@@ -852,6 +852,22 @@ void OpenMVPluginSerialPort_private::getFirmwareVersion() {
     }
 }
 
+void OpenMVPluginSerialPort_private::getJPEGPreferred() {
+    if (!m_camera || !m_camera->isConnected()) {
+        emit jpegPreferred(true, bool());
+        return;
+    }
+
+    try {
+        bool b = (!m_camera->cachedSystemInfo().value(QStringLiteral("usb_highspeed")).toBool()) ||
+                 m_camera->cachedSystemInfo().value(QStringLiteral("jpeg_present")).toBool();
+
+        emit jpegPreferred(false, b);
+    } catch (...) {
+        emit jpegPreferred(true, bool());
+    }
+}
+
 void OpenMVPluginSerialPort_private::getFrameReady() {
     if (!m_camera || !m_camera->isConnected()) {
         emit frameReady(false);
@@ -1269,6 +1285,12 @@ OpenMVPluginSerialPort::OpenMVPluginSerialPort(const QJsonDocument &settings,
 
     connect(m_port, &OpenMVPluginSerialPort_private::firmwareVersion,
             this, &OpenMVPluginSerialPort::firmwareVersion);
+
+    connect(this, &OpenMVPluginSerialPort::getJPEGPreferred,
+            m_port, &OpenMVPluginSerialPort_private::getJPEGPreferred);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::jpegPreferred,
+            this, &OpenMVPluginSerialPort::jpegPreferred);
 
     connect(this, &OpenMVPluginSerialPort::getFrameReady,
             m_port, &OpenMVPluginSerialPort_private::getFrameReady);

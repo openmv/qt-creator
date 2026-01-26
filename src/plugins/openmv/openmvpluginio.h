@@ -185,6 +185,7 @@ public slots:
     void getHostStatsString();
     void getDeviceStatsString();
     void getFirmwareVersion();
+    void getJPEGPreferred();
     void frameSizeDump();
     void getArchString();
     void learnMTU();
@@ -242,6 +243,7 @@ signals:
     void hostStatsString(const QString &stats);
     void deviceStatsString(const QString &stats);
     void firmwareVersion(int major, int minor, int patch);
+    void jpegPreferred(bool preferred);
     void frameBufferData(const QPixmap &data);
     void frameBufferEmpty(bool ok);
     void archString(const QString &arch);

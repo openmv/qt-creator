@@ -99,6 +99,7 @@ enum
     V2_HOST_STATS_STRING_CPL,
     V2_DEVICE_STATS_STRING_CPL,
     V2_FIRMWARE_VERSION_CPL,
+    V2_JPEG_PREFERRED_CPL,
     V2_FRAME_BUFFER_DATA_CPL,
     V2_ARCH_STRING_CPL,
     V2_SCRIPT_EXEC_CPL,
@@ -376,6 +377,14 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_FIRMWARE_VERSION_CPL);
                 emit firmwareVersion(major, minor, patch);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
+            });
+
+    connect(m_port, &OpenMVPluginSerialPort::jpegPreferred,
+            this, [this] (bool timeout, bool preferred) {
+                if (timeout) m_timeout = true;
+                m_completionQueue.removeOne(V2_JPEG_PREFERRED_CPL);
+                emit jpegPreferred(preferred);
                 if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
@@ -1637,6 +1646,17 @@ void OpenMVPluginIO::getFirmwareVersion()
                                                         true, true, true));
     m_completionQueue.enqueue(USBDBG_FW_VERSION_CPL);
     command();
+}
+
+void OpenMVPluginIO::getJPEGPreferred()
+{
+    if (m_v2ProtocolEnabled) {
+        m_completionQueue.enqueue(V2_JPEG_PREFERRED_CPL);
+        m_port->getJPEGPreferred();
+        return;
+    }
+
+    QTimer::singleShot(0, this, [this] {jpegPreferred(true);});
 }
 
 void OpenMVPluginIO::getSystemInfoString()

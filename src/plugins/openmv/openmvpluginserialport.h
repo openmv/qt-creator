@@ -384,6 +384,7 @@ public slots:
     void getHostStatsString();
     void getDeviceStatsString();
     void getFirmwareVersion();
+    void getJPEGPreferred();
     void getFrameReady(); // poll event
     void frameDump();
     void getArchString();
@@ -428,6 +429,7 @@ signals:
     void hostStatsString(bool timeout, const QString &stats);
     void deviceStatsString(bool timeout, const QString &stats);
     void firmwareVersion(bool timeout, int major, int minor, int patch);
+    void jpegPreferred(bool timeout, bool preferred);
     void frameReady(bool ready); // poll event
     void frameBufferData(bool timeout, const QPixmap &data);
     void archString(bool timeout, const QString &arch);
@@ -506,6 +508,7 @@ signals:
     void getHostStatsString();
     void getDeviceStatsString();
     void getFirmwareVersion();
+    void getJPEGPreferred();
     void getFrameReady(); // poll event
     void frameDump();
     void getArchString();
@@ -528,6 +531,7 @@ signals:
     void hostStatsString(bool timeout, const QString &stats);
     void deviceStatsString(bool timeout, const QString &stats);
     void firmwareVersion(bool timeout, int major, int minor, int patch);
+    void jpegPreferred(bool timeout, bool preferred);
     void frameReady(bool ready); // poll event
     void frameBufferData(bool timeout, const QPixmap &data);
     void archString(bool timeout, const QString &arch);

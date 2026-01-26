@@ -2778,7 +2778,40 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         m_jpgCompress->setVisible(m_iodevice->v2ProtocolEnabled());
 
-        m_iodevice->jpegEnable(m_jpgCompress->isChecked());
+        if (!m_boardType.isEmpty() && m_iodevice->v2ProtocolEnabled())
+        {
+            bool jpegPreferred = bool();
+            bool *jpegPreferredPtr = &jpegPreferred;
+
+            QMetaObject::Connection conn = connect(m_iodevice, &OpenMVPluginIO::jpegPreferred,
+                                                   this, [jpegPreferredPtr] (bool ok) {
+                                                       *jpegPreferredPtr = ok;
+                                                   });
+
+            QEventLoop loop;
+
+            connect(m_iodevice, &OpenMVPluginIO::jpegPreferred,
+                    &loop, &QEventLoop::quit);
+
+            m_iodevice->getJPEGPreferred();
+
+            loop.exec();
+
+            disconnect(conn);
+
+            settings->beginGroup(SETTINGS_GROUP);
+            bool jpgCompress = settings->value(QString((JPG_COMPRESS_STATE "_") + m_boardType).toUtf8(),
+                                               jpegPreferred).toBool();
+            settings->endGroup();
+
+            m_jpgCompress->setChecked(jpgCompress);
+            m_iodevice->jpegEnable(jpgCompress);
+        }
+        else
+        {
+            m_iodevice->jpegEnable(m_jpgCompress->isChecked());
+        }
+
         m_iodevice->fbEnable(!m_disableFrameBuffer->isChecked());
 
         Core::MessageManager::grayOutOldContent();
@@ -3066,6 +3099,16 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             }
 
             m_jpgCompress->setVisible(false);
+
+            if (!m_boardType.isEmpty() && m_iodevice->v2ProtocolEnabled())
+            {
+                Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+
+                settings->beginGroup(SETTINGS_GROUP);
+                settings->setValue(QString((JPG_COMPRESS_STATE "_") + m_boardType).toUtf8(),
+                                   m_jpgCompress->isChecked());
+                settings->endGroup();
+            }
 
             ///////////////////////////////////////////////////////////////////
 
