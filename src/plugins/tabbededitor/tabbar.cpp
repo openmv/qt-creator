@@ -66,7 +66,9 @@ TabBar::TabBar(QWidget *parent) :
     setUsesScrollButtons(true);
     // OPENMV-DIFF //
     setDrawBase(false);
+    #ifdef Q_OS_MAC
     setStyle(new LeftAlignedTabBarStyle(style()));
+    #endif
     // OPENMV-DIFF //
 
     QSizePolicy sp(QSizePolicy::Preferred, QSizePolicy::Fixed);
