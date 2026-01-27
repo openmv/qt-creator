@@ -1023,14 +1023,34 @@ function(qtc_copy_to_builddir custom_target_name)
     set(destinationDirectory "${_output_binary_dir}/${_arg_DESTINATION}/${folderName}")
 
     set(scriptFile "${CMAKE_CURRENT_BINARY_DIR}/${folderName}_download_and_extract.cmake")
-    set(scriptContent "file(DOWNLOAD \"${url}\" \"${downloadPath}\" SHOW_PROGRESS)\n")
-    string(APPEND scriptContent "file(MAKE_DIRECTORY \"${destinationDirectory}\")\n")
-    string(APPEND scriptContent "execute_process(COMMAND \"${CMAKE_COMMAND}\" -E tar xzf \"${downloadPath}\" WORKING_DIRECTORY \"${destinationDirectory}\")\n")
-    string(APPEND scriptContent "file(REMOVE \"${downloadPath}\")\n")
-    string(APPEND scriptContent "if(EXISTS \"${destinationDirectory}/${wrapperFolder}\")\n")
-    string(APPEND scriptContent "  execute_process(COMMAND \"${CMAKE_COMMAND}\" -E copy_directory \"${destinationDirectory}/${wrapperFolder}\" \"${destinationDirectory}\")\n")
-    string(APPEND scriptContent "  execute_process(COMMAND \"${CMAKE_COMMAND}\" -E remove_directory \"${destinationDirectory}/${wrapperFolder}\")\n")
-    string(APPEND scriptContent "endif()\n")
+    set(scriptContent
+    "set(_ok 0)\n"
+    "foreach(_try RANGE 1 5)\n"
+    "  file(DOWNLOAD \"${url}\" \"${downloadPath}\" SHOW_PROGRESS STATUS _st)\n"
+    "  list(GET _st 0 _code)\n"
+    "  if(_code EQUAL 0)\n"
+    "    set(_ok 1)\n"
+    "    break()\n"
+    "  endif()\n"
+    "  file(REMOVE \"${downloadPath}\")\n"
+    "  execute_process(COMMAND \"${CMAKE_COMMAND}\" -E sleep 10)\n"
+    "endforeach()\n"
+    "if(NOT _ok)\n"
+    "  message(FATAL_ERROR \"Failed to download ${url}\")\n"
+    "endif()\n"
+    "file(MAKE_DIRECTORY \"${destinationDirectory}\")\n"
+    "execute_process(COMMAND \"${CMAKE_COMMAND}\" -E tar xzf \"${downloadPath}\" WORKING_DIRECTORY \"${destinationDirectory}\" RESULT_VARIABLE _rv)\n"
+    "if(NOT _rv EQUAL 0)\n"
+    "  file(REMOVE \"${downloadPath}\")\n"
+    "  message(FATAL_ERROR \"Failed to extract ${downloadPath}\")\n"
+    "endif()\n"
+    "file(REMOVE \"${downloadPath}\")\n"
+    "if(EXISTS \"${destinationDirectory}/${wrapperFolder}\")\n"
+    "  execute_process(COMMAND \"${CMAKE_COMMAND}\" -E copy_directory \"${destinationDirectory}/${wrapperFolder}\" \"${destinationDirectory}\")\n"
+    "  execute_process(COMMAND \"${CMAKE_COMMAND}\" -E remove_directory \"${destinationDirectory}/${wrapperFolder}\")\n"
+    "endif()\n"
+    )
+    string(JOIN "" scriptContent ${scriptContent})
     file(WRITE "${scriptFile}" "${scriptContent}")
 
     add_custom_command(OUTPUT "${destinationTimestampFileName}"

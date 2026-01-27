@@ -98,7 +98,7 @@ if (WIN32)
     vela/windows
     spsdk/windows
     stcubeprogrammer/windows)
-  set(donwloaded_resource_directories
+  set(downloaded_resource_directories
     https://upload.openmv.io/stedgeai/stedgeai-win-3.0.0.tar.gz
     https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi.zip)
 endif()
@@ -119,7 +119,7 @@ if (APPLE)
     spsdk/mac
     stcubeprogrammer/mac)
   set(resource_files ${resource_files} pydfu/pydfu.py)
-  set(donwloaded_resource_directories
+  set(downloaded_resource_directories
     https://upload.openmv.io/stedgeai/stedgeai-macarm-3.0.0.tar.gz
     https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-darwin-arm64-arm-none-eabi.tar.xz)
 endif()
@@ -136,7 +136,7 @@ if(UNIX AND NOT APPLE)
         python/linux-arm64
         vela/aarch64
         pydfu)
-      set(donwloaded_resource_directories
+      set(downloaded_resource_directories
         https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-aarch64-arm-none-eabi.tar.xz)
     else()
       set(resource_directories ${resource_directories}
@@ -153,7 +153,7 @@ if(UNIX AND NOT APPLE)
         spsdk/linux-x86_64
         stcubeprogrammer/linux64
         pydfu)
-      set(donwloaded_resource_directories
+      set(downloaded_resource_directories
         https://upload.openmv.io/stedgeai/stedgeai-linux64-3.0.0.tar.gz
         https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz)
     endif()
@@ -194,7 +194,7 @@ qtc_copy_to_builddir(copy_share_files_to_builddir
 
 # OPENMV-DIFF #
 qtc_copy_to_builddir(copy_donwloaded_share_to_builddir
-  URLS ${donwloaded_resource_directories}
+  URLS ${downloaded_resource_directories}
   DESTINATION ${IDE_DATA_PATH}
 )
 # OPENMV-DIFF #
