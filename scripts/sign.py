@@ -127,7 +127,9 @@ def signFile(file, args):
         if codsignAvailable:
             if not os.system("codesign -d --verbose=4 " + file.replace(" ", "\\ ") + " 2>&1 | grep Timestamp > /dev/null") and \
             not os.system("codesign -d --verbose=4 " + file.replace(" ", "\\ ") + " 2>&1 | grep Authority > /dev/null") and \
-            not os.system("codesign -d --verbose=4 " + file.replace(" ", "\\ ") + " 2>&1 | grep Runtime > /dev/null"):
+            not os.system("codesign -d --verbose=4 " + file.replace(" ", "\\ ") + " 2>&1 | grep Runtime > /dev/null") and \
+            not ("stedgeai" in file) and \
+            not ("arm" in file):
                 print("Already Signed")
             else:
                 if not os.system("codesign" + \
