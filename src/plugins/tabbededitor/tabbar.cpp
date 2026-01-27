@@ -19,6 +19,10 @@
 #include <QMouseEvent>
 #include <QShortcut>
 #include <QTabBar>
+// OPENMV-DIFF //
+#include <QProxyStyle>
+#include <QStyle>
+// OPENMV-DIFF //
 
 // OPENMV-DIFF //
 #include "tabbededitortr.h"
@@ -30,6 +34,29 @@ using namespace TabbedEditor::Internal;
 
 /// TODO: Use Core::DocumentModel for everything
 
+// OPENMV-DIFF //
+#ifdef Q_OS_MAC
+class LeftAlignedTabBarStyle : public QProxyStyle
+{
+public:
+    using QProxyStyle::QProxyStyle;
+
+    int styleHint(StyleHint hint,
+                  const QStyleOption *option = nullptr,
+                  const QWidget *widget = nullptr,
+                  QStyleHintReturn *returnData = nullptr) const override
+    {
+        if (hint == QStyle::SH_TabBar_Alignment) {
+            // Force tabs to align left within the available tab bar space.
+            return Qt::AlignLeft;
+        }
+
+        return QProxyStyle::styleHint(hint, option, widget, returnData);
+    }
+};
+#endif
+// OPENMV-DIFF //
+
 TabBar::TabBar(QWidget *parent) :
     QTabBar(parent)
 {
@@ -39,6 +66,7 @@ TabBar::TabBar(QWidget *parent) :
     setUsesScrollButtons(true);
     // OPENMV-DIFF //
     setDrawBase(false);
+    setStyle(new LeftAlignedTabBarStyle(style()));
     // OPENMV-DIFF //
 
     QSizePolicy sp(QSizePolicy::Preferred, QSizePolicy::Fixed);
