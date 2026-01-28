@@ -124,10 +124,6 @@ def signFile(file, args):
         else: print("Skipping")
         return
     elif sys.platform == "darwin":
-        # Skip signing ST Stuff...
-        if "stedgeai" in file:
-            print("Skipping")
-            return
         if codsignAvailable:
             if not os.system("codesign -d --verbose=4 " + file.replace(" ", "\\ ") + " 2>&1 | grep Timestamp > /dev/null") and \
             not os.system("codesign -d --verbose=4 " + file.replace(" ", "\\ ") + " 2>&1 | grep Authority > /dev/null") and \
