@@ -175,7 +175,13 @@ def main():
     if not os.path.isabs(target):
         target = os.path.abspath(target)
 
-    if os.path.isfile(target): try_signFile(target)
+    if os.path.isfile(target):
+        plist_name = os.path.splitext(os.path.basename(target))[0]
+        plist_path = os.path.join(os.path.dirname(target), plist_name + ".plist")
+        if sys.platform == "darwin" and os.path.isfile(plist_path) and checkMach(target):
+            try_signFile(target, args=("--entitlements " + plist_path.replace(" ", "\\ ") + " "))
+        elif sys.platform != "darwin" or checkMach(target):
+            try_signFile(target)
     else:
 
         # Only digitally sign all files on windows during a release...
