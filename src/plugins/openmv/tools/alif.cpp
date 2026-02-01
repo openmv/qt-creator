@@ -372,9 +372,11 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
     int *sesVersionMinorPtr = &sesVersionMinor;
     int *sesVersionPatchPtr = &sesVersionPatch;
 
+    bool enterRecoverymode = false;
     bool enterHardMaintenanceMode = false;
     bool exitHardMaintenanceMode = false;
     bool hardMaintenanceRequired = false;
+    bool *enterRecoverymodePtr = &enterRecoverymode;
     bool *enterHardMaintenanceModePtr = &enterHardMaintenanceMode;
     bool *exitHardMaintenanceModePtr = &exitHardMaintenanceMode;
     bool *hardMaintenanceRequiredPtr = &hardMaintenanceRequired;
@@ -395,7 +397,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
     QObject::connect(&process, &Utils::Process::textOnStandardOutput, dialog,
                      [processPtr, dialog, stdOutBufferPtr, stdOutFirstTimePtr,
                       sesVersionMajorPtr, sesVersionMinorPtr, sesVersionPatchPtr,
-                      enterHardMaintenanceModePtr, exitHardMaintenanceModePtr, hardMaintenanceRequiredPtr,
+                      enterRecoverymodePtr, enterHardMaintenanceModePtr, exitHardMaintenanceModePtr, hardMaintenanceRequiredPtr,
                       startGetBootInfoPtr, stopGetBootInfoPtr, appLoadedPtr,
                       userButtonMessageBox] (const QString &text) {
         stdOutBufferPtr->append(text);
@@ -481,7 +483,17 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
                 processPtr->write(QStringLiteral("\n"));
             }
 
+            if (out.contains(QStringLiteral("Device connected in Recovery")))
+            {
+                *enterRecoverymodePtr = true;
+            }
+
             if (*enterHardMaintenanceModePtr && out.contains(QStringLiteral("1 - Device Control")))
+            {
+                processPtr->write(QStringLiteral("1\n"));
+            }
+
+            if (*enterHardMaintenanceModePtr && out.contains(QStringLiteral("1 - ROM")))
             {
                 processPtr->write(QStringLiteral("1\n"));
             }
@@ -497,6 +509,13 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
                 userButtonMessageBox->show();
                 *enterHardMaintenanceModePtr = false;
                 *exitHardMaintenanceModePtr = true;
+                *hardMaintenanceRequiredPtr = true;
+            }
+
+            if (*enterHardMaintenanceModePtr && out.contains(QStringLiteral("1 - Recovery")))
+            {
+                processPtr->write(QStringLiteral("1\n"));
+                *enterHardMaintenanceModePtr = false;
                 *hardMaintenanceRequiredPtr = true;
             }
 
@@ -658,7 +677,8 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
         process.setCommand(Utils::CommandLine(maintenanceBinary, args));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
-        if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+        if(enterRecoverymode
+        || ((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally)))
         {
             // Need to recover the board.
             {
@@ -801,6 +821,16 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
     //         goto cleanup;
     //     }
     // }
+
+    if (enterRecoverymode)
+    {
+        QMessageBox::information(Core::ICore::dialogParent(),
+                                 Tr::tr("Connect"),
+                                 Tr::tr("Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.\n\n"
+                                        "The camera must be power cycled after after recovery."));
+
+        enterRecoverymode = false;
+    }
 
     if(hardMaintenanceRequired
     || (sesVersionMajor < current_version_major)
