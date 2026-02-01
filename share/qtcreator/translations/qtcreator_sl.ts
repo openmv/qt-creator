@@ -7101,7 +7101,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
         <location line="+19" />
         <location line="+115" />
-        <location line="+1441" />
+        <location line="+1483" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
@@ -7119,11 +7119,11 @@ See the documentation of the specific language server for valid settings.</sourc
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
         <location line="+254" />
         <location line="+86" />
-        <location line="+1015" />
-        <location line="+896" />
+        <location line="+1017" />
+        <location line="+895" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+523" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+539" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
         <location line="+11" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
@@ -7135,7 +7135,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3433" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3475" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7150,7 +7150,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2471" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2513" />
         <location line="+1446" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
         <source>Failed to save the image file for an unknown reason!</source>
@@ -7193,7 +7193,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Preimenovanje datoteke ni uspelo iz neznanega razloga!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5122" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5164" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
         <source>Could not copy file "%1" to "%2".</source>
         <translation>Ni bilo mogoče kopirati datoteke »%1« v »%2«.</translation>
@@ -7227,7 +7227,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2348" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2349" />
         <location line="+9" />
         <location line="+13" />
         <location line="+59" />
@@ -7449,33 +7449,33 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+77" />
-        <location line="+3722" />
+        <location line="+3764" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Odprite terminal</translation>
     </message>
     <message>
-        <location line="-3776" />
+        <location line="-3818" />
         <source>Machine Vision</source>
         <translation>Strojni vid</translation>
     </message>
     <message>
         <location line="+181" />
-        <location line="+3626" />
+        <location line="+3668" />
         <location line="+76" />
         <source>Threshold Editor</source>
         <translation>Urejevalnik pragov</translation>
     </message>
     <message>
-        <location line="-3697" />
-        <location line="+3775" />
+        <location line="-3739" />
+        <location line="+3817" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Urejevalnik ključnih točk</translation>
     </message>
     <message>
-        <location line="-3768" />
-        <location line="+3934" />
+        <location line="-3810" />
+        <location line="+3976" />
         <location line="+98" />
         <location line="+24" />
         <location line="+11" />
@@ -7484,7 +7484,7 @@ Check the json file for errors and fix them.</source>
         <translation>Generator aprilskih oznak</translation>
     </message>
     <message>
-        <location line="-4082" />
+        <location line="-4124" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Družina TAG16H5 (30 oznak)</translation>
     </message>
@@ -7525,13 +7525,13 @@ Check the json file for errors and fix them.</source>
         <location line="+371" />
         <location line="+14" />
         <location line="+33" />
-        <location line="+874" />
+        <location line="+916" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
         <source>Failed to open: "%L1"</source>
         <translation>Odpiranje ni uspelo: "%L1"</translation>
     </message>
     <message>
-        <location line="-1316" />
+        <location line="-1358" />
         <source>DataMatrix Generator</source>
         <translation>DataMatrix Generator</translation>
     </message>
@@ -7558,7 +7558,7 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+228" />
-        <location line="+2315" />
+        <location line="+2357" />
         <location line="+1290" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+67" />
@@ -7579,7 +7579,7 @@ Check the json file for errors and fix them.</source>
         <translation>Izhodne datoteke ni mogoče prepisati!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3818" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3860" />
         <source>Video Tools</source>
         <translation>Video orodja</translation>
     </message>
@@ -7681,7 +7681,7 @@ Check the json file for errors and fix them.</source>
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1440" />
+        <location line="+1482" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
@@ -7697,7 +7697,7 @@ Check the json file for errors and fix them.</source>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
         <location line="+288" />
         <location line="+143" />
-        <location line="+1021" />
+        <location line="+1023" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
         <location line="+85" />
@@ -7706,7 +7706,7 @@ Check the json file for errors and fix them.</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3631" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3673" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Naložite v Edge Impulse Project</translation>
     </message>
@@ -7881,7 +7881,7 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1062" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1064" />
         <location line="+6" />
         <location line="+28" />
         <location line="+52" />
@@ -7898,13 +7898,13 @@ Check the json file for errors and fix them.</source>
         <location line="+12" />
         <location line="+28" />
         <location line="+36" />
-        <location line="+82" />
+        <location line="+84" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+87" />
+        <location line="+86" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
@@ -7920,8 +7920,9 @@ Check the json file for errors and fix them.</source>
         <location line="+121" />
         <location line="+214" />
         <location line="+33" />
-        <location line="+215" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+674" />
+        <location line="+248" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+658" />
+        <location line="+48" />
         <source>Connect</source>
         <translation>Povežite se</translation>
     </message>
@@ -8104,7 +8105,7 @@ Različice OpenMV IDE pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri name
     </message>
     <message>
         <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2478" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2512" />
         <source>Load Custom Firmware</source>
         <translation>Naložite vdelano programsko opremo po meri</translation>
     </message>
@@ -8233,7 +8234,7 @@ Različice OpenMV IDE pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri name
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2693" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2737" />
         <source>Board:</source>
         <translation>Odbor:</translation>
     </message>
@@ -8277,9 +8278,9 @@ Različice OpenMV IDE pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri name
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-291" />
-        <location line="+293" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-573" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-301" />
+        <location line="+303" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-583" />
         <source>Drive:</source>
         <translation>pogon:</translation>
     </message>
@@ -8300,8 +8301,8 @@ Različice OpenMV IDE pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri name
         <translation>Lahko se razlikuje od FPS kamere</translation>
     </message>
     <message>
-        <location line="+267" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2908" />
+        <location line="+309" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2952" />
         <source>Update Available</source>
         <translation>Posodobitev na voljo</translation>
     </message>
@@ -8538,7 +8539,7 @@ sudo adduser %L1 klic
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2388" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2389" />
         <location line="+9" />
         <location line="+8" />
         <location line="+19" />
@@ -8682,10 +8683,10 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Neveljavno oblikovan ključ plošče!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+190" />
-        <location line="+472" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+223" />
+        <location line="+482" />
         <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-77" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-83" />
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
@@ -8694,7 +8695,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation type="vanished">Konfigurirajte nastavitve</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+373" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+389" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>Shrani skript</translation>
@@ -8791,7 +8792,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Ne morem odpreti vzorčne datoteke "%L1"!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-457" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-467" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>Izberite Drive</translation>
@@ -8826,17 +8827,17 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Različica protokola %1 – sistemske informacije:</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+25" />
         <source>Host Stats:</source>
         <translation>Statistika gostitelja:</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Device Stats:</source>
         <translation>Statistika naprave:</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+24" />
         <source>Protocol Controls:</source>
         <translation>Kontrole protokola:</translation>
     </message>
@@ -8851,7 +8852,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Kombinirano glasovanje</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+16" />
         <source>Polling (ms)</source>
         <translation>Glasovanje (ms)</translation>
     </message>
@@ -8940,7 +8941,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1977" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2021" />
         <source>Please select a serial port</source>
         <translation>Izberite serijska vrata</translation>
     </message>
@@ -8951,7 +8952,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+94" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+243" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
         <source>Try doing:
 
 </source>
@@ -9181,7 +9182,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Generacija končana!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1508" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1510" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>Na voljo so novi viri OpenMV IDE (npr. primeri, vdelana programska oprema, dokumentacija itd.).</translation>
     </message>
@@ -9194,8 +9195,8 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <location line="+7" />
         <location line="+288" />
         <location line="+143" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-420" />
-        <location line="+148" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
+        <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
         <location line="+51" />
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+245" />
@@ -9262,47 +9263,47 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <location line="+119" />
         <location line="+588" />
         <location line="+217" />
-        <location line="+2161" />
+        <location line="+2205" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Izbrisati sistem notranjega maščob</translation>
     </message>
     <message>
-        <location line="-3160" />
+        <location line="-3204" />
         <location line="+119" />
         <location line="+589" />
         <location line="+216" />
-        <location line="+2161" />
+        <location line="+2205" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Če to možnost omogočite, se izbrišejo vse datoteke v sistemu notranjega datotečnega sistema OpenMV Cam. To ne izbriše datotek na nobeni odstranljivi SD kartici (če je vstavljeno).</translation>
     </message>
     <message>
-        <location line="-3160" />
+        <location line="-3204" />
         <location line="+708" />
         <location line="+216" />
-        <location line="+2161" />
+        <location line="+2205" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Ponastavite datotečni sistem ROMFS</translation>
     </message>
     <message>
-        <location line="-3159" />
+        <location line="-3203" />
         <location line="+708" />
         <location line="+215" />
-        <location line="+2161" />
+        <location line="+2205" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Če to možnost omogočite, se bo datotečni sistem ROM na vašem OpenMV Cam ponastavil nazaj na privzeto.</translation>
     </message>
     <message>
-        <location line="-3116" />
+        <location line="-3160" />
         <location line="+45" />
         <source>Bootloader</source>
         <translation>Zagonski nalagalnik</translation>
     </message>
     <message>
-        <location line="+2947" />
+        <location line="+2991" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9311,7 +9312,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Zlasti si oglejte primere Obdelava slik -&gt; Sledenje barvam in strojno učenje -&gt; TensorFlow.</translation>
     </message>
     <message>
-        <location line="-3060" />
+        <location line="-3104" />
         <location line="+4" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9405,7 +9406,7 @@ Zlasti si oglejte primere Obdelava slik -&gt; Sledenje barvam in strojno učenje
         <translation>Ali imate priklopljeno kamero OpenMV Cam in je zaklenjena?</translation>
     </message>
     <message>
-        <location line="+848" />
+        <location line="+849" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
 Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
@@ -9450,9 +9451,9 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-975" />
-        <location line="+656" />
-        <location line="+1707" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-976" />
+        <location line="+657" />
+        <location line="+1750" />
         <source>Please select the board type</source>
         <translation>Izberite vrsto plošče</translation>
     </message>
@@ -9461,7 +9462,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Želite izbrisati notranji datotečni sistem?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2251" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2295" />
         <source>No released firmware available for the attached board!</source>
         <translation>Za priloženo ploščo ni na voljo izdane vdelane programske opreme!</translation>
     </message>
@@ -9472,19 +9473,19 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="-85" />
-        <location line="+168" />
+        <location line="+170" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Posodobite zagonski nalagalnik na najnovejšo različico in namestite SoftDevice za flash vdelane programske opreme OpenMV. Več informacij najdete na &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-1063" />
-        <location line="+2968" />
+        <location line="-1065" />
+        <location line="+3012" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>OPOZORILO: Nadgradnja na novo različico vdelane programske opreme zahteva izbris sistema FAT File.</translation>
     </message>
     <message>
-        <location line="-2483" />
+        <location line="-2527" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
@@ -9509,13 +9510,13 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+219" />
-        <location line="+2162" />
+        <location line="+2206" />
         <source>Upgrade options:</source>
         <translation>Možnosti nadgradnje:</translation>
     </message>
     <message>
-        <location line="-2078" />
-        <location line="+167" />
+        <location line="-2122" />
+        <location line="+169" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Prosimo, skrajšajte REC na GND in ponastavite svojo ploščo. Več informacij najdete na &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
@@ -9530,7 +9531,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (Pritisnite Prekliči, če to traja več kot 5 sekund).</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+132" />
         <source>Timeout error while getting firmware version!</source>
         <translation>Napaka časovne omejitve med pridobivanjem različice vdelane programske opreme!</translation>
     </message>
@@ -9618,10 +9619,9 @@ Nadaljevati?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-191" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+46" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
         <location line="+56" />
-        <location line="+35" />
-        <location line="+50" />
+        <location line="+97" />
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
@@ -9868,7 +9868,7 @@ Kliknite gumb V redu, ko je zagonski nalagalnik SBL vaše OpenMV Cam oštevilče
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-582" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-933" />
         <location line="+934" />
         <source>Flashing Firmware</source>
@@ -10078,7 +10078,7 @@ Kliknite gumb V redu, ko je zagonski nalagalnik DFU vaše OpenMV Cam oštevilče
         <translation>Napaka časovne omejitve med učenjem MTU!</translation>
     </message>
     <message>
-        <location line="+134" />
+        <location line="+167" />
         <source>Board: %L1</source>
         <translation>Plošča: %L1</translation>
     </message>
@@ -10228,7 +10228,7 @@ Kliknite gumb V redu, ko je zagonski nalagalnik DFU vaše OpenMV Cam oštevilče
         <translation type="vanished">Začni</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+578" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+588" />
         <source>More Examples</source>
         <translation>Več primerov</translation>
     </message>
@@ -10399,7 +10399,7 @@ Ali želite, da ga OpenMV IDE kopira v vaš OpenMV Cam?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4268" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4310" />
         <location line="+10" />
         <location line="+56" />
         <location line="+7" />
@@ -10733,39 +10733,51 @@ Odprite nabor podatkov, da ga naložite.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+0" />
-        <location line="+30" />
-        <location line="+238" />
-        <location line="+10" />
-        <location line="+47" />
-        <location line="+56" />
-        <location line="+35" />
-        <location line="+18" />
         <location line="+32" />
+        <location line="+255" />
+        <location line="+10" />
+        <location line="+48" />
+        <location line="+56" />
+        <location line="+97" />
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
+        <location line="+21" />
         <source>Alif Tools</source>
         <translation>Orodja alif</translation>
     </message>
     <message>
-        <location line="-551" />
+        <location line="-602" />
         <source>Please turn on the hard maintenance mode switch, it not enabled, and then press the user button on your OpenMV Cam.</source>
         <translation>Vklopite stikalo načina trdega vzdrževanja, ni omogočeno, nato pa pritisnite gumb Uporabniški gumb na OpenMV Cam.</translation>
     </message>
     <message>
-        <location line="+238" />
+        <location line="+255" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1337" />
         <location line="+923" />
         <source>This feature is not supported on this machine!</source>
         <translation>Ta funkcija ni podprta na tem stroju!</translation>
     </message>
     <message>
-        <location line="+166" />
-        <source>Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled, reconnect your OpenMV Cam to your computer, and then press Ok.</source>
-        <translation>Prosimo, da iz računalnika izklopite odpiranje OpenMV, izklopite stikalo načina trdega vzdrževanja, če je omogočeno, ponovno priključite kamero OpenMV v računalnik in nato pritisnite OK.</translation>
+        <location line="+182" />
+        <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
+
+The camera must be power cycled after after recovery.</source>
+        <translation>Prekinite povezavo in nato ponovno povežite vaš OpenMV Cam z računalnikom in pritisnite OK. 
+
+Po obnovitvi je treba fotoaparat izklopiti.</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="+166" />
+        <source>Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled. Leave your OpenMV Cam unconnected until instructed to reconnect it.</source>
+        <translation>Odklopite OpenMV Cam iz računalnika, izklopite stikalo za trdi vzdrževalni način, če je omogočeno. Pustite vaš OpenMV Cam nepovezan, dokler ne dobite navodil, da ga znova povežete.</translation>
+    </message>
+    <message>
+        <source>Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled, reconnect your OpenMV Cam to your computer, and then press Ok.</source>
+        <translation type="vanished">Prosimo, da iz računalnika izklopite odpiranje OpenMV, izklopite stikalo načina trdega vzdrževanja, če je omogočeno, ponovno priključite kamero OpenMV v računalnik in nato pritisnite OK.</translation>
+    </message>
+    <message>
+        <location line="-118" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after a system package update.</source>
@@ -20020,7 +20032,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+96" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+126" />
         <source>Move tab left</source>
         <translation>Premakni zavihek levo</translation>
     </message>
