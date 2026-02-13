@@ -99,7 +99,7 @@ if (WIN32)
     spsdk/windows
     stcubeprogrammer/windows)
   set(downloaded_resource_directories
-    https://upload.openmv.io/stedgeai/stedgeai-win-3.0.0.tar.gz
+    https://download.openmv.io/stedgeai/stedgeai-win-3.0.0.tar.gz
     https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi.zip)
 endif()
 
@@ -120,7 +120,7 @@ if (APPLE)
     stcubeprogrammer/mac)
   set(resource_files ${resource_files} pydfu/pydfu.py)
   set(downloaded_resource_directories
-    https://upload.openmv.io/stedgeai/stedgeai-macarm-3.0.0.tar.gz
+    https://download.openmv.io/stedgeai/stedgeai-macarm-3.0.0.tar.gz
     https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-darwin-arm64-arm-none-eabi.tar.xz)
 endif()
 
@@ -154,7 +154,7 @@ if(UNIX AND NOT APPLE)
         stcubeprogrammer/linux64
         pydfu)
       set(downloaded_resource_directories
-        https://upload.openmv.io/stedgeai/stedgeai-linux64-3.0.0.tar.gz
+        https://download.openmv.io/stedgeai/stedgeai-linux64-3.0.0.tar.gz
         https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz)
     endif()
   else()
