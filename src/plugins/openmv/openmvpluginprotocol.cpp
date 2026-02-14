@@ -708,11 +708,15 @@ QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, b
     {
         data = data.replace(QByteArrayLiteral("sensor.set_pixformat(sensor.RGB565)"),
                             QByteArrayLiteral("sensor.set_pixformat(sensor.GRAYSCALE)"));
+        data = data.replace(QByteArrayLiteral(".pixformat(csi.RGB565)"),
+                            QByteArrayLiteral(".pixformat(csi.GRAYSCALE)"));
 
         if(m_sensorType.startsWith(QStringLiteral("HM01B0")))
         {
             data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"),
                                 QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+            data = data.replace(QByteArrayLiteral(".framesize(csi.VGA)"),
+                                QByteArrayLiteral(".framesize(csi.QVGA)"));
         }
 
         if((m_sensorType.startsWith(QStringLiteral("BOSON-320"))) ||
@@ -723,6 +727,8 @@ QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, b
         {
             data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"),
                                 QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+            data = data.replace(QByteArrayLiteral(".framesize(csi.VGA)"),
+                                QByteArrayLiteral(".framesize(csi.QVGA)"));
         }
 
         if((m_sensorType.startsWith(QStringLiteral("BOSON-640"))) ||
@@ -730,6 +736,8 @@ QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, b
         {
             data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"),
                                 QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"));
+            data = data.replace(QByteArrayLiteral(".framesize(csi.QVGA)"),
+                                QByteArrayLiteral(".framesize(csi.VGA)"));
         }
 
         if((m_sensorType.startsWith(QStringLiteral("GENX320-S"))) ||
@@ -739,6 +747,10 @@ QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, b
                                 QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
             data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"),
                                 QByteArrayLiteral("sensor.set_framesize(sensor.B320X320)"));
+            data = data.replace(QByteArrayLiteral(".framesize(csi.QVGA)"),
+                                QByteArrayLiteral(".framesize((320, 320))"));
+            data = data.replace(QByteArrayLiteral(".framesize(csi.VGA)"),
+                                QByteArrayLiteral(".framesize((320, 320))"));
         }
     }
 
@@ -749,6 +761,8 @@ QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, b
     {
         data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"),
                             QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"));
+        data = data.replace(QByteArrayLiteral(".framesize(csi.QVGA)"),
+                            QByteArrayLiteral(".framesize(csi.VGA)"));
     }
 
     return data;
