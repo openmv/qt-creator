@@ -142,12 +142,15 @@ void OpenMVPlugin::setPortPath(bool silent)
         {
             const QString rootPath = pair.first;
             const QString serialNumber = pair.second;
+            QByteArray serialNumberBytes = serialNumber.toUtf8();
+            std::reverse(serialNumberBytes.begin(), serialNumberBytes.end());
+            const QString serialNumberRev = QString::fromUtf8(serialNumberBytes);
 
             if((((m_major < OPENMV_DISK_ADDED_MAJOR)
                   || ((m_major == OPENMV_DISK_ADDED_MAJOR) && (m_minor < OPENMV_DISK_ADDED_MINOR))
                   || ((m_major == OPENMV_DISK_ADDED_MAJOR) && (m_minor == OPENMV_DISK_ADDED_MINOR) && (m_patch < OPENMV_DISK_ADDED_PATCH)))
-                 || QFile::exists(rootPath + QStringLiteral(OPENMV_DISK_ADDED_NAME)))
-                && (serialNumber.toLower() == m_portDriveSerialNumber.toLower()))
+                  || QFile::exists(rootPath + QStringLiteral(OPENMV_DISK_ADDED_NAME)))
+                && ((serialNumber.toLower() == m_portDriveSerialNumber.toLower()) || (serialNumberRev.toLower() == m_portDriveSerialNumber.toLower())))
             {
                 drives.append(rootPath);
             }
