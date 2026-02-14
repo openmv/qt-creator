@@ -653,6 +653,14 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                 }
                 case CHECK_PROTOCOL_VERSION_CPL_SPLIT:
                 {
+                    if(data.size())
+                    {
+                        // V1 Protocol response will be 0/1.
+                        // V2 Protocol response will be the proto sync.
+                        m_v2ProtocolEnabled = deserializeWord(data) == OMVProto::SYNC_WORD;
+                        m_port->enableV2Protocol(m_v2ProtocolEnabled);
+                    }
+
                     break;
                 }
                 case USBDBG_FW_VERSION_CPL:
@@ -1166,6 +1174,8 @@ void OpenMVPluginIO::commandResult(const OpenMVPluginSerialPortCommandResult &co
                     }
                     case CHECK_PROTOCOL_VERSION_CPL_SPLIT:
                     {
+                        m_v2ProtocolEnabled = false;
+                        m_port->enableV2Protocol(m_v2ProtocolEnabled);
                         break;
                     }
                     case USBDBG_FW_VERSION_CPL:
@@ -1602,28 +1612,32 @@ void OpenMVPluginIO::checkProtocolVerison(bool splitCommand)
 
     // On Mac for the RT1062 and AE3, they cannot handle receiving all 4 commands at once.
     // Splitting the command up into UDSBG_LEN sized commands seems to work around this...
+    //
+    // Note that you cannot send the split packet first for STM32 USBDBG as it will crash them...
     int len = SCRIPT_RUNNING_RESPONSE_LEN;
 
     if (splitCommand) {
-        while (buffer.size() > USBDBG_LEN) {
+        for (int i = 0, ii = buffer.size(); i < ii; i += USBDBG_LEN) {
             QByteArray part = buffer.left(USBDBG_LEN);
             buffer = buffer.mid(USBDBG_LEN);
             m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(part,
-                                                                len,
+                                                                (i == (ii - USBDBG_LEN)) ? len : 0,
                                                                 SCRIPT_RUNNING_START_DELAY,
                                                                 SCRIPT_RUNNING_END_DELAY,
-                                                                true, false, len > 0));
+                                                                true, false, i == 0));
             m_completionQueue.enqueue(CHECK_PROTOCOL_VERSION_CPL_SPLIT);
-            len = 0;
         }
     }
+    else
+    {
+        m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer,
+                                                            len,
+                                                            SCRIPT_RUNNING_START_DELAY,
+                                                            SCRIPT_RUNNING_END_DELAY,
+                                                            true, false, len > 0));
+        m_completionQueue.enqueue(CHECK_PROTOCOL_VERSION_CPL);
+    }
 
-    m_postedQueue.enqueue(OpenMVPluginSerialPortCommand(buffer,
-                                                        len,
-                                                        SCRIPT_RUNNING_START_DELAY,
-                                                        SCRIPT_RUNNING_END_DELAY,
-                                                        true, false, len > 0));
-    m_completionQueue.enqueue(CHECK_PROTOCOL_VERSION_CPL);
     command();
 }
 

@@ -1537,6 +1537,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         }
 
         bool isOldVidPid = false;
+        bool isTinyUSBHSV1Protocol = false;
         bool isOpenMVDfu = false;
         bool isIMX = false;
         bool isAlif = false;
@@ -1560,6 +1561,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             if (arduinoPort.hasVendorIdentifier() && arduinoPort.hasProductIdentifier())
             {
                 isOldVidPid = (arduinoPort.vendorIdentifier() == OPENMVCAM_VID) && (arduinoPort.productIdentifier() == OPENMVCAM_PID);
+                isTinyUSBHSV1Protocol = ((arduinoPort.vendorIdentifier() == OPENMVCAM_VID_NEW) && (arduinoPort.productIdentifier() == OPENMVCAM_RT1062_PID)) ||
+                                        ((arduinoPort.vendorIdentifier() == OPENMVCAM_VID_NEW) && (arduinoPort.productIdentifier() == OPENMVCAM_AE3_PID));
                 isArduinoDFU = isBootloaderType(m_firmwareSettings, arduinoPort.vendorIdentifier(), arduinoPort.productIdentifier(), QStringLiteral("arduino_dfu"));
                 isBossac = isBootloaderType(m_firmwareSettings, arduinoPort.vendorIdentifier(), arduinoPort.productIdentifier(), QStringLiteral("bossac"));
                 isPicotool = isBootloaderType(m_firmwareSettings, arduinoPort.vendorIdentifier(), arduinoPort.productIdentifier(), QStringLiteral("picotool"));
@@ -1763,7 +1766,18 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             connect(m_iodevice, &OpenMVPluginIO::protocolVersionDone,
                     &loop, &QEventLoop::quit);
 
-            m_iodevice->checkProtocolVerison(m_reconnects & 1);
+            // For unknown reasons, sending the special check packet on mac does not work
+            // correctly unless it's split on the highspeed cameras. The USB packet is indeed
+            // sent on the bus, but, the camera will lockup. This workout exist for all high speed
+            // capable cameras using the V1 protocol with TinyUSB.
+            if (isTinyUSBHSV1Protocol && Utils::HostOsInfo::isMacHost())
+            {
+                m_iodevice->checkProtocolVerison(true);
+            }
+            else
+            {
+                m_iodevice->checkProtocolVerison(m_reconnects & 1);
+            }
 
             loop.exec();
         }
