@@ -46,6 +46,10 @@
 #define OPENMVCAM_VID           0x1209
 #define OPENMVCAM_PID           0xABD1
 
+#define OPENMVCAM_VID_NEW       0x37C5
+#define OPENMVCAM_RT1062_PID    0x1060
+#define OPENMVCAM_AE3_PID       0x16E3
+
 #define ARDUINOCAM_VID          0x2341
 #define ARDUINOCAM_PH7_PID      0x005B
 #define ARDUINOCAM_NRF_PID      0x005A
