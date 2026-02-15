@@ -266,7 +266,9 @@ FindToolBar::FindToolBar(CurrentDocumentFind *currentDocumentFind)
     if (QApplication::clipboard()->supportsFindBuffer()) {
         ActionBuilder enterFindStringAction(this, "Find.EnterFindString");
         enterFindStringAction.setText(Tr::tr("Enter Find String"));
-        enterFindStringAction.setDefaultKeySequence(Tr::tr("Ctrl+E"));
+        // OPENMV-DIFF //
+        // enterFindStringAction.setDefaultKeySequence(Tr::tr("Ctrl+E"));
+        // OPENMV-DIFF //
         enterFindStringAction.addToContainer(Constants::M_FIND, Constants::G_FIND_ACTIONS);
         enterFindStringAction.bindContextAction(&m_enterFindStringAction);
         enterFindStringAction.addOnTriggered(this, [this] { putSelectionToFindClipboard(); });
