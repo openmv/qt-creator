@@ -3696,6 +3696,25 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
                                     Tr::tr("Register OpenMV Cam"),
                                     Tr::tr("Thank you for registering your OpenMV Cam!"));
 
+                                if (!m_formKey.isEmpty())
+                                {
+                                    m_registerButton->setProperty("statusColor",
+                                        Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ?
+                                                                    QStringLiteral("lightgreen") :
+                                                                    QStringLiteral("green"));
+                                    m_registerButton->setText(Tr::tr("Registered"));
+                                    m_registerButton->update();
+                                    m_registerButton->setVisible(true);
+                                    m_registerButtonSpacer->setVisible(true);
+                                }
+                                else
+                                {
+                                    m_registerButton->setText(QString());
+                                    m_registerButton->update();
+                                    m_registerButton->setVisible(false);
+                                    m_registerButtonSpacer->setVisible(false);
+                                }
+
                                 return true;
                             }
                             else if(text.contains(QStringLiteral("<p>Error: Invalid ID Key for board type!</p>")))
