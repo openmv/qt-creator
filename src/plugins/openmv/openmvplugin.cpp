@@ -3525,6 +3525,18 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
 
                     return;
                 }
+                else if(text.contains(QStringLiteral("<p>Error: Board type not available for this form key!</p>")))
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Register OpenMV Cam"),
+                        Tr::tr("Board type not available for this form key!"));
+                }
+                else if(text.contains(QStringLiteral("<p>Error: Registration limit reached for this board type!</p>")))
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Register OpenMV Cam"),
+                        Tr::tr("Registration limit reached for this board type!"));
+                }
                 else if(text.contains(QStringLiteral("Done")))
                 {
                     if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
