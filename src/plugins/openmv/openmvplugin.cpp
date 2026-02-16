@@ -3487,8 +3487,10 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
 
         connect(&manager, &QNetworkAccessManager::finished, &loop, &QEventLoop::quit);
 
-        QNetworkRequest request = QNetworkRequest(QUrl(QString(QStringLiteral("https://upload.openmv.io/openmv-swd-ids-insert.php?board=%1&id=%2&form_key=%3")).arg(board).arg(id).arg(m_formKey)));
-        QNetworkReply *reply = manager.get(request);
+        QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/insert.php")));
+        request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
+        QByteArray postData = QStringLiteral("board=%1&id=%2&form_key=%3").arg(board).arg(id).arg(m_formKey).toUtf8();
+        QNetworkReply *reply = manager.post(request, postData);
 
         if(reply)
         {
@@ -3671,8 +3673,10 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
                 connect(&dialog, &QProgressDialog::canceled, &dialog, &QProgressDialog::reject);
                 connect(&manager, &QNetworkAccessManager::finished, &dialog, &QProgressDialog::accept);
 
-                QNetworkRequest request = QNetworkRequest(QUrl(QString(QStringLiteral("https://upload.openmv.io/openmv-swd-ids-register.php?board=%1&id=%2&id_key=%3")).arg(board).arg(id).arg(boardKey)));
-                QNetworkReply *reply = manager.get(request);
+                QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/register.php")));
+                request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
+                QByteArray postData = QStringLiteral("board=%1&id=%2&id_key=%3").arg(board).arg(id).arg(boardKey).toUtf8();
+                QNetworkReply *reply = manager.post(request, postData);
 
                 if(reply)
                 {
