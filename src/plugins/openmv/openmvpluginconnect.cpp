@@ -2569,17 +2569,17 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         }
                     }
 
-                    if((!m_formKey.isEmpty())
-                    // Skip OpenMV Cam M4's...
-                    || ((!disableLicenseCheck) && (board != QStringLiteral("M4"))))
-                    {
-                        QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+                    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
 
-                        connect(manager, &QNetworkAccessManager::finished, this, [this, manager, board, id] (QNetworkReply *reply) {
+                    connect(manager, &QNetworkAccessManager::finished, this, [this, disableLicenseCheck, manager, board, id] (QNetworkReply *reply) {
 
-                            QByteArray data = reply->readAll();
+                        QByteArray data = reply->readAll();
 
-                            if((reply->error() == QNetworkReply::NoError) && (!data.isEmpty()))
+                        if((reply->error() == QNetworkReply::NoError) && (!data.isEmpty()))
+                        {
+                            if((!m_formKey.isEmpty())
+                                // Skip OpenMV Cam M4's...
+                                || ((!disableLicenseCheck) && (board != QStringLiteral("M4"))))
                             {
                                 if(QString::fromUtf8(data).contains(QStringLiteral("<p>Yes</p>")))
                                 {
@@ -2624,43 +2624,43 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                     CLOSE_CONNECT_END();
                                 }
                             }
-                            else if((!m_formKey.isEmpty()) && (reply->error() != QNetworkReply::NoError))
-                            {
-                                QMessageBox::critical(Core::ICore::dialogParent(),
-                                    Tr::tr("Register OpenMV Cam"),
-                                    Tr::tr("Error: %L1!").arg(reply->error()));
-
-                                CLOSE_CONNECT_END();
-                            }
-                            else if(!m_formKey.isEmpty())
-                            {
-                                QMessageBox::critical(Core::ICore::dialogParent(),
-                                    Tr::tr("Register OpenMV Cam"),
-                                    Tr::tr("GET Network error!"));
-
-                                CLOSE_CONNECT_END();
-                            }
-
-                            connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
-                        });
-
-                        QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/check.php")));
-                        request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
-                        QByteArray postData = QStringLiteral("board=%1&id=%2").arg(board, id).toUtf8();
-                        QNetworkReply *reply = manager->post(request, postData);
-
-                        if(reply)
+                        }
+                        else if((!m_formKey.isEmpty()) && (reply->error() != QNetworkReply::NoError))
                         {
-                            connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                Tr::tr("Register OpenMV Cam"),
+                                Tr::tr("Error: %L1!").arg(reply->error()));
+
+                            CLOSE_CONNECT_END();
                         }
                         else if(!m_formKey.isEmpty())
                         {
                             QMessageBox::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Register OpenMV Cam"),
-                                Tr::tr("GET network error!"));
+                                Tr::tr("GET Network error!"));
 
                             CLOSE_CONNECT_END();
                         }
+
+                        connect(reply, &QNetworkReply::destroyed, manager, &QNetworkAccessManager::deleteLater); reply->deleteLater();
+                    });
+
+                    QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/check.php")));
+                    request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
+                    QByteArray postData = QStringLiteral("board=%1&id=%2").arg(board, id).toUtf8();
+                    QNetworkReply *reply = manager->post(request, postData);
+
+                    if(reply)
+                    {
+                        connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
+                    }
+                    else if(!m_formKey.isEmpty())
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            Tr::tr("Register OpenMV Cam"),
+                            Tr::tr("GET network error!"));
+
+                        CLOSE_CONNECT_END();
                     }
                 }
             }
