@@ -110,6 +110,11 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                     QJsonArray extraProgramCommandsArray = bootloaderSettings.value(QStringLiteral("programCommands")).toArray();
                     for(const QJsonValue &command : extraProgramCommandsArray)
                     {
+                        // if(romfsAccess == OPENMV_ROMFS_NONE && programCommandsPath.contains(QStringLiteral(".img"), Qt::CaseInsensitive))
+                        // {
+                        //     continue;
+                        // }
+
                         QJsonObject obj2 = command.toObject();
                         programCommandsCmd.append(obj2.value(QStringLiteral("cmd")).toString());
                         programCommandsPath.append(obj2.value(QStringLiteral("path")).toString());
@@ -207,6 +212,11 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                 QJsonArray extraProgramCommandsArray = bootloaderSettings.value(QStringLiteral("programCommands")).toArray();
                 for(const QJsonValue &command : extraProgramCommandsArray)
                 {
+                    // if(romfsAccess == OPENMV_ROMFS_NONE && programCommandsPath.contains(QStringLiteral(".img"), Qt::CaseInsensitive))
+                    // {
+                    //     continue;
+                    // }
+
                     QJsonObject obj2 = command.toObject();
                     programCommandsCmd.append(obj2.value(QStringLiteral("cmd")).toString());
                     programCommandsPath.append(obj2.value(QStringLiteral("path")).toString());
