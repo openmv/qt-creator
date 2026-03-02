@@ -303,10 +303,21 @@ static bool alifUpdateBuild(const QString &originalFirmwareFolder)
         }
     }
 
-    if(!Utils::FileUtils::copyRecursively(Core::ICore::allUsersResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder),
-                                          Core::ICore::allUsersResourcePath(QStringLiteral("alif/build")), &error, copyOperator))
+    if (QDir(originalFirmwareFolder).exists())
     {
-        return false;
+        if(!Utils::FileUtils::copyRecursively(Utils::FilePath::fromString(originalFirmwareFolder),
+                                               Core::ICore::allUsersResourcePath(QStringLiteral("alif/build")), &error, copyOperator))
+        {
+            return false;
+        }
+    }
+    else
+    {
+        if(!Utils::FileUtils::copyRecursively(Core::ICore::allUsersResourcePath(QStringLiteral("firmware")).pathAppended(originalFirmwareFolder),
+                                               Core::ICore::allUsersResourcePath(QStringLiteral("alif/build")), &error, copyOperator))
+        {
+            return false;
+        }
     }
 
     QDir buildDir(Core::ICore::allUsersResourcePath(QStringLiteral("alif/build")).toString());

@@ -1135,6 +1135,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             QJsonObject bootloaderSettings = value.toObject().value(QStringLiteral("bootloaderSettings")).toObject();
                             fallbackBootloaderMappings.insert(a, bootloaderSettings.value(QStringLiteral("fallbackBootloader")).toObject());
                         }
+                        else if (value.toObject().value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("alif_tools"))
+                        {
+                            QJsonObject bootloaderSettings = value.toObject().value(QStringLiteral("bootloaderSettings")).toObject();
+                            fallbackBootloaderMappings.insert(a, bootloaderSettings);
+                        }
                         else
                         {
                             fallbackBootloaderMappings.insert(a, QJsonObject());
@@ -1358,6 +1363,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             eraseMappings.insert(a, QPair<int, int>(0, 0));
                             eraseAllMappings.insert(a, QPair<int, int>(0, 0));
                             fallbackBootloaderMappings.insert(a, bootloaderSettings.value(QStringLiteral("fallbackBootloader")).toObject());
+                        }
+                        else if (value.toObject().value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("alif_tools"))
+                        {
+                            QJsonObject bootloaderSettings = value.toObject().value(QStringLiteral("bootloaderSettings")).toObject();
+                            eraseMappings.insert(a, QPair<int, int>(0, 0));
+                            eraseAllMappings.insert(a, QPair<int, int>(0, 0));
+                            fallbackBootloaderMappings.insert(a, bootloaderSettings);
                         }
                         else
                         {
@@ -2092,6 +2104,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                     eraseAllMappings.insert(a, QPair<int, int>(0, 0));
                                     fallbackBootloaderMappings.insert(a, bootloaderSettings.value(QStringLiteral("fallbackBootloader")).toObject());
                                 }
+                                else if (value.toObject().value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("alif_tools"))
+                                {
+                                    QJsonObject bootloaderSettings = value.toObject().value(QStringLiteral("bootloaderSettings")).toObject();
+                                    eraseMappings.insert(a, QPair<int, int>(0, 0));
+                                    eraseAllMappings.insert(a, QPair<int, int>(0, 0));
+                                    fallbackBootloaderMappings.insert(a, bootloaderSettings);
+                                }
                                 else
                                 {
                                     eraseMappings.insert(a, QPair<int, int>(0, 0));
@@ -2420,6 +2439,75 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if (isAlif)
             {
+                if (firmwarePath.endsWith(QStringLiteral("bootloader.bin")))
+                {
+                    QTemporaryDir tempDir;
+
+                    if (tempDir.isValid())
+                    {
+                        QString tempPath = tempDir.path();
+
+                        QDir originalFirmwareDir(Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
+                                                     .pathAppended(originalFirmwareFolder).toString());
+
+                        if (originalFirmwareDir.exists())
+                        {
+                            bool ok = true;
+
+                            for (const QFileInfo &fileInfo : originalFirmwareDir.entryInfoList(QDir::Files))
+                            {
+                                ok = ok && QFile::copy(fileInfo.absoluteFilePath(), tempPath + QDir::separator() + fileInfo.fileName());
+                            }
+
+                            QFile::remove(tempPath + QDir::separator() + QStringLiteral("bootloader.bin"));
+                            ok = ok && QFile::copy(firmwarePath, tempPath + QDir::separator() + QStringLiteral("bootloader.bin"));
+
+                            if (ok)
+                            {
+                                if(alifDownloadFirmware(selectedDfuDevice.split(QStringLiteral(",")).last(),
+                                                        tempPath,
+                                                        originalFallbackBootloaderSettings))
+                                {
+                                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
+                                        Tr::tr("Connect"),
+                                        Tr::tr("Bootloader update complete!\n\n") +
+                                        Tr::tr("Connect your OpenMV Cam now."));
+
+                                    RECONNECT_WAIT_END();
+                                }
+                                else
+                                {
+                                    CONNECT_END();
+                                }
+                            }
+                            else
+                            {
+                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                                      Tr::tr("Connect"),
+                                                      Tr::tr("Failed to copy firmware files to temporary directory!"));
+
+                                CONNECT_END();
+                            }
+                        }
+                        else
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                                  Tr::tr("Connect"),
+                                                  Tr::tr("Original firmware folder does not exist!"));
+
+                            CONNECT_END();
+                        }
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                                              Tr::tr("Connect"),
+                                              Tr::tr("Failed to create temporary directory!"));
+
+                        CONNECT_END();
+                    }
+                }
+
                 openmvAlifBootloader(forceFirmwarePath,
                                      forceFlashFSErase,
                                      justEraseFlashFs,
