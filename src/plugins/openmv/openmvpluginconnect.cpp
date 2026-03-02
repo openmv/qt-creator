@@ -1112,6 +1112,103 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             && (m_autoUpdate != QStringLiteral("developement")))
             {
                 forceBootloaderBricked = true;
+
+                QMap<QString, QString> mappings;
+                QMap<QString, QJsonObject> fallbackBootloaderMappings;
+                QMap<QString, QString> vidpidMappings;
+
+                for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
+                {
+                    if (value.toObject().value(QStringLiteral("hidden")).toBool())
+                    {
+                        QString a = value.toObject().value(QStringLiteral("boardDisplayName")).toString();
+                        mappings.insert(a, value.toObject().value(QStringLiteral("boardFirmwareFolder")).toString());
+                        vidpidMappings.insert(a, value.toObject().value(QStringLiteral("bootloaderVidPid")).toString());
+
+                        if (value.toObject().value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("internal"))
+                        {
+                            QJsonObject bootloaderSettings = value.toObject().value(QStringLiteral("bootloaderSettings")).toObject();
+                            fallbackBootloaderMappings.insert(a, bootloaderSettings.value(QStringLiteral("fallbackBootloader")).toObject());
+                        }
+                        else if (value.toObject().value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("openmv_dfu"))
+                        {
+                            QJsonObject bootloaderSettings = value.toObject().value(QStringLiteral("bootloaderSettings")).toObject();
+                            fallbackBootloaderMappings.insert(a, bootloaderSettings.value(QStringLiteral("fallbackBootloader")).toObject());
+                        }
+                        else
+                        {
+                            fallbackBootloaderMappings.insert(a, QJsonObject());
+                        }
+                    }
+                }
+
+                if(!mappings.isEmpty())
+                {
+                    for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
+                    {
+                        QJsonObject object = value.toObject();
+                        QString bootloaderType = object.value(QStringLiteral("bootloaderType")).toString();
+
+                        if (object.value(QStringLiteral("hidden")).toBool()
+                            && ((bootloaderType == QStringLiteral("picotool")) || (bootloaderType == QStringLiteral("bossac"))))
+                        {
+                            QString boardFirmwareFolder = object.value(QStringLiteral("boardFirmwareFolder")).toString();
+                            QJsonObject bootloaderSettings = object.value(QStringLiteral("bootloaderSettings")).toObject();
+                            QString altvidpidDisplayName = bootloaderSettings.value(QStringLiteral("altvidpidDisplayName")).toString();
+                            QString altvidpid = bootloaderSettings.value(QStringLiteral("altvidpid")).toString();
+                            QString defaultFirmwareName = object.value(QStringLiteral("defaultFirmwareName")).toString();
+
+                            mappings.insert(altvidpidDisplayName, boardFirmwareFolder);
+                            fallbackBootloaderMappings.insert(altvidpidDisplayName, QJsonObject());
+                            vidpidMappings.insert(altvidpidDisplayName, altvidpid);
+                        }
+                    }
+
+                    for(QMap<QString, QString>::iterator it = mappings.begin(); it != mappings.end(); )
+                    {
+                        bool found = false;
+
+                        for(const QString &device : qAsConst(dfuDevices))
+                        {
+                            if(device.split(QStringLiteral(",")).first().toLower() == vidpidMappings.value(it.key()).toLower())
+                            {
+                                found = true;
+                                break;
+                            }
+                        }
+
+                        if(!found)
+                        {
+                            fallbackBootloaderMappings.remove(it.key());
+                            vidpidMappings.remove(it.key());
+                            it = mappings.erase(it);
+                        }
+                        else
+                        {
+                            it++;
+                        }
+                    }
+
+                    if(mappings.size())
+                    {
+                        int index = mappings.keys().indexOf(settings->value(LAST_BOARD_TYPE_STATE).toString());
+
+                        bool ok = mappings.size() == 1;
+                        QString temp = (mappings.size() == 1) ? mappings.firstKey() : QInputDialog::getItem(Core::ICore::dialogParent(),
+                            Tr::tr("Connect"), Tr::tr("Please select the board type"),
+                            mappings.keys(), (index != -1) ? index : 0, false, &ok,
+                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+
+                        if(ok)
+                        {
+                            settings->setValue(LAST_BOARD_TYPE_STATE, temp);
+
+                            originalFirmwareFolder = mappings.value(temp);
+                            originalFallbackBootloaderSettings = fallbackBootloaderMappings.value(temp);
+                        }
+                    }
+                }
             }
             else
             {
@@ -2136,14 +2233,89 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                 if((vidpid.size() == 2) && (vidpid.at(0).toInt(nullptr, 16) == STM32_DFU_VID) && (vidpid.at(1).toInt(nullptr, 16) == STM32_DFU_PID))
                 {
-                    QMessageBox::critical(Core::ICore::dialogParent(),
-                        Tr::tr("Connect"),
-                        Tr::tr("Only loading *.dfu files is supported for the STM32 recovery bootloader!\n\n"
-                               "Please select a bootloader.dfu file and try again. "
-                               "Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) "
-                               "may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!"));
+                    bool cubeProgrammer = originalFallbackBootloaderSettings.value(QStringLiteral("useSTCubeProgrammer")).toBool();
 
-                    CONNECT_END();
+                    if (cubeProgrammer)
+                    {
+                        if (firmwarePath.endsWith(QStringLiteral("bootloader.bin")))
+                        {
+                            QTemporaryDir tempDir;
+
+                            if (tempDir.isValid())
+                            {
+                                QString tempPath = tempDir.path();
+
+                                QDir originalFirmwareDir(Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
+                                    .pathAppended(originalFirmwareFolder).toString());
+
+                                if (originalFirmwareDir.exists())
+                                {
+                                    bool ok = true;
+
+                                    for (const QFileInfo &fileInfo : originalFirmwareDir.entryInfoList(QDir::Files))
+                                    {
+                                        ok = ok && QFile::copy(fileInfo.absoluteFilePath(), tempPath + QDir::separator() + fileInfo.fileName());
+                                    }
+
+                                    QFile::remove(tempPath + QDir::separator() + QStringLiteral("bootloader.bin"));
+                                    ok = ok && QFile::copy(firmwarePath, tempPath + QDir::separator() + QStringLiteral("bootloader.bin"));
+
+                                    if (ok)
+                                    {
+                                        openmvRepairingBootloader(forceFlashFSErase,
+                                                                  previousMapping,
+                                                                  originalDfuVidPid,
+                                                                  true,
+                                                                  tempPath + QDir::separator() + QStringLiteral("bootloader.bin"),
+                                                                  false,
+                                                                  true);
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        QMessageBox::critical(Core::ICore::dialogParent(),
+                                            Tr::tr("Connect"),
+                                            Tr::tr("Failed to copy firmware files to temporary directory!"));
+
+                                        CONNECT_END();
+                                    }
+                                }
+                                else
+                                {
+                                    QMessageBox::critical(Core::ICore::dialogParent(),
+                                        Tr::tr("Connect"),
+                                        Tr::tr("Original firmware folder does not exist!"));
+
+                                    CONNECT_END();
+                                }
+                            }
+                            else
+                            {
+                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                    Tr::tr("Connect"),
+                                    Tr::tr("Failed to create temporary directory!"));
+
+                                CONNECT_END();
+                            }
+                        }
+                        else
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                Tr::tr("Connect"),
+                                Tr::tr("Only loading bootloader.bin files is supported with the ST Cube Programmer!"));
+
+                            CONNECT_END();
+                        }
+                    }
+
+                    openmvRepairingBootloader(forceFlashFSErase,
+                                              previousMapping,
+                                              originalDfuVidPid,
+                                              true,
+                                              firmwarePath,
+                                              false,
+                                              cubeProgrammer);
+                    return;
                 }
 
                 openmvInternalBootloader(forceFirmwarePath,

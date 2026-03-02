@@ -677,7 +677,7 @@ void OpenMVPlugin::openmvRepairingBootloader(bool forceFlashFSErase,
             {
                 QString options = QStringLiteral("-a 0 -s :leave");
 
-                if (repairingBootloader)
+                if (firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive))
                 {
                     options = QStringLiteral("-a 0 -s 0x08000000");
                 }
