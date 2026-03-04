@@ -528,6 +528,8 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
         if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty()))
         {
             int s = data2.indexOf("<div data-pjax=\"true\" data-test-selector=\"body-content\" data-view-component=\"true\" class=\"markdown-body my-3\">");
+            if (s == -1) s = data2.indexOf("<div data-pjax=\"true\" data-test-selector=\"body-content\" data-view-component=\"true\" class=\"markdown-body tmp-my-3\">");
+
             int e = data2.indexOf("<div data-view-component=\"true\" class=\"Box-footer\">");
 
             QByteArray d;
