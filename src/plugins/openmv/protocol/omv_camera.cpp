@@ -834,6 +834,7 @@ QVariantList OMVCamera::readProfile()
 
         // Lock the profile channel
         if (!channelLock(profile_id)) {
+            QThread::msleep(10); // Avoid busy loop if lock fails
             return records;
         }
 
@@ -963,6 +964,7 @@ bool OMVCamera::readFrame(OMVFrame &outFrame)
         }
 
         if (!channelLock(stream_id)) {
+            QThread::msleep(10); // Avoid busy loop if lock fails
             return false;
         }
 
