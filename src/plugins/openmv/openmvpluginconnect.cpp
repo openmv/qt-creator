@@ -2678,7 +2678,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 }
                 else if(ids2.at(0))
                 {
-                    QStringList sensorTypeList;
+                    QList<QPair<QString, bool> > sensorTypeList;
 
                     for (int id : ids2)
                     {
@@ -2704,11 +2704,25 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             sensorType = Tr::tr("Unknown");
                         }
 
-                        if (mainSensor) sensorTypeList.prepend(sensorType);
-                        else if (!hidden || sensorTypeList.isEmpty()) sensorTypeList.append(sensorType);
+                        QPair<QString, bool> pair(sensorType, hidden);
+                        if (mainSensor) sensorTypeList.prepend(pair);
+                        else if (!hidden || sensorTypeList.isEmpty()) sensorTypeList.append(pair);
                     }
 
-                    m_sensorType = sensorTypeList.join(QStringLiteral(", "));
+                    for (int i = 0; i < sensorTypeList.size(); )
+                    {
+                        if (sensorTypeList.at(i).second) sensorTypeList.removeAt(i);
+                        else i++;
+                    }
+
+                    QStringList sensorTypes;
+
+                    for (const QPair<QString, bool> &pair : sensorTypeList)
+                    {
+                        sensorTypes.append(pair.first);
+                    }
+
+                    m_sensorType = sensorTypes.join(QStringLiteral(", "));
                 }
                 else
                 {
