@@ -765,6 +765,19 @@ QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, b
                             QByteArrayLiteral(".framesize(csi.VGA)"));
     }
 
+    if ((!notExamples) &&
+        ((m_boardType.startsWith(QStringLiteral("M4"))) ||
+         (m_boardType.startsWith(QStringLiteral("M7"))) ||
+         (m_boardType.startsWith(QStringLiteral("H7"))) ||
+         (m_boardType.startsWith(QStringLiteral("NICLA"))) ||
+         (m_boardType.startsWith(QStringLiteral("NICLAV")))))
+    {
+        data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.VGA)"),
+                            QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
+        data = data.replace(QByteArrayLiteral(".framesize(csi.VGA)"),
+                            QByteArrayLiteral(".framesize(csi.QVGA)"));
+    }
+
     return data;
 }
 
