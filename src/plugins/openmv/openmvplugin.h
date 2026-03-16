@@ -448,7 +448,7 @@ public slots: // private
                         bool waitForCamera = false,
                         QString previousMapping = QString(),
                         OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
-    void disconnectClicked(bool reset = false);
+    void disconnectClicked(bool reset = false, bool enterBootloader = false);
     void startClicked();
     void stopClicked();
     void processEvents();
@@ -577,6 +577,7 @@ private:
 
     QList<bool> m_boardPresentStringListHistory;
     QList<bool> m_boardPresentDFUDevicesHistory;
+    bool m_nonDFUBoardPresent;
     bool m_boardPresent;
     bool m_working;
     bool m_connected;
@@ -621,6 +622,7 @@ private:
     Core::Command *m_saveCommand; QAction *m_saveAction;
     Core::Command *m_resetCommand; QAction *m_resetAction;
     Core::Command *m_developmentReleaseCommand; QAction *m_developmentReleaseAction;
+    Core::Command *m_enterBootloaderCommand; QAction *m_enterBootloaderAction;
     Core::ActionContainer *m_openTerminalMenu;
     Core::Command *m_connectCommand; QAction *m_connectAction;
     Core::Command *m_disconnectCommand; QAction *m_disconnectAction;

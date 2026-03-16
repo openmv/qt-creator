@@ -3132,6 +3132,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_configureSettingsAction->setEnabled(false);
         m_saveAction->setEnabled(false);
         m_resetAction->setEnabled(true);
+        m_enterBootloaderAction->setEnabled(true);
         m_developmentReleaseAction->setEnabled(true);
         if(!m_autoReconnectAction->isChecked()) m_connectAction->setEnabled(false);
         m_connectAction->setVisible(false);
@@ -3278,7 +3279,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
     }
 }
 
-void OpenMVPlugin::disconnectClicked(bool reset)
+void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
 {
     if(m_connected)
     {
@@ -3297,7 +3298,7 @@ void OpenMVPlugin::disconnectClicked(bool reset)
                 {
                     flushPortPath();
 
-                    m_iodevice->sysReset();
+                    m_iodevice->sysReset(enterBootloader);
                 }
                 else
                 {
@@ -3435,6 +3436,7 @@ void OpenMVPlugin::disconnectClicked(bool reset)
             m_configureSettingsAction->setEnabled(false);
             m_saveAction->setEnabled(false);
             m_resetAction->setEnabled(false);
+            m_enterBootloaderAction->setEnabled(false);
             m_developmentReleaseAction->setEnabled(false);
             m_connectAction->setVisible(true);
             if(!m_autoReconnectAction->isChecked()) m_connectAction->setEnabled(true);
@@ -3993,7 +3995,7 @@ void OpenMVPlugin::updateCam(bool forceYes)
 
 QJsonObject OpenMVPlugin::getBoardSettings(const QString &title, Utils::QtcSettings *settings, bool autoConnectToBoard)
 {
-    if (m_boardPresent && (!m_working) && autoConnectToBoard)
+    if (m_nonDFUBoardPresent && (!m_working) && autoConnectToBoard)
     {
         QEventLoop loop;
         connect(this, &OpenMVPlugin::workingDone, &loop, &QEventLoop::quit);

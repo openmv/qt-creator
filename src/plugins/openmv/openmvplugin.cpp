@@ -75,6 +75,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
 
     m_boardPresentStringListHistory = QList<bool>();
     m_boardPresentDFUDevicesHistory = QList<bool>();
+    m_nonDFUBoardPresent = false;
     m_boardPresent = false;
     m_working = false;
     m_connected = false;
@@ -941,12 +942,17 @@ void OpenMVPlugin::extensionsInitialized()
     m_resetAction->setEnabled(false);
     connect(m_resetAction, &QAction::triggered, this, [this] {disconnectClicked(true);});
 
+    m_enterBootloaderAction = new QAction(Tr::tr("Force enter OpenMV Cam bootloader"), this);
+    m_enterBootloaderCommand = Core::ActionManager::registerAction(m_enterBootloaderAction, Utils::Id("OpenMV.EnterBootloader"));
+    toolsMenu->addAction(m_enterBootloaderCommand);
+    m_enterBootloaderAction->setEnabled(false);
+    connect(m_enterBootloaderAction, &QAction::triggered, this, [this] {disconnectClicked(true, true);});
+
     m_developmentReleaseAction = new QAction(Tr::tr("Install the Latest Development Release"), this);
     m_developmentReleaseCommand = Core::ActionManager::registerAction(m_developmentReleaseAction, Utils::Id("OpenMV.InstallTheLatestDevelopmentRelease"));
     toolsMenu->addAction(m_developmentReleaseCommand);
     m_developmentReleaseAction->setEnabled(false);
     connect(m_developmentReleaseAction, &QAction::triggered, this, &OpenMVPlugin::installTheLatestDevelopmentRelease);
-
     toolsMenu->addSeparator();
 
     Core::ActionContainer *microPythonToolsMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.MicroPythonMenu"));
@@ -2758,7 +2764,9 @@ bool OpenMVPlugin::delayedInitialize()
                 if (present) dfuDevicesHistoryCount++;
             }
 
-            m_boardPresent = (stringListHistoryCount >= 1) || (dfuDevicesHistoryCount >= 3);
+            m_nonDFUBoardPresent = stringListHistoryCount >= 1;
+            m_boardPresent = m_nonDFUBoardPresent || (dfuDevicesHistoryCount >= 3);
+
             bool dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
 
             if(!m_boardPresent) {
@@ -2775,7 +2783,7 @@ bool OpenMVPlugin::delayedInitialize()
                 }
             }
 
-            if(m_boardPresent && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected))
+            if(m_nonDFUBoardPresent && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected))
             {
                 QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected)) emit m_connectAction->triggered(); });
             }

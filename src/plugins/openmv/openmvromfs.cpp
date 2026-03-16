@@ -706,7 +706,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                 QString path = QFileInfo(romfsFile).filePath();
 
                 QTimer::singleShot(0, this, [this, path, boardSettings] {
-                    connectClicked(true, path, false, false, false, true,
+                    connectClicked(true, path, false, false, false, m_nonDFUBoardPresent,
                                    boardSettings.value(QStringLiteral("boardDisplayName")).toString(),
                                    OPENMV_ROMFS_READ);
                 });
