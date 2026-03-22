@@ -52,7 +52,8 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                                             const QJsonObject &originalFallbackBootloaderSettings,
                                             const QString &originalDfuVidPid,
                                             bool dfuNoDialogs,
-                                            OpenMVROMFSAccess romfsAccess)
+                                            OpenMVROMFSAccess romfsAccess,
+                                            bool forceBootloaderEntry)
 {
     QStringList fallbackVidPid = originalFallbackBootloaderSettings.value(QStringLiteral("vidpid")).toString().split(QStringLiteral(":"));
     int fallbackVid = 0, fallbackPid = 0;
@@ -167,7 +168,9 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                                                         installTheLatestDevelopmentFirmware,
                                                         firmwarePath,
                                                         device,
-                                                        romfsAccess);
+                                                        romfsAccess,
+                                                        QString(),
+                                                        forceBootloaderEntry);
                                     return;
                                 }
                             }

@@ -41,7 +41,8 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                                        const QString &firmwarePath,
                                        const QString &selectedDfuDevice,
                                        OpenMVROMFSAccess romfsAccess,
-                                       const QString &extraMessage)
+                                       const QString &extraMessage,
+                                       bool forceBootloaderEntry)
 {
     if(selectedDfuDevice.isEmpty())
     {
@@ -56,7 +57,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
         // However, until the V2 protocol, there was a bug in the bootloader that could cause it not
         // to actually exit after DFU detach. On the V2 protocol we can detect the bootloader verison
         // and fallback to normal reset if needed.
-        m_iodevice->sysReset(m_iodevice->v2ProtocolEnabled());
+        m_iodevice->sysReset(m_iodevice->v2ProtocolEnabled() || forceBootloaderEntry);
         m_iodevice->close();
 
         loop.exec();

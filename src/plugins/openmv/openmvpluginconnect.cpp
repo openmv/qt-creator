@@ -573,6 +573,24 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
             layout2->addWidget(checkBox2);
             checkBox2->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be updated to the latest development release."));
 
+            QCheckBox *checkBox3 = new QCheckBox(Tr::tr("Force bootloader"));
+            layout2->addWidget(checkBox3);
+            checkBox3->setToolTip(Tr::tr("Force enter the OpenMV Cam bootloader. May result in the OpenMV Cam bootloader not automatically exiting on older boards."));
+
+            for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
+            {
+                QJsonObject object = value.toObject();
+
+                if ((m_boardType.toLower() == object.value(QStringLiteral("boardType")).toString().toLower()) &&
+                    (!object.value(QStringLiteral("hidden")).toBool()) &&
+                    (object.value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("openmv_dfu")))
+                {
+                    QJsonObject bootloaderSettings = value.toObject().value(QStringLiteral("bootloaderSettings")).toObject();
+                    checkBox3->setChecked(bootloaderSettings.value(QStringLiteral("forceBootloaderDefaultSafe")).toBool());
+                    break;
+                }
+            }
+
             if((m_major < OPENMV_FORCE_ROMFS_UPGRADE_MAJOR)
             || ((m_major == OPENMV_FORCE_ROMFS_UPGRADE_MAJOR) && (m_minor < OPENMV_FORCE_ROMFS_UPGRADE_MINOR))
             || ((m_major == OPENMV_FORCE_ROMFS_UPGRADE_MAJOR) && (m_minor == OPENMV_FORCE_ROMFS_UPGRADE_MINOR) && (m_patch < OPENMV_FORCE_ROMFS_UPGRADE_PATCH)))
@@ -581,6 +599,8 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
                 checkBox->setEnabled(false);
                 checkBox2->setChecked(true);
                 checkBox2->setEnabled(false);
+                checkBox3->setChecked(false);
+                checkBox3->setEnabled(false);
 
                 layout->addRow(new QLabel(Tr::tr("Warning: Upgrading to the new firmware version requires the FAT file system to be erased.")));
             }
@@ -599,6 +619,7 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
             {
                 bool flashFSErase = checkBox->isChecked();
                 bool updateROMFS = checkBox2->isChecked();
+                bool forceBootloaderEntry = checkBox3->isChecked();
 
                 if (checkBox->isEnabled()) settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, flashFSErase);
                 if (checkBox2->isEnabled()) settings->setValue(LAST_DFU_UPDATE_ROM_FS_STATE, updateROMFS);
@@ -606,7 +627,7 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
                 delete newDialog;
 
                 connectClicked(true, QString(), flashFSErase, false, true,
-                               false, QString(), updateROMFS ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE);
+                               false, QString(), updateROMFS ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE, forceBootloaderEntry);
             }
             else
             {
@@ -1036,7 +1057,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                   bool installTheLatestDevelopmentFirmware,
                                   bool waitForCamera,
                                   QString previousMapping,
-                                  OpenMVROMFSAccess romfsAccess)
+                                  OpenMVROMFSAccess romfsAccess,
+                                  bool forceBootloaderEntry)
 {
     if(!m_working)
     {
@@ -1048,9 +1070,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         if(m_connected)
         {
             m_connect_disconnect = connect(this, &OpenMVPlugin::disconnectDone, this,
-                [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess] {
-                QTimer::singleShot(0, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess] {
-                    connectClicked(forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess);
+                [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess, forceBootloaderEntry] {
+                QTimer::singleShot(0, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess, forceBootloaderEntry] {
+                    connectClicked(forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess, forceBootloaderEntry);
                 });
             });
 
@@ -1238,7 +1260,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     layout->addItem(new QSpacerItem(0, 6));
 
                     QComboBox *combo = new QComboBox();
-                    combo->addItem(Tr::tr("Install the lastest release firmware (v%L1.%L2.%L3)").arg(match.captured(1).toInt()).arg(match.captured(2).toInt()).arg(match.captured(3).toInt()));
+                    combo->addItem(Tr::tr("Install the latest release firmware (v%L1.%L2.%L3)").arg(match.captured(1).toInt()).arg(match.captured(2).toInt()).arg(match.captured(3).toInt()));
                     combo->addItem(Tr::tr("Load a specific firmware"));
                     combo->addItem(Tr::tr("Just erase the internal FAT file system"));
                     combo->addItem(Tr::tr("Edit the ROM file system"));
@@ -2407,7 +2429,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                         installTheLatestDevelopmentFirmware,
                                         firmwarePath,
                                         selectedDfuDevice,
-                                        romfsAccess);
+                                        romfsAccess,
+                                        QString(),
+                                        forceBootloaderEntry);
                 }
 
                 return;

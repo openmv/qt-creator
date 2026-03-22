@@ -40,7 +40,8 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
                                         bool justEraseFlashFs,
                                         Utils::QtcSettings *settings,
                                         QString originalFirmwareFolder,
-                                        const QString &selectedDfuDevice)
+                                        const QString &selectedDfuDevice,
+                                        bool forceBootloaderEntry)
 {
     QJsonObject outObj;
 
@@ -144,7 +145,8 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
             if (!dfuBootloaderProgramCommand.isEmpty())
             {
                 openmvDFUBootloader(forceFlashFSErase, justEraseFlashFs, false, QString(),
-                                    dfuBootloaderProgramCommand.value(QStringLiteral("bootloaderVidPid")).toString() + QStringLiteral(",NULL"));
+                                    dfuBootloaderProgramCommand.value(QStringLiteral("bootloaderVidPid")).toString() + QStringLiteral(",NULL"),
+                                    OPENMV_ROMFS_NONE, QString(), forceBootloaderEntry);
             }
             else
             {

@@ -65,6 +65,7 @@
             "bootloaderVidPid" : "37C5:9202",
             "bootloaderType" : "openmv_dfu",
             "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : false,
                 "eraseCommands" : ["-a 1"],
                 "programCommands" : [
                     {
@@ -201,6 +202,7 @@
             "bootloaderVidPid" : "37C5:9203",
             "bootloaderType" : "openmv_dfu",
             "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : false,
                 "eraseCommands" : ["-a 1"],
                 "programCommands" : [
                     {
@@ -337,6 +339,7 @@
             "bootloaderVidPid" : "37C5:9204",
             "bootloaderType" : "openmv_dfu",
             "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : false,
                 "eraseCommands" : ["-a 1"],
                 "programCommands" : [
                     {
@@ -473,6 +476,7 @@
             "bootloaderVidPid" : "37C5:924A",
             "bootloaderType" : "openmv_dfu",
             "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : false,
                 "eraseCommands" : ["-a 3"],
                 "programCommands" : [
                     {
@@ -609,6 +613,7 @@
             "bootloaderVidPid" : "37C5:9205",
             "bootloaderType" : "openmv_dfu",
             "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : false,
                 "eraseCommands" : ["-a 3"],
                 "programCommands" : [
                     {
@@ -884,6 +889,7 @@
             "bootloaderVidPid" : "37C5:96E3",
             "bootloaderType" : "openmv_dfu",
             "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : true,
                 "eraseCommands" : ["-a 5"],
                 "programCommands" : [
                     {
@@ -1171,6 +1177,7 @@
             "bootloaderVidPid" : "37C5:9206",
             "bootloaderType" : "openmv_dfu",
             "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : true,
                 "eraseCommands" : ["-a 2"],
                 "programCommands" : [
                     {

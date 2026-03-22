@@ -447,7 +447,8 @@ public slots: // private
                         bool installTheLatestDevelopmentFirmware = false,
                         bool waitForCamera = false,
                         QString previousMapping = QString(),
-                        OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
+                        OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE,
+                        bool forceBootloaderEntry = false);
     void disconnectClicked(bool reset = false, bool enterBootloader = false);
     void startClicked();
     void stopClicked();
@@ -498,7 +499,8 @@ private:
                                   const QJsonObject &originalFallbackBootloaderSettings,
                                   const QString &originalDfuVidPid,
                                   bool dfuNoDialogs,
-                                  OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
+                                  OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE,
+                                  bool forceBootloaderEntry = false);
     void openmvRepairingBootloader(bool forceFlashFSErase,
                                    QString previousMapping,
                                    const QString &originalDfuVidPid,
@@ -512,7 +514,8 @@ private:
                              const QString &firmwarePath,
                              const QString &selectedDfuDevice,
                              OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE,
-                             const QString &extraMessage = QString());
+                             const QString &extraMessage = QString(),
+                             bool forceBootloaderEntry = false);
     void openmvIMXBootloader(const QString &forceFirmwarePath,
                              bool forceFlashFSErase,
                              bool justEraseFlashFs,
@@ -528,7 +531,8 @@ private:
                               bool justEraseFlashFs,
                               Utils::QtcSettings *settings,
                               QString originalFirmwareFolder,
-                              const QString &selectedDfuDevice);
+                              const QString &selectedDfuDevice,
+                              bool forceBootloaderEntry = false);
     void openmvArduinoDFUBootloader(bool forceFlashFSErase,
                                     bool justEraseFlashFs,
                                     bool installTheLatestDevelopmentFirmware,
