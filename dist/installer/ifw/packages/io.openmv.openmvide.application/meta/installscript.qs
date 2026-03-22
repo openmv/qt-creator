@@ -260,7 +260,7 @@ Component.prototype.installerLoaded = function()
         }
     }
 
-    gui.pageById(QInstaller.LicenseCheck).entered.connect(this, Component.prototype.licenseCheckPageEntered);
+    gui.pageById(QInstaller.ReadyForInstallation).entered.connect(this, Component.prototype.readyForInstallPageEntered);
 
     if ( installer.value("os") == "x11" ) {
         if (installer.addWizardPage(component, "LinuxWidget", QInstaller.ReadyForInstallation)) {
@@ -337,7 +337,7 @@ Component.prototype.chooseTarget = function()
     }
 }
 
-Component.prototype.licenseCheckPageEntered = function()
+Component.prototype.readyForInstallPageEntered = function()
 {
     var temp = QDesktopServices.storageLocation(QDesktopServices.TempLocation);
     var dir = installer.value("TargetDir");
