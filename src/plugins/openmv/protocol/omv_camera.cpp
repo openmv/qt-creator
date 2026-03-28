@@ -948,7 +948,7 @@ QString OMVCamera::readStdout()
         }
 
         QByteArray data = channelReadRaw(stdout_id, 0, size);
-        return (data.size() == size) ? QString::fromUtf8(data) : QString();
+        return QString::fromUtf8(data); // handle short reads.
     });
 }
 

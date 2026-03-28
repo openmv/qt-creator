@@ -439,6 +439,8 @@ QVariant OMVTransport::recv_packet(bool poll_events)
                 throw OMVPSequenceException(QString());
             } else if (status == OMVPStatus::TIMEOUT) {
                 throw OMVPTimeoutException(QString());
+            } else if (status == OMVPStatus::FAILED) {
+                return QVariant(packet.payload); // return a short read.
             } else if (status != OMVPStatus::BUSY) {
                 throw OMVPException(QStringLiteral("Command failed with status: %1").arg(status));
             }
