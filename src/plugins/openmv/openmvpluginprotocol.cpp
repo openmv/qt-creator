@@ -779,8 +779,8 @@ QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, b
     }
 
     if ((!notExamples) &&
-        m_boardType.startsWith(QStringLiteral("AE3")) &&
-        m_sensorType.startsWith(QStringLiteral("PAG7936")))
+        (m_boardType.startsWith(QStringLiteral("AE3")) || m_boardType.startsWith(QStringLiteral("N6"))) &&
+        (m_sensorType.startsWith(QStringLiteral("PAG7936")) || m_sensorType.startsWith(QStringLiteral("PS5520"))))
     {
         data = data.replace(QByteArrayLiteral("sensor.set_framesize(sensor.QQVGA)"),
                             QByteArrayLiteral("sensor.set_framesize(sensor.QVGA)"));
