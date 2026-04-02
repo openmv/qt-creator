@@ -258,6 +258,8 @@ void OMVCamera::handleEvent(uint8_t channel_id, uint16_t event)
             event_type = scriptState
             ? QStringLiteral(" (Script Started)")
             : QStringLiteral(" (Script Stopped)");
+            frameEvent = false;
+            lastFrameReady.restart();
             lastScriptRunning.restart();
             lastframeReadyAndScriptRunning.restart();
         }
