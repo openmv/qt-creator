@@ -111,9 +111,9 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_dynamicFrameReadingLock = false;
     m_dynamicFrameReadingPending = false;
 
-    QTimer *timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, &OpenMVPlugin::processEvents);
-    timer->start(1);
+    // Timer is started on connect and stopped on disconnect.
+    m_processEventsTimer = new QTimer(this);
+    connect(m_processEventsTimer, &QTimer::timeout, this, &OpenMVPlugin::processEvents);
 }
 
 static void noShow()

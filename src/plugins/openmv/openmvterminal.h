@@ -102,11 +102,14 @@ protected:
     void resizeEvent(QResizeEvent *event);
     void contextMenuEvent(QContextMenuEvent *event);
     bool focusNextPrevChild(bool next);
+    void focusInEvent(QFocusEvent *event);
+    void focusOutEvent(QFocusEvent *event);
     void paintEvent(QPaintEvent *event);
 
 private:
 
     int m_tabWidth;
+    QTimer *m_cursorBlinkTimer;
     QTextCursor m_textCursor;
 
     enum

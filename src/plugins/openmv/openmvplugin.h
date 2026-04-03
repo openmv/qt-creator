@@ -576,7 +576,7 @@ private:
 
     QElapsedTimer m_timer;
     QQueue<qint64> m_queue;
-
+    QTimer *m_processEventsTimer;
     ScanDriveThread *m_scanDriveThread;
 
     QList<bool> m_boardPresentStringListHistory;

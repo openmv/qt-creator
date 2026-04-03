@@ -3143,6 +3143,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_timer.restart();
         m_queue.clear();
         m_connected = true;
+        m_processEventsTimer->start(1);
         m_running = false;
         m_portName = selectedPort;
         m_portPath = QString();
@@ -3440,6 +3441,7 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             m_timer.restart();
             m_queue.clear();
             m_connected = false;
+        m_processEventsTimer->stop();
             m_running = false;
             m_major = int();
             m_minor = int();

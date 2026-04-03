@@ -85,15 +85,13 @@ MyPlainTextEdit::MyPlainTextEdit(qreal fontPointSizeF, QWidget *parent) : QPlain
     setPalette(p);
 
     m_isCursorVisible = true;
-    QTimer *timer = new QTimer(this);
-    timer->setInterval(500);
+    m_cursorBlinkTimer = new QTimer(this);
+    m_cursorBlinkTimer->setInterval(500);
 
-    connect(timer, &QTimer::timeout, this, [this] {
+    connect(m_cursorBlinkTimer, &QTimer::timeout, this, [this] {
         m_isCursorVisible = !m_isCursorVisible;
         viewport()->update();
     });
-
-    timer->start();
 }
 
 void MyPlainTextEdit::readBytes(const QByteArray &data)
@@ -803,8 +801,21 @@ void MyPlainTextEdit::contextMenuEvent(QContextMenuEvent *event)
 bool MyPlainTextEdit::focusNextPrevChild(bool next)
 {
     Q_UNUSED(next)
-
     return false;
+}
+
+void MyPlainTextEdit::focusInEvent(QFocusEvent *event)
+{
+    m_cursorBlinkTimer->start();
+    QPlainTextEdit::focusInEvent(event);
+}
+
+void MyPlainTextEdit::focusOutEvent(QFocusEvent *event)
+{
+    m_cursorBlinkTimer->stop();
+    m_isCursorVisible = true;
+    viewport()->update();
+    QPlainTextEdit::focusOutEvent(event);
 }
 
 void MyPlainTextEdit::paintEvent(QPaintEvent *event)
