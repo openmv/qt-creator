@@ -1243,6 +1243,8 @@ void OpenMVPluginSerialPort_private::close() {
 
     try {
         m_camera->disconnect();
+        m_v2ProtocolEnabled = false;
+        m_idleTimer->stop();
 
         if (m_camera) {
             delete m_camera;
