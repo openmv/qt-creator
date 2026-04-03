@@ -247,7 +247,7 @@ void OpenMVPluginSerialPort_private::open(const QString &portName) {
         int override_events = obj.value(QStringLiteral("overrideEvents")).toInt(-1);
         if (override_events >= 0) events = bool(override_events);
 
-        double timeout = 5.0;
+        double timeout = 2.0;
         double override_timeout = obj.value(QStringLiteral("overrideTimeout")).toDouble(-1.0);
         if (override_timeout >= 0.0) timeout = override_timeout;
 
@@ -779,6 +779,8 @@ void OpenMVPluginSerialPort_private::getSystemInfoString() {
         emit systemInfoString(false, m_camera->systemInfoString());
     } catch (...) {
         emit systemInfoString(true, QString());
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -800,6 +802,8 @@ void OpenMVPluginSerialPort_private::getHostStatsString() {
         emit hostStatsString(false, info);
     } catch (...) {
         emit hostStatsString(true, QString());
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -825,6 +829,8 @@ void OpenMVPluginSerialPort_private::getDeviceStatsString() {
         emit deviceStatsString(false, info);
     } catch (...) {
         emit deviceStatsString(true, QString());
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -849,6 +855,8 @@ void OpenMVPluginSerialPort_private::getFirmwareVersion() {
         }
     } catch (...) {
         emit firmwareVersion(true, 0, 0, 0);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -865,6 +873,8 @@ void OpenMVPluginSerialPort_private::getJPEGPreferred() {
         emit jpegPreferred(false, b);
     } catch (...) {
         emit jpegPreferred(true, bool());
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -878,6 +888,8 @@ void OpenMVPluginSerialPort_private::getFrameReady() {
         emit frameReady(m_camera->frameReady(true));
     } catch (...) {
         emit frameReady(false);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -897,6 +909,8 @@ void OpenMVPluginSerialPort_private::frameDump() {
         }
     } catch (...) {
         emit frameBufferData(true, QPixmap());
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -958,6 +972,8 @@ void OpenMVPluginSerialPort_private::getArchString() {
         }
     } catch (...) {
         emit archString(true, QString());
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -976,6 +992,8 @@ void OpenMVPluginSerialPort_private::scriptExec(const QByteArray &data) {
         emit scriptExecDone(false);
     } catch (...) {
         emit scriptExecDone(true);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -996,6 +1014,8 @@ void OpenMVPluginSerialPort_private::scriptStop() {
         emit scriptStopDone(false);
     } catch (...) {
         emit scriptStopDone(true);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -1009,6 +1029,8 @@ void OpenMVPluginSerialPort_private::getScriptRunning() {
         emit scriptRunning(false, m_camera->scriptRunning());
     } catch (...) {
         emit scriptRunning(true, false);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -1028,6 +1050,8 @@ void OpenMVPluginSerialPort_private::sysReset(bool enterBootloader) {
         emit sysResetDone(false);
     } catch (...) {
         emit sysResetDone(true);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -1042,6 +1066,8 @@ void OpenMVPluginSerialPort_private::fbEnable(bool enable) {
         emit fbEnableDone(false);
     } catch (...) {
         emit fbEnableDone(true);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -1056,6 +1082,8 @@ void OpenMVPluginSerialPort_private::jpegEnable(bool enable) {
         emit jpegEnableDone(false);
     } catch (...) {
         emit jpegEnableDone(true);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -1070,6 +1098,8 @@ void OpenMVPluginSerialPort_private::getTxBuffer() {
         emit printData(false, s.toUtf8());
     } catch (...) {
         emit printData(true, QByteArray());
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -1089,6 +1119,8 @@ void OpenMVPluginSerialPort_private::sensorId() {
         emit sensorIdDone(false, sensorIds);
     } catch (...) {
         emit sensorIdDone(true, QList<int>());
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -1116,6 +1148,8 @@ void OpenMVPluginSerialPort_private::getState() {
                           frameValid ? frame.pixmap : QPixmap());
     } catch (...) {
         emit getStateDone(true, false, false, false, QByteArray(), QPixmap());
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -1148,6 +1182,8 @@ void OpenMVPluginSerialPort_private::readProfile() {
         emit readProfileDone(false, records);
     } catch (...) {
         emit readProfileDone(true, QList<profile_record_t>());
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -1162,6 +1198,8 @@ void OpenMVPluginSerialPort_private::setProfileMode(int mode) {
         emit setProfileModeDone(false);
     } catch (...) {
         emit setProfileModeDone(true);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -1176,6 +1214,8 @@ void OpenMVPluginSerialPort_private::setEventCounter(int event_num, int event_ty
         emit setEventCounterDone(false);
     } catch (...) {
         emit setEventCounterDone(true);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -1190,6 +1230,8 @@ void OpenMVPluginSerialPort_private::profileReset() {
         emit profileResetDone(false);
     } catch (...) {
         emit profileResetDone(true);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 
@@ -1205,6 +1247,8 @@ void OpenMVPluginSerialPort_private::close() {
         emit closeResponse(false);
     } catch (...) {
         emit closeResponse(true);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
     }
 }
 

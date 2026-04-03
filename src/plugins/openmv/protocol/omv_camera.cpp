@@ -181,7 +181,7 @@ QByteArray OMVCamera::sendCmdWaitResp(uint8_t opcode,
 
     try {
         transport->send_packet(opcode, channel, 0, data);
-        QVariant resp = transport->recv_packet();
+        QVariant resp = transport->recv_packet(false, opcode == OMVPOpcode::CHANNEL_SIZE);
 
         if ((opcode == OMVPOpcode::CHANNEL_LOCK || opcode == OMVPOpcode::CHANNEL_UNLOCK) &&
             resp.canConvert<bool>()) {
@@ -208,7 +208,7 @@ QByteArray OMVCamera::sendCmdWaitResp(uint8_t opcode,
         if (opcode == OMVPOpcode::CHANNEL_SIZE) {
             return QByteArray(4, 0);
         }
-        resync();
+        resync(false); // no grace timeout
         throw OMVPResyncException(QStringLiteral("Resync requested"));
     } catch (const std::exception &e) {
         omvDebug() << "sendCmdWaitResp exception:" << e.what();
@@ -276,7 +276,7 @@ void OMVCamera::handleEvent(uint8_t channel_id, uint16_t event)
     }
 }
 
-void OMVCamera::resync()
+void OMVCamera::resync(bool grace_timeout)
 {
     omvDebug() << "Resynchronizing";
 
@@ -292,7 +292,9 @@ void OMVCamera::resync()
         }
 
         const double graceTimeoutSec = 1.0;
-        const double attemptTimeoutSec = attempt ? graceTimeoutSec : qMax(timeoutSec, graceTimeoutSec);
+        const double attemptTimeoutSec = grace_timeout
+            ? (attempt ? graceTimeoutSec : qMax(timeoutSec, graceTimeoutSec))
+            : 1.0;
         // Use the protocol defaults for the initial connection
         transport = new OMVTransport(serial,
                                      /*crc*/ true,
@@ -926,6 +928,8 @@ QVariantList OMVCamera::readProfile()
 
             channelUnlock(profile_id);
             return records;
+        } catch (const OMVPTimeoutException &e) {
+            throw;
         } catch (...) {
             channelUnlock(profile_id);
             throw;
@@ -1054,6 +1058,8 @@ bool OMVCamera::readFrame(OMVFrame &outFrame)
 
             channelUnlock(stream_id);
             return true;
+        } catch (const OMVPTimeoutException &e) {
+            throw;
         } catch (...) {
             channelUnlock(stream_id);
             throw;

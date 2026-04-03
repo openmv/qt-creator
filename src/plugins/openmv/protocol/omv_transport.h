@@ -74,7 +74,7 @@ public:
             QVariant(true)        -> True (ACK only)
             QVariant(QByteArray)  -> bytes payload
     */
-    QVariant recv_packet(bool poll_events = false);
+    QVariant recv_packet(bool poll_events = false, bool short_timeout = false);
 
     typedef struct _stats {
         uint32_t sent;

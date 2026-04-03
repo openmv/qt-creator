@@ -162,7 +162,7 @@ private:
     }
 
     void handleEvent(uint8_t channel_id, uint16_t event);
-    void resync();
+    void resync(bool grace_timeout = true);
 
     QByteArray sendCmdWaitResp(uint8_t opcode,
                                uint8_t channel = 0,

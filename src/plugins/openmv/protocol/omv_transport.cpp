@@ -289,7 +289,7 @@ void OMVTransport::send_packet(uint8_t opcode,
     stats.sent += 1;
 }
 
-QVariant OMVTransport::recv_packet(bool poll_events)
+QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout)
 {
     /*
         Receive and parse a packet from the camera with NAK handling
@@ -302,7 +302,7 @@ QVariant OMVTransport::recv_packet(bool poll_events)
     QElapsedTimer timer;
     timer.start();
 
-    const qint64 timeout_ms = qint64(timeout * 1000.0);
+    const qint64 timeout_ms = short_timeout ? 1000.0 : qint64(timeout * 1000.0);
 
     while (timer.elapsed() < timeout_ms) {
         serial->waitForReadyRead(1);
