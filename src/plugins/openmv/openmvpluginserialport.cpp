@@ -1241,9 +1241,19 @@ void OpenMVPluginSerialPort_private::close() {
         return;
     }
 
-    m_camera->disconnect();
-
     try {
+        m_camera->disconnect();
+
+        if (m_camera) {
+            delete m_camera;
+            m_camera = Q_NULLPTR;
+        }
+
+        if (m_port) {
+            delete m_port;
+            m_port = Q_NULLPTR;
+        }
+
         emit closeResponse(false);
     } catch (...) {
         emit closeResponse(true);

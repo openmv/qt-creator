@@ -3311,6 +3311,18 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
         {
             m_working = true;
 
+            m_jpgCompress->setVisible(false);
+
+            if (!m_boardType.isEmpty() && m_iodevice->v2ProtocolEnabled())
+            {
+                Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+
+                settings->beginGroup(SETTINGS_GROUP);
+                settings->setValue(QString((JPG_COMPRESS_STATE "_") + m_boardType).toUtf8(),
+                                   m_jpgCompress->isChecked());
+                settings->endGroup();
+            }
+
             // Stopping ///////////////////////////////////////////////////////
             {
                 QEventLoop loop;
@@ -3413,18 +3425,6 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
                 m_iodevice->close();
 
                 loop.exec();
-            }
-
-            m_jpgCompress->setVisible(false);
-
-            if (!m_boardType.isEmpty() && m_iodevice->v2ProtocolEnabled())
-            {
-                Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-
-                settings->beginGroup(SETTINGS_GROUP);
-                settings->setValue(QString((JPG_COMPRESS_STATE "_") + m_boardType).toUtf8(),
-                                   m_jpgCompress->isChecked());
-                settings->endGroup();
             }
 
             ///////////////////////////////////////////////////////////////////
