@@ -3119,6 +3119,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             bool jpgCompress = settings->value(QString((JPG_COMPRESS_STATE "_") + m_boardType).toUtf8(),
                                                jpegPreferred).toBool();
             settings->endGroup();
+            // FORCE PREFFERED ON CONNECT
+            jpgCompress = jpegPreferred;
 
             m_jpgCompress->setChecked(jpgCompress);
             m_iodevice->jpegEnable(jpgCompress);

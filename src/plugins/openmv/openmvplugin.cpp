@@ -1934,7 +1934,7 @@ void OpenMVPlugin::extensionsInitialized()
     });
 
     m_jpgCompress = new QToolButton;
-    m_jpgCompress->setText(Tr::tr("JPG"));
+    m_jpgCompress->setText(Tr::tr("JPG Mode"));
     m_jpgCompress->setToolTip(Tr::tr("JPEG compress the Frame Buffer for higher performance"));
     m_jpgCompress->setCheckable(true);
     m_jpgCompress->setChecked(true);
@@ -1957,6 +1957,10 @@ void OpenMVPlugin::extensionsInitialized()
                 });
             }
         }
+    });
+    // TEXT UPDATE
+    connect(m_jpgCompress, &QToolButton::toggled, this, [this] (bool checked) {
+        m_jpgCompress->setText(checked ? Tr::tr("JPG Mode") : Tr::tr("RAW Mode"));
     });
 
     Utils::ElidingLabel *disableLabel = new Utils::ElidingLabel(Tr::tr("Frame Buffer Disabled - click the disable button again to enable (top right)"));
