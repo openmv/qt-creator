@@ -580,57 +580,53 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     // Scan examples.
     {
         QThread *thread = new QThread;
-        LoadFolderThread *loadFolderThread = new LoadFolderThread(Core::ICore::allUsersResourcePath(QStringLiteral("examples")).toString(), true);
-        loadFolderThread->moveToThread(thread);
-        QTimer *timer = new QTimer(this);
+        examplesLoadFolderThread = new LoadFolderThread(Core::ICore::allUsersResourcePath(QStringLiteral("examples")).toString(), true);
+        examplesLoadFolderThread->moveToThread(thread);
+        m_scanExamplesTimer = new QTimer(this);
 
-        connect(timer, &QTimer::timeout,
-                loadFolderThread, &LoadFolderThread::loadFolderSlot);
+        connect(m_scanExamplesTimer, &QTimer::timeout,
+                examplesLoadFolderThread, &LoadFolderThread::loadFolderSlot);
 
-        connect(loadFolderThread, &LoadFolderThread::folderLoaded, this, [this] (const importDataList_t &output) {
+        connect(examplesLoadFolderThread, &LoadFolderThread::folderLoaded, this, [this] (const importDataList_t &output) {
             m_exampleModules = output;
         });
 
         connect(this, &OpenMVPlugin::destroyed,
-                loadFolderThread, &LoadFolderThread::deleteLater);
+                examplesLoadFolderThread, &LoadFolderThread::deleteLater);
 
-        connect(loadFolderThread, &LoadFolderThread::destroyed,
+        connect(examplesLoadFolderThread, &LoadFolderThread::destroyed,
                 thread, &QThread::quit);
 
         connect(thread, &QThread::finished,
                 thread, &QThread::deleteLater);
 
         thread->start();
-        timer->start(FOLDER_SCAN_TIME);
-        QTimer::singleShot(0, loadFolderThread, &LoadFolderThread::loadFolderSlot);
     }
 
     // Scan documents folder.
     {
         QThread *thread = new QThread;
-        LoadFolderThread *loadFolderThread = new LoadFolderThread(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV"), false);
-        loadFolderThread->moveToThread(thread);
-        QTimer *timer = new QTimer(this);
+        documentsLoadFolderThread = new LoadFolderThread(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV"), false);
+        documentsLoadFolderThread->moveToThread(thread);
+        m_scanDocumentsTimer = new QTimer(this);
 
-        connect(timer, &QTimer::timeout,
-                loadFolderThread, &LoadFolderThread::loadFolderSlot);
+        connect(m_scanDocumentsTimer, &QTimer::timeout,
+                documentsLoadFolderThread, &LoadFolderThread::loadFolderSlot);
 
-        connect(loadFolderThread, &LoadFolderThread::folderLoaded, this, [this] (const importDataList_t &output) {
+        connect(documentsLoadFolderThread, &LoadFolderThread::folderLoaded, this, [this] (const importDataList_t &output) {
             m_documentsModules = output;
         });
 
         connect(this, &OpenMVPlugin::destroyed,
-                loadFolderThread, &LoadFolderThread::deleteLater);
+                documentsLoadFolderThread, &LoadFolderThread::deleteLater);
 
-        connect(loadFolderThread, &LoadFolderThread::destroyed,
+        connect(documentsLoadFolderThread, &LoadFolderThread::destroyed,
                 thread, &QThread::quit);
 
         connect(thread, &QThread::finished,
                 thread, &QThread::deleteLater);
 
         thread->start();
-        timer->start(FOLDER_SCAN_TIME);
-        QTimer::singleShot(0, loadFolderThread, &LoadFolderThread::loadFolderSlot);
     }
 
     ///////////////////////////////////////////////////////////////////////////
@@ -905,6 +901,23 @@ void OpenMVPlugin::extensionsInitialized()
     m_enableSyncingImportsAction->setCheckable(true);
     m_enableSyncingImportsAction->setChecked(false);
     m_enableSyncingImportsAction->setDisabled(false);
+    connect(m_enableSyncingImportsAction, &QAction::toggled, this, [this] (bool checked) {
+        if (checked)
+        {
+            m_scanExamplesTimer->start(FOLDER_SCAN_TIME);
+            m_scanDocumentsTimer->start(FOLDER_SCAN_TIME);
+
+            QTimer::singleShot(0, examplesLoadFolderThread, &LoadFolderThread::loadFolderSlot);
+            QTimer::singleShot(0, documentsLoadFolderThread, &LoadFolderThread::loadFolderSlot);
+        }
+        else
+        {
+            m_scanExamplesTimer->stop();
+            m_scanDocumentsTimer->stop();
+        }
+    });
+    // DISABLED
+    m_enableSyncingImportsAction->setVisible(false);
 
     m_enableFilteringExamplesAction = new QAction(Tr::tr("Filter examples by board and sensor type"), this);
     m_enableFilteringExamplesAction->setToolTip(Tr::tr("Only show examples that are relevant for your board and sensor type."));

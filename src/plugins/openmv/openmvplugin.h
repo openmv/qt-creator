@@ -578,6 +578,10 @@ private:
     QQueue<qint64> m_queue;
     QTimer *m_processEventsTimer;
     ScanDriveThread *m_scanDriveThread;
+    LoadFolderThread *examplesLoadFolderThread;
+    QTimer *m_scanExamplesTimer;
+    LoadFolderThread *documentsLoadFolderThread;
+    QTimer *m_scanDocumentsTimer;
 
     QList<bool> m_boardPresentStringListHistory;
     QList<bool> m_boardPresentDFUDevicesHistory;
