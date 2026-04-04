@@ -225,7 +225,61 @@ HardwareMonitor::~HardwareMonitor()
     UnregisterClassW(kWindowClassName, GetModuleHandleW(nullptr));
 }
 
-#else // !Q_OS_MAC && !Q_OS_WIN
+#elif defined(Q_OS_LINUX)
+
+#include <unistd.h>
+
+HardwareMonitor::HardwareMonitor(QObject *parent)
+    : QObject(parent)
+    , m_netlinkFd(-1)
+    , m_netlinkNotifier(nullptr)
+{
+    m_netlinkFd = socket(AF_NETLINK, SOCK_DGRAM | SOCK_NONBLOCK | SOCK_CLOEXEC,
+                         NETLINK_KOBJECT_UEVENT);
+    if (m_netlinkFd < 0)
+        return;
+
+    struct sockaddr_nl addr = {};
+    addr.nl_family = AF_NETLINK;
+    addr.nl_pid = 0;
+    // UEVENT_KERNEL_MCAST_GRP = 1 — receive kernel uevent broadcasts
+    addr.nl_groups = 1;
+
+    if (bind(m_netlinkFd, reinterpret_cast<struct sockaddr *>(&addr), sizeof(addr)) < 0) {
+        close(m_netlinkFd);
+        m_netlinkFd = -1;
+        return;
+    }
+
+    m_netlinkNotifier = new QSocketNotifier(m_netlinkFd, QSocketNotifier::Read, this);
+    connect(m_netlinkNotifier, &QSocketNotifier::activated,
+            this, &HardwareMonitor::onNetlinkEvent);
+}
+
+void HardwareMonitor::onNetlinkEvent()
+{
+    // Drain all pending messages from the socket
+    char buf[4096];
+    while (recv(m_netlinkFd, buf, sizeof(buf), MSG_DONTWAIT) > 0) {
+        // just drain
+    }
+
+    emit hardwareEventDetected();
+}
+
+HardwareMonitor::~HardwareMonitor()
+{
+    if (m_netlinkNotifier) {
+        m_netlinkNotifier->setEnabled(false);
+    }
+
+    if (m_netlinkFd >= 0) {
+        close(m_netlinkFd);
+        m_netlinkFd = -1;
+    }
+}
+
+#else // Unsupported platform
 
 HardwareMonitor::HardwareMonitor(QObject *parent)
     : QObject(parent)

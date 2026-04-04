@@ -2855,9 +2855,9 @@ bool OpenMVPlugin::delayedInitialize()
         QTimer::singleShot(0, m_scanDriveThread, &ScanDriveThread::scanDrivesSlot);
     }
 
-    // Scan Window (hardware-event-driven, macOS and Windows)
+    // Scan Window (hardware-event-driven, macOS, Windows, and Linux)
     {
-#if defined(Q_OS_MAC) || defined(Q_OS_WIN)
+#if defined(Q_OS_MAC) || defined(Q_OS_WIN) || defined(Q_OS_LINUX)
         QTimer *scanWindowTimer = new QTimer(this);
         scanWindowTimer->setSingleShot(true);
 

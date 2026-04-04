@@ -43,6 +43,9 @@
 #include <DiskArbitration/DiskArbitration.h>
 
 #include <IOKit/IOKitLib.h>
+#elif defined(Q_OS_LINUX)
+#include <sys/socket.h>
+#include <linux/netlink.h>
 #endif
 
 namespace OpenMV {
@@ -76,6 +79,11 @@ private:
 
     static LRESULT __stdcall windowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
     static const wchar_t *kWindowClassName;
+#elif defined(Q_OS_LINUX)
+    int m_netlinkFd;
+    QSocketNotifier *m_netlinkNotifier;
+
+    void onNetlinkEvent();
 #endif
 };
 
