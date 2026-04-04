@@ -102,6 +102,7 @@
 #include "tools/dfu-util.h"
 #include "tools/driveserialnumber.h"
 #include "tools/edgeimpulse.h"
+#include "tools/hardwaremonitor.h"
 #include "tools/imx.h"
 #include "tools/keypointseditor.h"
 #include "tools/myqserialportinfo.h"
@@ -578,6 +579,9 @@ private:
     QQueue<qint64> m_queue;
     QTimer *m_processEventsTimer;
     ScanDriveThread *m_scanDriveThread;
+    HardwareMonitor *m_hardwareMonitor;
+    QTimer *m_serialScanTimer;
+    QTimer *m_driveScanTimer;
     LoadFolderThread *examplesLoadFolderThread;
     QTimer *m_scanExamplesTimer;
     LoadFolderThread *documentsLoadFolderThread;

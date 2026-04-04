@@ -2737,14 +2737,18 @@ bool OpenMVPlugin::delayedInitialize()
         }
     });
 
+    m_hardwareMonitor = new HardwareMonitor(this);
+    m_serialScanTimer = nullptr;
+    m_driveScanTimer = nullptr;
+
     // Scan Serial Ports
     {
         QThread *thread = new QThread;
         ScanSerialPortsThread *scanSerialPortsThread = new ScanSerialPortsThread(QJsonDocument(m_firmwareSettings), QString(m_serialNumberFilter));
         scanSerialPortsThread->moveToThread(thread);
-        QTimer *timer = new QTimer(this);
+        m_serialScanTimer = new QTimer(this);
 
-        connect(timer, &QTimer::timeout, scanSerialPortsThread, [this, scanSerialPortsThread] () {
+        connect(m_serialScanTimer, &QTimer::timeout, scanSerialPortsThread, [this, scanSerialPortsThread] () {
             if (!m_connected) {
                 scanSerialPortsThread->scanSerialPortsSlot();
             }
@@ -2816,7 +2820,7 @@ bool OpenMVPlugin::delayedInitialize()
                 thread, &QThread::deleteLater);
 
         thread->start();
-        timer->start(1000);
+        m_serialScanTimer->start(1000);
         QTimer::singleShot(0, scanSerialPortsThread, &ScanSerialPortsThread::scanSerialPortsSlot);
     }
 
@@ -2825,9 +2829,9 @@ bool OpenMVPlugin::delayedInitialize()
         QThread *thread = new QThread;
         m_scanDriveThread = new ScanDriveThread();
         m_scanDriveThread->moveToThread(thread);
-        QTimer *timer = new QTimer(this);
+        m_driveScanTimer = new QTimer(this);
 
-        connect(timer, &QTimer::timeout, m_scanDriveThread, [this] () {
+        connect(m_driveScanTimer, &QTimer::timeout, m_scanDriveThread, [this] () {
             if (!m_connected || m_availableDrives.isEmpty()) {
                 m_scanDriveThread->scanDrivesSlot();
             }
@@ -2847,8 +2851,32 @@ bool OpenMVPlugin::delayedInitialize()
                 thread, &QThread::deleteLater);
 
         thread->start();
-        timer->start(1000);
+        m_driveScanTimer->start(1000);
         QTimer::singleShot(0, m_scanDriveThread, &ScanDriveThread::scanDrivesSlot);
+    }
+
+    // Scan Window (hardware-event-driven, macOS only)
+    {
+#ifdef Q_OS_MAC
+        QTimer *scanWindowTimer = new QTimer(this);
+        scanWindowTimer->setSingleShot(true);
+
+        // Stop both scan timers when the window expires
+        connect(scanWindowTimer, &QTimer::timeout, this, [this]() {
+            m_serialScanTimer->stop();
+            m_driveScanTimer->stop();
+        });
+
+        // Restart window on any hardware event (USB plug/unplug, disk mount/dismount)
+        connect(m_hardwareMonitor, &HardwareMonitor::hardwareEventDetected, this, [this, scanWindowTimer]() {
+            if (!m_serialScanTimer->isActive()) m_serialScanTimer->start(1000);
+            if (!m_driveScanTimer->isActive()) m_driveScanTimer->start(1000);
+            scanWindowTimer->start(10000); // restart/extend 10-second window
+        });
+
+        // Initial 10-second startup window (timers already running from blocks above)
+        scanWindowTimer->start(10000);
+#endif
     }
 
     if(!socket->bind(OPENMVCAM_BROADCAST_PORT))

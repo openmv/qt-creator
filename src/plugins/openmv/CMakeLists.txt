@@ -36,6 +36,7 @@ add_qtc_plugin(OpenMV
     tools/bossac.cpp tools/bossac.h
     tools/dfu-util.cpp tools/dfu-util.h
     tools/edgeimpulse.cpp tools/edgeimpulse.h
+    tools/hardwaremonitor.cpp tools/hardwaremonitor.h
     tools/imx.cpp tools/imx.h
     tools/keypointseditor.cpp tools/keypointseditor.h
     tools/mpy-cross.cpp tools/mpy-cross.h
@@ -115,5 +116,13 @@ else()
         zlib/trees.c
         zlib/uncompr.c
         zlib/zutil.c
+    )
+endif()
+
+if (APPLE)
+    target_link_libraries(OpenMV PRIVATE
+        "-framework IOKit"
+        "-framework CoreFoundation"
+        "-framework DiskArbitration"
     )
 endif()
