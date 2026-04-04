@@ -31,11 +31,17 @@
 #ifndef HARDWAREMONITOR_H
 #define HARDWAREMONITOR_H
 
+#ifdef _WIN32
+#include <windows.h>
+#include <dbt.h>
+#endif
+
 #include <QtCore>
 
 #if defined(Q_OS_MAC)
 #include <CoreFoundation/CoreFoundation.h>
 #include <DiskArbitration/DiskArbitration.h>
+
 #include <IOKit/IOKitLib.h>
 #endif
 
@@ -64,6 +70,12 @@ private:
     static void usbDeviceRemoved(void *refCon, io_iterator_t iterator);
     static void diskAppeared(DADiskRef disk, void *context);
     static void diskDisappeared(DADiskRef disk, void *context);
+#elif defined(Q_OS_WIN)
+    HWND m_hwnd;
+    HDEVNOTIFY m_hDevNotify;
+
+    static LRESULT __stdcall windowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+    static const wchar_t *kWindowClassName;
 #endif
 };
 

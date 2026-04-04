@@ -85,7 +85,7 @@ target_sources(OpenMV
 target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::GuiPrivate)
 
 if (WIN32)
-    target_link_libraries(OpenMV PRIVATE setupapi cfgmgr32)
+    target_link_libraries(OpenMV PRIVATE setupapi cfgmgr32 user32)
     target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::ZlibPrivate)
 else()
     extend_qtc_plugin(OpenMV

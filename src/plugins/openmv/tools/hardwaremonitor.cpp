@@ -155,7 +155,77 @@ HardwareMonitor::~HardwareMonitor()
     }
 }
 
-#else // !Q_OS_MAC
+#elif defined(Q_OS_WIN)
+
+const wchar_t *HardwareMonitor::kWindowClassName = L"OpenMVHardwareMonitorClass";
+
+LRESULT __stdcall HardwareMonitor::windowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+    if (msg == WM_DEVICECHANGE) {
+        if (wParam == DBT_DEVICEARRIVAL || wParam == DBT_DEVICEREMOVECOMPLETE) {
+            HardwareMonitor *monitor = reinterpret_cast<HardwareMonitor *>(
+                GetWindowLongPtrW(hwnd, GWLP_USERDATA));
+            if (monitor) {
+                QMetaObject::invokeMethod(monitor, "hardwareEventDetected",
+                                          Qt::QueuedConnection);
+            }
+        }
+        return TRUE;
+    }
+    return DefWindowProcW(hwnd, msg, wParam, lParam);
+}
+
+HardwareMonitor::HardwareMonitor(QObject *parent)
+    : QObject(parent)
+    , m_hwnd(nullptr)
+    , m_hDevNotify(nullptr)
+{
+    // Register a window class for our message-only window
+    WNDCLASSW wc = {};
+    wc.lpfnWndProc = windowProc;
+    wc.hInstance = GetModuleHandleW(nullptr);
+    wc.lpszClassName = kWindowClassName;
+    RegisterClassW(&wc);
+
+    // Create message-only window (HWND_MESSAGE = no visible window)
+    m_hwnd = CreateWindowExW(
+        0, kWindowClassName, L"OpenMV HW Monitor",
+        0, 0, 0, 0, 0,
+        HWND_MESSAGE, nullptr, GetModuleHandleW(nullptr), nullptr);
+
+    if (m_hwnd) {
+        // Store 'this' pointer for the window proc
+        SetWindowLongPtrW(m_hwnd, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(this));
+
+        // Register for USB device interface notifications
+        // GUID_DEVINTERFACE_USB_DEVICE = {A5DCBF10-6530-11D2-901F-00C04FB951ED}
+        DEV_BROADCAST_DEVICEINTERFACE_W filter = {};
+        filter.dbcc_size = sizeof(filter);
+        filter.dbcc_devicetype = DBT_DEVTYP_DEVICEINTERFACE;
+        filter.dbcc_classguid = {0xA5DCBF10, 0x6530, 0x11D2,
+                                 {0x90, 0x1F, 0x00, 0xC0, 0x4F, 0xB9, 0x51, 0xED}};
+
+        m_hDevNotify = RegisterDeviceNotificationW(
+            m_hwnd, &filter, DEVICE_NOTIFY_WINDOW_HANDLE);
+    }
+}
+
+HardwareMonitor::~HardwareMonitor()
+{
+    if (m_hDevNotify) {
+        UnregisterDeviceNotification(m_hDevNotify);
+        m_hDevNotify = nullptr;
+    }
+
+    if (m_hwnd) {
+        DestroyWindow(m_hwnd);
+        m_hwnd = nullptr;
+    }
+
+    UnregisterClassW(kWindowClassName, GetModuleHandleW(nullptr));
+}
+
+#else // !Q_OS_MAC && !Q_OS_WIN
 
 HardwareMonitor::HardwareMonitor(QObject *parent)
     : QObject(parent)
