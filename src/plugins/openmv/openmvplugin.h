@@ -223,7 +223,7 @@
 #define OPEN_TERMINAL_COMMAND_STR "CommandStr"
 #define OPEN_TERMINAL_COMMAND_VAL "CommandVal"
 
-#define RECONNECTS_MAX 10
+#define RECONNECTS_MAX 2
 #define OLD_API_MAJOR 1
 #define OLD_API_MINOR 7
 #define OLD_API_PATCH 0
