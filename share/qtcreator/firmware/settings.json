@@ -1105,6 +1105,101 @@
         },
         {
             "hidden" : true,
+            "boardType" : "AE3",
+            "boardArchString" : "OPENMV AE3 SBL2",
+            "boardDisplayName" : "OpenMV AE3 SBL2",
+            "boardFirmwareFolder" : "OPENMV_AE3",
+            "highSpeed" : true,
+            "boardVidPid" : "37C5:16E3",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.lst",
+            "bootloaderVidPid" : "1A86:55D3",
+            "bootloaderType" : "alif_tools",
+            "bootloaderSettings" : {
+                "global-cfg.db" : {
+                    "DEVICE": {
+                        "Revision": "B4",
+                        "Part#": "E3 (AE302F80F55D5LE) - 5.5 MRAM / 13.5 SRAM"
+                    },
+                    "MRAM-BURNER": {
+                        "Interface": "isp",
+                        "Jtag-adapter": "J-Link"
+                    }
+                },
+                "dfuBootloaderProgramCommand" : {
+                    "images": "../build/bootloader.bin 0x80000000 ../build/firmware_pad.toc 0x8057E000",
+                    "bootloaderVidPid": "37C5:96E3"
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "High Performance Core",
+                    "size" : 25165824,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "vela",
+                        "args" : [
+                            "--system-config RTSS_HP_SRAM_OSPI",
+                            "--accelerator-config ethos-u55-256",
+                            "--memory-mode Shared_Sram"
+                        ],
+                        "heapSize" : 4194304,
+                        "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    }
+                },
+                {
+                    "name" : "High Efficiency Core",
+                    "size" : 1048576,
+                    "index" : 1,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "vela",
+                        "args" : [
+                            "--system-config RTSS_HE_SRAM_MRAM",
+                            "--accelerator-config ethos-u55-128",
+                            "--memory-mode Shared_Sram"
+                        ],
+                        "heapSize" : 2097152,
+                        "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    }
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : true,
             "boardType" : "N6",
             "boardArchString" : "OpenMV N6",
             "boardDisplayName" : "OpenMV N6 (STM32N657)",
