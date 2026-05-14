@@ -87,6 +87,8 @@ NPY_NO_EXPORT  int PyUFunc_AddWrappingLoop \
        (PyObject *, PyArray_DTypeMeta *new_dtypes[], PyArray_DTypeMeta *wrapped_dtypes[], PyArrayMethod_TranslateGivenDescriptors *, PyArrayMethod_TranslateLoopDescriptors *);
 NPY_NO_EXPORT  int PyUFunc_GiveFloatingpointErrors \
        (const char *, int);
+NPY_NO_EXPORT  int PyUFunc_AddLoopsFromSpecs \
+       (PyUFunc_LoopSlot *);
 
 #else
 
@@ -249,9 +251,16 @@ static void **PyUFunc_API=NULL;
     PyUFunc_API[46])
 #endif
 
+#if NPY_FEATURE_VERSION >= NPY_2_4_API_VERSION
+#define PyUFunc_AddLoopsFromSpecs \
+        (*(int (*)(PyUFunc_LoopSlot *)) \
+    PyUFunc_API[47])
+#endif
+
 static inline int
 _import_umath(void)
 {
+  PyObject *c_api;
   PyObject *numpy = PyImport_ImportModule("numpy._core._multiarray_umath");
   if (numpy == NULL && PyErr_ExceptionMatches(PyExc_ModuleNotFoundError)) {
     PyErr_Clear();
@@ -264,7 +273,7 @@ _import_umath(void)
       return -1;
   }
 
-  PyObject *c_api = PyObject_GetAttrString(numpy, "_UFUNC_API");
+  c_api = PyObject_GetAttrString(numpy, "_UFUNC_API");
   Py_DECREF(numpy);
   if (c_api == NULL) {
       PyErr_SetString(PyExc_AttributeError, "_UFUNC_API not found");

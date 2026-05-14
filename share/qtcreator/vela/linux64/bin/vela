@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/home/kwagyeman/github/openmv-ide/qt-creator/share/qtcreator/python/linux-x86_64/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
