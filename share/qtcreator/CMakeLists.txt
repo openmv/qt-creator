@@ -154,7 +154,7 @@ if(UNIX AND NOT APPLE)
         stcubeprogrammer/linux64
         pydfu)
       set(downloaded_resource_directories
-        https://download.openmv.io/stedgeai/stedgeai-linux64-3.0.0.tar.gz
+        https://download.openmv.io/stedgeai/stedgeai-linux64-4.0.0.tar.gz
         https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz)
     endif()
   else()
