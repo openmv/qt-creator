@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2020-2021, 2023-2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2020-2021, 2023-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -305,7 +305,6 @@ def create_lut_rsqrt_int8_op(op):
     quantized_min = min(ix)
     quantized_max = max(ix)
 
-    # Any value close to 0 (zero index in LUT) is mapped to the max output value
     values = [quantized_max]
     for x in ix:
         if x == -128:
@@ -313,9 +312,14 @@ def create_lut_rsqrt_int8_op(op):
             continue
         # Rsqrt is only defined for positive values
         x_real = max(0, x - zp_in)
-        val = RSQRT_LUT[x_real]
-        val = fp_math.multiply_by_quantized_multiplier(val, output_multiplier, output_shift - kshift) + zp_out
-        lut_result = min(quantized_max, max(quantized_min, val))
+        if x_real == 0:
+            # Any value close to 0 (zero index in LUT) is mapped to the max output value
+            lut_result = quantized_max
+        else:
+            val = RSQRT_LUT[x_real]
+            val = fp_math.multiply_by_quantized_multiplier(val, output_multiplier, output_shift - kshift) + zp_out
+            lut_result = min(quantized_max, max(quantized_min, val))
+
         values.append(lut_result)
 
     return convert_to_lut(op, values, "rsqrt")

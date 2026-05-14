@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2020-2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2020-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -292,7 +292,7 @@ def _estimate_output_cycles_per_element(arch, op_type: Op, faf_type: Op, query: 
 
     if faf_type in (Op.Sigmoid, Op.Tanh, Op.LUT):
         activation_perf_index = 0
-    elif faf_type in (Op.Relu, Op.Relu6, Op.ReluN1To1):
+    elif faf_type in (Op.Relu, Op.Relu6, Op.Relu0To1, Op.ReluN1To1):
         activation_perf_index = 1
     else:
         activation_perf_index = 2

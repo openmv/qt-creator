@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2020-2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2020-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -277,27 +277,19 @@ class ArchitectureFeatures:
 
         self.system_config = system_config
         self.memory_mode = memory_mode
-        axi_port_data_width = np.ones(MemArea.Size)
+
         if self.is_ethos_u85_system:
             self.max_outstanding_dma = 4
             axi_port_address_width = 40
-            # axi-port data-width depends on the number of interfaces in each config
-            if self.accelerator_config == Accelerator.Ethos_U85_2048:
-                axi_port_data_width = [128 * 2 for i in range(MemArea.Size)]
-                axi_port_data_width[MemArea.Sram] = 128 * 4
-            elif self.accelerator_config == Accelerator.Ethos_U85_1024:
-                axi_port_data_width = [128 * 2 for i in range(MemArea.Size)]
-            else:
-                axi_port_data_width = [128 for i in range(MemArea.Size)]
-                axi_port_data_width[MemArea.Sram] = 128 * 2
+            axi_port_bytes_per_cycle = np.full(MemArea.Size, 16.0)
         elif self.is_ethos_u65_system:
             self.max_outstanding_dma = 2
             axi_port_address_width = 40
-            axi_port_data_width = [128 for i in range(MemArea.Size)]
+            axi_port_bytes_per_cycle = np.full(MemArea.Size, 16.0)
         elif self.is_ethos_u55_system:
             self.max_outstanding_dma = 1
             axi_port_address_width = 32
-            axi_port_data_width = [64 for i in range(MemArea.Size)]
+            axi_port_bytes_per_cycle = np.full(MemArea.Size, 8.0)
         else:
             assert False, f"Unsupported accelerator_config = {self.accelerator_config}"
 
@@ -305,9 +297,7 @@ class ArchitectureFeatures:
 
         self._get_vela_config(vela_config_files, verbose_config, arena_cache_size)
 
-        self.memory_bandwidths_per_cycle = (
-            np.array([a * b for a, b in zip(axi_port_data_width, self.memory_clock_scales)]) / 8
-        )
+        self.memory_bandwidths_per_cycle = axi_port_bytes_per_cycle * self.memory_ports_used * self.memory_clock_scales
         self.memory_bandwidths_per_second = self.memory_bandwidths_per_cycle * self.core_clock
 
         self.tensor_storage_mem_area = {
@@ -586,6 +576,7 @@ class ArchitectureFeatures:
         self.axi0_port = MemArea(1)
         self.axi1_port = MemArea(1)
         self.memory_clock_scales = np.ones(MemArea.Size)
+        self.memory_ports_used = np.ones(MemArea.Size, int)
         self.memory_burst_length = np.ones(MemArea.Size, int)
         self.memory_latency = np.zeros((MemArea.Size, BandwidthDirection.Size), int)
         self.const_mem_area = MemPort(1)
@@ -637,6 +628,10 @@ class ArchitectureFeatures:
                         sys_cfg_section, mem_area.name + "_clock_scale", self.memory_clock_scales[mem_area]
                     )
                 )
+                ports_used = int(
+                    self._read_config(sys_cfg_section, mem_area.name + "_ports_used", self.memory_ports_used[mem_area])
+                )
+                self.memory_ports_used[mem_area] = max(1, ports_used)
                 self.memory_burst_length[mem_area] = int(
                     self._read_config(
                         sys_cfg_section, mem_area.name + "_burst_length", self.memory_burst_length[mem_area]
@@ -709,6 +704,7 @@ class ArchitectureFeatures:
                     self.axi0_port = MemArea.OnChipFlash
                 self.memory_clock_scales[MemArea.OnChipFlash] = self.memory_clock_scales[MemArea.Sram]
                 self.memory_burst_length[MemArea.OnChipFlash] = self.memory_burst_length[MemArea.Sram]
+                self.memory_ports_used[MemArea.OnChipFlash] = self.memory_ports_used[MemArea.Sram]
                 self.memory_latency[MemArea.OnChipFlash] = self.memory_latency[MemArea.Sram]
 
         # override sram usage
@@ -758,6 +754,7 @@ class ArchitectureFeatures:
             print(f"   axi1_port = {self.axi1_port.name}")
             for mem in (MemArea.Sram, MemArea.Dram, MemArea.OnChipFlash, MemArea.OffChipFlash):
                 print(f"   {mem.name}_clock_scales = {self.memory_clock_scales[mem]}")
+                print(f"   {mem.name}_ports_used = {self.memory_ports_used[mem]}")
                 print(f"   {mem.name}_burst_length = {self.memory_burst_length[mem]}")
                 print(f"   {mem.name}_read_latency = {self.memory_latency[mem][BandwidthDirection.Read]}")
                 print(f"   {mem.name}_write_latency = {self.memory_latency[mem][BandwidthDirection.Write]}")

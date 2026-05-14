@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2020-2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2020-2023, 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -149,9 +149,9 @@ def print_allocation(lrs, mem_area, mem_type_set, tensor_allocator, sg, actual_m
     min_mem_usage_for_alloc = max(memory_hist)
     print(
         f"{'Start Time':>10s} - {'End Time':>10s}: {'Start Addr':>10s} - {'End Addr':>10s}: {'Tensor Size':>11s}:"
-        f" {'Memory Usage':>12s}: {'Purpose':12s}: Name"
+        f" {'Memory Usage':>12s}: {'Purpose':12s}: {'Format':18s}: Name"
     )
-    for start_time, end_time, size, start_addr, end_addr, purpose, name in sorted(
+    for start_time, end_time, size, start_addr, end_addr, purpose, format, name in sorted(
         (
             lr.start_time,
             lr.end_time,
@@ -159,13 +159,14 @@ def print_allocation(lrs, mem_area, mem_type_set, tensor_allocator, sg, actual_m
             tens.address,
             tens.address + lr.size,
             tens.purpose,
+            tens.format.name,
             tens.name,
         )
         for tens, lr in lrs.ranges.items()
     ):
         print(
             f"{start_time:10d} - {end_time:10d}: {start_addr:#10x} - {end_addr:#10x}: {size:11d}:"
-            f" {max(memory_hist[start_time:end_time+1]):12d}: {purpose.display_name():12s}: {name:s}"
+            f" {max(memory_hist[start_time:end_time+1]):12d}: {purpose.display_name():12s}: {format:18s}: {name:s}"
         )
 
     alloc_overhead_fraction = (actual_mem_usage_for_alloc - min_mem_usage_for_alloc) / min_mem_usage_for_alloc
