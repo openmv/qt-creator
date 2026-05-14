@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2020-2022, 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2020-2022, 2024-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -20,8 +20,6 @@ from typing import Dict
 from typing import List
 from typing import Tuple
 from typing import Union
-
-import lxml.etree as xml
 
 from . import numeric_util
 from .operation import Operation
@@ -144,24 +142,34 @@ class DebugDatabase:
         cls._queueTable.append([offset, stream_id, optimised_id])
 
     @classmethod
-    def _write_table(cls, root: xml.Element, name: str, headers: List[str], table):
+    def _write_table(cls, name: str, headers: List[str], table):
         # Convert table to CSV
         out = io.StringIO()
         writer = csv.writer(out, quoting=csv.QUOTE_NONNUMERIC)
         writer.writerow(headers)
         writer.writerows(table)
 
-        # Package table into XML output
-        table = xml.SubElement(root, "table", {"name": name})
-        table.text = xml.CDATA(out.getvalue())
+        # Package table into XML formatted CDATA section
+        table_element = f"  <table name='{name}'><![CDATA[{out.getvalue()}]]></table>\n"
+
+        return table_element
 
     @classmethod
     def write(cls, file_path: str, input_file: str, output_file: str):
-        root = xml.Element("debug", {"source": input_file, "optimised": output_file})
+        # Construct XML declaration and root element opening tag
+        xml_content = (
+            f"<?xml version='1.0' encoding='UTF-8'?>\n<debug source=\"{input_file}\" optimised=\"{output_file}\">\n"
+        )
 
-        cls._write_table(root, cls.SOURCE_TABLE, cls._sourceHeaders, cls._sourceTable)
-        cls._write_table(root, cls.OPTIMISED_TABLE, cls._optimisedHeaders, cls._optimisedTable)
-        cls._write_table(root, cls.QUEUE_TABLE, cls._queueHeaders, cls._queueTable)
-        cls._write_table(root, cls.STREAM_TABLE, cls._streamHeaders, cls._streamTable)
+        # Append each table as an XML CDATA formatted string
+        xml_content += cls._write_table(cls.SOURCE_TABLE, cls._sourceHeaders, cls._sourceTable)
+        xml_content += cls._write_table(cls.OPTIMISED_TABLE, cls._optimisedHeaders, cls._optimisedTable)
+        xml_content += cls._write_table(cls.QUEUE_TABLE, cls._queueHeaders, cls._queueTable)
+        xml_content += cls._write_table(cls.STREAM_TABLE, cls._streamHeaders, cls._streamTable)
 
-        xml.ElementTree(root).write(file_path, encoding="utf-8", xml_declaration=True, pretty_print=True)
+        # Close root element tag
+        xml_content += "</debug>\n"
+
+        # Write the XML content to specified file
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(xml_content)

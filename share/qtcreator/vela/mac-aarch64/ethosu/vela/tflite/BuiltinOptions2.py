@@ -25,3 +25,5 @@ class BuiltinOptions2(object):
     StablehloRngBitGeneratorOptions = 19
     ReduceWindowOptions = 20
     StableHLOCompositeOptions = 21
+    StablehloShiftLeftOptions = 22
+    StablehloCaseOptions = 23

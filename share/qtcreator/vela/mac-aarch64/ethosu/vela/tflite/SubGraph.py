@@ -139,8 +139,15 @@ class SubGraph(object):
             return self._tab.String(o + self._tab.Pos)
         return None
 
+    # SubGraph
+    def DebugMetadataIndex(self):
+        o = flatbuffers.number_types.UOffsetTFlags.py_type(self._tab.Offset(14))
+        if o != 0:
+            return self._tab.Get(flatbuffers.number_types.Int32Flags, o + self._tab.Pos)
+        return -1
+
 def SubGraphStart(builder):
-    builder.StartObject(5)
+    builder.StartObject(6)
 
 def Start(builder):
     SubGraphStart(builder)
@@ -198,6 +205,12 @@ def SubGraphAddName(builder, name):
 
 def AddName(builder, name):
     SubGraphAddName(builder, name)
+
+def SubGraphAddDebugMetadataIndex(builder, debugMetadataIndex):
+    builder.PrependInt32Slot(5, debugMetadataIndex, -1)
+
+def AddDebugMetadataIndex(builder, debugMetadataIndex):
+    SubGraphAddDebugMetadataIndex(builder, debugMetadataIndex)
 
 def SubGraphEnd(builder):
     return builder.EndObject()

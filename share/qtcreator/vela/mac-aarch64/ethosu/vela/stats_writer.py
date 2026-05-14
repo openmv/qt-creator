@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2020-2022, 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2020-2022, 2024-2026 Arm Limited and/or its affiliates <open-source-office@arm.com>
 # SPDX-FileCopyrightText: (c) Meta Platforms, Inc. and affiliates. (http://www.meta.com)
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -276,6 +276,9 @@ def print_performance_metrics_common(
     mem_area_labels = [
         (mem_area, label) for mem_area, label in orig_mem_areas_labels if np.sum(bandwidths[mem_area]) > 0
     ]
+    mem_area_usage_labels = [
+        (mem_area, label) for mem_area, label in orig_mem_areas_labels if memory_used.get(mem_area, 0) > 0
+    ]
 
     print("", file=f)
     if name:
@@ -292,13 +295,10 @@ def print_performance_metrics_common(
             file=f,
         )
     print(file=f)
-    for mem_area, label in mem_area_labels:
-        if mem_area not in memory_used:
-            continue
-
+    for mem_area, label in mem_area_usage_labels:
         aug_label = label + " used"
 
-        print(f"Total {aug_label:25}          {memory_used[mem_area] / 1024.0:12.2f} KiB", file=f)
+        print(f"Total {aug_label:25}          {memory_used.get(mem_area, 0) / 1024.0:12.2f} KiB", file=f)
 
     print(file=f)
 
@@ -451,13 +451,14 @@ def regor_operations_from_database(opt_database):
 
     # set of optimised_ids that ended up on NPU
     npu_optimised_ids = set()
+    group_ids = set()
     # maps src-id to ofm-shape
     ofm_shapes = dict()
     cpu_operations = []
     npu_operations = []
 
     # prerequisite checks
-    required_tables = ["source", "optimised", "perf", "queue"]
+    required_tables = ["source", "group", "perf", "queue"]
     for table in required_tables:
         if table not in opt_database.tables:
             print("Could not extract CPU operations:")
@@ -491,15 +492,26 @@ def regor_operations_from_database(opt_database):
     for entry in qt.data:
         npu_optimised_ids.add(entry[id_idx])
 
+    # add fused/chained operation ids from group table to group_ids
+    group = opt_database.tables["group"]
+    id_idx = find_in_header(["id"], group.header)[0]
+    if id_idx == -1:
+        print("Could not extract CPU operations:")
+        print("id was not found in group table")
+        return cpu_operations, npu_operations
+    for entry in group.data:
+        group_ids.add(entry[id_idx])
+
     # build cpu/npu operations from perf-table
     perf = opt_database.tables["perf"]
-    fields = ["optimised_id", "source_id", "name", "operator"]
+    fields = ["id", "optimised_id", "source_id", "name", "operator"]
     ids = find_in_header(fields, perf.header)
     if any([x < 0 for x in ids]):
         print("Could not extract CPU operations:")
         print("Could not find all necessary fields in perf database")
-    opt_idx, src_idx, name_idx, operator_idx = ids
+    id_idx, opt_idx, src_idx, name_idx, operator_idx = ids
     for entry in perf.data:
+        op_id = entry[id_idx]
         opt_id = entry[opt_idx]
         src_id = entry[src_idx]
         name = entry[name_idx]
@@ -507,7 +519,7 @@ def regor_operations_from_database(opt_database):
         ofm_shape = ofm_shapes[src_id]
         # TODO add ifm shapes
         op_desc = f"{operator} = {name} (outputs {ofm_shape})"
-        if opt_id in npu_optimised_ids:
+        if opt_id in npu_optimised_ids or op_id in group_ids:
             npu_operations.append(op_desc)
         else:
             cpu_operations.append(op_desc)
@@ -553,25 +565,37 @@ def print_regor_performance_metrics(
     cycles = [0] * PassCycles.Size
     bandwidths = [[[0] * BandwidthDirection.Size for i in range(TensorPurpose.Size)] for j in range(MemArea.Size)]
     memory_used = {i: 0 for i in range(MemArea.Size)}
+
+    mem_areas_present = set()
     for mem_name, memory in report.memories.items():
+        mem_name_lower = str(mem_name).lower()
+
+        # skip shram/lutram in performance report
+        if mem_name_lower in ["lutram", "shram"]:
+            continue
+
+        cycles_idx = cycles_mapping[mem_name_lower]
+        cycles[cycles_idx] += memory.totalAccessCycles
+
+        mem_area = memory_mapping.get(mem_name_lower, MemArea.Unknown)
+        mem_areas_present.add(mem_area)
+        memory_used[mem_area] = memory.peakUsage
+
         for _, a in memory.accesses.items():
-            mem_name_lower = str(mem_name).lower()
-
-            # skip shram/lutram in performance report
-            if mem_name_lower in ["lutram", "shram"]:
-                continue
-
-            mem_area = memory_mapping.get(mem_name_lower, MemArea.Unknown)
             purpose = purpose_mapping.get(str(a.accessType).lower(), TensorPurpose.Unknown)
-
-            if mem_name_lower in cycles_mapping:
-                cycles_idx = cycles_mapping[mem_name_lower]
-                cycles[cycles_idx] += a.accessCycles
 
             bandwidths[mem_area][purpose][BandwidthDirection.Read] = a.bytesRead
             bandwidths[mem_area][purpose][BandwidthDirection.Write] = a.bytesWritten
 
-            memory_used[mem_area] = memory.peakUsage
+    read_only_area = arch.tensor_storage_mem_area[TensorPurpose.Weights]
+    # Split read-only and staging/feature-map usage when const shares SRAM (OnChipFlash alias).
+    if (
+        report.readOnlyPeakUsage > 0
+        and read_only_area == MemArea.OnChipFlash
+        and MemArea.OnChipFlash not in mem_areas_present
+    ):
+        memory_used[read_only_area] = report.readOnlyPeakUsage
+        memory_used[MemArea.Sram] = memory_used.get(MemArea.Sram, 0) - report.readOnlyPeakUsage
 
     cycles[PassCycles.Npu] = report.npuCycles
     cycles[PassCycles.Total] = report.totalCycles
@@ -668,7 +692,7 @@ def postprocess_regor_performance_database(arch, opt_database, performance_repor
         source_table = opt_database.tables["source"]
         source_header = source_table.header
         source_rows = source_table.data
-        op_name_idx = find_in_header("name", source_header)
+        op_name_idx = find_in_header("operator", source_header)
         op_id_idx = find_in_header("id", source_header)
         if op_name_idx != -1 and op_id_idx != -1:
             for row in source_rows:
@@ -724,15 +748,15 @@ def postprocess_regor_performance_database(arch, opt_database, performance_repor
             # post-processing for things not contained in regors performance-database
             else:
                 if col == "Target":
-                    opt_id_idx = col_map["OptId"]
-                    if opt_id_idx != -1 and len(npu_operators):
-                        opt_id = row[opt_id_idx]
-                        if int(opt_id) in npu_operators:
+                    nng_op_idx = col_map["NNG Operator"]
+                    if nng_op_idx != -1:
+                        nng_op = row[nng_op_idx]
+                        if nng_op != "Passthrough":
                             new_row.append("NPU")
                         else:
                             new_row.append("CPU")
                     else:
-                        new_row.append("N/A")
+                        new_row.append("CPU")
                 elif col == "Original Operator":
                     source_id_idx = col_map["SourceId"]
                     if source_id_idx != -1:
@@ -743,7 +767,7 @@ def postprocess_regor_performance_database(arch, opt_database, performance_repor
                         new_row.append("N/A")
                 elif col == "Peak% (Staging)":
                     staging_idx = col_map["Staging Usage"]
-                    if staging_idx != -1:
+                    if staging_idx != -1 and performance_report.stagingMemoryArea in performance_report.memories:
                         staging_usage = int(row[staging_idx])
                         staging_network = int(
                             performance_report.memories[performance_report.stagingMemoryArea].peakUsage
@@ -751,7 +775,7 @@ def postprocess_regor_performance_database(arch, opt_database, performance_repor
                         staging_percent = _percentage(staging_usage, staging_network)
                         new_row.append(str(staging_percent))
                     else:
-                        new_row.append("N/A")
+                        new_row.append("NaN")
                 elif col == "Network% (cycles)":
                     cycles_idx = col_map["Op Cycles"]
                     if cycles_idx != -1:
@@ -760,7 +784,7 @@ def postprocess_regor_performance_database(arch, opt_database, performance_repor
                         cycles_percent = _percentage(cycles, cycles_network)
                         new_row.append(str(cycles_percent))
                     else:
-                        new_row.append("N/A")
+                        new_row.append("NaN")
                 elif col == "Network% (MAC)":
                     mac_idx = col_map["MAC Count"]
                     if mac_idx != -1:
@@ -780,9 +804,9 @@ def postprocess_regor_performance_database(arch, opt_database, performance_repor
                         util = _percentage(macs, max_macs)
                         new_row.append(str(util))
                     else:
-                        new_row.append("N/A")
+                        new_row.append("NaN")
                 else:
-                    new_row.append("N/A")
+                    new_row.append("NaN")
 
         new_data.append(new_row)
     return new_header, new_data

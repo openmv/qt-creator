@@ -225,8 +225,15 @@ class Operator(object):
             return obj
         return None
 
+    # Operator
+    def DebugMetadataIndex(self):
+        o = flatbuffers.number_types.UOffsetTFlags.py_type(self._tab.Offset(30))
+        if o != 0:
+            return self._tab.Get(flatbuffers.number_types.Int32Flags, o + self._tab.Pos)
+        return -1
+
 def OperatorStart(builder):
-    builder.StartObject(13)
+    builder.StartObject(14)
 
 def Start(builder):
     OperatorStart(builder)
@@ -338,6 +345,12 @@ def OperatorAddBuiltinOptions2(builder, builtinOptions2):
 
 def AddBuiltinOptions2(builder, builtinOptions2):
     OperatorAddBuiltinOptions2(builder, builtinOptions2)
+
+def OperatorAddDebugMetadataIndex(builder, debugMetadataIndex):
+    builder.PrependInt32Slot(13, debugMetadataIndex, -1)
+
+def AddDebugMetadataIndex(builder, debugMetadataIndex):
+    OperatorAddDebugMetadataIndex(builder, debugMetadataIndex)
 
 def OperatorEnd(builder):
     return builder.EndObject()
