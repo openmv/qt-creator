@@ -120,7 +120,7 @@ if (APPLE)
     stcubeprogrammer/mac)
   set(resource_files ${resource_files} pydfu/pydfu.py)
   set(downloaded_resource_directories
-    https://download.openmv.io/stedgeai/stedgeai-macarm-3.0.0.tar.gz
+    https://download.openmv.io/stedgeai/stedgeai-macarm-4.0.0.tar.gz
     https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-darwin-arm64-arm-none-eabi.tar.xz)
 endif()
 
