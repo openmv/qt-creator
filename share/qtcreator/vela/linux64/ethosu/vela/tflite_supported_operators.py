@@ -126,6 +126,7 @@ class TFLiteSupportedOperators:
         (
             Op.Relu,
             Op.Relu6,
+            Op.Relu0To1,
             Op.ReluN1To1,
             Op.Clip,
         )
@@ -777,12 +778,17 @@ class TFLiteSupportedOperators:
         valid = False
         ofm_shape = op.ofm.shape
         size_h, size_w = None, None
-        # check that the size tensor (the second input) exists, is not none, and has the correct values
-        if len(op.inputs) == 2 and op.inputs[1] is not None and len(op.inputs[1].values) == 2:
-            size_h, size_w = op.inputs[1].values
-            # check size and output size match
-            if size_h == ofm_shape[1] and size_w == ofm_shape[2]:
-                valid = True
+        # check that the size tensor (the second input) exists and has the correct values
+        if len(op.inputs) < 2 or op.inputs[1] is None:
+            return False, "Size tensor is missing"
+        if op.inputs[1].values is None:
+            return False, f"Size tensor '{op.inputs[1].name}' is dynamic or has no values"
+        if len(op.inputs[1].values) != 2:
+            return False, f"Size tensor '{op.inputs[1].name}' does not have two elements (has {len(op.inputs[1].values)})"
+        size_h, size_w = op.inputs[1].values
+        # check size and output size match
+        if size_h == ofm_shape[1] and size_w == ofm_shape[2]:
+            valid = True
 
         return valid, f"Op has size={size_h}x{size_w} and ofm_shape={ofm_shape}."
 

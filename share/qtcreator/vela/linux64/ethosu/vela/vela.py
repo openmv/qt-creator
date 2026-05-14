@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
+# flake8: noqa
 #
-# SPDX-FileCopyrightText: Copyright 2020-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2020-2026 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -42,18 +43,10 @@ from .debug_database import DebugDatabase
 from .errors import InputFileError
 from .errors import VelaError
 from .hillclimb_allocation import HillClimbAllocator
-from .nn_graph import NetworkType
 from .nn_graph import TensorAllocator
 from .tensor import MemArea
 from .tensor import Tensor
 from .tflite.Model import Model
-from .tflite_mapping import builtin_operator_map
-from .tflite_mapping import builtin_operator_name_map
-from .tflite_mapping import optype_to_builtintype
-from .tflite_model_semantic import TFLiteSemantic
-from .tflite_supported_operators import TFLiteSupportedOperators
-from .tosa_model_semantic import TosaSemantic
-from .tosa_supported_operators import TosaSupportedOperators
 from ethosu import regor
 
 TFLITE_MAGIC = 0x334C4654
@@ -245,20 +238,349 @@ def print_subgraph_io_summary(nng):
 
 
 def generate_supported_ops():
-    # Exclude network type from generation by adding value to exclude list.
-    # To easily exclude NetworkType from generated documentation.
-    exclude_generation_network_type_value = [NetworkType.TOSA.value]
-
-    def _exclude_list_names(constraint, exclude_list):
-        constraints_excluded_names = [
-            optype_to_builtintype(op) for op, exclude_constraint in exclude_list if constraint in exclude_constraint
+    def _u85_tosa_support_lines() -> list[str]:
+        return [
+            "## Ethos-U85 TOSA Operator Support",
+            "",
+            "This section summarizes TOSA support for Ethos-U85 against the v1.0 PRO-INT 8k baseline.",
+            "",
+            "- Baseline:",
+            "  - TOSA Version: v1.0",
+            "  - TOSA Profile: PRO-INT",
+            "  - TOSA Level: 8k",
+            "- Supported extensions:",
+            "  - EXT-INT16",
+            "  - EXT-INT4",
+            "  - EXT-DOUBLEROUND",
+            "  - EXT-CONTROLFLOW (experimental)",
+            "- Unsupported operators:",
+            "  - TRANSPOSE_CONV2D with dynamic weights and/or bias",
+            "  - CONV3D with dynamic weights and/or bias",
         ]
-        return f" - [{', '.join(sorted(constraints_excluded_names))}]" if constraints_excluded_names else ""
+
+    # pylint: disable=line-too-long
+    def _u55_u65_tosa_support_lines() -> list[str]:
+        return [
+            "## Ethos-U55 and Ethos-U65 TOSA Summary Table",
+            "",
+            "The table below contains TOSA operators for Ethos-U55 and Ethos-U65.  ",
+            "For TOSA operators, CPU fallback is not supported and unsupported operators/configurations result in a compiler error.  ",
+            "",
+            "| Operator | TOSA Constraints |",
+            "| --- | --- |",
+            "| ABS | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints) |",
+            "| ADD | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints) |",
+            "| ARGMAX | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-argmax-constraints) |",
+            "| ARITHMETIC_RIGHT_SHIFT | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-arithmetic_right_shift-constraints) |",
+            "| AVG_POOL2D | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-avg_pool2d-constraints) |",
+            "| CAST | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-cast-constraints) |",
+            "| CLAMP | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints) |",
+            "| CLZ | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints) |",
+            "| CONCAT | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-concat-constraints) |",
+            "| CONST | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints) |",
+            "| CONV2D | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-conv2d-constraints) |",
+            "| CONV3D | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-conv3d-constraints) |",
+            "| IDENTITY | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-identity-constraints) |",
+            "| LOGICAL_LEFT_SHIFT | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-logical_left_shift-constraints) |",
+            "| MATMUL | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-matmul-constraints) |",
+            "| MAXIMUM | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints) |",
+            "| MAX_POOL2D | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-max_pool2d-constraints) |",
+            "| MINIMUM | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints) |",
+            "| MUL | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints) |",
+            "| NEGATE | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints) |",
+            "| PAD | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-pad-constraints) |",
+            "| REDUCE_MAX | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-reduce_max-constraints) |",
+            "| REDUCE_MIN | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-reduce_min-constraints) |",
+            "| REDUCE_SUM | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-reduce_sum-constraints) |",
+            "| RESCALE | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-rescale-constraints) |",
+            "| RESHAPE | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-reshape-constraints) |",
+            "| RESIZE | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-resize-constraints) |",
+            "| REVERSE | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-reverse-constraints) |",
+            "| SLICE | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-slice-constraints) |",
+            "| SUB | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints) |",
+            "| TABLE | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-table-constraints) |",
+            "| TILE | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-tile-constraints) |",
+            "| TRANSPOSE | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-transpose-constraints) |",
+            "| TRANSPOSE_CONV2D | [Generic](#ethos-u55-and-ethos-u65-tosa-generic-constraints), [Specific](#ethos-u55-and-ethos-u65-tosa-transpose_conv2d-constraints) |",
+            "",
+            "## Ethos-U55 and Ethos-U65 TOSA Generic Constraints",
+            "",
+            "This is a list of constraints that most TOSA operators must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- Baseline:",
+            "  - TOSA Version: v1.0",
+            "  - TOSA Profile: PRO-INT",
+            "  - TOSA Level: 8k",
+            "- PRO-INT extensions:",
+            "  - EXT-INT16: 16-bit integer operations",
+            "  - EXT-INT4: 4-bit integer weights",
+            "  - EXT-DOUBLEROUND: double rounding support for RESCALE",
+            "- Operators and configurations not listed as supported below are not supported.",
+            "- For TOSA operators, CPU fallback is not supported.",
+            "",
+            "## Ethos-U55 and Ethos-U65 TOSA Specific Operator Constraints",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA ARITHMETIC_RIGHT_SHIFT Constraints",
+            "",
+            "This is a list of constraints that the ARITHMETIC_RIGHT_SHIFT operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes: int32 only (IFM and OFM must be 32-bit)",
+            "- Round: true only",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA LOGICAL_LEFT_SHIFT Constraints",
+            "",
+            "This is a list of constraints that the LOGICAL_LEFT_SHIFT operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes: int32 only (IFM and OFM must be 32-bit)",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA TABLE Constraints",
+            "",
+            "This is a list of constraints that the TABLE operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes: int8 only",
+            "- EXT-INT16 is not supported",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA AVG_POOL2D Constraints",
+            "",
+            "This is a list of constraints that the AVG_POOL2D operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- Tensor axis: N=1 and HWC in range 1..65536",
+            "- IF padding is used: 1 <= kernel_x <= 8 and 1 <= kernel_y <= 8",
+            "- ELSE: 1 <= kernel_x*kernel_y <= 65536 and 1 <= kernel_y <= 256",
+            "- Kernel stride: 1 <= stride <= 3",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA MAX_POOL2D Constraints",
+            "",
+            "This is a list of constraints that the MAX_POOL2D operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- Tensor axis: N any, HWC in range 1..65536",
+            "- Kernel size: 1 <= kernel_x*kernel_y <= 65536 and 1 <= kernel_y <= 256",
+            "- Kernel stride: 1 <= stride <= 3",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA ARGMAX Constraints",
+            "",
+            "This is a list of constraints that the ARGMAX operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- Tensor axis: N=1, C in range 1..127, and W*H in range 1..65536",
+            "- Rank must be in range 1..4",
+            "- Reduction axis must be channel",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA CONV2D Constraints",
+            "",
+            "This is a list of constraints that the CONV2D operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes (IFM, Weights, OFM): (i8_t,i8_t,i32_t), (i8_t,i4_t,i32_t), (i16_t,i8_t,i48_t)",
+            "- EXT-INT16 is only supported if followed by RESCALE to i8_t, i16_t or i32_t",
+            "- Tensor axis: NHW any, C in range 1..65536",
+            "- Kernel size: 1 <= kernel_x*kernel_y <= 4096 and 1 <= kernel_y <= 64",
+            "- Kernel stride: 1 <= stride <= 3",
+            "- Sum of absolute weights must not exceed 127*65536",
+            "- Bias must fit in signed int40: -549755813888..549755813887",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA CONV3D Constraints",
+            "",
+            "This is a list of constraints that the CONV3D operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes (IFM, Weights, OFM): (i8_t,i8_t,i32_t), (i8_t,i4_t,i32_t), (i16_t,i8_t,i48_t)",
+            "- EXT-INT16 is only supported if followed by RESCALE to i8_t, i16_t or i32_t",
+            "- Tensor axis: NDHW any, C in range 1..65536",
+            "- Kernel size: 1 <= kernel_x*kernel_y <= 4096 and 1 <= kernel_y <= 64 and kernel_z==1",
+            "- Kernel stride: 1 <= stride_x <= 3, 1 <= stride_y <= 3, 1 <= stride_z",
+            "- Sum of absolute weights must not exceed 127*65536",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA TRANSPOSE_CONV2D Constraints",
+            "",
+            "This is a list of constraints that the TRANSPOSE_CONV2D operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes (IFM, Weights, OFM): (i8_t,i8_t,i32_t), (i8_t,i4_t,i32_t), (i16_t,i8_t,i48_t)",
+            "- EXT-INT16 is only supported if followed by RESCALE to i8_t, i16_t or i32_t",
+            "- Tensor axis: N any, HWC in range 1..65536",
+            "- Kernel size: 1 <= kernel_x*kernel_y <= 4096 and 1 <= kernel_y <= 64",
+            "- Stride combinations:",
+            "  - (1,1), (2,2)",
+            "  - (1,2) only if IFM height and kernel height are 1",
+            "  - (2,1) only if IFM width and kernel width are 1",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA MATMUL Constraints",
+            "",
+            "This is a list of constraints that the MATMUL operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes (IFM, IFM2, OFM): (i8_t, i8_t, i32_t)",
+            "- Tensor axis: WC in range 1..65536, NH any",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA RESIZE Constraints",
+            "",
+            "This is a list of constraints that the RESIZE operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- Upscale must be power-of-two in range 2x..8x",
+            "- Bilinear mode must be followed by RESCALE with shift=log2(upscale_x*upscale_y) and scale=1",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA TRANSPOSE Constraints",
+            "",
+            "This is a list of constraints that the TRANSPOSE operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes: int8, int16, int32 (bool is not supported)",
+            "- Rank: int8/int16 support 1..MAX_RANK, int32 support 1..4",
+            "- Permutation and tensor-axis constraints:",
+            "  - IF IFM is Int32:",
+            "    - Rank must be <= 4",
+            "    - NHWC: C <= 2^15",
+            "    - NWHC: N == 1, H <= 2^16, W <= 2^16, C <= 2^14",
+            "    - NHCW: N*H <= 2^16, W <= 2^16, C <= 2^16",
+            "    - NCWH: N == 1, H <= 2^16, W <= 2^16, C <= 2^14",
+            "    - Any other permutation vector is unsupported",
+            "  - IF IFM is Int8 or Int16:",
+            "    - NHWC: no shape constraints",
+            "    - ELSE IF Rank <= 4 and permutation is NWHC/NHCW/NCWH:",
+            "      - (N*H, W, C) <= (2^16, 2^16, 2^16)",
+            "    - ELSE: product of elements must be <= 2^16",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA REDUCE_SUM Constraints",
+            "",
+            "This is a list of constraints that the REDUCE_SUM operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- Reduced axis must be in range 1..65536",
+            "- IF reduction is over channel: other axes can be any size",
+            "- ELSE: product of axes before and after the reduced axis respectively must be in range 1..65536",
+            "- Reduction is native over depth only; otherwise Vela inserts transpose (lower performance)",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA REDUCE_MAX Constraints",
+            "",
+            "This is a list of constraints that the REDUCE_MAX operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes: INT8->INT8 and INT16->INT16",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA REDUCE_MIN Constraints",
+            "",
+            "This is a list of constraints that the REDUCE_MIN operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes: INT8->INT8 and INT16->INT16",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA CONCAT Constraints",
+            "",
+            "This is a list of constraints that the CONCAT operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes: INT8, INT16, INT32",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA RESHAPE Constraints",
+            "",
+            "This is a list of constraints that the RESHAPE operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes: INT8, INT16, INT32",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA SLICE Constraints",
+            "",
+            "This is a list of constraints that the SLICE operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes: INT8, INT16, INT32",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA TILE Constraints",
+            "",
+            "This is a list of constraints that the TILE operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- DataTypes: INT8, INT16, INT32",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA CAST Constraints",
+            "",
+            "This is a list of constraints that the CAST operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- Any PRO-INT combination is supported if bool is not used",
+            "- Down-casting from int32 is not supported",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA RESCALE Constraints",
+            "",
+            "This is a list of constraints that the RESCALE operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- EXT-INT16 (INT48 types) are not supported standalone, but might be supported if the compiler can fuse them. "
+            "See EXT-INT16 constraints on other operators for more details.",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA IDENTITY Constraints",
+            "",
+            "This is a list of constraints that the IDENTITY operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- Supported pairs: INT8->INT8, INT16->INT16, INT32->INT32, INT48->INT48",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA PAD Constraints",
+            "",
+            "This is a list of constraints that the PAD operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- Supported pairs: INT8->INT8, INT16->INT16, INT32->INT32",
+            "- Bool is not supported",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA REVERSE Constraints",
+            "",
+            "This is a list of constraints that the REVERSE operator must satisfy in order to be scheduled on the NPU.",
+            "",
+            "- Supported pairs: INT8->INT8 and INT16->INT16",
+            "- Only W-axis and H-axis reverse are supported",
+            "- INT32 is not supported",
+            "",
+            "### Ethos-U55 and Ethos-U65 TOSA Not Supported Operators",
+            "",
+            "This is a list of TOSA operators that are not supported on Ethos-U55 and Ethos-U65.",
+            "",
+            "- BITWISE_AND",
+            "- BITWISE_OR",
+            "- BITWISE_XOR",
+            "- BITWISE_NOT",
+            "- INTDIV",
+            "- LOGICAL_AND",
+            "- LOGICAL_RIGHT_SHIFT",
+            "- LOGICAL_OR",
+            "- LOGICAL_XOR",
+            "- LOGICAL_NOT",
+            "- SELECT",
+            "- EQUAL",
+            "- GREATER",
+            "- GREATER_EQUAL",
+            "- REDUCE_ALL",
+            "- REDUCE_ANY",
+            "- GATHER",
+            "- SCATTER",
+        ]
+
+    # pylint: enable=line-too-long
+
+    def _regor_generic_constraints(supported_ops):
+        # extract generic constraints from Regor supported-ops
+        # A generic constraint applies to all opTypes except a list of exceptions
+        # a constraint is considered generic if it applies to more than 80% of the opTypes
+        threshold = 0.20 * len(supported_ops)
+        allconstraints = set()
+        exceptions = dict()
+        for op in supported_ops:
+            for constraint in supported_ops[op]:
+                allconstraints.add(constraint)
+                exceptions[constraint] = list()
+        for op in supported_ops:
+            for constraint in [c for c in allconstraints if c not in supported_ops[op]]:
+                exceptions[constraint].append(op)
+        return {k: v for k, v in exceptions.items() if len(v) < threshold}
+
+    def _regor_specific_constraints(supported_ops, generic_constraints):
+        # extract specific constraints from Regor supported-ops
+        # A constraint is considered op-specific if it's not in the generic constraints
+        specific_constraints = dict()
+        # create op-specific constraints
+        for op in sorted(supported_ops):
+            constraints = supported_ops[op]
+            # Regor renames ARG_MAX to avoid name-collisions
+            op = op.replace("ARGMAX", "ARG_MAX")
+            specific_constraints[op] = sorted(filter(lambda c: c not in generic_constraints, constraints))
+        return specific_constraints
+
+    supported_ops_u55_u65 = regor.tflite_operator_constraints("EthosU55")
+    u55_u65_generic = _regor_generic_constraints(supported_ops_u55_u65)
+    u55_u65_specific = _regor_specific_constraints(supported_ops_u55_u65, u55_u65_generic)
+
+    supported_ops_u85 = regor.tflite_operator_constraints("EthosU85")
+    u85_generic = _regor_generic_constraints(supported_ops_u85)
+    u85_specific = _regor_specific_constraints(supported_ops_u85, u85_generic)
 
     # Add license for supported ops
     lines = [
         "<!--",
-        "SPDX-FileCopyrightText: Copyright 2020-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>",
+        "SPDX-FileCopyrightText: Copyright 2020-2026 Arm Limited and/or its affiliates <open-source-office@arm.com>",
         "",
         "SPDX-License-Identifier: Apache-2.0",
         "",
@@ -289,513 +611,134 @@ def generate_supported_ops():
         "Summary table of constraints for:",
     ]
 
-    # Ethos-U55 and Ethos-U65 TFLite and TOSA
-    for network_type in NetworkType:
-        if network_type.value in exclude_generation_network_type_value:
-            continue
-
-        lines += [
-            f"- [Ethos-U55 and Ethos-U65 {network_type.name}]"
-            f"(#ethos-u55-and-ethos-u65-{network_type.name.lower()}-summary-table)",
-        ]
-
-    # Ethos-U85 TFLite
+    # Ethos-U55, Ethos-U65 and Ethos-U85 TFLite summary links
     lines += [
+        "- [Ethos-U55 and Ethos-U65 TFLite](#ethos-u55-and-ethos-u65-tflite-summary-table)",
         "- [Ethos-U85 TFLite](#ethos-u85-tflite-summary-table)",
+        "- [Ethos-U55 and Ethos-U65 TOSA](#ethos-u55-and-ethos-u65-tosa-operator-support)",
+        "- [Ethos-U85 TOSA](#ethos-u85-tosa-operator-support)",
     ]
 
-    # Ethos-U55 and Ethos-U65 TFLite and TOSA
-    for network_type in NetworkType:
-        if network_type.value in exclude_generation_network_type_value:
-            continue
-
-        lines += [
-            "",
-            f"## Ethos-U55 and Ethos-U65 {network_type.name} Summary Table",
-            "",
-        ]
-        if network_type == NetworkType.TFLite:
-            lines += [
-                "The table below contains TFLite operators that can be placed on the Ethos-U55 and Ethos-U65.  ",
-                "If the constraints are not met, then that operator will be scheduled on the CPU instead.  ",
-                "For any other TFLite operator not listed, will be left untouched and scheduled on the CPU.  ",
-                "Please check the supported operator list for your chosen runtime for further information.",
-                "",
-                "| Operator | TFLite Constraints |",
-                "| --- | --- |",
-            ]
-            semantic_checker = TFLiteSemantic()
-            supported = TFLiteSupportedOperators()
-        elif network_type == NetworkType.TOSA:
-            lines += [
-                "The table below contains TOSA operators that can be placed on the Ethos-U NPU.  ",
-                "Note: There is limited support for compiling a TOSA neural network (EXPERIMENTAL).  ",
-                "The related constraints have not yet been populated in the list.",
-                "",
-                "| Operator | TOSA Constraints |",
-                "| --- | --- |",
-            ]
-            semantic_checker = TosaSemantic()
-            supported = TosaSupportedOperators()
-        else:
-            raise ValueError
-
-        op_constraint_links = []
-        op_list = sorted(((op, builtin_operator_name_map[op]) for op in builtin_operator_map), key=lambda x: x[1])
-        for op, name in op_list:
-            internal_op = builtin_operator_map[op][0]
-            if internal_op in TFLiteSupportedOperators.supported_operators:
-                links = f"[Generic](#{network_type.name.lower()}-generic-constraints)"
-                if (
-                    internal_op in supported.specific_constraints
-                    or internal_op in semantic_checker.specific_constraints
-                ):
-                    links += (
-                        f", [Specific](#ethos-u55-and-ethos-u65-{network_type.name.lower()}-{name.lower()}-constraints)"
-                    )
-                    op_constraint_links.append((internal_op, name))
-                lines.append(f"| {name} | {links} |")
-        # Ethos-U85 TFLite
-        lines += [
-            """
-## Ethos-U85 TFLite Summary Table
-
-The table below contains TFLite operators that can be placed on the Ethos-U85.
-If the constraints are not met, then that operator will be scheduled on the CPU instead.
-For any other TFLite operator not listed, will be left untouched and scheduled on the CPU.
-Please check the supported operator list for your chosen runtime for further information.
-
-| Operator | TFLite Constraints |
-| --- | --- |
-| ABS | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-abs-constraints) |
-| ADD | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-add-constraints) |
-| ARG_MAX | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-arg_max-constraints) |
-| AVERAGE_POOL_2D | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-average_pool_2d-constraints) |
-| BATCH_MATMUL | [Generic](#tflite-generic-constraints) |
-| CONCATENATION | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-concatenation-constraints) |
-| CONV_2D | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-conv_2d-constraints) |
-| DEPTHWISE_CONV_2D | [Generic](#tflite-generic-constraints), \
-[Specific](#ethos-u85-tflite-depthwise_conv_2d-constraints) |
-| EXP | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-exp-constraints) |
-| EXPAND_DIMS | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-expand_dims-constraints) |
-| FULLY_CONNECTED | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-fully_connected-constraints) |
-| GATHER | [Generic](#tflite-generic-constraints) | [Specific](#ethos-u85-tflite-gather-constraints) |
-| HARD_SWISH | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-hard_swish-constraints) |
-| LEAKY_RELU | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-leaky_relu-constraints) |
-| LOGISTIC | [Generic](#tflite-generic-constraints) |
-| MAXIMUM | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-maximum-constraints) |
-| MAX_POOL_2D | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-max_pool_2d-constraints) |
-| MEAN | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-mean-constraints) |
-| MINIMUM | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-minimum-constraints) |
-| MIRROR_PAD | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-mirror_pad-constraints) |
-| MUL | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-mul-constraints) |
-| PACK | [Generic](#tflite-generic-constraints) |
-| PAD | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-pad-constraints) |
-| PRELU | [Generic](#tflite-generic-constraints) |
-| QUANTIZE | [Generic](#tflite-generic-constraints) |
-| RELU | [Generic](#tflite-generic-constraints) |
-| RELU6 | [Generic](#tflite-generic-constraints) |
-| RELU_N1_TO_1 | [Generic](#tflite-generic-constraints) |
-| RESHAPE | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-reshape-constraints) |
-| RESIZE_BILINEAR | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-resize_bilinear-constraints) |
-| RESIZE_NEAREST_NEIGHBOR | [Generic](#tflite-generic-constraints), \
-[Specific](#ethos-u85-tflite-resize_nearest_neighbor-constraints) |
-| RSQRT | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-rsqrt-constraints) |
-| SCATTER | [Generic](#tflite-generic-constraints) | [Specific](#ethos-u85-tflite-scatter-constraints) |
-| SELECT | [Generic](#tflite-generic-constraints) |
-| SELECT_V2 | [Generic](#tflite-generic-constraints) |
-| SHAPE | [Generic](#tflite-generic-constraints) |
-| SLICE | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-slice-constraints) |
-| SOFTMAX | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-softmax-constraints) |
-| SPLIT | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-split-constraints) |
-| SPLIT_V | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-split_v-constraints) |
-| SQUARED_DIFFERENCE | [Generic](tflite-generic-constraints), \
-[Specific](#ethos-u85-tflite-squared_difference-constraints) |
-| SQUEEZE | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-squeeze-constraints) |
-| STRIDED_SLICE | [Generic](#tflite-generic-constraints), \
-[Specific](#ethos-u85-tflite-strided_slice-constraints) |
-| SUB | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-sub-constraints) |
-| TANH | [Generic](#tflite-generic-constraints) |
-| TRANSPOSE | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-transpose-constraints) |
-| TRANSPOSE_CONV | [Generic](#tflite-generic-constraints), [Specific](#ethos-u85-tflite-transpose_conv-constraints) |
-| UNPACK | [Generic](#tflite-generic-constraints) |
-"""
-        ]
-        lines += [
-            "",
-            f"### {network_type.name} Generic Constraints",
-            "",
-            "This is a list of constraints that most operators must satisfy in order to be scheduled on the NPU.",
-            "(Operators excluded from certain constraints are shown in brackets [ ] )\n" "",
-        ]
-        for constraint in semantic_checker.generic_constraints:
-            # Markdown needs two spaces at the end of a line to render it as a separate line
-            reason = constraint.__doc__.replace("\n", "  \n")
-            exclude_list = TFLiteSemantic.get_generic_constraint_exclude_list().items()
-            lines.append(f"- {reason}{_exclude_list_names(constraint, exclude_list)}")
-        for constraint in supported.generic_constraints:
-            # Markdown needs two spaces at the end of a line to render it as a separate line
-            reason = constraint.__doc__.replace("\n", "  \n")
-            exclude_list = supported.generic_constraints_exceptions.items()
-            lines.append(f"- {reason}{_exclude_list_names(constraint, exclude_list)}")
-        lines += ["", "## Ethos-U55 and Ethos-U65 Specific Operator constraints"]
-        for op, name in op_constraint_links:
-            lines += [
-                "",
-                f"### Ethos-U55 and Ethos-U65 {network_type.name} {name} Constraints",
-                "",
-                f"This is a list of constraints that the {name} operator must satisfy in order to be scheduled on the"
-                " NPU.",
-                "",
-            ]
-            for constraint in semantic_checker.specific_constraints[op]:
-                # Markdown needs two spaces at the end of a line to render it as a separate line
-                reason = constraint.__doc__.replace("\n", "  \n")
-                lines.append(f"- {reason}")
-            for constraint in supported.specific_constraints[op]:
-                # Markdown needs two spaces at the end of a line to render it as a separate line
-                reason = constraint.__doc__.replace("\n", "  \n")
-                lines.append(f"- {reason}")
-
-    # Ethos-U85 TFLite
+    # Ethos-U55 and Ethos-U65 TFLite Summary Table
     lines += [
-        """
-## Ethos-U85 Specific Operator Constraints
-
-### Ethos-U85 TFLite ABS Constraints
-
-This is a list of constraints that the ABS operator must satisfy in order to be scheduled on the NPU.
-
-- At least one Input's shape must match the OFM's shape
-- IFM and OFM data types must match
-
-### Ethos-U85 TFLite ADD Constraints
-
-This is a list of constraints that the ADD operator must satisfy in order to be scheduled on the NPU.
-
-- At least one Input's shape must match the OFM's shape
-- Both Input data types must match
-- For IFM that are signed, OFM must also be signed
-- For IFM that are unsigned, OFM must either be the same type or int32
-- Broadcasting is only allowed for rank indices with dimension 1, from either IFM1 or IFM2
-
-### Ethos-U85 TFLite ARG_MAX Constraints
-
-This is a list of constraints that the ARG_MAX operator must satisfy in order to be scheduled on the NPU.
-
-- OFM must be int32 or int64
-
-### Ethos-U85 TFLite AVERAGE_POOL_2D Constraints
-
-This is a list of constraints that the AVERAGE_POOL_2D operator must satisfy in order to be scheduled on the NPU.
-
-- Stride values for both width and height must be integer types
-- IFM and OFM data types must match
-- Kernel filter values for both width and height must be integer types
-- Stride values for both width and height must be in the range [1, 3]
-- Kernel filter values for both width and height must be in the range [1, 8]
-- VALID padding: Kernel filter height must be in the range [1, 256]
-- VALID padding: Product of kernel filter width and height must be in the range [1, 65536]
-
-### Ethos-U85 TFLite CONCATENATION Constraints
-
-This is a list of constraints that the CONCATENATION operator must satisfy in order to be scheduled on the NPU.
-
-- Axis attribute must exist
-- Axis attribute must be in the range [0, <ofm_dimensions>)
-- All Input dimensionalities must match OFM dimensionality
-- All Input dimensions must match OFM dimension in all axes except the one defined by the axis attribute
-- The size of the OFM axis must match the sum of all IFM axis defined by the axis attribute
-
-### Ethos-U85 TFLite CONV_2D Constraints
-
-This is a list of constraints that the CONV_2D operator must satisfy in order to be scheduled on the NPU.
-
-- Stride values for both width and height must be integer types
-- IFM depth must be a whole multiple of the filter kernel depth
-- Dilation factor values for both width and height must be integer types
-- Stride values for both width and height must be in the range [1, 3]
-- Dilated kernel height must be in the range [1, 64]
-- Product of dilated kernel width and height must be in the range [1, 4096]
-- Weight tensor must be 8-bit
-- Weight tensor must be constant
-- The sum of the weights cannot exceed 8323072
-- Optional Bias tensor must be of shape: 1D
-- Optional Bias tensor must be of type: int32, int64
-- Optional Bias tensor values must fit within 40-bits
-
-### Ethos-U85 TFLite DEPTHWISE_CONV_2D Constraints
-
-This is a list of constraints that the DEPTHWISE_CONV_2D operator must satisfy in order to be scheduled on the NPU.
-
-- Stride values for both width and height must be integer types
-- Dilation factor values for both width and height must be integer types
-- Dilated kernel height must be in the range [1, 64]
-- Product of dilated kernel width and height must be in the range [1, 4096]
-- Weight tensor must be 8-bit
-- Weight tensor must be constant
-- The sum of the weights cannot exceed 8323072
-- Optional Bias tensor must be of shape: 1D
-- Optional Bias tensor must be of type: int32, int64
-- Optional Bias tensor values must fit within 40-bits
-- Stride values for both width and height must be between 1 and 3
-- For depth multipliers > 1, IFM channels must be 1 and OFM channels must be equal to the depth multiplier
-
-### Ethos-U85 TFLite EXP Constraints
-
-This is a list of constraints that the EXP operator must satisfy in order to be scheduled on the NPU.
-
-- At least one Input's shape must match the OFM's shape
-- IFM and OFM data types must match
-- IFM must be int8 or int16
-
-### Ethos-U85 TFLite EXPAND_DIMS Constraints
-
-This is a list of constraints that the EXPAND_DIMS operator must satisfy in order to be scheduled on the NPU.
-
-- Input and output quantisation must match.
-- Input and output number of elements must match.
-
-### Ethos-U85 TFLite FULLY_CONNECTED Constraints
-
-This is a list of constraints that the FULLY_CONNECTED operator must satisfy in order to be scheduled on the NPU.
-
-- The output tensor(s) must have 2D shape
-- The IFM and OFM must have the same number of dimensions if keep_num_dims is set to true
-- Weight tensor must be 8-bit
-- Weight tensor must be constant
-- Optional Bias tensor must be of shape: 1D
-- Optional Bias tensor must be of type: int32, int64
-- Optional Bias tensor values must fit within 40-bits
-
-### Ethos-U85 TFLite GATHER Constraints
-
-This is a list of constraints that the GATHER operator must satisfy in order to be scheduled on the NPU.
-
-- Axis parameter must equal batch dim parameter
-
-### Ethos-U85 TFLite HARD_SWISH Constraints
-
-This is a list of constraints that the HARD_SWISH operator must satisfy in order to be scheduled on the NPU.
-
-- IFM must be int8 or uint8
-- IFM and OFM data types must match
-
-### Ethos-U85 TFLite LEAKY_RELU Constraints
-
-This is a list of constraints that the LEAKY_RELU operator must satisfy in order to be scheduled on the NPU.
-
-- At least one Input's shape must match the OFM's shape
-- IFM and OFM data types must match
-
-### Ethos-U85 TFLite MAXIMUM Constraints
-
-This is a list of constraints that the MAXIMUM operator must satisfy in order to be scheduled on the NPU.
-
-- At least one Input's shape must match the OFM's shape
-- IFM and OFM data types must match
-- Both Input quantization parameters must match OFM quantization parameters
-- Broadcasting is only allowed for rank indices with dimension 1, from either IFM1 or IFM2
-
-### Ethos-U85 TFLite MAX_POOL_2D Constraints
-
-This is a list of constraints that the MAX_POOL_2D operator must satisfy in order to be scheduled on the NPU.
-
-- Stride values for both width and height must be integer types
-- IFM and OFM data types must match
-- Kernel filter values for both width and height must be integer types
-- Stride values for both width and height must be in the range [1, 3]
-- Kernel filter height must be in the range [1, 256]
-- Product of kernel filter width and height must be in the range [1, 65536]
-
-### Ethos-U85 TFLite MEAN Constraints
-
-This is a list of constraints that the MEAN operator must satisfy in order to be scheduled on the NPU.
-
-- Input tensor must be at least 2D
-- Requirements for axis parameter:  
-        When IFM tensor is 2D:  
-          - Reduction in both axes is supported.  
-        When IFM tensor is 3D or 4D:  
-          - Reduction in Batch axis is only supported if batch size is 1.  
-          - Reduction in both Height and Width axes is supported.  
-          - Reduction in Depth axis is supported if at least one of H,W,C are of size 1.
-- Product of reduced axes must be no greater than:  
-        - 16777216 for signed 8-bit inputs.  
-        - 8388608 for unsigned 8-bit inputs.  
-        - 65536 for signed 16-bit inputs.
-- If Width axis is reduced its shape must be no greater than 4096.
-- If Depth axis is reduced its shape must be no greater than 4096.
-
-### Ethos-U85 TFLite MINIMUM Constraints
-
-This is a list of constraints that the MINIMUM operator must satisfy in order to be scheduled on the NPU.
-
-- At least one Input's shape must match the OFM's shape
-- IFM and OFM data types must match
-- Both Input quantization parameters must match OFM quantization parameters
-- Broadcasting is only allowed for rank indices with dimension 1, from either IFM1 or IFM2
-
-### Ethos-U85 TFLite MIRROR_PAD Constraints
-
-This is a list of constraints that the MIRROR_PAD operator must satisfy in order to be scheduled on the NPU.
-
-- The padding tensor must have the shape [3,2] or [4,2]
-- The pad tensor can only pad width and height
-- Pad tensor must be of type: int32, int64
-- The number of pad values for each direction must not be larger than the ifm size in that dimension
-
-### Ethos-U85 TFLite MUL Constraints
-
-This is a list of constraints that the MUL operator must satisfy in order to be scheduled on the NPU.
-
-- At least one Input's shape must match the OFM's shape
-- Both Input data types must match
-- For IFM that are signed, OFM must also be signed
-- For IFM that are unsigned, OFM must either be the same type or int32
-- Broadcasting is only allowed for rank indices with dimension 1, from either IFM1 or IFM2
-
-### Ethos-U85 TFLite PAD Constraints
-
-This is a list of constraints that the PAD operator must satisfy in order to be scheduled on the NPU.
-
-- Number of input tensors must be exactly 2
-- The padding tensor must be constant
-- Shape of output tensor must equal to size of input tensor plus padding
-- The padding tensor must have the shape [3,2] or [4,2]
-- The pad tensor can only pad width and height
-- Pad tensor must be of type: int32, int64
-
-### Ethos-U85 TFLite RESHAPE Constraints
-
-This is a list of constraints that the RESHAPE operator must satisfy in order to be scheduled on the NPU.
-
-- Input and output quantisation must match.
-- Input and output number of elements must match.
-- Shape must be constant
-
-### Ethos-U85 TFLite RESIZE_BILINEAR Constraints
-
-This is a list of constraints that the RESIZE_BILINEAR operator must satisfy in order to be scheduled on the NPU.
-
-- The size tensor must match the output tensor shape
-- Both align_corners and half_pixel_centers can't be True
-
-### Ethos-U85 TFLite RESIZE_NEAREST_NEIGHBOR Constraints
-
-This is a list of constraints that the RESIZE_NEAREST_NEIGHBOR operator must satisfy in order to be scheduled on the \
-NPU.
-
-- The size tensor must match the output tensor shape
-- Both align_corners and half_pixel_centers can't be True
-
-### Ethos-U85 TFLite RSQRT Constraints
-
-This is a list of constraints that the RSQRT operator must satisfy in order to be scheduled on the NPU.
-
-- At least one Input's shape must match the OFM's shape
-- IFM and OFM data types must match
-- IFM must be int8
-
-### Ethos-U85 TFLite SCATTER Constraints
-
-This is a list of constraints that the SCATTER operator must satisfy in order to be scheduled on the NPU.
-
-- Index tensor must be constant
-- Index tensor must not contain any duplicate values
-- Last dimension of index tensor must be 1
-- Shape tensor must be constant
-
-### Ethos-U85 TFLite SLICE Constraints
-
-This is a list of constraints that the SLICE operator must satisfy in order to be scheduled on the NPU.
-
-- Begin and Size Input tensors must be constant
-
-### Ethos-U85 TFLite SOFTMAX Constraints
-
-This is a list of constraints that the SOFTMAX operator must satisfy in order to be scheduled on the NPU.
-
-- IFM and OFM shapes must match
-- IFM and OFM data types must match
-- Beta value needs to be positive
-
-### Ethos-U85 TFLite SPLIT Constraints
-
-This is a list of constraints that the SPLIT operator must satisfy in order to be scheduled on the NPU.
-
-- Axis value must be in the range [-RANK(IFM) to +RANK(IFM))
-- Axis must be divisible by number of splits
-
-### Ethos-U85 TFLite SPLIT_V Constraints
-
-This is a list of constraints that the SPLIT_V operator must satisfy in order to be scheduled on the NPU.
-
-- Only one size is allowed to be inferred
-
-### Ethos-U85 TFLite SQUARED_DIFFERENCE Constraints
-
-This is a list of constraints that the SQUARED_DIFFERENCE operator must satisfy in order to be scheduled on the NPU.
-
-- At least one Input's shape must match the OFM's shape
-
-### Ethos-U85 TFLite SQUEEZE Constraints
-
-This is a list of constraints that the SQUEEZE operator must satisfy in order to be scheduled on the NPU.
-
-- Input and output quantisation must match.
-- Input and output number of elements must match.
-
-### Ethos-U85 TFLite STRIDED_SLICE Constraints
-
-This is a list of constraints that the STRIDED_SLICE operator must satisfy in order to be scheduled on the NPU.
-
-- Exactly 4 Input tensors are required
-- Begin, End and Stride Input tensors must be constant
-- ellipsis_mask must be 0
-- new_axis_mask and shrink_axis_mask cannot both be set
-- Slice 'end' values must be greater than 'begin' values
-- All Strides values must be 1
-- Offset attribute must be False
-
-### Ethos-U85 TFLite SUB Constraints
-
-This is a list of constraints that the SUB operator must satisfy in order to be scheduled on the NPU.
-
-- At least one Input's shape must match the OFM's shape
-- Both Input data types must match
-- For IFM that are signed, OFM must also be signed
-- For IFM that are unsigned, OFM must either be the same type or int32
-- Broadcasting is only allowed for rank indices with dimension 1, from either IFM1 or IFM2
-
-### Ethos-U85 TFLite TRANSPOSE Constraints
-
-This is a list of constraints that the TRANSPOSE operator must satisfy in order to be scheduled on the NPU.
-
-- Permutation array must be a 1D tensor with RANK(IFM) elements
-- Permutation array must have constant values in the range [0, RANK(IFM))
-
-### Ethos-U85 TFLite TRANSPOSE_CONV Constraints
-
-This is a list of constraints that the TRANSPOSE_CONV operator must satisfy in order to be scheduled on the NPU.
-
-- Stride values for both width and height must be integer types
-- Dilated kernel height must be in the range [1, 64]
-- Product of dilated kernel width and height must be in the range [1, 4096]
-- Weight tensor must be 8-bit
-- Weight tensor must be constant
-- The sum of the weights cannot exceed 8323072
-- Optional Bias tensor must be of shape: 1D
-- Optional Bias tensor must be of type: int32, int64
-- Optional Bias tensor values must fit within 40-bits
-- Stride values for width and height must match one of the following criteria:  
-        Stride values WxH must be 1x1 or 2x2  
-        Stride WxH 2x1 supported if ifm height and kernel height = 1
-- SAME padding: OFM dimensions must equal IFM dimensions multiplied by stride
-- VALID padding: OFM dimensions must equal IFM dimensions multiplied by stride,  
-        minus difference between kernel size and stride
-"""
+        "",
+        "## Ethos-U55 and Ethos-U65 TFLite Summary Table",
+        "",
     ]
+    lines += [
+        "The table below contains TFLite operators that can be placed on the Ethos-U55 and Ethos-U65.  ",
+        "If the constraints are not met, then that operator will be scheduled on the CPU instead.  ",
+        "For any other TFLite operator not listed, will be left untouched and scheduled on the CPU.  ",
+        "Please check the supported operator list for your chosen runtime for further information.",
+        "",
+        "| Operator | TFLite Constraints |",
+        "| --- | --- |",
+    ]
+    for op in u55_u65_specific:
+        sconstraints = u55_u65_specific[op]
+        links = "[Generic](#ethos-u55-and-ethos-u65-tflite-generic-constraints)"
+        if len(sconstraints):
+            links += f", [Specific](#ethos-u55-and-ethos-u65-tflite-{op.lower()}-constraints)"
+        lines.append(f"| {op.upper()} | {links} |")
+
+    # Ethos-U85 TFLite Summary Table
+    lines += [
+        "",
+        "## Ethos-U85 TFLite Summary Table",
+        "",
+    ]
+    lines += [
+        "The table below contains TFLite operators that can be placed on the Ethos-U85.  ",
+        "If the constraints are not met, then that operator will be scheduled on the CPU instead.  ",
+        "For any other TFLite operator not listed, will be left untouched and scheduled on the CPU.  ",
+        "Please check the supported operator list for your chosen runtime for further information.  ",
+        "",
+        "| Operator | TFLite Constraints |",
+        "| --- | --- |",
+    ]
+    for op in u85_specific:
+        sconstraints = u85_specific[op]
+        links = "[Generic](#ethos-u85-tflite-generic-constraints)"
+        if len(sconstraints):
+            links += f", [Specific](#ethos-u85-tflite-{op.lower()}-constraints)"
+        lines.append(f"| {op.upper()} | {links} |")
+
+    # Ethos-U55 and Ethos-U65 generic constraints
+    lines += [
+        "",
+        "## Ethos-U55 and Ethos-U65 TFLite Generic Constraints",
+        "",
+        "This is a list of constraints that most operators must satisfy in order to be scheduled on the NPU.  ",
+        "(Operators excluded from certain constraints are listed as exceptions )\n" "",
+    ]
+    for constraint in u55_u65_generic:
+        exceptions = u55_u65_generic[constraint]
+        lines.append(f"- {constraint}")
+        if len(exceptions):
+            lines.append(f"  - Exceptions: [{', '.join(sorted(exceptions))}]")
+
+    lines += ["", "## Ethos-U55 and Ethos-U65 Specific Operator constraints"]
+    for name in u55_u65_specific:
+        constraints = u55_u65_specific[name]
+        if not len(constraints):
+            continue
+        lines += [
+            "",
+            f"### Ethos-U55 and Ethos-U65 TFLite {name.upper()} Constraints",
+            "",
+            f"This is a list of constraints that the {name.upper()} operator "
+            "must satisfy in order to be scheduled on the"
+            " NPU.",
+            "",
+        ]
+        for constraint in constraints:
+            lines.append(f"- {constraint}")
+
+    # Generic TFLite constraints for Ethos-U85
+    lines += [
+        "",
+        "## Ethos-U85 TFLite Generic Constraints",
+        "",
+        "This is a list of constraints that most operators must satisfy in order to be scheduled on the NPU.  ",
+        "(Operators excluded from certain constraints are listed as exceptions )\n" "",
+        "",
+    ]
+    for constraint in u85_generic:
+        exceptions = u85_generic[constraint]
+        lines.append(f"- {constraint}")
+        if len(exceptions):
+            lines.append(f"  - Exceptions: [{', '.join(sorted(exceptions))}]")
+
+    # Op-specific TFLite constraints for Ethos-U85
+    lines += [
+        "",
+        "## Ethos-U85 Specific Operator Constraints",
+    ]
+
+    for name in u85_specific:
+        constraints = u85_specific[name]
+        if not len(constraints):
+            continue
+        lines += [
+            "",
+            f"### Ethos-U85 TFLite {name.upper()} Constraints",
+            "",
+            f"This is a list of constraints that the {name.upper()} operator "
+            "must satisfy in order to be scheduled on the"
+            " NPU.",
+            "",
+        ]
+        for constraint in constraints:
+            lines.append(f"- {constraint}")
+
+    # Ethos-U55 and Ethos-U65 TOSA operator support
+    lines += [
+        "",
+        "## Ethos-U55 and Ethos-U65 TOSA Operator Support",
+        "",
+    ]
+    lines += _u55_u65_tosa_support_lines()
+    lines += [""] + _u85_tosa_support_lines()
 
     # Note. this will generate the file in the CWD
     filepath = os.path.join(os.getcwd(), "SUPPORTED_OPS.md")
@@ -823,8 +766,11 @@ def get_compiler_config(
     disable_fwd: bool,
     disable_cascading: bool,
     disable_buffering: bool,
+    disable_ifm_reuse: bool,
     cop_format: str,
     separate_io_regions: bool,
+    cpu_tensor_alignment: int,
+    tensor_allocator: str,
 ) -> str:
     """Build compiler config file."""
     config = "\n[compiler]\n"
@@ -856,9 +802,13 @@ def get_compiler_config(
         config += "Cascading|"
     if disable_buffering:
         config += "WeightBuffering|"
+    if disable_ifm_reuse:
+        config += "ReuseIFM|"
     config = config.rstrip("|") + "\n"
     if separate_io_regions:
         config += "separate_io_regions=true\n"
+    config += f"cpu_tensor_alignment={cpu_tensor_alignment}\n"
+    config += f"tensor_allocator={tensor_allocator}\n"
 
     config += "\n[graph]\n"
     if verbose_graph:
@@ -906,15 +856,39 @@ def list_configs(config_filename):
         print(f"   {section}")
 
 
+class DeprecatedStoreAction(argparse.Action):
+    def __init__(self, option_strings, dest, **kwargs):
+        super().__init__(option_strings, dest, **kwargs)
+
+    def __call__(self, parser, namespace, values, option_string=None):
+        print(f"Warning: Option {option_string} is deprecated and will be removed in a future release.")
+        setattr(namespace, self.dest, values)
+
+
+class DeprecatedStoreTrueAction(argparse.Action):
+    def __init__(self, option_strings, dest, **kwargs):
+        super().__init__(option_strings, dest, nargs=0, **kwargs)
+
+    def __call__(self, parser, namespace, values, option_string=None):
+        print(f"Warning: Option {option_string} is deprecated and will be removed in a future release.")
+        setattr(namespace, self.dest, True)
+
+
 def main(argv: Optional[List[str]] = None) -> int:
     """Run the main entry point."""
     if argv is None:
         argv = sys.argv[1:]
 
     parser = argparse.ArgumentParser(prog="vela", description="Neural network model compiler for Arm Ethos-U NPUs")
+    parser.register("action", "deprecated_store", DeprecatedStoreAction)
+    parser.register("action", "deprecated_store_true", DeprecatedStoreTrueAction)
     parser.add_argument("--version", action="version", version=__version__)
     parser.add_argument(
-        "--api-version", action="version", version=API_VERSION, help="Displays the version of the external API."
+        "--api-version",
+        action="version",
+        version="Warning: Option --api-version is deprecated and will be removed in a future release."
+        f" Version: {API_VERSION}",
+        help="[DEPRECATED] Displays the version of the external API.",
     )
     parser.add_argument(
         "--supported-ops-report",
@@ -953,7 +927,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         type=str,
         default="tflite",
         choices=["tflite", "raw"],
-        help="Output format (default: %(default)s)",
+        help="Output format (default: %(default)s).",
     )
     parser.add_argument(
         "--enable-debug-db",
@@ -973,8 +947,12 @@ def main(argv: Optional[List[str]] = None) -> int:
     )
     parser.add_argument("--verbose-graph", action="store_true", help="Enable graph optimizer debug")
     parser.add_argument("--verbose-quantization", action="store_true", help="Enable quantization debug")
-    parser.add_argument("--verbose-packing", action="store_true", help="Enable pass packing debug")
-    parser.add_argument("--verbose-tensor-purpose", action="store_true", help="Enable tensor purpose debug")
+    parser.add_argument(
+        "--verbose-packing", action="deprecated_store_true", help="[DEPRECATED] Enable pass packing debug"
+    )
+    parser.add_argument(
+        "--verbose-tensor-purpose", action="deprecated_store_true", help="[DEPRECATED] Enable tensor purpose debug"
+    )
     parser.add_argument("--verbose-tensor-format", action="store_true", help="Enable tensor format debug")
     parser.add_argument("--verbose-schedule", action="store_true", help="Enable schedule debug")
     parser.add_argument("--verbose-allocation", action="store_true", help="Enable tensor allocation debug")
@@ -984,15 +962,21 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument(
         "--verbose-register-command-stream", action="store_true", help="Enable register command stream debug"
     )
-    parser.add_argument("--verbose-operators", action="store_true", help="Enable operator list debug")
+    parser.add_argument(
+        "--verbose-operators", action="deprecated_store_true", help="[DEPRECATED] Enable operator list debug"
+    )
     parser.add_argument("--verbose-weights", action="store_true", help="Enable weights information debug")
     parser.add_argument("--verbose-cycle-estimate", action="store_true", help="Enable cycle estimate information debug")
     parser.add_argument("--verbose-performance", action="store_true", help="Enable performance information debug")
-    parser.add_argument("--verbose-progress", action="store_true", help="Enable progress information debug")
+    parser.add_argument(
+        "--verbose-progress", action="deprecated_store_true", help="[DEPRECATED] Enable progress information debug"
+    )
     parser.add_argument(
         "--show-cpu-operations", action="store_true", help="Show the operations that fall back to the CPU"
     )
-    parser.add_argument("--timing", action="store_true", help="Time the compiler doing operations")
+    parser.add_argument(
+        "--timing", action="deprecated_store_true", help="[DEPRECATED] Time the compiler doing operations"
+    )
     parser.add_argument(
         "--force-symmetric-int-weights",
         action="store_true",
@@ -1026,16 +1010,17 @@ def main(argv: Optional[List[str]] = None) -> int:
     )
     parser.add_argument(
         "--show-subgraph-io-summary",
-        action="store_true",
-        help="Shows a summary of all the subgraphs and their inputs and outputs",
+        action="deprecated_store_true",
+        help="[DEPRECATED] Shows a summary of all the subgraphs and their inputs and outputs",
     )
     parser.add_argument(
         "--max-block-dependency",
+        action="deprecated_store",
         type=int,
         default=architecture_features.ArchitectureFeatures.MAX_BLOCKDEP,
         choices=range(0, architecture_features.ArchitectureFeatures.MAX_BLOCKDEP + 1),
         help=(
-            "Set the maximum value that can be used for the block dependency between npu kernel operations"
+            "[DEPRECATED] Set the maximum value that can be used for the block dependency between npu kernel operations"
             " (default: %(default)s)"
         ),
     )
@@ -1063,21 +1048,29 @@ def main(argv: Optional[List[str]] = None) -> int:
         type=int,
         default=Tensor.AllocationQuantum,
         help=(
-            "Controls the allocation byte alignment of cpu tensors including Ethos-U Custom"
+            "Controls the allocation byte alignment of CPU tensors including Ethos-U Custom"
             " operator inputs and outputs (default: %(default)s Bytes)"
         ),
     )
     parser.add_argument(
         "--recursion-limit",
+        action="deprecated_store",
         type=int,
         default=1000,
-        help="Set the recursion depth limit, may result in RecursionError if too low (default: %(default)s)",
+        help=(
+            "[DEPRECATED] Set the recursion depth limit, may result in RecursionError"
+            " if too low (default: %(default)s)"
+        ),
     )
     parser.add_argument(
         "--hillclimb-max-iterations",
+        action="deprecated_store",
         type=int,
         default=HillClimbAllocator.MAX_ITERATIONS,
-        help="Set the maximum number of iterations the Hill Climb tensor allocator will run (default: %(default)s)",
+        help=(
+            "[DEPRECATED] Set the maximum number of iterations the Hill Climb tensor allocator"
+            " will run (default: %(default)s)"
+        ),
     )
     parser.add_argument(
         "--cop-format",
@@ -1091,12 +1084,19 @@ def main(argv: Optional[List[str]] = None) -> int:
     )
 
     # debug options
-    parser.add_argument("--debug-force-regor", action="store_true", help="Debug: Force the use of the regor")
-    parser.add_argument("--disable-chaining", action="store_true", default=False)
-    parser.add_argument("--disable-fwd", action="store_true", default=False)
-    parser.add_argument("--disable-cascading", action="store_true", default=False)
-    parser.add_argument("--disable-buffering", action="store_true", default=False)
-
+    parser.add_argument(
+        "--debug-force-legacy-core",
+        action="deprecated_store_true",
+        help="Debug: Use the deprecated legacy Python compilation core",
+    )
+    parser.add_argument(
+        "--debug-force-regor", action="deprecated_store_true", help="[DEPRECATED] Debug: Force the use of the regor"
+    )
+    parser.add_argument("--disable-chaining", action="deprecated_store_true", default=False, help="[DEPRECATED]")
+    parser.add_argument("--disable-fwd", action="deprecated_store_true", default=False, help="[DEPRECATED]")
+    parser.add_argument("--disable-cascading", action="deprecated_store_true", default=False, help="[DEPRECATED]")
+    parser.add_argument("--disable-buffering", action="deprecated_store_true", default=False, help="[DEPRECATED]")
+    parser.add_argument("--disable-ifm-reuse", action="deprecated_store_true", default=False, help="[DEPRECATED]")
     args = parser.parse_args(argv)
 
     # Generate the supported ops report and exit
@@ -1163,6 +1163,12 @@ def main(argv: Optional[List[str]] = None) -> int:
             "".format(args.cpu_tensor_alignment)
         )
 
+    if args.debug_force_legacy_core and args.debug_force_regor:
+        parser.error(
+            "Cannot force the use of both the deprecated legacy Python compilation core and the Regor C++ compilation"
+            " core at the same time. Please choose only one of these options."
+        )
+
     if args.verbose_all:
         for v in vars(args):
             if v.startswith("verbose") and v != "verbose_all":
@@ -1182,10 +1188,17 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     model_reader_options = model_reader.ModelReaderOptions()
 
-    # The default behaviour to compile TFLite networks on Ethos-U55/U65 is to use Vela's Python compiler core (no name).
-    # However, this can be overridden to use Vela's C++ compiler core (Regor) by using the --debug-force-regor option.
-    # All Ethos-U85 or all TOSA network compilations use Vela's C++ compiler core (Regor).
-    if arch.is_ethos_u85_system or args.network.lower().endswith(".tosa") or args.debug_force_regor:
+    # Vela's legacy Python compilation core has been deprecated.
+    # However, this can be overridden to still be used for TFLite and Ethos-U55 or Ethos-U65 by using the
+    # `--debug-force-legacy-core` option, until fully removed.
+    # All Ethos-U85 or TOSA network compilations always use Vela's C++ compilation core (Regor).
+    if arch.is_ethos_u85_system or args.network.lower().endswith(".tosa") or not args.debug_force_legacy_core:
+        if args.debug_force_legacy_core:
+            parser.error(
+                "Forcing the use of the deprecated legacy Python compilation core is not possible for this target"
+                " system or input network. \nThe legacy core only supports Ethos-U55 and Ethos-U65 systems and TFLite"
+                " input networks. Please remove the --debug-force-legacy-core option and try again."
+            )
         system_config = "[architecture]\n"
         system_config += f"macs={arch.num_macs_per_cycle}\n"
         system_config += f"cores={arch.ncores}\n"
@@ -1226,8 +1239,11 @@ def main(argv: Optional[List[str]] = None) -> int:
             args.disable_fwd,
             args.disable_cascading,
             args.disable_buffering,
+            args.disable_ifm_reuse,
             args.cop_format,
             args.separate_io_regions,
+            args.cpu_tensor_alignment,
+            args.tensor_allocator,
         )
 
         process_regor(

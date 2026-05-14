@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2021-2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2021-2023, 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -774,7 +774,7 @@ class TFLiteSemantic:
 
         for ax in axis:
             if ax < 0 or ax >= dims:
-                return False, "Axis parameter is out of bounds. axis: {axis}, dims: {dims}. "
+                return False, f"Axis parameter is out of bounds. axis: {axis}, dims: {dims}. "
 
             # Batch is only supported if batch shape is 1
             if dims == 4 and ax == 0:

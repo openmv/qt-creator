@@ -373,7 +373,7 @@ class Op(Enum):
         return self.info.block_type == NpuBlockType.ElementWise and not self.info.is_unary
 
     def is_relu_op(self):
-        return self in (Op.Relu, Op.Relu6, Op.ReluN1To1, Op.ReluN, Op.Clip, Op.Clamp)
+        return self in (Op.Relu, Op.Relu6, Op.Relu0To1, Op.ReluN1To1, Op.ReluN, Op.Clip, Op.Clamp)
 
     def is_activation_op(self):
         return self.is_relu_op() or self in (Op.Tanh, Op.Sigmoid, Op.Softmax, Op.LUT, Op.HardSwish)
@@ -454,6 +454,9 @@ def create_activation_function(op_type: Op, min=None, max=None) -> ActivationFun
     elif op_type == Op.Relu6:
         act.min = 0.0
         act.max = 6.0
+    elif op_type == Op.Relu0To1:
+        act.min = 0.0
+        act.max = 1.0
     elif op_type == Op.ReluN1To1:
         act.min = -1.0
         act.max = 1.0

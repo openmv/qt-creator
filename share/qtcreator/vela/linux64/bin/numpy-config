@@ -1,4 +1,4 @@
-#!/home/kwagyeman/github/openmv-ide/qt-creator/share/qtcreator/vela/linux64/../../python/linux-x86_64/bin/python3
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

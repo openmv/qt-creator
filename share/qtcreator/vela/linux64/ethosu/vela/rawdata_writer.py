@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright 2021, 2024-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+# SPDX-FileCopyrightText: Copyright 2021, 2024-2026 Arm Limited and/or its affiliates <open-source-office@arm.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -23,6 +23,48 @@ from .nn_graph import PassPlacement
 from .operation import Op
 
 
+def _quantization_entry(quant_type, scale, zero_point):
+    qt = (quant_type or "").lower()
+    if qt in ("", "none"):
+        return {
+            "quant_type": "none",
+            "scale": np.array([], dtype=np.float32),
+            "zero_point": np.array([], dtype=np.int32),
+        }
+
+    scale_arr = np.array(scale, dtype=np.float32).flatten()
+    zero_arr = np.array(zero_point, dtype=np.int32).flatten()
+
+    if qt == "per_channel":
+        return {"quant_type": qt, "scale": scale_arr, "zero_point": zero_arr}
+
+    if scale_arr.size == 0 or zero_arr.size == 0:
+        return {
+            "quant_type": "none",
+            "scale": np.array([], dtype=np.float32),
+            "zero_point": np.array([], dtype=np.int32),
+        }
+
+    return {
+        "quant_type": qt,
+        "scale": np.array([scale_arr[0]], dtype=np.float32),
+        "zero_point": np.array([zero_arr[0]], dtype=np.int32),
+    }
+
+
+def _quantization_entry_from_tensor(tensor):
+    if hasattr(tensor, "quant_type"):
+        quant_type = getattr(tensor, "quant_type", "none") or "none"
+        return _quantization_entry(quant_type, getattr(tensor, "scale", None), getattr(tensor, "zero_point", None))
+
+    quant = getattr(tensor, "quantization", None)
+    if quant is None or not quant.is_valid():
+        return _quantization_entry("none", None, None)
+
+    quant_type = "per_channel" if quant.is_per_axis() else "per_tensor"
+    return _quantization_entry(quant_type, quant.scale_f32, quant.zero_point)
+
+
 def write_rawdata_output(nng, arch, filename):
     subgraphs_to_write = [sg for sg in nng.subgraphs if sg.placement == PassPlacement.Cpu]
 
@@ -41,10 +83,12 @@ def write_rawdata_output(nng, arch, filename):
             ifm_elem_sizes = []
             ifm_regions = []
             ifm_offsets = []
+            ifm_quantization = []
             ofm_shapes = []
             ofm_elem_sizes = []
             ofm_regions = []
             ofm_offsets = []
+            ofm_quantization = []
             cmd_stream_tensor, weight_tensor, scratch_tensor, scratch_fast_tensor = custom_op.inputs[:4]
             weight_region = get_region(weight_tensor.mem_type, arch)
             scratch_region = get_region(scratch_tensor.mem_type, arch)
@@ -54,11 +98,13 @@ def write_rawdata_output(nng, arch, filename):
                 ifm_regions.append(get_region(ifm.mem_type, arch))
                 ifm_offsets.append(ifm.address)
                 ifm_elem_sizes.append(ifm.element_size())
+                ifm_quantization.append(_quantization_entry_from_tensor(ifm))
             for ofm in custom_op.outputs:
                 ofm_shapes.append(ofm.get_full_shape())
                 ofm_regions.append(get_region(ofm.mem_type, arch))
                 ofm_offsets.append(ofm.address)
                 ofm_elem_sizes.append(ofm.element_size())
+                ofm_quantization.append(_quantization_entry_from_tensor(ofm))
 
             filename_sg = f"{filename}_vela_sg{sg_idx}.npz"
             np.savez(
@@ -80,6 +126,9 @@ def write_rawdata_output(nng, arch, filename):
                 output_elem_size=ofm_elem_sizes,
                 output_region=ofm_regions,
                 output_offset=ofm_offsets,
+                input_quantization=ifm_quantization,
+                output_quantization=ofm_quantization,
+                variable_quantization=[],
                 variable_shape=[],
                 variable_elem_size=[],
                 variable_region=[],
@@ -113,4 +162,7 @@ def write_rawdata_output_from_model(filename, model):
         variable_elem_size=[t.element_size for t in model.variables],
         variable_region=[t.region for t in model.variables],
         variable_offset=[t.address for t in model.variables],
+        input_quantization=[_quantization_entry_from_tensor(t) for t in model.inputs],
+        output_quantization=[_quantization_entry_from_tensor(t) for t in model.outputs],
+        variable_quantization=[_quantization_entry_from_tensor(t) for t in model.variables],
     )

@@ -204,6 +204,7 @@ def remove_SplitSliceRead(op, arch):
         #   - if ifm stride multiplier is larger than one in any dimension
         #   - if consumer is a Transpose op since ifm shape has been reshaped and can not be changed
         #   - if consumer is elementwise and ifm needs to be broadcasted
+        #   - if consumer is a SplitSliceRead, do not support multiple Splits
         if (
             op.ofm_shapes[0] == Shape4D.from_list(op.ofm.shape)
             and all(s_mul == 1 for s_mul in op.ifm_stride_multiplier[0])
@@ -211,7 +212,9 @@ def remove_SplitSliceRead(op, arch):
                 consumer is not None
                 and consumer.run_on_npu
                 and consumer.type not in memory_only_ops
+                and consumer.type != Op.Memcpy
                 and consumer.original_type != Op.Transpose
+                and consumer.original_type != Op.SplitSliceRead
                 and check_splitsliceread_to_consumer_shape(op, consumer)
                 and not (
                     consumer.type.is_binary_elementwise_op()
@@ -2716,7 +2719,8 @@ def fixup_dilation_gt2(op: Operation, arch, nng) -> Operation:
             new_kernel_w = (kernel_w - 1) * scale_dilation_w + 1
 
             new_kernel_shape = [new_kernel_h, new_kernel_w, kernel_ic, kernel_oc]
-            new_kernel_values = np.zeros(new_kernel_shape, dtype=op.weights.values.dtype)
+            zp = op.weights.quantization.zero_point
+            new_kernel_values = np.zeros(new_kernel_shape, dtype=op.weights.values.dtype) + zp
 
             # copy the original kernel values into the new sparse kernel
             for h in range(0, kernel_h):
@@ -2954,8 +2958,14 @@ def convert_conv_groups(op: Operation, arch, nng):
             # across all of the convolution groups
             conv_group_op_weights_shape = op.weights.shape[:-1] + [num_filters_cg]
             conv_group_op_weights_quant = op.weights.quantization.clone()
-            conv_group_op_weights_quant.scale_f32 = op.weights.quantization.scale_f32[..., cg_oc_start:cg_oc_end]
-            conv_group_op_weights_quant.zero_point = op.weights.quantization.zero_point[..., cg_oc_start:cg_oc_end]
+
+            if np.isscalar(op.weights.quantization.scale_f32):
+                conv_group_op_weights_quant.scale_f32 = op.weights.quantization.scale_f32
+                conv_group_op_weights_quant.zero_point = op.weights.quantization.zero_point
+            else:
+                conv_group_op_weights_quant.scale_f32 = op.weights.quantization.scale_f32[..., cg_oc_start:cg_oc_end]
+                conv_group_op_weights_quant.zero_point = op.weights.quantization.zero_point[..., cg_oc_start:cg_oc_end]
+
             conv_group_op.add_input_tensor(
                 create_const_tensor(
                     f"{op.weights.name}_cg{i}",
@@ -2973,8 +2983,14 @@ def convert_conv_groups(op: Operation, arch, nng):
             else:
                 conv_group_op_bias_shape = op.bias.shape[:-1] + [num_filters_cg]
                 conv_group_op_bias_quant = op.bias.quantization.clone()
-                conv_group_op_bias_quant.scale_f32 = op.bias.quantization.scale_f32[..., cg_oc_start:cg_oc_end]
-                conv_group_op_bias_quant.zero_point = op.bias.quantization.zero_point[..., cg_oc_start:cg_oc_end]
+
+                if np.isscalar(op.bias.quantization.scale_f32):
+                    conv_group_op_bias_quant.scale_f32 = op.bias.quantization.scale_f32
+                    conv_group_op_bias_quant.zero_point = op.bias.quantization.zero_point
+                else:
+                    conv_group_op_bias_quant.scale_f32 = op.bias.quantization.scale_f32[..., cg_oc_start:cg_oc_end]
+                    conv_group_op_bias_quant.zero_point = op.bias.quantization.zero_point[..., cg_oc_start:cg_oc_end]
+
                 conv_group_op.add_input_tensor(
                     create_const_tensor(
                         f"{op.bias.name}_cg{i}",
