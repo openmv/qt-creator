@@ -99,7 +99,7 @@ if (WIN32)
     spsdk/windows
     stcubeprogrammer/windows)
   set(downloaded_resource_directories
-    https://download.openmv.io/stedgeai/stedgeai-win-3.0.0.tar.gz
+    https://download.openmv.io/stedgeai/stedgeai-win-4.0.0.tar.gz
     https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi.zip)
 endif()
 
