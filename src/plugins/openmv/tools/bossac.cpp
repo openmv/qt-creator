@@ -140,7 +140,6 @@ void bossacDownloadFirmware(const QString &details, QString &command, Utils::Pro
     QMutexLocker locker(&bossac_working);
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("BOSSAC"), details, process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                             Core::ICore::dialogParent());
 
@@ -297,7 +296,6 @@ void bossacDownloadFirmware(const QString &details, QString &command, Utils::Pro
     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
     delete dialog;
-    settings->endGroup();
 }
 
 } // namespace Internal

@@ -46,9 +46,8 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
     layout->addWidget(new QLabel(Tr::tr("Please choose how to split the data to upload.\nOpenMV recommends leaving this at the default 80/20% split.")));
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(EDGE_IMPULSE_SETTINGS_GROUP);
 
-    int split = settings->value(LAST_TRAIN_TEST_SPLIT, 80).toInt();
+    int split = settings->value(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_TRAIN_TEST_SPLIT, 80).toInt();
 
     QHBoxLayout *layout2 = new QHBoxLayout();
 
@@ -81,10 +80,9 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
 
     if(ok)
     {
-        settings->setValue(LAST_TRAIN_TEST_SPLIT, splitSlider->value());
+        settings->setValue(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_TRAIN_TEST_SPLIT, splitSlider->value());
     }
 
-    settings->endGroup();
 
     if(ok)
     {
@@ -410,10 +408,8 @@ static void uploadProject(const QString &apiKey, OpenMVDatasetEditor *editor)
 QString loggedIntoEdgeImpulse()
 {
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(EDGE_IMPULSE_SETTINGS_GROUP);
-    bool ok = !settings->value(LAST_JWT_TOKEN).toString().isEmpty();
-    QString accountName = settings->value(LAST_JWT_TOKEN_EMAIL).toString();
-    settings->endGroup();
+    bool ok = !settings->value(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_JWT_TOKEN).toString().isEmpty();
+    QString accountName = settings->value(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_JWT_TOKEN_EMAIL).toString();
     return ok ? accountName : QString();
 }
 
@@ -434,9 +430,7 @@ void loginToEdgeImpulse(OpenMVDatasetEditor *editor)
             if(success)
             {
                 Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-                settings->beginGroup(EDGE_IMPULSE_SETTINGS_GROUP);
-                settings->setValue(LAST_JWT_TOKEN, token);
-                settings->endGroup();
+                settings->setValue(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_JWT_TOKEN, token);
 
                 if(editor->rootPath().isEmpty())
                 {
@@ -473,9 +467,8 @@ void loginToEdgeImpulse(OpenMVDatasetEditor *editor)
     QFormLayout *layout = new QFormLayout(&dialog);
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(EDGE_IMPULSE_SETTINGS_GROUP);
 
-    QLineEdit *usernameBox = new QLineEdit(settings->value(LAST_JWT_TOKEN_EMAIL).toString());
+    QLineEdit *usernameBox = new QLineEdit(settings->value(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_JWT_TOKEN_EMAIL).toString());
     usernameBox->setPlaceholderText(Tr::tr("Email Address"));
     layout->addRow(Tr::tr("Username"), usernameBox);
 
@@ -491,7 +484,7 @@ void loginToEdgeImpulse(OpenMVDatasetEditor *editor)
 
     if(dialog.exec() == QDialog::Accepted)
     {
-        settings->setValue(LAST_JWT_TOKEN_EMAIL, usernameBox->text());
+        settings->setValue(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_JWT_TOKEN_EMAIL, usernameBox->text());
 
         QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://studio.edgeimpulse.com/v1/api-login")));
         request.setRawHeader(QByteArrayLiteral("accept"), QByteArrayLiteral("application/json"));
@@ -508,15 +501,12 @@ void loginToEdgeImpulse(OpenMVDatasetEditor *editor)
         }
     }
 
-    settings->endGroup();
 }
 
 void logoutFromEdgeImpulse()
 {
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(EDGE_IMPULSE_SETTINGS_GROUP);
-    settings->setValue(LAST_JWT_TOKEN, QString());
-    settings->endGroup();
+    settings->setValue(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_JWT_TOKEN, QString());
 }
 
 void uploadToSelectedProject(OpenMVDatasetEditor *editor)
@@ -545,9 +535,8 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
                 if(map.size())
                 {
                     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-                    settings->beginGroup(EDGE_IMPULSE_SETTINGS_GROUP);
 
-                    int id = settings->value(LAST_PROJECT_ID).toInt();
+                    int id = settings->value(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_PROJECT_ID).toInt();
                     int index = map.contains(id) ? map.values().indexOf(map.value(id)) : -1;
 
                     bool ok;
@@ -559,7 +548,7 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
 
                     if(ok)
                     {
-                        settings->setValue(LAST_PROJECT_ID, id);
+                        settings->setValue(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_PROJECT_ID, id);
 
                         QNetworkAccessManager *manager2 = new QNetworkAccessManager();
 
@@ -597,7 +586,7 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
 
                         QNetworkRequest request2 = QNetworkRequest(QUrl(QString(QStringLiteral("https://studio.edgeimpulse.com/v1/api/%1/devkeys")).arg(id)));
                         request2.setRawHeader(QByteArrayLiteral("accept"), QByteArrayLiteral("application/json"));
-                        request2.setRawHeader(QByteArrayLiteral("cookie"), QByteArrayLiteral("jwt=") + settings->value(LAST_JWT_TOKEN).toByteArray());
+                        request2.setRawHeader(QByteArrayLiteral("cookie"), QByteArrayLiteral("jwt=") + settings->value(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_JWT_TOKEN).toByteArray());
 
                         QNetworkReply *reply2 = manager2->get(request2);
 
@@ -607,7 +596,6 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
                         }
                     }
 
-                    settings->endGroup();
                 }
                 else
                 {
@@ -638,11 +626,10 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
     });
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(EDGE_IMPULSE_SETTINGS_GROUP);
 
     QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://studio.edgeimpulse.com/v1/api/projects")));
     request.setRawHeader(QByteArrayLiteral("accept"), QByteArrayLiteral("application/json"));
-    request.setRawHeader(QByteArrayLiteral("cookie"), QByteArrayLiteral("jwt=") + settings->value(LAST_JWT_TOKEN).toByteArray());
+    request.setRawHeader(QByteArrayLiteral("cookie"), QByteArrayLiteral("jwt=") + settings->value(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_JWT_TOKEN).toByteArray());
 
     QNetworkReply *reply = manager->get(request);
 
@@ -651,18 +638,16 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
         QObject::connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
     }
 
-    settings->endGroup();
 }
 
 void uploadProjectByAPIKey(OpenMVDatasetEditor *editor)
 {
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(EDGE_IMPULSE_SETTINGS_GROUP);
 
     bool ok;
     QString apiKey = QInputDialog::getText(Core::ICore::dialogParent(),
         Tr::tr("Upload Project"), Tr::tr("Please enter an Edge Impluse Project API Key"),
-        QLineEdit::Normal, settings->value(LAST_API_KEY).toString(), &ok,
+        QLineEdit::Normal, settings->value(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_API_KEY).toString(), &ok,
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
@@ -670,10 +655,9 @@ void uploadProjectByAPIKey(OpenMVDatasetEditor *editor)
 
     if(ok)
     {
-        settings->setValue(LAST_API_KEY, apiKey);
+        settings->setValue(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_API_KEY, apiKey);
     }
 
-    settings->endGroup();
 
     if(ok)
     {

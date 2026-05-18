@@ -163,7 +163,7 @@ void OpenMVPlugin::setPortPath(bool silent)
         }
 
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SERIAL_PORT_SETTINGS_GROUP);
+        const Utils::Key portKey = Utils::keyFromString(QStringLiteral(SERIAL_PORT_SETTINGS_GROUP "/") + m_portName);
 
         if(drives.isEmpty())
         {
@@ -189,12 +189,12 @@ void OpenMVPlugin::setPortPath(bool silent)
             else
             {
                 m_portPath = drives.first();
-                settings->setValue(m_portName.toUtf8(), m_portPath);
+                settings->setValue(portKey, m_portPath);
             }
         }
         else
         {
-            int index = drives.indexOf(settings->value(m_portName.toUtf8()).toString());
+            int index = drives.indexOf(settings->value(portKey).toString());
 
             bool ok = silent;
             QString temp = silent ? drives.first() : QInputDialog::getItem(Core::ICore::dialogParent(),
@@ -206,11 +206,9 @@ void OpenMVPlugin::setPortPath(bool silent)
             if(ok)
             {
                 m_portPath = temp;
-                settings->setValue(m_portName.toUtf8(), m_portPath);
+                settings->setValue(portKey, m_portPath);
             }
         }
-
-        settings->endGroup();
 
         m_pathButton->setText((!m_portPath.isEmpty()) ? Tr::tr("Drive: %L1").arg(m_portPath) : Tr::tr("Drive:"));
 
@@ -233,14 +231,15 @@ void OpenMVPlugin::setPortPath(bool silent)
 void OpenMVPlugin::setSpacing()
 {
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(SETTINGS_GROUP);
 
-    bool useGetState = settings->value(LAST_USE_GET_STATE, true).toBool();
-    int frameDumpSpacing = settings->value(LAST_FRAME_DUMP_SPACING, FRAME_SIZE_DUMP_SPACING).toInt();
-    int getScriptRunningSpacing = settings->value(LAST_GET_SCRIPT_RUNNING_SPACING, GET_SCRIPT_RUNNING_SPACING).toInt();
-    int getTxBufferSpacing = settings->value(LAST_GET_TX_BUFFER_SPACING, GET_TX_BUFFER_SPACING).toInt();
-    int getStateSpacing = settings->value(LAST_GET_STATE_SPACING, GET_STATE_SPACING).toInt();
-    int readProfileSpacing = settings->value(LAST_READ_PROFILE_SPACING, READ_PROFILE_SPACING).toInt();
+    bool useGetState = settings->value(SETTINGS_GROUP "/" LAST_USE_GET_STATE, true).toBool();
+    int frameDumpSpacing = settings->value(SETTINGS_GROUP "/" LAST_FRAME_DUMP_SPACING, FRAME_SIZE_DUMP_SPACING).toInt();
+    int getScriptRunningSpacing = settings->value(SETTINGS_GROUP "/" LAST_GET_SCRIPT_RUNNING_SPACING,
+                                                   GET_SCRIPT_RUNNING_SPACING).toInt();
+    int getTxBufferSpacing = settings->value(SETTINGS_GROUP "/" LAST_GET_TX_BUFFER_SPACING,
+                                             GET_TX_BUFFER_SPACING).toInt();
+    int getStateSpacing = settings->value(SETTINGS_GROUP "/" LAST_GET_STATE_SPACING, GET_STATE_SPACING).toInt();
+    int readProfileSpacing = settings->value(SETTINGS_GROUP "/" LAST_READ_PROFILE_SPACING, READ_PROFILE_SPACING).toInt();
 
     int useGetStateAvailable =
       !((m_major < OPENMV_ADD_GET_STATE_MAJOR)
@@ -428,13 +427,18 @@ void OpenMVPlugin::setSpacing()
 
     if(dialog->exec() == QDialog::Accepted)
     {
-        settings->setValue(LAST_USE_GET_STATE, m_useGetState = getStateGroup->isChecked());
-        settings->setValue(LAST_FRAME_DUMP_SPACING, m_frameSizeDumpSpacing = frameDumpSpacingBox->value());
-        settings->setValue(LAST_GET_SCRIPT_RUNNING_SPACING, m_getScriptRunningSpacing = getScriptRunningSpacingBox->value());
-        settings->setValue(LAST_GET_TX_BUFFER_SPACING, m_getTxBufferSpacing = getTxBufferSpacingBox->value());
-        settings->setValue(LAST_GET_STATE_SPACING, m_getStateSpacing = getStateSpacingBox->value());
-        settings->setValue(LAST_READ_PROFILE_SPACING, m_readProfileSpacing = readProfileSpacingBox->value());
-        settings->setValue(LAST_DYNAMIC_FRAME_READING, m_dynamicFrameReading = dynamicFrameReadingBox->isChecked());
+        settings->setValue(SETTINGS_GROUP "/" LAST_USE_GET_STATE, m_useGetState = getStateGroup->isChecked());
+        settings->setValue(SETTINGS_GROUP "/" LAST_FRAME_DUMP_SPACING,
+                           m_frameSizeDumpSpacing = frameDumpSpacingBox->value());
+        settings->setValue(SETTINGS_GROUP "/" LAST_GET_SCRIPT_RUNNING_SPACING,
+                           m_getScriptRunningSpacing = getScriptRunningSpacingBox->value());
+        settings->setValue(SETTINGS_GROUP "/" LAST_GET_TX_BUFFER_SPACING,
+                           m_getTxBufferSpacing = getTxBufferSpacingBox->value());
+        settings->setValue(SETTINGS_GROUP "/" LAST_GET_STATE_SPACING, m_getStateSpacing = getStateSpacingBox->value());
+        settings->setValue(SETTINGS_GROUP "/" LAST_READ_PROFILE_SPACING,
+                           m_readProfileSpacing = readProfileSpacingBox->value());
+        settings->setValue(SETTINGS_GROUP "/" LAST_DYNAMIC_FRAME_READING,
+                           m_dynamicFrameReading = dynamicFrameReadingBox->isChecked());
 
         m_frameSizeDumpTimer.restart();
         m_getScriptRunningTimer.restart();
@@ -445,7 +449,6 @@ void OpenMVPlugin::setSpacing()
         m_queue.clear();
     }
 
-    settings->endGroup();
     delete dialog;
 }
 
@@ -561,7 +564,6 @@ void OpenMVPlugin::saveTemplate(const QRect &rect)
         QString drivePath = QDir::cleanPath(QDir::fromNativeSeparators(m_portPath));
 
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
 
         QString path;
 
@@ -569,7 +571,8 @@ void OpenMVPlugin::saveTemplate(const QRect &rect)
         {
             path =
                 QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Template"),
-                                             settings->value(LAST_SAVE_TEMPLATE_PATH, drivePath).toString(),
+                                             settings->value(SETTINGS_GROUP "/" LAST_SAVE_TEMPLATE_PATH,
+                                                             drivePath).toString(),
                                              Tr::tr("Image Files (*.bmp *.jpg *.jpeg *.pgm *.ppm)"));
 
             if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
@@ -602,7 +605,7 @@ void OpenMVPlugin::saveTemplate(const QRect &rect)
                 if(sendPath.size() <= DESCRIPTOR_SAVE_PATH_MAX_LEN)
                 {
                     m_iodevice->templateSave(rect.x(), rect.y(), rect.width(), rect.height(), sendPath);
-                    settings->setValue(LAST_SAVE_TEMPLATE_PATH, path);
+                    settings->setValue(SETTINGS_GROUP "/" LAST_SAVE_TEMPLATE_PATH, path);
                 }
                 else
                 {
@@ -612,8 +615,6 @@ void OpenMVPlugin::saveTemplate(const QRect &rect)
                 }
             }
         }
-
-        settings->endGroup();
     }
     else
     {
@@ -628,7 +629,6 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
         QString drivePath = QDir::cleanPath(QDir::fromNativeSeparators(m_portPath));
 
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
 
         QString path;
 
@@ -636,7 +636,8 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
         {
             path =
                 QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Descriptor"),
-                                             settings->value(LAST_SAVE_DESCRIPTOR_PATH, drivePath).toString(),
+                                             settings->value(SETTINGS_GROUP "/" LAST_SAVE_DESCRIPTOR_PATH,
+                                                             drivePath).toString(),
                                              Tr::tr("Keypoints Files (*.lbp *.orb)"));
 
             if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
@@ -669,7 +670,7 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
                 if(sendPath.size() <= DESCRIPTOR_SAVE_PATH_MAX_LEN)
                 {
                     m_iodevice->descriptorSave(rect.x(), rect.y(), rect.width(), rect.height(), sendPath);
-                    settings->setValue(LAST_SAVE_DESCRIPTOR_PATH, path);
+                    settings->setValue(SETTINGS_GROUP "/" LAST_SAVE_DESCRIPTOR_PATH, path);
                 }
                 else
                 {
@@ -679,8 +680,6 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
                 }
             }
         }
-
-        settings->endGroup();
     }
     else
     {

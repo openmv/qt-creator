@@ -513,7 +513,6 @@ void MyPlainTextEdit::clear()
 void MyPlainTextEdit::save()
 {
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(TERMINAL_SETTINGS_GROUP);
 
     QString path;
 
@@ -521,7 +520,7 @@ void MyPlainTextEdit::save()
     {
         path =
         QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Log"),
-            settings->value(LAST_SAVE_LOG_PATH, QDir::homePath()).toString(),
+            settings->value(TERMINAL_SETTINGS_GROUP "/" LAST_SAVE_LOG_PATH, QDir::homePath()).toString(),
             Tr::tr("Text Files (*.txt);;All files (*)"));
 
         if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
@@ -550,7 +549,7 @@ void MyPlainTextEdit::save()
             }
             else
             {
-                settings->setValue(LAST_SAVE_LOG_PATH, path);
+                settings->setValue(TERMINAL_SETTINGS_GROUP "/" LAST_SAVE_LOG_PATH, path);
             }
         }
         else
@@ -560,8 +559,6 @@ void MyPlainTextEdit::save()
                 Tr::tr("Error: %L1!").arg(file.errorString()));
         }
     }
-
-    settings->endGroup();
 }
 
 void MyPlainTextEdit::execute(bool standAlone)

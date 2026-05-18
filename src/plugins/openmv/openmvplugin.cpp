@@ -436,12 +436,13 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     }
 
     // Keep backwards compatibility with old versions of OpenMV IDE.
-    settings->beginGroup(SETTINGS_GROUP);
-    settings->setValue(RESOURCES_MAJOR, resourcesSettings.value(QStringLiteral(RESOURCES_MAJOR)).toInt());
-    settings->setValue(RESOURCES_MINOR, resourcesSettings.value(QStringLiteral(RESOURCES_MINOR)).toInt());
-    settings->setValue(RESOURCES_PATCH, resourcesSettings.value(QStringLiteral(RESOURCES_PATCH)).toInt());
+    settings->setValue(SETTINGS_GROUP "/" RESOURCES_MAJOR,
+                      resourcesSettings.value(QStringLiteral(RESOURCES_MAJOR)).toInt());
+    settings->setValue(SETTINGS_GROUP "/" RESOURCES_MINOR,
+                      resourcesSettings.value(QStringLiteral(RESOURCES_MINOR)).toInt());
+    settings->setValue(SETTINGS_GROUP "/" RESOURCES_PATCH,
+                      resourcesSettings.value(QStringLiteral(RESOURCES_PATCH)).toInt());
     settings->sync();
-    settings->endGroup();
 
     ///////////////////////////////////////////////////////////////////////////
 
@@ -657,24 +658,21 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     if((!isNoShow()) && (index_form_key == -1) && (index_form_key_dialog != -1))
     {
-        settings->beginGroup(SETTINGS_GROUP);
 
         bool formkeyOk;
         QString formKey = QInputDialog::getText(splashScreen,
             Tr::tr("Form Key"), Tr::tr("Please enter the form key"),
-            QLineEdit::Normal, settings->value(LAST_FORM_KEY).toString(), &formkeyOk,
+            QLineEdit::Normal, settings->value(SETTINGS_GROUP "/" LAST_FORM_KEY).toString(), &formkeyOk,
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
         if(formkeyOk && (!formKey.isEmpty()))
         {
             m_formKey = formKey;
-            settings->setValue(LAST_FORM_KEY, formKey);
-            settings->endGroup();
+            settings->setValue(SETTINGS_GROUP "/" LAST_FORM_KEY, formKey);
         }
         else
         {
-            settings->endGroup();
             exit(-1);
         }
     }
@@ -977,18 +975,17 @@ void OpenMVPlugin::extensionsInitialized()
     microPythonToolsMenu->addAction(copyScriptCommand);
     connect(copyScriptAction, &QAction::triggered, this, [this] {
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
 
         QJsonObject boardSettings = getBoardSettings(Tr::tr("Copy/Convert Python File"), settings);
 
         if (boardSettings.isEmpty())
         {
-            settings->endGroup();
             return;
         }
 
         QString src = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Copy/Convert Python File"),
-                                                   settings->value(LAST_COPY_SCRIPT_OPEN_PATH, QDir::homePath()).toString());
+                                                   settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_OPEN_PATH,
+                                                                  QDir::homePath()).toString());
 
         if (!src.isEmpty())
         {
@@ -996,14 +993,13 @@ void OpenMVPlugin::extensionsInitialized()
 
             if (convertedSrc.isEmpty())
             {
-                settings->endGroup();
                 return;
             }
 
             QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Copy/Convert Python File"),
                 m_portPath.isEmpty()
-                ? (settings->value(LAST_COPY_SCRIPT_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
-                : (settings->value(LAST_COPY_SCRIPT_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
+                ? (settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
+                : (settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
 
             if(!dst.isEmpty())
             {
@@ -1011,9 +1007,11 @@ void OpenMVPlugin::extensionsInitialized()
                 {
                     if(QFile::copy(convertedSrc, dst))
                     {
-                        settings->setValue(LAST_COPY_SCRIPT_OPEN_PATH, QFileInfo(src).path());
-                        if (m_portPath.isEmpty()) settings->setValue(LAST_COPY_SCRIPT_NO_CAM_PATH, QFileInfo(dst).path());
-                        if (!m_portPath.isEmpty()) settings->setValue(LAST_COPY_SCRIPT_WITH_CAM_PATH, QFileInfo(dst).path());
+                        settings->setValue(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_OPEN_PATH, QFileInfo(src).path());
+                        if (m_portPath.isEmpty())
+                            settings->setValue(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_NO_CAM_PATH, QFileInfo(dst).path());
+                        if (!m_portPath.isEmpty())
+                            settings->setValue(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_WITH_CAM_PATH, QFileInfo(dst).path());
                     }
                     else
                     {
@@ -1031,7 +1029,6 @@ void OpenMVPlugin::extensionsInitialized()
             }
         }
 
-        settings->endGroup();
     });
 
     toolsMenu->addSeparator();
@@ -1051,13 +1048,11 @@ void OpenMVPlugin::extensionsInitialized()
     machineVisionToolsMenu->addAction(openmvModelZooCommand);
     connect(openmvModelZooAction, &QAction::triggered, this, [this] {
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
 
         QJsonObject boardSettings = getBoardSettings(Tr::tr("Model Zoo"), settings);
 
         if (boardSettings.isEmpty())
         {
-            settings->endGroup();
             return;
         }
 
@@ -1067,7 +1062,6 @@ void OpenMVPlugin::extensionsInitialized()
 
             if (romfsConfigSettings.isEmpty())
             {
-                settings->endGroup();
                 return;
             }
 
@@ -1084,14 +1078,13 @@ void OpenMVPlugin::extensionsInitialized()
             if (convertedSrc.isEmpty())
             {
                 delete dialog;
-                settings->endGroup();
                 return;
             }
 
             QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Model Zoo"),
                 m_portPath.isEmpty()
-                ? (settings->value(LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
-                : (settings->value(LAST_MODEL_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
+                ? (settings->value(SETTINGS_GROUP "/" LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
+                : (settings->value(SETTINGS_GROUP "/" LAST_MODEL_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
 
             if(!dst.isEmpty())
             {
@@ -1099,8 +1092,10 @@ void OpenMVPlugin::extensionsInitialized()
                 {
                     if(QFile::copy(convertedSrc, dst))
                     {
-                        if (m_portPath.isEmpty()) settings->setValue(LAST_MODEL_NO_CAM_PATH, QFileInfo(dst).path());
-                        if (!m_portPath.isEmpty()) settings->setValue(LAST_MODEL_WITH_CAM_PATH, QFileInfo(dst).path());
+                        if (m_portPath.isEmpty())
+                            settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_NO_CAM_PATH, QFileInfo(dst).path());
+                        if (!m_portPath.isEmpty())
+                            settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_WITH_CAM_PATH, QFileInfo(dst).path());
 
                         // Copy labels over too if they exist.
                         QString labels = dialog->selectedModelLabels();
@@ -1133,7 +1128,6 @@ void OpenMVPlugin::extensionsInitialized()
         }
 
         delete dialog;
-        settings->endGroup();
     });
 
     QAction *convertModelAction = new QAction(Tr::tr("Convert Model for NPU"), this);
@@ -1141,13 +1135,11 @@ void OpenMVPlugin::extensionsInitialized()
     machineVisionToolsMenu->addAction(convertModelCommand);
     connect(convertModelAction, &QAction::triggered, this, [this] {
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
 
         QJsonObject boardSettings = getBoardSettings(Tr::tr("Convert Model"), settings);
 
         if (boardSettings.isEmpty())
         {
-            settings->endGroup();
             return;
         }
 
@@ -1157,7 +1149,6 @@ void OpenMVPlugin::extensionsInitialized()
 
             if (romfsConfigSettings.isEmpty())
             {
-                settings->endGroup();
                 return;
             }
 
@@ -1169,13 +1160,13 @@ void OpenMVPlugin::extensionsInitialized()
                     Tr::tr("Convert Model"),
                     QObject::tr("Model conversion is unnecessary for this board, as it lacks an NPU accelerator."));
 
-                settings->endGroup();
                 return;
             }
         }
 
         QString src = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Convert Model"),
-                                                   settings->value(LAST_MODEL_CONVERT_OPEN_PATH, QDir::homePath()).toString());
+                                                   settings->value(SETTINGS_GROUP "/" LAST_MODEL_CONVERT_OPEN_PATH,
+                                                                  QDir::homePath()).toString());
 
         if (!src.isEmpty())
         {
@@ -1183,14 +1174,13 @@ void OpenMVPlugin::extensionsInitialized()
 
             if (convertedSrc.isEmpty())
             {
-                settings->endGroup();
                 return;
             }
 
             QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Convert Model"),
                 m_portPath.isEmpty()
-                ? (settings->value(LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
-                : (settings->value(LAST_MODEL_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
+                ? (settings->value(SETTINGS_GROUP "/" LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
+                : (settings->value(SETTINGS_GROUP "/" LAST_MODEL_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
 
             if(!dst.isEmpty())
             {
@@ -1198,9 +1188,11 @@ void OpenMVPlugin::extensionsInitialized()
                 {
                     if(QFile::copy(convertedSrc, dst))
                     {
-                        settings->setValue(LAST_MODEL_CONVERT_OPEN_PATH, QFileInfo(src).path());
-                        if (m_portPath.isEmpty()) settings->setValue(LAST_MODEL_NO_CAM_PATH, QFileInfo(dst).path());
-                        if (!m_portPath.isEmpty()) settings->setValue(LAST_MODEL_WITH_CAM_PATH, QFileInfo(dst).path());
+                        settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_CONVERT_OPEN_PATH, QFileInfo(src).path());
+                        if (m_portPath.isEmpty())
+                            settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_NO_CAM_PATH, QFileInfo(dst).path());
+                        if (!m_portPath.isEmpty())
+                            settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_WITH_CAM_PATH, QFileInfo(dst).path());
                     }
                     else
                     {
@@ -1218,7 +1210,6 @@ void OpenMVPlugin::extensionsInitialized()
             }
         }
 
-        settings->endGroup();
     });
 
     machineVisionToolsMenu->addSeparator();
@@ -1351,11 +1342,10 @@ void OpenMVPlugin::extensionsInitialized()
     datasetEditorMenu->addAction(newDatasetCommand);
     connect(newDatasetAction, &QAction::triggered, this, [this] {
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
 
         QString path =
             QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), Tr::tr("Dataset Editor - Choose a folder to build the dataset in"),
-                settings->value(LAST_DATASET_EDITOR_PATH, QDir::homePath()).toString());
+                settings->value(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_PATH, QDir::homePath()).toString());
 
         if(!path.isEmpty())
         {
@@ -1443,7 +1433,7 @@ void OpenMVPlugin::extensionsInitialized()
                             m_datasetEditor->setRootPath(path);
                             Core::EditorManager::addCurrentPositionToNavigationHistory();
                             Core::EditorManager::activateEditor(editor);
-                            settings->setValue(LAST_DATASET_EDITOR_PATH, path);
+                            settings->setValue(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_PATH, path);
                         }
                     }
                 }
@@ -1456,7 +1446,6 @@ void OpenMVPlugin::extensionsInitialized()
             }
         }
 
-        settings->endGroup();
     });
 
     QAction *openDatasetAction = new QAction(Tr::tr("Open Dataset"), this);
@@ -1464,11 +1453,10 @@ void OpenMVPlugin::extensionsInitialized()
     datasetEditorMenu->addAction(openDatasetCommand);
     connect(openDatasetAction, &QAction::triggered, this, [this] {
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
 
         QString path =
             QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), Tr::tr("Dataset Editor - Choose a dataset folder to open"),
-                settings->value(LAST_DATASET_EDITOR_PATH, QDir::homePath()).toString());
+                settings->value(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_PATH, QDir::homePath()).toString());
 
         if(!path.isEmpty())
         {
@@ -1483,7 +1471,7 @@ void OpenMVPlugin::extensionsInitialized()
                     m_datasetEditor->setRootPath(path);
                     Core::EditorManager::addCurrentPositionToNavigationHistory();
                     Core::EditorManager::activateEditor(editor);
-                    settings->setValue(LAST_DATASET_EDITOR_PATH, path);
+                    settings->setValue(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_PATH, path);
                 }
             }
             else
@@ -1494,7 +1482,6 @@ void OpenMVPlugin::extensionsInitialized()
             }
         }
 
-        settings->endGroup();
     });
 
     datasetEditorMenu->addSeparator();
@@ -1509,7 +1496,6 @@ void OpenMVPlugin::extensionsInitialized()
     datasetEditorExportMenu->addAction(exportDatasetFlatCommand);
     connect(exportDataseFlatAction, &QAction::triggered, this, [this] {
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
 
         QString path;
 
@@ -1517,7 +1503,7 @@ void OpenMVPlugin::extensionsInitialized()
         {
             path =
             QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Export Dataset"),
-                settings->value(LAST_DATASET_EDITOR_EXPORT_PATH, QDir::homePath()).toString(),
+                settings->value(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_EXPORT_PATH, QDir::homePath()).toString(),
                 Tr::tr("Zip Files (*.zip)"));
 
             if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
@@ -1581,7 +1567,7 @@ void OpenMVPlugin::extensionsInitialized()
 
             if(!progress.wasCanceled())
             {
-                settings->setValue(LAST_DATASET_EDITOR_EXPORT_PATH, path);
+                settings->setValue(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_EXPORT_PATH, path);
             }
             else if(!QFile::remove(path))
             {
@@ -1591,7 +1577,6 @@ void OpenMVPlugin::extensionsInitialized()
             }
         }
 
-        settings->endGroup();
     });
 
     datasetEditorExportMenu->addSeparator();
@@ -2332,17 +2317,18 @@ void OpenMVPlugin::extensionsInitialized()
     ///////////////////////////////////////////////////////////////////////////
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(SETTINGS_GROUP);
     Core::EditorManager::restoreState(
-        settings->value(EDITOR_MANAGER_STATE).toByteArray());
+        settings->value(SETTINGS_GROUP "/" EDITOR_MANAGER_STATE).toByteArray());
     m_autoReconnectAction->setChecked(
-        m_autoConnect || settings->value(AUTO_RECONNECT_STATE, m_autoReconnectAction->isChecked()).toBool());
+        m_autoConnect || settings->value(SETTINGS_GROUP "/" AUTO_RECONNECT_STATE, m_autoReconnectAction->isChecked()).toBool());
     m_stopOnConnectDiconnectionAction->setChecked(
-        (!m_viewerMode) && (!m_disableStop) && settings->value(STOP_SCRIPT_CONNECT_DISCONNECT_STATE, m_stopOnConnectDiconnectionAction->isChecked()).toBool());
+        (!m_viewerMode) && (!m_disableStop) && settings->value(SETTINGS_GROUP "/" STOP_SCRIPT_CONNECT_DISCONNECT_STATE, m_stopOnConnectDiconnectionAction->isChecked()).toBool());
     m_enableSyncingImportsAction->setChecked(
-        settings->value(ENABLE_SYNCING_IMPORTS_STATE, m_enableSyncingImportsAction->isChecked()).toBool());
+        settings->value(SETTINGS_GROUP "/" ENABLE_SYNCING_IMPORTS_STATE,
+                       m_enableSyncingImportsAction->isChecked()).toBool());
     m_enableFilteringExamplesAction->setChecked(
-        settings->value(ENABLE_FILTERING_EXAMPLES_STATE, m_enableFilteringExamplesAction->isChecked()).toBool());
+        settings->value(SETTINGS_GROUP "/" ENABLE_FILTERING_EXAMPLES_STATE,
+                       m_enableFilteringExamplesAction->isChecked()).toBool());
     m_connectAction->setEnabled(!m_autoReconnectAction->isChecked());
     m_disconnectAction->setEnabled(!m_autoReconnectAction->isChecked());
     if(m_autoReconnectAction->isChecked()) {
@@ -2353,31 +2339,30 @@ void OpenMVPlugin::extensionsInitialized()
         static_cast<Utils::ProxyAction *>(m_disconnectCommand->action())->setOverrideToolTip(QString());
     }
     zoomButton->setChecked(
-        settings->value(ZOOM_STATE, zoomButton->isChecked()).toBool());
+        settings->value(SETTINGS_GROUP "/" ZOOM_STATE, zoomButton->isChecked()).toBool());
     m_jpgCompress->setChecked(
-        settings->value(JPG_COMPRESS_STATE, m_jpgCompress->isChecked()).toBool());
+        settings->value(SETTINGS_GROUP "/" JPG_COMPRESS_STATE, m_jpgCompress->isChecked()).toBool());
     m_disableFrameBuffer->setChecked(
-        settings->value(DISABLE_FRAME_BUFFER_STATE, m_disableFrameBuffer->isChecked()).toBool());
+        settings->value(SETTINGS_GROUP "/" DISABLE_FRAME_BUFFER_STATE, m_disableFrameBuffer->isChecked()).toBool());
     colorSpace->setCurrentIndex(
-        settings->value(HISTOGRAM_COLOR_SPACE_STATE, colorSpace->currentIndex()).toInt());
+        settings->value(SETTINGS_GROUP "/" HISTOGRAM_COLOR_SPACE_STATE, colorSpace->currentIndex()).toInt());
     QFont font = TextEditor::TextEditorSettings::fontSettings().defaultFixedFontFamily();
     font.setPointSize(TextEditor::TextEditorSettings::fontSettings().defaultFontSize());
     Core::MessageManager::outputWindow()->setBaseFont(font);
     Core::MessageManager::outputWindow()->setWheelZoomEnabled(true);
     Core::MessageManager::outputWindow()->setFontZoom(
-        settings->value(OUTPUT_WINDOW_FONT_ZOOM_STATE).toFloat());
+        settings->value(SETTINGS_GROUP "/" OUTPUT_WINDOW_FONT_ZOOM_STATE).toFloat());
     Core::MessageManager::outputWindow()->setTabSettings(TextEditor::TextEditorSettings::codeStyle()->tabSettings().m_serialTerminalTabSize);
     connect(TextEditor::TextEditorSettings::codeStyle(), &TextEditor::ICodeStylePreferences::tabSettingsChanged, this, [] (const TextEditor::TabSettings &settings) {
         Core::MessageManager::outputWindow()->setTabSettings(settings.m_serialTerminalTabSize);
     });
-    m_useGetState = settings->value(LAST_USE_GET_STATE, true).toBool();
-    m_frameSizeDumpSpacing = settings->value(LAST_FRAME_DUMP_SPACING, FRAME_SIZE_DUMP_SPACING).toInt();
-    m_getScriptRunningSpacing = settings->value(LAST_GET_SCRIPT_RUNNING_SPACING, GET_SCRIPT_RUNNING_SPACING).toInt();
-    m_getTxBufferSpacing = settings->value(LAST_GET_TX_BUFFER_SPACING, GET_TX_BUFFER_SPACING).toInt();
-    m_getStateSpacing = settings->value(LAST_GET_STATE_SPACING, GET_STATE_SPACING).toInt();
-    m_readProfileSpacing = settings->value(LAST_READ_PROFILE_SPACING, READ_PROFILE_SPACING).toInt();
-    m_dynamicFrameReading = settings->value(LAST_DYNAMIC_FRAME_READING, true).toBool();
-    settings->endGroup();
+    m_useGetState = settings->value(SETTINGS_GROUP "/" LAST_USE_GET_STATE, true).toBool();
+    m_frameSizeDumpSpacing = settings->value(SETTINGS_GROUP "/" LAST_FRAME_DUMP_SPACING, FRAME_SIZE_DUMP_SPACING).toInt();
+    m_getScriptRunningSpacing = settings->value(SETTINGS_GROUP "/" LAST_GET_SCRIPT_RUNNING_SPACING, GET_SCRIPT_RUNNING_SPACING).toInt();
+    m_getTxBufferSpacing = settings->value(SETTINGS_GROUP "/" LAST_GET_TX_BUFFER_SPACING, GET_TX_BUFFER_SPACING).toInt();
+    m_getStateSpacing = settings->value(SETTINGS_GROUP "/" LAST_GET_STATE_SPACING, GET_STATE_SPACING).toInt();
+    m_readProfileSpacing = settings->value(SETTINGS_GROUP "/" LAST_READ_PROFILE_SPACING, READ_PROFILE_SPACING).toInt();
+    m_dynamicFrameReading = settings->value(SETTINGS_GROUP "/" LAST_DYNAMIC_FRAME_READING, true).toBool();
 
     connect(m_ioport, &OpenMVPluginSerialPort::frameReady, this, [this] (bool ready) {
         m_dynamicFrameReadingPending = ready;
@@ -2390,14 +2375,12 @@ void OpenMVPlugin::extensionsInitialized()
     connect(Core::MessageManager::outputWindow()->getParser(), &Core::OpenMVPluginEscapeCodeParser::fbBufferError, m_frameBuffer, &OpenMVPluginFB::fbBufferError);
 
     connect(Core::ICore::instance(), &Core::ICore::showEventSignal, this, [this, widget, settings, msplitter, hsplitter, vsplitter] {
-        settings->beginGroup(SETTINGS_GROUP);
-        const bool haveH = settings->contains(HSPLITTER_STATE);
-        const bool haveV = settings->contains(VSPLITTER_STATE);
-        if(settings->contains(LAST_DATASET_EDITOR_PATH) && settings->value(LAST_DATASET_EDITOR_LOADED).toBool()) m_datasetEditor->setRootPath(settings->value(LAST_DATASET_EDITOR_PATH).toString());
-        if(settings->contains(MSPLITTER_STATE)) msplitter->restoreState(settings->value(MSPLITTER_STATE).toByteArray());
-        if(haveH) vsplitter->restoreState(settings->value(VSPLITTER_STATE).toByteArray()); // restore before HSPLITTER
-        if(haveV) hsplitter->restoreState(settings->value(HSPLITTER_STATE).toByteArray()); // restore after VSPLITTER
-        settings->endGroup();
+        const bool haveH = settings->contains(SETTINGS_GROUP "/" HSPLITTER_STATE);
+        const bool haveV = settings->contains(SETTINGS_GROUP "/" VSPLITTER_STATE);
+        if(settings->contains(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_PATH) && settings->value(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_LOADED).toBool()) m_datasetEditor->setRootPath(settings->value(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_PATH).toString());
+        if(settings->contains(SETTINGS_GROUP "/" MSPLITTER_STATE)) msplitter->restoreState(settings->value(SETTINGS_GROUP "/" MSPLITTER_STATE).toByteArray());
+        if(haveH) vsplitter->restoreState(settings->value(SETTINGS_GROUP "/" VSPLITTER_STATE).toByteArray()); // restore before HSPLITTER
+        if(haveV) hsplitter->restoreState(settings->value(SETTINGS_GROUP "/" HSPLITTER_STATE).toByteArray()); // restore after VSPLITTER
 
         widget->m_leftDrawer->parentWidget()->setVisible(haveH ? (!hsplitter->sizes().at(0)) : false);
         widget->m_rightDrawer->parentWidget()->setVisible(haveH ? (!hsplitter->sizes().at(1)) : false);
@@ -2431,16 +2414,14 @@ void OpenMVPlugin::extensionsInitialized()
     });
 
     connect(Core::ICore::instance(), &Core::ICore::hideEventSignal, this, [this, settings, msplitter, hsplitter, vsplitter] {
-        settings->beginGroup(SETTINGS_GROUP);
-        if(!isNoShow()) settings->setValue(LAST_DATASET_EDITOR_LOADED,
+        if(!isNoShow()) settings->setValue(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_LOADED,
             !m_datasetEditor->rootPath().isEmpty());
-        if(!isNoShow()) settings->setValue(MSPLITTER_STATE,
+        if(!isNoShow()) settings->setValue(SETTINGS_GROUP "/" MSPLITTER_STATE,
             msplitter->saveState());
-        if(!isNoShow()) settings->setValue(HSPLITTER_STATE,
+        if(!isNoShow()) settings->setValue(SETTINGS_GROUP "/" HSPLITTER_STATE,
             hsplitter->saveState());
-        if(!isNoShow()) settings->setValue(VSPLITTER_STATE,
+        if(!isNoShow()) settings->setValue(SETTINGS_GROUP "/" VSPLITTER_STATE,
             vsplitter->saveState());
-        settings->endGroup();
     });
 
     m_openTerminalMenuData = QList<openTerminalMenuData_t>();
@@ -2460,36 +2441,34 @@ void OpenMVPlugin::extensionsInitialized()
 
     connect(Core::ICore::instance(), &Core::ICore::saveSettingsRequested, this, [this, zoomButton, colorSpace, msplitter, hsplitter, vsplitter] {
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
-        settings->setValue(EDITOR_MANAGER_STATE,
+        settings->setValue(SETTINGS_GROUP "/" EDITOR_MANAGER_STATE,
             Core::EditorManager::saveState());
-        if(!isNoShow()) settings->setValue(LAST_DATASET_EDITOR_LOADED,
+        if(!isNoShow()) settings->setValue(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_LOADED,
             !m_datasetEditor->rootPath().isEmpty());
-        if(!isNoShow()) settings->setValue(MSPLITTER_STATE,
+        if(!isNoShow()) settings->setValue(SETTINGS_GROUP "/" MSPLITTER_STATE,
             msplitter->saveState());
-        if(!isNoShow()) settings->setValue(HSPLITTER_STATE,
+        if(!isNoShow()) settings->setValue(SETTINGS_GROUP "/" HSPLITTER_STATE,
             hsplitter->saveState());
-        if(!isNoShow()) settings->setValue(VSPLITTER_STATE,
+        if(!isNoShow()) settings->setValue(SETTINGS_GROUP "/" VSPLITTER_STATE,
             vsplitter->saveState());
-        if(!m_autoConnect) settings->setValue(AUTO_RECONNECT_STATE,
+        if(!m_autoConnect) settings->setValue(SETTINGS_GROUP "/" AUTO_RECONNECT_STATE,
             m_autoReconnectAction->isChecked());
-        if((!m_viewerMode) && (!m_disableStop)) settings->setValue(STOP_SCRIPT_CONNECT_DISCONNECT_STATE,
+        if((!m_viewerMode) && (!m_disableStop)) settings->setValue(SETTINGS_GROUP "/" STOP_SCRIPT_CONNECT_DISCONNECT_STATE,
             m_stopOnConnectDiconnectionAction->isChecked());
-        settings->setValue(ENABLE_SYNCING_IMPORTS_STATE,
+        settings->setValue(SETTINGS_GROUP "/" ENABLE_SYNCING_IMPORTS_STATE,
             m_enableSyncingImportsAction->isChecked());
-        settings->setValue(ENABLE_FILTERING_EXAMPLES_STATE,
+        settings->setValue(SETTINGS_GROUP "/" ENABLE_FILTERING_EXAMPLES_STATE,
             m_enableFilteringExamplesAction->isChecked());
-        settings->setValue(ZOOM_STATE,
+        settings->setValue(SETTINGS_GROUP "/" ZOOM_STATE,
             zoomButton->isChecked());
-        settings->setValue(JPG_COMPRESS_STATE,
+        settings->setValue(SETTINGS_GROUP "/" JPG_COMPRESS_STATE,
             m_jpgCompress->isChecked());
-        settings->setValue(DISABLE_FRAME_BUFFER_STATE,
+        settings->setValue(SETTINGS_GROUP "/" DISABLE_FRAME_BUFFER_STATE,
             m_disableFrameBuffer->isChecked());
-        settings->setValue(HISTOGRAM_COLOR_SPACE_STATE,
+        settings->setValue(SETTINGS_GROUP "/" HISTOGRAM_COLOR_SPACE_STATE,
             colorSpace->currentIndex());
-        settings->setValue(OUTPUT_WINDOW_FONT_ZOOM_STATE,
+        settings->setValue(SETTINGS_GROUP "/" OUTPUT_WINDOW_FONT_ZOOM_STATE,
             Core::MessageManager::outputWindow()->fontZoom());
-        settings->endGroup();
 
         settings->beginWriteArray(OPEN_TERMINAL_SETTINGS_GROUP);
 
@@ -3935,7 +3914,6 @@ void OpenMVPlugin::configureSettings()
 void OpenMVPlugin::saveImage(const QPixmap &data)
 {
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(SETTINGS_GROUP);
 
     QString path;
 
@@ -3943,7 +3921,7 @@ void OpenMVPlugin::saveImage(const QPixmap &data)
     {
         path =
         QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Image"),
-            settings->value(LAST_SAVE_IMAGE_PATH, QDir::homePath()).toString(),
+            settings->value(SETTINGS_GROUP "/" LAST_SAVE_IMAGE_PATH, QDir::homePath()).toString(),
             Tr::tr("Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)"));
 
         if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
@@ -3962,7 +3940,7 @@ void OpenMVPlugin::saveImage(const QPixmap &data)
     {
         if(data.save(path))
         {
-            settings->setValue(LAST_SAVE_IMAGE_PATH, path);
+            settings->setValue(SETTINGS_GROUP "/" LAST_SAVE_IMAGE_PATH, path);
         }
         else
         {
@@ -3972,7 +3950,6 @@ void OpenMVPlugin::saveImage(const QPixmap &data)
         }
     }
 
-    settings->endGroup();
 }
 
 QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const QString &path, QMenu *parent, bool notExamples)
@@ -4171,14 +4148,13 @@ void OpenMVPlugin::openTerminalAboutToShow()
     m_openTerminalMenu->menu()->clear();
     connect(m_openTerminalMenu->menu()->addAction(Tr::tr("New Terminal")), &QAction::triggered, this, [this] {
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
 
         QStringList optionList = QStringList()
             << Tr::tr("Connect to serial port")
             << Tr::tr("Connect to UDP port")
             << Tr::tr("Connect to TCP port");
 
-        int optionListIndex = optionList.indexOf(settings->value(LAST_OPEN_TERMINAL_SELECT).toString());
+        int optionListIndex = optionList.indexOf(settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_SELECT).toString());
 
         bool optionNameOk;
         QString optionName = QInputDialog::getItem(Core::ICore::dialogParent(),
@@ -4209,7 +4185,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
                     if(!stringList.isEmpty())
                     {
-                        int index = stringList.indexOf(settings->value(LAST_OPEN_TERMINAL_SERIAL_PORT).toString());
+                        int index = stringList.indexOf(settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_SERIAL_PORT).toString());
 
                         bool portNameValueOk;
                         QString portNameValue = QInputDialog::getItem(Core::ICore::dialogParent(),
@@ -4223,7 +4199,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             bool baudRateOk;
                             QString baudRate = QInputDialog::getText(Core::ICore::dialogParent(),
                                 Tr::tr("New Terminal"), Tr::tr("Please enter a baud rate"),
-                                QLineEdit::Normal, settings->value(LAST_OPEN_TERMINAL_SERIAL_PORT_BAUD_RATE, QStringLiteral("115200")).toString(), &baudRateOk,
+                                QLineEdit::Normal, settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_SERIAL_PORT_BAUD_RATE, QStringLiteral("115200")).toString(), &baudRateOk,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
@@ -4234,9 +4210,11 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
                                 if(buadRateValueOk)
                                 {
-                                    settings->setValue(LAST_OPEN_TERMINAL_SELECT, optionName);
-                                    settings->setValue(LAST_OPEN_TERMINAL_SERIAL_PORT, portNameValue);
-                                    settings->setValue(LAST_OPEN_TERMINAL_SERIAL_PORT_BAUD_RATE, baudRateValue);
+                                    settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_SELECT, optionName);
+                                    settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_SERIAL_PORT,
+                                                      portNameValue);
+                                    settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_SERIAL_PORT_BAUD_RATE,
+                                                      baudRateValue);
 
                                     openTerminalMenuData_t data;
                                     data.displayName = Tr::tr("Serial Port - %L1 - %L2 BPS").arg(portNameValue).arg(baudRateValue);
@@ -4354,7 +4332,8 @@ void OpenMVPlugin::openTerminalAboutToShow()
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
                     QPushButton *button0 = box.addButton(Tr::tr(" Connect to a Server "), QMessageBox::AcceptRole);
                     QPushButton *button1 = box.addButton(Tr::tr(" Start a Server "), QMessageBox::AcceptRole);
-                    box.setDefaultButton(settings->value(LAST_OPEN_TERMINAL_UDP_TYPE_SELECT, 0).toInt() ? button1 : button0);
+                    box.setDefaultButton(
+                        settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_UDP_TYPE_SELECT, 0).toInt() ? button1 : button0);
                     box.setEscapeButton(QMessageBox::Cancel);
                     box.exec();
 
@@ -4363,7 +4342,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                         bool hostNameOk;
                         QString hostName = QInputDialog::getText(Core::ICore::dialogParent(),
                             Tr::tr("New Terminal"), Tr::tr("Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)"),
-                            QLineEdit::Normal, settings->value(LAST_OPEN_TERMINAL_UDP_PORT, QStringLiteral("xxx.xxx.xxx.xxx:xxxx")).toString(), &hostNameOk,
+                            QLineEdit::Normal, settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_UDP_PORT, QStringLiteral("xxx.xxx.xxx.xxx:xxxx")).toString(), &hostNameOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
@@ -4379,9 +4358,9 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
                                 if(portValueOk)
                                 {
-                                    settings->setValue(LAST_OPEN_TERMINAL_SELECT, optionName);
-                                    settings->setValue(LAST_OPEN_TERMINAL_UDP_TYPE_SELECT, 0);
-                                    settings->setValue(LAST_OPEN_TERMINAL_UDP_PORT, hostName);
+                                    settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_SELECT, optionName);
+                                    settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_UDP_TYPE_SELECT, 0);
+                                    settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_UDP_PORT, hostName);
 
                                     openTerminalMenuData_t data;
                                     data.displayName = Tr::tr("UDP Client Connection - %1").arg(hostName);
@@ -4487,15 +4466,15 @@ void OpenMVPlugin::openTerminalAboutToShow()
                         bool portValueOk;
                         int portValue = QInputDialog::getInt(Core::ICore::dialogParent(),
                             Tr::tr("New Terminal"), Tr::tr("Please enter a port number (enter 0 for any random free port)"),
-                            settings->value(LAST_OPEN_TERMINAL_UDP_SERVER_PORT, 0).toInt(), 0, 65535, 1, &portValueOk,
+                            settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_UDP_SERVER_PORT, 0).toInt(), 0, 65535, 1, &portValueOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
                         if(portValueOk)
                         {
-                            settings->setValue(LAST_OPEN_TERMINAL_SELECT, optionName);
-                            settings->setValue(LAST_OPEN_TERMINAL_UDP_TYPE_SELECT, 1);
-                            settings->setValue(LAST_OPEN_TERMINAL_UDP_SERVER_PORT, portValue);
+                            settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_SELECT, optionName);
+                            settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_UDP_TYPE_SELECT, 1);
+                            settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_UDP_SERVER_PORT, portValue);
 
                             openTerminalMenuData_t data;
                             data.displayName = Tr::tr("UDP Server Connection - %1").arg(portValue);
@@ -4597,7 +4576,8 @@ void OpenMVPlugin::openTerminalAboutToShow()
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
                     QPushButton *button0 = box.addButton(Tr::tr(" Connect to a Server "), QMessageBox::AcceptRole);
                     QPushButton *button1 = box.addButton(Tr::tr(" Start a Server "), QMessageBox::AcceptRole);
-                    box.setDefaultButton(settings->value(LAST_OPEN_TERMINAL_TCP_TYPE_SELECT, 0).toInt() ? button1 : button0);
+                    box.setDefaultButton(
+                        settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_TCP_TYPE_SELECT, 0).toInt() ? button1 : button0);
                     box.setEscapeButton(QMessageBox::Cancel);
                     box.exec();
 
@@ -4606,7 +4586,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                         bool hostNameOk;
                         QString hostName = QInputDialog::getText(Core::ICore::dialogParent(),
                             Tr::tr("New Terminal"), Tr::tr("Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)"),
-                            QLineEdit::Normal, settings->value(LAST_OPEN_TERMINAL_TCP_PORT, QStringLiteral("xxx.xxx.xxx.xxx:xxxx")).toString(), &hostNameOk,
+                            QLineEdit::Normal, settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_TCP_PORT, QStringLiteral("xxx.xxx.xxx.xxx:xxxx")).toString(), &hostNameOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
@@ -4622,9 +4602,9 @@ void OpenMVPlugin::openTerminalAboutToShow()
 
                                 if(portValueOk)
                                 {
-                                    settings->setValue(LAST_OPEN_TERMINAL_SELECT, optionName);
-                                    settings->setValue(LAST_OPEN_TERMINAL_TCP_TYPE_SELECT, 0);
-                                    settings->setValue(LAST_OPEN_TERMINAL_TCP_PORT, hostName);
+                                    settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_SELECT, optionName);
+                                    settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_TCP_TYPE_SELECT, 0);
+                                    settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_TCP_PORT, hostName);
 
                                     openTerminalMenuData_t data;
                                     data.displayName = Tr::tr("TCP Client Connection - %1").arg(hostName);
@@ -4730,15 +4710,15 @@ void OpenMVPlugin::openTerminalAboutToShow()
                         bool portValueOk;
                         int portValue = QInputDialog::getInt(Core::ICore::dialogParent(),
                             Tr::tr("New Terminal"), Tr::tr("Please enter a port number (enter 0 for any random free port)"),
-                            settings->value(LAST_OPEN_TERMINAL_TCP_SERVER_PORT, 0).toInt(), 0, 65535, 1, &portValueOk,
+                            settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_TCP_SERVER_PORT, 0).toInt(), 0, 65535, 1, &portValueOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
                         if(portValueOk)
                         {
-                            settings->setValue(LAST_OPEN_TERMINAL_SELECT, optionName);
-                            settings->setValue(LAST_OPEN_TERMINAL_TCP_TYPE_SELECT, 1);
-                            settings->setValue(LAST_OPEN_TERMINAL_TCP_SERVER_PORT, portValue);
+                            settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_SELECT, optionName);
+                            settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_TCP_TYPE_SELECT, 1);
+                            settings->setValue(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_TCP_SERVER_PORT, portValue);
 
                             openTerminalMenuData_t data;
                             data.displayName = Tr::tr("TCP Server Connection - %1").arg(portValue);
@@ -4836,7 +4816,6 @@ void OpenMVPlugin::openTerminalAboutToShow()
             }
         }
 
-        settings->endGroup();
     });
 
     m_openTerminalMenu->menu()->addSeparator();
@@ -4972,7 +4951,6 @@ QList<int> OpenMVPlugin::openThresholdEditor(const QVariant parameters)
     QString drivePath = QDir::cleanPath(QDir::fromNativeSeparators(m_portPath));
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(SETTINGS_GROUP);
 
     QList<int> result;
 
@@ -4980,16 +4958,16 @@ QList<int> OpenMVPlugin::openThresholdEditor(const QVariant parameters)
     {
         if(m_frameBuffer->pixmapValid())
         {
-            ThresholdEditor editor(m_frameBuffer->pixmap(), settings->value(LAST_THRESHOLD_EDITOR_STATE).toByteArray(), Core::ICore::dialogParent(),
+            ThresholdEditor editor(m_frameBuffer->pixmap(), settings->value(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE).toByteArray(), Core::ICore::dialogParent(),
                 Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint),
                 ((!parameters.toList().isEmpty()) && ((parameters.toList().size() == 2) || (parameters.toList().size() == 6)))
                 ? Tr::tr("The selected threshold tuple will be updated on close.")
                 : QString());
 
-            if(settings->contains(LAST_THRESHOLD_EDITOR_STATE "_2"))
+            if(settings->contains(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE "_2"))
             {
-                editor.setState(settings->value(LAST_THRESHOLD_EDITOR_STATE "_2").toList());
+                editor.setState(settings->value(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE "_2").toList());
             }
 
             if(!parameters.toList().isEmpty())
@@ -5020,8 +4998,8 @@ QList<int> OpenMVPlugin::openThresholdEditor(const QVariant parameters)
             // In normal mode exec always return rejected... the second statement below lets the if pass in this case.
             if((editor.exec() == QDialog::Accepted) || parameters.toList().isEmpty())
             {
-                settings->setValue(LAST_THRESHOLD_EDITOR_STATE, editor.saveGeometry());
-                settings->setValue(LAST_THRESHOLD_EDITOR_STATE "_2", editor.getState());
+                settings->setValue(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE, editor.saveGeometry());
+                settings->setValue(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE "_2", editor.getState());
                 result = QList<int>()
                 << editor.getGMin()
                 << editor.getGMax()
@@ -5044,23 +5022,23 @@ QList<int> OpenMVPlugin::openThresholdEditor(const QVariant parameters)
     {
         QString path =
             QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Image File"),
-                settings->value(LAST_THRESHOLD_EDITOR_PATH, drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
+                settings->value(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_PATH, drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
                 Tr::tr("Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)"));
 
         if(!path.isEmpty())
         {
             QPixmap pixmap = QPixmap(path);
 
-            ThresholdEditor editor(pixmap, settings->value(LAST_THRESHOLD_EDITOR_STATE).toByteArray(), Core::ICore::dialogParent(),
+            ThresholdEditor editor(pixmap, settings->value(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE).toByteArray(), Core::ICore::dialogParent(),
                 Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint),
                 ((!parameters.toList().isEmpty()) && ((parameters.toList().size() == 2) || (parameters.toList().size() == 6)))
                 ? Tr::tr("The selected threshold tuple will be updated on close.")
                 : QString());
 
-            if(settings->contains(LAST_THRESHOLD_EDITOR_STATE "_2"))
+            if(settings->contains(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE "_2"))
             {
-                editor.setState(settings->value(LAST_THRESHOLD_EDITOR_STATE "_2").toList());
+                editor.setState(settings->value(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE "_2").toList());
             }
 
             if(!parameters.toList().isEmpty())
@@ -5091,9 +5069,9 @@ QList<int> OpenMVPlugin::openThresholdEditor(const QVariant parameters)
             // In normal mode exec always return rejected... the second statement below lets the if pass in this case.
             if((editor.exec() == QDialog::Accepted) || parameters.toList().isEmpty())
             {
-                settings->setValue(LAST_THRESHOLD_EDITOR_STATE, editor.saveGeometry());
-                settings->setValue(LAST_THRESHOLD_EDITOR_STATE "_2", editor.getState());
-                settings->setValue(LAST_THRESHOLD_EDITOR_PATH, path);
+                settings->setValue(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE, editor.saveGeometry());
+                settings->setValue(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE "_2", editor.getState());
+                settings->setValue(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_PATH, path);
                 result = QList<int>()
                 << editor.getGMin()
                 << editor.getGMax()
@@ -5107,7 +5085,6 @@ QList<int> OpenMVPlugin::openThresholdEditor(const QVariant parameters)
         }
     }
 
-    settings->endGroup();
 
     return result;
 }
@@ -5126,13 +5103,12 @@ void OpenMVPlugin::openKeypointsEditor()
     QString drivePath = QDir::cleanPath(QDir::fromNativeSeparators(m_portPath));
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(SETTINGS_GROUP);
 
     if(box.clickedButton() == button0)
     {
         QString path =
             QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Edit Keypoints"),
-                settings->value(LAST_EDIT_KEYPOINTS_PATH, drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
+                settings->value(SETTINGS_GROUP "/" LAST_EDIT_KEYPOINTS_PATH, drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
                 Tr::tr("Keypoints Files (*.lbp *.orb)"));
 
         if(!path.isEmpty())
@@ -5157,7 +5133,7 @@ void OpenMVPlugin::openKeypointsEditor()
                     QString pixmapPath = QFileInfo(path).path() + QDir::separator() + list.first();
                     QPixmap pixmap = QPixmap(pixmapPath);
 
-                    KeypointsEditor editor(ks.data(), pixmap, settings->value(LAST_EDIT_KEYPOINTS_STATE).toByteArray(), Core::ICore::dialogParent(),
+                    KeypointsEditor editor(ks.data(), pixmap, settings->value(SETTINGS_GROUP "/" LAST_EDIT_KEYPOINTS_STATE).toByteArray(), Core::ICore::dialogParent(),
                         Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
@@ -5177,8 +5153,8 @@ void OpenMVPlugin::openKeypointsEditor()
                         && QFile::copy(pixmapPath, pixmapPath + QStringLiteral(".bak"))
                         && ks->saveKeypoints(path))
                         {
-                            settings->setValue(LAST_EDIT_KEYPOINTS_STATE, editor.saveGeometry());
-                            settings->setValue(LAST_EDIT_KEYPOINTS_PATH, path);
+                            settings->setValue(SETTINGS_GROUP "/" LAST_EDIT_KEYPOINTS_STATE, editor.saveGeometry());
+                            settings->setValue(SETTINGS_GROUP "/" LAST_EDIT_KEYPOINTS_PATH, path);
                         }
                         else
                         {
@@ -5189,8 +5165,8 @@ void OpenMVPlugin::openKeypointsEditor()
                     }
                     else
                     {
-                        settings->setValue(LAST_EDIT_KEYPOINTS_STATE, editor.saveGeometry());
-                        settings->setValue(LAST_EDIT_KEYPOINTS_PATH, path);
+                        settings->setValue(SETTINGS_GROUP "/" LAST_EDIT_KEYPOINTS_STATE, editor.saveGeometry());
+                        settings->setValue(SETTINGS_GROUP "/" LAST_EDIT_KEYPOINTS_PATH, path);
                     }
                 }
                 else
@@ -5212,7 +5188,7 @@ void OpenMVPlugin::openKeypointsEditor()
     {
         QStringList paths =
             QFileDialog::getOpenFileNames(Core::ICore::dialogParent(), Tr::tr("Merge Keypoints"),
-                settings->value(LAST_MERGE_KEYPOINTS_OPEN_PATH, drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
+                settings->value(SETTINGS_GROUP "/" LAST_MERGE_KEYPOINTS_OPEN_PATH, drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
                 Tr::tr("Keypoints Files (*.lbp *.orb)"));
 
         if(!paths.isEmpty())
@@ -5233,7 +5209,7 @@ void OpenMVPlugin::openKeypointsEditor()
                 {
                     path =
                     QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Merged Keypoints"),
-                        settings->value(LAST_MERGE_KEYPOINTS_SAVE_PATH, drivePath).toString(),
+                        settings->value(SETTINGS_GROUP "/" LAST_MERGE_KEYPOINTS_SAVE_PATH, drivePath).toString(),
                         Tr::tr("Keypoints Files (*.lbp *.orb)"));
 
                     if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
@@ -5252,8 +5228,8 @@ void OpenMVPlugin::openKeypointsEditor()
                 {
                     if(ks->saveKeypoints(path))
                     {
-                        settings->setValue(LAST_MERGE_KEYPOINTS_OPEN_PATH, first);
-                        settings->setValue(LAST_MERGE_KEYPOINTS_SAVE_PATH, path);
+                        settings->setValue(SETTINGS_GROUP "/" LAST_MERGE_KEYPOINTS_OPEN_PATH, first);
+                        settings->setValue(SETTINGS_GROUP "/" LAST_MERGE_KEYPOINTS_SAVE_PATH, path);
                     }
                     else
                     {
@@ -5272,7 +5248,6 @@ void OpenMVPlugin::openKeypointsEditor()
         }
     }
 
-    settings->endGroup();
 }
 
 void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
@@ -5285,7 +5260,6 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
     layout->addWidget(new QLabel(Tr::tr("What tag images from the %L1 tag family do you want to generate?").arg(QString::fromUtf8(family->name).toUpper())));
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(SETTINGS_GROUP);
 
     QWidget *temp = new QWidget();
     QHBoxLayout *tempLayout = new QHBoxLayout(temp);
@@ -5297,7 +5271,7 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
     QSpinBox *minRange = new QSpinBox();
     minRange->setMinimum(0);
     minRange->setMaximum(family->ncodes - 1);
-    minRange->setValue(settings->value(LAST_APRILTAG_RANGE_MIN, 0).toInt());
+    minRange->setValue(settings->value(SETTINGS_GROUP "/" LAST_APRILTAG_RANGE_MIN, 0).toInt());
     minRange->setAccelerated(true);
     minTempLayout->addRow(Tr::tr("Min (%1)").arg(0), minRange); // don't use %L1 here
     tempLayout->addWidget(minTemp);
@@ -5308,7 +5282,7 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
     QSpinBox *maxRange = new QSpinBox();
     maxRange->setMinimum(0);
     maxRange->setMaximum(family->ncodes - 1);
-    maxRange->setValue(settings->value(LAST_APRILTAG_RANGE_MAX, family->ncodes - 1).toInt());
+    maxRange->setValue(settings->value(SETTINGS_GROUP "/" LAST_APRILTAG_RANGE_MAX, family->ncodes - 1).toInt());
     maxRange->setAccelerated(true);
     maxTempLayout->addRow(Tr::tr("Max (%1)").arg(family->ncodes - 1), maxRange); // don't use %L1 here
     tempLayout->addWidget(maxTemp);
@@ -5317,7 +5291,7 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
 
     QCheckBox *checkBox = new QCheckBox(Tr::tr("Inlcude tag family and ID number in the image"));
     checkBox->setCheckable(true);
-    checkBox->setChecked(settings->value(LAST_APRILTAG_INCLUDE, true).toBool());
+    checkBox->setChecked(settings->value(SETTINGS_GROUP "/" LAST_APRILTAG_INCLUDE, true).toBool());
     layout->addWidget(checkBox);
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
@@ -5334,7 +5308,7 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
 
         QString path =
             QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), Tr::tr("AprilTag Generator - Where do you want to save %n tag image(s) to?", "", number),
-                settings->value(LAST_APRILTAG_PATH, QDir::homePath()).toString());
+                settings->value(SETTINGS_GROUP "/" LAST_APRILTAG_PATH, QDir::homePath()).toString());
 
         if(!path.isEmpty())
         {
@@ -5425,10 +5399,10 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
 
             if(!progress.wasCanceled())
             {
-                settings->setValue(LAST_APRILTAG_RANGE_MIN, min);
-                settings->setValue(LAST_APRILTAG_RANGE_MAX, max);
-                settings->setValue(LAST_APRILTAG_INCLUDE, include);
-                settings->setValue(LAST_APRILTAG_PATH, path);
+                settings->setValue(SETTINGS_GROUP "/" LAST_APRILTAG_RANGE_MIN, min);
+                settings->setValue(SETTINGS_GROUP "/" LAST_APRILTAG_RANGE_MAX, max);
+                settings->setValue(SETTINGS_GROUP "/" LAST_APRILTAG_INCLUDE, include);
+                settings->setValue(SETTINGS_GROUP "/" LAST_APRILTAG_PATH, path);
 
                 QMessageBox::information(Core::ICore::dialogParent(),
                     Tr::tr("AprilTag Generator"),
@@ -5437,7 +5411,6 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
         }
     }
 
-    settings->endGroup();
     delete dialog;
     free(family->name);
     free(family->codes);

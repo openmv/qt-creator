@@ -322,12 +322,16 @@ void OpenMVPlugin::packageUpdate()
                                                 Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
 
                                                 // Keep backwards compatibility with old versions of OpenMV IDE.
-                                                settings->beginGroup(SETTINGS_GROUP);
-                                                settings->setValue(RESOURCES_MAJOR, resourcesSettings.value(QStringLiteral(RESOURCES_MAJOR)).toInt());
-                                                settings->setValue(RESOURCES_MINOR, resourcesSettings.value(QStringLiteral(RESOURCES_MINOR)).toInt());
-                                                settings->setValue(RESOURCES_PATCH, resourcesSettings.value(QStringLiteral(RESOURCES_PATCH)).toInt());
+                                                settings->setValue(
+                                                    SETTINGS_GROUP "/" RESOURCES_MAJOR,
+                                                    resourcesSettings.value(QStringLiteral(RESOURCES_MAJOR)).toInt());
+                                                settings->setValue(
+                                                    SETTINGS_GROUP "/" RESOURCES_MINOR,
+                                                    resourcesSettings.value(QStringLiteral(RESOURCES_MINOR)).toInt());
+                                                settings->setValue(
+                                                    SETTINGS_GROUP "/" RESOURCES_PATCH,
+                                                    resourcesSettings.value(QStringLiteral(RESOURCES_PATCH)).toInt());
                                                 settings->sync();
-                                                settings->endGroup();
 
                                                 if (loadDocs(true, false))
                                                 {
@@ -425,13 +429,13 @@ void OpenMVPlugin::bootloaderClicked()
     layout->setVerticalSpacing(0);
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(SETTINGS_GROUP);
 
     Utils::PathChooser *pathChooser = new Utils::PathChooser();
     pathChooser->setExpectedKind(Utils::PathChooser::File);
     pathChooser->setPromptDialogTitle(Tr::tr("Firmware Path"));
     pathChooser->setPromptDialogFilter(Tr::tr("Firmware Binary (*.bin *.dfu *.img)"));
-    pathChooser->setFilePath(Utils::FilePath::fromVariant(settings->value(LAST_FIRMWARE_PATH, QDir::homePath())));
+    pathChooser->setFilePath(Utils::FilePath::fromVariant(
+        settings->value(SETTINGS_GROUP "/" LAST_FIRMWARE_PATH, QDir::homePath())));
     pathChooser->setHistoryCompleter(LAST_FIRMWARE_HISTORY, false);
     layout->addRow(Tr::tr("Firmware Path"), pathChooser);
     layout->addItem(new QSpacerItem(0, 6));
@@ -442,13 +446,13 @@ void OpenMVPlugin::bootloaderClicked()
     widget->setLayout(layout2);
 
     QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal FAT file system"));
-    checkBox->setChecked(settings->value(LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
+    checkBox->setChecked(settings->value(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
     layout2->addWidget(checkBox);
     checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
                                 "This does not erase files on any removable SD card (if inserted)."));
 
     QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Reset ROMFS file system"));
-    checkBox2->setChecked(settings->value(LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
+    checkBox2->setChecked(settings->value(SETTINGS_GROUP "/" LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
     layout2->addWidget(checkBox2);
     checkBox2->setEnabled(!pathChooser->filePath().toString().endsWith(QStringLiteral(".img"), Qt::CaseInsensitive));
     checkBox2->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be reset back to default."));
@@ -485,10 +489,9 @@ void OpenMVPlugin::bootloaderClicked()
 
         if(QFileInfo::exists(forceFirmwarePath) && QFileInfo(forceFirmwarePath).isFile())
         {
-            settings->setValue(LAST_FIRMWARE_PATH, forceFirmwarePath);
-            settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, flashFSErase);
-            settings->setValue(LAST_DFU_RESET_ROM_FS_STATE, resetROMFS);
-            settings->endGroup();
+            settings->setValue(SETTINGS_GROUP "/" LAST_FIRMWARE_PATH, forceFirmwarePath);
+            settings->setValue(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, flashFSErase);
+            settings->setValue(SETTINGS_GROUP "/" LAST_DFU_RESET_ROM_FS_STATE, resetROMFS);
             delete dialog;
 
             connectClicked(true, forceFirmwarePath, flashFSErase,
@@ -500,13 +503,11 @@ void OpenMVPlugin::bootloaderClicked()
                 Tr::tr("Bootloader"),
                 Tr::tr("\"%L1\" is not a file!").arg(forceFirmwarePath));
 
-            settings->endGroup();
             delete dialog;
         }
     }
     else
     {
-        settings->endGroup();
         delete dialog;
     }
 }
@@ -555,7 +556,6 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
             }
 
             Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-            settings->beginGroup(SETTINGS_GROUP);
 
             QHBoxLayout *layout2 = new QHBoxLayout;
             layout2->setContentsMargins(0, 0, 0, 0);
@@ -563,13 +563,13 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
             widget->setLayout(layout2);
 
             QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal FAT file system"));
-            checkBox->setChecked(settings->value(LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
+            checkBox->setChecked(settings->value(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
             layout2->addWidget(checkBox);
             checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
                                         "This does not erase files on any removable SD card (if inserted)."));
 
             QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Update ROMFS file system"));
-            checkBox2->setChecked(settings->value(LAST_DFU_UPDATE_ROM_FS_STATE, false).toBool());
+            checkBox2->setChecked(settings->value(SETTINGS_GROUP "/" LAST_DFU_UPDATE_ROM_FS_STATE, false).toBool());
             layout2->addWidget(checkBox2);
             checkBox2->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be updated to the latest development release."));
 
@@ -621,9 +621,10 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
                 bool updateROMFS = checkBox2->isChecked();
                 bool forceBootloaderEntry = checkBox3->isChecked();
 
-                if (checkBox->isEnabled()) settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, flashFSErase);
-                if (checkBox2->isEnabled()) settings->setValue(LAST_DFU_UPDATE_ROM_FS_STATE, updateROMFS);
-                settings->endGroup();
+                if (checkBox->isEnabled())
+                    settings->setValue(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, flashFSErase);
+                if (checkBox2->isEnabled())
+                    settings->setValue(SETTINGS_GROUP "/" LAST_DFU_UPDATE_ROM_FS_STATE, updateROMFS);
                 delete newDialog;
 
                 connectClicked(true, QString(), flashFSErase, false, true,
@@ -631,7 +632,6 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
             }
             else
             {
-                settings->endGroup();
                 delete newDialog;
             }
         }
@@ -1113,7 +1113,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         QApplication::restoreOverrideCursor();
 
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->beginGroup(SETTINGS_GROUP);
 
         QString selectedPort;
         bool forceBootloaderBricked = false;
@@ -1220,7 +1219,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                     if(mappings.size())
                     {
-                        int index = mappings.keys().indexOf(settings->value(LAST_BOARD_TYPE_STATE).toString());
+                        int index = mappings.keys().indexOf(
+                            settings->value(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE).toString());
 
                         bool ok = mappings.size() == 1;
                         QString temp = (mappings.size() == 1) ? mappings.firstKey() : QInputDialog::getItem(Core::ICore::dialogParent(),
@@ -1231,7 +1231,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                         if(ok)
                         {
-                            settings->setValue(LAST_BOARD_TYPE_STATE, temp);
+                            settings->setValue(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE, temp);
 
                             originalFirmwareFolder = mappings.value(temp);
                             originalFallbackBootloaderSettings = fallbackBootloaderMappings.value(temp);
@@ -1265,7 +1265,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     combo->addItem(Tr::tr("Just erase the internal FAT file system"));
                     combo->addItem(Tr::tr("Edit the ROM file system"));
                     combo->addItem(Tr::tr("Reset the ROM file system"));
-                    combo->setCurrentIndex(settings->value(LAST_DFU_ACTION, 0).toInt());
+                    combo->setCurrentIndex(settings->value(SETTINGS_GROUP "/" LAST_DFU_ACTION, 0).toInt());
                     layout->addWidget(combo);
                     layout->addItem(new QSpacerItem(0, 6));
 
@@ -1275,14 +1275,16 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     widget->setLayout(layout2);
 
                     QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal FAT file system"));
-                    checkBox->setChecked(settings->value(LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
+                    checkBox->setChecked(
+                        settings->value(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
                     layout2->addWidget(checkBox);
                     checkBox->setVisible(combo->currentIndex() == 0);
                     checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
                                                 "This does not erase files on any removable SD card (if inserted)."));
 
                     QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Reset ROMFS file system"));
-                    checkBox2->setChecked(settings->value(LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
+                    checkBox2->setChecked(
+                        settings->value(SETTINGS_GROUP "/" LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
                     layout2->addWidget(checkBox2);
                     checkBox2->setVisible(combo->currentIndex() == 0);
                     checkBox2->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be reset back to default."));
@@ -1312,9 +1314,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     || (m_autoUpdate == QStringLiteral("developement"))
                     || (dialog->exec() == QDialog::Accepted))
                     {
-                        settings->setValue(LAST_DFU_ACTION, combo->currentIndex());
-                        settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
-                        settings->setValue(LAST_DFU_RESET_ROM_FS_STATE, checkBox2->isChecked());
+                        settings->setValue(SETTINGS_GROUP "/" LAST_DFU_ACTION, combo->currentIndex());
+                        settings->setValue(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
+                        settings->setValue(SETTINGS_GROUP "/" LAST_DFU_RESET_ROM_FS_STATE, checkBox2->isChecked());
 
                         if(combo->currentIndex() == 0)
                         {
@@ -1345,7 +1347,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                     if(!dfuDeviceResetToRelease)
                     {
-                        settings->endGroup();
                         CONNECT_END();
                     }
                 }
@@ -1468,7 +1469,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                         if(mappings.size())
                         {
-                            int index = mappings.keys().indexOf(settings->value(LAST_BOARD_TYPE_STATE).toString());
+                            int index = mappings.keys().indexOf(
+                                settings->value(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE).toString());
 
                             bool previousMappingAvailable = previousMappingSet && mappings.contains(previousMapping);
                             bool ok = previousMappingAvailable || (mappings.size() == 1);
@@ -1481,7 +1483,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                             if(ok)
                             {
-                                if (!previousMappingAvailable) settings->setValue(LAST_BOARD_TYPE_STATE, temp);
+                                if (!previousMappingAvailable)
+                                    settings->setValue(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE, temp);
 
                                 QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
                                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -1499,13 +1502,15 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 widget->setLayout(layout2);
 
                                 QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal FAT file system"));
-                                checkBox->setChecked(settings->value(LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
+                                checkBox->setChecked(
+                                    settings->value(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
                                 layout2->addWidget(checkBox);
                                 checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
                                                             "This does not erase files on any removable SD card (if inserted)."));
 
                                 QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Reset ROMFS file system"));
-                                checkBox2->setChecked(settings->value(LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
+                                checkBox2->setChecked(
+                                    settings->value(SETTINGS_GROUP "/" LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
                                 layout2->addWidget(checkBox2);
                                 checkBox2->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be reset back to default."));
 
@@ -1527,8 +1532,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                                 if (ok)
                                 {
-                                    settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
-                                    settings->setValue(LAST_DFU_RESET_ROM_FS_STATE, checkBox2->isChecked());
+                                    settings->setValue(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE,
+                                                       checkBox->isChecked());
+                                    settings->setValue(SETTINGS_GROUP "/" LAST_DFU_RESET_ROM_FS_STATE,
+                                                       checkBox2->isChecked());
                                     previousMapping = temp;
                                     originalFirmwareFolder = mappings.value(temp);
                                     firmwarePath = Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
@@ -1596,11 +1603,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         else if(stringList.size() == 1)
         {
             selectedPort = stringList.first();
-            settings->setValue(LAST_SERIAL_PORT_STATE, selectedPort);
+            settings->setValue(SETTINGS_GROUP "/" LAST_SERIAL_PORT_STATE, selectedPort);
         }
         else
         {
-            int index = stringList.indexOf(settings->value(LAST_SERIAL_PORT_STATE).toString());
+            int index = stringList.indexOf(settings->value(SETTINGS_GROUP "/" LAST_SERIAL_PORT_STATE).toString());
 
             const QList<QPair<QString, QString> > prettyNames = querySerialPorts(stringList);
 
@@ -1621,11 +1628,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             if(ok)
             {
                 selectedPort = temp.split(QStringLiteral(":")).first();
-                settings->setValue(LAST_SERIAL_PORT_STATE, selectedPort);
+                settings->setValue(SETTINGS_GROUP "/" LAST_SERIAL_PORT_STATE, selectedPort);
             }
         }
 
-        settings->endGroup();
 
         if((!forceBootloaderBricked) && selectedPort.isEmpty())
         {
@@ -1636,16 +1642,15 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         if(forceBootloaderBricked && (!dfuDevices.isEmpty()))
         {
-            settings->beginGroup(SETTINGS_GROUP);
 
             if(dfuDevices.size() == 1)
             {
                 selectedDfuDevice = dfuDevices.first();
-                settings->setValue(LAST_DFU_PORT_STATE, selectedDfuDevice);
+                settings->setValue(SETTINGS_GROUP "/" LAST_DFU_PORT_STATE, selectedDfuDevice);
             }
             else
             {
-                int index = dfuDevices.indexOf(settings->value(LAST_DFU_PORT_STATE).toString());
+                int index = dfuDevices.indexOf(settings->value(SETTINGS_GROUP "/" LAST_DFU_PORT_STATE).toString());
 
                 bool ok;
                 QString temp = QInputDialog::getItem(Core::ICore::dialogParent(),
@@ -1657,7 +1662,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 if(ok)
                 {
                     selectedDfuDevice = temp;
-                    settings->setValue(LAST_DFU_PORT_STATE, selectedDfuDevice);
+                    settings->setValue(SETTINGS_GROUP "/" LAST_DFU_PORT_STATE, selectedDfuDevice);
                 }
             }
 
@@ -1666,7 +1671,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 CONNECT_END();
             }
 
-            settings->endGroup();
         }
 
         bool isOldVidPid = false;
@@ -2148,7 +2152,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                         if(!mappings.contains(temp))
                         {
-                            int index = mappingsHumanReadable.keys().indexOf(settings->value(LAST_BOARD_TYPE_STATE_2).toString());
+                            int index = mappingsHumanReadable.keys().indexOf(
+                                settings->value(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE_2).toString());
 
                             bool ok = mappingsHumanReadable.size() == 1;
                             temp = (mappingsHumanReadable.size() == 1) ? mappingsHumanReadable.keys().first() : QInputDialog::getItem(Core::ICore::dialogParent(),
@@ -2159,7 +2164,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                             if(ok)
                             {
-                                settings->setValue(LAST_BOARD_TYPE_STATE_2, temp);
+                                settings->setValue(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE_2, temp);
                             }
                             else
                             {
@@ -3115,10 +3120,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             disconnect(conn);
 
-            settings->beginGroup(SETTINGS_GROUP);
-            bool jpgCompress = settings->value(QString((JPG_COMPRESS_STATE "_") + m_boardType).toUtf8(),
-                                               jpegPreferred).toBool();
-            settings->endGroup();
+            const Utils::Key jpgKey =
+                Utils::keyFromString(QStringLiteral(SETTINGS_GROUP "/" JPG_COMPRESS_STATE "_") + m_boardType);
+            bool jpgCompress = settings->value(jpgKey, jpegPreferred).toBool();
             // FORCE PREFFERED ON CONNECT
             jpgCompress = jpegPreferred;
 
@@ -3425,11 +3429,10 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             if (!m_boardType.isEmpty() && v2ProtocolEnabled)
             {
                 Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+                const Utils::Key jpgKey =
+                    Utils::keyFromString(QStringLiteral(SETTINGS_GROUP "/" JPG_COMPRESS_STATE "_") + m_boardType);
 
-                settings->beginGroup(SETTINGS_GROUP);
-                settings->setValue(QString((JPG_COMPRESS_STATE "_") + m_boardType).toUtf8(),
-                                   m_jpgCompress->isChecked());
-                settings->endGroup();
+                settings->setValue(jpgKey, m_jpgCompress->isChecked());
             }
 
             ///////////////////////////////////////////////////////////////////
@@ -3879,7 +3882,6 @@ void OpenMVPlugin::updateCam(bool forceYes)
         || ((m_major == match.captured(1).toInt()) && (m_minor == match.captured(2).toInt()) && (m_patch < match.captured(3).toInt())))
         {
             Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-            settings->beginGroup(SETTINGS_GROUP);
 
             QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -3895,13 +3897,13 @@ void OpenMVPlugin::updateCam(bool forceYes)
             widget->setLayout(layout2);
 
             QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal FAT file system"));
-            checkBox->setChecked(settings->value(LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
+            checkBox->setChecked(settings->value(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
             layout2->addWidget(checkBox);
             checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
                                         "This does not erase files on any removable SD card (if inserted)."));
 
             QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Reset ROMFS file system"));
-            checkBox2->setChecked(settings->value(LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
+            checkBox2->setChecked(settings->value(SETTINGS_GROUP "/" LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
             layout2->addWidget(checkBox2);
             checkBox2->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be reset back to default."));
 
@@ -3931,11 +3933,12 @@ void OpenMVPlugin::updateCam(bool forceYes)
 
             if(ok)
             {
-                if (checkBox->isEnabled()) settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
-                if (checkBox2->isEnabled()) settings->setValue(LAST_DFU_RESET_ROM_FS_STATE, checkBox2->isChecked());
+                if (checkBox->isEnabled())
+                    settings->setValue(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
+                if (checkBox2->isEnabled())
+                    settings->setValue(SETTINGS_GROUP "/" LAST_DFU_RESET_ROM_FS_STATE, checkBox2->isChecked());
             }
 
-            settings->endGroup();
 
             if(ok)
             {
@@ -3957,7 +3960,6 @@ void OpenMVPlugin::updateCam(bool forceYes)
                 Tr::tr("Your OpenMV Cam's firmware is up to date."));
 
             Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-            settings->beginGroup(SETTINGS_GROUP);
 
             QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -3973,13 +3975,13 @@ void OpenMVPlugin::updateCam(bool forceYes)
             widget->setLayout(layout2);
 
             QCheckBox *checkBox = new QCheckBox(Tr::tr("Erase internal FAT file system"));
-            checkBox->setChecked(settings->value(LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
+            checkBox->setChecked(settings->value(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, false).toBool());
             layout2->addWidget(checkBox);
             checkBox->setToolTip(Tr::tr("If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. "
                                         "This does not erase files on any removable SD card (if inserted)."));
 
             QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Reset ROMFS file system"));
-            checkBox2->setChecked(settings->value(LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
+            checkBox2->setChecked(settings->value(SETTINGS_GROUP "/" LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
             layout2->addWidget(checkBox2);
             checkBox2->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be reset back to default."));
 
@@ -3997,11 +3999,10 @@ void OpenMVPlugin::updateCam(bool forceYes)
 
             if(ok)
             {
-                settings->setValue(LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
-                settings->setValue(LAST_DFU_RESET_ROM_FS_STATE, checkBox2->isChecked());
+                settings->setValue(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
+                settings->setValue(SETTINGS_GROUP "/" LAST_DFU_RESET_ROM_FS_STATE, checkBox2->isChecked());
             }
 
-            settings->endGroup();
 
             if(ok)
             {
@@ -4068,7 +4069,8 @@ QJsonObject OpenMVPlugin::getBoardSettings(const QString &title, Utils::QtcSetti
             }
         }
 
-        int index = mappingsHumanReadable.keys().indexOf(settings->value(LAST_BOARD_TYPE_STATE_GET).toString());
+        int index = mappingsHumanReadable.keys().indexOf(
+            settings->value(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE_GET).toString());
 
         bool ok = mappingsHumanReadable.size() == 1;
         QString temp = (mappingsHumanReadable.size() == 1) ? mappingsHumanReadable.keys().first() : QInputDialog::getItem(Core::ICore::dialogParent(),
@@ -4079,7 +4081,7 @@ QJsonObject OpenMVPlugin::getBoardSettings(const QString &title, Utils::QtcSetti
 
         if(ok)
         {
-            settings->setValue(LAST_BOARD_TYPE_STATE_GET, temp);
+            settings->setValue(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE_GET, temp);
             return mappingsHumanReadable.value(temp); // Get mappings key.
         }
 

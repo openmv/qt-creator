@@ -721,7 +721,6 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     QRegularExpression fpsRegex(QStringLiteral("Video:.*?,\\s*(\\d+(?:\\.\\d+)?)\\s+fps,"));
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(VIDEO_SETTINGS_GROUP);
 
     Utils::Process process;
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("Convert Video"), Tr::tr("Converting"), process, settings,
@@ -839,7 +838,6 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
                               Tr::tr("FFMPEG is not supported on this platform."));
 
         delete dialog;
-        settings->endGroup();
         return false;
     }
 
@@ -882,7 +880,6 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     }
 
     delete dialog;
-    settings->endGroup();
     result = rejected ? false : result;
 
     {
@@ -1287,24 +1284,23 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
 void convertVideoFileAction(const QString &drivePath)
 {
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(VIDEO_SETTINGS_GROUP);
 
     QStringList srcList =
         QFileDialog::getOpenFileNames(Core::ICore::dialogParent(), Tr::tr("Convert Video Source"),
-            settings->value(LAST_CONVERT_VIDEO_SRC_PATH, drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
+            settings->value(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_SRC_PATH, drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
             Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;") + getInputFormats());
 
     if(srcList.size() > 1)
     {
         QString dstFolder =
         QFileDialog::getExistingDirectory(Core::ICore::dialogParent(), Tr::tr("Convert Video Output"),
-            settings->value(LAST_CONVERT_VIDEO_DST_FOLDER_PATH, QDir::homePath()).toString());
+            settings->value(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_DST_FOLDER_PATH, QDir::homePath()).toString());
 
         if(!dstFolder.isEmpty())
         {
             QString extensions = Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;") + getOutputFormats();
             QStringList extensionsList = extensions.split(QStringLiteral(";;"));
-            int index = extensionsList.indexOf(settings->value(LAST_CONVERT_VIDEO_DST_EXTENSION).toString());
+            int index = extensionsList.indexOf(settings->value(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_DST_EXTENSION).toString());
 
             bool ok;
             QString extension = QInputDialog::getItem(Core::ICore::dialogParent(),
@@ -1336,7 +1332,7 @@ void convertVideoFileAction(const QString &drivePath)
                             scale = QInputDialog::getInt(Core::ICore::dialogParent(),
                                     Tr::tr("Convert Video"),
                                     Tr::tr("Enter a new width (the aspect ratio will be kept the same)"),
-                                    settings->value(LAST_CONVERT_VIDEO_HRES, 320).toInt(), 16, 65535, 1, &ok,
+                                    settings->value(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_HRES, 320).toInt(), 16, 65535, 1, &ok,
                                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                     (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
                         }
@@ -1358,7 +1354,7 @@ void convertVideoFileAction(const QString &drivePath)
                                     skip = QInputDialog::getInt(Core::ICore::dialogParent(),
                                            Tr::tr("Convert Video"),
                                            Tr::tr("Enter how many frames to skip at a time"),
-                                           settings->value(LAST_CONVERT_VIDEO_SKIP, 0).toInt(), 0, 255, 1, &ok,
+                                           settings->value(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_SKIP, 0).toInt(), 0, 255, 1, &ok,
                                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
                                 }
@@ -1401,11 +1397,16 @@ void convertVideoFileAction(const QString &drivePath)
                                         }
                                     }
 
-                                    settings->setValue(LAST_CONVERT_VIDEO_SRC_PATH, QFileInfo(srcList.first()).absoluteDir().path());
-                                    settings->setValue(LAST_CONVERT_VIDEO_DST_FOLDER_PATH, dstFolder);
-                                    settings->setValue(LAST_CONVERT_VIDEO_DST_EXTENSION, extension);
-                                    if(rescale == QMessageBox::Yes) settings->setValue(LAST_CONVERT_VIDEO_HRES, scale);
-                                    if(skipFrames == QMessageBox::Yes) settings->setValue(LAST_CONVERT_VIDEO_SKIP, skip);
+                                    settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_SRC_PATH,
+                                                       QFileInfo(srcList.first()).absoluteDir().path());
+                                    settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_DST_FOLDER_PATH,
+                                                       dstFolder);
+                                    settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_DST_EXTENSION,
+                                                       extension);
+                                    if(rescale == QMessageBox::Yes)
+                                        settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_HRES, scale);
+                                    if(skipFrames == QMessageBox::Yes)
+                                        settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_SKIP, skip);
 
                                     QMessageBox::information(Core::ICore::dialogParent(),
                                         Tr::tr("Convert Video"),
@@ -1426,7 +1427,7 @@ void convertVideoFileAction(const QString &drivePath)
         {
             dst =
             QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Convert Video Output"),
-                settings->value(LAST_CONVERT_VIDEO_DST_PATH, QDir::homePath()).toString(),
+                settings->value(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_DST_PATH, QDir::homePath()).toString(),
                 Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;") + getOutputFormats());
 
             if((!dst.isEmpty()) && QFileInfo(dst).completeSuffix().isEmpty())
@@ -1458,7 +1459,7 @@ void convertVideoFileAction(const QString &drivePath)
                     scale = QInputDialog::getInt(Core::ICore::dialogParent(),
                             Tr::tr("Convert Video"),
                             Tr::tr("Enter a new width (the aspect ratio will be kept the same)"),
-                            settings->value(LAST_CONVERT_VIDEO_HRES, 320).toInt(), 16, 65535, 1, &ok,
+                            settings->value(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_HRES, 320).toInt(), 16, 65535, 1, &ok,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
                 }
@@ -1480,7 +1481,7 @@ void convertVideoFileAction(const QString &drivePath)
                             skip = QInputDialog::getInt(Core::ICore::dialogParent(),
                                    Tr::tr("Convert Video"),
                                    Tr::tr("Enter how many frames to skip at a time"),
-                                   settings->value(LAST_CONVERT_VIDEO_SKIP, 0).toInt(), 0, 255, 1, &ok,
+                                   settings->value(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_SKIP, 0).toInt(), 0, 255, 1, &ok,
                                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
                         }
@@ -1493,10 +1494,12 @@ void convertVideoFileAction(const QString &drivePath)
                             {
                                 if((!tempSrc.isEmpty()) && convertVideoFile(dst, tempSrc, scale, skip))
                                 {
-                                    settings->setValue(LAST_CONVERT_VIDEO_SRC_PATH, src);
-                                    settings->setValue(LAST_CONVERT_VIDEO_DST_PATH, dst);
-                                    if(rescale == QMessageBox::Yes) settings->setValue(LAST_CONVERT_VIDEO_HRES, scale);
-                                    if(skipFrames == QMessageBox::Yes) settings->setValue(LAST_CONVERT_VIDEO_SKIP, skip);
+                                    settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_SRC_PATH, src);
+                                    settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_DST_PATH, dst);
+                                    if(rescale == QMessageBox::Yes)
+                                        settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_HRES, scale);
+                                    if(skipFrames == QMessageBox::Yes)
+                                        settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_SKIP, skip);
 
                                     QMessageBox::information(Core::ICore::dialogParent(),
                                         Tr::tr("Convert Video"),
@@ -1516,17 +1519,15 @@ void convertVideoFileAction(const QString &drivePath)
         }
     }
 
-    settings->endGroup();
 }
 
 void playVideoFileAction(const QString &drivePath)
 {
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(VIDEO_SETTINGS_GROUP);
 
     QString path =
         QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Play Video"),
-            settings->value(LAST_PLAY_VIDEO_PATH, drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
+            settings->value(VIDEO_SETTINGS_GROUP "/" LAST_PLAY_VIDEO_PATH, drivePath.isEmpty() ? QDir::homePath() : drivePath).toString(),
             Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;") + getInputFormats());
 
     if(!path.isEmpty())
@@ -1535,17 +1536,15 @@ void playVideoFileAction(const QString &drivePath)
 
         if((!tempPath.isEmpty()) && playVideoFile(tempPath))
         {
-            settings->setValue(LAST_PLAY_VIDEO_PATH, path);
+            settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_PLAY_VIDEO_PATH, path);
         }
     }
 
-    settings->endGroup();
 }
 
 void playRTSPStreamAction()
 {
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(VIDEO_SETTINGS_GROUP);
 
     QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -1558,7 +1557,7 @@ void playRTSPStreamAction()
     layout->addRow(urlChooserTitle);
     layout->addItem(new QSpacerItem(0, 6));
 
-    QLineEdit *urlChooser = new QLineEdit(settings->value(LAST_PLAY_RTSP_URL, QStringLiteral("xxx.xxx.xxx.xxx")).toString());
+    QLineEdit *urlChooser = new QLineEdit(settings->value(VIDEO_SETTINGS_GROUP "/" LAST_PLAY_RTSP_URL, QStringLiteral("xxx.xxx.xxx.xxx")).toString());
     layout->addRow(urlChooser);
     layout->addItem(new QSpacerItem(0, 6));
 
@@ -1566,7 +1565,7 @@ void playRTSPStreamAction()
     layout->addRow(portChooserTitle);
     layout->addItem(new QSpacerItem(0, 6));
 
-    QLineEdit *portChooser = new QLineEdit(settings->value(LAST_PLAY_RTSP_PORT, QStringLiteral("554")).toString());
+    QLineEdit *portChooser = new QLineEdit(settings->value(VIDEO_SETTINGS_GROUP "/" LAST_PLAY_RTSP_PORT, QStringLiteral("554")).toString());
     layout->addRow(portChooser);
     layout->addItem(new QSpacerItem(0, 6));
 
@@ -1576,7 +1575,7 @@ void playRTSPStreamAction()
     widget->setLayout(layout2);
 
     QCheckBox *checkBox = new QCheckBox(Tr::tr("Stream video over TCP (versus UDP)?"));
-    checkBox->setChecked(settings->value(LAST_PLAY_RTSP_TCP, false).toBool());
+    checkBox->setChecked(settings->value(VIDEO_SETTINGS_GROUP "/" LAST_PLAY_RTSP_TCP, false).toBool());
     layout2->addWidget(checkBox);
     checkBox->setToolTip(Tr::tr("Keeps the RTP video stream inside of the same TCP socket used for setting up the initial connection "
                                      "verus creating a new UDP video stream. This may help the connection on networks with firewalls."));
@@ -1613,20 +1612,18 @@ void playRTSPStreamAction()
 
         if(playRTSPStream(u, checkBox->isChecked()))
         {
-            settings->setValue(LAST_PLAY_RTSP_URL, url);
-            settings->setValue(LAST_PLAY_RTSP_PORT, port);
-            settings->setValue(LAST_PLAY_RTSP_TCP, checkBox->isChecked());
+            settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_PLAY_RTSP_URL, url);
+            settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_PLAY_RTSP_PORT, port);
+            settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_PLAY_RTSP_TCP, checkBox->isChecked());
         }
     }
 
-    settings->endGroup();
     delete dialog;
 }
 
 void saveVideoFile(const QString &srcPath)
 {
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(VIDEO_SETTINGS_GROUP);
 
     QString dst;
 
@@ -1634,7 +1631,7 @@ void saveVideoFile(const QString &srcPath)
     {
         dst =
         QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Video"),
-            settings->value(LAST_SAVE_VIDEO_PATH, QDir::homePath()).toString(),
+            settings->value(VIDEO_SETTINGS_GROUP "/" LAST_SAVE_VIDEO_PATH, QDir::homePath()).toString(),
             Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;") + getOutputFormats());
 
         if((!dst.isEmpty()) && QFileInfo(dst).completeSuffix().isEmpty())
@@ -1666,7 +1663,7 @@ void saveVideoFile(const QString &srcPath)
                 scale = QInputDialog::getInt(Core::ICore::dialogParent(),
                         Tr::tr("Convert Video"),
                         Tr::tr("Enter a new width (the aspect ratio will be kept the same)"),
-                        settings->value(LAST_SAVE_VIDEO_HRES, 320).toInt(), 16, 65535, 1, &ok,
+                        settings->value(VIDEO_SETTINGS_GROUP "/" LAST_SAVE_VIDEO_HRES, 320).toInt(), 16, 65535, 1, &ok,
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
             }
@@ -1688,7 +1685,7 @@ void saveVideoFile(const QString &srcPath)
                         skip = QInputDialog::getInt(Core::ICore::dialogParent(),
                                Tr::tr("Convert Video"),
                                Tr::tr("Enter how many frames to skip at a time"),
-                               settings->value(LAST_SAVE_VIDEO_SKIP, 0).toInt(), 0, 255, 1, &ok,
+                               settings->value(VIDEO_SETTINGS_GROUP "/" LAST_SAVE_VIDEO_SKIP, 0).toInt(), 0, 255, 1, &ok,
                                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
                     }
@@ -1701,9 +1698,11 @@ void saveVideoFile(const QString &srcPath)
                         {
                             if((!tempSrc.isEmpty()) && convertVideoFile(dst, tempSrc, scale, skip))
                             {
-                                settings->setValue(LAST_SAVE_VIDEO_PATH, dst);
-                                if(rescale == QMessageBox::Yes) settings->setValue(LAST_SAVE_VIDEO_HRES, scale);
-                                if(skipFrames == QMessageBox::Yes) settings->setValue(LAST_SAVE_VIDEO_SKIP, skip);
+                                settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_SAVE_VIDEO_PATH, dst);
+                                if(rescale == QMessageBox::Yes)
+                                    settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_SAVE_VIDEO_HRES, scale);
+                                if(skipFrames == QMessageBox::Yes)
+                                    settings->setValue(VIDEO_SETTINGS_GROUP "/" LAST_SAVE_VIDEO_SKIP, skip);
 
                                 QMessageBox::information(Core::ICore::dialogParent(),
                                     Tr::tr("Convert Video"),
@@ -1722,7 +1721,6 @@ void saveVideoFile(const QString &srcPath)
         }
     }
 
-    settings->endGroup();
 }
 
 } // namespace Internal

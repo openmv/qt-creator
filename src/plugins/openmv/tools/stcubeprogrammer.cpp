@@ -56,7 +56,6 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
     QMutexLocker locker(&st_cube_programmer_working);
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("STM32 Programmer"), details, process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                             Core::ICore::dialogParent());
 
@@ -212,7 +211,6 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
             Tr::tr("STM32 Programmer is not supported on this platform."));
 
         delete dialog;
-        settings->endGroup();
     }
     else
     {
@@ -229,7 +227,6 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
         delete dialog;
-        settings->endGroup();
     }
 }
 

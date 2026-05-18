@@ -214,7 +214,6 @@ void downloadFirmware(const QString &details,
         if(Utils::HostOsInfo::isWindowsHost() && path.endsWith("dfu", Qt::CaseInsensitive))
         {
             Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-            settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
             LoaderDialog *dialog = new LoaderDialog(Tr::tr("DfuSe"), details, process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                                     Core::ICore::dialogParent());
 
@@ -330,12 +329,10 @@ void downloadFirmware(const QString &details,
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             delete dialog;
-            settings->endGroup();
         }
         else
         {
             Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-            settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
             LoaderDialog *dialog = new LoaderDialog(Tr::tr("PyDfu"), details, process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                                     Core::ICore::dialogParent());
 
@@ -448,14 +445,12 @@ void downloadFirmware(const QString &details,
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
             delete dialog;
-            settings->endGroup();
         }
 
         return;
     }
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("DFU Util"), details, process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                             Core::ICore::dialogParent());
 
@@ -632,7 +627,6 @@ void downloadFirmware(const QString &details,
     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
     delete dialog;
-    settings->endGroup();
 }
 
 } // namespace Internal

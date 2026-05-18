@@ -353,7 +353,6 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("NXP IMX"), Tr::tr("Flashing Firmware"), process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                             Core::ICore::dialogParent());
 
@@ -1266,7 +1265,6 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 cleanup:
 
     delete dialog;
-    settings->endGroup();
 
     return result;
 }
@@ -1285,7 +1283,6 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
     env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("NXP IMX"), ((romfsAccess == OPENMV_ROMFS_READ) ? Tr::tr("Read ROMFS") :
                                                                     ((romfsAccess == OPENMV_ROMFS_WRITE) ? Tr::tr("Write ROMFS") :
                                                                         Tr::tr("Flashing Firmware"))),
@@ -1857,7 +1854,6 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 cleanup:
 
     delete dialog;
-    settings->endGroup();
 
     return result;
 }

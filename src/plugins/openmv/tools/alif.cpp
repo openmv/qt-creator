@@ -366,7 +366,6 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
     Utils::Process process;
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("Alif Tools"), Tr::tr("Flashing Firmware"), process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                             Core::ICore::dialogParent());
 
@@ -1015,7 +1014,6 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 cleanup:
 
     delete dialog;
-    settings->endGroup();
 
     return result;
 }

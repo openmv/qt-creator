@@ -188,7 +188,6 @@ void picotoolDownloadFirmware(const QString &details, QString &command, Utils::P
     QMutexLocker locker(&picotool_working);
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    settings->beginGroup(LOADERDIALOG_SETTINGS_GROUP);
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("PicoTool"), details, process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
                                             Core::ICore::dialogParent());
 
@@ -339,7 +338,6 @@ void picotoolDownloadFirmware(const QString &details, QString &command, Utils::P
     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
     delete dialog;
-    settings->endGroup();
 }
 
 } // namespace Internal
