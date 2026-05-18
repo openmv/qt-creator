@@ -1758,8 +1758,13 @@ void ICorePrivate::registerDefaultContainers()
 {
     ActionContainer *menubar = ActionManager::createMenuBar(Constants::MENU_BAR);
 
-    if (!HostOsInfo::isMacHost()) // System menu bar on Mac
-        m_mainwindow->setMenuBar(menubar->menuBar());
+    // OPENMV-DIFF //
+    // if (!HostOsInfo::isMacHost()) // System menu bar on Mac
+    //     m_mainwindow->setMenuBar(menubar->menuBar());
+    m_mainwindow->setMenuBar(menubar->menuBar());
+    if (HostOsInfo::isMacHost())
+        menubar->menuBar()->hide();
+    // OPENMV-DIFF //
     menubar->appendGroup(Constants::G_FILE);
     menubar->appendGroup(Constants::G_EDIT);
     menubar->appendGroup(Constants::G_VIEW);
