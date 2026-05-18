@@ -921,11 +921,17 @@ static const char saveLogFilePath[] = "SaveLogFilePath";
 void OutputWindow::save()
 {
     QtcSettings *settings = ICore::settings();
-    settings->beginGroup(settingsGroup);
+    // OPENMV-DIFF //
+    // settings->beginGroup(settingsGroup);
+    const Utils::Key logKey = Utils::Key(settingsGroup) + '/' + Utils::Key(saveLogFilePath);
+    // OPENMV-DIFF //
 
     QString path =
         QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Log"),
-            settings->value(saveLogFilePath, QDir::homePath()).toString(),
+            // OPENMV-DIFF //
+            // settings->value(saveLogFilePath, QDir::homePath()).toString(),
+            settings->value(logKey, QDir::homePath()).toString(),
+            // OPENMV-DIFF //
             Tr::tr("Text Files (*.txt);;All files (*)"));
 
     if(!path.isEmpty())
@@ -942,7 +948,10 @@ void OutputWindow::save()
             }
             else
             {
-                settings->setValue(saveLogFilePath, path);
+                // OPENMV-DIFF //
+                // settings->setValue(saveLogFilePath, path);
+                settings->setValue(logKey, path);
+                // OPENMV-DIFF //
             }
         }
         else
@@ -952,8 +961,9 @@ void OutputWindow::save()
                 Tr::tr("Error: %L1!").arg(file.errorString()));
         }
     }
-
-    settings->endGroup();
+    // OPENMV-DIFF //
+    // settings->endGroup();
+    // OPENMV-DIFF //
 }
 
 void OutputWindow::setTabSettings(int tabWidth)

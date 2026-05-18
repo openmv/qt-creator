@@ -545,29 +545,21 @@ void DiffEditorPluginPrivate::diffExternalFiles()
     //     return;
     // OPENMV-DIFF //
     QtcSettings *settings = ICore::settings();
-    settings->beginGroup(Constants::DIFF_EXTERNAL_FILES_PATH_GROUP);
+    const Utils::Key diffPathKey = Utils::Key(Constants::DIFF_EXTERNAL_FILES_PATH_GROUP) + '/'
+                                   + Utils::Key(Constants::DIFF_EXTERNAL_FILES_PATH);
     const FilePath filePath1 = FileUtils::getOpenFilePath(nullptr, Tr::tr("Select First File for Diff"),
-                                                          Utils::FilePath::fromVariant(settings->value(Constants::DIFF_EXTERNAL_FILES_PATH,
+                                                          Utils::FilePath::fromVariant(settings->value(diffPathKey,
                                                           QString(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV")))));
-    if (filePath1.isEmpty()) {
-        settings->endGroup();
+    if (filePath1.isEmpty())
         return;
-    }
-    if (EditorManager::skipOpeningBigTextFile(filePath1)) {
-        settings->endGroup();
+    if (EditorManager::skipOpeningBigTextFile(filePath1))
         return;
-    }
     const FilePath filePath2 = FileUtils::getOpenFilePath(nullptr, Tr::tr("Select Second File for Diff"), filePath1);
-    if (filePath2.isEmpty()) {
-        settings->endGroup();
+    if (filePath2.isEmpty())
         return;
-    }
-    if (EditorManager::skipOpeningBigTextFile(filePath2)) {
-        settings->endGroup();
+    if (EditorManager::skipOpeningBigTextFile(filePath2))
         return;
-    }
-    settings->setValue(Constants::DIFF_EXTERNAL_FILES_PATH, filePath1.toVariant());
-    settings->endGroup();
+    settings->setValue(diffPathKey, filePath1.toVariant());
     // OPENMV-DIFF //
 
     const QString documentId = QLatin1String(Constants::DIFF_EDITOR_PLUGIN)
