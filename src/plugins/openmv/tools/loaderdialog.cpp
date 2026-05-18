@@ -47,7 +47,8 @@ LoaderDialog::LoaderDialog(const QString &title,
                            Utils::Process &process,
                            Utils::QtcSettings *settings,
                            const QString &settingsName,
-                           QWidget *parent) : QDialog(parent), m_settings(settings), m_settingsName(Utils::keyFromString(settingsName))
+                           QWidget *parent) : QDialog(parent), m_settings(settings),
+    m_settingsName(Utils::keyFromString(QStringLiteral(LOADERDIALOG_SETTINGS_GROUP "/") + settingsName))
 {
     setWindowFlags(windowFlags() | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                    (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |

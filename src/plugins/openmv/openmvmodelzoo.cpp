@@ -150,7 +150,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
     m_splitter = new Core::MiniSplitter(Qt::Horizontal, this);
 
     m_filterCheckBox = new QCheckBox(Tr::tr("Filter models by board type"));
-    m_filterCheckBox->setChecked(m_settings->value(LAST_MODEL_ZOO_DIALOG_FILTER_MODELS, true).toBool());
+    m_filterCheckBox->setChecked(m_settings->value(SETTINGS_GROUP "/" LAST_MODEL_ZOO_DIALOG_FILTER_MODELS, true).toBool());
 
     m_filter = new OpenMVModelZooBrowserFilter(m_boardSettings, m_filterCheckBox, this);
     m_filter->setSourceModel(m_model);
@@ -204,14 +204,14 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
         m_filter->invalidate();
     });
 
-    if(m_settings->contains(LAST_MODEL_ZOO_DIALOG_GEOMETRY))
+    if(m_settings->contains(SETTINGS_GROUP "/" LAST_MODEL_ZOO_DIALOG_GEOMETRY))
     {
-        restoreGeometry(m_settings->value(LAST_MODEL_ZOO_DIALOG_GEOMETRY).toByteArray());
-        m_splitter->restoreState(m_settings->value(LAST_MODEL_ZOO_DIALOG_SPLITTER_STATE).toByteArray());
+        restoreGeometry(m_settings->value(SETTINGS_GROUP "/" LAST_MODEL_ZOO_DIALOG_GEOMETRY).toByteArray());
+        m_splitter->restoreState(m_settings->value(SETTINGS_GROUP "/" LAST_MODEL_ZOO_DIALOG_SPLITTER_STATE).toByteArray());
 
-        m_settings->beginGroup(m_boardSettings.value(QStringLiteral("boardFirmwareFolder")).toString().toUtf8());
-        m_listToExpand = m_settings->value(LAST_MODEL_ZOO_DIALOG_EXPANDED_STATE).toStringList();
-        m_settings->endGroup();
+        m_listToExpand = m_settings->value(Utils::keyFromString(QStringLiteral(SETTINGS_GROUP "/")
+            + m_boardSettings.value(QStringLiteral("boardFirmwareFolder")).toString()
+            + QStringLiteral("/" LAST_MODEL_ZOO_DIALOG_EXPANDED_STATE))).toStringList();
 
         connect(m_model, &QFileSystemModel::directoryLoaded, this, [this] () {
             if (!m_listToExpand.isEmpty())
@@ -221,10 +221,10 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
         });
 
         connect(m_treeView, &OpenMVModelZooBrowserTreeView::paintEventSignal, this, [this] () {
-            if (m_listToExpand.isEmpty() && (!m_initialized) && m_settings->contains(LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX))
+            if (m_listToExpand.isEmpty() && (!m_initialized) && m_settings->contains(SETTINGS_GROUP "/" LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX))
             {
                 QTimer::singleShot(1, this, [this] () {
-                    QModelIndex index = m_filter->mapFromSource(m_model->index(m_settings->value(LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX).toString()));
+                    QModelIndex index = m_filter->mapFromSource(m_model->index(m_settings->value(SETTINGS_GROUP "/" LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX).toString()));
                     m_treeView->setCurrentIndex(index);
                     m_treeView->scrollTo(index, QTreeView::PositionAtCenter);
                 });
@@ -395,23 +395,23 @@ void OpenMVModelZooBrowser::restoreExpandedState(const QString &path, const QMod
 
 OpenMVModelZooBrowser::~OpenMVModelZooBrowser()
 {
-    m_settings->setValue(LAST_MODEL_ZOO_DIALOG_GEOMETRY, saveGeometry());
-    m_settings->setValue(LAST_MODEL_ZOO_DIALOG_SPLITTER_STATE, m_splitter->saveState());
-    m_settings->setValue(LAST_MODEL_ZOO_DIALOG_FILTER_MODELS, m_filterCheckBox->isChecked());
+    m_settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_ZOO_DIALOG_GEOMETRY, saveGeometry());
+    m_settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_ZOO_DIALOG_SPLITTER_STATE, m_splitter->saveState());
+    m_settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_ZOO_DIALOG_FILTER_MODELS, m_filterCheckBox->isChecked());
 
     QStringList list;
     saveExpandedState(QString(), list, m_treeView->rootIndex());
-    m_settings->beginGroup(m_boardSettings.value(QStringLiteral("boardFirmwareFolder")).toString().toUtf8());
-    m_settings->setValue(LAST_MODEL_ZOO_DIALOG_EXPANDED_STATE, list);
-    m_settings->endGroup();
+    m_settings->setValue(Utils::keyFromString(QStringLiteral(SETTINGS_GROUP "/")
+        + m_boardSettings.value(QStringLiteral("boardFirmwareFolder")).toString()
+        + QStringLiteral("/" LAST_MODEL_ZOO_DIALOG_EXPANDED_STATE)), list);
 
     if (m_treeView->selectionModel()->hasSelection())
     {
-        m_settings->setValue(LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX, m_model->filePath(m_filter->mapToSource(m_treeView->currentIndex())));
+        m_settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX, m_model->filePath(m_filter->mapToSource(m_treeView->currentIndex())));
     }
     else
     {
-        m_settings->remove(LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX);
+        m_settings->remove(SETTINGS_GROUP "/" LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX);
     }
 }
 

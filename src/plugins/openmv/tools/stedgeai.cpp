@@ -108,7 +108,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     combo2->addItem(Tr::tr("Medium Optimization"));
     combo2->addItem(Tr::tr("Low Optimization"));
     combo2->addItem(Tr::tr("No Optimization"));
-    combo2->setCurrentIndex(settings->value(LAST_STEDGEAI_COMPILIER_OPTIMIZE_STATE, 0).toInt());
+    combo2->setCurrentIndex(settings->value("OpenMV/" LAST_STEDGEAI_COMPILIER_OPTIMIZE_STATE, 0).toInt());
     layout2->addWidget(combo2);
     layout2->addItem(new QSpacerItem(0, 6));
 
@@ -116,7 +116,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     layout->setContentsMargins(0, 0, 0, 0);
     QWidget *widget = new QWidget;
     widget->setLayout(layout);
-    widget->setVisible(settings->value(LAST_STEDGEAI_COMPILIER_ADVANCED_STATE, false).toBool());
+    widget->setVisible(settings->value("OpenMV/" LAST_STEDGEAI_COMPILIER_ADVANCED_STATE, false).toBool());
 
     Utils::FancyLineEdit *lineEdit = new Utils::FancyLineEdit();
     lineEdit->setPlaceholderText(Tr::tr("--verbosity 2"));
@@ -150,7 +150,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     widget2->setLayout(layout3);
 
     QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Advanced"));
-    checkBox2->setChecked(settings->value(LAST_STEDGEAI_COMPILIER_ADVANCED_STATE, false).toBool());
+    checkBox2->setChecked(settings->value("OpenMV/" LAST_STEDGEAI_COMPILIER_ADVANCED_STATE, false).toBool());
     layout3->addWidget(checkBox2);
 
     QDialogButtonBox *box2 = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
@@ -173,10 +173,10 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
         return QString();
     }
 
-    settings->setValue(LAST_STEDGEAI_COMPILIER_OPTIMIZE_STATE, combo2->currentIndex());
-    settings->setValue(LAST_STEDGEAI_COMPILIER_ADVANCED_STATE, checkBox2->isChecked());
-    settings->setValue(LAST_STEDGEAI_COMPILIER_OPTIONS_STRING, lineEdit->text());
-    settings->setValue(LAST_STEDGEAI_COMPILIER_OPTIONS_STRING_ATONN, lineEdit2->text());
+    settings->setValue("OpenMV/" LAST_STEDGEAI_COMPILIER_OPTIMIZE_STATE, combo2->currentIndex());
+    settings->setValue("OpenMV/" LAST_STEDGEAI_COMPILIER_ADVANCED_STATE, checkBox2->isChecked());
+    settings->setValue("OpenMV/" LAST_STEDGEAI_COMPILIER_OPTIONS_STRING, lineEdit->text());
+    settings->setValue("OpenMV/" LAST_STEDGEAI_COMPILIER_OPTIONS_STRING_ATONN, lineEdit2->text());
     QStringList stedgeaiArgs, stedgeaiAtonnArgs;
 
     if (combo2->currentIndex() == 0)

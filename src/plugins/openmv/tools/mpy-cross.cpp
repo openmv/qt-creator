@@ -81,7 +81,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
     combo2->addItem(Tr::tr("Copy and clean whitespace"));
     combo2->addItem(Tr::tr("Copy and clean whitespace/comments"));
     combo2->addItem(Tr::tr("Compile to bytecode"));
-    combo2->setCurrentIndex(settings->value(LAST_MPY_COMPILIER_OPTIMIZE_STATE, 0).toInt());
+    combo2->setCurrentIndex(settings->value("OpenMV/" LAST_MPY_COMPILIER_OPTIMIZE_STATE, 0).toInt());
     layout2->addRow(combo2);
     layout2->addItem(new QSpacerItem(0, 6));
 
@@ -89,7 +89,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
     layout->setContentsMargins(0, 0, 0, 0);
     QWidget *widget = new QWidget;
     widget->setLayout(layout);
-    widget->setVisible(settings->value(LAST_MPY_COMPILIER_ADVANCED_STATE, false).toBool());
+    widget->setVisible(settings->value("OpenMV/" LAST_MPY_COMPILIER_ADVANCED_STATE, false).toBool());
 
     Utils::FancyLineEdit *lineEdit = new Utils::FancyLineEdit();
     lineEdit->setHistoryCompleter(LAST_MPY_COMPILIER_OPTIONS_STRING, true);
@@ -109,8 +109,8 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
     widget2->setLayout(layout3);
 
     QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Advanced"));
-    checkBox2->setChecked(settings->value(LAST_MPY_COMPILIER_ADVANCED_STATE, false).toBool());
-    checkBox2->setVisible(settings->value(LAST_MPY_COMPILIER_OPTIMIZE_STATE, 0).toInt() == 3);
+    checkBox2->setChecked(settings->value("OpenMV/" LAST_MPY_COMPILIER_ADVANCED_STATE, false).toBool());
+    checkBox2->setVisible(settings->value("OpenMV/" LAST_MPY_COMPILIER_OPTIMIZE_STATE, 0).toInt() == 3);
     layout3->addWidget(checkBox2);
 
     QDialogButtonBox *box2 = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
@@ -137,9 +137,9 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
         return QString();
     }
 
-    settings->setValue(LAST_MPY_COMPILIER_OPTIMIZE_STATE, combo2->currentIndex());
-    settings->setValue(LAST_MPY_COMPILIER_ADVANCED_STATE, checkBox2->isChecked());
-    settings->setValue(LAST_MPY_COMPILIER_OPTIONS_STRING, lineEdit->text());
+    settings->setValue("OpenMV/" LAST_MPY_COMPILIER_OPTIMIZE_STATE, combo2->currentIndex());
+    settings->setValue("OpenMV/" LAST_MPY_COMPILIER_ADVANCED_STATE, checkBox2->isChecked());
+    settings->setValue("OpenMV/" LAST_MPY_COMPILIER_OPTIONS_STRING, lineEdit->text());
 
     QStringList mpyArgs;
 
