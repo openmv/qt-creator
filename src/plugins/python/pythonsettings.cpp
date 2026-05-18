@@ -840,17 +840,20 @@ PythonSettings::PythonSettings()
     // OPENMV-DIFF //
     // m_taskTreeRunner.start(recipe);
     // OPENMV-DIFF //
+    QString bundledInterpreterId;
     if (Utils::HostOsInfo::isWindowsHost())
     {
         const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/win/python.exe")), {});
         if (!alreadyRegistered(interpreter))
             settingsInstance->addInterpreter(interpreter, true);
+        bundledInterpreterId = interpreter.id;
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
         const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python")), {});
         if (!alreadyRegistered(interpreter))
             settingsInstance->addInterpreter(interpreter, true);
+        bundledInterpreterId = interpreter.id;
     }
     else if (Utils::HostOsInfo::isLinuxHost())
     {
@@ -859,30 +862,40 @@ PythonSettings::PythonSettings()
             const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/linux-x86/bin/python")), {});
             if (!alreadyRegistered(interpreter))
                 settingsInstance->addInterpreter(interpreter, true);
+            bundledInterpreterId = interpreter.id;
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
             const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/linux-x86_64/bin/python")), {});
             if (!alreadyRegistered(interpreter))
                 settingsInstance->addInterpreter(interpreter, true);
+            bundledInterpreterId = interpreter.id;
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
             const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/linux-arm/bin/python")), {});
             if (!alreadyRegistered(interpreter))
                 settingsInstance->addInterpreter(interpreter, true);
+            bundledInterpreterId = interpreter.id;
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         {
             const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/linux-arm64/bin/python")), {});
             if (!alreadyRegistered(interpreter))
                 settingsInstance->addInterpreter(interpreter, true);
+            bundledInterpreterId = interpreter.id;
         }
     }
     else
     {
         m_taskTreeRunner.start(recipe);
     }
+    // Force the IDE's bundled interpreter as the default on every launch. A
+    // stale persisted default (e.g. one pinned to a previous build tree, or a
+    // system python removed by an OS/Xcode update) otherwise silently disables
+    // the Python language server while in-process Kate highlighting still works.
+    if (!bundledInterpreterId.isEmpty())
+        m_defaultInterpreterId = bundledInterpreterId;
     // OPENMV-DIFF //
 
     if (m_defaultInterpreterId.isEmpty())
