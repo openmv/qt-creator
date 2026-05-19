@@ -649,7 +649,9 @@ void OutputWindow::grayOutOldContent()
     if(document()->isEmpty())
         return;
     d->enforceNewline = true;
-    const bool atBottom = isScrollbarAtBottom();
+    // Follow the sticky user-intent flag, not a fresh value()==maximum() check
+    // that fast continuous output keeps re-pinning so you can never scroll up.
+    const bool atBottom = d->scrollToBottom;
     // OPENMV-DIFF //
     if (!d->cursor.atEnd())
         d->cursor.movePosition(QTextCursor::End);
@@ -898,7 +900,9 @@ void OutputWindow::appendText(const QString &textIn)
             continue;
         }
 
-        const bool atBottom = isScrollbarAtBottom();
+        // Follow the sticky user-intent flag, not a fresh value()==maximum() check
+    // that fast continuous output keeps re-pinning so you can never scroll up.
+    const bool atBottom = d->scrollToBottom;
         if (!d->cursor.atEnd())
             d->cursor.movePosition(QTextCursor::End);
         d->cursor.beginEditBlock();
