@@ -228,7 +228,9 @@ OpenMVROMFSEditor::OpenMVROMFSEditor(QWidget *parent, const QString &path, const
     connect(m_model, &QFileSystemModel::directoryLoaded, this, &OpenMVROMFSEditor::calculateFileSystemSize);
     connect(m_model, &QFileSystemModel::dataChanged, this, &OpenMVROMFSEditor::calculateFileSystemSize);
     connect(m_model, &QFileSystemModel::directoryLoaded, this, [this, path] (){
-        preloadDirectories(m_filter->mapFromSource(m_model->index(path)));
+        QTimer::singleShot(0, this, [this, path] {
+            preloadDirectories(m_filter->mapFromSource(m_model->index(path)));
+        });
     });
 }
 
@@ -353,7 +355,9 @@ void OpenMVROMFSEditor::addModel()
             // Required to make sure creation timestamps are different on created files.
             QThread::msleep(10);
 
-            setCurrentIndex(m_filter->mapFromSource(m_model->index(newFilePath)));
+            const QModelIndex newIndex = m_filter->mapFromSource(m_model->index(newFilePath));
+            if (newIndex.isValid())
+                setCurrentIndex(newIndex);
 
             // Copy labels over too if they exist.
             QString labels = dialog.selectedModelLabels();
@@ -441,7 +445,9 @@ void OpenMVROMFSEditor::addFile()
 
         if (QFile::copy(convertedSrc, newFilePath))
         {
-            setCurrentIndex(m_filter->mapFromSource(m_model->index(newFilePath)));
+            const QModelIndex newIndex = m_filter->mapFromSource(m_model->index(newFilePath));
+            if (newIndex.isValid())
+                setCurrentIndex(newIndex);
             settings->setValue(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_OPEN_FILE_PATH, QFileInfo(file).path());
 
             m_filter->invalidate();
@@ -479,7 +485,9 @@ void OpenMVROMFSEditor::newFolder()
 
         if (QDir().mkdir(newFilePath))
         {
-            setCurrentIndex(m_filter->mapFromSource(m_model->index(newFilePath)));
+            const QModelIndex newIndex = m_filter->mapFromSource(m_model->index(newFilePath));
+            if (newIndex.isValid())
+                setCurrentIndex(newIndex);
             settings->setValue(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_NEW_FOLDER_NAME, name);
 
             m_filter->invalidate();

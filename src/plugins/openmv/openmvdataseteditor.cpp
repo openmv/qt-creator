@@ -225,7 +225,9 @@ void OpenMVDatasetEditor::snapshot()
 
     if(m_pixmap.save(filePath))
     {
-        setCurrentIndex(m_model->index(filePath));
+        const QModelIndex newIndex = m_model->index(filePath);
+        if (newIndex.isValid())
+            setCurrentIndex(newIndex);
     }
     else
     {
