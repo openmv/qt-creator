@@ -1069,6 +1069,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                   OpenMVROMFSAccess romfsAccess,
                                   bool forceBootloaderEntry)
 {
+    // Latch the operation before any early return so the flag is already set
+    // while the internal pre-disconnect / disconnectDone trampoline runs,
+    // closing the window auto-reconnect would otherwise race into.
+    if(forceBootloader || installTheLatestDevelopmentFirmware || justEraseFlashFs)
+    {
+        m_firmwareUpdateInProgress = true;
+    }
+
     if(!m_working)
     {
         if(m_connect_disconnect)
@@ -3301,6 +3309,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         ///////////////////////////////////////////////////////////////////////
 
         m_working = false;
+        m_firmwareUpdateInProgress = false;
 
         OpenMVPlugin::setPortPath(true);
 

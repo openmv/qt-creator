@@ -91,6 +91,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_boardPID = 0;
     m_sensorType = QString();
     m_reconnects = int();
+    m_firmwareUpdateInProgress = false;
     m_portName = QString();
     m_portPath = QString();
     m_portDriveSerialNumber = QString();
@@ -2796,9 +2797,9 @@ bool OpenMVPlugin::delayedInitialize()
                 }
             }
 
-            if(m_nonDFUBoardPresent && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected))
+            if(m_nonDFUBoardPresent && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected) && (!m_firmwareUpdateInProgress))
             {
-                QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected)) emit m_connectAction->triggered(); });
+                QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected) && (!m_firmwareUpdateInProgress)) emit m_connectAction->triggered(); });
             }
         });
 

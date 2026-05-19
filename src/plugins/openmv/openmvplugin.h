@@ -606,6 +606,10 @@ private:
     int m_boardPID;
     QString m_sensorType;
     int m_reconnects;
+    // Sticky for the whole firmware-update/bootloader operation, which tears
+    // m_working/m_connected down and back up across its re-entrant stages.
+    // Auto-reconnect must not hijack one of those transient idle windows.
+    bool m_firmwareUpdateInProgress;
     QString m_portName;
     QString m_portPath;
     QString m_portDriveSerialNumber;

@@ -39,6 +39,7 @@
 #define CONNECT_END() \
 do { \
     m_working = false; \
+    m_firmwareUpdateInProgress = false; \
     QTimer::singleShot(0, this, &OpenMVPlugin::workingDone); \
     return; \
 } while(0)
@@ -75,6 +76,7 @@ do { \
     m_iodevice->close(); \
     m_loop.exec(); \
     m_working = false; \
+    m_firmwareUpdateInProgress = false; \
     QTimer::singleShot(0, this, &OpenMVPlugin::workingDone); \
     return; \
 } while(0)
