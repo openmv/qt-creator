@@ -38,6 +38,15 @@
 namespace OpenMV {
 namespace Internal {
 
+static QString openmvServerUserAgent()
+{
+    if (Utils::HostOsInfo::isWindowsHost())
+        return QStringLiteral("Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
+    if (Utils::HostOsInfo::isMacHost())
+        return QStringLiteral("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)");
+    return QStringLiteral("Mozilla/5.0 (X11; Linux x86_64)");
+}
+
 static bool removeRecursively(const Utils::FilePath &path, QString *error)
 {
     return path.removeRecursively(error);
@@ -2952,6 +2961,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                     QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/check.php")));
                     request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
+                    request.setHeader(QNetworkRequest::UserAgentHeader, openmvServerUserAgent());
                     QByteArray postData = QStringLiteral("board=%1&id=%2").arg(board, id).toUtf8();
                     QNetworkReply *reply = manager->post(request, postData);
 

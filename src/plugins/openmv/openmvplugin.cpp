@@ -116,6 +116,15 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     connect(m_processEventsTimer, &QTimer::timeout, this, &OpenMVPlugin::processEvents);
 }
 
+static QString openmvServerUserAgent()
+{
+    if (Utils::HostOsInfo::isWindowsHost())
+        return QStringLiteral("Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
+    if (Utils::HostOsInfo::isMacHost())
+        return QStringLiteral("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)");
+    return QStringLiteral("Mozilla/5.0 (X11; Linux x86_64)");
+}
+
 static void noShow()
 {
     Core::ICore::disableShow(true);
@@ -3521,6 +3530,7 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
 
         QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/insert.php")));
         request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
+        request.setHeader(QNetworkRequest::UserAgentHeader, openmvServerUserAgent());
         QByteArray postData = QStringLiteral("board=%1&id=%2&form_key=%3").arg(board).arg(id).arg(m_formKey).toUtf8();
         QNetworkReply *reply = manager.post(request, postData);
 
@@ -3719,6 +3729,7 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
 
                 QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://upload.openmv.io/register.php")));
                 request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
+                request.setHeader(QNetworkRequest::UserAgentHeader, openmvServerUserAgent());
                 QByteArray postData = QStringLiteral("board=%1&id=%2&id_key=%3").arg(board).arg(id).arg(boardKey).toUtf8();
                 QNetworkReply *reply = manager.post(request, postData);
 
