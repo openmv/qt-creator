@@ -35,6 +35,49 @@
 namespace OpenMV {
 namespace Internal {
 
+QString OpenMVPlugin::dfuInterfaceErrorText(const QJsonObject &boardObject,
+                                            const QString &selectedFileName)
+{
+    const QString displayName = boardObject.value(QStringLiteral("boardDisplayName")).toString();
+    const QString boardType = boardObject.value(QStringLiteral("boardType")).toString();
+    const QString boardName = (!displayName.isEmpty()) ? displayName
+                            : ((!boardType.isEmpty()) ? boardType : Tr::tr("the detected board"));
+
+    QStringList interfaces;
+
+    for(const QJsonValue &cmd : boardObject.value(QStringLiteral("bootloaderSettings")).toObject()
+                                           .value(QStringLiteral("binProgamCommands")).toArray())
+    {
+        const QString name = cmd.toObject().value(QStringLiteral("name")).toString();
+
+        if((!name.isEmpty()) && (!interfaces.contains(name, Qt::CaseInsensitive)))
+        {
+            interfaces.append(name);
+        }
+    }
+
+    QString text = Tr::tr("The selected file \"%L1\" does not match any firmware interface for %L2.")
+                       .arg(selectedFileName, boardName);
+
+    if(!interfaces.isEmpty())
+    {
+        text += QStringLiteral("\n\n")
+              + Tr::tr("%L1 accepts files named:").arg(boardName)
+              + QStringLiteral("\n\n    ")
+              + interfaces.join(QStringLiteral("\n    "))
+              + QStringLiteral("\n\n")
+              + Tr::tr("Rename your firmware file to one of the names above "
+                       "(or select the correct file) and try again.");
+    }
+    else
+    {
+        text += QStringLiteral("\n\n")
+              + Tr::tr("This board does not define any loadable firmware interfaces in its settings.");
+    }
+
+    return text;
+}
+
 void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                                        bool justEraseFlashFs,
                                        bool installTheLatestDevelopmentFirmware,
@@ -75,6 +118,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
     QString selectedDfuDeviceSerialNumber = selectedDfuDevice.isEmpty() ? QString() : selectedDfuDevice.split(QStringLiteral(",")).last();
 
     QString boardTypeToDfuDeviceVidPid;
+    QJsonObject matchedBoard;
     QStringList eraseCommands, programCommandsCmd, programCommandsPath;
     QStringList resetROMFSCommandsCmd, resetROMFSCommandsPath;
     QStringList binProgramCommands, binProgramPaths;
@@ -167,6 +211,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                         }
                     }
 
+                    matchedBoard = obj;
                     foundMatch = true;
                     break;
                 }
@@ -186,7 +231,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
         {
             QMessageBox::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
-                Tr::tr("No matching interface for the selected file name!") + QString(QStringLiteral("\n\nVID: %1, PID: %2")).arg(m_boardVID).arg(m_boardPID));
+                dfuInterfaceErrorText(matchedBoard, firmwarePathFileName));
 
             CONNECT_END();
         }
@@ -269,6 +314,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                     }
                 }
 
+                matchedBoard = obj;
                 foundMatch = true;
                 break;
             }
@@ -289,13 +335,9 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
         if (binProgramCommands.isEmpty() && QFileInfo(firmwarePath).exists())
         {
-            QStringList dfuDeviceVidPidList = selectedDfuDeviceVidPid.split(QLatin1Char(':'));
-
             QMessageBox::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
-                Tr::tr("No matching interface for the selected file name!") + QString(QStringLiteral("\n\nVID: %1, PID: %2"))
-                                  .arg(dfuDeviceVidPidList.first().toInt(nullptr, 16))
-                                  .arg(dfuDeviceVidPidList.last().toInt(nullptr, 16)));
+                dfuInterfaceErrorText(matchedBoard, firmwarePathFileName));
 
             CONNECT_END();
         }

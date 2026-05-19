@@ -550,6 +550,8 @@ private:
                                    const QString &firmwarePath,
                                    const QString &selectedDfuDevice,
                                    OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
+    QString dfuInterfaceErrorText(const QJsonObject &boardObject,
+                                  const QString &selectedFileName);
 
     QStringList m_resourceFoldersToCopy;
     QStringList m_resourceFoldersToDelete;
