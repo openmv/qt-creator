@@ -50,6 +50,14 @@ namespace Internal {
 
 void OpenMVPlugin::processEvents()
 {
+    // No device activity at all while an external tool's modal LoaderDialog
+    // is up: the camera must not stream during a compile/flash. Polling
+    // resumes by itself once the tool finishes and the dialog is destroyed.
+    if(loaderDialogActive())
+    {
+        return;
+    }
+
     if((!m_working) && m_connected)
     {
         if(m_iodevice->getTimeout())

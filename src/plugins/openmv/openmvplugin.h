@@ -105,6 +105,7 @@
 #include "tools/hardwaremonitor.h"
 #include "tools/imx.h"
 #include "tools/keypointseditor.h"
+#include "tools/loaderdialog.h"
 #include "tools/myqserialportinfo.h"
 #include "tools/picotool.h"
 #include "tools/stcubeprogrammer.h"

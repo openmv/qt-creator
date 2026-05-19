@@ -86,6 +86,12 @@ private:
     bool m_wasRejected;
 };
 
+// True while one or more LoaderDialogs (external-process waits) are shown.
+// The process is pumped by a nested event loop, so timer/queued callbacks
+// (e.g. the auto-reconnect scan timer) must consult this and not start work
+// that would re-enter while the tool runs; modality only blocks user input.
+bool loaderDialogActive();
+
 } // namespace Internal
 } // namespace OpenMV
 

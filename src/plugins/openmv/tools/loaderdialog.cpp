@@ -42,6 +42,13 @@
 namespace OpenMV {
 namespace Internal {
 
+static int s_loaderDialogActiveCount = 0;
+
+bool loaderDialogActive()
+{
+    return s_loaderDialogActiveCount > 0;
+}
+
 LoaderDialog::LoaderDialog(const QString &title,
                            const QString &details,
                            Utils::Process &process,
@@ -50,10 +57,17 @@ LoaderDialog::LoaderDialog(const QString &title,
                            QWidget *parent) : QDialog(parent), m_settings(settings),
     m_settingsName(Utils::keyFromString(QStringLiteral(LOADERDIALOG_SETTINGS_GROUP "/") + settingsName))
 {
+    ++s_loaderDialogActiveCount;
+
     setWindowFlags(windowFlags() | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                    (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
     setAttribute(Qt::WA_ShowWithoutActivating);
+    // The external process is pumped by a nested event loop that delivers
+    // all events so this dialog's own controls (cancel/details/scroll) keep
+    // working. Modality is what then stops that same pump from letting the
+    // user drive the rest of the app and re-enter while the tool runs.
+    setWindowModality(Qt::ApplicationModal);
     setWindowTitle(details + QStringLiteral(" - ") + title);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
@@ -155,6 +169,8 @@ LoaderDialog::LoaderDialog(const QString &title,
 
 LoaderDialog::~LoaderDialog()
 {
+    if (s_loaderDialogActiveCount > 0) --s_loaderDialogActiveCount;
+
     QByteArray out;
     QDataStream s(&out, QIODeviceBase::WriteOnly);
     s << saveGeometry();

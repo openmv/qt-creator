@@ -2797,9 +2797,9 @@ bool OpenMVPlugin::delayedInitialize()
                 }
             }
 
-            if(m_nonDFUBoardPresent && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected) && (!m_firmwareUpdateInProgress))
+            if(m_nonDFUBoardPresent && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected) && (!m_firmwareUpdateInProgress) && (!loaderDialogActive()))
             {
-                QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected) && (!m_firmwareUpdateInProgress)) emit m_connectAction->triggered(); });
+                QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected) && (!m_firmwareUpdateInProgress) && (!loaderDialogActive())) emit m_connectAction->triggered(); });
             }
         });
 
@@ -5540,7 +5540,11 @@ void OpenMVPlugin::clearDeferred()
 
 void OpenMVPlugin::drainDeferred()
 {
-    if (!m_connected || m_working) {
+    // Hold queued continuations while an external tool's LoaderDialog is up:
+    // it pumps a nested all-events loop, so a queued-connection drain here
+    // would re-enter a device op behind the tool. workingDone re-kicks the
+    // drain once the enclosing operation (and its dialog) finishes.
+    if (!m_connected || m_working || loaderDialogActive()) {
         return;
     }
 
