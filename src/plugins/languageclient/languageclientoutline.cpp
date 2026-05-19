@@ -238,8 +238,14 @@ void LanguageClientOutlineWidget::handleResponse(const DocumentUri &uri,
     else
         m_model.clear();
 
-    // The list has changed, update the current items
-    updateSelectionInTree(m_editor->textCursor());
+    // OPENMV-DIFF //
+    // // The list has changed, update the current items
+    // updateSelectionInTree(m_editor->textCursor());
+    QTimer::singleShot(0, this, [this] {
+        if (m_editor)
+            updateSelectionInTree(m_editor->textCursor());
+    });
+    // OPENMV-DIFF //
 }
 
 void LanguageClientOutlineWidget::updateTextCursor(const QModelIndex &proxyIndex)
