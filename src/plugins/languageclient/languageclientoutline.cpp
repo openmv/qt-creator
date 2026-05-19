@@ -26,6 +26,9 @@
 #include <QBoxLayout>
 #include <QMenu>
 #include <QSortFilterProxyModel>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 
 using namespace LanguageServerProtocol;
 
@@ -376,9 +379,15 @@ void OutlineComboBox::updateModel(const DocumentUri &resultUri, const DocumentSy
     else
         m_model.clear();
 
-    view()->expandAll();
-    // The list has changed, update the current item
-    updateEntry();
+    // OPENMV-DIFF //
+    // view()->expandAll();
+    // // The list has changed, update the current item
+    // updateEntry();
+    QTimer::singleShot(0, this, [this] {
+        view()->expandAll();
+        updateEntry();
+    });
+    // OPENMV-DIFF //
 }
 
 void OutlineComboBox::updateEntry()
