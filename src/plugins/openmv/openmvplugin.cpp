@@ -2573,6 +2573,10 @@ void OpenMVPlugin::extensionsInitialized()
                 if(editor)
                 {
                     editor->document()->setProperty("diffFilePath", QFileInfo(file).canonicalFilePath());
+                    // Snapshot the exact pristine contents so the connect-time
+                    // "Fix Hello World" sync can tell "user never touched it"
+                    // from "user typed something" without trusting isModified().
+                    editor->document()->setProperty("OpenMVPristineHelloWorld", data);
                     Core::EditorManager::addCurrentPositionToNavigationHistory();
                     editor->editorWidget()->configureGenericHighlighter();
                     Core::EditorManager::activateEditor(editor);

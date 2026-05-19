@@ -3218,7 +3218,19 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         {
             TextEditor::TextDocument *document = textEditor->textDocument();
 
-            if(document && document->displayName() == QStringLiteral("helloworld_1.py") && (!document->isModified()))
+            // Only auto-sync the default Hello World example for the connected
+            // sensor while the user has NOT touched it. isModified() is
+            // unreliable here (the async setFilePath()/openFinished() and
+            // reload() reset it), so compare the live contents against the
+            // pristine snapshot taken when the doc was opened. Any keystroke
+            // makes them differ, which permanently protects the document.
+            const QByteArray pristineHelloWorld =
+                document ? document->property("OpenMVPristineHelloWorld").toByteArray() : QByteArray();
+
+            if(document && document->displayName() == QStringLiteral("helloworld_1.py")
+            && (!pristineHelloWorld.isEmpty())
+            && (document->contents().simplified().trimmed()
+                == pristineHelloWorld.simplified().trimmed()))
             {
                 QString filePath = Core::ICore::allUsersResourcePath(QStringLiteral("examples/00-HelloWorld/helloworld.py")).toString();
 
@@ -3245,6 +3257,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 {
                                     QString error;
                                     document->reload(&error);
+                                    // Refresh the snapshot to the just-synced
+                                    // contents so a later connect (e.g. a
+                                    // different sensor) can re-sync, but only
+                                    // while still untouched by the user.
+                                    document->setProperty("OpenMVPristineHelloWorld", data);
                                 }
                             }
                         }
