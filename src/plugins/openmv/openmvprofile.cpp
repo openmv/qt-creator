@@ -731,6 +731,11 @@ OpenMVProfileView::OpenMVProfileView(Utils::QtcSettings *settings, QWidget *pare
     setMinimumSize(QSize(480, 480));
     setSizeGripEnabled(true);
 
+    // This dialog has no QDialogButtonBox, so guarantee Escape dismisses it
+    // regardless of which child widget has focus.
+    QShortcut *escapeShortcut = new QShortcut(QKeySequence(Qt::Key_Escape), this);
+    connect(escapeShortcut, &QShortcut::activated, this, &QDialog::reject);
+
     QVBoxLayout *vlayout = new QVBoxLayout(this);
 
     QWidget *toolWidget = new QWidget;
