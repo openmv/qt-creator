@@ -273,6 +273,10 @@ static LanguageClientOutlineItem *itemForCursor(const LanguageClientOutlineModel
 
 void LanguageClientOutlineWidget::updateSelectionInTree(const QTextCursor &currentCursor)
 {
+    // OPENMV-DIFF //
+    if (!m_view.isVisible())
+        return;
+    // OPENMV-DIFF //
     if (LanguageClientOutlineItem *item = itemForCursor(m_model, currentCursor)) {
         const QModelIndex index = m_proxyModel.mapFromSource(m_model.indexForItem(item));
         m_view.setCurrentIndex(index);
