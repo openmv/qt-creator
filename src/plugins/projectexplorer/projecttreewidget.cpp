@@ -493,6 +493,10 @@ void ProjectTreeWidget::syncFromDocumentManager()
 
 void ProjectTreeWidget::setCurrentItem(Node *node)
 {
+    // OPENMV-DIFF //
+    if (!m_view->isVisible())
+        return;
+    // OPENMV-DIFF //
     const QModelIndex mainIndex = m_model->indexForNode(node);
 
     if (mainIndex.isValid()) {
