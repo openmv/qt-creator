@@ -4,6 +4,9 @@
 #include "treeviewcombobox.h"
 
 #include <QWheelEvent>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 
 using namespace Utils;
 
@@ -124,7 +127,12 @@ void TreeViewComboBox::setCurrentIndex(const QModelIndex &index)
     QComboBox::setCurrentIndex(index.row());
     // OPENMV-DIFF //
     setRootModelIndex(QModelIndex());
-    m_view->setCurrentIndex(index);
+    // OPENMV-DIFF //
+    // m_view->setCurrentIndex(index);
+    m_pendingCurrentIndex = QPersistentModelIndex(index);
+    if (m_view->isVisible())
+        m_view->setCurrentIndex(index);
+    // OPENMV-DIFF //
 }
 
 bool TreeViewComboBox::eventFilter(QObject *object, QEvent *event)
@@ -142,6 +150,15 @@ void TreeViewComboBox::showPopup()
 {
     m_view->adjustWidth(topLevelWidget()->geometry().width());
     QComboBox::showPopup();
+    // OPENMV-DIFF //
+    if (m_pendingCurrentIndex.isValid()) {
+        const QPersistentModelIndex idx = m_pendingCurrentIndex;
+        QTimer::singleShot(0, m_view, [this, idx] {
+            if (idx.isValid())
+                m_view->setCurrentIndex(idx);
+        });
+    }
+    // OPENMV-DIFF //
 }
 
 void TreeViewComboBox::hidePopup()

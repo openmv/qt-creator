@@ -38,5 +38,8 @@ private:
 
     TreeViewComboBoxView *m_view;
     bool m_skipNextHide = false;
+    // OPENMV-DIFF //
+    QPersistentModelIndex m_pendingCurrentIndex;
+    // OPENMV-DIFF //
 };
 }
