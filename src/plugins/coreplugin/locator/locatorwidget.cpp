@@ -429,7 +429,17 @@ LocatorPopup::LocatorPopup(LocatorWidget *locatorWidget, QWidget *parent)
     connect(locatorWidget, &LocatorWidget::lostFocus, this, &LocatorPopup::inputLostFocus,
             Qt::QueuedConnection);
     connect(locatorWidget, &LocatorWidget::selectRow, m_tree, [this](int row) {
-        m_tree->setCurrentIndex(m_tree->model()->index(row, 0));
+        // OPENMV-DIFF //
+        // m_tree->setCurrentIndex(m_tree->model()->index(row, 0));
+        if (m_tree->isVisible()) {
+            m_tree->setCurrentIndex(m_tree->model()->index(row, 0));
+        } else {
+            QTimer::singleShot(0, m_tree, [this, row] {
+                if (m_tree->model() && row >= 0 && row < m_tree->model()->rowCount())
+                    m_tree->setCurrentIndex(m_tree->model()->index(row, 0));
+            });
+        }
+        // OPENMV-DIFF //
     });
     connect(locatorWidget, &LocatorWidget::showCurrentItemToolTip,
             m_tree, &CompletionList::showCurrentItemToolTip);
