@@ -204,7 +204,13 @@ TaskWindow::TaskWindow() : IOutputPane(true), d(std::make_unique<TaskWindowPriva
     Core::ICore::addContextObject(d->m_taskWindowContext);
 
     connect(d->m_treeView.selectionModel(), &QItemSelectionModel::currentChanged,
-            this, [this](const QModelIndex &index) { d->m_treeView.scrollTo(index); });
+            // OPENMV-DIFF //
+            // this, [this](const QModelIndex &index) { d->m_treeView.scrollTo(index); });
+            this, [this](const QModelIndex &index) {
+                if (d->m_treeView.isVisible())
+                    d->m_treeView.scrollTo(index);
+            });
+            // OPENMV-DIFF //
     connect(&d->m_treeView, &QAbstractItemView::activated,
             this, &TaskWindow::triggerDefaultHandler);
     connect(d->m_treeView.selectionModel(), &QItemSelectionModel::selectionChanged,
