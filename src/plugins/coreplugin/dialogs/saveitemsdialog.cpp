@@ -16,6 +16,9 @@
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QTreeWidget>
 
 Q_DECLARE_METATYPE(Core::IDocument*)
@@ -92,7 +95,10 @@ SaveItemsDialog::SaveItemsDialog(QWidget *parent, const QList<IDocument *> &item
     }
 
     m_treeWidget->resizeColumnToContents(0);
-    m_treeWidget->selectAll();
+    // OPENMV-DIFF //
+    // m_treeWidget->selectAll();
+    QTimer::singleShot(0, m_treeWidget, [this] { m_treeWidget->selectAll(); });
+    // OPENMV-DIFF //
     if (HostOsInfo::isMacHost())
         m_treeWidget->setAlternatingRowColors(true);
     adjustButtonWidths();
