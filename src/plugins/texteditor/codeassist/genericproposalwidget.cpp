@@ -155,7 +155,19 @@ public:
     int rowSelected() const { return currentIndex().row(); }
     bool isFirstRowSelected() const { return rowSelected() == 0; }
     bool isLastRowSelected() const { return rowSelected() == model()->rowCount() - 1; }
-    void selectRow(int row) { setCurrentIndex(model()->index(row, 0)); }
+    // OPENMV-DIFF //
+    // void selectRow(int row) { setCurrentIndex(model()->index(row, 0)); }
+    void selectRow(int row) {
+        if (isVisible()) {
+            setCurrentIndex(model()->index(row, 0));
+        } else {
+            QTimer::singleShot(0, this, [this, row] {
+                if (model() && row >= 0 && row < model()->rowCount())
+                    setCurrentIndex(model()->index(row, 0));
+            });
+        }
+    }
+    // OPENMV-DIFF //
     void selectFirstRow() { selectRow(0); }
     void selectLastRow() { selectRow(model()->rowCount() - 1); }
 };
