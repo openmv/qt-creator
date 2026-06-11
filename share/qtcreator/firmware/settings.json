@@ -1350,6 +1350,26 @@
         },
         {
             "hidden" : false,
+            "boardType" : "MP2",
+            "boardArchString" : "OpenMV MP2",
+            "boardDisplayName" : "OpenMV MP2",
+            "boardFirmwareFolder" : "OPENMV_MP2",
+            "highSpeed" : true,
+            "boardVidPid" : "37C5:1207",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "",
+            "bootloaderVidPid" : "",
+            "bootloaderType" : "",
+            "bootloaderSettings" : {
+            },
+            "mpyConfig" : {
+                "args" : [
+                ]
+            }
+        },
+        {
+            "hidden" : false,
             "boardType" : "H7",
             "boardArchString" : "PORTENTA H7 8192 SDRAM",
             "boardDisplayName" : "Arduino Portenta",
