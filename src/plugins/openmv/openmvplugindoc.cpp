@@ -369,14 +369,17 @@ void OpenMVPlugin::loadStubs(const Utils::FilePath &stubsPath,
                              QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs,
                              QStringList &providerMethods, QMap<QString, QStringList> &providerMethodArgs)
 {
+    // Blank lines separate the docstring's items and paragraphs; render them
+    // as single line breaks (<p> margins are too airy for a tooltip) and
+    // reflow the hard-wrapped lines within each paragraph.
     auto docToHtml = [] (const QString &title, const QString &doc) {
-        QString body;
+        QString body = doc.toHtmlEscaped().trimmed();
 
-        for(const QString &paragraph : doc.split(QStringLiteral("\n\n"), Qt::SkipEmptyParts))
+        if(!body.isEmpty())
         {
-            body.append(QStringLiteral("<p>") +
-                        QString(paragraph).toHtmlEscaped().replace(QLatin1Char('\n'), QLatin1Char(' ')) +
-                        QStringLiteral("</p>"));
+            body.replace(QRegularExpression(QStringLiteral("\n{2,}")), QStringLiteral("<br/>"));
+            body.replace(QLatin1Char('\n'), QLatin1Char(' '));
+            body = QStringLiteral("<p>") + body + QStringLiteral("</p>");
         }
 
         return QStringLiteral("<h3>%1</h3>%2").arg(title.toHtmlEscaped()).arg(body);
@@ -490,13 +493,6 @@ void OpenMVPlugin::loadStubs(const Utils::FilePath &stubsPath,
 
         QString moduleName = moduleParts.join(QLatin1Char('.'));
 
-        documentation_t moduleEntry;
-        moduleEntry.moduleName = QString();
-        moduleEntry.className = QString();
-        moduleEntry.name = moduleName;
-        moduleEntry.text = QStringLiteral("<h3>%1</h3>").arg(moduleName);
-        m_modules.append(moduleEntry);
-
         QStringList lines = data.split(QLatin1Char('\n'));
 
         auto readDocstring = [&lines] (int &i) {
@@ -545,9 +541,27 @@ void OpenMVPlugin::loadStubs(const Utils::FilePath &stubsPath,
             return docLines.join(QLatin1Char('\n'));
         };
 
+        // Module docstring: the first statement after the header comment.
+        int firstLine = 0;
+
+        while((firstLine < lines.size())
+        && (lines.at(firstLine).trimmed().isEmpty() || lines.at(firstLine).trimmed().startsWith(QLatin1Char('#'))))
+        {
+            firstLine += 1;
+        }
+
+        QString moduleDoc = readDocstring(firstLine);
+
+        documentation_t moduleEntry;
+        moduleEntry.moduleName = QString();
+        moduleEntry.className = QString();
+        moduleEntry.name = moduleName;
+        moduleEntry.text = docToHtml(moduleName, moduleDoc);
+        m_modules.append(moduleEntry);
+
         QString currentClass;
 
-        for(int i = 0; i < lines.size(); )
+        for(int i = firstLine; i < lines.size(); )
         {
             const QString &raw = lines.at(i);
             QString trimmed = raw.trimmed();
@@ -1073,8 +1087,8 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 
                                         if(!text.isEmpty())
                                         {
-                                            text.replace(QStringLiteral("\n\n"), QStringLiteral("</p><p>"));
-                                            text.replace(QLatin1Char('\n'), QStringLiteral("<br/>"));
+                                            text.replace(QRegularExpression(QStringLiteral("\n{2,}")), QStringLiteral("<br/>"));
+                                            text.replace(QLatin1Char('\n'), QLatin1Char(' '));
                                             html.append(QStringLiteral("<p>") + text + QStringLiteral("</p>"));
                                         }
                                     };
