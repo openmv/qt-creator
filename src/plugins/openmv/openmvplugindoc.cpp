@@ -1027,12 +1027,14 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                             if(!text.isEmpty())
                             {
                                 QStringList list;
+                                bool moduleNameMatch = false;
 
                                 for(const documentation_t &d : m_modules)
                                 {
                                     if(d.name == text)
                                     {
                                         list.append(d.text);
+                                        moduleNameMatch = true;
                                     }
                                 }
 
@@ -1119,7 +1121,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                         cleanedToolTip = originalToolTip.mid(index).remove(QStringLiteral("\\"));
                                         list = QStringList() << cleanedToolTip;
                                     }
-                                    else if (!originalToolTip.isEmpty() && (!(moduleFilter && (list.size() == 1))))
+                                    else if (!originalToolTip.isEmpty() && (!((moduleFilter || moduleNameMatch) && (list.size() == 1))))
                                     {
                                         // The language server resolved the actual symbol under the
                                         // cursor, so its hover text is the right documentation.
@@ -1128,11 +1130,14 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                         // only fall back to it (as a grid of candidates) when no
                                         // hover text is available.
                                         //
-                                        // Exception: a module-qualified name (e.g. csi.RGB565) that
-                                        // matched exactly one entry is already resolved, and our
-                                        // entry is better than the server's for constants - the
-                                        // server reports the docstring of the constant's type (int)
-                                        // rather than the constant's own documentation.
+                                        // Exceptions where our single matched entry is already
+                                        // resolved and better than the server's:
+                                        // - a module-qualified name (e.g. csi.RGB565): the server
+                                        //   reports the docstring of the constant's type (int)
+                                        //   rather than the constant's own documentation.
+                                        // - a module name itself (e.g. time): for modules that
+                                        //   share a name with the CPython standard library the
+                                        //   server reports CPython's module docstring.
                                         showOriginalToolTip(originalToolTip);
                                         return;
                                     }
