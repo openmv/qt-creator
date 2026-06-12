@@ -1060,6 +1060,15 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                     }
                                 }
 
+                                auto showOriginalToolTip = [globalPos, widget] (const QString &originalToolTip) {
+                                    QString cleanedToolTip = QString(originalToolTip).remove(QStringLiteral("\\")).simplified().trimmed();
+                                    cleanedToolTip.replace(QRegularExpression("```\\s*(.+?)\\s*```"), QStringLiteral("<pre>\\1</pre>"));
+                                    cleanedToolTip.replace(QStringLiteral("</pre> <pre>"), QStringLiteral("</pre><pre>"));
+                                    cleanedToolTip.replace(QStringLiteral("</pre> "), QStringLiteral("</pre><p>"));
+                                    cleanedToolTip.replace(QStringLiteral(" <pre>"), QStringLiteral("</p><pre>"));
+                                    Utils::ToolTip::show(globalPos, QStringLiteral("<table><tr><td style=\"padding:6px;\">") + cleanedToolTip + QStringLiteral("</td></tr></table>"), widget);
+                                };
+
                                 if(!list.isEmpty())
                                 {
                                     int index = originalToolTip.indexOf(QStringLiteral("<h3>"));
@@ -1069,6 +1078,17 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                     {
                                         cleanedToolTip = originalToolTip.mid(index).remove(QStringLiteral("\\"));
                                         list = QStringList() << cleanedToolTip;
+                                    }
+                                    else if (!originalToolTip.isEmpty())
+                                    {
+                                        // The language server resolved the actual symbol under the
+                                        // cursor, so its hover text is the right documentation.
+                                        // The name-matched list below cannot tell same-named
+                                        // symbols from different modules and classes apart, so
+                                        // only fall back to it (as a grid of candidates) when no
+                                        // hover text is available.
+                                        showOriginalToolTip(originalToolTip);
+                                        return;
                                     }
 
                                     QString string;
@@ -1101,12 +1121,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                 }
                                 else if(!originalToolTip.isEmpty())
                                 {
-                                    QString cleanedToolTip = QString(originalToolTip).remove(QStringLiteral("\\")).simplified().trimmed();
-                                    cleanedToolTip.replace(QRegularExpression("```\\s*(.+?)\\s*```"), QStringLiteral("<pre>\\1</pre>"));
-                                    cleanedToolTip.replace(QStringLiteral("</pre> <pre>"), QStringLiteral("</pre><pre>"));
-                                    cleanedToolTip.replace(QStringLiteral("</pre> "), QStringLiteral("</pre><p>"));
-                                    cleanedToolTip.replace(QStringLiteral(" <pre>"), QStringLiteral("</p><pre>"));
-                                    Utils::ToolTip::show(globalPos, QStringLiteral("<table><tr><td style=\"padding:6px;\">") + cleanedToolTip + QStringLiteral("</td></tr></table>"), widget);
+                                    showOriginalToolTip(originalToolTip);
                                     return;
                                 }
                             }
