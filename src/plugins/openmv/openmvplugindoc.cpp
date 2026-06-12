@@ -369,16 +369,16 @@ void OpenMVPlugin::loadStubs(const Utils::FilePath &stubsPath,
                              QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs,
                              QStringList &providerMethods, QMap<QString, QStringList> &providerMethodArgs)
 {
-    // Blank lines separate the docstring's items and paragraphs; render them
-    // as single line breaks (<p> margins are too airy for a tooltip) and
-    // reflow the hard-wrapped lines within each paragraph.
+    // Render the docstring layout literally: every newline is a line break
+    // (so blank lines separate paragraphs exactly as written) and runs of
+    // spaces survive html whitespace collapsing (indented example code).
     auto docToHtml = [] (const QString &title, const QString &doc) {
         QString body = doc.toHtmlEscaped().trimmed();
 
         if(!body.isEmpty())
         {
-            body.replace(QRegularExpression(QStringLiteral("\n{2,}")), QStringLiteral("<br/>"));
-            body.replace(QLatin1Char('\n'), QLatin1Char(' '));
+            body.replace(QStringLiteral("  "), QStringLiteral("&nbsp;&nbsp;"));
+            body.replace(QLatin1Char('\n'), QStringLiteral("<br/>"));
             body = QStringLiteral("<p>") + body + QStringLiteral("</p>");
         }
 
@@ -1087,8 +1087,8 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 
                                         if(!text.isEmpty())
                                         {
-                                            text.replace(QRegularExpression(QStringLiteral("\n{2,}")), QStringLiteral("<br/>"));
-                                            text.replace(QLatin1Char('\n'), QLatin1Char(' '));
+                                            text.replace(QStringLiteral("  "), QStringLiteral("&nbsp;&nbsp;"));
+                                            text.replace(QLatin1Char('\n'), QStringLiteral("<br/>"));
                                             html.append(QStringLiteral("<p>") + text + QStringLiteral("</p>"));
                                         }
                                     };
