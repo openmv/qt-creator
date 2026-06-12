@@ -1131,12 +1131,25 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                     QRegularExpression fence(QStringLiteral("```(?:python)?\\s*(.+?)\\s*```"), QRegularExpression::DotMatchesEverythingOption);
                                     QRegularExpressionMatchIterator fences = fence.globalMatch(source);
                                     int pos = 0;
+                                    bool firstFence = true;
 
                                     while(fences.hasNext())
                                     {
                                         QRegularExpressionMatch match = fences.next();
                                         appendText(source.mid(pos, match.capturedStart() - pos));
-                                        html.append(QStringLiteral("<pre>") + match.captured(1).toHtmlEscaped() + QStringLiteral("</pre>"));
+
+                                        // The first fence is the signature; style it as the
+                                        // heading, matching our own documentation entries.
+                                        if(firstFence && (match.capturedStart() == 0))
+                                        {
+                                            html.append(QStringLiteral("<h3>") + match.captured(1).toHtmlEscaped() + QStringLiteral("</h3>"));
+                                        }
+                                        else
+                                        {
+                                            html.append(QStringLiteral("<pre>") + match.captured(1).toHtmlEscaped() + QStringLiteral("</pre>"));
+                                        }
+
+                                        firstFence = false;
                                         pos = match.capturedEnd();
                                     }
 
@@ -1154,23 +1167,17 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                         cleanedToolTip = originalToolTip.mid(index).remove(QStringLiteral("\\"));
                                         list = QStringList() << cleanedToolTip;
                                     }
-                                    else if (!originalToolTip.isEmpty() && (!((moduleFilter || moduleNameMatch) && (list.size() == 1))))
+                                    else if (!originalToolTip.isEmpty() && (list.size() > 1))
                                     {
-                                        // The language server resolved the actual symbol under the
-                                        // cursor, so its hover text is the right documentation.
-                                        // The name-matched list below cannot tell same-named
-                                        // symbols from different modules and classes apart, so
-                                        // only fall back to it (as a grid of candidates) when no
-                                        // hover text is available.
-                                        //
-                                        // Exceptions where our single matched entry is already
-                                        // resolved and better than the server's:
-                                        // - a module-qualified name (e.g. csi.RGB565): the server
-                                        //   reports the docstring of the constant's type (int)
-                                        //   rather than the constant's own documentation.
-                                        // - a module name itself (e.g. time): for modules that
-                                        //   share a name with the CPython standard library the
-                                        //   server reports CPython's module docstring.
+                                        // A name that matched exactly one documentation entry is
+                                        // already resolved, and our entry is richer than the
+                                        // server's hover (fully qualified bold title, and correct
+                                        // for cases the server gets wrong: constants report their
+                                        // type's docstring, stdlib-named modules report CPython's
+                                        // module docstring). Only when several same-named entries
+                                        // exist is the server hover preferred, since it resolved
+                                        // the actual symbol under the cursor; without hover text
+                                        // the candidates are shown as a grid.
                                         showOriginalToolTip(originalToolTip);
                                         return;
                                     }
