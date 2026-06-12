@@ -1061,12 +1061,38 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                 }
 
                                 auto showOriginalToolTip = [globalPos, widget] (const QString &originalToolTip) {
-                                    QString cleanedToolTip = QString(originalToolTip).remove(QStringLiteral("\\")).simplified().trimmed();
-                                    cleanedToolTip.replace(QRegularExpression("```\\s*(.+?)\\s*```"), QStringLiteral("<pre>\\1</pre>"));
-                                    cleanedToolTip.replace(QStringLiteral("</pre> <pre>"), QStringLiteral("</pre><pre>"));
-                                    cleanedToolTip.replace(QStringLiteral("</pre> "), QStringLiteral("</pre><p>"));
-                                    cleanedToolTip.replace(QStringLiteral(" <pre>"), QStringLiteral("</p><pre>"));
-                                    Utils::ToolTip::show(globalPos, QStringLiteral("<table><tr><td style=\"padding:6px;\">") + cleanedToolTip + QStringLiteral("</td></tr></table>"), widget);
+                                    // The hover text is markdown-ish: ```python ...``` code fences
+                                    // around signatures with plain-text documentation between them.
+                                    // Render the fences as <pre> blocks and keep the documentation's
+                                    // line structure (blank lines separate paragraphs).
+                                    QString source = QString(originalToolTip).remove(QStringLiteral("\\")).trimmed();
+                                    QString html;
+
+                                    auto appendText = [&html] (const QString &chunk) {
+                                        QString text = chunk.toHtmlEscaped().trimmed();
+
+                                        if(!text.isEmpty())
+                                        {
+                                            text.replace(QStringLiteral("\n\n"), QStringLiteral("</p><p>"));
+                                            text.replace(QLatin1Char('\n'), QStringLiteral("<br/>"));
+                                            html.append(QStringLiteral("<p>") + text + QStringLiteral("</p>"));
+                                        }
+                                    };
+
+                                    QRegularExpression fence(QStringLiteral("```(?:python)?\\s*(.+?)\\s*```"), QRegularExpression::DotMatchesEverythingOption);
+                                    QRegularExpressionMatchIterator fences = fence.globalMatch(source);
+                                    int pos = 0;
+
+                                    while(fences.hasNext())
+                                    {
+                                        QRegularExpressionMatch match = fences.next();
+                                        appendText(source.mid(pos, match.capturedStart() - pos));
+                                        html.append(QStringLiteral("<pre>") + match.captured(1).toHtmlEscaped() + QStringLiteral("</pre>"));
+                                        pos = match.capturedEnd();
+                                    }
+
+                                    appendText(source.mid(pos));
+                                    Utils::ToolTip::show(globalPos, QStringLiteral("<table><tr><td style=\"padding:6px;\">") + html + QStringLiteral("</td></tr></table>"), widget);
                                 };
 
                                 if(!list.isEmpty())
@@ -1079,7 +1105,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                         cleanedToolTip = originalToolTip.mid(index).remove(QStringLiteral("\\"));
                                         list = QStringList() << cleanedToolTip;
                                     }
-                                    else if (!originalToolTip.isEmpty())
+                                    else if (!originalToolTip.isEmpty() && (!(moduleFilter && (list.size() == 1))))
                                     {
                                         // The language server resolved the actual symbol under the
                                         // cursor, so its hover text is the right documentation.
@@ -1087,6 +1113,12 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                         // symbols from different modules and classes apart, so
                                         // only fall back to it (as a grid of candidates) when no
                                         // hover text is available.
+                                        //
+                                        // Exception: a module-qualified name (e.g. csi.RGB565) that
+                                        // matched exactly one entry is already resolved, and our
+                                        // entry is better than the server's for constants - the
+                                        // server reports the docstring of the constant's type (int)
+                                        // rather than the constant's own documentation.
                                         showOriginalToolTip(originalToolTip);
                                         return;
                                     }
