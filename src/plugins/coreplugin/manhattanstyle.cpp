@@ -563,7 +563,11 @@ static void drawPrimitiveTweakedForDarkTheme(QStyle::PrimitiveElement element,
         break;
     }
     case QStyle::PE_IndicatorTabClose: {
-        const qreal devicePixelRatio = painter->device()->devicePixelRatio();
+        // OPENMV-DIFF //
+        // const qreal devicePixelRatio = painter->device()->devicePixelRatio();
+        // OPENMV-DIFF //
+        const qreal devicePixelRatio = painter->device()->devicePixelRatioF();
+        // OPENMV-DIFF //
         QRect iconRect = QRect(0, 0, 16, 16);
         iconRect.moveCenter(option->rect.center());
         const QIcon::Mode mode = !isEnabled ? QIcon::Disabled : QIcon::Normal;

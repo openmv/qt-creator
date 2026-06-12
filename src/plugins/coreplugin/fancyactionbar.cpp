@@ -337,12 +337,25 @@ void FancyToolButton::setIconsOnly(bool iconsOnly)
 void FancyToolButton::hoverOverlay(QPainter *painter, const QRect &spanRect)
 {
     const QSize logicalSize = spanRect.size();
+    // OPENMV-DIFF //
+    // const QString cacheKey = QLatin1String(Q_FUNC_INFO) + QString::number(logicalSize.width())
+    //                          + QLatin1Char('x') + QString::number(logicalSize.height());
+    // QPixmap overlay;
+    // if (!QPixmapCache::find(cacheKey, &overlay)) {
+    //     const int dpr = painter->device()->devicePixelRatio();
+    //     overlay = QPixmap(logicalSize * dpr);
+    // OPENMV-DIFF //
+    // The device pixel ratio must be part of the cache key, otherwise an overlay
+    // rendered for one display is reused on displays with a different scale
+    // factor. Use devicePixelRatioF() so fractional factors are not truncated.
+    const qreal dpr = painter->device()->devicePixelRatioF();
     const QString cacheKey = QLatin1String(Q_FUNC_INFO) + QString::number(logicalSize.width())
-                             + QLatin1Char('x') + QString::number(logicalSize.height());
+                             + QLatin1Char('x') + QString::number(logicalSize.height())
+                             + QLatin1Char('@') + QString::number(dpr);
     QPixmap overlay;
     if (!QPixmapCache::find(cacheKey, &overlay)) {
-        const int dpr = painter->device()->devicePixelRatio();
-        overlay = QPixmap(logicalSize * dpr);
+        overlay = QPixmap((QSizeF(logicalSize) * dpr).toSize());
+        // OPENMV-DIFF //
         overlay.fill(Qt::transparent);
         overlay.setDevicePixelRatio(dpr);
 

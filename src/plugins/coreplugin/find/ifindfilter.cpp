@@ -338,24 +338,49 @@ QPixmap IFindFilter::pixmapForFindFlags(FindFlags flags)
     // OPENMV-DIFF //
     pixmap.fill(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal));
     // OPENMV-DIFF //
-    const int dpr = int(qApp->devicePixelRatio());
+    // OPENMV-DIFF //
+    // const int dpr = int(qApp->devicePixelRatio());
+    // pixmap.setDevicePixelRatio(dpr);
+    // QPainter painter(&pixmap);
+    // int x = 0;
+    // if (casesensitive) {
+    //     painter.drawPixmap(x, 0, casesensitiveIcon);
+    //     x += casesensitiveIcon.width() / dpr;
+    // }
+    // if (wholewords) {
+    //     painter.drawPixmap(x, 0, wholewordsIcon);
+    //     x += wholewordsIcon.width() / dpr;
+    // }
+    // if (regexp) {
+    //     painter.drawPixmap(x, 0, regexpIcon);
+    //     x += regexpIcon.width() / dpr;
+    // }
+    // if (preservecase)
+    //     painter.drawPixmap(x, 0, preservecaseIcon);
+    // OPENMV-DIFF //
+    // int(qApp->devicePixelRatio()) truncates fractional scale factors (1.5 -> 1)
+    // and then disagrees with the icons' actual device pixel ratio, which
+    // Icon::pixmap() rounds to an integer. Use the icons' own ratio so the
+    // declared scale and the x advances stay consistent with the pixmaps drawn.
+    const qreal dpr = casesensitiveIcon.devicePixelRatio();
     pixmap.setDevicePixelRatio(dpr);
     QPainter painter(&pixmap);
-    int x = 0;
+    qreal x = 0;
     if (casesensitive) {
-        painter.drawPixmap(x, 0, casesensitiveIcon);
+        painter.drawPixmap(QPointF(x, 0), casesensitiveIcon);
         x += casesensitiveIcon.width() / dpr;
     }
     if (wholewords) {
-        painter.drawPixmap(x, 0, wholewordsIcon);
+        painter.drawPixmap(QPointF(x, 0), wholewordsIcon);
         x += wholewordsIcon.width() / dpr;
     }
     if (regexp) {
-        painter.drawPixmap(x, 0, regexpIcon);
+        painter.drawPixmap(QPointF(x, 0), regexpIcon);
         x += regexpIcon.width() / dpr;
     }
     if (preservecase)
-        painter.drawPixmap(x, 0, preservecaseIcon);
+        painter.drawPixmap(QPointF(x, 0), preservecaseIcon);
+    // OPENMV-DIFF //
     return pixmap;
 }
 

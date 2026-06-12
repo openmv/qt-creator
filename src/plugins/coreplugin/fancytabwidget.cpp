@@ -208,13 +208,24 @@ void FancyTabBar::mousePressEvent(QMouseEvent *event)
 static void paintSelectedTabBackground(QPainter *painter, const QRect &spanRect)
 {
     const int verticalOverlap = 2; // Grows up and down for the overlaps
-    const int dpr = painter->device()->devicePixelRatio();
+    // OPENMV-DIFF //
+    // const int dpr = painter->device()->devicePixelRatio();
+    // OPENMV-DIFF //
+    // QPaintDevice::devicePixelRatio() returns int, which truncates fractional
+    // scale factors (e.g. 1.5 -> 1) and renders blurry on fractionally scaled
+    // displays.
+    const qreal dpr = painter->device()->devicePixelRatioF();
+    // OPENMV-DIFF //
     const QString cacheKey = QLatin1String(Q_FUNC_INFO) + QString::number(spanRect.width())
                              + QLatin1Char('x') + QString::number(spanRect.height())
                              + QLatin1Char('@') + QString::number(dpr);
     QPixmap selection;
     if (!QPixmapCache::find(cacheKey, &selection)) {
-        selection = QPixmap(QSize(spanRect.width(), spanRect.height() + 2 * verticalOverlap) * dpr);
+        // OPENMV-DIFF //
+        // selection = QPixmap(QSize(spanRect.width(), spanRect.height() + 2 * verticalOverlap) * dpr);
+        // OPENMV-DIFF //
+        selection = QPixmap((QSizeF(spanRect.width(), spanRect.height() + 2 * verticalOverlap) * dpr).toSize());
+        // OPENMV-DIFF //
         selection.fill(Qt::transparent);
         selection.setDevicePixelRatio(dpr);
         QPainter p(&selection);
