@@ -287,10 +287,24 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
     QSplashScreen *splashScreen = new QSplashScreen(QPixmap(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral(DARK_SPLASH_PATH) : QStringLiteral(LIGHT_SPLASH_PATH)));
-    Core::ICore::mainWindow()->restoreGeometry(settings->value("MainWindow/WindowGeometry").toByteArray()); // Move to the correct screen for moving splash...
-    splashScreen->move(Core::ICore::mainWindow()->screen()->availableGeometry().center() - splashScreen->rect().center());
+    // Show the splash on the screen the main window was last closed on. Restoring
+    // the main window geometry here would corrupt it on mixed-DPI multi-display
+    // systems; the real restore happens later in ICorePrivate::restoreWindowState().
+    QScreen *splashScreenTarget = QGuiApplication::primaryScreen();
+    const QString lastScreenName = settings->value("MainWindow/WindowScreenName").toString();
+    for(QScreen *candidate : QGuiApplication::screens())
+    {
+        if(candidate->name() == lastScreenName)
+        {
+            splashScreenTarget = candidate;
+            break;
+        }
+    }
 
-    if(!qFuzzyCompare(splashScreen->screen()->devicePixelRatio(), 1.0))
+    splashScreen->setScreen(splashScreenTarget);
+    splashScreen->move(splashScreenTarget->availableGeometry().center() - splashScreen->rect().center());
+
+    if(!qFuzzyCompare(splashScreenTarget->devicePixelRatio(), 1.0))
     {
         QPixmap hdpi = QPixmap(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral(DARK_SPLASH_HIDPI_PATH) : QStringLiteral(LIGHT_SPLASH_HIDPI_PATH));
         hdpi.setDevicePixelRatio(2.0);
