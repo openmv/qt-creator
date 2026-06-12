@@ -1013,6 +1013,20 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                 text = QString();
                             }
 
+                            // A word directly followed by '=' (but not '==') is a keyword
+                            // argument, e.g. skip_frames(time=2000) - documentation for
+                            // same-named modules or functions does not apply to it.
+                            if(!text.isEmpty())
+                            {
+                                int wordEnd = qMax(cursor.position(), cursor.anchor());
+
+                                if((widget->textDocument()->document()->characterAt(wordEnd) == QLatin1Char('='))
+                                && (widget->textDocument()->document()->characterAt(wordEnd + 1) != QLatin1Char('=')))
+                                {
+                                    text = QString();
+                                }
+                            }
+
                             QTextCursor newCursor(cursor);
                             QString maybeModuleName;
                             bool moduleFilter = false;
@@ -1189,11 +1203,9 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                     Utils::ToolTip::show(globalPos, QStringLiteral("<table>") + string + QStringLiteral("</table>"), widget);
                                     return;
                                 }
-                                else if(!originalToolTip.isEmpty())
-                                {
-                                    showOriginalToolTip(originalToolTip);
-                                    return;
-                                }
+                                // No matching documentation: show nothing rather than the
+                                // language server hover, which reports the inferred type's
+                                // full docstring for plain user variables.
                             }
                         }
                     }
