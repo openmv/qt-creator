@@ -83,6 +83,9 @@
 #include <QMenuBar>
 #include <QMessageBox>
 #include <QPrinter>
+// OPENMV-DIFF //
+#include <QScreen>
+// OPENMV-DIFF //
 #include <QStandardPaths>
 #include <QStatusBar>
 #include <QStyleFactory>
@@ -223,6 +226,12 @@ const char settingsGroup[] = "MainWindow";
 const char colorKey[] = "Color";
 const char windowGeometryKey[] = "WindowGeometry";
 const char windowStateKey[] = "WindowState";
+// OPENMV-DIFF //
+const char windowScreenNameKey[] = "WindowScreenName";
+const char windowNormalGeometryKey[] = "WindowNormalGeometry";
+const char windowMaximizedKey[] = "WindowMaximized";
+const char windowFullScreenKey[] = "WindowFullScreen";
+// OPENMV-DIFF //
 const char modeSelectorLayoutKey[] = "ModeSelectorLayout";
 const char menubarVisibleKey[] = "MenubarVisible";
 
@@ -2640,6 +2649,20 @@ void ICorePrivate::saveWindowSettings()
     if (Utils::HostOsInfo::isMacHost() && m_mainwindow->isFullScreen())
         m_mainwindow->setWindowState(m_mainwindow->windowState() & ~Qt::WindowFullScreen);
     settings->setValue(windowGeometryKey, m_mainwindow->saveGeometry());
+    // OPENMV-DIFF //
+    // Qt's saveGeometry()/restoreGeometry() mangles the window position and size
+    // on multi-display systems where displays have different scale factors
+    // (QTBUG-77385). Save the screen name plus a screen-relative geometry instead;
+    // the blob above is only kept as a fallback for downgrades.
+    QScreen *screen = m_mainwindow->screen();
+    const QRect normalGeometry = (m_mainwindow->isMaximized() || m_mainwindow->isFullScreen())
+        ? m_mainwindow->normalGeometry() : m_mainwindow->geometry();
+    settings->setValue(windowScreenNameKey, screen->name());
+    settings->setValue(windowNormalGeometryKey,
+                       normalGeometry.translated(-screen->geometry().topLeft()));
+    settings->setValue(windowMaximizedKey, m_mainwindow->isMaximized());
+    settings->setValue(windowFullScreenKey, m_mainwindow->isFullScreen());
+    // OPENMV-DIFF //
     settings->setValue(windowStateKey, m_mainwindow->saveState());
     settings->setValue(modeSelectorLayoutKey, int(ModeManager::modeStyle()));
 
@@ -2894,8 +2917,57 @@ void ICorePrivate::restoreWindowState()
     NANOTRACE_SCOPE("Core", "MainWindow::restoreWindowState");
     QtcSettings *settings = PluginManager::settings();
     settings->beginGroup(settingsGroup);
-    if (!m_mainwindow->restoreGeometry(settings->value(windowGeometryKey).toByteArray()))
+    // OPENMV-DIFF //
+    // if (!m_mainwindow->restoreGeometry(settings->value(windowGeometryKey).toByteArray()))
+    //     m_mainwindow->resize(1260, 700); // size without window decoration
+    // OPENMV-DIFF //
+    bool restored = false;
+    const QRect savedNormalGeometry = settings->value(windowNormalGeometryKey).toRect();
+    if (savedNormalGeometry.isValid()) {
+        const QString savedScreenName = settings->value(windowScreenNameKey).toString();
+        QScreen *screen = nullptr;
+        const QList<QScreen *> screens = QGuiApplication::screens();
+        for (QScreen *candidate : screens) {
+            if (candidate->name() == savedScreenName) {
+                screen = candidate;
+                break;
+            }
+        }
+        if (!screen)
+            screen = QGuiApplication::primaryScreen();
+        if (screen) {
+            // Pin the window to the saved screen before it is first shown so it is
+            // created with that screen's scale factor, then clamp the saved
+            // screen-relative geometry into the screen's available area in case the
+            // display's resolution or scaling changed since the geometry was saved.
+            const QRect available = screen->availableGeometry();
+            QRect geometry = savedNormalGeometry.translated(screen->geometry().topLeft());
+            geometry.setWidth(qMin(geometry.width(), available.width()));
+            geometry.setHeight(qMin(geometry.height(), available.height()));
+            if (geometry.right() > available.right())
+                geometry.moveRight(available.right());
+            if (geometry.bottom() > available.bottom())
+                geometry.moveBottom(available.bottom());
+            if (geometry.left() < available.left())
+                geometry.moveLeft(available.left());
+            if (geometry.top() < available.top())
+                geometry.moveTop(available.top());
+            m_mainwindow->setScreen(screen);
+            m_mainwindow->setGeometry(geometry);
+            Qt::WindowStates states = m_mainwindow->windowState();
+            if (settings->value(windowMaximizedKey, false).toBool())
+                states |= Qt::WindowMaximized;
+            if (settings->value(windowFullScreenKey, false).toBool())
+                states |= Qt::WindowFullScreen;
+            m_mainwindow->setWindowState(states);
+            restored = true;
+        }
+    }
+    if (!restored)
+        restored = m_mainwindow->restoreGeometry(settings->value(windowGeometryKey).toByteArray());
+    if (!restored)
         m_mainwindow->resize(1260, 700); // size without window decoration
+    // OPENMV-DIFF //
     m_mainwindow->restoreState(settings->value(windowStateKey).toByteArray());
     settings->endGroup();
     // OPENMV-DIFF //
