@@ -56,6 +56,9 @@
 #include <utils/qtcprocess.h>
 
 #include <QDebug>
+// OPENMV-DIFF //
+#include <QDirIterator>
+// OPENMV-DIFF //
 #include <QGuiApplication>
 #include <QJsonDocument>
 #include <QLoggingCategory>
@@ -559,7 +562,14 @@ void Client::initialize()
     // if (d->m_project)
     //     params.setRootUri(hostPathToServerUri(d->m_project->projectDirectory()));
     // OPENMV-DIFF //
-    params.setRootUri(hostPathToServerUri(Core::ICore::allUsersResourcePath(QStringLiteral("micropython-headers"))));
+    // Newer documentation packages ship .pyi stubs in html/stubs; use them as
+    // the workspace root directly. Older packages fall back to the
+    // micropython-headers folder generated from the parsed html.
+    const Utils::FilePath stubsPath = Core::ICore::allUsersResourcePath(QStringLiteral("html/stubs"));
+    const bool stubsAvailable = QDirIterator(stubsPath.toString(), QStringList() << QStringLiteral("*.pyi"),
+                                             QDir::Files, QDirIterator::Subdirectories).hasNext();
+    params.setRootUri(hostPathToServerUri(stubsAvailable
+        ? stubsPath : Core::ICore::allUsersResourcePath(QStringLiteral("micropython-headers"))));
     // OPENMV-DIFF //
 
     auto projectFilter = [this](Project *project) { return canOpenProject(project); };
