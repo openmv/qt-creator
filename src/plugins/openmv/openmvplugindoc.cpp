@@ -1001,6 +1001,18 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                             cursor.select(QTextCursor::WordUnderCursor);
                             text = cursor.selectedText();
 
+                            // Only identifiers get documentation tooltips. Hovering
+                            // punctuation ('.', '(', ')') or literals otherwise falls
+                            // through to the language server hover, which maps the
+                            // position to the enclosing expression and reports an
+                            // unrelated inferred type hint.
+                            static const QRegularExpression identifierRegEx(QStringLiteral("^[A-Za-z_][A-Za-z0-9_]*$"));
+
+                            if(!identifierRegEx.match(text).hasMatch())
+                            {
+                                text = QString();
+                            }
+
                             QTextCursor newCursor(cursor);
                             QString maybeModuleName;
                             bool moduleFilter = false;
