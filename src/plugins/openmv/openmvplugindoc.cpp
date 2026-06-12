@@ -1028,6 +1028,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                             {
                                 QStringList list;
                                 bool moduleNameMatch = false;
+                                const QChar nextChar = widget->textDocument()->document()->characterAt(qMax(cursor.position(), cursor.anchor()));
 
                                 for(const documentation_t &d : m_modules)
                                 {
@@ -1038,15 +1039,21 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                     }
                                 }
 
-                                for(const documentation_t &d : m_datas)
+                                // A known module name followed by '.' is that module being
+                                // dereferenced (e.g. time.clock()) - same-named data and
+                                // attribute entries from other modules do not apply.
+                                if(!(moduleNameMatch && (nextChar == QLatin1Char('.'))))
                                 {
-                                    if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
+                                    for(const documentation_t &d : m_datas)
                                     {
-                                        list.append(d.text);
+                                        if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
+                                        {
+                                            list.append(d.text);
+                                        }
                                     }
                                 }
 
-                                if(widget->textDocument()->document()->characterAt(qMax(cursor.position(), cursor.anchor())) == QLatin1Char('('))
+                                if(nextChar == QLatin1Char('('))
                                 {
                                     for(const documentation_t &d : m_classes)
                                     {
