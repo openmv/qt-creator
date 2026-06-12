@@ -35,6 +35,127 @@
 namespace OpenMV {
 namespace Internal {
 
+// Makes a documented argument list emittable as a valid Python signature in
+// the generated micropython-headers. Some documentation conventions are not
+// valid Python: a trailing bare '*' (keyword-only marker with the keywords
+// described in prose), '**' used as a separator, python-2 tuple parameters
+// like (buttons,x,y,z), prose defaults like <board_default> or "'dhcp' or
+// tuple", annotations like "(ESP32 only)" appended after the closing
+// parenthesis, and required-looking parameters listed after defaulted ones.
+static QStringList sanitizeHeaderArguments(QStringList list)
+{
+    for(int i = list.size() - 1; i >= 0; i--)
+    {
+        QString arg = list.at(i);
+
+        // Drop tokens that cannot start a parameter.
+        if(arg.isEmpty() || ((!arg.at(0).isLetter()) && (!QStringLiteral("_*/(").contains(arg.at(0)))))
+        {
+            list.removeAt(i);
+            continue;
+        }
+
+        if(arg == QStringLiteral("**"))
+        {
+            arg = QStringLiteral("*");
+        }
+
+        // Truncate at an unbalanced closing bracket (signature annotations
+        // like "mac) (ESP32 only" leaking past the real closing parenthesis).
+        int depth = 0;
+
+        for(int j = 0; j < arg.size(); j++)
+        {
+            if(QStringLiteral("([{").contains(arg.at(j)))
+            {
+                depth += 1;
+            }
+            else if(QStringLiteral(")]}").contains(arg.at(j)))
+            {
+                depth -= 1;
+
+                if(depth < 0)
+                {
+                    arg = arg.left(j);
+                    break;
+                }
+            }
+        }
+
+        if(arg.isEmpty())
+        {
+            list.removeAt(i);
+            continue;
+        }
+
+        // Defaults that are prose rather than expressions become None.
+        int equals = arg.indexOf(QLatin1Char('='));
+
+        if(equals != -1)
+        {
+            QString def = arg.mid(equals + 1);
+
+            if(def.contains(QRegularExpression(QStringLiteral("'[^']*'\\w|\"[^\"]*\"\\w")))
+            || def.contains(QLatin1Char('&')) || def.contains(QLatin1Char('<')) || def.contains(QLatin1Char('>')))
+            {
+                arg = arg.left(equals + 1) + QStringLiteral("None");
+            }
+        }
+
+        list[i] = arg;
+    }
+
+    while((!list.isEmpty()) && ((list.last() == QStringLiteral("*")) || (list.last() == QStringLiteral("/"))))
+    {
+        list.removeLast();
+    }
+
+    for(int i = 0; i < list.size(); i++)
+    {
+        if(list.at(i).startsWith(QLatin1Char('(')) && list.at(i).endsWith(QLatin1Char(')')))
+        {
+            QStringList inner = list.takeAt(i).mid(1).chopped(1).split(QLatin1Char(','), Qt::SkipEmptyParts);
+
+            for(int j = 0; j < inner.size(); j++)
+            {
+                list.insert(i + j, inner.at(j).trimmed());
+            }
+
+            i += inner.size() - 1;
+        }
+    }
+
+    bool seenDefault = false;
+
+    for(int i = 0; i < list.size(); i++)
+    {
+        const QString &arg = list.at(i);
+
+        if(arg == QStringLiteral("*"))
+        {
+            seenDefault = false; // keyword-only arguments do not need defaults
+        }
+        else if(arg.contains(QLatin1Char('=')))
+        {
+            seenDefault = true;
+        }
+        else if(seenDefault && (arg != QStringLiteral("/")) && (!arg.startsWith(QLatin1Char('*'))))
+        {
+            list[i] = arg + QStringLiteral("=None");
+        }
+    }
+
+    return list;
+}
+
+// Documented names that are not valid Python identifiers (e.g. the old docs'
+// 802_1X constant) cannot be emitted into the generated headers.
+static bool isValidPythonIdentifier(const QString &name)
+{
+    static const QRegularExpression identifierRegEx(QStringLiteral("^[A-Za-z_][A-Za-z0-9_]*$"));
+    return identifierRegEx.match(name).hasMatch();
+}
+
 QStringList OpenMVPlugin::processArgumentSplitting(const QString &args)
 {
     enum
@@ -95,11 +216,16 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
 
         if(args.hasMatch())
         {
+            // m_tagRegEx catches the markup the targeted removals miss, e.g.
+            // the <abbr> tags newer docs wrap around the bare '*' and '/'
+            // parameter separators (whose opening tag m_anchorRegEx ate as
+            // "<a.*?>", stranding a "</abbr>").
             argumentString = QLatin1Char('(') + QString(args.captured(1)).
             remove(m_emRegEx).
             remove(m_spanRegEx).
             remove(QLatin1String("</em>")).
             remove(QLatin1String("</span>")).
+            remove(m_tagRegEx).
             replace(QStringLiteral("[,"), QStringLiteral(" [ ,")) + QLatin1Char(')');
         }
 
@@ -174,6 +300,39 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
         else
         {
             d.moduleName = (idList.size() > 1) ? idList.mid(0, idList.size() - 1).join('.') : QString();
+
+            // Remove duplicate module names in path (bug fix for documentation issues)...
+            QStringList test = d.moduleName.split('.');
+            if ((test.size() >= 2) && (test.at(test.size() - 1) == test.at(test.size() - 2))) {
+                test.removeLast();
+                d.moduleName = test.join('.');
+            }
+        }
+
+        // Resolve against the known modules: ids like jwt.exceptions.PyJWTError
+        // carry documentation-only path segments that are not importable
+        // modules, and ids like requests.Response.content are class members
+        // documented with a function directive.
+        if((!d.moduleName.isEmpty()) && (d.moduleName != QStringLiteral("builtin")) && (!m_knownModules.contains(d.moduleName)))
+        {
+            QStringList parts = d.moduleName.split(QLatin1Char('.'));
+
+            for(int i = parts.size() - 1; i >= 1; i--)
+            {
+                QString prefix = QStringList(parts.mid(0, i)).join(QLatin1Char('.'));
+
+                if(m_knownModules.contains(prefix))
+                {
+                    if(((type == QStringLiteral("function")) || (type == QStringLiteral("data"))) && (idList.size() >= 3))
+                    {
+                        d.className = idList.at(idList.size() - 2);
+                        type = (type == QStringLiteral("function")) ? QStringLiteral("method") : QStringLiteral("attribute");
+                    }
+
+                    d.moduleName = prefix;
+                    break;
+                }
+            }
         }
 
         d.text = QString(QStringLiteral("<h3>%1%2</h3>%3")).arg(d.moduleName.isEmpty() ? d.name : (d.moduleName + QStringLiteral(" - ") + (d.className.isEmpty() ? d.name : (d.className + QLatin1Char('.') + d.name)))).arg(argumentString).arg(body).
@@ -188,10 +347,11 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
                  remove(QStringLiteral("<blockquote>")).
                  remove(QStringLiteral("</blockquote>"));
 
-        if(QString(d.text).remove(QRegularExpression(QStringLiteral("<h3>.+?</h3>"))).isEmpty())
-        {
-            return;
-        }
+        // Entries with no documentation body are still real API: the docs
+        // stack related signatures (e.g. LCD160CR.rect/rect_no_clip/...) and
+        // describe them only under the last one, leaving the others with an
+        // empty <dd>. Keep them - with a title-only tooltip - so they appear
+        // in completion, highlighting, and the generated headers.
 
         if((type == QStringLiteral("class")) || (type == QStringLiteral("exception")))
         {
@@ -307,6 +467,7 @@ void OpenMVPlugin::processDocumentationMatch(const QRegularExpressionMatch &matc
                               remove(QLatin1String("</em>")).
                               remove(QLatin1String("</span>")).
                               remove(QLatin1String("</a>")).
+                              remove(m_tagRegEx).
                               remove(QLatin1Char(' '))))
             {
                 int equals = arg.indexOf(QLatin1Char('='));
@@ -720,6 +881,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
     m_arguments = QSet<QString>();
     m_argumentsByHierarchy = QMap<QStringList, QStringList>();
     m_returnTypesByHierarchy = QMap<QStringList, QString>();
+    m_knownModules = QSet<QString>();
 
     QStringList providerVariables;
     QStringList providerClasses;
@@ -736,9 +898,15 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
     m_anchorRegEx = QRegularExpression(QStringLiteral("<a.*?>"), QRegularExpression::DotMatchesEverythingOption);
     m_preRexEx = QRegularExpression(QStringLiteral("<pre.*?>"), QRegularExpression::DotMatchesEverythingOption);
     m_classRegEx = QRegularExpression(QStringLiteral(" class=\".*?\""), QRegularExpression::DotMatchesEverythingOption);
-    QRegularExpression cdfmRegEx(QStringLiteral("<dl class=\"py (class|data|exception|function|method|attribute)\">\\s*<dt class=\".+?\" id=\"(.+?)\">(.*?)</dt>\\s*<dd>(.*?)(?:<section|</dd>\\s*</dl>)"), QRegularExpression::DotMatchesEverythingOption);
-    m_cdfmRegExInside = QRegularExpression(QStringLiteral("<dl class=\"py (class|data|exception|function|method|attribute)\">\\s*<dt class=\".+?\" id=\"(.+?)\">(.*?)</dt>\\s*<dd>(.*)"), QRegularExpression::DotMatchesEverythingOption);
-    m_cdfmRegExShared = QRegularExpression(QStringLiteral("<dt class=\".+?\" id=\"(.+?)\">(.*?)</dt>"), QRegularExpression::DotMatchesEverythingOption);
+    m_tagRegEx = QRegularExpression(QStringLiteral("</?\\w.*?>"), QRegularExpression::DotMatchesEverythingOption);
+    // The class and id attribute patterns must not be able to span attribute
+    // boundaries ([^"]* instead of .+?): a dt without an id (Sphinx omits the
+    // anchor on duplicate object descriptions, e.g. re's "class regex") would
+    // otherwise make .+? jump across it into the NEXT entry's id, mistyping
+    // that entry and consuming it.
+    QRegularExpression cdfmRegEx(QStringLiteral("<dl class=\"py (class|data|exception|function|method|attribute)\">\\s*<dt class=\"[^\"]*\" id=\"([^\"]*)\">(.*?)</dt>\\s*<dd>(.*?)(?:<section|</dd>\\s*</dl>)"), QRegularExpression::DotMatchesEverythingOption);
+    m_cdfmRegExInside = QRegularExpression(QStringLiteral("<dl class=\"py (class|data|exception|function|method|attribute)\">\\s*<dt class=\"[^\"]*\" id=\"([^\"]*)\">(.*?)</dt>\\s*<dd>(.*)"), QRegularExpression::DotMatchesEverythingOption);
+    m_cdfmRegExShared = QRegularExpression(QStringLiteral("<dt class=\"[^\"]*\" id=\"([^\"]*)\">(.*?)</dt>"), QRegularExpression::DotMatchesEverythingOption);
     m_argumentRegEx = QRegularExpression(QStringLiteral("<span class=\"sig-paren\">\\(</span>(.*?)<span class=\"sig-paren\">\\)</span>"), QRegularExpression::DotMatchesEverythingOption);
     m_returnTypeRegEx = QRegularExpression(QStringLiteral("<span class=\"sig-return-typehint\">(.+?)<a class=\"headerlink\""), QRegularExpression::DotMatchesEverythingOption);
     m_dataReturnTypeRexEx = QRegularExpression(QStringLiteral("<span class=\"pre\">:(.+?)<a class=\"headerlink\""), QRegularExpression::DotMatchesEverythingOption);
@@ -767,11 +935,23 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
     }
     else
     {
-        QDirIterator it(Core::ICore::allUsersResourcePath(QStringLiteral("html/library")).toString(), QDir::Files);
+        QStringList htmlFiles;
 
-        while(it.hasNext())
         {
-            QFile file(it.next());
+            QDirIterator it(Core::ICore::allUsersResourcePath(QStringLiteral("html/library")).toString(), QDir::Files);
+
+            while(it.hasNext())
+            {
+                htmlFiles.append(it.next());
+            }
+        }
+
+        // Pass 1: collect the module names from every page first, so that
+        // processDocumentationMatch() below can resolve ids against the full
+        // set of known modules regardless of file order.
+        for(const QString &htmlFile : htmlFiles)
+        {
+            QFile file(htmlFile);
 
             if(file.open(QIODevice::ReadOnly))
             {
@@ -805,13 +985,31 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                         d.name = name;
                         d.text = text;
                         m_modules.append(d);
+                        m_knownModules.insert(name);
 
                         if(name.startsWith(QLatin1Char('u')))
                         {
                             d.name = name.mid(1);
                             m_modules.append(d);
+                            m_knownModules.insert(d.name);
                         }
                     }
+                }
+            }
+        }
+
+        // Pass 2: parse the documented objects.
+        for(const QString &htmlFile : htmlFiles)
+        {
+            QFile file(htmlFile);
+
+            if(file.open(QIODevice::ReadOnly))
+            {
+                QString data = QString::fromUtf8(file.readAll());
+
+                if((file.error() == QFile::NoError) && (!data.isEmpty()))
+                {
+                    file.close();
 
                     QRegularExpressionMatchIterator matches = cdfmRegEx.globalMatch(data);
 
@@ -1327,7 +1525,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 
                 for (const documentation_t &datas : m_datas)
                 {
-                    if ((datas.moduleName == modules.name) && datas.className.isEmpty())
+                    if ((datas.moduleName == modules.name) && datas.className.isEmpty() && isValidPythonIdentifier(datas.name))
                     {
                         QStringList hierarchy = QStringList() << datas.moduleName << datas.name;
                         stream << "\"\"\"\n";
@@ -1341,11 +1539,11 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 
                 for (const documentation_t &function : m_functions)
                 {
-                    if (function.moduleName == modules.name)
+                    if ((function.moduleName == modules.name) && isValidPythonIdentifier(function.name))
                     {
                         QStringList hierarchy = QStringList() << function.moduleName << function.name;
                         stream << "def " << function.name << "(";
-                        stream << m_argumentsByHierarchy.value(hierarchy).join(", ");
+                        stream << sanitizeHeaderArguments(m_argumentsByHierarchy.value(hierarchy)).join(", ");
                         if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ") -> " << m_returnTypesByHierarchy.value(hierarchy) << ":\n";
                         else stream << "):\n";
                         stream << "\t\"\"\"\n";
@@ -1357,7 +1555,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 
                 for (const documentation_t &classes : m_classes)
                 {
-                    if (classes.moduleName == modules.name)
+                    if ((classes.moduleName == modules.name) && isValidPythonIdentifier(classes.name))
                     {
                         QStringList hierarchy = QStringList() << classes.moduleName << classes.name;
                         stream << "class " << classes.name << ":\n";
@@ -1365,7 +1563,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 
                         if (m_argumentsByHierarchy.contains(hierarchy))
                         {
-                            stream << ", " << m_argumentsByHierarchy.value(hierarchy).join(", ");
+                            stream << ", " << sanitizeHeaderArguments(m_argumentsByHierarchy.value(hierarchy)).join(", ");
                             if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ") -> " << m_returnTypesByHierarchy.value(hierarchy) << ":\n";
                             else stream << "):\n";
                         }
@@ -1381,7 +1579,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 
                         for (const documentation_t &datas : m_datas)
                         {
-                            if (datas.moduleName == modules.name && datas.className == classes.name)
+                            if (datas.moduleName == modules.name && datas.className == classes.name && isValidPythonIdentifier(datas.name))
                             {
                                 QStringList hierarchy = QStringList() << datas.moduleName << datas.className << datas.name;
                                 stream << "\t" << datas.name;
@@ -1395,11 +1593,11 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 
                         for (const documentation_t &methods : m_methods)
                         {
-                            if (methods.moduleName == modules.name && methods.className == classes.name)
+                            if (methods.moduleName == modules.name && methods.className == classes.name && isValidPythonIdentifier(methods.name))
                             {
                                 QStringList hierarchy = QStringList() << methods.moduleName << methods.className << methods.name;
                                 stream << "\tdef " << methods.name << "(";
-                                stream << (QStringList() << "self" << m_argumentsByHierarchy.value(hierarchy)).join(", ");
+                                stream << (QStringList() << "self" << sanitizeHeaderArguments(m_argumentsByHierarchy.value(hierarchy))).join(", ");
                                 if (m_returnTypesByHierarchy.contains(hierarchy)) stream << ") -> " << m_returnTypesByHierarchy.value(hierarchy) << ":\n";
                                 else stream << "):\n";
                                 stream << "\t\t\"\"\"\n";

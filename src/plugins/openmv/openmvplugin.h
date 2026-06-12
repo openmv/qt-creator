@@ -675,6 +675,7 @@ private:
     }
     documentation_t;
 
+    QSet<QString> m_knownModules;
     QList<documentation_t> m_modules;
     QList<documentation_t> m_classes;
     QList<documentation_t> m_datas;
@@ -729,6 +730,7 @@ private:
     QRegularExpression m_listRegEx;
     QRegularExpression m_dictionaryRegEx;
     QRegularExpression m_typeHintRegEx;
+    QRegularExpression m_tagRegEx;
 
     QStringList processArgumentSplitting(const QString &args);
     void processDocumentationMatch(const QRegularExpressionMatch &match,
