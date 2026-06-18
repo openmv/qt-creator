@@ -9,5 +9,6 @@
     <MaintenanceToolName>OpenMVIDEUninst</MaintenanceToolName>
     <TargetDir>@ApplicationsDir@/OpenMV IDE</TargetDir>
     <StartMenuDir>OpenMV IDE</StartMenuDir>
+    <WizardStyle>Classic</WizardStyle>
     <ControlScript>controlscript.qs</ControlScript>
 </Installer>
