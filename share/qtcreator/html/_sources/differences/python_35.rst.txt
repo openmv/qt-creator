@@ -81,7 +81,7 @@ Changes to built-in modules:
   | *OrderedDict.items()* , *OrderedDict.keys()* , *OrderedDict.values()* views now support reversed()        |               |
   | iteration.                                                                                                |               |
   +-----------------------------------------------------------------------------------------------------------+---------------+
-  | The deque class now defines *index()*, *insert()*, and *copy()*, and supports the + and * operators.      |               |
+  | The deque class now defines *index()*, *insert()*, and *copy()*, and supports the + and \* operators.     |               |
   +-----------------------------------------------------------------------------------------------------------+---------------+
   | Docstrings produced by namedtuple() can now be updated.                                                   |               |
   +-----------------------------------------------------------------------------------------------------------+---------------+

@@ -1,129 +1,123 @@
-:mod:`tv` --- tv shield driver
-==============================
+.. currentmodule:: display
 
-.. module:: tv
-   :synopsis: tv shield driver
+class TVDisplay -- TV Shield Driver
+===================================
 
-The ``tv`` module is used for controlling the tv shield.
+The :class:`TVDisplay` class drives the OpenMV TV Shield, which
+converts an RGB565 framebuffer into an NTSC composite video signal
+(352x240, 60 fields/s interlaced) suitable for any television or
+analog video monitor.
+
+Two shield variants are supported:
+
+- The wired **TV Shield**, which exposes the composite signal on a
+  single RCA jack.
+- The **Wireless TV Shield**, which feeds the same signal into a
+  2.4 GHz analog video transmitter. The receiver channel (1--8) is
+  selected at runtime via :meth:`ioctl` with
+  :data:`display.IOCTL_CHANNEL`; until that call is made no channel
+  is selected.
+
+Resolution and framing are fixed -- :class:`TVDisplay` does not take a
+``framesize`` argument. Frames are presented by passing an
+:class:`image.Image` to :meth:`write`, which handles scaling, ROI,
+palette and orientation transforms internally.
 
 Example usage::
 
-    import sensor, tv
+    import csi
+    import display
 
-    # Setup camera.
-    sensor.reset()
-    sensor.set_pixformat(sensor.RGB565)
-    sensor.set_framesize(sensor.SIF)
-    sensor.skip_frames()
-    tv.init()
+    csi0 = csi.CSI()
+    csi0.reset()
+    csi0.pixformat(csi.RGB565)
+    csi0.framesize(csi.SIF)              # 352x240, matches the TV output
 
-    # Show image.
-    while(True):
-        tv.display(sensor.snapshot())
+    tv = display.TVDisplay()
 
-Functions
----------
+    while True:
+        tv.write(csi0.snapshot())
 
-.. function:: init(type=TV_SHIELD, triple_buffer=False) -> None
+Constructors
+------------
 
-   Initializes an attached tv output module.
+.. class:: TVDisplay(triple_buffer: bool = True)
 
-   ``type`` indicates how the lcd module should be initialized:
+    ``triple_buffer`` If True then makes updates to the screen non-blocking at the cost of 3X the
+    display size in RAM. The default is board-dependent.
 
-      * `tv.TV_NONE`: Do nothing.
-      * `tv.TV_SHIELD`: Initialize a TV output module. Uses pins P0, P1, P2, and P3.
+   .. method:: deinit() -> None
 
-    ``triple_buffer`` If True then makes updates to the screen non-blocking in `tv.TV_SHIELD`
-    mode at the cost of 3X the display RAM (495 KB).
+      Releases the I/O pins and RAM used by the class. This is called automatically on destruction.
 
-.. function:: deinit() -> None
+   .. method:: width() -> int
 
-   Deinitializes the tv module, internal/external hardware, and I/O pins.
+      Returns the width of the screen (352).
 
-.. function:: width() -> int
+   .. method:: height() -> int
 
-   Returns 352 pixels. This is the `sensor.SIF` resolution.
+      Returns the height of the screen (240).
 
-.. function:: height() -> int
+   .. method:: refresh() -> int
 
-   Returns 240 pixels. This is the `sensor.SIF` resolution.
+      Returns the refresh rate (60).
 
-.. function:: type() -> int
+   .. method:: triple_buffer() -> bool
 
-   Returns the type of the screen that was set during `tv.init()`.
+      Returns if triple buffering is enabled.
 
-.. function:: triple_buffer() -> bool
+   .. method:: write(image:image.Image, x:int=0, y:int=0, x_scale:float=1.0, y_scale:float=1.0, roi:Optional[Tuple[int,int,int,int]]=None, rgb_channel:int=-1, alpha:int=256, color_palette: int | "image.Image" | None = None, alpha_palette: "image.Image" | None = None, hint:int=0) -> None
 
-   Returns if triple buffering is enabled that was set during `tv.init()`.
+      Displays an ``image`` whose top-left corner starts at location x, y.
 
-.. function:: refresh() -> None
+      ``x_scale`` controls how much the displayed image is scaled by in the x direction (float). If this
+      value is negative the image will be flipped horizontally.
 
-   Returns 60 Hz.
+      ``y_scale`` controls how much the displayed image is scaled by in the y direction (float). If this
+      value is negative the image will be flipped vertically.
 
-.. function:: channel(channel:Optional[int]=None) -> int
+      ``roi`` is the region-of-interest rectangle tuple (x, y, w, h) of the image to display.
 
-   For the wireless TV shield this sets the broadcast channel between 1-8. If passed without a channel
-   argument then this method returns the previously set channel (1-8). Default is channel 8.
+      ``rgb_channel`` is the RGB channel (0=R, G=1, B=2) to extract from an RGB565 image and render
+      on the display.
 
-.. function:: display(image:image.Image, x=0, y=0, x_scale=1.0, y_scale=1.0, roi:Optional[Tuple[int,int,int,int]]=None, rgb_channel=-1, alpha=256, color_palette=None, alpha_palette=None, hint=0)
+      ``alpha`` controls how opaque the image is. A value of 256 displays an opaque image while a
+      value lower than 256 produces a black transparent image. 0 results in a perfectly black image.
 
-   Displays an ``image`` whose top-left corner starts at location x, y.
+      ``color_palette`` if not ``-1`` can be a color palette enum or a 256 pixel in total RGB565
+      image to use as a color lookup table on the grayscale value of the input image.
 
-   ``x_scale`` controls how much the displayed image is scaled by in the x direction (float). If this
-   value is negative the image will be flipped horizontally. Note that if ``y_scale`` is not specified
-   then it will match ``x_scale`` to maintain the aspect ratio.
+      ``alpha_palette`` if not ``-1`` can be a 256 pixel in total GRAYSCALE image to use as an alpha
+      palette which modulates the ``alpha`` value of the input image at a per-pixel level.
 
-   ``y_scale`` controls how much the displayed image is scaled by in the y direction (float). If this
-   value is negative the image will be flipped vertically. Note that if ``x_scale`` is not specified
-   then it will match ``x_scale`` to maintain the aspect ratio.
+      ``hint`` logical OR of the flags:
 
-   ``roi`` is the region-of-interest rectangle tuple (x, y, w, h) of the image to display. This
-   allows you to extract just the pixels in the ROI to scale.
+         * `image.AREA`: Use area scaling when downscaling.
+         * `image.BILINEAR`: Use bilinear scaling.
+         * `image.BICUBIC`: Use bicubic scaling.
+         * `image.CENTER`: Center the image on the display (after scaling).
+         * `image.HMIRROR`: Horizontally mirror the image.
+         * `image.VFLIP`: Vertically flip the image.
+         * `image.TRANSPOSE`: Transpose the image (swap x/y).
+         * `image.EXTRACT_RGB_CHANNEL_FIRST`: Apply ``rgb_channel`` extraction before scaling.
+         * `image.APPLY_COLOR_PALETTE_FIRST`: Apply ``color_palette`` before scaling.
+         * `image.SCALE_ASPECT_KEEP`: Scale to fit inside the display.
+         * `image.SCALE_ASPECT_EXPAND`: Scale to fill the display (cropping).
+         * `image.SCALE_ASPECT_IGNORE`: Scale to fill the display (stretching).
+         * `image.ROTATE_90`: Rotate by 90 degrees (``VFLIP | TRANSPOSE``).
+         * `image.ROTATE_180`: Rotate by 180 degrees (``HMIRROR | VFLIP``).
+         * `image.ROTATE_270`: Rotate by 270 degrees (``HMIRROR | TRANSPOSE``).
 
-   ``rgb_channel`` is the RGB channel (0=R, G=1, B=2) to extract from an RGB565 image (if passed)
-   and to render on the display. For example, if you pass ``rgb_channel=1`` this will
-   extract the green channel of the RGB565 image and display that in grayscale.
+   .. method:: clear(display_off: bool = False) -> None
 
-   ``alpha`` controls how opaque the image is. A value of 256 displays an opaque image while a
-   value lower than 256 produces a black transparent image. 0 results in a perfectly black image.
+      Clears the screen to black.
 
-   ``color_palette`` if not ``-1`` can be an a color palette enum or
-   a 256 pixel in total RGB565 image to use as a color lookup table on the grayscale value of
-   whatever the input image is. This is applied after ``rgb_channel`` extraction if used.
+      ``display_off`` is accepted for API compatibility with other display classes and is ignored.
 
-   ``alpha_palette`` if not ``-1`` can be a 256 pixel in total GRAYSCALE image to use as a alpha
-   palette which modulates the ``alpha`` value of the input image being displayed at a pixel pixel
-   level allowing you to precisely control the alpha value of pixels based on their grayscale value.
-   A pixel value of 255 in the alpha lookup table is opaque which anything less than 255 becomes
-   more transparent until 0. This is applied after ``rgb_channel`` extraction if used.
+   .. method:: ioctl(cmd:int, *args) -> object
 
-   ``hint`` can be a logical OR of the flags:
+      Generic ioctl entry point.
 
-      * `image.AREA`: Use area scaling when downscaling versus the default of nearest neighbor.
-      * `image.BILINEAR`: Use bilinear scaling versus the default of nearest neighbor scaling.
-      * `image.BICUBIC`: Use bicubic scaling versus the default of nearest neighbor scaling.
-      * `image.CENTER`: Center the image being drawn on the display. This is applied after scaling.
-      * `image.HMIRROR`: Horizontally mirror the image.
-      * `image.VFLIP`: Vertically flip the image.
-      * `image.TRANSPOSE`: Transpose the image (swap x/y).
-      * `image.EXTRACT_RGB_CHANNEL_FIRST`: Do rgb_channel extraction before scaling.
-      * `image.APPLY_COLOR_PALETTE_FIRST`: Apply color palette before scaling.
-      * `image.SCALE_ASPECT_KEEP`: Scale the image being drawn to fit inside the display.
-      * `image.SCALE_ASPECT_EXPAND`: Scale the image being drawn to fill the display (results in cropping)
-      * `image.SCALE_ASPECT_IGNORE`: Scale the image being drawn to fill the display (results in stretching).
-      * `image.ROTATE_90`: Rotate the image by 90 degrees (this is just VFLIP | TRANSPOSE).
-      * `image.ROTATE_180`: Rotate the image by 180 degrees (this is just HMIRROR | VFLIP).
-      * `image.ROTATE_270`: Rotate the image by 270 degrees (this is just HMIRROR | TRANSPOSE).
-
-Constants
----------
-
-.. data:: TV_NONE
-   :type: int
-
-   Returned by `tv.type()` when the this module is not initialized.
-
-.. data:: TV_SHIELD
-   :type: int
-
-   Used to initialize the TV module.
+      Pass `display.IOCTL_CHANNEL` as ``cmd`` to set or get the wireless TV shield broadcast channel.
+      With a second argument (1-8) the channel is set; with no second argument the current channel
+      is returned. No channel is selected until the first set call is made.
