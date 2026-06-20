@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+838" />
         <source>Copy</source>
         <translation>Kopiraj</translation>
     </message>
@@ -30,82 +30,82 @@
         <translation>Nastavitve OpenMV Cam</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Turn on WiFi Shield on startup</source>
         <translation>Ob zagonu vklopite WiFi Shield</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Client Mode (Normal)</source>
         <translation>Odjemalski način (običajno)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Password</source>
         <translation>Geslo</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter your WiFi network password here</source>
         <translation>Tukaj vnesite geslo za omrežje WiFi</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Type</source>
         <translation>Vrsta</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Open (No password)</source>
         <translation>Odpri (brez gesla)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WPA (Modern WiFi Security)</source>
         <translation>WPA (Modern WiFi Security)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WEP (Hexadecimal password)</source>
         <translation>WEP (šestnajstiško geslo)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>SSID</source>
         <translation>SSID</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter or select your WiFi network here</source>
         <translation>Tukaj vnesite ali izberite svoje WiFi omrežje</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Acess Point Mode</source>
         <translation>Način dostopne točke</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
         <translation>Tukaj vnesite ime omrežja WiFi, da ustvarite geslo</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
         <translation>Tukaj vnesite ime omrežja Wi-Fi, ki ga želite ustvariti</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Board Name</source>
         <translation>Ime plošče</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
         <translation>Tukaj vnesite ime za vaš OpenMV Cam</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Duplicate REPL on the UART on startup</source>
         <translation>Podvojeni REPL na UART ob zagonu</translation>
     </message>
@@ -118,42 +118,42 @@
         <translation>000</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Max</source>
         <translation>maks</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Median</source>
         <translation>Mediana</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mode</source>
         <translation>Način</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Min</source>
         <translation>Min</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mean</source>
         <translation>Pomeni</translation>
     </message>
@@ -205,41 +205,41 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for '%1'...</source>
-        <translation>Prenašanje nove sintaksne definicije za '%1' ...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation>Prenašanje nove sintaksne definicije za &apos;%1&apos; ...</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for '%1' to version %2...</source>
-        <translation>Posodabljanje definicije sintakse za '%1' na različico %2 ...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation>Posodabljanje definicije sintakse za &apos;%1&apos; na različico %2 ...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
         <source>Copy/Convert Python File</source>
         <translation>Kopirajte/pretvorite datoteko python</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+21" />
         <location line="+7" />
-        <location line="+94" />
+        <location line="+91" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+76" />
         <location line="+7" />
         <source>Unable to overwrite output file!</source>
         <translation>Ne morem prepisati izhodne datoteke!</translation>
     </message>
     <message>
-        <location line="-125" />
+        <location line="-124" />
         <source>Model Zoo</source>
         <translation>Modelni živalski vrt</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+77" />
         <source>Model conversion is unnecessary for this board, as it lacks an NPU accelerator.</source>
         <translation>Pretvorba modela je za to ploščo nepotrebna, saj nima pospeševalnika NPU.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <source>Convert Model</source>
         <translation>Preoblikovalni model</translation>
     </message>
@@ -335,8 +335,8 @@
         <translation type="vanished">Upravitelj delovnega prostora</translation>
     </message>
     <message>
-        <source>&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;What is a Workspace?&lt;/a&gt;</source>
-        <translation type="vanished">&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;Kaj je delovni prostor?&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;Kaj je delovni prostor?&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Workspace</source>
@@ -639,7 +639,7 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Request Copilot suggestion at the current editor's cursor position.</source>
+        <source>Request Copilot suggestion at the current editor&apos;s cursor position.</source>
         <translation>Zahtevajte predlog za kopilot na položaju kazalca trenutnega urednika.</translation>
     </message>
     <message>
@@ -893,7 +893,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
-        <source>Failed to open an editor for "%1".</source>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
         <translation>Urejevalnika za »%1« ni bilo mogoče odpreti.</translation>
     </message>
     <message>
@@ -929,7 +929,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-2268" />
         <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+445" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
@@ -1027,8 +1027,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+74" />
-        <source>An item named "%1" already exists at this location. Do you want to overwrite it?</source>
-        <translation>Element z imenom "%1" že obstaja na tej lokaciji. Ali ga želite prepisati?</translation>
+        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
+        <translation>Element z imenom &quot;%1&quot; že obstaja na tej lokaciji. Ali ga želite prepisati?</translation>
     </message>
     <message>
         <location line="+230" />
@@ -1155,12 +1155,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+7" />
-        <source>X-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>Koordinata x zgornjega levega kota trenutnega urejevalnika, glede na zaslon.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Y-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>Koordinata y zgornjega levega kota trenutnega urejevalnika, glede na zaslon.</translation>
     </message>
     <message>
@@ -1170,7 +1170,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <source>The text file "%1" has the size %2MB and might take more memory to open and process than available.
+        <source>The text file &quot;%1&quot; has the size %2MB and might take more memory to open and process than available.
 
 Continue?</source>
         <translation>Besedilna datoteka »%1« ima velikost %2 MB in lahko za odpiranje in obdelavo potrebuje več pomnilnika, kot je na voljo.
@@ -1179,17 +1179,17 @@ Nadaljevati?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>Could not open "%1": Cannot open files of type "%2".</source>
+        <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
         <translation>Ni bilo mogoče odpreti »%1«: ni mogoče odpreti datotek vrste »%2«.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not open "%1" for reading. Either the file does not exist or you do not have the permissions to open it.</source>
+        <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
         <translation>»%1« ni bilo mogoče odpreti za branje. Datoteka ne obstaja ali pa nimate dovoljenj za odpiranje.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Could not open "%1": Unknown error.</source>
+        <source>Could not open &quot;%1&quot;: Unknown error.</source>
         <translation>Ni bilo mogoče odpreti »%1«: Neznana napaka.</translation>
     </message>
     <message>
@@ -1267,17 +1267,17 @@ Nadaljevati?</translation>
     </message>
     <message>
         <location line="+308" />
-        <source>Close "%1"</source>
+        <source>Close &quot;%1&quot;</source>
         <translation>Zapri »%1«</translation>
     </message>
     <message>
         <location line="+27" />
-        <source>Unpin "%1"</source>
+        <source>Unpin &quot;%1&quot;</source>
         <translation>Odpni »%1«</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Pin "%1"</source>
+        <source>Pin &quot;%1&quot;</source>
         <translation>Pripni »%1«</translation>
     </message>
     <message>
@@ -1403,7 +1403,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+2" />
-        <source>Don't Round</source>
+        <source>Don&apos;t Round</source>
         <translation>Ne zaokrožite</translation>
     </message>
     <message>
@@ -1555,8 +1555,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+35" />
-        <source>Command line arguments used for "Run in terminal".</source>
-        <translation>Argumenti ukazne vrstice, uporabljeni za "Zaženi v terminalu".</translation>
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>Argumenti ukazne vrstice, uporabljeni za &quot;Zaženi v terminalu&quot;.</translation>
     </message>
     <message>
         <location line="-50" />
@@ -1580,7 +1580,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+105" />
-        <source>Command line arguments used for "%1".</source>
+        <source>Command line arguments used for &quot;%1&quot;.</source>
         <translation>Argumenti ukazne vrstice, uporabljeni za »%1«.</translation>
     </message>
     <message>
@@ -1637,8 +1637,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+147" />
-        <source>Maximum number of entries in "Recent Files":</source>
-        <translation>Največje število vnosov v "Nedavne datoteke":</translation>
+        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
+        <translation>Največje število vnosov v &quot;Nedavne datoteke&quot;:</translation>
     </message>
     <message>
         <location line="+12" />
@@ -1698,7 +1698,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>Izhod</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1773" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1787" />
         <source>&amp;File</source>
         <translation>&amp;Datoteka</translation>
     </message>
@@ -1723,7 +1723,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>&amp;Pomoč</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+122" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+128" />
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2620" />
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
@@ -1748,13 +1748,13 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>Shrani &amp;vse</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-279" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>Zapustiti %1?</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+106" />
         <source>&amp;View</source>
         <translation>&amp;Videz</translation>
     </message>
@@ -1913,7 +1913,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     <message>
         <location line="+11" />
         <source>Pr&amp;eferences...</source>
-        <translation>Nastavitve ...</translation>
+        <translation>Nastavitv&amp;e ...</translation>
     </message>
     <message>
         <location line="+26" />
@@ -1947,8 +1947,8 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the "%2" action from the "%3" locator filter (%4).</source>
-        <translation>To bo v celoti skril menijsko vrstico. Ponovno ga lahko pokažete tako, da vtipkate%1. &lt;br&gt; &lt;br&gt; ali sprožite dejanje "%2" iz filtra "%3" (%4).</translation>
+        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the &quot;%2&quot; action from the &quot;%3&quot; locator filter (%4).</source>
+        <translation>To bo v celoti skril menijsko vrstico. Ponovno ga lahko pokažete tako, da vtipkate%1. &lt;br&gt; &lt;br&gt; ali sprožite dejanje &quot;%2&quot; iz filtra &quot;%3&quot; (%4).</translation>
     </message>
     <message>
         <location line="+21" />
@@ -2001,7 +2001,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>Skrito</translation>
     </message>
     <message>
-        <location line="+460" />
+        <location line="+474" />
         <source>Version:</source>
         <translation>Različica:</translation>
     </message>
@@ -2021,7 +2021,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>&lt;p&gt;Razvijalci Qt Creator so dosegljivi na poštnem seznamu Qt Creator:&lt;/p&gt;%1&lt;p&gt;ali kanalu #qt-creator na Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;Naš sledilnik napak se nahaja na %3.&lt;/p&gt;&lt;p&gt;Uporabite %4 za večje dele besedila.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-803" />
+        <location line="-817" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -2054,7 +2054,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+240" />
+        <location line="+244" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>Odprti dokumenti</translation>
@@ -2076,7 +2076,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Close All Except "%1"</source>
+        <source>Close All Except &quot;%1&quot;</source>
         <translation>Zapri vse, razen »%1«</translation>
     </message>
     <message>
@@ -2113,16 +2113,16 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+927" />
-        <location line="+13" />
-        <location line="+11" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location line="+16" />
+        <location line="+14" />
         <source>Save Log</source>
         <translation>Shrani dnevnik</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-617" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
         <source>Clear</source>
         <translation>Počisti</translation>
     </message>
@@ -2263,8 +2263,8 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location line="+51" />
-        <source>Failed to open preset file "%1" for reading.</source>
-        <translation>Za branje ni odprl prednastavljene datoteke "%1".</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading.</source>
+        <translation>Za branje ni odprl prednastavljene datoteke &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-172" />
@@ -2278,12 +2278,12 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>Failed to write logs to "%1".</source>
+        <source>Failed to write logs to &quot;%1&quot;.</source>
         <translation>Pisanje dnevnikov v »%1« ni uspelo.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open file "%1" for writing logs.</source>
+        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
         <translation>Datoteke »%1« za pisanje dnevnikov ni bilo mogoče odpreti.</translation>
     </message>
     <message>
@@ -2292,7 +2292,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location line="+45" />
-        <source>Failed to write preset file "%1".</source>
+        <source>Failed to write preset file &quot;%1&quot;.</source>
         <translation>Zapis prednastavljene datoteke »%1« ni uspel.</translation>
     </message>
     <message>
@@ -2301,13 +2301,13 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>Naloži omogočene kategorije iz</translation>
     </message>
     <message>
-        <source>Failed to open preset file "%1" for reading</source>
+        <source>Failed to open preset file &quot;%1&quot; for reading</source>
         <translation type="vanished">Prednastavljene datoteke »%1« za branje ni bilo mogoče odpreti</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Failed to read preset file "%1": %2</source>
-        <translation>Branje prednastavljene datoteke "%1" ni uspelo: %2</translation>
+        <source>Failed to read preset file &quot;%1&quot;: %2</source>
+        <translation>Branje prednastavljene datoteke &quot;%1&quot; ni uspelo: %2</translation>
     </message>
     <message>
         <location line="+29" />
@@ -2466,17 +2466,17 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>Procesi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-75" />
         <source>&amp;Diff</source>
         <translation>&amp;Razlike</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Do &amp;Not Save</source>
-        <translation>Ne shranite</translation>
+        <translation>&amp;Ne shranite</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+72" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
         <translation>&amp;Razl. &amp;&amp; Prekliči</translation>
     </message>
@@ -2570,13 +2570,13 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Use "Cmd", "Opt", "Ctrl", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>Za modifikacijske tipke uporabite "Cmd", "Opt", "Ctrl" in "Shift". Za posebne tipke uporabite "Escape", "Backspace", "Delete", "Insert", "Home" in tako naprej. Kombinirajte posamezne tipke z "+" in združite več bližnjic v zaporedje bližnjic z ",". Na primer, če mora uporabnik držati modifikatorski tipki Ctrl in Shift, medtem ko pritisne tipko Escape, nato pa jo spustiti in pritisniti A, vnesite "Ctrl+Shift+Escape,A".</translation>
+        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Za modifikacijske tipke uporabite &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot; in &quot;Shift&quot;. Za posebne tipke uporabite &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; in tako naprej. Kombinirajte posamezne tipke z &quot;+&quot; in združite več bližnjic v zaporedje bližnjic z &quot;,&quot;. Na primer, če mora uporabnik držati modifikatorski tipki Ctrl in Shift, medtem ko pritisne tipko Escape, nato pa jo spustiti in pritisniti A, vnesite &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Use "Ctrl", "Alt", "Meta", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>Za modifikacijske tipke uporabite "Ctrl", "Alt", "Meta" in "Shift". Za posebne tipke uporabite "Escape", "Backspace", "Delete", "Insert", "Home" in tako naprej. Kombinirajte posamezne tipke z "+" in združite več bližnjic v zaporedje bližnjic z ",". Na primer, če mora uporabnik držati modifikatorski tipki Ctrl in Shift, medtem ko pritisne tipko Escape, nato pa jo spustiti in pritisniti A, vnesite "Ctrl+Shift+Escape,A".</translation>
+        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Za modifikacijske tipke uporabite &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot; in &quot;Shift&quot;. Za posebne tipke uporabite &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; in tako naprej. Kombinirajte posamezne tipke z &quot;+&quot; in združite več bližnjic v zaporedje bližnjic z &quot;,&quot;. Na primer, če mora uporabnik držati modifikatorski tipki Ctrl in Shift, medtem ko pritisne tipko Escape, nato pa jo spustiti in pritisniti A, vnesite &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -2585,8 +2585,8 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Key sequence has potential conflicts. &lt;a href="#conflicts"&gt;Show.&lt;/a&gt;</source>
-        <translation>Zaporedje tipk ima potencialne konflikte. &lt;a href="#conflicts"&gt;Pokaži.&lt;/a&gt;</translation>
+        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
+        <translation>Zaporedje tipk ima potencialne konflikte. &lt;a href=&quot;#conflicts&quot;&gt;Pokaži.&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+122" />
@@ -2611,22 +2611,22 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     <message>
         <location line="+7" />
         <source>Search f&amp;or:</source>
-        <translation>Išči:</translation>
+        <translation>&amp;Išči:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Whole words o&amp;nly</source>
-        <translation>Samo cele besede</translation>
+        <translation>&amp;Samo cele besede</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Use re&amp;gular expressions</source>
-        <translation>Uporabite regularne izraze</translation>
+        <translation>Uporabite re&amp;gularne izraze</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Sco&amp;pe:</source>
-        <translation>Obseg:</translation>
+        <translation>&amp;Obseg:</translation>
     </message>
     <message>
         <location line="-9" />
@@ -2645,7 +2645,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-333" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-335" />
         <source>Open Advanced Find...</source>
         <translation>Odpri napredno iskanje …</translation>
     </message>
@@ -2667,12 +2667,11 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>Vnesite iskani niz</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+E</source>
-        <translation>Ctrl+E</translation>
+        <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Find Next</source>
         <translation>Najdi naslednje</translation>
     </message>
@@ -2692,24 +2691,24 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>Zamenjaj in najdi prejšnje</translation>
     </message>
     <message>
-        <location line="-246" />
-        <location line="+259" />
+        <location line="-248" />
+        <location line="+261" />
         <source>Replace All</source>
         <translation>Zamenjaj vse</translation>
     </message>
     <message>
-        <location line="-309" />
+        <location line="-311" />
         <source>Find Flags</source>
         <translation>Poiščite zastave</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+235" />
+        <location line="+237" />
         <source>Replace &amp;&amp; Find</source>
         <translation>Zamenjaj in najdi</translation>
     </message>
     <message>
-        <location line="-148" />
+        <location line="-150" />
         <location line="+13" />
         <source>Shift+Enter</source>
         <translation>Shift+Enter</translation>
@@ -2726,7 +2725,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>Najdi in zamenjaj</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+59" />
         <source>Find Next (Selected)</source>
         <translation>Poišči naslednje (izbrano)</translation>
     </message>
@@ -2785,7 +2784,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>Zamenjaj z...</translation>
     </message>
     <message>
-        <location line="-520" />
+        <location line="-522" />
         <source>Find</source>
         <translation>Najdi</translation>
     </message>
@@ -2824,7 +2823,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+705" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
         <source>Collapse All</source>
         <translation>Skrči vse</translation>
     </message>
@@ -2851,7 +2850,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+225" />
+        <location line="+227" />
         <source>Replace</source>
         <translation>Zamenjaj</translation>
     </message>
@@ -2867,11 +2866,11 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Open file "%1" with:</source>
+        <source>Open file &quot;%1&quot; with:</source>
         <translation>Odpri datoteko »%1« z:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-455" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
         <source>Show Hidden Files</source>
         <translation>Pokaži skrite datoteke</translation>
     </message>
@@ -2897,14 +2896,14 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>Nova datoteka</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="+156" />
         <location line="+78" />
         <source>New Folder</source>
         <translation>Nova mapa</translation>
     </message>
     <message>
         <location line="-18" />
-        <source>Open "%1"</source>
+        <source>Open &quot;%1&quot;</source>
         <translation>Odpri »%1«</translation>
     </message>
     <message>
@@ -2965,7 +2964,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>Odstrani...</translation>
     </message>
     <message>
-        <location line="-618" />
+        <location line="-622" />
         <source>Synchronize with Editor</source>
         <translation>Uskladi z urejevalnikom</translation>
     </message>
@@ -3000,8 +2999,8 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
         <translation>Splošen filter map</translation>
     </message>
     <message>
-        <source>Matches all files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">Ujema se z vsemi datotekami iz nabora imenikov po meri. Dodajte "+&lt;število&gt;" ali ":&lt;število&gt;", da skočite na dano številko vrstice. Dodajte še en "+&lt;število&gt;" ali ":&lt;število&gt;", da skočite tudi na številko stolpca.</translation>
+        <source>Matches all files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">Ujema se z vsemi datotekami iz nabora imenikov po meri. Dodajte &quot;+&lt;število&gt;&quot; ali &quot;:&lt;število&gt;&quot;, da skočite na dano številko vrstice. Dodajte še en &quot;+&lt;število&gt;&quot; ali &quot;:&lt;število&gt;&quot;, da skočite tudi na številko stolpca.</translation>
     </message>
     <message>
         <location line="+273" />
@@ -3155,8 +3154,8 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-78" />
-        <source>Locates files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Poiščite datoteke iz po meri imenikov. Dodajte "+&lt;temement&gt;" ali ": &lt;temement&gt;", da skočite na dano številko vrstice. Dodate še en "+&lt;temement&gt;" ali ": &lt;temement&gt;", da skočite tudi na številko stolpca.</translation>
+        <source>Locates files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Poiščite datoteke iz po meri imenikov. Dodajte &quot;+&lt;temement&gt;&quot; ali &quot;: &lt;temement&gt;&quot;, da skočite na dano številko vrstice. Dodate še en &quot;+&lt;temement&gt;&quot; ali &quot;: &lt;temement&gt;&quot;, da skočite tudi na številko stolpca.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -3243,7 +3242,7 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;What to do with the executable's standard output.
+&lt;p&gt;What to do with the executable&apos;s standard output.
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
@@ -3277,17 +3276,12 @@ pod pogojem, da niso bili spremenjeni pred refaktoriranjem.</translation>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
-&lt;p &gt;What to do with the executable's standard error output.&lt;/p&gt;
+&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
 &lt;li&gt;Show in General Messages.&lt;/li&gt;
 &lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;glava&gt;&lt;telo&gt;
-&lt;p &gt;Kaj storiti s standardnim izhodom napake izvedljive datoteke.&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Prezri: s tem ne stori ničesar.&lt;/li&gt;
-&lt;li&gt;Prikaži v splošnih sporočilih.&lt;/li&gt;
-&lt;li&gt;Zamenjaj izbor: Zamenjajte trenutni izbor v trenutnem dokumentu z njim.&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12" />
@@ -3404,11 +3398,11 @@ Za uporabo v polje Iskalnika vtipkajte to bližnjico in presledek ter nato iskan
     </message>
     <message>
         <location line="+1" />
-        <source>Opens a file given by a relative path to the current document, or absolute path. "~" refers to your home directory. You have the option to create a file if it does not exist yet.</source>
-        <translation>Odpre datoteko, podano z relativno potjo do trenutnega dokumenta ali absolutno potjo. "~" se nanaša na vaš domači imenik. Imate možnost ustvariti datoteko, če še ne obstaja.</translation>
+        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
+        <translation>Odpre datoteko, podano z relativno potjo do trenutnega dokumenta ali absolutno potjo. &quot;~&quot; se nanaša na vaš domači imenik. Imate možnost ustvariti datoteko, če še ne obstaja.</translation>
     </message>
     <message>
-        <source>Create and Open "%1"</source>
+        <source>Create and Open &quot;%1&quot;</source>
         <translation type="vanished">Ustvari in odpri »%1«</translation>
     </message>
     <message>
@@ -3418,7 +3412,7 @@ Za uporabo v polje Iskalnika vtipkajte to bližnjico in presledek ter nato iskan
     </message>
     <message>
         <location line="-13" />
-        <source>Create "%1"?</source>
+        <source>Create &quot;%1&quot;?</source>
         <translation>Ustvariti »%1«?</translation>
     </message>
     <message>
@@ -3438,8 +3432,8 @@ Za uporabo v polje Iskalnika vtipkajte to bližnjico in presledek ter nato iskan
     </message>
     <message>
         <location line="+1" />
-        <source>Cannot create file "%1".</source>
-        <translation>Ne more ustvariti datoteke "%1".</translation>
+        <source>Cannot create file &quot;%1&quot;.</source>
+        <translation>Ne more ustvariti datoteke &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -3448,13 +3442,13 @@ Za uporabo v polje Iskalnika vtipkajte to bližnjico in presledek ter nato iskan
     </message>
     <message>
         <location line="+164" />
-        <source>Create and Open File "%1"</source>
-        <translation>Ustvarite in odprite datoteko "%1"</translation>
+        <source>Create and Open File &quot;%1&quot;</source>
+        <translation>Ustvarite in odprite datoteko &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Create Directory "%1"</source>
-        <translation>Ustvari imenik "%1"</translation>
+        <source>Create Directory &quot;%1&quot;</source>
+        <translation>Ustvari imenik &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+58" />
@@ -3472,7 +3466,7 @@ Za uporabo v polje Iskalnika vtipkajte to bližnjico in presledek ter nato iskan
         <translation>Razpoložljivi filtri</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+557" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
         <source>Open as Centered Popup</source>
         <translation>Odpri kot sredinsko pojavno okno</translation>
     </message>
@@ -3513,18 +3507,18 @@ Za uporabo v polje Iskalnika vtipkajte to bližnjico in presledek ter nato iskan
     </message>
     <message>
         <location line="+143" />
-        <source>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Odpri dokument&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Datoteka &gt; Odpri datoteko (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Datoteka &gt; Primeri &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Datoteka &gt; Nedavne datoteke&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Povlecite in spustite datoteke sem&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Odpri dokument&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Datoteka &gt; Odpri datoteko (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Datoteka &gt; Primeri &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Datoteka &gt; Nedavne datoteke&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Povlecite in spustite datoteke sem&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+37" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- vnesite &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; za skok na definicijo razreda&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- vnesite &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; za skok na definicijo razreda&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- vnesite &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; za skok na definicijo funkcije&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- vnesite &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; za skok na definicijo funkcije&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+121" />
@@ -3600,7 +3594,7 @@ Za uporabo v polje Iskalnika vtipkajte to bližnjico in presledek ter nato iskan
         <translation>Po meri</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-113" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-116" />
         <source>Save Changes</source>
         <translation>Shrani spremembe</translation>
     </message>
@@ -3734,14 +3728,14 @@ Za uporabo v polje Iskalnika vtipkajte to bližnjico in presledek ter nato iskan
         <translation>Nastavitve</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+488" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
         <source>Options</source>
         <translation>Možnosti</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13" />
-        <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
+        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
         <translation>Ustvari prevajalske datoteke qm, ki jih lahko uporablja aplikacija iz datotek ts prevajalca</translation>
     </message>
     <message>
@@ -3750,14 +3744,14 @@ Za uporabo v polje Iskalnika vtipkajte to bližnjico in presledek ter nato iskan
         <translation>Izdaja prevodov (lrelease)</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+5" />
         <source>Linguist</source>
         <translation>Jezikoslovec</translation>
     </message>
     <message>
-        <location line="-12" />
-        <source>Synchronizes translator's ts files with the program code</source>
+        <location line="-2" />
+        <source>Synchronizes translator&apos;s ts files with the program code</source>
         <translation>Sinhronizira datoteke ts prevajalca s programsko kodo</translation>
     </message>
     <message>
@@ -3777,13 +3771,13 @@ Za uporabo v polje Iskalnika vtipkajte to bližnjico in presledek ter nato iskan
     </message>
     <message>
         <location line="+1" />
-        <location line="+10" />
+        <location line="+15" />
         <location line="+5" />
         <source>Text</source>
         <translation>Besedilo</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-17" />
         <source>Runs the current QML file with QML utility.</source>
         <translation>Zažene trenutno datoteko QML s pripomočkom QML.</translation>
     </message>
@@ -3809,7 +3803,7 @@ Za uporabo v polje Iskalnika vtipkajte to bližnjico in presledek ter nato iskan
         <translation>Predogled Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+4" />
         <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Odpre trenutno datoteko v vi</translation>
@@ -3827,8 +3821,8 @@ Za uporabo v polje Iskalnika vtipkajte to bližnjico in presledek ter nato iskan
     </message>
     <message>
         <location line="+1" />
-        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by "&gt;". For example "sess def" matches "File &gt; Sessions &gt; Default".</source>
-        <translation>Sproži dejanje. Če je iz menija, se ujema s katerim koli delom hierarhije menija, ločenim z "&gt;". Na primer "sess def" se ujema z "Datoteka &gt; Seje &gt; Privzeto".</translation>
+        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
+        <translation>Sproži dejanje. Če je iz menija, se ujema s katerim koli delom hierarhije menija, ločenim z &quot;&gt;&quot;. Na primer &quot;sess def&quot; se ujema z &quot;Datoteka &gt; Seje &gt; Privzeto&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
@@ -3972,7 +3966,7 @@ Za uporabo v polje Iskalnika vtipkajte to bližnjico in presledek ter nato iskan
     </message>
     <message>
         <location line="+12" />
-        <source>The settings file "%1" is not writable.
+        <source>The settings file &quot;%1&quot; is not writable.
 You will not be able to store any %2 settings.</source>
         <translation>V datoteko z nastavitvami »%1« ni mogoče zapisovati.
 Ne boste mogli shraniti nobenih nastavitev %2.</translation>
@@ -3989,9 +3983,9 @@ Ne boste mogli shraniti nobenih nastavitev %2.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Error reading settings file "%1": %2
+        <source>Error reading settings file &quot;%1&quot;: %2
 You will likely experience further problems using this instance of %3.</source>
-        <translation>Napaka pri branju nastavitvene datoteke "%1": %2
+        <translation>Napaka pri branju nastavitvene datoteke &quot;%1&quot;: %2
 Pri uporabi tega primerka %3 boste verjetno imeli nadaljnje težave.</translation>
     </message>
     <message>
@@ -4061,7 +4055,7 @@ Pri uporabi tega primerka %3 boste verjetno imeli nadaljnje težave.</translatio
     </message>
     <message>
         <location line="+1" />
-        <source>Select encoding for "%1".%2</source>
+        <source>Select encoding for &quot;%1&quot;.%2</source>
         <translation>Izberite nabor znakov za »%1«.%2</translation>
     </message>
     <message>
@@ -4244,7 +4238,7 @@ Do you want to check them out now?</source>
 Ali jih želite zdaj preveriti?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-943" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-948" />
         <source>Restart Required</source>
         <translation>Potreben je ponovni zagon</translation>
     </message>
@@ -4280,22 +4274,22 @@ Ali jih želite zdaj preveriti?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
-        <source>Could not find executable for "%1" (expanded "%2")</source>
-        <translation>Ni bilo mogoče najti izvedljive datoteke za "%1" (razširjeno "%2")</translation>
+        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
+        <translation>Ni bilo mogoče najti izvedljive datoteke za &quot;%1&quot; (razširjeno &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>Starting external tool "%1"</source>
-        <translation>Zagon zunanjega orodja "%1"</translation>
+        <source>Starting external tool &quot;%1&quot;</source>
+        <translation>Zagon zunanjega orodja &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>"%1" finished</source>
+        <source>&quot;%1&quot; finished</source>
         <translation>»%1« je končano</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" finished with error</source>
+        <source>&quot;%1&quot; finished with error</source>
         <translation>»%1« se je končal z napako</translation>
     </message>
     <message>
@@ -4333,7 +4327,7 @@ Ali jih želite zdaj preveriti?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>"%1" returned the following error:
+        <source>&quot;%1&quot; returned the following error:
 
 %2</source>
         <translation>»%1« je vrnil to napako:
@@ -4396,37 +4390,37 @@ Ali jih želite zdaj preveriti?</translation>
     <message>
         <location line="+6" />
         <source>Open Command Prompt With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Odprite ukazni poziv z</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open Terminal With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Odprite terminal z</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file "%1".</source>
+        <source>Failed to remove file &quot;%1&quot;.</source>
         <translation>Datoteke »%1« ni bilo mogoče odstraniti.</translation>
     </message>
     <message>
         <location line="+40" />
-        <source>Failed to rename the include guard in file "%1".</source>
+        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
         <translation>Preimenovanje vključitvenega ščitnika v datoteko »%1« ni uspelo.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
         <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>Zamenjanih %n pojavitev.</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+369" />
+        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+394" />
         <source>Case sensitive</source>
         <translation>Razlikuje med velikimi in malimi črkami</translation>
     </message>
@@ -4478,7 +4472,7 @@ Ali jih želite zdaj preveriti?</translation>
     <message>
         <location line="+6" />
         <source>Preser&amp;ve case</source>
-        <translation>Ohrani etui</translation>
+        <translation>&amp;Ohrani etui</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4498,11 +4492,11 @@ Ali jih želite zdaj preveriti?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>The search resulted in more than %n items, do you still want to continue?</source>
-        <translation>
-            <numerusform>Rezultat iskanja je več kot %n elementov, ali še vedno želite nadaljevati?</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4518,11 +4512,11 @@ Ali jih želite zdaj preveriti?</translation>
     <message numerus="yes">
         <location line="+82" />
         <source>%n matches found.</source>
-        <translation>
-            <numerusform>Najdenih %n zadetkov.</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4573,8 +4567,8 @@ Ali jih želite zdaj preveriti?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
-        <source>Factory with id="%1" already registered. Deleting.</source>
-        <translation>Tovarna z id="%1" je že registrirana. Brisanje.</translation>
+        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
+        <translation>Tovarna z id=&quot;%1&quot; je že registrirana. Brisanje.</translation>
     </message>
     <message>
         <location line="+230" />
@@ -4588,18 +4582,18 @@ Ali jih želite zdaj preveriti?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
-        <source>Error in "%1": %2</source>
-        <translation>Napaka v "%1": %2</translation>
+        <source>Error in &quot;%1&quot;: %2</source>
+        <translation>Napaka v &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>Cannot convert result of "%1" to string.</source>
+        <source>Cannot convert result of &quot;%1&quot; to string.</source>
         <translation>Rezultata »%1« ni mogoče pretvoriti v niz.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal '}' characters must be escaped as "\}", '\' characters must be escaped as "\\", and "%{" must be escaped as "%\{".</source>
-        <translation>Ocenite preproste stavke JavaScript.&lt;br&gt;Znaki literala '}' morajo biti ubežni kot "\}", znaki '\' morajo biti ubežni kot "\\" in "%{" morajo biti ubežni kot "%\{".</translation>
+        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
+        <translation>Ocenite preproste stavke JavaScript.&lt;br&gt;Znaki literala &apos;}&apos; morajo biti ubežni kot &quot;\}&quot;, znaki &apos;\&apos; morajo biti ubežni kot &quot;\\&quot; in &quot;%{&quot; morajo biti ubežni kot &quot;%\{&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
@@ -4613,9 +4607,9 @@ Ali jih želite zdaj preveriti?</translation>
     </message>
     <message>
         <location line="+68" />
-        <source>Previous command is still running ("%1").
+        <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
-        <translation>Prejšnji ukaz se še vedno izvaja ("%1").
+        <translation>Prejšnji ukaz se še vedno izvaja (&quot;%1&quot;).
 Ali ga hočeš ubiti?</translation>
     </message>
     <message>
@@ -4625,13 +4619,13 @@ Ali ga hočeš ubiti?</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>Could not find executable for "%1".</source>
-        <translation>Ni bilo mogoče najti izvedljive datoteke za "%1".</translation>
+        <source>Could not find executable for &quot;%1&quot;.</source>
+        <translation>Ni bilo mogoče najti izvedljive datoteke za &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Starting command "%1".</source>
-        <translation>Zagon ukaza "%1".</translation>
+        <source>Starting command &quot;%1&quot;.</source>
+        <translation>Zagon ukaza &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+21" />
@@ -4686,7 +4680,7 @@ Ali ga hočeš ubiti?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
-        <source>Locator: Error occurred when running "%1".</source>
+        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
         <translation>Lokator: Pri izvajanju »%1« je prišlo do napake.</translation>
     </message>
     <message>
@@ -4701,7 +4695,7 @@ Ali ga hočeš ubiti?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Locator query string with quotes escaped with backslash and spaces replaced with "*" wildcards.</source>
+        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
         <translation>Poizvedbeni niz lokatorja z narekovaji, ubežnimi s poševnico nazaj in presledki, zamenjanimi z nadomestnimi znaki »*«.</translation>
     </message>
     <message>
@@ -4716,8 +4710,8 @@ Ali ga hočeš ubiti?</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Poiščite datoteke iz indeksa globalnega datotečnega sistema (Spotlight, Loke, vse). Dodajte "+&lt;temement&gt;" ali ": &lt;temement&gt;", da skočite na dano številko vrstice. Dodate še en "+&lt;temement&gt;" ali ": &lt;temement&gt;", da skočite tudi na številko stolpca.</translation>
+        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Poiščite datoteke iz indeksa globalnega datotečnega sistema (Spotlight, Loke, vse). Dodajte &quot;+&lt;temement&gt;&quot; ali &quot;: &lt;temement&gt;&quot;, da skočite na dano številko vrstice. Dodate še en &quot;+&lt;temement&gt;&quot; ali &quot;: &lt;temement&gt;&quot;, da skočite tudi na številko stolpca.</translation>
     </message>
     <message>
         <location line="+113" />
@@ -4725,8 +4719,8 @@ Ali ga hočeš ubiti?</translation>
         <translation>Razvrsti rezultate</translation>
     </message>
     <message>
-        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">Ujema datoteke iz globalnega indeksa datotečnega sistema (Spotlight, Locate, Everything). Dodajte "+&lt;število&gt;" ali ":&lt;število&gt;", da skočite na dano številko vrstice. Dodajte še en "+&lt;število&gt;" ali ":&lt;število&gt;", da skočite tudi na številko stolpca.</translation>
+        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">Ujema datoteke iz globalnega indeksa datotečnega sistema (Spotlight, Locate, Everything). Dodajte &quot;+&lt;število&gt;&quot; ali &quot;:&lt;število&gt;&quot;, da skočite na dano številko vrstice. Dodajte še en &quot;+&lt;število&gt;&quot; ali &quot;:&lt;število&gt;&quot;, da skočite tudi na številko stolpca.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -4735,7 +4729,7 @@ Ali ga hočeš ubiti?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110" />
-        <source>Add "%1" placeholder for the query string.
+        <source>Add &quot;%1&quot; placeholder for the query string.
 Double-click to edit item.</source>
         <translation>Dodajte nadomestno oznako »%1« za poizvedbeni niz.
 Dvokliknite za urejanje predmeta.</translation>
@@ -4771,13 +4765,13 @@ Dvokliknite za urejanje predmeta.</translation>
         <translation>Dodaj čarobno glavo</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Čarobni podatki MIME se razlagajo, kot je opredeljeno v specifikaciji skupne baze podatkov MIME-info iz &lt;a href="http://standards.freedesktop.org/shared-mime-info- spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Čarobni podatki MIME se razlagajo, kot je opredeljeno v specifikaciji skupne baze podatkov MIME-info iz &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info- spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;glava/&gt; &lt;body&gt; &lt;p&gt; Mime Magic Podatki se razlagajo, kot je opredeljeno s skupno specifikacijo baze podatkov MIME-Info iz &lt;a href = "https://www.freedesktop.org/wiki/Specifications/shared- MIME-INFO-SPEC/"&gt; FREEDSKTOP.ORG &lt;/A&gt;. &lt;hr/&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -4831,8 +4825,8 @@ Dvokliknite za urejanje predmeta.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Opomba: Širok razpon vrednosti lahko vpliva na zmogljivost pri odpiranju datotek.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Opomba: Širok razpon vrednosti lahko vpliva na zmogljivost pri odpiranju datotek.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4899,11 +4893,11 @@ Dvokliknite za urejanje predmeta.</translation>
     <message numerus="yes">
         <location line="+159" />
         <source>Elided %n characters due to Application Output settings</source>
-        <translation>
-            <numerusform>Izločenih %n znakov zaradi nastavitev izpisa aplikacije</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4914,13 +4908,13 @@ Dvokliknite za urejanje predmeta.</translation>
 </translation>
     </message>
     <message>
-        <location line="+298" />
+        <location line="+308" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Besedilne datoteke (*.txt);;Vse datoteke (*)</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+11" />
+        <location line="+14" />
         <source>Error: %L1!</source>
         <translation>Napaka: %L1!</translation>
     </message>
@@ -4951,23 +4945,23 @@ Dvokliknite za urejanje predmeta.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>There is no patch-command configured in the general "Environment" settings.</source>
+        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
         <translation>V splošnih nastavitvah »Okolja« ni konfiguriran noben ukaz za popravek.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The patch-command configured in the general "Environment" settings does not exist.</source>
+        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
         <translation>Ukaz za popravek, konfiguriran v splošnih nastavitvah »Okolje«, ne obstaja.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Running in "%1": %2 %3.</source>
-        <translation>Tek v " %1": %2 %3.</translation>
+        <source>Running in &quot;%1&quot;: %2 %3.</source>
+        <translation>Tek v &quot; %1&quot;: %2 %3.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>A timeout occurred running "%1".</source>
-        <translation>Pojavila se je časovna omejitev, ki je potekala "%1".</translation>
+        <source>A timeout occurred running &quot;%1&quot;.</source>
+        <translation>Pojavila se je časovna omejitev, ki je potekala &quot;%1&quot;.</translation>
     </message>
     <message>
         <source>Running in %1: %2 %3</source>
@@ -4975,21 +4969,21 @@ Dvokliknite za urejanje predmeta.</translation>
     </message>
     <message>
         <location line="-11" />
-        <source>Unable to launch "%1": %2</source>
+        <source>Unable to launch &quot;%1&quot;: %2</source>
         <translation>Ni moč zagnati »%1«: %2</translation>
     </message>
     <message>
-        <source>A timeout occurred running "%1"</source>
+        <source>A timeout occurred running &quot;%1&quot;</source>
         <translation type="vanished">Pri izvajanju »%1« je prišlo do časovne omejitve</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>"%1" crashed.</source>
+        <source>&quot;%1&quot; crashed.</source>
         <translation>»%1« se je sesul.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"%1" failed (exit code %2).</source>
+        <source>&quot;%1&quot; failed (exit code %2).</source>
         <translation>»%1« ni uspelo (izhodna koda %2).</translation>
     </message>
     <message>
@@ -5083,7 +5077,7 @@ Dvokliknite za urejanje predmeta.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>"%1" will be installed into "%2".</source>
+        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
         <translation>»%1« bo nameščen v »%2«.</translation>
     </message>
     <message>
@@ -5093,8 +5087,8 @@ Dvokliknite za urejanje predmeta.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The file "%1" exists. Overwrite?</source>
-        <translation>Datoteka "%1" obstaja. Prepisati?</translation>
+        <source>The file &quot;%1&quot; exists. Overwrite?</source>
+        <translation>Datoteka &quot;%1&quot; obstaja. Prepisati?</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5108,7 +5102,7 @@ Dvokliknite za urejanje predmeta.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to write file "%1".</source>
+        <source>Failed to write file &quot;%1&quot;.</source>
         <translation>Zapis v datoteko »%1« ni uspel.</translation>
     </message>
     <message>
@@ -5328,7 +5322,7 @@ v nadzor različic (%2)
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
-        <source>Could not parse patch file "%1". The content is not of unified diff format.</source>
+        <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
         <translation>Ni bilo mogoče razčleniti datoteke popravka »%1«. Vsebina ni v poenotenem formatu diff.</translation>
     </message>
     <message>
@@ -5408,23 +5402,23 @@ v nadzor različic (%2)
     </message>
     <message>
         <location line="+52" />
-        <source>Diff "%1"</source>
+        <source>Diff &quot;%1&quot;</source>
         <translation>Razlike v »%1«</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+28" />
         <source>Select First File for Diff</source>
         <translation>Izberite prvo datoteko za razl</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+7" />
         <source>Select Second File for Diff</source>
         <translation>Izberite Drugo datoteko za Diff</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>Diff "%1", "%2"</source>
-        <translation>Razlika "%1", "%2"</translation>
+        <location line="+10" />
+        <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
+        <translation>Razlika &quot;%1&quot;, &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
@@ -5443,7 +5437,7 @@ v nadzor različic (%2)
     </message>
     <message>
         <location line="+31" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding.</source>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
         <translation>&lt;b&gt;Napaka:&lt;/b&gt; »%1« ni bilo mogoče dekodirati s kodiranjem »%2«.</translation>
     </message>
     <message>
@@ -5487,11 +5481,11 @@ v nadzor različic (%2)
     <message numerus="yes">
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
         <source>Skipped %n lines...</source>
-        <translation>
-            <numerusform>Preskočenih %n vrstic ...</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -5606,8 +5600,8 @@ v nadzor različic (%2)
     </message>
     <message>
         <location line="+1" />
-        <source>%1 (current: "%2")</source>
-        <translation>%1 (trenutno: "%2")</translation>
+        <source>%1 (current: &quot;%2&quot;)</source>
+        <translation>%1 (trenutno: &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5646,7 +5640,7 @@ v nadzor različic (%2)
     </message>
     <message>
         <location line="+4" />
-        <source>Plugin's initialization function succeeded.</source>
+        <source>Plugin&apos;s initialization function succeeded.</source>
         <translation>Funkcija inicializacije vtičnika je uspela.</translation>
     </message>
     <message>
@@ -5887,7 +5881,7 @@ Razlog: %3</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The last time you started %1, it seems to have closed because of a problem with the "%2" plugin. Temporarily disable the plugin?</source>
+        <source>The last time you started %1, it seems to have closed because of a problem with the &quot;%2&quot; plugin. Temporarily disable the plugin?</source>
         <translation>Zadnjič, ko ste zagnali %1, se zdi, da se je zaprl zaradi težave z vtičnikom »%2«. Želite začasno onemogočiti vtičnik?</translation>
     </message>
     <message>
@@ -5904,7 +5898,7 @@ Razlog: %3</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
-        <source>The plugin "%1" is specified twice for testing.</source>
+        <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>Vtičnik »%1« je dvakrat določen za testiranje.</translation>
     </message>
     <message>
@@ -5912,18 +5906,18 @@ Razlog: %3</translation>
         <location line="+18" />
         <location line="+47" />
         <location line="+25" />
-        <source>The plugin "%1" does not exist.</source>
+        <source>The plugin &quot;%1&quot; does not exist.</source>
         <translation>Vtičnik »%1« ne obstaja.</translation>
     </message>
     <message>
         <location line="-79" />
-        <source>The plugin "%1" is not tested.</source>
+        <source>The plugin &quot;%1&quot; is not tested.</source>
         <translation>Vtičnik »%1« ni preizkušen.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Cannot request scenario "%1" as it was already requested.</source>
-        <translation>Ni mogoče zahtevati scenarija "%1", saj je bil že zahtevan.</translation>
+        <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
+        <translation>Ni mogoče zahtevati scenarija &quot;%1&quot;, saj je bil že zahtevan.</translation>
     </message>
     <message>
         <location line="+130" />
@@ -5942,7 +5936,7 @@ Razlog: %3</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency '%1(%2)'</source>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
         <translation>Ni bilo moč razrešiti odvisnosti »%1 (%2)«</translation>
     </message>
     <message>
@@ -5957,7 +5951,7 @@ Razlog: %3</translation>
     </message>
     <message>
         <location line="-416" />
-        <source>"%1" is missing</source>
+        <source>&quot;%1&quot; is missing</source>
         <translation>»%1« manjka</translation>
     </message>
     <message>
@@ -5967,27 +5961,27 @@ Razlog: %3</translation>
     </message>
     <message>
         <location line="+29" />
-        <source>Value for key "%1" is not a string</source>
+        <source>Value for key &quot;%1&quot; is not a string</source>
         <translation>Vrednost za ključ »%1« ni niz</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a bool</source>
-        <translation>Vrednost za ključ "%1" ni Bool</translation>
+        <source>Value for key &quot;%1&quot; is not a bool</source>
+        <translation>Vrednost za ključ &quot;%1&quot; ni Bool</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not an array of objects</source>
+        <source>Value for key &quot;%1&quot; is not an array of objects</source>
         <translation>Vrednost za ključ »%1« ni niz predmetov</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a string and not an array of strings</source>
+        <source>Value for key &quot;%1&quot; is not a string and not an array of strings</source>
         <translation>Vrednost za ključ »%1« ni niz in ni niz nizov</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Value "%2" for key "%1" has invalid format</source>
+        <source>Value &quot;%2&quot; for key &quot;%1&quot; has invalid format</source>
         <translation>Vrednost »%2« za ključ »%1« ima neveljavno obliko</translation>
     </message>
     <message>
@@ -5997,8 +5991,8 @@ Razlog: %3</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected IID "%1", but found "%2"</source>
-        <translation>Pričakoval IID "%1", vendar sem ugotovil "%2"</translation>
+        <source>Expected IID &quot;%1&quot;, but found &quot;%2&quot;</source>
+        <translation>Pričakoval IID &quot;%1&quot;, vendar sem ugotovil &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6007,8 +6001,8 @@ Razlog: %3</translation>
     </message>
     <message>
         <location line="+108" />
-        <source>Invalid platform specification "%1": %2</source>
-        <translation>Neveljavna specifikacija platforme "%1": %2</translation>
+        <source>Invalid platform specification &quot;%1&quot;: %2</source>
+        <translation>Neveljavna specifikacija platforme &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+18" />
@@ -6021,7 +6015,7 @@ Razlog: %3</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Dependency: "%1" must be "%2" or "%3" (is "%4").</source>
+        <source>Dependency: &quot;%1&quot; must be &quot;%2&quot; or &quot;%3&quot; (is &quot;%4&quot;).</source>
         <translation>Odvisnost: »%1« mora biti »%2« ali »%3« (je »%4«).</translation>
     </message>
     <message>
@@ -6034,7 +6028,7 @@ Razlog: %3</translation>
     </message>
     <message>
         <location line="-13" />
-        <source>Argument: "%1" is empty</source>
+        <source>Argument: &quot;%1&quot; is empty</source>
         <translation>Argument: »%1« je prazen</translation>
     </message>
     <message>
@@ -6192,12 +6186,12 @@ Ali ga želite prepisati?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+161" />
-        <source>Exported "%1", %2x%3, %4 bytes</source>
+        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
         <translation>Izvožen »%1«, %2x%3, %4 bajtov</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Could not write file "%1".</source>
+        <source>Could not write file &quot;%1&quot;.</source>
         <translation>Ni bilo mogoče zapisati v datoteko »%1«.</translation>
     </message>
     <message>
@@ -6369,8 +6363,8 @@ Ali ga želite prepisati?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>A comma-separated list of size specifications of the form "&lt;width&gt;x&lt;height&gt;".</source>
-        <translation>Z vejicami ločen seznam specifikacij velikosti v obliki "&lt;širina&gt;x&lt;višina&gt;".</translation>
+        <source>A comma-separated list of size specifications of the form &quot;&lt;width&gt;x&lt;height&gt;&quot;.</source>
+        <translation>Z vejicami ločen seznam specifikacij velikosti v obliki &quot;&lt;širina&gt;x&lt;višina&gt;&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6415,7 +6409,7 @@ Bi jih radi prepisali?</translation>
         <translation>Napaka %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+60" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
         <source>Deprecated</source>
         <translation>Opuščeni</translation>
     </message>
@@ -6440,7 +6434,7 @@ Bi jih radi prepisali?</translation>
         <translation>Izpeljan</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+212" />
         <source>Call Hierarchy</source>
         <translation>Pokličite hierarhijo</translation>
     </message>
@@ -6450,13 +6444,13 @@ Bi jih radi prepisali?</translation>
         <translation>Ponovno naloži hierarhijo klicev za simbol pod položajem kazalca.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+394" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
         <translation>%1 za %2</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+230" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>neinializirani</translation>
@@ -6499,15 +6493,15 @@ Bi jih radi prepisali?</translation>
     </message>
     <message>
         <location line="+1342" />
-        <source>Invalid parameter in "%1":
+        <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
-        <translation>Neveljaven parameter v "%1":
+        <translation>Neveljaven parameter v &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
         <location line="+219" />
-        <source>Language Server "%1" Initialization Error</source>
-        <translation>Napaka inicializacije jezikovnega strežnika "%1"</translation>
+        <source>Language Server &quot;%1&quot; Initialization Error</source>
+        <translation>Napaka inicializacije jezikovnega strežnika &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+13" />
@@ -6581,8 +6575,8 @@ Bi jih radi prepisali?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientinterface.cpp" line="+77" />
-        <source>Cannot handle MIME type "%1" of message.</source>
-        <translation>Ne morem obvladati mime "%1" sporočila.</translation>
+        <source>Cannot handle MIME type &quot;%1&quot; of message.</source>
+        <translation>Ne morem obvladati mime &quot;%1&quot; sporočila.</translation>
     </message>
     <message>
         <location line="+70" />
@@ -6600,7 +6594,7 @@ Bi jih radi prepisali?</translation>
         <translation>Nepričakovano končano.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+217" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+82" />
         <source>Expand All</source>
         <translation>Razširite vse</translation>
@@ -6633,12 +6627,12 @@ Bi jih radi prepisali?</translation>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+185" />
         <source>&amp;Add</source>
-        <translation>&amp; Dodaj</translation>
+        <translation>&amp;Dodaj</translation>
     </message>
     <message>
         <location line="+11" />
         <source>&amp;Delete</source>
-        <translation>&amp; Izbriši</translation>
+        <translation>&amp;Izbriši</translation>
     </message>
     <message>
         <location line="+106" />
@@ -6684,8 +6678,8 @@ Example: *.cpp%1*.h</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Language server-specific JSON to pass via "initializationOptions" field of "initialize" request.</source>
-        <translation>JSON, specifičen za strežnika, ki ga je treba prenesti prek polja "inicializacija optimov" zahteve "inicializiranje".</translation>
+        <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
+        <translation>JSON, specifičen za strežnika, ki ga je treba prenesti prek polja &quot;inicializacija optimov&quot; zahteve &quot;inicializiranje&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6762,11 +6756,11 @@ See the documentation of the specific language server for valid settings.</sourc
     <message numerus="yes">
         <location line="+21" />
         <source>Re&amp;name %n files</source>
-        <translation>
-            <numerusform>RE &amp; IME %N datoteke</numerusform>
-            <numerusform>RE &amp; IME %N datoteke</numerusform>
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -6824,23 +6818,23 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+6" />
-        <source>Running "%1" to install %2.</source>
-        <translation>Zagon " %1" za namestitev %2.</translation>
+        <source>Running &quot;%1&quot; to install %2.</source>
+        <translation>Zagon &quot; %1&quot; za namestitev %2.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>Namestitev "%1" je bila preklicana s časovno omejitvijo.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>Namestitev &quot;%1&quot; je bila preklicana s časovno omejitvijo.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>Namestitev "%1" je preklical uporabnik.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>Namestitev &quot;%1&quot; je preklical uporabnik.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>Namestitev " %1" ni uspela z izhodno kodo %2.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>Namestitev &quot; %1&quot; ni uspela z izhodno kodo %2.</translation>
     </message>
     <message>
         <location line="+56" />
@@ -6947,33 +6941,33 @@ See the documentation of the specific language server for valid settings.</sourc
     <name>QtC::LanguageServerProtocol</name>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
-        <source>Cannot decode content with "%1". Falling back to "%2".</source>
-        <translation>Vsebine ne more dekodirati z "%1". Padec na "%2".</translation>
+        <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
+        <translation>Vsebine ne more dekodirati z &quot;%1&quot;. Padec na &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Expected an integer in "%1", but got "%2".</source>
-        <translation>Pričakoval je celo število v "%1", vendar je dobil "%2".</translation>
+        <source>Expected an integer in &quot;%1&quot;, but got &quot;%2&quot;.</source>
+        <translation>Pričakoval je celo število v &quot;%1&quot;, vendar je dobil &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
-        <source>Could not parse JSON message: "%1".</source>
-        <translation>Ni mogel razčleniti JSON sporočila: "%1".</translation>
+        <source>Could not parse JSON message: &quot;%1&quot;.</source>
+        <translation>Ni mogel razčleniti JSON sporočila: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected a JSON object, but got a JSON "%1" value.</source>
-        <translation>Pričakoval je objekt JSON, vendar je dobil vrednost JSON "%1".</translation>
+        <source>Expected a JSON object, but got a JSON &quot;%1&quot; value.</source>
+        <translation>Pričakoval je objekt JSON, vendar je dobil vrednost JSON &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
-        <source>No parameters in "%1".</source>
-        <translation>Brez parametrov v "%1".</translation>
+        <source>No parameters in &quot;%1&quot;.</source>
+        <translation>Brez parametrov v &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+213" />
-        <source>No ID set in "%1".</source>
-        <translation>Nobenega ID -ja v "%1".</translation>
+        <source>No ID set in &quot;%1&quot;.</source>
+        <translation>Nobenega ID -ja v &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
@@ -6983,7 +6977,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+15" />
         <source>Rename %1 to %2</source>
-        <translation>Preimenujte %od 1 do %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17" />
@@ -7061,7 +7055,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7073,60 +7067,60 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+156" />
         <location line="+823" />
         <source>Dataset Editor</source>
         <translation>Urejevalnik nabora podatkov</translation>
     </message>
     <message>
-        <location line="-364" />
+        <location line="-366" />
         <source>Please enter a class name</source>
         <translation>Vnesite ime razreda</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+604" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+412" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+70" />
+        <location line="+72" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-732" />
         <location line="+19" />
-        <location line="+115" />
-        <location line="+1483" />
+        <location line="+111" />
+        <location line="+1514" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+124" />
-        <location line="+180" />
-        <location line="+308" />
+        <location line="+139" />
+        <location line="+202" />
+        <location line="+306" />
         <location line="+13" />
-        <location line="+168" />
-        <location line="+145" />
+        <location line="+169" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
-        <location line="+254" />
+        <location line="+117" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+378" />
+        <location line="+273" />
         <location line="+86" />
-        <location line="+1017" />
-        <location line="+895" />
+        <location line="+1142" />
+        <location line="+1075" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+539" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
         <location line="+19" />
         <location line="+11" />
@@ -7134,8 +7128,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Napaka: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3475" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-309" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3541" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7145,29 +7139,29 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+9" />
         <location line="+25" />
         <location line="+9" />
-        <source>Failed to create "%L1"!</source>
-        <translation>Ustvarjanje "%L1" ni uspelo!</translation>
+        <source>Failed to create &quot;%L1&quot;!</source>
+        <translation>Ustvarjanje &quot;%L1&quot; ni uspelo!</translation>
     </message>
     <message>
-        <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2513" />
-        <location line="+1446" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
+        <location line="+33" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
+        <location line="+1442" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Slikovne datoteke ni bilo mogoče shraniti iz neznanega razloga!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581" />
-        <location line="+239" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
+        <location line="+224" />
         <source>Delete</source>
         <translation>Izbriši</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309" />
-        <source>Are you sure you want to permanetly delete "%L1"?</source>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Ali ste prepričani, da želite trajno izbrisati »%L1«?</translation>
     </message>
     <message>
@@ -7193,9 +7187,9 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Preimenovanje datoteke ni uspelo iz neznanega razloga!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5164" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5247" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
-        <source>Could not copy file "%1" to "%2".</source>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Ni bilo mogoče kopirati datoteke »%1« v »%2«.</translation>
     </message>
     <message>
@@ -7220,19 +7214,19 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Manjka argument za -serial_number_filter</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+145" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2349" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2677" />
         <location line="+9" />
         <location line="+13" />
-        <location line="+59" />
+        <location line="+63" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+830" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
         <location line="+36" />
         <location line="+7" />
@@ -7241,13 +7235,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+7" />
         <source>
 
-Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>
 
 Zaprite vse programe, ki si ogledujejo/urejajo podatke aplikacije OpenMV IDE in nato znova zaženite OpenMV IDE!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-65" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Uredite prag sivine z urejevalnikom pragov</translation>
     </message>
@@ -7257,18 +7251,18 @@ Zaprite vse programe, ki si ogledujejo/urejajo podatke aplikacije OpenMV IDE in 
         <translation>Uredite prag LAB z urejevalnikom pragov</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+221" />
         <source>Missing argument for -form_key</source>
         <translation>Manjka argument za -form_key</translation>
     </message>
     <message>
-        <location line="+1066" />
+        <location line="+1074" />
         <source>About OpenMV Viewer...</source>
         <translation>O pregledovalniku OpenMV ...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;O %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Avtor: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU SPLOŠNA JAVNA LICENCA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Avtorske pravice (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ta program se distribuira v upanju, da bo uporaben, vendar BREZ KAKRŠNEGA KOLI JAMSTVA; brez celo implicitnega jamstva o PRODAJNOSTI ali PRIMERNOSTI ZA DOLOČEN NAMEN. Za več podrobnosti glejte &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Vprašanja ali komentarji?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kontaktirajte nas na &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;O %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Avtor: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU SPLOŠNA JAVNA LICENCA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Avtorske pravice (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ta program se distribuira v upanju, da bo uporaben, vendar BREZ KAKRŠNEGA KOLI JAMSTVA; brez celo implicitnega jamstva o PRODAJNOSTI ali PRIMERNOSTI ZA DOLOČEN NAMEN. Za več podrobnosti glejte &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Vprašanja ali komentarji?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kontaktirajte nas na &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+17" />
@@ -7276,7 +7270,7 @@ Zaprite vse programe, ki si ogledujejo/urejajo podatke aplikacije OpenMV IDE in 
         <translation>OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1039" />
+        <location line="-1050" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -7289,7 +7283,7 @@ Zaprite vse programe, ki si ogledujejo/urejajo podatke aplikacije OpenMV IDE in 
         <translation type="vanished">Manjkajoči argument za -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="-460" />
+        <location line="-468" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>Neveljaven argument (%1) za -auto_update</translation>
     </message>
@@ -7299,20 +7293,18 @@ Zaprite vse programe, ki si ogledujejo/urejajo podatke aplikacije OpenMV IDE in 
         <translation>Manjkajoči argument za -auto_update</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+248" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
-        <translation>Napaka pri razčlenjevanju &lt;se user_resources&gt;//openmvide/firmware/settings.json - %l1!
-
- Preverite datoteko JSON za napake in jih popravite.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.\n\nOpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
         <translation type="vanished">Napaka branje &lt;user_resources&gt;//openmvide/firmware/settings.json: %l1. \ N \ nopenmv IDE različice pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri namestitvi virov.</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+188" />
         <source>Form Key</source>
         <translation>Ključ obrazca</translation>
     </message>
@@ -7322,7 +7314,7 @@ Check the json file for errors and fix them.</source>
         <translation>Prosimo, vnesite ključ obrazca</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+80" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7332,7 +7324,7 @@ Check the json file for errors and fix them.</source>
         <location line="-13" />
         <location line="+7" />
         <location line="+7" />
-        <source>Can't open the new file!</source>
+        <source>Can&apos;t open the new file!</source>
         <translation>Nove datoteke ni mogoče odpreti!</translation>
     </message>
     <message>
@@ -7342,8 +7334,8 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Add some code to "%L1"</source>
-        <translation>Dodajte kodo v "%L1"</translation>
+        <source>Add some code to &quot;%L1&quot;</source>
+        <translation>Dodajte kodo v &quot;%L1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -7379,7 +7371,7 @@ Check the json file for errors and fix them.</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <source>Are you sure you want to erase your OpenMV Cam's onboard flash drive?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s onboard flash drive?</source>
         <translation type="vanished">Ali ste prepričani, da želite izbrisati vgrajeni bliskovni pogon OpenMV Cam?</translation>
     </message>
     <message>
@@ -7413,7 +7405,7 @@ Check the json file for errors and fix them.</source>
         <translation>Samodejno sinhronizira knjižnice med vašo kamero OpenMV in mapo dokumentov.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+24" />
         <source>Filter examples by board and sensor type</source>
         <translation>Primeri filtriranja po plošči in vrsti senzorja</translation>
     </message>
@@ -7443,40 +7435,40 @@ Check the json file for errors and fix them.</source>
         <translation>Ponastavite OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Install the Latest Development Release</source>
         <translation>Namestite najnovejšo razvojno izdajo</translation>
     </message>
     <message>
-        <location line="+77" />
-        <location line="+3764" />
+        <location line="+75" />
+        <location line="+3823" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Odprite terminal</translation>
     </message>
     <message>
-        <location line="-3818" />
+        <location line="-3877" />
         <source>Machine Vision</source>
         <translation>Strojni vid</translation>
     </message>
     <message>
-        <location line="+181" />
-        <location line="+3668" />
-        <location line="+76" />
+        <location line="+175" />
+        <location line="+3733" />
+        <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Urejevalnik pragov</translation>
     </message>
     <message>
-        <location line="-3739" />
-        <location line="+3817" />
+        <location line="-3803" />
+        <location line="+3880" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Urejevalnik ključnih točk</translation>
     </message>
     <message>
-        <location line="-3810" />
-        <location line="+3976" />
-        <location line="+98" />
+        <location line="-3873" />
+        <location line="+4037" />
+        <location line="+97" />
         <location line="+24" />
         <location line="+11" />
         <location line="+18" />
@@ -7484,7 +7476,7 @@ Check the json file for errors and fix them.</source>
         <translation>Generator aprilskih oznak</translation>
     </message>
     <message>
-        <location line="-4124" />
+        <location line="-4184" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Družina TAG16H5 (30 oznak)</translation>
     </message>
@@ -7522,16 +7514,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+371" />
+        <location line="+367" />
         <location line="+14" />
         <location line="+33" />
-        <location line="+916" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
-        <source>Failed to open: "%L1"</source>
-        <translation>Odpiranje ni uspelo: "%L1"</translation>
+        <location line="+918" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-223" />
+        <source>Failed to open: &quot;%L1&quot;</source>
+        <translation>Odpiranje ni uspelo: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1358" />
+        <location line="-1356" />
         <source>DataMatrix Generator</source>
         <translation>DataMatrix Generator</translation>
     </message>
@@ -7557,29 +7549,29 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Kam shraniti omrežje na OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+228" />
-        <location line="+2357" />
-        <location line="+1290" />
+        <location line="+225" />
+        <location line="+2424" />
+        <location line="+1288" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
-        <location line="+67" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382" />
-        <location line="+364" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899" />
-        <location line="+208" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-393" />
+        <location line="+375" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+900" />
+        <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Dodajte pripono datoteke!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-269" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+112" />
-        <location line="+207" />
+        <location line="+119" />
+        <location line="+203" />
         <source>Unable to overwrite output file!</source>
         <translation>Izhodne datoteke ni mogoče prepisati!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3860" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3922" />
         <source>Video Tools</source>
         <translation>Video orodja</translation>
     </message>
@@ -7595,23 +7587,23 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-437" />
-        <location line="+273" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-439" />
+        <location line="+275" />
         <source>Play RTSP Stream</source>
         <translation>Predvajaj RTSP Stream</translation>
     </message>
     <message>
         <location line="+16" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+15" />
         <location line="+6" />
-        <location line="+46" />
+        <location line="+48" />
         <location line="+19" />
         <source>New Dataset</source>
         <translation>Nov nabor podatkov</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-98" />
         <source>Dataset Editor - Choose a folder to build the dataset in</source>
         <translation>Urejevalnik nabora podatkov – izberite mapo, v kateri želite zgraditi nabor podatkov</translation>
     </message>
@@ -7622,17 +7614,17 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+15" />
-        <location line="+207" />
+        <location line="+205" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-209" />
         <location line="+34" />
         <location line="+48" />
         <location line="+33" />
-        <source>Failed to remove "%L1"!</source>
+        <source>Failed to remove &quot;%L1&quot;!</source>
         <translation>Odstranitev »%L1« ni uspela!</translation>
     </message>
     <message>
-        <location line="-128" />
-        <location line="+30" />
+        <location line="-125" />
+        <location line="+29" />
         <source>Open Dataset</source>
         <translation>Odpri nabor podatkov</translation>
     </message>
@@ -7647,7 +7639,7 @@ Check the json file for errors and fix them.</source>
         <translation>Zdi se, da izbrana mapa ni veljaven nabor slik OpenMV Cam!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export</source>
         <translation>Izvozi</translation>
     </message>
@@ -7657,7 +7649,7 @@ Check the json file for errors and fix them.</source>
         <translation>Izvozi nabor podatkov v datoteko Zip</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <location line="+7" />
         <location line="+42" />
         <location line="+21" />
@@ -7675,38 +7667,38 @@ Check the json file for errors and fix them.</source>
         <translation>Izvažanje ...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-520" />
-        <location line="+237" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-522" />
+        <location line="+239" />
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1482" />
+        <location line="+1513" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+258" />
-        <location line="+533" />
-        <location line="+145" />
+        <location line="+273" />
+        <location line="+554" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location line="+433" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
-        <location line="+288" />
-        <location line="+143" />
-        <location line="+1023" />
+        <location line="+117" />
+        <location line="+428" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-131" />
+        <location line="+289" />
+        <location line="+165" />
+        <location line="+1148" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1339" />
         <location line="+85" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3673" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3737" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Naložite v Edge Impulse Project</translation>
     </message>
@@ -7785,8 +7777,8 @@ Check the json file for errors and fix them.</source>
         <translation>O OpenMV IDE ...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;O OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Avtor: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;SPLOŠNA JAVNA LICENCA GNU&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Avtorske pravice (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ta program se distribuira v upanju, da bo uporaben, vendar BREZ VSAKRŠNEGA JAMSTVA; brez implicitnega jamstva o PRIMERNOSTI ZA PRODAJO ali PRIMERNOSTI ZA DOLOČEN NAMEN. Za več podrobnosti si oglejte &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;splošno javno licenco GNU&lt;/a&gt;.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Vprašanja ali komentarji?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pišite nam na &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;O OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Avtor: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;SPLOŠNA JAVNA LICENCA GNU&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Avtorske pravice (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ta program se distribuira v upanju, da bo uporaben, vendar BREZ VSAKRŠNEGA JAMSTVA; brez implicitnega jamstva o PRIMERNOSTI ZA PRODAJO ali PRIMERNOSTI ZA DOLOČEN NAMEN. Za več podrobnosti si oglejte &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;splošno javno licenco GNU&lt;/a&gt;.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Vprašanja ali komentarji?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pišite nam na &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
@@ -7807,11 +7799,11 @@ Check the json file for errors and fix them.</source>
         <translation>Pregledovalnik OpenMV</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+73" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
         <location line="+37" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-221" />
         <location line="+87" />
         <location line="+55" />
@@ -7847,11 +7839,11 @@ Check the json file for errors and fix them.</source>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-195" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-197" />
         <location line="+9" />
-        <location line="+89" />
-        <location line="+13" />
-        <location line="+42" />
+        <location line="+95" />
+        <location line="+11" />
+        <location line="+40" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
@@ -7881,53 +7873,61 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1064" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1189" />
         <location line="+6" />
         <location line="+28" />
         <location line="+52" />
         <location line="+8" />
         <location line="+35" />
-        <location line="+320" />
-        <location line="+62" />
-        <location line="+99" />
-        <location line="+49" />
-        <location line="+67" />
-        <location line="+12" />
-        <location line="+77" />
+        <location line="+329" />
+        <location line="+136" />
+        <location line="+28" />
+        <location line="+100" />
+        <location line="+56" />
+        <location line="+68" />
+        <location line="+13" />
+        <location line="+81" />
         <location line="+10" />
         <location line="+12" />
         <location line="+28" />
-        <location line="+36" />
-        <location line="+84" />
+        <location line="+34" />
+        <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+86" />
+        <location line="+97" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
-        <location line="+108" />
+        <location line="+116" />
         <location line="+83" />
-        <location line="+42" />
-        <location line="+38" />
-        <location line="+52" />
-        <location line="+38" />
+        <location line="+82" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+46" />
+        <location line="+54" />
+        <location line="+51" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
         <location line="+21" />
         <location line="+20" />
         <location line="+24" />
-        <location line="+121" />
-        <location line="+214" />
+        <location line="+135" />
+        <location line="+217" />
         <location line="+33" />
-        <location line="+248" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+658" />
+        <location line="+268" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+668" />
         <location line="+48" />
         <source>Connect</source>
         <translation>Povežite se</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-42" />
         <source>No settings for the selected board type %L1!</source>
         <translation>Ni nastavitev za izbrano vrsto plošče %L1!</translation>
     </message>
@@ -7938,12 +7938,12 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Only firmware recovery is supported using the Alif Semiconductor's SE Tools.</source>
+        <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>Samo obnovitev vdelane programske opreme je podprta z uporabo orodij ALIF Semiconductor SE.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
         <source>Disconnect</source>
@@ -8002,12 +8002,11 @@ Check the json file for errors and fix them.</source>
         <translation>Povečaj, da se prilega</translation>
     </message>
     <message>
-        <location line="+30" />
         <source>JPG</source>
-        <translation>JPG</translation>
+        <translation type="vanished">JPG</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+31" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG stisne okvirni medpomnilnik za večjo zmogljivost</translation>
     </message>
@@ -8026,7 +8025,7 @@ Check the json file for errors and fix them.</source>
         <translation>Onemogočite okvirni medpomnilnik za največjo zmogljivost</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+52" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>Medpomnilnik okvirjev je onemogočen - znova kliknite gumb za onemogočanje, da omogočite (zgoraj desno)</translation>
     </message>
@@ -8095,17 +8094,15 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Res (š:%1, v:%2)</translation>
     </message>
     <message>
-        <location line="-1574" />
+        <location line="-1582" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>Napaka branje &lt;user_resources&gt; /OpenMVide/firmware/settings.json: %l1. 
-
-Različice OpenMV IDE pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri namestitvi virov.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2512" />
+        <location line="+346" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2858" />
         <source>Load Custom Firmware</source>
         <translation>Naložite vdelano programsko opremo po meri</translation>
     </message>
@@ -8117,7 +8114,7 @@ Različice OpenMV IDE pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri name
     </message>
     <message>
         <location line="+1" />
-        <source>Are you sure you want to erase your OpenMV Cam's internal FAT file system?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s internal FAT file system?</source>
         <translation>Ali ste prepričani, da želite izbrisati notranji sistem za maščobne datoteke OpenMV Cam?</translation>
     </message>
     <message>
@@ -8146,15 +8143,20 @@ Različice OpenMV IDE pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri name
         <translation>Ponastavi ROMFS na OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+84" />
+        <source>Force enter OpenMV Cam bootloader</source>
+        <translation>Prisilno vstopite v zagonski nalagalnik OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>MicroPython Tools</source>
         <translation>Orodja za mikropiton</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+6" />
         <location line="+7" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -8164,39 +8166,50 @@ Različice OpenMV IDE pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri name
         <translation>Kopirajte/pretvorite datoteko python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Open Model Zoo</source>
         <translation>Odprti model živalskega vrta</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+87" />
         <source>Convert Model for NPU</source>
         <translation>Pretvori model za NPU</translation>
     </message>
     <message>
+        <location line="+6" />
+        <location line="+9" />
+        <location line="+12" />
         <location line="+7" />
-        <location line="+10" />
-        <location line="+13" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-176" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Preoblikovalni model</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location line="+420" />
         <source>Show Code Profiler</source>
         <translation>Prikaži profil kode</translation>
     </message>
     <message>
         <location line="+101" />
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;O %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Avtor: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;TOVARNIŠKA RAZLIČICA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Namenjeno samo licenciranim proizvajalcem.&lt;/p&gt;&lt;p&gt;&lt;b&gt;SPLOŠNA JAVNA LICENCA GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Avtorske pravice (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ta program se distribuira v upanju, da bo uporaben, vendar BREZ KAKRŠNEGA KOLI JAMSTVA; brez implicitnega jamstva o PRIMERNOSTI ZA PRODAJO ali PRIMERNOSTI ZA DOLOČEN NAMEN. Za več podrobnosti si oglejte &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;Splošno javno licenco GNU&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Vprašanja ali komentarje?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pišite nam na &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;O %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Avtor: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;TOVARNIŠKA RAZLIČICA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Namenjeno samo licenciranim proizvajalcem.&lt;/p&gt;&lt;p&gt;&lt;b&gt;SPLOŠNA JAVNA LICENCA GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Avtorske pravice (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ta program se distribuira v upanju, da bo uporaben, vendar BREZ KAKRŠNEGA KOLI JAMSTVA; brez implicitnega jamstva o PRIMERNOSTI ZA PRODAJO ali PRIMERNOSTI ZA DOLOČEN NAMEN. Za več podrobnosti si oglejte &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;Splošno javno licenco GNU&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Vprašanja ali komentarje?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pišite nam na &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+196" />
+        <location line="+26" />
+        <source>JPG Mode</source>
+        <translation>Način JPG</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>RAW Mode</source>
+        <translation>Način RAW</translation>
+    </message>
+    <message>
+        <location line="+113" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - slikovne pike (%7) - fokus (%8)</translation>
@@ -8234,7 +8247,7 @@ Različice OpenMV IDE pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri name
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2737" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
         <source>Board:</source>
         <translation>Odbor:</translation>
     </message>
@@ -8278,9 +8291,9 @@ Različice OpenMV IDE pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri name
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-301" />
-        <location line="+303" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
+        <location line="+324" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
         <source>Drive:</source>
         <translation>pogon:</translation>
     </message>
@@ -8301,8 +8314,8 @@ Različice OpenMV IDE pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri name
         <translation>Lahko se razlikuje od FPS kamere</translation>
     </message>
     <message>
-        <location line="+309" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2952" />
+        <location line="+307" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
         <source>Update Available</source>
         <translation>Posodobitev na voljo</translation>
     </message>
@@ -8317,7 +8330,7 @@ Različice OpenMV IDE pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri name
         <translation>Prenesi</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
         <translation>Programiranje WiFi onemogočeno!</translation>
     </message>
@@ -8355,11 +8368,11 @@ Različice OpenMV IDE pred v4.3.0 nimajo te datoteke in bi jo izbrisali pri name
         <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
-Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
 
 Blinking Green:
 
-Your OpenMV Cam's onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
 
 Blinking Blue:
 
@@ -8367,11 +8380,11 @@ Your OpenMV Cam is running the default main.py script onboard.
 
 If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
 
-If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+If the LED is blinking blue but OpenMV IDE can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
 
 Blinking White:
 
-Your OpenMV Cam's firmware is panicking because of a hardware failure. Please check that your OpenMV Cam's camera module is installed securely.
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
         <translation>Hvala za uporabo OpenMV Cam in OpenMV IDE!
@@ -8398,27 +8411,27 @@ Vdelana programska oprema vaše OpenMV Cam je panična zaradi okvare strojne opr
     </message>
     <message>
         <location line="+93" />
-        <location line="+1176" />
+        <location line="+1212" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Serijska vrata - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1144" />
+        <location line="-1180" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+791" />
-        <location line="+145" />
+        <location line="+827" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
+        <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>Povezovanje ... (30 sekundna časovna omejitev)</translation>
     </message>
     <message>
-        <location line="-1783" />
+        <location line="-1820" />
         <source>
 
 Try doing:
@@ -8471,12 +8484,12 @@ sudo adduser %L1 klic
     </message>
     <message>
         <location line="+17" />
-        <location line="+1233" />
+        <location line="+1270" />
         <source>UDP Server Connection - %1</source>
         <translation>Povezava s strežnikom UDP - %1</translation>
     </message>
     <message>
-        <location line="-1159" />
+        <location line="-1196" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Neveljaven argument vrat (%1) za -open_udp_server_terminal</translation>
     </message>
@@ -8507,12 +8520,12 @@ sudo adduser %L1 klic
     </message>
     <message>
         <location line="+17" />
-        <location line="+1279" />
+        <location line="+1317" />
         <source>TCP Server Connection - %1</source>
         <translation>Povezava s strežnikom TCP - %1</translation>
     </message>
     <message>
-        <location line="-1205" />
+        <location line="-1243" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Neveljaven argument vrat (%1) za -open_tcp_server_terminal</translation>
     </message>
@@ -8522,15 +8535,17 @@ sudo adduser %L1 klic
         <translation>Manjkajoči argumenti za -open_tcp_server_terminal</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+58" />
         <location line="+18" />
+        <location line="+6" />
+        <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
         <location line="+9" />
         <location line="+45" />
-        <location line="+79" />
-        <location line="+8" />
+        <location line="+82" />
+        <location line="+27" />
         <location line="+6" />
         <location line="+6" />
         <location line="+6" />
@@ -8539,15 +8554,15 @@ sudo adduser %L1 klic
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2389" />
-        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location line="+10" />
         <location line="+8" />
-        <location line="+19" />
+        <location line="+22" />
         <source>Register OpenMV Cam</source>
         <translation>Registrirajte OpenMV Cam</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="-278" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8567,13 +8582,24 @@ Zaženite Primeri-&gt;HelloWorld-&gt;helloworld.py, da preizkusite kakovost vida
     </message>
     <message>
         <location line="+7" />
-        <location line="+17" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65" />
+        <location line="+29" />
+        <location line="+172" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-69" />
         <source>Registered</source>
         <translation>Registriran</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-190" />
+        <source>Board type not available for this form key!</source>
+        <translation>Vrsta plošče ni na voljo za ta ključ obrazca!</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Registration limit reached for this board type!</source>
+        <translation>Omejitev registracije za to vrsto plošče je dosežena!</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8589,27 +8615,27 @@ Zaženite Primeri-&gt;HelloWorld-&gt;helloworld.py, da preizkusite kakovost vida
     </message>
     <message>
         <location line="+17" />
-        <location line="+182" />
+        <location line="+204" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>Napaka baze podatkov!</translation>
     </message>
     <message>
-        <location line="-165" />
-        <location line="+178" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+17" />
+        <location line="-187" />
+        <location line="+200" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+18" />
         <source>GET Network error!</source>
         <translation>GET Omrežna napaka!</translation>
     </message>
     <message>
-        <location line="-169" />
-        <location line="+177" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+19" />
+        <location line="-191" />
+        <location line="+199" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+22" />
         <source>GET network error!</source>
         <translation>GET omrežna napaka!</translation>
     </message>
     <message>
-        <location line="-170" />
+        <location line="-192" />
         <location line="+10" />
         <location line="+10" />
         <source>Unregistered OpenMV Cam Detected</source>
@@ -8617,7 +8643,7 @@ Zaženite Primeri-&gt;HelloWorld-&gt;helloworld.py, da preizkusite kakovost vida
     </message>
     <message>
         <location line="-19" />
-        <source>Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
         <translation>Vaš OpenMV Cam ni registriran. Svoj OpenMV Cam morate registrirati z OpenMV za neomejeno uporabo z OpenMV IDE brez kakršnih koli prekinitev.
@@ -8644,8 +8670,8 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href="https://openmv.io/products/openmv-cam-board-key"&gt;here&lt;/a&gt;.</source>
-        <translation>Vnesite ključ plošče, da registrirate svojo OpenMV Cam.&lt;br/&gt;&lt;br/&gt;Če nimate ključa plošče, ga lahko kupite pri OpenMV &lt;a href="https://openmv.io/products/openmv- cam-board-key"&gt;tukaj&lt;/a&gt;.</translation>
+        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Vnesite ključ plošče, da registrirate svojo OpenMV Cam.&lt;br/&gt;&lt;br/&gt;Če nimate ključa plošče, ga lahko kupite pri OpenMV &lt;a href=&quot;https://openmv.io/products/openmv- cam-board-key&quot;&gt;tukaj&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+47" />
@@ -8653,12 +8679,12 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Registracija OpenMV Cam ...</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+33" />
         <source>Thank you for registering your OpenMV Cam!</source>
         <translation>Hvala za registracijo vaše OpenMV Cam!</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+27" />
         <source>Invalid Board Key for Board Type!</source>
         <translation>Neveljaven ključ plošče za vrsto plošče!</translation>
     </message>
@@ -8683,10 +8709,10 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Neveljavno oblikovan ključ plošče!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+223" />
-        <location line="+482" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+225" />
+        <location line="+503" />
         <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-83" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-84" />
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
@@ -8695,7 +8721,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation type="vanished">Konfigurirajte nastavitve</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+389" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+395" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>Shrani skript</translation>
@@ -8706,7 +8732,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Odstraniti komentarje in pretvoriti presledke v zavihke?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
@@ -8723,8 +8749,8 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Slikovne datoteke (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Template</source>
@@ -8737,26 +8763,26 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+23" />
-        <location line="+67" />
+        <location line="+65" />
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>Izberite veljavno pot na OpenMV Cam!</translation>
     </message>
     <message>
-        <location line="-52" />
-        <location line="+67" />
-        <source>"%L1" is longer than a max length of %L2 characters!</source>
-        <translation>"%L1" je daljši od največje dolžine %L2 znakov!</translation>
+        <location line="-50" />
+        <location line="+65" />
+        <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
+        <translation>&quot;%L1&quot; je daljši od največje dolžine %L2 znakov!</translation>
     </message>
     <message>
-        <location line="-40" />
-        <location line="+7" />
+        <location line="-41" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Descriptor</source>
         <translation>Shrani deskriptor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8764,7 +8790,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Datoteke ključnih točk (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1113" />
+        <location line="-1112" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8782,17 +8808,17 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
     <message>
         <location line="-19" />
         <location line="+13" />
-        <source>Cannot open the file "%L1"!</source>
-        <translation>Datoteke "%L1" ni mogoče odpreti!</translation>
+        <source>Cannot open the file &quot;%L1&quot;!</source>
+        <translation>Datoteke &quot;%L1&quot; ni mogoče odpreti!</translation>
     </message>
     <message>
         <location line="-13" />
         <location line="+13" />
-        <source>Cannot open the example file "%L1"!</source>
-        <translation>Ne morem odpreti vzorčne datoteke "%L1"!</translation>
+        <source>Cannot open the example file &quot;%L1&quot;!</source>
+        <translation>Ne morem odpreti vzorčne datoteke &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-467" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-468" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>Izberite Drive</translation>
@@ -8803,7 +8829,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Ni veljavnih pogonov za povezavo z vašo OpenMV Cam!</translation>
     </message>
     <message>
-        <source>"%L1" is the only drive available so it must be your OpenMV Cam's drive.</source>
+        <source>&quot;%L1&quot; is the only drive available so it must be your OpenMV Cam&apos;s drive.</source>
         <translation type="vanished">»%L1« je edini pogon, ki je na voljo, zato mora biti pogon vašega OpenMV Cam.</translation>
     </message>
     <message>
@@ -8812,12 +8838,12 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Prosimo, povežite pogon z vašo OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>Drive: %L1</source>
         <translation>Pogon: %L1</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+42" />
         <source>Debug Protocol Settings</source>
         <translation>Nastavitve protokola za odpravljanje napak</translation>
     </message>
@@ -8887,30 +8913,30 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Poizvedovanje kode Profiler (ms)</translation>
     </message>
     <message>
-        <location line="+354" />
+        <location line="+391" />
         <location line="+26" />
         <location line="+7" />
-        <source>Failed to flush "%L1"!</source>
+        <source>Failed to flush &quot;%L1&quot;!</source>
         <translation>Izpiranje »%L1« ni uspelo!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34" />
-        <location line="+13" />
+        <location line="+12" />
         <location line="+31" />
         <location line="+9" />
-        <location line="+87" />
+        <location line="+89" />
         <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -8920,7 +8946,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Nov terminal</translation>
     </message>
     <message>
-        <location line="-637" />
+        <location line="-641" />
         <source>Connect to serial port</source>
         <translation>Povežite se s serijskimi vrati</translation>
     </message>
@@ -8941,7 +8967,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2021" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2227" />
         <source>Please select a serial port</source>
         <translation>Izberite serijska vrata</translation>
     </message>
@@ -8951,7 +8977,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Vnesite hitrost prenosa podatkov</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+96" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
         <source>Try doing:
 
@@ -8968,15 +8994,15 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+17" />
-        <location line="+138" />
+        <location line="+139" />
         <location line="+7" />
-        <location line="+236" />
+        <location line="+237" />
         <location line="+7" />
-        <source>Invalid string: "%L1"!</source>
-        <translation>Neveljaven niz: "%L1"!</translation>
+        <source>Invalid string: &quot;%L1&quot;!</source>
+        <translation>Neveljaven niz: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-381" />
         <source>No serial ports found!</source>
         <translation>Ni najdenih serijskih vrat!</translation>
     </message>
@@ -8987,45 +9013,45 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+243" />
+        <location line="+244" />
         <source> Connect to a Server </source>
         <translation> Povežite se s strežnikom </translation>
     </message>
     <message>
-        <location line="-242" />
-        <location line="+243" />
+        <location line="-243" />
+        <location line="+244" />
         <source> Start a Server </source>
         <translation> Zaženite strežnik </translation>
     </message>
     <message>
         <location line="-234" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>Vnesite naslov IP (ali ime domene) in vrata (npr. xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-222" />
         <source>UDP Client Connection - %1</source>
         <translation>Odjemalska povezava UDP - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>Vnesite številko vrat (vnesite 0 za katera koli naključna prosta vrata)</translation>
     </message>
     <message>
-        <location line="-137" />
+        <location line="-138" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>Povezati se s strežnikom TCP kot odjemalec ali zagnati strežnik TCP?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+36" />
         <source>TCP Client Connection - %1</source>
         <translation>Povezava odjemalca TCP - %1</translation>
     </message>
     <message>
-        <location line="+244" />
+        <location line="+243" />
         <source>Error: Option Index!</source>
         <translation>Napaka: Indeks možnosti!</translation>
     </message>
@@ -9050,7 +9076,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation> slikovna datoteka </translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>Izbrana torka pragov bo posodobljena ob zaključku.</translation>
@@ -9066,8 +9092,8 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>slikovna datoteka</translation>
     </message>
     <message>
-        <location line="+71" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+70" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+704" />
         <source>What would you like to do?</source>
         <translation>Kaj bi rad počel?</translation>
     </message>
@@ -9082,7 +9108,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation> Združi datoteke </translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9132,12 +9158,12 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Prve datoteke ključnih točk ni bilo mogoče naložiti iz neznanega razloga!</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>What tag images from the %L1 tag family do you want to generate?</source>
         <translation>Katere slike oznak iz družine oznak %L1 želite ustvariti?</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Min (%1)</source>
         <translation>Najmanj (%1)</translation>
     </message>
@@ -9154,11 +9180,11 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>AprilTag Generator - Where do you want to save %n tag image(s) to?</source>
-        <translation>
-            <numerusform>AprilTag Generator - Kam želite shraniti %n slik oznak?</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -9182,7 +9208,7 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
         <translation>Generacija končana!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1510" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>Na voljo so novi viri OpenMV IDE (npr. primeri, vdelana programska oprema, dokumentacija itd.).</translation>
     </message>
@@ -9193,42 +9219,42 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+288" />
-        <location line="+143" />
+        <location line="+289" />
+        <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
         <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
         <location line="+46" />
-        <location line="+75" />
+        <location line="+73" />
         <location line="+46" />
-        <location line="+74" />
+        <location line="+72" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+400" />
         <location line="+50" />
-        <location line="+873" />
+        <location line="+871" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>Prenašanje ...</translation>
     </message>
     <message>
-        <location line="-417" />
+        <location line="-440" />
         <source>Installing...</source>
         <translation>Namestitev ...</translation>
     </message>
     <message>
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
-        <source>Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+        <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>Zaprite vse programe, ki si ogledujejo/urejajo podatke aplikacije OpenMV IDE in nato znova zaženite OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
         <translation>Namestitev uspešna! Znova zaženite OpenMV IDE.</translation>
     </message>
@@ -9241,69 +9267,119 @@ Ali želite zdaj registrirati svojo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+254" />
+        <location line="+273" />
         <location line="+88" />
-        <source>Cannot open the resources file "%L1"!</source>
-        <translation>Ni mogoče odpreti datoteke virov "%L1"!</translation>
+        <source>Cannot open the resources file &quot;%L1&quot;!</source>
+        <translation>Ni mogoče odpreti datoteke virov &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-314" />
-        <location line="+254" />
+        <location line="-333" />
+        <location line="+273" />
         <location line="+95" />
-        <source>Network request failed "%L1"!</source>
-        <translation>Omrežna zahteva ni uspela "%L1"!</translation>
+        <source>Network request failed &quot;%L1&quot;!</source>
+        <translation>Omrežna zahteva ni uspela &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-315" />
+        <location line="-335" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation>Vdelana programska oprema ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+119" />
-        <location line="+588" />
-        <location line="+217" />
-        <location line="+2205" />
+        <location line="+12" />
+        <location line="+117" />
+        <location line="+720" />
+        <location line="+227" />
+        <location line="+2414" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Izbrisati sistem notranjega maščob</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+119" />
-        <location line="+589" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+117" />
+        <location line="+722" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
-        <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Če to možnost omogočite, se izbrišejo vse datoteke v sistemu notranjega datotečnega sistema OpenMV Cam. To ne izbriše datotek na nobeni odstranljivi SD kartici (če je vstavljeno).</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+708" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+839" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Ponastavite datotečni sistem ROMFS</translation>
     </message>
     <message>
-        <location line="-3203" />
-        <location line="+708" />
-        <location line="+215" />
-        <location line="+2205" />
+        <location line="-3552" />
+        <location line="+840" />
+        <location line="+225" />
+        <location line="+2412" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Če to možnost omogočite, se bo datotečni sistem ROM na vašem OpenMV Cam ponastavil nazaj na privzeto.</translation>
     </message>
     <message>
-        <location line="-3160" />
+        <location line="-3510" />
         <location line="+45" />
         <source>Bootloader</source>
         <translation>Zagonski nalagalnik</translation>
     </message>
     <message>
-        <location line="+2991" />
+        <location line="+28" />
+        <source>Force bootloader</source>
+        <translation>Vsili zagonski nalagalnik</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Force enter the OpenMV Cam bootloader. May result in the OpenMV Cam bootloader not automatically exiting on older boards.</source>
+        <translation>Prisilno vstopite v zagonski nalagalnik OpenMV Cam. Lahko povzroči, da se zagonski nalagalnik OpenMV Cam na starejših ploščah ne zapre samodejno.</translation>
+    </message>
+    <message>
+        <location line="+693" />
+        <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
+        <translation>Namestite najnovejšo izdajo vdelane programske opreme (v%L1.%L2.%L3)</translation>
+    </message>
+    <message>
+        <location line="+1063" />
+        <location line="+192" />
+        <source>Failed to copy firmware files to temporary directory!</source>
+        <translation>Datotek vdelane programske opreme ni bilo mogoče kopirati v začasni imenik!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Original firmware folder does not exist!</source>
+        <translation>Originalna mapa vdelane programske opreme ne obstaja!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Failed to create temporary directory!</source>
+        <translation>Začasnega imenika ni bilo mogoče ustvariti!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <source>Only loading bootloader.bin files is supported with the ST Cube Programmer!</source>
+        <translation>ST Cube Programmer podpira samo nalaganje datotek bootloader.bin!</translation>
+    </message>
+    <message>
+        <location line="+151" />
+        <source>Bootloader update complete!
+
+</source>
+        <translation>Posodobitev zagonskega nalagalnika je končana!</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Connect your OpenMV Cam now.</source>
+        <translation>Povežite svojo OpenMV Cam zdaj.</translation>
+    </message>
+    <message>
+        <location line="+1377" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9312,8 +9388,8 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Zlasti si oglejte primere Obdelava slik -&gt; Sledenje barvam in strojno učenje -&gt; TensorFlow.</translation>
     </message>
     <message>
-        <location line="-3104" />
-        <location line="+4" />
+        <location line="-3455" />
+        <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
         <source>Firmware Path</source>
@@ -9328,26 +9404,26 @@ Zlasti si oglejte primere Obdelava slik -&gt; Sledenje barvam in strojno učenje
         <translation type="vanished">Izbriši notranji datotečni sistem</translation>
     </message>
     <message>
-        <source>If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">Če omogočite to možnost, bodo vse datoteke na notranjem bliskovnem pogonu vašega OpenMV Cam izbrisane. To ne izbriše datotek na kateri koli odstranljivi kartici SD (če je vstavljena).</translation>
     </message>
     <message>
-        <source>Loading firmware via DFU always erases your OpenMV Cam's internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
+        <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">Nalaganje vdelane programske opreme prek DFU vedno izbriše notranji bliskovni pogon OpenMV Cam. To ne izbriše datotek na kateri koli odstranljivi kartici SD (če je vstavljena).</translation>
     </message>
     <message>
         <location line="+21" />
-        <location line="+130" />
+        <location line="+148" />
         <source>Run</source>
         <translation>Zaženi</translation>
     </message>
     <message>
-        <location line="-86" />
-        <source>"%L1" is not a file!</source>
+        <location line="-105" />
+        <source>&quot;%L1&quot; is not a file!</source>
         <translation>»%L1« ni datoteka!</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+67" />
         <source>Update ROMFS file system</source>
         <translation>Posodobite datotečni sistem ROMFS</translation>
     </message>
@@ -9357,7 +9433,7 @@ Zlasti si oglejte primere Obdelava slik -&gt; Sledenje barvam in strojno učenje
         <translation>Če to možnost omogočite, bo datotečni sistem ROM na vašem OpenMV Cam posodobljen na najnovejšo razvojno izdajo.</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+125" />
         <source>Extracting...</source>
         <translation>Ekstrahiranje ...</translation>
     </message>
@@ -9377,17 +9453,16 @@ Zlasti si oglejte primere Obdelava slik -&gt; Sledenje barvam in strojno učenje
         <translation>Neznana plošča</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+344" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Zaznana je bila plošča v načinu DFU. Kaj bi rad počel?</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Install the lastest release firmware (v%L1.%L2.%L3)</source>
-        <translation>Namestite najnovejšo izdajo vdelane programske opreme (v%L1.%L2.%L3)</translation>
+        <translation type="vanished">Namestite najnovejšo izdajo vdelane programske opreme (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Load a specific firmware</source>
         <translation>Naložite določeno vdelano programsko opremo</translation>
     </message>
@@ -9396,36 +9471,35 @@ Zlasti si oglejte primere Obdelava slik -&gt; Sledenje barvam in strojno učenje
         <translation type="vanished">Samo izbrišite notranji datotečni sistem</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+92" />
         <source>No OpenMV Cams found!</source>
         <translation>Ni najdenih kamer OpenMV!</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+56" />
         <source>Do you have an OpenMV Cam connected and is it bricked?</source>
         <translation>Ali imate priklopljeno kamero OpenMV Cam in je zaklenjena?</translation>
     </message>
     <message>
-        <location line="+849" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
-Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
-        <translation>Za zagonski nalagalnik STM32 je podprta samo nalaganje *.dfu Files!
+Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!</source>
+        <translation type="vanished">Za zagonski nalagalnik STM32 je podprta samo nalaganje *.dfu Files!
 
  Izberite datoteko Bootloader.dfu in poskusite znova. Upoštevajte, da nalaganje vdelane programske opreme.dfu ali OpenMV.dfu (Bootloader + vdelana programska oprema) morda ne bo delovala na ploščah STM32H7 zaradi napake v čipnem rom bootloaderju!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+987" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>Za notranji zagonski nakladalnik so podprte samo nalaganje *.bin in *.img datotek!</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Only loading *.bin and *.img files are supported for the IMX bootloader!</source>
         <translation>Za IMX Bootloader sta podprta samo nalaganje *.bin in *.img datotek!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+107" />
         <source>Only loading *.bin, *.dfu, and *.img files are supported for the Arduino bootloader!</source>
         <translation>Za Arduino Bootloader so podprte samo nalaganje *.bin, *.dfu in *.img datotek!</translation>
     </message>
@@ -9441,7 +9515,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
     </message>
     <message>
         <location line="+24" />
-        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
+        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
         <translation>Upoštevajte, da nalaganje vdelane programske opreme.dfu ali OpenMV.dfu (Bootloader + vdelana programska oprema) morda ne bo delovala na ploščah STM32H7 zaradi napake v čipnem rom bootloaderju!
@@ -9451,9 +9525,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-976" />
-        <location line="+657" />
-        <location line="+1750" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1398" />
+        <location line="+252" />
+        <location line="+681" />
+        <location line="+1936" />
         <source>Please select the board type</source>
         <translation>Izberite vrsto plošče</translation>
     </message>
@@ -9462,30 +9537,30 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Želite izbrisati notranji datotečni sistem?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2295" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2500" />
         <source>No released firmware available for the attached board!</source>
         <translation>Za priloženo ploščo ni na voljo izdane vdelane programske opreme!</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+61" />
         <source>Please select a DFU Device</source>
         <translation>Izberite napravo DFU</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-83" />
         <location line="+170" />
         <location line="+44" />
-        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Posodobite zagonski nalagalnik na najnovejšo različico in namestite SoftDevice za flash vdelane programske opreme OpenMV. Več informacij najdete na &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Posodobite zagonski nalagalnik na najnovejšo različico in namestite SoftDevice za flash vdelane programske opreme OpenMV. Več informacij najdete na &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-1065" />
-        <location line="+3012" />
+        <location line="-1191" />
+        <location line="+3343" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>OPOZORILO: Nadgradnja na novo različico vdelane programske opreme zahteva izbris sistema FAT File.</translation>
     </message>
     <message>
-        <location line="-2527" />
+        <location line="-2848" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
@@ -9494,7 +9569,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 %1</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+173" />
         <source>Just erase the internal FAT file system</source>
         <translation>Samo izbrišite sistem notranjega datotek maščob</translation>
     </message>
@@ -9509,17 +9584,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Ponastavite datotečni sistem ROM</translation>
     </message>
     <message>
-        <location line="+219" />
-        <location line="+2206" />
+        <location line="+229" />
+        <location line="+2415" />
         <source>Upgrade options:</source>
         <translation>Možnosti nadgradnje:</translation>
     </message>
     <message>
-        <location line="-2122" />
+        <location line="-2327" />
         <location line="+169" />
         <location line="+44" />
-        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Prosimo, skrajšajte REC na GND in ponastavite svojo ploščo. Več informacij najdete na &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Prosimo, skrajšajte REC na GND in ponastavite svojo ploščo. Več informacij najdete na &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+25" />
@@ -9531,7 +9606,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (Pritisnite Prekliči, če to traja več kot 5 sekund).</translation>
     </message>
     <message>
-        <location line="+132" />
+        <location line="+143" />
         <source>Timeout error while getting firmware version!</source>
         <translation>Napaka časovne omejitve med pridobivanjem različice vdelane programske opreme!</translation>
     </message>
@@ -9547,8 +9622,8 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+191" />
-        <location line="+570" />
+        <location line="+199" />
+        <location line="+733" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Napaka časovne omejitve pri pridobivanju arhitekture plošče!</translation>
     </message>
@@ -9557,7 +9632,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Nepodprta arhitektura plošče!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-633" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Odklopite vaš OpenMV Cam in ga nato ponovno priklopite ...</translation>
@@ -9590,12 +9665,12 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+38" />
-        <source>Unable to connect to your OpenMV Cam's normal bootloader!</source>
+        <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>Ni mogoče vzpostaviti povezave z običajnim zagonskim programom OpenMV Cam!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+129" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+131" />
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
         <translation>OpenMV IDE lahko še vedno poskuša popraviti vaš OpenMV Cam z uporabo zagonskega nalagalnika DFU vašega OpenMV Cam.
@@ -9604,9 +9679,9 @@ Nadaljevati?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-288" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
         <location line="+46" />
-        <location line="+195" />
+        <location line="+191" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>Brisanje ...</translation>
@@ -9625,7 +9700,7 @@ Nadaljevati?</translation>
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-837" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-835" />
         <location line="+41" />
         <location line="+51" />
         <location line="+44" />
@@ -9642,7 +9717,7 @@ Nadaljevati?</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+221" />
+        <location line="+219" />
         <location line="+50" />
         <location line="+51" />
         <location line="+42" />
@@ -9706,11 +9781,11 @@ Nadaljevati?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
         <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
-        <source>Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.</source>
+        <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>Kliknite V redu, ko LED RGB vaše OpenMV Cam začne utripati modro – kar pomeni, da je samotestiranje končano.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
@@ -9728,7 +9803,7 @@ Nadaljevati?</translation>
 
 If you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py.
 
-In this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).</source>
+In this case click OK when you see your OpenMV Cam&apos;s internal flash drive mount (a window may or may not pop open).</source>
         <translation>
 
 Če ste prepisali main.py na vaši OpenMV Cam in niste izbrisali diska, bo vaša OpenMV Cam samo zagnala ta main.py.
@@ -9751,8 +9826,8 @@ V tem primeru kliknite V redu, ko vidite notranji nosilec bliskovnega pogona Ope
         <translation>Ni nastavitev IMX!</translation>
     </message>
     <message>
-        <source>Failed to eject "%L1"!</source>
-        <translation type="vanished">Izmet "%L1" ni uspel!</translation>
+        <source>Failed to eject &quot;%L1&quot;!</source>
+        <translation type="vanished">Izmet &quot;%L1&quot; ni uspel!</translation>
     </message>
     <message>
         <location line="+14" />
@@ -9765,7 +9840,7 @@ Pritisnite Prekliči, da preskočite na reprogramiranje SBL.</translation>
     </message>
     <message>
         <location line="+42" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
         <translation>OpenMV IDE lahko še vedno poskuša popraviti vaš OpenMV Cam z uporabo zagonskega nalagalnika SBL vašega OpenMV Cam.
@@ -9776,7 +9851,7 @@ Nadaljevati?</translation>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
         <translation>Odklopite OpenMV Cam iz računalnika, dodajte premostitveno žico med SBL in 3,3 V zatiči in nato znova povežite OpenMV Cam z računalnikom.
 
 Kliknite gumb V redu, ko je zagonski nalagalnik SBL vaše OpenMV Cam oštevilčen.</translation>
@@ -9828,19 +9903,19 @@ Kliknite gumb V redu, ko je zagonski nalagalnik SBL vaše OpenMV Cam oštevilče
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-345" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-347" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Ni nastavitev DFU za izbrano vrsto plošče!</translation>
     </message>
     <message>
         <location line="+55" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+104" />
         <source>No DFU settings for the selected device!</source>
         <translation>Za izbrano napravo ni nastavitev DFU!</translation>
     </message>
     <message>
         <location line="+32" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+47" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
         <source>Erasing Disk</source>
         <translation>Brisanje diska</translation>
@@ -9869,8 +9944,8 @@ Kliknite gumb V redu, ko je zagonski nalagalnik SBL vaše OpenMV Cam oštevilče
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-933" />
-        <location line="+934" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-931" />
+        <location line="+932" />
         <source>Flashing Firmware</source>
         <translation>Utripajoča vdelana programska oprema</translation>
     </message>
@@ -9916,17 +9991,17 @@ Kliknite gumb V redu, ko je zagonski nalagalnik SBL vaše OpenMV Cam oštevilče
     </message>
     <message>
         <location line="+14" />
-        <source>Your %1 doesn't have an internal FAT file system.</source>
+        <source>Your %1 doesn&apos;t have an internal FAT file system.</source>
         <translation>Vaš %1 nima notranjega maščobnega datotečnega sistema.</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
-        <source>Your %1 doesn't have an ROM file system.</source>
+        <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>Vaš %1 nima datotečnega sistema ROM.</translation>
     </message>
     <message>
-        <source>Your Nano 33 BLE doesn't have an onboard data flash disk.</source>
+        <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
         <translation type="vanished">Vaš Nano 33 BLE nima vgrajenega podatkovnega bliskovnega diska.</translation>
     </message>
     <message>
@@ -9987,7 +10062,7 @@ Nadaljevati?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>DFU update erases your OpenMV Cam's internal flash file system.
+        <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
         <translation>Posodobitev DFU izbriše notranji datotečni sistem Flash vaše OpenMV Cam.
@@ -9998,7 +10073,7 @@ Pred nadaljevanjem varnostno kopirajte svoje podatke!</translation>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.</source>
         <translation>Odklopite OpenMV Cam iz računalnika, dodajte premostitveno žico med zatičema BOOT in RST in nato znova povežite OpenMV Cam z računalnikom.
 
 Kliknite gumb V redu, ko je zagonski nalagalnik DFU vaše OpenMV Cam oštevilčen.</translation>
@@ -10051,13 +10126,13 @@ Kliknite gumb V redu, ko je zagonski nalagalnik DFU vaše OpenMV Cam oštevilče
         <translation>Ponastavitev zagonskega nalagalnika DFU ni uspela!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-271" />
         <source>None</source>
         <translation>Brez</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+16" />
+        <location line="+30" />
         <location line="+56" />
         <source>Unknown</source>
         <translation>Neznano</translation>
@@ -10073,12 +10148,12 @@ Kliknite gumb V redu, ko je zagonski nalagalnik DFU vaše OpenMV Cam oštevilče
         <translation>Neregistriran</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+94" />
         <source>Timeout error while learning MTU!</source>
         <translation>Napaka časovne omejitve med učenjem MTU!</translation>
     </message>
     <message>
-        <location line="+167" />
+        <location line="+170" />
         <source>Board: %L1</source>
         <translation>Plošča: %L1</translation>
     </message>
@@ -10103,13 +10178,13 @@ Kliknite gumb V redu, ko je zagonski nalagalnik DFU vaše OpenMV Cam oštevilče
         <translation>Serijska vrata: %L1</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+85" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ zastarelo - kliknite tukaj za nadgradnjo ]</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Your OpenMV Cam's firmware is out of date. Would you like to upgrade?</source>
+        <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>Vdelana programska oprema vaše OpenMV Cam je zastarela. Bi radi nadgradili?</translation>
     </message>
     <message>
@@ -10118,7 +10193,7 @@ Kliknite gumb V redu, ko je zagonski nalagalnik DFU vaše OpenMV Cam oštevilče
         <translation> - [ najnovejše ]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-674" />
         <source>Failed to open or parse ELF: %1</source>
         <translation>Ni bilo mogoče odpreti ali razčleniti ELF: %1</translation>
     </message>
@@ -10174,7 +10249,7 @@ Kliknite gumb V redu, ko je zagonski nalagalnik DFU vaše OpenMV Cam oštevilče
     </message>
     <message>
         <location line="+396" />
-        <location line="+172" />
+        <location line="+177" />
         <source>Code Profiler</source>
         <translation>Profiler kode</translation>
     </message>
@@ -10228,7 +10303,7 @@ Kliknite gumb V redu, ko je zagonski nalagalnik DFU vaše OpenMV Cam oštevilče
         <translation type="vanished">Začni</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+588" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+592" />
         <source>More Examples</source>
         <translation>Več primerov</translation>
     </message>
@@ -10241,29 +10316,29 @@ In particular, checkout the Color-Tracking examples.</source>
 Še posebej si oglejte primere sledenja barvam.</translation>
     </message>
     <message>
-        <location line="+28" />
-        <location line="+69" />
-        <location line="+9" />
+        <location line="+27" />
+        <location line="+70" />
+        <location line="+8" />
         <source>Firmware Update</source>
         <translation>Posodobitev vdelane programske opreme</translation>
     </message>
     <message>
         <location line="-75" />
-        <source>Update your OpenMV Cam's firmware to the latest version?</source>
+        <source>Update your OpenMV Cam&apos;s firmware to the latest version?</source>
         <translation>Želite posodobiti vdelano programsko opremo OpenMV Cam na najnovejšo različico?</translation>
     </message>
     <message>
-        <location line="+67" />
-        <source>Your OpenMV Cam's firmware is up to date.</source>
+        <location line="+68" />
+        <source>Your OpenMV Cam&apos;s firmware is up to date.</source>
         <translation>Vdelana programska oprema vaše OpenMV Cam je posodobljena.</translation>
     </message>
     <message>
-        <location line="+11" />
-        <source>Need to reset your OpenMV Cam's firmware to the release version?</source>
+        <location line="+10" />
+        <source>Need to reset your OpenMV Cam&apos;s firmware to the release version?</source>
         <translation>Ali morate vdelano programsko opremo OpenMV Cam ponastaviti na različico za izdajo?</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+86" />
         <source>No board settings for the connected board found!</source>
         <translation>Nastavitve plošče za povezano ploščo najdete!</translation>
     </message>
@@ -10358,10 +10433,10 @@ In particular, checkout the Color-Tracking examples.</source>
     </message>
     <message>
         <location line="-223" />
-        <source>Module "%L1" on your OpenMV Cam is different than the copy on your computer.
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
 Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>Modul "%L1" na vaši OpenMV Cam se razlikuje od kopije v vašem računalniku.
+        <translation>Modul &quot;%L1&quot; na vaši OpenMV Cam se razlikuje od kopije v vašem računalniku.
 
 Ali želite, da OpenMV IDE posodobi modul na vaši OpenMV Cam?</translation>
     </message>
@@ -10372,15 +10447,15 @@ Ali želite, da OpenMV IDE posodobi modul na vaši OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+91" />
-        <source>Module "%L1" may be required to run your script.
+        <source>Module &quot;%L1&quot; may be required to run your script.
 
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>Za izvajanje skripta bo morda potreben modul "%L1".
+        <translation>Za izvajanje skripta bo morda potreben modul &quot;%L1&quot;.
 
 Ali želite, da ga OpenMV IDE kopira v vaš OpenMV Cam?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-366" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10393,18 +10468,18 @@ Ali želite, da ga OpenMV IDE kopira v vaš OpenMV Cam?</translation>
         <translation>Besedilne datoteke (*.txt);;Vse datoteke (*)</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+228" />
         <source>Zoom: %1%</source>
         <translation>Povečava: %1%</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4310" />
-        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4365" />
+        <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280" />
-        <location line="+236" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-265" />
+        <location line="+221" />
         <source>Model Zoo</source>
         <translation>Modelni živalski vrt</translation>
     </message>
@@ -10440,7 +10515,7 @@ Ali želite, da ga OpenMV IDE kopira v vaš OpenMV Cam?</translation>
         <translation>Najdi</translation>
     </message>
     <message>
-        <location line="+226" />
+        <location line="+239" />
         <source>Serial Terminal</source>
         <translation>Serijski terminal</translation>
     </message>
@@ -10461,8 +10536,8 @@ Ali želite, da ga OpenMV IDE kopira v vaš OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Run "/main.py"</source>
-        <translation>Zaženite "/main.py"</translation>
+        <source>Run &quot;/main.py&quot;</source>
+        <translation>Zaženite &quot;/main.py&quot;</translation>
     </message>
     <message>
         <location line="+0" />
@@ -10485,31 +10560,31 @@ Ali želite, da ga OpenMV IDE kopira v vaš OpenMV Cam?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-360" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-150" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Pridobite naprave</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-293" />
         <location line="+79" />
         <source>Query failed!</source>
         <translation>Poizvedba ni uspela!</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+44" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+119" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+120" />
+        <location line="+118" />
         <source>DFU Util</source>
         <translation>DFU Util</translation>
     </message>
@@ -10534,7 +10609,7 @@ Ali želite, da ga OpenMV IDE kopira v vaš OpenMV Cam?</translation>
         <translation>To lahko traja nekaj časa, premor voda?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-87" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
         <source>Dataset Split</source>
         <translation>Razdelitev nabora podatkov</translation>
     </message>
@@ -10546,7 +10621,7 @@ OpenMV recommends leaving this at the default 80/20% split.</source>
 OpenMV priporoča, da to pustite na privzeti delitvi 80/20 %.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <location line="+16" />
         <source>Training Data
 Percentage
@@ -10568,7 +10643,7 @@ Odstotek
     <message>
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+58" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
         <location line="+50" />
         <source>Uploading...</source>
@@ -10609,12 +10684,12 @@ Odstotek
         <location line="+10" />
         <source>Nothing to upload
 
-Only jpg/png/bmp images with a numeric name (e.g. "00001.jpg")
-in class folders ("*.class") can be uploaded.</source>
+Only jpg/png/bmp images with a numeric name (e.g. &quot;00001.jpg&quot;)
+in class folders (&quot;*.class&quot;) can be uploaded.</source>
         <translation>Nič za nalaganje
 
-Samo slike jpg/png/bmp s številčnim imenom (npr. "00001.jpg")
-v razrednih mapah ("*.class") je mogoče naložiti.</translation>
+Samo slike jpg/png/bmp s številčnim imenom (npr. &quot;00001.jpg&quot;)
+v razrednih mapah (&quot;*.class&quot;) je mogoče naložiti.</translation>
     </message>
     <message>
         <location line="+43" />
@@ -10622,31 +10697,31 @@ v razrednih mapah ("*.class") je mogoče naložiti.</translation>
         <location line="+21" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+164" />
+        <location line="+155" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+23" />
         <location line="+9" />
         <location line="+9" />
         <source>Edge Impulse Projects</source>
         <translation>Projekti Edge Impulse</translation>
     </message>
     <message>
-        <location line="-276" />
+        <location line="-266" />
         <location line="+35" />
-        <location line="+71" />
-        <location line="+129" />
-        <location line="+42" />
+        <location line="+67" />
+        <location line="+124" />
+        <location line="+41" />
         <source>No request data received</source>
         <translation>Podatki o zahtevi niso bili prejeti</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-246" />
         <source>An unkown error occured</source>
         <translation>Prišlo je do neznane napake</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+62" />
         <location line="+11" />
         <location line="+7" />
         <location line="+10" />
@@ -10663,7 +10738,7 @@ Open a data set to upload it.</source>
 Odprite nabor podatkov, da ga naložite.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+33" />
         <source>Email Address</source>
         <translation>Email naslov</translation>
     </message>
@@ -10678,17 +10753,17 @@ Odprite nabor podatkov, da ga naložite.</translation>
         <translation>Geslo</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+66" />
         <source>Please select a project</source>
         <translation>Izberite projekt</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+60" />
         <source>No projects found</source>
         <translation>Ni najdenih projektov</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+45" />
         <source>Upload Project</source>
         <translation>Naloži projekt</translation>
     </message>
@@ -10698,7 +10773,7 @@ Odprite nabor podatkov, da ga naložite.</translation>
         <translation>Vnesite ključ Edge Impluse Project API</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1017" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1015" />
         <location line="+144" />
         <location line="+36" />
         <location line="+41" />
@@ -10717,7 +10792,7 @@ Odprite nabor podatkov, da ga naložite.</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+41" />
+        <location line="+39" />
         <location line="+135" />
         <location line="+45" />
         <location line="+50" />
@@ -10753,8 +10828,8 @@ Odprite nabor podatkov, da ga naložite.</translation>
     </message>
     <message>
         <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1337" />
-        <location line="+923" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1335" />
+        <location line="+921" />
         <source>This feature is not supported on this machine!</source>
         <translation>Ta funkcija ni podprta na tem stroju!</translation>
     </message>
@@ -10786,15 +10861,15 @@ The camera must be power cycled after a system package update.</source>
 Po posodobitvi sistemskega paketa mora biti kamera, ki je namenjena.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-472" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-470" />
         <location line="+51" />
         <location line="+91" />
-        <location line="+346" />
+        <location line="+344" />
         <location line="+51" />
         <location line="+50" />
         <location line="+94" />
         <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Izvedba tega ukaza traja nekaj časa. Prosim, bodite potrpežljivi.</translation>
@@ -10815,7 +10890,7 @@ Po posodobitvi sistemskega paketa mora biti kamera, ki je namenjena.</translatio
         <translation>Končano</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
@@ -10947,12 +11022,12 @@ Po posodobitvi sistemskega paketa mora biti kamera, ki je namenjena.</translatio
     </message>
     <message>
         <location line="-77" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Transcoding File...</source>
         <translation>Prekodiranje datoteke ...</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-594" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -11013,29 +11088,29 @@ Po posodobitvi sistemskega paketa mora biti kamera, ki je namenjena.</translatio
         <translation>Pridobite vhodne formate</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+37" />
         <location line="+111" />
-        <location line="+100" />
+        <location line="+98" />
         <location line="+15" />
-        <location line="+372" />
+        <location line="+371" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
         <location line="+16" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+14" />
+        <location line="+19" />
         <location line="+36" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+21" />
+        <location line="+23" />
         <location line="+7" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+20" />
+        <location line="+22" />
         <location line="+7" />
         <source>Convert Video</source>
         <translation>Pretvori video</translation>
@@ -11055,7 +11130,7 @@ Po posodobitvi sistemskega paketa mora biti kamera, ki je namenjena.</translatio
         <translation>FFMPEG ni podprt na tej platformi.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+98" />
         <source>Unable to write to output video file!</source>
         <translation>Ni mogoče zapisati v izhodno video datoteko!</translation>
     </message>
@@ -11066,79 +11141,79 @@ Po posodobitvi sistemskega paketa mora biti kamera, ki je namenjena.</translatio
     </message>
     <message>
         <location line="+163" />
-        <location line="+411" />
+        <location line="+415" />
         <source>Play Video</source>
         <translation>Predvajaj video</translation>
     </message>
     <message>
-        <location line="-410" />
+        <location line="-414" />
         <location line="+163" />
         <source>Failed to launch ffplay!</source>
         <translation>Zagon ffplaya ni uspel!</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>Convert Video Source</source>
         <translation>Pretvori video vir</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+235" />
+        <location line="+240" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</source>
         <translation>Video datoteke (*.mp4 *.*);;Datoteke OpenMV ImageWriter (*.bin);;</translation>
     </message>
     <message>
-        <location line="-230" />
+        <location line="-235" />
         <location line="+11" />
-        <location line="+117" />
+        <location line="+122" />
         <location line="+7" />
         <source>Convert Video Output</source>
         <translation>Pretvori video izhod</translation>
     </message>
     <message>
-        <location line="-130" />
-        <location line="+125" />
-        <location line="+208" />
+        <location line="-135" />
+        <location line="+130" />
+        <location line="+204" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
         <translation>Video datoteke (*.mp4 *.*);;Datoteke OpenMV ImageReader (*.bin);;</translation>
     </message>
     <message>
-        <location line="-327" />
+        <location line="-328" />
         <source>Please select output format</source>
         <translation>Izberite izhodni format</translation>
     </message>
     <message>
         <location line="+15" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Rescale the video?</source>
         <translation>Spremenite velikost videoposnetka?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter a new width (the aspect ratio will be kept the same)</source>
         <translation>Vnesite novo širino (razmerje stranic bo ostalo enako)</translation>
     </message>
     <message>
-        <location line="-320" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-321" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Skip frames?</source>
         <translation>Preskočiti okvirje?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter how many frames to skip at a time</source>
         <translation>Vnesite, koliko sličic želite naenkrat preskočiti</translation>
     </message>
     <message>
-        <location line="-278" />
-        <location line="+91" />
-        <location line="+207" />
+        <location line="-274" />
+        <location line="+93" />
+        <location line="+203" />
         <source>Video conversion finished!</source>
         <translation>Video pretvorba je končana!</translation>
     </message>
@@ -11168,13 +11243,13 @@ Po posodobitvi sistemskega paketa mora biti kamera, ki je namenjena.</translatio
         <translation>Igraj</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+47" />
         <location line="+7" />
         <source>Save Video</source>
         <translation>Shrani video</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
         <source>Busy</source>
         <translation>Zaseden</translation>
     </message>
@@ -11190,13 +11265,11 @@ Po posodobitvi sistemskega paketa mora biti kamera, ki je namenjena.</translatio
         <translation>Skrij podrobnosti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-335" />
-        <location line="+102" />
         <source>No matching interface for the selected file name!</source>
-        <translation>Brez ujemajočega se vmesnika za izbrano ime datoteke!</translation>
+        <translation type="vanished">Brez ujemajočega se vmesnika za izbrano ime datoteke!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-745" />
         <source>Please select the target</source>
         <translation>Izberite cilj</translation>
     </message>
@@ -11219,70 +11292,70 @@ OpenMV IDE will just copy the model as is.</source>
 OpenMV IDE bo samo kopiral model, kakršen je.</translation>
     </message>
     <message>
-        <location line="+145" />
-        <location line="+36" />
+        <location line="+147" />
+        <location line="+35" />
         <location line="+6" />
         <location line="+8" />
-        <location line="+40" />
-        <location line="+17" />
-        <location line="+20" />
-        <location line="+6" />
-        <location line="+8" />
+        <location line="+42" />
+        <location line="+16" />
         <location line="+21" />
-        <location line="+19" />
-        <location line="+20" />
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
         <location line="+93" />
-        <location line="+9" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+13" />
-        <location line="+14" />
-        <location line="+45" />
-        <location line="+17" />
-        <location line="+28" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+40" />
+        <location line="+15" />
         <location line="+27" />
+        <location line="+24" />
         <location line="+53" />
-        <location line="+67" />
+        <location line="+63" />
         <location line="+6" />
         <location line="+21" />
         <source>Edit ROMFS</source>
         <translation>Uredi ROMF</translation>
     </message>
     <message>
-        <location line="-620" />
-        <location line="+91" />
+        <location line="-606" />
+        <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>Mapa z istim imenom že obstaja!</translation>
     </message>
     <message>
-        <location line="-85" />
-        <location line="+91" />
+        <location line="-87" />
+        <location line="+93" />
         <source>File already exists! Overwrite?</source>
         <translation>Datoteka že obstaja! Prepisovati?</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+91" />
+        <location line="-85" />
+        <location line="+93" />
         <source>Failed to remove file!</source>
         <translation>Ni uspelo odstraniti datoteke!</translation>
     </message>
     <message>
         <location line="-51" />
-        <location line="+72" />
+        <location line="+74" />
         <source>Failed to copy file!</source>
         <translation>Ni uspelo kopirati datoteke!</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+17" />
         <source>Folder Name</source>
         <translation>Ime mape</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Failed to create folder!</source>
         <translation>Ni uspelo ustvariti mape!</translation>
     </message>
@@ -11303,58 +11376,58 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Ne morem shraniti mape!</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+14" />
+        <location line="+6" />
+        <location line="+15" />
         <location line="+19" />
-        <location line="+240" />
+        <location line="+225" />
         <source>Extract File</source>
         <translation>Izvleček datoteke</translation>
     </message>
     <message>
-        <location line="-246" />
+        <location line="-231" />
         <source>View/Edit</source>
         <translation>Pogled/urejanje</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+237" />
+        <location line="+222" />
         <source>Add File</source>
         <translation>Dodaj datoteko</translation>
     </message>
     <message>
-        <location line="-236" />
-        <location line="+238" />
+        <location line="-221" />
+        <location line="+223" />
         <source>New Folder</source>
         <translation>Nova mapa</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+14" />
-        <location line="+322" />
-        <location line="+12" />
+        <location line="-135" />
+        <location line="+13" />
+        <location line="+303" />
+        <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS na tej plošči ni podprt!</translation>
     </message>
     <message>
-        <location line="-290" />
-        <location line="+45" />
+        <location line="-275" />
+        <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Ni uspelo razpakirati ROMF!</translation>
     </message>
     <message>
         <location line="-19" />
-        <location line="+28" />
+        <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>OpenMV ROMFS</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+172" />
+        <location line="-25" />
+        <location line="+165" />
         <source>ROMFS Images (*.img)</source>
         <translation>Slike ROMFS (*.img)</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="-101" />
         <source>Commit</source>
         <translation>Zavezati</translation>
     </message>
@@ -11369,17 +11442,17 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Shranite ROMF -je za datoteko</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location line="+8" />
+        <location line="+105" />
+        <location line="+7" />
+        <location line="+11" />
         <location line="+12" />
-        <location line="+13" />
-        <location line="+12" />
+        <location line="+11" />
         <source>Reset ROMFS</source>
         <translation>Ponastavite romfs</translation>
     </message>
     <message>
-        <location line="-44" />
-        <source>Are you sure you want to reset your OpenMV Cam's ROM file system?</source>
+        <location line="-40" />
+        <source>Are you sure you want to reset your OpenMV Cam&apos;s ROM file system?</source>
         <translation>Ali ste prepričani, da želite ponastaviti datotečni sistem ROM OpenMV Cam?</translation>
     </message>
     <message>
@@ -11409,12 +11482,12 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>&lt;a href="https://pypi.org/project/mpy-cross/"&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://pypi.org/project/mpy-cross/"&gt; Mpy Cross prevajalnika CLI možnosti &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://pypi.org/project/mpy-cross/&quot;&gt; Mpy Cross prevajalnika CLI možnosti &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
         <source>Advanced</source>
         <translation>Napredno</translation>
@@ -11427,7 +11500,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
     </message>
     <message>
         <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+90" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
         <source>Compiling</source>
         <translation>Sestavljanje</translation>
@@ -11439,9 +11512,9 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-780" />
         <source>Success - Press Ok to close the window</source>
         <translation>Uspeh - Pritisnite OK, da zaprete okno</translation>
     </message>
@@ -11454,18 +11527,18 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Okvara - Pritisnite preklic, da zaprete okno</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+126" />
+        <location line="+111" />
         <location line="+14" />
-        <location line="+173" />
+        <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>Stedge prevajalnik</translation>
     </message>
     <message>
-        <location line="-334" />
+        <location line="-300" />
         <source>Failed to copy JSON file!</source>
         <translation>Ni uspelo kopirati datoteke JSON!</translation>
     </message>
@@ -11502,14 +11575,13 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+24" />
         <source>--verbosity 2</source>
         <translation>-VERBOSIJA 2</translation>
     </message>
     <message>
-        <location line="-22" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; Stedgeai Core CLI možnosti &lt;/a&gt;</translation>
+        <location line="+2" />
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; Stedgeai Core CLI možnosti &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -11518,16 +11590,15 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; Stedgeai nevronsko-art CLI možnosti &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; Stedgeai nevronsko-art CLI možnosti &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; stedgeai selitve CLI možnosti &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href = &quot;%1&quot;&gt; stedgeai selitve CLI možnosti &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+75" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>Ni uspelo odpreti datoteke JSON!</translation>
@@ -11538,7 +11609,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Stedgeai</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+140" />
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
         <translation>Na tej platformi ni podprt prevajalnik Stedgeai.</translation>
     </message>
@@ -11566,8 +11637,8 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md"&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/options.md"&gt; Vela Compilier CLI možnosti &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/options.md&quot;&gt; Vela Compilier CLI možnosti &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+67" />
@@ -11590,6 +11661,31 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <source>STM32 Programmer is not supported on this platform.</source>
         <translation>Programer STM32 na tej platformi ni podprt.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <source>the detected board</source>
+        <translation>zaznano ploščo</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>The selected file &quot;%L1&quot; does not match any firmware interface for %L2.</source>
+        <translation>Izbrana datoteka &quot;%L1&quot; se ne ujema z nobenim vmesnikom vdelane programske opreme za %L2.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%L1 accepts files named:</source>
+        <translation>%L1 sprejema datoteke z imenom:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Rename your firmware file to one of the names above (or select the correct file) and try again.</source>
+        <translation>Preimenujte datoteko vdelane programske opreme v eno od zgornjih imen (ali izberite pravilno datoteko) in poskusite znova.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>This board does not define any loadable firmware interfaces in its settings.</source>
+        <translation>Ta plošča v svojih nastavitvah ne definira nobenih vmesnikov vdelane programske opreme, ki bi jih bilo mogoče naložiti.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
@@ -11599,91 +11695,39 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+28" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+235" />
         <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
         <location line="+15" />
         <location line="+22" />
-        <location line="+132" />
         <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+21" />
         <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+306" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+144" />
         <source>Project Location</source>
         <translation>Lokacija projekta</translation>
     </message>
     <message>
-        <location line="-895" />
-        <location line="+28" />
-        <location line="+21" />
+        <location line="-886" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
-        <location line="+15" />
         <location line="+22" />
-        <location line="+24" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+11" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
-        <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+28" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+20" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+81" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
@@ -11693,7 +11737,59 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+94" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+15" />
+        <location line="+22" />
+        <location line="+18" />
+        <location line="+21" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+51" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
         <source>Location</source>
         <translation>Mesto</translation>
     </message>
@@ -11702,7 +11798,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation type="vanished">Qt Test</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-516" />
         <source>Google Test</source>
         <translation>Google Test</translation>
     </message>
@@ -11722,49 +11818,49 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Catch2</translation>
     </message>
     <message>
-        <location line="-762" />
+        <location line="-371" />
         <location line="+25" />
         <location line="+26" />
-        <location line="+712" />
+        <location line="+321" />
         <source>Test framework:</source>
         <translation>Testni okvir:</translation>
     </message>
     <message>
-        <location line="-687" />
+        <location line="-296" />
         <source>GUI Application</source>
         <translation>Aplikacija GUI</translation>
     </message>
     <message>
         <location line="-75" />
         <location line="+51" />
-        <location line="+715" />
+        <location line="+324" />
         <source>Test suite name:</source>
         <translation>Ime testne zbirke:</translation>
     </message>
     <message>
-        <location line="-790" />
-        <location line="+25" />
+        <location line="-374" />
         <location line="+24" />
         <location line="+27" />
         <location line="+21" />
-        <location line="+694" />
+        <location line="+22" />
+        <location line="+281" />
         <source>Test case name:</source>
         <translation>Ime testnega primera:</translation>
     </message>
     <message>
-        <location line="-693" />
+        <location line="-302" />
         <source>Requires QApplication</source>
         <translation>Potrebuje QApplication</translation>
     </message>
     <message>
-        <location line="-97" />
+        <location line="+22" />
         <source>Generate setup code</source>
         <translation>Ustvarite nastavitveno kodo</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+98" />
-        <location line="+692" />
+        <location line="-20" />
+        <location line="+21" />
+        <location line="+280" />
         <source>Generate initialization and cleanup code</source>
         <translation>Ustvari kodo za inicializacijo in čiščenje</translation>
     </message>
@@ -11773,17 +11869,17 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation type="vanished">Omogoči C++11</translation>
     </message>
     <message>
-        <location line="-766" />
+        <location line="-324" />
         <source>Googletest source directory (optional):</source>
         <translation>Izvorni imenik Googletest (neobvezno):</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>Imenik Boost include (neobvezno):</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
         <translation>Imenik Catch2 include (neobvezno):</translation>
     </message>
@@ -11793,154 +11889,154 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Uporabite knjižnice Qt</translation>
     </message>
     <message>
-        <location line="-50" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+45" />
-        <location line="+47" />
-        <location line="+84" />
+        <location line="+107" />
+        <location line="+46" />
+        <location line="+43" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
+        <location line="+105" />
+        <location line="+48" />
         <location line="+43" />
-        <location line="+49" />
-        <location line="+84" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+85" />
+        <location line="+153" />
+        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+314" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build system:</source>
         <translation>Gradi sistem:</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Informacije o projektu in preizkusu</translation>
     </message>
     <message>
-        <location line="-120" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-93" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+26" />
-        <location line="+51" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+79" />
+        <location line="+116" />
         <location line="+18" />
         <location line="+4" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+41" />
+        <location line="+17" />
+        <location line="+33" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+70" />
-        <location line="+220" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+28" />
+        <location line="+142" />
         <source>Details</source>
         <translation>Podrobnosti</translation>
     </message>
     <message>
-        <location line="-869" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-887" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Izbira kompleta</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -11948,101 +12044,101 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Kompleti</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+18" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <source>Project Management</source>
         <translation>Upravljanje projektov</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+37" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+41" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Povzetek</translation>
@@ -12052,9 +12148,9 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation type="vanished">Ustvari nov testni projekt enote. Preskusi enote vam omogočajo, da preverite, ali je koda primerna za uporabo in da ni nobenih regresij.</translation>
     </message>
     <message>
-        <location line="-466" />
-        <location line="+12" />
-        <location line="+456" />
+        <location line="-715" />
+        <location line="+380" />
+        <location line="+165" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Drugi projekt</translation>
@@ -12064,36 +12160,36 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation type="vanished">Projekt samodejnega testiranja</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="-620" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Popolnoma kvalificirano ime, vključno z imenskimi prostori</translation>
     </message>
     <message>
-        <location line="-645" />
-        <location line="+36" />
-        <location line="+276" />
-        <location line="+80" />
-        <location line="+235" />
-        <location line="+19" />
+        <location line="+1" />
         <location line="+22" />
+        <location line="+19" />
+        <location line="+289" />
+        <location line="+145" />
+        <location line="+40" />
+        <location line="+119" />
         <source>Class name:</source>
         <translation>Ime razreda:</translation>
     </message>
     <message>
-        <location line="-631" />
-        <location line="+592" />
-        <location line="+18" />
+        <location line="-633" />
+        <location line="+42" />
+        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Po meri&gt;</translation>
     </message>
     <message>
-        <location line="-646" />
-        <location line="+37" />
-        <location line="+282" />
-        <location line="+73" />
-        <location line="+237" />
-        <location line="+18" />
+        <location line="-474" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+294" />
+        <location line="+139" />
+        <location line="+39" />
+        <location line="+119" />
         <source>Base class:</source>
         <translation>Osnovni razred:</translation>
     </message>
@@ -12102,7 +12198,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-632" />
         <source>Include QObject</source>
         <translation>Vključi QObject</translation>
     </message>
@@ -12140,70 +12236,70 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Dodaj QML_ELEMENT</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+68" />
-        <location line="+262" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+315" />
+        <location line="+292" />
         <source>Header file:</source>
         <translation>Datoteka glave:</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+288" />
-        <location line="+68" />
-        <location line="+220" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+215" />
         <location line="+1" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+80" />
+        <location line="+133" />
+        <location line="+39" />
+        <location line="+120" />
         <source>Source file:</source>
         <translation>Izvorna datoteka:</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+392" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+34" />
-        <location line="+19" />
-        <location line="+444" />
-        <location line="+19" />
-        <location line="+22" />
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Pot:</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+596" />
-        <location line="+22" />
+        <location line="-739" />
+        <location line="+38" />
+        <location line="+429" />
+        <location line="+39" />
         <source>Define Class</source>
         <translation>Določite razred</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-502" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Ustvari datoteki z glavo in izvorno kodo C++ za nov razred, ki ga lahko dodate v projekt C++.</translation>
     </message>
     <message>
-        <location line="-203" />
-        <location line="+130" />
-        <location line="+74" />
+        <location line="+1" />
+        <location line="+65" />
+        <location line="+9" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-73" />
         <source>C++ Class</source>
         <translation>Razred C++</translation>
     </message>
@@ -12243,22 +12339,22 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Ustvari model predmeta Qt.</translation>
     </message>
     <message>
-        <location line="-231" />
-        <location line="+39" />
-        <location line="+26" />
-        <location line="+65" />
-        <location line="+18" />
-        <location line="+84" />
+        <location line="+1" />
+        <location line="+66" />
+        <location line="+57" />
+        <location line="+62" />
+        <location line="+9" />
+        <location line="+59" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-252" />
         <source>Qt Item Model</source>
         <translation>Model predmeta Qt</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+4" />
         <source>Qt for Python module:</source>
         <translation>Qt za modul Python:</translation>
     </message>
@@ -12283,8 +12379,8 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Uvoz QtQuick</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
         <location line="+6" />
@@ -12292,18 +12388,18 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Ustvari novo datoteko razreda Python.</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+71" />
+        <location line="+1" />
+        <location line="+158" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-157" />
         <source>Python Class</source>
         <translation>Razred Python</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+3" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Ustvari testni projekt na osnovi CMake, za katerega je mogoče vnesti delček kode.</translation>
     </message>
@@ -12358,7 +12454,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Izrezek kode</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="+7" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Ustvari datoteko glave, ki jo lahko dodate projektu C/C++.</translation>
     </message>
@@ -12368,7 +12464,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Datoteka glave C/C++</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Ustvari izvorno datoteko, ki jo lahko dodate projektu C/C++.</translation>
     </message>
@@ -12378,7 +12474,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Izvorna datoteka C/C++</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>Izberite predlogo za obrazec</translation>
     </message>
@@ -12396,12 +12492,12 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation type="vanished">Obrazec Qt Designer</translation>
     </message>
     <message>
-        <location line="-15" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Ustvari senčilnik za fragmente v jeziku Desktop OpenGL Shading Language (GLSL). Senčilniki za fragmente določajo končne barve slikovnih pik v trikotnikih, točkah in črtah, ki so izrisani z OpenGL.</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+1" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -12409,12 +12505,12 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-26" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Senčilnik za fragmente (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Ustvari senčilo vozlišč v jeziku senčenja OpenGL za namizne računalnike (GLSL). Vertex shaderji preoblikujejo položaje, normale in koordinate teksture trikotnikov, točk in črt, upodobljenih z OpenGL.</translation>
     </message>
@@ -12424,7 +12520,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Senčilnik za oglišča (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Ustvari senčilnik za fragmente v jeziku OpenGL/ES 2.0 Shading Language (GLSL/ES). Senčilniki za fragmente določajo končne barve slikovnih pik v trikotnikih, točkah in črtah, ki so izrisani z OpenGL.</translation>
     </message>
@@ -12434,7 +12530,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Senčilnik za fragmente (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Ustvari senčilo vozlišč v jeziku senčenja OpenGL/ES 2.0 (GLSL/ES). Vertex shaderji preoblikujejo položaje, normale in koordinate teksture trikotnikov, točk in črt, upodobljenih z OpenGL.</translation>
     </message>
@@ -12444,7 +12540,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Senčilnik za oglišča (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="+7" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Ustvari datoteko Java s standardno kodo.</translation>
     </message>
@@ -12459,7 +12555,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Java datoteka</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>Knjižnica brez stanj</translation>
     </message>
@@ -12480,25 +12576,25 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Datoteka JavaScript</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+12" />
         <source>Model name:</source>
         <translation>Ime modela:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
+        <location line="+1" />
+        <location line="+67" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Lokacija:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
-        <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" obstaja v datotečnem sistemu.</translation>
+        <location line="-66" />
+        <location line="+67" />
+        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; obstaja v datotečnem sistemu.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model Name and Location</source>
         <translation>Ime modela in lokacija</translation>
     </message>
@@ -12508,19 +12604,19 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Ustvari nov prazen model s praznim diagramom.</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+53" />
-        <location line="+12" />
+        <location line="+1" />
+        <location line="+5" />
+        <location line="+62" />
         <source>Modeling</source>
         <translation>Modelarstvo</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model</source>
         <translation>Model</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+3" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Ustvari praski model z uporabo začasne datoteke.</translation>
     </message>
@@ -12530,23 +12626,23 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Scratch model</translation>
     </message>
     <message>
-        <location line="-81" />
+        <location line="+7" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Ustvari prazno datoteko Nim z uporabo nabora znakov UTF-8.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+14" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>Datoteka Nim</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Ustvari prazno datoteko skripta Nim z uporabo nabora znakov UTF-8.</translation>
     </message>
@@ -12556,7 +12652,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Datoteka Nim Script</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+7" />
         <source>Creates an empty Python script file using UTF-8 charset.</source>
         <translation>Ustvari prazno skriptno datoteko Python z uporabo nabora znakov UTF-8.</translation>
     </message>
@@ -12566,7 +12662,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Datoteka Python</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Ustvari datoteko virov Qt (.qrc).</translation>
     </message>
@@ -12576,9 +12672,9 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Datoteka virov Qt</translation>
     </message>
     <message>
-        <location line="-67" />
-        <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
-        <translation>Ustvari datoteko QML s standardno kodo, ki se začne z "import QtQuick".</translation>
+        <location line="+7" />
+        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
+        <translation>Ustvari datoteko QML s standardno kodo, ki se začne z &quot;import QtQuick&quot;.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12586,21 +12682,21 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Datoteka QML (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="-32" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Ustvari medpomnilnik za praske z uporabo začasne datoteke.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+57" />
-        <location line="+47" />
+        <location line="-66" />
+        <location line="+67" />
+        <location line="+45" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Splošno</translation>
     </message>
     <message>
-        <location line="-634" />
+        <location line="-401" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Ta čarovnik ustvari preprost testni projekt enote z uporabo Boost.</translation>
     </message>
@@ -12625,21 +12721,21 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Ustvari nov testni projekt enote z uporabo Boost. Enotni testi vam omogočajo, da preverite, ali je koda primerna za uporabo in da ni regresij.</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+25" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Test Project</source>
         <translation>Testni projekt</translation>
     </message>
     <message>
-        <location line="-21" />
+        <location line="-93" />
         <source>Boost Test Project</source>
         <translation>Boost Test Project</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Ta čarovnik ustvari preprost testni projekt enote s pomočjo Catch2.</translation>
     </message>
@@ -12674,7 +12770,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>CATCH2 Test Project</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Ta čarovnik ustvari preprost testni projekt enote z uporabo Google Testa.</translation>
     </message>
@@ -12704,7 +12800,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Google testni projekt</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Ta čarovnik ustvari preprost testni projekt enote s pomočjo QT testa.</translation>
     </message>
@@ -12719,7 +12815,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>QT testni projekt</translation>
     </message>
     <message>
-        <location line="-116" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Ta čarovnik ustvari preprost testni projekt enote z uporabo QT Quick testa.</translation>
     </message>
@@ -12734,17 +12830,17 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>QT hitri testni projekt</translation>
     </message>
     <message>
-        <location line="+815" />
+        <location line="+10" />
         <source>Include QQuickItem</source>
         <translation>Vključite qquickitem</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+67" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>Ustvari testni projekt, ki temelji na CMAKE, kjer lahko vnesete delček kode, da ga sestavite in preverite.</translation>
     </message>
     <message>
-        <location line="-121" />
+        <location line="+29" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>Ustvari oblikovalski obrazec qt widgets, ki ga lahko dodate v projekt qt widget. To je koristno, če že imate obstoječi razred za poslovno logiko uporabniškega vmesnika.</translation>
     </message>
@@ -12754,7 +12850,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Obrazec oblikovalcev qt pripomočkov</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="+64" />
         <source>Creates a markdown file.</source>
         <translation>Ustvari datoteko za označevanje.</translation>
     </message>
@@ -12764,12 +12860,12 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Datoteka Markdown</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="+67" />
         <source>Scratch Buffer</source>
         <translation>Scratch Buffer</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>Ime državne karte:</translation>
     </message>
@@ -12789,7 +12885,7 @@ OpenMV IDE bo samo kopiral model, kakršen je.</translation>
         <translation>Državna karta</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -12829,7 +12925,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Testni primer</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>Ustvari prazno datoteko.</translation>
     </message>
@@ -12839,7 +12935,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Prazna datoteka</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Ustvari prevajalsko datoteko, ki jo lahko dodate v projekt QT.</translation>
     </message>
@@ -12849,61 +12945,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QT prevajalska datoteka</translation>
     </message>
     <message>
-        <location line="-623" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Ta čarovnik ustvari preprosto konzolno aplikacijo, ki temelji na Qt.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+83" />
+        <location line="+195" />
         <source>Meson</source>
         <translation>Meson</translation>
     </message>
     <message>
-        <location line="-442" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-326" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Define Build System</source>
         <translation>Določite Build System</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-328" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build System</source>
         <translation>Sistem za gradnjo</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-328" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation File</source>
         <translation>Prevajalska datoteka</translation>
     </message>
     <message>
-        <location line="-591" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-479" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation</source>
         <translation>Prevajanje</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-262" />
         <source>Define Python Interpreter</source>
         <translation>Določite tolmač Python</translation>
     </message>
@@ -12918,7 +13014,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Ustvari QT za aplikacijo Python, ki vključuje oblikovalski pripomočki QT Widgets (datoteka uporabniške vmesnike). Zahteva .ui v Python pretvorbo.</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+38" />
         <source>Qt 6.4</source>
         <translation>QT 6.4</translation>
     </message>
@@ -12933,7 +13029,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Ustvari QT hitra aplikacija, ki ima lahko kodo QML in C ++. Aplikacijo lahko sestavite in jo namestite na namizne, vgrajene in mobilne ciljne platforme.</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="+42" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -12942,7 +13038,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  Če želite razviti popolno aplikacijo, namesto tega ustvarite QT Quick Application Project.</translation>
     </message>
     <message>
-        <location line="+173" />
+        <location line="+30" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -12959,31 +13055,31 @@ Preselects a desktop Qt for building the application if available.</source>
 Če je na voljo, za gradnjo programa Izbere Qt za namizje.</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+32" />
-        <location line="+299" />
-        <location line="+114" />
+        <location line="-337" />
+        <location line="+266" />
+        <location line="+28" />
+        <location line="+44" />
         <source>Application (Qt)</source>
         <translation>Aplikacija (Qt)</translation>
     </message>
     <message>
-        <location line="-412" />
+        <location line="-337" />
         <source>Qt Console Application</source>
         <translation>Konzolni program Qt</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Ta čarovnik ustvari projekt knjižnice C++.</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+84" />
+        <location line="+308" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Podajte osnovne podatke o razredih, za katere želite ustvariti datoteke z ogrodjem izvorne kode.</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="-307" />
         <source>Shared Library</source>
         <translation>Deljena knjižnica</translation>
     </message>
@@ -12999,17 +13095,17 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+35" />
+        <location line="+46" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Vrsta:</translation>
     </message>
     <message>
-        <source>%{JS: value('Type') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</source>
-        <translation type="vanished">%{JS: value('Type') === 'qtplugin'? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</translation>
+        <source>%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</source>
+        <translation type="vanished">%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos;? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -13075,14 +13171,14 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Qt modul:</translation>
     </message>
     <message>
-        <location line="-519" />
-        <location line="+147" />
-        <location line="+70" />
+        <location line="+3" />
+        <location line="+116" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+59" />
-        <location line="+42" />
+        <location line="+68" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+170" />
         <source>Define Project Details</source>
         <translation>Določite podrobnosti projekta</translation>
     </message>
@@ -13091,38 +13187,38 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Ustvari knjižnico C++. To lahko uporabite za ustvarjanje:&lt;ul&gt;&lt;li&gt;skupne knjižnice C++ za uporabo z &lt;tt&gt;QPluginLoader&lt;/tt&gt; in izvajalnim okoljem (vtičniki)&lt;/li&gt;&lt;li&gt;skupne ali statične knjižnice C++ za uporabo z drugim projekt ob času povezave&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-513" />
-        <location line="+460" />
-        <location line="+62" />
-        <location line="+7" />
+        <location line="-427" />
+        <location line="+18" />
+        <location line="+186" />
+        <location line="+232" />
         <source>Library</source>
         <translation>Knjižnica</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-435" />
         <source>C++ Library</source>
         <translation>Knjižnica C++</translation>
     </message>
     <message>
-        <location line="-366" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>Ustvari preprosto aplikacijo Nim.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+229" />
+        <location line="+40" />
         <location line="+18" />
-        <location line="+157" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Projekt, ki ni Qt</translation>
     </message>
     <message>
-        <location line="-403" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>Aplikacija Nim</translation>
     </message>
     <message>
-        <location line="+369" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>Dvojiško</translation>
     </message>
@@ -13137,13 +13233,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Avtor:</translation>
     </message>
     <message>
-        <location line="-544" />
-        <location line="+545" />
+        <location line="+1" />
+        <location line="+402" />
         <source>Description:</source>
         <translation>Opis:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-401" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -13208,13 +13304,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Drugo</translation>
     </message>
     <message>
-        <location line="-560" />
-        <location line="+561" />
+        <location line="+1" />
+        <location line="+386" />
         <source>License:</source>
         <translation>Licenca:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-385" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -13255,22 +13351,22 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Določite konfiguracijo projekta</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="+1" />
+        <location line="+253" />
+        <location line="+1" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+202" />
         <source>Configuration</source>
         <translation>Nastavitve</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-343" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Z Nimble ustvari aplikacijo Nim.</translation>
     </message>
@@ -13280,7 +13376,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Spretna aplikacija</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Ustvari preprosto aplikacijo C brez odvisnosti.</translation>
     </message>
@@ -13290,7 +13386,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Navadna aplikacija C</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Ustvari preprosto aplikacijo C++ brez odvisnosti.</translation>
     </message>
@@ -13300,7 +13396,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Navadna aplikacija C++</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Ta čarovnik ustvari prazno datoteko .pro.</translation>
     </message>
@@ -13319,43 +13415,43 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Različica PySide:</translation>
     </message>
     <message>
-        <location line="-218" />
+        <location line="+13" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Ustvari aplikacijo Qt za Python, ki vsebuje samo glavno kodo za QApplication.</translation>
     </message>
     <message>
-        <location line="-14" />
-        <location line="+15" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+18" />
+        <location line="+21" />
         <source>Application (Qt for Python)</source>
         <translation>Aplikacija (Qt za Python)</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-60" />
         <source>Empty Application</source>
         <translation>Prazna aplikacija</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</source>
-        <translation type="vanished">%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</translation>
+        <source>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</source>
+        <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-28" />
-        <location line="+37" />
+        <location line="+9" />
+        <location line="+39" />
         <source>Project file:</source>
         <translation>Projektna datoteka:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Ustvari aplikacijo Qt za Python, ki vsebuje prazno okno.</translation>
     </message>
@@ -13365,15 +13461,15 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Prazno okno</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+15" />
+        <location line="-32" />
         <location line="+22" />
         <location line="+15" />
+        <location line="+24" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-211" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -13382,19 +13478,19 @@ Preselects a desktop Qt for building the application if available.</source>
  Predpostavlja namizni QT za gradnjo aplikacije, če je na voljo.</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Ustvari knjižnico C ++. Lahko ustvarite: &lt;ul&gt; &lt;li&gt; Skupna knjižnica C ++ za uporabo z &lt;TT&gt; QPLUGINLOADER &lt;/TT&gt; in RUNTIME (Plugins) &lt;/li&gt; &lt;li&gt; Skupna ali statična knjižnica C ++ za uporabo z drugim projektom pri Linktime &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+15" />
+        <location line="+107" />
         <location line="+22" />
+        <location line="+39" />
         <source>PySide 2</source>
         <translation>Pyside 2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="-24" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -13428,50 +13524,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Ustvari aplikacijo Qt za Python, ki vključuje gradnik, ki temelji na Qt Designerju (datoteka ui) – Zahteva pretvorbo .ui v Python</translation>
     </message>
     <message>
-        <location line="-55" />
+        <location line="+21" />
         <source>Window UI</source>
         <translation>okenski uporabniški vmesnik</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+311" />
+        <location line="+10" />
         <location line="+25" />
+        <location line="+23" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-335" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
         <location line="+23" />
+        <location line="+25" />
         <source>Minimum required Qt version:</source>
         <translation>Najmanjša zahtevana različica Qt:</translation>
     </message>
     <message>
-        <location line="-22" />
+        <location line="-47" />
         <source>MyItem</source>
         <translation>MyItem</translation>
     </message>
@@ -13519,9 +13615,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Ustvarite projekt s strukturo, ki je združljiva s Qt Design Studio (prek .qmlproject) in s Qt Creator (prek CMakeLists.txt). Vsebuje obrazec .ui.qml, ki ga lahko vizualno urejate v Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="-324" />
-        <location line="+274" />
-        <location line="+55" />
+        <location line="+5" />
+        <location line="+30" />
+        <location line="+16" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Uporabite virtualno tipkovnico Qt</translation>
     </message>
@@ -13534,15 +13630,15 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Ustvari aplikacijo Qt Quick, ki vsebuje prazno okno. Po želji lahko ustvarite projekt Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-33" />
         <source>Qt Quick Application</source>
         <translation>Program Qt Quick</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="+26" />
         <source>Creates a Qt Quick application that contains an empty window.
 
-Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
+Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
         <translation>Ustvari aplikacijo Qt Quick, ki vsebuje prazno okno.
 
 Uporabite to »compat« različico, če želite uporabljati druge gradbene sisteme kot različice CMake ali Qt, starejše od 6.</translation>
@@ -13561,18 +13657,18 @@ Use this only if you are prototyping. You cannot create a full application with 
 To uporabite le, če izdelujete prototip. S tem ne morete ustvariti celotne aplikacije. Namesto tega razmislite o uporabi projekta Qt Quick Application.</translation>
     </message>
     <message>
-        <location line="+272" />
+        <location line="+14" />
         <source>Qt Quick UI Prototype</source>
         <translation>Prototip hitrega uporabniškega vmesnika Qt</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Ta čarovnik ustvari projekt aplikacije Qt Widgets. Aplikacija privzeto izhaja iz QApplication in vključuje prazen gradnik.</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
         <location line="+15" />
@@ -13580,8 +13676,8 @@ To uporabite le, če izdelujete prototip. S tem ne morete ustvariti celotne apli
         <translation>Ustvari obrazec</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), 'ui')}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), 'ui')}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13607,27 +13703,27 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
         <translation>Aplikacija Qt Widgets</translation>
     </message>
     <message>
-        <location line="-332" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Konfigurirajte &lt;b&gt;%{vcsName}&lt;/b&gt; zdaj.</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-93" />
+        <location line="+52" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository:</source>
         <translation>Skladišče:</translation>
     </message>
     <message>
         <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>URL skladišča ni veljaven</translation>
@@ -13637,24 +13733,24 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
         <source>Directory:</source>
         <translation>Mapa:</translation>
     </message>
     <message>
-        <location line="-94" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
-        <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" obstaja v datotečnem sistemu.</translation>
+        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; obstaja v datotečnem sistemu.</translation>
     </message>
     <message>
-        <location line="-52" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>Uporabi obstoječo mapo</translation>
     </message>
@@ -13730,13 +13826,13 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+19" />
+        <location line="+60" />
         <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Določite URL skladišča, imenik za odjavo in pot.</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>Podružnica Running Bazaar ...</translation>
     </message>
@@ -13755,9 +13851,9 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
         <translation>Sklonira vejo Bazaar in poskusi naložiti vsebovani projekt.</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+1" />
+        <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <location line="+20" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
@@ -13765,12 +13861,12 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
         <translation>Uvozi projekt</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Klon (ali veja) skladišča Bazaar</translation>
     </message>
     <message>
-        <location line="-69" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>Modul:</translation>
     </message>
@@ -13789,7 +13885,7 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+52" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+19" />
         <location line="+1" />
@@ -13797,7 +13893,7 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
         <translation>Preveri</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Prevzame skladišče CVS in poskusi naložiti vsebovani projekt.</translation>
     </message>
@@ -13847,7 +13943,7 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>Poganja se Mercurialov klon ...</translation>
     </message>
@@ -13882,7 +13978,7 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
         <translation>Prevzem iz Subversion</translation>
     </message>
     <message>
-        <location line="-394" />
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Ta čarovnik ustvari vtičnik Qt Creator po meri.</translation>
     </message>
@@ -13892,8 +13988,8 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
         <translation>Določite podrobnosti o svojem vtičniku Qt Creator po meri.</translation>
     </message>
     <message>
-        <source>%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</source>
-        <translation type="vanished">%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</translation>
+        <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
+        <translation type="vanished">%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13931,8 +14027,8 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
         <translation>Tukaj vnesite kratek opis vašega vtičnika</translation>
     </message>
     <message>
-        <source>https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</source>
-        <translation type="vanished">https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</translation>
+        <source>https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</source>
+        <translation type="vanished">https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13957,12 +14053,12 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
         <source>S&amp;essions</source>
-        <translation>S &amp; Essions</translation>
+        <translation>S &amp;Essions</translation>
     </message>
     <message>
         <location line="+9" />
         <source>&amp;Manage...</source>
-        <translation>&amp; Upravljanje ...</translation>
+        <translation>&amp;Upravljanje ...</translation>
     </message>
     <message>
         <location line="+13" />
@@ -14024,8 +14120,8 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
     </message>
     <message>
         <location line="+42" />
-        <source>Could not save session to file "%1"</source>
-        <translation>Seje ni bilo mogoče shraniti v vložitev "%1"</translation>
+        <source>Could not save session to file &quot;%1&quot;</source>
+        <translation>Seje ni bilo mogoče shraniti v vložitev &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
@@ -14040,27 +14136,27 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
     <message>
         <location line="+7" />
         <source>&amp;New...</source>
-        <translation>&amp; Novo ...</translation>
+        <translation>&amp;Novo ...</translation>
     </message>
     <message>
         <location line="+3" />
         <source>&amp;Open</source>
-        <translation>&amp; Odprto</translation>
+        <translation>&amp;Odprto</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Rename...</source>
-        <translation>&amp; Preimenovanje ...</translation>
+        <translation>&amp;Preimenovanje ...</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C&amp;lone...</source>
-        <translation>C &amp; Lone ...</translation>
+        <translation>C &amp;Lone ...</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Delete...</source>
-        <translation>&amp; Izbriši ...</translation>
+        <translation>&amp;Izbriši ...</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14091,22 +14187,22 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
     <message>
         <location line="-10" />
         <source>&amp;Create</source>
-        <translation>&amp; Ustvari</translation>
+        <translation>&amp;Ustvari</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Create and &amp;Open</source>
-        <translation>Ustvari in odprite</translation>
+        <translation>Ustvari in &amp;odprite</translation>
     </message>
     <message>
         <location line="+11" />
         <source>&amp;Clone</source>
-        <translation>&amp; Klon</translation>
+        <translation>&amp;Klon</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Clone and &amp;Open</source>
-        <translation>Klon in &amp; odprt</translation>
+        <translation>Klon in &amp;odprt</translation>
     </message>
     <message>
         <location line="+22" />
@@ -14116,12 +14212,12 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
     <message>
         <location line="+1" />
         <source>&amp;Rename</source>
-        <translation>&amp; Preimenovanje</translation>
+        <translation>&amp;Preimenovanje</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Rename and &amp;Open</source>
-        <translation>Preimenujte in odprite</translation>
+        <translation>Preimenujte in &amp;odprite</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
@@ -14135,38 +14231,38 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
     </message>
     <message>
         <location line="+72" />
-        <source>Could not create directory "%1"</source>
-        <translation>Ne bi mogel ustvariti imenika "%1"</translation>
+        <source>Could not create directory &quot;%1&quot;</source>
+        <translation>Ne bi mogel ustvariti imenika &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>Program "%1" ne obstaja ali ni izvedljiv.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>Program &quot;%1&quot; ne obstaja ali ni izvedljiv.</translation>
     </message>
     <message>
         <location line="+34" />
-        <source>Starting: "%1" %2</source>
-        <translation>Začetek: " %1" %2</translation>
+        <source>Starting: &quot;%1&quot; %2</source>
+        <translation>Začetek: &quot; %1&quot; %2</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The process "%1" exited normally.</source>
-        <translation>Postopek "%1" je izstopil normalno.</translation>
+        <source>The process &quot;%1&quot; exited normally.</source>
+        <translation>Postopek &quot;%1&quot; je izstopil normalno.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The process "%1" exited with code %2.</source>
-        <translation>Proces " %1" je izstopil s kodo %2.</translation>
+        <source>The process &quot;%1&quot; exited with code %2.</source>
+        <translation>Proces &quot; %1&quot; je izstopil s kodo %2.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Could not start process "%1" %2.</source>
-        <translation>Ne bi mogel začeti procesa " %1" %2.</translation>
+        <source>Could not start process &quot;%1&quot; %2.</source>
+        <translation>Ne bi mogel začeti procesa &quot; %1&quot; %2.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The process "%1" crashed.</source>
-        <translation>Proces "%1" se je zrušil.</translation>
+        <source>The process &quot;%1&quot; crashed.</source>
+        <translation>Proces &quot;%1&quot; se je zrušil.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
@@ -14207,8 +14303,8 @@ Vnaprej izbere namizni Qt za izdelavo aplikacije, če je na voljo.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files of all open projects. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Poiščite datoteke vseh odprtih projektov. Dodajte "+&lt;temement&gt;" ali ": &lt;temement&gt;", da skočite na dano številko vrstice. Dodate še en "+&lt;temement&gt;" ali ": &lt;temement&gt;", da skočite tudi na številko stolpca.</translation>
+        <source>Locates files of all open projects. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Poiščite datoteke vseh odprtih projektov. Dodajte &quot;+&lt;temement&gt;&quot; ali &quot;: &lt;temement&gt;&quot;, da skočite na dano številko vrstice. Dodate še en &quot;+&lt;temement&gt;&quot; ali &quot;: &lt;temement&gt;&quot;, da skočite tudi na številko stolpca.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
@@ -14263,7 +14359,7 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>Show &amp;App Output</source>
-        <translation>Pokaži in aplikacije izhod</translation>
+        <translation>Pok&amp;aži in aplikacije izhod</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14384,13 +14480,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+105" />
-        <source>Build directory contains potentially problematic character "%1".</source>
-        <translation>Izdelava imenika vsebuje potencialno problematičen značaj "%1".</translation>
+        <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
+        <translation>Izdelava imenika vsebuje potencialno problematičen značaj &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>This warning can be suppressed &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>To opozorilo je mogoče zatreti &lt;a href = "lutka"&gt; tukaj &lt;/a&gt;.</translation>
+        <source>This warning can be suppressed &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>To opozorilo je mogoče zatreti &lt;a href = &quot;lutka&quot;&gt; tukaj &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -14446,7 +14542,7 @@ Excluding: %2
     </message>
     <message>
         <location line="+4" />
-        <source>Variables in the build configuration's environment</source>
+        <source>Variables in the build configuration&apos;s environment</source>
         <translation>Spremenljivke v okolju konfiguracije gradnje</translation>
     </message>
     <message>
@@ -14488,12 +14584,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build configuration</source>
+        <source>Name of the project&apos;s active build configuration</source>
         <translation>Ime konfiguracije aktivne gradnje projekta</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build system</source>
+        <source>Name of the project&apos;s active build system</source>
         <translation>Ime sistema aktivne gradnje projekta</translation>
     </message>
     <message>
@@ -14503,13 +14599,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Type of the project's active build configuration</source>
+        <source>Type of the project&apos;s active build configuration</source>
         <translation>Vrsta konfiguracije aktivne gradnje projekta</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>No build device is set for the kit "%1".</source>
-        <translation>Za komplet "%1" ni nastavljena nobena naprava za gradnjo.</translation>
+        <source>No build device is set for the kit &quot;%1&quot;.</source>
+        <translation>Za komplet &quot;%1&quot; ni nastavljena nobena naprava za gradnjo.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -14518,22 +14614,22 @@ Excluding: %2
     </message>
     <message>
         <location line="+7" />
-        <source>The build device "%1" cannot reach the project directory.</source>
-        <translation>Naprava za gradnjo "%1" ne more priti do imenika projekta.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the project directory.</source>
+        <translation>Naprava za gradnjo &quot;%1&quot; ne more priti do imenika projekta.</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The build device "%1" cannot reach the build directory.</source>
-        <translation>Naprava za gradnjo "%1" ne more priti do imenika gradnje.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the build directory.</source>
+        <translation>Naprava za gradnjo &quot;%1&quot; ne more priti do imenika gradnje.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
         <source>Finished %1 of %n steps</source>
-        <translation>
-            <numerusform>Končan %1 od %n korakov</numerusform>
-            <numerusform>Končan %1 od %n korakov</numerusform>
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -14559,7 +14655,7 @@ Excluding: %2
     <message>
         <location line="+138" />
         <source>Compile</source>
-        <comment>Category for compiler issues listed under 'Issues'</comment>
+        <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>Sestaviti</translation>
     </message>
     <message>
@@ -14570,7 +14666,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Build System</source>
-        <comment>Category for build system issues listed under 'Issues'</comment>
+        <comment>Category for build system issues listed under &apos;Issues&apos;</comment>
         <translation>Sistem za gradnjo</translation>
     </message>
     <message>
@@ -14581,7 +14677,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Deployment</source>
-        <comment>Category for deployment issues listed under 'Issues'</comment>
+        <comment>Category for deployment issues listed under &apos;Issues&apos;</comment>
         <translation>Uvajanje</translation>
     </message>
     <message>
@@ -14592,7 +14688,7 @@ Excluding: %2
     <message>
         <location line="+4" />
         <source>Autotests</source>
-        <comment>Category for autotest issues listed under 'Issues'</comment>
+        <comment>Category for autotest issues listed under &apos;Issues&apos;</comment>
         <translation>Autotests</translation>
     </message>
     <message>
@@ -14609,7 +14705,7 @@ Excluding: %2
         <location line="+8" />
         <location line="+59" />
         <source>Clean</source>
-        <extracomment>Displayed name for a "cleaning" build step
+        <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
 Display name of the clean build step list. Used as part of the labels in the project window.</extracomment>
         <translation>Čist</translation>
@@ -14673,8 +14769,8 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location line="+98" />
-        <source>When executing step "%1"</source>
-        <translation>Pri izvajanju koraka "%1"</translation>
+        <source>When executing step &quot;%1&quot;</source>
+        <translation>Pri izvajanju koraka &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
@@ -14891,8 +14987,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+3" />
-        <source>The project file "%1" does not exist.</source>
-        <translation>Projektna datoteka "%1" ne obstaja.</translation>
+        <source>The project file &quot;%1&quot; does not exist.</source>
+        <translation>Projektna datoteka &quot;%1&quot; ne obstaja.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/codestylesettingspropertiespage.cpp" line="+60" />
@@ -14919,7 +15015,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+38" />
         <source>Show Compile &amp;Output</source>
-        <translation>Pokaži prevajanje in izhod</translation>
+        <translation>P&amp;okaži prevajanje in izhod</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14989,13 +15085,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from the current document's project. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Poiščite datoteke iz projekta trenutnega dokumenta. Dodajte "+&lt;temement&gt;" ali ": &lt;temement&gt;", da skočite na dano številko vrstice. Dodate še en "+&lt;temement&gt;" ali ": &lt;temement&gt;", da skočite tudi na številko stolpca.</translation>
+        <source>Locates files from the current document&apos;s project. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Poiščite datoteke iz projekta trenutnega dokumenta. Dodajte &quot;+&lt;temement&gt;&quot; ali &quot;: &lt;temement&gt;&quot;, da skočite na dano številko vrstice. Dodate še en &quot;+&lt;temement&gt;&quot; ali &quot;: &lt;temement&gt;&quot;, da skočite tudi na številko stolpca.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
-        <source>Project "%1"</source>
-        <translation>Projekt "%1"</translation>
+        <source>Project &quot;%1&quot;</source>
+        <translation>Projekt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -15004,8 +15100,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>Project "%1":</source>
-        <translation>Projekt "%1":</translation>
+        <source>Project &quot;%1&quot;:</source>
+        <translation>Projekt &quot;%1&quot;:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
@@ -15026,8 +15122,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
-        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>Izhod iz izhoda po meri Skeniranje ukazne vrstice za vzorce napak, ki jih zagotavlja uporabnik &lt;br&gt; Za ustvarjanje vnosov v vprašanjih.</translation>
+        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+82" />
@@ -15037,11 +15133,11 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+2" />
         <source>There are %n custom parsers active</source>
-        <translation>
-            <numerusform>Ni %n po meri razčlenjevalcev</numerusform>
-            <numerusform>Ni %n po meri razčlenjevalcev</numerusform>
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -15052,25 +15148,25 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>&amp;Error message capture pattern:</source>
-        <translation>&amp; Vzorec zajemanja sporočil o napaki:</translation>
+        <translation>&amp;Vzorec zajemanja sporočil o napaki:</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+33" />
         <source>&amp;File name:</source>
-        <translation>&amp; Ime datoteke:</translation>
+        <translation>&amp;Ime datoteke:</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Line number:</source>
-        <translation>&amp; Številka vrstice:</translation>
+        <translation>&amp;Številka vrstice:</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Message:</source>
-        <translation>&amp; Sporočilo:</translation>
+        <translation>&amp;Sporočilo:</translation>
     </message>
     <message>
         <location line="-15" />
@@ -15087,7 +15183,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-31" />
         <source>E&amp;rror message:</source>
-        <translation>E &amp; rror sporočilo:</translation>
+        <translation>E &amp;rror sporočilo:</translation>
     </message>
     <message>
         <location line="+33" />
@@ -15172,7 +15268,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
-        <source>Custom output parsers defined here can be enabled individually in the project's build or run settings.</source>
+        <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>Tukaj opredeljeni izhodni razčlenjevalci po meri lahko v nastavitvah izdelave ali zagona projekta posamezno omogočijo posamezno.</translation>
     </message>
     <message>
@@ -15225,11 +15321,11 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+44" />
         <source>%n entries</source>
-        <translation>
-            <numerusform>%n vnosi</numerusform>
-            <numerusform>%n vnosi</numerusform>
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -15268,44 +15364,44 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
         <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>&amp; Prepiler pot:</translation>
+        <translation>&amp;Prepiler pot:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Make path:</source>
-        <translation>&amp; Naredi pot:</translation>
+        <translation>&amp;Naredi pot:</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
         <source>&amp;ABI:</source>
-        <translation>&amp; Abi:</translation>
+        <translation>&amp;Abi:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Predefined macros:</source>
-        <translation>Vnaprej določeni makroni:</translation>
+        <translation>Vna&amp;prej določeni makroni:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Header paths:</source>
-        <translation>In glave poti:</translation>
+        <translation>&amp;In glave poti:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C++11 &amp;flags:</source>
-        <translation>C ++ 11 in zastave:</translation>
+        <translation>&amp;C ++ 11 in zastave:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Qt mkspecs:</source>
-        <translation>&amp; QT MKSPECS:</translation>
+        <translation>&amp;QT MKSPECS:</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Error parser:</source>
-        <translation>&amp; Error Parser:</translation>
+        <translation>&amp;Error Parser:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/dependenciespanel.cpp" line="+83" />
@@ -15460,19 +15556,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
-        <source>No device for path "%1"</source>
-        <translation>Brez naprave za pot "%1"</translation>
+        <source>No device for path &quot;%1&quot;</source>
+        <translation>Brez naprave za pot &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
-        <source>No device found for path "%1"</source>
-        <translation>Nobena naprava za pot "%1"</translation>
+        <source>No device found for path &quot;%1&quot;</source>
+        <translation>Nobena naprava za pot &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-9" />
-        <source>No file access for device "%1"</source>
-        <translation>Ni dostopa do datoteke za napravo "%1"</translation>
+        <source>No file access for device &quot;%1&quot;</source>
+        <translation>Ni dostopa do datoteke za napravo &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
@@ -15497,17 +15593,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+22" />
         <source>&amp;Update List</source>
-        <translation>&amp; Seznam posodobitev</translation>
+        <translation>&amp;Seznam posodobitev</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Kill Process</source>
-        <translation>&amp; Ubijanje procesa</translation>
+        <translation>&amp;Ubijanje procesa</translation>
     </message>
     <message>
         <location line="+8" />
         <source>&amp;Filter:</source>
-        <translation>&amp; Filter:</translation>
+        <translation>&amp;Filter:</translation>
     </message>
     <message>
         <location line="+64" />
@@ -15517,7 +15613,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-253" />
         <source>&amp;Device:</source>
-        <translation>&amp; Naprava:</translation>
+        <translation>&amp;Naprava:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15527,7 +15623,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>&amp;Remove</source>
-        <translation>&amp; Odstrani</translation>
+        <translation>&amp;Odstrani</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15537,12 +15633,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>&amp;Add...</source>
-        <translation>&amp; Dodaj ...</translation>
+        <translation>&amp;Dodaj ...</translation>
     </message>
     <message>
         <location line="+4" />
         <source>&amp;Start Wizard to Add Device...</source>
-        <translation>&amp; Začetek čarovnika za dodajanje naprave ...</translation>
+        <translation>&amp;Začetek čarovnika za dodajanje naprave ...</translation>
     </message>
     <message>
         <location line="+12" />
@@ -15553,7 +15649,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+34" />
         <source>&amp;Name:</source>
-        <translation>&amp; Ime:</translation>
+        <translation>&amp;Ime:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -15567,8 +15663,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+87" />
-        <source>Yes (id is "%1")</source>
-        <translation>Da (ID je "%1")</translation>
+        <source>Yes (id is &quot;%1&quot;)</source>
+        <translation>Da (ID je &quot;%1&quot;)</translation>
     </message>
     <message>
         <location line="+0" />
@@ -15609,11 +15705,11 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+41" />
         <source>Found %n free ports.</source>
-        <translation>
-            <numerusform>Najdena %n brezplačna vrata.</numerusform>
-            <numerusform>Najdena %n brezplačna vrata.</numerusform>
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -15699,13 +15795,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>No device for given path: "%1".</source>
-        <translation>Brez naprave za dano pot: "%1".</translation>
+        <source>No device for given path: &quot;%1&quot;.</source>
+        <translation>Brez naprave za dano pot: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Device for path "%1" does not support killing processes.</source>
-        <translation>Naprava za pot "%1" ne podpira procesov ubijanja.</translation>
+        <source>Device for path &quot;%1&quot; does not support killing processes.</source>
+        <translation>Naprava za pot &quot;%1&quot; ne podpira procesov ubijanja.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
@@ -15788,7 +15884,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Prikažite desno in maržo v stolpcu:</translation>
+        <translation>Prikažite desno in &amp;maržo v stolpcu:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15837,22 +15933,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-278" />
         <source>Ed&amp;it</source>
-        <translation>Ed &amp; It</translation>
+        <translation>Ed &amp;It</translation>
     </message>
     <message>
         <location line="+4" />
         <source>&amp;Add</source>
-        <translation>&amp; Dodaj</translation>
+        <translation>&amp;Dodaj</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&amp;Reset</source>
-        <translation>&amp; Ponastavitev</translation>
+        <translation>&amp;Ponastavitev</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&amp;Unset</source>
-        <translation>&amp; Unset</translation>
+        <translation>&amp;Unset</translation>
     </message>
     <message>
         <location line="+14" />
@@ -15867,7 +15963,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+9" />
         <source>Open &amp;Terminal</source>
-        <translation>Open &amp; Terminal</translation>
+        <translation>Open &amp;Terminal</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15876,33 +15972,33 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+123" />
-        <source>Unset &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Unset &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Unset &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation>Set &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; do &lt;b&gt;%2 &lt;/b&gt;</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
+        <translation>Set &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; do &lt;b&gt;%2 &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Dodaj &lt;b&gt;%2 &lt;/b&gt; v &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Dodaj &lt;b&gt;%2 &lt;/b&gt; v &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Predend &lt;b&gt;%2 &lt;/b&gt; do &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Predend &lt;b&gt;%2 &lt;/b&gt; do &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
-        <translation>Set &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; do &lt;b&gt;%2 &lt;/b&gt; [onemogočen]</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
+        <translation>Set &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; do &lt;b&gt;%2 &lt;/b&gt; [onemogočen]</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Use &lt;b&gt;%1&lt;/b&gt;</source>
-        <extracomment>%1 is "System Environment" or some such.</extracomment>
+        <extracomment>%1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Uporabite &lt;B&gt;%1 &lt;/b&gt;</translation>
     </message>
     <message>
@@ -15913,7 +16009,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>Use &lt;b&gt;%1&lt;/b&gt; and</source>
-        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is "System Environment" or some such.</extracomment>
+        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Uporabite &lt;b&gt;%1 &lt;/b&gt; in</translation>
     </message>
     <message>
@@ -16011,58 +16107,58 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Field "%1" has no type.</source>
-        <translation>Polje "%1" nima vrste.</translation>
+        <source>Field &quot;%1&quot; has no type.</source>
+        <translation>Polje &quot;%1&quot; nima vrste.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Field "%1" has unsupported type "%2".</source>
-        <translation>Polje "%1" ima nepodprto tip "%2".</translation>
+        <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
+        <translation>Polje &quot;%1&quot; ima nepodprto tip &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>When parsing Field "%1": %2</source>
-        <translation>Ko je polje za razčlenitev " %1": %2</translation>
+        <source>When parsing Field &quot;%1&quot;: %2</source>
+        <translation>Ko je polje za razčlenitev &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+208" />
-        <source>Label ("%1") data is not an object.</source>
-        <translation>Podatki oznake ("%1") niso predmet.</translation>
+        <source>Label (&quot;%1&quot;) data is not an object.</source>
+        <translation>Podatki oznake (&quot;%1&quot;) niso predmet.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Label ("%1") has no trText.</source>
-        <translation>Nalepka ("%1") nima TRTEXT.</translation>
+        <source>Label (&quot;%1&quot;) has no trText.</source>
+        <translation>Nalepka (&quot;%1&quot;) nima TRTEXT.</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>Spacer ("%1") data is not an object.</source>
-        <translation>Podatki distančnikov ("%1") niso predmet.</translation>
+        <source>Spacer (&quot;%1&quot;) data is not an object.</source>
+        <translation>Podatki distančnikov (&quot;%1&quot;) niso predmet.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Spacer ("%1") property "factor" is no integer value.</source>
-        <translation>Sparter ("%1") lastnosti "faktor" ni celoštevilčna vrednost.</translation>
+        <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
+        <translation>Sparter (&quot;%1&quot;) lastnosti &quot;faktor&quot; ni celoštevilčna vrednost.</translation>
     </message>
     <message>
         <location line="+35" />
-        <source>LineEdit ("%1") data is not an object.</source>
-        <translation>Podatki LineEdit ("%1") niso predmet.</translation>
+        <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>Podatki LineEdit (&quot;%1&quot;) niso predmet.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>LineEdit ("%1") has an invalid regular expression "%2" in "validator".</source>
-        <translation>LineEdit ("%1") ima neveljaven redni izraz "%2" v "Validator".</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
+        <translation>LineEdit (&quot;%1&quot;) ima neveljaven redni izraz &quot;%2&quot; v &quot;Validator&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>LineEdit ("%1") has an invalid value "%2" in "completion".</source>
-        <translation>LineEdit ("%1") ima neveljavno vrednost "%2" v "dokončanju".</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
+        <translation>LineEdit (&quot;%1&quot;) ima neveljavno vrednost &quot;%2&quot; v &quot;dokončanju&quot;.</translation>
     </message>
     <message>
         <location line="+166" />
-        <source>TextEdit ("%1") data is not an object.</source>
-        <translation>Podatki TextEdit ("%1") niso predmet.</translation>
+        <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>Podatki TextEdit (&quot;%1&quot;) niso predmet.</translation>
     </message>
     <message>
         <location line="+83" />
@@ -16071,18 +16167,18 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+26" />
-        <source>kind "%1" is not one of the supported "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any".</source>
-        <translation>Kind "%1" ni eden od podprtih "obstoječihDirectory", "imenik", "datoteka", "savefile", "obstoječiCommand", "ukaz", "karkoli".</translation>
+        <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
+        <translation>Kind &quot;%1&quot; ni eden od podprtih &quot;obstoječihDirectory&quot;, &quot;imenik&quot;, &quot;datoteka&quot;, &quot;savefile&quot;, &quot;obstoječiCommand&quot;, &quot;ukaz&quot;, &quot;karkoli&quot;.</translation>
     </message>
     <message>
         <location line="+80" />
-        <source>CheckBox ("%1") data is not an object.</source>
-        <translation>Podatki ("%1") niso predmet.</translation>
+        <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
+        <translation>Podatki (&quot;%1&quot;) niso predmet.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>CheckBox ("%1") values for checked and unchecked state are identical.</source>
-        <translation>Vrednosti potrditve ("%1") za preverjeno in nenadzorovano stanje so enake.</translation>
+        <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
+        <translation>Vrednosti potrditve (&quot;%1&quot;) za preverjeno in nenadzorovano stanje so enake.</translation>
     </message>
     <message>
         <location line="+80" />
@@ -16091,33 +16187,33 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>No "key" found in List items.</source>
-        <translation>V elementih seznama ni "ključa".</translation>
+        <source>No &quot;key&quot; found in List items.</source>
+        <translation>V elementih seznama ni &quot;ključa&quot;.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>%1 ("%2") data is not an object.</source>
-        <translation>Podatki%1 ("%2") niso predmet.</translation>
+        <source>%1 (&quot;%2&quot;) data is not an object.</source>
+        <translation>Podatki%1 (&quot;%2&quot;) niso predmet.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>%1 ("%2") "index" is not an integer value.</source>
-        <translation>%1 ("%2") "Indeks" ni celo število.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;Indeks&quot; ni celo število.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>%1 ("%2") "disabledIndex" is not an integer value.</source>
-        <translation>%1 ("%2") "DisabledIndex" ni celo število.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;DisabledIndex&quot; ni celo število.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>%1 ("%2") "items" missing.</source>
-        <translation>%1 ("%2") "Predmeti" manjkajo.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;Predmeti&quot; manjkajo.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>%1 ("%2") "items" is not a JSON list.</source>
-        <translation>%1 ("%2") "Predmeti" niso JSON seznam.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;Predmeti&quot; niso JSON seznam.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
@@ -16141,8 +16237,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+13" />
-        <source>No "%1" key found in feature list object.</source>
-        <translation>Ni ključa "%1", ki jo najdemo v predmetu seznama funkcij.</translation>
+        <source>No &quot;%1&quot; key found in feature list object.</source>
+        <translation>Ni ključa &quot;%1&quot;, ki jo najdemo v predmetu seznama funkcij.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -16156,8 +16252,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Error message from Version Control System: "%1".</source>
-        <translation>Sporočilo o napaki iz sistema nadzora različic: "%1".</translation>
+        <source>Error message from Version Control System: &quot;%1&quot;.</source>
+        <translation>Sporočilo o napaki iz sistema nadzora različic: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16168,18 +16264,18 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="-11" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
-        <source>Failed to add subproject "%1"
-to project "%2".</source>
-        <translation>Ni uspelo dodati podprojekta "%1"
- Projekt "%2".</translation>
+        <source>Failed to add subproject &quot;%1&quot;
+to project &quot;%2&quot;.</source>
+        <translation>Ni uspelo dodati podprojekta &quot;%1&quot;
+ Projekt &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
         <source>Failed to add one or more files to project
-"%1" (%2).</source>
+&quot;%1&quot; (%2).</source>
         <translation>V projekt ni dodal ene ali več datotek
- "%1" (%2).</translation>
+ &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
@@ -16199,13 +16295,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+33" />
-        <source>Check whether a variable exists.&lt;br&gt;Returns "true" if it does and an empty string if not.</source>
-        <translation>Preverite, ali obstaja spremenljivka. &lt;br&gt; vrne "resnično", če je, in prazen niz, če ne.</translation>
+        <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
+        <translation>Preverite, ali obstaja spremenljivka. &lt;br&gt; vrne &quot;resnično&quot;, če je, in prazen niz, če ne.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not determine target path. "TargetPath" was not set on any page.</source>
-        <translation>Ni mogel določiti ciljne poti. "Targetpath" ni bil nastavljen na nobeni strani.</translation>
+        <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
+        <translation>Ni mogel določiti ciljne poti. &quot;Targetpath&quot; ni bil nastavljen na nobeni strani.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -16214,13 +16310,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The wizard failed to generate files.&lt;br&gt;The error message was: "%1".</source>
-        <translation>Čarovnik ni uspel ustvariti datotek. &lt;br&gt; Sporočilo o napaki je bilo: "%1".</translation>
+        <source>The wizard failed to generate files.&lt;br&gt;The error message was: &quot;%1&quot;.</source>
+        <translation>Čarovnik ni uspel ustvariti datotek. &lt;br&gt; Sporočilo o napaki je bilo: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+63" />
-        <source>No 'key' in options object.</source>
-        <translation>V objektu možnosti ni "ključa".</translation>
+        <source>No &apos;key&apos; in options object.</source>
+        <translation>V objektu možnosti ni &quot;ključa&quot;.</translation>
     </message>
     <message>
         <location line="+88" />
@@ -16254,24 +16350,24 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+58" />
-        <source>"%1" does not exist in the file system.</source>
-        <translation>"%1" ne obstaja v datotečnem sistemu.</translation>
+        <source>&quot;%1&quot; does not exist in the file system.</source>
+        <translation>&quot;%1&quot; ne obstaja v datotečnem sistemu.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open "%1" as a project.</source>
-        <translation>Kot projekt ni odprl "%1".</translation>
+        <source>Failed to open &quot;%1&quot; as a project.</source>
+        <translation>Kot projekt ni odprl &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+46" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>Urednika za "%1" ni uspel odpreti.</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>Urednika za &quot;%1&quot; ni uspel odpreti.</translation>
     </message>
     <message>
         <location line="-27" />
-        <source>No file to open found in "%1".</source>
-        <translation>Nobene datoteke, ki bi jo odprli v "%1".</translation>
+        <source>No file to open found in &quot;%1&quot;.</source>
+        <translation>Nobene datoteke, ki bi jo odprli v &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16280,8 +16376,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to open project in "%1".</source>
-        <translation>Projekta ni uspel odpreti v "%1".</translation>
+        <source>Failed to open project in &quot;%1&quot;.</source>
+        <translation>Projekta ni uspel odpreti v &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16301,31 +16397,31 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+7" />
-        <source>TypeId "%1" of generator is unknown. Supported typeIds are: "%2".</source>
-        <translation>TypeID "%1" generatorja ni znan. Podprti tipi so: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>TypeID &quot;%1&quot; generatorja ni znan. Podprti tipi so: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+56" />
         <location line="+241" />
-        <source>Path "%1" does not exist when checking JSON wizard search paths.</source>
-        <translation>Pot "%1" ne obstaja pri preverjanju iskalnih poti json Wizard.</translation>
+        <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
+        <translation>Pot &quot;%1&quot; ne obstaja pri preverjanju iskalnih poti json Wizard.</translation>
     </message>
     <message>
         <location line="-228" />
-        <source>Checking "%1" for %2.</source>
-        <translation>Preverjanje " %1" za %2.</translation>
+        <source>Checking &quot;%1&quot; for %2.</source>
+        <translation>Preverjanje &quot; %1&quot; za %2.</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+233" />
-        <source>* Failed to parse "%1":%2:%3: %4</source>
-        <translation>* Ni uspelo razčleniti "%1":%2:%3:%4</translation>
+        <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
+        <translation>* Ni uspelo razčleniti &quot;%1&quot;:%2:%3:%4</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>* Did not find a JSON object in "%1".
+        <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* Ni našel predmeta JSON v "%1".</translation>
+        <translation>* Ni našel predmeta JSON v &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -16335,8 +16431,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="-224" />
-        <source>JsonWizard: "%1" not found.</source>
-        <translation>JSONWIZARD: "%1" ni mogoče najti.</translation>
+        <source>JsonWizard: &quot;%1&quot; not found.</source>
+        <translation>JSONWIZARD: &quot;%1&quot; ni mogoče najti.</translation>
     </message>
     <message>
         <location line="+96" />
@@ -16350,18 +16446,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>TypeId "%1" of page is unknown. Supported typeIds are: "%2".</source>
-        <translation>TypeId "%1" strani ni znan. Podprti tipi so: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>TypeId &quot;%1&quot; strani ni znan. Podprti tipi so: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Page with typeId "%1" has invalid "index".</source>
-        <translation>Stran s TypeID "%1" ima neveljaven "indeks".</translation>
+        <source>Page with typeId &quot;%1&quot; has invalid &quot;index&quot;.</source>
+        <translation>Stran s TypeID &quot;%1&quot; ima neveljaven &quot;indeks&quot;.</translation>
     </message>
     <message>
         <location line="+89" />
-        <source>* Did not find a JSON object in "%1".</source>
-        <translation>* Ni našel predmeta JSON v "%1".</translation>
+        <source>* Did not find a JSON object in &quot;%1&quot;.</source>
+        <translation>* Ni našel predmeta JSON v &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16400,13 +16496,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+32" />
-        <source>"kind" value "%1" is not "class" (deprecated), "file" or "project".</source>
-        <translation>"Kind" vrednost "%1" ni "razred" (opuščeno), "datoteka" ali "projekt".</translation>
+        <source>&quot;kind&quot; value &quot;%1&quot; is not &quot;class&quot; (deprecated), &quot;file&quot; or &quot;project&quot;.</source>
+        <translation>&quot;Kind&quot; vrednost &quot;%1&quot; ni &quot;razred&quot; (opuščeno), &quot;datoteka&quot; ali &quot;projekt&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"kind" is "file" or "class" (deprecated) and "%1" is also set.</source>
-        <translation>"Kind" je "datoteka" ali "razred" (opuščen) in je nastavljena tudi "%1".</translation>
+        <source>&quot;kind&quot; is &quot;file&quot; or &quot;class&quot; (deprecated) and &quot;%1&quot; is also set.</source>
+        <translation>&quot;Kind&quot; je &quot;datoteka&quot; ali &quot;razred&quot; (opuščen) in je nastavljena tudi &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -16420,13 +16516,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Icon file "%1" not found.</source>
-        <translation>Ikona datoteka "%1" ni bila najdena.</translation>
+        <source>Icon file &quot;%1&quot; not found.</source>
+        <translation>Ikona datoteka &quot;%1&quot; ni bila najdena.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Image file "%1" not found.</source>
-        <translation>Slikovna datoteka "%1" ni najdena.</translation>
+        <source>Image file &quot;%1&quot; not found.</source>
+        <translation>Slikovna datoteka &quot;%1&quot; ni najdena.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16445,13 +16541,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>When parsing "generators": %1</source>
-        <translation>Pri razčlenjevanju "generatorjev": %1</translation>
+        <source>When parsing &quot;generators&quot;: %1</source>
+        <translation>Pri razčlenjevanju &quot;generatorjev&quot;: %1</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>When parsing "pages": %1</source>
-        <translation>Pri razčlenjevanju "strani": %1</translation>
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation>Pri razčlenjevanju &quot;strani&quot;: %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
@@ -16465,8 +16561,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+57" />
-        <source>When processing "%1":&lt;br&gt;%2</source>
-        <translation>Pri obdelavi "%1": &lt;br&gt;%2</translation>
+        <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
+        <translation>Pri obdelavi &quot;%1&quot;: &lt;br&gt;%2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
@@ -16492,43 +16588,43 @@ to project "%2".</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
-        <source>When parsing fields of page "%1": %2</source>
-        <translation>Pri razčlenjevanju polj strani " %1": %2</translation>
+        <source>When parsing fields of page &quot;%1&quot;: %2</source>
+        <translation>Pri razčlenjevanju polj strani &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "File" page needs to be unset or an empty object.</source>
-        <translation>"Podatki" za stran "Datoteka" mora biti izpostavljena ali prazen predmet.</translation>
+        <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
+        <translation>&quot;Podatki&quot; za stran &quot;Datoteka&quot; mora biti izpostavljena ali prazen predmet.</translation>
     </message>
     <message>
         <location line="+48" />
-        <source>Error parsing "%1" in "Kits" page: %2</source>
-        <translation>Napaka razčlenitev " %1" v "kompleti": %2</translation>
+        <source>Error parsing &quot;%1&quot; in &quot;Kits&quot; page: %2</source>
+        <translation>Napaka razčlenitev &quot; %1&quot; v &quot;kompleti&quot;: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>"data" must be a JSON object for "Kits" pages.</source>
-        <translation>"Podatki" morajo biti objekt JSON za strani "komplete".</translation>
+        <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
+        <translation>&quot;Podatki&quot; morajo biti objekt JSON za strani &quot;komplete&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>"Kits" page requires a "%1" set.</source>
-        <translation>Stran "kompleti" zahteva komplet "%1".</translation>
+        <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
+        <translation>Stran &quot;kompleti&quot; zahteva komplet &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+62" />
-        <source>"data" must be empty or a JSON object for "Project" pages.</source>
-        <translation>"Podatki" morajo biti prazni ali JSON predmet za "Project" strani.</translation>
+        <source>&quot;data&quot; must be empty or a JSON object for &quot;Project&quot; pages.</source>
+        <translation>&quot;Podatki&quot; morajo biti prazni ali JSON predmet za &quot;Project&quot; strani.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Invalid regular expression "%1" in "%2". %3</source>
-        <translation>Neveljaven redni izraz "%1" v "%2". %3</translation>
+        <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
+        <translation>Neveljaven redni izraz &quot;%1&quot; v &quot;%2&quot;. %3</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "Summary" page can be unset or needs to be an object.</source>
-        <translation>"Podatki" za stran "povzetek" je lahko izpostavljen ali je treba biti predmet.</translation>
+        <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
+        <translation>&quot;Podatki&quot; za stran &quot;povzetek&quot; je lahko izpostavljen ali je treba biti predmet.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
@@ -16537,13 +16633,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Pattern "%1" is no valid regular expression.</source>
-        <translation>Vzorec "%1" ni veljaven redni izraz.</translation>
+        <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
+        <translation>Vzorec &quot;%1&quot; ni veljaven redni izraz.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>ScannerGenerator: Binary pattern "%1" not valid.</source>
-        <translation>ScannerGenerator: binarni vzorec "%1" ni veljaven.</translation>
+        <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
+        <translation>ScannerGenerator: binarni vzorec &quot;%1&quot; ni veljaven.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
@@ -16600,18 +16696,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+17" />
-        <source>Sys Root "%1" does not exist in the file system.</source>
-        <translation>SYS Root "%1" ne obstaja v datotečnem sistemu.</translation>
+        <source>Sys Root &quot;%1&quot; does not exist in the file system.</source>
+        <translation>SYS Root &quot;%1&quot; ne obstaja v datotečnem sistemu.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is not a directory.</source>
-        <translation>SYS Root "%1" ni imenik.</translation>
+        <source>Sys Root &quot;%1&quot; is not a directory.</source>
+        <translation>SYS Root &quot;%1&quot; ni imenik.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is empty.</source>
-        <translation>Sys Root "%1" je prazen.</translation>
+        <source>Sys Root &quot;%1&quot; is empty.</source>
+        <translation>Sys Root &quot;%1&quot; je prazen.</translation>
     </message>
     <message>
         <location line="+14" />
@@ -16634,7 +16730,7 @@ to project "%2".</source>
     <message>
         <location line="-147" />
         <source>The compiler to use for building.&lt;br&gt;Make sure the compiler will produce binaries compatible with the target device, Qt version and other libraries used.</source>
-        <translation>Prevajalnik, ki ga bo uporabil za gradnjo.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+45" />
@@ -16857,7 +16953,7 @@ to project "%2".</source>
     <message>
         <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The name of the kit suitable for generating directory names. This value is used for the variable &lt;i&gt;%1&lt;/i&gt;, which for example determines the name of the shadow build directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;glava/&gt; &lt;body&gt; &lt;p&gt; Ime kompleta, primernega za ustvarjanje imen imenikov. Ta vrednost se uporablja za spremenljivko &lt;i&gt;%1 &lt;/i&gt;, ki na primer določa ime imenika Shadow Build.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -17094,13 +17190,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href="projectmode"&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation>&lt;slog type = text/css&gt; a: povezava {color: rgb (128, 128, 255);} &lt;/tyle&gt; Projekt &lt;b&gt;%1 &lt;/b&gt; še ni konfiguriran &lt;br/&gt; &lt;Br/ &gt; Lahko ga konfigurirate v načinu projektov &lt;a href = "ProjectMode"&gt; &lt;/a&gt; &lt;br/&gt;</translation>
+        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href=&quot;projectmode&quot;&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
+        <translation>&lt;slog type = text/css&gt; a: povezava {color: rgb (128, 128, 255);} &lt;/tyle&gt; Projekt &lt;b&gt;%1 &lt;/b&gt; še ni konfiguriran &lt;br/&gt; &lt;Br/ &gt; Lahko ga konfigurirate v načinu projektov &lt;a href = &quot;ProjectMode&quot;&gt; &lt;/a&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
-        <source>Falling back to use the cached environment for "%1" after:</source>
-        <translation>Padec nazaj na uporabo predpomnjenega okolja za "%1" po:</translation>
+        <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
+        <translation>Padec nazaj na uporabo predpomnjenega okolja za &quot;%1&quot; po:</translation>
     </message>
     <message>
         <location line="+483" />
@@ -17122,9 +17218,9 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+796" />
-        <source>Failed to retrieve MSVC Environment from "%1":
+        <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
-        <translation>Ni uspelo pridobiti MSVC okolja iz "%1":
+        <translation>Ni uspelo pridobiti MSVC okolja iz &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
@@ -17171,8 +17267,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open file: "%1": %2</source>
-        <translation>Ni mogel odpreti datoteke: " %1": %2</translation>
+        <source>Could not open file: &quot;%1&quot;: %2</source>
+        <translation>Ni mogel odpreti datoteke: &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
@@ -17282,13 +17378,13 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+92" />
-        <source>Project "%1" was configured for kit "%2" with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
-        <translation>Projekt "%1" je bil konfiguriran za Kit "%2" z id%3, ki ne obstaja več. Lahko ustvarite nov komplet ali kopirate korake izginjanega kompleta v drug komplet v %4.</translation>
+        <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
+        <translation>Projekt &quot;%1&quot; je bil konfiguriran za Kit &quot;%2&quot; z id%3, ki ne obstaja več. Lahko ustvarite nov komplet ali kopirate korake izginjanega kompleta v drug komplet v %4.</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+622" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+626" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
@@ -17297,79 +17393,79 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+265" />
-        <source>Could not find any qml_*.qm file at "%1"</source>
-        <translation>Ni bilo mogoče najti nobene datoteke QML _*. QM pri "%1"</translation>
+        <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
+        <translation>Ni bilo mogoče najti nobene datoteke QML _*. QM pri &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+87" />
         <source>%1: Name.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: ime.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to main file.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Celotna pot do glavne datoteke.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Popolna pot do imenika projekta.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: The name of the active kit.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Ime aktivnega kompleta.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Name of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Ime konfiguracije Active Build.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Type of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Vrsta konfiguracije aktivne gradnje.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Full build path of active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Popolna pot konfiguracije aktivne gradnje.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Variables in the active build environment.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Spremenljivke v okolju Active Build.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Name of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Ime konfiguracije Active Run.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Executable of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Izvršilna konfiguracija Active Run.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Variables in the environment of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Spremenljivke v okolju aktivne konfiguracije teka.</translation>
     </message>
     <message>
         <location line="+12" />
         <source>%1: Working directory of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Delovni imenik aktivne konfiguracije teka.</translation>
     </message>
     <message>
@@ -17407,17 +17503,17 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+7" />
         <source>&amp;Build</source>
-        <translation>&amp; Graditi</translation>
+        <translation>&amp;Graditi</translation>
     </message>
     <message>
         <location line="+7" />
         <source>&amp;Debug</source>
-        <translation>&amp; Odpravljanje napak</translation>
+        <translation>&amp;Odpravljanje napak</translation>
     </message>
     <message>
         <location line="+6" />
         <source>&amp;Start Debugging</source>
-        <translation>&amp; Začnite odpravljanje napak</translation>
+        <translation>&amp;Začnite odpravljanje napak</translation>
     </message>
     <message>
         <location line="+82" />
@@ -17452,7 +17548,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+17" />
         <source>Recent P&amp;rojects</source>
-        <translation>Nedavni P &amp; Rojects</translation>
+        <translation>Nedavni P &amp;Rojects</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17462,8 +17558,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="-347" />
-        <source>Close Pro&amp;ject "%1"</source>
-        <translation>Zapri projekt "%1"</translation>
+        <source>Close Pro&amp;ject &quot;%1&quot;</source>
+        <translation>Zapri pro&amp;jekt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -17473,13 +17569,13 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <location line="+328" />
-        <source>Close All Files in Project "%1"</source>
-        <translation>Zaprite vse datoteke v projektu "%1"</translation>
+        <source>Close All Files in Project &quot;%1&quot;</source>
+        <translation>Zaprite vse datoteke v projektu &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-316" />
         <source>Close Pro&amp;ject</source>
-        <translation>Zapri projekt</translation>
+        <translation>Zapri pro&amp;jekt</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17537,8 +17633,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Build Project "%1"</source>
-        <translation>Graditi projekt "%1"</translation>
+        <source>Build Project &quot;%1&quot;</source>
+        <translation>Graditi projekt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17547,18 +17643,18 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Build Project "%1" for All Configurations</source>
-        <translation>Graditi projekt "%1" za vse konfiguracije</translation>
+        <source>Build Project &quot;%1&quot; for All Configurations</source>
+        <translation>Graditi projekt &quot;%1&quot; za vse konfiguracije</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Build for &amp;Run Configuration</source>
-        <translation>Graditi in zaženite konfiguracijo</translation>
+        <translation>G&amp;raditi in zaženite konfiguracijo</translation>
     </message>
     <message>
         <location line="+0" />
-        <source>Build for &amp;Run Configuration "%1"</source>
-        <translation>Gradite za in zaženite konfiguracijo "%1"</translation>
+        <source>Build for &amp;Run Configuration &quot;%1&quot;</source>
+        <translation>G&amp;radite za in zaženite konfiguracijo &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+13" />
@@ -17651,8 +17747,8 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+9" />
         <location line="+1621" />
-        <source>Close Project "%1"</source>
-        <translation>Zapri projekt "%1"</translation>
+        <source>Close Project &quot;%1&quot;</source>
+        <translation>Zapri projekt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-1614" />
@@ -17661,8 +17757,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Close All Projects Except "%1"</source>
-        <translation>Zaprite vse projekte, razen "%1"</translation>
+        <source>Close All Projects Except &quot;%1&quot;</source>
+        <translation>Zaprite vse projekte, razen &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -17697,8 +17793,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Set "%1" as Active Project</source>
-        <translation>Nastavite "%1" kot aktivni projekt</translation>
+        <source>Set &quot;%1&quot; as Active Project</source>
+        <translation>Nastavite &quot;%1&quot; kot aktivni projekt</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17783,7 +17879,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+62" />
         <source>Sanitizer</source>
-        <comment>Category for sanitizer issues listed under 'Issues'</comment>
+        <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
         <translation>Sanitator</translation>
     </message>
     <message>
@@ -17824,8 +17920,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+48" />
-        <source>Failed opening project "%1": No plugin can open project type "%2".</source>
-        <translation>Neuspešen odpiralni projekt "%1": noben vtičnik ne more odpreti vrste projekta "%2".</translation>
+        <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
+        <translation>Neuspešen odpiralni projekt &quot;%1&quot;: noben vtičnik ne more odpreti vrste projekta &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+195" />
@@ -17856,18 +17952,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+23" />
-        <source>Open Project in "%1"</source>
-        <translation>Odprti projekt v "%1"</translation>
+        <source>Open Project in &quot;%1&quot;</source>
+        <translation>Odprti projekt v &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Open Project "%1"</source>
-        <translation>Odprt projekt "%1"</translation>
+        <source>Open Project &quot;%1&quot;</source>
+        <translation>Odprt projekt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>The file "%1" was renamed to "%2", but the following projects could not be automatically changed: %3</source>
-        <translation>Datoteka "%1" je bila preimenovana v "%2", vendar naslednjih projektov ni bilo mogoče samodejno spremeniti:%3</translation>
+        <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
+        <translation>Datoteka &quot;%1&quot; je bila preimenovana v &quot;%2&quot;, vendar naslednjih projektov ni bilo mogoče samodejno spremeniti:%3</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17884,8 +17980,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+62" />
-        <source>Building "%1" is disabled: %2&lt;br&gt;</source>
-        <translation>Zgradba " %1" je onemogočena: %2 &lt;br&gt;</translation>
+        <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
+        <translation>Zgradba &quot; %1&quot; je onemogočena: %2 &lt;br&gt;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17946,18 +18042,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>The project "%1" is not configured.</source>
-        <translation>Projekt "%1" ni konfiguriran.</translation>
+        <source>The project &quot;%1&quot; is not configured.</source>
+        <translation>Projekt &quot;%1&quot; ni konfiguriran.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The project "%1" has no active kit.</source>
-        <translation>Projekt "%1" nima aktivnega kompleta.</translation>
+        <source>The project &quot;%1&quot; has no active kit.</source>
+        <translation>Projekt &quot;%1&quot; nima aktivnega kompleta.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The kit "%1" for the project "%2" has no active run configuration.</source>
-        <translation>Komplet "%1" za projekt "%2" nima aktivne konfiguracije teka.</translation>
+        <source>The kit &quot;%1&quot; for the project &quot;%2&quot; has no active run configuration.</source>
+        <translation>Komplet &quot;%1&quot; za projekt &quot;%2&quot; nima aktivne konfiguracije teka.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -17966,8 +18062,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>Cannot run "%1".</source>
-        <translation>Ne more zagnati "%1".</translation>
+        <source>Cannot run &quot;%1&quot;.</source>
+        <translation>Ne more zagnati &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17993,8 +18089,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+41" />
-        <source>The following subprojects could not be added to project "%1":</source>
-        <translation>Naslednjih podprojektov ni bilo mogoče dodati v projekt "%1":</translation>
+        <source>The following subprojects could not be added to project &quot;%1&quot;:</source>
+        <translation>Naslednjih podprojektov ni bilo mogoče dodati v projekt &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18043,15 +18139,15 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>File "%1" was not removed, because the project has changed in the meantime.
+        <source>File &quot;%1&quot; was not removed, because the project has changed in the meantime.
 Please try again.</source>
-        <translation>Datoteka "%1" ni bila odstranjena, ker se je projekt medtem spremenil.
+        <translation>Datoteka &quot;%1&quot; ni bila odstranjena, ker se je projekt medtem spremenil.
  Poskusite znova.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Could not remove file "%1" from project "%2".</source>
-        <translation>Ne bi mogel odstraniti datoteke "%1" iz projekta "%2".</translation>
+        <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
+        <translation>Ne bi mogel odstraniti datoteke &quot;%1&quot; iz projekta &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+36" />
@@ -18076,13 +18172,13 @@ Please try again.</source>
     </message>
     <message>
         <location line="-9" />
-        <source>Failed to copy file "%1" to "%2": %3.</source>
-        <translation>Ni uspelo kopirati datoteke "%1" na "%2":%3.</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
+        <translation>Ni uspelo kopirati datoteke &quot;%1&quot; na &quot;%2&quot;:%3.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Failed to add new file "%1" to the project.</source>
-        <translation>V projekt ni uspelo dodati nove datoteke "%1".</translation>
+        <source>Failed to add new file &quot;%1&quot; to the project.</source>
+        <translation>V projekt ni uspelo dodati nove datoteke &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18130,8 +18226,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+192" />
-        <source>Locates files from all project directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Poiščite datoteke iz vseh projektnih imenikov. Dodajte "+&lt;temement&gt;" ali ": &lt;temement&gt;", da skočite na dano številko vrstice. Dodate še en "+&lt;temement&gt;" ali ": &lt;temement&gt;", da skočite tudi na številko stolpca.</translation>
+        <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Poiščite datoteke iz vseh projektnih imenikov. Dodajte &quot;+&lt;temement&gt;&quot; ali &quot;: &lt;temement&gt;&quot;, da skočite na dano številko vrstice. Dodate še en &quot;+&lt;temement&gt;&quot; ali &quot;: &lt;temement&gt;&quot;, da skočite tudi na številko stolpca.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -18188,13 +18284,13 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
         <source>s</source>
-        <extracomment>Suffix for "seconds"</extracomment>
+        <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>s</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The amount of seconds to wait between a "soft kill" and a "hard kill" of a running application.</source>
-        <translation>Količina sekund za počakanje med "mehkim ubijanjem" in "trdim ubijanjem" tekaške vloge.</translation>
+        <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
+        <translation>Količina sekund za počakanje med &quot;mehkim ubijanjem&quot; in &quot;trdim ubijanjem&quot; tekaške vloge.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -18258,8 +18354,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Some legacy build tools do not deal well with paths that contain "special" characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
-        <translation>Nekatera zapuščena orodja za gradnjo se ne ukvarjajo dobro s potmi, ki vsebujejo "posebne" znake, kot so presledki, kar lahko povzroči lažne napake v gradnji. &lt;p&gt; Počistite to možnost, če ne delate s takšnimi orodji.</translation>
+        <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
+        <translation>Nekatera zapuščena orodja za gradnjo se ne ukvarjajo dobro s potmi, ki vsebujejo &quot;posebne&quot; znake, kot so presledki, kar lahko povzroči lažne napake v gradnji. &lt;p&gt; Počistite to možnost, če ne delate s takšnimi orodji.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18318,13 +18414,13 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Show all kits in "Build &amp; Run" in "Projects" mode</source>
-        <translation>Pokažite vse komplete v načinu "Build &amp; Run" v "Projektih"</translation>
+        <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
+        <translation>Pokažite vse komplete v načinu &quot;Build &amp; Run&quot; v &quot;Projektih&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Show also inactive kits in "Build &amp; Run" in "Projects" mode.</source>
-        <translation>Pokažite tudi neaktivne komplete v načinu "Build &amp; Run" v "Projektih".</translation>
+        <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
+        <translation>Pokažite tudi neaktivne komplete v načinu &quot;Build &amp; Run&quot; v &quot;Projektih&quot;.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18363,8 +18459,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Default for "Run in terminal":</source>
-        <translation>Privzeto za "zaženite terminal":</translation>
+        <source>Default for &quot;Run in terminal&quot;:</source>
+        <translation>Privzeto za &quot;zaženite terminal&quot;:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18444,8 +18540,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
-        <source>No kits are enabled for this project. Enable kits in the "Projects" mode.</source>
-        <translation>Za ta projekt niso omogočeni nobeni kompleti. Omogoči komplete v načinu "Projekti".</translation>
+        <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
+        <translation>Za ta projekt niso omogočeni nobeni kompleti. Omogoči komplete v načinu &quot;Projekti&quot;.</translation>
     </message>
     <message>
         <location line="+89" />
@@ -18552,7 +18648,7 @@ What should %1 do now?</source>
         <translation>&lt;b&gt; Opozorilo: &lt;/b&gt; Ta datoteka je zunaj imenika projekta.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-391" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-395" />
         <source>Simplify Tree</source>
         <translation>Poenostavite drevo</translation>
     </message>
@@ -18602,7 +18698,7 @@ What should %1 do now?</source>
         <translation>Filtrirno drevo</translation>
     </message>
     <message>
-        <location line="+194" />
+        <location line="+198" />
         <source>Meta+X</source>
         <translation>Meta+x</translation>
     </message>
@@ -18638,18 +18734,18 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+50" />
-        <source>Open %1 "%2"</source>
-        <translation>Open %1 " %2"</translation>
+        <source>Open %1 &quot;%2&quot;</source>
+        <translation>Open %1 &quot; %2&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Open %1 "%2" (%3)</source>
-        <translation>Odprto%1 "%2" (%3)</translation>
+        <source>Open %1 &quot;%2&quot; (%3)</source>
+        <translation>Odprto%1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
         <location line="+20" />
         <source>session</source>
-        <comment>Appears in "Open session &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>sejo</translation>
     </message>
     <message>
@@ -18676,7 +18772,7 @@ What should %1 do now?</source>
     <message>
         <location line="+125" />
         <source>project</source>
-        <comment>Appears in "Open project &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>projekt</translation>
     </message>
     <message>
@@ -18711,7 +18807,7 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+118" />
-        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project's settings:</source>
+        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>Projekt je bil konfiguriran za komplete, ki ne obstajajo več. V kontekstnem meniju izberite eno od naslednjih možnosti, da obnovite nastavitve projekta:</translation>
     </message>
     <message>
@@ -18742,8 +18838,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+12" />
-        <source>Remove Vanished Target "%1"</source>
-        <translation>Odstranite izginilo tarčo "%1"</translation>
+        <source>Remove Vanished Target &quot;%1&quot;</source>
+        <translation>Odstranite izginilo tarčo &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18811,7 +18907,7 @@ What should %1 do now?</source>
     <message>
         <location line="+63" />
         <source>Add to &amp;version control:</source>
-        <translation>Dodaj v nadzor in različice:</translation>
+        <translation>Dodaj &amp;v nadzor in različice:</translation>
     </message>
     <message>
         <location line="+88" />
@@ -18821,17 +18917,17 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Add to &amp;project:</source>
-        <translation>Dodaj v in projekt:</translation>
+        <translation>Dodaj v in &amp;projekt:</translation>
     </message>
     <message>
         <location line="+74" />
-        <source>A version control system repository could not be created in "%1".</source>
-        <translation>V "%1" ni bilo mogoče ustvariti skladišča sistema za nadzor različice.</translation>
+        <source>A version control system repository could not be created in &quot;%1&quot;.</source>
+        <translation>V &quot;%1&quot; ni bilo mogoče ustvariti skladišča sistema za nadzor različice.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to add "%1" to the version control system.</source>
-        <translation>V sistem za nadzor različic ni bilo mogoče dodati "%1".</translation>
+        <source>Failed to add &quot;%1&quot; to the version control system.</source>
+        <translation>V sistem za nadzor različic ni bilo mogoče dodati &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+94" />
@@ -18867,17 +18963,17 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>The run configuration's working directory.</source>
+        <source>The run configuration&apos;s working directory.</source>
         <translation>Delovni imenik konfiguracije teka.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The run configuration's name.</source>
+        <source>The run configuration&apos;s name.</source>
         <translation>Ime konfiguracije teka.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The run configuration's executable.</source>
+        <source>The run configuration&apos;s executable.</source>
         <translation>Konfiguracija teka je izvedljiva.</translation>
     </message>
     <message>
@@ -18894,7 +18990,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
-        <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
+        <extracomment>Shown in Run configuration, Add menu: &quot;name of runnable (on device name)&quot;</extracomment>
         <translation>%1 (na %{naprava: ime})</translation>
     </message>
     <message>
@@ -19017,7 +19113,7 @@ What should %1 do now?</source>
     <message>
         <location line="+324" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;enter&gt; &lt;i&gt;%1 &lt;/i&gt; še vedno teče. &lt;center/&gt; &lt;enter&gt; ga prisilite, da nehate? &lt;/cort&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2" />
@@ -19027,12 +19123,12 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Force &amp;Quit</source>
-        <translation>Sila in nehaj</translation>
+        <translation>&amp;Sila in nehaj</translation>
     </message>
     <message>
         <location line="+0" />
         <source>&amp;Keep Running</source>
-        <translation>&amp; Nadaljujte z tekom</translation>
+        <translation>&amp;Nadaljujte z tekom</translation>
     </message>
     <message>
         <location line="+246" />
@@ -19096,8 +19192,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Either the invoked program "%1" is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>Manjka bodisi priklicani program "%1" ali pa imate morda dovolj dovoljenj za uveljavljanje programa.</translation>
+        <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>Manjka bodisi priklicani program &quot;%1&quot; ali pa imate morda dovolj dovoljenj za uveljavljanje programa.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19233,13 +19329,11 @@ What should %1 do now?</source>
         <location line="+11" />
         <source>Not showing %n files that are outside of the base directory.
 These files are preserved.</source>
-        <translation>
-            <numerusform>Ne prikazuje %n datotek, ki so zunaj osnovnega imenika.
- Te datoteke so ohranjene.</numerusform>
-            <numerusform>Ne prikazuje %n datotek, ki so zunaj osnovnega imenika.
- Te datoteke so ohranjene.</numerusform>
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -19295,12 +19389,12 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Imports existing projects that do not use qmake, CMake, Qbs, Meson, or Autotools.&lt;p&gt;This creates a project file that allows you to use %1 as a code editor and as a launcher for debugging and analyzing tools. If you want to build the project, you might need to edit the generated project file.</source>
-        <translation>Uvozi obstoječe projekte, ki ne uporabljajo QMake, CMake, QBS, Meson ali Autotools. Če želite zgraditi projekt, boste morda morali urediti ustvarjeno datoteko projekta.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+172" />
-        <source>Unknown build system "%1"</source>
-        <translation>Neznani sistem za gradnjo "%1"</translation>
+        <source>Unknown build system &quot;%1&quot;</source>
+        <translation>Neznani sistem za gradnjo &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
@@ -19325,7 +19419,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
         <source>&amp;Configure Project</source>
-        <translation>&amp; Konfiguriraj projekt</translation>
+        <translation>&amp;Konfiguriraj projekt</translation>
     </message>
     <message>
         <location line="+91" />
@@ -19360,8 +19454,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+71" />
-        <source>Enable Kit for Project "%1"</source>
-        <translation>Omogoči komplet za projekt "%1"</translation>
+        <source>Enable Kit for Project &quot;%1&quot;</source>
+        <translation>Omogoči komplet za projekt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7" />
@@ -19370,8 +19464,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Disable Kit for Project "%1"</source>
-        <translation>Onemogoči komplet za projekt "%1"</translation>
+        <source>Disable Kit for Project &quot;%1&quot;</source>
+        <translation>Onemogoči komplet za projekt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19380,8 +19474,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Disable Kit "%1" in This Project?</source>
-        <translation>Onemogočite komplet "%1" v tem projektu?</translation>
+        <source>Disable Kit &quot;%1&quot; in This Project?</source>
+        <translation>Onemogočite komplet &quot;%1&quot; v tem projektu?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19415,8 +19509,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Add a kit in the &lt;a href="buildandrun"&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
-        <translation>Dodajte komplet v možnostih &lt;a href = "BuildAnddrun"&gt; ali prek orodja za vzdrževanje SDK.</translation>
+        <source>Add a kit in the &lt;a href=&quot;buildandrun&quot;&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8" />
@@ -19512,7 +19606,7 @@ These files are preserved.</source>
         <translation>Težave</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+53" />
         <source>Show Warnings</source>
         <translation>Pokaži opozorila</translation>
     </message>
@@ -19524,7 +19618,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-152" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
-        <translation>&lt;BOBR&gt; &lt;B&gt; ABI: &lt;/b&gt; %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1" />
@@ -19594,7 +19688,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
         <source>&amp;Annotate</source>
-        <translation>&amp; Opombe</translation>
+        <translation>&amp;Opombe</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19680,18 +19774,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+24" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>Namestitev "%1" je bila preklicana s časovno omejitvijo.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>Namestitev &quot;%1&quot; je bila preklicana s časovno omejitvijo.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>Namestitev "%1" je preklical uporabnik.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>Namestitev &quot;%1&quot; je preklical uporabnik.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>Namestitev " %1" ni uspela z izhodno kodo %2.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>Namestitev &quot; %1&quot; ni uspela z izhodno kodo %2.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
@@ -19768,23 +19862,23 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" not found.</source>
-        <translation>Python "%1" ni bilo mogoče najti.</translation>
+        <source>Python &quot;%1&quot; not found.</source>
+        <translation>Python &quot;%1&quot; ni bilo mogoče najti.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" is not executable.</source>
-        <translation>Python "%1" ni izvedljiv.</translation>
+        <source>Python &quot;%1&quot; is not executable.</source>
+        <translation>Python &quot;%1&quot; ni izvedljiv.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Python "%1" does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
-        <translation>Python "%1" ne vsebuje uporabne pip. PIP je potreben za namestitev paketov Python iz indeksa paketa Python, kot sta Pyside in Server Python Language. Če želite uporabiti katero koli funkcijo, zagotovite, da je PIP nameščen za ta Python.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
+        <translation>Python &quot;%1&quot; ne vsebuje uporabne pip. PIP je potreben za namestitev paketov Python iz indeksa paketa Python, kot sta Pyside in Server Python Language. Če želite uporabiti katero koli funkcijo, zagotovite, da je PIP nameščen za ta Python.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Python "%1" does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
-        <translation>Python "%1" ne vsebuje uporabnega venva. Venv je priporočljiv način za izolacijo razvojnega okolja za projekt iz globalno nameščenega Pythona.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
+        <translation>Python &quot;%1&quot; ne vsebuje uporabnega venva. Venv je priporočljiv način za izolacijo razvojnega okolja za projekt iz globalno nameščenega Pythona.</translation>
     </message>
     <message>
         <location line="+32" />
@@ -19838,8 +19932,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
-        <source>No Python interpreter set for kit "%1".</source>
-        <translation>Za komplet "%1" ni nastavljen noben Python tolmač.</translation>
+        <source>No Python interpreter set for kit &quot;%1&quot;.</source>
+        <translation>Za komplet &quot;%1&quot; ni nastavljen noben Python tolmač.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
@@ -19858,7 +19952,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
         <source>Python:</source>
         <translation>Python:</translation>
     </message>
@@ -19868,7 +19962,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Teči %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
         <location line="+283" />
         <source>Name:</source>
         <translation>Ime:</translation>
@@ -19886,42 +19980,42 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" does not exist.</source>
-        <translation>"%1" ne obstaja.</translation>
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot; ne obstaja.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" is not an executable file.</source>
-        <translation>"%1" ni izvedljiva datoteka.</translation>
+        <source>&quot;%1&quot; is not an executable file.</source>
+        <translation>&quot;%1&quot; ni izvedljiva datoteka.</translation>
     </message>
     <message>
         <location line="+16" />
         <location line="+186" />
         <source>&amp;Add</source>
-        <translation>&amp; Dodaj</translation>
+        <translation>&amp;Dodaj</translation>
     </message>
     <message>
         <location line="-184" />
         <location line="+185" />
         <source>&amp;Delete</source>
-        <translation>&amp; Izbriši</translation>
+        <translation>&amp;Izbriši</translation>
     </message>
     <message>
         <location line="-183" />
         <location line="+185" />
         <source>&amp;Make Default</source>
-        <translation>&amp; Naredite privzeto</translation>
+        <translation>&amp;Naredite privzeto</translation>
     </message>
     <message>
         <location line="-183" />
         <source>&amp;Generate Kit</source>
-        <translation>&amp; Ustvari komplet</translation>
+        <translation>&amp;Ustvari komplet</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+179" />
         <source>&amp;Clean Up</source>
-        <translation>In čiščenje</translation>
+        <translation>&amp;In čiščenje</translation>
     </message>
     <message>
         <location line="-178" />
@@ -19959,7 +20053,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Konfiguracija jezikovnega strežnika</translation>
     </message>
     <message>
-        <location line="+476" />
+        <location line="+489" />
         <source>Python interpreter:</source>
         <translation>Tolmač Python:</translation>
     </message>
@@ -19991,8 +20085,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+11" />
-        <source>Found "%1" (%2)</source>
-        <translation>Najdeno "%1" (%2)</translation>
+        <source>Found &quot;%1&quot; (%2)</source>
+        <translation>Najdeno &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="+9" />
@@ -20001,13 +20095,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
-        <source>"data" of a Python wizard page expects a map with "items" containing a list of objects.</source>
-        <translation>"Podatki" strani Wizard Python pričakujejo zemljevid z "elementi", ki vsebujejo seznam predmetov.</translation>
+        <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
+        <translation>&quot;Podatki&quot; strani Wizard Python pričakujejo zemljevid z &quot;elementi&quot;, ki vsebujejo seznam predmetov.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>An item of Python wizard page data expects a "trKey" field containing the UI visible string for that Python version and a "value" field containing an object with a "PySideVersion" field used for import statements in the Python files.</source>
-        <translation>Podatki o strani strani Wizard Python pričakujejo polje "TRKey", ki vsebuje vidni niz uporabniškega vmesnika za to različico Python in polje "vrednost", ki vsebuje predmet s poljem "Pysideversion", ki se uporablja za uvozne izjave v datotekah Python.</translation>
+        <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
+        <translation>Podatki o strani strani Wizard Python pričakujejo polje &quot;TRKey&quot;, ki vsebuje vidni niz uporabniškega vmesnika za to različico Python in polje &quot;vrednost&quot;, ki vsebuje predmet s poljem &quot;Pysideversion&quot;, ki se uporablja za uvozne izjave v datotekah Python.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -20032,17 +20126,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+126" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
         <source>Move tab left</source>
         <translation>Premakni zavihek levo</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Switch to next tab</source>
         <translation>Preklopite na naslednji zavihek</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+15" />
         <source>Move tab right</source>
         <translation>Premakni zavihek desno</translation>
     </message>
@@ -20204,7 +20298,7 @@ Poleg tega Shift+Enter vstavi ubežni znak na položaj kazalke in premakne preos
     <message>
         <location line="+72" />
         <source>&amp;Automatically Insert Matching Characters</source>
-        <translation>Samodejno vstavite ujemajoče se znake</translation>
+        <translation>S&amp;amodejno vstavite ujemajoče se znake</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
@@ -20213,8 +20307,8 @@ Poleg tega Shift+Enter vstavi ubežni znak na položaj kazalke in premakne preos
     </message>
     <message>
         <location line="+2" />
-        <source>Automatically creates a Doxygen comment upon pressing enter after a '/**', '/*!', '//!' or '///'.</source>
-        <translation>Samodejno ustvari komentar Doxygen, ko pritisnete enter za '/**', '/*!', '//!' ali '///'.</translation>
+        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
+        <translation>Samodejno ustvari komentar Doxygen, ko pritisnete enter za &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; ali &apos;///&apos;.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20233,8 +20327,8 @@ Poleg tega Shift+Enter vstavi ubežni znak na položaj kazalke in premakne preos
     </message>
     <message>
         <location line="+2" />
-        <source>Adds leading asterisks when continuing C/C++ "/*", Qt "/*!" and Java "/**" style comments on new lines.</source>
-        <translation>Dodaja uvodne zvezdice pri nadaljevanju C/C++ "/*", Qt "/*!" in komentarji v slogu Java "/**" v novih vrsticah.</translation>
+        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
+        <translation>Dodaja uvodne zvezdice pri nadaljevanju C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; in komentarji v slogu Java &quot;/**&quot; v novih vrsticah.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20243,12 +20337,12 @@ Poleg tega Shift+Enter vstavi ubežni znak na položaj kazalke in premakne preos
     </message>
     <message>
         <location line="+1" />
-        <source>Doxygen allows "@" and "\" to start commands.
-By default, "@" is used if the surrounding comment starts with "/**" or "///", and "\" is used
-if the comment starts with "/*!" or "//!".</source>
-        <translation>Doxygen omogoča "@" in "\" za zagon ukazov.
- Privzeto se uporablja "@", če se okoliški komentar začne z "/**" ali "///" in "\" se uporablja
- Če se komentar začne z "/*!" ali "//!".</translation>
+        <source>Doxygen allows &quot;@&quot; and &quot;\&quot; to start commands.
+By default, &quot;@&quot; is used if the surrounding comment starts with &quot;/**&quot; or &quot;///&quot;, and &quot;\&quot; is used
+if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
+        <translation>Doxygen omogoča &quot;@&quot; in &quot;\&quot; za zagon ukazov.
+ Privzeto se uporablja &quot;@&quot;, če se okoliški komentar začne z &quot;/**&quot; ali &quot;///&quot; in &quot;\&quot; se uporablja
+ Če se komentar začne z &quot;/*!&quot; ali &quot;//!&quot;.</translation>
     </message>
     <message>
         <source>&amp;Automatically insert matching characters</source>
@@ -20423,7 +20517,7 @@ if the comment starts with "/*!" or "//!".</source>
     </message>
     <message>
         <location line="+36" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding. Editing not possible.</source>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
         <translation>&lt;b&gt;Napaka:&lt;/b&gt; »%1« ni moč dekodirati s kodiranjem »%2«. Urejanje ni možno.</translation>
     </message>
     <message>
@@ -20523,32 +20617,7 @@ Influences the indentation of continuation lines.
 &lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-Vpliva na zamik nadaljevalnih vrstic.
-
-&lt;ul&gt;
-&lt;li&gt;Brez: ne poravnaj. Vrstice bodo zamaknjene le do trenutne logične širine zamika.
-&lt;pre&gt;
-&lt;pre&gt;
-(tab)int i = foo(a, b
-(tab)c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;S presledki: za poravnavo vedno uporabi presledke, ne glede na druge nastavitve zamikanja.
-&lt;pre&gt;
-(tab)int i = foo(a, b
-(tab)            c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;Z običajnim zamikanjem: za poravnavo uporabi tabulatorje in/ali presledke, kot je nastavljeno zgoraj.
-&lt;pre&gt;
-(tab)int i = foo(a, b
-(tab)(tab)(tab)  c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+31" />
@@ -20557,8 +20626,8 @@ Vpliva na zamik nadaljevalnih vrstic.
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;i&gt;Code indentation is configured in &lt;a href="C++"&gt;C++&lt;/a&gt; and &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;Zamik kode je konfiguriran v nastavitvah &lt;a href="C++"&gt;C++&lt;/a&gt; in &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt;.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;Zamik kode je konfiguriran v nastavitvah &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; in &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt;.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20809,7 +20878,7 @@ Določa, kako vračalka vpliva na zamik.
     <message>
         <location line="+1" />
         <source>Enable built-in camel case &amp;navigation</source>
-        <translation>Omogoči vgrajeno kamelo torbico in navigacijo</translation>
+        <translation>Omogoči vgraje&amp;no kamelo torbico in navigacijo</translation>
     </message>
     <message>
         <location line="+2" />
@@ -20944,8 +21013,8 @@ Določa, kako vračalka vpliva na zamik.
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;i&gt;Set &lt;a href="font zoom"&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;Nastavite &lt;a href="font zoom"&gt;razmik med vrsticami pisave&lt;/a&gt; na 100 %, da omogočite možnost prelivanja besedila.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;Nastavite &lt;a href=&quot;font zoom&quot;&gt;razmik med vrsticami pisave&lt;/a&gt; na 100 %, da omogočite možnost prelivanja besedila.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -21025,7 +21094,7 @@ Določa, kako vračalka vpliva na zamik.
     <message>
         <location line="+2" />
         <source>&amp;Highlight selection</source>
-        <translation>&amp; IZBOR IZBOR</translation>
+        <translation>&amp;IZBOR IZBOR</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21106,7 +21175,7 @@ Vrednost, manjša od 100 %, lahko povzroči prekrivanje in neporavnano grafiko.<
     </message>
     <message>
         <location line="+16" />
-        <source>Color Scheme for Theme "%1"</source>
+        <source>Color Scheme for Theme &quot;%1&quot;</source>
         <translation>Barvna shema za temo »%1«</translation>
     </message>
     <message>
@@ -21228,7 +21297,7 @@ Vrednost, manjša od 100 %, lahko povzroči prekrivanje in neporavnano grafiko.<
     </message>
     <message>
         <location line="-12" />
-        <source>Cannot import code style from "%1".</source>
+        <source>Cannot import code style from &quot;%1&quot;.</source>
         <translation>Sloga kode ni mogoče uvoziti iz »%1«.</translation>
     </message>
     <message>
@@ -21258,7 +21327,7 @@ Vrednost, manjša od 100 %, lahko povzroči prekrivanje in neporavnano grafiko.<
     </message>
     <message>
         <location line="+1" />
-        <source>The color scheme "%1" was modified, do you want to save the changes?</source>
+        <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
         <translation>Barvna shema »%1« je bila spremenjena. Ali želite shraniti spremembe?</translation>
     </message>
     <message>
@@ -21273,8 +21342,8 @@ Vrednost, manjša od 100 %, lahko povzroči prekrivanje in neporavnano grafiko.<
     </message>
     <message>
         <location line="+16" />
-        <source>File "%1":</source>
-        <translation>Datoteka "%1":</translation>
+        <source>File &quot;%1&quot;:</source>
+        <translation>Datoteka &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -21328,8 +21397,8 @@ Vrednost, manjša od 100 %, lahko povzroči prekrivanje in neporavnano grafiko.<
     </message>
     <message>
         <location line="+27" />
-        <source>&lt;p align='center'&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href="copy"&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;p align='center'&gt;&lt;b&gt;Vgrajene barvne sheme je treba &lt;a href="copy"&gt;kopirati&lt;/a&gt;&lt;br/&gt;, preden jih lahko spremenite&lt;/b&gt;&lt;/p&gt;</translation>
+        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Vgrajene barvne sheme je treba &lt;a href=&quot;copy&quot;&gt;kopirati&lt;/a&gt;&lt;br/&gt;, preden jih lahko spremenite&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -21528,12 +21597,12 @@ Vrednost, manjša od 100 %, lahko povzroči prekrivanje in neporavnano grafiko.<
     </message>
     <message>
         <location line="+7" />
-        <source>Current document's font size in points.</source>
+        <source>Current document&apos;s font size in points.</source>
         <translation>Velikost pisave trenutnega dokumenta v pikah.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Word under the current document's text cursor.</source>
+        <source>Word under the current document&apos;s text cursor.</source>
         <translation>Word pod besedilnim kazalcem trenutnega dokumenta.</translation>
     </message>
     <message>
@@ -22405,7 +22474,7 @@ Uporablja se za označevanje vsebujoče funkcije uporabe simbola.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Class' data members.</source>
+        <source>Class&apos; data members.</source>
         <translation>Podatkovni člani razreda.</translation>
     </message>
     <message>
@@ -23038,152 +23107,152 @@ Ne bo uporabljen za presledke v komentarjih in nizih.</translation>
         <translation>Ni datoteka z barvno shemo.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>izpeljan iz QObject</translation>
     </message>
     <message>
         <location line="+1" />
         <source>derived from QWidget</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>izpeljan iz QWidget</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>predlogo</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with if</source>
-        <comment>group:'C++' trigger:'else'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
         <translation>s če</translation>
     </message>
     <message>
         <location line="+1" />
         <source>range-based</source>
-        <comment>group:'C++' trigger:'for'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
         <translation>na podlagi obsega</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and else</source>
-        <comment>group:'C++' trigger:'if'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
         <translation>in drugo</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with closing brace comment</source>
-        <comment>group:'C++' trigger:'namespace'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
         <translation>s komentarjem v oklepaju</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and catch</source>
-        <comment>group:'C++' trigger:'try'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
         <translation>in ulovi</translation>
     </message>
     <message>
         <location line="+1" />
         <source>namespace</source>
-        <comment>group:'C++' trigger:'using'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
         <translation>imenski prostor</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'struct'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
         <translation>predlogo</translation>
     </message>
     <message>
         <location line="+1" />
         <source>(type name READ name WRITE setName NOTIFY nameChanged FINAL)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation>(Vnesite ime Preberi ime pisanje setName obvesti imenod finale)</translation>
     </message>
     <message>
         <source>(type name READ name WRITE setName NOTIFY nameChanged)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation type="vanished">(ime vnesite READ name WRITE setName NOTIFY nameChanged)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>s tarčami</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>s tarčo</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>s tarčami</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>s tarčo</translation>
     </message>
     <message>
         <location line="+3" />
         <source>QuickTest Test Case</source>
-        <comment>group:'QML' trigger:'TestCase'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>Testni primer QuickTest</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Function</source>
-        <comment>group:'C++' trigger:'TEST'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST&apos;</comment>
         <translation>Funkcija gtest</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Fixture</source>
-        <comment>group:'C++' trigger:'TEST_F'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_F&apos;</comment>
         <translation>Gtest pritrdilna</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Parameterized</source>
-        <comment>group:'C++' trigger:'TEST_P'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_P&apos;</comment>
         <translation>GTEST parametrizirani</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Case</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_CASE&apos;</comment>
         <translation>Testni primer</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Suite</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_SUITE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_SUITE&apos;</comment>
         <translation>Testni paket</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Test Case</source>
-        <comment>group:'C++' trigger:'TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_CASE&apos;</comment>
         <translation>Primer za ulov</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Scenario</source>
-        <comment>group:'C++' trigger:'SCENARIO'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;SCENARIO&apos;</comment>
         <translation>Scenarij ulova</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="+3" />
         <source>example</source>
-        <comment>group:'Text' trigger:'global'</comment>
+        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
         <translation>primer</translation>
     </message>
     <message>
@@ -23199,21 +23268,21 @@ Ne bo uporabljen za presledke v komentarjih in nizih.</translation>
     <message numerus="yes">
         <location line="+3" />
         <source>%n found.</source>
-        <translation>
-            <numerusform>%n najden.</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+29" />
         <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>Zamenjanih %n pojavitev.</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -23248,7 +23317,7 @@ Ne bo uporabljen za presledke v komentarjih in nizih.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Folder "%2":</source>
+        <source>Folder &quot;%2&quot;:</source>
         <translation>Mapa »%2«:</translation>
     </message>
     <message>
@@ -23302,8 +23371,8 @@ Razen: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/formattexteditor.cpp" line="+71" />
-        <source>Cannot create temporary file "%1": %2.</source>
-        <translation>Ni mogoče ustvariti začasne datoteke "%1": %2.</translation>
+        <source>Cannot create temporary file &quot;%1&quot;: %2.</source>
+        <translation>Ni mogoče ustvariti začasne datoteke &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <source>TextEditor</source>
@@ -23312,7 +23381,7 @@ Razen: %3
     </message>
     <message>
         <location line="+21" />
-        <source>Cannot read file "%1": %2.</source>
+        <source>Cannot read file &quot;%1&quot;: %2.</source>
         <translation>Datoteke »%1« ni mogoče prebrati: %2.</translation>
     </message>
     <message>
@@ -23367,8 +23436,8 @@ Razen: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definicije osvetlitve zagotavlja &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/ a&gt; motor.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definicije osvetlitve zagotavlja &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/ a&gt; motor.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23442,7 +23511,7 @@ Razen: %3
         <translation>Filtriraj drevo</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+130" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+140" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
         <source>Sort Alphabetically</source>
         <translation>Razvrsti po abecedi</translation>
@@ -23464,8 +23533,8 @@ Razen: %3
     </message>
     <message>
         <location line="+15" />
-        <source>Expected mangler ID "l" (lowercase), "u" (uppercase), or "c" (titlecase) after colon.</source>
-        <translation>Pričakovani ID manglerja "l" (male črke), "u" (velike črke) ali "c" (naslovne črke) za dvopičjem.</translation>
+        <source>Expected mangler ID &quot;l&quot; (lowercase), &quot;u&quot; (uppercase), or &quot;c&quot; (titlecase) after colon.</source>
+        <translation>Pričakovani ID manglerja &quot;l&quot; (male črke), &quot;u&quot; (velike črke) ali &quot;c&quot; (naslovne črke) za dvopičjem.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -23517,7 +23586,7 @@ Razen: %3
     </message>
     <message>
         <location line="+1" />
-        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark's note text.</source>
+        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark&apos;s note text.</source>
         <translation>Poiščite zaznamke. Filtrirajte po imenu datoteke, z besedilom v vrstici zaznamka ali z besedilom zaznamka.</translation>
     </message>
     <message>
@@ -23533,12 +23602,12 @@ Razen: %3
     <message>
         <location line="+1" />
         <source>&amp;Edit</source>
-        <translation>&amp; Uredi</translation>
+        <translation>&amp;Uredi</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Remove</source>
-        <translation>&amp; Odstrani</translation>
+        <translation>&amp;Odstrani</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23571,7 +23640,7 @@ Razen: %3
     <message>
         <location line="-15" />
         <source>&amp;Bookmarks</source>
-        <translation>&amp; Zaznamki</translation>
+        <translation>&amp;Zaznamki</translation>
     </message>
     <message>
         <location line="+53" />
@@ -23688,23 +23757,23 @@ Razen: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot create temporary directory "%1": %2</source>
-        <translation>Ni mogoče ustvariti začasnega imenika "%1": %2</translation>
+        <source>Cannot create temporary directory &quot;%1&quot;: %2</source>
+        <translation>Ni mogoče ustvariti začasnega imenika &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Unexpected output from helper program (%1).</source>
-        <translation>Nepričakovan izhod od pomožnega programa.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot change to working directory "%1": %2</source>
-        <translation>Ni mogoče spremeniti v delovni imenik "%1": %2</translation>
+        <source>Cannot change to working directory &quot;%1&quot;: %2</source>
+        <translation>Ni mogoče spremeniti v delovni imenik &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1": %2</source>
-        <translation>Ni mogoče izvesti "%1": %2</translation>
+        <source>Cannot execute &quot;%1&quot;: %2</source>
+        <translation>Ni mogoče izvesti &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+109" />
@@ -23713,11 +23782,11 @@ Razen: %3
     </message>
     <message>
         <location line="+60" />
-        <source>Cannot set permissions on temporary directory "%1": %2</source>
-        <translation>V začasnem imeniku " %1": %2 ni mogoče nastaviti dovoljenj</translation>
+        <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
+        <translation>V začasnem imeniku &quot; %1&quot;: %2 ni mogoče nastaviti dovoljenj</translation>
     </message>
     <message>
-        <source>The process "%1" could not be started: %2</source>
+        <source>The process &quot;%1&quot; could not be started: %2</source>
         <translation type="vanished">Procesa »%1« ni bilo mogoče zagnati: %2</translation>
     </message>
     <message>
@@ -23737,13 +23806,13 @@ Razen: %3
         <translation type="vanished">Terminalski ukaz morda ni lupinski ukaz.</translation>
     </message>
     <message>
-        <source>Cannot start the terminal emulator "%1", change the setting in the Environment preferences. (%2)</source>
+        <source>Cannot start the terminal emulator &quot;%1&quot;, change the setting in the Environment preferences. (%2)</source>
         <translation type="vanished">Terminalskega emulatorja »%1« ni mogoče zagnati, spremenite nastavitev v nastavitvah okolja. (%2)</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Cannot create socket "%1": %2</source>
-        <translation>Ni mogoče ustvariti vtičnice "%1": %2</translation>
+        <source>Cannot create socket &quot;%1&quot;: %2</source>
+        <translation>Ni mogoče ustvariti vtičnice &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="-171" />
@@ -23786,7 +23855,7 @@ Razen: %3
     <message>
         <location line="+5" />
         <source>Excl&amp;usion pattern:</source>
-        <translation>Vzorec izključitve:</translation>
+        <translation>Vzorec izklj&amp;učitve:</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23831,8 +23900,8 @@ Razen: %3
     </message>
     <message>
         <location line="+69" />
-        <source>The default suffix if you do not explicitly specify a file extension is ".%1".</source>
-        <translation>Privzeta pripona, če ne podate izrecno končnice datoteke, je ".%1".</translation>
+        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
+        <translation>Privzeta pripona, če ne podate izrecno končnice datoteke, je &quot;.%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
@@ -23873,51 +23942,51 @@ Razen: %3
     </message>
     <message>
         <location line="+176" />
-        <source>The path "%1" expanded to an empty string.</source>
+        <source>The path &quot;%1&quot; expanded to an empty string.</source>
         <translation>Pot »%1« je razširjena v prazen niz.</translation>
     </message>
     <message>
         <location line="-72" />
         <location line="+10" />
         <location line="+20" />
-        <source>The path "%1" does not exist.</source>
+        <source>The path &quot;%1&quot; does not exist.</source>
         <translation>Pot »%1« ne obstaja.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+36" />
-        <source>The path "%1" is not a directory.</source>
+        <source>The path &quot;%1&quot; is not a directory.</source>
         <translation>Pot »%1« ni imenik.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+10" />
-        <source>The path "%1" is not a file.</source>
+        <source>The path &quot;%1&quot; is not a file.</source>
         <translation>Pot »%1« ni datoteka.</translation>
     </message>
     <message>
         <location line="-4" />
-        <source>The directory "%1" does not exist.</source>
-        <translation>Imenik "%1" ne obstaja.</translation>
+        <source>The directory &quot;%1&quot; does not exist.</source>
+        <translation>Imenik &quot;%1&quot; ne obstaja.</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>The path "%1" is not an executable file.</source>
+        <source>The path &quot;%1&quot; is not an executable file.</source>
         <translation>Pot »%1« ni izvršljiva datoteka.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid path "%1".</source>
-        <translation>Neveljavna pot "%1".</translation>
+        <source>Invalid path &quot;%1&quot;.</source>
+        <translation>Neveljavna pot &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1".</source>
+        <source>Cannot execute &quot;%1&quot;.</source>
         <translation>Ni mogoče izvesti »%1«.</translation>
     </message>
     <message>
-        <source>Full path: "%1"</source>
-        <translation type="vanished">Celotna pot: "%1"</translation>
+        <source>Full path: &quot;%1&quot;</source>
+        <translation type="vanished">Celotna pot: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-58" />
@@ -23957,8 +24026,8 @@ Razen: %3
     </message>
     <message>
         <location line="+121" />
-        <source>Directory "%1" will be created.</source>
-        <translation>Imenik "%1" bo ustvarjen.</translation>
+        <source>Directory &quot;%1&quot; will be created.</source>
+        <translation>Imenik &quot;%1&quot; bo ustvarjen.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -23977,12 +24046,12 @@ Razen: %3
     </message>
     <message>
         <location line="+12" />
-        <source>Invalid character ".".</source>
-        <translation>Neveljaven znak ".".</translation>
+        <source>Invalid character &quot;.&quot;.</source>
+        <translation>Neveljaven znak &quot;.&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Invalid character "%1" found.</source>
+        <source>Invalid character &quot;%1&quot; found.</source>
         <translation>Najden je neveljaven znak »%1«.</translation>
     </message>
     <message>
@@ -24050,7 +24119,7 @@ Razen: %3
     <message>
         <location line="-3" />
         <source>Save &amp;as...</source>
-        <translation>Shrani kot...</translation>
+        <translation>Shr&amp;ani kot...</translation>
     </message>
     <message>
         <location line="+5" />
@@ -24138,12 +24207,12 @@ Razen: %3
         <location line="-16" />
         <location line="+20" />
         <source>Running %1
-in "%2".
+in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
         <translation>Teče %1
-v "%2".
+v &quot;%2&quot;.
 
 </translation>
     </message>
@@ -24191,12 +24260,12 @@ v "%2".
     <message>
         <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
         <source>Do not &amp;ask again</source>
-        <translation>Ne vprašaj ponovno</translation>
+        <translation>Ne vpr&amp;ašaj ponovno</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Do not &amp;show again</source>
-        <translation>Ne prikaži več</translation>
+        <translation>&amp;Ne prikaži več</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
@@ -24219,8 +24288,8 @@ v "%2".
         <translation>Podrobnosti</translation>
     </message>
     <message>
-        <source>copyFile is not implemented for "%1"</source>
-        <translation type="vanished">copyFile ni implementiran za "%1"</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">copyFile ni implementiran za &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Cannot copy from %1, it is not a directory.</source>
@@ -24232,61 +24301,61 @@ v "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to create tar archive from source: %3</source>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
         <translation>Med poskusom ustvarjanja arhiva tar iz vira ni uspelo rekurzivno kopirati iz »%1« v »%2«: %3</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to extract tar archive to target: %3</source>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
         <translation>Rekurzivno kopiranje iz »%1« v »%2« med poskusom ekstrahiranja arhiva tar v cilj ni uspelo: %3</translation>
     </message>
     <message>
-        <source>fileContents is not implemented for "%1"</source>
-        <translation type="vanished">fileContents ni implementiran za "%1"</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">fileContents ni implementiran za &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>writeFileContents is not implemented for "%1"</source>
-        <translation type="vanished">writeFileContents ni implementiran za "%1"</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">writeFileContents ni implementiran za &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>createTempFile is not implemented for "%1"</source>
-        <translation type="vanished">createTempFile ni implementiran za "%1"</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">createTempFile ni implementiran za &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-139" />
         <location line="+409" />
-        <source>Path "%1" exists but is not a writable directory.</source>
-        <translation>Pot "%1" obstaja, vendar ni zapisni imenik.</translation>
+        <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
+        <translation>Pot &quot;%1&quot; obstaja, vendar ni zapisni imenik.</translation>
     </message>
     <message>
         <location line="-356" />
-        <source>copyFile is not implemented for "%1".</source>
-        <translation>CopyFile se ne izvaja za "%1".</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;.</source>
+        <translation>CopyFile se ne izvaja za &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+30" />
-        <source>Cannot copy from "%1", it is not a directory.</source>
-        <translation>Ne more kopirati iz "%1", to ni imenik.</translation>
+        <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
+        <translation>Ne more kopirati iz &quot;%1&quot;, to ni imenik.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Cannot copy "%1" to "%2": %3</source>
-        <translation>Ne more kopirati "%1" na "%2":%3</translation>
+        <source>Cannot copy &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Ne more kopirati &quot;%1&quot; na &quot;%2&quot;:%3</translation>
     </message>
     <message>
         <location line="+103" />
-        <source>fileContents is not implemented for "%1".</source>
-        <translation>FileContents se ne izvaja za "%1".</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>FileContents se ne izvaja za &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for "%1".</source>
-        <translation>WriteFileContents se ne izvaja za "%1".</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>WriteFileContents se ne izvaja za &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+66" />
-        <source>createTempFile is not implemented for "%1".</source>
-        <translation>CreateTempFile se ne izvaja za "%1".</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation>CreateTempFile se ne izvaja za &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24295,8 +24364,8 @@ v "%2".
     </message>
     <message>
         <location line="+180" />
-        <source>Refusing to remove the standard directory "%1".</source>
-        <translation>Noče odstraniti standardnega imenika "%1".</translation>
+        <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
+        <translation>Noče odstraniti standardnega imenika &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -24310,83 +24379,83 @@ v "%2".
     </message>
     <message>
         <location line="+37" />
-        <source>Failed to remove directory "%1".</source>
+        <source>Failed to remove directory &quot;%1&quot;.</source>
         <translation>Imenika »%1« ni bilo mogoče odstraniti.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Failed to remove file "%1".</source>
+        <source>Failed to remove file &quot;%1&quot;.</source>
         <translation>Datoteke »%1« ni bilo mogoče odstraniti.</translation>
     </message>
     <message>
         <location line="+551" />
-        <source>Failed creating temporary file "%1" (too many tries).</source>
-        <translation>Neuspešno ustvarjanje začasne datoteke "%1" (preveč poskusov).</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
+        <translation>Neuspešno ustvarjanje začasne datoteke &quot;%1&quot; (preveč poskusov).</translation>
     </message>
     <message>
-        <source>Failed to copy file "%1" to "%2".</source>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation type="vanished">Kopiranje datoteke »%1« v »%2« ni uspelo.</translation>
     </message>
     <message>
-        <source>File "%1" does not exist</source>
+        <source>File &quot;%1&quot; does not exist</source>
         <translation type="vanished">Datoteka »%1« ne obstaja</translation>
     </message>
     <message>
-        <source>Could not open File "%1"</source>
+        <source>Could not open File &quot;%1&quot;</source>
         <translation type="vanished">Ni bilo mogoče odpreti datoteke »%1«</translation>
     </message>
     <message>
         <location line="-449" />
-        <source>Cannot read "%1": %2</source>
+        <source>Cannot read &quot;%1&quot;: %2</source>
         <translation>Ni mogoče prebrati »%1«: %2</translation>
     </message>
     <message>
-        <source>Could not open file "%1" for writing</source>
+        <source>Could not open file &quot;%1&quot; for writing</source>
         <translation type="vanished">Ni bilo mogoče odpreti datoteke »%1« za pisanje</translation>
     </message>
     <message>
-        <source>Could not write to file "%1" (only %2 of %3 bytes written)</source>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
         <translation type="vanished">Ni bilo mogoče zapisati v datoteko »%1« (zapisano samo %2 od %3 bajtov)</translation>
     </message>
     <message>
-        <source>Could not create temporary file in "%1" (%2)</source>
+        <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
         <translation type="vanished">Ni bilo mogoče ustvariti začasne datoteke v »%1« (%2)</translation>
     </message>
     <message>
         <location line="-87" />
         <location line="+406" />
-        <source>Failed to copy file "%1" to "%2": %3</source>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
         <translation>Kopiranje datoteke »%1« v »%2« ni uspelo: %3</translation>
     </message>
     <message>
         <location line="-333" />
-        <source>File "%1" does not exist.</source>
-        <translation>Datoteka "%1" ne obstaja.</translation>
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>Datoteka &quot;%1&quot; ne obstaja.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File "%1".</source>
-        <translation>Ni mogel odpreti datoteke "%1".</translation>
+        <source>Could not open File &quot;%1&quot;.</source>
+        <translation>Ni mogel odpreti datoteke &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Could not open file "%1" for writing.</source>
-        <translation>Za pisanje ne bi mogel odpreti datoteke "%1".</translation>
+        <source>Could not open file &quot;%1&quot; for writing.</source>
+        <translation>Za pisanje ne bi mogel odpreti datoteke &quot;%1&quot;.</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
-        <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
-        <translation>
-            <numerusform>Ne bi mogel pisati, da bi vložil " %1" (samo %2 od %n napisanih bajtov).</numerusform>
-            <numerusform>Ne bi mogel pisati, da bi vložil " %1" (samo %2 od %n napisanih bajtov).</numerusform>
-            <numerusform />
-            <numerusform />
+        <source>Could not write to file &quot;%1&quot; (only %2 of %n byte(s) written).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Could not create temporary file in "%1" (%2).</source>
-        <translation>Ne bi mogel ustvariti začasne datoteke v "%1" (%2).</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2).</source>
+        <translation>Ne bi mogel ustvariti začasne datoteke v &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location line="+138" />
@@ -24395,21 +24464,21 @@ v "%2".
     </message>
     <message>
         <location line="+202" />
-        <source>Failed reading file "%1": %2</source>
-        <translation>Branje datoteke "%1" ni uspelo: %2</translation>
+        <source>Failed reading file &quot;%1&quot;: %2</source>
+        <translation>Branje datoteke &quot;%1&quot; ni uspelo: %2</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Failed writing file "%1": %2</source>
+        <source>Failed writing file &quot;%1&quot;: %2</source>
         <translation>Zapisovanje datoteke »%1« ni uspelo: %2</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Failed creating temporary file "%1": %2</source>
-        <translation>Ustvarjanje začasne datoteke "%1" ni uspelo: %2</translation>
+        <source>Failed creating temporary file &quot;%1&quot;: %2</source>
+        <translation>Ustvarjanje začasne datoteke &quot;%1&quot; ni uspelo: %2</translation>
     </message>
     <message>
-        <source>Failed creating temporary file "%1" (too many tries)</source>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
         <translation type="vanished">Ustvarjanje začasne datoteke »%1« ni uspelo (preveč poskusov)</translation>
     </message>
     <message>
@@ -24429,17 +24498,17 @@ v "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/elfreader.cpp" line="+130" />
-        <source>"%1" is an invalid ELF object (%2)</source>
+        <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
         <translation>»%1« je neveljaven objekt ELF (%2)</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>"%1" is not an ELF object (file too small)</source>
+        <source>&quot;%1&quot; is not an ELF object (file too small)</source>
         <translation>»%1« ni objekt ELF (datoteka je premajhna)</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>"%1" is not an ELF object</source>
+        <source>&quot;%1&quot; is not an ELF object</source>
         <translation>»%1« ni predmet ELF</translation>
     </message>
     <message>
@@ -24465,11 +24534,11 @@ v "%2".
     <message numerus="yes">
         <location line="+9" />
         <source>announced %n sections, each %1 bytes, exceed file size</source>
-        <translation>
-            <numerusform>napovedanih %n razdelkov, vsak %1 bajt, presega velikost datoteke</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -24494,14 +24563,14 @@ To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-To disable a variable, prefix the line with "#".</source>
+To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="vanished">V vsako vrstico vnesite eno spremenljivko okolja.
 Če želite nastaviti ali spremeniti spremenljivko, uporabite VARIABLE=VALUE.
 Če želite dodati spremenljivki, uporabite VARIABLE+=VALUE.
 Če želite spremenljivki dodati pred spremenljivko, uporabite VARIABLE=+VALUE.
 Na obstoječe spremenljivke se lahko sklicujete v VALUE z ${OTHER}.
 Če želite počistiti spremenljivko, postavite njeno ime v vrstico, na kateri ni ničesar drugega.
-Če želite onemogočiti spremenljivko, pred vrstico vnesite "#".</translation>
+Če želite onemogočiti spremenljivko, pred vrstico vnesite &quot;#&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
@@ -24541,13 +24610,13 @@ Na obstoječe spremenljivke se lahko sklicujete v VALUE z ${OTHER}.
     </message>
     <message>
         <location line="+2" />
-        <source>Invalid character "%1".</source>
-        <translation>Neveljaven znak "%1".</translation>
+        <source>Invalid character &quot;%1&quot;.</source>
+        <translation>Neveljaven znak &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid characters "%1".</source>
-        <translation>Neveljavni znaki "%1".</translation>
+        <source>Invalid characters &quot;%1&quot;.</source>
+        <translation>Neveljavni znaki &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -24588,13 +24657,13 @@ Na obstoječe spremenljivke se lahko sklicujete v VALUE z ${OTHER}.
     </message>
     <message>
         <location line="+5" />
-        <source>Could not set permissions on "%1"</source>
+        <source>Could not set permissions on &quot;%1&quot;</source>
         <translation>Ni bilo mogoče nastaviti dovoljenj za »%1«</translation>
     </message>
     <message>
         <location line="+250" />
-        <source>No "localSource" device hook set.</source>
-        <translation>Ni nastavljenega kljuka naprave "localSource".</translation>
+        <source>No &quot;localSource&quot; device hook set.</source>
+        <translation>Ni nastavljenega kljuka naprave &quot;localSource&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
@@ -24676,19 +24745,19 @@ Na obstoječe spremenljivke se lahko sklicujete v VALUE z ${OTHER}.
     </message>
     <message>
         <location line="+1" />
-        <source>Overwrite existing file "%1"?</source>
+        <source>Overwrite existing file &quot;%1&quot;?</source>
         <translation>Želite prepisati obstoječo datoteko »%1«?</translation>
     </message>
     <message>
         <location line="+21" />
-        <source>Could not copy file "%1" to "%2".</source>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Ni bilo mogoče kopirati datoteke »%1« v »%2«.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
         <location line="+409" />
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
-        <source>Failed to create directory "%1".</source>
+        <source>Failed to create directory &quot;%1&quot;.</source>
         <translation>Imenika »%1« ni bilo mogoče ustvariti.</translation>
     </message>
     <message>
@@ -24750,16 +24819,16 @@ Na obstoječe spremenljivke se lahko sklicujete v VALUE z ${OTHER}.
         <location line="+14" />
         <location line="+2" />
         <source>%n Items</source>
-        <translation>
-            <numerusform>%n elementov</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
-        <source>Failed to start process launcher at "%1": %2</source>
+        <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
         <translation>Zagon zaganjalnika procesov pri »%1« ni uspel: %2</translation>
     </message>
     <message>
@@ -24876,20 +24945,20 @@ Na obstoječe spremenljivke se lahko sklicujete v VALUE z ${OTHER}.
         <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
-To disable a variable, prefix this line with "#".
+To disable a variable, prefix this line with &quot;#&quot;.
 To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-Lines starting with "##" will be treated as comments.</source>
+Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Vnesite eno spremenljivko okolja na vrstico.
  Če želite nastaviti ali spremeniti spremenljivko, uporabite spremenljivko = vrednost.
- Če želite onemogočiti spremenljivko, predpono to vrstico z "#".
+ Če želite onemogočiti spremenljivko, predpono to vrstico z &quot;#&quot;.
  Če želite dodati spremenljivko, uporabite spremenljivko+= vrednost.
  Če želite preprečiti spremenljivko, uporabite spremenljivko =+vrednost.
  Obstoječe spremenljivke se lahko sklicujejo v vrednosti z $ {drugim}.
  Če želite očistiti spremenljivko, postavite ime na vrstico, na katero ni nič drugega.
- Vrstice, ki se začnejo z "##", bodo obravnavane kot komentarji.</translation>
+ Vrstice, ki se začnejo z &quot;##&quot;, bodo obravnavane kot komentarji.</translation>
     </message>
     <message>
         <location line="+112" />
@@ -24908,18 +24977,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+29" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>Program "%1" ne obstaja ali pa ni izvršljiv.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>Program &quot;%1&quot; ne obstaja ali pa ni izvršljiv.</translation>
     </message>
     <message>
         <location line="+79" />
-        <source>The program "%1" could not be found.</source>
-        <translation>Programa "%1" ni bilo mogoče najti.</translation>
+        <source>The program &quot;%1&quot; could not be found.</source>
+        <translation>Programa &quot;%1&quot; ni bilo mogoče najti.</translation>
     </message>
     <message>
         <location line="+908" />
-        <source>Failed to create process interface for "%1".</source>
-        <translation>Ni uspelo ustvariti procesnega vmesnika za "%1".</translation>
+        <source>Failed to create process interface for &quot;%1&quot;.</source>
+        <translation>Ni uspelo ustvariti procesnega vmesnika za &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+163" />
@@ -24933,7 +25002,7 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The process "%1" is not responding.</source>
+        <source>The process &quot;%1&quot; is not responding.</source>
         <translation>Proces »%1« se ne odziva.</translation>
     </message>
     <message>
@@ -24943,31 +25012,31 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+233" />
-        <source>The command "%1" finished successfully.</source>
+        <source>The command &quot;%1&quot; finished successfully.</source>
         <translation>Ukaz »%1« se je uspešno zaključil.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated with exit code %2.</source>
+        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
         <translation>Ukaz »%1« se je končal z izhodno kodo %2.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated abnormally.</source>
+        <source>The command &quot;%1&quot; terminated abnormally.</source>
         <translation>Ukaz »%1« se je nenormalno zaključil.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" could not be started.</source>
+        <source>The command &quot;%1&quot; could not be started.</source>
         <translation>Ukaza »%1« ni bilo mogoče zagnati.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>The command "%1" was canceled after %2 ms.</source>
-        <translation>Ukaz " %1" je bil preklican po %2 ms.</translation>
+        <source>The command &quot;%1&quot; was canceled after %2 ms.</source>
+        <translation>Ukaz &quot; %1&quot; je bil preklican po %2 ms.</translation>
     </message>
     <message>
-        <source>The command "%1" did not respond within the timeout limit (%2 s).</source>
+        <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
         <translation type="vanished">Ukaz »%1« se ni odzval v časovni omejitvi (%2 s).</translation>
     </message>
     <message>
@@ -25007,7 +25076,7 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open "%1".</source>
+        <source>Could not open &quot;%1&quot;.</source>
         <translation>Ni bilo mogoče odpreti »%1«.</translation>
     </message>
     <message>
@@ -25029,12 +25098,12 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="-264" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Ni bilo mogoče najti nobene veljavne nastavitvene datoteke.&lt;/p&gt;&lt;p&gt;Vse nastavitvene datoteke, najdene v imeniku »%1«, niso bile primerne za trenutno različico %2, ker jih je na primer napisala nekompatibilna različica %2 ali ker je bila uporabljena drugačna pot nastavitev.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+265" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were either too new or too old to be read.&lt;/p&gt;</source>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Ni bilo mogoče najti nobene veljavne nastavitvene datoteke.&lt;/p&gt;&lt;p&gt;Vse nastavitvene datoteke, najdene v imeniku »%1«, so bile bodisi prenove ali prestare, da bi jih lahko prebrali.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -25044,17 +25113,17 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>&lt;p&gt;The versioned backup "%1" of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
+        <source>&lt;p&gt;The versioned backup &quot;%1&quot; of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Uporabljena je varnostna kopija »%1« nastavitvene datoteke z različico, ker je datoteko brez različice ustvarila nekompatibilna različica %2.&lt;/p&gt;&lt;p&gt;Spremembe nastavitev od zadnje različice %2 je bil uporabljen, so prezrte in spremembe, narejene zdaj, &lt;b&gt;ne bodo&lt;/b&gt; prenesene na novejšo različico.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Settings File for "%1" from a Different Environment?</source>
+        <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
         <translation>Datoteka z nastavitvami za »%1« iz drugega okolja?</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file "%2"?&lt;/p&gt;</source>
+        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file &quot;%2&quot;?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Najdena ni bila nobena datoteka z nastavitvami, ki jo je ustvaril ta primerek %1.&lt;/p&gt;&lt;p&gt;Ali ste s tem projektom delali na drugem računalniku ali že prej uporabljali drugo pot nastavitev?&lt;/p&gt;&lt;p&gt;Ali še vedno želite naložiti datoteko z nastavitvami »%2«?&lt;/p&gt;</translation>
     </message>
     <message>
@@ -25064,7 +25133,7 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" is not supported by %2. Do you want to try loading it anyway?</source>
+        <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
         <translation>»%1« ne podpira %2. Ga vseeno želite poskusiti naložiti?</translation>
     </message>
     <message>
@@ -25140,8 +25209,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+3" />
         <location line="+7" />
-        <source>Insert "%1"</source>
-        <translation>Vstavi "%1"</translation>
+        <source>Insert &quot;%1&quot;</source>
+        <translation>Vstavi &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-3" />
@@ -25182,8 +25251,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+7" />
-        <source>Command "%1" was not found.</source>
-        <translation>Ukaz "%1" ni bilo mogoče najti.</translation>
+        <source>Command &quot;%1&quot; was not found.</source>
+        <translation>Ukaz &quot;%1&quot; ni bilo mogoče najti.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -25208,8 +25277,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+28" />
         <location line="+45" />
-        <source>Failed to start terminal process: "%1".</source>
-        <translation>Ni uspel začeti terminalnega postopka: "%1".</translation>
+        <source>Failed to start terminal process: &quot;%1&quot;.</source>
+        <translation>Ni uspel začeti terminalnega postopka: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
@@ -25260,9 +25329,9 @@ Lines starting with "##" will be treated as comments.</source>
 <context>
     <name>TextEditor::Internal::Snippets</name>
     <message>
-        <source />
+        <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
-        <translation />
+        <translation></translation>
     </message>
 </context>
 </TS>

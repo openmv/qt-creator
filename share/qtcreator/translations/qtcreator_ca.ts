@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+838" />
         <source>Copy</source>
         <translation>Còpia</translation>
     </message>
@@ -30,84 +30,84 @@
         <translation>Configuració de la càmera OpenMV</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Turn on WiFi Shield on startup</source>
-        <translation>Activeu WiFi Shield a l'inici</translation>
+        <translation>Activeu WiFi Shield a l&apos;inici</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Client Mode (Normal)</source>
         <translation>Mode client (normal)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Password</source>
         <translation>Contrasenya</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter your WiFi network password here</source>
         <translation>Introduïu aquí la contrasenya de la vostra xarxa WiFi</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Type</source>
         <translation>Tipus</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Open (No password)</source>
         <translation>Obre (sense contrasenya)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WPA (Modern WiFi Security)</source>
         <translation>WPA (Seguretat WiFi moderna)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WEP (Hexadecimal password)</source>
         <translation>WEP (contrasenya hexadecimal)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>SSID</source>
         <translation>SSID</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter or select your WiFi network here</source>
         <translation>Introduïu o seleccioneu la vostra xarxa WiFi aquí</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Acess Point Mode</source>
-        <translation>Mode de punt d'accés</translation>
+        <translation>Mode de punt d&apos;accés</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
         <translation>Introduïu aquí el nom de la xarxa WiFi per crear la contrasenya</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
         <translation>Introduïu aquí el nom de la xarxa WiFi per crear-la</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Board Name</source>
         <translation>Nom de la Junta</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
         <translation>Introduïu aquí un nom per a la vostra càmera OpenMV</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Duplicate REPL on the UART on startup</source>
-        <translation>Duplicar REPL a l'UART a l'inici</translation>
+        <translation>Duplicar REPL a l&apos;UART a l&apos;inici</translation>
     </message>
 </context>
 <context>
@@ -118,42 +118,42 @@
         <translation>000</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Max</source>
         <translation>Màx</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Median</source>
         <translation>Mitjana</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mode</source>
         <translation>Mode</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Min</source>
         <translation>Min</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mean</source>
         <translation>Significar</translation>
     </message>
@@ -164,7 +164,7 @@
         <location filename="../../../src/libs/utils/fsengine/fileiconprovider.cpp" line="+170" />
         <source>File Folder</source>
         <comment>Match Windows Explorer</comment>
-        <translation>Carpeta d'arxius</translation>
+        <translation>Carpeta d&apos;arxius</translation>
     </message>
     <message>
         <location line="+2" />
@@ -205,41 +205,41 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for '%1'...</source>
-        <translation>S'està baixant la definició de sintaxi nova per a '%1'...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation>S&apos;està baixant la definició de sintaxi nova per a &apos;%1&apos;...</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for '%1' to version %2...</source>
-        <translation>S'està actualitzant la definició de sintaxi per a '%1' a la versió %2...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation>S&apos;està actualitzant la definició de sintaxi per a &apos;%1&apos; a la versió %2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
         <source>Copy/Convert Python File</source>
         <translation>Copia/converteix el fitxer Python</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+21" />
         <location line="+7" />
-        <location line="+94" />
+        <location line="+91" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+76" />
         <location line="+7" />
         <source>Unable to overwrite output file!</source>
         <translation>No es pot sobreescriure el fitxer de sortida.</translation>
     </message>
     <message>
-        <location line="-125" />
+        <location line="-124" />
         <source>Model Zoo</source>
         <translation>Model Zoo</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+77" />
         <source>Model conversion is unnecessary for this board, as it lacks an NPU accelerator.</source>
         <translation>La conversió del model no és necessària per a aquest tauler, ja que no té un accelerador NPU.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <source>Convert Model</source>
         <translation>Converteix el model</translation>
     </message>
@@ -292,7 +292,7 @@
     </message>
     <message>
         <source>Enter the name of the workspace:</source>
-        <translation type="vanished">Introduïu el nom de l'espai de treball:</translation>
+        <translation type="vanished">Introduïu el nom de l&apos;espai de treball:</translation>
     </message>
     <message>
         <source>&amp;New</source>
@@ -328,15 +328,15 @@
     </message>
     <message>
         <source>Restore last workspace on startup</source>
-        <translation type="vanished">Restaura l'últim espai de treball a l'inici</translation>
+        <translation type="vanished">Restaura l&apos;últim espai de treball a l&apos;inici</translation>
     </message>
     <message>
         <source>Workspace Manager</source>
-        <translation type="vanished">Gestor d'espai de treball</translation>
+        <translation type="vanished">Gestor d&apos;espai de treball</translation>
     </message>
     <message>
-        <source>&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;What is a Workspace?&lt;/a&gt;</source>
-        <translation type="vanished">&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;Què és un espai de treball?&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;Què és un espai de treball?&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Workspace</source>
@@ -348,7 +348,7 @@
     </message>
     <message>
         <source>New Workspace Name</source>
-        <translation type="vanished">Nou nom de l'espai de treball</translation>
+        <translation type="vanished">Nou nom de l&apos;espai de treball</translation>
     </message>
     <message>
         <source>&amp;Create</source>
@@ -368,7 +368,7 @@
     </message>
     <message>
         <source>Rename Workspace</source>
-        <translation type="vanished">Canvia el nom de l'espai de treball</translation>
+        <translation type="vanished">Canvia el nom de l&apos;espai de treball</translation>
     </message>
     <message>
         <source>Rename and &amp;Open</source>
@@ -376,11 +376,11 @@
     </message>
     <message>
         <source>Import Workspace</source>
-        <translation type="vanished">Importa l'espai de treball</translation>
+        <translation type="vanished">Importa l&apos;espai de treball</translation>
     </message>
     <message>
         <source>Export Workspace</source>
-        <translation type="vanished">Exportar l'espai de treball</translation>
+        <translation type="vanished">Exportar l&apos;espai de treball</translation>
     </message>
 </context>
 <context>
@@ -401,12 +401,12 @@
     <message>
         <location line="-14" />
         <source>The Binary Editor cannot open empty files.</source>
-        <translation>L'Editor binari no pot obrir fitxers buits.</translation>
+        <translation>L&apos;Editor binari no pot obrir fitxers buits.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>The file is too big for the Binary Editor (max. 32GB).</source>
-        <translation>El fitxer és massa gran per a l'Editor binari (màx. 32 GB).</translation>
+        <translation>El fitxer és massa gran per a l&apos;Editor binari (màx. 32 GB).</translation>
     </message>
     <message>
         <location line="+87" />
@@ -451,7 +451,7 @@
     <message>
         <location line="+5" />
         <source>%1-bit&amp;nbsp;Integer&amp;nbsp;Type</source>
-        <translation>%1 bit&amp;nbsp;Tipus d'enter&amp;nbsp;</translation>
+        <translation>%1 bit&amp;nbsp;Tipus d&apos;enter&amp;nbsp;</translation>
     </message>
     <message>
         <location line="+1" />
@@ -511,7 +511,7 @@
     <message>
         <location line="+23" />
         <source>Copying Failed</source>
-        <translation>No s'ha pogut copiar</translation>
+        <translation>No s&apos;ha pogut copiar</translation>
     </message>
     <message>
         <location line="+1" />
@@ -531,7 +531,7 @@
     <message>
         <location line="+7" />
         <source>Set Data Breakpoint on Selection</source>
-        <translation>Estableix el punt d'interrupció de les dades a la selecció</translation>
+        <translation>Estableix el punt d&apos;interrupció de les dades a la selecció</translation>
     </message>
     <message>
         <location line="+14" />
@@ -542,12 +542,12 @@
     <message>
         <location line="+11" />
         <source>Jump to Address in This Window</source>
-        <translation>Vés a l'adreça d'aquesta finestra</translation>
+        <translation>Vés a l&apos;adreça d&apos;aquesta finestra</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Jump to Address in New Window</source>
-        <translation>Ves a l'adreça a la finestra nova</translation>
+        <translation>Ves a l&apos;adreça a la finestra nova</translation>
     </message>
     <message>
         <location line="+1" />
@@ -557,12 +557,12 @@
     <message>
         <location line="+46" />
         <source>Jump to Address 0x%1</source>
-        <translation>Ves a l'adreça 0x%1</translation>
+        <translation>Ves a l&apos;adreça 0x%1</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Jump to Address 0x%1 in New Window</source>
-        <translation>Ves a l'adreça 0x%1 a la finestra nova</translation>
+        <translation>Ves a l&apos;adreça 0x%1 a la finestra nova</translation>
     </message>
 </context>
 <context>
@@ -578,8 +578,8 @@
         <location line="+26" />
         <source>A browser window will open. Enter the code %1 when asked.
 The code has been copied to your clipboard.</source>
-        <translation>S'obrirà una finestra del navegador. Introduïu el codi %1 quan se li demana.
- El codi s'ha copiat al porta -retalls.</translation>
+        <translation>S&apos;obrirà una finestra del navegador. Introduïu el codi %1 quan se li demana.
+ El codi s&apos;ha copiat al porta -retalls.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -600,7 +600,7 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+1" />
         <source>Proxy username and password required:</source>
-        <translation>Nom d'usuari i contrasenya del proxy:</translation>
+        <translation>Nom d&apos;usuari i contrasenya del proxy:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -639,8 +639,8 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Request Copilot suggestion at the current editor's cursor position.</source>
-        <translation>Sol·liciteu suggeriments de copilot a la posició del cursor actual de l'editor.</translation>
+        <source>Request Copilot suggestion at the current editor&apos;s cursor position.</source>
+        <translation>Sol·liciteu suggeriments de copilot a la posició del cursor actual de l&apos;editor.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -773,7 +773,7 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+2" />
         <source>The host name of the proxy server.</source>
-        <translation>El nom d'amfitrió del servidor intermediari.</translation>
+        <translation>El nom d&apos;amfitrió del servidor intermediari.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -803,7 +803,7 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+2" />
         <source>The user name to access the proxy server.</source>
-        <translation>El nom d'usuari per accedir al servidor intermediari.</translation>
+        <translation>El nom d&apos;usuari per accedir al servidor intermediari.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -893,8 +893,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>No s'ha pogut obrir un editor per a "%1".</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut obrir un editor per a &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+28" />
@@ -929,7 +929,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-2268" />
         <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+445" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
@@ -974,7 +974,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <location line="+12" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-65" />
         <source>Split Side by Side</source>
-        <translation>Dividir al costat de l'altre</translation>
+        <translation>Dividir al costat de l&apos;altre</translation>
     </message>
     <message>
         <location line="+20" />
@@ -995,7 +995,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+696" />
         <source>Could not save the files.</source>
         <comment>error message</comment>
-        <translation>No s'han pogut desar els fitxers.</translation>
+        <translation>No s&apos;han pogut desar els fitxers.</translation>
     </message>
     <message>
         <location line="+47" />
@@ -1027,8 +1027,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+74" />
-        <source>An item named "%1" already exists at this location. Do you want to overwrite it?</source>
-        <translation>Ja existeix un element anomenat "%1" en aquesta ubicació. Voleu sobreescriure-lo?</translation>
+        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
+        <translation>Ja existeix un element anomenat &quot;%1&quot; en aquesta ubicació. Voleu sobreescriure-lo?</translation>
     </message>
     <message>
         <location line="+230" />
@@ -1146,7 +1146,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="+12" />
         <source>Ad&amp;vanced</source>
-        <translation>Avançat</translation>
+        <translation>A&amp;vançat</translation>
     </message>
     <message>
         <location line="+38" />
@@ -1155,13 +1155,13 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+7" />
-        <source>X-coordinate of the current editor's upper left corner, relative to screen.</source>
-        <translation>Coordenada X de la cantonada superior esquerra de l'editor actual, relativa a la pantalla.</translation>
+        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
+        <translation>Coordenada X de la cantonada superior esquerra de l&apos;editor actual, relativa a la pantalla.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Y-coordinate of the current editor's upper left corner, relative to screen.</source>
-        <translation>Coordenada Y de la cantonada superior esquerra de l'editor actual, relativa a la pantalla.</translation>
+        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
+        <translation>Coordenada Y de la cantonada superior esquerra de l&apos;editor actual, relativa a la pantalla.</translation>
     </message>
     <message>
         <location line="+49" />
@@ -1170,32 +1170,32 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <source>The text file "%1" has the size %2MB and might take more memory to open and process than available.
+        <source>The text file &quot;%1&quot; has the size %2MB and might take more memory to open and process than available.
 
 Continue?</source>
-        <translation>El fitxer de text "%1" té la mida de %2 MB i pot necessitar més memòria per obrir-se i processar-se de la disponible.
+        <translation>El fitxer de text &quot;%1&quot; té la mida de %2 MB i pot necessitar més memòria per obrir-se i processar-se de la disponible.
 
 Continuar?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>Could not open "%1": Cannot open files of type "%2".</source>
-        <translation>No s'ha pogut obrir "%1": no es poden obrir fitxers de tipus "%2".</translation>
+        <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
+        <translation>No s&apos;ha pogut obrir &quot;%1&quot;: no es poden obrir fitxers de tipus &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not open "%1" for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>No s'ha pogut obrir "%1" per llegir-lo. O el fitxer no existeix o no teniu els permisos per obrir-lo.</translation>
+        <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
+        <translation>No s&apos;ha pogut obrir &quot;%1&quot; per llegir-lo. O el fitxer no existeix o no teniu els permisos per obrir-lo.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Could not open "%1": Unknown error.</source>
-        <translation>No s'ha pogut obrir "%1": error desconegut.</translation>
+        <source>Could not open &quot;%1&quot;: Unknown error.</source>
+        <translation>No s&apos;ha pogut obrir &quot;%1&quot;: error desconegut.</translation>
     </message>
     <message>
         <location line="+1130" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file was not opened in %1 yet.</source>
-        <translation>&lt;b&gt;Avís:&lt;/b&gt; aquest fitxer encara no s'ha obert a %1.</translation>
+        <translation>&lt;b&gt;Avís:&lt;/b&gt; aquest fitxer encara no s&apos;ha obert a %1.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1267,18 +1267,18 @@ Continuar?</translation>
     </message>
     <message>
         <location line="+308" />
-        <source>Close "%1"</source>
-        <translation>Tanca "%1"</translation>
+        <source>Close &quot;%1&quot;</source>
+        <translation>Tanca &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+27" />
-        <source>Unpin "%1"</source>
-        <translation>Desfixa "%1"</translation>
+        <source>Unpin &quot;%1&quot;</source>
+        <translation>Desfixa &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Pin "%1"</source>
-        <translation>Pin "%1"</translation>
+        <source>Pin &quot;%1&quot;</source>
+        <translation>Pin &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1343,7 +1343,7 @@ Continuar?</translation>
     </message>
     <message>
         <source>Enable high DPI scaling</source>
-        <translation type="vanished">Activa l'escalat de DPI alt</translation>
+        <translation type="vanished">Activa l&apos;escalat de DPI alt</translation>
     </message>
     <message>
         <source>The high DPI settings will take effect after restart.</source>
@@ -1352,7 +1352,7 @@ Continuar?</translation>
     <message>
         <location line="+50" />
         <source>User Interface</source>
-        <translation>Interfície d'usuari</translation>
+        <translation>Interfície d&apos;usuari</translation>
     </message>
     <message>
         <location line="-144" />
@@ -1403,7 +1403,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+2" />
-        <source>Don't Round</source>
+        <source>Don&apos;t Round</source>
         <translation>No arrodonir</translation>
     </message>
     <message>
@@ -1419,7 +1419,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+7" />
         <source>Environment influences UI scaling behavior.</source>
-        <translation>El medi ambient influeix en el comportament de la interfície d'usuari.</translation>
+        <translation>El medi ambient influeix en el comportament de la interfície d&apos;usuari.</translation>
     </message>
     <message>
         <location line="+60" />
@@ -1429,7 +1429,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+92" />
         <source>The language change will take effect after restart.</source>
-        <translation>El canvi d'idioma es farà efectiu després del reinici.</translation>
+        <translation>El canvi d&apos;idioma es farà efectiu després del reinici.</translation>
     </message>
     <message>
         <location line="+45" />
@@ -1496,12 +1496,12 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+43" />
         <source>Enable crash reporting</source>
-        <translation>Activa els informes d'error</translation>
+        <translation>Activa els informes d&apos;error</translation>
     </message>
     <message>
         <location line="-26" />
         <source>Warn before opening text files greater than</source>
-        <translation>Aviseu abans d'obrir fitxers de text superiors a</translation>
+        <translation>Aviseu abans d&apos;obrir fitxers de text superiors a</translation>
     </message>
     <message>
         <location line="+20" />
@@ -1516,7 +1516,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+96" />
         <source>Clear Local Crash Reports</source>
-        <translation>Esborra els informes d'error locals</translation>
+        <translation>Esborra els informes d&apos;error locals</translation>
     </message>
     <message>
         <location line="-79" />
@@ -1551,12 +1551,12 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+42" />
         <source>Allow crashes to be automatically reported. Collected reports are used for the sole purpose of fixing bugs.</source>
-        <translation>Permet que els bloquejos s'informin automàticament. Els informes recopilats s'utilitzen amb l'únic propòsit de corregir errors.</translation>
+        <translation>Permet que els bloquejos s&apos;informin automàticament. Els informes recopilats s&apos;utilitzen amb l&apos;únic propòsit de corregir errors.</translation>
     </message>
     <message>
         <location line="+35" />
-        <source>Command line arguments used for "Run in terminal".</source>
-        <translation>Arguments de línia d'ordres utilitzats per a "Executar al terminal".</translation>
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>Arguments de línia d&apos;ordres utilitzats per a &quot;Executar al terminal&quot;.</translation>
     </message>
     <message>
         <location line="-50" />
@@ -1580,8 +1580,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+105" />
-        <source>Command line arguments used for "%1".</source>
-        <translation>Arguments de línia d'ordres utilitzats per a "%1".</translation>
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>Arguments de línia d&apos;ordres utilitzats per a &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+34" />
@@ -1601,7 +1601,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+2" />
         <source>Minimum number of open documents that should be kept in memory. Increasing this number will lead to greater resource usage when not manually closing documents.</source>
-        <translation>Nombre mínim de documents oberts que s'han de conservar a la memòria. Augmentar aquest nombre comportarà un ús més gran dels recursos quan no es tanqueu manualment els documents.</translation>
+        <translation>Nombre mínim de documents oberts que s&apos;han de conservar a la memòria. Augmentar aquest nombre comportarà un ús més gran dels recursos quan no es tanqueu manualment els documents.</translation>
     </message>
     <message>
         <location line="+84" />
@@ -1637,8 +1637,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+147" />
-        <source>Maximum number of entries in "Recent Files":</source>
-        <translation>Nombre màxim d'entrades a "Fitxers recents":</translation>
+        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
+        <translation>Nombre màxim d&apos;entrades a &quot;Fitxers recents&quot;:</translation>
     </message>
     <message>
         <location line="+12" />
@@ -1654,19 +1654,19 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+7" />
         <source>Automatically creates temporary copies of modified files. If %1 is restarted after a crash or power failure, it asks whether to recover the auto-saved content.</source>
-        <translation>Crea automàticament còpies temporals dels fitxers modificats. Si %1 es reinicia després d'una fallada o una fallada de corrent, es preguntarà si cal recuperar el contingut desat automàticament.</translation>
+        <translation>Crea automàticament còpies temporals dels fitxers modificats. Si %1 es reinicia després d&apos;una fallada o una fallada de corrent, es preguntarà si cal recuperar el contingut desat automàticament.</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Automatically saves all open files affected by a refactoring operation,
 provided they were unmodified before the refactoring.</source>
         <translation>Desa automàticament tots els fitxers oberts afectats per una operació de refactorització,
-sempre que no s'hagin modificat abans de la refactorització.</translation>
+sempre que no s&apos;hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location line="+183" />
         <source>Crash Reporting</source>
-        <translation>Informe d'accidents</translation>
+        <translation>Informe d&apos;accidents</translation>
     </message>
     <message>
         <source>The change will take effect after restart.</source>
@@ -1698,7 +1698,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
         <translation>Sortida</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1773" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1787" />
         <source>&amp;File</source>
         <translation>&amp;Dossier</translation>
     </message>
@@ -1723,7 +1723,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
         <translation>&amp;Ajuda</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+122" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+128" />
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2620" />
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
@@ -1735,7 +1735,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
-        <translation>Guardar com...</translation>
+        <translation>Gu&amp;ardar com...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+3" />
@@ -1745,16 +1745,16 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+701" />
         <source>Save A&amp;ll</source>
-        <translation>Guardar tot</translation>
+        <translation>&amp;Guardar tot</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-279" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>Sortir de %1?</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+106" />
         <source>&amp;View</source>
         <translation>&amp;Veure</translation>
     </message>
@@ -1857,7 +1857,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="+8" />
         <source>Select &amp;All</source>
-        <translation>Seleccionar tot</translation>
+        <translation>Seleccion&amp;ar tot</translation>
     </message>
     <message>
         <location line="+8" />
@@ -1947,8 +1947,8 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the "%2" action from the "%3" locator filter (%4).</source>
-        <translation>Això ocultarà completament la barra de menús. Podeu mostrar -ho de nou escrivint%.</translation>
+        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the &quot;%2&quot; action from the &quot;%3&quot; locator filter (%4).</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21" />
@@ -2001,7 +2001,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
         <translation>Ocult</translation>
     </message>
     <message>
-        <location line="+460" />
+        <location line="+474" />
         <source>Version:</source>
         <translation>Versió:</translation>
     </message>
@@ -2018,10 +2018,10 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="+1" />
         <source>&lt;p&gt;Qt Creator developers can be reached at the Qt Creator mailing list:&lt;/p&gt;%1&lt;p&gt;or the #qt-creator channel on Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;Our bug tracker is located at %3.&lt;/p&gt;&lt;p&gt;Please use %4 for bigger chunks of text.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Podeu contactar amb els desenvolupadors de Qt Creator a la llista de correu de Qt Creator:&lt;/p&gt;%1&lt;p&gt;o al canal #qt-creator a Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;El nostre rastrejador d'errors es troba a %3.&lt;/p&gt;&lt;p&gt;Si us plau, utilitzeu %4 per a fragments de text més grans.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Podeu contactar amb els desenvolupadors de Qt Creator a la llista de correu de Qt Creator:&lt;/p&gt;%1&lt;p&gt;o al canal #qt-creator a Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;El nostre rastrejador d&apos;errors es troba a %3.&lt;/p&gt;&lt;p&gt;Si us plau, utilitzeu %4 per a fragments de text més grans.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-803" />
+        <location line="-817" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -2054,7 +2054,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+240" />
+        <location line="+244" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>Documents oberts</translation>
@@ -2072,12 +2072,12 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+855" />
         <source>Close Editor</source>
-        <translation>Tanca l'editor</translation>
+        <translation>Tanca l&apos;editor</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Close All Except "%1"</source>
-        <translation>Tanca-ho tot excepte "%1"</translation>
+        <source>Close All Except &quot;%1&quot;</source>
+        <translation>Tanca-ho tot excepte &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
@@ -2113,16 +2113,16 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+927" />
-        <location line="+13" />
-        <location line="+11" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location line="+16" />
+        <location line="+14" />
         <source>Save Log</source>
         <translation>Guarda el registre</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-617" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
         <source>Clear</source>
         <translation>Clar</translation>
     </message>
@@ -2263,8 +2263,8 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location line="+51" />
-        <source>Failed to open preset file "%1" for reading.</source>
-        <translation>No s'ha pogut obrir el fitxer preestablert "%1" per a la lectura.</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading.</source>
+        <translation>No s&apos;ha pogut obrir el fitxer preestablert &quot;%1&quot; per a la lectura.</translation>
     </message>
     <message>
         <location line="-172" />
@@ -2278,13 +2278,13 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>Failed to write logs to "%1".</source>
-        <translation>No s'han pogut escriure els registres a "%1".</translation>
+        <source>Failed to write logs to &quot;%1&quot;.</source>
+        <translation>No s&apos;han pogut escriure els registres a &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open file "%1" for writing logs.</source>
-        <translation>No s'ha pogut obrir el fitxer "%1" per escriure els registres.</translation>
+        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
+        <translation>No s&apos;ha pogut obrir el fitxer &quot;%1&quot; per escriure els registres.</translation>
     </message>
     <message>
         <source>Save Enabled Categories As</source>
@@ -2292,8 +2292,8 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location line="+45" />
-        <source>Failed to write preset file "%1".</source>
-        <translation>No s'ha pogut escriure el fitxer predefinit "%1".</translation>
+        <source>Failed to write preset file &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut escriure el fitxer predefinit &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -2301,13 +2301,13 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
         <translation>Carrega les categories habilitades de</translation>
     </message>
     <message>
-        <source>Failed to open preset file "%1" for reading</source>
-        <translation type="vanished">No s'ha pogut obrir el fitxer predefinit "%1" per llegir-lo</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading</source>
+        <translation type="vanished">No s&apos;ha pogut obrir el fitxer predefinit &quot;%1&quot; per llegir-lo</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Failed to read preset file "%1": %2</source>
-        <translation>No s'ha pogut llegir el fitxer predefinit "%1": %2</translation>
+        <source>Failed to read preset file &quot;%1&quot;: %2</source>
+        <translation>No s&apos;ha pogut llegir el fitxer predefinit &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+29" />
@@ -2342,7 +2342,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="+64" />
         <source>Out&amp;put</source>
-        <translation>Sortida i sortida</translation>
+        <translation>&amp;Sortida i sortida</translation>
     </message>
     <message>
         <location line="+406" />
@@ -2434,7 +2434,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+2" />
         <source>Error Details</source>
-        <translation>Detalls de l'error</translation>
+        <translation>Detalls de l&apos;error</translation>
     </message>
     <message>
         <location line="+3" />
@@ -2466,17 +2466,17 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
         <translation>Processos</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-75" />
         <source>&amp;Diff</source>
         <translation>&amp;Dif</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Do &amp;Not Save</source>
-        <translation>No guardi</translation>
+        <translation>&amp;No guardi</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+72" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
         <translation>&amp;Dif &amp;&amp; Cancel·la</translation>
     </message>
@@ -2545,12 +2545,12 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="+4" />
         <source>Key sequence will not work in editor.</source>
-        <translation>La seqüència de tecles no funcionarà a l'editor.</translation>
+        <translation>La seqüència de tecles no funcionarà a l&apos;editor.</translation>
     </message>
     <message>
         <location line="+451" />
         <source>Import Keyboard Mapping Scheme</source>
-        <translation>Importa l'esquema de mapatge del teclat</translation>
+        <translation>Importa l&apos;esquema de mapatge del teclat</translation>
     </message>
     <message>
         <location line="+2" />
@@ -2561,7 +2561,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="-2" />
         <source>Export Keyboard Mapping Scheme</source>
-        <translation>Exporta l'esquema de mapatge del teclat</translation>
+        <translation>Exporta l&apos;esquema de mapatge del teclat</translation>
     </message>
     <message>
         <location line="-332" />
@@ -2570,13 +2570,13 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Use "Cmd", "Opt", "Ctrl", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>Utilitzeu "Cmd", "Opt", "Ctrl" i "Maj" per a les tecles modificadores. Utilitzeu "Escapa", "Retrocés", "Suprimeix", "Insereix", "Inici", i així successivament, per a tecles especials. Combina tecles individuals amb "+" i combina diverses dreceres per a una seqüència de dreceres amb ",". Per exemple, si l'usuari ha de mantenir premudes les tecles modificadores Ctrl i Majúscules mentre prem Esc, i després deixar anar i prémer A, introduïu "Ctrl+Maj+Escape,A".</translation>
+        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Utilitzeu &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot; i &quot;Maj&quot; per a les tecles modificadores. Utilitzeu &quot;Escapa&quot;, &quot;Retrocés&quot;, &quot;Suprimeix&quot;, &quot;Insereix&quot;, &quot;Inici&quot;, i així successivament, per a tecles especials. Combina tecles individuals amb &quot;+&quot; i combina diverses dreceres per a una seqüència de dreceres amb &quot;,&quot;. Per exemple, si l&apos;usuari ha de mantenir premudes les tecles modificadores Ctrl i Majúscules mentre prem Esc, i després deixar anar i prémer A, introduïu &quot;Ctrl+Maj+Escape,A&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Use "Ctrl", "Alt", "Meta", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>Utilitzeu "Ctrl", "Alt", "Meta" i "Maj" per a les tecles modificadores. Utilitzeu "Escapa", "Retrocés", "Suprimeix", "Insereix", "Inici", i així successivament, per a tecles especials. Combina tecles individuals amb "+" i combina diverses dreceres per a una seqüència de dreceres amb ",". Per exemple, si l'usuari ha de mantenir premudes les tecles modificadores Ctrl i Majúscules mentre prem Esc, i després deixar anar i prémer A, introduïu "Ctrl+Maj+Escape,A".</translation>
+        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Utilitzeu &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot; i &quot;Maj&quot; per a les tecles modificadores. Utilitzeu &quot;Escapa&quot;, &quot;Retrocés&quot;, &quot;Suprimeix&quot;, &quot;Insereix&quot;, &quot;Inici&quot;, i així successivament, per a tecles especials. Combina tecles individuals amb &quot;+&quot; i combina diverses dreceres per a una seqüència de dreceres amb &quot;,&quot;. Per exemple, si l&apos;usuari ha de mantenir premudes les tecles modificadores Ctrl i Majúscules mentre prem Esc, i després deixar anar i prémer A, introduïu &quot;Ctrl+Maj+Escape,A&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -2585,8 +2585,8 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Key sequence has potential conflicts. &lt;a href="#conflicts"&gt;Show.&lt;/a&gt;</source>
-        <translation>La seqüència de claus té possibles conflictes. &lt;a href="#conflicts"&gt;Mostra.&lt;/a&gt;</translation>
+        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
+        <translation>La seqüència de claus té possibles conflictes. &lt;a href=&quot;#conflicts&quot;&gt;Mostra.&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+122" />
@@ -2611,22 +2611,22 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="+7" />
         <source>Search f&amp;or:</source>
-        <translation>Buscar:</translation>
+        <translation>&amp;Buscar:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Whole words o&amp;nly</source>
-        <translation>Només paraules senceres</translation>
+        <translation>&amp;Només paraules senceres</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Use re&amp;gular expressions</source>
-        <translation>Utilitzeu expressions regulars</translation>
+        <translation>Utilitzeu expressions re&amp;gulars</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Sco&amp;pe:</source>
-        <translation>Àmbit:</translation>
+        <translation>À&amp;mbit:</translation>
     </message>
     <message>
         <location line="-9" />
@@ -2645,7 +2645,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-333" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-335" />
         <source>Open Advanced Find...</source>
         <translation>Obre Cerca avançada...</translation>
     </message>
@@ -2667,19 +2667,18 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
         <translation>Introduïu Cerca cadena</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+E</source>
-        <translation>Ctrl+E</translation>
+        <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Find Next</source>
         <translation>Cerca Següent</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Find Previous</source>
-        <translation>Cerca l'anterior</translation>
+        <translation>Cerca l&apos;anterior</translation>
     </message>
     <message>
         <location line="+61" />
@@ -2689,27 +2688,27 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="+14" />
         <source>Replace &amp;&amp; Find Previous</source>
-        <translation>Substitueix &amp;&amp; Cerca l'anterior</translation>
+        <translation>Substitueix &amp;&amp; Cerca l&apos;anterior</translation>
     </message>
     <message>
-        <location line="-246" />
-        <location line="+259" />
+        <location line="-248" />
+        <location line="+261" />
         <source>Replace All</source>
         <translation>Substituïu-ho tot</translation>
     </message>
     <message>
-        <location line="-309" />
+        <location line="-311" />
         <source>Find Flags</source>
         <translation>Cerca banderes</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+235" />
+        <location line="+237" />
         <source>Replace &amp;&amp; Find</source>
         <translation>Substitueix &amp;&amp; Troba</translation>
     </message>
     <message>
-        <location line="-148" />
+        <location line="-150" />
         <location line="+13" />
         <source>Shift+Enter</source>
         <translation>Maj+Enter</translation>
@@ -2726,7 +2725,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
         <translation>Cerca/substitueix</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+59" />
         <source>Find Next (Selected)</source>
         <translation>Cerca el següent (seleccionat)</translation>
     </message>
@@ -2738,7 +2737,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="+5" />
         <source>Find Previous (Selected)</source>
-        <translation>Cerca l'anterior (seleccionat)</translation>
+        <translation>Cerca l&apos;anterior (seleccionat)</translation>
     </message>
     <message>
         <location line="+2" />
@@ -2785,7 +2784,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
         <translation>Substitueix per...</translation>
     </message>
     <message>
-        <location line="-520" />
+        <location line="-522" />
         <source>Find</source>
         <translation>Troba</translation>
     </message>
@@ -2824,7 +2823,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+705" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
         <source>Collapse All</source>
         <translation>Col · lapsar tot</translation>
     </message>
@@ -2851,7 +2850,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+225" />
+        <location line="+227" />
         <source>Replace</source>
         <translation>Substitueix</translation>
     </message>
@@ -2867,11 +2866,11 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Open file "%1" with:</source>
-        <translation>Obre el fitxer "%1" amb:</translation>
+        <source>Open file &quot;%1&quot; with:</source>
+        <translation>Obre el fitxer &quot;%1&quot; amb:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-455" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
         <source>Show Hidden Files</source>
         <translation>Mostra els fitxers ocults</translation>
     </message>
@@ -2888,7 +2887,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="+75" />
         <source>Synchronize Root Directory with Editor</source>
-        <translation>Sincronitza el directori arrel amb l'editor</translation>
+        <translation>Sincronitza el directori arrel amb l&apos;editor</translation>
     </message>
     <message>
         <location line="+142" />
@@ -2897,15 +2896,15 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
         <translation>Nou fitxer</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="+156" />
         <location line="+78" />
         <source>New Folder</source>
         <translation>Carpeta nova</translation>
     </message>
     <message>
         <location line="-18" />
-        <source>Open "%1"</source>
-        <translation>Obre "%1"</translation>
+        <source>Open &quot;%1&quot;</source>
+        <translation>Obre &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -2965,9 +2964,9 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
         <translation>Elimina...</translation>
     </message>
     <message>
-        <location line="-618" />
+        <location line="-622" />
         <source>Synchronize with Editor</source>
-        <translation>Sincronitza amb l'editor</translation>
+        <translation>Sincronitza amb l&apos;editor</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+643" />
@@ -2977,7 +2976,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="+16" />
         <source>Type the prefix followed by a space and search term to restrict search to the filter.</source>
-        <translation>Escriviu el prefix seguit d'un espai i d'un terme de cerca per restringir la cerca al filtre.</translation>
+        <translation>Escriviu el prefix seguit d&apos;un espai i d&apos;un terme de cerca per restringir la cerca al filtre.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -3000,8 +2999,8 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
         <translation>Filtre de directoris genèric</translation>
     </message>
     <message>
-        <source>Matches all files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">Coincideix amb tots els fitxers d'un conjunt personalitzat de directoris. Afegiu "+&lt;número&gt;" o ":&lt;número&gt;" per saltar al número de línia donat. Afegiu un altre "+&lt;número&gt;" o ":&lt;número&gt;" per saltar també al número de columna.</translation>
+        <source>Matches all files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">Coincideix amb tots els fitxers d&apos;un conjunt personalitzat de directoris. Afegiu &quot;+&lt;número&gt;&quot; o &quot;:&lt;número&gt;&quot; per saltar al número de línia donat. Afegiu un altre &quot;+&lt;número&gt;&quot; o &quot;:&lt;número&gt;&quot; per saltar també al número de columna.</translation>
     </message>
     <message>
         <location line="+273" />
@@ -3016,9 +3015,9 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message numerus="yes">
         <location line="-264" />
         <source>%1 filter update: %n files</source>
-        <translation>
-            <numerusform>Actualització del filtre %1: %n fitxers</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -3153,8 +3152,8 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-78" />
-        <source>Locates files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Localitza fitxers des d’un conjunt de directoris personalitzats. Afegiu "+&lt;number&gt;" o ": &lt;number&gt;" per saltar al número de línia donat. Afegiu un altre "+&lt;number&gt;" o ": &lt;number&gt;" per saltar també al número de la columna.</translation>
+        <source>Locates files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Localitza fitxers des d’un conjunt de directoris personalitzats. Afegiu &quot;+&lt;number&gt;&quot; o &quot;: &lt;number&gt;&quot; per saltar al número de línia donat. Afegiu un altre &quot;+&lt;number&gt;&quot; o &quot;: &lt;number&gt;&quot; per saltar també al número de la columna.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -3226,12 +3225,12 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="+1" />
         <source>Remove tool.</source>
-        <translation>Elimina l'eina.</translation>
+        <translation>Elimina l&apos;eina.</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Revert tool to default.</source>
-        <translation>Reverteix l'eina al valor predeterminat.</translation>
+        <translation>Reverteix l&apos;eina al valor predeterminat.</translation>
     </message>
     <message>
         <location line="+29" />
@@ -3241,13 +3240,10 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;What to do with the executable's standard output.
+&lt;p&gt;What to do with the executable&apos;s standard output.
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation>&lt;html&gt;&lt;cap/&gt;&lt;cos&gt;
-&lt;p&gt;Què cal fer amb la sortida estàndard de l'executable.
-&lt;ul&gt;&lt;li&gt;Ignorar: no fer-hi res.&lt;/li&gt;&lt;li&gt;Mostrar als missatges generals.&lt;/li&gt;&lt;li&gt;Substituir la selecció: substituir la selecció actual del document actual per ella.&lt;/li&gt; &lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7" />
@@ -3270,18 +3266,18 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="-11" />
         <source>Error output:</source>
-        <translation>Sortida d'error:</translation>
+        <translation>Sortida d&apos;error:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
-&lt;p &gt;What to do with the executable's standard error output.&lt;/p&gt;
+&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
 &lt;li&gt;Show in General Messages.&lt;/li&gt;
 &lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head&gt;&lt;body&gt;
-&lt;p &gt;Què cal fer amb la sortida d'error estàndard de l'executable.&lt;/p&gt;
+&lt;p &gt;Què cal fer amb la sortida d&apos;error estàndard de l&apos;executable.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Ignorar: no fer res amb això.&lt;/li&gt;
 &lt;li&gt;Mostra als missatges generals.&lt;/li&gt;
 &lt;li&gt;Substitueix la selecció: substituïu la selecció actual del document actual per ella.&lt;/li&gt;
@@ -3308,7 +3304,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="+1" />
         <source>If the tool modifies the current document, set this flag to ensure that the document is saved before running the tool and is reloaded after the tool finished.</source>
-        <translation>Si l'eina modifica el document actual, configureu aquesta marca per assegurar-vos que el document es desa abans d'executar l'eina i es torna a carregar un cop finalitzada l'eina.</translation>
+        <translation>Si l&apos;eina modifica el document actual, configureu aquesta marca per assegurar-vos que el document es desa abans d&apos;executar l&apos;eina i es torna a carregar un cop finalitzada l&apos;eina.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -3318,7 +3314,7 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
     <message>
         <location line="+1" />
         <source>Text to pass to the executable via standard input. Leave empty if the executable should not receive any input.</source>
-        <translation>Text per passar a l'executable mitjançant entrada estàndard. Deixeu-lo en blanc si l'executable no ha de rebre cap entrada.</translation>
+        <translation>Text per passar a l&apos;executable mitjançant entrada estàndard. Deixeu-lo en blanc si l&apos;executable no ha de rebre cap entrada.</translation>
     </message>
     <message>
         <location line="+18" />
@@ -3392,8 +3388,8 @@ sempre que no s'hagin modificat abans de la refactorització.</translation>
         <location line="-8" />
         <source>Specify a short word/abbreviation that can be used to restrict completions to files from this directory tree.
 To do this, you type this shortcut and a space in the Locator entry field, and then the word to search for.</source>
-        <translation>Especifiqueu una paraula breu/abreviatura que es pugui utilitzar per restringir les finalitzacions als fitxers d'aquest arbre de directoris.
-Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, i després la paraula que voleu cercar.</translation>
+        <translation>Especifiqueu una paraula breu/abreviatura que es pugui utilitzar per restringir les finalitzacions als fitxers d&apos;aquest arbre de directoris.
+Per fer-ho, escriviu aquesta drecera i un espai al camp d&apos;entrada Localitzador, i després la paraula que voleu cercar.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+121" />
@@ -3402,12 +3398,12 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     </message>
     <message>
         <location line="+1" />
-        <source>Opens a file given by a relative path to the current document, or absolute path. "~" refers to your home directory. You have the option to create a file if it does not exist yet.</source>
-        <translation>Obre un fitxer donat per una ruta relativa al document actual o ruta absoluta. "~" fa referència al vostre directori d'inici. Teniu l'opció de crear un fitxer si encara no existeix.</translation>
+        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
+        <translation>Obre un fitxer donat per una ruta relativa al document actual o ruta absoluta. &quot;~&quot; fa referència al vostre directori d&apos;inici. Teniu l&apos;opció de crear un fitxer si encara no existeix.</translation>
     </message>
     <message>
-        <source>Create and Open "%1"</source>
-        <translation type="vanished">Crear i obrir "%1"</translation>
+        <source>Create and Open &quot;%1&quot;</source>
+        <translation type="vanished">Crear i obrir &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-46" />
@@ -3416,8 +3412,8 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     </message>
     <message>
         <location line="-13" />
-        <source>Create "%1"?</source>
-        <translation>Voleu crear "%1"?</translation>
+        <source>Create &quot;%1&quot;?</source>
+        <translation>Voleu crear &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+6" />
@@ -3436,8 +3432,8 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     </message>
     <message>
         <location line="+1" />
-        <source>Cannot create file "%1".</source>
-        <translation>No es pot crear el fitxer "%1".</translation>
+        <source>Cannot create file &quot;%1&quot;.</source>
+        <translation>No es pot crear el fitxer &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -3446,13 +3442,13 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     </message>
     <message>
         <location line="+164" />
-        <source>Create and Open File "%1"</source>
-        <translation>Crear i obrir el fitxer "%1"</translation>
+        <source>Create and Open File &quot;%1&quot;</source>
+        <translation>Crear i obrir el fitxer &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Create Directory "%1"</source>
-        <translation>Creeu el directori "%1"</translation>
+        <source>Create Directory &quot;%1&quot;</source>
+        <translation>Creeu el directori &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+58" />
@@ -3470,7 +3466,7 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
         <translation>Filtres disponibles</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+557" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
         <source>Open as Centered Popup</source>
         <translation>Obre com a finestra emergent centrada</translation>
     </message>
@@ -3511,23 +3507,23 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     </message>
     <message>
         <location line="+143" />
-        <source>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Obre un document&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Fitxer &gt; Obre el fitxer (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Fitxer &gt; Exemples &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Fitxer &gt; Fitxers recents&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Arrossegueu i deixeu anar els fitxers aquí&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Obre un document&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Fitxer &gt; Obre el fitxer (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Fitxer &gt; Exemples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Fitxer &gt; Fitxers recents&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Arrossegueu i deixeu anar els fitxers aquí&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+37" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- escriviu &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; per saltar a una definició de classe&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- escriviu &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; per saltar a una definició de classe&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;: escriviu &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; per saltar a una definició de funció&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;: escriviu &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; per saltar a una definició de funció&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+121" />
         <source>Updating Locator Caches</source>
-        <translation>S'està actualitzant la memòria cau del localitzador</translation>
+        <translation>S&apos;està actualitzant la memòria cau del localitzador</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-2" />
@@ -3549,7 +3545,7 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     <message>
         <location line="+2" />
         <source>Locator filters that do not update their cached data immediately, such as the custom directory filters, update it after this time interval.</source>
-        <translation>Els filtres de localització que no actualitzen les dades de la memòria cau immediatament, com ara els filtres de directoris personalitzats, l'actualitzen després d'aquest interval de temps.</translation>
+        <translation>Els filtres de localització que no actualitzen les dades de la memòria cau immediatament, com ara els filtres de directoris personalitzats, l&apos;actualitzen després d&apos;aquest interval de temps.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -3570,7 +3566,7 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+102" />
         <source>URL Template</source>
-        <translation>Plantilla d'URL</translation>
+        <translation>Plantilla d&apos;URL</translation>
     </message>
     <message>
         <location line="+108" />
@@ -3598,7 +3594,7 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
         <translation>Personalitzat</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-113" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-116" />
         <source>Save Changes</source>
         <translation>Guardar canvis</translation>
     </message>
@@ -3638,7 +3634,7 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     <message>
         <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-80" />
         <source>Command Mappings</source>
-        <translation>Mapes d'ordres</translation>
+        <translation>Mapes d&apos;ordres</translation>
     </message>
     <message>
         <location line="-17" />
@@ -3732,14 +3728,14 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
         <translation>Preferències</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+488" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
         <source>Options</source>
         <translation>Opcions</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13" />
-        <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
+        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
         <translation>Crea fitxers de traducció qm que pot utilitzar una aplicació a partir dels fitxers ts del traductor</translation>
     </message>
     <message>
@@ -3748,14 +3744,14 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
         <translation>Traduccions del llançament (lrelease)</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+5" />
         <source>Linguist</source>
         <translation>Lingüista</translation>
     </message>
     <message>
-        <location line="-12" />
-        <source>Synchronizes translator's ts files with the program code</source>
+        <location line="-2" />
+        <source>Synchronizes translator&apos;s ts files with the program code</source>
         <translation>Sincronitza els fitxers ts del traductor amb el codi del programa</translation>
     </message>
     <message>
@@ -3775,13 +3771,13 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     </message>
     <message>
         <location line="+1" />
-        <location line="+10" />
+        <location line="+15" />
         <location line="+5" />
         <source>Text</source>
         <translation>Text</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-17" />
         <source>Runs the current QML file with QML utility.</source>
         <translation>Executa el fitxer QML actual amb la utilitat QML.</translation>
     </message>
@@ -3807,7 +3803,7 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
         <translation>Vista prèvia de Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+4" />
         <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Obre el fitxer actual a vi</translation>
@@ -3825,8 +3821,8 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     </message>
     <message>
         <location line="+1" />
-        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by "&gt;". For example "sess def" matches "File &gt; Sessions &gt; Default".</source>
-        <translation>Activa una acció. Si és del menú, coincideix amb qualsevol part d'una jerarquia de menú, separada per "&gt;". Per exemple, "sess def" coincideix amb "Fitxer &gt; Sessions &gt; Per defecte".</translation>
+        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
+        <translation>Activa una acció. Si és del menú, coincideix amb qualsevol part d&apos;una jerarquia de menú, separada per &quot;&gt;&quot;. Per exemple, &quot;sess def&quot; coincideix amb &quot;Fitxer &gt; Sessions &gt; Per defecte&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
@@ -3841,7 +3837,7 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     <message>
         <location line="+24" />
         <source>No themes found in installation.</source>
-        <translation>No s'han trobat temes a la instal·lació.</translation>
+        <translation>No s&apos;han trobat temes a la instal·lació.</translation>
     </message>
     <message>
         <location line="+32" />
@@ -3851,7 +3847,7 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     <message>
         <location line="+2" />
         <source>The current time (ISO).</source>
-        <translation>L'hora actual (ISO).</translation>
+        <translation>L&apos;hora actual (ISO).</translation>
     </message>
     <message>
         <location line="+2" />
@@ -3861,7 +3857,7 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     <message>
         <location line="+2" />
         <source>The current time (RFC2822).</source>
-        <translation>L'hora actual (RFC2822).</translation>
+        <translation>L&apos;hora actual (RFC2822).</translation>
     </message>
     <message>
         <location line="+2" />
@@ -3871,7 +3867,7 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     <message>
         <location line="+3" />
         <source>The current time (Locale).</source>
-        <translation>L'hora actual (local).</translation>
+        <translation>L&apos;hora actual (local).</translation>
     </message>
     <message>
         <location line="+3" />
@@ -3881,27 +3877,27 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     <message>
         <location line="+2" />
         <source>The directory last visited in a file dialog.</source>
-        <translation>L'últim directori visitat en un diàleg de fitxers.</translation>
+        <translation>L&apos;últim directori visitat en un diàleg de fitxers.</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Is %1 running on Windows?</source>
-        <translation>%1 s'executa a Windows?</translation>
+        <translation>%1 s&apos;executa a Windows?</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Is %1 running on OS X?</source>
-        <translation>%1 s'executa a OS X?</translation>
+        <translation>%1 s&apos;executa a OS X?</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Is %1 running on Linux?</source>
-        <translation>S'està executant %1 a Linux?</translation>
+        <translation>S&apos;està executant %1 a Linux?</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Is %1 running on any unix-based platform?</source>
-        <translation>S'està executant %1 en qualsevol plataforma basada en Unix?</translation>
+        <translation>S&apos;està executant %1 en qualsevol plataforma basada en Unix?</translation>
     </message>
     <message>
         <location line="+6" />
@@ -3936,7 +3932,7 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     <message>
         <location line="+2" />
         <source>The current time (QTime formatstring).</source>
-        <translation>L'hora actual (cadena de format QTime).</translation>
+        <translation>L&apos;hora actual (cadena de format QTime).</translation>
     </message>
     <message>
         <location line="+2" />
@@ -3970,9 +3966,9 @@ Per fer-ho, escriviu aquesta drecera i un espai al camp d'entrada Localitzador, 
     </message>
     <message>
         <location line="+12" />
-        <source>The settings file "%1" is not writable.
+        <source>The settings file &quot;%1&quot; is not writable.
 You will not be able to store any %2 settings.</source>
-        <translation>El fitxer de configuració "%1" no es pot escriure.
+        <translation>El fitxer de configuració &quot;%1&quot; no es pot escriure.
 No podreu emmagatzemar cap configuració de %2.</translation>
     </message>
     <message>
@@ -3987,20 +3983,20 @@ No podreu emmagatzemar cap configuració de %2.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Error reading settings file "%1": %2
+        <source>Error reading settings file &quot;%1&quot;: %2
 You will likely experience further problems using this instance of %3.</source>
-        <translation>Error en llegir el fitxer de configuració "%1": %2
+        <translation>Error en llegir el fitxer de configuració &quot;%1&quot;: %2
 És probable que experimenteu més problemes amb aquesta instància de %3.</translation>
     </message>
     <message>
         <location line="+14" />
         <source>%1 collects crash reports for the sole purpose of fixing bugs. To disable this feature go to %2.</source>
-        <translation>%1 recull informes d'error amb l'únic propòsit de corregir errors. Per desactivar aquesta funció, aneu a %2.</translation>
+        <translation>%1 recull informes d&apos;error amb l&apos;únic propòsit de corregir errors. Per desactivar aquesta funció, aneu a %2.</translation>
     </message>
     <message>
         <location line="+2" />
         <source>%1 can collect crash reports for the sole purpose of fixing bugs. To enable this feature go to %2.</source>
-        <translation>%1 pot recopilar informes d'error amb l'únic propòsit de corregir errors. Per habilitar aquesta funció, aneu a %2.</translation>
+        <translation>%1 pot recopilar informes d&apos;error amb l&apos;únic propòsit de corregir errors. Per habilitar aquesta funció, aneu a %2.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -4015,7 +4011,7 @@ You will likely experience further problems using this instance of %3.</source>
     <message>
         <location line="+25" />
         <source>%1 uses Google Crashpad for collecting crashes and sending them to our backend for processing. Crashpad may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
-        <translation>%1 utilitza Google Crashpad per recollir errors i enviar-los al nostre backend per processar-los. Crashpad pot capturar contingut arbitrari de la memòria del procés bloquejat, inclosa la informació sensible de l'usuari, els URL i qualsevol altre contingut en què els usuaris hagin confiat en %1. Tanmateix, els informes d'error recopilats només s'utilitzen amb l'únic propòsit de corregir errors.</translation>
+        <translation>%1 utilitza Google Crashpad per recollir errors i enviar-los al nostre backend per processar-los. Crashpad pot capturar contingut arbitrari de la memòria del procés bloquejat, inclosa la informació sensible de l&apos;usuari, els URL i qualsevol altre contingut en què els usuaris hagin confiat en %1. Tanmateix, els informes d&apos;error recopilats només s&apos;utilitzen amb l&apos;únic propòsit de corregir errors.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -4059,8 +4055,8 @@ You will likely experience further problems using this instance of %3.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Select encoding for "%1".%2</source>
-        <translation>Seleccioneu la codificació per a "%1".%2</translation>
+        <source>Select encoding for &quot;%1&quot;.%2</source>
+        <translation>Seleccioneu la codificació per a &quot;%1&quot;.%2</translation>
     </message>
     <message>
         <location line="+49" />
@@ -4160,14 +4156,14 @@ Vols sobreescriure-les?</translation>
     <message>
         <location line="+7" />
         <source>No Version Control System Found</source>
-        <translation>No s'ha trobat cap sistema de control de versions</translation>
+        <translation>No s&apos;ha trobat cap sistema de control de versions</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Cannot open file %1 from version control system.
 No version control system found.</source>
         <translation>No es pot obrir el fitxer %1 des del sistema de control de versions.
-No s'ha trobat cap sistema de control de versions.</translation>
+No s&apos;ha trobat cap sistema de control de versions.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -4192,12 +4188,12 @@ No s'ha trobat cap sistema de control de versions.</translation>
     <message>
         <location line="+5" />
         <source>Canceled Changing Permissions</source>
-        <translation>S'han cancel·lat el canvi de permisos</translation>
+        <translation>S&apos;han cancel·lat el canvi de permisos</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Could Not Change Permissions on Some Files</source>
-        <translation>No s'han pogut canviar els permisos d'alguns fitxers</translation>
+        <translation>No s&apos;han pogut canviar els permisos d&apos;alguns fitxers</translation>
     </message>
     <message>
         <location line="+2" />
@@ -4207,17 +4203,17 @@ No s'ha trobat cap sistema de control de versions.</translation>
     <message>
         <location line="+138" />
         <source>Files Without Write Permissions</source>
-        <translation>Fitxers sense permís d'escriptura</translation>
+        <translation>Fitxers sense permís d&apos;escriptura</translation>
     </message>
     <message>
         <location line="+2" />
         <source>The following files have no write permissions. Do you want to change the permissions?</source>
-        <translation>Els fitxers següents no tenen permisos d'escriptura. Vols canviar els permisos?</translation>
+        <translation>Els fitxers següents no tenen permisos d&apos;escriptura. Vols canviar els permisos?</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Filename</source>
-        <translation>Nom de l'arxiu</translation>
+        <translation>Nom de l&apos;arxiu</translation>
     </message>
     <message>
         <location line="+1" />
@@ -4227,7 +4223,7 @@ No s'ha trobat cap sistema de control de versions.</translation>
     <message>
         <location line="+12" />
         <source>Change &amp;Permission</source>
-        <translation>Canvi i permís</translation>
+        <translation>Canvi i &amp;permís</translation>
     </message>
     <message>
         <location line="+8" />
@@ -4238,11 +4234,11 @@ No s'ha trobat cap sistema de control de versions.</translation>
         <location line="+86" />
         <source>The following files are not checked out yet.
 Do you want to check them out now?</source>
-        <translation>Els fitxers següents encara no s'han extret.
+        <translation>Els fitxers següents encara no s&apos;han extret.
 Vols comprovar-los ara?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-943" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-948" />
         <source>Restart Required</source>
         <translation>Cal reiniciar</translation>
     </message>
@@ -4264,7 +4260,7 @@ Vols comprovar-los ara?</translation>
     <message>
         <location line="+2" />
         <source>No document is selected.</source>
-        <translation>No s'ha seleccionat cap document.</translation>
+        <translation>No s&apos;ha seleccionat cap document.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+21" />
@@ -4274,27 +4270,27 @@ Vols comprovar-los ara?</translation>
     <message>
         <location line="+10" />
         <source>Could not open URL %1.</source>
-        <translation>No s'ha pogut obrir l'URL %1.</translation>
+        <translation>No s&apos;ha pogut obrir l&apos;URL %1.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
-        <source>Could not find executable for "%1" (expanded "%2")</source>
-        <translation>No s'ha pogut trobar l'executable per a "%1" (ampliat "%2")</translation>
+        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
+        <translation>No s&apos;ha pogut trobar l&apos;executable per a &quot;%1&quot; (ampliat &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>Starting external tool "%1"</source>
-        <translation>S'està iniciant l'eina externa "%1"</translation>
+        <source>Starting external tool &quot;%1&quot;</source>
+        <translation>S&apos;està iniciant l&apos;eina externa &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>"%1" finished</source>
-        <translation>"%1" acabat</translation>
+        <source>&quot;%1&quot; finished</source>
+        <translation>&quot;%1&quot; acabat</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" finished with error</source>
-        <translation>"%1" ha acabat amb un error</translation>
+        <source>&quot;%1&quot; finished with error</source>
+        <translation>&quot;%1&quot; ha acabat amb un error</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
@@ -4304,17 +4300,17 @@ Vols comprovar-los ara?</translation>
     <message>
         <location line="+52" />
         <source>Error while parsing external tool %1: %2</source>
-        <translation>Error en analitzar l'eina externa %1: %2</translation>
+        <translation>Error en analitzar l&apos;eina externa %1: %2</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Error: External tool in %1 has duplicate id</source>
-        <translation>Error: l'eina externa a %1 té un identificador duplicat</translation>
+        <translation>Error: l&apos;eina externa a %1 té un identificador duplicat</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+60" />
         <source>Launching a file browser failed</source>
-        <translation>No s'ha pogut iniciar un navegador de fitxers</translation>
+        <translation>No s&apos;ha pogut iniciar un navegador de fitxers</translation>
     </message>
     <message>
         <location line="+1" />
@@ -4331,30 +4327,30 @@ Vols comprovar-los ara?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>"%1" returned the following error:
+        <source>&quot;%1&quot; returned the following error:
 
 %2</source>
-        <translation>"%1" ha retornat l'error següent:
+        <translation>&quot;%1&quot; ha retornat l&apos;error següent:
 
 %2</translation>
     </message>
     <message>
         <source>Launching Windows Explorer Failed</source>
-        <translation type="vanished">No s'ha pogut iniciar l'explorador de Windows</translation>
+        <translation type="vanished">No s&apos;ha pogut iniciar l&apos;explorador de Windows</translation>
     </message>
     <message>
         <source>Could not find explorer.exe in path to launch Windows Explorer.</source>
-        <translation type="vanished">No s'ha pogut trobar explorer.exe al camí per iniciar l'Explorador de Windows.</translation>
+        <translation type="vanished">No s&apos;ha pogut trobar explorer.exe al camí per iniciar l&apos;Explorador de Windows.</translation>
     </message>
     <message>
         <location line="+30" />
         <source>The command for file browser is not set.</source>
-        <translation>L'ordre per al navegador de fitxers no està configurada.</translation>
+        <translation>L&apos;ordre per al navegador de fitxers no està configurada.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Error while starting file browser.</source>
-        <translation>S'ha produït un error en iniciar el navegador de fitxers.</translation>
+        <translation>S&apos;ha produït un error en iniciar el navegador de fitxers.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -4394,35 +4390,35 @@ Vols comprovar-los ara?</translation>
     <message>
         <location line="+6" />
         <source>Open Command Prompt With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Obriu el símbol del sistema amb</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open Terminal With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Obrir el terminal amb</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file "%1".</source>
-        <translation>No s'ha pogut eliminar el fitxer "%1".</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut eliminar el fitxer &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+40" />
-        <source>Failed to rename the include guard in file "%1".</source>
-        <translation>No s'ha pogut canviar el nom de la protecció d'inclusió al fitxer "%1".</translation>
+        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut canviar el nom de la protecció d&apos;inclusió al fitxer &quot;%1&quot;.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
         <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>S'han substituït %n ocurrències.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+369" />
+        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+394" />
         <source>Case sensitive</source>
         <translation>Cas delicat</translation>
     </message>
@@ -4474,7 +4470,7 @@ Vols comprovar-los ara?</translation>
     <message>
         <location line="+6" />
         <source>Preser&amp;ve case</source>
-        <translation>Conserveu el cas</translation>
+        <translation>Conser&amp;veu el cas</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4494,9 +4490,9 @@ Vols comprovar-los ara?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>The search resulted in more than %n items, do you still want to continue?</source>
-        <translation>
-            <numerusform>La cerca ha donat com a resultat més de %n elements, encara voleu continuar?</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4507,25 +4503,25 @@ Vols comprovar-los ara?</translation>
     <message>
         <location line="+184" />
         <source>Search was canceled.</source>
-        <translation>La cerca s'ha cancel·lat.</translation>
+        <translation>La cerca s&apos;ha cancel·lat.</translation>
     </message>
     <message numerus="yes">
         <location line="+82" />
         <source>%n matches found.</source>
-        <translation>
-            <numerusform>S'han trobat %n coincidències.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+2" />
         <source>Searching...</source>
-        <translation>S'està buscant...</translation>
+        <translation>S&apos;està buscant...</translation>
     </message>
     <message>
         <location line="+2" />
         <source>No matches found.</source>
-        <translation>No s'han trobat coincidències.</translation>
+        <translation>No s&apos;han trobat coincidències.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-460" />
@@ -4561,12 +4557,12 @@ Vols comprovar-los ara?</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+672" />
         <source>File was restored from auto-saved copy. Select Save to confirm or Revert to Saved to discard changes.</source>
-        <translation>El fitxer s'ha restaurat des de la còpia desada automàticament. Seleccioneu Desa per confirmar o Torna a Desat per descartar els canvis.</translation>
+        <translation>El fitxer s&apos;ha restaurat des de la còpia desada automàticament. Seleccioneu Desa per confirmar o Torna a Desat per descartar els canvis.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
-        <source>Factory with id="%1" already registered. Deleting.</source>
-        <translation>Fàbrica amb id="%1" ja registrada. S'està suprimint.</translation>
+        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
+        <translation>Fàbrica amb id=&quot;%1&quot; ja registrada. S&apos;està suprimint.</translation>
     </message>
     <message>
         <location line="+230" />
@@ -4576,22 +4572,22 @@ Vols comprovar-los ara?</translation>
     <message>
         <location line="+12" />
         <source>Inspect Wizard State</source>
-        <translation>Inspeccioneu l'estat de l'assistent</translation>
+        <translation>Inspeccioneu l&apos;estat de l&apos;assistent</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
-        <source>Error in "%1": %2</source>
-        <translation>Error a "%1": %2</translation>
+        <source>Error in &quot;%1&quot;: %2</source>
+        <translation>Error a &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>Cannot convert result of "%1" to string.</source>
-        <translation>No es pot convertir el resultat de "%1" en cadena.</translation>
+        <source>Cannot convert result of &quot;%1&quot; to string.</source>
+        <translation>No es pot convertir el resultat de &quot;%1&quot; en cadena.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal '}' characters must be escaped as "\}", '\' characters must be escaped as "\\", and "%{" must be escaped as "%\{".</source>
-        <translation>Avalueu declaracions simples de JavaScript.&lt;br&gt;Els caràcters literals '}' s'han d'escapar com a "\}", els caràcters '\' s'han d'escapar com a "\\" i "%{" s'han d'escapar com a "%\{".</translation>
+        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
+        <translation>Avalueu declaracions simples de JavaScript.&lt;br&gt;Els caràcters literals &apos;}&apos; s&apos;han d&apos;escapar com a &quot;\}&quot;, els caràcters &apos;\&apos; s&apos;han d&apos;escapar com a &quot;\\&quot; i &quot;%{&quot; s&apos;han d&apos;escapar com a &quot;%\{&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
@@ -4601,13 +4597,13 @@ Vols comprovar-los ara?</translation>
     <message>
         <location line="+1" />
         <source>Runs an arbitrary command with arguments. The command is searched for in the PATH environment variable if needed. Note that the command is run directly, not in a shell.</source>
-        <translation>Executa una ordre arbitrària amb arguments. L'ordre es cerca a la variable d'entorn PATH si cal. Tingueu en compte que l'ordre s'executa directament, no en un shell.</translation>
+        <translation>Executa una ordre arbitrària amb arguments. L&apos;ordre es cerca a la variable d&apos;entorn PATH si cal. Tingueu en compte que l&apos;ordre s&apos;executa directament, no en un shell.</translation>
     </message>
     <message>
         <location line="+68" />
-        <source>Previous command is still running ("%1").
+        <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
-        <translation>L'ordre anterior encara s'està executant ("%1").
+        <translation>L&apos;ordre anterior encara s&apos;està executant (&quot;%1&quot;).
 El vols matar?</translation>
     </message>
     <message>
@@ -4617,18 +4613,18 @@ El vols matar?</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>Could not find executable for "%1".</source>
-        <translation>No s'ha pogut trobar l'executable per a "%1".</translation>
+        <source>Could not find executable for &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut trobar l&apos;executable per a &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Starting command "%1".</source>
-        <translation>S'està iniciant l'ordre "%1".</translation>
+        <source>Starting command &quot;%1&quot;.</source>
+        <translation>S&apos;està iniciant l&apos;ordre &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+21" />
         <source>Run External Tool</source>
-        <translation>Executeu l'eina externa</translation>
+        <translation>Executeu l&apos;eina externa</translation>
     </message>
     <message>
         <location line="+1" />
@@ -4653,7 +4649,7 @@ El vols matar?</translation>
     <message>
         <location line="-58" />
         <source>Engine aborted after timeout.</source>
-        <translation>El motor s'ha avortat després del temps d'espera.</translation>
+        <translation>El motor s&apos;ha avortat després del temps d&apos;espera.</translation>
     </message>
     <message>
         <location line="-190" />
@@ -4678,8 +4674,8 @@ El vols matar?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
-        <source>Locator: Error occurred when running "%1".</source>
-        <translation>Localitzador: s'ha produït un error en executar "%1".</translation>
+        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
+        <translation>Localitzador: s&apos;ha produït un error en executar &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-71" />
@@ -4693,8 +4689,8 @@ El vols matar?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Locator query string with quotes escaped with backslash and spaces replaced with "*" wildcards.</source>
-        <translation>Cadena de consulta del localitzador amb cometes escapades amb barra invertida i espais substituïts per comodins "*".</translation>
+        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
+        <translation>Cadena de consulta del localitzador amb cometes escapades amb barra invertida i espais substituïts per comodins &quot;*&quot;.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -4708,8 +4704,8 @@ El vols matar?</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Localitza fitxers d’un índex de sistema de fitxers global (Spotlight, Locate, tot). Afegiu "+&lt;number&gt;" o ": &lt;number&gt;" per saltar al número de línia donat. Afegiu un altre "+&lt;number&gt;" o ": &lt;number&gt;" per saltar també al número de la columna.</translation>
+        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Localitza fitxers d’un índex de sistema de fitxers global (Spotlight, Locate, tot). Afegiu &quot;+&lt;number&gt;&quot; o &quot;: &lt;number&gt;&quot; per saltar al número de línia donat. Afegiu un altre &quot;+&lt;number&gt;&quot; o &quot;: &lt;number&gt;&quot; per saltar també al número de la columna.</translation>
     </message>
     <message>
         <location line="+113" />
@@ -4717,8 +4713,8 @@ El vols matar?</translation>
         <translation>Ordeneu els resultats</translation>
     </message>
     <message>
-        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">Coincideix amb els fitxers d'un índex global del sistema de fitxers (Spotlight, Locate, Everything). Afegiu "+&lt;número&gt;" o ":&lt;número&gt;" per saltar al número de línia donat. Afegiu un altre "+&lt;número&gt;" o ":&lt;número&gt;" per saltar també al número de columna.</translation>
+        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">Coincideix amb els fitxers d&apos;un índex global del sistema de fitxers (Spotlight, Locate, Everything). Afegiu &quot;+&lt;número&gt;&quot; o &quot;:&lt;número&gt;&quot; per saltar al número de línia donat. Afegiu un altre &quot;+&lt;número&gt;&quot; o &quot;:&lt;número&gt;&quot; per saltar també al número de columna.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -4727,10 +4723,10 @@ El vols matar?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110" />
-        <source>Add "%1" placeholder for the query string.
+        <source>Add &quot;%1&quot; placeholder for the query string.
 Double-click to edit item.</source>
-        <translation>Afegiu el marcador de posició "%1" per a la cadena de consulta.
-Feu doble clic per editar l'element.</translation>
+        <translation>Afegiu el marcador de posició &quot;%1&quot; per a la cadena de consulta.
+Feu doble clic per editar l&apos;element.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -4763,13 +4759,13 @@ Feu doble clic per editar l'element.</translation>
         <translation>Afegeix una capçalera màgica</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Les dades màgiques MIME s'interpreten tal com les defineixen l'especificació de la base de dades Shared MIME-info de &lt;a href="http://standards.freedesktop.org/shared-mime-info- spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Les dades màgiques MIME s&apos;interpreten tal com les defineixen l&apos;especificació de la base de dades Shared MIME-info de &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info- spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head/&gt; &lt;dircule&gt; &lt;p&gt; mime Magic Data s’interpreta com es defineix per l’especificació de la base de dades de mime-info compartida de &lt;a href = "https://www.freedesktop.org/wiki/specifications/shared- mime-info-spec/"&gt; Freedesktop.org &lt;/a&gt;. &lt;hr/&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -4823,8 +4819,8 @@ Feu doble clic per editar l'element.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Nota: els valors amplis poden afectar el rendiment en obrir fitxers.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Nota: els valors amplis poden afectar el rendiment en obrir fitxers.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4891,9 +4887,9 @@ Feu doble clic per editar l'element.</translation>
     <message numerus="yes">
         <location line="+159" />
         <source>Elided %n characters due to Application Output settings</source>
-        <translation>
-            <numerusform>%n caràcters elidits a causa de la configuració de sortida de l'aplicació</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4904,13 +4900,13 @@ Feu doble clic per editar l'element.</translation>
 </translation>
     </message>
     <message>
-        <location line="+298" />
+        <location line="+308" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Fitxers de text (*.txt);;Tots els fitxers (*)</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+11" />
+        <location line="+14" />
         <source>Error: %L1!</source>
         <translation>Error: %L1!</translation>
     </message>
@@ -4937,50 +4933,50 @@ Feu doble clic per editar l'element.</translation>
     <message>
         <location line="+2" />
         <source>Note: The file will be saved before this operation.</source>
-        <translation>Nota: el fitxer es desarà abans d'aquesta operació.</translation>
+        <translation>Nota: el fitxer es desarà abans d&apos;aquesta operació.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>There is no patch-command configured in the general "Environment" settings.</source>
-        <translation>No hi ha cap comandament de pedaç configurat a la configuració general "Entorn".</translation>
+        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
+        <translation>No hi ha cap comandament de pedaç configurat a la configuració general &quot;Entorn&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The patch-command configured in the general "Environment" settings does not exist.</source>
-        <translation>L'ordre de pedaç configurat a la configuració general "Entorn" no existeix.</translation>
+        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
+        <translation>L&apos;ordre de pedaç configurat a la configuració general &quot;Entorn&quot; no existeix.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Running in "%1": %2 %3.</source>
-        <translation>Funcionant en " %1": %2 %3.</translation>
+        <source>Running in &quot;%1&quot;: %2 %3.</source>
+        <translation>Funcionant en &quot; %1&quot;: %2 %3.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>A timeout occurred running "%1".</source>
-        <translation>Es va produir un temps d'espera amb "%1".</translation>
+        <source>A timeout occurred running &quot;%1&quot;.</source>
+        <translation>Es va produir un temps d&apos;espera amb &quot;%1&quot;.</translation>
     </message>
     <message>
         <source>Running in %1: %2 %3</source>
-        <translation type="vanished">S'està executant a %1: %2 %3</translation>
+        <translation type="vanished">S&apos;està executant a %1: %2 %3</translation>
     </message>
     <message>
         <location line="-11" />
-        <source>Unable to launch "%1": %2</source>
-        <translation>No es pot iniciar "%1": %2</translation>
+        <source>Unable to launch &quot;%1&quot;: %2</source>
+        <translation>No es pot iniciar &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>A timeout occurred running "%1"</source>
-        <translation type="vanished">S'ha produït un temps d'espera executant "%1"</translation>
+        <source>A timeout occurred running &quot;%1&quot;</source>
+        <translation type="vanished">S&apos;ha produït un temps d&apos;espera executant &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>"%1" crashed.</source>
-        <translation>"%1" ha fallat.</translation>
+        <source>&quot;%1&quot; crashed.</source>
+        <translation>&quot;%1&quot; ha fallat.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"%1" failed (exit code %2).</source>
-        <translation>"%1" ha fallat (codi de sortida %2).</translation>
+        <source>&quot;%1&quot; failed (exit code %2).</source>
+        <translation>&quot;%1&quot; ha fallat (codi de sortida %2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
@@ -4990,22 +4986,22 @@ Feu doble clic per editar l'element.</translation>
     <message>
         <location line="+4" />
         <source>Choose source location. This can be a plugin library file or a zip file.</source>
-        <translation>Trieu la ubicació d'origen. Pot ser un fitxer de biblioteca de connectors o un fitxer zip.</translation>
+        <translation>Trieu la ubicació d&apos;origen. Pot ser un fitxer de biblioteca de connectors o un fitxer zip.</translation>
     </message>
     <message>
         <location line="+28" />
         <source>File does not exist.</source>
-        <translation>L'arxiu no existeix.</translation>
+        <translation>L&apos;arxiu no existeix.</translation>
     </message>
     <message>
         <location line="+72" />
         <source>Check Archive</source>
-        <translation>Consulta l'arxiu</translation>
+        <translation>Consulta l&apos;arxiu</translation>
     </message>
     <message>
         <location line="+29" />
         <source>Checking archive...</source>
-        <translation>S'està comprovant l'arxiu...</translation>
+        <translation>S&apos;està comprovant l&apos;arxiu...</translation>
     </message>
     <message>
         <source>The file is not an archive.</source>
@@ -5019,12 +5015,12 @@ Feu doble clic per editar l'element.</translation>
     <message>
         <location line="+40" />
         <source>There was an error while unarchiving.</source>
-        <translation>S'ha produït un error en desarxivar.</translation>
+        <translation>S&apos;ha produït un error en desarxivar.</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Archive is OK.</source>
-        <translation>L'arxiu està bé.</translation>
+        <translation>L&apos;arxiu està bé.</translation>
     </message>
     <message>
         <location line="-82" />
@@ -5034,7 +5030,7 @@ Feu doble clic per editar l'element.</translation>
     <message>
         <location line="+7" />
         <source>Did not find %1 plugin.</source>
-        <translation>No s'ha trobat el connector %1.</translation>
+        <translation>No s&apos;ha trobat el connector %1.</translation>
     </message>
     <message>
         <location line="+117" />
@@ -5044,17 +5040,17 @@ Feu doble clic per editar l'element.</translation>
     <message>
         <location line="+2" />
         <source>Choose install location.</source>
-        <translation>Trieu la ubicació d'instal·lació.</translation>
+        <translation>Trieu la ubicació d&apos;instal·lació.</translation>
     </message>
     <message>
         <location line="+3" />
         <source>User plugins</source>
-        <translation>Connectors d'usuari</translation>
+        <translation>Connectors d&apos;usuari</translation>
     </message>
     <message>
         <location line="+2" />
         <source>The plugin will be available to all compatible %1 installations, but only for the current user.</source>
-        <translation>El connector estarà disponible per a totes les instal·lacions de %1 compatibles, però només per a l'usuari actual.</translation>
+        <translation>El connector estarà disponible per a totes les instal·lacions de %1 compatibles, però només per a l&apos;usuari actual.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -5073,8 +5069,8 @@ Feu doble clic per editar l'element.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>"%1" will be installed into "%2".</source>
-        <translation>"%1" s'instal·larà a "%2".</translation>
+        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot; s&apos;instal·larà a &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+29" />
@@ -5083,8 +5079,8 @@ Feu doble clic per editar l'element.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The file "%1" exists. Overwrite?</source>
-        <translation>El fitxer "%1" existeix. Sobreescriure?</translation>
+        <source>The file &quot;%1&quot; exists. Overwrite?</source>
+        <translation>El fitxer &quot;%1&quot; existeix. Sobreescriure?</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5094,12 +5090,12 @@ Feu doble clic per editar l'element.</translation>
     <message>
         <location line="+10" />
         <source>Failed to Write File</source>
-        <translation>No s'ha pogut escriure el fitxer</translation>
+        <translation>No s&apos;ha pogut escriure el fitxer</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to write file "%1".</source>
-        <translation>No s'ha pogut escriure el fitxer "%1".</translation>
+        <source>Failed to write file &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut escriure el fitxer &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -5109,7 +5105,7 @@ Feu doble clic per editar l'element.</translation>
     <message>
         <location line="+33" />
         <source>Failed to Copy Plugin Files</source>
-        <translation>No s'han pogut copiar els fitxers del connector</translation>
+        <translation>No s&apos;han pogut copiar els fitxers del connector</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+338" />
@@ -5134,7 +5130,7 @@ Feu doble clic per editar l'element.</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+263" />
         <source>%1 repository was detected but %1 is not configured.</source>
-        <translation>S'ha detectat el repositori %1 però %1 no està configurat.</translation>
+        <translation>S&apos;ha detectat el repositori %1 però %1 no està configurat.</translation>
     </message>
     <message>
         <location line="+72" />
@@ -5181,7 +5177,7 @@ al control de versions (%2)?</translation>
     <message>
         <location line="+6" />
         <source>Adding to Version Control Failed</source>
-        <translation>S'ha produït un error en afegir al control de versions</translation>
+        <translation>S&apos;ha produït un error en afegir al control de versions</translation>
     </message>
     <message>
         <location line="+6" />
@@ -5189,7 +5185,7 @@ al control de versions (%2)?</translation>
 %1
 to version control (%2)
 </source>
-        <translation>No s'ha pogut afegir el fitxer
+        <translation>No s&apos;ha pogut afegir el fitxer
 %1
 al control de versions (%2)
 </translation>
@@ -5198,7 +5194,7 @@ al control de versions (%2)
         <location line="+2" />
         <source>Could not add the following files to version control (%1)
 %2</source>
-        <translation>No s'han pogut afegir els fitxers següents al control de versions (%1)
+        <translation>No s&apos;han pogut afegir els fitxers següents al control de versions (%1)
 %2</translation>
     </message>
     <message>
@@ -5224,7 +5220,7 @@ al control de versions (%2)
     <message>
         <location line="+9" />
         <source>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Copyright 2008-%6 %7. All rights reserved.&lt;br/&gt;&lt;br/&gt;The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;br/&gt;</source>
-        <translation>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Dret d'autor 2008-%6 %7. Tots els drets reservats.&lt;br/&gt;&lt;br/&gt;El programa s'ofereix tal com està sense GARANTIA DE CAP TIPUS, INCLOSA LA GARANTIA DE DISSENY, COMERCIABILITAT I IDONEITAT PER A UN PROPÒSIT PARTICULAR.&lt;br/&gt;</translation>
+        <translation>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Dret d&apos;autor 2008-%6 %7. Tots els drets reservats.&lt;br/&gt;&lt;br/&gt;El programa s&apos;ofereix tal com està sense GARANTIA DE CAP TIPUS, INCLOSA LA GARANTIA DE DISSENY, COMERCIABILITAT I IDONEITAT PER A UN PROPÒSIT PARTICULAR.&lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+19" />
@@ -5318,8 +5314,8 @@ al control de versions (%2)
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
-        <source>Could not parse patch file "%1". The content is not of unified diff format.</source>
-        <translation>No s'ha pogut analitzar el fitxer de pedaços "%1". El contingut no té un format de diferència unificat.</translation>
+        <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
+        <translation>No s&apos;ha pogut analitzar el fitxer de pedaços &quot;%1&quot;. El contingut no té un format de diferència unificat.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
@@ -5398,23 +5394,23 @@ al control de versions (%2)
     </message>
     <message>
         <location line="+52" />
-        <source>Diff "%1"</source>
-        <translation>Diferència "%1"</translation>
+        <source>Diff &quot;%1&quot;</source>
+        <translation>Diferència &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+28" />
         <source>Select First File for Diff</source>
         <translation>Seleccioneu Primer fitxer per a la diferència</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+7" />
         <source>Select Second File for Diff</source>
         <translation>Seleccioneu el segon fitxer per a la diferència</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>Diff "%1", "%2"</source>
-        <translation>Diferència "%1", "%2"</translation>
+        <location line="+10" />
+        <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
+        <translation>Diferència &quot;%1&quot;, &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
@@ -5433,8 +5429,8 @@ al control de versions (%2)
     </message>
     <message>
         <location line="+31" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding.</source>
-        <translation>&lt;b&gt;Error:&lt;/b&gt; no s'ha pogut descodificar "%1" amb la codificació "%2".</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
+        <translation>&lt;b&gt;Error:&lt;/b&gt; no s&apos;ha pogut descodificar &quot;%1&quot; amb la codificació &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5444,7 +5440,7 @@ al control de versions (%2)
     <message>
         <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+76" />
         <source>Switch to Unified Diff Editor</source>
-        <translation>Canvia a l'Editor de diferència unificat</translation>
+        <translation>Canvia a l&apos;Editor de diferència unificat</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+52" />
@@ -5462,12 +5458,12 @@ al control de versions (%2)
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+57" />
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+392" />
         <source>Retrieving data failed.</source>
-        <translation>No s'han pogut recuperar les dades.</translation>
+        <translation>No s&apos;han pogut recuperar les dades.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-33" />
         <source>Switch to Side By Side Diff Editor</source>
-        <translation>Canvia a l'editor de diferències al costat</translation>
+        <translation>Canvia a l&apos;editor de diferències al costat</translation>
     </message>
     <message>
         <location line="+2" />
@@ -5477,9 +5473,9 @@ al control de versions (%2)
     <message numerus="yes">
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
         <source>Skipped %n lines...</source>
-        <translation>
-            <numerusform>S'han saltat %n línies...</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -5490,7 +5486,7 @@ al control de versions (%2)
     <message>
         <location line="+1" />
         <source>Skipped unknown number of lines...</source>
-        <translation>S'ha saltat un nombre desconegut de línies...</translation>
+        <translation>S&apos;ha saltat un nombre desconegut de línies...</translation>
     </message>
     <message>
         <location line="+35" />
@@ -5594,8 +5590,8 @@ al control de versions (%2)
     </message>
     <message>
         <location line="+1" />
-        <source>%1 (current: "%2")</source>
-        <translation>%1 (actual: "%2")</translation>
+        <source>%1 (current: &quot;%2&quot;)</source>
+        <translation>%1 (actual: &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5610,12 +5606,12 @@ al control de versions (%2)
     <message>
         <location line="+1" />
         <source>Error message:</source>
-        <translation>Missatge d'error:</translation>
+        <translation>Missatge d&apos;error:</translation>
     </message>
     <message>
         <location line="+39" />
         <source>Description file found, but error on read.</source>
-        <translation>S'ha trobat el fitxer de descripció, però s'ha produït un error en llegir.</translation>
+        <translation>S&apos;ha trobat el fitxer de descripció, però s&apos;ha produït un error en llegir.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -5625,7 +5621,7 @@ al control de versions (%2)
     <message>
         <location line="+4" />
         <source>Dependencies are successfully resolved.</source>
-        <translation>Les dependències s'han resolt correctament.</translation>
+        <translation>Les dependències s&apos;han resolt correctament.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -5634,18 +5630,18 @@ al control de versions (%2)
     </message>
     <message>
         <location line="+4" />
-        <source>Plugin's initialization function succeeded.</source>
-        <translation>La funció d'inicialització del connector ha estat correcta.</translation>
+        <source>Plugin&apos;s initialization function succeeded.</source>
+        <translation>La funció d&apos;inicialització del connector ha estat correcta.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Plugin successfully loaded and running.</source>
-        <translation>El connector s'ha carregat i s'està executant correctament.</translation>
+        <translation>El connector s&apos;ha carregat i s&apos;està executant correctament.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Plugin was shut down.</source>
-        <translation>El connector s'ha tancat.</translation>
+        <translation>El connector s&apos;ha tancat.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -5676,21 +5672,21 @@ El connector no està disponible en aquesta plataforma.</translation>
         <source>Path: %1
 Plugin is enabled as dependency of an enabled plugin.</source>
         <translation>Camí: %1
-El connector està habilitat com a dependència d'un connector habilitat.</translation>
+El connector està habilitat com a dependència d&apos;un connector habilitat.</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Path: %1
 Plugin is enabled by command line argument.</source>
         <translation>Camí: %1
-El connector s'habilita mitjançant l'argument de la línia d'ordres.</translation>
+El connector s&apos;habilita mitjançant l&apos;argument de la línia d&apos;ordres.</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Path: %1
 Plugin is disabled by command line argument.</source>
         <translation>Camí: %1
-El connector està desactivat per l'argument de la línia d'ordres.</translation>
+El connector està desactivat per l&apos;argument de la línia d&apos;ordres.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -5710,12 +5706,12 @@ El connector està desactivat per l'argument de la línia d'ordres.</translation
     <message>
         <location line="+5" />
         <source>Load on startup</source>
-        <translation>Carregueu a l'inici</translation>
+        <translation>Carregueu a l&apos;inici</translation>
     </message>
     <message>
         <location line="+71" />
         <source>Load on Startup</source>
-        <translation>Carregueu a l'inici</translation>
+        <translation>Carregueu a l&apos;inici</translation>
     </message>
     <message>
         <location line="+54" />
@@ -5816,12 +5812,12 @@ també desactivarà els connectors següents:
     <message>
         <location line="+4" />
         <source>Deleted</source>
-        <translation>S'ha suprimit</translation>
+        <translation>S&apos;ha suprimit</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1072" />
         <source>Multiple versions of the same plugin have been found.</source>
-        <translation>S'han trobat diverses versions del mateix complement.</translation>
+        <translation>S&apos;han trobat diverses versions del mateix complement.</translation>
     </message>
     <message>
         <location line="+440" />
@@ -5842,7 +5838,7 @@ també desactivarà els connectors següents:
         <location line="+21" />
         <source>Cannot load plugin because dependency failed to load: %1 (%2)
 Reason: %3</source>
-        <translation>No es pot carregar el connector perquè la dependència no s'ha pogut carregar: %1 (%2)
+        <translation>No es pot carregar el connector perquè la dependència no s&apos;ha pogut carregar: %1 (%2)
 Motiu: %3</translation>
     </message>
     <message>
@@ -5858,7 +5854,7 @@ Motiu: %3</translation>
     <message>
         <location line="+2" />
         <source>If you temporarily disable %1, the following plugins that depend on it are also disabled: %2.</source>
-        <translation>Si desactiveu temporalment %1, els complements següents que depenen d'ella també estan desactivats: %2.</translation>
+        <translation>Si desactiveu temporalment %1, els complements següents que depenen d&apos;ella també estan desactivats: %2.</translation>
     </message>
     <message>
         <source>If you temporarily disable %1, the following plugins that depend on it are also disabled: %2.
@@ -5875,8 +5871,8 @@ Motiu: %3</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The last time you started %1, it seems to have closed because of a problem with the "%2" plugin. Temporarily disable the plugin?</source>
-        <translation>L'última vegada que vau iniciar %1, sembla que s'hagi tancat a causa d'un problema amb el connector "%2". Vols desactivar temporalment el connector?</translation>
+        <source>The last time you started %1, it seems to have closed because of a problem with the &quot;%2&quot; plugin. Temporarily disable the plugin?</source>
+        <translation>L&apos;última vegada que vau iniciar %1, sembla que s&apos;hagi tancat a causa d&apos;un problema amb el connector &quot;%2&quot;. Vols desactivar temporalment el connector?</translation>
     </message>
     <message>
         <location line="+8" />
@@ -5887,31 +5883,31 @@ Motiu: %3</translation>
         <location line="+73" />
         <source>Cannot load plugin because dependency failed to load: %1(%2)
 Reason: %3</source>
-        <translation>No es pot carregar el connector perquè la dependència no s'ha pogut carregar: %1(%2)
+        <translation>No es pot carregar el connector perquè la dependència no s&apos;ha pogut carregar: %1(%2)
 Motiu: %3</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
-        <source>The plugin "%1" is specified twice for testing.</source>
-        <translation>El connector "%1" s'especifica dues vegades per a la prova.</translation>
+        <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
+        <translation>El connector &quot;%1&quot; s&apos;especifica dues vegades per a la prova.</translation>
     </message>
     <message>
         <location line="+7" />
         <location line="+18" />
         <location line="+47" />
         <location line="+25" />
-        <source>The plugin "%1" does not exist.</source>
-        <translation>El connector "%1" no existeix.</translation>
+        <source>The plugin &quot;%1&quot; does not exist.</source>
+        <translation>El connector &quot;%1&quot; no existeix.</translation>
     </message>
     <message>
         <location line="-79" />
-        <source>The plugin "%1" is not tested.</source>
-        <translation>El connector "%1" no s'ha provat.</translation>
+        <source>The plugin &quot;%1&quot; is not tested.</source>
+        <translation>El connector &quot;%1&quot; no s&apos;ha provat.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Cannot request scenario "%1" as it was already requested.</source>
-        <translation>No es pot sol·licitar l'escenari "%1" ja que ja s'havia sol·licitat.</translation>
+        <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
+        <translation>No es pot sol·licitar l&apos;escenari &quot;%1&quot; ja que ja s&apos;havia sol·licitat.</translation>
     </message>
     <message>
         <location line="+130" />
@@ -5921,32 +5917,32 @@ Motiu: %3</translation>
     <message>
         <location line="+21" />
         <source>The option %1 requires an argument.</source>
-        <translation>L'opció %1 requereix un argument.</translation>
+        <translation>L&apos;opció %1 requereix un argument.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+1071" />
         <source>Resolving dependencies failed because state != Read</source>
-        <translation>No s'ha pogut resoldre les dependències perquè estat != Llegir</translation>
+        <translation>No s&apos;ha pogut resoldre les dependències perquè estat != Llegir</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency '%1(%2)'</source>
-        <translation>No s'ha pogut resoldre la dependència '%1(%2)'</translation>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation>No s&apos;ha pogut resoldre la dependència &apos;%1(%2)&apos;</translation>
     </message>
     <message>
         <location line="+61" />
         <source>Loading the library failed because state != Resolved</source>
-        <translation>No s'ha pogut carregar la biblioteca perquè estat != S'ha resolt</translation>
+        <translation>No s&apos;ha pogut carregar la biblioteca perquè estat != S&apos;ha resolt</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Plugin is not valid (does not derive from IPlugin)</source>
-        <translation>El connector no és vàlid (no deriva d'IPlugin)</translation>
+        <translation>El connector no és vàlid (no deriva d&apos;IPlugin)</translation>
     </message>
     <message>
         <location line="-416" />
-        <source>"%1" is missing</source>
-        <translation>Falta "%1".</translation>
+        <source>&quot;%1&quot; is missing</source>
+        <translation>Falta &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-24" />
@@ -5955,28 +5951,28 @@ Motiu: %3</translation>
     </message>
     <message>
         <location line="+29" />
-        <source>Value for key "%1" is not a string</source>
-        <translation>El valor de la clau "%1" no és una cadena</translation>
+        <source>Value for key &quot;%1&quot; is not a string</source>
+        <translation>El valor de la clau &quot;%1&quot; no és una cadena</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a bool</source>
-        <translation>El valor de la clau "%1" no és bool</translation>
+        <source>Value for key &quot;%1&quot; is not a bool</source>
+        <translation>El valor de la clau &quot;%1&quot; no és bool</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not an array of objects</source>
-        <translation>El valor de la clau "%1" no és una matriu d'objectes</translation>
+        <source>Value for key &quot;%1&quot; is not an array of objects</source>
+        <translation>El valor de la clau &quot;%1&quot; no és una matriu d&apos;objectes</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a string and not an array of strings</source>
-        <translation>El valor de la clau "%1" no és una cadena ni una matriu de cadenes</translation>
+        <source>Value for key &quot;%1&quot; is not a string and not an array of strings</source>
+        <translation>El valor de la clau &quot;%1&quot; no és una cadena ni una matriu de cadenes</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Value "%2" for key "%1" has invalid format</source>
-        <translation>El valor "%2" de la clau "%1" no té un format vàlid</translation>
+        <source>Value &quot;%2&quot; for key &quot;%1&quot; has invalid format</source>
+        <translation>El valor &quot;%2&quot; de la clau &quot;%1&quot; no té un format vàlid</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5985,18 +5981,18 @@ Motiu: %3</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected IID "%1", but found "%2"</source>
-        <translation>IID previst "%1", però va trobar "%2"</translation>
+        <source>Expected IID &quot;%1&quot;, but found &quot;%2&quot;</source>
+        <translation>IID previst &quot;%1&quot;, però va trobar &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Plugin meta data not found</source>
-        <translation>No s'han trobat les metadades del connector</translation>
+        <translation>No s&apos;han trobat les metadades del connector</translation>
     </message>
     <message>
         <location line="+108" />
-        <source>Invalid platform specification "%1": %2</source>
-        <translation>Especificació de plataforma "%1" no vàlida: %2</translation>
+        <source>Invalid platform specification &quot;%1&quot;: %2</source>
+        <translation>Especificació de plataforma &quot;%1&quot; no vàlida: %2</translation>
     </message>
     <message>
         <location line="+18" />
@@ -6009,8 +6005,8 @@ Motiu: %3</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Dependency: "%1" must be "%2" or "%3" (is "%4").</source>
-        <translation>Dependència: "%1" ha de ser "%2" o "%3" (és "%4").</translation>
+        <source>Dependency: &quot;%1&quot; must be &quot;%2&quot; or &quot;%3&quot; (is &quot;%4&quot;).</source>
+        <translation>Dependència: &quot;%1&quot; ha de ser &quot;%2&quot; o &quot;%3&quot; (és &quot;%4&quot;).</translation>
     </message>
     <message>
         <location line="+25" />
@@ -6022,13 +6018,13 @@ Motiu: %3</translation>
     </message>
     <message>
         <location line="-13" />
-        <source>Argument: "%1" is empty</source>
-        <translation>Argument: "%1" està buit</translation>
+        <source>Argument: &quot;%1&quot; is empty</source>
+        <translation>Argument: &quot;%1&quot; està buit</translation>
     </message>
     <message>
         <location line="+182" />
         <source>Initializing the plugin failed because state != Loaded</source>
-        <translation>La inicialització del connector ha fallat perquè estat != S'ha carregat</translation>
+        <translation>La inicialització del connector ha fallat perquè estat != S&apos;ha carregat</translation>
     </message>
     <message>
         <location line="+5" />
@@ -6085,7 +6081,7 @@ Motiu: %3</translation>
     </message>
     <message>
         <source>Open Link as New Page</source>
-        <translation type="vanished">Obriu l'enllaç com a pàgina nova</translation>
+        <translation type="vanished">Obriu l&apos;enllaç com a pàgina nova</translation>
     </message>
     <message>
         <source>New Folder</source>
@@ -6129,11 +6125,11 @@ Motiu: %3</translation>
     </message>
     <message>
         <source>Deleting a folder also removes its content.&lt;br&gt;Do you want to continue?</source>
-        <translation type="vanished">En suprimir una carpeta, també se n'elimina el contingut.&lt;br&gt;Vols continuar?</translation>
+        <translation type="vanished">En suprimir una carpeta, també se n&apos;elimina el contingut.&lt;br&gt;Vols continuar?</translation>
     </message>
     <message>
         <source>Bookmarks</source>
-        <translation type="vanished">Adreces d'interès</translation>
+        <translation type="vanished">Adreces d&apos;interès</translation>
     </message>
     <message>
         <source>Add Bookmark</source>
@@ -6180,13 +6176,13 @@ Voleu sobreescriure-lo?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+161" />
-        <source>Exported "%1", %2x%3, %4 bytes</source>
-        <translation>S'ha exportat "%1", %2x%3, %4 bytes</translation>
+        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
+        <translation>S&apos;ha exportat &quot;%1&quot;, %2x%3, %4 bytes</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Could not write file "%1".</source>
-        <translation>No s'ha pogut escriure el fitxer "%1".</translation>
+        <source>Could not write file &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut escriure el fitxer &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6202,7 +6198,7 @@ Voleu sobreescriure-lo?</translation>
     <message>
         <location line="+15" />
         <source>Export a Series of Images from %1 (%2x%3)</source>
-        <translation>Exporta una sèrie d'imatges de %1 (%2x%3)</translation>
+        <translation>Exporta una sèrie d&apos;imatges de %1 (%2x%3)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageviewer.cpp" line="-365" />
@@ -6227,7 +6223,7 @@ Voleu sobreescriure-lo?</translation>
     <message>
         <location line="+3" />
         <source>Use the current settings for background, outline, and fitting to screen as the default for new image viewers. Current default:</source>
-        <translation>Utilitzeu la configuració actual per al fons, el contorn i l'ajust a la pantalla com a predeterminada per als visualitzadors d'imatges nous. Predeterminat actual:</translation>
+        <translation>Utilitzeu la configuració actual per al fons, el contorn i l&apos;ajust a la pantalla com a predeterminada per als visualitzadors d&apos;imatges nous. Predeterminat actual:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -6262,33 +6258,33 @@ Voleu sobreescriure-lo?</translation>
     <message>
         <location line="+4" />
         <source>Pause Animation</source>
-        <translation>Pausa l'animació</translation>
+        <translation>Pausa l&apos;animació</translation>
     </message>
     <message>
         <location line="-9" />
         <source>Play Animation</source>
-        <translation>Juga a l'animació</translation>
+        <translation>Juga a l&apos;animació</translation>
     </message>
     <message>
         <location line="+23" />
         <source>Image Viewer</source>
-        <translation>Visor d'imatges</translation>
+        <translation>Visor d&apos;imatges</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+87" />
         <source>Image format not supported.</source>
-        <translation>Format d'imatge no compatible.</translation>
+        <translation>Format d&apos;imatge no compatible.</translation>
     </message>
     <message>
         <location line="+12" />
         <source>Failed to read SVG image.</source>
-        <translation>No s'ha pogut llegir la imatge SVG.</translation>
+        <translation>No s&apos;ha pogut llegir la imatge SVG.</translation>
     </message>
     <message>
         <location line="+13" />
         <location line="+15" />
         <source>Failed to read image.</source>
-        <translation>No s'ha pogut llegir la imatge.</translation>
+        <translation>No s&apos;ha pogut llegir la imatge.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageviewer.cpp" line="+36" />
@@ -6323,7 +6319,7 @@ Voleu sobreescriure-lo?</translation>
     <message>
         <location line="+3" />
         <source>Toggle Animation</source>
-        <translation>Activa o desactiva l'animació</translation>
+        <translation>Activa o desactiva l&apos;animació</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6338,7 +6334,7 @@ Voleu sobreescriure-lo?</translation>
     <message>
         <location filename="../../../src/plugins/imageviewer/multiexportdialog.cpp" line="-4" />
         <source>Enter a file name containing place holders %1 which will be replaced by the width and height of the image, respectively.</source>
-        <translation>Introduïu un nom de fitxer que contingui els marcadors de posició %1 que se substituiran per l'amplada i l'alçada de la imatge, respectivament.</translation>
+        <translation>Introduïu un nom de fitxer que contingui els marcadors de posició %1 que se substituiran per l&apos;amplada i l&apos;alçada de la imatge, respectivament.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -6348,7 +6344,7 @@ Voleu sobreescriure-lo?</translation>
     <message>
         <location line="+2" />
         <source>Set Standard Icon Sizes</source>
-        <translation>Estableix mides d'icones estàndard</translation>
+        <translation>Estableix mides d&apos;icones estàndard</translation>
     </message>
     <message>
         <location line="+2" />
@@ -6357,8 +6353,8 @@ Voleu sobreescriure-lo?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>A comma-separated list of size specifications of the form "&lt;width&gt;x&lt;height&gt;".</source>
-        <translation>Una llista separada per comes d'especificacions de mida de la forma "&lt;amplada&gt;x&lt;altura&gt;".</translation>
+        <source>A comma-separated list of size specifications of the form &quot;&lt;width&gt;x&lt;height&gt;&quot;.</source>
+        <translation>Una llista separada per comes d&apos;especificacions de mida de la forma &quot;&lt;amplada&gt;x&lt;altura&gt;&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6403,7 +6399,7 @@ Vols sobreescriure-les?</translation>
         <translation>Error %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+60" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
         <source>Deprecated</source>
         <translation>Depreciat</translation>
     </message>
@@ -6428,7 +6424,7 @@ Vols sobreescriure-les?</translation>
         <translation>Derivat</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+212" />
         <source>Call Hierarchy</source>
         <translation>Truca jerarquia</translation>
     </message>
@@ -6438,13 +6434,13 @@ Vols sobreescriure-les?</translation>
         <translation>Torna a carregar la jerarquia de trucades del símbol en posició del cursor.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+394" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
         <translation>%1 per al %2</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+230" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>no destinat</translation>
@@ -6459,7 +6455,7 @@ Vols sobreescriure-les?</translation>
         <location line="+2" />
         <source>failed to initialize</source>
         <extracomment>language client state</extracomment>
-        <translation>No s'ha pogut inicialitzar</translation>
+        <translation>No s&apos;ha pogut inicialitzar</translation>
     </message>
     <message>
         <location line="+2" />
@@ -6471,7 +6467,7 @@ Vols sobreescriure-les?</translation>
         <location line="+2" />
         <source>shutdown requested</source>
         <extracomment>language client state</extracomment>
-        <translation>S'ha sol·licitat l'aturada</translation>
+        <translation>S&apos;ha sol·licitat l&apos;aturada</translation>
     </message>
     <message>
         <location line="+2" />
@@ -6487,20 +6483,20 @@ Vols sobreescriure-les?</translation>
     </message>
     <message>
         <location line="+1342" />
-        <source>Invalid parameter in "%1":
+        <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
-        <translation>Paràmetre no vàlid a "%1":
+        <translation>Paràmetre no vàlid a &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
         <location line="+219" />
-        <source>Language Server "%1" Initialization Error</source>
-        <translation>Error d'inicialització del servidor d'idiomes "%1"</translation>
+        <source>Language Server &quot;%1&quot; Initialization Error</source>
+        <translation>Error d&apos;inicialització del servidor d&apos;idiomes &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Initialization error: %1.</source>
-        <translation>Error d'inicialització: %1.</translation>
+        <translation>Error d&apos;inicialització: %1.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -6525,7 +6521,7 @@ Vols sobreescriure-les?</translation>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+22" />
         <source>Language Client</source>
-        <translation>Client d'idioma</translation>
+        <translation>Client d&apos;idioma</translation>
     </message>
     <message>
         <location line="+2" />
@@ -6535,17 +6531,17 @@ Vols sobreescriure-les?</translation>
     <message>
         <location line="+2" />
         <source>Locates symbols in the current document, based on a language server.</source>
-        <translation>Localitza símbols al document actual, basat en un servidor d'idiomes.</translation>
+        <translation>Localitza símbols al document actual, basat en un servidor d&apos;idiomes.</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Symbols in Workspace</source>
-        <translation>Símbols a l'espai de treball</translation>
+        <translation>Símbols a l&apos;espai de treball</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Locates symbols in the language server workspace.</source>
-        <translation>Localitza símbols a l'espai de treball del servidor d'idiomes.</translation>
+        <translation>Localitza símbols a l&apos;espai de treball del servidor d&apos;idiomes.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -6555,7 +6551,7 @@ Vols sobreescriure-les?</translation>
     <message>
         <location line="+2" />
         <source>Locates classes and structs in the language server workspace.</source>
-        <translation>Localitza classes i estructures a l'espai de treball del servidor d'idiomes.</translation>
+        <translation>Localitza classes i estructures a l&apos;espai de treball del servidor d&apos;idiomes.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -6565,12 +6561,12 @@ Vols sobreescriure-les?</translation>
     <message>
         <location line="+2" />
         <source>Locates functions and methods in the language server workspace.</source>
-        <translation>Localitza funcions i mètodes a l'espai de treball del servidor d'idiomes.</translation>
+        <translation>Localitza funcions i mètodes a l&apos;espai de treball del servidor d&apos;idiomes.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientinterface.cpp" line="+77" />
-        <source>Cannot handle MIME type "%1" of message.</source>
-        <translation>No es pot gestionar el tipus de mime "%1" del missatge.</translation>
+        <source>Cannot handle MIME type &quot;%1&quot; of message.</source>
+        <translation>No es pot gestionar el tipus de mime &quot;%1&quot; del missatge.</translation>
     </message>
     <message>
         <location line="+70" />
@@ -6588,7 +6584,7 @@ Vols sobreescriure-les?</translation>
         <translation>Inesperadament acabat.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+217" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+82" />
         <source>Expand All</source>
         <translation>Ampliar tot</translation>
@@ -6606,27 +6602,27 @@ Vols sobreescriure-les?</translation>
     <message>
         <location line="+4" />
         <source>Inspect Language Clients...</source>
-        <translation>Inspeccioneu els clients d'idiomes ...</translation>
+        <translation>Inspeccioneu els clients d&apos;idiomes ...</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Language Server Diagnostics</source>
-        <translation>Diagnòstic del servidor d'idiomes</translation>
+        <translation>Diagnòstic del servidor d&apos;idiomes</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Issues provided by the Language Server in the current document.</source>
-        <translation>Problemes proporcionats pel servidor d'idiomes al document actual.</translation>
+        <translation>Problemes proporcionats pel servidor d&apos;idiomes al document actual.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+185" />
         <source>&amp;Add</source>
-        <translation>I afegir</translation>
+        <translation>I &amp;afegir</translation>
     </message>
     <message>
         <location line="+11" />
         <source>&amp;Delete</source>
-        <translation>I suprimir</translation>
+        <translation>&amp;I suprimir</translation>
     </message>
     <message>
         <location line="+106" />
@@ -6668,12 +6664,12 @@ Example: *.cpp%1*.h</source>
     <message>
         <location line="+18" />
         <source>Failed to parse JSON at %1: %2</source>
-        <translation>No s'ha pogut analitzar JSON al %1: %2</translation>
+        <translation>No s&apos;ha pogut analitzar JSON al %1: %2</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Language server-specific JSON to pass via "initializationOptions" field of "initialize" request.</source>
-        <translation>JSON específic del servidor de llenguatges per passar mitjançant "Inicialització" Camp de "Inicialitzar" la sol·licitud.</translation>
+        <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
+        <translation>JSON específic del servidor de llenguatges per passar mitjançant &quot;Inicialització&quot; Camp de &quot;Inicialitzar&quot; la sol·licitud.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6698,7 +6694,7 @@ Example: *.cpp%1*.h</source>
     <message>
         <location line="+1" />
         <source>Initialization options:</source>
-        <translation>Opcions d'inicialització:</translation>
+        <translation>Opcions d&apos;inicialització:</translation>
     </message>
     <message>
         <location line="+74" />
@@ -6728,19 +6724,19 @@ Example: *.cpp%1*.h</source>
     <message>
         <location line="+57" />
         <source>Workspace Configuration</source>
-        <translation>Configuració de l'espai de treball</translation>
+        <translation>Configuració de l&apos;espai de treball</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Additional JSON configuration sent to all running language servers for this project.
 See the documentation of the specific language server for valid settings.</source>
-        <translation>Configuració addicional de JSON enviada a tots els servidors d'idiomes per a aquest projecte.
+        <translation>Configuració addicional de JSON enviada a tots els servidors d&apos;idiomes per a aquest projecte.
  Consulteu la documentació del servidor de llenguatge específic per a configuracions vàlides.</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Language Server</source>
-        <translation>Servidor d'idiomes</translation>
+        <translation>Servidor d&apos;idiomes</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+39" />
@@ -6751,8 +6747,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+21" />
         <source>Re&amp;name %n files</source>
         <translation>
-            <numerusform>Re &amp; name %n fitxers</numerusform>
-            <numerusform>Re &amp; name %n fitxers</numerusform>
+            <numerusform>Re &amp;name %n fitxers</numerusform>
+            <numerusform>Re &amp;name %n fitxers</numerusform>
         </translation>
     </message>
     <message>
@@ -6796,7 +6792,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+5" />
         <source>Inspect Language Clients</source>
-        <translation>Inspeccioneu els clients d'idiomes</translation>
+        <translation>Inspeccioneu els clients d&apos;idiomes</translation>
     </message>
     <message>
         <location line="+3" />
@@ -6810,33 +6806,33 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+6" />
-        <source>Running "%1" to install %2.</source>
-        <translation>Funcionant " %1" per instal·lar %2.</translation>
+        <source>Running &quot;%1&quot; to install %2.</source>
+        <translation>Funcionant &quot; %1&quot; per instal·lar %2.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>La instal·lació de "%1" es va cancel·lar per temps d'espera.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>La instal·lació de &quot;%1&quot; es va cancel·lar per temps d&apos;espera.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>L'usuari va cancel·lar la instal·lació de "%1".</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>L&apos;usuari va cancel·lar la instal·lació de &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>Instal·lació de " %1" ha fallat amb el codi de sortida %2.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>Instal·lació de &quot; %1&quot; ha fallat amb el codi de sortida %2.</translation>
     </message>
     <message>
         <location line="+56" />
         <source>Install %1 language server via npm.</source>
-        <translation>Instal·leu el servidor d'idiomes %1 mitjançant NPM.</translation>
+        <translation>Instal·leu el servidor d&apos;idiomes %1 mitjançant NPM.</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Setup %1 language server (%2).</source>
-        <translation>Configuració %1 servidor d'idiomes ( %2).</translation>
+        <translation>Configuració %1 servidor d&apos;idiomes ( %2).</translation>
     </message>
     <message>
         <location line="+4" />
@@ -6851,7 +6847,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+10" />
         <source>%1 Language Server</source>
-        <translation>%1 servidor d'idiomes</translation>
+        <translation>%1 servidor d&apos;idiomes</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+48" />
@@ -6901,7 +6897,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+93" />
         <source>Language Client Inspector</source>
-        <translation>Inspector de clients d'idiomes</translation>
+        <translation>Inspector de clients d&apos;idiomes</translation>
     </message>
     <message>
         <location line="+10" />
@@ -6911,7 +6907,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+3" />
         <source>Language Server:</source>
-        <translation>Servidor d'idiomes:</translation>
+        <translation>Servidor d&apos;idiomes:</translation>
     </message>
     <message>
         <location line="+5" />
@@ -6933,33 +6929,33 @@ See the documentation of the specific language server for valid settings.</sourc
     <name>QtC::LanguageServerProtocol</name>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
-        <source>Cannot decode content with "%1". Falling back to "%2".</source>
-        <translation>No es pot descodificar el contingut amb "%1". Caure a "%2".</translation>
+        <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
+        <translation>No es pot descodificar el contingut amb &quot;%1&quot;. Caure a &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Expected an integer in "%1", but got "%2".</source>
-        <translation>S'esperava un nombre enter a "%1", però va obtenir "%2".</translation>
+        <source>Expected an integer in &quot;%1&quot;, but got &quot;%2&quot;.</source>
+        <translation>S&apos;esperava un nombre enter a &quot;%1&quot;, però va obtenir &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
-        <source>Could not parse JSON message: "%1".</source>
-        <translation>No s'ha pogut analitzar el missatge JSON: "%1".</translation>
+        <source>Could not parse JSON message: &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut analitzar el missatge JSON: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected a JSON object, but got a JSON "%1" value.</source>
-        <translation>S'esperava un objecte JSON, però va obtenir un valor "%1" de JSON.</translation>
+        <source>Expected a JSON object, but got a JSON &quot;%1&quot; value.</source>
+        <translation>S&apos;esperava un objecte JSON, però va obtenir un valor &quot;%1&quot; de JSON.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
-        <source>No parameters in "%1".</source>
-        <translation>No hi ha paràmetres a "%1".</translation>
+        <source>No parameters in &quot;%1&quot;.</source>
+        <translation>No hi ha paràmetres a &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+213" />
-        <source>No ID set in "%1".</source>
-        <translation>No hi ha cap identificació a "%1".</translation>
+        <source>No ID set in &quot;%1&quot;.</source>
+        <translation>No hi ha cap identificació a &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
@@ -6969,7 +6965,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+15" />
         <source>Rename %1 to %2</source>
-        <translation>Canviar el nom de 1 a %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17" />
@@ -7047,7 +7043,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7059,60 +7055,60 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+156" />
         <location line="+823" />
         <source>Dataset Editor</source>
         <translation>Editor de conjunt de dades</translation>
     </message>
     <message>
-        <location line="-364" />
+        <location line="-366" />
         <source>Please enter a class name</source>
         <translation>Introduïu un nom de classe</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+604" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+412" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+70" />
+        <location line="+72" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-732" />
         <location line="+19" />
-        <location line="+115" />
-        <location line="+1483" />
+        <location line="+111" />
+        <location line="+1514" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+124" />
-        <location line="+180" />
-        <location line="+308" />
+        <location line="+139" />
+        <location line="+202" />
+        <location line="+306" />
         <location line="+13" />
-        <location line="+168" />
-        <location line="+145" />
+        <location line="+169" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
-        <location line="+254" />
+        <location line="+117" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+378" />
+        <location line="+273" />
         <location line="+86" />
-        <location line="+1017" />
-        <location line="+895" />
+        <location line="+1142" />
+        <location line="+1075" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+539" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
         <location line="+19" />
         <location line="+11" />
@@ -7120,8 +7116,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Error: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3475" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-309" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3541" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7131,30 +7127,30 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+9" />
         <location line="+25" />
         <location line="+9" />
-        <source>Failed to create "%L1"!</source>
-        <translation>No s'ha pogut crear "%L1"!</translation>
+        <source>Failed to create &quot;%L1&quot;!</source>
+        <translation>No s&apos;ha pogut crear &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2513" />
-        <location line="+1446" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
+        <location line="+33" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
+        <location line="+1442" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
         <source>Failed to save the image file for an unknown reason!</source>
-        <translation>No s'ha pogut desar el fitxer d'imatge per un motiu desconegut!</translation>
+        <translation>No s&apos;ha pogut desar el fitxer d&apos;imatge per un motiu desconegut!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581" />
-        <location line="+239" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
+        <location line="+224" />
         <source>Delete</source>
         <translation>Suprimeix</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309" />
-        <source>Are you sure you want to permanetly delete "%L1"?</source>
-        <translation>Esteu segur que voleu suprimir de manera permanent "%L1"?</translation>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
+        <translation>Esteu segur que voleu suprimir de manera permanent &quot;%L1&quot;?</translation>
     </message>
     <message>
         <location line="-86" />
@@ -7171,18 +7167,18 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="-13" />
         <location line="+26" />
         <source>Failed to rename the folder for an unknown reason!</source>
-        <translation>No s'ha pogut canviar el nom de la carpeta per un motiu desconegut!</translation>
+        <translation>No s&apos;ha pogut canviar el nom de la carpeta per un motiu desconegut!</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Failed to rename the file for an unknown reason!</source>
-        <translation>No s'ha pogut canviar el nom del fitxer per un motiu desconegut!</translation>
+        <translation>No s&apos;ha pogut canviar el nom del fitxer per un motiu desconegut!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5164" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5247" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>No s'ha pogut copiar el fitxer "%1" a "%2".</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>No s&apos;ha pogut copiar el fitxer &quot;%1&quot; a &quot;%2&quot;.</translation>
     </message>
     <message>
         <source>Invalid argument (%1) for -override_read_timeout</source>
@@ -7190,7 +7186,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <source>Missing argument for -override_read_timeout</source>
-        <translation type="vanished">Falta l'argument per a -override_read_timeout</translation>
+        <translation type="vanished">Falta l&apos;argument per a -override_read_timeout</translation>
     </message>
     <message>
         <source>Invalid argument (%1) for -override_read_stall_timeout</source>
@@ -7198,27 +7194,27 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <source>Missing argument for -override_read_stall_timeout</source>
-        <translation type="vanished">Falta l'argument per a -override_read_stall_timeout</translation>
+        <translation type="vanished">Falta l&apos;argument per a -override_read_stall_timeout</translation>
     </message>
     <message>
         <location line="+40" />
         <source>Missing argument for -serial_number_filter</source>
-        <translation>Falta l'argument per a -serial_number_filter</translation>
+        <translation>Falta l&apos;argument per a -serial_number_filter</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+145" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2349" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2677" />
         <location line="+9" />
         <location line="+13" />
-        <location line="+59" />
+        <location line="+63" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+830" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
         <location line="+36" />
         <location line="+7" />
@@ -7227,34 +7223,34 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+7" />
         <source>
 
-Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>
 
-Tanqueu tots els programes que estiguin veient/editant les dades de l'aplicació d'OpenMV IDE i després reinicieu l'OpenMV IDE!</translation>
+Tanqueu tots els programes que estiguin veient/editant les dades de l&apos;aplicació d&apos;OpenMV IDE i després reinicieu l&apos;OpenMV IDE!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-65" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
-        <translation>Editeu el llindar d'escala de grisos amb l'editor de llindars</translation>
+        <translation>Editeu el llindar d&apos;escala de grisos amb l&apos;editor de llindars</translation>
     </message>
     <message>
         <location line="+23" />
         <source>Edit LAB threshold with Threshold Editor</source>
-        <translation>Editeu el llindar de LAB amb l'editor de llindars</translation>
+        <translation>Editeu el llindar de LAB amb l&apos;editor de llindars</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+221" />
         <source>Missing argument for -form_key</source>
-        <translation>Falta l'argument per a -form_key</translation>
+        <translation>Falta l&apos;argument per a -form_key</translation>
     </message>
     <message>
-        <location line="+1066" />
+        <location line="+1074" />
         <source>About OpenMV Viewer...</source>
         <translation>Sobre OpenMV Viewer...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;Sobre %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Per: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Aquest programa es distribueix amb l'esperança que sigui útil, però SENSE CAP GARANTIA; sense ni tan sols la garantia implícita de comerciabilitat o idoneïtat per a un propòsit particular. Vegeu la &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; per a més detalls.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Preguntes o comentaris?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contacta amb nosaltres a &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Sobre %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Per: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Aquest programa es distribueix amb l&apos;esperança que sigui útil, però SENSE CAP GARANTIA; sense ni tan sols la garantia implícita de comerciabilitat o idoneïtat per a un propòsit particular. Vegeu la &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; per a més detalls.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Preguntes o comentaris?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contacta amb nosaltres a &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+17" />
@@ -7262,7 +7258,7 @@ Tanqueu tots els programes que estiguin veient/editant les dades de l'aplicació
         <translation>OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1039" />
+        <location line="-1050" />
         <source>untitled_$.py</source>
         <translation>sense títol_$.py</translation>
     </message>
@@ -7272,33 +7268,31 @@ Tanqueu tots els programes que estiguin veient/editant les dades de l'aplicació
     </message>
     <message>
         <source>Missing argument for -override_per_command_wait</source>
-        <translation type="vanished">Falta l'argument per a -override_per_command_wait</translation>
+        <translation type="vanished">Falta l&apos;argument per a -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="-460" />
+        <location line="-468" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>Argument no vàlid (%1) per a -auto_update</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Missing argument for -auto_update</source>
-        <translation>Falta l'argument per a -auto_update</translation>
+        <translation>Falta l&apos;argument per a -auto_update</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+248" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
-        <translation>Error en l'analització &lt;suer_resources&gt; /openmvide/firmware/settings.json - %l1!
-
- Comproveu els errors del fitxer JSON i solucioneu -los.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.\n\nOpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation type="vanished">Error de lectura &lt;suer_resources&gt; /openmvide/firmware/settings.json: %l1. \ N \ nopenmv versions IDE abans que v4.3.0 no tinguin aquest fitxer i l'hauria suprimit en la instal·lació de recursos.</translation>
+        <translation type="vanished">Error de lectura &lt;suer_resources&gt; /openmvide/firmware/settings.json: %l1. \ N \ nopenmv versions IDE abans que v4.3.0 no tinguin aquest fitxer i l&apos;hauria suprimit en la instal·lació de recursos.</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+188" />
         <source>Form Key</source>
         <translation>Clau de formulari</translation>
     </message>
@@ -7308,7 +7302,7 @@ Check the json file for errors and fix them.</source>
         <translation>Si us plau, introduïu la clau del formulari</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+80" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7318,7 +7312,7 @@ Check the json file for errors and fix them.</source>
         <location line="-13" />
         <location line="+7" />
         <location line="+7" />
-        <source>Can't open the new file!</source>
+        <source>Can&apos;t open the new file!</source>
         <translation>No es pot obrir el fitxer nou!</translation>
     </message>
     <message>
@@ -7328,8 +7322,8 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Add some code to "%L1"</source>
-        <translation>Afegeix un codi a "%L1"</translation>
+        <source>Add some code to &quot;%L1&quot;</source>
+        <translation>Afegeix un codi a &quot;%L1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -7339,16 +7333,16 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+11" />
         <source>No examples found for your board</source>
-        <translation>No s'han trobat exemples per al vostre tauler</translation>
+        <translation>No s&apos;han trobat exemples per al vostre tauler</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Connect to your board first to see examples</source>
-        <translation>Connecteu-vos primer a la pissarra per veure'n exemples</translation>
+        <translation>Connecteu-vos primer a la pissarra per veure&apos;n exemples</translation>
     </message>
     <message>
         <source>Run Bootloader (Load Firmware)</source>
-        <translation type="vanished">Executeu el carregador d'arrencada (carregueu el firmware)</translation>
+        <translation type="vanished">Executeu el carregador d&apos;arrencada (carregueu el firmware)</translation>
     </message>
     <message>
         <location line="+24" />
@@ -7365,7 +7359,7 @@ Check the json file for errors and fix them.</source>
         <translation>Ctrl+Maj+E</translation>
     </message>
     <message>
-        <source>Are you sure you want to erase your OpenMV Cam's onboard flash drive?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s onboard flash drive?</source>
         <translation type="vanished">Esteu segur que voleu esborrar la unitat flaix integrada de la vostra OpenMV Cam?</translation>
     </message>
     <message>
@@ -7376,17 +7370,17 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+1" />
         <source>When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected.</source>
-        <translation>Quan la Reconnexió automàtica està habilitada, l'OpenMV IDE es tornarà a connectar automàticament a l'OpenMV si es detecta.</translation>
+        <translation>Quan la Reconnexió automàtica està habilitada, l&apos;OpenMV IDE es tornarà a connectar automàticament a l&apos;OpenMV si es detecta.</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Stop Script on Connect/Disconnect</source>
-        <translation>Atura l'script a Connect/Desconnect</translation>
+        <translation>Atura l&apos;script a Connect/Desconnect</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Stop the script on Connect or Disconnect (note that the IDE disconnects on close if connected).</source>
-        <translation>Atureu l'script a Connect o Desconnect (tingueu en compte que l'IDE es desconnecta al tancar si està connectat).</translation>
+        <translation>Atureu l&apos;script a Connect o Desconnect (tingueu en compte que l&apos;IDE es desconnecta al tancar si està connectat).</translation>
     </message>
     <message>
         <location line="+7" />
@@ -7399,7 +7393,7 @@ Check the json file for errors and fix them.</source>
         <translation>Sincronitza automàticament les biblioteques entre la vostra càmera OpenMV i la carpeta de documents.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+24" />
         <source>Filter examples by board and sensor type</source>
         <translation>Exemples de filtres per placa i tipus de sensor</translation>
     </message>
@@ -7421,7 +7415,7 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+8" />
         <source>Save open script to OpenMV Cam (as main.py)</source>
-        <translation>Desa l'script obert a l'OpenMV Cam (com a main.py)</translation>
+        <translation>Desa l&apos;script obert a l&apos;OpenMV Cam (com a main.py)</translation>
     </message>
     <message>
         <location line="+6" />
@@ -7429,40 +7423,40 @@ Check the json file for errors and fix them.</source>
         <translation>Restableix OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Install the Latest Development Release</source>
         <translation>Instal·leu la darrera versió de desenvolupament</translation>
     </message>
     <message>
-        <location line="+77" />
-        <location line="+3764" />
+        <location line="+75" />
+        <location line="+3823" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Obre el terminal</translation>
     </message>
     <message>
-        <location line="-3818" />
+        <location line="-3877" />
         <source>Machine Vision</source>
         <translation>Visió artificial</translation>
     </message>
     <message>
-        <location line="+181" />
-        <location line="+3668" />
-        <location line="+76" />
+        <location line="+175" />
+        <location line="+3733" />
+        <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Editor de llindars</translation>
     </message>
     <message>
-        <location line="-3739" />
-        <location line="+3817" />
+        <location line="-3803" />
+        <location line="+3880" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Editor de punts clau</translation>
     </message>
     <message>
-        <location line="-3810" />
-        <location line="+3976" />
-        <location line="+98" />
+        <location line="-3873" />
+        <location line="+4037" />
+        <location line="+97" />
         <location line="+24" />
         <location line="+11" />
         <location line="+18" />
@@ -7470,7 +7464,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag Generator</translation>
     </message>
     <message>
-        <location line="-4124" />
+        <location line="-4184" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Família TAG16H5 (30 etiquetes)</translation>
     </message>
@@ -7508,16 +7502,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+371" />
+        <location line="+367" />
         <location line="+14" />
         <location line="+33" />
-        <location line="+916" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
-        <source>Failed to open: "%L1"</source>
-        <translation>No s'ha pogut obrir: "%L1"</translation>
+        <location line="+918" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-223" />
+        <source>Failed to open: &quot;%L1&quot;</source>
+        <translation>No s&apos;ha pogut obrir: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1358" />
+        <location line="-1356" />
         <source>DataMatrix Generator</source>
         <translation>Generador DataMatrix</translation>
     </message>
@@ -7532,40 +7526,40 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <source>Network to copy to OpenMV Cam</source>
-        <translation type="vanished">Xarxa per copiar a l'OpenMV Cam</translation>
+        <translation type="vanished">Xarxa per copiar a l&apos;OpenMV Cam</translation>
     </message>
     <message>
         <source>TensorFlow Model (*.tflite);;Neural Network Model (*.network);;Label Files (*.txt);;All Files (*.*)</source>
-        <translation type="vanished">Model TensorFlow (*.tflite);;Model de xarxa neuronal (*.network);;Fitxers d'etiquetes (*.txt);;Tots els fitxers (*.*)</translation>
+        <translation type="vanished">Model TensorFlow (*.tflite);;Model de xarxa neuronal (*.network);;Fitxers d&apos;etiquetes (*.txt);;Tots els fitxers (*.*)</translation>
     </message>
     <message>
         <source>Where to save the network on the OpenMV Cam</source>
-        <translation type="vanished">On desar la xarxa a l'OpenMV Cam</translation>
+        <translation type="vanished">On desar la xarxa a l&apos;OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+228" />
-        <location line="+2357" />
-        <location line="+1290" />
+        <location line="+225" />
+        <location line="+2424" />
+        <location line="+1288" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
-        <location line="+67" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382" />
-        <location line="+364" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899" />
-        <location line="+208" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-393" />
+        <location line="+375" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+900" />
+        <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Si us plau, afegiu una extensió de fitxer!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-269" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+112" />
-        <location line="+207" />
+        <location line="+119" />
+        <location line="+203" />
         <source>Unable to overwrite output file!</source>
         <translation>No es pot sobreescriure el fitxer de sortida!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3860" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3922" />
         <source>Video Tools</source>
         <translation>Eines de vídeo</translation>
     </message>
@@ -7581,44 +7575,44 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-437" />
-        <location line="+273" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-439" />
+        <location line="+275" />
         <source>Play RTSP Stream</source>
         <translation>Reprodueix RTSP Stream</translation>
     </message>
     <message>
         <location line="+16" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+15" />
         <location line="+6" />
-        <location line="+46" />
+        <location line="+48" />
         <location line="+19" />
         <source>New Dataset</source>
         <translation>Nou conjunt de dades</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-98" />
         <source>Dataset Editor - Choose a folder to build the dataset in</source>
         <translation>Editor del conjunt de dades: trieu una carpeta on crear el conjunt de dades</translation>
     </message>
     <message>
         <location line="+11" />
         <source>The selected folder is not empty and the contents will be deleted. Continue?</source>
-        <translation>La carpeta seleccionada no està buida i el contingut s'eliminarà. Continuar?</translation>
+        <translation>La carpeta seleccionada no està buida i el contingut s&apos;eliminarà. Continuar?</translation>
     </message>
     <message>
         <location line="+15" />
-        <location line="+207" />
+        <location line="+205" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-209" />
         <location line="+34" />
         <location line="+48" />
         <location line="+33" />
-        <source>Failed to remove "%L1"!</source>
-        <translation>No s'ha pogut eliminar "%L1"!</translation>
+        <source>Failed to remove &quot;%L1&quot;!</source>
+        <translation>No s&apos;ha pogut eliminar &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-128" />
-        <location line="+30" />
+        <location line="-125" />
+        <location line="+29" />
         <source>Open Dataset</source>
         <translation>Conjunt de dades obert</translation>
     </message>
@@ -7630,10 +7624,10 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+23" />
         <source>The selected folder does not appear to be a valid OpenMV Cam Image Dataset!</source>
-        <translation>La carpeta seleccionada no sembla ser un conjunt de dades d'imatges de càmera OpenMV vàlid!</translation>
+        <translation>La carpeta seleccionada no sembla ser un conjunt de dades d&apos;imatges de càmera OpenMV vàlid!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export</source>
         <translation>Exporta</translation>
     </message>
@@ -7643,7 +7637,7 @@ Check the json file for errors and fix them.</source>
         <translation>Exporta el conjunt de dades a un fitxer Zip</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <location line="+7" />
         <location line="+42" />
         <location line="+21" />
@@ -7658,41 +7652,41 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+26" />
         <source>Exporting...</source>
-        <translation>S'està exportant...</translation>
+        <translation>S&apos;està exportant...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-520" />
-        <location line="+237" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-522" />
+        <location line="+239" />
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1482" />
+        <location line="+1513" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+258" />
-        <location line="+533" />
-        <location line="+145" />
+        <location line="+273" />
+        <location line="+554" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location line="+433" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
-        <location line="+288" />
-        <location line="+143" />
-        <location line="+1023" />
+        <location line="+117" />
+        <location line="+428" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-131" />
+        <location line="+289" />
+        <location line="+165" />
+        <location line="+1148" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1339" />
         <location line="+85" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Cancel</source>
         <translation>Cancel · lar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3673" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3737" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Carregueu a Edge Impulse Project</translation>
     </message>
@@ -7716,7 +7710,7 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+8" />
         <source>Upload to Edge Impulse by API Key</source>
-        <translation>Penja a Edge Impulse mitjançant la clau d'API</translation>
+        <translation>Penja a Edge Impulse mitjançant la clau d&apos;API</translation>
     </message>
     <message>
         <location line="+7" />
@@ -7757,7 +7751,7 @@ Check the json file for errors and fix them.</source>
         <location line="+18" />
         <location line="+6" />
         <source>About OpenMV IDE</source>
-        <translation>Sobre l'IDE d'OpenMV</translation>
+        <translation>Sobre l&apos;IDE d&apos;OpenMV</translation>
     </message>
     <message>
         <location line="-6" />
@@ -7771,8 +7765,8 @@ Check the json file for errors and fix them.</source>
         <translation>Sobre OpenMV IDE...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;Sobre l'IDE %L1 d'OpenMV&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Per: Ibrahim Abdelkader i Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;LLICÈNCIA PÚBLICA GENERAL GNU&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Dret d'autor (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Aquest programa es distribueix amb l'esperança que sigui útil, però SENSE CAP GARANTIA; sense ni tan sols la garantia implícita de COMERCIABILITAT o IDONEITAT PER A UN FINS PARTICULAR. Consulteu la &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;Llicència pública general GNU&lt;/a&gt; per obtenir més detalls.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Preguntes o comentaris?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contacteu amb nosaltres a &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Sobre l&apos;IDE %L1 d&apos;OpenMV&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Per: Ibrahim Abdelkader i Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;LLICÈNCIA PÚBLICA GENERAL GNU&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Dret d&apos;autor (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Aquest programa es distribueix amb l&apos;esperança que sigui útil, però SENSE CAP GARANTIA; sense ni tan sols la garantia implícita de COMERCIABILITAT o IDONEITAT PER A UN FINS PARTICULAR. Consulteu la &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;Llicència pública general GNU&lt;/a&gt; per obtenir més detalls.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Preguntes o comentaris?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contacteu amb nosaltres a &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
@@ -7780,7 +7774,7 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <source>&lt;p&gt;OpenMV IDE English translation by Kwabena W. Agyeman.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;Traducció a l'anglès d'OpenMV IDE de Kwabena W. Agyeman.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;Traducció a l&apos;anglès d&apos;OpenMV IDE de Kwabena W. Agyeman.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+17" />
@@ -7793,11 +7787,11 @@ Check the json file for errors and fix them.</source>
         <translation>Visor OpenMV</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+73" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
         <location line="+37" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-221" />
         <location line="+87" />
         <location line="+55" />
@@ -7833,11 +7827,11 @@ Check the json file for errors and fix them.</source>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-195" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-197" />
         <location line="+9" />
-        <location line="+89" />
-        <location line="+13" />
-        <location line="+42" />
+        <location line="+95" />
+        <location line="+11" />
+        <location line="+40" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
@@ -7867,53 +7861,61 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1064" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1189" />
         <location line="+6" />
         <location line="+28" />
         <location line="+52" />
         <location line="+8" />
         <location line="+35" />
-        <location line="+320" />
-        <location line="+62" />
-        <location line="+99" />
-        <location line="+49" />
-        <location line="+67" />
-        <location line="+12" />
-        <location line="+77" />
+        <location line="+329" />
+        <location line="+136" />
+        <location line="+28" />
+        <location line="+100" />
+        <location line="+56" />
+        <location line="+68" />
+        <location line="+13" />
+        <location line="+81" />
         <location line="+10" />
         <location line="+12" />
         <location line="+28" />
-        <location line="+36" />
-        <location line="+84" />
+        <location line="+34" />
+        <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+86" />
+        <location line="+97" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
-        <location line="+108" />
+        <location line="+116" />
         <location line="+83" />
-        <location line="+42" />
-        <location line="+38" />
-        <location line="+52" />
-        <location line="+38" />
+        <location line="+82" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+46" />
+        <location line="+54" />
+        <location line="+51" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
         <location line="+21" />
         <location line="+20" />
         <location line="+24" />
-        <location line="+121" />
-        <location line="+214" />
+        <location line="+135" />
+        <location line="+217" />
         <location line="+33" />
-        <location line="+248" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+658" />
+        <location line="+268" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+668" />
         <location line="+48" />
         <source>Connect</source>
-        <translation>Connecta't</translation>
+        <translation>Connecta&apos;t</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-42" />
         <source>No settings for the selected board type %L1!</source>
         <translation>No hi ha configuració per al tauler seleccionat Tipus %L1!</translation>
     </message>
@@ -7924,12 +7926,12 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Only firmware recovery is supported using the Alif Semiconductor's SE Tools.</source>
+        <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>Només la recuperació del firmware és compatible amb les eines SE del semiconductor Alif.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
         <source>Disconnect</source>
@@ -7938,12 +7940,12 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+19" />
         <source>Start (run script)</source>
-        <translation>Inici (executa l'script)</translation>
+        <translation>Inici (executa l&apos;script)</translation>
     </message>
     <message>
         <location line="+21" />
         <source>Stop (halt script)</source>
-        <translation>Atura (atura l'script)</translation>
+        <translation>Atura (atura l&apos;script)</translation>
     </message>
     <message>
         <location line="+68" />
@@ -7988,12 +7990,11 @@ Check the json file for errors and fix them.</source>
         <translation>Zoom per adaptar-se</translation>
     </message>
     <message>
-        <location line="+30" />
         <source>JPG</source>
-        <translation>JPG</translation>
+        <translation type="vanished">JPG</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+31" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG comprimeix la memòria intermèdia per obtenir un major rendiment</translation>
     </message>
@@ -8012,7 +8013,7 @@ Check the json file for errors and fix them.</source>
         <translation>Desactiveu el Frame Buffer per obtenir el màxim rendiment</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+52" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>Frame Buffer desactivat: feu clic de nou al botó desactivar per activar-lo (a dalt a la dreta)</translation>
     </message>
@@ -8081,17 +8082,15 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Res (p:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1574" />
+        <location line="-1582" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>Error de lectura &lt;suer_resources&gt; /openmvide/firmware/settings.json: %l1. 
-
-OpenMV IDE versions abans que v4.3.0 no tingui aquest fitxer i l'hauria suprimit en la instal·lació de recursos.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2512" />
+        <location line="+346" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2858" />
         <source>Load Custom Firmware</source>
         <translation>Carregueu el firmware personalitzat</translation>
     </message>
@@ -8103,7 +8102,7 @@ OpenMV IDE versions abans que v4.3.0 no tingui aquest fitxer i l'hauria suprimit
     </message>
     <message>
         <location line="+1" />
-        <source>Are you sure you want to erase your OpenMV Cam's internal FAT file system?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s internal FAT file system?</source>
         <translation>Esteu segur que voleu esborrar el sistema de fitxers de greix intern de la vostra càmera OpenMV?</translation>
     </message>
     <message>
@@ -8132,15 +8131,20 @@ OpenMV IDE versions abans que v4.3.0 no tingui aquest fitxer i l'hauria suprimit
         <translation>Restableix Romfs a OpenMv Cam</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+84" />
+        <source>Force enter OpenMV Cam bootloader</source>
+        <translation>Força l&apos;entrada del carregador d&apos;arrencada OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>MicroPython Tools</source>
         <translation>Eines de micropython</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+6" />
         <location line="+7" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -8150,39 +8154,50 @@ OpenMV IDE versions abans que v4.3.0 no tingui aquest fitxer i l'hauria suprimit
         <translation>Copia/converteix el fitxer Python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Open Model Zoo</source>
         <translation>Open Model Zoo</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+87" />
         <source>Convert Model for NPU</source>
         <translation>Converteix el model per a NPU</translation>
     </message>
     <message>
+        <location line="+6" />
+        <location line="+9" />
+        <location line="+12" />
         <location line="+7" />
-        <location line="+10" />
-        <location line="+13" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-176" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Converteix el model</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location line="+420" />
         <source>Show Code Profiler</source>
         <translation>Mostra el perfil de codi</translation>
     </message>
     <message>
         <location line="+101" />
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Quant a %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Per: Ibrahim Abdelkader i Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;VERSIÓ DE FÀBRICA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Només destinat a fabricants amb llicència.&lt;/p&gt;&lt;p&gt;&lt;b&gt;LLICÈNCIA PÚBLICA GENERAL GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;El programa és còpia (C) %L&gt;&lt;p&gt;&lt;p&gt;%L2. distribuït amb l'esperança que sigui útil, però SENSE CAP GARANTIA; sense ni tan sols la garantia implícita de COMERCIABILITAT o IDONEITAT PER A UN FINS PARTICULAR. Consulteu la &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;Llicència pública general GNU&lt;/a&gt; per obtenir més informació.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Preguntes o comentaris?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contacteu amb nosaltres a &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+196" />
+        <location line="+26" />
+        <source>JPG Mode</source>
+        <translation>Mode JPG</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>RAW Mode</source>
+        <translation>Mode RAW</translation>
+    </message>
+    <message>
+        <location line="+113" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Píxels (%7) - Enfocament (%8)</translation>
@@ -8220,7 +8235,7 @@ OpenMV IDE versions abans que v4.3.0 no tingui aquest fitxer i l'hauria suprimit
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2737" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
         <source>Board:</source>
         <translation>Pissarra:</translation>
     </message>
@@ -8264,9 +8279,9 @@ OpenMV IDE versions abans que v4.3.0 no tingui aquest fitxer i l'hauria suprimit
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-301" />
-        <location line="+303" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
+        <location line="+324" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
         <source>Drive:</source>
         <translation>Conduir:</translation>
     </message>
@@ -8287,15 +8302,15 @@ OpenMV IDE versions abans que v4.3.0 no tingui aquest fitxer i l'hauria suprimit
         <translation>Pot ser diferent dels FPS de la càmera</translation>
     </message>
     <message>
-        <location line="+309" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2952" />
+        <location line="+307" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
         <source>Update Available</source>
         <translation>Actualització disponible</translation>
     </message>
     <message>
         <location line="+0" />
         <source>A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.</source>
-        <translation>Hi ha disponible una versió nova de l'IDE OpenMV (%L1.%L2.%L3) per descarregar.</translation>
+        <translation>Hi ha disponible una versió nova de l&apos;IDE OpenMV (%L1.%L2.%L3) per descarregar.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -8303,14 +8318,14 @@ OpenMV IDE versions abans que v4.3.0 no tingui aquest fitxer i l'hauria suprimit
         <translation>descarregar</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
         <translation>Programació WiFi desactivada!</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Another application is using the OpenMV Cam broadcast discovery port. Please close that application and restart OpenMV IDE to enable WiFi programming.</source>
-        <translation>Una altra aplicació està utilitzant el port de descobriment de difusió OpenMV Cam. Tanqueu aquesta aplicació i reinicieu l'IDE OpenMV per habilitar la programació WiFi.</translation>
+        <translation>Una altra aplicació està utilitzant el port de descobriment de difusió OpenMV Cam. Tanqueu aquesta aplicació i reinicieu l&apos;IDE OpenMV per habilitar la programació WiFi.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -8320,7 +8335,7 @@ OpenMV IDE versions abans que v4.3.0 no tingui aquest fitxer i l'hauria suprimit
     <message>
         <location line="+1" />
         <source>Failed to create the documents folder!</source>
-        <translation>No s'ha pogut crear la carpeta de documents!</translation>
+        <translation>No s&apos;ha pogut crear la carpeta de documents!</translation>
     </message>
     <message>
         <location line="+22" />
@@ -8341,11 +8356,11 @@ OpenMV IDE versions abans que v4.3.0 no tingui aquest fitxer i l'hauria suprimit
         <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
-Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
 
 Blinking Green:
 
-Your OpenMV Cam's onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
 
 Blinking Blue:
 
@@ -8353,58 +8368,58 @@ Your OpenMV Cam is running the default main.py script onboard.
 
 If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
 
-If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+If the LED is blinking blue but OpenMV IDE can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
 
 Blinking White:
 
-Your OpenMV Cam's firmware is panicking because of a hardware failure. Please check that your OpenMV Cam's camera module is installed securely.
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>Gràcies per utilitzar l'OpenMV Cam i l'IDE OpenMV!
+        <translation>Gràcies per utilitzar l&apos;OpenMV Cam i l&apos;IDE OpenMV!
 
-El LED integrat de l'OpenMV Cam parpelleja amb diferents colors per indicar el seu estat:
+El LED integrat de l&apos;OpenMV Cam parpelleja amb diferents colors per indicar el seu estat:
 
 Verd intermitent:
 
-El carregador d'arrencada integrat de l'OpenMV Cam s'està executant. El carregador d'arrencada integrat s'executa durant uns segons quan l'OpenMV Cam s'engega mitjançant USB per permetre que l'OpenMV IDE torni a programar l'OpenMV Cam.
+El carregador d&apos;arrencada integrat de l&apos;OpenMV Cam s&apos;està executant. El carregador d&apos;arrencada integrat s&apos;executa durant uns segons quan l&apos;OpenMV Cam s&apos;engega mitjançant USB per permetre que l&apos;OpenMV IDE torni a programar l&apos;OpenMV Cam.
 
 Blau parpellejant:
 
-L'OpenMV Cam està executant l'script main.py predeterminat a bord.
+L&apos;OpenMV Cam està executant l&apos;script main.py predeterminat a bord.
 
-Si teniu instal·lada una targeta SD o heu sobreescrit l'script main.py a l'OpenMV Cam, s'executarà qualsevol codi que hi hàgiu carregat.
+Si teniu instal·lada una targeta SD o heu sobreescrit l&apos;script main.py a l&apos;OpenMV Cam, s&apos;executarà qualsevol codi que hi hàgiu carregat.
 
-Si el LED parpelleja en blau però l'OpenMV IDE no es pot connectar a l'OpenMV Cam, assegureu-vos que connecteu l'OpenMV Cam al vostre ordinador amb un cable USB que subministra dades i energia.
+Si el LED parpelleja en blau però l&apos;OpenMV IDE no es pot connectar a l&apos;OpenMV Cam, assegureu-vos que connecteu l&apos;OpenMV Cam al vostre ordinador amb un cable USB que subministra dades i energia.
 
 Blanc intermitent:
 
-El microprogramari de l'OpenMV Cam té pànic a causa d'una fallada de maquinari. Comproveu que el mòdul de càmera de l'OpenMV Cam estigui instal·lat de manera segura.
+El microprogramari de l&apos;OpenMV Cam té pànic a causa d&apos;una fallada de maquinari. Comproveu que el mòdul de càmera de l&apos;OpenMV Cam estigui instal·lat de manera segura.
 
 </translation>
     </message>
     <message>
         <location line="+93" />
-        <location line="+1176" />
+        <location line="+1212" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Port sèrie - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1144" />
+        <location line="-1180" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+791" />
-        <location line="+145" />
+        <location line="+827" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
+        <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
-        <translation>S'està connectant... (temps d'espera de 30 segons)</translation>
+        <translation>S&apos;està connectant... (temps d&apos;espera de 30 segons)</translation>
     </message>
     <message>
-        <location line="-1783" />
+        <location line="-1820" />
         <source>
 
 Try doing:
@@ -8418,7 +8433,7 @@ Intenta fer:
 
 sudo adduser %L1 dialout
 
-...en un terminal i després reinicieu l'ordinador.</translation>
+...en un terminal i després reinicieu l&apos;ordinador.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -8443,7 +8458,7 @@ sudo adduser %L1 dialout
     <message>
         <location line="+69" />
         <source>Invalid port argument (%1) for -open_udp_client_terminal</source>
-        <translation>L'argument del port (%1) no és vàlid per a -open_udp_client_terminal</translation>
+        <translation>L&apos;argument del port (%1) no és vàlid per a -open_udp_client_terminal</translation>
     </message>
     <message>
         <location line="+5" />
@@ -8457,14 +8472,14 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1233" />
+        <location line="+1270" />
         <source>UDP Server Connection - %1</source>
         <translation>Connexió al servidor UDP - %1</translation>
     </message>
     <message>
-        <location line="-1159" />
+        <location line="-1196" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
-        <translation>L'argument del port (%1) no és vàlid per a -open_udp_server_terminal</translation>
+        <translation>L&apos;argument del port (%1) no és vàlid per a -open_udp_server_terminal</translation>
     </message>
     <message>
         <location line="+5" />
@@ -8479,7 +8494,7 @@ sudo adduser %L1 dialout
     <message>
         <location line="+69" />
         <source>Invalid port argument (%1) for -open_tcp_client_terminal</source>
-        <translation>L'argument del port (%1) no és vàlid per a -open_tcp_client_terminal</translation>
+        <translation>L&apos;argument del port (%1) no és vàlid per a -open_tcp_client_terminal</translation>
     </message>
     <message>
         <location line="+5" />
@@ -8493,14 +8508,14 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1279" />
+        <location line="+1317" />
         <source>TCP Server Connection - %1</source>
         <translation>Connexió al servidor TCP - %1</translation>
     </message>
     <message>
-        <location line="-1205" />
+        <location line="-1243" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
-        <translation>L'argument del port (%1) no és vàlid per a -open_tcp_server_terminal</translation>
+        <translation>L&apos;argument del port (%1) no és vàlid per a -open_tcp_server_terminal</translation>
     </message>
     <message>
         <location line="+5" />
@@ -8508,15 +8523,17 @@ sudo adduser %L1 dialout
         <translation>Falten arguments per a -open_tcp_server_terminal</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+58" />
         <location line="+18" />
+        <location line="+6" />
+        <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
         <location line="+9" />
         <location line="+45" />
-        <location line="+79" />
-        <location line="+8" />
+        <location line="+82" />
+        <location line="+27" />
         <location line="+6" />
         <location line="+6" />
         <location line="+6" />
@@ -8525,15 +8542,15 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2389" />
-        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location line="+10" />
         <location line="+8" />
-        <location line="+19" />
+        <location line="+22" />
         <source>Register OpenMV Cam</source>
         <translation>Registreu OpenMV Cam</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="-278" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8553,13 +8570,24 @@ Si us plau, executeu Examples-&gt;HelloWorld-&gt;helloworld.py per provar la qua
     </message>
     <message>
         <location line="+7" />
-        <location line="+17" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65" />
+        <location line="+29" />
+        <location line="+172" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-69" />
         <source>Registered</source>
         <translation>Registrat</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-190" />
+        <source>Board type not available for this form key!</source>
+        <translation>El tipus de tauler no està disponible per a aquesta clau de formulari!</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Registration limit reached for this board type!</source>
+        <translation>S&apos;ha arribat al límit de registre per a aquest tipus de tauler!</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8575,35 +8603,35 @@ Executeu Examples-&gt;HelloWorld-&gt;helloworld.py per provar la qualitat de vis
     </message>
     <message>
         <location line="+17" />
-        <location line="+182" />
+        <location line="+204" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>Error de base de dades!</translation>
     </message>
     <message>
-        <location line="-165" />
-        <location line="+178" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+17" />
+        <location line="-187" />
+        <location line="+200" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+18" />
         <source>GET Network error!</source>
         <translation>GET error de xarxa!</translation>
     </message>
     <message>
-        <location line="-169" />
-        <location line="+177" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+19" />
+        <location line="-191" />
+        <location line="+199" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+22" />
         <source>GET network error!</source>
         <translation>OBTENIR un error de xarxa!</translation>
     </message>
     <message>
-        <location line="-170" />
+        <location line="-192" />
         <location line="+10" />
         <location line="+10" />
         <source>Unregistered OpenMV Cam Detected</source>
-        <translation>S'ha detectat una càmera OpenMV no registrada</translation>
+        <translation>S&apos;ha detectat una càmera OpenMV no registrada</translation>
     </message>
     <message>
         <location line="-19" />
-        <source>Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
         <translation>La teva càmera OpenMV no està registrada. Heu de registrar la vostra OpenMV Cam amb OpenMV per a un ús il·limitat amb OpenMV IDE sense cap interrupció.
@@ -8615,7 +8643,7 @@ Vols registrar la teva OpenMV Cam ara?</translation>
         <source>Unregistered OpenMV Cams hurt the open-source OpenMV ecosystem by undercutting offical OpenMV Cam sales which help fund OpenMV Cam software development.
 
 Would you like to register your OpenMV Cam now?</source>
-        <translation>Les càmeres OpenMV no registrades van perjudicar l'ecosistema OpenMV de codi obert en socavar les vendes oficials d'OpenMV Cam que ajuden a finançar el desenvolupament de programari OpenMV Cam.
+        <translation>Les càmeres OpenMV no registrades van perjudicar l&apos;ecosistema OpenMV de codi obert en socavar les vendes oficials d&apos;OpenMV Cam que ajuden a finançar el desenvolupament de programari OpenMV Cam.
 
 Vols registrar la teva OpenMV Cam ara?</translation>
     </message>
@@ -8630,21 +8658,21 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href="https://openmv.io/products/openmv-cam-board-key"&gt;here&lt;/a&gt;.</source>
-        <translation>Introduïu una clau de tauler per registrar la vostra OpenMV Cam.&lt;br/&gt;&lt;br/&gt;Si no teniu una clau de tauler, podeu comprar-ne una a OpenMV &lt;a href="https://openmv.io/products/openmv- cam-board-key"&gt;aquí&lt;/a&gt;.</translation>
+        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Introduïu una clau de tauler per registrar la vostra OpenMV Cam.&lt;br/&gt;&lt;br/&gt;Si no teniu una clau de tauler, podeu comprar-ne una a OpenMV &lt;a href=&quot;https://openmv.io/products/openmv- cam-board-key&quot;&gt;aquí&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+47" />
         <source>Registering OpenMV Cam...</source>
-        <translation>S'està registrant OpenMV Cam...</translation>
+        <translation>S&apos;està registrant OpenMV Cam...</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+33" />
         <source>Thank you for registering your OpenMV Cam!</source>
         <translation>Gràcies per registrar la teva càmera OpenMV!</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+27" />
         <source>Invalid Board Key for Board Type!</source>
         <translation>Clau de tauler no vàlida per al tipus de tauler!</translation>
     </message>
@@ -8656,7 +8684,7 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     <message>
         <location line="+6" />
         <source>Board Key already used!</source>
-        <translation>La clau del tauler ja s'ha utilitzat!</translation>
+        <translation>La clau del tauler ja s&apos;ha utilitzat!</translation>
     </message>
     <message>
         <location line="+6" />
@@ -8669,10 +8697,10 @@ Vols registrar la teva OpenMV Cam ara?</translation>
         <translation>Clau del tauler amb format no vàlid!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+223" />
-        <location line="+482" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+225" />
+        <location line="+503" />
         <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-83" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-84" />
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
@@ -8681,10 +8709,10 @@ Vols registrar la teva OpenMV Cam ara?</translation>
         <translation type="vanished">Configura la configuració</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+389" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+395" />
         <location line="+20" />
         <source>Save Script</source>
-        <translation>Guarda l'script</translation>
+        <translation>Guarda l&apos;script</translation>
     </message>
     <message>
         <location line="-19" />
@@ -8692,7 +8720,7 @@ Vols registrar la teva OpenMV Cam ara?</translation>
         <translation>Eliminar comentaris i convertir espais en pestanyes?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
@@ -8706,11 +8734,11 @@ Vols registrar la teva OpenMV Cam ara?</translation>
         <location line="+1101" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
-        <translation>Fitxers d'imatge (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
+        <translation>Fitxers d&apos;imatge (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Template</source>
@@ -8719,30 +8747,30 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     <message>
         <location line="-37" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.pgm *.ppm)</source>
-        <translation>Fitxers d'imatge (*.bmp *.jpg *.jpeg *.pgm *.ppm)</translation>
+        <translation>Fitxers d&apos;imatge (*.bmp *.jpg *.jpeg *.pgm *.ppm)</translation>
     </message>
     <message>
         <location line="+23" />
-        <location line="+67" />
+        <location line="+65" />
         <source>Please select a valid path on the OpenMV Cam!</source>
-        <translation>Seleccioneu un camí vàlid a l'OpenMV Cam!</translation>
+        <translation>Seleccioneu un camí vàlid a l&apos;OpenMV Cam!</translation>
     </message>
     <message>
-        <location line="-52" />
-        <location line="+67" />
-        <source>"%L1" is longer than a max length of %L2 characters!</source>
-        <translation>"%L1" té una longitud màxima de %L2 caràcters!</translation>
+        <location line="-50" />
+        <location line="+65" />
+        <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
+        <translation>&quot;%L1&quot; té una longitud màxima de %L2 caràcters!</translation>
     </message>
     <message>
-        <location line="-40" />
-        <location line="+7" />
+        <location line="-41" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Descriptor</source>
         <translation>Desa el descriptor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8750,7 +8778,7 @@ Vols registrar la teva OpenMV Cam ara?</translation>
         <translation>Fitxers de punts clau (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1113" />
+        <location line="-1112" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8768,17 +8796,17 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     <message>
         <location line="-19" />
         <location line="+13" />
-        <source>Cannot open the file "%L1"!</source>
-        <translation>No es pot obrir el fitxer "%L1"!</translation>
+        <source>Cannot open the file &quot;%L1&quot;!</source>
+        <translation>No es pot obrir el fitxer &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="-13" />
         <location line="+13" />
-        <source>Cannot open the example file "%L1"!</source>
-        <translation>No es pot obrir el fitxer d'exemple "%L1"!</translation>
+        <source>Cannot open the example file &quot;%L1&quot;!</source>
+        <translation>No es pot obrir el fitxer d&apos;exemple &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-467" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-468" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>Seleccioneu Drive</translation>
@@ -8786,11 +8814,11 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     <message>
         <location line="-27" />
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
-        <translation>No s'han trobat unitats vàlides per associar-se amb la vostra càmera OpenMV!</translation>
+        <translation>No s&apos;han trobat unitats vàlides per associar-se amb la vostra càmera OpenMV!</translation>
     </message>
     <message>
-        <source>"%L1" is the only drive available so it must be your OpenMV Cam's drive.</source>
-        <translation type="vanished">"%L1" és l'única unitat disponible, de manera que ha de ser la unitat de l'OpenMV Cam.</translation>
+        <source>&quot;%L1&quot; is the only drive available so it must be your OpenMV Cam&apos;s drive.</source>
+        <translation type="vanished">&quot;%L1&quot; és l&apos;única unitat disponible, de manera que ha de ser la unitat de l&apos;OpenMV Cam.</translation>
     </message>
     <message>
         <location line="+27" />
@@ -8798,24 +8826,24 @@ Vols registrar la teva OpenMV Cam ara?</translation>
         <translation>Si us plau, associa una unitat amb la teva càmera OpenMV</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>Drive: %L1</source>
         <translation>Unitat: %L1</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+42" />
         <source>Debug Protocol Settings</source>
         <translation>Configuració del protocol de depuració</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Protocol Version %1 - System Info:</source>
-        <translation>Versió del protocol % 1 - Informació del sistema:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25" />
         <source>Host Stats:</source>
-        <translation>Estadístiques de l'amfitrió:</translation>
+        <translation>Estadístiques de l&apos;amfitrió:</translation>
     </message>
     <message>
         <location line="+23" />
@@ -8860,7 +8888,7 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     <message>
         <location line="+6" />
         <source>Script State Polling (ms)</source>
-        <translation>Sondeig d'estat de script (ms)</translation>
+        <translation>Sondeig d&apos;estat de script (ms)</translation>
     </message>
     <message>
         <location line="+5" />
@@ -8873,30 +8901,30 @@ Vols registrar la teva OpenMV Cam ara?</translation>
         <translation>Sondeig del perfilador de codi (ms)</translation>
     </message>
     <message>
-        <location line="+354" />
+        <location line="+391" />
         <location line="+26" />
         <location line="+7" />
-        <source>Failed to flush "%L1"!</source>
-        <translation>No s'ha pogut esborrar "%L1"!</translation>
+        <source>Failed to flush &quot;%L1&quot;!</source>
+        <translation>No s&apos;ha pogut esborrar &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34" />
-        <location line="+13" />
+        <location line="+12" />
         <location line="+31" />
         <location line="+9" />
-        <location line="+87" />
+        <location line="+89" />
         <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -8906,7 +8934,7 @@ Vols registrar la teva OpenMV Cam ara?</translation>
         <translation>Nova Terminal</translation>
     </message>
     <message>
-        <location line="-637" />
+        <location line="-641" />
         <source>Connect to serial port</source>
         <translation>Connecteu-vos al port sèrie</translation>
     </message>
@@ -8927,7 +8955,7 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2021" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2227" />
         <source>Please select a serial port</source>
         <translation>Seleccioneu un port sèrie</translation>
     </message>
@@ -8937,7 +8965,7 @@ Vols registrar la teva OpenMV Cam ara?</translation>
         <translation>Introduïu una velocitat en baudis</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+96" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
         <source>Try doing:
 
@@ -8950,21 +8978,21 @@ Vols registrar la teva OpenMV Cam ara?</translation>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+0" />
         <source>...in a terminal and then restart your computer.</source>
-        <translation>...en un terminal i després reinicieu l'ordinador.</translation>
+        <translation>...en un terminal i després reinicieu l&apos;ordinador.</translation>
     </message>
     <message>
         <location line="+17" />
-        <location line="+138" />
+        <location line="+139" />
         <location line="+7" />
-        <location line="+236" />
+        <location line="+237" />
         <location line="+7" />
-        <source>Invalid string: "%L1"!</source>
-        <translation>Cadena no vàlida: "%L1"!</translation>
+        <source>Invalid string: &quot;%L1&quot;!</source>
+        <translation>Cadena no vàlida: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-381" />
         <source>No serial ports found!</source>
-        <translation>No s'han trobat ports sèrie!</translation>
+        <translation>No s&apos;han trobat ports sèrie!</translation>
     </message>
     <message>
         <location line="+7" />
@@ -8973,47 +9001,47 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+243" />
+        <location line="+244" />
         <source> Connect to a Server </source>
         <translation> Connecteu-vos a un servidor </translation>
     </message>
     <message>
-        <location line="-242" />
-        <location line="+243" />
+        <location line="-243" />
+        <location line="+244" />
         <source> Start a Server </source>
         <translation> Inicieu un servidor </translation>
     </message>
     <message>
         <location line="-234" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>Introduïu una adreça IP (o un nom de domini) i un port (p. ex., xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-222" />
         <source>UDP Client Connection - %1</source>
         <translation>Connexió de client UDP - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>Introduïu un número de port (introduïu 0 per a qualsevol port lliure aleatori)</translation>
     </message>
     <message>
-        <location line="-137" />
+        <location line="-138" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>Connectar-se a un servidor TCP com a client o iniciar un servidor TCP?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+36" />
         <source>TCP Client Connection - %1</source>
         <translation>Connexió de client TCP - %1</translation>
     </message>
     <message>
-        <location line="+244" />
+        <location line="+243" />
         <source>Error: Option Index!</source>
-        <translation>Error: índex d'opcions!</translation>
+        <translation>Error: índex d&apos;opcions!</translation>
     </message>
     <message>
         <location line="+81" />
@@ -9023,7 +9051,7 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     <message>
         <location line="+8" />
         <source>Source image location?</source>
-        <translation>Ubicació de la imatge d'origen?</translation>
+        <translation>Ubicació de la imatge d&apos;origen?</translation>
     </message>
     <message>
         <location line="+3" />
@@ -9033,29 +9061,29 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     <message>
         <location line="+1" />
         <source> Image File </source>
-        <translation> Arxiu d'imatge </translation>
+        <translation> Arxiu d&apos;imatge </translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
-        <translation>La tupla llindar seleccionada s'actualitzarà al tancar.</translation>
+        <translation>La tupla llindar seleccionada s&apos;actualitzarà al tancar.</translation>
     </message>
     <message>
         <location line="-18" />
         <source>No image loaded!</source>
-        <translation>No s'ha carregat cap imatge!</translation>
+        <translation>No s&apos;ha carregat cap imatge!</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Image File</source>
-        <translation>Arxiu d'imatge</translation>
+        <translation>Arxiu d&apos;imatge</translation>
     </message>
     <message>
-        <location line="+71" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+70" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+704" />
         <source>What would you like to do?</source>
-        <translation>Què t'agradaria fer?</translation>
+        <translation>Què t&apos;agradaria fer?</translation>
     </message>
     <message>
         <location line="+3" />
@@ -9068,7 +9096,7 @@ Vols registrar la teva OpenMV Cam ara?</translation>
         <translation> Fusionar fitxers </translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9082,17 +9110,17 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     <message>
         <location line="+1" />
         <source>Failed to save the edited keypoints for an unknown reason!</source>
-        <translation>No s'han pogut desar els punts clau editats per un motiu desconegut!</translation>
+        <translation>No s&apos;han pogut desar els punts clau editats per un motiu desconegut!</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Failed to find the keypoints image file!</source>
-        <translation>No s'ha pogut trobar el fitxer d'imatge de punts clau!</translation>
+        <translation>No s&apos;ha pogut trobar el fitxer d&apos;imatge de punts clau!</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Failed to load the keypoints file for an unknown reason!</source>
-        <translation>No s'ha pogut carregar el fitxer de punts clau per un motiu desconegut!</translation>
+        <translation>No s&apos;ha pogut carregar el fitxer de punts clau per un motiu desconegut!</translation>
     </message>
     <message>
         <location line="+7" />
@@ -9110,20 +9138,20 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     <message>
         <location line="+1" />
         <source>Failed to save the merged keypoints for an unknown reason!</source>
-        <translation>No s'han pogut desar els punts clau combinats per un motiu desconegut!</translation>
+        <translation>No s&apos;han pogut desar els punts clau combinats per un motiu desconegut!</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Failed to load the first keypoints file for an unknown reason!</source>
-        <translation>No s'ha pogut carregar el primer fitxer de punts clau per un motiu desconegut!</translation>
+        <translation>No s&apos;ha pogut carregar el primer fitxer de punts clau per un motiu desconegut!</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>What tag images from the %L1 tag family do you want to generate?</source>
-        <translation>Quines imatges d'etiquetes de la família d'etiquetes %L1 voleu generar?</translation>
+        <translation>Quines imatges d&apos;etiquetes de la família d&apos;etiquetes %L1 voleu generar?</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Min (%1)</source>
         <translation>Mínim (%1)</translation>
     </message>
@@ -9135,20 +9163,20 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     <message>
         <location line="+5" />
         <source>Inlcude tag family and ID number in the image</source>
-        <translation>Incloeu la família d'etiquetes i el número d'identificació a la imatge</translation>
+        <translation>Incloeu la família d&apos;etiquetes i el número d&apos;identificació a la imatge</translation>
     </message>
     <message numerus="yes">
         <location line="+18" />
         <source>AprilTag Generator - Where do you want to save %n tag image(s) to?</source>
-        <translation>
-            <numerusform>AprilTag Generator: on voleu desar %n imatges d'etiquetes?</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+5" />
         <source>Generating images...</source>
-        <translation>S'estan generant imatges...</translation>
+        <translation>S&apos;estan generant imatges...</translation>
     </message>
     <message>
         <location line="+41" />
@@ -9166,7 +9194,7 @@ Vols registrar la teva OpenMV Cam ara?</translation>
         <translation>Generació completa!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1510" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>Nous recursos OpenMV IDE estan disponibles (per exemple, exemples, microprogramari, documentació, etc.).</translation>
     </message>
@@ -9177,44 +9205,44 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+288" />
-        <location line="+143" />
+        <location line="+289" />
+        <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
         <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
         <location line="+46" />
-        <location line="+75" />
+        <location line="+73" />
         <location line="+46" />
-        <location line="+74" />
+        <location line="+72" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+400" />
         <location line="+50" />
-        <location line="+873" />
+        <location line="+871" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
         <location line="+57" />
         <source>Downloading...</source>
-        <translation>S'està baixant...</translation>
+        <translation>S&apos;està baixant...</translation>
     </message>
     <message>
-        <location line="-417" />
+        <location line="-440" />
         <source>Installing...</source>
-        <translation>S'està instal·lant...</translation>
+        <translation>S&apos;està instal·lant...</translation>
     </message>
     <message>
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
-        <source>Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
-        <translation>Tanqueu tots els programes que estiguin veient/editant les dades de l'aplicació d'OpenMV IDE i després reinicieu l'OpenMV IDE!</translation>
+        <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
+        <translation>Tanqueu tots els programes que estiguin veient/editant les dades de l&apos;aplicació d&apos;OpenMV IDE i després reinicieu l&apos;OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
-        <translation>Instal·lació amb èxit! Si us plau, reinicieu l'IDE OpenMV.</translation>
+        <translation>Instal·lació amb èxit! Si us plau, reinicieu l&apos;IDE OpenMV.</translation>
     </message>
     <message>
         <location line="+28" />
@@ -9225,79 +9253,129 @@ Vols registrar la teva OpenMV Cam ara?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+254" />
+        <location line="+273" />
         <location line="+88" />
-        <source>Cannot open the resources file "%L1"!</source>
-        <translation>No es pot obrir el fitxer de recursos "%L1"!</translation>
+        <source>Cannot open the resources file &quot;%L1&quot;!</source>
+        <translation>No es pot obrir el fitxer de recursos &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-314" />
-        <location line="+254" />
+        <location line="-333" />
+        <location line="+273" />
         <location line="+95" />
-        <source>Network request failed "%L1"!</source>
-        <translation>La sol·licitud de xarxa ha fallat "%L1"!</translation>
+        <source>Network request failed &quot;%L1&quot;!</source>
+        <translation>La sol·licitud de xarxa ha fallat &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-315" />
+        <location line="-335" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation>Firmware Binary ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+119" />
-        <location line="+588" />
-        <location line="+217" />
-        <location line="+2205" />
+        <location line="+12" />
+        <location line="+117" />
+        <location line="+720" />
+        <location line="+227" />
+        <location line="+2414" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Esborreu el sistema de fitxers de greixos intern</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+119" />
-        <location line="+589" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+117" />
+        <location line="+722" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
-        <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
-        <translation>Si activeu aquesta opció, s'eliminaran tots els fitxers del sistema de fitxers de greixos d'OpenMV CAM. Això no esborra els fitxers en cap targeta SD extraïble (si s’insereix).</translation>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <translation>Si activeu aquesta opció, s&apos;eliminaran tots els fitxers del sistema de fitxers de greixos d&apos;OpenMV CAM. Això no esborra els fitxers en cap targeta SD extraïble (si s’insereix).</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+708" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+839" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Restableix el sistema de fitxers ROMFS</translation>
     </message>
     <message>
-        <location line="-3203" />
-        <location line="+708" />
-        <location line="+215" />
-        <location line="+2205" />
+        <location line="-3552" />
+        <location line="+840" />
+        <location line="+225" />
+        <location line="+2412" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Si activeu aquesta opció, el sistema de fitxers ROM de la vostra càmera OpenMV es restablirà de nou.</translation>
     </message>
     <message>
-        <location line="-3160" />
+        <location line="-3510" />
         <location line="+45" />
         <source>Bootloader</source>
-        <translation>Carregador d'arrencada</translation>
+        <translation>Carregador d&apos;arrencada</translation>
     </message>
     <message>
-        <location line="+2991" />
+        <location line="+28" />
+        <source>Force bootloader</source>
+        <translation>Força el carregador d&apos;arrencada</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Force enter the OpenMV Cam bootloader. May result in the OpenMV Cam bootloader not automatically exiting on older boards.</source>
+        <translation>Força l&apos;entrada al carregador d&apos;arrencada OpenMV Cam. Pot fer que el carregador d&apos;arrencada de l&apos;OpenMV Cam no surti automàticament en taulers antics.</translation>
+    </message>
+    <message>
+        <location line="+693" />
+        <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
+        <translation>Instal·leu el microprogramari de la versió més recent (v%L1.%L2.%L3)</translation>
+    </message>
+    <message>
+        <location line="+1063" />
+        <location line="+192" />
+        <source>Failed to copy firmware files to temporary directory!</source>
+        <translation>No s&apos;han pogut copiar els fitxers del microprogramari al directori temporal!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Original firmware folder does not exist!</source>
+        <translation>La carpeta de firmware original no existeix!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Failed to create temporary directory!</source>
+        <translation>No s&apos;ha pogut crear el directori temporal!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <source>Only loading bootloader.bin files is supported with the ST Cube Programmer!</source>
+        <translation>Només s&apos;admet la càrrega de fitxers bootloader.bin amb el programador ST Cube!</translation>
+    </message>
+    <message>
+        <location line="+151" />
+        <source>Bootloader update complete!
+
+</source>
+        <translation>Actualització del carregador d&apos;arrencada completa!</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Connect your OpenMV Cam now.</source>
+        <translation>Connecteu ara la vostra càmera OpenMV.</translation>
+    </message>
+    <message>
+        <location line="+1377" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
         <translation>Podeu trobar més exemples al menú Fitxer -&gt; Exemples. 
 
-En particular, consulteu els exemples de processament d'imatges -&gt; Seguiment de color i aprenentatge automàtic -&gt; TensorFlow.</translation>
+En particular, consulteu els exemples de processament d&apos;imatges -&gt; Seguiment de color i aprenentatge automàtic -&gt; TensorFlow.</translation>
     </message>
     <message>
-        <location line="-3104" />
-        <location line="+4" />
+        <location line="-3455" />
+        <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
         <source>Firmware Path</source>
@@ -9312,26 +9390,26 @@ En particular, consulteu els exemples de processament d'imatges -&gt; Seguiment 
         <translation type="vanished">Esborra el sistema de fitxers intern</translation>
     </message>
     <message>
-        <source>If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
-        <translation type="vanished">Si activeu aquesta opció, s'eliminaran tots els fitxers de la unitat flash interna de l'OpenMV Cam. Això no esborra els fitxers de cap targeta SD extraïble (si s'insereix).</translation>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <translation type="vanished">Si activeu aquesta opció, s&apos;eliminaran tots els fitxers de la unitat flash interna de l&apos;OpenMV Cam. Això no esborra els fitxers de cap targeta SD extraïble (si s&apos;insereix).</translation>
     </message>
     <message>
-        <source>Loading firmware via DFU always erases your OpenMV Cam's internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
-        <translation type="vanished">La càrrega de firmware mitjançant DFU sempre esborra la unitat flash interna de l'OpenMV Cam. Això no esborra els fitxers de cap targeta SD extraïble (si s'insereix).</translation>
+        <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
+        <translation type="vanished">La càrrega de firmware mitjançant DFU sempre esborra la unitat flash interna de l&apos;OpenMV Cam. Això no esborra els fitxers de cap targeta SD extraïble (si s&apos;insereix).</translation>
     </message>
     <message>
         <location line="+21" />
-        <location line="+130" />
+        <location line="+148" />
         <source>Run</source>
         <translation>Correr</translation>
     </message>
     <message>
-        <location line="-86" />
-        <source>"%L1" is not a file!</source>
-        <translation>"%L1" no és un fitxer!</translation>
+        <location line="-105" />
+        <source>&quot;%L1&quot; is not a file!</source>
+        <translation>&quot;%L1&quot; no és un fitxer!</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+67" />
         <source>Update ROMFS file system</source>
         <translation>Actualitzeu el sistema de fitxers ROMFS</translation>
     </message>
@@ -9341,9 +9419,9 @@ En particular, consulteu els exemples de processament d'imatges -&gt; Seguiment 
         <translation>Si activeu aquesta opció, el sistema de fitxers ROM de la vostra càmera OpenMV s’actualitzarà a l’última versió de desenvolupament.</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+125" />
         <source>Extracting...</source>
-        <translation>S'està extraient...</translation>
+        <translation>S&apos;està extraient...</translation>
     </message>
     <message>
         <location line="+8" />
@@ -9361,17 +9439,16 @@ En particular, consulteu els exemples de processament d'imatges -&gt; Seguiment 
         <translation>Tauler desconegut</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+344" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
-        <translation>S'ha detectat un tauler en mode DFU. Què t'agradaria fer?</translation>
+        <translation>S&apos;ha detectat un tauler en mode DFU. Què t&apos;agradaria fer?</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Install the lastest release firmware (v%L1.%L2.%L3)</source>
-        <translation>Instal·leu el microprogramari de la versió més recent (v%L1.%L2.%L3)</translation>
+        <translation type="vanished">Instal·leu el microprogramari de la versió més recent (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Load a specific firmware</source>
         <translation>Carregueu un firmware específic</translation>
     </message>
@@ -9380,38 +9457,37 @@ En particular, consulteu els exemples de processament d'imatges -&gt; Seguiment 
         <translation type="vanished">Només cal esborrar el sistema de fitxers intern</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+92" />
         <source>No OpenMV Cams found!</source>
-        <translation>No s'han trobat càmeres OpenMV!</translation>
+        <translation>No s&apos;han trobat càmeres OpenMV!</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+56" />
         <source>Do you have an OpenMV Cam connected and is it bricked?</source>
         <translation>Tens una càmera OpenMV connectada i està entallada?</translation>
     </message>
     <message>
-        <location line="+849" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
-Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
-        <translation>Només la càrrega *.dfu és compatible amb el carregador d'arrencada de recuperació STM32.
+Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!</source>
+        <translation type="vanished">Només la càrrega *.dfu és compatible amb el carregador d&apos;arrencada de recuperació STM32.
 
- Seleccioneu un fitxer Bootloader.dfu i torneu -ho a provar. Tingueu en compte que la càrrega de Firmware.dfu o OpenMV.dfu (Bootloader + Firmware) pot no funcionar a les plaques STM32H7 a causa d'un error al carregador d'arrencada ROM del xip.</translation>
+ Seleccioneu un fitxer Bootloader.dfu i torneu -ho a provar. Tingueu en compte que la càrrega de Firmware.dfu o OpenMV.dfu (Bootloader + Firmware) pot no funcionar a les plaques STM32H7 a causa d&apos;un error al carregador d&apos;arrencada ROM del xip.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+987" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>Només la càrrega *.bin i *.img són compatibles amb el carregador d’inici intern.</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Only loading *.bin and *.img files are supported for the IMX bootloader!</source>
-        <translation>Només la càrrega *.bin i *.img són compatibles amb el carregador d'arrencada IMX.</translation>
+        <translation>Només la càrrega *.bin i *.img són compatibles amb el carregador d&apos;arrencada IMX.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+107" />
         <source>Only loading *.bin, *.dfu, and *.img files are supported for the Arduino bootloader!</source>
-        <translation>Només els fitxers de càrrega *.bin, *.dfu i *.img són compatibles amb el carregador d'arrencada Arduino!</translation>
+        <translation>Només els fitxers de càrrega *.bin, *.dfu i *.img són compatibles amb el carregador d&apos;arrencada Arduino!</translation>
     </message>
     <message>
         <location line="+21" />
@@ -9421,23 +9497,24 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
     <message>
         <location line="+20" />
         <source>Only loading *.bin files is supported for the Picotool bootloader!</source>
-        <translation>Només la càrrega *.Bin Files és compatible amb el carregador d'arrencada de Picotool.</translation>
+        <translation>Només la càrrega *.Bin Files és compatible amb el carregador d&apos;arrencada de Picotool.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
+        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
-        <translation>Tingueu en compte que la càrrega de Firmware.dfu o OpenMV.dfu (Bootloader + Firmware) pot no funcionar a les plaques STM32H7 a causa d'un error al carregador d'arrencada ROM del xip.
+        <translation>Tingueu en compte que la càrrega de Firmware.dfu o OpenMV.dfu (Bootloader + Firmware) pot no funcionar a les plaques STM32H7 a causa d&apos;un error al carregador d&apos;arrencada ROM del xip.
 
- OpenMV recomana només carregar el carregador d'arrencada.dfu per reparar el carregador d'arrencada.</translation>
+ OpenMV recomana només carregar el carregador d&apos;arrencada.dfu per reparar el carregador d&apos;arrencada.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-976" />
-        <location line="+657" />
-        <location line="+1750" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1398" />
+        <location line="+252" />
+        <location line="+681" />
+        <location line="+1936" />
         <source>Please select the board type</source>
         <translation>Seleccioneu el tipus de tauler</translation>
     </message>
@@ -9446,39 +9523,39 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Vols esborrar el sistema de fitxers intern?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2295" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2500" />
         <source>No released firmware available for the attached board!</source>
         <translation>No hi ha cap firmware llançat disponible per a la placa adjunta!</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+61" />
         <source>Please select a DFU Device</source>
         <translation>Seleccioneu un dispositiu DFU</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-83" />
         <location line="+170" />
         <location line="+44" />
-        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Actualitzeu el carregador d'arrencada a la darrera versió i instal·leu el SoftDevice per flashejar el microprogramari OpenMV. Podeu trobar més informació a &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Actualitzeu el carregador d&apos;arrencada a la darrera versió i instal·leu el SoftDevice per flashejar el microprogramari OpenMV. Podeu trobar més informació a &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-1065" />
-        <location line="+3012" />
+        <location line="-1191" />
+        <location line="+3343" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>ADVERTIMENT: L’actualització a la nova versió del firmware requereix que el sistema de fitxers FAT s’esborri.</translation>
     </message>
     <message>
-        <location line="-2527" />
+        <location line="-2848" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
-        <translation>El vostre sistema operatiu ha detectat problemes d'USB amb els dispositius següents en aquest sistema. Si us plau, corregeix o elimina aquests dispositius, ja que provocaran problemes de connexió. 
+        <translation>El vostre sistema operatiu ha detectat problemes d&apos;USB amb els dispositius següents en aquest sistema. Si us plau, corregeix o elimina aquests dispositius, ja que provocaran problemes de connexió. 
 
 %1</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+173" />
         <source>Just erase the internal FAT file system</source>
         <translation>Acabeu d’esborrar el sistema de fitxers de greix intern</translation>
     </message>
@@ -9493,17 +9570,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Restableix el sistema de fitxers ROM</translation>
     </message>
     <message>
-        <location line="+219" />
-        <location line="+2206" />
+        <location line="+229" />
+        <location line="+2415" />
         <source>Upgrade options:</source>
-        <translation>Opcions d'actualització:</translation>
+        <translation>Opcions d&apos;actualització:</translation>
     </message>
     <message>
-        <location line="-2122" />
+        <location line="-2327" />
         <location line="+169" />
         <location line="+44" />
-        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Si us plau, escurça REC a GND i restableix el teu tauler. Podeu trobar més informació a &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Si us plau, escurça REC a GND i restableix el teu tauler. Podeu trobar més informació a &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+25" />
@@ -9515,9 +9592,9 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (Premeu Cancel·la si triga més de 5 segons).</translation>
     </message>
     <message>
-        <location line="+132" />
+        <location line="+143" />
         <source>Timeout error while getting firmware version!</source>
-        <translation>Error d'espera en obtenir la versió del firmware!</translation>
+        <translation>Error d&apos;espera en obtenir la versió del firmware!</translation>
     </message>
     <message>
         <location line="+4" />
@@ -9531,17 +9608,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+191" />
-        <location line="+570" />
+        <location line="+199" />
+        <location line="+733" />
         <source>Timeout error while getting board architecture!</source>
-        <translation>Error de temps d'espera en obtenir l'arquitectura del tauler!</translation>
+        <translation>Error de temps d&apos;espera en obtenir l&apos;arquitectura del tauler!</translation>
     </message>
     <message>
         <source>Unsupported board architecture!</source>
         <translation type="vanished">Arquitectura de tauler no compatible!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-633" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Desconnecteu la vostra OpenMV Cam i torneu-la a connectar...</translation>
@@ -9564,36 +9641,36 @@ Premeu Cancel·la per passar a la reprogramació de DFU.</translation>
         <source>
 
 Hit cancel to skip to bootloader recovery reprogramming.</source>
-        <translation>Feu clic a Cancel·la per saltar -se a la reprogramació de la recuperació del carregador d'arrencada.</translation>
+        <translation>Feu clic a Cancel·la per saltar -se a la reprogramació de la recuperació del carregador d&apos;arrencada.</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+0" />
         <source>Connecting... (Hit cancel if this takes more than 5 seconds).</source>
-        <translation>S'està connectant... (Premeu Cancel·la si triga més de 5 segons).</translation>
+        <translation>S&apos;està connectant... (Premeu Cancel·la si triga més de 5 segons).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+38" />
-        <source>Unable to connect to your OpenMV Cam's normal bootloader!</source>
-        <translation>No es pot connectar al carregador d'arrencada normal de l'OpenMV Cam!</translation>
+        <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
+        <translation>No es pot connectar al carregador d&apos;arrencada normal de l&apos;OpenMV Cam!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+129" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+131" />
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
-        <translation>L'IDE d'OpenMV encara pot provar de reparar l'OpenMV Cam mitjançant el carregador d'arrencada DFU de l'OpenMV Cam.
+        <translation>L&apos;IDE d&apos;OpenMV encara pot provar de reparar l&apos;OpenMV Cam mitjançant el carregador d&apos;arrencada DFU de l&apos;OpenMV Cam.
 
 Continuar?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-288" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
         <location line="+46" />
-        <location line="+195" />
+        <location line="+191" />
         <location line="+47" />
         <source>Erasing...</source>
-        <translation>S'està esborrant...</translation>
+        <translation>S&apos;està esborrant...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-173" />
@@ -9609,7 +9686,7 @@ Continuar?</translation>
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-837" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-835" />
         <location line="+41" />
         <location line="+51" />
         <location line="+44" />
@@ -9626,7 +9703,7 @@ Continuar?</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+221" />
+        <location line="+219" />
         <location line="+50" />
         <location line="+51" />
         <location line="+42" />
@@ -9636,7 +9713,7 @@ Continuar?</translation>
         <location line="+42" />
         <location line="+41" />
         <source>Timeout Error!</source>
-        <translation>Error de temps d'espera!</translation>
+        <translation>Error de temps d&apos;espera!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-58" />
@@ -9679,7 +9756,7 @@ Continuar?</translation>
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
 </source>
-        <translation>L'OpenMV Cam començarà a executar la seva autoprova integrada si no hi ha cap targeta SD connectada... això pot trigar una estona.
+        <translation>L&apos;OpenMV Cam començarà a executar la seva autoprova integrada si no hi ha cap targeta SD connectada... això pot trigar una estona.
 
 </translation>
     </message>
@@ -9690,11 +9767,11 @@ Continuar?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
         <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
-        <source>Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.</source>
-        <translation>Feu clic a D'acord quan el LED RGB de l'OpenMV Cam comenci a parpellejar en blau, cosa que indica que l'autoprova s'ha completat.</translation>
+        <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
+        <translation>Feu clic a D&apos;acord quan el LED RGB de l&apos;OpenMV Cam comenci a parpellejar en blau, cosa que indica que l&apos;autoprova s&apos;ha completat.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
@@ -9712,12 +9789,12 @@ Continuar?</translation>
 
 If you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py.
 
-In this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).</source>
+In this case click OK when you see your OpenMV Cam&apos;s internal flash drive mount (a window may or may not pop open).</source>
         <translation>
 
-Si heu sobreescrit main.py a l'OpenMV Cam i no heu esborrat el disc, l'OpenMV Cam només executarà aquest main.py.
+Si heu sobreescrit main.py a l&apos;OpenMV Cam i no heu esborrat el disc, l&apos;OpenMV Cam només executarà aquest main.py.
 
-En aquest cas, feu clic a D'acord quan vegeu que la unitat flash interna de l'OpenMV Cam està muntada (una finestra pot obrir-se o no).</translation>
+En aquest cas, feu clic a D&apos;acord quan vegeu que la unitat flash interna de l&apos;OpenMV Cam està muntada (una finestra pot obrir-se o no).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+32" />
@@ -9732,11 +9809,11 @@ En aquest cas, feu clic a D'acord quan vegeu que la unitat flash interna de l'Op
     <message>
         <location line="+9" />
         <source>No IMX settings found!</source>
-        <translation>No s'ha trobat cap configuració d'IMX!</translation>
+        <translation>No s&apos;ha trobat cap configuració d&apos;IMX!</translation>
     </message>
     <message>
-        <source>Failed to eject "%L1"!</source>
-        <translation type="vanished">No s'ha pogut expulsar "%L1"!</translation>
+        <source>Failed to eject &quot;%L1&quot;!</source>
+        <translation type="vanished">No s&apos;ha pogut expulsar &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="+14" />
@@ -9749,10 +9826,10 @@ Premeu Cancel·la per passar a la reprogramació SBL.</translation>
     </message>
     <message>
         <location line="+42" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
-        <translation>L'OpenMV IDE encara pot intentar reparar l'OpenMV Cam mitjançant el carregador d'arrencada SBL de l'OpenMV Cam.
+        <translation>L&apos;OpenMV IDE encara pot intentar reparar l&apos;OpenMV Cam mitjançant el carregador d&apos;arrencada SBL de l&apos;OpenMV Cam.
 
 Continuar?</translation>
     </message>
@@ -9760,10 +9837,10 @@ Continuar?</translation>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</source>
-        <translation>Desconnecteu la vostra OpenMV Cam de l'ordinador, afegiu un cable de pont entre els pins SBL i de 3,3 V i, a continuació, torneu a connectar la vostra OpenMV Cam a l'ordinador.
+Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
+        <translation>Desconnecteu la vostra OpenMV Cam de l&apos;ordinador, afegiu un cable de pont entre els pins SBL i de 3,3 V i, a continuació, torneu a connectar la vostra OpenMV Cam a l&apos;ordinador.
 
-Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada SBL de l'OpenMV Cam.</translation>
+Feu clic al botó D&apos;acord després que s&apos;hagi enumerat el carregador d&apos;arrencada SBL de l&apos;OpenMV Cam.</translation>
     </message>
     <message>
         <location line="+60" />
@@ -9788,7 +9865,7 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
         <source>Disconnect your OpenMV Cam from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
 </source>
-        <translation>Desconnecteu la vostra OpenMV Cam de l'ordinador, traieu el cable de pont entre els pins SBL i 3.3V i, a continuació, torneu a connectar la vostra OpenMV Cam a l'ordinador.
+        <translation>Desconnecteu la vostra OpenMV Cam de l&apos;ordinador, traieu el cable de pont entre els pins SBL i 3.3V i, a continuació, torneu a connectar la vostra OpenMV Cam a l&apos;ordinador.
 
 </translation>
     </message>
@@ -9803,7 +9880,7 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
         <location line="+51" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-1" />
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
-        <translation>Feu clic al botó D'acord després que l'OpenMV Cam s'hagi enumerat i hagi acabat d'executar la prova automàtica integrada (el LED blau parpelleja; això triga una estona).</translation>
+        <translation>Feu clic al botó D&apos;acord després que l&apos;OpenMV Cam s&apos;hagi enumerat i hagi acabat d&apos;executar la prova automàtica integrada (el LED blau parpelleja; això triga una estona).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-339" />
@@ -9812,19 +9889,19 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-345" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-347" />
         <source>No DFU settings for the selected board type!</source>
         <translation>No hi ha paràmetres de DFU per al tipus de tauler seleccionat!</translation>
     </message>
     <message>
         <location line="+55" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+104" />
         <source>No DFU settings for the selected device!</source>
         <translation>No hi ha cap configuració de DFU per al dispositiu seleccionat!</translation>
     </message>
     <message>
         <location line="+32" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+47" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
         <source>Erasing Disk</source>
         <translation>Esborrant disc</translation>
@@ -9853,8 +9930,8 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-933" />
-        <location line="+934" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-931" />
+        <location line="+932" />
         <source>Flashing Firmware</source>
         <translation>Firmware intermitent</translation>
     </message>
@@ -9867,7 +9944,7 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
         <location line="+26" />
         <location line="+41" />
         <source>DFU firmware update failed!</source>
-        <translation>L'actualització del microprogramari DFU ha fallat!</translation>
+        <translation>L&apos;actualització del microprogramari DFU ha fallat!</translation>
     </message>
     <message>
         <location line="-13" />
@@ -9900,17 +9977,17 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
     </message>
     <message>
         <location line="+14" />
-        <source>Your %1 doesn't have an internal FAT file system.</source>
+        <source>Your %1 doesn&apos;t have an internal FAT file system.</source>
         <translation>El vostre %1 no té un sistema de fitxers de greix intern.</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
-        <source>Your %1 doesn't have an ROM file system.</source>
+        <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>El vostre %1 no té un sistema de fitxers ROM.</translation>
     </message>
     <message>
-        <source>Your Nano 33 BLE doesn't have an onboard data flash disk.</source>
+        <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
         <translation type="vanished">El vostre Nano 33 BLE no té cap disc flash de dades a bord.</translation>
     </message>
     <message>
@@ -9925,7 +10002,7 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
     <message>
         <location line="+13" />
         <source>BOSSAC firmware update failed!</source>
-        <translation>L'actualització del firmware BOSSAC ha fallat!</translation>
+        <translation>L&apos;actualització del firmware BOSSAC ha fallat!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-50" />
@@ -9949,7 +10026,7 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
     <message>
         <location line="+13" />
         <source>PicoTool firmware update failed!</source>
-        <translation>L'actualització del microprogramari PicoTool ha fallat!</translation>
+        <translation>L&apos;actualització del microprogramari PicoTool ha fallat!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-521" />
@@ -9971,10 +10048,10 @@ Continuar?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>DFU update erases your OpenMV Cam's internal flash file system.
+        <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
-        <translation>L'actualització DFU esborra el sistema de fitxers flash intern de l'OpenMV Cam.
+        <translation>L&apos;actualització DFU esborra el sistema de fitxers flash intern de l&apos;OpenMV Cam.
 
 Feu una còpia de seguretat de les vostres dades abans de continuar!</translation>
     </message>
@@ -9982,23 +10059,23 @@ Feu una còpia de seguretat de les vostres dades abans de continuar!</translatio
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</source>
-        <translation>Desconnecteu l'OpenMV Cam de l'ordinador, afegiu un cable de pont entre els pins BOOT i RST i, a continuació, torneu a connectar l'OpenMV Cam a l'ordinador.
+Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.</source>
+        <translation>Desconnecteu l&apos;OpenMV Cam de l&apos;ordinador, afegiu un cable de pont entre els pins BOOT i RST i, a continuació, torneu a connectar l&apos;OpenMV Cam a l&apos;ordinador.
 
-Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada DFU de l'OpenMV Cam.</translation>
+Feu clic al botó D&apos;acord després que s&apos;hagi enumerat el carregador d&apos;arrencada DFU de l&apos;OpenMV Cam.</translation>
     </message>
     <message>
         <location line="+11" />
         <location line="+11" />
         <source>Flashing Bootloader</source>
-        <translation>Carregador d'arrencada intermitent</translation>
+        <translation>Carregador d&apos;arrencada intermitent</translation>
     </message>
     <message>
         <location line="+14" />
         <source>DFU bootloader reset complete!
 
 </source>
-        <translation>S'ha completat el restabliment del carregador d'arrencada de DFU!
+        <translation>S&apos;ha completat el restabliment del carregador d&apos;arrencada de DFU!
 
 </translation>
     </message>
@@ -10007,7 +10084,7 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
         <source>Disconnect your OpenMV Cam from your computer and remove the jumper wire between the BOOT and RST pins.
 
 </source>
-        <translation>Desconnecteu l'OpenMV Cam de l'ordinador i traieu el cable de pont entre els pins BOOT i RST.
+        <translation>Desconnecteu l&apos;OpenMV Cam de l&apos;ordinador i traieu el cable de pont entre els pins BOOT i RST.
 
 </translation>
     </message>
@@ -10018,30 +10095,30 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
     </message>
     <message>
         <source>OpenMV IDE will now try to update your OpenMV Cam again.</source>
-        <translation type="vanished">L'OpenMV IDE ara intentarà actualitzar de nou l'OpenMV Cam.</translation>
+        <translation type="vanished">L&apos;OpenMV IDE ara intentarà actualitzar de nou l&apos;OpenMV Cam.</translation>
     </message>
     <message>
         <location line="+25" />
         <source>Disconnect your OpenMV Cam from your computer, remove the jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
 
 </source>
-        <translation>Desconnecteu l'OpenMV Cam de l'ordinador, traieu el cable de pont entre els pins BOOT i RST i, a continuació, torneu a connectar l'OpenMV Cam a l'ordinador.
+        <translation>Desconnecteu l&apos;OpenMV Cam de l&apos;ordinador, traieu el cable de pont entre els pins BOOT i RST i, a continuació, torneu a connectar l&apos;OpenMV Cam a l&apos;ordinador.
 
 </translation>
     </message>
     <message>
         <location line="+14" />
         <source>DFU bootloader reset failed!</source>
-        <translation>Ha fallat el restabliment del carregador d'arrencada de DFU!</translation>
+        <translation>Ha fallat el restabliment del carregador d&apos;arrencada de DFU!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-271" />
         <source>None</source>
         <translation>Cap</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+16" />
+        <location line="+30" />
         <location line="+56" />
         <source>Unknown</source>
         <translation>Desconegut</translation>
@@ -10049,7 +10126,7 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
     <message>
         <location line="-59" />
         <source>Timeout error while getting sensor type!</source>
-        <translation>Error de temps d'espera en obtenir el tipus de sensor!</translation>
+        <translation>Error de temps d&apos;espera en obtenir el tipus de sensor!</translation>
     </message>
     <message>
         <location line="+156" />
@@ -10057,12 +10134,12 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
         <translation>No registrat</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+94" />
         <source>Timeout error while learning MTU!</source>
-        <translation>Error de temps d'espera durant l'aprenentatge de MTU!</translation>
+        <translation>Error de temps d&apos;espera durant l&apos;aprenentatge de MTU!</translation>
     </message>
     <message>
-        <location line="+167" />
+        <location line="+170" />
         <source>Board: %L1</source>
         <translation>Tauler: %L1</translation>
     </message>
@@ -10087,14 +10164,14 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
         <translation>Port sèrie: %L1</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+85" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ desactualitzat - feu clic aquí per actualitzar ]</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Your OpenMV Cam's firmware is out of date. Would you like to upgrade?</source>
-        <translation>El microprogramari de l'OpenMV Cam no està actualitzat. Voleu actualitzar?</translation>
+        <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
+        <translation>El microprogramari de l&apos;OpenMV Cam no està actualitzat. Voleu actualitzar?</translation>
     </message>
     <message>
         <location line="+11" />
@@ -10102,19 +10179,19 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
         <translation> - [última]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-674" />
         <source>Failed to open or parse ELF: %1</source>
-        <translation>No s'ha pogut obrir o analitzar ELF: %1</translation>
+        <translation>No s&apos;ha pogut obrir o analitzar ELF: %1</translation>
     </message>
     <message>
         <location line="+42" />
         <source>No function symbols found (.symtab/.dynsym missing or stripped)</source>
-        <translation>No s'han trobat símbols de funció (falta .symtab/.dynsym o elimina)</translation>
+        <translation>No s&apos;han trobat símbols de funció (falta .symtab/.dynsym o elimina)</translation>
     </message>
     <message>
         <location line="+176" />
         <source>Event %1</source>
-        <translation>Esdeveniment % 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4" />
@@ -10158,7 +10235,7 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
     </message>
     <message>
         <location line="+396" />
-        <location line="+172" />
+        <location line="+177" />
         <source>Code Profiler</source>
         <translation>Perfil de codi</translation>
     </message>
@@ -10200,7 +10277,7 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
     <message>
         <location line="+165" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
-        <translation>Funcions: %1, Total de trucades: %2, Total de μs: %3, Total de cicles: %4, Total d'esdeveniments: %5</translation>
+        <translation>Funcions: %1, Total de trucades: %2, Total de μs: %3, Total de cicles: %4, Total d&apos;esdeveniments: %5</translation>
     </message>
     <message>
         <location line="+9" />
@@ -10212,7 +10289,7 @@ Feu clic al botó D'acord després que s'hagi enumerat el carregador d'arrencada
         <translation type="vanished">Començar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+588" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+592" />
         <source>More Examples</source>
         <translation>Més exemples</translation>
     </message>
@@ -10225,29 +10302,29 @@ In particular, checkout the Color-Tracking examples.</source>
 En particular, consulteu els exemples de seguiment de colors.</translation>
     </message>
     <message>
-        <location line="+28" />
-        <location line="+69" />
-        <location line="+9" />
+        <location line="+27" />
+        <location line="+70" />
+        <location line="+8" />
         <source>Firmware Update</source>
         <translation>Actualització del firmware</translation>
     </message>
     <message>
         <location line="-75" />
-        <source>Update your OpenMV Cam's firmware to the latest version?</source>
-        <translation>Actualitzar el microprogramari de l'OpenMV Cam a la darrera versió?</translation>
+        <source>Update your OpenMV Cam&apos;s firmware to the latest version?</source>
+        <translation>Actualitzar el microprogramari de l&apos;OpenMV Cam a la darrera versió?</translation>
     </message>
     <message>
-        <location line="+67" />
-        <source>Your OpenMV Cam's firmware is up to date.</source>
-        <translation>El microprogramari de l'OpenMV Cam està actualitzat.</translation>
+        <location line="+68" />
+        <source>Your OpenMV Cam&apos;s firmware is up to date.</source>
+        <translation>El microprogramari de l&apos;OpenMV Cam està actualitzat.</translation>
     </message>
     <message>
-        <location line="+11" />
-        <source>Need to reset your OpenMV Cam's firmware to the release version?</source>
+        <location line="+10" />
+        <source>Need to reset your OpenMV Cam&apos;s firmware to the release version?</source>
         <translation>Necessites restablir el microprogramari de la teva OpenMV Cam a la versió de llançament?</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+86" />
         <source>No board settings for the connected board found!</source>
         <translation>No es troba cap configuració de la placa per a la junta connectada.</translation>
     </message>
@@ -10270,7 +10347,7 @@ En particular, consulteu els exemples de seguiment de colors.</translation>
     <message>
         <location line="+69" />
         <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!</source>
-        <translation>Avís: JPEG/PNG massa gran per a la memòria intermèdia a l'OpenMV Cam actual i enviar-lo a l'IDE OpenMV!</translation>
+        <translation>Avís: JPEG/PNG massa gran per a la memòria intermèdia a l&apos;OpenMV Cam actual i enviar-lo a l&apos;IDE OpenMV!</translation>
     </message>
     <message>
         <location line="+83" />
@@ -10288,17 +10365,17 @@ En particular, consulteu els exemples de seguiment de colors.</translation>
     <message>
         <location line="+1" />
         <source>Failed to write frame!</source>
-        <translation>No s'ha pogut escriure el marc!</translation>
+        <translation>No s&apos;ha pogut escriure el marc!</translation>
     </message>
     <message>
         <location line="+54" />
         <source>Save Image selection to PC</source>
-        <translation>Desa la selecció d'imatge a l'ordinador</translation>
+        <translation>Desa la selecció d&apos;imatge a l&apos;ordinador</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Save Image to PC</source>
-        <translation>Desa la imatge a l'ordinador</translation>
+        <translation>Desa la imatge a l&apos;ordinador</translation>
     </message>
     <message>
         <location line="+2" />
@@ -10342,10 +10419,10 @@ En particular, consulteu els exemples de seguiment de colors.</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>Module "%L1" on your OpenMV Cam is different than the copy on your computer.
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
 Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>El mòdul "%L1" de l'OpenMV Cam és diferent de la còpia de l'ordinador.
+        <translation>El mòdul &quot;%L1&quot; de l&apos;OpenMV Cam és diferent de la còpia de l&apos;ordinador.
 
 Vols que OpenMV IDE actualitzi el mòdul a la teva OpenMV Cam?</translation>
     </message>
@@ -10356,15 +10433,15 @@ Vols que OpenMV IDE actualitzi el mòdul a la teva OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+91" />
-        <source>Module "%L1" may be required to run your script.
+        <source>Module &quot;%L1&quot; may be required to run your script.
 
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>El mòdul "%L1" pot ser necessari per executar el vostre script.
+        <translation>El mòdul &quot;%L1&quot; pot ser necessari per executar el vostre script.
 
-Voleu que l'IDE OpenMV el copiï a la vostra càmera OpenMV?</translation>
+Voleu que l&apos;IDE OpenMV el copiï a la vostra càmera OpenMV?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-366" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10377,18 +10454,18 @@ Voleu que l'IDE OpenMV el copiï a la vostra càmera OpenMV?</translation>
         <translation>Fitxers de text (*.txt);;Tots els fitxers (*)</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+228" />
         <source>Zoom: %1%</source>
         <translation>Zoom: %1%</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4310" />
-        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4365" />
+        <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280" />
-        <location line="+236" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-265" />
+        <location line="+221" />
         <source>Model Zoo</source>
         <translation>Model Zoo</translation>
     </message>
@@ -10424,7 +10501,7 @@ Voleu que l'IDE OpenMV el copiï a la vostra càmera OpenMV?</translation>
         <translation>Troba</translation>
     </message>
     <message>
-        <location line="+226" />
+        <location line="+239" />
         <source>Serial Terminal</source>
         <translation>Terminal sèrie</translation>
     </message>
@@ -10445,18 +10522,18 @@ Voleu que l'IDE OpenMV el copiï a la vostra càmera OpenMV?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Run "/main.py"</source>
-        <translation>Executeu "/main.py"</translation>
+        <source>Run &quot;/main.py&quot;</source>
+        <translation>Executeu &quot;/main.py&quot;</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Run current script in editor window</source>
-        <translation>Executeu l'script actual a la finestra de l'editor</translation>
+        <translation>Executeu l&apos;script actual a la finestra de l&apos;editor</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Stop running script</source>
-        <translation>Atura l'execució de l'script</translation>
+        <translation>Atura l&apos;execució de l&apos;script</translation>
     </message>
     <message>
         <location line="+5" />
@@ -10469,31 +10546,31 @@ Voleu que l'IDE OpenMV el copiï a la vostra càmera OpenMV?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-360" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-150" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Obteniu dispositius</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-293" />
         <location line="+79" />
         <source>Query failed!</source>
         <translation>La consulta ha fallat!</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+44" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+119" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+120" />
+        <location line="+118" />
         <source>DFU Util</source>
         <translation>DFU Util</translation>
     </message>
@@ -10518,7 +10595,7 @@ Voleu que l'IDE OpenMV el copiï a la vostra càmera OpenMV?</translation>
         <translation>Això pot trigar una estona, el descans d’aigua?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-87" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
         <source>Dataset Split</source>
         <translation>Divisió del conjunt de dades</translation>
     </message>
@@ -10530,7 +10607,7 @@ OpenMV recommends leaving this at the default 80/20% split.</source>
 OpenMV recomana deixar-ho a la divisió predeterminada del 80/20%.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <location line="+16" />
         <source>Training Data
 Percentage
@@ -10552,11 +10629,11 @@ Percentatge
     <message>
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+58" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
         <location line="+50" />
         <source>Uploading...</source>
-        <translation>S'està carregant...</translation>
+        <translation>S&apos;està carregant...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+30" />
@@ -10565,7 +10642,7 @@ Percentatge
         <location line="+19" />
         <location line="+10" />
         <source>Uploading Dataset</source>
-        <translation>S'està carregant el conjunt de dades</translation>
+        <translation>S&apos;està carregant el conjunt de dades</translation>
     </message>
     <message>
         <location line="-37" />
@@ -10584,7 +10661,7 @@ Percentatge
         <translation>Estadístiques de càrrega:
 
 %L1 fitxers penjats
-Respostes %L2 d'Edge Impulse
+Respostes %L2 d&apos;Edge Impulse
 
 %L3 Imatges noves afegides
 %L4 Marcat com a duplicats</translation>
@@ -10593,12 +10670,12 @@ Respostes %L2 d'Edge Impulse
         <location line="+10" />
         <source>Nothing to upload
 
-Only jpg/png/bmp images with a numeric name (e.g. "00001.jpg")
-in class folders ("*.class") can be uploaded.</source>
+Only jpg/png/bmp images with a numeric name (e.g. &quot;00001.jpg&quot;)
+in class folders (&quot;*.class&quot;) can be uploaded.</source>
         <translation>No hi ha res a carregar
 
-Només imatges jpg/png/bmp amb un nom numèric (p. ex., "00001.jpg")
-a les carpetes de classe ("*.class") es poden carregar.</translation>
+Només imatges jpg/png/bmp amb un nom numèric (p. ex., &quot;00001.jpg&quot;)
+a les carpetes de classe (&quot;*.class&quot;) es poden carregar.</translation>
     </message>
     <message>
         <location line="+43" />
@@ -10606,31 +10683,31 @@ a les carpetes de classe ("*.class") es poden carregar.</translation>
         <location line="+21" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+164" />
+        <location line="+155" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+23" />
         <location line="+9" />
         <location line="+9" />
         <source>Edge Impulse Projects</source>
         <translation>Projectes Edge Impulse</translation>
     </message>
     <message>
-        <location line="-276" />
+        <location line="-266" />
         <location line="+35" />
-        <location line="+71" />
-        <location line="+129" />
-        <location line="+42" />
+        <location line="+67" />
+        <location line="+124" />
+        <location line="+41" />
         <source>No request data received</source>
-        <translation>No s'han rebut dades de sol·licitud</translation>
+        <translation>No s&apos;han rebut dades de sol·licitud</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-246" />
         <source>An unkown error occured</source>
-        <translation>S'ha produït un error desconegut</translation>
+        <translation>S&apos;ha produït un error desconegut</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+62" />
         <location line="+11" />
         <location line="+7" />
         <location line="+10" />
@@ -10642,19 +10719,19 @@ a les carpetes de classe ("*.class") es poden carregar.</translation>
         <source>Sucessfully logged into your Edge Impulse account.
 
 Open a data set to upload it.</source>
-        <translation>S'ha iniciat la sessió correctament al vostre compte Edge Impulse.
+        <translation>S&apos;ha iniciat la sessió correctament al vostre compte Edge Impulse.
 
 Obriu un conjunt de dades per carregar-lo.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+33" />
         <source>Email Address</source>
         <translation>Correu electrònic</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Username</source>
-        <translation>Nom d'usuari</translation>
+        <translation>Nom d&apos;usuari</translation>
     </message>
     <message>
         <location line="+5" />
@@ -10662,27 +10739,27 @@ Obriu un conjunt de dades per carregar-lo.</translation>
         <translation>Contrasenya</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+66" />
         <source>Please select a project</source>
         <translation>Seleccioneu un projecte</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+60" />
         <source>No projects found</source>
-        <translation>No s'han trobat projectes</translation>
+        <translation>No s&apos;han trobat projectes</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+45" />
         <source>Upload Project</source>
         <translation>Carrega el projecte</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Please enter an Edge Impluse Project API Key</source>
-        <translation>Introduïu una clau d'API Edge Impluse Project</translation>
+        <translation>Introduïu una clau d&apos;API Edge Impluse Project</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1017" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1015" />
         <location line="+144" />
         <location line="+36" />
         <location line="+41" />
@@ -10701,7 +10778,7 @@ Obriu un conjunt de dades per carregar-lo.</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+41" />
+        <location line="+39" />
         <location line="+135" />
         <location line="+45" />
         <location line="+50" />
@@ -10733,12 +10810,12 @@ Obriu un conjunt de dades per carregar-lo.</translation>
     <message>
         <location line="-602" />
         <source>Please turn on the hard maintenance mode switch, it not enabled, and then press the user button on your OpenMV Cam.</source>
-        <translation>Engegueu el commutador de mode de manteniment dur, no està activat i, a continuació, premeu el botó d'usuari a la càmera OpenMV.</translation>
+        <translation>Engegueu el commutador de mode de manteniment dur, no està activat i, a continuació, premeu el botó d&apos;usuari a la càmera OpenMV.</translation>
     </message>
     <message>
         <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1337" />
-        <location line="+923" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1335" />
+        <location line="+921" />
         <source>This feature is not supported on this machine!</source>
         <translation>Aquesta funció no és compatible amb aquesta màquina!</translation>
     </message>
@@ -10747,14 +10824,14 @@ Obriu un conjunt de dades per carregar-lo.</translation>
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after after recovery.</source>
-        <translation>Si us plau, desconnecteu i torneu a connectar l'OpenMV Cam de l'ordinador i premeu D'acord. 
+        <translation>Si us plau, desconnecteu i torneu a connectar l&apos;OpenMV Cam de l&apos;ordinador i premeu D&apos;acord. 
 
-Després de la recuperació, s'ha d'encendre la càmera.</translation>
+Després de la recuperació, s&apos;ha d&apos;encendre la càmera.</translation>
     </message>
     <message>
         <location line="+166" />
         <source>Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled. Leave your OpenMV Cam unconnected until instructed to reconnect it.</source>
-        <translation>Desconnecteu l'OpenMV Cam de l'ordinador, desactiveu l'interruptor del mode de manteniment dur, si està activat. Deixeu la vostra OpenMV Cam desconnectada fins que se us indiqui per tornar-la a connectar.</translation>
+        <translation>Desconnecteu l&apos;OpenMV Cam de l&apos;ordinador, desactiveu l&apos;interruptor del mode de manteniment dur, si està activat. Deixeu la vostra OpenMV Cam desconnectada fins que se us indiqui per tornar-la a connectar.</translation>
     </message>
     <message>
         <source>Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled, reconnect your OpenMV Cam to your computer, and then press Ok.</source>
@@ -10767,18 +10844,18 @@ Després de la recuperació, s'ha d'encendre la càmera.</translation>
 The camera must be power cycled after a system package update.</source>
         <translation>Desconnecteu i torneu a connectar la càmera OpenMV des de l’ordinador i, a continuació, premeu OK. 
 
-La càmera ha de ciclitzar potència després d'una actualització del paquet del sistema.</translation>
+La càmera ha de ciclitzar potència després d&apos;una actualització del paquet del sistema.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-472" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-470" />
         <location line="+51" />
         <location line="+91" />
-        <location line="+346" />
+        <location line="+344" />
         <location line="+51" />
         <location line="+50" />
         <location line="+94" />
         <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Aquesta ordre triga una estona a executar-se. Si us plau sigui pacient.</translation>
@@ -10791,7 +10868,7 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
     <message>
         <location line="+6" />
         <source>Show Octave %L1</source>
-        <translation>Mostra l'octava %L1</translation>
+        <translation>Mostra l&apos;octava %L1</translation>
     </message>
     <message>
         <location line="+19" />
@@ -10799,7 +10876,7 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
         <translation>Fet</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
@@ -10811,7 +10888,7 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
     <message>
         <location line="+26" />
         <source>Source Image</source>
-        <translation>Imatge d'origen</translation>
+        <translation>Imatge d&apos;origen</translation>
     </message>
     <message>
         <location line="+22" />
@@ -10856,7 +10933,7 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
     <message>
         <location line="+5" />
         <source>Grayscale Threshold</source>
-        <translation>Llindar d'escala de grisos</translation>
+        <translation>Llindar d&apos;escala de grisos</translation>
     </message>
     <message>
         <location line="+39" />
@@ -10916,7 +10993,7 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
         <location line="-110" />
         <location line="+85" />
         <source>No frames found!</source>
-        <translation>No s'han trobat marcs!</translation>
+        <translation>No s&apos;han trobat marcs!</translation>
     </message>
     <message>
         <location line="-57" />
@@ -10931,12 +11008,12 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
     </message>
     <message>
         <location line="-77" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Transcoding File...</source>
-        <translation>S'està transcodificant el fitxer...</translation>
+        <translation>S&apos;està transcodificant el fitxer...</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-594" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10955,7 +11032,7 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
     <message>
         <location line="+11" />
         <source>Failed to write!</source>
-        <translation>No s'ha pogut escriure!</translation>
+        <translation>No s&apos;ha pogut escriure!</translation>
     </message>
     <message>
         <location line="+62" />
@@ -10972,7 +11049,7 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
     <message>
         <location line="-59" />
         <source>Failed to write header again!</source>
-        <translation>No s'ha pogut tornar a escriure la capçalera!</translation>
+        <translation>No s&apos;ha pogut tornar a escriure la capçalera!</translation>
     </message>
     <message>
         <location line="+7" />
@@ -10983,7 +11060,7 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
     <message>
         <location line="-7" />
         <source>Failed to write header!</source>
-        <translation>No s'ha pogut escriure la capçalera!</translation>
+        <translation>No s&apos;ha pogut escriure la capçalera!</translation>
     </message>
     <message>
         <location line="+22" />
@@ -10994,39 +11071,39 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
         <location line="+96" />
         <location line="+79" />
         <source>Get Input Formats</source>
-        <translation>Obteniu formats d'entrada</translation>
+        <translation>Obteniu formats d&apos;entrada</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+37" />
         <location line="+111" />
-        <location line="+100" />
+        <location line="+98" />
         <location line="+15" />
-        <location line="+372" />
+        <location line="+371" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
         <location line="+16" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+14" />
+        <location line="+19" />
         <location line="+36" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+21" />
+        <location line="+23" />
         <location line="+7" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+20" />
+        <location line="+22" />
         <location line="+7" />
         <source>Convert Video</source>
         <translation>Converteix vídeo</translation>
     </message>
     <message>
         <source>Failed to launch ffmpeg!</source>
-        <translation type="vanished">No s'ha pogut iniciar ffmpeg!</translation>
+        <translation type="vanished">No s&apos;ha pogut iniciar ffmpeg!</translation>
     </message>
     <message>
         <location line="-989" />
@@ -11039,7 +11116,7 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
         <translation>FFMPEG no és compatible amb aquesta plataforma.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+98" />
         <source>Unable to write to output video file!</source>
         <translation>No es pot escriure al fitxer de vídeo de sortida!</translation>
     </message>
@@ -11050,81 +11127,81 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
     </message>
     <message>
         <location line="+163" />
-        <location line="+411" />
+        <location line="+415" />
         <source>Play Video</source>
         <translation>Reprodueix el vídeo</translation>
     </message>
     <message>
-        <location line="-410" />
+        <location line="-414" />
         <location line="+163" />
         <source>Failed to launch ffplay!</source>
-        <translation>No s'ha pogut iniciar ffplay!</translation>
+        <translation>No s&apos;ha pogut iniciar ffplay!</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>Convert Video Source</source>
         <translation>Converteix la font de vídeo</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+235" />
+        <location line="+240" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</source>
-        <translation>Fitxers de vídeo (*.mp4 *.*);;Fitxers d'OpenMV ImageWriter (*.bin);;</translation>
+        <translation>Fitxers de vídeo (*.mp4 *.*);;Fitxers d&apos;OpenMV ImageWriter (*.bin);;</translation>
     </message>
     <message>
-        <location line="-230" />
+        <location line="-235" />
         <location line="+11" />
-        <location line="+117" />
+        <location line="+122" />
         <location line="+7" />
         <source>Convert Video Output</source>
         <translation>Converteix la sortida de vídeo</translation>
     </message>
     <message>
-        <location line="-130" />
-        <location line="+125" />
-        <location line="+208" />
+        <location line="-135" />
+        <location line="+130" />
+        <location line="+204" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
-        <translation>Fitxers de vídeo (*.mp4 *.*);;Fitxers d'OpenMV ImageReader (*.bin);;</translation>
+        <translation>Fitxers de vídeo (*.mp4 *.*);;Fitxers d&apos;OpenMV ImageReader (*.bin);;</translation>
     </message>
     <message>
-        <location line="-327" />
+        <location line="-328" />
         <source>Please select output format</source>
         <translation>Seleccioneu el format de sortida</translation>
     </message>
     <message>
         <location line="+15" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Rescale the video?</source>
-        <translation>Voleu canviar l'escala del vídeo?</translation>
+        <translation>Voleu canviar l&apos;escala del vídeo?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter a new width (the aspect ratio will be kept the same)</source>
-        <translation>Introduïu una amplada nova (la relació d'aspecte es mantindrà igual)</translation>
+        <translation>Introduïu una amplada nova (la relació d&apos;aspecte es mantindrà igual)</translation>
     </message>
     <message>
-        <location line="-320" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-321" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Skip frames?</source>
         <translation>Saltar fotogrames?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter how many frames to skip at a time</source>
         <translation>Introduïu quants fotogrames voleu saltar alhora</translation>
     </message>
     <message>
-        <location line="-278" />
-        <location line="+91" />
-        <location line="+207" />
+        <location line="-274" />
+        <location line="+93" />
+        <location line="+203" />
         <source>Video conversion finished!</source>
-        <translation>S'ha acabat la conversió de vídeo!</translation>
+        <translation>S&apos;ha acabat la conversió de vídeo!</translation>
     </message>
     <message>
         <location line="-153" />
@@ -11144,7 +11221,7 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
     <message>
         <location line="+3" />
         <source>Keeps the RTP video stream inside of the same TCP socket used for setting up the initial connection verus creating a new UDP video stream. This may help the connection on networks with firewalls.</source>
-        <translation>Manté el flux de vídeo RTP dins del mateix sòcol TCP que s'utilitza per configurar la connexió inicial i crear un nou flux de vídeo UDP. Això pot ajudar a la connexió a xarxes amb tallafocs.</translation>
+        <translation>Manté el flux de vídeo RTP dins del mateix sòcol TCP que s&apos;utilitza per configurar la connexió inicial i crear un nou flux de vídeo UDP. Això pot ajudar a la connexió a xarxes amb tallafocs.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -11152,13 +11229,13 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
         <translation>Jugar</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+47" />
         <location line="+7" />
         <source>Save Video</source>
         <translation>Guarda el vídeo</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
         <source>Busy</source>
         <translation>Ocupada</translation>
     </message>
@@ -11174,22 +11251,20 @@ La càmera ha de ciclitzar potència després d'una actualització del paquet de
         <translation>Amaga els detalls</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-335" />
-        <location line="+102" />
         <source>No matching interface for the selected file name!</source>
-        <translation>No hi ha interfície coincident per al nom del fitxer seleccionat.</translation>
+        <translation type="vanished">No hi ha interfície coincident per al nom del fitxer seleccionat.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-745" />
         <source>Please select the target</source>
-        <translation>Seleccioneu l'objectiu</translation>
+        <translation>Seleccioneu l&apos;objectiu</translation>
     </message>
     <message>
         <location line="+59" />
         <source>The model has already been converted for the Ethos-U NPU.
 
 OpenMV IDE will just copy the model as is.</source>
-        <translation>El model ja s'ha convertit per a l'etos-U NPU. 
+        <translation>El model ja s&apos;ha convertit per a l&apos;etos-U NPU. 
 
 OpenMV IDE només copiarà el model tal com és.</translation>
     </message>
@@ -11198,77 +11273,77 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <source>The model has already been converted for the Neural-ART NPU.
 
 OpenMV IDE will just copy the model as is.</source>
-        <translation>El model ja s'ha convertit per a la NPU d'art neural. 
+        <translation>El model ja s&apos;ha convertit per a la NPU d&apos;art neural. 
 
 OpenMV IDE només copiarà el model tal com és.</translation>
     </message>
     <message>
-        <location line="+145" />
-        <location line="+36" />
+        <location line="+147" />
+        <location line="+35" />
         <location line="+6" />
         <location line="+8" />
-        <location line="+40" />
-        <location line="+17" />
-        <location line="+20" />
-        <location line="+6" />
-        <location line="+8" />
+        <location line="+42" />
+        <location line="+16" />
         <location line="+21" />
-        <location line="+19" />
-        <location line="+20" />
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
         <location line="+93" />
-        <location line="+9" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+13" />
-        <location line="+14" />
-        <location line="+45" />
-        <location line="+17" />
-        <location line="+28" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+40" />
+        <location line="+15" />
         <location line="+27" />
+        <location line="+24" />
         <location line="+53" />
-        <location line="+67" />
+        <location line="+63" />
         <location line="+6" />
         <location line="+21" />
         <source>Edit ROMFS</source>
         <translation>Edita Romfs</translation>
     </message>
     <message>
-        <location line="-620" />
-        <location line="+91" />
+        <location line="-606" />
+        <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>Ja existeix una carpeta amb el mateix nom.</translation>
     </message>
     <message>
-        <location line="-85" />
-        <location line="+91" />
+        <location line="-87" />
+        <location line="+93" />
         <source>File already exists! Overwrite?</source>
         <translation>El fitxer ja existeix! Sobreescriure?</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+91" />
+        <location line="-85" />
+        <location line="+93" />
         <source>Failed to remove file!</source>
-        <translation>No s'ha pogut eliminar el fitxer.</translation>
+        <translation>No s&apos;ha pogut eliminar el fitxer.</translation>
     </message>
     <message>
         <location line="-51" />
-        <location line="+72" />
+        <location line="+74" />
         <source>Failed to copy file!</source>
-        <translation>No s'ha pogut copiar el fitxer.</translation>
+        <translation>No s&apos;ha pogut copiar el fitxer.</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+17" />
         <source>Folder Name</source>
         <translation>Nom de la carpeta</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Failed to create folder!</source>
-        <translation>No s'ha pogut crear la carpeta.</translation>
+        <translation>No s&apos;ha pogut crear la carpeta.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -11279,7 +11354,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
     <message>
         <location line="-15" />
         <source>Failed to remove file or folder!</source>
-        <translation>No s'ha pogut eliminar el fitxer o la carpeta.</translation>
+        <translation>No s&apos;ha pogut eliminar el fitxer o la carpeta.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -11287,58 +11362,58 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>No es pot desar una carpeta!</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+14" />
+        <location line="+6" />
+        <location line="+15" />
         <location line="+19" />
-        <location line="+240" />
+        <location line="+225" />
         <source>Extract File</source>
         <translation>Extreu el fitxer</translation>
     </message>
     <message>
-        <location line="-246" />
+        <location line="-231" />
         <source>View/Edit</source>
         <translation>Veure/Editar</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+237" />
+        <location line="+222" />
         <source>Add File</source>
         <translation>Afegir arxiu</translation>
     </message>
     <message>
-        <location line="-236" />
-        <location line="+238" />
+        <location line="-221" />
+        <location line="+223" />
         <source>New Folder</source>
         <translation>Carpeta nova</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+14" />
-        <location line="+322" />
-        <location line="+12" />
+        <location line="-135" />
+        <location line="+13" />
+        <location line="+303" />
+        <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS no és compatible en aquest tauler.</translation>
     </message>
     <message>
-        <location line="-290" />
-        <location line="+45" />
+        <location line="-275" />
+        <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
-        <translation>No s'ha pogut desempaquetar ROMFS!</translation>
+        <translation>No s&apos;ha pogut desempaquetar ROMFS!</translation>
     </message>
     <message>
         <location line="-19" />
-        <location line="+28" />
+        <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>OpenMV Romfs</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+172" />
+        <location line="-25" />
+        <location line="+165" />
         <source>ROMFS Images (*.img)</source>
         <translation>Imatges ROMFS (*.img)</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="-101" />
         <source>Commit</source>
         <translation>Fer</translation>
     </message>
@@ -11353,17 +11428,17 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Deseu ROMFS al fitxer</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location line="+8" />
+        <location line="+105" />
+        <location line="+7" />
+        <location line="+11" />
         <location line="+12" />
-        <location line="+13" />
-        <location line="+12" />
+        <location line="+11" />
         <source>Reset ROMFS</source>
         <translation>Restableix els romfs</translation>
     </message>
     <message>
-        <location line="-44" />
-        <source>Are you sure you want to reset your OpenMV Cam's ROM file system?</source>
+        <location line="-40" />
+        <source>Are you sure you want to reset your OpenMV Cam&apos;s ROM file system?</source>
         <translation>Esteu segur que voleu restablir el sistema de fitxers ROM OpenMV Cam?</translation>
     </message>
     <message>
@@ -11379,7 +11454,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
     <message>
         <location line="+1" />
         <source>Copy and clean whitespace</source>
-        <translation>Copieu i netegeu l'espai en blanc</translation>
+        <translation>Copieu i netegeu l&apos;espai en blanc</translation>
     </message>
     <message>
         <location line="+1" />
@@ -11393,12 +11468,12 @@ OpenMV IDE només copiarà el model tal com és.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>&lt;a href="https://pypi.org/project/mpy-cross/"&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://pypi.org/project/mpy-cross/"&gt; opcions de compilador creuat mpy &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://pypi.org/project/mpy-cross/&quot;&gt; opcions de compilador creuat mpy &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
         <source>Advanced</source>
         <translation>Avançada</translation>
@@ -11411,7 +11486,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
     </message>
     <message>
         <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+90" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
         <source>Compiling</source>
         <translation>Recopilar</translation>
@@ -11423,9 +11498,9 @@ OpenMV IDE només copiarà el model tal com és.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-780" />
         <source>Success - Press Ok to close the window</source>
         <translation>Èxit: premeu OK per tancar la finestra</translation>
     </message>
@@ -11438,25 +11513,25 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Falla: premeu Cancel·la per tancar la finestra</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+126" />
+        <location line="+111" />
         <location line="+14" />
-        <location line="+173" />
+        <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>Compilador de Funda</translation>
     </message>
     <message>
-        <location line="-334" />
+        <location line="-300" />
         <source>Failed to copy JSON file!</source>
-        <translation>No s'ha pogut copiar el fitxer JSON.</translation>
+        <translation>No s&apos;ha pogut copiar el fitxer JSON.</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Failed to copy MPOOL file!</source>
-        <translation>No s'ha pogut copiar el fitxer mpool.</translation>
+        <translation>No s&apos;ha pogut copiar el fitxer mpool.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -11486,14 +11561,13 @@ OpenMV IDE només copiarà el model tal com és.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+24" />
         <source>--verbosity 2</source>
         <translation>-Verbositat 2</translation>
     </message>
     <message>
-        <location line="-22" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; opcions de CLI de StedgeAi Core &lt;/a&gt;</translation>
+        <location line="+2" />
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; opcions de CLI de StedgeAi Core &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -11502,19 +11576,18 @@ OpenMV IDE només copiarà el model tal com és.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; opcions de CLI de StedGeai Art-Art &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; opcions de CLI de StedGeai Art-Art &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; opcions de trasllat de stedgeai &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href = &quot;%1&quot;&gt; opcions de trasllat de stedgeai &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+75" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
-        <translation>No s'ha pogut obrir el fitxer JSON.</translation>
+        <translation>No s&apos;ha pogut obrir el fitxer JSON.</translation>
     </message>
     <message>
         <location line="+14" />
@@ -11522,7 +11595,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Stedgeai</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+140" />
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
         <translation>El compilador de Stedgeai no és compatible en aquesta plataforma.</translation>
     </message>
@@ -11550,8 +11623,8 @@ OpenMV IDE només copiarà el model tal com és.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md"&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vala/-/blob/main/options.md"&gt; Vela Compilaer Cli Opcions &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vala/-/blob/main/options.md&quot;&gt; Vela Compilaer Cli Opcions &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+67" />
@@ -11574,100 +11647,73 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <source>STM32 Programmer is not supported on this platform.</source>
         <translation>El programador STM32 no és compatible en aquesta plataforma.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <source>the detected board</source>
+        <translation>el tauler detectat</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>The selected file &quot;%L1&quot; does not match any firmware interface for %L2.</source>
+        <translation>El fitxer seleccionat &quot;%L1&quot; no coincideix amb cap interfície de microprogramari per a %L2.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%L1 accepts files named:</source>
+        <translation>%L1 accepta fitxers anomenats:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Rename your firmware file to one of the names above (or select the correct file) and try again.</source>
+        <translation>Canvieu el nom del fitxer de microprogramari a un dels noms anteriors (o seleccioneu el fitxer correcte) i torneu-ho a provar.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>This board does not define any loadable firmware interfaces in its settings.</source>
+        <translation>Aquesta placa no defineix cap interfície de microprogramari carregable a la seva configuració.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
     <message>
         <source>This wizard creates a simple unit test project.</source>
-        <translation type="vanished">Aquest assistent crea un projecte de prova d'unitat senzill.</translation>
+        <translation type="vanished">Aquest assistent crea un projecte de prova d&apos;unitat senzill.</translation>
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+28" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+235" />
         <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
         <location line="+15" />
         <location line="+22" />
-        <location line="+132" />
         <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+21" />
         <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+306" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+144" />
         <source>Project Location</source>
         <translation>Localització del projecte</translation>
     </message>
     <message>
-        <location line="-895" />
-        <location line="+28" />
-        <location line="+21" />
+        <location line="-886" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
-        <location line="+15" />
         <location line="+22" />
-        <location line="+24" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+11" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
-        <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+28" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+20" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+81" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
@@ -11677,7 +11723,59 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+94" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+15" />
+        <location line="+22" />
+        <location line="+18" />
+        <location line="+21" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+51" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
         <source>Location</source>
         <translation>Ubicació</translation>
     </message>
@@ -11686,7 +11784,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation type="vanished">Prova Qt</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-516" />
         <source>Google Test</source>
         <translation>Prova de Google</translation>
     </message>
@@ -11698,7 +11796,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
     <message>
         <location line="+1" />
         <source>Boost Test</source>
-        <translation>Prova d'impuls</translation>
+        <translation>Prova d&apos;impuls</translation>
     </message>
     <message>
         <location line="+1" />
@@ -11706,70 +11804,70 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Captura 2</translation>
     </message>
     <message>
-        <location line="-762" />
+        <location line="-371" />
         <location line="+25" />
         <location line="+26" />
-        <location line="+712" />
+        <location line="+321" />
         <source>Test framework:</source>
         <translation>Marc de prova:</translation>
     </message>
     <message>
-        <location line="-687" />
+        <location line="-296" />
         <source>GUI Application</source>
         <translation>Aplicació GUI</translation>
     </message>
     <message>
         <location line="-75" />
         <location line="+51" />
-        <location line="+715" />
+        <location line="+324" />
         <source>Test suite name:</source>
         <translation>Nom del conjunt de proves:</translation>
     </message>
     <message>
-        <location line="-790" />
-        <location line="+25" />
+        <location line="-374" />
         <location line="+24" />
         <location line="+27" />
         <location line="+21" />
-        <location line="+694" />
+        <location line="+22" />
+        <location line="+281" />
         <source>Test case name:</source>
         <translation>Nom del cas de prova:</translation>
     </message>
     <message>
-        <location line="-693" />
+        <location line="-302" />
         <source>Requires QApplication</source>
         <translation>Requereix QApplication</translation>
     </message>
     <message>
-        <location line="-97" />
+        <location line="+22" />
         <source>Generate setup code</source>
         <translation>Generar codi de configuració</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+98" />
-        <location line="+692" />
+        <location line="-20" />
+        <location line="+21" />
+        <location line="+280" />
         <source>Generate initialization and cleanup code</source>
-        <translation>Generar codi d'inicialització i neteja</translation>
+        <translation>Generar codi d&apos;inicialització i neteja</translation>
     </message>
     <message>
         <source>Enable C++11</source>
         <translation type="vanished">Habilita C++11</translation>
     </message>
     <message>
-        <location line="-766" />
+        <location line="-324" />
         <source>Googletest source directory (optional):</source>
         <translation>Directori font de Googletest (opcional):</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>Boost inclou el directori (opcional):</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
-        <translation>Directori d'inclusió Catch2 (opcional):</translation>
+        <translation>Directori d&apos;inclusió Catch2 (opcional):</translation>
     </message>
     <message>
         <location line="+3" />
@@ -11777,154 +11875,154 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Utilitzeu biblioteques Qt</translation>
     </message>
     <message>
-        <location line="-50" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+45" />
-        <location line="+47" />
-        <location line="+84" />
+        <location line="+107" />
+        <location line="+46" />
+        <location line="+43" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
+        <location line="+105" />
+        <location line="+48" />
         <location line="+43" />
-        <location line="+49" />
-        <location line="+84" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+85" />
+        <location line="+153" />
+        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+314" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build system:</source>
         <translation>Sistema de construcció:</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Informació sobre projectes i proves</translation>
     </message>
     <message>
-        <location line="-120" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-93" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+26" />
-        <location line="+51" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+79" />
+        <location line="+116" />
         <location line="+18" />
         <location line="+4" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+41" />
+        <location line="+17" />
+        <location line="+33" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+70" />
-        <location line="+220" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+28" />
+        <location line="+142" />
         <source>Details</source>
         <translation>Detalls</translation>
     </message>
     <message>
-        <location line="-869" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-887" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Selecció de kits</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -11932,113 +12030,113 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Kits</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+18" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <source>Project Management</source>
         <translation>Gestió de projectes</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+37" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+41" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Resum</translation>
     </message>
     <message>
         <source>Creates a new unit test project. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
-        <translation type="vanished">Crea un nou projecte de prova d'unitat. Les proves unitàries permeten verificar que el codi és apte per al seu ús i que no hi ha regressió.</translation>
+        <translation type="vanished">Crea un nou projecte de prova d&apos;unitat. Les proves unitàries permeten verificar que el codi és apte per al seu ús i que no hi ha regressió.</translation>
     </message>
     <message>
-        <location line="-466" />
-        <location line="+12" />
-        <location line="+456" />
+        <location line="-715" />
+        <location line="+380" />
+        <location line="+165" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Un altre projecte</translation>
@@ -12048,36 +12146,36 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation type="vanished">Projecte de prova automàtica</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="-620" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Nom complet, inclosos els espais de noms</translation>
     </message>
     <message>
-        <location line="-645" />
-        <location line="+36" />
-        <location line="+276" />
-        <location line="+80" />
-        <location line="+235" />
-        <location line="+19" />
+        <location line="+1" />
         <location line="+22" />
+        <location line="+19" />
+        <location line="+289" />
+        <location line="+145" />
+        <location line="+40" />
+        <location line="+119" />
         <source>Class name:</source>
         <translation>Nom de la classe:</translation>
     </message>
     <message>
-        <location line="-631" />
-        <location line="+592" />
-        <location line="+18" />
+        <location line="-633" />
+        <location line="+42" />
+        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Personalitzat&gt;</translation>
     </message>
     <message>
-        <location line="-646" />
-        <location line="+37" />
-        <location line="+282" />
-        <location line="+73" />
-        <location line="+237" />
-        <location line="+18" />
+        <location line="-474" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+294" />
+        <location line="+139" />
+        <location line="+39" />
+        <location line="+119" />
         <source>Base class:</source>
         <translation>Classe base:</translation>
     </message>
@@ -12086,7 +12184,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-632" />
         <source>Include QObject</source>
         <translation>Inclou QObject</translation>
     </message>
@@ -12124,70 +12222,70 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Afegeix QML_ELEMENT</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(valor('Classe'), Util.preferredSuffix('text/x-c++hdr'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(valor(&apos;Classe&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+68" />
-        <location line="+262" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+315" />
+        <location line="+292" />
         <source>Header file:</source>
         <translation>Fitxer de capçalera:</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(valor('Classe'), Util.preferredSuffix('text/x-c++src'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(valor(&apos;Classe&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+288" />
-        <location line="+68" />
-        <location line="+220" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+215" />
         <location line="+1" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+80" />
+        <location line="+133" />
+        <location line="+39" />
+        <location line="+120" />
         <source>Source file:</source>
         <translation>Arxiu font:</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+392" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+34" />
-        <location line="+19" />
-        <location line="+444" />
-        <location line="+19" />
-        <location line="+22" />
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Camí:</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+596" />
-        <location line="+22" />
+        <location line="-739" />
+        <location line="+38" />
+        <location line="+429" />
+        <location line="+39" />
         <source>Define Class</source>
         <translation>Definiu la classe</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-502" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Crea una capçalera C++ i un fitxer font per a una nova classe que podeu afegir a un projecte C++.</translation>
     </message>
     <message>
-        <location line="-203" />
-        <location line="+130" />
-        <location line="+74" />
+        <location line="+1" />
+        <location line="+65" />
+        <location line="+9" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-73" />
         <source>C++ Class</source>
         <translation>Classe C++</translation>
     </message>
@@ -12219,30 +12317,30 @@ OpenMV IDE només copiarà el model tal com és.</translation>
     <message>
         <location line="+4" />
         <source>Define Item Model Class</source>
-        <translation>Definiu la classe del model d'element</translation>
+        <translation>Definiu la classe del model d&apos;element</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Creates a Qt item model.</source>
-        <translation>Crea un model d'element Qt.</translation>
+        <translation>Crea un model d&apos;element Qt.</translation>
     </message>
     <message>
-        <location line="-231" />
-        <location line="+39" />
-        <location line="+26" />
-        <location line="+65" />
-        <location line="+18" />
-        <location line="+84" />
+        <location line="+1" />
+        <location line="+66" />
+        <location line="+57" />
+        <location line="+62" />
+        <location line="+9" />
+        <location line="+59" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-252" />
         <source>Qt Item Model</source>
-        <translation>Model d'article Qt</translation>
+        <translation>Model d&apos;article Qt</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+4" />
         <source>Qt for Python module:</source>
         <translation>Qt per al mòdul Python:</translation>
     </message>
@@ -12267,8 +12365,8 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Importa QtQuick</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Util.fileName(valor('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Util.fileName(valor(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
         <location line="+6" />
@@ -12276,18 +12374,18 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Crea un fitxer de classe Python nou.</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+71" />
+        <location line="+1" />
+        <location line="+158" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-157" />
         <source>Python Class</source>
         <translation>Classe Python</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+3" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Crea un projecte de prova basat en CMake per al qual es pot introduir un fragment de codi.</translation>
     </message>
@@ -12324,7 +12422,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
     <message>
         <location line="+1" />
         <source>Application bundle (macOS)</source>
-        <translation>Paquet d'aplicacions (macOS)</translation>
+        <translation>Paquet d&apos;aplicacions (macOS)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -12342,7 +12440,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Fragment de codi</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="+7" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Crea un fitxer de capçalera que podeu afegir a un projecte C/C++.</translation>
     </message>
@@ -12352,7 +12450,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Fitxer de capçalera C/C++</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Crea un fitxer font que podeu afegir a un projecte C/C++.</translation>
     </message>
@@ -12362,7 +12460,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Fitxer font C/C++</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>Trieu una plantilla de formulari</translation>
     </message>
@@ -12380,12 +12478,12 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation type="vanished">Formulari Qt Designer</translation>
     </message>
     <message>
-        <location line="-15" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
-        <translation>Crea un ombrejador de fragments a l'OpenGL Shading Language (GLSL) d'escriptori. Els ombrejats de fragments generen els colors de píxels finals per a triangles, punts i línies representats amb OpenGL.</translation>
+        <translation>Crea un ombrejador de fragments a l&apos;OpenGL Shading Language (GLSL) d&apos;escriptori. Els ombrejats de fragments generen els colors de píxels finals per a triangles, punts i línies representats amb OpenGL.</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+1" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -12393,24 +12491,24 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-26" />
         <source>Fragment Shader (Desktop OpenGL)</source>
-        <translation>Shader de fragments (OpenGL d'escriptori)</translation>
+        <translation>Shader de fragments (OpenGL d&apos;escriptori)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
-        <translation>Crea un ombrejador de vèrtex a l'OpenGL Shading Language (GLSL) d'escriptori. Els ombrejats de vèrtex transformen les posicions, normals i coordenades de textura de triangles, punts i línies representats amb OpenGL.</translation>
+        <translation>Crea un ombrejador de vèrtex a l&apos;OpenGL Shading Language (GLSL) d&apos;escriptori. Els ombrejats de vèrtex transformen les posicions, normals i coordenades de textura de triangles, punts i línies representats amb OpenGL.</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Vertex Shader (Desktop OpenGL)</source>
-        <translation>Vertex Shader (OpenGL d'escriptori)</translation>
+        <translation>Vertex Shader (OpenGL d&apos;escriptori)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
-        <translation>Crea un ombrejador de fragments al llenguatge d'ombrejat OpenGL/ES 2.0 (GLSL/ES). Els ombrejats de fragments generen els colors de píxels finals per a triangles, punts i línies representats amb OpenGL.</translation>
+        <translation>Crea un ombrejador de fragments al llenguatge d&apos;ombrejat OpenGL/ES 2.0 (GLSL/ES). Els ombrejats de fragments generen els colors de píxels finals per a triangles, punts i línies representats amb OpenGL.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12418,9 +12516,9 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Fragment Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
-        <translation>Crea un ombrejador de vèrtex al llenguatge d'ombrejat OpenGL/ES 2.0 (GLSL/ES). Els ombrejats de vèrtex transformen les posicions, normals i coordenades de textura de triangles, punts i línies representats amb OpenGL.</translation>
+        <translation>Crea un ombrejador de vèrtex al llenguatge d&apos;ombrejat OpenGL/ES 2.0 (GLSL/ES). Els ombrejats de vèrtex transformen les posicions, normals i coordenades de textura de triangles, punts i línies representats amb OpenGL.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12428,7 +12526,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="+7" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Crea un fitxer Java amb codi boilerplate.</translation>
     </message>
@@ -12443,7 +12541,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Fitxer Java</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>Biblioteca sense estat</translation>
     </message>
@@ -12464,25 +12562,25 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Fitxer JS</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+12" />
         <source>Model name:</source>
         <translation>Nom del model:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
+        <location line="+1" />
+        <location line="+67" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Ubicació:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
-        <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" existeix al sistema de fitxers.</translation>
+        <location line="-66" />
+        <location line="+67" />
+        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; existeix al sistema de fitxers.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model Name and Location</source>
         <translation>Nom i ubicació del model</translation>
     </message>
@@ -12492,19 +12590,19 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Crea un model buit nou amb un diagrama buit.</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+53" />
-        <location line="+12" />
+        <location line="+1" />
+        <location line="+5" />
+        <location line="+62" />
         <source>Modeling</source>
         <translation>Modelatge</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model</source>
         <translation>Model</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+3" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Crea un model scratch mitjançant un fitxer temporal.</translation>
     </message>
@@ -12514,25 +12612,25 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Model Scratch</translation>
     </message>
     <message>
-        <location line="-81" />
+        <location line="+7" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Crea un fitxer Nim buit utilitzant el conjunt de caràcters UTF-8.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+14" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>Fitxer Nim</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
-        <translation>Crea un fitxer d'script Nim buit utilitzant el conjunt de caràcters UTF-8.</translation>
+        <translation>Crea un fitxer d&apos;script Nim buit utilitzant el conjunt de caràcters UTF-8.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12540,9 +12638,9 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Fitxer de script Nim</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+7" />
         <source>Creates an empty Python script file using UTF-8 charset.</source>
-        <translation>Crea un fitxer d'script Python buit utilitzant el conjunt de caràcters UTF-8.</translation>
+        <translation>Crea un fitxer d&apos;script Python buit utilitzant el conjunt de caràcters UTF-8.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12550,7 +12648,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Fitxer Python</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Crea un fitxer de recursos Qt (.qrc).</translation>
     </message>
@@ -12560,9 +12658,9 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Fitxer de recursos Qt</translation>
     </message>
     <message>
-        <location line="-67" />
-        <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
-        <translation>Crea un fitxer QML amb codi normal, començant per "import QtQuick".</translation>
+        <location line="+7" />
+        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
+        <translation>Crea un fitxer QML amb codi normal, començant per &quot;import QtQuick&quot;.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12570,21 +12668,21 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Fitxer QML (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="-32" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Crea una memòria intermèdia amb un fitxer temporal.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+57" />
-        <location line="+47" />
+        <location line="-66" />
+        <location line="+67" />
+        <location line="+45" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>General</translation>
     </message>
     <message>
-        <location line="-634" />
+        <location line="-401" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Aquest assistent crea un projecte de proves d’unitats senzill mitjançant Boost.</translation>
     </message>
@@ -12609,21 +12707,21 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Crea un nou projecte de prova d’unitat mitjançant Boost. Les proves d’unitats us permeten verificar que el codi s’adapti a l’ús i que no hi hagi regressions.</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+25" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Test Project</source>
         <translation>Projecte de prova</translation>
     </message>
     <message>
-        <location line="-21" />
+        <location line="-93" />
         <source>Boost Test Project</source>
         <translation>Projecte de proves Boost</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Aquest bruixot crea un projecte de prova d’unitat senzill mitjançant Catch2.</translation>
     </message>
@@ -12658,7 +12756,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Projecte de prova de captura2</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Aquest assistent crea un projecte de proves d’unitats senzill mitjançant Google Test.</translation>
     </message>
@@ -12688,7 +12786,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Projecte de prova de Google</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Aquest assistent crea un projecte de proves d’unitat senzill mitjançant la prova QT.</translation>
     </message>
@@ -12703,7 +12801,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Projecte de prova QT</translation>
     </message>
     <message>
-        <location line="-116" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Aquest assistent crea un projecte de proves d’unitat senzill mitjançant la prova ràpida de QT.</translation>
     </message>
@@ -12718,19 +12816,19 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Projecte de proves ràpides de QT</translation>
     </message>
     <message>
-        <location line="+815" />
+        <location line="+10" />
         <source>Include QQuickItem</source>
         <translation>Inclou Qquickitem</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+67" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>Crea un projecte de prova basat en CMake on podeu introduir un fragment de codi per compilar-lo i comprovar-lo.</translation>
     </message>
     <message>
-        <location line="-121" />
+        <location line="+29" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
-        <translation>Crea un formulari de dissenyador de widgets QT que podeu afegir a un projecte de widget QT. Això és útil si ja teniu una classe existent per a la lògica empresarial de la interfície d'usuari.</translation>
+        <translation>Crea un formulari de dissenyador de widgets QT que podeu afegir a un projecte de widget QT. Això és útil si ja teniu una classe existent per a la lògica empresarial de la interfície d&apos;usuari.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12738,7 +12836,7 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Formulari de dissenyador de widgets QT</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="+64" />
         <source>Creates a markdown file.</source>
         <translation>Crea un fitxer de marcatge.</translation>
     </message>
@@ -12748,12 +12846,12 @@ OpenMV IDE només copiarà el model tal com és.</translation>
         <translation>Fitxer de marcatge</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="+67" />
         <source>Scratch Buffer</source>
         <translation>Scratch Buffer</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>Nom del gràfic estatal:</translation>
     </message>
@@ -12765,19 +12863,19 @@ OpenMV IDE només copiarà el model tal com és.</translation>
     <message>
         <location line="+4" />
         <source>Creates a new empty state chart.</source>
-        <translation>Crea un nou gràfic d'estats buit.</translation>
+        <translation>Crea un nou gràfic d&apos;estats buit.</translation>
     </message>
     <message>
         <location line="+2" />
         <source>State Chart</source>
-        <translation>Gràfic de l'estat</translation>
+        <translation>Gràfic de l&apos;estat</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
-        <translation>Heu de dir a QT Creator quin marc de prova s'utilitza dins del projecte.
+        <translation>Heu de dir a QT Creator quin marc de prova s&apos;utilitza dins del projecte.
 
  No heu de barrejar diversos marcs de prova en un projecte.</translation>
     </message>
@@ -12813,7 +12911,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Caixa de prova</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>Crea un fitxer buit.</translation>
     </message>
@@ -12823,7 +12921,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Fitxer buit</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Crea un fitxer de traducció que podeu afegir a un projecte QT.</translation>
     </message>
@@ -12833,61 +12931,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Fitxer de traducció QT</translation>
     </message>
     <message>
-        <location line="-623" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Aquest assistent crea una aplicació de consola senzilla basada en Qt.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+83" />
+        <location line="+195" />
         <source>Meson</source>
         <translation>Mesó</translation>
     </message>
     <message>
-        <location line="-442" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-326" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Define Build System</source>
         <translation>Definir el sistema de construcció</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-328" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build System</source>
         <translation>Sistema de construcció</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-328" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation File</source>
         <translation>Fitxer de traducció</translation>
     </message>
     <message>
-        <location line="-591" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-479" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation</source>
         <translation>Traducció</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-262" />
         <source>Define Python Interpreter</source>
         <translation>Definiu un intèrpret de Python</translation>
     </message>
@@ -12899,10 +12997,10 @@ You should not mix multiple test frameworks in a project.</source>
     <message>
         <location line="+5" />
         <source>Creates a Qt for Python application that includes a Qt Widgets Designer-based widget (ui file). Requires .ui to Python conversion.</source>
-        <translation>Crea un QT per a l'aplicació Python que inclou un widget basat en dissenyadors de widgets QT (fitxer d'UI). Requereix la conversió de Python.</translation>
+        <translation>Crea un QT per a l&apos;aplicació Python que inclou un widget basat en dissenyadors de widgets QT (fitxer d&apos;UI). Requereix la conversió de Python.</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+38" />
         <source>Qt 6.4</source>
         <translation>QT 6.4</translation>
     </message>
@@ -12917,7 +13015,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Crea una aplicació ràpida QT que pot tenir el codi QML i C ++. Podeu crear l’aplicació i desplegar -la a les plataformes d’objectiu d’escriptori, incrustades i mòbils.</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="+42" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -12926,13 +13024,13 @@ To develop a full application, create a Qt Quick Application project instead.</s
  Per desenvolupar una aplicació completa, creeu un projecte d’aplicació Quick QT.</translation>
     </message>
     <message>
-        <location line="+173" />
+        <location line="+30" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
-        <translation>Crea una aplicació QT basada en widget que conté una finestra principal basada en dissenyadors de widgets QT i fitxers de capçalera i capçalera basats en C ++ per implementar la lògica de l'aplicació.
+        <translation>Crea una aplicació QT basada en widget que conté una finestra principal basada en dissenyadors de widgets QT i fitxers de capçalera i capçalera basats en C ++ per implementar la lògica de l&apos;aplicació.
 
- Preselecciona un QT d'escriptori per crear l'aplicació si està disponible.</translation>
+ Preselecciona un QT d&apos;escriptori per crear l&apos;aplicació si està disponible.</translation>
     </message>
     <message>
         <source>Creates a project containing a single main.cpp file with a stub implementation.
@@ -12940,34 +13038,34 @@ Preselects a desktop Qt for building the application if available.</source>
 Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Crea un projecte que conté un únic fitxer main.cpp amb una implementació stub.
 
-Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</translation>
+Preselecciona un Qt d&apos;escriptori per crear l&apos;aplicació si està disponible.</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+32" />
-        <location line="+299" />
-        <location line="+114" />
+        <location line="-337" />
+        <location line="+266" />
+        <location line="+28" />
+        <location line="+44" />
         <source>Application (Qt)</source>
         <translation>Aplicació (Qt)</translation>
     </message>
     <message>
-        <location line="-412" />
+        <location line="-337" />
         <source>Qt Console Application</source>
         <translation>Aplicació de consola Qt</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Aquest assistent crea un projecte de biblioteca C++.</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+84" />
+        <location line="+308" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
-        <translation>Especifiqueu informació bàsica sobre les classes per a les quals voleu generar fitxers de codi font d'esquelet.</translation>
+        <translation>Especifiqueu informació bàsica sobre les classes per a les quals voleu generar fitxers de codi font d&apos;esquelet.</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="-307" />
         <source>Shared Library</source>
         <translation>Biblioteca compartida</translation>
     </message>
@@ -12983,17 +13081,17 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     </message>
     <message>
         <location line="+1" />
-        <location line="+35" />
+        <location line="+46" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Tipus:</translation>
     </message>
     <message>
-        <source>%{JS: value('Type') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</source>
-        <translation type="vanished">%{JS: value('Type') === 'qtplugin'? value('BaseClassName').slice(1): (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</translation>
+        <source>%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</source>
+        <translation type="vanished">%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos;? value(&apos;BaseClassName&apos;).slice(1): (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -13059,54 +13157,54 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Mòdul Qt:</translation>
     </message>
     <message>
-        <location line="-519" />
-        <location line="+147" />
-        <location line="+70" />
+        <location line="+3" />
+        <location line="+116" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+59" />
-        <location line="+42" />
+        <location line="+68" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+170" />
         <source>Define Project Details</source>
         <translation>Definir els detalls del projecte</translation>
     </message>
     <message>
         <source>Creates a C++ library. This can be used to create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="vanished">Crea una biblioteca C++. Això es pot utilitzar per crear:&lt;ul&gt;&lt;li&gt;una biblioteca C++ compartida per utilitzar-la amb &lt;tt&gt;QPluginLoader&lt;/tt&gt; i temps d'execució (complements)&lt;/li&gt;&lt;li&gt;una biblioteca C++ compartida o estàtica per utilitzar-la amb un altre projecte a linktime&lt;/li&gt;&lt;/ul&gt;</translation>
+        <translation type="vanished">Crea una biblioteca C++. Això es pot utilitzar per crear:&lt;ul&gt;&lt;li&gt;una biblioteca C++ compartida per utilitzar-la amb &lt;tt&gt;QPluginLoader&lt;/tt&gt; i temps d&apos;execució (complements)&lt;/li&gt;&lt;li&gt;una biblioteca C++ compartida o estàtica per utilitzar-la amb un altre projecte a linktime&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-513" />
-        <location line="+460" />
-        <location line="+62" />
-        <location line="+7" />
+        <location line="-427" />
+        <location line="+18" />
+        <location line="+186" />
+        <location line="+232" />
         <source>Library</source>
         <translation>Biblioteca</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-435" />
         <source>C++ Library</source>
         <translation>Biblioteca C++</translation>
     </message>
     <message>
-        <location line="-366" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>Crea una aplicació Nim senzilla.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+229" />
+        <location line="+40" />
         <location line="+18" />
-        <location line="+157" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Projecte no Qt</translation>
     </message>
     <message>
-        <location line="-403" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>Aplicació Nim</translation>
     </message>
     <message>
-        <location line="+369" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>Binari</translation>
     </message>
@@ -13121,13 +13219,13 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Autor:</translation>
     </message>
     <message>
-        <location line="-544" />
-        <location line="+545" />
+        <location line="+1" />
+        <location line="+402" />
         <source>Description:</source>
         <translation>Descripció:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-401" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -13192,13 +13290,13 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Altres</translation>
     </message>
     <message>
-        <location line="-560" />
-        <location line="+561" />
+        <location line="+1" />
+        <location line="+386" />
         <source>License:</source>
         <translation>Llicència:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-385" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -13239,22 +13337,22 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Definir la configuració del projecte</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="+1" />
+        <location line="+253" />
+        <location line="+1" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+202" />
         <source>Configuration</source>
         <translation>Configuració</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-343" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Crea una aplicació Nim amb Nimble.</translation>
     </message>
@@ -13264,7 +13362,7 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Aplicació àgil</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Crea una aplicació C senzilla sense dependències.</translation>
     </message>
@@ -13274,7 +13372,7 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Aplicació C simple</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Crea una aplicació C++ senzilla sense dependències.</translation>
     </message>
@@ -13284,7 +13382,7 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Aplicació Plain C++</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Aquest assistent crea un fitxer .pro buit.</translation>
     </message>
@@ -13303,43 +13401,43 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation type="vanished">Versió PySide:</translation>
     </message>
     <message>
-        <location line="-218" />
+        <location line="+13" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
-        <translation>Crea una aplicació Qt per a Python que només conté el codi principal d'una QApplication.</translation>
+        <translation>Crea una aplicació Qt per a Python que només conté el codi principal d&apos;una QApplication.</translation>
     </message>
     <message>
-        <location line="-14" />
-        <location line="+15" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+18" />
+        <location line="+21" />
         <source>Application (Qt for Python)</source>
         <translation>Aplicació (Qt per a Python)</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-60" />
         <source>Empty Application</source>
         <translation>Aplicació buida</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseCB') ? value('BaseCB').slice(1): 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1): &apos;MyClass&apos;}</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(valor('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(valor(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</source>
-        <translation type="vanished">%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</translation>
+        <source>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</source>
+        <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-28" />
-        <location line="+37" />
+        <location line="+9" />
+        <location line="+39" />
         <source>Project file:</source>
         <translation>Fitxa del projecte:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Crea una aplicació Qt per a Python que conté una finestra buida.</translation>
     </message>
@@ -13349,36 +13447,36 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Finestra buida</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+15" />
+        <location line="-32" />
         <location line="+22" />
         <location line="+15" />
+        <location line="+24" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-211" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
-        <translation>Crea un projecte que conté un únic fitxer main.cpp amb una implementació de tija i sense interfície d'interès gràfic.
+        <translation>Crea un projecte que conté un únic fitxer main.cpp amb una implementació de tija i sense interfície d&apos;interès gràfic.
 
- Preselecciona un QT d'escriptori per crear l'aplicació si està disponible.</translation>
+ Preselecciona un QT d&apos;escriptori per crear l&apos;aplicació si està disponible.</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation>Crea una biblioteca C ++. Podeu crear: &lt;ul&gt; &lt;li&gt; Una biblioteca C ++ compartida per utilitzar amb &lt;tt&gt; qpluginloader &lt;/tt&gt; i temps d'execució (plugins) &lt;/li&gt; &lt;li&gt; Una biblioteca C ++ compartida o estàtica per utilitzar -la amb un altre projecte a LinkTime &lt;/li&gt; &lt;/ul&gt;</translation>
+        <translation>Crea una biblioteca C ++. Podeu crear: &lt;ul&gt; &lt;li&gt; Una biblioteca C ++ compartida per utilitzar amb &lt;tt&gt; qpluginloader &lt;/tt&gt; i temps d&apos;execució (plugins) &lt;/li&gt; &lt;li&gt; Una biblioteca C ++ compartida o estàtica per utilitzar -la amb un altre projecte a LinkTime &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+15" />
+        <location line="+107" />
         <location line="+22" />
+        <location line="+39" />
         <source>PySide 2</source>
         <translation>Pyside 2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="-24" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -13412,57 +13510,57 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Crea una aplicació Qt per a Python que inclou un widget basat en Qt Designer (fitxer ui): requereix la conversió de .ui a Python</translation>
     </message>
     <message>
-        <location line="-55" />
+        <location line="+21" />
         <source>Window UI</source>
-        <translation>Interfície d'usuari de la finestra</translation>
+        <translation>Interfície d&apos;usuari de la finestra</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+311" />
+        <location line="+10" />
         <location line="+25" />
+        <location line="+23" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-335" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
         <location line="+23" />
+        <location line="+25" />
         <source>Minimum required Qt version:</source>
         <translation>Versió Qt mínima requerida:</translation>
     </message>
     <message>
-        <location line="-22" />
+        <location line="-47" />
         <source>MyItem</source>
         <translation>MyItem</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Object class-name:</source>
-        <translation>Nom de la classe d'objectes:</translation>
+        <translation>Nom de la classe d&apos;objectes:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13477,7 +13575,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+1" />
         <source>Create example project</source>
-        <translation>Crea un projecte d'exemple</translation>
+        <translation>Crea un projecte d&apos;exemple</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13492,7 +13590,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+2" />
         <source>Qt Quick 2 Extension Plugin</source>
-        <translation>Connector d'extensió Qt Quick 2</translation>
+        <translation>Connector d&apos;extensió Qt Quick 2</translation>
     </message>
     <message>
         <source>Create a project that you can open in Qt Design Studio</source>
@@ -13503,33 +13601,33 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Creeu un projecte amb una estructura compatible tant amb Qt Design Studio (mitjançant .qmlproject) com amb Qt Creator (mitjançant CMakeLists.txt). Conté un formulari .ui.qml que podeu editar visualment a Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="-324" />
-        <location line="+274" />
-        <location line="+55" />
+        <location line="+5" />
+        <location line="+30" />
+        <location line="+16" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Utilitzeu el teclat virtual Qt</translation>
     </message>
     <message>
         <source>The minimum version of Qt you want to build the application for</source>
-        <translation type="vanished">La versió mínima de Qt per a la qual voleu crear l'aplicació</translation>
+        <translation type="vanished">La versió mínima de Qt per a la qual voleu crear l&apos;aplicació</translation>
     </message>
     <message>
         <source>Creates a Qt Quick application that contains an empty window. Optionally, you can create a Qt Design Studio project.</source>
         <translation type="vanished">Crea una aplicació Qt Quick que conté una finestra buida. Opcionalment, podeu crear un projecte de Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-33" />
         <source>Qt Quick Application</source>
         <translation>Aplicació ràpida de Qt</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="+26" />
         <source>Creates a Qt Quick application that contains an empty window.
 
-Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
+Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
         <translation>Crea una aplicació Qt Quick que conté una finestra buida.
 
-Utilitzeu aquesta versió "compat" si voleu utilitzar altres sistemes de compilació que les versions CMake o Qt inferiors a 6.</translation>
+Utilitzeu aquesta versió &quot;compat&quot; si voleu utilitzar altres sistemes de compilació que les versions CMake o Qt inferiors a 6.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13540,23 +13638,23 @@ Utilitzeu aquesta versió "compat" si voleu utilitzar altres sistemes de compila
         <source>Creates a Qt Quick 2 UI project with a QML entry point. To use it, you need to have a QML runtime environment.
 
 Use this only if you are prototyping. You cannot create a full application with this. Consider using a Qt Quick Application project instead.</source>
-        <translation type="vanished">Crea un projecte d'IU Qt Quick 2 amb un punt d'entrada QML. Per utilitzar-lo, cal tenir un entorn d'execució QML.
+        <translation type="vanished">Crea un projecte d&apos;IU Qt Quick 2 amb un punt d&apos;entrada QML. Per utilitzar-lo, cal tenir un entorn d&apos;execució QML.
 
-Utilitzeu-ho només si esteu fent prototips. No podeu crear una aplicació completa amb això. Penseu en utilitzar un projecte d'aplicació ràpida de Qt.</translation>
+Utilitzeu-ho només si esteu fent prototips. No podeu crear una aplicació completa amb això. Penseu en utilitzar un projecte d&apos;aplicació ràpida de Qt.</translation>
     </message>
     <message>
-        <location line="+272" />
+        <location line="+14" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt Quick UI Prototype</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
-        <translation>Aquest assistent genera un projecte d'aplicació Qt Widgets. L'aplicació deriva per defecte de QApplication i inclou un giny buit.</translation>
+        <translation>Aquest assistent genera un projecte d&apos;aplicació Qt Widgets. L&apos;aplicació deriva per defecte de QApplication i inclou un giny buit.</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseClass') ? value('BaseClass').slice(1): 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1): &apos;MyClass&apos;}</translation>
     </message>
     <message>
         <location line="+15" />
@@ -13564,8 +13662,8 @@ Utilitzeu-ho només si esteu fent prototips. No podeu crear una aplicació compl
         <translation>Generar formulari</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), 'ui')}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(valor('Classe'), 'ui')}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(valor(&apos;Classe&apos;), &apos;ui&apos;)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13583,7 +13681,7 @@ Utilitzeu-ho només si esteu fent prototips. No podeu crear una aplicació compl
 Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Crea una aplicació Qt basada en widgets que conté una finestra principal basada en Qt Designer.
 
-Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</translation>
+Preselecciona un Qt d&apos;escriptori per crear l&apos;aplicació si està disponible.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -13591,54 +13689,54 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Aplicació Qt Widgets</translation>
     </message>
     <message>
-        <location line="-332" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Configura &lt;b&gt;%{vcsName}&lt;/b&gt; ara.</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-93" />
+        <location line="+52" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository:</source>
         <translation>Repositori:</translation>
     </message>
     <message>
         <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository URL is not valid</source>
-        <translation>L'URL del repositori no és vàlid</translation>
+        <translation>L&apos;URL del repositori no és vàlid</translation>
     </message>
     <message>
         <source>%{defaultDir}</source>
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
         <source>Directory:</source>
         <translation>Directori:</translation>
     </message>
     <message>
-        <location line="-94" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
-        <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" existeix al sistema de fitxers.</translation>
+        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; existeix al sistema de fitxers.</translation>
     </message>
     <message>
-        <location line="-52" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>Utilitzeu el directori existent</translation>
     </message>
@@ -13655,7 +13753,7 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     <message>
         <location line="+1" />
         <source>Make the new branch depend on the availability of the source branch.</source>
-        <translation>Feu que la nova branca depengui de la disponibilitat de la branca d'origen.</translation>
+        <translation>Feu que la nova branca depengui de la disponibilitat de la branca d&apos;origen.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13670,12 +13768,12 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     <message>
         <location line="+1" />
         <source>Bind new branch to source location</source>
-        <translation>Enllaça la branca nova a la ubicació d'origen</translation>
+        <translation>Enllaça la branca nova a la ubicació d&apos;origen</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Bind the new branch to the source location.</source>
-        <translation>Enllaceu la nova branca a la ubicació d'origen.</translation>
+        <translation>Enllaceu la nova branca a la ubicació d&apos;origen.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13695,7 +13793,7 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     <message>
         <location line="+1" />
         <source>Use hard-links in working tree.</source>
-        <translation>Utilitzeu enllaços durs a l'arbre de treball.</translation>
+        <translation>Utilitzeu enllaços durs a l&apos;arbre de treball.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13714,13 +13812,13 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     </message>
     <message>
         <location line="+3" />
-        <location line="+19" />
+        <location line="+60" />
         <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
-        <translation>Especifiqueu l'URL del dipòsit, el directori de pagament i el camí.</translation>
+        <translation>Especifiqueu l&apos;URL del dipòsit, el directori de pagament i el camí.</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>Sucursal de Running Bazaar...</translation>
     </message>
@@ -13739,22 +13837,22 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Clona una branca de Basar i intenta carregar el projecte contingut.</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+1" />
+        <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <location line="+20" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
         <source>Import Project</source>
-        <translation>Projecte d'importació</translation>
+        <translation>Projecte d&apos;importació</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Clon del basar (o branca)</translation>
     </message>
     <message>
-        <location line="-69" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>Mòdul:</translation>
     </message>
@@ -13766,14 +13864,14 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     <message>
         <location line="+1" />
         <source>Running CVS checkout...</source>
-        <translation>S'està executant la comprovació de CVS...</translation>
+        <translation>S&apos;està executant la comprovació de CVS...</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+52" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+19" />
         <location line="+1" />
@@ -13781,7 +13879,7 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Pagament</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Consulta un repositori CVS i intenta carregar el projecte contingut.</translation>
     </message>
@@ -13813,12 +13911,12 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     <message>
         <location line="+3" />
         <source>Specify repository URL, branch, checkout directory, and path.</source>
-        <translation>Especifiqueu l'URL del dipòsit, la branca, el directori de pagament i el camí.</translation>
+        <translation>Especifiqueu l&apos;URL del dipòsit, la branca, el directori de pagament i el camí.</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Running Git clone...</source>
-        <translation>S'està executant el clon de Git...</translation>
+        <translation>S&apos;està executant el clon de Git...</translation>
     </message>
     <message>
         <location line="+3" />
@@ -13831,9 +13929,9 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Clon de Git</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
-        <translation>S'està executant el clon de Mercurial...</translation>
+        <translation>S&apos;està executant el clon de Mercurial...</translation>
     </message>
     <message>
         <location line="+3" />
@@ -13853,7 +13951,7 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     <message>
         <location line="+4" />
         <source>Running Subversion checkout...</source>
-        <translation>S'està executant la compra de Subversion...</translation>
+        <translation>S&apos;està executant la compra de Subversion...</translation>
     </message>
     <message>
         <location line="+3" />
@@ -13866,7 +13964,7 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Subversion Checkout</translation>
     </message>
     <message>
-        <location line="-394" />
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Aquest assistent crea un connector personalitzat de Qt Creator.</translation>
     </message>
@@ -13876,8 +13974,8 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Especifiqueu detalls sobre el vostre connector personalitzat de Qt Creator.</translation>
     </message>
     <message>
-        <source>%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</source>
-        <translation type="vanished">%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</translation>
+        <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
+        <translation type="vanished">%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13915,8 +14013,8 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
         <translation>Posa aquí una breu descripció del teu connector</translation>
     </message>
     <message>
-        <source>https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</source>
-        <translation type="vanished">https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</translation>
+        <source>https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</source>
+        <translation type="vanished">https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13941,12 +14039,12 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     <message>
         <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
         <source>S&amp;essions</source>
-        <translation>S &amp; ESSIONS</translation>
+        <translation>S &amp;ESSIONS</translation>
     </message>
     <message>
         <location line="+9" />
         <source>&amp;Manage...</source>
-        <translation>I gestiona ...</translation>
+        <translation>&amp;I gestiona ...</translation>
     </message>
     <message>
         <location line="+13" />
@@ -13988,7 +14086,7 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     <message>
         <location line="+1" />
         <source>Could not restore session %1</source>
-        <translation>No s'ha pogut restaurar la sessió %1</translation>
+        <translation>No s&apos;ha pogut restaurar la sessió %1</translation>
     </message>
     <message>
         <location line="+44" />
@@ -14004,12 +14102,12 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     <message>
         <location line="-41" />
         <source>Could not save session %1</source>
-        <translation>No s'ha pogut estalviar la sessió %1</translation>
+        <translation>No s&apos;ha pogut estalviar la sessió %1</translation>
     </message>
     <message>
         <location line="+42" />
-        <source>Could not save session to file "%1"</source>
-        <translation>No s'ha pogut desar la sessió al fitxer "%1"</translation>
+        <source>Could not save session to file &quot;%1&quot;</source>
+        <translation>No s&apos;ha pogut desar la sessió al fitxer &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
@@ -14024,27 +14122,27 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     <message>
         <location line="+7" />
         <source>&amp;New...</source>
-        <translation>I nou ...</translation>
+        <translation>I &amp;nou ...</translation>
     </message>
     <message>
         <location line="+3" />
         <source>&amp;Open</source>
-        <translation>I obert</translation>
+        <translation>I &amp;obert</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Rename...</source>
-        <translation>I canvia el nom ...</translation>
+        <translation>&amp;I canvia el nom ...</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C&amp;lone...</source>
-        <translation>C &amp; solitari ...</translation>
+        <translation>C &amp;solitari ...</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Delete...</source>
-        <translation>I suprimir ...</translation>
+        <translation>&amp;I suprimir ...</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14075,22 +14173,22 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     <message>
         <location line="-10" />
         <source>&amp;Create</source>
-        <translation>I crear</translation>
+        <translation>I &amp;crear</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Create and &amp;Open</source>
-        <translation>Crea i i obre</translation>
+        <translation>Crea i i &amp;obre</translation>
     </message>
     <message>
         <location line="+11" />
         <source>&amp;Clone</source>
-        <translation>I clon</translation>
+        <translation>I &amp;clon</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Clone and &amp;Open</source>
-        <translation>Clon i i obert</translation>
+        <translation>Cl&amp;on i i obert</translation>
     </message>
     <message>
         <location line="+22" />
@@ -14100,17 +14198,17 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     <message>
         <location line="+1" />
         <source>&amp;Rename</source>
-        <translation>I canviar el nom</translation>
+        <translation>I canvia&amp;r el nom</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Rename and &amp;Open</source>
-        <translation>Canvia de nom i i obert</translation>
+        <translation>Canvia de n&amp;om i i obert</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
         <source>&lt;custom&gt;</source>
-        <translation>&lt;S. Custom&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+98" />
@@ -14119,38 +14217,38 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     </message>
     <message>
         <location line="+72" />
-        <source>Could not create directory "%1"</source>
-        <translation>No s'ha pogut crear el directori "%1"</translation>
+        <source>Could not create directory &quot;%1&quot;</source>
+        <translation>No s&apos;ha pogut crear el directori &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>El programa "%1" no existeix o no és executable.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>El programa &quot;%1&quot; no existeix o no és executable.</translation>
     </message>
     <message>
         <location line="+34" />
-        <source>Starting: "%1" %2</source>
-        <translation>Començar: " %1" %2</translation>
+        <source>Starting: &quot;%1&quot; %2</source>
+        <translation>Començar: &quot; %1&quot; %2</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The process "%1" exited normally.</source>
-        <translation>El procés "%1" va sortir normalment.</translation>
+        <source>The process &quot;%1&quot; exited normally.</source>
+        <translation>El procés &quot;%1&quot; va sortir normalment.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The process "%1" exited with code %2.</source>
-        <translation>El procés " %1" va sortir amb el codi %2.</translation>
+        <source>The process &quot;%1&quot; exited with code %2.</source>
+        <translation>El procés &quot; %1&quot; va sortir amb el codi %2.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Could not start process "%1" %2.</source>
-        <translation>No s'ha pogut iniciar el procés " %1" %2.</translation>
+        <source>Could not start process &quot;%1&quot; %2.</source>
+        <translation>No s&apos;ha pogut iniciar el procés &quot; %1&quot; %2.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The process "%1" crashed.</source>
-        <translation>El procés "%1" es va estavellar.</translation>
+        <source>The process &quot;%1&quot; crashed.</source>
+        <translation>El procés &quot;%1&quot; es va estavellar.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
@@ -14172,7 +14270,7 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     <message>
         <location line="+45" />
         <source>Create Run Configuration</source>
-        <translation>Creeu la configuració d'execució</translation>
+        <translation>Creeu la configuració d&apos;execució</translation>
     </message>
     <message>
         <location line="+7" />
@@ -14191,8 +14289,8 @@ Preselecciona un Qt d'escriptori per crear l'aplicació si està disponible.</tr
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files of all open projects. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Localitza fitxers de tots els projectes oberts. Afegiu "+&lt;number&gt;" o ": &lt;number&gt;" per saltar al número de línia donat. Afegiu un altre "+&lt;number&gt;" o ": &lt;number&gt;" per saltar també al número de la columna.</translation>
+        <source>Locates files of all open projects. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Localitza fitxers de tots els projectes oberts. Afegiu &quot;+&lt;number&gt;&quot; o &quot;: &lt;number&gt;&quot; per saltar al número de línia donat. Afegiu un altre &quot;+&lt;number&gt;&quot; o &quot;: &lt;number&gt;&quot; per saltar també al número de la columna.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
@@ -14247,12 +14345,12 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>Show &amp;App Output</source>
-        <translation>Mostra i sortida d'aplicacions</translation>
+        <translation>Mostr&amp;a i sortida d&apos;aplicacions</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Show the output that generated this issue in Application Output.</source>
-        <translation>Mostra la sortida que va generar aquest problema a la sortida de l'aplicació.</translation>
+        <translation>Mostra la sortida que va generar aquest problema a la sortida de l&apos;aplicació.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14263,7 +14361,7 @@ Excluding: %2
         <location line="+3" />
         <location line="+737" />
         <source>Application Output</source>
-        <translation>Sortida de l'aplicació</translation>
+        <translation>Sortida de l&apos;aplicació</translation>
     </message>
     <message>
         <location line="-727" />
@@ -14284,7 +14382,7 @@ Excluding: %2
     <message>
         <location line="+29" />
         <source>Application Output Window</source>
-        <translation>Finestra de sortida de l'aplicació</translation>
+        <translation>Finestra de sortida de l&apos;aplicació</translation>
     </message>
     <message>
         <location line="+280" />
@@ -14337,12 +14435,12 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>Open Application Output when running:</source>
-        <translation>Obriu la sortida de l'aplicació quan s'executa:</translation>
+        <translation>Obriu la sortida de l&apos;aplicació quan s&apos;executa:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Open Application Output when debugging:</source>
-        <translation>Obriu la sortida de l'aplicació en depurar:</translation>
+        <translation>Obriu la sortida de l&apos;aplicació en depurar:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+146" />
@@ -14364,17 +14462,17 @@ Excluding: %2
     <message>
         <location line="+22" />
         <source>Shadow build:</source>
-        <translation>Construcció d'ombres:</translation>
+        <translation>Construcció d&apos;ombres:</translation>
     </message>
     <message>
         <location line="+105" />
-        <source>Build directory contains potentially problematic character "%1".</source>
-        <translation>El directori de construcció conté un caràcter potencialment problemàtic "%1".</translation>
+        <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
+        <translation>El directori de construcció conté un caràcter potencialment problemàtic &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>This warning can be suppressed &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>Aquest avís es pot suprimir &lt;a href = "maniquí"&gt; aquí &lt;/a&gt;.</translation>
+        <source>This warning can be suppressed &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Aquest avís es pot suprimir &lt;a href = &quot;maniquí&quot;&gt; aquí &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -14404,7 +14502,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Parse standard output during build</source>
-        <translation>Sortida estàndard de l'anàlisi durant la creació</translation>
+        <translation>Sortida estàndard de l&apos;anàlisi durant la creació</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14430,7 +14528,7 @@ Excluding: %2
     </message>
     <message>
         <location line="+4" />
-        <source>Variables in the build configuration's environment</source>
+        <source>Variables in the build configuration&apos;s environment</source>
         <translation>Variables a l’entorn de la configuració de la creació</translation>
     </message>
     <message>
@@ -14472,12 +14570,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build configuration</source>
+        <source>Name of the project&apos;s active build configuration</source>
         <translation>Nom de la configuració de creació activa del projecte</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build system</source>
+        <source>Name of the project&apos;s active build system</source>
         <translation>Nom del sistema de creació activa del projecte</translation>
     </message>
     <message>
@@ -14487,13 +14585,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Type of the project's active build configuration</source>
+        <source>Type of the project&apos;s active build configuration</source>
         <translation>Tipus de configuració de creació activa del projecte</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>No build device is set for the kit "%1".</source>
-        <translation>No hi ha cap dispositiu de creació per al kit "%1".</translation>
+        <source>No build device is set for the kit &quot;%1&quot;.</source>
+        <translation>No hi ha cap dispositiu de creació per al kit &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -14502,20 +14600,20 @@ Excluding: %2
     </message>
     <message>
         <location line="+7" />
-        <source>The build device "%1" cannot reach the project directory.</source>
-        <translation>El dispositiu de creació "%1" no pot arribar al directori del projecte.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the project directory.</source>
+        <translation>El dispositiu de creació &quot;%1&quot; no pot arribar al directori del projecte.</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The build device "%1" cannot reach the build directory.</source>
-        <translation>El dispositiu de creació "%1" no pot arribar al directori de creació.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the build directory.</source>
+        <translation>El dispositiu de creació &quot;%1&quot; no pot arribar al directori de creació.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
         <source>Finished %1 of %n steps</source>
-        <translation>
-            <numerusform>Acabat %1 de %N passos</numerusform>
-            <numerusform>Acabat %1 de %N passos</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -14541,7 +14639,7 @@ Excluding: %2
     <message>
         <location line="+138" />
         <source>Compile</source>
-        <comment>Category for compiler issues listed under 'Issues'</comment>
+        <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>Compilar</translation>
     </message>
     <message>
@@ -14552,7 +14650,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Build System</source>
-        <comment>Category for build system issues listed under 'Issues'</comment>
+        <comment>Category for build system issues listed under &apos;Issues&apos;</comment>
         <translation>Sistema de construcció</translation>
     </message>
     <message>
@@ -14563,7 +14661,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Deployment</source>
-        <comment>Category for deployment issues listed under 'Issues'</comment>
+        <comment>Category for deployment issues listed under &apos;Issues&apos;</comment>
         <translation>Desplegament</translation>
     </message>
     <message>
@@ -14574,7 +14672,7 @@ Excluding: %2
     <message>
         <location line="+4" />
         <source>Autotests</source>
-        <comment>Category for autotest issues listed under 'Issues'</comment>
+        <comment>Category for autotest issues listed under &apos;Issues&apos;</comment>
         <translation>Autotests</translation>
     </message>
     <message>
@@ -14591,7 +14689,7 @@ Excluding: %2
         <location line="+8" />
         <location line="+59" />
         <source>Clean</source>
-        <extracomment>Displayed name for a "cleaning" build step
+        <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
 Display name of the clean build step list. Used as part of the labels in the project window.</extracomment>
         <translation>Netejar</translation>
@@ -14655,8 +14753,8 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location line="+98" />
-        <source>When executing step "%1"</source>
-        <translation>En executar el pas "%1"</translation>
+        <source>When executing step &quot;%1&quot;</source>
+        <translation>En executar el pas &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
@@ -14798,7 +14896,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+1" />
         <source>The build configuration &lt;b&gt;%1&lt;/b&gt; is currently being built.</source>
-        <translation>Actualment s'està construint la configuració de creació &lt;b&gt;%1 &lt;/b&gt;.</translation>
+        <translation>Actualment s&apos;està construint la configuració de creació &lt;b&gt;%1 &lt;/b&gt;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14828,7 +14926,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+7" />
         <source>Remove Item</source>
-        <translation>Eliminar l'element</translation>
+        <translation>Eliminar l&apos;element</translation>
     </message>
     <message>
         <location line="+97" />
@@ -14873,8 +14971,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+3" />
-        <source>The project file "%1" does not exist.</source>
-        <translation>El fitxer del projecte "%1" no existeix.</translation>
+        <source>The project file &quot;%1&quot; does not exist.</source>
+        <translation>El fitxer del projecte &quot;%1&quot; no existeix.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/codestylesettingspropertiespage.cpp" line="+60" />
@@ -14901,7 +14999,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+38" />
         <source>Show Compile &amp;Output</source>
-        <translation>Mostra compilació i sortida</translation>
+        <translation>M&amp;ostra compilació i sortida</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14971,13 +15069,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from the current document's project. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Localitza fitxers del projecte actual del document. Afegiu "+&lt;number&gt;" o ": &lt;number&gt;" per saltar al número de línia donat. Afegiu un altre "+&lt;number&gt;" o ": &lt;number&gt;" per saltar també al número de la columna.</translation>
+        <source>Locates files from the current document&apos;s project. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Localitza fitxers del projecte actual del document. Afegiu &quot;+&lt;number&gt;&quot; o &quot;: &lt;number&gt;&quot; per saltar al número de línia donat. Afegiu un altre &quot;+&lt;number&gt;&quot; o &quot;: &lt;number&gt;&quot; per saltar també al número de la columna.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
-        <source>Project "%1"</source>
-        <translation>Projecte "%1"</translation>
+        <source>Project &quot;%1&quot;</source>
+        <translation>Projecte &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14986,8 +15084,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>Project "%1":</source>
-        <translation>Projecte "%1":</translation>
+        <source>Project &quot;%1&quot;:</source>
+        <translation>Projecte &quot;%1&quot;:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
@@ -15004,12 +15102,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+7" />
         <source>You need to set an executable in the custom run configuration.</source>
-        <translation>Heu de definir un executable a la configuració de l'execució personalitzada.</translation>
+        <translation>Heu de definir un executable a la configuració de l&apos;execució personalitzada.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
-        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>Sortida de sortida personalitzada Scan Scan Line Sortida per a patrons d'error proporcionats per l'usuari &lt;br&gt; Per crear entrades en problemes. &lt;br&gt; Els analitzadors es poden configurar &lt;a href = "maniquí"&gt; aquí &lt;/a&gt;.</translation>
+        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Sortida de sortida personalitzada Scan Scan Line Sortida per a patrons d&apos;error proporcionats per l&apos;usuari &lt;br&gt; Per crear entrades en problemes. &lt;br&gt; Els analitzadors es poden configurar &lt;a href = &quot;maniquí&quot;&gt; aquí &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+82" />
@@ -15032,25 +15130,25 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>&amp;Error message capture pattern:</source>
-        <translation>I patró de captura de missatges d'error:</translation>
+        <translation>I patró d&amp;e captura de missatges d&apos;error:</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+33" />
         <source>&amp;File name:</source>
-        <translation>I nom del fitxer:</translation>
+        <translation>I nom del &amp;fitxer:</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Line number:</source>
-        <translation>Número de línia:</translation>
+        <translation>Número de &amp;línia:</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Message:</source>
-        <translation>I missatge:</translation>
+        <translation>I &amp;missatge:</translation>
     </message>
     <message>
         <location line="-15" />
@@ -15067,17 +15165,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-31" />
         <source>E&amp;rror message:</source>
-        <translation>Missatge E &amp; RROR:</translation>
+        <translation>Missatge E &amp;RROR:</translation>
     </message>
     <message>
         <location line="+33" />
         <source>Warning message:</source>
-        <translation>Missatge d'advertència:</translation>
+        <translation>Missatge d&apos;advertència:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Warning message capture pattern:</source>
-        <translation>Patró de captura de missatges d'advertència:</translation>
+        <translation>Patró de captura de missatges d&apos;advertència:</translation>
     </message>
     <message>
         <location line="+3" />
@@ -15152,7 +15250,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
-        <source>Custom output parsers defined here can be enabled individually in the project's build or run settings.</source>
+        <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>Els analitzadors de sortida personalitzats definits aquí es poden activar individualment en la configuració de creació o execució del projecte.</translation>
     </message>
     <message>
@@ -15246,44 +15344,44 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
         <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>&amp; Camí del compilador:</translation>
+        <translation>&amp;Camí del compilador:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Make path:</source>
-        <translation>I fer el camí:</translation>
+        <translation>I fer el ca&amp;mí:</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
         <source>&amp;ABI:</source>
-        <translation>&amp; Abi:</translation>
+        <translation>&amp;Abi:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Predefined macros:</source>
-        <translation>Macros predefinits:</translation>
+        <translation>Macros &amp;predefinits:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Header paths:</source>
-        <translation>I camins de capçalera:</translation>
+        <translation>&amp;I camins de capçalera:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C++11 &amp;flags:</source>
-        <translation>C ++ 11 i banderes:</translation>
+        <translation>&amp;C ++ 11 i banderes:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Qt mkspecs:</source>
-        <translation>&amp; Qt mkspecs:</translation>
+        <translation>&amp;Qt mkspecs:</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Error parser:</source>
-        <translation>I l'analitzador d'error:</translation>
+        <translation>I l&apos;analitzador d&apos;&amp;error:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/dependenciespanel.cpp" line="+83" />
@@ -15438,19 +15536,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
-        <source>No device for path "%1"</source>
-        <translation>No hi ha dispositiu per a la ruta "%1"</translation>
+        <source>No device for path &quot;%1&quot;</source>
+        <translation>No hi ha dispositiu per a la ruta &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
-        <source>No device found for path "%1"</source>
-        <translation>No es troba cap dispositiu per a la ruta "%1"</translation>
+        <source>No device found for path &quot;%1&quot;</source>
+        <translation>No es troba cap dispositiu per a la ruta &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-9" />
-        <source>No file access for device "%1"</source>
-        <translation>No hi ha accés de fitxer per al dispositiu "%1"</translation>
+        <source>No file access for device &quot;%1&quot;</source>
+        <translation>No hi ha accés de fitxer per al dispositiu &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
@@ -15475,17 +15573,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+22" />
         <source>&amp;Update List</source>
-        <translation>I llista d'actualització</translation>
+        <translation>I llista d&apos;act&amp;ualització</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Kill Process</source>
-        <translation>Procés i matar</translation>
+        <translation>&amp;Procés i matar</translation>
     </message>
     <message>
         <location line="+8" />
         <source>&amp;Filter:</source>
-        <translation>I filtre:</translation>
+        <translation>I &amp;filtre:</translation>
     </message>
     <message>
         <location line="+64" />
@@ -15495,7 +15593,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-253" />
         <source>&amp;Device:</source>
-        <translation>I dispositiu:</translation>
+        <translation>I &amp;dispositiu:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15505,7 +15603,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>&amp;Remove</source>
-        <translation>I treure</translation>
+        <translation>I t&amp;reure</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15515,12 +15613,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>&amp;Add...</source>
-        <translation>I afegir ...</translation>
+        <translation>I &amp;afegir ...</translation>
     </message>
     <message>
         <location line="+4" />
         <source>&amp;Start Wizard to Add Device...</source>
-        <translation>I inicieu l'assistent per afegir dispositiu ...</translation>
+        <translation>I inicieu l&apos;a&amp;ssistent per afegir dispositiu ...</translation>
     </message>
     <message>
         <location line="+12" />
@@ -15531,7 +15629,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+34" />
         <source>&amp;Name:</source>
-        <translation>I nom:</translation>
+        <translation>I &amp;nom:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -15545,8 +15643,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+87" />
-        <source>Yes (id is "%1")</source>
-        <translation>Sí (la identificació és "%1")</translation>
+        <source>Yes (id is &quot;%1&quot;)</source>
+        <translation>Sí (la identificació és &quot;%1&quot;)</translation>
     </message>
     <message>
         <location line="+0" />
@@ -15582,14 +15680,14 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceusedportsgatherer.cpp" line="+81" />
         <source>Remote error output was: %1</source>
-        <translation>La sortida d'error remota va ser: %1</translation>
+        <translation>La sortida d&apos;error remota va ser: %1</translation>
     </message>
     <message numerus="yes">
         <location line="+41" />
         <source>Found %n free ports.</source>
         <translation>
-            <numerusform>S'ha trobat %n ports lliures.</numerusform>
-            <numerusform>S'ha trobat %n ports lliures.</numerusform>
+            <numerusform>S&apos;ha trobat %n ports lliures.</numerusform>
+            <numerusform>S&apos;ha trobat %n ports lliures.</numerusform>
         </translation>
     </message>
     <message>
@@ -15675,13 +15773,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>No device for given path: "%1".</source>
-        <translation>No hi ha dispositiu per a la ruta donada: "%1".</translation>
+        <source>No device for given path: &quot;%1&quot;.</source>
+        <translation>No hi ha dispositiu per a la ruta donada: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Device for path "%1" does not support killing processes.</source>
-        <translation>El dispositiu per a la ruta "%1" no admet els processos de matança.</translation>
+        <source>Device for path &quot;%1&quot; does not support killing processes.</source>
+        <translation>El dispositiu per a la ruta &quot;%1&quot; no admet els processos de matança.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
@@ -15712,7 +15810,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+1" />
         <source>Connection sharing timeout:</source>
-        <translation>Temps d'intercanvi de connexions:</translation>
+        <translation>Temps d&apos;intercanvi de connexions:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15764,7 +15862,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Mostra la dreta i el marge a la columna:</translation>
+        <translation>&amp;Mostra la dreta i el marge a la columna:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15792,12 +15890,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+43" />
         <source>Base environment for this run configuration:</source>
-        <translation>Entorn base per a aquesta configuració d'execució:</translation>
+        <translation>Entorn base per a aquesta configuració d&apos;execució:</translation>
     </message>
     <message>
         <location line="+29" />
         <source>Show in Application Output when running</source>
-        <translation>Mostra a la sortida de l'aplicació quan s'executa</translation>
+        <translation>Mostra a la sortida de l&apos;aplicació quan s&apos;executa</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+2" />
@@ -15813,22 +15911,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-278" />
         <source>Ed&amp;it</source>
-        <translation>Ed &amp; it</translation>
+        <translation>Ed &amp;it</translation>
     </message>
     <message>
         <location line="+4" />
         <source>&amp;Add</source>
-        <translation>I afegir</translation>
+        <translation>I &amp;afegir</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&amp;Reset</source>
-        <translation>I restablir</translation>
+        <translation>I &amp;restablir</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&amp;Unset</source>
-        <translation>I desactivar</translation>
+        <translation>&amp;I desactivar</translation>
     </message>
     <message>
         <location line="+14" />
@@ -15843,7 +15941,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+9" />
         <source>Open &amp;Terminal</source>
-        <translation>Obert i terminal</translation>
+        <translation>Ober&amp;t i terminal</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15852,44 +15950,44 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+123" />
-        <source>Unset &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Unset &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Unset &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation>SET &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; a &lt;b&gt;%2 &lt;/b&gt;</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
+        <translation>SET &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; a &lt;b&gt;%2 &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Append &lt;b&gt;%2 &lt;/b&gt; a &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Append &lt;b&gt;%2 &lt;/b&gt; a &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Prepend &lt;b&gt;%2 &lt;/b&gt; a &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Prepend &lt;b&gt;%2 &lt;/b&gt; a &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
-        <translation>Set &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; a &lt;b&gt;%2 &lt;/b&gt; [desactivat]</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
+        <translation>Set &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; a &lt;b&gt;%2 &lt;/b&gt; [desactivat]</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Use &lt;b&gt;%1&lt;/b&gt;</source>
-        <extracomment>%1 is "System Environment" or some such.</extracomment>
+        <extracomment>%1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Utilitzeu &lt;b&gt;%1 &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&lt;b&gt;No environment changes&lt;/b&gt;</source>
-        <translation>&lt;b&gt; No canvia l'entorn &lt;/b&gt;</translation>
+        <translation>&lt;b&gt; No canvia l&apos;entorn &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Use &lt;b&gt;%1&lt;/b&gt; and</source>
-        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is "System Environment" or some such.</extracomment>
+        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Utilitzeu &lt;b&gt;%1 &lt;/b&gt; i</translation>
     </message>
     <message>
@@ -15933,7 +16031,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <source>Enable in the rare case that the code model
 fails because Clang does not understand the target architecture.</source>
         <translation>Activa en el cas rar que el model de codi
- Falles perquè Clang no entén l'arquitectura objectiu.</translation>
+ Falles perquè Clang no entén l&apos;arquitectura objectiu.</translation>
     </message>
     <message>
         <location line="+45" />
@@ -15987,58 +16085,58 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Field "%1" has no type.</source>
-        <translation>El camp "%1" no té cap tipus.</translation>
+        <source>Field &quot;%1&quot; has no type.</source>
+        <translation>El camp &quot;%1&quot; no té cap tipus.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Field "%1" has unsupported type "%2".</source>
-        <translation>El camp "%1" té un tipus no suportat "%2".</translation>
+        <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
+        <translation>El camp &quot;%1&quot; té un tipus no suportat &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>When parsing Field "%1": %2</source>
-        <translation>Quan analitzeu el camp " %1": %2</translation>
+        <source>When parsing Field &quot;%1&quot;: %2</source>
+        <translation>Quan analitzeu el camp &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+208" />
-        <source>Label ("%1") data is not an object.</source>
-        <translation>Les dades de l'etiqueta ("%1") no són un objecte.</translation>
+        <source>Label (&quot;%1&quot;) data is not an object.</source>
+        <translation>Les dades de l&apos;etiqueta (&quot;%1&quot;) no són un objecte.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Label ("%1") has no trText.</source>
-        <translation>L'etiqueta ("%1") no té trtext.</translation>
+        <source>Label (&quot;%1&quot;) has no trText.</source>
+        <translation>L&apos;etiqueta (&quot;%1&quot;) no té trtext.</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>Spacer ("%1") data is not an object.</source>
-        <translation>Les dades espaciadores ("%1") no són un objecte.</translation>
+        <source>Spacer (&quot;%1&quot;) data is not an object.</source>
+        <translation>Les dades espaciadores (&quot;%1&quot;) no són un objecte.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Spacer ("%1") property "factor" is no integer value.</source>
-        <translation>Spacer ("%1") La propietat "factor" no és cap valor enter.</translation>
+        <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
+        <translation>Spacer (&quot;%1&quot;) La propietat &quot;factor&quot; no és cap valor enter.</translation>
     </message>
     <message>
         <location line="+35" />
-        <source>LineEdit ("%1") data is not an object.</source>
-        <translation>Les dades LineEdit ("%1") no són un objecte.</translation>
+        <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>Les dades LineEdit (&quot;%1&quot;) no són un objecte.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>LineEdit ("%1") has an invalid regular expression "%2" in "validator".</source>
-        <translation>LineEdit ("%1") té una expressió regular no vàlida "%2" a "validador".</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
+        <translation>LineEdit (&quot;%1&quot;) té una expressió regular no vàlida &quot;%2&quot; a &quot;validador&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>LineEdit ("%1") has an invalid value "%2" in "completion".</source>
-        <translation>LineEdit ("%1") té un valor no vàlid "%2" a "finalització".</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
+        <translation>LineEdit (&quot;%1&quot;) té un valor no vàlid &quot;%2&quot; a &quot;finalització&quot;.</translation>
     </message>
     <message>
         <location line="+166" />
-        <source>TextEdit ("%1") data is not an object.</source>
-        <translation>Les dades de TextEdit ("%1") no són un objecte.</translation>
+        <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>Les dades de TextEdit (&quot;%1&quot;) no són un objecte.</translation>
     </message>
     <message>
         <location line="+83" />
@@ -16047,18 +16145,18 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+26" />
-        <source>kind "%1" is not one of the supported "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any".</source>
-        <translation>El tipus "%1" no és un dels "existents existents", "directori", "fitxer", "saveFile", "existentCommand", "Comandament", "Any".</translation>
+        <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
+        <translation>El tipus &quot;%1&quot; no és un dels &quot;existents existents&quot;, &quot;directori&quot;, &quot;fitxer&quot;, &quot;saveFile&quot;, &quot;existentCommand&quot;, &quot;Comandament&quot;, &quot;Any&quot;.</translation>
     </message>
     <message>
         <location line="+80" />
-        <source>CheckBox ("%1") data is not an object.</source>
-        <translation>Les dades de caixa ("%1") no són un objecte.</translation>
+        <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
+        <translation>Les dades de caixa (&quot;%1&quot;) no són un objecte.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>CheckBox ("%1") values for checked and unchecked state are identical.</source>
-        <translation>Els valors de caixa ("%1") per a l'estat marcat i sense controlar són idèntics.</translation>
+        <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
+        <translation>Els valors de caixa (&quot;%1&quot;) per a l&apos;estat marcat i sense controlar són idèntics.</translation>
     </message>
     <message>
         <location line="+80" />
@@ -16067,33 +16165,33 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>No "key" found in List items.</source>
-        <translation>No es troba cap "clau" als elements de la llista.</translation>
+        <source>No &quot;key&quot; found in List items.</source>
+        <translation>No es troba cap &quot;clau&quot; als elements de la llista.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>%1 ("%2") data is not an object.</source>
-        <translation>%1 ("%2") Les dades no són un objecte.</translation>
+        <source>%1 (&quot;%2&quot;) data is not an object.</source>
+        <translation>%1 (&quot;%2&quot;) Les dades no són un objecte.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>%1 ("%2") "index" is not an integer value.</source>
-        <translation>%1 ("%2") "Índex" no és un valor enter.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;Índex&quot; no és un valor enter.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>%1 ("%2") "disabledIndex" is not an integer value.</source>
-        <translation>%1 ("%2") "DesactivatEndex" no és un valor enter.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;DesactivatEndex&quot; no és un valor enter.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>%1 ("%2") "items" missing.</source>
-        <translation>%1 ("%2") "articles" que falten.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;articles&quot; que falten.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>%1 ("%2") "items" is not a JSON list.</source>
-        <translation>%1 ("%2") "articles" no és una llista de JSON.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;articles&quot; no és una llista de JSON.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
@@ -16117,8 +16215,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+13" />
-        <source>No "%1" key found in feature list object.</source>
-        <translation>No es troba cap tecla "%1" a l'objecte de la llista de funcions.</translation>
+        <source>No &quot;%1&quot; key found in feature list object.</source>
+        <translation>No es troba cap tecla &quot;%1&quot; a l&apos;objecte de la llista de funcions.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -16128,34 +16226,34 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+161" />
         <source>Failed to Commit to Version Control</source>
-        <translation>No s'ha pogut comprometre amb el control de la versió</translation>
+        <translation>No s&apos;ha pogut comprometre amb el control de la versió</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Error message from Version Control System: "%1".</source>
-        <translation>Missatge d'error del sistema de control de versions: "%1".</translation>
+        <source>Error message from Version Control System: &quot;%1&quot;.</source>
+        <translation>Missatge d&apos;error del sistema de control de versions: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+16" />
         <location line="+12" />
         <source>Failed to Add to Project</source>
-        <translation>No s'ha pogut afegir al projecte</translation>
+        <translation>No s&apos;ha pogut afegir al projecte</translation>
     </message>
     <message>
         <location line="-11" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
-        <source>Failed to add subproject "%1"
-to project "%2".</source>
-        <translation>No s'ha pogut afegir subproject "%1"
- al projecte "%2".</translation>
+        <source>Failed to add subproject &quot;%1&quot;
+to project &quot;%2&quot;.</source>
+        <translation>No s&apos;ha pogut afegir subproject &quot;%1&quot;
+ al projecte &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
         <source>Failed to add one or more files to project
-"%1" (%2).</source>
-        <translation>No s'ha pogut afegir un o més fitxers al projecte
- "%1" (%2).</translation>
+&quot;%1&quot; (%2).</source>
+        <translation>No s&apos;ha pogut afegir un o més fitxers al projecte
+ &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
@@ -16175,13 +16273,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+33" />
-        <source>Check whether a variable exists.&lt;br&gt;Returns "true" if it does and an empty string if not.</source>
-        <translation>Comproveu si existeix una variable. &lt;br&gt; Retorna "True" si ho fa i una cadena buida si no.</translation>
+        <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
+        <translation>Comproveu si existeix una variable. &lt;br&gt; Retorna &quot;True&quot; si ho fa i una cadena buida si no.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not determine target path. "TargetPath" was not set on any page.</source>
-        <translation>No s'ha pogut determinar el camí objectiu. "TargetPath" no s'ha establert a cap pàgina.</translation>
+        <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
+        <translation>No s&apos;ha pogut determinar el camí objectiu. &quot;TargetPath&quot; no s&apos;ha establert a cap pàgina.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -16190,74 +16288,74 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The wizard failed to generate files.&lt;br&gt;The error message was: "%1".</source>
-        <translation>L'assistent no ha pogut generar fitxers. &lt;br&gt; El missatge d'error era: "%1".</translation>
+        <source>The wizard failed to generate files.&lt;br&gt;The error message was: &quot;%1&quot;.</source>
+        <translation>L&apos;assistent no ha pogut generar fitxers. &lt;br&gt; El missatge d&apos;error era: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+63" />
-        <source>No 'key' in options object.</source>
-        <translation>No hi ha cap "clau" en l'objecte Opcions.</translation>
+        <source>No &apos;key&apos; in options object.</source>
+        <translation>No hi ha cap &quot;clau&quot; en l&apos;objecte Opcions.</translation>
     </message>
     <message>
         <location line="+88" />
         <source>Failed to Overwrite Files</source>
-        <translation>No s'ha pogut sobreescriure els fitxers</translation>
+        <translation>No s&apos;ha pogut sobreescriure els fitxers</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Failed to Format Files</source>
-        <translation>No s'ha pogut formar fitxers</translation>
+        <translation>No s&apos;ha pogut formar fitxers</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Failed to Write Files</source>
-        <translation>No s'ha pogut escriure fitxers</translation>
+        <translation>No s&apos;ha pogut escriure fitxers</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Failed to Post-Process Files</source>
-        <translation>No s'ha pogut als fitxers post-procés</translation>
+        <translation>No s&apos;ha pogut als fitxers post-procés</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Failed to Polish Files</source>
-        <translation>No s'ha pogut polir fitxers</translation>
+        <translation>No s&apos;ha pogut polir fitxers</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Failed to Open Files</source>
-        <translation>No s'ha pogut obrir fitxers</translation>
+        <translation>No s&apos;ha pogut obrir fitxers</translation>
     </message>
     <message>
         <location line="+58" />
-        <source>"%1" does not exist in the file system.</source>
-        <translation>"%1" no existeix al sistema de fitxers.</translation>
+        <source>&quot;%1&quot; does not exist in the file system.</source>
+        <translation>&quot;%1&quot; no existeix al sistema de fitxers.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open "%1" as a project.</source>
-        <translation>No s'ha pogut obrir "%1" com a projecte.</translation>
+        <source>Failed to open &quot;%1&quot; as a project.</source>
+        <translation>No s&apos;ha pogut obrir &quot;%1&quot; com a projecte.</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+46" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>No s'ha pogut obrir un editor per a "%1".</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut obrir un editor per a &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-27" />
-        <source>No file to open found in "%1".</source>
-        <translation>No es troba cap fitxer a obrir a "%1".</translation>
+        <source>No file to open found in &quot;%1&quot;.</source>
+        <translation>No es troba cap fitxer a obrir a &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Failed to open project.</source>
-        <translation>No s'ha pogut obrir el projecte.</translation>
+        <translation>No s&apos;ha pogut obrir el projecte.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to open project in "%1".</source>
-        <translation>No s'ha pogut obrir el projecte a "%1".</translation>
+        <source>Failed to open project in &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut obrir el projecte a &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16277,31 +16375,31 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+7" />
-        <source>TypeId "%1" of generator is unknown. Supported typeIds are: "%2".</source>
-        <translation>TypeID "%1" del generador no es coneix. Els tipus de suport són: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>TypeID &quot;%1&quot; del generador no es coneix. Els tipus de suport són: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+56" />
         <location line="+241" />
-        <source>Path "%1" does not exist when checking JSON wizard search paths.</source>
-        <translation>La ruta "%1" no existeix quan es comprova les rutes de cerca de l'assistent JSON.</translation>
+        <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
+        <translation>La ruta &quot;%1&quot; no existeix quan es comprova les rutes de cerca de l&apos;assistent JSON.</translation>
     </message>
     <message>
         <location line="-228" />
-        <source>Checking "%1" for %2.</source>
-        <translation>Comprovant " %1" del %2.</translation>
+        <source>Checking &quot;%1&quot; for %2.</source>
+        <translation>Comprovant &quot; %1&quot; del %2.</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+233" />
-        <source>* Failed to parse "%1":%2:%3: %4</source>
-        <translation>* No s'ha pogut analitzar "%1":%2:%3:%4</translation>
+        <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
+        <translation>* No s&apos;ha pogut analitzar &quot;%1&quot;:%2:%3:%4</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>* Did not find a JSON object in "%1".
+        <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* No he trobat cap objecte JSON a "%1".</translation>
+        <translation>* No he trobat cap objecte JSON a &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -16311,8 +16409,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="-224" />
-        <source>JsonWizard: "%1" not found.</source>
-        <translation>JSONWIZARD: "%1" no es troba.</translation>
+        <source>JsonWizard: &quot;%1&quot; not found.</source>
+        <translation>JSONWIZARD: &quot;%1&quot; no es troba.</translation>
     </message>
     <message>
         <location line="+96" />
@@ -16326,18 +16424,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>TypeId "%1" of page is unknown. Supported typeIds are: "%2".</source>
-        <translation>TypeId "%1" de la pàgina no se sap. Els tipus de suport són: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>TypeId &quot;%1&quot; de la pàgina no se sap. Els tipus de suport són: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Page with typeId "%1" has invalid "index".</source>
-        <translation>La pàgina amb TypeID "%1" té "índex" no vàlid.</translation>
+        <source>Page with typeId &quot;%1&quot; has invalid &quot;index&quot;.</source>
+        <translation>La pàgina amb TypeID &quot;%1&quot; té &quot;índex&quot; no vàlid.</translation>
     </message>
     <message>
         <location line="+89" />
-        <source>* Did not find a JSON object in "%1".</source>
-        <translation>* No he trobat cap objecte JSON a "%1".</translation>
+        <source>* Did not find a JSON object in &quot;%1&quot;.</source>
+        <translation>* No he trobat cap objecte JSON a &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16347,7 +16445,7 @@ to project "%2".</source>
     <message>
         <location line="+9" />
         <source>* Failed to create: %1</source>
-        <translation>* No s'ha pogut crear: %1</translation>
+        <translation>* No s&apos;ha pogut crear: %1</translation>
     </message>
     <message>
         <location line="+227" />
@@ -16357,12 +16455,12 @@ to project "%2".</source>
     <message>
         <location line="+6" />
         <source>Expected an object or a list.</source>
-        <translation>S'esperava un objecte o una llista.</translation>
+        <translation>S&apos;esperava un objecte o una llista.</translation>
     </message>
     <message>
         <location line="+29" />
         <source>The platform selected for the wizard.</source>
-        <translation>La plataforma seleccionada per a l'assistent.</translation>
+        <translation>La plataforma seleccionada per a l&apos;assistent.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -16376,13 +16474,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+32" />
-        <source>"kind" value "%1" is not "class" (deprecated), "file" or "project".</source>
-        <translation>El valor "Kind"%1 "no és" classe "(desprès)," fitxer "o" projecte ".</translation>
+        <source>&quot;kind&quot; value &quot;%1&quot; is not &quot;class&quot; (deprecated), &quot;file&quot; or &quot;project&quot;.</source>
+        <translation>El valor &quot;Kind&quot;%1 &quot;no és&quot; classe &quot;(desprès),&quot; fitxer &quot;o&quot; projecte &quot;.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"kind" is "file" or "class" (deprecated) and "%1" is also set.</source>
-        <translation>"Kind" és "Fitxer" o "Classe" (Deprecated) i "%1" també s'estableix.</translation>
+        <source>&quot;kind&quot; is &quot;file&quot; or &quot;class&quot; (deprecated) and &quot;%1&quot; is also set.</source>
+        <translation>&quot;Kind&quot; és &quot;Fitxer&quot; o &quot;Classe&quot; (Deprecated) i &quot;%1&quot; també s&apos;estableix.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -16396,13 +16494,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Icon file "%1" not found.</source>
-        <translation>El fitxer de la icona "%1" no es troba.</translation>
+        <source>Icon file &quot;%1&quot; not found.</source>
+        <translation>El fitxer de la icona &quot;%1&quot; no es troba.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Image file "%1" not found.</source>
-        <translation>El fitxer d'imatge "%1" no es troba.</translation>
+        <source>Image file &quot;%1&quot; not found.</source>
+        <translation>El fitxer d&apos;imatge &quot;%1&quot; no es troba.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16421,13 +16519,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>When parsing "generators": %1</source>
-        <translation>Quan analitzen "generadors": %1</translation>
+        <source>When parsing &quot;generators&quot;: %1</source>
+        <translation>Quan analitzen &quot;generadors&quot;: %1</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>When parsing "pages": %1</source>
-        <translation>Quan analitzeu "pàgines": %1</translation>
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation>Quan analitzeu &quot;pàgines&quot;: %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
@@ -16441,8 +16539,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+57" />
-        <source>When processing "%1":&lt;br&gt;%2</source>
-        <translation>Quan es processa "%1": &lt;br&gt;%2</translation>
+        <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
+        <translation>Quan es processa &quot;%1&quot;: &lt;br&gt;%2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
@@ -16468,43 +16566,43 @@ to project "%2".</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
-        <source>When parsing fields of page "%1": %2</source>
-        <translation>Quan analitzeu camps de la pàgina " %1": %2</translation>
+        <source>When parsing fields of page &quot;%1&quot;: %2</source>
+        <translation>Quan analitzeu camps de la pàgina &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "File" page needs to be unset or an empty object.</source>
-        <translation>"Dades" per a una pàgina "Fitxer" ha de ser no establerta o un objecte buit.</translation>
+        <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
+        <translation>&quot;Dades&quot; per a una pàgina &quot;Fitxer&quot; ha de ser no establerta o un objecte buit.</translation>
     </message>
     <message>
         <location line="+48" />
-        <source>Error parsing "%1" in "Kits" page: %2</source>
-        <translation>Error analitzant " %1" a "kits" Pàgina: %2</translation>
+        <source>Error parsing &quot;%1&quot; in &quot;Kits&quot; page: %2</source>
+        <translation>Error analitzant &quot; %1&quot; a &quot;kits&quot; Pàgina: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>"data" must be a JSON object for "Kits" pages.</source>
-        <translation>Les "dades" han de ser un objecte JSON per a pàgines "kits".</translation>
+        <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
+        <translation>Les &quot;dades&quot; han de ser un objecte JSON per a pàgines &quot;kits&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>"Kits" page requires a "%1" set.</source>
-        <translation>La pàgina "Kits" requereix un conjunt "%1".</translation>
+        <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
+        <translation>La pàgina &quot;Kits&quot; requereix un conjunt &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+62" />
-        <source>"data" must be empty or a JSON object for "Project" pages.</source>
-        <translation>Les "dades" han d'estar buides o un objecte JSON per a les pàgines "Projecte".</translation>
+        <source>&quot;data&quot; must be empty or a JSON object for &quot;Project&quot; pages.</source>
+        <translation>Les &quot;dades&quot; han d&apos;estar buides o un objecte JSON per a les pàgines &quot;Projecte&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Invalid regular expression "%1" in "%2". %3</source>
-        <translation>Expressió regular no vàlida "%1" a "%2". %3</translation>
+        <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
+        <translation>Expressió regular no vàlida &quot;%1&quot; a &quot;%2&quot;. %3</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "Summary" page can be unset or needs to be an object.</source>
-        <translation>"Dades" per a una pàgina "Resum" pot ser que no sigui definit o ha de ser un objecte.</translation>
+        <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
+        <translation>&quot;Dades&quot; per a una pàgina &quot;Resum&quot; pot ser que no sigui definit o ha de ser un objecte.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
@@ -16513,13 +16611,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Pattern "%1" is no valid regular expression.</source>
-        <translation>El patró "%1" no és una expressió regular vàlida.</translation>
+        <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
+        <translation>El patró &quot;%1&quot; no és una expressió regular vàlida.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>ScannerGenerator: Binary pattern "%1" not valid.</source>
-        <translation>Scannergenerator: patró binari "%1" No és vàlid.</translation>
+        <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
+        <translation>Scannergenerator: patró binari &quot;%1&quot; No és vàlid.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
@@ -16572,22 +16670,22 @@ to project "%2".</source>
     <message>
         <location line="+1" />
         <source>The root directory of the system image to use.&lt;br&gt;Leave empty when building for the desktop.</source>
-        <translation>El directori arrel de la imatge del sistema a utilitzar. &lt;br&gt; Deixeu buit quan construïu per a l'escriptori.</translation>
+        <translation>El directori arrel de la imatge del sistema a utilitzar. &lt;br&gt; Deixeu buit quan construïu per a l&apos;escriptori.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Sys Root "%1" does not exist in the file system.</source>
-        <translation>SYS Root "%1" no existeix al sistema de fitxers.</translation>
+        <source>Sys Root &quot;%1&quot; does not exist in the file system.</source>
+        <translation>SYS Root &quot;%1&quot; no existeix al sistema de fitxers.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is not a directory.</source>
-        <translation>L'arrel "%1" de SYS no és un directori.</translation>
+        <source>Sys Root &quot;%1&quot; is not a directory.</source>
+        <translation>L&apos;arrel &quot;%1&quot; de SYS no és un directori.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is empty.</source>
-        <translation>L'arrel de SYS "%1" està buida.</translation>
+        <source>Sys Root &quot;%1&quot; is empty.</source>
+        <translation>L&apos;arrel de SYS &quot;%1&quot; està buida.</translation>
     </message>
     <message>
         <location line="+14" />
@@ -16620,7 +16718,7 @@ to project "%2".</source>
     <message>
         <location line="+108" />
         <source>Path to the compiler executable</source>
-        <translation>Camí cap a l'executable compilable</translation>
+        <translation>Camí cap a l&apos;executable compilable</translation>
     </message>
     <message>
         <location line="+7" />
@@ -16661,7 +16759,7 @@ to project "%2".</source>
     <message>
         <location line="+140" />
         <source>Run device</source>
-        <translation>Dispositiu d'execució</translation>
+        <translation>Dispositiu d&apos;execució</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16688,7 +16786,7 @@ to project "%2".</source>
     <message>
         <location line="-252" />
         <source>Host address</source>
-        <translation>Adreça d'amfitrió</translation>
+        <translation>Adreça d&apos;amfitrió</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16698,7 +16796,7 @@ to project "%2".</source>
     <message>
         <location line="+4" />
         <source>User name</source>
-        <translation>Nom d'usuari</translation>
+        <translation>Nom d&apos;usuari</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16734,7 +16832,7 @@ to project "%2".</source>
     <message>
         <location line="+26" />
         <source>Build host address</source>
-        <translation>Construeix l'adreça de l'amfitrió</translation>
+        <translation>Construeix l&apos;adreça de l&apos;amfitrió</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16744,7 +16842,7 @@ to project "%2".</source>
     <message>
         <location line="+4" />
         <source>Build user name</source>
-        <translation>Construeix el nom de l'usuari</translation>
+        <translation>Construeix el nom de l&apos;usuari</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16759,7 +16857,7 @@ to project "%2".</source>
     <message>
         <location line="+5" />
         <source>Build device root directory</source>
-        <translation>Directori d'arrel de creació del dispositiu</translation>
+        <translation>Directori d&apos;arrel de creació del dispositiu</translation>
     </message>
     <message>
         <location line="+110" />
@@ -16781,7 +16879,7 @@ to project "%2".</source>
     <message>
         <location line="+2" />
         <source>Either switches MSVC to English or keeps the language and just forces UTF-8 output (may vary depending on the used MSVC compiler).</source>
-        <translation>O bé canvia MSVC a l'anglès o manté l'idioma i només obliga la sortida UTF-8 (pot variar segons el compilador MSVC usat).</translation>
+        <translation>O bé canvia MSVC a l&apos;anglès o manté l&apos;idioma i només obliga la sortida UTF-8 (pot variar segons el compilador MSVC usat).</translation>
     </message>
     <message>
         <location line="+42" />
@@ -16791,7 +16889,7 @@ to project "%2".</source>
     <message>
         <location line="+11" />
         <source>The environment setting value is invalid.</source>
-        <translation>El valor de configuració de l'entorn no és vàlid.</translation>
+        <translation>El valor de configuració de l&apos;entorn no és vàlid.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitchooser.cpp" line="+93" />
@@ -16833,7 +16931,7 @@ to project "%2".</source>
     <message>
         <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The name of the kit suitable for generating directory names. This value is used for the variable &lt;i&gt;%1&lt;/i&gt;, which for example determines the name of the shadow build directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head/&gt; &lt;dircul&gt; &lt;p&gt; El nom del kit adequat per generar noms de directori. Aquest valor s'utilitza per a la variable &lt;i&gt;%1 &lt;/i&gt;, que per exemple determina el nom del directori de creació d'ombres. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -16974,7 +17072,7 @@ to project "%2".</source>
     <message>
         <location line="+20" />
         <source>Overriding &lt;code&gt;MAKEFLAGS&lt;/code&gt; environment variable.</source>
-        <translation>Variable d'entorn &lt;code&gt; makeFlags &lt;/code&gt;.</translation>
+        <translation>Variable d&apos;entorn &lt;code&gt; makeFlags &lt;/code&gt;.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -16984,7 +17082,7 @@ to project "%2".</source>
     <message>
         <location line="+4" />
         <source>No conflict with &lt;code&gt;MAKEFLAGS&lt;/code&gt; environment variable.</source>
-        <translation>No hi ha conflicte amb la variable d'entorn &lt;code&gt; makeFlags &lt;/code&gt;.</translation>
+        <translation>No hi ha conflicte amb la variable d&apos;entorn &lt;code&gt; makeFlags &lt;/code&gt;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1348" />
@@ -17070,12 +17168,12 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href="projectmode"&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation>&lt;style type = text/css&gt; a: link {color: rgb (128, 128, 255);} &lt;/style&gt; El projecte &lt;b&gt;%1 &lt;/b&gt; encara no està configurat &lt;br/&gt; &lt;br/ &gt; Podeu configurar -lo al &lt;a href = "ProjectMode"&gt; Mode de projectes &lt;/a&gt; &lt;br/&gt;</translation>
+        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href=&quot;projectmode&quot;&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
+        <translation>&lt;style type = text/css&gt; a: link {color: rgb (128, 128, 255);} &lt;/style&gt; El projecte &lt;b&gt;%1 &lt;/b&gt; encara no està configurat &lt;br/&gt; &lt;br/ &gt; Podeu configurar -lo al &lt;a href = &quot;ProjectMode&quot;&gt; Mode de projectes &lt;/a&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
-        <source>Falling back to use the cached environment for "%1" after:</source>
+        <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
         <translation>Caure per utilitzar l’entorn en caché per a “%1” després:</translation>
     </message>
     <message>
@@ -17098,9 +17196,9 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+796" />
-        <source>Failed to retrieve MSVC Environment from "%1":
+        <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
-        <translation>No s'ha pogut recuperar l'entorn MSVC de "%1":
+        <translation>No s&apos;ha pogut recuperar l&apos;entorn MSVC de &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
@@ -17112,13 +17210,13 @@ to project "%2".</source>
         <location filename="../../../src/plugins/projectexplorer/osparser.cpp" line="+25" />
         <source>The process cannot access the file because it is being used by another process.
 Please close all running instances of your application before starting a build.</source>
-        <translation>El procés no pot accedir al fitxer perquè s'utilitza un altre procés.
+        <translation>El procés no pot accedir al fitxer perquè s&apos;utilitza un altre procés.
  Tanqueu totes les instàncies de la vostra sol·licitud abans d’iniciar una creació.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+44" />
         <source>Parse Build Output</source>
-        <translation>Sortida de creació de l'anàlisi</translation>
+        <translation>Sortida de creació de l&apos;anàlisi</translation>
     </message>
     <message>
         <location line="+2" />
@@ -17143,12 +17241,12 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+5" />
         <source>Could Not Open File</source>
-        <translation>No s'ha pogut obrir el fitxer</translation>
+        <translation>No s&apos;ha pogut obrir el fitxer</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open file: "%1": %2</source>
-        <translation>No s'ha pogut obrir el fitxer: " %1": %2</translation>
+        <source>Could not open file: &quot;%1&quot;: %2</source>
+        <translation>No s&apos;ha pogut obrir el fitxer: &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
@@ -17158,7 +17256,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+14" />
         <source>Parsing Options</source>
-        <translation>Opcions d'anàlisi</translation>
+        <translation>Opcions d&apos;anàlisi</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17258,13 +17356,13 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+92" />
-        <source>Project "%1" was configured for kit "%2" with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
-        <translation>El projecte "%1" es va configurar per a Kit "%2" amb ID%3, que ja no existeix. Podeu crear un kit nou o copiar els passos del kit desaparegut a un altre kit en mode %4.</translation>
+        <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
+        <translation>El projecte &quot;%1&quot; es va configurar per a Kit &quot;%2&quot; amb ID%3, que ja no existeix. Podeu crear un kit nou o copiar els passos del kit desaparegut a un altre kit en mode %4.</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+622" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+626" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
@@ -17273,79 +17371,79 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+265" />
-        <source>Could not find any qml_*.qm file at "%1"</source>
-        <translation>No s'ha pogut trobar cap fitxer qml _*. Qm a "%1"</translation>
+        <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
+        <translation>No s&apos;ha pogut trobar cap fitxer qml _*. Qm a &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+87" />
         <source>%1: Name.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: nom.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to main file.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: camí complet al fitxer principal.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Camí complet al directori de projectes.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: The name of the active kit.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: el nom del kit actiu.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Name of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Nom de la configuració de creació activa.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Type of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Tipus de configuració de creació activa.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Full build path of active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: ruta de creació completa de la configuració de creació activa.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Variables in the active build environment.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: variables en l’entorn de creació activa.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Name of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>%1: Nom de la configuració activa d'execució.</translation>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
+        <translation>%1: Nom de la configuració activa d&apos;execució.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Executable of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>%1: executable de la configuració d'execució activa.</translation>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
+        <translation>%1: executable de la configuració d&apos;execució activa.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Variables in the environment of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: variables a l’entorn de la configuració activa d’execució.</translation>
     </message>
     <message>
         <location line="+12" />
         <source>%1: Working directory of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Directori de treball de la configuració activa.</translation>
     </message>
     <message>
@@ -17383,17 +17481,17 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+7" />
         <source>&amp;Build</source>
-        <translation>I construir</translation>
+        <translation>&amp;I construir</translation>
     </message>
     <message>
         <location line="+7" />
         <source>&amp;Debug</source>
-        <translation>I depuració</translation>
+        <translation>I &amp;depuració</translation>
     </message>
     <message>
         <location line="+6" />
         <source>&amp;Start Debugging</source>
-        <translation>I començar a depurar</translation>
+        <translation>&amp;I començar a depurar</translation>
     </message>
     <message>
         <location line="+82" />
@@ -17428,7 +17526,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+17" />
         <source>Recent P&amp;rojects</source>
-        <translation>P &amp; Rojects recents</translation>
+        <translation>P &amp;Rojects recents</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17438,8 +17536,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="-347" />
-        <source>Close Pro&amp;ject "%1"</source>
-        <translation>Projecte tancat "%1"</translation>
+        <source>Close Pro&amp;ject &quot;%1&quot;</source>
+        <translation>Pro&amp;jecte tancat &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -17449,13 +17547,13 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <location line="+328" />
-        <source>Close All Files in Project "%1"</source>
-        <translation>Tanqueu tots els fitxers del projecte "%1"</translation>
+        <source>Close All Files in Project &quot;%1&quot;</source>
+        <translation>Tanqueu tots els fitxers del projecte &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-316" />
         <source>Close Pro&amp;ject</source>
-        <translation>Tancar el projecte</translation>
+        <translation>Tancar el pro&amp;jecte</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17513,8 +17611,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Build Project "%1"</source>
-        <translation>Crear el projecte "%1"</translation>
+        <source>Build Project &quot;%1&quot;</source>
+        <translation>Crear el projecte &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17523,23 +17621,23 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Build Project "%1" for All Configurations</source>
-        <translation>Crear el projecte "%1" per a totes les configuracions</translation>
+        <source>Build Project &quot;%1&quot; for All Configurations</source>
+        <translation>Crear el projecte &quot;%1&quot; per a totes les configuracions</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Build for &amp;Run Configuration</source>
-        <translation>Configuració de creació i execució</translation>
+        <translation>Configu&amp;ració de creació i execució</translation>
     </message>
     <message>
         <location line="+0" />
-        <source>Build for &amp;Run Configuration "%1"</source>
-        <translation>Creació per a la configuració i executar "%1"</translation>
+        <source>Build for &amp;Run Configuration &quot;%1&quot;</source>
+        <translation>C&amp;reació per a la configuració i executar &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Run Generator</source>
-        <translation>Generador d'execució</translation>
+        <translation>Generador d&apos;execució</translation>
     </message>
     <message>
         <location line="+19" />
@@ -17627,8 +17725,8 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+9" />
         <location line="+1621" />
-        <source>Close Project "%1"</source>
-        <translation>Projecte tancat "%1"</translation>
+        <source>Close Project &quot;%1&quot;</source>
+        <translation>Projecte tancat &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-1614" />
@@ -17637,8 +17735,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Close All Projects Except "%1"</source>
-        <translation>Tanqueu tots els projectes, excepte "%1"</translation>
+        <source>Close All Projects Except &quot;%1&quot;</source>
+        <translation>Tanqueu tots els projectes, excepte &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -17673,8 +17771,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Set "%1" as Active Project</source>
-        <translation>Estableix el "%1" com a projecte actiu</translation>
+        <source>Set &quot;%1&quot; as Active Project</source>
+        <translation>Estableix el &quot;%1&quot; com a projecte actiu</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17759,7 +17857,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+62" />
         <source>Sanitizer</source>
-        <comment>Category for sanitizer issues listed under 'Issues'</comment>
+        <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
         <translation>Desfiador</translation>
     </message>
     <message>
@@ -17780,7 +17878,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+23" />
         <source>Parse Build Output...</source>
-        <translation>Sortida de creació d'analls ...</translation>
+        <translation>Sortida de creació d&apos;analls ...</translation>
     </message>
     <message>
         <location line="+65" />
@@ -17791,7 +17889,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+130" />
         <source>Failed to Open Project</source>
-        <translation>No s'ha pogut obrir el projecte</translation>
+        <translation>No s&apos;ha pogut obrir el projecte</translation>
     </message>
     <message>
         <location line="+5" />
@@ -17800,8 +17898,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+48" />
-        <source>Failed opening project "%1": No plugin can open project type "%2".</source>
-        <translation>El projecte d'obertura fallida "%1": cap complement pot obrir el tipus de projecte "%2".</translation>
+        <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
+        <translation>El projecte d&apos;obertura fallida &quot;%1&quot;: cap complement pot obrir el tipus de projecte &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+195" />
@@ -17812,7 +17910,7 @@ Please close all running instances of your application before starting a build.<
         <location line="+1" />
         <source>Found some build errors in current task.
 Do you want to ignore them?</source>
-        <translation>S'ha trobat alguns errors de creació en la tasca actual.
+        <translation>S&apos;ha trobat alguns errors de creació en la tasca actual.
  Voleu ignorar -los?</translation>
     </message>
     <message>
@@ -17832,18 +17930,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+23" />
-        <source>Open Project in "%1"</source>
-        <translation>Projecte obert a "%1"</translation>
+        <source>Open Project in &quot;%1&quot;</source>
+        <translation>Projecte obert a &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Open Project "%1"</source>
-        <translation>Projecte obert "%1"</translation>
+        <source>Open Project &quot;%1&quot;</source>
+        <translation>Projecte obert &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>The file "%1" was renamed to "%2", but the following projects could not be automatically changed: %3</source>
-        <translation>El fitxer "%1" es va canviar de nom a "%2", però no es podrien canviar automàticament els projectes següents:%3</translation>
+        <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
+        <translation>El fitxer &quot;%1&quot; es va canviar de nom a &quot;%2&quot;, però no es podrien canviar automàticament els projectes següents:%3</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17860,8 +17958,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+62" />
-        <source>Building "%1" is disabled: %2&lt;br&gt;</source>
-        <translation>La creació de " %1" està desactivat: %2 &lt;br&gt;</translation>
+        <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
+        <translation>La creació de &quot; %1&quot; està desactivat: %2 &lt;br&gt;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17922,18 +18020,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>The project "%1" is not configured.</source>
-        <translation>El projecte "%1" no està configurat.</translation>
+        <source>The project &quot;%1&quot; is not configured.</source>
+        <translation>El projecte &quot;%1&quot; no està configurat.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The project "%1" has no active kit.</source>
-        <translation>El projecte "%1" no té kit actiu.</translation>
+        <source>The project &quot;%1&quot; has no active kit.</source>
+        <translation>El projecte &quot;%1&quot; no té kit actiu.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The kit "%1" for the project "%2" has no active run configuration.</source>
-        <translation>El kit "%1" del projecte "%2" no té cap configuració d'execució activa.</translation>
+        <source>The kit &quot;%1&quot; for the project &quot;%2&quot; has no active run configuration.</source>
+        <translation>El kit &quot;%1&quot; del projecte &quot;%2&quot; no té cap configuració d&apos;execució activa.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -17942,8 +18040,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>Cannot run "%1".</source>
-        <translation>No es pot executar "%1".</translation>
+        <source>Cannot run &quot;%1&quot;.</source>
+        <translation>No es pot executar &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17969,13 +18067,13 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+41" />
-        <source>The following subprojects could not be added to project "%1":</source>
-        <translation>No es van poder afegir els subprojectes següents al projecte "%1":</translation>
+        <source>The following subprojects could not be added to project &quot;%1&quot;:</source>
+        <translation>No es van poder afegir els subprojectes següents al projecte &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Adding Subproject Failed</source>
-        <translation>Si s'afegeix el subprojecte, ha fallat</translation>
+        <translation>Si s&apos;afegeix el subprojecte, ha fallat</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17985,19 +18083,19 @@ Do you want to ignore them?</source>
     <message>
         <location line="+33" />
         <source>Could not add following files to project %1:</source>
-        <translation>No s'ha pogut afegir fitxers següents al projecte %1:</translation>
+        <translation>No s&apos;ha pogut afegir fitxers següents al projecte %1:</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Adding Files to Project Failed</source>
-        <translation>S'ha fallat l'afegit de fitxers al projecte</translation>
+        <translation>S&apos;ha fallat l&apos;afegit de fitxers al projecte</translation>
     </message>
     <message>
         <location line="+87" />
         <location line="+40" />
         <source>Failed opening terminal.
 %1</source>
-        <translation>Terminal d'obertura fallada.
+        <translation>Terminal d&apos;obertura fallada.
  %1</translation>
     </message>
     <message>
@@ -18019,15 +18117,15 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>File "%1" was not removed, because the project has changed in the meantime.
+        <source>File &quot;%1&quot; was not removed, because the project has changed in the meantime.
 Please try again.</source>
-        <translation>El fitxer "%1" no s'ha eliminat, perquè el projecte ha canviat mentrestant.
+        <translation>El fitxer &quot;%1&quot; no s&apos;ha eliminat, perquè el projecte ha canviat mentrestant.
  Torneu -ho a provar.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Could not remove file "%1" from project "%2".</source>
-        <translation>No s'ha pogut eliminar el fitxer "%1" del projecte "%2".</translation>
+        <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
+        <translation>No s&apos;ha pogut eliminar el fitxer &quot;%1&quot; del projecte &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+36" />
@@ -18052,13 +18150,13 @@ Please try again.</source>
     </message>
     <message>
         <location line="-9" />
-        <source>Failed to copy file "%1" to "%2": %3.</source>
-        <translation>No s'ha pogut copiar el fitxer "%1" a "%2":%3.</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
+        <translation>No s&apos;ha pogut copiar el fitxer &quot;%1&quot; a &quot;%2&quot;:%3.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Failed to add new file "%1" to the project.</source>
-        <translation>No s'ha pogut afegir el fitxer nou "%1" al projecte.</translation>
+        <source>Failed to add new file &quot;%1&quot; to the project.</source>
+        <translation>No s&apos;ha pogut afegir el fitxer nou &quot;%1&quot; al projecte.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18073,21 +18171,19 @@ Please try again.</source>
     <message>
         <location line="+17" />
         <source>Deleting File Failed</source>
-        <translation>S'ha fallat la supressió del fitxer</translation>
+        <translation>S&apos;ha fallat la supressió del fitxer</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Could not delete file %1.</source>
-        <translation>No s'ha pogut suprimir el fitxer %1.</translation>
+        <translation>No s&apos;ha pogut suprimir el fitxer %1.</translation>
     </message>
     <message>
         <location line="+37" />
         <source>The project file %1 cannot be automatically changed.
 
 Rename %2 to %3 anyway?</source>
-        <translation>El fitxer del projecte %1 no es pot canviar automàticament.
-
- Canviar el nom de 2 a %3 de totes maneres?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17" />
@@ -18106,18 +18202,18 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+192" />
-        <source>Locates files from all project directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Localitza fitxers de tots els directoris del projecte. Afegiu "+&lt;number&gt;" o ": &lt;number&gt;" per saltar al número de línia donat. Afegiu un altre "+&lt;number&gt;" o ": &lt;number&gt;" per saltar també al número de la columna.</translation>
+        <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Localitza fitxers de tots els directoris del projecte. Afegiu &quot;+&lt;number&gt;&quot; o &quot;: &lt;number&gt;&quot; per saltar al número de línia donat. Afegiu un altre &quot;+&lt;number&gt;&quot; o &quot;: &lt;number&gt;&quot; per saltar també al número de la columna.</translation>
     </message>
     <message>
         <location line="+102" />
         <source>Run Run Configuration</source>
-        <translation>Executeu la configuració d'execució</translation>
+        <translation>Executeu la configuració d&apos;execució</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Runs a run configuration of the active project.</source>
-        <translation>Executa una configuració d'execució del projecte actiu.</translation>
+        <translation>Executa una configuració d&apos;execució del projecte actiu.</translation>
     </message>
     <message>
         <location line="+14" />
@@ -18133,18 +18229,18 @@ Rename %2 to %3 anyway?</source>
         <location line="+17" />
         <source>Switched run configuration to
 %1</source>
-        <translation>Configuració d'execució commutada a
+        <translation>Configuració d&apos;execució commutada a
  %1</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Switch Run Configuration</source>
-        <translation>Configuració d'execució de commutació</translation>
+        <translation>Configuració d&apos;execució de commutació</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Switches the active run configuration of the active project.</source>
-        <translation>Canvia la configuració d'execució activa del projecte actiu.</translation>
+        <translation>Canvia la configuració d&apos;execució activa del projecte actiu.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
@@ -18164,13 +18260,13 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
         <source>s</source>
-        <extracomment>Suffix for "seconds"</extracomment>
+        <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>s</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The amount of seconds to wait between a "soft kill" and a "hard kill" of a running application.</source>
-        <translation>La quantitat de segons per esperar entre una "matança suau" i una "matança dura" d'una aplicació en execució.</translation>
+        <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
+        <translation>La quantitat de segons per esperar entre una &quot;matança suau&quot; i una &quot;matança dura&quot; d&apos;una aplicació en execució.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -18185,7 +18281,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+2" />
         <source>Close source files along with project</source>
-        <translation>Tanqueu els fitxers d'origen juntament amb el projecte</translation>
+        <translation>Tanqueu els fitxers d&apos;origen juntament amb el projecte</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18210,7 +18306,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+2" />
         <source>Create suitable run configurations automatically</source>
-        <translation>Creeu configuracions d'execució adequades automàticament</translation>
+        <translation>Creeu configuracions d&apos;execució adequades automàticament</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18234,8 +18330,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Some legacy build tools do not deal well with paths that contain "special" characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
-        <translation>Algunes eines de creació heretades no tracten bé de camins que contenen caràcters "especials" com ara espais, que poden provocar errors de creació espuriosos. &lt;p&gt; Desmarqueu aquesta opció si no treballeu amb aquestes eines.</translation>
+        <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
+        <translation>Algunes eines de creació heretades no tracten bé de camins que contenen caràcters &quot;especials&quot; com ara espais, que poden provocar errors de creació espuriosos. &lt;p&gt; Desmarqueu aquesta opció si no treballeu amb aquestes eines.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18294,13 +18390,13 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Show all kits in "Build &amp; Run" in "Projects" mode</source>
-        <translation>Mostra tots els kits al mode "Build &amp; Run" en "projectes"</translation>
+        <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
+        <translation>Mostra tots els kits al mode &quot;Build &amp; Run&quot; en &quot;projectes&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Show also inactive kits in "Build &amp; Run" in "Projects" mode.</source>
-        <translation>Mostra també kits inactius en mode "Build &amp; Run" en mode "Projectes".</translation>
+        <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
+        <translation>Mostra també kits inactius en mode &quot;Build &amp; Run&quot; en mode &quot;Projectes&quot;.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18310,7 +18406,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+2" />
         <source>Application environment:</source>
-        <translation>Entorn de l'aplicació:</translation>
+        <translation>Entorn de l&apos;aplicació:</translation>
     </message>
     <message>
         <location line="+20" />
@@ -18339,8 +18435,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Default for "Run in terminal":</source>
-        <translation>Per defecte per a "Executar a Terminal":</translation>
+        <source>Default for &quot;Run in terminal&quot;:</source>
+        <translation>Per defecte per a &quot;Executar a Terminal&quot;:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18401,12 +18497,12 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+205" />
         <source>Failed to restore project files</source>
-        <translation>No s'ha pogut restaurar els fitxers del projecte</translation>
+        <translation>No s&apos;ha pogut restaurar els fitxers del projecte</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Could not restore the following project files:&lt;br&gt;&lt;b&gt;%1&lt;/b&gt;</source>
-        <translation>No s'ha pogut restaurar els fitxers del projecte següents: &lt;br&gt; &lt;b&gt;%1 &lt;/b&gt;</translation>
+        <translation>No s&apos;ha pogut restaurar els fitxers del projecte següents: &lt;br&gt; &lt;b&gt;%1 &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18420,8 +18516,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
-        <source>No kits are enabled for this project. Enable kits in the "Projects" mode.</source>
-        <translation>No hi ha kits habilitats per a aquest projecte. Activa els kits en el mode "Projectes".</translation>
+        <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
+        <translation>No hi ha kits habilitats per a aquest projecte. Activa els kits en el mode &quot;Projectes&quot;.</translation>
     </message>
     <message>
         <location line="+89" />
@@ -18528,9 +18624,9 @@ What should %1 do now?</source>
         <translation>&lt;b&gt; ADVERTIMENT: &lt;/b&gt; Aquest fitxer es troba fora del directori del projecte.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-391" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-395" />
         <source>Simplify Tree</source>
-        <translation>Simplificar l'arbre</translation>
+        <translation>Simplificar l&apos;arbre</translation>
     </message>
     <message>
         <location line="+5" />
@@ -18565,12 +18661,12 @@ What should %1 do now?</source>
     <message>
         <location line="+6" />
         <source>Hide Source and Header Groups</source>
-        <translation>Oculta els grups d'origen i de capçalera</translation>
+        <translation>Oculta els grups d&apos;origen i de capçalera</translation>
     </message>
     <message>
         <location line="+26" />
         <source>Synchronize with Editor</source>
-        <translation>Sincronitzar amb l'editor</translation>
+        <translation>Sincronitzar amb l&apos;editor</translation>
     </message>
     <message>
         <location line="+140" />
@@ -18578,7 +18674,7 @@ What should %1 do now?</source>
         <translation>Arbre de filtre</translation>
     </message>
     <message>
-        <location line="+194" />
+        <location line="+198" />
         <source>Meta+X</source>
         <translation>Meta+x</translation>
     </message>
@@ -18614,18 +18710,18 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+50" />
-        <source>Open %1 "%2"</source>
-        <translation>Obert %1 " %2"</translation>
+        <source>Open %1 &quot;%2&quot;</source>
+        <translation>Obert %1 &quot; %2&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Open %1 "%2" (%3)</source>
-        <translation>Open%1 "%2" (%3)</translation>
+        <source>Open %1 &quot;%2&quot; (%3)</source>
+        <translation>Open%1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
         <location line="+20" />
         <source>session</source>
-        <comment>Appears in "Open session &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>sessió</translation>
     </message>
     <message>
@@ -18652,7 +18748,7 @@ What should %1 do now?</source>
     <message>
         <location line="+125" />
         <source>project</source>
-        <comment>Appears in "Open project &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>projecte</translation>
     </message>
     <message>
@@ -18687,7 +18783,7 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+118" />
-        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project's settings:</source>
+        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>El projecte es va configurar per a kits que ja no existeixen. Seleccioneu una de les opcions següents al menú contextual per restaurar la configuració del projecte:</translation>
     </message>
     <message>
@@ -18718,8 +18814,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+12" />
-        <source>Remove Vanished Target "%1"</source>
-        <translation>Eliminar l'objectiu desaparegut "%1"</translation>
+        <source>Remove Vanished Target &quot;%1&quot;</source>
+        <translation>Eliminar l&apos;objectiu desaparegut &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18766,7 +18862,7 @@ What should %1 do now?</source>
     <message>
         <location line="+156" />
         <source>Import Directory</source>
-        <translation>Directori d'importació</translation>
+        <translation>Directori d&apos;importació</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-157" />
@@ -18787,7 +18883,7 @@ What should %1 do now?</source>
     <message>
         <location line="+63" />
         <source>Add to &amp;version control:</source>
-        <translation>Afegeix i control de versió:</translation>
+        <translation>Afegeix i control de &amp;versió:</translation>
     </message>
     <message>
         <location line="+88" />
@@ -18797,27 +18893,27 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Add to &amp;project:</source>
-        <translation>Afegiu a i projecte:</translation>
+        <translation>Afegiu a i &amp;projecte:</translation>
     </message>
     <message>
         <location line="+74" />
-        <source>A version control system repository could not be created in "%1".</source>
-        <translation>Un dipòsit del sistema de control de versions no es va poder crear a "%1".</translation>
+        <source>A version control system repository could not be created in &quot;%1&quot;.</source>
+        <translation>Un dipòsit del sistema de control de versions no es va poder crear a &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to add "%1" to the version control system.</source>
-        <translation>No s'ha pogut afegir "%1" al sistema de control de versions.</translation>
+        <source>Failed to add &quot;%1&quot; to the version control system.</source>
+        <translation>No s&apos;ha pogut afegir &quot;%1&quot; al sistema de control de versions.</translation>
     </message>
     <message>
         <location line="+94" />
         <source>Files to be added:</source>
-        <translation>Fitxers que s'han d'afegir:</translation>
+        <translation>Fitxers que s&apos;han d&apos;afegir:</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Files to be added in</source>
-        <translation>Fitxers que s'han d'afegir a</translation>
+        <translation>Fitxers que s&apos;han d&apos;afegir a</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/removetaskhandler.cpp" line="+23" />
@@ -18843,18 +18939,18 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>The run configuration's working directory.</source>
-        <translation>El directori de treball de la configuració d'execució.</translation>
+        <source>The run configuration&apos;s working directory.</source>
+        <translation>El directori de treball de la configuració d&apos;execució.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The run configuration's name.</source>
-        <translation>El nom de la configuració d'execució.</translation>
+        <source>The run configuration&apos;s name.</source>
+        <translation>El nom de la configuració d&apos;execució.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The run configuration's executable.</source>
-        <translation>L'executable de la configuració d'execució.</translation>
+        <source>The run configuration&apos;s executable.</source>
+        <translation>L&apos;executable de la configuració d&apos;execució.</translation>
     </message>
     <message>
         <location line="+31" />
@@ -18870,7 +18966,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
-        <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
+        <extracomment>Shown in Run configuration, Add menu: &quot;name of runnable (on device name)&quot;</extracomment>
         <translation>%1 (a %{dispositiu: nom})</translation>
     </message>
     <message>
@@ -18922,7 +19018,7 @@ What should %1 do now?</source>
     <message>
         <location line="+5" />
         <source>Enter the path to the executable</source>
-        <translation>Introduïu el camí cap a l'executable</translation>
+        <translation>Introduïu el camí cap a l&apos;executable</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18993,22 +19089,22 @@ What should %1 do now?</source>
     <message>
         <location line="+324" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head/&gt; &lt;rody&gt; &lt;neder&gt; &lt;i&gt;%1 &lt;/i&gt; continua funcionant. &lt;Center/&gt; &lt;Center&gt; Forçar -lo a deixar -ho?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2" />
         <source>Application Still Running</source>
-        <translation>L'aplicació encara s'executa</translation>
+        <translation>L&apos;aplicació encara s&apos;executa</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Force &amp;Quit</source>
-        <translation>Force &amp; Surt</translation>
+        <translation>Force &amp;Surt</translation>
     </message>
     <message>
         <location line="+0" />
         <source>&amp;Keep Running</source>
-        <translation>I Segueix corrent</translation>
+        <translation>&amp;I Segueix corrent</translation>
     </message>
     <message>
         <location line="+246" />
@@ -19018,7 +19114,7 @@ What should %1 do now?</source>
     <message>
         <location line="+38" />
         <source>User requested stop. Shutting down...</source>
-        <translation>S'aturen a la sol·licitud de l'usuari. Apagat ...</translation>
+        <translation>S&apos;aturen a la sol·licitud de l&apos;usuari. Apagat ...</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19058,7 +19154,7 @@ What should %1 do now?</source>
     <message>
         <location line="+11" />
         <source>No executable specified.</source>
-        <translation>No s'especifica cap executable.</translation>
+        <translation>No s&apos;especifica cap executable.</translation>
     </message>
     <message>
         <location line="+279" />
@@ -19068,12 +19164,12 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>An unknown error in the process occurred.</source>
-        <translation>S'ha produït un error desconegut en el procés.</translation>
+        <translation>S&apos;ha produït un error desconegut en el procés.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Either the invoked program "%1" is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>Falta el programa invocat "%1", o bé pot tenir permisos suficients per invocar el programa.</translation>
+        <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>Falta el programa invocat &quot;%1&quot;, o bé pot tenir permisos suficients per invocar el programa.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19083,12 +19179,12 @@ What should %1 do now?</source>
     <message>
         <location line="+8" />
         <source>An error occurred when attempting to write to the process. For example, the process may not be running, or it may have closed its input channel.</source>
-        <translation>S'ha produït un error en intentar escriure al procés. Per exemple, és possible que el procés no s’executi o pot haver tancat el seu canal d’entrada.</translation>
+        <translation>S&apos;ha produït un error en intentar escriure al procés. Per exemple, és possible que el procés no s’executi o pot haver tancat el seu canal d’entrada.</translation>
     </message>
     <message>
         <location line="+5" />
         <source>An error occurred when attempting to read from the process. For example, the process may not be running.</source>
-        <translation>S'ha produït un error en intentar llegir des del procés. Per exemple, és possible que el procés no s’executi.</translation>
+        <translation>S&apos;ha produït un error en intentar llegir des del procés. Per exemple, és possible que el procés no s’executi.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-186" />
@@ -19114,27 +19210,27 @@ What should %1 do now?</source>
     <message>
         <location line="+153" />
         <source>Remove Run Configuration?</source>
-        <translation>Eliminar la configuració d'execució?</translation>
+        <translation>Eliminar la configuració d&apos;execució?</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Do you really want to delete the run configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>De debò voleu eliminar la configuració d'execució &lt;b&gt;%1 &lt;/b&gt;?</translation>
+        <translation>De debò voleu eliminar la configuració d&apos;execució &lt;b&gt;%1 &lt;/b&gt;?</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Remove Run Configurations?</source>
-        <translation>Eliminar les configuracions d'execució?</translation>
+        <translation>Eliminar les configuracions d&apos;execució?</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Do you really want to delete all run configurations?</source>
-        <translation>De debò voleu suprimir totes les configuracions d'execució?</translation>
+        <translation>De debò voleu suprimir totes les configuracions d&apos;execució?</translation>
     </message>
     <message>
         <location line="+35" />
         <source>New name for run configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>Nom nou per a la configuració d'execució &lt;b&gt;%1 &lt;/b&gt;:</translation>
+        <translation>Nom nou per a la configuració d&apos;execució &lt;b&gt;%1 &lt;/b&gt;:</translation>
     </message>
     <message>
         <location line="+69" />
@@ -19149,7 +19245,7 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>The deploy configuration &lt;b&gt;%1&lt;/b&gt; is currently being built.</source>
-        <translation>Actualment s'està construint la configuració de desplegament &lt;b&gt;%1 &lt;/b&gt;.</translation>
+        <translation>Actualment s&apos;està construint la configuració de desplegament &lt;b&gt;%1 &lt;/b&gt;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19174,7 +19270,7 @@ What should %1 do now?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+542" />
         <source>Source directory:</source>
-        <translation>Directori d'origen:</translation>
+        <translation>Directori d&apos;origen:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -19209,11 +19305,9 @@ What should %1 do now?</source>
         <location line="+11" />
         <source>Not showing %n files that are outside of the base directory.
 These files are preserved.</source>
-        <translation>
-            <numerusform>No mostren %N fitxers que es troben fora del directori base.
- Aquests fitxers es conserven.</numerusform>
-            <numerusform>No mostren %N fitxers que es troben fora del directori base.
- Aquests fitxers es conserven.</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -19229,7 +19323,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/showineditortaskhandler.cpp" line="+35" />
         <source>Show in Editor</source>
-        <translation>Mostra a l'editor</translation>
+        <translation>Mostra a l&apos;editor</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19269,22 +19363,22 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Imports existing projects that do not use qmake, CMake, Qbs, Meson, or Autotools.&lt;p&gt;This creates a project file that allows you to use %1 as a code editor and as a launcher for debugging and analyzing tools. If you want to build the project, you might need to edit the generated project file.</source>
-        <translation>Importa projectes existents que no utilitzen QMake, Cmake, QBS, Meson o Autotools. &lt;p&gt; Això crea un fitxer de projecte que permet utilitzar %1 com a editor de codis i com a llançador per a la depuració i l'anàlisi d'eines. Si voleu crear el projecte, potser haureu d’editar el fitxer de projecte generat.</translation>
+        <translation>Importa projectes existents que no utilitzen QMake, Cmake, QBS, Meson o Autotools. &lt;p&gt; Això crea un fitxer de projecte que permet utilitzar %1 com a editor de codis i com a llançador per a la depuració i l&apos;anàlisi d&apos;eines. Si voleu crear el projecte, potser haureu d’editar el fitxer de projecte generat.</translation>
     </message>
     <message>
         <location line="+172" />
-        <source>Unknown build system "%1"</source>
-        <translation>Sistema de construcció desconegut "%1"</translation>
+        <source>Unknown build system &quot;%1&quot;</source>
+        <translation>Sistema de construcció desconegut &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
         <source>Target Settings</source>
-        <translation>Configuració d'orientació</translation>
+        <translation>Configuració d&apos;orientació</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Source directory</source>
-        <translation>Directori d'origen</translation>
+        <translation>Directori d&apos;origen</translation>
     </message>
     <message>
         <location line="+2" />
@@ -19299,7 +19393,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
         <source>&amp;Configure Project</source>
-        <translation>I configurar el projecte</translation>
+        <translation>I &amp;configurar el projecte</translation>
     </message>
     <message>
         <location line="+91" />
@@ -19334,8 +19428,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+71" />
-        <source>Enable Kit for Project "%1"</source>
-        <translation>Activa el kit per al projecte "%1"</translation>
+        <source>Enable Kit for Project &quot;%1&quot;</source>
+        <translation>Activa el kit per al projecte &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7" />
@@ -19344,8 +19438,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Disable Kit for Project "%1"</source>
-        <translation>Desactiveu el kit del projecte "%1"</translation>
+        <source>Disable Kit for Project &quot;%1&quot;</source>
+        <translation>Desactiveu el kit del projecte &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19354,8 +19448,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Disable Kit "%1" in This Project?</source>
-        <translation>Desactiveu el kit "%1" en aquest projecte?</translation>
+        <source>Disable Kit &quot;%1&quot; in This Project?</source>
+        <translation>Desactiveu el kit &quot;%1&quot; en aquest projecte?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19389,8 +19483,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Add a kit in the &lt;a href="buildandrun"&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
-        <translation>Afegiu un kit a &lt;a href = "buildandrun"&gt; opcions &lt;/a&gt; o a través de l'eina de manteniment del SDK.</translation>
+        <source>Add a kit in the &lt;a href=&quot;buildandrun&quot;&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
+        <translation>Afegiu un kit a &lt;a href = &quot;buildandrun&quot;&gt; opcions &lt;/a&gt; o a través de l&apos;eina de manteniment del SDK.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19486,7 +19580,7 @@ These files are preserved.</source>
         <translation>Problemes</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+53" />
         <source>Show Warnings</source>
         <translation>ADVERTIMENTS DE LES ESPECTACLES</translation>
     </message>
@@ -19508,12 +19602,12 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>This toolchain is invalid.</source>
-        <translation>Aquesta cadena d'eines no és vàlida.</translation>
+        <translation>Aquesta cadena d&apos;eines no és vàlida.</translation>
     </message>
     <message>
         <location line="+43" />
         <source>Toolchain Auto-detection Settings</source>
-        <translation>Configuració de detecció automàtica de la cadena d'eines</translation>
+        <translation>Configuració de detecció automàtica de la cadena d&apos;eines</translation>
     </message>
     <message>
         <location line="+2" />
@@ -19568,7 +19662,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
         <source>&amp;Annotate</source>
-        <translation>I anotar</translation>
+        <translation>I &amp;anotar</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19654,18 +19748,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+24" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>La instal·lació de "%1" es va cancel·lar per temps d'espera.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>La instal·lació de &quot;%1&quot; es va cancel·lar per temps d&apos;espera.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>L'usuari va cancel·lar la instal·lació de "%1".</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>L&apos;usuari va cancel·lar la instal·lació de &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>Instal·lació de " %1" ha fallat amb el codi de sortida %2.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>Instal·lació de &quot; %1&quot; ha fallat amb el codi de sortida %2.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
@@ -19742,28 +19836,28 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" not found.</source>
-        <translation>Python "%1" no es troba.</translation>
+        <source>Python &quot;%1&quot; not found.</source>
+        <translation>Python &quot;%1&quot; no es troba.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" is not executable.</source>
-        <translation>Python "%1" no és executable.</translation>
+        <source>Python &quot;%1&quot; is not executable.</source>
+        <translation>Python &quot;%1&quot; no és executable.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Python "%1" does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
-        <translation>Python "%1" no conté un PIP utilitzable. PIP és necessari per instal·lar paquets Python de l’índex de paquets Python, com Pyside i el servidor de llenguatge Python. Per utilitzar qualsevol d'aquesta funcionalitat, assegureu -vos que PIP estigui instal·lat per a aquest Python.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
+        <translation>Python &quot;%1&quot; no conté un PIP utilitzable. PIP és necessari per instal·lar paquets Python de l’índex de paquets Python, com Pyside i el servidor de llenguatge Python. Per utilitzar qualsevol d&apos;aquesta funcionalitat, assegureu -vos que PIP estigui instal·lat per a aquest Python.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Python "%1" does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
-        <translation>Python "%1" no conté un VENV utilitzable. VENV és la manera recomanada d’aïllar un entorn de desenvolupament d’un projecte del Python instal·lat a nivell mundial.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
+        <translation>Python &quot;%1&quot; no conté un VENV utilitzable. VENV és la manera recomanada d’aïllar un entorn de desenvolupament d’un projecte del Python instal·lat a nivell mundial.</translation>
     </message>
     <message>
         <location line="+32" />
         <source>Name of Python Interpreter</source>
-        <translation>Nom de l'intèrpret de Python</translation>
+        <translation>Nom de l&apos;intèrpret de Python</translation>
     </message>
     <message>
         <location line="+7" />
@@ -19778,7 +19872,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+303" />
         <source>Install Python language server (PyLS) for %1 (%2). The language server provides Python specific completion and annotation.</source>
-        <translation>Instal·leu Python Language Server (PYLS) per al %1 ( %2). El servidor d'idiomes proporciona una finalització i anotació específiques de Python.</translation>
+        <translation>Instal·leu Python Language Server (PYLS) per al %1 ( %2). El servidor d&apos;idiomes proporciona una finalització i anotació específiques de Python.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -19808,12 +19902,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+84" />
         <source>Issues parsed from Python runtime output.</source>
-        <translation>Els problemes analitzats des de la sortida d'execució de Python.</translation>
+        <translation>Els problemes analitzats des de la sortida d&apos;execució de Python.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
-        <source>No Python interpreter set for kit "%1".</source>
-        <translation>Cap intèrpret de Python fixat per al kit "%1".</translation>
+        <source>No Python interpreter set for kit &quot;%1&quot;.</source>
+        <translation>Cap intèrpret de Python fixat per al kit &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
@@ -19832,7 +19926,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
         <source>Python:</source>
         <translation>Python:</translation>
     </message>
@@ -19842,7 +19936,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Fer córrer %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
         <location line="+283" />
         <source>Name:</source>
         <translation>Nom:</translation>
@@ -19860,42 +19954,42 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" does not exist.</source>
-        <translation>"%1" no existeix.</translation>
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot; no existeix.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" is not an executable file.</source>
-        <translation>"%1" no és un fitxer executable.</translation>
+        <source>&quot;%1&quot; is not an executable file.</source>
+        <translation>&quot;%1&quot; no és un fitxer executable.</translation>
     </message>
     <message>
         <location line="+16" />
         <location line="+186" />
         <source>&amp;Add</source>
-        <translation>I afegir</translation>
+        <translation>I &amp;afegir</translation>
     </message>
     <message>
         <location line="-184" />
         <location line="+185" />
         <source>&amp;Delete</source>
-        <translation>I suprimir</translation>
+        <translation>&amp;I suprimir</translation>
     </message>
     <message>
         <location line="-183" />
         <location line="+185" />
         <source>&amp;Make Default</source>
-        <translation>I fer per defecte</translation>
+        <translation>&amp;I fer per defecte</translation>
     </message>
     <message>
         <location line="-183" />
         <source>&amp;Generate Kit</source>
-        <translation>I generar kit</translation>
+        <translation>I &amp;generar kit</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+179" />
         <source>&amp;Clean Up</source>
-        <translation>I netejar</translation>
+        <translation>&amp;I netejar</translation>
     </message>
     <message>
         <location line="-178" />
@@ -19930,10 +20024,10 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+99" />
         <source>Language Server Configuration</source>
-        <translation>Configuració del servidor d'idiomes</translation>
+        <translation>Configuració del servidor d&apos;idiomes</translation>
     </message>
     <message>
-        <location line="+476" />
+        <location line="+489" />
         <source>Python interpreter:</source>
         <translation>Intèrpret de Python:</translation>
     </message>
@@ -19945,7 +20039,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+1" />
         <source>Virtual environment directory:</source>
-        <translation>Directori d'entorn virtual:</translation>
+        <translation>Directori d&apos;entorn virtual:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -19965,8 +20059,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+11" />
-        <source>Found "%1" (%2)</source>
-        <translation>S'ha trobat "%1" (%2)</translation>
+        <source>Found &quot;%1&quot; (%2)</source>
+        <translation>S&apos;ha trobat &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="+9" />
@@ -19975,13 +20069,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
-        <source>"data" of a Python wizard page expects a map with "items" containing a list of objects.</source>
-        <translation>"Dades" d'una pàgina d'assistent de Python espera un mapa amb "ítems" que conté una llista d'objectes.</translation>
+        <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
+        <translation>&quot;Dades&quot; d&apos;una pàgina d&apos;assistent de Python espera un mapa amb &quot;ítems&quot; que conté una llista d&apos;objectes.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>An item of Python wizard page data expects a "trKey" field containing the UI visible string for that Python version and a "value" field containing an object with a "PySideVersion" field used for import statements in the Python files.</source>
-        <translation>Un element de les dades de l'assistent de Python espera que un camp "Trkey" que conté la cadena visible de la interfície d'usuari per a la versió Python i un camp "Valor" que conté un objecte amb un camp "PysideVersion" utilitzat per a les declaracions d'importació als fitxers Python.</translation>
+        <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
+        <translation>Un element de les dades de l&apos;assistent de Python espera que un camp &quot;Trkey&quot; que conté la cadena visible de la interfície d&apos;usuari per a la versió Python i un camp &quot;Valor&quot; que conté un objecte amb un camp &quot;PysideVersion&quot; utilitzat per a les declaracions d&apos;importació als fitxers Python.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -20000,23 +20094,23 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+8" />
         <source>The &lt;RCC&gt; root element is missing.</source>
-        <translation>Falta l'element arrel &lt;RCC&gt;.</translation>
+        <translation>Falta l&apos;element arrel &lt;RCC&gt;.</translation>
     </message>
 </context>
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+126" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
         <source>Move tab left</source>
-        <translation>Mou la pestanya cap a l'esquerra</translation>
+        <translation>Mou la pestanya cap a l&apos;esquerra</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Switch to next tab</source>
         <translation>Canvia a la pestanya següent</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+15" />
         <source>Move tab right</source>
         <translation>Mou la pestanya cap a la dreta</translation>
     </message>
@@ -20064,7 +20158,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+2" />
         <source>Timeout in ms:</source>
-        <translation>Temps d'espera en ms:</translation>
+        <translation>Temps d&apos;espera en ms:</translation>
     </message>
     <message>
         <location line="+7" />
@@ -20074,7 +20168,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+5" />
         <source>Autocomplete common &amp;prefix</source>
-        <translation>Prefix comú d'emplenament automàtic</translation>
+        <translation>&amp;Prefix comú d&apos;emplenament automàtic</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20093,12 +20187,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 In addition, Shift+Enter inserts an escape character at the cursor position and moves the rest of the string to the next line.</source>
         <translation>Divideix una cadena en dues línies afegint una cometa final a la posició del cursor quan premeu Intro i una cita inicial a la línia següent, abans de la resta de la cadena.
 
-A més, Maj+Enter insereix un caràcter d'escapada a la posició del cursor i mou la resta de la cadena a la línia següent.</translation>
+A més, Maj+Enter insereix un caràcter d&apos;escapada a la posició del cursor i mou la resta de la cadena a la línia següent.</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Insert opening or closing brackets</source>
-        <translation>Introduïu suports d'obertura o tancament</translation>
+        <translation>Introduïu suports d&apos;obertura o tancament</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20113,7 +20207,7 @@ A més, Maj+Enter insereix un caràcter d'escapada a la posició del cursor i mo
     <message>
         <location line="+3" />
         <source>When typing a matching bracket and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
-        <translation>Quan s'escriu un claudàtor coincident i hi ha una selecció de text, en comptes d'eliminar la selecció, l'envolta amb els caràcters corresponents.</translation>
+        <translation>Quan s&apos;escriu un claudàtor coincident i hi ha una selecció de text, en comptes d&apos;eliminar la selecció, l&apos;envolta amb els caràcters corresponents.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20128,7 +20222,7 @@ A més, Maj+Enter insereix un caràcter d'escapada a la posició del cursor i mo
     <message>
         <location line="+3" />
         <source>When typing a matching quote and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
-        <translation>Quan s'escriu una cita coincident i hi ha una selecció de text, en comptes d'eliminar la selecció, l'envolta amb els caràcters corresponents.</translation>
+        <translation>Quan s&apos;escriu una cita coincident i hi ha una selecció de text, en comptes d&apos;eliminar la selecció, l&apos;envolta amb els caràcters corresponents.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20138,7 +20232,7 @@ A més, Maj+Enter insereix un caràcter d'escapada a la posició del cursor i mo
     <message>
         <location line="+2" />
         <source>Show a visual hint when for example a brace or a quote is automatically inserted by the editor.</source>
-        <translation>Mostra una pista visual quan, per exemple, l'editor insereix automàticament una clau o una cita.</translation>
+        <translation>Mostra una pista visual quan, per exemple, l&apos;editor insereix automàticament una clau o una cita.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20163,7 +20257,7 @@ A més, Maj+Enter insereix un caràcter d'escapada a la posició del cursor i mo
     <message>
         <location line="+2" />
         <source>Remove the automatically inserted character if the trigger is deleted by backspace after the completion.</source>
-        <translation>Elimineu el caràcter inserit automàticament si l'activador s'elimina per retrocés després de completar-lo.</translation>
+        <translation>Elimineu el caràcter inserit automàticament si l&apos;activador s&apos;elimina per retrocés després de completar-lo.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20178,7 +20272,7 @@ A més, Maj+Enter insereix un caràcter d'escapada a la posició del cursor i mo
     <message>
         <location line="+72" />
         <source>&amp;Automatically Insert Matching Characters</source>
-        <translation>Inseriu automàticament caràcters coincidents</translation>
+        <translation>Inseriu &amp;automàticament caràcters coincidents</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
@@ -20187,8 +20281,8 @@ A més, Maj+Enter insereix un caràcter d'escapada a la posició del cursor i mo
     </message>
     <message>
         <location line="+2" />
-        <source>Automatically creates a Doxygen comment upon pressing enter after a '/**', '/*!', '//!' or '///'.</source>
-        <translation>Crea automàticament un comentari de Doxygen en prémer Intro després d'un '/**', '/*!', '//!' o '///'.</translation>
+        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
+        <translation>Crea automàticament un comentari de Doxygen en prémer Intro després d&apos;un &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; o &apos;///&apos;.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20207,8 +20301,8 @@ A més, Maj+Enter insereix un caràcter d'escapada a la posició del cursor i mo
     </message>
     <message>
         <location line="+2" />
-        <source>Adds leading asterisks when continuing C/C++ "/*", Qt "/*!" and Java "/**" style comments on new lines.</source>
-        <translation>Afegeix asteriscs inicials en continuar C/C++ "/*", Qt "/*!" i comentaris d'estil Java "/**" a noves línies.</translation>
+        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
+        <translation>Afegeix asteriscs inicials en continuar C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; i comentaris d&apos;estil Java &quot;/**&quot; a noves línies.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20217,12 +20311,12 @@ A més, Maj+Enter insereix un caràcter d'escapada a la posició del cursor i mo
     </message>
     <message>
         <location line="+1" />
-        <source>Doxygen allows "@" and "\" to start commands.
-By default, "@" is used if the surrounding comment starts with "/**" or "///", and "\" is used
-if the comment starts with "/*!" or "//!".</source>
-        <translation>Doxygen permet que les ordres "@" i "\" inicien les ordres.
- Per defecte, "@" s'utilitza si el comentari circumdant comença amb "/**" o "///", i "\" s'utilitza
- Si el comentari comença amb "/*!" o "//!".</translation>
+        <source>Doxygen allows &quot;@&quot; and &quot;\&quot; to start commands.
+By default, &quot;@&quot; is used if the surrounding comment starts with &quot;/**&quot; or &quot;///&quot;, and &quot;\&quot; is used
+if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
+        <translation>Doxygen permet que les ordres &quot;@&quot; i &quot;\&quot; inicien les ordres.
+ Per defecte, &quot;@&quot; s&apos;utilitza si el comentari circumdant comença amb &quot;/**&quot; o &quot;///&quot;, i &quot;\&quot; s&apos;utilitza
+ Si el comentari comença amb &quot;/*!&quot; o &quot;//!&quot;.</translation>
     </message>
     <message>
         <source>&amp;Automatically insert matching characters</source>
@@ -20264,7 +20358,7 @@ if the comment starts with "/*!" or "//!".</source>
     <message>
         <location line="+53" />
         <source>Error reverting snippet.</source>
-        <translation>S'ha produït un error en revertir el fragment.</translation>
+        <translation>S&apos;ha produït un error en revertir el fragment.</translation>
     </message>
     <message>
         <location line="+98" />
@@ -20299,7 +20393,7 @@ if the comment starts with "/*!" or "//!".</source>
     <message>
         <location line="+69" />
         <source>No snippet selected.</source>
-        <translation>No s'ha seleccionat cap fragment.</translation>
+        <translation>No s&apos;ha seleccionat cap fragment.</translation>
     </message>
     <message>
         <location line="+86" />
@@ -20397,8 +20491,8 @@ if the comment starts with "/*!" or "//!".</source>
     </message>
     <message>
         <location line="+36" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding. Editing not possible.</source>
-        <translation>&lt;b&gt;Error:&lt;/b&gt; no s'ha pogut descodificar "%1" amb la codificació "%2". No es pot editar.</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
+        <translation>&lt;b&gt;Error:&lt;/b&gt; no s&apos;ha pogut descodificar &quot;%1&quot; amb la codificació &quot;%2&quot;. No es pot editar.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -20408,17 +20502,17 @@ if the comment starts with "/*!" or "//!".</source>
     <message>
         <location line="+1297" />
         <source>Snippet Parse Error</source>
-        <translation>Error d'anàlisi de fragments</translation>
+        <translation>Error d&apos;anàlisi de fragments</translation>
     </message>
     <message>
         <location line="+522" />
         <source>A highlight definition was not found for this file. Would you like to download additional highlight definition files?</source>
-        <translation>No s'ha trobat una definició destacada per a aquest fitxer. Voleu baixar fitxers de definició destacats addicionals?</translation>
+        <translation>No s&apos;ha trobat una definició destacada per a aquest fitxer. Voleu baixar fitxers de definició destacats addicionals?</translation>
     </message>
     <message>
         <location line="+14" />
         <source>More than one highlight definition was found for this file. Which one should be used to highlight this file?</source>
-        <translation>S'ha trobat més d'una definició destacada per a aquest fitxer. Quin s'hauria d'utilitzar per ressaltar aquest fitxer?</translation>
+        <translation>S&apos;ha trobat més d&apos;una definició destacada per a aquest fitxer. Quin s&apos;hauria d&apos;utilitzar per ressaltar aquest fitxer?</translation>
     </message>
     <message>
         <location line="+7" />
@@ -20458,7 +20552,7 @@ if the comment starts with "/*!" or "//!".</source>
     <message>
         <location line="+7" />
         <source>In entire &amp;document</source>
-        <translation>En el document complet</translation>
+        <translation>En el &amp;document complet</translation>
     </message>
     <message>
         <location line="-4" />
@@ -20497,31 +20591,7 @@ Influences the indentation of continuation lines.
 &lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;cap/&gt;&lt;cos&gt;
-Influeix en el sagnat de les línies de continuació.
-
-&lt;ul&gt;
-&lt;li&gt;De cap manera: no alineeu gens. Les línies només es sagnaran a la profunditat de sagnat lògica actual.
-&lt;pre&gt;
-(tab)int i = foo(a, b
-(tab)c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;Amb espais: feu servir sempre espais per a l'alineació, independentment de la resta de paràmetres de sagnat.
-&lt;pre&gt;
-(tab)int i = foo(a, b
-(pestanya) c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;Amb sagnat regular: utilitzeu tabulacions i/o espais per a l'alineació, tal com s'ha configurat anteriorment.
-&lt;pre&gt;
-(tab)int i = foo(a, b
-(tab)(tab)(tab) c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+31" />
@@ -20530,13 +20600,13 @@ Influeix en el sagnat de les línies de continuació.
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;i&gt;Code indentation is configured in &lt;a href="C++"&gt;C++&lt;/a&gt; and &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;El sagnat del codi es configura a la configuració &lt;a href="C++"&gt;C++&lt;/a&gt; i &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt;.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;El sagnat del codi es configura a la configuració &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; i &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt;.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+5" />
         <source>The text editor indentation setting is used for non-code files only. See the C++ and Qt Quick coding style settings to configure indentation for code files.</source>
-        <translation>La configuració de sagnat de l'editor de text només s'utilitza per a fitxers sense codi. Consulteu la configuració d'estil de codificació ràpida C++ i Qt per configurar el sagnat per als fitxers de codi.</translation>
+        <translation>La configuració de sagnat de l&apos;editor de text només s&apos;utilitza per a fitxers sense codi. Consulteu la configuració d&apos;estil de codificació ràpida C++ i Qt per configurar el sagnat per als fitxers de codi.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20556,7 +20626,7 @@ Influeix en el sagnat de les línies de continuació.
     <message>
         <location line="+2" />
         <source>Ta&amp;b size:</source>
-        <translation>Mida de la pestanya:</translation>
+        <translation>&amp;Mida de la pestanya:</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20607,7 +20677,7 @@ Influeix en el sagnat de les línies de continuació.
     <message>
         <location line="+1" />
         <source>In Leading White Space</source>
-        <translation>A l'espai en blanc líder</translation>
+        <translation>A l&apos;espai en blanc líder</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20641,25 +20711,12 @@ Specifies how backspace interacts with indentation.
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation>&lt;html&gt;&lt;cap/&gt;&lt;cos&gt;
-Especifica com interacciona el retrocés amb el sagnat.
-
-&lt;ul&gt;
-&lt;li&gt;Cap: cap interacció. Comportament normal de retrocés normal.
-&lt;/li&gt;
-
-&lt;li&gt;Segueix els sagnis anteriors: a l'espai en blanc inicial, tornarà el cursor al nivell de sagnat més proper utilitzat a les línies anteriors.
-&lt;/li&gt;
-
-&lt;li&gt;Desendents: si el caràcter darrere del cursor és un espai, es comporta com una pestanya posterior.
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17" />
         <source>Prefer single line comments</source>
-        <translation>Prefereix comentaris d'una sola línia</translation>
+        <translation>Prefereix comentaris d&apos;una sola línia</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20761,13 +20818,7 @@ Especifica com interacciona el retrocés amb el sagnat.
 &lt;li&gt;&lt;i&gt;Always Delete:&lt;/i&gt; never write an UTF-8 BOM, possibly deleting a pre-existing one.&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;Note that UTF-8 BOMs are uncommon and treated incorrectly by some editors, so it usually makes little sense to add any.&lt;/p&gt;
 &lt;p&gt;This setting does &lt;b&gt;not&lt;/b&gt; influence the use of UTF-16 and UTF-32 BOMs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;cap/&gt;&lt;cos&gt;
-&lt;p&gt;Com haurien de tractar els editors de text amb les marques d'ordre de bytes UTF-8. Les opcions són:&lt;/p&gt;
-&lt;ul &gt;&lt;li&gt;&lt;i&gt;Afegeix si la codificació és UTF-8:&lt;/i&gt; afegiu sempre una BOM quan deseu un fitxer amb codificació UTF-8. Tingueu en compte que això no funcionarà si la codificació és &lt;i&gt;Sistema&lt;/i&gt;, ja que l'editor de text no sap què és realment.&lt;/li&gt;
-&lt;li&gt;&lt;i&gt;Conserva si ja està present: &lt;/i&gt;deseu el fitxer amb una LDM si ja en tenia una quan es va carregar.&lt;/li&gt;
-&lt;li&gt;&lt;i&gt;Suprimeix sempre:&lt;/i&gt; no escriviu mai una LDM UTF-8, possiblement suprimint-ne una de preexistent.&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;Tingueu en compte que els BOM UTF-8 són poc freqüents i alguns editors els tracten incorrectament, de manera que normalment no té molt sentit afegir-ne.&lt;/p&gt;
-&lt;p&gt;Aquesta configuració &lt;b&gt;no&lt;/b&gt; influeix en l'ús de les BOM UTF-16 i UTF-32.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11" />
@@ -20777,12 +20828,12 @@ Especifica com interacciona el retrocés amb el sagnat.
     <message>
         <location line="+2" />
         <source>Enable scroll &amp;wheel zooming</source>
-        <translation>Activa el desplaçament i el zoom amb rodes</translation>
+        <translation>&amp;Activa el desplaçament i el zoom amb rodes</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Enable built-in camel case &amp;navigation</source>
-        <translation>Activa la funda i la navegació de camell integrats</translation>
+        <translation>Activa la fu&amp;nda i la navegació de camell integrats</translation>
     </message>
     <message>
         <location line="+2" />
@@ -20792,12 +20843,12 @@ Especifica com interacciona el retrocés amb el sagnat.
     <message>
         <location line="+1" />
         <source>Using Select Block Up / Down actions will now provide smarter selections.</source>
-        <translation>L'ús de les accions Select Block Up / Down ara proporcionarà seleccions més intel·ligents.</translation>
+        <translation>L&apos;ús de les accions Select Block Up / Down ara proporcionarà seleccions més intel·ligents.</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Show help tooltips using keyboard shortcut (Alt)</source>
-        <translation>Mostra les instruccions d'ajuda mitjançant la drecera del teclat (Alt)</translation>
+        <translation>Mostra les instruccions d&apos;ajuda mitjançant la drecera del teclat (Alt)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20862,17 +20913,17 @@ Especifica com interacciona el retrocés amb el sagnat.
     <message>
         <location line="+11" />
         <source>Show help tooltips using the mouse:</source>
-        <translation>Mostra les instruccions d'ajuda amb el ratolí:</translation>
+        <translation>Mostra les instruccions d&apos;ajuda amb el ratolí:</translation>
     </message>
     <message>
         <location line="+152" />
         <source>Displays context-sensitive help or type information on mouseover.</source>
-        <translation>Mostra ajuda contextual o informació d'escriptura al passar el ratolí.</translation>
+        <translation>Mostra ajuda contextual o informació d&apos;escriptura al passar el ratolí.</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Displays context-sensitive help or type information on Shift+Mouseover.</source>
-        <translation>Mostra ajuda sensible al context o informació d'escriptura a Maj+Mouseover.</translation>
+        <translation>Mostra ajuda sensible al context o informació d&apos;escriptura a Maj+Mouseover.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+139" />
@@ -20898,7 +20949,7 @@ Especifica com interacciona el retrocés amb el sagnat.
     <message>
         <location line="+1" />
         <source>Display &amp;folding markers</source>
-        <translation>Mostra i marcadors plegables</translation>
+        <translation>&amp;Mostra i marcadors plegables</translation>
     </message>
     <message>
         <location line="+8" />
@@ -20917,8 +20968,8 @@ Especifica com interacciona el retrocés amb el sagnat.
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;i&gt;Set &lt;a href="font zoom"&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;Definiu l'&lt;a href="font zoom"&gt;interlineat de la font&lt;/a&gt; al 100% per habilitar l'opció d'ajustament de text.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;Definiu l&apos;&lt;a href=&quot;font zoom&quot;&gt;interlineat de la font&lt;/a&gt; al 100% per habilitar l&apos;opció d&apos;ajustament de text.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -20928,7 +20979,7 @@ Especifica com interacciona el retrocés amb el sagnat.
     <message>
         <location line="+1" />
         <source>Tint whole margin area</source>
-        <translation>Tingueu tota l'àrea del marge</translation>
+        <translation>Tingueu tota l&apos;àrea del marge</translation>
     </message>
     <message>
         <location line="+8" />
@@ -20998,7 +21049,7 @@ Especifica com interacciona el retrocés amb el sagnat.
     <message>
         <location line="+2" />
         <source>&amp;Highlight selection</source>
-        <translation>I destacar la selecció</translation>
+        <translation>&amp;I destacar la selecció</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21008,7 +21059,7 @@ Especifica com interacciona el retrocés amb el sagnat.
     <message>
         <location line="+3" />
         <source>Next to editor content</source>
-        <translation>Al costat del contingut de l'editor</translation>
+        <translation>Al costat del contingut de l&apos;editor</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21052,7 +21103,7 @@ Especifica com interacciona el retrocés amb el sagnat.
     <message>
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+547" />
         <source>Copy Color Scheme</source>
-        <translation>Copia l'esquema de colors</translation>
+        <translation>Copia l&apos;esquema de colors</translation>
     </message>
     <message>
         <location line="-434" />
@@ -21064,7 +21115,7 @@ Especifica com interacciona el retrocés amb el sagnat.
         <location line="+6" />
         <source>A line spacing value other than 100% disables text wrapping.
 A value less than 100% can result in overlapping and misaligned graphics.</source>
-        <translation>Un valor d'interlineat diferent del 100% desactiva l'ajustament del text.
+        <translation>Un valor d&apos;interlineat diferent del 100% desactiva l&apos;ajustament del text.
 Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</translation>
     </message>
     <message>
@@ -21079,8 +21130,8 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     </message>
     <message>
         <location line="+16" />
-        <source>Color Scheme for Theme "%1"</source>
-        <translation>Esquema de colors per al tema "%1"</translation>
+        <source>Color Scheme for Theme &quot;%1&quot;</source>
+        <translation>Esquema de colors per al tema &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+16" />
@@ -21096,7 +21147,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
         <location line="+370" />
         <location line="+92" />
         <source>Color scheme name:</source>
-        <translation>Nom de l'esquema de colors:</translation>
+        <translation>Nom de l&apos;esquema de colors:</translation>
     </message>
     <message>
         <location line="-91" />
@@ -21106,7 +21157,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     <message>
         <location line="+45" />
         <source>Delete Color Scheme</source>
-        <translation>Suprimeix l'esquema de colors</translation>
+        <translation>Suprimeix l&apos;esquema de colors</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21117,7 +21168,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
         <location line="+31" />
         <location line="+13" />
         <source>Import Color Scheme</source>
-        <translation>Importa l'esquema de colors</translation>
+        <translation>Importa l&apos;esquema de colors</translation>
     </message>
     <message>
         <location line="-11" />
@@ -21128,7 +21179,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     <message>
         <location line="-2" />
         <source>Export Color Scheme</source>
-        <translation>Exporta l'esquema de colors</translation>
+        <translation>Exporta l&apos;esquema de colors</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+41" />
@@ -21158,12 +21209,12 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     <message>
         <location line="+105" />
         <source>Copy Code Style</source>
-        <translation>Copia l'estil del codi</translation>
+        <translation>Copia l&apos;estil del codi</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Code style name:</source>
-        <translation>Nom de l'estil del codi:</translation>
+        <translation>Nom de l&apos;estil del codi:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -21173,7 +21224,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     <message>
         <location line="+21" />
         <source>Delete Code Style</source>
-        <translation>Suprimeix l'estil del codi</translation>
+        <translation>Suprimeix l&apos;estil del codi</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21191,7 +21242,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
         <location line="+12" />
         <location line="+9" />
         <source>Import Code Style</source>
-        <translation>Importa l'estil del codi</translation>
+        <translation>Importa l&apos;estil del codi</translation>
     </message>
     <message>
         <location line="-8" />
@@ -21201,13 +21252,13 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     </message>
     <message>
         <location line="-12" />
-        <source>Cannot import code style from "%1".</source>
-        <translation>No es pot importar l'estil de codi de "%1".</translation>
+        <source>Cannot import code style from &quot;%1&quot;.</source>
+        <translation>No es pot importar l&apos;estil de codi de &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Export Code Style</source>
-        <translation>Exporta l'estil del codi</translation>
+        <translation>Exporta l&apos;estil del codi</translation>
     </message>
     <message>
         <location line="+68" />
@@ -21231,8 +21282,8 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     </message>
     <message>
         <location line="+1" />
-        <source>The color scheme "%1" was modified, do you want to save the changes?</source>
-        <translation>S'ha modificat l'esquema de colors "%1", voleu desar els canvis?</translation>
+        <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
+        <translation>S&apos;ha modificat l&apos;esquema de colors &quot;%1&quot;, voleu desar els canvis?</translation>
     </message>
     <message>
         <location line="+7" />
@@ -21246,8 +21297,8 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     </message>
     <message>
         <location line="+16" />
-        <source>File "%1":</source>
-        <translation>Fitxer "%1":</translation>
+        <source>File &quot;%1&quot;:</source>
+        <translation>Fitxer &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -21260,7 +21311,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
         <location line="+7" />
         <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+106" />
         <source>Please note that this only searches files that have been saved to disk.</source>
-        <translation>Tingueu en compte que això només cerca els fitxers que s'han desat al disc.</translation>
+        <translation>Tingueu en compte que això només cerca els fitxers que s&apos;han desat al disc.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+188" />
@@ -21301,8 +21352,8 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     </message>
     <message>
         <location line="+27" />
-        <source>&lt;p align='center'&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href="copy"&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;p align='center'&gt;&lt;b&gt;Els esquemes de colors integrats s'han de &lt;a href="copy"&gt;copiar&lt;/a&gt;&lt;br/&gt; abans de poder canviar-los&lt;/b&gt;&lt;/p&gt;</translation>
+        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Els esquemes de colors integrats s&apos;han de &lt;a href=&quot;copy&quot;&gt;copiar&lt;/a&gt;&lt;br/&gt; abans de poder canviar-los&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -21365,7 +21416,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     <message>
         <location line="+2" />
         <source>Wave Underline</source>
-        <translation>Subratllat d'ona</translation>
+        <translation>Subratllat d&apos;ona</translation>
     </message>
     <message>
         <location line="+2" />
@@ -21461,7 +21512,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     <message>
         <location line="+4" />
         <source>Trigger Refactoring Action</source>
-        <translation>Activar l'acció de refactorització</translation>
+        <translation>Activar l&apos;acció de refactorització</translation>
     </message>
     <message>
         <location line="+4" />
@@ -21501,12 +21552,12 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     </message>
     <message>
         <location line="+7" />
-        <source>Current document's font size in points.</source>
+        <source>Current document&apos;s font size in points.</source>
         <translation>Mida de lletra del document actual en punts.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Word under the current document's text cursor.</source>
+        <source>Word under the current document&apos;s text cursor.</source>
         <translation>Word sota el cursor de text del document actual.</translation>
     </message>
     <message>
@@ -21525,7 +21576,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     <message>
         <location line="+124" />
         <source>&amp;Visualize Whitespace</source>
-        <translation>&amp;Visualitza l'espai en blanc</translation>
+        <translation>&amp;Visualitza l&apos;espai en blanc</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21540,7 +21591,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     <message>
         <location line="+3" />
         <source>Enable Text &amp;Wrapping</source>
-        <translation>Activa l'ajustament i text</translation>
+        <translation>&amp;Activa l&apos;ajustament i text</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21740,7 +21791,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     <message>
         <location line="+23" />
         <source>Paste from Clipboard History</source>
-        <translation>Enganxa des de l'historial del porta-retalls</translation>
+        <translation>Enganxa des de l&apos;historial del porta-retalls</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21780,7 +21831,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
     <message>
         <location line="+4" />
         <source>Toggle Comment &amp;Selection</source>
-        <translation>Activa i desactiva la selecció de comentaris</translation>
+        <translation>Activa i de&amp;sactiva la selecció de comentaris</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22121,7 +22172,7 @@ Un valor inferior al 100% pot provocar gràfics superposats i desalineats.</tran
         <source>Generic text and punctuation tokens.
 Applied to text that matched no other rule.</source>
         <translation>Text genèric i fitxes de puntuació.
-S'aplica a text que no coincideix amb cap altra regla.</translation>
+S&apos;aplica a text que no coincideix amb cap altra regla.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -22151,7 +22202,7 @@ S'aplica a text que no coincideix amb cap altra regla.</translation>
     <message>
         <location line="+1" />
         <source>Line numbers located on the left side of the editor.</source>
-        <translation>Números de línia situats al costat esquerre de l'editor.</translation>
+        <translation>Números de línia situats al costat esquerre de l&apos;editor.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22161,7 +22212,7 @@ S'aplica a text que no coincideix amb cap altra regla.</translation>
     <message>
         <location line="+1" />
         <source>Highlighted search results inside the editor.</source>
-        <translation>Resultats de cerca destacats dins de l'editor.</translation>
+        <translation>Resultats de cerca destacats dins de l&apos;editor.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22172,8 +22223,8 @@ S'aplica a text que no coincideix amb cap altra regla.</translation>
         <location line="+1" />
         <source>Highlighted search results inside the editor.
 Used to mark read accesses to C++ symbols.</source>
-        <translation>Resultats de cerca destacats dins de l'editor.
-S'utilitza per marcar els accessos de lectura als símbols C++.</translation>
+        <translation>Resultats de cerca destacats dins de l&apos;editor.
+S&apos;utilitza per marcar els accessos de lectura als símbols C++.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22184,8 +22235,8 @@ S'utilitza per marcar els accessos de lectura als símbols C++.</translation>
         <location line="+1" />
         <source>Highlighted search results inside the editor.
 Used to mark write accesses to C++ symbols.</source>
-        <translation>Resultats de cerca destacats dins de l'editor.
-S'utilitza per marcar els accessos d'escriptura als símbols C++.</translation>
+        <translation>Resultats de cerca destacats dins de l&apos;editor.
+S&apos;utilitza per marcar els accessos d&apos;escriptura als símbols C++.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22196,8 +22247,8 @@ S'utilitza per marcar els accessos d'escriptura als símbols C++.</translation>
         <location line="+1" />
         <source>Highlighted search results inside the editor.
 Used to mark containing function of the symbol usage.</source>
-        <translation>Resultats de cerca destacats dins de l'editor.
-S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
+        <translation>Resultats de cerca destacats dins de l&apos;editor.
+S&apos;utilitza per marcar la funció que conté l&apos;ús del símbol.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22237,7 +22288,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+1" />
         <source>Displayed when a character is automatically inserted like brackets or quotes.</source>
-        <translation>Es mostra quan s'insereix automàticament un caràcter com a claudàtors o cometes.</translation>
+        <translation>Es mostra quan s&apos;insereix automàticament un caràcter com a claudàtors o cometes.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22257,7 +22308,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+1" />
         <source>Line number located on the left side of the editor where the cursor is placed in.</source>
-        <translation>Número de línia situat al costat esquerre de l'editor on es troba el cursor.</translation>
+        <translation>Número de línia situat al costat esquerre de l&apos;editor on es troba el cursor.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -22269,7 +22320,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
         <source>Occurrences of the symbol under the cursor.
 (Only the background will be applied.)</source>
         <translation>Ocurrències del símbol sota el cursor.
-(Només s'aplicarà el fons.)</translation>
+(Només s&apos;aplicarà el fons.)</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22284,12 +22335,12 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+3" />
         <source>Renaming Occurrence</source>
-        <translation>Canviar el nom de l'ocurrència</translation>
+        <translation>Canviar el nom de l&apos;ocurrència</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Occurrences of a symbol that will be renamed.</source>
-        <translation>Ocurrències d'un símbol que es canviarà de nom.</translation>
+        <translation>Ocurrències d&apos;un símbol que es canviarà de nom.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22319,7 +22370,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+1" />
         <source>Name of a primitive data type.</source>
-        <translation>Nom d'un tipus de dades primitiu.</translation>
+        <translation>Nom d&apos;un tipus de dades primitiu.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -22329,7 +22380,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+0" />
         <source>Name of a type.</source>
-        <translation>Nom d'un tipus.</translation>
+        <translation>Nom d&apos;un tipus.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22349,7 +22400,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+0" />
         <source>Name of a namespace.</source>
-        <translation>Nom d'un espai de noms.</translation>
+        <translation>Nom d&apos;un espai de noms.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22378,7 +22429,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Class' data members.</source>
+        <source>Class&apos; data members.</source>
         <translation>Membres de dades de la classe.</translation>
     </message>
     <message>
@@ -22399,7 +22450,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+1" />
         <source>Applied to enumeration items.</source>
-        <translation>S'aplica als elements d'enumeració.</translation>
+        <translation>S&apos;aplica als elements d&apos;enumeració.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22409,7 +22460,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+0" />
         <source>Name of a function.</source>
-        <translation>Nom d'una funció.</translation>
+        <translation>Nom d&apos;una funció.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -22419,7 +22470,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+1" />
         <source>Style adjustments to declarations.</source>
-        <translation>Ajustaments d'estil a les declaracions.</translation>
+        <translation>Ajustaments d&apos;estil a les declaracions.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22449,7 +22500,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+1" />
         <source>QML item property, that allows a binding to another property.</source>
-        <translation>Propietat d'element QML, que permet un enllaç a una altra propietat.</translation>
+        <translation>Propietat d&apos;element QML, que permet un enllaç a una altra propietat.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -22459,22 +22510,22 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+1" />
         <source>QML item id within a QML file.</source>
-        <translation>ID d'element QML dins d'un fitxer QML.</translation>
+        <translation>ID d&apos;element QML dins d&apos;un fitxer QML.</translation>
     </message>
     <message>
         <location line="+2" />
         <source>QML Root Object Property</source>
-        <translation>Propietat de l'objecte arrel QML</translation>
+        <translation>Propietat de l&apos;objecte arrel QML</translation>
     </message>
     <message>
         <location line="+1" />
         <source>QML property of a parent item.</source>
-        <translation>Propietat QML d'un element pare.</translation>
+        <translation>Propietat QML d&apos;un element pare.</translation>
     </message>
     <message>
         <location line="+2" />
         <source>QML Scope Object Property</source>
-        <translation>Propietat d'objecte QML Scope</translation>
+        <translation>Propietat d&apos;objecte QML Scope</translation>
     </message>
     <message>
         <location line="+1" />
@@ -22484,12 +22535,12 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+1" />
         <source>QML State Name</source>
-        <translation>Nom de l'estat QML</translation>
+        <translation>Nom de l&apos;estat QML</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Name of a QML state.</source>
-        <translation>Nom d'un estat QML.</translation>
+        <translation>Nom d&apos;un estat QML.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22499,7 +22550,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+1" />
         <source>Name of a QML type.</source>
-        <translation>Nom d'un tipus QML.</translation>
+        <translation>Nom d&apos;un tipus QML.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22514,7 +22565,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+3" />
         <source>QML External Object Property</source>
-        <translation>Propietat d'objecte extern de QML</translation>
+        <translation>Propietat d&apos;objecte extern de QML</translation>
     </message>
     <message>
         <location line="+1" />
@@ -22539,7 +22590,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+1" />
         <source>Name of a JavaScript import inside a QML file.</source>
-        <translation>Nom d'una importació de JavaScript dins d'un fitxer QML.</translation>
+        <translation>Nom d&apos;una importació de JavaScript dins d&apos;un fitxer QML.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22549,7 +22600,7 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
     <message>
         <location line="+1" />
         <source>Variables defined outside the script.</source>
-        <translation>Variables definides fora de l'script.</translation>
+        <translation>Variables definides fora de l&apos;script.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22580,8 +22631,8 @@ S'utilitza per marcar la funció que conté l'ús del símbol.</translation>
         <location line="+1" />
         <source>Non user-defined language operators.
 To style user-defined operators, use Overloaded Operator.</source>
-        <translation>Operadors lingüístics no definits per l'usuari.
-Per estilitzar els operadors definits per l'usuari, utilitzeu l'operador sobrecarregat.</translation>
+        <translation>Operadors lingüístics no definits per l&apos;usuari.
+Per estilitzar els operadors definits per l&apos;usuari, utilitzeu l&apos;operador sobrecarregat.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22591,7 +22642,7 @@ Per estilitzar els operadors definits per l'usuari, utilitzeu l'operador sobreca
     <message>
         <location line="+1" />
         <source>Calls and declarations of overloaded (user-defined) operators.</source>
-        <translation>Trucades i declaracions d'operadors sobrecarregats (definits per l'usuari).</translation>
+        <translation>Trucades i declaracions d&apos;operadors sobrecarregats (definits per l&apos;usuari).</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22651,7 +22702,7 @@ Per estilitzar els operadors definits per l'usuari, utilitzeu l'operador sobreca
     <message>
         <location line="+0" />
         <source>Doxygen tags.</source>
-        <translation>Etiquetes d'oxigen.</translation>
+        <translation>Etiquetes d&apos;oxigen.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22663,7 +22714,7 @@ Per estilitzar els operadors definits per l'usuari, utilitzeu l'operador sobreca
         <source>Whitespace.
 Will not be applied to whitespace in comments and strings.</source>
         <translation>Espai blanc.
-No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
+No s&apos;aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22683,7 +22734,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Applied to added lines in differences (in diff editor).</source>
-        <translation>S'aplica a les línies afegides a les diferències (a l'editor de diferències).</translation>
+        <translation>S&apos;aplica a les línies afegides a les diferències (a l&apos;editor de diferències).</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22693,7 +22744,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Applied to removed lines in differences (in diff editor).</source>
-        <translation>S'aplica a les línies eliminades en diferències (a l'editor de diferències).</translation>
+        <translation>S&apos;aplica a les línies eliminades en diferències (a l&apos;editor de diferències).</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22703,7 +22754,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Compared files (in diff editor).</source>
-        <translation>Fitxers comparats (a l'editor de diferències).</translation>
+        <translation>Fitxers comparats (a l&apos;editor de diferències).</translation>
     </message>
     <message>
         <location line="+1" />
@@ -22713,7 +22764,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Location in the files where the difference is (in diff editor).</source>
-        <translation>Ubicació als fitxers on hi ha la diferència (a l'editor de diferències).</translation>
+        <translation>Ubicació als fitxers on hi ha la diferència (a l&apos;editor de diferències).</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22723,7 +22774,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Applied to lines with file information in differences (in side-by-side diff editor).</source>
-        <translation>S'aplica a línies amb informació de fitxer en diferències (a l'editor de diferències al costat de l'altre).</translation>
+        <translation>S&apos;aplica a línies amb informació de fitxer en diferències (a l&apos;editor de diferències al costat de l&apos;altre).</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22733,7 +22784,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Applied to lines describing hidden context in differences (in side-by-side diff editor).</source>
-        <translation>S'aplica a les línies que descriuen el context ocult en les diferències (en l'editor de diferències al costat de l'altre).</translation>
+        <translation>S&apos;aplica a les línies que descriuen el context ocult en les diferències (en l&apos;editor de diferències al costat de l&apos;altre).</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22743,7 +22794,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Applied to source lines with changes in differences (in side-by-side diff editor).</source>
-        <translation>S'aplica a les línies d'origen amb canvis en les diferències (a l'editor de diferències al costat de l'altre).</translation>
+        <translation>S&apos;aplica a les línies d&apos;origen amb canvis en les diferències (a l&apos;editor de diferències al costat de l&apos;altre).</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22753,7 +22804,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Applied to removed characters in differences (in side-by-side diff editor).</source>
-        <translation>S'aplica als caràcters eliminats de les diferències (a l'editor de diferències costat a costat).</translation>
+        <translation>S&apos;aplica als caràcters eliminats de les diferències (a l&apos;editor de diferències costat a costat).</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22763,7 +22814,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Applied to destination lines with changes in differences (in side-by-side diff editor).</source>
-        <translation>S'aplica a les línies de destinació amb canvis en les diferències (en l'editor de diferències al costat de l'altre).</translation>
+        <translation>S&apos;aplica a les línies de destinació amb canvis en les diferències (en l&apos;editor de diferències al costat de l&apos;altre).</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22773,7 +22824,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Applied to added characters in differences (in side-by-side diff editor).</source>
-        <translation>S'aplica als caràcters afegits a les diferències (a l'editor de diferències costat a costat).</translation>
+        <translation>S&apos;aplica als caràcters afegits a les diferències (a l&apos;editor de diferències costat a costat).</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22783,17 +22834,17 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Applied to lines describing changes in VCS log.</source>
-        <translation>S'aplica a les línies que descriuen els canvis al registre VCS.</translation>
+        <translation>S&apos;aplica a les línies que descriuen els canvis al registre VCS.</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Log Author Name</source>
-        <translation>Nom de l'autor del registre</translation>
+        <translation>Nom de l&apos;autor del registre</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Applied to author names in VCS log.</source>
-        <translation>S'aplica als noms dels autors al registre VCS.</translation>
+        <translation>S&apos;aplica als noms dels autors al registre VCS.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22803,7 +22854,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Applied to commit dates in VCS log.</source>
-        <translation>S'aplica a les dates de confirmació al registre de VCS.</translation>
+        <translation>S&apos;aplica a les dates de confirmació al registre de VCS.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22813,7 +22864,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Applied to commit hashes in VCS log.</source>
-        <translation>S'aplica a commit hash al registre VCS.</translation>
+        <translation>S&apos;aplica a commit hash al registre VCS.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22838,17 +22889,17 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+6" />
         <source>Underline color of error diagnostics.</source>
-        <translation>Subratlla el color del diagnòstic d'errors.</translation>
+        <translation>Subratlla el color del diagnòstic d&apos;errors.</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Error Context</source>
-        <translation>Context d'error</translation>
+        <translation>Context d&apos;error</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Underline color of the contexts of error diagnostics.</source>
-        <translation>Color de subratllat dels contextos de diagnòstic d'errors.</translation>
+        <translation>Color de subratllat dels contextos de diagnòstic d&apos;errors.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -22858,17 +22909,17 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Underline color of warning diagnostics.</source>
-        <translation>Subratlla el color dels diagnòstics d'avís.</translation>
+        <translation>Subratlla el color dels diagnòstics d&apos;avís.</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Warning Context</source>
-        <translation>Context d'advertència</translation>
+        <translation>Context d&apos;advertència</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Underline color of the contexts of warning diagnostics.</source>
-        <translation>Subratlla el color dels contextos de diagnòstic d'avís.</translation>
+        <translation>Subratlla el color dels contextos de diagnòstic d&apos;avís.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -22878,7 +22929,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>Writable arguments of a function call.</source>
-        <translation>Arguments escrivibles d'una crida de funció.</translation>
+        <translation>Arguments escrivibles d&apos;una crida de funció.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22898,7 +22949,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>New code that was not checked for tests.</source>
-        <translation>Codi nou que no s'ha comprovat per a les proves.</translation>
+        <translation>Codi nou que no s&apos;ha comprovat per a les proves.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22938,7 +22989,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+1" />
         <source>User added validation.</source>
-        <translation>Validació afegit per l'usuari.</translation>
+        <translation>Validació afegit per l&apos;usuari.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22953,12 +23004,12 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location line="+4" />
         <source>Code Coverage Execution Count Too Low</source>
-        <translation>El recompte d'execució de la cobertura del codi és massa baix</translation>
+        <translation>El recompte d&apos;execució de la cobertura del codi és massa baix</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Minimum count not reached.</source>
-        <translation>No s'ha arribat al recompte mínim.</translation>
+        <translation>No s&apos;ha arribat al recompte mínim.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23008,155 +23059,155 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+302" />
         <source>Not a color scheme file.</source>
-        <translation>No és un fitxer d'esquema de colors.</translation>
+        <translation>No és un fitxer d&apos;esquema de colors.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>derivat de QObject</translation>
     </message>
     <message>
         <location line="+1" />
         <source>derived from QWidget</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>derivat de QWidget</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>plantilla</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with if</source>
-        <comment>group:'C++' trigger:'else'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
         <translation>amb si</translation>
     </message>
     <message>
         <location line="+1" />
         <source>range-based</source>
-        <comment>group:'C++' trigger:'for'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
         <translation>basat en rangs</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and else</source>
-        <comment>group:'C++' trigger:'if'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
         <translation>i més</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with closing brace comment</source>
-        <comment>group:'C++' trigger:'namespace'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
         <translation>amb comentari de claus de tancament</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and catch</source>
-        <comment>group:'C++' trigger:'try'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
         <translation>i agafar</translation>
     </message>
     <message>
         <location line="+1" />
         <source>namespace</source>
-        <comment>group:'C++' trigger:'using'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
         <translation>espai de noms</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'struct'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
         <translation>plantilla</translation>
     </message>
     <message>
         <location line="+1" />
         <source>(type name READ name WRITE setName NOTIFY nameChanged FINAL)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation>(Tipus Nom Llegiu Nom Escriure SetName Notifica Namechanged Final)</translation>
     </message>
     <message>
         <source>(type name READ name WRITE setName NOTIFY nameChanged)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation type="vanished">(escriviu el nom LLEGIR el nom WRITE setName NOTIFY nameChanged)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>amb objectius</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>amb objectiu</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>amb objectius</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>amb objectiu</translation>
     </message>
     <message>
         <location line="+3" />
         <source>QuickTest Test Case</source>
-        <comment>group:'QML' trigger:'TestCase'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>Cas de prova més ràpida</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Function</source>
-        <comment>group:'C++' trigger:'TEST'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST&apos;</comment>
         <translation>Funció GTEST</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Fixture</source>
-        <comment>group:'C++' trigger:'TEST_F'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_F&apos;</comment>
         <translation>Gtest dispositiu</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Parameterized</source>
-        <comment>group:'C++' trigger:'TEST_P'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_P&apos;</comment>
         <translation>Parametritzat GTEST</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Case</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_CASE&apos;</comment>
         <translation>Caixa de prova</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Suite</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_SUITE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_SUITE&apos;</comment>
         <translation>Suite de proves</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Test Case</source>
-        <comment>group:'C++' trigger:'TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_CASE&apos;</comment>
         <translation>Casa de prova de captura</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Scenario</source>
-        <comment>group:'C++' trigger:'SCENARIO'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;SCENARIO&apos;</comment>
         <translation>Escenari de captura</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="+3" />
         <source>example</source>
-        <comment>group:'Text' trigger:'global'</comment>
+        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
         <translation>exemple</translation>
     </message>
     <message>
@@ -23172,23 +23223,23 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message numerus="yes">
         <location line="+3" />
         <source>%n found.</source>
-        <translation>
-            <numerusform>%n trobat.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+29" />
         <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>S'han substituït %n ocurrències.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+178" />
         <source>Aborting replace.</source>
-        <translation>S'està avortant la substitució.</translation>
+        <translation>S&apos;està avortant la substitució.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/codeassist/functionhintproposalwidget.cpp" line="+371" />
@@ -23198,7 +23249,7 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     <message>
         <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+52" />
         <source>Edit preview contents to see how the current settings are applied to custom code snippets. Changes in the preview do not affect the current settings.</source>
-        <translation>Editeu el contingut de la vista prèvia per veure com s'aplica la configuració actual als fragments de codi personalitzats. Els canvis a la vista prèvia no afecten la configuració actual.</translation>
+        <translation>Editeu el contingut de la vista prèvia per veure com s&apos;aplica la configuració actual als fragments de codi personalitzats. Els canvis a la vista prèvia no afecten la configuració actual.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+42" />
@@ -23217,8 +23268,8 @@ No s'aplicarà als espais en blanc dels comentaris i cadenes.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Folder "%2":</source>
-        <translation>Carpeta "%2":</translation>
+        <source>Folder &quot;%2&quot;:</source>
+        <translation>Carpeta &quot;%2&quot;:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -23240,7 +23291,7 @@ Excloent: %3
     <message>
         <location line="+20" />
         <source>Director&amp;y:</source>
-        <translation>Director i:</translation>
+        <translation>&amp;Director i:</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23271,8 +23322,8 @@ Excloent: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/formattexteditor.cpp" line="+71" />
-        <source>Cannot create temporary file "%1": %2.</source>
-        <translation>No es pot crear el fitxer temporal "%1": %2.</translation>
+        <source>Cannot create temporary file &quot;%1&quot;: %2.</source>
+        <translation>No es pot crear el fitxer temporal &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <source>TextEditor</source>
@@ -23281,13 +23332,13 @@ Excloent: %3
     </message>
     <message>
         <location line="+21" />
-        <source>Cannot read file "%1": %2.</source>
-        <translation>No es pot llegir el fitxer "%1": %2.</translation>
+        <source>Cannot read file &quot;%1&quot;: %2.</source>
+        <translation>No es pot llegir el fitxer &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Cannot call %1 or some other error occurred. Timeout reached while formatting file %2.</source>
-        <translation>No es pot trucar a %1 o s'ha produït algun altre error. S'ha arribat al temps d'espera en formatar el fitxer %2.</translation>
+        <translation>No es pot trucar a %1 o s&apos;ha produït algun altre error. S&apos;ha arribat al temps d&apos;espera en formatar el fitxer %2.</translation>
     </message>
     <message>
         <source>TextEditor</source>
@@ -23297,7 +23348,7 @@ Excloent: %3
     <message>
         <location line="-25" />
         <source>Failed to format: %1.</source>
-        <translation>No s'ha pogut formar: %1.</translation>
+        <translation>No s&apos;ha pogut formar: %1.</translation>
     </message>
     <message>
         <location line="+175" />
@@ -23307,17 +23358,17 @@ Excloent: %3
     <message>
         <location line="+16" />
         <source>Could not format file %1.</source>
-        <translation>No s'ha pogut formatar el fitxer %1.</translation>
+        <translation>No s&apos;ha pogut formatar el fitxer %1.</translation>
     </message>
     <message>
         <location line="+5" />
         <source>File %1 was closed.</source>
-        <translation>El fitxer %1 s'ha tancat.</translation>
+        <translation>El fitxer %1 s&apos;ha tancat.</translation>
     </message>
     <message>
         <location line="+46" />
         <source>File was modified.</source>
-        <translation>S'ha modificat el fitxer.</translation>
+        <translation>S&apos;ha modificat el fitxer.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+196" />
@@ -23336,8 +23387,8 @@ Excloent: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Les definicions de ressaltat les proporciona &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/ a&gt; motor.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Les definicions de ressaltat les proporciona &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/ a&gt; motor.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23368,7 +23419,7 @@ Excloent: %3
     <message>
         <location line="+1" />
         <source>Reset definitions remembered for files that can be associated with more than one highlighter definition.</source>
-        <translation>Restableix les definicions recordades per als fitxers que es poden associar amb més d'una definició de ressaltat.</translation>
+        <translation>Restableix les definicions recordades per als fitxers que es poden associar amb més d&apos;una definició de ressaltat.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -23378,7 +23429,7 @@ Excloent: %3
     <message>
         <location line="+3" />
         <source>User Highlight Definition Files</source>
-        <translation>Fitxers de definició de ressaltat d'usuari</translation>
+        <translation>Fitxers de definició de ressaltat d&apos;usuari</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23403,7 +23454,7 @@ Excloent: %3
     <message>
         <location line="+13" />
         <source>Synchronize with Editor</source>
-        <translation>Sincronitza amb l'editor</translation>
+        <translation>Sincronitza amb l&apos;editor</translation>
     </message>
     <message>
         <location line="+11" />
@@ -23411,7 +23462,7 @@ Excloent: %3
         <translation>Arbre del filtre</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+130" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+140" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
         <source>Sort Alphabetically</source>
         <translation>Ordena alfabèticament</translation>
@@ -23429,12 +23480,12 @@ Excloent: %3
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+226" />
         <source>Expected delimiter after mangler ID.</source>
-        <translation>Delimitador esperat després de l'identificador de mangler.</translation>
+        <translation>Delimitador esperat després de l&apos;identificador de mangler.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Expected mangler ID "l" (lowercase), "u" (uppercase), or "c" (titlecase) after colon.</source>
-        <translation>L'identificador de mangler esperat "l" (minúscula), "u" (majúscula) o "c" (majúscula) després de dos punts.</translation>
+        <source>Expected mangler ID &quot;l&quot; (lowercase), &quot;u&quot; (uppercase), or &quot;c&quot; (titlecase) after colon.</source>
+        <translation>L&apos;identificador de mangler esperat &quot;l&quot; (minúscula), &quot;u&quot; (majúscula) o &quot;c&quot; (majúscula) després de dos punts.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -23444,7 +23495,7 @@ Excloent: %3
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippetscollection.cpp" line="+285" />
         <source>Cannot create user snippet directory %1</source>
-        <translation>No es pot crear el directori de fragments d'usuari %1</translation>
+        <translation>No es pot crear el directori de fragments d&apos;usuari %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+401" />
@@ -23486,8 +23537,8 @@ Excloent: %3
     </message>
     <message>
         <location line="+1" />
-        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark's note text.</source>
-        <translation>Localitza les adreces d'interès. Filtra el nom del fitxer, pel text de la línia del marcador o pel text de la nota del marcador.</translation>
+        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark&apos;s note text.</source>
+        <translation>Localitza les adreces d&apos;interès. Filtra el nom del fitxer, pel text de la línia del marcador o pel text de la nota del marcador.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-788" />
@@ -23502,12 +23553,12 @@ Excloent: %3
     <message>
         <location line="+1" />
         <source>&amp;Edit</source>
-        <translation>I editar</translation>
+        <translation>I &amp;editar</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Remove</source>
-        <translation>I treure</translation>
+        <translation>I t&amp;reure</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23517,12 +23568,12 @@ Excloent: %3
     <message>
         <location line="+47" />
         <source>Remove All Bookmarks</source>
-        <translation>Elimineu totes les adreces d'interès</translation>
+        <translation>Elimineu totes les adreces d&apos;interès</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Are you sure you want to remove all bookmarks from all files in the current session?</source>
-        <translation>Esteu segur que voleu eliminar totes les adreces d'interès de tots els fitxers de la sessió actual?</translation>
+        <translation>Esteu segur que voleu eliminar totes les adreces d&apos;interès de tots els fitxers de la sessió actual?</translation>
     </message>
     <message>
         <location line="+29" />
@@ -23540,7 +23591,7 @@ Excloent: %3
     <message>
         <location line="-15" />
         <source>&amp;Bookmarks</source>
-        <translation>I marcadors</translation>
+        <translation>&amp;I marcadors</translation>
     </message>
     <message>
         <location line="+53" />
@@ -23628,7 +23679,7 @@ Excloent: %3
     <message>
         <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+83" />
         <source>The class name must not contain namespace delimiters.</source>
-        <translation>El nom de classe no ha de contenir delimitadors d'espai de noms.</translation>
+        <translation>El nom de classe no ha de contenir delimitadors d&apos;espai de noms.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23657,62 +23708,62 @@ Excloent: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot create temporary directory "%1": %2</source>
-        <translation>No es pot crear el directori temporal "%1": %2</translation>
+        <source>Cannot create temporary directory &quot;%1&quot;: %2</source>
+        <translation>No es pot crear el directori temporal &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Unexpected output from helper program (%1).</source>
-        <translation>Sortida inesperada del programa d'ajuda (%1).</translation>
+        <translation>Sortida inesperada del programa d&apos;ajuda (%1).</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot change to working directory "%1": %2</source>
-        <translation>No es pot canviar al directori de treball "%1": %2</translation>
+        <source>Cannot change to working directory &quot;%1&quot;: %2</source>
+        <translation>No es pot canviar al directori de treball &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1": %2</source>
-        <translation>No es pot executar "%1": %2</translation>
+        <source>Cannot execute &quot;%1&quot;: %2</source>
+        <translation>No es pot executar &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+109" />
         <source>Failed to start terminal process. The stub exited before the inferior was started.</source>
-        <translation>No s'ha pogut iniciar el procés de terminal. La planxa sortia abans que es posés en marxa l’inferior.</translation>
+        <translation>No s&apos;ha pogut iniciar el procés de terminal. La planxa sortia abans que es posés en marxa l’inferior.</translation>
     </message>
     <message>
         <location line="+60" />
-        <source>Cannot set permissions on temporary directory "%1": %2</source>
-        <translation>No es poden configurar permisos al directori temporal " %1": %2</translation>
+        <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
+        <translation>No es poden configurar permisos al directori temporal &quot; %1&quot;: %2</translation>
     </message>
     <message>
-        <source>The process "%1" could not be started: %2</source>
-        <translation type="vanished">No s'ha pogut iniciar el procés "%1": %2</translation>
+        <source>The process &quot;%1&quot; could not be started: %2</source>
+        <translation type="vanished">No s&apos;ha pogut iniciar el procés &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <source>Quoting error in command.</source>
-        <translation type="vanished">Error de citació a l'ordre.</translation>
+        <translation type="vanished">Error de citació a l&apos;ordre.</translation>
     </message>
     <message>
         <source>Debugging complex shell commands in a terminal is currently not supported.</source>
-        <translation type="vanished">Actualment no s'admet la depuració d'ordres d'intèrpret d'ordres complexes en un terminal.</translation>
+        <translation type="vanished">Actualment no s&apos;admet la depuració d&apos;ordres d&apos;intèrpret d&apos;ordres complexes en un terminal.</translation>
     </message>
     <message>
         <source>Quoting error in terminal command.</source>
-        <translation type="vanished">Error de citació a l'ordre del terminal.</translation>
+        <translation type="vanished">Error de citació a l&apos;ordre del terminal.</translation>
     </message>
     <message>
         <source>Terminal command may not be a shell command.</source>
-        <translation type="vanished">Pot ser que l'ordre del terminal no sigui una ordre del shell.</translation>
+        <translation type="vanished">Pot ser que l&apos;ordre del terminal no sigui una ordre del shell.</translation>
     </message>
     <message>
-        <source>Cannot start the terminal emulator "%1", change the setting in the Environment preferences. (%2)</source>
-        <translation type="vanished">No es pot iniciar l'emulador de terminal "%1", canvieu la configuració a les preferències d'Entorn. (%2)</translation>
+        <source>Cannot start the terminal emulator &quot;%1&quot;, change the setting in the Environment preferences. (%2)</source>
+        <translation type="vanished">No es pot iniciar l&apos;emulador de terminal &quot;%1&quot;, canvieu la configuració a les preferències d&apos;Entorn. (%2)</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Cannot create socket "%1": %2</source>
-        <translation>No es pot crear el sòcol "%1": %2</translation>
+        <source>Cannot create socket &quot;%1&quot;: %2</source>
+        <translation>No es pot crear el sòcol &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="-171" />
@@ -23725,33 +23776,33 @@ Excloent: %3
     </message>
     <message>
         <source>Cannot obtain exit status from inferior: %1</source>
-        <translation type="vanished">No es pot obtenir l'estat de sortida d'inferior: %1</translation>
+        <translation type="vanished">No es pot obtenir l&apos;estat de sortida d&apos;inferior: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
-        <translation>
-            <numerusform>%1: cancel·lat. S'han trobat %n ocurrències als fitxers %2.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+6" />
         <source>%1: %n occurrences found in %2 files.</source>
-        <translation>
-            <numerusform>%1: S'han trobat %n ocurrències als fitxers %2.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+280" />
         <source>Fi&amp;le pattern:</source>
-        <translation>Patró de fitxer:</translation>
+        <translation>&amp;Patró de fitxer:</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Excl&amp;usion pattern:</source>
-        <translation>Patró d'exclusió:</translation>
+        <translation>Patró d&apos;excl&amp;usió:</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23761,7 +23812,7 @@ Excloent: %3
     <message>
         <location line="+2" />
         <source>Files with file name or full file path matching any filter are included.</source>
-        <translation>S'inclouen fitxers amb nom de fitxer o ruta de fitxer completa que coincideix amb qualsevol filtre.</translation>
+        <translation>S&apos;inclouen fitxers amb nom de fitxer o ruta de fitxer completa que coincideix amb qualsevol filtre.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -23770,7 +23821,7 @@ Excloent: %3
     </message>
     <message>
         <source>List of comma separated wildcard filters. Files with file name or full file path matching any filter are included.</source>
-        <translation type="vanished">Llista de filtres de comodí separats per comes. S'inclouen fitxers amb el nom del fitxer o la ruta completa del fitxer que coincideixin amb qualsevol filtre.</translation>
+        <translation type="vanished">Llista de filtres de comodí separats per comes. S&apos;inclouen fitxers amb el nom del fitxer o la ruta completa del fitxer que coincideixin amb qualsevol filtre.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filewizardpage.cpp" line="+48" />
@@ -23780,7 +23831,7 @@ Excloent: %3
     <message>
         <location line="+11" />
         <source>File name:</source>
-        <translation>Nom de l'arxiu:</translation>
+        <translation>Nom de l&apos;arxiu:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -23796,8 +23847,8 @@ Excloent: %3
     </message>
     <message>
         <location line="+69" />
-        <source>The default suffix if you do not explicitly specify a file extension is ".%1".</source>
-        <translation>El sufix per defecte si no especifiqueu explícitament una extensió de fitxer és ".%1".</translation>
+        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
+        <translation>El sufix per defecte si no especifiqueu explícitament una extensió de fitxer és &quot;.%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
@@ -23834,61 +23885,61 @@ Excloent: %3
         <location line="+11" />
         <location line="+9" />
         <source>Choose File</source>
-        <translation>Trieu l'arxiu</translation>
+        <translation>Trieu l&apos;arxiu</translation>
     </message>
     <message>
         <location line="+176" />
-        <source>The path "%1" expanded to an empty string.</source>
-        <translation>El camí "%1" s'ha expandit a una cadena buida.</translation>
+        <source>The path &quot;%1&quot; expanded to an empty string.</source>
+        <translation>El camí &quot;%1&quot; s&apos;ha expandit a una cadena buida.</translation>
     </message>
     <message>
         <location line="-72" />
         <location line="+10" />
         <location line="+20" />
-        <source>The path "%1" does not exist.</source>
-        <translation>El camí "%1" no existeix.</translation>
+        <source>The path &quot;%1&quot; does not exist.</source>
+        <translation>El camí &quot;%1&quot; no existeix.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+36" />
-        <source>The path "%1" is not a directory.</source>
-        <translation>El camí "%1" no és un directori.</translation>
+        <source>The path &quot;%1&quot; is not a directory.</source>
+        <translation>El camí &quot;%1&quot; no és un directori.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+10" />
-        <source>The path "%1" is not a file.</source>
-        <translation>El camí "%1" no és un fitxer.</translation>
+        <source>The path &quot;%1&quot; is not a file.</source>
+        <translation>El camí &quot;%1&quot; no és un fitxer.</translation>
     </message>
     <message>
         <location line="-4" />
-        <source>The directory "%1" does not exist.</source>
-        <translation>El directori "%1" no existeix.</translation>
+        <source>The directory &quot;%1&quot; does not exist.</source>
+        <translation>El directori &quot;%1&quot; no existeix.</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>The path "%1" is not an executable file.</source>
-        <translation>El camí "%1" no és un fitxer executable.</translation>
+        <source>The path &quot;%1&quot; is not an executable file.</source>
+        <translation>El camí &quot;%1&quot; no és un fitxer executable.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid path "%1".</source>
-        <translation>Camí "%1" no vàlid.</translation>
+        <source>Invalid path &quot;%1&quot;.</source>
+        <translation>Camí &quot;%1&quot; no vàlid.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1".</source>
-        <translation>No es pot executar "%1".</translation>
+        <source>Cannot execute &quot;%1&quot;.</source>
+        <translation>No es pot executar &quot;%1&quot;.</translation>
     </message>
     <message>
-        <source>Full path: "%1"</source>
-        <translation type="vanished">Camí complet: "%1"</translation>
+        <source>Full path: &quot;%1&quot;</source>
+        <translation type="vanished">Camí complet: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-58" />
         <location line="+74" />
         <source>The path must not be empty.</source>
-        <translation>El camí no ha d'estar buit.</translation>
+        <translation>El camí no ha d&apos;estar buit.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+101" />
@@ -23922,8 +23973,8 @@ Excloent: %3
     </message>
     <message>
         <location line="+121" />
-        <source>Directory "%1" will be created.</source>
-        <translation>Es crearà el directori "%1".</translation>
+        <source>Directory &quot;%1&quot; will be created.</source>
+        <translation>Es crearà el directori &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -23942,13 +23993,13 @@ Excloent: %3
     </message>
     <message>
         <location line="+12" />
-        <source>Invalid character ".".</source>
-        <translation>Caràcter ".". no vàlid.</translation>
+        <source>Invalid character &quot;.&quot;.</source>
+        <translation>Caràcter &quot;.&quot;. no vàlid.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Invalid character "%1" found.</source>
-        <translation>S'ha trobat el caràcter "%1" no vàlid.</translation>
+        <source>Invalid character &quot;%1&quot; found.</source>
+        <translation>S&apos;ha trobat el caràcter &quot;%1&quot; no vàlid.</translation>
     </message>
     <message>
         <location line="-232" />
@@ -23968,12 +24019,12 @@ Excloent: %3
     <message>
         <location line="+4" />
         <source>The unsaved file &lt;i&gt;%1&lt;/i&gt; has been changed on disk. Do you want to reload it and discard your changes?</source>
-        <translation>El fitxer no desat &lt;i&gt;%1&lt;/i&gt; s'ha canviat al disc. Voleu tornar-lo a carregar i descartar els vostres canvis?</translation>
+        <translation>El fitxer no desat &lt;i&gt;%1&lt;/i&gt; s&apos;ha canviat al disc. Voleu tornar-lo a carregar i descartar els vostres canvis?</translation>
     </message>
     <message>
         <location line="+3" />
         <source>The file &lt;i&gt;%1&lt;/i&gt; has been changed on disk. Do you want to reload it?</source>
-        <translation>El fitxer &lt;i&gt;%1&lt;/i&gt; s'ha canviat al disc. El vols tornar a carregar?</translation>
+        <translation>El fitxer &lt;i&gt;%1&lt;/i&gt; s&apos;ha canviat al disc. El vols tornar a carregar?</translation>
     </message>
     <message>
         <location line="+4" />
@@ -24000,12 +24051,12 @@ Excloent: %3
     <message>
         <location line="+25" />
         <source>File Has Been Removed</source>
-        <translation>El fitxer s'ha eliminat</translation>
+        <translation>El fitxer s&apos;ha eliminat</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The file %1 has been removed from disk. Do you want to save it under a different name, or close the editor?</source>
-        <translation>El fitxer %1 s'ha eliminat del disc. Voleu desar-lo amb un altre nom o tancar l'editor?</translation>
+        <translation>El fitxer %1 s&apos;ha eliminat del disc. Voleu desar-lo amb un altre nom o tancar l&apos;editor?</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24015,7 +24066,7 @@ Excloent: %3
     <message>
         <location line="-3" />
         <source>Save &amp;as...</source>
-        <translation>Guardar com...</translation>
+        <translation>Gu&amp;ardar com...</translation>
     </message>
     <message>
         <location line="+5" />
@@ -24024,15 +24075,15 @@ Excloent: %3
     </message>
     <message>
         <source>Cannot Save Workspace</source>
-        <translation type="vanished">No es pot desar l'espai de treball</translation>
+        <translation type="vanished">No es pot desar l&apos;espai de treball</translation>
     </message>
     <message>
         <source>Could not save workspace to file %1</source>
-        <translation type="vanished">No s'ha pogut desar l'espai de treball al fitxer %1</translation>
+        <translation type="vanished">No s&apos;ha pogut desar l&apos;espai de treball al fitxer %1</translation>
     </message>
     <message>
         <source>Delete Workspace</source>
-        <translation type="vanished">Suprimeix l'espai de treball</translation>
+        <translation type="vanished">Suprimeix l&apos;espai de treball</translation>
     </message>
     <message>
         <source>Delete Workspaces</source>
@@ -24040,7 +24091,7 @@ Excloent: %3
     </message>
     <message>
         <source>Delete workspace %1?</source>
-        <translation type="vanished">Voleu suprimir l'espai de treball %1?</translation>
+        <translation type="vanished">Voleu suprimir l&apos;espai de treball %1?</translation>
     </message>
     <message>
         <source>Delete these workspaces?
@@ -24057,11 +24108,11 @@ Excloent: %3
     </message>
     <message>
         <source>Cannot Restore Workspace</source>
-        <translation type="vanished">No es pot restaurar l'espai de treball</translation>
+        <translation type="vanished">No es pot restaurar l&apos;espai de treball</translation>
     </message>
     <message>
         <source>Could not restore workspace %1</source>
-        <translation type="vanished">No s'ha pogut restaurar l'espai de treball %1</translation>
+        <translation type="vanished">No s&apos;ha pogut restaurar l&apos;espai de treball %1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/unarchiver.cpp" line="+112" />
@@ -24071,7 +24122,7 @@ Excloent: %3
     <message>
         <location line="+11" />
         <source>Could not find any unarchiving executable in PATH (%1).</source>
-        <translation>No s'ha pogut trobar cap executable desarxivat a PATH (%1).</translation>
+        <translation>No s&apos;ha pogut trobar cap executable desarxivat a PATH (%1).</translation>
     </message>
     <message>
         <location line="+18" />
@@ -24086,29 +24137,29 @@ Excloent: %3
     <message>
         <location line="+14" />
         <source>Failed to open output file.</source>
-        <translation>No s'ha pogut obrir el fitxer de sortida.</translation>
+        <translation>No s&apos;ha pogut obrir el fitxer de sortida.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Failed to write output file.</source>
-        <translation>No s'ha pogut escriure el fitxer de sortida.</translation>
+        <translation>No s&apos;ha pogut escriure el fitxer de sortida.</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+21" />
         <source>Command failed.</source>
-        <translation>L'ordre ha fallat.</translation>
+        <translation>L&apos;ordre ha fallat.</translation>
     </message>
     <message>
         <location line="-16" />
         <location line="+20" />
         <source>Running %1
-in "%2".
+in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
-        <translation>S'està executant %1
-a "%2".
+        <translation>S&apos;està executant %1
+a &quot;%2&quot;.
 
 </translation>
     </message>
@@ -24156,22 +24207,22 @@ a "%2".
     <message>
         <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
         <source>Do not &amp;ask again</source>
-        <translation>No tornis a preguntar</translation>
+        <translation>No tornis &amp;a preguntar</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Do not &amp;show again</source>
-        <translation>No mostrar de nou</translation>
+        <translation>No mo&amp;strar de nou</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
         <source>No clangd executable specified.</source>
-        <translation>No s'especifica cap executable de Clangd.</translation>
+        <translation>No s&apos;especifica cap executable de Clangd.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Failed to retrieve clangd version: Unexpected clangd output.</source>
-        <translation>No s'ha pogut recuperar la versió de clangd: sortida de clangd inesperada.</translation>
+        <translation>No s&apos;ha pogut recuperar la versió de clangd: sortida de clangd inesperada.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -24184,8 +24235,8 @@ a "%2".
         <translation>Detalls</translation>
     </message>
     <message>
-        <source>copyFile is not implemented for "%1"</source>
-        <translation type="vanished">copyFile no està implementat per a "%1"</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">copyFile no està implementat per a &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Cannot copy from %1, it is not a directory.</source>
@@ -24197,61 +24248,61 @@ a "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to create tar archive from source: %3</source>
-        <translation>No s'ha pogut copiar recursivament de "%1" a "%2" mentre s'intentava crear l'arxiu tar des de la font: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
+        <translation>No s&apos;ha pogut copiar recursivament de &quot;%1&quot; a &quot;%2&quot; mentre s&apos;intentava crear l&apos;arxiu tar des de la font: %3</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to extract tar archive to target: %3</source>
-        <translation>No s'ha pogut copiar recursivament de "%1" a "%2" mentre s'intenta extreure l'arxiu tar a l'objectiu: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
+        <translation>No s&apos;ha pogut copiar recursivament de &quot;%1&quot; a &quot;%2&quot; mentre s&apos;intenta extreure l&apos;arxiu tar a l&apos;objectiu: %3</translation>
     </message>
     <message>
-        <source>fileContents is not implemented for "%1"</source>
-        <translation type="vanished">fileContents no està implementat per a "%1"</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">fileContents no està implementat per a &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>writeFileContents is not implemented for "%1"</source>
-        <translation type="vanished">writeFileContents no està implementat per a "%1"</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">writeFileContents no està implementat per a &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>createTempFile is not implemented for "%1"</source>
-        <translation type="vanished">createTempFile no s'ha implementat per a "%1"</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">createTempFile no s&apos;ha implementat per a &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-139" />
         <location line="+409" />
-        <source>Path "%1" exists but is not a writable directory.</source>
-        <translation>El camí "%1" existeix, però no és un directori escrit.</translation>
+        <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
+        <translation>El camí &quot;%1&quot; existeix, però no és un directori escrit.</translation>
     </message>
     <message>
         <location line="-356" />
-        <source>copyFile is not implemented for "%1".</source>
-        <translation>CopyFile no s'implementa per "%1".</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;.</source>
+        <translation>CopyFile no s&apos;implementa per &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+30" />
-        <source>Cannot copy from "%1", it is not a directory.</source>
-        <translation>No es pot copiar de "%1", no és un directori.</translation>
+        <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
+        <translation>No es pot copiar de &quot;%1&quot;, no és un directori.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Cannot copy "%1" to "%2": %3</source>
-        <translation>No es pot copiar "%1" a "%2":%3</translation>
+        <source>Cannot copy &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>No es pot copiar &quot;%1&quot; a &quot;%2&quot;:%3</translation>
     </message>
     <message>
         <location line="+103" />
-        <source>fileContents is not implemented for "%1".</source>
-        <translation>FileContents no està implementat per "%1".</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>FileContents no està implementat per &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for "%1".</source>
-        <translation>WriteFileContents no està implementat per "%1".</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>WriteFileContents no està implementat per &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+66" />
-        <source>createTempFile is not implemented for "%1".</source>
-        <translation>CreateTempFile no està implementat per "%1".</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation>CreateTempFile no està implementat per &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24260,8 +24311,8 @@ a "%2".
     </message>
     <message>
         <location line="+180" />
-        <source>Refusing to remove the standard directory "%1".</source>
-        <translation>Negant -se a eliminar el directori estàndard "%1".</translation>
+        <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
+        <translation>Negant -se a eliminar el directori estàndard &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -24271,85 +24322,85 @@ a "%2".
     <message>
         <location line="+6" />
         <source>Refusing to remove your home directory.</source>
-        <translation>Negar-se a eliminar el vostre directori d'inici.</translation>
+        <translation>Negar-se a eliminar el vostre directori d&apos;inici.</translation>
     </message>
     <message>
         <location line="+37" />
-        <source>Failed to remove directory "%1".</source>
-        <translation>No s'ha pogut eliminar el directori "%1".</translation>
+        <source>Failed to remove directory &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut eliminar el directori &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Failed to remove file "%1".</source>
-        <translation>No s'ha pogut eliminar el fitxer "%1".</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut eliminar el fitxer &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+551" />
-        <source>Failed creating temporary file "%1" (too many tries).</source>
-        <translation>Fallit creant el fitxer temporal "%1" (massa intents).</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
+        <translation>Fallit creant el fitxer temporal &quot;%1&quot; (massa intents).</translation>
     </message>
     <message>
-        <source>Failed to copy file "%1" to "%2".</source>
-        <translation type="vanished">No s'ha pogut copiar el fitxer "%1" a "%2".</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation type="vanished">No s&apos;ha pogut copiar el fitxer &quot;%1&quot; a &quot;%2&quot;.</translation>
     </message>
     <message>
-        <source>File "%1" does not exist</source>
-        <translation type="vanished">El fitxer "%1" no existeix</translation>
+        <source>File &quot;%1&quot; does not exist</source>
+        <translation type="vanished">El fitxer &quot;%1&quot; no existeix</translation>
     </message>
     <message>
-        <source>Could not open File "%1"</source>
-        <translation type="vanished">No s'ha pogut obrir el fitxer "%1"</translation>
+        <source>Could not open File &quot;%1&quot;</source>
+        <translation type="vanished">No s&apos;ha pogut obrir el fitxer &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-449" />
-        <source>Cannot read "%1": %2</source>
-        <translation>No es pot llegir "%1": %2</translation>
+        <source>Cannot read &quot;%1&quot;: %2</source>
+        <translation>No es pot llegir &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>Could not open file "%1" for writing</source>
-        <translation type="vanished">No s'ha pogut obrir el fitxer "%1" per escriure</translation>
+        <source>Could not open file &quot;%1&quot; for writing</source>
+        <translation type="vanished">No s&apos;ha pogut obrir el fitxer &quot;%1&quot; per escriure</translation>
     </message>
     <message>
-        <source>Could not write to file "%1" (only %2 of %3 bytes written)</source>
-        <translation type="vanished">No s'ha pogut escriure al fitxer "%1" (només %2 de %3 bytes escrits)</translation>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
+        <translation type="vanished">No s&apos;ha pogut escriure al fitxer &quot;%1&quot; (només %2 de %3 bytes escrits)</translation>
     </message>
     <message>
-        <source>Could not create temporary file in "%1" (%2)</source>
-        <translation type="vanished">No s'ha pogut crear el fitxer temporal a "%1" (%2)</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
+        <translation type="vanished">No s&apos;ha pogut crear el fitxer temporal a &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="-87" />
         <location line="+406" />
-        <source>Failed to copy file "%1" to "%2": %3</source>
-        <translation>No s'ha pogut copiar el fitxer "%1" a "%2": %3</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>No s&apos;ha pogut copiar el fitxer &quot;%1&quot; a &quot;%2&quot;: %3</translation>
     </message>
     <message>
         <location line="-333" />
-        <source>File "%1" does not exist.</source>
-        <translation>El fitxer "%1" no existeix.</translation>
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>El fitxer &quot;%1&quot; no existeix.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File "%1".</source>
-        <translation>No s'ha pogut obrir el fitxer "%1".</translation>
+        <source>Could not open File &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut obrir el fitxer &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Could not open file "%1" for writing.</source>
-        <translation>No s'ha pogut obrir el fitxer "%1" per escriure.</translation>
+        <source>Could not open file &quot;%1&quot; for writing.</source>
+        <translation>No s&apos;ha pogut obrir el fitxer &quot;%1&quot; per escriure.</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
-        <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %n byte(s) written).</source>
         <translation>
-            <numerusform>No s'ha pogut escriure al fitxer " %1" (només %2 de %n byte (s) escrits).</numerusform>
-            <numerusform>No s'ha pogut escriure al fitxer " %1" (només %2 de %n byte (s) escrits).</numerusform>
+            <numerusform>No s&apos;ha pogut escriure al fitxer &quot; %1&quot; (només %2 de %n byte (s) escrits).</numerusform>
+            <numerusform>No s&apos;ha pogut escriure al fitxer &quot; %1&quot; (només %2 de %n byte (s) escrits).</numerusform>
         </translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Could not create temporary file in "%1" (%2).</source>
-        <translation>No s'ha pogut crear un fitxer temporal a "%1" (%2).</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2).</source>
+        <translation>No s&apos;ha pogut crear un fitxer temporal a &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location line="+138" />
@@ -24358,22 +24409,22 @@ a "%2".
     </message>
     <message>
         <location line="+202" />
-        <source>Failed reading file "%1": %2</source>
-        <translation>No s'ha pogut llegir el fitxer "%1": %2</translation>
+        <source>Failed reading file &quot;%1&quot;: %2</source>
+        <translation>No s&apos;ha pogut llegir el fitxer &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Failed writing file "%1": %2</source>
-        <translation>No s'ha pogut escriure el fitxer "%1": %2</translation>
+        <source>Failed writing file &quot;%1&quot;: %2</source>
+        <translation>No s&apos;ha pogut escriure el fitxer &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Failed creating temporary file "%1": %2</source>
-        <translation>No s'ha pogut crear el fitxer temporal "%1": %2</translation>
+        <source>Failed creating temporary file &quot;%1&quot;: %2</source>
+        <translation>No s&apos;ha pogut crear el fitxer temporal &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>Failed creating temporary file "%1" (too many tries)</source>
-        <translation type="vanished">No s'ha pogut crear el fitxer temporal "%1" (massa intents)</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
+        <translation type="vanished">No s&apos;ha pogut crear el fitxer temporal &quot;%1&quot; (massa intents)</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
@@ -24392,18 +24443,18 @@ a "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/elfreader.cpp" line="+130" />
-        <source>"%1" is an invalid ELF object (%2)</source>
-        <translation>"%1" és un objecte ELF no vàlid (%2)</translation>
+        <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
+        <translation>&quot;%1&quot; és un objecte ELF no vàlid (%2)</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>"%1" is not an ELF object (file too small)</source>
-        <translation>"%1" no és un objecte ELF (el fitxer és massa petit)</translation>
+        <source>&quot;%1&quot; is not an ELF object (file too small)</source>
+        <translation>&quot;%1&quot; no és un objecte ELF (el fitxer és massa petit)</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>"%1" is not an ELF object</source>
-        <translation>"%1" no és un objecte ELF</translation>
+        <source>&quot;%1&quot; is not an ELF object</source>
+        <translation>&quot;%1&quot; no és un objecte ELF</translation>
     </message>
     <message>
         <location line="+8" />
@@ -24428,9 +24479,9 @@ a "%2".
     <message numerus="yes">
         <location line="+9" />
         <source>announced %n sections, each %1 bytes, exceed file size</source>
-        <translation>
-            <numerusform>%n seccions anunciades, cada %1 bytes, superen la mida del fitxer</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -24446,7 +24497,7 @@ a "%2".
     <message>
         <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+18" />
         <source>Edit Environment</source>
-        <translation>Edita l'entorn</translation>
+        <translation>Edita l&apos;entorn</translation>
     </message>
     <message>
         <source>Enter one environment variable per line.
@@ -24455,14 +24506,14 @@ To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-To disable a variable, prefix the line with "#".</source>
-        <translation type="vanished">Introduïu una variable d'entorn per línia.
+To disable a variable, prefix the line with &quot;#&quot;.</source>
+        <translation type="vanished">Introduïu una variable d&apos;entorn per línia.
 Per establir o canviar una variable, utilitzeu VARIABLE=VALOR.
 Per afegir a una variable, utilitzeu VARIABLE+=VALOR.
 Per anteposar una variable, utilitzeu VARIABLE=+VALOR.
 Les variables existents es poden fer referència en un VALUE amb ${OTHER}.
 Per esborrar una variable, poseu-ne el nom en una línia sense res més.
-Per desactivar una variable, prefixeu la línia amb "#".</translation>
+Per desactivar una variable, prefixeu la línia amb &quot;#&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
@@ -24502,13 +24553,13 @@ Per desactivar una variable, prefixeu la línia amb "#".</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Invalid character "%1".</source>
-        <translation>Caràcter "%1" no vàlid.</translation>
+        <source>Invalid character &quot;%1&quot;.</source>
+        <translation>Caràcter &quot;%1&quot; no vàlid.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid characters "%1".</source>
-        <translation>Caràcters no vàlids "%1".</translation>
+        <source>Invalid characters &quot;%1&quot;.</source>
+        <translation>Caràcters no vàlids &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -24518,7 +24569,7 @@ Per desactivar una variable, prefixeu la línia amb "#".</translation>
     <message>
         <location line="+35" />
         <source>File extension %1 is required:</source>
-        <translation>L'extensió de fitxer %1 és necessària:</translation>
+        <translation>L&apos;extensió de fitxer %1 és necessària:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -24545,17 +24596,17 @@ Per desactivar una variable, prefixeu la línia amb "#".</translation>
     <message>
         <location line="+7" />
         <source>Could not copy file: %1</source>
-        <translation>No s'ha pogut copiar el fitxer: %1</translation>
+        <translation>No s&apos;ha pogut copiar el fitxer: %1</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Could not set permissions on "%1"</source>
-        <translation>No s'han pogut establir els permisos a "%1"</translation>
+        <source>Could not set permissions on &quot;%1&quot;</source>
+        <translation>No s&apos;han pogut establir els permisos a &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+250" />
-        <source>No "localSource" device hook set.</source>
-        <translation>No hi ha cap connexió de dispositiu "localSource".</translation>
+        <source>No &quot;localSource&quot; device hook set.</source>
+        <translation>No hi ha cap connexió de dispositiu &quot;localSource&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
@@ -24637,20 +24688,20 @@ Per desactivar una variable, prefixeu la línia amb "#".</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Overwrite existing file "%1"?</source>
-        <translation>Voleu sobreescriure el fitxer existent "%1"?</translation>
+        <source>Overwrite existing file &quot;%1&quot;?</source>
+        <translation>Voleu sobreescriure el fitxer existent &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+21" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>No s'ha pogut copiar el fitxer "%1" a "%2".</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>No s&apos;ha pogut copiar el fitxer &quot;%1&quot; a &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
         <location line="+409" />
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
-        <source>Failed to create directory "%1".</source>
-        <translation>No s'ha pogut crear el directori "%1".</translation>
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut crear el directori &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
@@ -24711,15 +24762,15 @@ Per desactivar una variable, prefixeu la línia amb "#".</translation>
         <location line="+14" />
         <location line="+2" />
         <source>%n Items</source>
-        <translation>
-            <numerusform>%n elements</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
-        <source>Failed to start process launcher at "%1": %2</source>
-        <translation>No s'ha pogut iniciar el llançador de processos a "%1": %2</translation>
+        <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
+        <translation>No s&apos;ha pogut iniciar el llançador de processos a &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24799,7 +24850,7 @@ Per desactivar una variable, prefixeu la línia amb "#".</translation>
     <message>
         <location line="+1" />
         <source>Access environment variables.</source>
-        <translation>Accedir a les variables d'entorn.</translation>
+        <translation>Accedir a les variables d&apos;entorn.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+111" />
@@ -24835,25 +24886,25 @@ Per desactivar una variable, prefixeu la línia amb "#".</translation>
         <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
-To disable a variable, prefix this line with "#".
+To disable a variable, prefix this line with &quot;#&quot;.
 To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-Lines starting with "##" will be treated as comments.</source>
-        <translation>Introduïu una variable d'entorn per línia.
+Lines starting with &quot;##&quot; will be treated as comments.</source>
+        <translation>Introduïu una variable d&apos;entorn per línia.
  Per configurar o canviar una variable, utilitzeu la variable = valor.
- Per desactivar una variable, prefixeu aquesta línia amb "#".
+ Per desactivar una variable, prefixeu aquesta línia amb &quot;#&quot;.
  Per afegir a una variable, utilitzeu la variable+= valor.
  Per preparar -se a una variable, utilitzeu la variable =+valor.
  Les variables existents es poden fer referència en un valor amb $ {altres}.
  Per esborrar una variable, poseu el seu nom en una línia sense res més.
- Les línies que comencen amb "##" seran tractades com a comentaris.</translation>
+ Les línies que comencen amb &quot;##&quot; seran tractades com a comentaris.</translation>
     </message>
     <message>
         <location line="+112" />
         <source>&amp;OK</source>
-        <translation>&amp;D'ACORD</translation>
+        <translation>&amp;D&apos;ACORD</translation>
     </message>
     <message>
         <location line="+1" />
@@ -24863,22 +24914,22 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+267" />
         <source>Error in command line.</source>
-        <translation>Error a la línia d'ordres.</translation>
+        <translation>Error a la línia d&apos;ordres.</translation>
     </message>
     <message>
         <location line="+29" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>El programa "%1" no existeix o no és executable.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>El programa &quot;%1&quot; no existeix o no és executable.</translation>
     </message>
     <message>
         <location line="+79" />
-        <source>The program "%1" could not be found.</source>
-        <translation>No s'ha pogut trobar el programa "%1".</translation>
+        <source>The program &quot;%1&quot; could not be found.</source>
+        <translation>No s&apos;ha pogut trobar el programa &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+908" />
-        <source>Failed to create process interface for "%1".</source>
-        <translation>No s'ha pogut crear una interfície de procés per a "%1".</translation>
+        <source>Failed to create process interface for &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut crear una interfície de procés per a &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+163" />
@@ -24892,8 +24943,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The process "%1" is not responding.</source>
-        <translation>El procés "%1" no respon.</translation>
+        <source>The process &quot;%1&quot; is not responding.</source>
+        <translation>El procés &quot;%1&quot; no respon.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -24902,32 +24953,32 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+233" />
-        <source>The command "%1" finished successfully.</source>
-        <translation>L'ordre "%1" s'ha acabat correctament.</translation>
+        <source>The command &quot;%1&quot; finished successfully.</source>
+        <translation>L&apos;ordre &quot;%1&quot; s&apos;ha acabat correctament.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated with exit code %2.</source>
-        <translation>L'ordre "%1" va finalitzar amb el codi de sortida %2.</translation>
+        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
+        <translation>L&apos;ordre &quot;%1&quot; va finalitzar amb el codi de sortida %2.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated abnormally.</source>
-        <translation>L'ordre "%1" ha finalitzat de manera anormal.</translation>
+        <source>The command &quot;%1&quot; terminated abnormally.</source>
+        <translation>L&apos;ordre &quot;%1&quot; ha finalitzat de manera anormal.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" could not be started.</source>
-        <translation>L'ordre "%1" no s'ha pogut iniciar.</translation>
+        <source>The command &quot;%1&quot; could not be started.</source>
+        <translation>L&apos;ordre &quot;%1&quot; no s&apos;ha pogut iniciar.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>The command "%1" was canceled after %2 ms.</source>
-        <translation>La comanda " %1" es va cancel·lar després del %de 2 ms.</translation>
+        <source>The command &quot;%1&quot; was canceled after %2 ms.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The command "%1" did not respond within the timeout limit (%2 s).</source>
-        <translation type="vanished">L'ordre "%1" no va respondre dins del límit de temps d'espera (%2 s).</translation>
+        <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
+        <translation type="vanished">L&apos;ordre &quot;%1&quot; no va respondre dins del límit de temps d&apos;espera (%2 s).</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
@@ -24962,18 +25013,18 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+114" />
         <source>Failed to Read File</source>
-        <translation>No s'ha pogut llegir el fitxer</translation>
+        <translation>No s&apos;ha pogut llegir el fitxer</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open "%1".</source>
-        <translation>No s'ha pogut obrir "%1".</translation>
+        <source>Could not open &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut obrir &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+23" />
         <location line="+10" />
         <source>Failed to Write File</source>
-        <translation>No s'ha pogut escriure el fitxer</translation>
+        <translation>No s&apos;ha pogut escriure el fitxer</translation>
     </message>
     <message>
         <location line="-9" />
@@ -24984,17 +25035,17 @@ Lines starting with "##" will be treated as comments.</source>
         <location line="+101" />
         <location line="+265" />
         <source>No Valid Settings Found</source>
-        <translation>No s'ha trobat cap configuració vàlida</translation>
+        <translation>No s&apos;ha trobat cap configuració vàlida</translation>
     </message>
     <message>
         <location line="-264" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;No s'ha trobat cap fitxer de configuració vàlid.&lt;/p&gt;&lt;p&gt;Tots els fitxers de configuració trobats al directori "%1" no eren adequats per a la versió actual de %2, per exemple perquè van ser escrits per una versió incompatible de %2, o perquè s'ha utilitzat una ruta de configuració diferent.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;No s&apos;ha trobat cap fitxer de configuració vàlid.&lt;/p&gt;&lt;p&gt;Tots els fitxers de configuració trobats al directori &quot;%1&quot; no eren adequats per a la versió actual de %2, per exemple perquè van ser escrits per una versió incompatible de %2, o perquè s&apos;ha utilitzat una ruta de configuració diferent.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+265" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were either too new or too old to be read.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;No s'ha trobat cap fitxer de configuració vàlid.&lt;/p&gt;&lt;p&gt;Tots els fitxers de configuració trobats al directori "%1" eren massa nous o massa antics per ser llegits.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;No s&apos;ha trobat cap fitxer de configuració vàlid.&lt;/p&gt;&lt;p&gt;Tots els fitxers de configuració trobats al directori &quot;%1&quot; eren massa nous o massa antics per ser llegits.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+11" />
@@ -25003,18 +25054,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>&lt;p&gt;The versioned backup "%1" of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;S'utilitza la còpia de seguretat amb versions "%1" del fitxer de configuració, perquè el fitxer sense versions va ser creat per una versió incompatible de %2.&lt;/p&gt;&lt;p&gt;Canvis de configuració realitzats des de l'última vegada que aquesta versió de S'ignoren %2 que es va utilitzar, i els canvis fets ara &lt;b&gt;no&lt;/b&gt; es propagaran a la versió més nova.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;The versioned backup &quot;%1&quot; of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;S&apos;utilitza la còpia de seguretat amb versions &quot;%1&quot; del fitxer de configuració, perquè el fitxer sense versions va ser creat per una versió incompatible de %2.&lt;/p&gt;&lt;p&gt;Canvis de configuració realitzats des de l&apos;última vegada que aquesta versió de S&apos;ignoren %2 que es va utilitzar, i els canvis fets ara &lt;b&gt;no&lt;/b&gt; es propagaran a la versió més nova.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Settings File for "%1" from a Different Environment?</source>
-        <translation>Fitxer de configuració per a "%1" d'un entorn diferent?</translation>
+        <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
+        <translation>Fitxer de configuració per a &quot;%1&quot; d&apos;un entorn diferent?</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file "%2"?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;No s'ha trobat cap fitxer de configuració creat per aquesta instància de %1.&lt;/p&gt;&lt;p&gt;Has treballat amb aquest projecte en una altra màquina o utilitzant una ruta de configuració diferent abans?&lt;/p&gt;&lt;p&gt;Encara voleu carregar el fitxer de configuració "%2"?&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file &quot;%2&quot;?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;No s&apos;ha trobat cap fitxer de configuració creat per aquesta instància de %1.&lt;/p&gt;&lt;p&gt;Has treballat amb aquest projecte en una altra màquina o utilitzant una ruta de configuració diferent abans?&lt;/p&gt;&lt;p&gt;Encara voleu carregar el fitxer de configuració &quot;%2&quot;?&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+55" />
@@ -25023,8 +25074,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" is not supported by %2. Do you want to try loading it anyway?</source>
-        <translation>"%1" no és compatible amb %2. Voleu provar de carregar-lo de totes maneres?</translation>
+        <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
+        <translation>&quot;%1&quot; no és compatible amb %2. Voleu provar de carregar-lo de totes maneres?</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/aspects.cpp" line="+92" />
@@ -25074,12 +25125,12 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="-65" />
         <source>An encoding error was encountered.</source>
-        <translation>S'ha trobat un error de codificació.</translation>
+        <translation>S&apos;ha trobat un error de codificació.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;S'expandeix a&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td &gt;directori del fitxer actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;nom del fitxer (amb camí complet)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;% n&lt;/td&gt;&lt;td&gt;nom del fitxer (sense camí)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
@@ -25099,8 +25150,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+3" />
         <location line="+7" />
-        <source>Insert "%1"</source>
-        <translation>Insereix "%1"</translation>
+        <source>Insert &quot;%1&quot;</source>
+        <translation>Insereix &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-3" />
@@ -25131,18 +25182,18 @@ Lines starting with "##" will be treated as comments.</source>
         <location line="+34" />
         <source>Failed to install shell script: %1
 %2</source>
-        <translation>No s'ha pogut instal·lar script shell: %1
+        <translation>No s&apos;ha pogut instal·lar script shell: %1
  %2</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Timeout while trying to check for %1.</source>
-        <translation>Temps d'espera mentre intenta comprovar el %1.</translation>
+        <translation>Temps d&apos;espera mentre intenta comprovar el %1.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Command "%1" was not found.</source>
-        <translation>El comandament "%1" no s'ha trobat.</translation>
+        <source>Command &quot;%1&quot; was not found.</source>
+        <translation>El comandament &quot;%1&quot; no s&apos;ha trobat.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -25152,23 +25203,23 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+26" />
         <source>Timeout while waiting for shell script installation.</source>
-        <translation>Temps d'espera mentre espereu la instal·lació de scripts de shell.</translation>
+        <translation>Temps d&apos;espera mentre espereu la instal·lació de scripts de shell.</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Failed to install shell script: %1</source>
-        <translation>No s'ha pogut instal·lar script shell: %1</translation>
+        <translation>No s&apos;ha pogut instal·lar script shell: %1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/externalterminalprocessimpl.cpp" line="+124" />
         <source>Failed to open temporary script file.</source>
-        <translation>No s'ha pogut obrir un fitxer de script temporal.</translation>
+        <translation>No s&apos;ha pogut obrir un fitxer de script temporal.</translation>
     </message>
     <message>
         <location line="+28" />
         <location line="+45" />
-        <source>Failed to start terminal process: "%1".</source>
-        <translation>No s'ha pogut iniciar el procés de terminal: "%1".</translation>
+        <source>Failed to start terminal process: &quot;%1&quot;.</source>
+        <translation>No s&apos;ha pogut iniciar el procés de terminal: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
@@ -25188,7 +25239,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/lua.cpp" line="+25" />
         <source>No Lua interface set</source>
-        <translation>No hi ha cap conjunt d'interfície LUA</translation>
+        <translation>No hi ha cap conjunt d&apos;interfície LUA</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/passworddialog.cpp" line="+25" />
@@ -25220,9 +25271,9 @@ Lines starting with "##" will be treated as comments.</source>
     <name>TextEditor::Internal::Snippets</name>
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippetscollection.cpp" line="-255" />
-        <source />
+        <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
-        <translation />
+        <translation></translation>
     </message>
 </context>
 </TS>

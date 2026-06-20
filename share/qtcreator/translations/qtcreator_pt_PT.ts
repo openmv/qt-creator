@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+838" />
         <source>Copy</source>
         <translation>Cópia</translation>
     </message>
@@ -30,82 +30,82 @@
         <translation>Configurações da Câmera OpenMV</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Turn on WiFi Shield on startup</source>
         <translation>Ative o WiFi Shield na inicialização</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Client Mode (Normal)</source>
         <translation>Modo Cliente (Normal)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Password</source>
         <translation>Senha</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter your WiFi network password here</source>
         <translation>Digite sua senha de rede WiFi aqui</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Type</source>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Open (No password)</source>
         <translation>Abrir (sem senha)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WPA (Modern WiFi Security)</source>
         <translation>WPA (segurança WiFi moderna)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WEP (Hexadecimal password)</source>
         <translation>WEP (senha hexadecimal)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>SSID</source>
         <translation>SSID</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter or select your WiFi network here</source>
         <translation>Insira ou selecione sua rede WiFi aqui</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Acess Point Mode</source>
         <translation>Modo de ponto de acesso</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
         <translation>Digite o nome da rede WiFi para criar a senha aqui</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
         <translation>Por favor, digite o nome da rede WiFI para criar aqui</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Board Name</source>
         <translation>Nome do Conselho</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
         <translation>Insira um nome para sua OpenMV Cam aqui</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Duplicate REPL on the UART on startup</source>
         <translation>Duplicar REPL no UART na inicialização</translation>
     </message>
@@ -118,42 +118,42 @@
         <translation>000</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Max</source>
         <translation>máx.</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Median</source>
         <translation>Mediana</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mode</source>
         <translation>Modo</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Min</source>
         <translation>mín.</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mean</source>
         <translation>Significar</translation>
     </message>
@@ -205,41 +205,41 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for '%1'...</source>
-        <translation>Baixando nova definição de sintaxe para '%1'...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation>Baixando nova definição de sintaxe para &apos;%1&apos;...</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for '%1' to version %2...</source>
-        <translation>Atualizando definição de sintaxe para '%1' para a versão %2...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation>Atualizando definição de sintaxe para &apos;%1&apos; para a versão %2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
         <source>Copy/Convert Python File</source>
         <translation>Copie/converta o arquivo python</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+21" />
         <location line="+7" />
-        <location line="+94" />
+        <location line="+91" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+76" />
         <location line="+7" />
         <source>Unable to overwrite output file!</source>
         <translation>Incapaz de substituir o arquivo de saída!</translation>
     </message>
     <message>
-        <location line="-125" />
+        <location line="-124" />
         <source>Model Zoo</source>
         <translation>Modelo Zoológico</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+77" />
         <source>Model conversion is unnecessary for this board, as it lacks an NPU accelerator.</source>
         <translation>A conversão do modelo é desnecessária para esta placa, pois não possui um acelerador da NPU.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <source>Convert Model</source>
         <translation>Converter modelo</translation>
     </message>
@@ -335,8 +335,8 @@
         <translation type="vanished">Gerenciador de espaço de trabalho</translation>
     </message>
     <message>
-        <source>&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;What is a Workspace?&lt;/a&gt;</source>
-        <translation type="vanished">&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;O que é um espaço de trabalho?&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;O que é um espaço de trabalho?&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Workspace</source>
@@ -639,7 +639,7 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Request Copilot suggestion at the current editor's cursor position.</source>
+        <source>Request Copilot suggestion at the current editor&apos;s cursor position.</source>
         <translation>Solicite a sugestão da copilot na posição de cursor do editor atual.</translation>
     </message>
     <message>
@@ -893,8 +893,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>Falha ao abrir um editor para "%1".</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>Falha ao abrir um editor para &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+28" />
@@ -929,7 +929,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-2268" />
         <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+445" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
@@ -1027,8 +1027,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+74" />
-        <source>An item named "%1" already exists at this location. Do you want to overwrite it?</source>
-        <translation>Já existe um item chamado "%1" neste local. Você deseja sobrescrever isso?</translation>
+        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
+        <translation>Já existe um item chamado &quot;%1&quot; neste local. Você deseja sobrescrever isso?</translation>
     </message>
     <message>
         <location line="+230" />
@@ -1146,7 +1146,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="+12" />
         <source>Ad&amp;vanced</source>
-        <translation>Avançado</translation>
+        <translation>A&amp;vançado</translation>
     </message>
     <message>
         <location line="+38" />
@@ -1155,12 +1155,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+7" />
-        <source>X-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>Coordenada X do canto superior esquerdo do editor atual, em relação à tela.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Y-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>Coordenada Y do canto superior esquerdo do editor atual, em relação à tela.</translation>
     </message>
     <message>
@@ -1170,27 +1170,27 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <source>The text file "%1" has the size %2MB and might take more memory to open and process than available.
+        <source>The text file &quot;%1&quot; has the size %2MB and might take more memory to open and process than available.
 
 Continue?</source>
-        <translation>O arquivo de texto "%1" tem o tamanho %2MB e pode ocupar mais memória para abrir e processar do que a disponível.
+        <translation>O arquivo de texto &quot;%1&quot; tem o tamanho %2MB e pode ocupar mais memória para abrir e processar do que a disponível.
 
 Continuar?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>Could not open "%1": Cannot open files of type "%2".</source>
-        <translation>Não foi possível abrir "%1": não é possível abrir arquivos do tipo "%2".</translation>
+        <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
+        <translation>Não foi possível abrir &quot;%1&quot;: não é possível abrir arquivos do tipo &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not open "%1" for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>Não foi possível abrir "%1" para leitura. O arquivo não existe ou você não tem permissão para abri-lo.</translation>
+        <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
+        <translation>Não foi possível abrir &quot;%1&quot; para leitura. O arquivo não existe ou você não tem permissão para abri-lo.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Could not open "%1": Unknown error.</source>
-        <translation>Não foi possível abrir "%1": erro desconhecido.</translation>
+        <source>Could not open &quot;%1&quot;: Unknown error.</source>
+        <translation>Não foi possível abrir &quot;%1&quot;: erro desconhecido.</translation>
     </message>
     <message>
         <location line="+1130" />
@@ -1267,18 +1267,18 @@ Continuar?</translation>
     </message>
     <message>
         <location line="+308" />
-        <source>Close "%1"</source>
-        <translation>Fechar "%1"</translation>
+        <source>Close &quot;%1&quot;</source>
+        <translation>Fechar &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+27" />
-        <source>Unpin "%1"</source>
-        <translation>Desafixar "%1"</translation>
+        <source>Unpin &quot;%1&quot;</source>
+        <translation>Desafixar &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Pin "%1"</source>
-        <translation>Fixar "%1"</translation>
+        <source>Pin &quot;%1&quot;</source>
+        <translation>Fixar &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1403,7 +1403,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+2" />
-        <source>Don't Round</source>
+        <source>Don&apos;t Round</source>
         <translation>Não faça a sua volta</translation>
     </message>
     <message>
@@ -1555,8 +1555,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+35" />
-        <source>Command line arguments used for "Run in terminal".</source>
-        <translation>Argumentos de linha de comando usados para "Executar no terminal".</translation>
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>Argumentos de linha de comando usados para &quot;Executar no terminal&quot;.</translation>
     </message>
     <message>
         <location line="-50" />
@@ -1580,8 +1580,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+105" />
-        <source>Command line arguments used for "%1".</source>
-        <translation>Argumentos de linha de comando usados para "%1".</translation>
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>Argumentos de linha de comando usados para &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+34" />
@@ -1637,8 +1637,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+147" />
-        <source>Maximum number of entries in "Recent Files":</source>
-        <translation>Número máximo de entradas em "Arquivos recentes":</translation>
+        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
+        <translation>Número máximo de entradas em &quot;Arquivos recentes&quot;:</translation>
     </message>
     <message>
         <location line="+12" />
@@ -1698,7 +1698,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <translation>Saída</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1773" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1787" />
         <source>&amp;File</source>
         <translation>&amp;Arquivo</translation>
     </message>
@@ -1723,7 +1723,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <translation>&amp;Ajuda</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+122" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+128" />
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2620" />
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
@@ -1735,7 +1735,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
-        <translation>Salvar como...</translation>
+        <translation>S&amp;alvar como...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+3" />
@@ -1745,16 +1745,16 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+701" />
         <source>Save A&amp;ll</source>
-        <translation>Salvar tudo</translation>
+        <translation>Sa&amp;lvar tudo</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-279" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>Sair de%1?</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+106" />
         <source>&amp;View</source>
         <translation>&amp;Visualizar</translation>
     </message>
@@ -1797,7 +1797,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     <message>
         <location line="+10" />
         <source>Recent &amp;Files</source>
-        <translation>Arquivos recentes</translation>
+        <translation>&amp;Arquivos recentes</translation>
     </message>
     <message>
         <location line="+20" />
@@ -1812,7 +1812,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     <message>
         <location line="+8" />
         <source>E&amp;xit</source>
-        <translation>Saída</translation>
+        <translation>&amp;Saída</translation>
     </message>
     <message>
         <location line="+3" />
@@ -1842,7 +1842,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     <message>
         <location line="+6" />
         <source>Cu&amp;t</source>
-        <translation>Corte</translation>
+        <translation>Cor&amp;te</translation>
     </message>
     <message>
         <location line="+8" />
@@ -1857,7 +1857,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     <message>
         <location line="+8" />
         <source>Select &amp;All</source>
-        <translation>Selecionar tudo</translation>
+        <translation>Selecion&amp;ar tudo</translation>
     </message>
     <message>
         <location line="+8" />
@@ -1947,8 +1947,8 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the "%2" action from the "%3" locator filter (%4).</source>
-        <translation>Isso ocultará completamente a barra de menus. Você pode mostrá -lo novamente digitando%1. &lt;br&gt; &lt;br&gt; Ou, acionar a ação "%2" do filtro do localizador "%3" (%4).</translation>
+        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the &quot;%2&quot; action from the &quot;%3&quot; locator filter (%4).</source>
+        <translation>Isso ocultará completamente a barra de menus. Você pode mostrá -lo novamente digitando%1. &lt;br&gt; &lt;br&gt; Ou, acionar a ação &quot;%2&quot; do filtro do localizador &quot;%3&quot; (%4).</translation>
     </message>
     <message>
         <location line="+21" />
@@ -2001,7 +2001,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <translation>Escondido</translation>
     </message>
     <message>
-        <location line="+460" />
+        <location line="+474" />
         <source>Version:</source>
         <translation>Versão:</translation>
     </message>
@@ -2021,7 +2021,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <translation>&lt;p&gt;Os desenvolvedores do Qt Creator podem ser contatados na lista de discussão do Qt Creator:&lt;/p&gt;%1&lt;p&gt;ou no canal #qt-creator no Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;Nosso rastreador de bugs está localizado em %3.&lt;/p&gt;&lt;p&gt;Use %4 para trechos maiores de texto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-803" />
+        <location line="-817" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -2054,7 +2054,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+240" />
+        <location line="+244" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>Documentos Abertos</translation>
@@ -2076,8 +2076,8 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Close All Except "%1"</source>
-        <translation>Fechar tudo, exceto "%1"</translation>
+        <source>Close All Except &quot;%1&quot;</source>
+        <translation>Fechar tudo, exceto &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
@@ -2113,16 +2113,16 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+927" />
-        <location line="+13" />
-        <location line="+11" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location line="+16" />
+        <location line="+14" />
         <source>Save Log</source>
         <translation>Salvar registro</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-617" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
         <source>Clear</source>
         <translation>Claro</translation>
     </message>
@@ -2263,8 +2263,8 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location line="+51" />
-        <source>Failed to open preset file "%1" for reading.</source>
-        <translation>Falha ao abrir o arquivo predefinido "%1" para leitura.</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading.</source>
+        <translation>Falha ao abrir o arquivo predefinido &quot;%1&quot; para leitura.</translation>
     </message>
     <message>
         <location line="-172" />
@@ -2278,13 +2278,13 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>Failed to write logs to "%1".</source>
-        <translation>Falha ao gravar logs em "%1".</translation>
+        <source>Failed to write logs to &quot;%1&quot;.</source>
+        <translation>Falha ao gravar logs em &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open file "%1" for writing logs.</source>
-        <translation>Falha ao abrir o arquivo "%1" para gravação de logs.</translation>
+        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
+        <translation>Falha ao abrir o arquivo &quot;%1&quot; para gravação de logs.</translation>
     </message>
     <message>
         <source>Save Enabled Categories As</source>
@@ -2292,8 +2292,8 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location line="+45" />
-        <source>Failed to write preset file "%1".</source>
-        <translation>Falha ao gravar o arquivo predefinido "%1".</translation>
+        <source>Failed to write preset file &quot;%1&quot;.</source>
+        <translation>Falha ao gravar o arquivo predefinido &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -2301,13 +2301,13 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <translation>Carregar categorias ativadas de</translation>
     </message>
     <message>
-        <source>Failed to open preset file "%1" for reading</source>
-        <translation type="vanished">Falha ao abrir o arquivo predefinido "%1" para leitura</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading</source>
+        <translation type="vanished">Falha ao abrir o arquivo predefinido &quot;%1&quot; para leitura</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Failed to read preset file "%1": %2</source>
-        <translation>Falha ao ler o arquivo predefinido "%1": %2</translation>
+        <source>Failed to read preset file &quot;%1&quot;: %2</source>
+        <translation>Falha ao ler o arquivo predefinido &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+29" />
@@ -2342,7 +2342,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     <message>
         <location line="+64" />
         <source>Out&amp;put</source>
-        <translation>Saída</translation>
+        <translation>&amp;Saída</translation>
     </message>
     <message>
         <location line="+406" />
@@ -2466,17 +2466,17 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <translation>Processos</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-75" />
         <source>&amp;Diff</source>
         <translation>&amp;Diferença</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Do &amp;Not Save</source>
-        <translation>Não salve</translation>
+        <translation>&amp;Não salve</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+72" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
         <translation>&amp;Dif &amp;&amp; Cancelar</translation>
     </message>
@@ -2570,13 +2570,13 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Use "Cmd", "Opt", "Ctrl", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>Use "Cmd", "Opt", "Ctrl" e "Shift" para teclas modificadoras. Use "Escape", "Backspace", "Delete", "Insert", "Home" e assim por diante, para teclas especiais. Combine teclas individuais com "+" e combine vários atalhos em uma sequência de atalhos com ",". Por exemplo, se o usuário deve manter pressionadas as teclas modificadoras Ctrl e Shift enquanto pressiona Escape e, em seguida, solte e pressione A, digite "Ctrl+Shift+Escape,A".</translation>
+        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot; e &quot;Shift&quot; para teclas modificadoras. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; e assim por diante, para teclas especiais. Combine teclas individuais com &quot;+&quot; e combine vários atalhos em uma sequência de atalhos com &quot;,&quot;. Por exemplo, se o usuário deve manter pressionadas as teclas modificadoras Ctrl e Shift enquanto pressiona Escape e, em seguida, solte e pressione A, digite &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Use "Ctrl", "Alt", "Meta", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>Use "Ctrl", "Alt", "Meta" e "Shift" para teclas modificadoras. Use "Escape", "Backspace", "Delete", "Insert", "Home" e assim por diante, para teclas especiais. Combine teclas individuais com "+" e combine vários atalhos em uma sequência de atalhos com ",". Por exemplo, se o usuário deve manter pressionadas as teclas modificadoras Ctrl e Shift enquanto pressiona Escape e, em seguida, solte e pressione A, digite "Ctrl+Shift+Escape,A".</translation>
+        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot; e &quot;Shift&quot; para teclas modificadoras. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; e assim por diante, para teclas especiais. Combine teclas individuais com &quot;+&quot; e combine vários atalhos em uma sequência de atalhos com &quot;,&quot;. Por exemplo, se o usuário deve manter pressionadas as teclas modificadoras Ctrl e Shift enquanto pressiona Escape e, em seguida, solte e pressione A, digite &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -2585,8 +2585,8 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Key sequence has potential conflicts. &lt;a href="#conflicts"&gt;Show.&lt;/a&gt;</source>
-        <translation>A sequência de teclas tem possíveis conflitos. &lt;a href="#conflicts"&gt;Mostrar.&lt;/a&gt;</translation>
+        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
+        <translation>A sequência de teclas tem possíveis conflitos. &lt;a href=&quot;#conflicts&quot;&gt;Mostrar.&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+122" />
@@ -2611,22 +2611,22 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     <message>
         <location line="+7" />
         <source>Search f&amp;or:</source>
-        <translation>Procurar:</translation>
+        <translation>Pr&amp;ocurar:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Whole words o&amp;nly</source>
-        <translation>Apenas palavras inteiras</translation>
+        <translation>Ape&amp;nas palavras inteiras</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Use re&amp;gular expressions</source>
-        <translation>Usar expressões regulares</translation>
+        <translation>Usar expressões re&amp;gulares</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Sco&amp;pe:</source>
-        <translation>Escopo:</translation>
+        <translation>Esco&amp;po:</translation>
     </message>
     <message>
         <location line="-9" />
@@ -2645,7 +2645,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-333" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-335" />
         <source>Open Advanced Find...</source>
         <translation>Abrir Localização Avançada...</translation>
     </message>
@@ -2667,12 +2667,11 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <translation>Inserir Cadeia de Pesquisa</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+E</source>
-        <translation>Ctrl+E</translation>
+        <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Find Next</source>
         <translation>Encontre o próximo</translation>
     </message>
@@ -2692,24 +2691,24 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <translation>Substituir &amp;&amp; Localizar Anterior</translation>
     </message>
     <message>
-        <location line="-246" />
-        <location line="+259" />
+        <location line="-248" />
+        <location line="+261" />
         <source>Replace All</source>
         <translation>Substitua tudo</translation>
     </message>
     <message>
-        <location line="-309" />
+        <location line="-311" />
         <source>Find Flags</source>
         <translation>Encontrar sinalizadores</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+235" />
+        <location line="+237" />
         <source>Replace &amp;&amp; Find</source>
         <translation>Substituir &amp;&amp; Localizar</translation>
     </message>
     <message>
-        <location line="-148" />
+        <location line="-150" />
         <location line="+13" />
         <source>Shift+Enter</source>
         <translation>Shift+Enter</translation>
@@ -2726,7 +2725,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <translation>Localizar/Substituir</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+59" />
         <source>Find Next (Selected)</source>
         <translation>Localizar próximo (selecionado)</translation>
     </message>
@@ -2785,7 +2784,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <translation>Substituir com...</translation>
     </message>
     <message>
-        <location line="-520" />
+        <location line="-522" />
         <source>Find</source>
         <translation>Encontrar</translation>
     </message>
@@ -2824,7 +2823,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+705" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
         <source>Collapse All</source>
         <translation>Recolher todos</translation>
     </message>
@@ -2851,7 +2850,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+225" />
+        <location line="+227" />
         <source>Replace</source>
         <translation>Substituir</translation>
     </message>
@@ -2867,11 +2866,11 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Open file "%1" with:</source>
-        <translation>Abra o arquivo "%1" com:</translation>
+        <source>Open file &quot;%1&quot; with:</source>
+        <translation>Abra o arquivo &quot;%1&quot; com:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-455" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
         <source>Show Hidden Files</source>
         <translation>Mostrar arquivos ocultos</translation>
     </message>
@@ -2897,15 +2896,15 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <translation>Novo arquivo</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="+156" />
         <location line="+78" />
         <source>New Folder</source>
         <translation>Nova pasta</translation>
     </message>
     <message>
         <location line="-18" />
-        <source>Open "%1"</source>
-        <translation>Abra "%1"</translation>
+        <source>Open &quot;%1&quot;</source>
+        <translation>Abra &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -2965,7 +2964,7 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <translation>Remover...</translation>
     </message>
     <message>
-        <location line="-618" />
+        <location line="-622" />
         <source>Synchronize with Editor</source>
         <translation>Sincronizar com o Editor</translation>
     </message>
@@ -3000,8 +2999,8 @@ desde que não tenham sido modificados antes da refatoração.</translation>
         <translation>Filtro de Diretório Genérico</translation>
     </message>
     <message>
-        <source>Matches all files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">Corresponde a todos os arquivos de um conjunto personalizado de diretórios. Acrescente "+&lt;número&gt;" ou ":&lt;número&gt;" para pular para o número de linha fornecido. Acrescente outro "+&lt;número&gt;" ou ":&lt;número&gt;" para pular para o número da coluna também.</translation>
+        <source>Matches all files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">Corresponde a todos os arquivos de um conjunto personalizado de diretórios. Acrescente &quot;+&lt;número&gt;&quot; ou &quot;:&lt;número&gt;&quot; para pular para o número de linha fornecido. Acrescente outro &quot;+&lt;número&gt;&quot; ou &quot;:&lt;número&gt;&quot; para pular para o número da coluna também.</translation>
     </message>
     <message>
         <location line="+273" />
@@ -3016,9 +3015,9 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     <message numerus="yes">
         <location line="-264" />
         <source>%1 filter update: %n files</source>
-        <translation>
-            <numerusform>%1 atualização de filtro: %n arquivos</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -3153,8 +3152,8 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-78" />
-        <source>Locates files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Localiza arquivos de um conjunto personalizado de diretórios. Anexe "+&lt;número&gt;" ou ": &lt;número&gt;" para pular para o número da linha fornecida. Anexe outro "+&lt;número&gt;" ou ": &lt;número&gt;" para pular para o número da coluna também.</translation>
+        <source>Locates files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Localiza arquivos de um conjunto personalizado de diretórios. Anexe &quot;+&lt;número&gt;&quot; ou &quot;: &lt;número&gt;&quot; para pular para o número da linha fornecida. Anexe outro &quot;+&lt;número&gt;&quot; ou &quot;: &lt;número&gt;&quot; para pular para o número da coluna também.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -3241,13 +3240,10 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;What to do with the executable's standard output.
+&lt;p&gt;What to do with the executable&apos;s standard output.
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation>&lt;html&gt;&lt;cabeça/&gt;&lt;corpo&gt;
-&lt;p&gt;O que fazer com a saída padrão do executável.
-&lt;ul&gt;&lt;li&gt;Ignorar: Não fazer nada com ele.&lt;/li&gt;&lt;li&gt;Mostrar em Mensagens Gerais.&lt;/li&gt;&lt;li&gt;Substituir seleção: Substituir a seleção atual no documento atual por ela.&lt;/li&gt; &lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7" />
@@ -3275,17 +3271,12 @@ desde que não tenham sido modificados antes da refatoração.</translation>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
-&lt;p &gt;What to do with the executable's standard error output.&lt;/p&gt;
+&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
 &lt;li&gt;Show in General Messages.&lt;/li&gt;
 &lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;cabeça&gt;&lt;corpo&gt;
-&lt;p &gt;O que fazer com a saída de erro padrão do executável.&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Ignorar: não fazer nada com isso.&lt;/li&gt;
-&lt;li&gt;Mostrar em Mensagens Gerais.&lt;/li&gt;
-&lt;li&gt;Substituir seleção: Substitua a seleção atual no documento atual por ela.&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12" />
@@ -3402,12 +3393,12 @@ Para fazer isso, digite este atalho e um espaço no campo de entrada Localizador
     </message>
     <message>
         <location line="+1" />
-        <source>Opens a file given by a relative path to the current document, or absolute path. "~" refers to your home directory. You have the option to create a file if it does not exist yet.</source>
-        <translation>Abre um arquivo fornecido por um caminho relativo ao documento atual ou caminho absoluto. "~" refere-se ao seu diretório inicial. Você tem a opção de criar um arquivo se ele ainda não existir.</translation>
+        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
+        <translation>Abre um arquivo fornecido por um caminho relativo ao documento atual ou caminho absoluto. &quot;~&quot; refere-se ao seu diretório inicial. Você tem a opção de criar um arquivo se ele ainda não existir.</translation>
     </message>
     <message>
-        <source>Create and Open "%1"</source>
-        <translation type="vanished">Criar e abrir "%1"</translation>
+        <source>Create and Open &quot;%1&quot;</source>
+        <translation type="vanished">Criar e abrir &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-46" />
@@ -3416,8 +3407,8 @@ Para fazer isso, digite este atalho e um espaço no campo de entrada Localizador
     </message>
     <message>
         <location line="-13" />
-        <source>Create "%1"?</source>
-        <translation>Criar "%1"?</translation>
+        <source>Create &quot;%1&quot;?</source>
+        <translation>Criar &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+6" />
@@ -3436,8 +3427,8 @@ Para fazer isso, digite este atalho e um espaço no campo de entrada Localizador
     </message>
     <message>
         <location line="+1" />
-        <source>Cannot create file "%1".</source>
-        <translation>Não é possível criar o arquivo "%1".</translation>
+        <source>Cannot create file &quot;%1&quot;.</source>
+        <translation>Não é possível criar o arquivo &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -3446,13 +3437,13 @@ Para fazer isso, digite este atalho e um espaço no campo de entrada Localizador
     </message>
     <message>
         <location line="+164" />
-        <source>Create and Open File "%1"</source>
-        <translation>Crie e aberto arquivo "%1"</translation>
+        <source>Create and Open File &quot;%1&quot;</source>
+        <translation>Crie e aberto arquivo &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Create Directory "%1"</source>
-        <translation>Crie diretório "%1"</translation>
+        <source>Create Directory &quot;%1&quot;</source>
+        <translation>Crie diretório &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+58" />
@@ -3470,7 +3461,7 @@ Para fazer isso, digite este atalho e um espaço no campo de entrada Localizador
         <translation>Filtros disponíveis</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+557" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
         <source>Open as Centered Popup</source>
         <translation>Abrir como pop-up centralizado</translation>
     </message>
@@ -3511,18 +3502,18 @@ Para fazer isso, digite este atalho e um espaço no campo de entrada Localizador
     </message>
     <message>
         <location line="+143" />
-        <source>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Abrir um documento&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Arquivo &gt; Abrir arquivo (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Arquivo &gt; Exemplos &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Arquivo &gt; Arquivos recentes&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Arraste e solte os arquivos aqui&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Abrir um documento&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Arquivo &gt; Abrir arquivo (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Arquivo &gt; Exemplos &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Arquivo &gt; Arquivos recentes&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Arraste e solte os arquivos aqui&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+37" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- digite &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; para pular para uma definição de classe&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- digite &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; para pular para uma definição de classe&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- digite &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; para pular para uma definição de função&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- digite &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; para pular para uma definição de função&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+121" />
@@ -3598,7 +3589,7 @@ Para fazer isso, digite este atalho e um espaço no campo de entrada Localizador
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-113" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-116" />
         <source>Save Changes</source>
         <translation>Salvar alterações</translation>
     </message>
@@ -3732,14 +3723,14 @@ Para fazer isso, digite este atalho e um espaço no campo de entrada Localizador
         <translation>Preferências</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+488" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
         <source>Options</source>
         <translation>Opções</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13" />
-        <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
+        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
         <translation>Cria arquivos de tradução qm que podem ser usados por um aplicativo a partir dos arquivos ts do tradutor</translation>
     </message>
     <message>
@@ -3748,14 +3739,14 @@ Para fazer isso, digite este atalho e um espaço no campo de entrada Localizador
         <translation>Traduções de versão (lrelease)</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+5" />
         <source>Linguist</source>
         <translation>Linguista</translation>
     </message>
     <message>
-        <location line="-12" />
-        <source>Synchronizes translator's ts files with the program code</source>
+        <location line="-2" />
+        <source>Synchronizes translator&apos;s ts files with the program code</source>
         <translation>Sincroniza os arquivos ts do tradutor com o código do programa</translation>
     </message>
     <message>
@@ -3775,13 +3766,13 @@ Para fazer isso, digite este atalho e um espaço no campo de entrada Localizador
     </message>
     <message>
         <location line="+1" />
-        <location line="+10" />
+        <location line="+15" />
         <location line="+5" />
         <source>Text</source>
         <translation>Texto</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-17" />
         <source>Runs the current QML file with QML utility.</source>
         <translation>Executa o arquivo QML atual com o utilitário QML.</translation>
     </message>
@@ -3807,7 +3798,7 @@ Para fazer isso, digite este atalho e um espaço no campo de entrada Localizador
         <translation>Qt Quick 2 Preview (qmlscene)</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+4" />
         <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Abre o arquivo atual no vi</translation>
@@ -3825,8 +3816,8 @@ Para fazer isso, digite este atalho e um espaço no campo de entrada Localizador
     </message>
     <message>
         <location line="+1" />
-        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by "&gt;". For example "sess def" matches "File &gt; Sessions &gt; Default".</source>
-        <translation>Aciona uma ação. Se for do menu, corresponde a qualquer parte de uma hierarquia de menu, separada por "&gt;". Por exemplo, "sess def" corresponde a "Arquivo &gt; Sessões &gt; Padrão".</translation>
+        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
+        <translation>Aciona uma ação. Se for do menu, corresponde a qualquer parte de uma hierarquia de menu, separada por &quot;&gt;&quot;. Por exemplo, &quot;sess def&quot; corresponde a &quot;Arquivo &gt; Sessões &gt; Padrão&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
@@ -3970,9 +3961,9 @@ Para fazer isso, digite este atalho e um espaço no campo de entrada Localizador
     </message>
     <message>
         <location line="+12" />
-        <source>The settings file "%1" is not writable.
+        <source>The settings file &quot;%1&quot; is not writable.
 You will not be able to store any %2 settings.</source>
-        <translation>O arquivo de configurações "%1" não é gravável.
+        <translation>O arquivo de configurações &quot;%1&quot; não é gravável.
 Você não poderá armazenar nenhuma configuração de %2.</translation>
     </message>
     <message>
@@ -3987,9 +3978,9 @@ Você não poderá armazenar nenhuma configuração de %2.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Error reading settings file "%1": %2
+        <source>Error reading settings file &quot;%1&quot;: %2
 You will likely experience further problems using this instance of %3.</source>
-        <translation>Erro ao ler o arquivo de configurações "%1": %2
+        <translation>Erro ao ler o arquivo de configurações &quot;%1&quot;: %2
 Você provavelmente terá mais problemas ao usar esta instância de %3.</translation>
     </message>
     <message>
@@ -4059,8 +4050,8 @@ Você provavelmente terá mais problemas ao usar esta instância de %3.</transla
     </message>
     <message>
         <location line="+1" />
-        <source>Select encoding for "%1".%2</source>
-        <translation>Selecione a codificação para "%1".%2</translation>
+        <source>Select encoding for &quot;%1&quot;.%2</source>
+        <translation>Selecione a codificação para &quot;%1&quot;.%2</translation>
     </message>
     <message>
         <location line="+49" />
@@ -4242,7 +4233,7 @@ Do you want to check them out now?</source>
 Quer verificá-los agora?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-943" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-948" />
         <source>Restart Required</source>
         <translation>É necessário reiniciar</translation>
     </message>
@@ -4278,23 +4269,23 @@ Quer verificá-los agora?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
-        <source>Could not find executable for "%1" (expanded "%2")</source>
-        <translation>Não foi possível encontrar o executável para "%1" (expandido "%2")</translation>
+        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
+        <translation>Não foi possível encontrar o executável para &quot;%1&quot; (expandido &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>Starting external tool "%1"</source>
-        <translation>Iniciando a ferramenta externa "%1"</translation>
+        <source>Starting external tool &quot;%1&quot;</source>
+        <translation>Iniciando a ferramenta externa &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>"%1" finished</source>
-        <translation>"%1" finalizado</translation>
+        <source>&quot;%1&quot; finished</source>
+        <translation>&quot;%1&quot; finalizado</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" finished with error</source>
-        <translation>"%1" terminou com erro</translation>
+        <source>&quot;%1&quot; finished with error</source>
+        <translation>&quot;%1&quot; terminou com erro</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
@@ -4331,10 +4322,10 @@ Quer verificá-los agora?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>"%1" returned the following error:
+        <source>&quot;%1&quot; returned the following error:
 
 %2</source>
-        <translation>"%1" retornou o seguinte erro:
+        <translation>&quot;%1&quot; retornou o seguinte erro:
 
 %2</translation>
     </message>
@@ -4394,35 +4385,35 @@ Quer verificá-los agora?</translation>
     <message>
         <location line="+6" />
         <source>Open Command Prompt With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Abrir prompt de comando com</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open Terminal With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Abrir Terminal Com</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file "%1".</source>
-        <translation>Falha ao remover o arquivo "%1".</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>Falha ao remover o arquivo &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+40" />
-        <source>Failed to rename the include guard in file "%1".</source>
-        <translation>Falha ao renomear o protetor de inclusão no arquivo "%1".</translation>
+        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
+        <translation>Falha ao renomear o protetor de inclusão no arquivo &quot;%1&quot;.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
         <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>%n ocorrências substituídas.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+369" />
+        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+394" />
         <source>Case sensitive</source>
         <translation>Maiúsculas e minúsculas</translation>
     </message>
@@ -4469,12 +4460,12 @@ Quer verificá-los agora?</translation>
     <message>
         <location line="+5" />
         <source>Repla&amp;ce with:</source>
-        <translation>Substituir com:</translation>
+        <translation>Substituir &amp;com:</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Preser&amp;ve case</source>
-        <translation>Preservar maiúsculas e minúsculas</translation>
+        <translation>Preser&amp;var maiúsculas e minúsculas</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4494,9 +4485,9 @@ Quer verificá-los agora?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>The search resulted in more than %n items, do you still want to continue?</source>
-        <translation>
-            <numerusform>A busca resultou em mais de %n itens, você ainda deseja continuar?</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4512,9 +4503,9 @@ Quer verificá-los agora?</translation>
     <message numerus="yes">
         <location line="+82" />
         <source>%n matches found.</source>
-        <translation>
-            <numerusform>%n correspondências encontradas.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4565,8 +4556,8 @@ Quer verificá-los agora?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
-        <source>Factory with id="%1" already registered. Deleting.</source>
-        <translation>Fábrica com id="%1" já registrado. Excluindo.</translation>
+        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
+        <translation>Fábrica com id=&quot;%1&quot; já registrado. Excluindo.</translation>
     </message>
     <message>
         <location line="+230" />
@@ -4580,18 +4571,18 @@ Quer verificá-los agora?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
-        <source>Error in "%1": %2</source>
-        <translation>Erro em "%1": %2</translation>
+        <source>Error in &quot;%1&quot;: %2</source>
+        <translation>Erro em &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>Cannot convert result of "%1" to string.</source>
-        <translation>Não é possível converter o resultado de "%1" em string.</translation>
+        <source>Cannot convert result of &quot;%1&quot; to string.</source>
+        <translation>Não é possível converter o resultado de &quot;%1&quot; em string.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal '}' characters must be escaped as "\}", '\' characters must be escaped as "\\", and "%{" must be escaped as "%\{".</source>
-        <translation>Avalie instruções simples de JavaScript.&lt;br&gt;Os caracteres literais '}' devem ter escape como "\}", os caracteres '\' devem ter escape como "\\" e "%{" devem ter escape como "%\{".</translation>
+        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
+        <translation>Avalie instruções simples de JavaScript.&lt;br&gt;Os caracteres literais &apos;}&apos; devem ter escape como &quot;\}&quot;, os caracteres &apos;\&apos; devem ter escape como &quot;\\&quot; e &quot;%{&quot; devem ter escape como &quot;%\{&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
@@ -4605,9 +4596,9 @@ Quer verificá-los agora?</translation>
     </message>
     <message>
         <location line="+68" />
-        <source>Previous command is still running ("%1").
+        <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
-        <translation>O comando anterior ainda está em execução ("%1").
+        <translation>O comando anterior ainda está em execução (&quot;%1&quot;).
 Você quer matá-lo?</translation>
     </message>
     <message>
@@ -4617,13 +4608,13 @@ Você quer matá-lo?</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>Could not find executable for "%1".</source>
-        <translation>Não foi possível encontrar o executável para "%1".</translation>
+        <source>Could not find executable for &quot;%1&quot;.</source>
+        <translation>Não foi possível encontrar o executável para &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Starting command "%1".</source>
-        <translation>Iniciando o comando "%1".</translation>
+        <source>Starting command &quot;%1&quot;.</source>
+        <translation>Iniciando o comando &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+21" />
@@ -4678,8 +4669,8 @@ Você quer matá-lo?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
-        <source>Locator: Error occurred when running "%1".</source>
-        <translation>Localizador: Ocorreu um erro ao executar "%1".</translation>
+        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
+        <translation>Localizador: Ocorreu um erro ao executar &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-71" />
@@ -4693,8 +4684,8 @@ Você quer matá-lo?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Locator query string with quotes escaped with backslash and spaces replaced with "*" wildcards.</source>
-        <translation>String de consulta do localizador com aspas escapadas por barra invertida e espaços substituídos por curingas "*".</translation>
+        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
+        <translation>String de consulta do localizador com aspas escapadas por barra invertida e espaços substituídos por curingas &quot;*&quot;.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -4708,8 +4699,8 @@ Você quer matá-lo?</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Localiza arquivos de um índice global do sistema de arquivos (Spotlight, Locate, tudo). Anexe "+&lt;número&gt;" ou ": &lt;número&gt;" para pular para o número da linha fornecida. Anexe outro "+&lt;número&gt;" ou ": &lt;número&gt;" para pular para o número da coluna também.</translation>
+        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Localiza arquivos de um índice global do sistema de arquivos (Spotlight, Locate, tudo). Anexe &quot;+&lt;número&gt;&quot; ou &quot;: &lt;número&gt;&quot; para pular para o número da linha fornecida. Anexe outro &quot;+&lt;número&gt;&quot; ou &quot;: &lt;número&gt;&quot; para pular para o número da coluna também.</translation>
     </message>
     <message>
         <location line="+113" />
@@ -4717,8 +4708,8 @@ Você quer matá-lo?</translation>
         <translation>Classificar os resultados</translation>
     </message>
     <message>
-        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">Corresponde a arquivos de um índice global do sistema de arquivos (Spotlight, Locate, Everything). Acrescente "+&lt;número&gt;" ou ":&lt;número&gt;" para pular para o número de linha fornecido. Acrescente outro "+&lt;número&gt;" ou ":&lt;número&gt;" para pular para o número da coluna também.</translation>
+        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">Corresponde a arquivos de um índice global do sistema de arquivos (Spotlight, Locate, Everything). Acrescente &quot;+&lt;número&gt;&quot; ou &quot;:&lt;número&gt;&quot; para pular para o número de linha fornecido. Acrescente outro &quot;+&lt;número&gt;&quot; ou &quot;:&lt;número&gt;&quot; para pular para o número da coluna também.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -4727,9 +4718,9 @@ Você quer matá-lo?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110" />
-        <source>Add "%1" placeholder for the query string.
+        <source>Add &quot;%1&quot; placeholder for the query string.
 Double-click to edit item.</source>
-        <translation>Adicione o espaço reservado "%1" para a string de consulta.
+        <translation>Adicione o espaço reservado &quot;%1&quot; para a string de consulta.
 Clique duas vezes para editar o item.</translation>
     </message>
     <message>
@@ -4763,13 +4754,13 @@ Clique duas vezes para editar o item.</translation>
         <translation>Adicionar cabeçalho mágico</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Os dados mágicos do MIME são interpretados conforme definido pela especificação do banco de dados compartilhado de informações MIME de &lt;a href="http://standards.freedesktop.org/shared-mime-info- spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Os dados mágicos do MIME são interpretados conforme definido pela especificação do banco de dados compartilhado de informações MIME de &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info- spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; Os dados mágicos de MIME são interpretados como definidos pela especificação de banco de dados MIME-Info compartilhada de &lt;a href = "https://www.freedesktop.org/wiki/specificações/shared-- MIME-Info-spec/"&gt; Freedesktop.org &lt;/a&gt;. &lt;hr/&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; Os dados mágicos de MIME são interpretados como definidos pela especificação de banco de dados MIME-Info compartilhada de &lt;a href = &quot;https://www.freedesktop.org/wiki/specificações/shared-- MIME-Info-spec/&quot;&gt; Freedesktop.org &lt;/a&gt;. &lt;hr/&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+9" />
@@ -4823,8 +4814,8 @@ Clique duas vezes para editar o item.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Observação: valores de intervalo amplo podem afetar o desempenho ao abrir arquivos.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Observação: valores de intervalo amplo podem afetar o desempenho ao abrir arquivos.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4891,9 +4882,9 @@ Clique duas vezes para editar o item.</translation>
     <message numerus="yes">
         <location line="+159" />
         <source>Elided %n characters due to Application Output settings</source>
-        <translation>
-            <numerusform>%n caracteres eliminados devido às configurações de saída do aplicativo</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4904,13 +4895,13 @@ Clique duas vezes para editar o item.</translation>
 </translation>
     </message>
     <message>
-        <location line="+298" />
+        <location line="+308" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Arquivos de texto (*.txt);;Todos os arquivos (*)</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+11" />
+        <location line="+14" />
         <source>Error: %L1!</source>
         <translation>Erro: %L1!</translation>
     </message>
@@ -4941,23 +4932,23 @@ Clique duas vezes para editar o item.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>There is no patch-command configured in the general "Environment" settings.</source>
-        <translation>Não há nenhum comando patch configurado nas configurações gerais de "Ambiente".</translation>
+        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
+        <translation>Não há nenhum comando patch configurado nas configurações gerais de &quot;Ambiente&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The patch-command configured in the general "Environment" settings does not exist.</source>
-        <translation>O comando patch configurado nas configurações gerais de "Ambiente" não existe.</translation>
+        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
+        <translation>O comando patch configurado nas configurações gerais de &quot;Ambiente&quot; não existe.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Running in "%1": %2 %3.</source>
-        <translation>Executando em " %1": %2 %3.</translation>
+        <source>Running in &quot;%1&quot;: %2 %3.</source>
+        <translation>Executando em &quot; %1&quot;: %2 %3.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>A timeout occurred running "%1".</source>
-        <translation>Ocorreu um tempo limite em execução "%1".</translation>
+        <source>A timeout occurred running &quot;%1&quot;.</source>
+        <translation>Ocorreu um tempo limite em execução &quot;%1&quot;.</translation>
     </message>
     <message>
         <source>Running in %1: %2 %3</source>
@@ -4965,22 +4956,22 @@ Clique duas vezes para editar o item.</translation>
     </message>
     <message>
         <location line="-11" />
-        <source>Unable to launch "%1": %2</source>
-        <translation>Não foi possível iniciar "%1": %2</translation>
+        <source>Unable to launch &quot;%1&quot;: %2</source>
+        <translation>Não foi possível iniciar &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>A timeout occurred running "%1"</source>
-        <translation type="vanished">Ocorreu um tempo limite ao executar "%1"</translation>
+        <source>A timeout occurred running &quot;%1&quot;</source>
+        <translation type="vanished">Ocorreu um tempo limite ao executar &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>"%1" crashed.</source>
-        <translation>"%1" travou.</translation>
+        <source>&quot;%1&quot; crashed.</source>
+        <translation>&quot;%1&quot; travou.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"%1" failed (exit code %2).</source>
-        <translation>"%1" falhou (código de saída %2).</translation>
+        <source>&quot;%1&quot; failed (exit code %2).</source>
+        <translation>&quot;%1&quot; falhou (código de saída %2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
@@ -5073,8 +5064,8 @@ Clique duas vezes para editar o item.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>"%1" will be installed into "%2".</source>
-        <translation>"%1" será instalado em "%2".</translation>
+        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot; será instalado em &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+29" />
@@ -5083,8 +5074,8 @@ Clique duas vezes para editar o item.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The file "%1" exists. Overwrite?</source>
-        <translation>O arquivo "%1" existe. Substituir?</translation>
+        <source>The file &quot;%1&quot; exists. Overwrite?</source>
+        <translation>O arquivo &quot;%1&quot; existe. Substituir?</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5098,8 +5089,8 @@ Clique duas vezes para editar o item.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to write file "%1".</source>
-        <translation>Falha ao gravar o arquivo "%1".</translation>
+        <source>Failed to write file &quot;%1&quot;.</source>
+        <translation>Falha ao gravar o arquivo &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -5318,8 +5309,8 @@ para controle de versão (%2)
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
-        <source>Could not parse patch file "%1". The content is not of unified diff format.</source>
-        <translation>Não foi possível analisar o arquivo de correção "%1". O conteúdo não é de formato de comparação unificado.</translation>
+        <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
+        <translation>Não foi possível analisar o arquivo de correção &quot;%1&quot;. O conteúdo não é de formato de comparação unificado.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
@@ -5398,23 +5389,23 @@ para controle de versão (%2)
     </message>
     <message>
         <location line="+52" />
-        <source>Diff "%1"</source>
-        <translation>Diferença "%1"</translation>
+        <source>Diff &quot;%1&quot;</source>
+        <translation>Diferença &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+28" />
         <source>Select First File for Diff</source>
         <translation>Selecione o primeiro arquivo para Diff</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+7" />
         <source>Select Second File for Diff</source>
         <translation>Selecione o segundo arquivo para Diff</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>Diff "%1", "%2"</source>
-        <translation>Diferença "%1", "%2"</translation>
+        <location line="+10" />
+        <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
+        <translation>Diferença &quot;%1&quot;, &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
@@ -5433,8 +5424,8 @@ para controle de versão (%2)
     </message>
     <message>
         <location line="+31" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding.</source>
-        <translation>&lt;b&gt;Erro:&lt;/b&gt; Não foi possível decodificar "%1" com a codificação "%2".</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
+        <translation>&lt;b&gt;Erro:&lt;/b&gt; Não foi possível decodificar &quot;%1&quot; com a codificação &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5477,9 +5468,9 @@ para controle de versão (%2)
     <message numerus="yes">
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
         <source>Skipped %n lines...</source>
-        <translation>
-            <numerusform>%n linhas ignoradas...</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -5594,8 +5585,8 @@ para controle de versão (%2)
     </message>
     <message>
         <location line="+1" />
-        <source>%1 (current: "%2")</source>
-        <translation>%1 (atual: "%2")</translation>
+        <source>%1 (current: &quot;%2&quot;)</source>
+        <translation>%1 (atual: &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5634,7 +5625,7 @@ para controle de versão (%2)
     </message>
     <message>
         <location line="+4" />
-        <source>Plugin's initialization function succeeded.</source>
+        <source>Plugin&apos;s initialization function succeeded.</source>
         <translation>A função de inicialização do plug-in foi bem-sucedida.</translation>
     </message>
     <message>
@@ -5875,8 +5866,8 @@ Razão: %3</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The last time you started %1, it seems to have closed because of a problem with the "%2" plugin. Temporarily disable the plugin?</source>
-        <translation>A última vez que você iniciou %1, parece ter fechado devido a um problema com o plug-in "%2". Desativar temporariamente o plug-in?</translation>
+        <source>The last time you started %1, it seems to have closed because of a problem with the &quot;%2&quot; plugin. Temporarily disable the plugin?</source>
+        <translation>A última vez que você iniciou %1, parece ter fechado devido a um problema com o plug-in &quot;%2&quot;. Desativar temporariamente o plug-in?</translation>
     </message>
     <message>
         <location line="+8" />
@@ -5892,26 +5883,26 @@ Razão: %3</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
-        <source>The plugin "%1" is specified twice for testing.</source>
-        <translation>O plug-in "%1" é especificado duas vezes para teste.</translation>
+        <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
+        <translation>O plug-in &quot;%1&quot; é especificado duas vezes para teste.</translation>
     </message>
     <message>
         <location line="+7" />
         <location line="+18" />
         <location line="+47" />
         <location line="+25" />
-        <source>The plugin "%1" does not exist.</source>
-        <translation>O plug-in "%1" não existe.</translation>
+        <source>The plugin &quot;%1&quot; does not exist.</source>
+        <translation>O plug-in &quot;%1&quot; não existe.</translation>
     </message>
     <message>
         <location line="-79" />
-        <source>The plugin "%1" is not tested.</source>
-        <translation>O plug-in "%1" não foi testado.</translation>
+        <source>The plugin &quot;%1&quot; is not tested.</source>
+        <translation>O plug-in &quot;%1&quot; não foi testado.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Cannot request scenario "%1" as it was already requested.</source>
-        <translation>Não é possível solicitar o cenário "%1" porque já foi solicitado.</translation>
+        <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
+        <translation>Não é possível solicitar o cenário &quot;%1&quot; porque já foi solicitado.</translation>
     </message>
     <message>
         <location line="+130" />
@@ -5930,8 +5921,8 @@ Razão: %3</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency '%1(%2)'</source>
-        <translation>Não foi possível resolver a dependência '%1(%2)'</translation>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation>Não foi possível resolver a dependência &apos;%1(%2)&apos;</translation>
     </message>
     <message>
         <location line="+61" />
@@ -5945,8 +5936,8 @@ Razão: %3</translation>
     </message>
     <message>
         <location line="-416" />
-        <source>"%1" is missing</source>
-        <translation>"%1" está faltando</translation>
+        <source>&quot;%1&quot; is missing</source>
+        <translation>&quot;%1&quot; está faltando</translation>
     </message>
     <message>
         <location line="-24" />
@@ -5955,28 +5946,28 @@ Razão: %3</translation>
     </message>
     <message>
         <location line="+29" />
-        <source>Value for key "%1" is not a string</source>
-        <translation>O valor da chave "%1" não é uma string</translation>
+        <source>Value for key &quot;%1&quot; is not a string</source>
+        <translation>O valor da chave &quot;%1&quot; não é uma string</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a bool</source>
-        <translation>O valor da chave "%1" não é um bool</translation>
+        <source>Value for key &quot;%1&quot; is not a bool</source>
+        <translation>O valor da chave &quot;%1&quot; não é um bool</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not an array of objects</source>
-        <translation>O valor da chave "%1" não é uma matriz de objetos</translation>
+        <source>Value for key &quot;%1&quot; is not an array of objects</source>
+        <translation>O valor da chave &quot;%1&quot; não é uma matriz de objetos</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a string and not an array of strings</source>
-        <translation>O valor da chave "%1" não é uma string nem um array de strings</translation>
+        <source>Value for key &quot;%1&quot; is not a string and not an array of strings</source>
+        <translation>O valor da chave &quot;%1&quot; não é uma string nem um array de strings</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Value "%2" for key "%1" has invalid format</source>
-        <translation>O valor "%2" para a chave "%1" tem um formato inválido</translation>
+        <source>Value &quot;%2&quot; for key &quot;%1&quot; has invalid format</source>
+        <translation>O valor &quot;%2&quot; para a chave &quot;%1&quot; tem um formato inválido</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5985,8 +5976,8 @@ Razão: %3</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected IID "%1", but found "%2"</source>
-        <translation>Esperado IID "%1", mas encontrou "%2"</translation>
+        <source>Expected IID &quot;%1&quot;, but found &quot;%2&quot;</source>
+        <translation>Esperado IID &quot;%1&quot;, mas encontrou &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+6" />
@@ -5995,8 +5986,8 @@ Razão: %3</translation>
     </message>
     <message>
         <location line="+108" />
-        <source>Invalid platform specification "%1": %2</source>
-        <translation>Especificação de plataforma inválida "%1": %2</translation>
+        <source>Invalid platform specification &quot;%1&quot;: %2</source>
+        <translation>Especificação de plataforma inválida &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+18" />
@@ -6009,8 +6000,8 @@ Razão: %3</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Dependency: "%1" must be "%2" or "%3" (is "%4").</source>
-        <translation>Dependência: "%1" deve ser "%2" ou "%3" (é "%4").</translation>
+        <source>Dependency: &quot;%1&quot; must be &quot;%2&quot; or &quot;%3&quot; (is &quot;%4&quot;).</source>
+        <translation>Dependência: &quot;%1&quot; deve ser &quot;%2&quot; ou &quot;%3&quot; (é &quot;%4&quot;).</translation>
     </message>
     <message>
         <location line="+25" />
@@ -6022,8 +6013,8 @@ Razão: %3</translation>
     </message>
     <message>
         <location line="-13" />
-        <source>Argument: "%1" is empty</source>
-        <translation>Argumento: "%1" está vazio</translation>
+        <source>Argument: &quot;%1&quot; is empty</source>
+        <translation>Argumento: &quot;%1&quot; está vazio</translation>
     </message>
     <message>
         <location line="+182" />
@@ -6180,13 +6171,13 @@ Deseja substituí-lo?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+161" />
-        <source>Exported "%1", %2x%3, %4 bytes</source>
-        <translation>Exportado "%1", %2x%3, %4 bytes</translation>
+        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
+        <translation>Exportado &quot;%1&quot;, %2x%3, %4 bytes</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Could not write file "%1".</source>
-        <translation>Não foi possível gravar o arquivo "%1".</translation>
+        <source>Could not write file &quot;%1&quot;.</source>
+        <translation>Não foi possível gravar o arquivo &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6357,8 +6348,8 @@ Deseja substituí-lo?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>A comma-separated list of size specifications of the form "&lt;width&gt;x&lt;height&gt;".</source>
-        <translation>Uma lista separada por vírgulas de especificações de tamanho no formato "&lt;largura&gt;x&lt;altura&gt;".</translation>
+        <source>A comma-separated list of size specifications of the form &quot;&lt;width&gt;x&lt;height&gt;&quot;.</source>
+        <translation>Uma lista separada por vírgulas de especificações de tamanho no formato &quot;&lt;largura&gt;x&lt;altura&gt;&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6403,7 +6394,7 @@ Deseja sobrescrevê-los?</translation>
         <translation>Erro %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+60" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
         <source>Deprecated</source>
         <translation>Descontinuada Descontinuado</translation>
     </message>
@@ -6428,7 +6419,7 @@ Deseja sobrescrevê-los?</translation>
         <translation>Derivada Derivado</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+212" />
         <source>Call Hierarchy</source>
         <translation>Chamada de hierarquia</translation>
     </message>
@@ -6438,13 +6429,13 @@ Deseja sobrescrevê-los?</translation>
         <translation>Recarregue a hierarquia de chamadas para o símbolo na posição do cursor.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+394" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
         <translation>%1 para %2</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+230" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>não inicializado</translation>
@@ -6487,15 +6478,15 @@ Deseja sobrescrevê-los?</translation>
     </message>
     <message>
         <location line="+1342" />
-        <source>Invalid parameter in "%1":
+        <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
-        <translation>Parâmetro inválido em "%1":
+        <translation>Parâmetro inválido em &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
         <location line="+219" />
-        <source>Language Server "%1" Initialization Error</source>
-        <translation>Erro de inicialização do servidor de idiomas "%1"</translation>
+        <source>Language Server &quot;%1&quot; Initialization Error</source>
+        <translation>Erro de inicialização do servidor de idiomas &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+13" />
@@ -6569,8 +6560,8 @@ Deseja sobrescrevê-los?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientinterface.cpp" line="+77" />
-        <source>Cannot handle MIME type "%1" of message.</source>
-        <translation>Não é possível lidar com o tipo MIME "%1" da mensagem.</translation>
+        <source>Cannot handle MIME type &quot;%1&quot; of message.</source>
+        <translation>Não é possível lidar com o tipo MIME &quot;%1&quot; da mensagem.</translation>
     </message>
     <message>
         <location line="+70" />
@@ -6588,7 +6579,7 @@ Deseja sobrescrevê-los?</translation>
         <translation>Inesperadamente terminado.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+217" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+82" />
         <source>Expand All</source>
         <translation>Expandir tudo</translation>
@@ -6672,8 +6663,8 @@ Example: *.cpp%1*.h</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Language server-specific JSON to pass via "initializationOptions" field of "initialize" request.</source>
-        <translation>JSON específico para o servidor de idiomas para passar por meio do campo "Inicialização da OPTions" da solicitação "Inicializar".</translation>
+        <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
+        <translation>JSON específico para o servidor de idiomas para passar por meio do campo &quot;Inicialização da OPTions&quot; da solicitação &quot;Inicializar&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6751,8 +6742,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+21" />
         <source>Re&amp;name %n files</source>
         <translation>
-            <numerusform>Re &amp; name %n arquivos</numerusform>
-            <numerusform>Re &amp; name %n arquivos</numerusform>
+            <numerusform>Re &amp;name %n arquivos</numerusform>
+            <numerusform>Re &amp;name %n arquivos</numerusform>
         </translation>
     </message>
     <message>
@@ -6810,23 +6801,23 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+6" />
-        <source>Running "%1" to install %2.</source>
-        <translation>Executando " %1" para instalar %2.</translation>
+        <source>Running &quot;%1&quot; to install %2.</source>
+        <translation>Executando &quot; %1&quot; para instalar %2.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>A instalação de "%1" foi cancelada pelo tempo limite.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>A instalação de &quot;%1&quot; foi cancelada pelo tempo limite.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>A instalação de "%1" foi cancelada pelo usuário.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>A instalação de &quot;%1&quot; foi cancelada pelo usuário.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>A instalação de " %1" falhou com o código de saída %2.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>A instalação de &quot; %1&quot; falhou com o código de saída %2.</translation>
     </message>
     <message>
         <location line="+56" />
@@ -6933,33 +6924,33 @@ See the documentation of the specific language server for valid settings.</sourc
     <name>QtC::LanguageServerProtocol</name>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
-        <source>Cannot decode content with "%1". Falling back to "%2".</source>
-        <translation>Não é possível decodificar o conteúdo com "%1". Voltando para "%2".</translation>
+        <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
+        <translation>Não é possível decodificar o conteúdo com &quot;%1&quot;. Voltando para &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Expected an integer in "%1", but got "%2".</source>
-        <translation>Esperava um número inteiro em "%1", mas obteve "%2".</translation>
+        <source>Expected an integer in &quot;%1&quot;, but got &quot;%2&quot;.</source>
+        <translation>Esperava um número inteiro em &quot;%1&quot;, mas obteve &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
-        <source>Could not parse JSON message: "%1".</source>
-        <translation>Não foi possível analisar a mensagem JSON: "%1".</translation>
+        <source>Could not parse JSON message: &quot;%1&quot;.</source>
+        <translation>Não foi possível analisar a mensagem JSON: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected a JSON object, but got a JSON "%1" value.</source>
-        <translation>Esperava um objeto JSON, mas obteve um valor JSON "%1".</translation>
+        <source>Expected a JSON object, but got a JSON &quot;%1&quot; value.</source>
+        <translation>Esperava um objeto JSON, mas obteve um valor JSON &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
-        <source>No parameters in "%1".</source>
-        <translation>Não há parâmetros em "%1".</translation>
+        <source>No parameters in &quot;%1&quot;.</source>
+        <translation>Não há parâmetros em &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+213" />
-        <source>No ID set in "%1".</source>
-        <translation>Nenhum ID definido em "%1".</translation>
+        <source>No ID set in &quot;%1&quot;.</source>
+        <translation>Nenhum ID definido em &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
@@ -7047,7 +7038,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7059,60 +7050,60 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+156" />
         <location line="+823" />
         <source>Dataset Editor</source>
         <translation>Editor de conjunto de dados</translation>
     </message>
     <message>
-        <location line="-364" />
+        <location line="-366" />
         <source>Please enter a class name</source>
         <translation>Por favor, insira um nome de classe</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+604" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+412" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+70" />
+        <location line="+72" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-732" />
         <location line="+19" />
-        <location line="+115" />
-        <location line="+1483" />
+        <location line="+111" />
+        <location line="+1514" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+124" />
-        <location line="+180" />
-        <location line="+308" />
+        <location line="+139" />
+        <location line="+202" />
+        <location line="+306" />
         <location line="+13" />
-        <location line="+168" />
-        <location line="+145" />
+        <location line="+169" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
-        <location line="+254" />
+        <location line="+117" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+378" />
+        <location line="+273" />
         <location line="+86" />
-        <location line="+1017" />
-        <location line="+895" />
+        <location line="+1142" />
+        <location line="+1075" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+539" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
         <location line="+19" />
         <location line="+11" />
@@ -7120,8 +7111,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Erro: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3475" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-309" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3541" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7131,30 +7122,30 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+9" />
         <location line="+25" />
         <location line="+9" />
-        <source>Failed to create "%L1"!</source>
-        <translation>Falha ao criar "%L1"!</translation>
+        <source>Failed to create &quot;%L1&quot;!</source>
+        <translation>Falha ao criar &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2513" />
-        <location line="+1446" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
+        <location line="+33" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
+        <location line="+1442" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Falha ao salvar o arquivo de imagem por um motivo desconhecido!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581" />
-        <location line="+239" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
+        <location line="+224" />
         <source>Delete</source>
         <translation>Excluir</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309" />
-        <source>Are you sure you want to permanetly delete "%L1"?</source>
-        <translation>Tem certeza de que deseja excluir permanentemente "%L1"?</translation>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
+        <translation>Tem certeza de que deseja excluir permanentemente &quot;%L1&quot;?</translation>
     </message>
     <message>
         <location line="-86" />
@@ -7179,10 +7170,10 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Falha ao renomear o arquivo por um motivo desconhecido!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5164" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5247" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>Não foi possível copiar o arquivo "%1" para "%2".</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>Não foi possível copiar o arquivo &quot;%1&quot; para &quot;%2&quot;.</translation>
     </message>
     <message>
         <source>Invalid argument (%1) for -override_read_timeout</source>
@@ -7206,19 +7197,19 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Argumento ausente para -serial_number_filter</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+145" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2349" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2677" />
         <location line="+9" />
         <location line="+13" />
-        <location line="+59" />
+        <location line="+63" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+830" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
         <location line="+36" />
         <location line="+7" />
@@ -7227,13 +7218,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+7" />
         <source>
 
-Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>
 
 Por favor, feche todos os programas que estão visualizando/editando os dados do aplicativo OpenMV IDE e reinicie o OpenMV IDE!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-65" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Edite o limite da escala de cinza com o Threshold Editor</translation>
     </message>
@@ -7243,18 +7234,18 @@ Por favor, feche todos os programas que estão visualizando/editando os dados do
         <translation>Edite o limite LAB com o Threshold Editor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+221" />
         <source>Missing argument for -form_key</source>
         <translation>Argumento ausente para -form_key</translation>
     </message>
     <message>
-        <location line="+1066" />
+        <location line="+1074" />
         <source>About OpenMV Viewer...</source>
         <translation>Sobre o OpenMV Viewer...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;Sobre %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Por: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU LICENÇA PÚBLICA GERAL&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Este programa é distribuído na esperança de que seja útil, mas SEM QUALQUER GARANTIA; mesmo sem a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; para obter mais detalhes.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Perguntas ou comentários?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contacte-nos em &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Sobre %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Por: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU LICENÇA PÚBLICA GERAL&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Este programa é distribuído na esperança de que seja útil, mas SEM QUALQUER GARANTIA; mesmo sem a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. Consulte a &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; para obter mais detalhes.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Perguntas ou comentários?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contacte-nos em &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+17" />
@@ -7262,7 +7253,7 @@ Por favor, feche todos os programas que estão visualizando/editando os dados do
         <translation>OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1039" />
+        <location line="-1050" />
         <source>untitled_$.py</source>
         <translation>sem título_$.py</translation>
     </message>
@@ -7275,7 +7266,7 @@ Por favor, feche todos os programas que estão visualizando/editando os dados do
         <translation type="vanished">Falta argumento para -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="-460" />
+        <location line="-468" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>Argumento inválido (%1) para -auto_update</translation>
     </message>
@@ -7285,7 +7276,7 @@ Por favor, feche todos os programas que estão visualizando/editando os dados do
         <translation>Falta argumento para -auto_update</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+248" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7298,7 +7289,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">ERRO LEITURA &lt;USUDE_RESOURCES&gt; /OPENMVIDE/Firmware/Settings.JSON: %L1. \ N \ Nopenmv IDE versões antes da v4.3.0 não possui esse arquivo e o excluiram na instalação de recursos.</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+188" />
         <source>Form Key</source>
         <translation>Chave do formulário</translation>
     </message>
@@ -7308,7 +7299,7 @@ Check the json file for errors and fix them.</source>
         <translation>Introduza a chave do formulário</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+80" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7318,7 +7309,7 @@ Check the json file for errors and fix them.</source>
         <location line="-13" />
         <location line="+7" />
         <location line="+7" />
-        <source>Can't open the new file!</source>
+        <source>Can&apos;t open the new file!</source>
         <translation>Não é possível abrir o novo arquivo!</translation>
     </message>
     <message>
@@ -7328,8 +7319,8 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Add some code to "%L1"</source>
-        <translation>Adicione algum código a "%L1"</translation>
+        <source>Add some code to &quot;%L1&quot;</source>
+        <translation>Adicione algum código a &quot;%L1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -7365,7 +7356,7 @@ Check the json file for errors and fix them.</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <source>Are you sure you want to erase your OpenMV Cam's onboard flash drive?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s onboard flash drive?</source>
         <translation type="vanished">Tem certeza de que deseja apagar a unidade flash integrada do OpenMV Cam?</translation>
     </message>
     <message>
@@ -7399,7 +7390,7 @@ Check the json file for errors and fix them.</source>
         <translation>Sincroniza bibliotecas entre a sua OpenMV Cam e a Pasta de Documentos automaticamente.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+24" />
         <source>Filter examples by board and sensor type</source>
         <translation>Exemplos de filtros por placa e tipo de sensor</translation>
     </message>
@@ -7429,40 +7420,40 @@ Check the json file for errors and fix them.</source>
         <translation>Reiniciar Câmera OpenMV</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Install the Latest Development Release</source>
         <translation>Instale a versão de desenvolvimento mais recente</translation>
     </message>
     <message>
-        <location line="+77" />
-        <location line="+3764" />
+        <location line="+75" />
+        <location line="+3823" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Terminal aberto</translation>
     </message>
     <message>
-        <location line="-3818" />
+        <location line="-3877" />
         <source>Machine Vision</source>
         <translation>Visão de máquina</translation>
     </message>
     <message>
-        <location line="+181" />
-        <location line="+3668" />
-        <location line="+76" />
+        <location line="+175" />
+        <location line="+3733" />
+        <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Editor de limite</translation>
     </message>
     <message>
-        <location line="-3739" />
-        <location line="+3817" />
+        <location line="-3803" />
+        <location line="+3880" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Editor de pontos-chave</translation>
     </message>
     <message>
-        <location line="-3810" />
-        <location line="+3976" />
-        <location line="+98" />
+        <location line="-3873" />
+        <location line="+4037" />
+        <location line="+97" />
         <location line="+24" />
         <location line="+11" />
         <location line="+18" />
@@ -7470,7 +7461,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag Generator</translation>
     </message>
     <message>
-        <location line="-4124" />
+        <location line="-4184" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Família TAG16H5 (30 etiquetas)</translation>
     </message>
@@ -7508,16 +7499,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+371" />
+        <location line="+367" />
         <location line="+14" />
         <location line="+33" />
-        <location line="+916" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
-        <source>Failed to open: "%L1"</source>
-        <translation>Falha ao abrir: "%L1"</translation>
+        <location line="+918" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-223" />
+        <source>Failed to open: &quot;%L1&quot;</source>
+        <translation>Falha ao abrir: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1358" />
+        <location line="-1356" />
         <source>DataMatrix Generator</source>
         <translation>Gerador DataMatrix</translation>
     </message>
@@ -7543,29 +7534,29 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Onde salvar a rede na OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+228" />
-        <location line="+2357" />
-        <location line="+1290" />
+        <location line="+225" />
+        <location line="+2424" />
+        <location line="+1288" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
-        <location line="+67" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382" />
-        <location line="+364" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899" />
-        <location line="+208" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-393" />
+        <location line="+375" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+900" />
+        <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Por favor, adicione uma extensão de arquivo!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-269" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+112" />
-        <location line="+207" />
+        <location line="+119" />
+        <location line="+203" />
         <source>Unable to overwrite output file!</source>
         <translation>Não foi possível sobrescrever o arquivo de saída!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3860" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3922" />
         <source>Video Tools</source>
         <translation>Ferramentas de vídeo</translation>
     </message>
@@ -7581,23 +7572,23 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-437" />
-        <location line="+273" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-439" />
+        <location line="+275" />
         <source>Play RTSP Stream</source>
         <translation>Reproduzir transmissão RTSP</translation>
     </message>
     <message>
         <location line="+16" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+15" />
         <location line="+6" />
-        <location line="+46" />
+        <location line="+48" />
         <location line="+19" />
         <source>New Dataset</source>
         <translation>Novo conjunto de dados</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-98" />
         <source>Dataset Editor - Choose a folder to build the dataset in</source>
         <translation>Editor de conjunto de dados - Escolha uma pasta para criar o conjunto de dados</translation>
     </message>
@@ -7608,17 +7599,17 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+15" />
-        <location line="+207" />
+        <location line="+205" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-209" />
         <location line="+34" />
         <location line="+48" />
         <location line="+33" />
-        <source>Failed to remove "%L1"!</source>
-        <translation>Falha ao remover "%L1"!</translation>
+        <source>Failed to remove &quot;%L1&quot;!</source>
+        <translation>Falha ao remover &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-128" />
-        <location line="+30" />
+        <location line="-125" />
+        <location line="+29" />
         <source>Open Dataset</source>
         <translation>Conjunto de dados aberto</translation>
     </message>
@@ -7633,7 +7624,7 @@ Check the json file for errors and fix them.</source>
         <translation>A pasta selecionada não parece ser um conjunto de dados de imagem de câmera OpenMV válido!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export</source>
         <translation>Exportar</translation>
     </message>
@@ -7643,7 +7634,7 @@ Check the json file for errors and fix them.</source>
         <translation>Exportar conjunto de dados para arquivo zip</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <location line="+7" />
         <location line="+42" />
         <location line="+21" />
@@ -7661,38 +7652,38 @@ Check the json file for errors and fix them.</source>
         <translation>Exportador...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-520" />
-        <location line="+237" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-522" />
+        <location line="+239" />
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1482" />
+        <location line="+1513" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+258" />
-        <location line="+533" />
-        <location line="+145" />
+        <location line="+273" />
+        <location line="+554" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location line="+433" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
-        <location line="+288" />
-        <location line="+143" />
-        <location line="+1023" />
+        <location line="+117" />
+        <location line="+428" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-131" />
+        <location line="+289" />
+        <location line="+165" />
+        <location line="+1148" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1339" />
         <location line="+85" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3673" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3737" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Carregar para o Projeto Edge Impulse</translation>
     </message>
@@ -7771,8 +7762,8 @@ Check the json file for errors and fix them.</source>
         <translation>Sobre OpenMV IDE...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;Sobre OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Por: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Este programa é distribuído na esperança de que seja útil, mas SEM QUALQUER GARANTIA; mesmo sem a garantia implícita de COMERCIABILIDADE ou ADEQUAÇÃO PARA UM FIM ESPECÍFICO. Consulte a &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; para obter mais detalhes.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Perguntas ou comentários?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Entre em contato conosco em &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Sobre OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Por: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Este programa é distribuído na esperança de que seja útil, mas SEM QUALQUER GARANTIA; mesmo sem a garantia implícita de COMERCIABILIDADE ou ADEQUAÇÃO PARA UM FIM ESPECÍFICO. Consulte a &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; para obter mais detalhes.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Perguntas ou comentários?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Entre em contato conosco em &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
@@ -7793,11 +7784,11 @@ Check the json file for errors and fix them.</source>
         <translation>Visualizador OpenMV</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+73" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
         <location line="+37" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-221" />
         <location line="+87" />
         <location line="+55" />
@@ -7833,11 +7824,11 @@ Check the json file for errors and fix them.</source>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-195" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-197" />
         <location line="+9" />
-        <location line="+89" />
-        <location line="+13" />
-        <location line="+42" />
+        <location line="+95" />
+        <location line="+11" />
+        <location line="+40" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
@@ -7867,53 +7858,61 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1064" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1189" />
         <location line="+6" />
         <location line="+28" />
         <location line="+52" />
         <location line="+8" />
         <location line="+35" />
-        <location line="+320" />
-        <location line="+62" />
-        <location line="+99" />
-        <location line="+49" />
-        <location line="+67" />
-        <location line="+12" />
-        <location line="+77" />
+        <location line="+329" />
+        <location line="+136" />
+        <location line="+28" />
+        <location line="+100" />
+        <location line="+56" />
+        <location line="+68" />
+        <location line="+13" />
+        <location line="+81" />
         <location line="+10" />
         <location line="+12" />
         <location line="+28" />
-        <location line="+36" />
-        <location line="+84" />
+        <location line="+34" />
+        <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+86" />
+        <location line="+97" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
-        <location line="+108" />
+        <location line="+116" />
         <location line="+83" />
-        <location line="+42" />
-        <location line="+38" />
-        <location line="+52" />
-        <location line="+38" />
+        <location line="+82" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+46" />
+        <location line="+54" />
+        <location line="+51" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
         <location line="+21" />
         <location line="+20" />
         <location line="+24" />
-        <location line="+121" />
-        <location line="+214" />
+        <location line="+135" />
+        <location line="+217" />
         <location line="+33" />
-        <location line="+248" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+658" />
+        <location line="+268" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+668" />
         <location line="+48" />
         <source>Connect</source>
         <translation>Conectar</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-42" />
         <source>No settings for the selected board type %L1!</source>
         <translation>Nenhuma configuração para o tipo de placa selecionado %L1!</translation>
     </message>
@@ -7924,12 +7923,12 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Only firmware recovery is supported using the Alif Semiconductor's SE Tools.</source>
+        <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>Somente a recuperação do firmware é suportada usando as ferramentas SE do Alif Semiconductor.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
         <source>Disconnect</source>
@@ -7988,12 +7987,11 @@ Check the json file for errors and fix them.</source>
         <translation>Zoom para caber</translation>
     </message>
     <message>
-        <location line="+30" />
         <source>JPG</source>
-        <translation>JPG</translation>
+        <translation type="vanished">JPG</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+31" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG comprime o Frame Buffer para maior desempenho</translation>
     </message>
@@ -8012,7 +8010,7 @@ Check the json file for errors and fix them.</source>
         <translation>Desabilite o Frame Buffer para desempenho máximo</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+52" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>Frame Buffer desativado - clique no botão desativar novamente para ativar (canto superior direito)</translation>
     </message>
@@ -8081,7 +8079,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Res (w:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1574" />
+        <location line="-1582" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
@@ -8090,8 +8088,8 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
 As versões do OpenMV IDE antes da v4.3.0 não têm esse arquivo e o teriam excluído na instalação de recursos.</translation>
     </message>
     <message>
-        <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2512" />
+        <location line="+346" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2858" />
         <source>Load Custom Firmware</source>
         <translation>Carregue o firmware personalizado</translation>
     </message>
@@ -8103,7 +8101,7 @@ As versões do OpenMV IDE antes da v4.3.0 não têm esse arquivo e o teriam excl
     </message>
     <message>
         <location line="+1" />
-        <source>Are you sure you want to erase your OpenMV Cam's internal FAT file system?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s internal FAT file system?</source>
         <translation>Tem certeza de que deseja apagar o sistema interno de arquivos de gordura do OpenMV CAM?</translation>
     </message>
     <message>
@@ -8132,15 +8130,20 @@ As versões do OpenMV IDE antes da v4.3.0 não têm esse arquivo e o teriam excl
         <translation>Redefinir romfs na câmera OpenMV</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+84" />
+        <source>Force enter OpenMV Cam bootloader</source>
+        <translation>Forçar a entrada no bootloader OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>MicroPython Tools</source>
         <translation>Ferramentas Micropython</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+6" />
         <location line="+7" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -8150,39 +8153,50 @@ As versões do OpenMV IDE antes da v4.3.0 não têm esse arquivo e o teriam excl
         <translation>Copie/converta o arquivo python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Open Model Zoo</source>
         <translation>Zoológico de modelo aberto</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+87" />
         <source>Convert Model for NPU</source>
         <translation>Converter modelo para NPU</translation>
     </message>
     <message>
+        <location line="+6" />
+        <location line="+9" />
+        <location line="+12" />
         <location line="+7" />
-        <location line="+10" />
-        <location line="+13" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-176" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Converter modelo</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location line="+420" />
         <source>Show Code Profiler</source>
         <translation>Mostrar perfil de código</translation>
     </message>
     <message>
         <location line="+101" />
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Sobre %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Por: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;VERSÃO DE FÁBRICA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Destinada apenas a fabricantes licenciados.&lt;/p&gt;&lt;p&gt;&lt;b&gt;LICENÇA PÚBLICA GERAL GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Direitos autorais (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Este programa é distribuído em a esperança de que seja útil, mas SEM NENHUMA GARANTIA; mesmo sem a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO FIM. Consulte a &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;Licença Pública Geral GNU&lt;/a&gt; para obter mais detalhes.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Dúvidas ou comentários?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Entre em contato conosco em &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Sobre %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Por: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;VERSÃO DE FÁBRICA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Destinada apenas a fabricantes licenciados.&lt;/p&gt;&lt;p&gt;&lt;b&gt;LICENÇA PÚBLICA GERAL GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Direitos autorais (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Este programa é distribuído em a esperança de que seja útil, mas SEM NENHUMA GARANTIA; mesmo sem a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO FIM. Consulte a &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;Licença Pública Geral GNU&lt;/a&gt; para obter mais detalhes.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Dúvidas ou comentários?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Entre em contato conosco em &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+196" />
+        <location line="+26" />
+        <source>JPG Mode</source>
+        <translation>Modo JPG</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>RAW Mode</source>
+        <translation>Modo RAW</translation>
+    </message>
+    <message>
+        <location line="+113" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Foco (%8)</translation>
@@ -8220,7 +8234,7 @@ As versões do OpenMV IDE antes da v4.3.0 não têm esse arquivo e o teriam excl
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2737" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
         <source>Board:</source>
         <translation>Quadro:</translation>
     </message>
@@ -8264,9 +8278,9 @@ As versões do OpenMV IDE antes da v4.3.0 não têm esse arquivo e o teriam excl
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-301" />
-        <location line="+303" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
+        <location line="+324" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
         <source>Drive:</source>
         <translation>Dirigir:</translation>
     </message>
@@ -8287,8 +8301,8 @@ As versões do OpenMV IDE antes da v4.3.0 não têm esse arquivo e o teriam excl
         <translation>Pode ser diferente do FPS da câmera</translation>
     </message>
     <message>
-        <location line="+309" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2952" />
+        <location line="+307" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
         <source>Update Available</source>
         <translation>Atualização disponível</translation>
     </message>
@@ -8303,7 +8317,7 @@ As versões do OpenMV IDE antes da v4.3.0 não têm esse arquivo e o teriam excl
         <translation>Download</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
         <translation>Programação WiFi desabilitada!</translation>
     </message>
@@ -8341,11 +8355,11 @@ As versões do OpenMV IDE antes da v4.3.0 não têm esse arquivo e o teriam excl
         <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
-Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
 
 Blinking Green:
 
-Your OpenMV Cam's onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
 
 Blinking Blue:
 
@@ -8353,11 +8367,11 @@ Your OpenMV Cam is running the default main.py script onboard.
 
 If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
 
-If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+If the LED is blinking blue but OpenMV IDE can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
 
 Blinking White:
 
-Your OpenMV Cam's firmware is panicking because of a hardware failure. Please check that your OpenMV Cam's camera module is installed securely.
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
         <translation>Obrigado por usar o OpenMV Cam e o OpenMV IDE!
@@ -8384,27 +8398,27 @@ O firmware do seu OpenMV Cam está em pânico devido a uma falha de hardware. Ve
     </message>
     <message>
         <location line="+93" />
-        <location line="+1176" />
+        <location line="+1212" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Porta Serial - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1144" />
+        <location line="-1180" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+791" />
-        <location line="+145" />
+        <location line="+827" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
+        <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>Conectando... (tempo limite de 30 segundos)</translation>
     </message>
     <message>
-        <location line="-1783" />
+        <location line="-1820" />
         <source>
 
 Try doing:
@@ -8457,12 +8471,12 @@ sudo adduser %L1 discagem
     </message>
     <message>
         <location line="+17" />
-        <location line="+1233" />
+        <location line="+1270" />
         <source>UDP Server Connection - %1</source>
         <translation>Ligação do servidor UDP - %1</translation>
     </message>
     <message>
-        <location line="-1159" />
+        <location line="-1196" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Argumento de porta inválido (%1) para -open_udp_server_terminal</translation>
     </message>
@@ -8493,12 +8507,12 @@ sudo adduser %L1 discagem
     </message>
     <message>
         <location line="+17" />
-        <location line="+1279" />
+        <location line="+1317" />
         <source>TCP Server Connection - %1</source>
         <translation>Conexão do servidor TCP - %1</translation>
     </message>
     <message>
-        <location line="-1205" />
+        <location line="-1243" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Argumento de porta inválido (%1) para -open_tcp_server_terminal</translation>
     </message>
@@ -8508,15 +8522,17 @@ sudo adduser %L1 discagem
         <translation>Argumentos ausentes para -open_tcp_server_terminal</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+58" />
         <location line="+18" />
+        <location line="+6" />
+        <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
         <location line="+9" />
         <location line="+45" />
-        <location line="+79" />
-        <location line="+8" />
+        <location line="+82" />
+        <location line="+27" />
         <location line="+6" />
         <location line="+6" />
         <location line="+6" />
@@ -8525,15 +8541,15 @@ sudo adduser %L1 discagem
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2389" />
-        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location line="+10" />
         <location line="+8" />
-        <location line="+19" />
+        <location line="+22" />
         <source>Register OpenMV Cam</source>
         <translation>Registrar Câmera OpenMV</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="-278" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8553,13 +8569,24 @@ Execute Example-&gt;HelloWorld-&gt;helloworld.py para testar a qualidade da vis�
     </message>
     <message>
         <location line="+7" />
-        <location line="+17" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65" />
+        <location line="+29" />
+        <location line="+172" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-69" />
         <source>Registered</source>
         <translation>Registrada Registrado</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-190" />
+        <source>Board type not available for this form key!</source>
+        <translation>Tipo de quadro não disponível para esta chave de formulário!</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Registration limit reached for this board type!</source>
+        <translation>Limite de inscrições atingido para este tipo de fórum!</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8575,27 +8602,27 @@ Execute Example-&gt;HelloWorld-&gt;helloworld.py para testar a qualidade da vis�
     </message>
     <message>
         <location line="+17" />
-        <location line="+182" />
+        <location line="+204" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>Erro de banco de dados!</translation>
     </message>
     <message>
-        <location line="-165" />
-        <location line="+178" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+17" />
+        <location line="-187" />
+        <location line="+200" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+18" />
         <source>GET Network error!</source>
         <translation>GET Erro de rede!</translation>
     </message>
     <message>
-        <location line="-169" />
-        <location line="+177" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+19" />
+        <location line="-191" />
+        <location line="+199" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+22" />
         <source>GET network error!</source>
         <translation>OBTER erro de rede!</translation>
     </message>
     <message>
-        <location line="-170" />
+        <location line="-192" />
         <location line="+10" />
         <location line="+10" />
         <source>Unregistered OpenMV Cam Detected</source>
@@ -8603,7 +8630,7 @@ Execute Example-&gt;HelloWorld-&gt;helloworld.py para testar a qualidade da vis�
     </message>
     <message>
         <location line="-19" />
-        <source>Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
         <translation>Sua OpenMV Cam não está registrada. Você precisa registrar sua OpenMV Cam com OpenMV para uso ilimitado com OpenMV IDE sem interrupções.
@@ -8630,8 +8657,8 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href="https://openmv.io/products/openmv-cam-board-key"&gt;here&lt;/a&gt;.</source>
-        <translation>Insira uma chave de placa para registrar sua OpenMV Cam.&lt;br/&gt;&lt;br/&gt;Se você não tiver uma chave de placa, poderá comprá-la na OpenMV &lt;a href="https://openmv.io/products/openmv- cam-board-key"&gt;aqui&lt;/a&gt;.</translation>
+        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Insira uma chave de placa para registrar sua OpenMV Cam.&lt;br/&gt;&lt;br/&gt;Se você não tiver uma chave de placa, poderá comprá-la na OpenMV &lt;a href=&quot;https://openmv.io/products/openmv- cam-board-key&quot;&gt;aqui&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+47" />
@@ -8639,12 +8666,12 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation>Registrando câmera OpenMV...</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+33" />
         <source>Thank you for registering your OpenMV Cam!</source>
         <translation>Obrigado por registrar sua OpenMV Cam!</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+27" />
         <source>Invalid Board Key for Board Type!</source>
         <translation>Chave de placa inválida para o tipo de placa!</translation>
     </message>
@@ -8669,10 +8696,10 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation>Chave da placa formatada de forma inválida!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+223" />
-        <location line="+482" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+225" />
+        <location line="+503" />
         <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-83" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-84" />
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
@@ -8681,7 +8708,7 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation type="vanished">Definir configurações</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+389" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+395" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>Salvar roteiro</translation>
@@ -8692,7 +8719,7 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation>Remover comentários e converter espaços em guias?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
@@ -8709,8 +8736,8 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation>Arquivos de imagem (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Template</source>
@@ -8723,26 +8750,26 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
     </message>
     <message>
         <location line="+23" />
-        <location line="+67" />
+        <location line="+65" />
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>Por favor, selecione um caminho válido no OpenMV Cam!</translation>
     </message>
     <message>
-        <location line="-52" />
-        <location line="+67" />
-        <source>"%L1" is longer than a max length of %L2 characters!</source>
-        <translation>"%L1" é maior que o comprimento máximo de %L2 caracteres!</translation>
+        <location line="-50" />
+        <location line="+65" />
+        <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
+        <translation>&quot;%L1&quot; é maior que o comprimento máximo de %L2 caracteres!</translation>
     </message>
     <message>
-        <location line="-40" />
-        <location line="+7" />
+        <location line="-41" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Descriptor</source>
         <translation>Salvar descritor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8750,7 +8777,7 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation>Arquivos de pontos-chave (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1113" />
+        <location line="-1112" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8768,17 +8795,17 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
     <message>
         <location line="-19" />
         <location line="+13" />
-        <source>Cannot open the file "%L1"!</source>
-        <translation>Não é possível abrir o arquivo "%L1"!</translation>
+        <source>Cannot open the file &quot;%L1&quot;!</source>
+        <translation>Não é possível abrir o arquivo &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="-13" />
         <location line="+13" />
-        <source>Cannot open the example file "%L1"!</source>
-        <translation>Não é possível abrir o arquivo de exemplo "%L1"!</translation>
+        <source>Cannot open the example file &quot;%L1&quot;!</source>
+        <translation>Não é possível abrir o arquivo de exemplo &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-467" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-468" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>Selecione a unidade</translation>
@@ -8789,8 +8816,8 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation>Nenhuma unidade válida foi encontrada para associar ao seu OpenMV Cam!</translation>
     </message>
     <message>
-        <source>"%L1" is the only drive available so it must be your OpenMV Cam's drive.</source>
-        <translation type="vanished">"%L1" é a única unidade disponível, portanto deve ser a unidade da sua OpenMV Cam.</translation>
+        <source>&quot;%L1&quot; is the only drive available so it must be your OpenMV Cam&apos;s drive.</source>
+        <translation type="vanished">&quot;%L1&quot; é a única unidade disponível, portanto deve ser a unidade da sua OpenMV Cam.</translation>
     </message>
     <message>
         <location line="+27" />
@@ -8798,12 +8825,12 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation>Associe uma unidade à sua OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>Drive: %L1</source>
         <translation>Unidade: %L1</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+42" />
         <source>Debug Protocol Settings</source>
         <translation>Depurar configurações do protocolo</translation>
     </message>
@@ -8873,30 +8900,30 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation>Pesquisa de perfil de código (ms)</translation>
     </message>
     <message>
-        <location line="+354" />
+        <location line="+391" />
         <location line="+26" />
         <location line="+7" />
-        <source>Failed to flush "%L1"!</source>
-        <translation>Falha ao liberar "%L1"!</translation>
+        <source>Failed to flush &quot;%L1&quot;!</source>
+        <translation>Falha ao liberar &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34" />
-        <location line="+13" />
+        <location line="+12" />
         <location line="+31" />
         <location line="+9" />
-        <location line="+87" />
+        <location line="+89" />
         <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -8906,7 +8933,7 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation>Novo Terminal</translation>
     </message>
     <message>
-        <location line="-637" />
+        <location line="-641" />
         <source>Connect to serial port</source>
         <translation>Conectar à porta serial</translation>
     </message>
@@ -8927,7 +8954,7 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2021" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2227" />
         <source>Please select a serial port</source>
         <translation>Selecione uma porta serial</translation>
     </message>
@@ -8937,7 +8964,7 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation>Insira uma taxa de transmissão</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+96" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
         <source>Try doing:
 
@@ -8954,15 +8981,15 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
     </message>
     <message>
         <location line="+17" />
-        <location line="+138" />
+        <location line="+139" />
         <location line="+7" />
-        <location line="+236" />
+        <location line="+237" />
         <location line="+7" />
-        <source>Invalid string: "%L1"!</source>
-        <translation>String inválida: "%L1"!</translation>
+        <source>Invalid string: &quot;%L1&quot;!</source>
+        <translation>String inválida: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-381" />
         <source>No serial ports found!</source>
         <translation>Nenhuma porta serial encontrada!</translation>
     </message>
@@ -8973,45 +9000,45 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+243" />
+        <location line="+244" />
         <source> Connect to a Server </source>
         <translation> Conectar a um servidor </translation>
     </message>
     <message>
-        <location line="-242" />
-        <location line="+243" />
+        <location line="-243" />
+        <location line="+244" />
         <source> Start a Server </source>
         <translation> Iniciar um servidor </translation>
     </message>
     <message>
         <location line="-234" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>Insira um endereço IP (ou nome de domínio) e porta (por exemplo, xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-222" />
         <source>UDP Client Connection - %1</source>
         <translation>Conexão do Cliente UDP - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>Insira um número de porta (digite 0 para qualquer porta livre aleatória)</translation>
     </message>
     <message>
-        <location line="-137" />
+        <location line="-138" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>Conectar-se a um servidor TCP como cliente ou iniciar um servidor TCP?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+36" />
         <source>TCP Client Connection - %1</source>
         <translation>Conexão do Cliente TCP - %1</translation>
     </message>
     <message>
-        <location line="+244" />
+        <location line="+243" />
         <source>Error: Option Index!</source>
         <translation>Erro: Índice de opções!</translation>
     </message>
@@ -9036,7 +9063,7 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation> Arquivo de imagem </translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>A tupla de limite selecionada será atualizada no fechamento.</translation>
@@ -9052,8 +9079,8 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation>Arquivo de imagem</translation>
     </message>
     <message>
-        <location line="+71" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+70" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+704" />
         <source>What would you like to do?</source>
         <translation>O que você gostaria de fazer?</translation>
     </message>
@@ -9068,7 +9095,7 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation> Mesclar arquivos </translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9118,12 +9145,12 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation>Falha ao carregar o primeiro arquivo de pontos-chave por motivo desconhecido!</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>What tag images from the %L1 tag family do you want to generate?</source>
         <translation>Quais imagens de tags da família de tags %L1 você deseja gerar?</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Min (%1)</source>
         <translation>Mín. (%1)</translation>
     </message>
@@ -9140,9 +9167,9 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>AprilTag Generator - Where do you want to save %n tag image(s) to?</source>
-        <translation>
-            <numerusform>AprilTag Generator - Onde você deseja salvar %n imagens de tags?</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -9166,7 +9193,7 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
         <translation>Geração completa!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1510" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>Novos recursos OpenMV IDE estão disponíveis (por exemplo, exemplos, firmware, documentação, etc.).</translation>
     </message>
@@ -9177,42 +9204,42 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+288" />
-        <location line="+143" />
+        <location line="+289" />
+        <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
         <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
         <location line="+46" />
-        <location line="+75" />
+        <location line="+73" />
         <location line="+46" />
-        <location line="+74" />
+        <location line="+72" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+400" />
         <location line="+50" />
-        <location line="+873" />
+        <location line="+871" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>Baixando...</translation>
     </message>
     <message>
-        <location line="-417" />
+        <location line="-440" />
         <source>Installing...</source>
         <translation>Instalando...</translation>
     </message>
     <message>
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
-        <source>Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+        <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>Por favor, feche todos os programas que estão visualizando/editando os dados do aplicativo OpenMV IDE e reinicie o OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
         <translation>Instalação realizada com sucesso! Reinicie o OpenMV IDE.</translation>
     </message>
@@ -9225,69 +9252,119 @@ Gostaria de registrar sua OpenMV Cam agora?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+254" />
+        <location line="+273" />
         <location line="+88" />
-        <source>Cannot open the resources file "%L1"!</source>
-        <translation>Não é possível abrir o arquivo de recursos "%L1"!</translation>
+        <source>Cannot open the resources file &quot;%L1&quot;!</source>
+        <translation>Não é possível abrir o arquivo de recursos &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-314" />
-        <location line="+254" />
+        <location line="-333" />
+        <location line="+273" />
         <location line="+95" />
-        <source>Network request failed "%L1"!</source>
-        <translation>A solicitação de rede falhou "%L1"!</translation>
+        <source>Network request failed &quot;%L1&quot;!</source>
+        <translation>A solicitação de rede falhou &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-315" />
+        <location line="-335" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation>Firmware binário ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+119" />
-        <location line="+588" />
-        <location line="+217" />
-        <location line="+2205" />
+        <location line="+12" />
+        <location line="+117" />
+        <location line="+720" />
+        <location line="+227" />
+        <location line="+2414" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Apagar o sistema de arquivos gordurosos internos</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+119" />
-        <location line="+589" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+117" />
+        <location line="+722" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
-        <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Se você ativar esta opção, todos os arquivos no sistema interno de arquivos gordos do seu OpenMV CAM serão excluídos. Isso não apaga os arquivos em nenhum cartão SD removível (se inserido).</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+708" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+839" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Redefinir sistema de arquivos ROMFS</translation>
     </message>
     <message>
-        <location line="-3203" />
-        <location line="+708" />
-        <location line="+215" />
-        <location line="+2205" />
+        <location line="-3552" />
+        <location line="+840" />
+        <location line="+225" />
+        <location line="+2412" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Se você ativar esta opção, o sistema de arquivos ROM na sua câmera OpenMV será redefinido de volta para o padrão.</translation>
     </message>
     <message>
-        <location line="-3160" />
+        <location line="-3510" />
         <location line="+45" />
         <source>Bootloader</source>
         <translation>Bootloader</translation>
     </message>
     <message>
-        <location line="+2991" />
+        <location line="+28" />
+        <source>Force bootloader</source>
+        <translation>Forçar bootloader</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Force enter the OpenMV Cam bootloader. May result in the OpenMV Cam bootloader not automatically exiting on older boards.</source>
+        <translation>Force a entrada no bootloader OpenMV Cam. Pode fazer com que o bootloader OpenMV Cam não saia automaticamente em placas mais antigas.</translation>
+    </message>
+    <message>
+        <location line="+693" />
+        <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
+        <translation>Instale a versão mais recente do firmware (v%L1.%L2.%L3)</translation>
+    </message>
+    <message>
+        <location line="+1063" />
+        <location line="+192" />
+        <source>Failed to copy firmware files to temporary directory!</source>
+        <translation>Falha ao copiar ficheiros de firmware para diretório temporário!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Original firmware folder does not exist!</source>
+        <translation>A pasta do firmware original não existe!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Failed to create temporary directory!</source>
+        <translation>Falha ao criar diretório temporário!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <source>Only loading bootloader.bin files is supported with the ST Cube Programmer!</source>
+        <translation>Apenas o carregamento de ficheiros bootloader.bin é suportado pelo ST Cube Programmer!</translation>
+    </message>
+    <message>
+        <location line="+151" />
+        <source>Bootloader update complete!
+
+</source>
+        <translation>Atualização do bootloader concluída!</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Connect your OpenMV Cam now.</source>
+        <translation>Ligue a sua câmara OpenMV agora.</translation>
+    </message>
+    <message>
+        <location line="+1377" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9296,8 +9373,8 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Em particular, verifique os exemplos de Processamento de imagem -&gt; Rastreamento de cores e aprendizado de máquina -&gt; TensorFlow.</translation>
     </message>
     <message>
-        <location line="-3104" />
-        <location line="+4" />
+        <location line="-3455" />
+        <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
         <source>Firmware Path</source>
@@ -9312,26 +9389,26 @@ Em particular, verifique os exemplos de Processamento de imagem -&gt; Rastreamen
         <translation type="vanished">Apagar sistema de arquivos interno</translation>
     </message>
     <message>
-        <source>If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">Se você habilitar esta opção, todos os arquivos na unidade flash interna do OpenMV Cam serão excluídos. Isso não apaga arquivos em nenhum cartão SD removível (se inserido).</translation>
     </message>
     <message>
-        <source>Loading firmware via DFU always erases your OpenMV Cam's internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
+        <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">O carregamento do firmware via DFU sempre apaga a unidade flash interna do OpenMV Cam. Isso não apaga arquivos em nenhum cartão SD removível (se inserido).</translation>
     </message>
     <message>
         <location line="+21" />
-        <location line="+130" />
+        <location line="+148" />
         <source>Run</source>
         <translation>Correr</translation>
     </message>
     <message>
-        <location line="-86" />
-        <source>"%L1" is not a file!</source>
-        <translation>"%L1" não é um arquivo!</translation>
+        <location line="-105" />
+        <source>&quot;%L1&quot; is not a file!</source>
+        <translation>&quot;%L1&quot; não é um arquivo!</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+67" />
         <source>Update ROMFS file system</source>
         <translation>Atualize o sistema de arquivos romfs</translation>
     </message>
@@ -9341,7 +9418,7 @@ Em particular, verifique os exemplos de Processamento de imagem -&gt; Rastreamen
         <translation>Se você ativar esta opção, o sistema de arquivos ROM na sua câmera OpenMV será atualizado para a versão mais recente do desenvolvimento.</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+125" />
         <source>Extracting...</source>
         <translation>Extraindo...</translation>
     </message>
@@ -9361,17 +9438,16 @@ Em particular, verifique os exemplos de Processamento de imagem -&gt; Rastreamen
         <translation>Conselho desconhecido</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+344" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Uma placa no modo DFU foi detectada. O que você gostaria de fazer?</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Install the lastest release firmware (v%L1.%L2.%L3)</source>
-        <translation>Instale o firmware de versão mais recente (v%L1.%L2.%L3)</translation>
+        <translation type="vanished">Instale o firmware de versão mais recente (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Load a specific firmware</source>
         <translation>Carregar um firmware específico</translation>
     </message>
@@ -9380,36 +9456,35 @@ Em particular, verifique os exemplos de Processamento de imagem -&gt; Rastreamen
         <translation type="vanished">Apenas apague o sistema de arquivos interno</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+92" />
         <source>No OpenMV Cams found!</source>
         <translation>Nenhuma câmera OpenMV encontrada!</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+56" />
         <source>Do you have an OpenMV Cam connected and is it bricked?</source>
         <translation>Você tem uma OpenMV Cam conectada e ela está emparedada?</translation>
     </message>
     <message>
-        <location line="+849" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
-Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
-        <translation>Somente carregando arquivos .dfu é suportado para o STM32 Recovery Bootloader!
+Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!</source>
+        <translation type="vanished">Somente carregando arquivos .dfu é suportado para o STM32 Recovery Bootloader!
 
  Selecione um arquivo bootloader.dfu e tente novamente. Observe que carregar o firmware.dfu ou openmv.dfu (bootloader + firmware) pode não funcionar nas placas STM32H7 devido a um bug no carregador de inicialização do chip!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+987" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>Somente os arquivos carregando *.bin e *.img são suportados para o carregador de inicialização interno!</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Only loading *.bin and *.img files are supported for the IMX bootloader!</source>
         <translation>Somente os arquivos carregando *.bin e *.img são suportados para o carregador de inicialização do IMX!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+107" />
         <source>Only loading *.bin, *.dfu, and *.img files are supported for the Arduino bootloader!</source>
         <translation>Somente carregando arquivos *.bin, *.dfu e *.img são suportados para o carregador de inicialização Arduino!</translation>
     </message>
@@ -9425,7 +9500,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
     </message>
     <message>
         <location line="+24" />
-        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
+        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
         <translation>Observe que carregar o firmware.dfu ou openmv.dfu (bootloader + firmware) pode não funcionar nas placas STM32H7 devido a um bug no carregador de inicialização do chip!
@@ -9435,9 +9510,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-976" />
-        <location line="+657" />
-        <location line="+1750" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1398" />
+        <location line="+252" />
+        <location line="+681" />
+        <location line="+1936" />
         <source>Please select the board type</source>
         <translation>Selecione o tipo de placa</translation>
     </message>
@@ -9446,39 +9522,37 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Apagar o sistema de arquivos interno?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2295" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2500" />
         <source>No released firmware available for the attached board!</source>
         <translation>Nenhum firmware liberado disponível para a placa anexada!</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+61" />
         <source>Please select a DFU Device</source>
         <translation>Selecione um dispositivo DFU</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-83" />
         <location line="+170" />
         <location line="+44" />
-        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Atualize o bootloader para a versão mais recente e instale o SoftDevice para atualizar o firmware OpenMV. Mais informações podem ser encontradas em &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Atualize o bootloader para a versão mais recente e instale o SoftDevice para atualizar o firmware OpenMV. Mais informações podem ser encontradas em &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-1065" />
-        <location line="+3012" />
+        <location line="-1191" />
+        <location line="+3343" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>AVISO: A atualização para a nova versão do firmware exige que o sistema de arquivos FAT seja apagado.</translation>
     </message>
     <message>
-        <location line="-2527" />
+        <location line="-2848" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
-        <translation>Problemas de USB foram detectados pelo seu sistema operacional com os dispositivos abaixo neste sistema. Corrija ou remova esses dispositivos, pois eles causarão problemas de conexão. 
-
-% 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+173" />
         <source>Just erase the internal FAT file system</source>
         <translation>Apenas apagar o sistema de arquivos gordos internos</translation>
     </message>
@@ -9493,17 +9567,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Redefinir o sistema de arquivos ROM</translation>
     </message>
     <message>
-        <location line="+219" />
-        <location line="+2206" />
+        <location line="+229" />
+        <location line="+2415" />
         <source>Upgrade options:</source>
         <translation>Opções de atualização:</translation>
     </message>
     <message>
-        <location line="-2122" />
+        <location line="-2327" />
         <location line="+169" />
         <location line="+44" />
-        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Por favor, reduza REC para GND e reinicie sua placa. Mais informações podem ser encontradas em &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Por favor, reduza REC para GND e reinicie sua placa. Mais informações podem ser encontradas em &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+25" />
@@ -9515,7 +9589,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (Cancelar se isso demorar mais de 5 segundos).</translation>
     </message>
     <message>
-        <location line="+132" />
+        <location line="+143" />
         <source>Timeout error while getting firmware version!</source>
         <translation>Erro de tempo limite ao obter a versão do firmware!</translation>
     </message>
@@ -9531,8 +9605,8 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+191" />
-        <location line="+570" />
+        <location line="+199" />
+        <location line="+733" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Erro de tempo limite ao obter a arquitetura da placa!</translation>
     </message>
@@ -9541,7 +9615,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Arquitetura de placa não suportada!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-633" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Desconecte sua OpenMV Cam e reconecte-a...</translation>
@@ -9574,12 +9648,12 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+38" />
-        <source>Unable to connect to your OpenMV Cam's normal bootloader!</source>
+        <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>Não é possível conectar ao carregador de inicialização normal do seu OpenMV Cam!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+129" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+131" />
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
         <translation>O OpenMV IDE ainda pode tentar reparar sua OpenMV Cam usando o DFU Bootloader de sua OpenMV Cam.
@@ -9588,9 +9662,9 @@ Continuar?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-288" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
         <location line="+46" />
-        <location line="+195" />
+        <location line="+191" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>Apagando...</translation>
@@ -9609,7 +9683,7 @@ Continuar?</translation>
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-837" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-835" />
         <location line="+41" />
         <location line="+51" />
         <location line="+44" />
@@ -9626,7 +9700,7 @@ Continuar?</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+221" />
+        <location line="+219" />
         <location line="+50" />
         <location line="+51" />
         <location line="+42" />
@@ -9690,11 +9764,11 @@ Continuar?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
         <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
-        <source>Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.</source>
+        <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>Clique em OK quando o LED RGB do seu OpenMV Cam começar a piscar em azul - o que indica que o autoteste foi concluído.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
@@ -9712,7 +9786,7 @@ Continuar?</translation>
 
 If you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py.
 
-In this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).</source>
+In this case click OK when you see your OpenMV Cam&apos;s internal flash drive mount (a window may or may not pop open).</source>
         <translation>
 
 Se você substituiu main.py em seu OpenMV Cam e não apagou o disco, então seu OpenMV Cam apenas executará esse main.py.
@@ -9735,8 +9809,8 @@ Neste caso, clique em OK quando vir a unidade flash interna do OpenMV Cam montad
         <translation>Nenhuma configuração IMX encontrada!</translation>
     </message>
     <message>
-        <source>Failed to eject "%L1"!</source>
-        <translation type="vanished">Falha ao ejetar "%L1"!</translation>
+        <source>Failed to eject &quot;%L1&quot;!</source>
+        <translation type="vanished">Falha ao ejetar &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="+14" />
@@ -9749,7 +9823,7 @@ Clique em cancelar para pular para a reprogramação SBL.</translation>
     </message>
     <message>
         <location line="+42" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
         <translation>O OpenMV IDE ainda pode tentar reparar sua OpenMV Cam usando o SBL Bootloader de sua OpenMV Cam.
@@ -9760,7 +9834,7 @@ Continuar?</translation>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
         <translation>Desconecte sua OpenMV Cam do seu computador, adicione um jumper entre os pinos SBL e 3.3V e reconecte sua OpenMV Cam ao seu computador.
 
 Clique no botão Ok depois que o SBL Bootloader do OpenMV Cam foi enumerado.</translation>
@@ -9812,19 +9886,19 @@ Clique no botão Ok depois que o SBL Bootloader do OpenMV Cam foi enumerado.</tr
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-345" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-347" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Nenhuma configuração DFU para o tipo de placa selecionado!</translation>
     </message>
     <message>
         <location line="+55" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+104" />
         <source>No DFU settings for the selected device!</source>
         <translation>Nenhuma configuração DFU para o dispositivo selecionado!</translation>
     </message>
     <message>
         <location line="+32" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+47" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
         <source>Erasing Disk</source>
         <translation>Apagando disco</translation>
@@ -9853,8 +9927,8 @@ Clique no botão Ok depois que o SBL Bootloader do OpenMV Cam foi enumerado.</tr
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-933" />
-        <location line="+934" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-931" />
+        <location line="+932" />
         <source>Flashing Firmware</source>
         <translation>Firmware Piscando</translation>
     </message>
@@ -9900,17 +9974,17 @@ Clique no botão Ok depois que o SBL Bootloader do OpenMV Cam foi enumerado.</tr
     </message>
     <message>
         <location line="+14" />
-        <source>Your %1 doesn't have an internal FAT file system.</source>
+        <source>Your %1 doesn&apos;t have an internal FAT file system.</source>
         <translation>Seu %1 não possui um sistema de arquivos gordos internos.</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
-        <source>Your %1 doesn't have an ROM file system.</source>
+        <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>Seu %1 não possui um sistema de arquivos ROM.</translation>
     </message>
     <message>
-        <source>Your Nano 33 BLE doesn't have an onboard data flash disk.</source>
+        <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
         <translation type="vanished">Seu Nano 33 BLE não possui um disco flash de dados integrado.</translation>
     </message>
     <message>
@@ -9971,7 +10045,7 @@ Continuar?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>DFU update erases your OpenMV Cam's internal flash file system.
+        <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
         <translation>A atualização do DFU apaga o sistema de arquivos flash interno do seu OpenMV Cam.
@@ -9982,7 +10056,7 @@ Faça backup de seus dados antes de continuar!</translation>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.</source>
         <translation>Desconecte sua OpenMV Cam do seu computador, adicione um jumper entre os pinos BOOT e RST e reconecte sua OpenMV Cam ao seu computador.
 
 Clique no botão OK depois que o DFU Bootloader do OpenMV Cam tiver sido enumerado.</translation>
@@ -10035,13 +10109,13 @@ Clique no botão OK depois que o DFU Bootloader do OpenMV Cam tiver sido enumera
         <translation>A redefinição do carregador de inicialização DFU falhou!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-271" />
         <source>None</source>
         <translation>Nenhum</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+16" />
+        <location line="+30" />
         <location line="+56" />
         <source>Unknown</source>
         <translation>Desconhecido</translation>
@@ -10057,12 +10131,12 @@ Clique no botão OK depois que o DFU Bootloader do OpenMV Cam tiver sido enumera
         <translation>Não registrado</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+94" />
         <source>Timeout error while learning MTU!</source>
         <translation>Erro de tempo limite ao aprender MTU!</translation>
     </message>
     <message>
-        <location line="+167" />
+        <location line="+170" />
         <source>Board: %L1</source>
         <translation>Placa: %L1</translation>
     </message>
@@ -10087,13 +10161,13 @@ Clique no botão OK depois que o DFU Bootloader do OpenMV Cam tiver sido enumera
         <translation>Porta Serial: %L1</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+85" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ desatualizado - clique aqui para atualizar ]</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Your OpenMV Cam's firmware is out of date. Would you like to upgrade?</source>
+        <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>O firmware da sua OpenMV Cam está desatualizado. Gostaria de atualizar?</translation>
     </message>
     <message>
@@ -10102,7 +10176,7 @@ Clique no botão OK depois que o DFU Bootloader do OpenMV Cam tiver sido enumera
         <translation> - [ mais recente ]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-674" />
         <source>Failed to open or parse ELF: %1</source>
         <translation>Falha ao abrir ou analisar o ELF: %1</translation>
     </message>
@@ -10114,7 +10188,7 @@ Clique no botão OK depois que o DFU Bootloader do OpenMV Cam tiver sido enumera
     <message>
         <location line="+176" />
         <source>Event %1</source>
-        <translation>Evento % 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4" />
@@ -10158,7 +10232,7 @@ Clique no botão OK depois que o DFU Bootloader do OpenMV Cam tiver sido enumera
     </message>
     <message>
         <location line="+396" />
-        <location line="+172" />
+        <location line="+177" />
         <source>Code Profiler</source>
         <translation>Perfilador de código</translation>
     </message>
@@ -10212,7 +10286,7 @@ Clique no botão OK depois que o DFU Bootloader do OpenMV Cam tiver sido enumera
         <translation type="vanished">Começar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+588" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+592" />
         <source>More Examples</source>
         <translation>Mais exemplos</translation>
     </message>
@@ -10225,29 +10299,29 @@ In particular, checkout the Color-Tracking examples.</source>
 Em particular, verifique os exemplos de rastreamento de cores.</translation>
     </message>
     <message>
-        <location line="+28" />
-        <location line="+69" />
-        <location line="+9" />
+        <location line="+27" />
+        <location line="+70" />
+        <location line="+8" />
         <source>Firmware Update</source>
         <translation>Atualização de Firmware</translation>
     </message>
     <message>
         <location line="-75" />
-        <source>Update your OpenMV Cam's firmware to the latest version?</source>
+        <source>Update your OpenMV Cam&apos;s firmware to the latest version?</source>
         <translation>Atualize o firmware do seu OpenMV Cam para a versão mais recente?</translation>
     </message>
     <message>
-        <location line="+67" />
-        <source>Your OpenMV Cam's firmware is up to date.</source>
+        <location line="+68" />
+        <source>Your OpenMV Cam&apos;s firmware is up to date.</source>
         <translation>O firmware do seu OpenMV Cam está atualizado.</translation>
     </message>
     <message>
-        <location line="+11" />
-        <source>Need to reset your OpenMV Cam's firmware to the release version?</source>
+        <location line="+10" />
+        <source>Need to reset your OpenMV Cam&apos;s firmware to the release version?</source>
         <translation>Precisa redefinir o firmware do seu OpenMV Cam para a versão de lançamento?</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+86" />
         <source>No board settings for the connected board found!</source>
         <translation>Sem as configurações da placa para a placa conectada encontrada!</translation>
     </message>
@@ -10342,10 +10416,10 @@ Em particular, verifique os exemplos de rastreamento de cores.</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>Module "%L1" on your OpenMV Cam is different than the copy on your computer.
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
 Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>O módulo "%L1" em sua OpenMV Cam é diferente da cópia em seu computador.
+        <translation>O módulo &quot;%L1&quot; em sua OpenMV Cam é diferente da cópia em seu computador.
 
 Você gostaria que o OpenMV IDE atualizasse o módulo em sua OpenMV Cam?</translation>
     </message>
@@ -10356,15 +10430,15 @@ Você gostaria que o OpenMV IDE atualizasse o módulo em sua OpenMV Cam?</transl
     </message>
     <message>
         <location line="+91" />
-        <source>Module "%L1" may be required to run your script.
+        <source>Module &quot;%L1&quot; may be required to run your script.
 
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>O módulo "%L1" pode ser necessário para executar seu script.
+        <translation>O módulo &quot;%L1&quot; pode ser necessário para executar seu script.
 
 Você gostaria que o OpenMV IDE o copiasse para sua OpenMV Cam?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-366" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10377,18 +10451,18 @@ Você gostaria que o OpenMV IDE o copiasse para sua OpenMV Cam?</translation>
         <translation>Arquivos de texto (*.txt);;Todos os arquivos (*)</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+228" />
         <source>Zoom: %1%</source>
         <translation>Zoom: %1%</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4310" />
-        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4365" />
+        <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280" />
-        <location line="+236" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-265" />
+        <location line="+221" />
         <source>Model Zoo</source>
         <translation>Modelo Zoológico</translation>
     </message>
@@ -10424,7 +10498,7 @@ Você gostaria que o OpenMV IDE o copiasse para sua OpenMV Cam?</translation>
         <translation>Encontrar</translation>
     </message>
     <message>
-        <location line="+226" />
+        <location line="+239" />
         <source>Serial Terminal</source>
         <translation>Terminal Serial</translation>
     </message>
@@ -10445,8 +10519,8 @@ Você gostaria que o OpenMV IDE o copiasse para sua OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Run "/main.py"</source>
-        <translation>Execute "/main.py"</translation>
+        <source>Run &quot;/main.py&quot;</source>
+        <translation>Execute &quot;/main.py&quot;</translation>
     </message>
     <message>
         <location line="+0" />
@@ -10469,31 +10543,31 @@ Você gostaria que o OpenMV IDE o copiasse para sua OpenMV Cam?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-360" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-150" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Obter dispositivos</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-293" />
         <location line="+79" />
         <source>Query failed!</source>
         <translation>Falha na consulta!</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+44" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+119" />
         <source>PyDfu</source>
         <translation>PyDfuGenericName</translation>
     </message>
     <message>
-        <location line="+120" />
+        <location line="+118" />
         <source>DFU Util</source>
         <translation>Utilitário DFU</translation>
     </message>
@@ -10518,7 +10592,7 @@ Você gostaria que o OpenMV IDE o copiasse para sua OpenMV Cam?</translation>
         <translation>Isso pode demorar um pouco, quebra de água?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-87" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
         <source>Dataset Split</source>
         <translation>Divisão do conjunto de dados</translation>
     </message>
@@ -10530,7 +10604,7 @@ OpenMV recommends leaving this at the default 80/20% split.</source>
 O OpenMV recomenda deixar isso na divisão padrão de 80/20%.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <location line="+16" />
         <source>Training Data
 Percentage
@@ -10552,7 +10626,7 @@ Percentagem
     <message>
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+58" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
         <location line="+50" />
         <source>Uploading...</source>
@@ -10593,12 +10667,12 @@ Percentagem
         <location line="+10" />
         <source>Nothing to upload
 
-Only jpg/png/bmp images with a numeric name (e.g. "00001.jpg")
-in class folders ("*.class") can be uploaded.</source>
+Only jpg/png/bmp images with a numeric name (e.g. &quot;00001.jpg&quot;)
+in class folders (&quot;*.class&quot;) can be uploaded.</source>
         <translation>Nada para carregar
 
-Apenas imagens jpg/png/bmp com um nome numérico (por exemplo, "00001.jpg")
-nas pastas da classe ("*.class") podem ser carregados.</translation>
+Apenas imagens jpg/png/bmp com um nome numérico (por exemplo, &quot;00001.jpg&quot;)
+nas pastas da classe (&quot;*.class&quot;) podem ser carregados.</translation>
     </message>
     <message>
         <location line="+43" />
@@ -10606,31 +10680,31 @@ nas pastas da classe ("*.class") podem ser carregados.</translation>
         <location line="+21" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+164" />
+        <location line="+155" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+23" />
         <location line="+9" />
         <location line="+9" />
         <source>Edge Impulse Projects</source>
         <translation>Projetos Edge Impulse</translation>
     </message>
     <message>
-        <location line="-276" />
+        <location line="-266" />
         <location line="+35" />
-        <location line="+71" />
-        <location line="+129" />
-        <location line="+42" />
+        <location line="+67" />
+        <location line="+124" />
+        <location line="+41" />
         <source>No request data received</source>
         <translation>Nenhum dado de solicitação recebido</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-246" />
         <source>An unkown error occured</source>
         <translation>Ocorreu um erro desconhecido</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+62" />
         <location line="+11" />
         <location line="+7" />
         <location line="+10" />
@@ -10647,7 +10721,7 @@ Open a data set to upload it.</source>
 Abra um conjunto de dados para carregá-lo.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+33" />
         <source>Email Address</source>
         <translation>Endereço de email</translation>
     </message>
@@ -10662,17 +10736,17 @@ Abra um conjunto de dados para carregá-lo.</translation>
         <translation>Senha</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+66" />
         <source>Please select a project</source>
         <translation>Selecione um projeto</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+60" />
         <source>No projects found</source>
         <translation>Nenhum projeto encontrado</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+45" />
         <source>Upload Project</source>
         <translation>Carregar Projeto</translation>
     </message>
@@ -10682,7 +10756,7 @@ Abra um conjunto de dados para carregá-lo.</translation>
         <translation>Insira uma chave de API do projeto Edge Impluse</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1017" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1015" />
         <location line="+144" />
         <location line="+36" />
         <location line="+41" />
@@ -10701,7 +10775,7 @@ Abra um conjunto de dados para carregá-lo.</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+41" />
+        <location line="+39" />
         <location line="+135" />
         <location line="+45" />
         <location line="+50" />
@@ -10737,8 +10811,8 @@ Abra um conjunto de dados para carregá-lo.</translation>
     </message>
     <message>
         <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1337" />
-        <location line="+923" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1335" />
+        <location line="+921" />
         <source>This feature is not supported on this machine!</source>
         <translation>Este recurso não é suportado nesta máquina!</translation>
     </message>
@@ -10770,15 +10844,15 @@ The camera must be power cycled after a system package update.</source>
 A câmera deve ser o Power Cylled após uma atualização do pacote do sistema.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-472" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-470" />
         <location line="+51" />
         <location line="+91" />
-        <location line="+346" />
+        <location line="+344" />
         <location line="+51" />
         <location line="+50" />
         <location line="+94" />
         <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Este comando demora um pouco para ser executado. Por favor, seja paciente.</translation>
@@ -10799,7 +10873,7 @@ A câmera deve ser o Power Cylled após uma atualização do pacote do sistema.<
         <translation>Feito</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
@@ -10931,12 +11005,12 @@ A câmera deve ser o Power Cylled após uma atualização do pacote do sistema.<
     </message>
     <message>
         <location line="-77" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Transcoding File...</source>
         <translation>Transcodificando arquivo...</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-594" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10997,29 +11071,29 @@ A câmera deve ser o Power Cylled após uma atualização do pacote do sistema.<
         <translation>Obter formatos de entrada</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+37" />
         <location line="+111" />
-        <location line="+100" />
+        <location line="+98" />
         <location line="+15" />
-        <location line="+372" />
+        <location line="+371" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
         <location line="+16" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+14" />
+        <location line="+19" />
         <location line="+36" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+21" />
+        <location line="+23" />
         <location line="+7" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+20" />
+        <location line="+22" />
         <location line="+7" />
         <source>Convert Video</source>
         <translation>Converter vídeo</translation>
@@ -11039,7 +11113,7 @@ A câmera deve ser o Power Cylled após uma atualização do pacote do sistema.<
         <translation>FFMPEG não é compatível com esta plataforma.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+98" />
         <source>Unable to write to output video file!</source>
         <translation>Não foi possível gravar no arquivo de vídeo de saída!</translation>
     </message>
@@ -11050,79 +11124,79 @@ A câmera deve ser o Power Cylled após uma atualização do pacote do sistema.<
     </message>
     <message>
         <location line="+163" />
-        <location line="+411" />
+        <location line="+415" />
         <source>Play Video</source>
         <translation>Reproduzir vídeo</translation>
     </message>
     <message>
-        <location line="-410" />
+        <location line="-414" />
         <location line="+163" />
         <source>Failed to launch ffplay!</source>
         <translation>Falha ao iniciar o ffplay!</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>Convert Video Source</source>
         <translation>Converter fonte de vídeo</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+235" />
+        <location line="+240" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</source>
         <translation>Arquivos de Vídeo (*.mp4 *.*);;Arquivos OpenMV ImageWriter (*.bin);;</translation>
     </message>
     <message>
-        <location line="-230" />
+        <location line="-235" />
         <location line="+11" />
-        <location line="+117" />
+        <location line="+122" />
         <location line="+7" />
         <source>Convert Video Output</source>
         <translation>Converter Saída de Vídeo</translation>
     </message>
     <message>
-        <location line="-130" />
-        <location line="+125" />
-        <location line="+208" />
+        <location line="-135" />
+        <location line="+130" />
+        <location line="+204" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
         <translation>Arquivos de Vídeo (*.mp4 *.*);;Arquivos OpenMV ImageReader (*.bin);;</translation>
     </message>
     <message>
-        <location line="-327" />
+        <location line="-328" />
         <source>Please select output format</source>
         <translation>Selecione o formato de saída</translation>
     </message>
     <message>
         <location line="+15" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Rescale the video?</source>
         <translation>Redimensionar o vídeo?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter a new width (the aspect ratio will be kept the same)</source>
         <translation>Insira uma nova largura (a proporção será mantida a mesma)</translation>
     </message>
     <message>
-        <location line="-320" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-321" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Skip frames?</source>
         <translation>Pular quadros?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter how many frames to skip at a time</source>
         <translation>Insira quantos quadros pular por vez</translation>
     </message>
     <message>
-        <location line="-278" />
-        <location line="+91" />
-        <location line="+207" />
+        <location line="-274" />
+        <location line="+93" />
+        <location line="+203" />
         <source>Video conversion finished!</source>
         <translation>Conversão de vídeo concluída!</translation>
     </message>
@@ -11152,13 +11226,13 @@ A câmera deve ser o Power Cylled após uma atualização do pacote do sistema.<
         <translation>Jogar</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+47" />
         <location line="+7" />
         <source>Save Video</source>
         <translation>Salvar vídeo</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
         <source>Busy</source>
         <translation>Ocupada</translation>
     </message>
@@ -11174,13 +11248,11 @@ A câmera deve ser o Power Cylled após uma atualização do pacote do sistema.<
         <translation>Detalhes ocultos</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-335" />
-        <location line="+102" />
         <source>No matching interface for the selected file name!</source>
-        <translation>Nenhuma interface correspondente para o nome do arquivo selecionado!</translation>
+        <translation type="vanished">Nenhuma interface correspondente para o nome do arquivo selecionado!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-745" />
         <source>Please select the target</source>
         <translation>Selecione o alvo</translation>
     </message>
@@ -11203,70 +11275,70 @@ OpenMV IDE will just copy the model as is.</source>
 O OpenMV IDE apenas copiará o modelo como está.</translation>
     </message>
     <message>
-        <location line="+145" />
-        <location line="+36" />
+        <location line="+147" />
+        <location line="+35" />
         <location line="+6" />
         <location line="+8" />
-        <location line="+40" />
-        <location line="+17" />
-        <location line="+20" />
-        <location line="+6" />
-        <location line="+8" />
+        <location line="+42" />
+        <location line="+16" />
         <location line="+21" />
-        <location line="+19" />
-        <location line="+20" />
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
         <location line="+93" />
-        <location line="+9" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+13" />
-        <location line="+14" />
-        <location line="+45" />
-        <location line="+17" />
-        <location line="+28" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+40" />
+        <location line="+15" />
         <location line="+27" />
+        <location line="+24" />
         <location line="+53" />
-        <location line="+67" />
+        <location line="+63" />
         <location line="+6" />
         <location line="+21" />
         <source>Edit ROMFS</source>
         <translation>Editar romfs</translation>
     </message>
     <message>
-        <location line="-620" />
-        <location line="+91" />
+        <location line="-606" />
+        <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>Uma pasta com o mesmo nome já existe!</translation>
     </message>
     <message>
-        <location line="-85" />
-        <location line="+91" />
+        <location line="-87" />
+        <location line="+93" />
         <source>File already exists! Overwrite?</source>
         <translation>O arquivo já existe! Substituir?</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+91" />
+        <location line="-85" />
+        <location line="+93" />
         <source>Failed to remove file!</source>
         <translation>Falha ao remover o arquivo!</translation>
     </message>
     <message>
         <location line="-51" />
-        <location line="+72" />
+        <location line="+74" />
         <source>Failed to copy file!</source>
         <translation>Falha ao copiar o arquivo!</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+17" />
         <source>Folder Name</source>
         <translation>Nome da pasta</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Failed to create folder!</source>
         <translation>Falha ao criar a pasta!</translation>
     </message>
@@ -11287,58 +11359,58 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Não é possível salvar uma pasta!</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+14" />
+        <location line="+6" />
+        <location line="+15" />
         <location line="+19" />
-        <location line="+240" />
+        <location line="+225" />
         <source>Extract File</source>
         <translation>Extrair arquivo</translation>
     </message>
     <message>
-        <location line="-246" />
+        <location line="-231" />
         <source>View/Edit</source>
         <translation>Visualização/edição</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+237" />
+        <location line="+222" />
         <source>Add File</source>
         <translation>Adicionar arquivo</translation>
     </message>
     <message>
-        <location line="-236" />
-        <location line="+238" />
+        <location line="-221" />
+        <location line="+223" />
         <source>New Folder</source>
         <translation>Nova pasta</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+14" />
-        <location line="+322" />
-        <location line="+12" />
+        <location line="-135" />
+        <location line="+13" />
+        <location line="+303" />
+        <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>Romfs não são suportados nesta placa!</translation>
     </message>
     <message>
-        <location line="-290" />
-        <location line="+45" />
+        <location line="-275" />
+        <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Falha em descompactar romfos!</translation>
     </message>
     <message>
         <location line="-19" />
-        <location line="+28" />
+        <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>Romfs OpenMV</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+172" />
+        <location line="-25" />
+        <location line="+165" />
         <source>ROMFS Images (*.img)</source>
         <translation>Imagens de Romfs (*.img)</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="-101" />
         <source>Commit</source>
         <translation>Comprometer-se</translation>
     </message>
@@ -11353,17 +11425,17 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Salvar romfs para arquivar</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location line="+8" />
+        <location line="+105" />
+        <location line="+7" />
+        <location line="+11" />
         <location line="+12" />
-        <location line="+13" />
-        <location line="+12" />
+        <location line="+11" />
         <source>Reset ROMFS</source>
         <translation>Redefinir romfs</translation>
     </message>
     <message>
-        <location line="-44" />
-        <source>Are you sure you want to reset your OpenMV Cam's ROM file system?</source>
+        <location line="-40" />
+        <source>Are you sure you want to reset your OpenMV Cam&apos;s ROM file system?</source>
         <translation>Tem certeza de que deseja redefinir o sistema de arquivos ROM do OpenMV CAM?</translation>
     </message>
     <message>
@@ -11393,12 +11465,12 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>&lt;a href="https://pypi.org/project/mpy-cross/"&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://pypi.org/project/mpy-cross/"&gt; opções de cli cross Compilier MPY &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://pypi.org/project/mpy-cross/&quot;&gt; opções de cli cross Compilier MPY &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
         <source>Advanced</source>
         <translation>Avançada Avançado</translation>
@@ -11411,7 +11483,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
     </message>
     <message>
         <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+90" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
         <source>Compiling</source>
         <translation>Compilação</translation>
@@ -11423,9 +11495,9 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-780" />
         <source>Success - Press Ok to close the window</source>
         <translation>Sucesso - pressione OK para fechar a janela</translation>
     </message>
@@ -11438,18 +11510,18 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Falha - Pressione Cancelar para fechar a janela</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+126" />
+        <location line="+111" />
         <location line="+14" />
-        <location line="+173" />
+        <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>Compilador de Steedge</translation>
     </message>
     <message>
-        <location line="-334" />
+        <location line="-300" />
         <source>Failed to copy JSON file!</source>
         <translation>Falha ao copiar o arquivo json!</translation>
     </message>
@@ -11486,14 +11558,13 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+24" />
         <source>--verbosity 2</source>
         <translation>-Verbosidade 2</translation>
     </message>
     <message>
-        <location line="-22" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; opções de cli central stedgeaii &lt;/a&gt;</translation>
+        <location line="+2" />
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; opções de cli central stedgeaii &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -11502,16 +11573,15 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; stedgeai neural-arta cli opções &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; stedgeai neural-arta cli opções &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; opções de CLI de realocação de stedgeai &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href = &quot;%1&quot;&gt; opções de CLI de realocação de stedgeai &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+75" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>Falha ao abrir o arquivo JSON!</translation>
@@ -11522,7 +11592,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Stedgeai</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+140" />
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
         <translation>O Compilier StedgeAI não é suportado nesta plataforma.</translation>
     </message>
@@ -11550,8 +11620,8 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md"&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
-        <translation>)</translation>
+        <source>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+67" />
@@ -11574,6 +11644,31 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <source>STM32 Programmer is not supported on this platform.</source>
         <translation>O programador STM32 não é suportado nesta plataforma.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <source>the detected board</source>
+        <translation>a placa detectada</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>The selected file &quot;%L1&quot; does not match any firmware interface for %L2.</source>
+        <translation>O ficheiro selecionado &quot;%L1&quot; não corresponde a nenhuma interface de firmware para %L2.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%L1 accepts files named:</source>
+        <translation>%L1 aceita ficheiros nomeados:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Rename your firmware file to one of the names above (or select the correct file) and try again.</source>
+        <translation>Renomeie o seu ficheiro de firmware para um dos nomes acima (ou selecione o ficheiro correto) e tente novamente.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>This board does not define any loadable firmware interfaces in its settings.</source>
+        <translation>Esta placa não define nenhuma interface de firmware carregável nas suas definições.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
@@ -11583,91 +11678,39 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+28" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+235" />
         <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
         <location line="+15" />
         <location line="+22" />
-        <location line="+132" />
         <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+21" />
         <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+306" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+144" />
         <source>Project Location</source>
         <translation>Localização do projeto</translation>
     </message>
     <message>
-        <location line="-895" />
-        <location line="+28" />
-        <location line="+21" />
+        <location line="-886" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
-        <location line="+15" />
         <location line="+22" />
-        <location line="+24" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+11" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
-        <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+28" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+20" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+81" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
@@ -11677,7 +11720,59 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+94" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+15" />
+        <location line="+22" />
+        <location line="+18" />
+        <location line="+21" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+51" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
         <source>Location</source>
         <translation>Localização</translation>
     </message>
@@ -11686,7 +11781,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation type="vanished">Teste Qt</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-516" />
         <source>Google Test</source>
         <translation>Teste do Google</translation>
     </message>
@@ -11706,49 +11801,49 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Catch2</translation>
     </message>
     <message>
-        <location line="-762" />
+        <location line="-371" />
         <location line="+25" />
         <location line="+26" />
-        <location line="+712" />
+        <location line="+321" />
         <source>Test framework:</source>
         <translation>Estrutura de teste:</translation>
     </message>
     <message>
-        <location line="-687" />
+        <location line="-296" />
         <source>GUI Application</source>
         <translation>Aplicação GUI</translation>
     </message>
     <message>
         <location line="-75" />
         <location line="+51" />
-        <location line="+715" />
+        <location line="+324" />
         <source>Test suite name:</source>
         <translation>Nome do conjunto de teste:</translation>
     </message>
     <message>
-        <location line="-790" />
-        <location line="+25" />
+        <location line="-374" />
         <location line="+24" />
         <location line="+27" />
         <location line="+21" />
-        <location line="+694" />
+        <location line="+22" />
+        <location line="+281" />
         <source>Test case name:</source>
         <translation>Nome do caso de teste:</translation>
     </message>
     <message>
-        <location line="-693" />
+        <location line="-302" />
         <source>Requires QApplication</source>
         <translation>Requer QApplication</translation>
     </message>
     <message>
-        <location line="-97" />
+        <location line="+22" />
         <source>Generate setup code</source>
         <translation>Gerar código de configuração</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+98" />
-        <location line="+692" />
+        <location line="-20" />
+        <location line="+21" />
+        <location line="+280" />
         <source>Generate initialization and cleanup code</source>
         <translation>Gerar código de inicialização e limpeza</translation>
     </message>
@@ -11757,17 +11852,17 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation type="vanished">Habilitar C++11</translation>
     </message>
     <message>
-        <location line="-766" />
+        <location line="-324" />
         <source>Googletest source directory (optional):</source>
         <translation>Diretório de origem do Googletest (opcional):</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>Aumente o diretório de inclusão (opcional):</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 inclui diretório (opcional):</translation>
     </message>
@@ -11777,154 +11872,154 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Usar bibliotecas Qt</translation>
     </message>
     <message>
-        <location line="-50" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+45" />
-        <location line="+47" />
-        <location line="+84" />
+        <location line="+107" />
+        <location line="+46" />
+        <location line="+43" />
         <source>qmake</source>
         <translation>qfazer</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
+        <location line="+105" />
+        <location line="+48" />
         <location line="+43" />
-        <location line="+49" />
-        <location line="+84" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+85" />
+        <location line="+153" />
+        <location line="+44" />
         <source>Qbs</source>
         <translation>Qb</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+314" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build system:</source>
         <translation>Sistema de construção:</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Informações de projeto e teste</translation>
     </message>
     <message>
-        <location line="-120" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-93" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+26" />
-        <location line="+51" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+79" />
+        <location line="+116" />
         <location line="+18" />
         <location line="+4" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+41" />
+        <location line="+17" />
+        <location line="+33" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+70" />
-        <location line="+220" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+28" />
+        <location line="+142" />
         <source>Details</source>
         <translation>Detalhes</translation>
     </message>
     <message>
-        <location line="-869" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-887" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Seleção de kits</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -11932,101 +12027,101 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>kits</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+18" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <source>Project Management</source>
         <translation>Gerenciamento de projetos</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+37" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+41" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Resumo</translation>
@@ -12036,9 +12131,9 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation type="vanished">Cria um novo projeto de teste de unidade. Os testes de unidade permitem verificar se o código está apto para uso e se não há regressões.</translation>
     </message>
     <message>
-        <location line="-466" />
-        <location line="+12" />
-        <location line="+456" />
+        <location line="-715" />
+        <location line="+380" />
+        <location line="+165" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>outro projeto</translation>
@@ -12048,36 +12143,36 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation type="vanished">Projeto de teste automático</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="-620" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Nome totalmente qualificado, incluindo namespaces</translation>
     </message>
     <message>
-        <location line="-645" />
-        <location line="+36" />
-        <location line="+276" />
-        <location line="+80" />
-        <location line="+235" />
-        <location line="+19" />
+        <location line="+1" />
         <location line="+22" />
+        <location line="+19" />
+        <location line="+289" />
+        <location line="+145" />
+        <location line="+40" />
+        <location line="+119" />
         <source>Class name:</source>
         <translation>Nome da classe:</translation>
     </message>
     <message>
-        <location line="-631" />
-        <location line="+592" />
-        <location line="+18" />
+        <location line="-633" />
+        <location line="+42" />
+        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Personalizado&gt;</translation>
     </message>
     <message>
-        <location line="-646" />
-        <location line="+37" />
-        <location line="+282" />
-        <location line="+73" />
-        <location line="+237" />
-        <location line="+18" />
+        <location line="-474" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+294" />
+        <location line="+139" />
+        <location line="+39" />
+        <location line="+119" />
         <source>Base class:</source>
         <translation>Classe básica:</translation>
     </message>
@@ -12086,7 +12181,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-632" />
         <source>Include QObject</source>
         <translation>Incluir QObject</translation>
     </message>
@@ -12124,70 +12219,70 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Adicionar QML_ELEMENT</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+68" />
-        <location line="+262" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+315" />
+        <location line="+292" />
         <source>Header file:</source>
         <translation>Arquivo de cabeçalho:</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+288" />
-        <location line="+68" />
-        <location line="+220" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+215" />
         <location line="+1" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+80" />
+        <location line="+133" />
+        <location line="+39" />
+        <location line="+120" />
         <source>Source file:</source>
         <translation>Arquivo fonte:</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+392" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+34" />
-        <location line="+19" />
-        <location line="+444" />
-        <location line="+19" />
-        <location line="+22" />
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Caminho:</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+596" />
-        <location line="+22" />
+        <location line="-739" />
+        <location line="+38" />
+        <location line="+429" />
+        <location line="+39" />
         <source>Define Class</source>
         <translation>Definir classe</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-502" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Cria um cabeçalho C++ e um arquivo de origem para uma nova classe que você pode adicionar a um projeto C++.</translation>
     </message>
     <message>
-        <location line="-203" />
-        <location line="+130" />
-        <location line="+74" />
+        <location line="+1" />
+        <location line="+65" />
+        <location line="+9" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-73" />
         <source>C++ Class</source>
         <translation>Classe C++</translation>
     </message>
@@ -12227,22 +12322,22 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Cria um modelo de item Qt.</translation>
     </message>
     <message>
-        <location line="-231" />
-        <location line="+39" />
-        <location line="+26" />
-        <location line="+65" />
-        <location line="+18" />
-        <location line="+84" />
+        <location line="+1" />
+        <location line="+66" />
+        <location line="+57" />
+        <location line="+62" />
+        <location line="+9" />
+        <location line="+59" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-252" />
         <source>Qt Item Model</source>
         <translation>Modelo de Item Qt</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+4" />
         <source>Qt for Python module:</source>
         <translation>Módulo Qt para Python:</translation>
     </message>
@@ -12267,8 +12362,8 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Importar QtQuick</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
         <location line="+6" />
@@ -12276,18 +12371,18 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Cria um novo arquivo de classe Python.</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+71" />
+        <location line="+1" />
+        <location line="+158" />
         <source>Python</source>
         <translation>Pitão</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-157" />
         <source>Python Class</source>
         <translation>Classe Python</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+3" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Cria um projeto de teste baseado em CMake para o qual um trecho de código pode ser inserido.</translation>
     </message>
@@ -12342,7 +12437,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Fragmento de código</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="+7" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Cria um arquivo de cabeçalho que você pode adicionar a um projeto C/C++.</translation>
     </message>
@@ -12352,7 +12447,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Arquivo de Cabeçalho C/C++</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Cria um arquivo de origem que você pode adicionar a um projeto C/C++.</translation>
     </message>
@@ -12362,7 +12457,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Arquivo de Origem C/C++</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>Escolha um modelo de formulário</translation>
     </message>
@@ -12380,12 +12475,12 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation type="vanished">Formulário Qt Designer</translation>
     </message>
     <message>
-        <location line="-15" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Cria um fragment shader na Desktop OpenGL Shading Language (GLSL). Fragment shaders geram as cores de pixel finais para triângulos, pontos e linhas renderizados com OpenGL.</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+1" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -12393,12 +12488,12 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-26" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragment Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Cria um sombreador de vértice no Desktop OpenGL Shading Language (GLSL). Os sombreadores de vértice transformam as posições, normais e coordenadas de textura de triângulos, pontos e linhas renderizados com OpenGL.</translation>
     </message>
@@ -12408,7 +12503,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Vertex Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Cria um fragment shader na OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders geram as cores de pixel finais para triângulos, pontos e linhas renderizados com OpenGL.</translation>
     </message>
@@ -12418,7 +12513,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Fragment Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Cria um sombreador de vértice na OpenGL/ES 2.0 Shading Language (GLSL/ES). Os sombreadores de vértice transformam as posições, normais e coordenadas de textura de triângulos, pontos e linhas renderizados com OpenGL.</translation>
     </message>
@@ -12428,7 +12523,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="+7" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Cria um arquivo Java com código clichê.</translation>
     </message>
@@ -12443,7 +12538,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Arquivo Java</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>biblioteca sem estado</translation>
     </message>
@@ -12464,25 +12559,25 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Arquivo JS</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+12" />
         <source>Model name:</source>
         <translation>Nome do modelo:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
+        <location line="+1" />
+        <location line="+67" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Localização:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
-        <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" existe no sistema de arquivos.</translation>
+        <location line="-66" />
+        <location line="+67" />
+        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; existe no sistema de arquivos.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model Name and Location</source>
         <translation>Nome e localização do modelo</translation>
     </message>
@@ -12492,19 +12587,19 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Cria um novo modelo vazio com um diagrama vazio.</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+53" />
-        <location line="+12" />
+        <location line="+1" />
+        <location line="+5" />
+        <location line="+62" />
         <source>Modeling</source>
         <translation>Modelagem</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model</source>
         <translation>Modelo</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+3" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Cria um modelo de rascunho usando um arquivo temporário.</translation>
     </message>
@@ -12514,23 +12609,23 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Modelo Scratch</translation>
     </message>
     <message>
-        <location line="-81" />
+        <location line="+7" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Cria um arquivo Nim vazio usando o conjunto de caracteres UTF-8.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+14" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>Arquivo Nim</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Cria um arquivo de script Nim vazio usando o conjunto de caracteres UTF-8.</translation>
     </message>
@@ -12540,7 +12635,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Arquivo de script do Nim</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+7" />
         <source>Creates an empty Python script file using UTF-8 charset.</source>
         <translation>Cria um arquivo de script Python vazio usando o conjunto de caracteres UTF-8.</translation>
     </message>
@@ -12550,7 +12645,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Arquivo Python</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Cria um arquivo Qt Resource (.qrc).</translation>
     </message>
@@ -12560,9 +12655,9 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Ficheiro de Recurso QtName</translation>
     </message>
     <message>
-        <location line="-67" />
-        <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
-        <translation>Cria um arquivo QML com código clichê, começando com "import QtQuick".</translation>
+        <location line="+7" />
+        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
+        <translation>Cria um arquivo QML com código clichê, começando com &quot;import QtQuick&quot;.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12570,21 +12665,21 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Arquivo QML (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="-32" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Cria um buffer temporário usando um arquivo temporário.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+57" />
-        <location line="+47" />
+        <location line="-66" />
+        <location line="+67" />
+        <location line="+45" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Em geral</translation>
     </message>
     <message>
-        <location line="-634" />
+        <location line="-401" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Este assistente cria um projeto de teste de unidade simples usando o Boost.</translation>
     </message>
@@ -12609,21 +12704,21 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Cria um novo projeto de teste de unidade usando o Boost. Os testes de unidade permitem verificar se o código é adequado para uso e que não há regressões.</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+25" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Test Project</source>
         <translation>Projeto de teste</translation>
     </message>
     <message>
-        <location line="-21" />
+        <location line="-93" />
         <source>Boost Test Project</source>
         <translation>Projeto de teste de impulso</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Este assistente cria um projeto de teste de unidade simples usando o Catch2.</translation>
     </message>
@@ -12658,7 +12753,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Projeto de teste Catch2</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Este assistente cria um projeto de teste de unidade simples usando o teste do Google.</translation>
     </message>
@@ -12688,7 +12783,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Projeto de teste do Google</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Este assistente cria um projeto de teste de unidade simples usando o teste QT.</translation>
     </message>
@@ -12703,7 +12798,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Projeto de teste QT</translation>
     </message>
     <message>
-        <location line="-116" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Este assistente cria um projeto de teste de unidade simples usando o teste rápido do QT.</translation>
     </message>
@@ -12718,17 +12813,17 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Projeto de teste rápido qt</translation>
     </message>
     <message>
-        <location line="+815" />
+        <location line="+10" />
         <source>Include QQuickItem</source>
         <translation>Inclua Qquickitem</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+67" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>Cria um projeto de teste baseado em cmake, onde você pode inserir um snippet de código para compilar e verificar.</translation>
     </message>
     <message>
-        <location line="-121" />
+        <location line="+29" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>Cria um formulário de designer de widgets QT que você pode adicionar a um projeto de widget QT. Isso é útil se você já possui uma classe existente para a lógica de negócios da interface do usuário.</translation>
     </message>
@@ -12738,7 +12833,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>QT Widgets Designer Form</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="+64" />
         <source>Creates a markdown file.</source>
         <translation>Cria um arquivo de marcação.</translation>
     </message>
@@ -12748,12 +12843,12 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Arquivo de marcação</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="+67" />
         <source>Scratch Buffer</source>
         <translation>Buffer de rascunho</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>Nome do gráfico de estado:</translation>
     </message>
@@ -12773,7 +12868,7 @@ O OpenMV IDE apenas copiará o modelo como está.</translation>
         <translation>Gráfico de estado</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -12813,7 +12908,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Caso de teste</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>Cria um arquivo vazio.</translation>
     </message>
@@ -12823,7 +12918,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Arquivo vazio</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Cria um arquivo de tradução que você pode adicionar a um projeto QT.</translation>
     </message>
@@ -12833,61 +12928,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Arquivo de tradução QT</translation>
     </message>
     <message>
-        <location line="-623" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Este assistente cria um aplicativo de console simples baseado em Qt.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+83" />
+        <location line="+195" />
         <source>Meson</source>
         <translation>Méson</translation>
     </message>
     <message>
-        <location line="-442" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-326" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Define Build System</source>
         <translation>Definir sistema de construção</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-328" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build System</source>
         <translation>Construir sistema</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-328" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation File</source>
         <translation>Arquivo de tradução</translation>
     </message>
     <message>
-        <location line="-591" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-479" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation</source>
         <translation>Tradução</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-262" />
         <source>Define Python Interpreter</source>
         <translation>Defina o intérprete Python</translation>
     </message>
@@ -12902,7 +12997,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Cria um aplicativo QT para Python que inclui um widget baseado em widgets QT (arquivo de interface do usuário). Requer .ui para conversão de python.</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+38" />
         <source>Qt 6.4</source>
         <translation>Qt 6.4</translation>
     </message>
@@ -12917,7 +13012,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Cria um aplicativo rápido QT que pode ter código QML e C ++. Você pode criar o aplicativo e implantá -lo em plataformas de desktop, incorporado e de destino móvel.</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="+42" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -12926,7 +13021,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  Para desenvolver um aplicativo completo, crie um projeto de aplicativo rápido QT.</translation>
     </message>
     <message>
-        <location line="+173" />
+        <location line="+30" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -12943,31 +13038,31 @@ Preselects a desktop Qt for building the application if available.</source>
 Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+32" />
-        <location line="+299" />
-        <location line="+114" />
+        <location line="-337" />
+        <location line="+266" />
+        <location line="+28" />
+        <location line="+44" />
         <source>Application (Qt)</source>
         <translation>Aplicação (Qt)</translation>
     </message>
     <message>
-        <location line="-412" />
+        <location line="-337" />
         <source>Qt Console Application</source>
         <translation>Aplicação de Consola Qt</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Este assistente cria um projeto de biblioteca C++.</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+84" />
+        <location line="+308" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Especifique as informações básicas sobre as classes para as quais você deseja gerar arquivos de código-fonte esqueleto.</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="-307" />
         <source>Shared Library</source>
         <translation>Biblioteca Compartilhada</translation>
     </message>
@@ -12983,17 +13078,17 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
     </message>
     <message>
         <location line="+1" />
-        <location line="+35" />
+        <location line="+46" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Tipo:</translation>
     </message>
     <message>
-        <source>%{JS: value('Type') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</source>
-        <translation type="vanished">%{JS: value('Type') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</translation>
+        <source>%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</source>
+        <translation type="vanished">%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -13059,14 +13154,14 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Módulo Qt:</translation>
     </message>
     <message>
-        <location line="-519" />
-        <location line="+147" />
-        <location line="+70" />
+        <location line="+3" />
+        <location line="+116" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+59" />
-        <location line="+42" />
+        <location line="+68" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+170" />
         <source>Define Project Details</source>
         <translation>Definir detalhes do projeto</translation>
     </message>
@@ -13075,38 +13170,38 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation type="vanished">Cria uma biblioteca C++. Isso pode ser usado para criar:&lt;ul&gt;&lt;li&gt;uma biblioteca C++ compartilhada para uso com &lt;tt&gt;QPluginLoader&lt;/tt&gt; e tempo de execução (Plugins)&lt;/li&gt;&lt;li&gt;uma biblioteca C++ compartilhada ou estática para uso com outro projeto no linktime&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-513" />
-        <location line="+460" />
-        <location line="+62" />
-        <location line="+7" />
+        <location line="-427" />
+        <location line="+18" />
+        <location line="+186" />
+        <location line="+232" />
         <source>Library</source>
         <translation>Biblioteca</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-435" />
         <source>C++ Library</source>
         <translation>Biblioteca C++</translation>
     </message>
     <message>
-        <location line="-366" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>Cria um aplicativo Nim simples.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+229" />
+        <location line="+40" />
         <location line="+18" />
-        <location line="+157" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Projeto não-Qt</translation>
     </message>
     <message>
-        <location line="-403" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>Aplicação Nim</translation>
     </message>
     <message>
-        <location line="+369" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>Binário</translation>
     </message>
@@ -13121,13 +13216,13 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Autor:</translation>
     </message>
     <message>
-        <location line="-544" />
-        <location line="+545" />
+        <location line="+1" />
+        <location line="+402" />
         <source>Description:</source>
         <translation>Descrição:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-401" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -13192,13 +13287,13 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Outro</translation>
     </message>
     <message>
-        <location line="-560" />
-        <location line="+561" />
+        <location line="+1" />
+        <location line="+386" />
         <source>License:</source>
         <translation>Licença:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-385" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -13239,22 +13334,22 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Definir configuração do projeto</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="+1" />
+        <location line="+253" />
+        <location line="+1" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+202" />
         <source>Configuration</source>
         <translation>Configuração</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-343" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Cria um aplicativo Nim com o Nimble.</translation>
     </message>
@@ -13264,7 +13359,7 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Aplicativo ágil</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Cria um aplicativo C simples sem dependências.</translation>
     </message>
@@ -13274,7 +13369,7 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Aplicação Simples C</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Cria um aplicativo C++ simples sem dependências.</translation>
     </message>
@@ -13284,7 +13379,7 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Aplicativo C++ Simples</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Este assistente cria um arquivo .pro vazio.</translation>
     </message>
@@ -13303,43 +13398,43 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation type="vanished">Versão do PySide:</translation>
     </message>
     <message>
-        <location line="-218" />
+        <location line="+13" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Cria um aplicativo Qt for Python que contém apenas o código principal para um QApplication.</translation>
     </message>
     <message>
-        <location line="-14" />
-        <location line="+15" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+18" />
+        <location line="+21" />
         <source>Application (Qt for Python)</source>
         <translation>Aplicativo (Qt para Python)</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-60" />
         <source>Empty Application</source>
         <translation>Aplicativo Vazio</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MinhaClasse'}</translation>
+        <source>%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MinhaClasse&apos;}</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</source>
-        <translation type="vanished">%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</translation>
+        <source>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</source>
+        <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-28" />
-        <location line="+37" />
+        <location line="+9" />
+        <location line="+39" />
         <source>Project file:</source>
         <translation>Arquivo do projeto:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Cria um aplicativo Qt for Python que contém uma janela vazia.</translation>
     </message>
@@ -13349,15 +13444,15 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>janela vazia</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+15" />
+        <location line="-32" />
         <location line="+22" />
         <location line="+15" />
+        <location line="+24" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-211" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -13366,19 +13461,19 @@ Preselects a desktop Qt for building the application if available.</source>
  Pré -seleciona um QT de mesa para criar o aplicativo, se disponível.</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Cria uma biblioteca C ++. Você pode criar: &lt;ul&gt; &lt;li&gt; Uma biblioteca C ++ compartilhada para uso com &lt;tt&gt; qpluginloader &lt;/tt&gt; e tempo de execução (plugins) &lt;/li&gt; &lt;li&gt; Uma biblioteca C ++ compartilhada ou estática para uso com outro projeto no LinkTime &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+15" />
+        <location line="+107" />
         <location line="+22" />
+        <location line="+39" />
         <source>PySide 2</source>
         <translation>Pyside 2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="-24" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -13412,50 +13507,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Cria um aplicativo Qt for Python que inclui um widget baseado em Qt Designer (arquivo ui) - Requer conversão de .ui para Python</translation>
     </message>
     <message>
-        <location line="-55" />
+        <location line="+21" />
         <source>Window UI</source>
         <translation>IU da janela</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+311" />
+        <location line="+10" />
         <location line="+25" />
+        <location line="+23" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-335" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
         <location line="+23" />
+        <location line="+25" />
         <source>Minimum required Qt version:</source>
         <translation>Versão Qt mínima exigida:</translation>
     </message>
     <message>
-        <location line="-22" />
+        <location line="-47" />
         <source>MyItem</source>
         <translation>MeuItem</translation>
     </message>
@@ -13503,9 +13598,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Crie um projeto com uma estrutura compatível tanto com o Qt Design Studio (via .qmlproject) quanto com o Qt Creator (via CMakeLists.txt). Ele contém um formulário .ui.qml que você pode editar visualmente no Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="-324" />
-        <location line="+274" />
-        <location line="+55" />
+        <location line="+5" />
+        <location line="+30" />
+        <location line="+16" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Usar teclado virtual Qt</translation>
     </message>
@@ -13518,18 +13613,18 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Cria um aplicativo Qt Quick que contém uma janela vazia. Opcionalmente, você pode criar um projeto Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-33" />
         <source>Qt Quick Application</source>
         <translation>Aplicação Rápida do Qt</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="+26" />
         <source>Creates a Qt Quick application that contains an empty window.
 
-Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
+Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
         <translation>Cria um aplicativo Qt Quick que contém uma janela vazia.
 
-Use esta versão "compat" se quiser usar outros sistemas de compilação além das versões CMake ou Qt inferiores a 6.</translation>
+Use esta versão &quot;compat&quot; se quiser usar outros sistemas de compilação além das versões CMake ou Qt inferiores a 6.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13545,18 +13640,18 @@ Use this only if you are prototyping. You cannot create a full application with 
 Use isso somente se você estiver criando um protótipo. Você não pode criar um aplicativo completo com isso. Considere usar um projeto Qt Quick Application.</translation>
     </message>
     <message>
-        <location line="+272" />
+        <location line="+14" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt Quick UI Prototype</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Este assistente gera um projeto de aplicativo Qt Widgets. O aplicativo deriva por padrão de QApplication e inclui um widget vazio.</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MinhaClasse'}</translation>
+        <source>%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MinhaClasse&apos;}</translation>
     </message>
     <message>
         <location line="+15" />
@@ -13564,8 +13659,8 @@ Use isso somente se você estiver criando um protótipo. Você não pode criar u
         <translation>Gerar formulário</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), 'ui')}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), 'ui')}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13591,27 +13686,27 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Aplicativo Qt Widgets</translation>
     </message>
     <message>
-        <location line="-332" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Configure &lt;b&gt;%{vcsName}&lt;/b&gt; agora.</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-93" />
+        <location line="+52" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository:</source>
         <translation>Repositório:</translation>
     </message>
     <message>
         <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>O URL do repositório não é válido</translation>
@@ -13621,24 +13716,24 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
         <source>Directory:</source>
         <translation>Diretório:</translation>
     </message>
     <message>
-        <location line="-94" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
-        <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" existe no sistema de arquivos.</translation>
+        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; existe no sistema de arquivos.</translation>
     </message>
     <message>
-        <location line="-52" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>Usar diretório existente</translation>
     </message>
@@ -13714,13 +13809,13 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
     </message>
     <message>
         <location line="+3" />
-        <location line="+19" />
+        <location line="+60" />
         <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Especifique a URL do repositório, o diretório de checkout e o caminho.</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>Filial do Bazar funcionando...</translation>
     </message>
@@ -13739,9 +13834,9 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Clona uma ramificação do Bazaar e tenta carregar o projeto contido.</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+1" />
+        <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <location line="+20" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
@@ -13749,12 +13844,12 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Importar Projeto</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Bazaar Clone (Ou Filial)</translation>
     </message>
     <message>
-        <location line="-69" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>Módulo:</translation>
     </message>
@@ -13773,7 +13868,7 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+52" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+19" />
         <location line="+1" />
@@ -13781,7 +13876,7 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Confira</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Verifica um repositório CVS e tenta carregar o projeto contido.</translation>
     </message>
@@ -13831,7 +13926,7 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Git clone</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>Executando o clone do Mercurial...</translation>
     </message>
@@ -13866,7 +13961,7 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Check-out do Subversion</translation>
     </message>
     <message>
-        <location line="-394" />
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Este assistente cria um plug-in personalizado do Qt Creator.</translation>
     </message>
@@ -13876,8 +13971,8 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Especifique detalhes sobre seu plug-in personalizado do Qt Creator.</translation>
     </message>
     <message>
-        <source>%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</source>
-        <translation type="vanished">%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</translation>
+        <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
+        <translation type="vanished">%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13915,8 +14010,8 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
         <translation>Coloque uma breve descrição do seu plugin aqui</translation>
     </message>
     <message>
-        <source>https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</source>
-        <translation type="vanished">https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</translation>
+        <source>https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</source>
+        <translation type="vanished">https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13941,7 +14036,7 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
     <message>
         <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
         <source>S&amp;essions</source>
-        <translation>S &amp; Essions</translation>
+        <translation>S &amp;Essions</translation>
     </message>
     <message>
         <location line="+9" />
@@ -14008,8 +14103,8 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
     </message>
     <message>
         <location line="+42" />
-        <source>Could not save session to file "%1"</source>
-        <translation>Não foi possível salvar a sessão para arquivar "%1"</translation>
+        <source>Could not save session to file &quot;%1&quot;</source>
+        <translation>Não foi possível salvar a sessão para arquivar &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
@@ -14024,7 +14119,7 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
     <message>
         <location line="+7" />
         <source>&amp;New...</source>
-        <translation>&amp;Nova... &amp;Novo...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3" />
@@ -14034,12 +14129,12 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
     <message>
         <location line="+2" />
         <source>&amp;Rename...</source>
-        <translation>E renomear ...</translation>
+        <translation>E &amp;renomear ...</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C&amp;lone...</source>
-        <translation>Clone...</translation>
+        <translation>C&amp;lone...</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14080,7 +14175,7 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
     <message>
         <location line="+0" />
         <source>Create and &amp;Open</source>
-        <translation>Crie e aberto</translation>
+        <translation>Crie e abert&amp;o</translation>
     </message>
     <message>
         <location line="+11" />
@@ -14090,7 +14185,7 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
     <message>
         <location line="+0" />
         <source>Clone and &amp;Open</source>
-        <translation>Clone and &amp; Open</translation>
+        <translation>Clone and &amp;Open</translation>
     </message>
     <message>
         <location line="+22" />
@@ -14100,12 +14195,12 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
     <message>
         <location line="+1" />
         <source>&amp;Rename</source>
-        <translation>E renomear</translation>
+        <translation>E &amp;renomear</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Rename and &amp;Open</source>
-        <translation>Renomear e aberto</translation>
+        <translation>Ren&amp;omear e aberto</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
@@ -14119,38 +14214,38 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
     </message>
     <message>
         <location line="+72" />
-        <source>Could not create directory "%1"</source>
-        <translation>Não foi possível criar diretório "%1"</translation>
+        <source>Could not create directory &quot;%1&quot;</source>
+        <translation>Não foi possível criar diretório &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>O programa "%1" não existe ou não é executável.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>O programa &quot;%1&quot; não existe ou não é executável.</translation>
     </message>
     <message>
         <location line="+34" />
-        <source>Starting: "%1" %2</source>
-        <translation>Iniciando: " %1" %2</translation>
+        <source>Starting: &quot;%1&quot; %2</source>
+        <translation>Iniciando: &quot; %1&quot; %2</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The process "%1" exited normally.</source>
-        <translation>O processo "%1" saiu normalmente.</translation>
+        <source>The process &quot;%1&quot; exited normally.</source>
+        <translation>O processo &quot;%1&quot; saiu normalmente.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The process "%1" exited with code %2.</source>
-        <translation>O processo " %1" saiu do código %2.</translation>
+        <source>The process &quot;%1&quot; exited with code %2.</source>
+        <translation>O processo &quot; %1&quot; saiu do código %2.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Could not start process "%1" %2.</source>
-        <translation>Não foi possível iniciar o processo " %1" %2.</translation>
+        <source>Could not start process &quot;%1&quot; %2.</source>
+        <translation>Não foi possível iniciar o processo &quot; %1&quot; %2.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The process "%1" crashed.</source>
-        <translation>O processo "%1" caiu.</translation>
+        <source>The process &quot;%1&quot; crashed.</source>
+        <translation>O processo &quot;%1&quot; caiu.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
@@ -14191,8 +14286,8 @@ Pré-seleciona um Qt de desktop para construir o aplicativo, se disponível.</tr
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files of all open projects. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Localiza arquivos de todos os projetos abertos. Anexe "+&lt;número&gt;" ou ": &lt;número&gt;" para pular para o número da linha fornecida. Anexe outro "+&lt;número&gt;" ou ": &lt;número&gt;" para pular para o número da coluna também.</translation>
+        <source>Locates files of all open projects. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Localiza arquivos de todos os projetos abertos. Anexe &quot;+&lt;número&gt;&quot; ou &quot;: &lt;número&gt;&quot; para pular para o número da linha fornecida. Anexe outro &quot;+&lt;número&gt;&quot; ou &quot;: &lt;número&gt;&quot; para pular para o número da coluna também.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
@@ -14247,7 +14342,7 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>Show &amp;App Output</source>
-        <translation>Mostrar e saída de aplicativos</translation>
+        <translation>Mostr&amp;ar e saída de aplicativos</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14368,13 +14463,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+105" />
-        <source>Build directory contains potentially problematic character "%1".</source>
-        <translation>O diretório de construção contém caráter potencialmente problemático "%1".</translation>
+        <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
+        <translation>O diretório de construção contém caráter potencialmente problemático &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>This warning can be suppressed &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>Este aviso pode ser suprimido &lt;a href = "dummy"&gt; aqui &lt;/a&gt;.</translation>
+        <source>This warning can be suppressed &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Este aviso pode ser suprimido &lt;a href = &quot;dummy&quot;&gt; aqui &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -14430,7 +14525,7 @@ Excluding: %2
     </message>
     <message>
         <location line="+4" />
-        <source>Variables in the build configuration's environment</source>
+        <source>Variables in the build configuration&apos;s environment</source>
         <translation>Variáveis ​​no ambiente da configuração de construção</translation>
     </message>
     <message>
@@ -14472,12 +14567,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build configuration</source>
+        <source>Name of the project&apos;s active build configuration</source>
         <translation>Nome da configuração de construção ativa do projeto</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build system</source>
+        <source>Name of the project&apos;s active build system</source>
         <translation>Nome do sistema de construção ativo do projeto</translation>
     </message>
     <message>
@@ -14487,13 +14582,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Type of the project's active build configuration</source>
+        <source>Type of the project&apos;s active build configuration</source>
         <translation>Tipo de configuração de construção ativa do projeto</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>No build device is set for the kit "%1".</source>
-        <translation>Nenhum dispositivo de construção está definido para o kit "%1".</translation>
+        <source>No build device is set for the kit &quot;%1&quot;.</source>
+        <translation>Nenhum dispositivo de construção está definido para o kit &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -14502,20 +14597,20 @@ Excluding: %2
     </message>
     <message>
         <location line="+7" />
-        <source>The build device "%1" cannot reach the project directory.</source>
-        <translation>O dispositivo de construção "%1" não pode atingir o diretório do projeto.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the project directory.</source>
+        <translation>O dispositivo de construção &quot;%1&quot; não pode atingir o diretório do projeto.</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The build device "%1" cannot reach the build directory.</source>
-        <translation>O dispositivo de construção "%1" não pode atingir o diretório de compilação.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the build directory.</source>
+        <translation>O dispositivo de construção &quot;%1&quot; não pode atingir o diretório de compilação.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
         <source>Finished %1 of %n steps</source>
-        <translation>
-            <numerusform>Terminado %1 de %N etapas</numerusform>
-            <numerusform>Terminado %1 de %N etapas</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -14541,7 +14636,7 @@ Excluding: %2
     <message>
         <location line="+138" />
         <source>Compile</source>
-        <comment>Category for compiler issues listed under 'Issues'</comment>
+        <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>Compilar</translation>
     </message>
     <message>
@@ -14552,7 +14647,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Build System</source>
-        <comment>Category for build system issues listed under 'Issues'</comment>
+        <comment>Category for build system issues listed under &apos;Issues&apos;</comment>
         <translation>Sistema de construção</translation>
     </message>
     <message>
@@ -14563,7 +14658,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Deployment</source>
-        <comment>Category for deployment issues listed under 'Issues'</comment>
+        <comment>Category for deployment issues listed under &apos;Issues&apos;</comment>
         <translation>Implantação</translation>
     </message>
     <message>
@@ -14574,7 +14669,7 @@ Excluding: %2
     <message>
         <location line="+4" />
         <source>Autotests</source>
-        <comment>Category for autotest issues listed under 'Issues'</comment>
+        <comment>Category for autotest issues listed under &apos;Issues&apos;</comment>
         <translation>AutoTests</translation>
     </message>
     <message>
@@ -14591,7 +14686,7 @@ Excluding: %2
         <location line="+8" />
         <location line="+59" />
         <source>Clean</source>
-        <extracomment>Displayed name for a "cleaning" build step
+        <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
 Display name of the clean build step list. Used as part of the labels in the project window.</extracomment>
         <translation>Limpar/limpa Limpar/limpo</translation>
@@ -14655,8 +14750,8 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location line="+98" />
-        <source>When executing step "%1"</source>
-        <translation>Ao executar a etapa "%1"</translation>
+        <source>When executing step &quot;%1&quot;</source>
+        <translation>Ao executar a etapa &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
@@ -14873,8 +14968,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+3" />
-        <source>The project file "%1" does not exist.</source>
-        <translation>O arquivo do projeto "%1" não existe.</translation>
+        <source>The project file &quot;%1&quot; does not exist.</source>
+        <translation>O arquivo do projeto &quot;%1&quot; não existe.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/codestylesettingspropertiespage.cpp" line="+60" />
@@ -14901,7 +14996,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+38" />
         <source>Show Compile &amp;Output</source>
-        <translation>Mostre compilação e saída</translation>
+        <translation>M&amp;ostre compilação e saída</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14971,13 +15066,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from the current document's project. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Localiza arquivos do projeto do documento atual. Anexe "+&lt;número&gt;" ou ": &lt;número&gt;" para pular para o número da linha fornecida. Anexe outro "+&lt;número&gt;" ou ": &lt;número&gt;" para pular para o número da coluna também.</translation>
+        <source>Locates files from the current document&apos;s project. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Localiza arquivos do projeto do documento atual. Anexe &quot;+&lt;número&gt;&quot; ou &quot;: &lt;número&gt;&quot; para pular para o número da linha fornecida. Anexe outro &quot;+&lt;número&gt;&quot; ou &quot;: &lt;número&gt;&quot; para pular para o número da coluna também.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
-        <source>Project "%1"</source>
-        <translation>Projeto "%1"</translation>
+        <source>Project &quot;%1&quot;</source>
+        <translation>Projeto &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14986,8 +15081,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>Project "%1":</source>
-        <translation>Projeto "%1":</translation>
+        <source>Project &quot;%1&quot;:</source>
+        <translation>Projeto &quot;%1&quot;:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
@@ -15008,8 +15103,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
-        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>Analisadores de saída personalizados Visitalizar a saída da linha de comando para padrões de erro fornecidos pelo usuário &lt;br&gt; Para criar entradas nos problemas. &lt;br&gt; Os analisadores podem ser configurados &lt;a href = "dummy"&gt; aqui &lt;/a&gt;.</translation>
+        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Analisadores de saída personalizados Visitalizar a saída da linha de comando para padrões de erro fornecidos pelo usuário &lt;br&gt; Para criar entradas nos problemas. &lt;br&gt; Os analisadores podem ser configurados &lt;a href = &quot;dummy&quot;&gt; aqui &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+82" />
@@ -15032,19 +15127,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>&amp;Error message capture pattern:</source>
-        <translation>E padrão de captura de mensagem de erro:</translation>
+        <translation>&amp;E padrão de captura de mensagem de erro:</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+33" />
         <source>&amp;File name:</source>
-        <translation>&amp; Nome do arquivo:</translation>
+        <translation>&amp;Nome do arquivo:</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Line number:</source>
-        <translation>Número da linha:</translation>
+        <translation>Número da &amp;linha:</translation>
     </message>
     <message>
         <location line="-32" />
@@ -15067,7 +15162,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-31" />
         <source>E&amp;rror message:</source>
-        <translation>Mensagem e &amp; rror:</translation>
+        <translation>Mensagem e &amp;rror:</translation>
     </message>
     <message>
         <location line="+33" />
@@ -15152,7 +15247,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
-        <source>Custom output parsers defined here can be enabled individually in the project's build or run settings.</source>
+        <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>Os analisadores de saída personalizados definidos aqui podem ser ativados individualmente nas configurações de compilação ou execução do projeto.</translation>
     </message>
     <message>
@@ -15205,9 +15300,9 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+44" />
         <source>%n entries</source>
-        <translation>
-            <numerusform>%N entradas</numerusform>
-            <numerusform>%N entradas</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -15246,44 +15341,44 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
         <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>E caminho do compilador:</translation>
+        <translation>E &amp;caminho do compilador:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Make path:</source>
-        <translation>E fazer caminho:</translation>
+        <translation>E fazer ca&amp;minho:</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
         <source>&amp;ABI:</source>
-        <translation>&amp; ABI:</translation>
+        <translation>&amp;ABI:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Predefined macros:</source>
-        <translation>Macros predefinidos:</translation>
+        <translation>Macros &amp;predefinidos:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Header paths:</source>
-        <translation>&amp; Caminho do cabeçalho:</translation>
+        <translation>&amp;Caminho do cabeçalho:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C++11 &amp;flags:</source>
-        <translation>C ++ 11 e bandeiras:</translation>
+        <translation>&amp;C ++ 11 e bandeiras:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Qt mkspecs:</source>
-        <translation>&amp; Qt mkspecs:</translation>
+        <translation>&amp;Qt mkspecs:</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Error parser:</source>
-        <translation>E analisador de erros:</translation>
+        <translation>&amp;E analisador de erros:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/dependenciespanel.cpp" line="+83" />
@@ -15438,19 +15533,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
-        <source>No device for path "%1"</source>
-        <translation>Nenhum dispositivo para o caminho "%1"</translation>
+        <source>No device for path &quot;%1&quot;</source>
+        <translation>Nenhum dispositivo para o caminho &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
-        <source>No device found for path "%1"</source>
-        <translation>Nenhum dispositivo encontrado para o caminho "%1"</translation>
+        <source>No device found for path &quot;%1&quot;</source>
+        <translation>Nenhum dispositivo encontrado para o caminho &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-9" />
-        <source>No file access for device "%1"</source>
-        <translation>Sem acesso ao arquivo para o dispositivo "%1"</translation>
+        <source>No file access for device &quot;%1&quot;</source>
+        <translation>Sem acesso ao arquivo para o dispositivo &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
@@ -15475,12 +15570,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+22" />
         <source>&amp;Update List</source>
-        <translation>&amp; Lista de atualização</translation>
+        <translation>&amp;Lista de atualização</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Kill Process</source>
-        <translation>Processo de Kill</translation>
+        <translation>Processo de &amp;Kill</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15495,7 +15590,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-253" />
         <source>&amp;Device:</source>
-        <translation>&amp;Dispositiva: &amp;Dispositivo:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8" />
@@ -15520,7 +15615,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+4" />
         <source>&amp;Start Wizard to Add Device...</source>
-        <translation>E inicie o assistente para adicionar dispositivo ...</translation>
+        <translation>E inicie o a&amp;ssistente para adicionar dispositivo ...</translation>
     </message>
     <message>
         <location line="+12" />
@@ -15545,8 +15640,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+87" />
-        <source>Yes (id is "%1")</source>
-        <translation>Sim (ID é "%1")</translation>
+        <source>Yes (id is &quot;%1&quot;)</source>
+        <translation>Sim (ID é &quot;%1&quot;)</translation>
     </message>
     <message>
         <location line="+0" />
@@ -15675,13 +15770,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>No device for given path: "%1".</source>
-        <translation>Nenhum dispositivo para determinado caminho: "%1".</translation>
+        <source>No device for given path: &quot;%1&quot;.</source>
+        <translation>Nenhum dispositivo para determinado caminho: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Device for path "%1" does not support killing processes.</source>
-        <translation>O dispositivo para o caminho "%1" não suporta processos de morte.</translation>
+        <source>Device for path &quot;%1&quot; does not support killing processes.</source>
+        <translation>O dispositivo para o caminho &quot;%1&quot; não suporta processos de morte.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
@@ -15764,7 +15859,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Exibir direito e margem na coluna:</translation>
+        <translation>Exibir direito e &amp;margem na coluna:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15813,7 +15908,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-278" />
         <source>Ed&amp;it</source>
-        <translation>Editar</translation>
+        <translation>Ed&amp;itar</translation>
     </message>
     <message>
         <location line="+4" />
@@ -15828,7 +15923,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>&amp;Unset</source>
-        <translation>&amp;Desmembrada &amp;Desmembrado</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14" />
@@ -15843,7 +15938,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+9" />
         <source>Open &amp;Terminal</source>
-        <translation>Aberto e terminal</translation>
+        <translation>Aber&amp;to e terminal</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15852,33 +15947,33 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+123" />
-        <source>Unset &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Unset &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Unset &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation>Definir &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; para &lt;b&gt;%2 &lt;/b&gt;</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
+        <translation>Definir &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; para &lt;b&gt;%2 &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Anexe &lt;b&gt;%2 &lt;/b&gt; a &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Anexe &lt;b&gt;%2 &lt;/b&gt; a &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Prenda &lt;b&gt;%2 &lt;/b&gt; a &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Prenda &lt;b&gt;%2 &lt;/b&gt; a &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
-        <translation>Definir &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; para &lt;b&gt;%2 &lt;/b&gt; [desativado]</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
+        <translation>Definir &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; para &lt;b&gt;%2 &lt;/b&gt; [desativado]</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Use &lt;b&gt;%1&lt;/b&gt;</source>
-        <extracomment>%1 is "System Environment" or some such.</extracomment>
+        <extracomment>%1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Use &lt;b&gt;%1 &lt;/b&gt;</translation>
     </message>
     <message>
@@ -15889,7 +15984,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>Use &lt;b&gt;%1&lt;/b&gt; and</source>
-        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is "System Environment" or some such.</extracomment>
+        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Use &lt;b&gt;%1 &lt;/b&gt; e</translation>
     </message>
     <message>
@@ -15987,58 +16082,58 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Field "%1" has no type.</source>
-        <translation>Campo "%1" não tem tipo.</translation>
+        <source>Field &quot;%1&quot; has no type.</source>
+        <translation>Campo &quot;%1&quot; não tem tipo.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Field "%1" has unsupported type "%2".</source>
-        <translation>Campo "%1" possui tipo não suportado "%2".</translation>
+        <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
+        <translation>Campo &quot;%1&quot; possui tipo não suportado &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>When parsing Field "%1": %2</source>
-        <translation>Quando analisar o campo " %1": %2</translation>
+        <source>When parsing Field &quot;%1&quot;: %2</source>
+        <translation>Quando analisar o campo &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+208" />
-        <source>Label ("%1") data is not an object.</source>
-        <translation>Rótulo ("%1") Os dados não são um objeto.</translation>
+        <source>Label (&quot;%1&quot;) data is not an object.</source>
+        <translation>Rótulo (&quot;%1&quot;) Os dados não são um objeto.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Label ("%1") has no trText.</source>
-        <translation>Label ("%1") não tem trtext.</translation>
+        <source>Label (&quot;%1&quot;) has no trText.</source>
+        <translation>Label (&quot;%1&quot;) não tem trtext.</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>Spacer ("%1") data is not an object.</source>
-        <translation>Os dados espaçadores ("%1") não são um objeto.</translation>
+        <source>Spacer (&quot;%1&quot;) data is not an object.</source>
+        <translation>Os dados espaçadores (&quot;%1&quot;) não são um objeto.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Spacer ("%1") property "factor" is no integer value.</source>
-        <translation>O fator de propriedade do espaçador ("%1") "não é um valor inteiro.</translation>
+        <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
+        <translation>O fator de propriedade do espaçador (&quot;%1&quot;) &quot;não é um valor inteiro.</translation>
     </message>
     <message>
         <location line="+35" />
-        <source>LineEdit ("%1") data is not an object.</source>
-        <translation>Os dados de linha ("%1") não são um objeto.</translation>
+        <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>Os dados de linha (&quot;%1&quot;) não são um objeto.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>LineEdit ("%1") has an invalid regular expression "%2" in "validator".</source>
-        <translation>O LineEdit ("%1") possui uma expressão regular inválida "%2" em "Validator".</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
+        <translation>O LineEdit (&quot;%1&quot;) possui uma expressão regular inválida &quot;%2&quot; em &quot;Validator&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>LineEdit ("%1") has an invalid value "%2" in "completion".</source>
-        <translation>LineEdit ("%1") tem um valor inválido "%2" em "conclusão".</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
+        <translation>LineEdit (&quot;%1&quot;) tem um valor inválido &quot;%2&quot; em &quot;conclusão&quot;.</translation>
     </message>
     <message>
         <location line="+166" />
-        <source>TextEdit ("%1") data is not an object.</source>
-        <translation>Os dados do texto ("%1") não são um objeto.</translation>
+        <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>Os dados do texto (&quot;%1&quot;) não são um objeto.</translation>
     </message>
     <message>
         <location line="+83" />
@@ -16047,18 +16142,18 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+26" />
-        <source>kind "%1" is not one of the supported "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any".</source>
-        <translation>A tipo "%1" não é um dos "Diretores existingDirectory", "diretório", "arquivo", "salvamento", "comando existente", "comando", "qualquer".</translation>
+        <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
+        <translation>A tipo &quot;%1&quot; não é um dos &quot;Diretores existingDirectory&quot;, &quot;diretório&quot;, &quot;arquivo&quot;, &quot;salvamento&quot;, &quot;comando existente&quot;, &quot;comando&quot;, &quot;qualquer&quot;.</translation>
     </message>
     <message>
         <location line="+80" />
-        <source>CheckBox ("%1") data is not an object.</source>
-        <translation>Caixa de seleção ("%1") Os dados não são um objeto.</translation>
+        <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
+        <translation>Caixa de seleção (&quot;%1&quot;) Os dados não são um objeto.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>CheckBox ("%1") values for checked and unchecked state are identical.</source>
-        <translation>Os valores da caixa de seleção ("%1") para estado verificado e desmarcado são idênticos.</translation>
+        <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
+        <translation>Os valores da caixa de seleção (&quot;%1&quot;) para estado verificado e desmarcado são idênticos.</translation>
     </message>
     <message>
         <location line="+80" />
@@ -16067,33 +16162,33 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>No "key" found in List items.</source>
-        <translation>Nenhuma "chave" encontrada nos itens da lista.</translation>
+        <source>No &quot;key&quot; found in List items.</source>
+        <translation>Nenhuma &quot;chave&quot; encontrada nos itens da lista.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>%1 ("%2") data is not an object.</source>
-        <translation>Os dados%1 ("%2") não são um objeto.</translation>
+        <source>%1 (&quot;%2&quot;) data is not an object.</source>
+        <translation>Os dados%1 (&quot;%2&quot;) não são um objeto.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>%1 ("%2") "index" is not an integer value.</source>
-        <translation>%1 ("%2") "índice" não é um valor inteiro.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;índice&quot; não é um valor inteiro.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>%1 ("%2") "disabledIndex" is not an integer value.</source>
-        <translation>%1 ("%2") "DisabledIndex" não é um valor inteiro.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;DisabledIndex&quot; não é um valor inteiro.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>%1 ("%2") "items" missing.</source>
-        <translation>%1 ("%2") "itens" ausentes.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;itens&quot; ausentes.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>%1 ("%2") "items" is not a JSON list.</source>
-        <translation>%1 ("%2") "itens" não é uma lista JSON.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;itens&quot; não é uma lista JSON.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
@@ -16117,8 +16212,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+13" />
-        <source>No "%1" key found in feature list object.</source>
-        <translation>Nenhuma chave "%1" encontrada no objeto da lista de recursos.</translation>
+        <source>No &quot;%1&quot; key found in feature list object.</source>
+        <translation>Nenhuma chave &quot;%1&quot; encontrada no objeto da lista de recursos.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -16132,8 +16227,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Error message from Version Control System: "%1".</source>
-        <translation>Mensagem de erro do sistema de controle de versão: "%1".</translation>
+        <source>Error message from Version Control System: &quot;%1&quot;.</source>
+        <translation>Mensagem de erro do sistema de controle de versão: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16144,18 +16239,18 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="-11" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
-        <source>Failed to add subproject "%1"
-to project "%2".</source>
-        <translation>Falha ao adicionar subprojeto "%1"
- para projetar "%2".</translation>
+        <source>Failed to add subproject &quot;%1&quot;
+to project &quot;%2&quot;.</source>
+        <translation>Falha ao adicionar subprojeto &quot;%1&quot;
+ para projetar &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
         <source>Failed to add one or more files to project
-"%1" (%2).</source>
+&quot;%1&quot; (%2).</source>
         <translation>Falha ao adicionar um ou mais arquivos para projetar
- "%1" (%2).</translation>
+ &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
@@ -16175,13 +16270,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+33" />
-        <source>Check whether a variable exists.&lt;br&gt;Returns "true" if it does and an empty string if not.</source>
-        <translation>Verifique se existe uma variável.</translation>
+        <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not determine target path. "TargetPath" was not set on any page.</source>
-        <translation>Não foi possível determinar o caminho alvo. "TargetPath" não foi definido em nenhuma página.</translation>
+        <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
+        <translation>Não foi possível determinar o caminho alvo. &quot;TargetPath&quot; não foi definido em nenhuma página.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -16190,13 +16285,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The wizard failed to generate files.&lt;br&gt;The error message was: "%1".</source>
-        <translation>O assistente não conseguiu gerar arquivos. &lt;br&gt; A mensagem de erro foi: "%1".</translation>
+        <source>The wizard failed to generate files.&lt;br&gt;The error message was: &quot;%1&quot;.</source>
+        <translation>O assistente não conseguiu gerar arquivos. &lt;br&gt; A mensagem de erro foi: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+63" />
-        <source>No 'key' in options object.</source>
-        <translation>Não é 'chave' no objeto Opções.</translation>
+        <source>No &apos;key&apos; in options object.</source>
+        <translation>Não é &apos;chave&apos; no objeto Opções.</translation>
     </message>
     <message>
         <location line="+88" />
@@ -16230,24 +16325,24 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+58" />
-        <source>"%1" does not exist in the file system.</source>
-        <translation>"%1" não existe no sistema de arquivos.</translation>
+        <source>&quot;%1&quot; does not exist in the file system.</source>
+        <translation>&quot;%1&quot; não existe no sistema de arquivos.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open "%1" as a project.</source>
-        <translation>Falha ao abrir "%1" como um projeto.</translation>
+        <source>Failed to open &quot;%1&quot; as a project.</source>
+        <translation>Falha ao abrir &quot;%1&quot; como um projeto.</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+46" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>Falha ao abrir um editor para "%1".</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>Falha ao abrir um editor para &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-27" />
-        <source>No file to open found in "%1".</source>
-        <translation>Nenhum arquivo a ser aberto encontrado em "%1".</translation>
+        <source>No file to open found in &quot;%1&quot;.</source>
+        <translation>Nenhum arquivo a ser aberto encontrado em &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16256,8 +16351,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to open project in "%1".</source>
-        <translation>Falhou em abrir o projeto em "%1".</translation>
+        <source>Failed to open project in &quot;%1&quot;.</source>
+        <translation>Falhou em abrir o projeto em &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16277,31 +16372,31 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+7" />
-        <source>TypeId "%1" of generator is unknown. Supported typeIds are: "%2".</source>
-        <translation>TypeId "%1" do gerador é desconhecido. Os tipos suportados são: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>TypeId &quot;%1&quot; do gerador é desconhecido. Os tipos suportados são: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+56" />
         <location line="+241" />
-        <source>Path "%1" does not exist when checking JSON wizard search paths.</source>
-        <translation>O caminho "%1" não existe ao verificar os caminhos de pesquisa do assistente do JSON.</translation>
+        <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
+        <translation>O caminho &quot;%1&quot; não existe ao verificar os caminhos de pesquisa do assistente do JSON.</translation>
     </message>
     <message>
         <location line="-228" />
-        <source>Checking "%1" for %2.</source>
-        <translation>Verificando " %1" para %2.</translation>
+        <source>Checking &quot;%1&quot; for %2.</source>
+        <translation>Verificando &quot; %1&quot; para %2.</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+233" />
-        <source>* Failed to parse "%1":%2:%3: %4</source>
-        <translation>* Falha ao analisar "%1":%2:%3:%4</translation>
+        <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
+        <translation>* Falha ao analisar &quot;%1&quot;:%2:%3:%4</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>* Did not find a JSON object in "%1".
+        <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* Não encontrou um objeto JSON em "%1".</translation>
+        <translation>* Não encontrou um objeto JSON em &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -16311,8 +16406,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="-224" />
-        <source>JsonWizard: "%1" not found.</source>
-        <translation>JSONWIZARD: "%1" não encontrado.</translation>
+        <source>JsonWizard: &quot;%1&quot; not found.</source>
+        <translation>JSONWIZARD: &quot;%1&quot; não encontrado.</translation>
     </message>
     <message>
         <location line="+96" />
@@ -16326,18 +16421,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>TypeId "%1" of page is unknown. Supported typeIds are: "%2".</source>
-        <translation>TypeId "%1" da página é desconhecido. Os tipos suportados são: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>TypeId &quot;%1&quot; da página é desconhecido. Os tipos suportados são: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Page with typeId "%1" has invalid "index".</source>
-        <translation>Página com TypeId "%1" tem um índice inválido ".</translation>
+        <source>Page with typeId &quot;%1&quot; has invalid &quot;index&quot;.</source>
+        <translation>Página com TypeId &quot;%1&quot; tem um índice inválido &quot;.</translation>
     </message>
     <message>
         <location line="+89" />
-        <source>* Did not find a JSON object in "%1".</source>
-        <translation>* Não encontrou um objeto JSON em "%1".</translation>
+        <source>* Did not find a JSON object in &quot;%1&quot;.</source>
+        <translation>* Não encontrou um objeto JSON em &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16376,13 +16471,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+32" />
-        <source>"kind" value "%1" is not "class" (deprecated), "file" or "project".</source>
-        <translation>"Valor" de tipo "%1" não é "classe" (depreciados), "arquivo" ou "projeto".</translation>
+        <source>&quot;kind&quot; value &quot;%1&quot; is not &quot;class&quot; (deprecated), &quot;file&quot; or &quot;project&quot;.</source>
+        <translation>&quot;Valor&quot; de tipo &quot;%1&quot; não é &quot;classe&quot; (depreciados), &quot;arquivo&quot; ou &quot;projeto&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"kind" is "file" or "class" (deprecated) and "%1" is also set.</source>
-        <translation>"Kind" é "arquivo" ou "classe" (depreciado) e "%1" também está definido.</translation>
+        <source>&quot;kind&quot; is &quot;file&quot; or &quot;class&quot; (deprecated) and &quot;%1&quot; is also set.</source>
+        <translation>&quot;Kind&quot; é &quot;arquivo&quot; ou &quot;classe&quot; (depreciado) e &quot;%1&quot; também está definido.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -16396,13 +16491,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Icon file "%1" not found.</source>
-        <translation>Arquivo de ícone "%1" não encontrado.</translation>
+        <source>Icon file &quot;%1&quot; not found.</source>
+        <translation>Arquivo de ícone &quot;%1&quot; não encontrado.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Image file "%1" not found.</source>
-        <translation>Arquivo de imagem "%1" não encontrado.</translation>
+        <source>Image file &quot;%1&quot; not found.</source>
+        <translation>Arquivo de imagem &quot;%1&quot; não encontrado.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16421,13 +16516,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>When parsing "generators": %1</source>
-        <translation>Ao analisar "geradores": %1</translation>
+        <source>When parsing &quot;generators&quot;: %1</source>
+        <translation>Ao analisar &quot;geradores&quot;: %1</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>When parsing "pages": %1</source>
-        <translation>Ao analisar "páginas": %1</translation>
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation>Ao analisar &quot;páginas&quot;: %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
@@ -16441,8 +16536,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+57" />
-        <source>When processing "%1":&lt;br&gt;%2</source>
-        <translation>Ao processar "%1": &lt;br&gt;%2</translation>
+        <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
+        <translation>Ao processar &quot;%1&quot;: &lt;br&gt;%2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
@@ -16468,43 +16563,43 @@ to project "%2".</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
-        <source>When parsing fields of page "%1": %2</source>
-        <translation>Ao analisar campos da página " %1": %2</translation>
+        <source>When parsing fields of page &quot;%1&quot;: %2</source>
+        <translation>Ao analisar campos da página &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "File" page needs to be unset or an empty object.</source>
-        <translation>A página "Dados" para um "arquivo" precisa ser não definida ou um objeto vazio.</translation>
+        <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
+        <translation>A página &quot;Dados&quot; para um &quot;arquivo&quot; precisa ser não definida ou um objeto vazio.</translation>
     </message>
     <message>
         <location line="+48" />
-        <source>Error parsing "%1" in "Kits" page: %2</source>
-        <translation>Erro Parsing " %1" em "kits" Página: %2</translation>
+        <source>Error parsing &quot;%1&quot; in &quot;Kits&quot; page: %2</source>
+        <translation>Erro Parsing &quot; %1&quot; em &quot;kits&quot; Página: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>"data" must be a JSON object for "Kits" pages.</source>
-        <translation>"Dados" deve ser um objeto JSON para páginas de "kits".</translation>
+        <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
+        <translation>&quot;Dados&quot; deve ser um objeto JSON para páginas de &quot;kits&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>"Kits" page requires a "%1" set.</source>
-        <translation>A página de "kits" requer um conjunto "%1".</translation>
+        <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
+        <translation>A página de &quot;kits&quot; requer um conjunto &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+62" />
-        <source>"data" must be empty or a JSON object for "Project" pages.</source>
-        <translation>"Dados" deve estar vazio ou um objeto JSON para páginas de "projeto".</translation>
+        <source>&quot;data&quot; must be empty or a JSON object for &quot;Project&quot; pages.</source>
+        <translation>&quot;Dados&quot; deve estar vazio ou um objeto JSON para páginas de &quot;projeto&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Invalid regular expression "%1" in "%2". %3</source>
-        <translation>Expressão regular inválida "%1" em "%2". %3</translation>
+        <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
+        <translation>Expressão regular inválida &quot;%1&quot; em &quot;%2&quot;. %3</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "Summary" page can be unset or needs to be an object.</source>
-        <translation>A página "Dados" para uma "resumo" pode ser não definida ou precisa ser um objeto.</translation>
+        <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
+        <translation>A página &quot;Dados&quot; para uma &quot;resumo&quot; pode ser não definida ou precisa ser um objeto.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
@@ -16513,13 +16608,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Pattern "%1" is no valid regular expression.</source>
-        <translation>Padrão "%1" não é uma expressão regular válida.</translation>
+        <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
+        <translation>Padrão &quot;%1&quot; não é uma expressão regular válida.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>ScannerGenerator: Binary pattern "%1" not valid.</source>
-        <translation>Scannergenerator: padrão binário "%1" não é válido.</translation>
+        <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
+        <translation>Scannergenerator: padrão binário &quot;%1&quot; não é válido.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
@@ -16576,18 +16671,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+17" />
-        <source>Sys Root "%1" does not exist in the file system.</source>
-        <translation>Sys Root "%1" não existe no sistema de arquivos.</translation>
+        <source>Sys Root &quot;%1&quot; does not exist in the file system.</source>
+        <translation>Sys Root &quot;%1&quot; não existe no sistema de arquivos.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is not a directory.</source>
-        <translation>Sys Root "%1" não é um diretório.</translation>
+        <source>Sys Root &quot;%1&quot; is not a directory.</source>
+        <translation>Sys Root &quot;%1&quot; não é um diretório.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is empty.</source>
-        <translation>Sys Raiz "%1" está vazio.</translation>
+        <source>Sys Root &quot;%1&quot; is empty.</source>
+        <translation>Sys Raiz &quot;%1&quot; está vazio.</translation>
     </message>
     <message>
         <location line="+14" />
@@ -17070,13 +17165,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href="projectmode"&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation>&lt;style type = text/css&gt; a: link {cor: rgb (128, 128, 255);} &lt;/style&gt; o projeto &lt;b&gt;%1 &lt;/b&gt; ainda não está configurado &lt;br/&gt; &lt;r/br/ &gt; Você pode configurá -lo no modo de Projetos &lt;a href = "ProjectMode"&gt; &lt;/a&gt; &lt;br/&gt;</translation>
+        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href=&quot;projectmode&quot;&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
-        <source>Falling back to use the cached environment for "%1" after:</source>
-        <translation>Voltando para usar o ambiente em cache para "%1" depois de:</translation>
+        <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
+        <translation>Voltando para usar o ambiente em cache para &quot;%1&quot; depois de:</translation>
     </message>
     <message>
         <location line="+483" />
@@ -17098,9 +17193,9 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+796" />
-        <source>Failed to retrieve MSVC Environment from "%1":
+        <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
-        <translation>Falha ao recuperar o ambiente MSVC de "%1":
+        <translation>Falha ao recuperar o ambiente MSVC de &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
@@ -17147,8 +17242,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open file: "%1": %2</source>
-        <translation>Não foi possível abrir o arquivo: " %1": %2</translation>
+        <source>Could not open file: &quot;%1&quot;: %2</source>
+        <translation>Não foi possível abrir o arquivo: &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
@@ -17258,13 +17353,13 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+92" />
-        <source>Project "%1" was configured for kit "%2" with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
-        <translation>O projeto "%1" foi configurado para o kit "%2" com ID%3, que não existe mais. Você pode criar um novo kit ou copiar as etapas do kit desaparecido para outro kit no modo %4.</translation>
+        <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
+        <translation>O projeto &quot;%1&quot; foi configurado para o kit &quot;%2&quot; com ID%3, que não existe mais. Você pode criar um novo kit ou copiar as etapas do kit desaparecido para outro kit no modo %4.</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+622" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+626" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
@@ -17273,79 +17368,79 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+265" />
-        <source>Could not find any qml_*.qm file at "%1"</source>
-        <translation>Não foi possível encontrar nenhum arquivo QML _*. QM em "%1"</translation>
+        <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
+        <translation>Não foi possível encontrar nenhum arquivo QML _*. QM em &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+87" />
         <source>%1: Name.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: nome.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to main file.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: caminho completo para o arquivo principal.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: caminho completo para o diretório do projeto.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: The name of the active kit.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: o nome do kit ativo.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Name of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Nome da configuração de construção ativa.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Type of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Tipo da configuração de construção ativa.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Full build path of active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Caminho de construção completo da configuração de construção ativa.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Variables in the active build environment.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: variáveis ​​no ambiente de construção ativa.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Name of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Nome da configuração de execução ativa.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Executable of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: executável da configuração de execução ativa.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Variables in the environment of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: variáveis ​​no ambiente da configuração de execução ativa.</translation>
     </message>
     <message>
         <location line="+12" />
         <source>%1: Working directory of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: diretório de trabalho da configuração de execução ativa.</translation>
     </message>
     <message>
@@ -17393,7 +17488,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+6" />
         <source>&amp;Start Debugging</source>
-        <translation>E comece a depurar</translation>
+        <translation>&amp;E comece a depurar</translation>
     </message>
     <message>
         <location line="+82" />
@@ -17428,7 +17523,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+17" />
         <source>Recent P&amp;rojects</source>
-        <translation>P &amp; Rojects recentes</translation>
+        <translation>P &amp;Rojects recentes</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17438,8 +17533,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="-347" />
-        <source>Close Pro&amp;ject "%1"</source>
-        <translation>Projeto próximo "%1"</translation>
+        <source>Close Pro&amp;ject &quot;%1&quot;</source>
+        <translation>Pro&amp;jeto próximo &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -17449,13 +17544,13 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <location line="+328" />
-        <source>Close All Files in Project "%1"</source>
-        <translation>Feche todos os arquivos no projeto "%1"</translation>
+        <source>Close All Files in Project &quot;%1&quot;</source>
+        <translation>Feche todos os arquivos no projeto &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-316" />
         <source>Close Pro&amp;ject</source>
-        <translation>Projeto próximo</translation>
+        <translation>Pro&amp;jeto próximo</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17513,8 +17608,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Build Project "%1"</source>
-        <translation>Projeto de construção "%1"</translation>
+        <source>Build Project &quot;%1&quot;</source>
+        <translation>Projeto de construção &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17523,18 +17618,18 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Build Project "%1" for All Configurations</source>
-        <translation>Construir projeto "%1" para todas as configurações</translation>
+        <source>Build Project &quot;%1&quot; for All Configurations</source>
+        <translation>Construir projeto &quot;%1&quot; para todas as configurações</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Build for &amp;Run Configuration</source>
-        <translation>Construa a configuração e execução</translation>
+        <translation>Const&amp;rua a configuração e execução</translation>
     </message>
     <message>
         <location line="+0" />
-        <source>Build for &amp;Run Configuration "%1"</source>
-        <translation>Construa a configuração e execução "%1"</translation>
+        <source>Build for &amp;Run Configuration &quot;%1&quot;</source>
+        <translation>Const&amp;rua a configuração e execução &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+13" />
@@ -17627,8 +17722,8 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+9" />
         <location line="+1621" />
-        <source>Close Project "%1"</source>
-        <translation>Projeto próximo "%1"</translation>
+        <source>Close Project &quot;%1&quot;</source>
+        <translation>Projeto próximo &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-1614" />
@@ -17637,8 +17732,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Close All Projects Except "%1"</source>
-        <translation>Feche todos os projetos, exceto "%1"</translation>
+        <source>Close All Projects Except &quot;%1&quot;</source>
+        <translation>Feche todos os projetos, exceto &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -17673,8 +17768,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Set "%1" as Active Project</source>
-        <translation>Defina "%1" como projeto ativo</translation>
+        <source>Set &quot;%1&quot; as Active Project</source>
+        <translation>Defina &quot;%1&quot; como projeto ativo</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17759,7 +17854,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+62" />
         <source>Sanitizer</source>
-        <comment>Category for sanitizer issues listed under 'Issues'</comment>
+        <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
         <translation>Desinfetante</translation>
     </message>
     <message>
@@ -17800,8 +17895,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+48" />
-        <source>Failed opening project "%1": No plugin can open project type "%2".</source>
-        <translation>Projeto de abertura com falha "%1": nenhum plug -in pode abrir o tipo de projeto "%2".</translation>
+        <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
+        <translation>Projeto de abertura com falha &quot;%1&quot;: nenhum plug -in pode abrir o tipo de projeto &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+195" />
@@ -17832,18 +17927,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+23" />
-        <source>Open Project in "%1"</source>
-        <translation>Projeto aberto em "%1"</translation>
+        <source>Open Project in &quot;%1&quot;</source>
+        <translation>Projeto aberto em &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Open Project "%1"</source>
-        <translation>Projeto aberto "%1"</translation>
+        <source>Open Project &quot;%1&quot;</source>
+        <translation>Projeto aberto &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>The file "%1" was renamed to "%2", but the following projects could not be automatically changed: %3</source>
-        <translation>O arquivo "%1" foi renomeado para "%2", mas os seguintes projetos não puderam ser alterados automaticamente:%3</translation>
+        <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
+        <translation>O arquivo &quot;%1&quot; foi renomeado para &quot;%2&quot;, mas os seguintes projetos não puderam ser alterados automaticamente:%3</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17860,8 +17955,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+62" />
-        <source>Building "%1" is disabled: %2&lt;br&gt;</source>
-        <translation>Construindo " %1" está desativado: %2 &lt;br&gt;</translation>
+        <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
+        <translation>Construindo &quot; %1&quot; está desativado: %2 &lt;br&gt;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17922,18 +18017,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>The project "%1" is not configured.</source>
-        <translation>O projeto "%1" não está configurado.</translation>
+        <source>The project &quot;%1&quot; is not configured.</source>
+        <translation>O projeto &quot;%1&quot; não está configurado.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The project "%1" has no active kit.</source>
-        <translation>O projeto "%1" não possui kit ativo.</translation>
+        <source>The project &quot;%1&quot; has no active kit.</source>
+        <translation>O projeto &quot;%1&quot; não possui kit ativo.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The kit "%1" for the project "%2" has no active run configuration.</source>
-        <translation>O kit "%1" para o projeto "%2" não possui configuração de execução ativa.</translation>
+        <source>The kit &quot;%1&quot; for the project &quot;%2&quot; has no active run configuration.</source>
+        <translation>O kit &quot;%1&quot; para o projeto &quot;%2&quot; não possui configuração de execução ativa.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -17942,8 +18037,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>Cannot run "%1".</source>
-        <translation>Não é possível executar "%1".</translation>
+        <source>Cannot run &quot;%1&quot;.</source>
+        <translation>Não é possível executar &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17969,8 +18064,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+41" />
-        <source>The following subprojects could not be added to project "%1":</source>
-        <translation>Os seguintes subprojetos não puderam ser adicionados ao projeto "%1":</translation>
+        <source>The following subprojects could not be added to project &quot;%1&quot;:</source>
+        <translation>Os seguintes subprojetos não puderam ser adicionados ao projeto &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18019,15 +18114,15 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>File "%1" was not removed, because the project has changed in the meantime.
+        <source>File &quot;%1&quot; was not removed, because the project has changed in the meantime.
 Please try again.</source>
-        <translation>O arquivo "%1" não foi removido, porque o projeto mudou enquanto isso.
+        <translation>O arquivo &quot;%1&quot; não foi removido, porque o projeto mudou enquanto isso.
  Por favor, tente novamente.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Could not remove file "%1" from project "%2".</source>
-        <translation>Não foi possível remover o arquivo "%1" do projeto "%2".</translation>
+        <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
+        <translation>Não foi possível remover o arquivo &quot;%1&quot; do projeto &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+36" />
@@ -18052,13 +18147,13 @@ Please try again.</source>
     </message>
     <message>
         <location line="-9" />
-        <source>Failed to copy file "%1" to "%2": %3.</source>
-        <translation>Falha ao copiar o arquivo "%1" para "%2":%3.</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
+        <translation>Falha ao copiar o arquivo &quot;%1&quot; para &quot;%2&quot;:%3.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Failed to add new file "%1" to the project.</source>
-        <translation>Falha ao adicionar novo arquivo "%1" ao projeto.</translation>
+        <source>Failed to add new file &quot;%1&quot; to the project.</source>
+        <translation>Falha ao adicionar novo arquivo &quot;%1&quot; ao projeto.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18106,8 +18201,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+192" />
-        <source>Locates files from all project directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Localiza arquivos de todos os diretórios do projeto. Anexe "+&lt;número&gt;" ou ": &lt;número&gt;" para pular para o número da linha fornecida. Anexe outro "+&lt;número&gt;" ou ": &lt;número&gt;" para pular para o número da coluna também.</translation>
+        <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Localiza arquivos de todos os diretórios do projeto. Anexe &quot;+&lt;número&gt;&quot; ou &quot;: &lt;número&gt;&quot; para pular para o número da linha fornecida. Anexe outro &quot;+&lt;número&gt;&quot; ou &quot;: &lt;número&gt;&quot; para pular para o número da coluna também.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -18164,13 +18259,13 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
         <source>s</source>
-        <extracomment>Suffix for "seconds"</extracomment>
+        <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>s</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The amount of seconds to wait between a "soft kill" and a "hard kill" of a running application.</source>
-        <translation>A quantidade de segundos para esperar entre uma "matança suave" e uma "morte dura" de um aplicativo em execução.</translation>
+        <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
+        <translation>A quantidade de segundos para esperar entre uma &quot;matança suave&quot; e uma &quot;morte dura&quot; de um aplicativo em execução.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -18234,8 +18329,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Some legacy build tools do not deal well with paths that contain "special" characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
-        <translation>Algumas ferramentas de construção herdada não lidam bem com caminhos que contêm caracteres "especiais", como espaços, potencialmente resultando em erros de construção espúrios. &lt;p&gt; Desmarque essa opção se você não trabalhar com essas ferramentas.</translation>
+        <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
+        <translation>Algumas ferramentas de construção herdada não lidam bem com caminhos que contêm caracteres &quot;especiais&quot;, como espaços, potencialmente resultando em erros de construção espúrios. &lt;p&gt; Desmarque essa opção se você não trabalhar com essas ferramentas.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18294,13 +18389,13 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Show all kits in "Build &amp; Run" in "Projects" mode</source>
-        <translation>Mostre todos os kits no modo "Build &amp; Run" em "projetos"</translation>
+        <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
+        <translation>Mostre todos os kits no modo &quot;Build &amp; Run&quot; em &quot;projetos&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Show also inactive kits in "Build &amp; Run" in "Projects" mode.</source>
-        <translation>Mostre também kits inativos no modo "Build &amp; Run" em "Projetos".</translation>
+        <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
+        <translation>Mostre também kits inativos no modo &quot;Build &amp; Run&quot; em &quot;Projetos&quot;.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18339,8 +18434,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Default for "Run in terminal":</source>
-        <translation>Padrão para "Run in Terminal":</translation>
+        <source>Default for &quot;Run in terminal&quot;:</source>
+        <translation>Padrão para &quot;Run in Terminal&quot;:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18420,8 +18515,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
-        <source>No kits are enabled for this project. Enable kits in the "Projects" mode.</source>
-        <translation>Nenhum kits está ativado para este projeto. Ativar kits no modo "Projetos".</translation>
+        <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
+        <translation>Nenhum kits está ativado para este projeto. Ativar kits no modo &quot;Projetos&quot;.</translation>
     </message>
     <message>
         <location line="+89" />
@@ -18528,7 +18623,7 @@ What should %1 do now?</source>
         <translation>&lt;b&gt; Aviso: &lt;/b&gt; Este arquivo está fora do diretório do projeto.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-391" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-395" />
         <source>Simplify Tree</source>
         <translation>Simplificar a árvore</translation>
     </message>
@@ -18578,7 +18673,7 @@ What should %1 do now?</source>
         <translation>Tree de filtro</translation>
     </message>
     <message>
-        <location line="+194" />
+        <location line="+198" />
         <source>Meta+X</source>
         <translation>Meta+x</translation>
     </message>
@@ -18614,18 +18709,18 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+50" />
-        <source>Open %1 "%2"</source>
-        <translation>Aberto %1 " %2"</translation>
+        <source>Open %1 &quot;%2&quot;</source>
+        <translation>Aberto %1 &quot; %2&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Open %1 "%2" (%3)</source>
-        <translation>Aberto%1 "%2" (%3)</translation>
+        <source>Open %1 &quot;%2&quot; (%3)</source>
+        <translation>Aberto%1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
         <location line="+20" />
         <source>session</source>
-        <comment>Appears in "Open session &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>sessão</translation>
     </message>
     <message>
@@ -18652,7 +18747,7 @@ What should %1 do now?</source>
     <message>
         <location line="+125" />
         <source>project</source>
-        <comment>Appears in "Open project &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>projeto</translation>
     </message>
     <message>
@@ -18687,7 +18782,7 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+118" />
-        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project's settings:</source>
+        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>O projeto foi configurado para kits que não existem mais. Selecione uma das seguintes opções no menu de contexto para restaurar as configurações do projeto:</translation>
     </message>
     <message>
@@ -18718,8 +18813,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+12" />
-        <source>Remove Vanished Target "%1"</source>
-        <translation>Remova o alvo desaparecido "%1"</translation>
+        <source>Remove Vanished Target &quot;%1&quot;</source>
+        <translation>Remova o alvo desaparecido &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18787,7 +18882,7 @@ What should %1 do now?</source>
     <message>
         <location line="+63" />
         <source>Add to &amp;version control:</source>
-        <translation>Adicionar ao Controle de versão e versão:</translation>
+        <translation>Adicionar ao Controle de &amp;versão e versão:</translation>
     </message>
     <message>
         <location line="+88" />
@@ -18797,17 +18892,17 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Add to &amp;project:</source>
-        <translation>Adicionar ao &amp; Project:</translation>
+        <translation>Adicionar ao &amp;Project:</translation>
     </message>
     <message>
         <location line="+74" />
-        <source>A version control system repository could not be created in "%1".</source>
-        <translation>Um repositório do sistema de controle de versão não pôde ser criado em "%1".</translation>
+        <source>A version control system repository could not be created in &quot;%1&quot;.</source>
+        <translation>Um repositório do sistema de controle de versão não pôde ser criado em &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to add "%1" to the version control system.</source>
-        <translation>Falha ao adicionar "%1" ao sistema de controle de versão.</translation>
+        <source>Failed to add &quot;%1&quot; to the version control system.</source>
+        <translation>Falha ao adicionar &quot;%1&quot; ao sistema de controle de versão.</translation>
     </message>
     <message>
         <location line="+94" />
@@ -18843,17 +18938,17 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>The run configuration's working directory.</source>
+        <source>The run configuration&apos;s working directory.</source>
         <translation>O diretório de trabalho da configuração de execução.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The run configuration's name.</source>
+        <source>The run configuration&apos;s name.</source>
         <translation>O nome da configuração de execução.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The run configuration's executable.</source>
+        <source>The run configuration&apos;s executable.</source>
         <translation>O executável da configuração de execução.</translation>
     </message>
     <message>
@@ -18870,7 +18965,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
-        <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
+        <extracomment>Shown in Run configuration, Add menu: &quot;name of runnable (on device name)&quot;</extracomment>
         <translation>%1 (em %{dispositivo: nome})</translation>
     </message>
     <message>
@@ -18993,7 +19088,7 @@ What should %1 do now?</source>
     <message>
         <location line="+324" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;Center&gt; &lt;i&gt;%1 &lt;/i&gt; ainda está em execução.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2" />
@@ -19003,12 +19098,12 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Force &amp;Quit</source>
-        <translation>Force &amp; desistir</translation>
+        <translation>Force &amp;desistir</translation>
     </message>
     <message>
         <location line="+0" />
         <source>&amp;Keep Running</source>
-        <translation>E continue correndo</translation>
+        <translation>&amp;E continue correndo</translation>
     </message>
     <message>
         <location line="+246" />
@@ -19072,8 +19167,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Either the invoked program "%1" is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>O programa chamado "%1" está faltando, ou você pode ter permissões insuficientes para invocar o programa.</translation>
+        <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>O programa chamado &quot;%1&quot; está faltando, ou você pode ter permissões insuficientes para invocar o programa.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19269,12 +19364,12 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Imports existing projects that do not use qmake, CMake, Qbs, Meson, or Autotools.&lt;p&gt;This creates a project file that allows you to use %1 as a code editor and as a launcher for debugging and analyzing tools. If you want to build the project, you might need to edit the generated project file.</source>
-        <translation>Importa projetos existentes que não usam QMake, CMake, QBS, Meson ou AutoTools. Se você deseja criar o projeto, pode ser necessário editar o arquivo de projeto gerado.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+172" />
-        <source>Unknown build system "%1"</source>
-        <translation>Sistema de construção desconhecido "%1"</translation>
+        <source>Unknown build system &quot;%1&quot;</source>
+        <translation>Sistema de construção desconhecido &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
@@ -19299,7 +19394,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
         <source>&amp;Configure Project</source>
-        <translation>E configurar o projeto</translation>
+        <translation>E &amp;configurar o projeto</translation>
     </message>
     <message>
         <location line="+91" />
@@ -19334,8 +19429,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+71" />
-        <source>Enable Kit for Project "%1"</source>
-        <translation>Ativar kit para o projeto "%1"</translation>
+        <source>Enable Kit for Project &quot;%1&quot;</source>
+        <translation>Ativar kit para o projeto &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7" />
@@ -19344,8 +19439,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Disable Kit for Project "%1"</source>
-        <translation>Desative o kit para o projeto "%1"</translation>
+        <source>Disable Kit for Project &quot;%1&quot;</source>
+        <translation>Desative o kit para o projeto &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19354,8 +19449,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Disable Kit "%1" in This Project?</source>
-        <translation>Desativar o kit "%1" neste projeto?</translation>
+        <source>Disable Kit &quot;%1&quot; in This Project?</source>
+        <translation>Desativar o kit &quot;%1&quot; neste projeto?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19389,8 +19484,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Add a kit in the &lt;a href="buildandrun"&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
-        <translation>Adicione um kit nas opções &lt;a href = "buildandrun"&gt; &lt;/a&gt; ou através da ferramenta de manutenção do SDK.</translation>
+        <source>Add a kit in the &lt;a href=&quot;buildandrun&quot;&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
+        <translation>Adicione um kit nas opções &lt;a href = &quot;buildandrun&quot;&gt; &lt;/a&gt; ou através da ferramenta de manutenção do SDK.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19486,7 +19581,7 @@ These files are preserved.</source>
         <translation>Problemas</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+53" />
         <source>Show Warnings</source>
         <translation>Mostrar avisos</translation>
     </message>
@@ -19498,7 +19593,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-152" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
-        <translation>&lt;br&gt; &lt;b&gt; abi: &lt;/b&gt; %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1" />
@@ -19654,18 +19749,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+24" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>A instalação de "%1" foi cancelada pelo tempo limite.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>A instalação de &quot;%1&quot; foi cancelada pelo tempo limite.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>A instalação de "%1" foi cancelada pelo usuário.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>A instalação de &quot;%1&quot; foi cancelada pelo usuário.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>A instalação de " %1" falhou com o código de saída %2.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>A instalação de &quot; %1&quot; falhou com o código de saída %2.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
@@ -19742,23 +19837,23 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" not found.</source>
-        <translation>Python "%1" não encontrado.</translation>
+        <source>Python &quot;%1&quot; not found.</source>
+        <translation>Python &quot;%1&quot; não encontrado.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" is not executable.</source>
-        <translation>Python "%1" não é executável.</translation>
+        <source>Python &quot;%1&quot; is not executable.</source>
+        <translation>Python &quot;%1&quot; não é executável.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Python "%1" does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
-        <translation>O Python "%1" não contém um PIP utilizável. O PIP é necessário para instalar pacotes Python no índice de pacotes Python, como Pyside e Python Language Server. Para usar qualquer uma dessas funcionalidades, garanta que o PIP seja instalado para esse python.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
+        <translation>O Python &quot;%1&quot; não contém um PIP utilizável. O PIP é necessário para instalar pacotes Python no índice de pacotes Python, como Pyside e Python Language Server. Para usar qualquer uma dessas funcionalidades, garanta que o PIP seja instalado para esse python.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Python "%1" does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
-        <translation>O Python "%1" não contém um VENV utilizável. O VENV é a maneira recomendada de isolar um ambiente de desenvolvimento para um projeto do Python instalado globalmente.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
+        <translation>O Python &quot;%1&quot; não contém um VENV utilizável. O VENV é a maneira recomendada de isolar um ambiente de desenvolvimento para um projeto do Python instalado globalmente.</translation>
     </message>
     <message>
         <location line="+32" />
@@ -19812,8 +19907,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
-        <source>No Python interpreter set for kit "%1".</source>
-        <translation>Nenhum conjunto de intérprete Python para o kit "%1".</translation>
+        <source>No Python interpreter set for kit &quot;%1&quot;.</source>
+        <translation>Nenhum conjunto de intérprete Python para o kit &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
@@ -19832,7 +19927,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
         <source>Python:</source>
         <translation>Python:</translation>
     </message>
@@ -19842,7 +19937,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Execute %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
         <location line="+283" />
         <source>Name:</source>
         <translation>Nome:</translation>
@@ -19860,13 +19955,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" does not exist.</source>
-        <translation>"%1" não existe.</translation>
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot; não existe.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" is not an executable file.</source>
-        <translation>"%1" não é um arquivo executável.</translation>
+        <source>&quot;%1&quot; is not an executable file.</source>
+        <translation>&quot;%1&quot; não é um arquivo executável.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -19884,12 +19979,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <location line="-183" />
         <location line="+185" />
         <source>&amp;Make Default</source>
-        <translation>E faça padrão</translation>
+        <translation>&amp;E faça padrão</translation>
     </message>
     <message>
         <location line="-183" />
         <source>&amp;Generate Kit</source>
-        <translation>E gerar kit</translation>
+        <translation>E &amp;gerar kit</translation>
     </message>
     <message>
         <location line="+3" />
@@ -19933,7 +20028,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Configuração do servidor de idiomas</translation>
     </message>
     <message>
-        <location line="+476" />
+        <location line="+489" />
         <source>Python interpreter:</source>
         <translation>Interpretador Python:</translation>
     </message>
@@ -19965,8 +20060,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+11" />
-        <source>Found "%1" (%2)</source>
-        <translation>Encontrado "%1" (%2)</translation>
+        <source>Found &quot;%1&quot; (%2)</source>
+        <translation>Encontrado &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="+9" />
@@ -19975,13 +20070,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
-        <source>"data" of a Python wizard page expects a map with "items" containing a list of objects.</source>
-        <translation>"Dados" de uma página do assistente Python espera um mapa com "itens" contendo uma lista de objetos.</translation>
+        <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
+        <translation>&quot;Dados&quot; de uma página do assistente Python espera um mapa com &quot;itens&quot; contendo uma lista de objetos.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>An item of Python wizard page data expects a "trKey" field containing the UI visible string for that Python version and a "value" field containing an object with a "PySideVersion" field used for import statements in the Python files.</source>
-        <translation>Um item dos dados da página do assistente Python espera um campo "Trkey" que contém a string visível da interface do usuário para essa versão python e um campo "Valor" que contém um objeto com um campo "Pysideversion" usado para instruções de importação nos arquivos Python.</translation>
+        <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
+        <translation>Um item dos dados da página do assistente Python espera um campo &quot;Trkey&quot; que contém a string visível da interface do usuário para essa versão python e um campo &quot;Valor&quot; que contém um objeto com um campo &quot;Pysideversion&quot; usado para instruções de importação nos arquivos Python.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -20006,17 +20101,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+126" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
         <source>Move tab left</source>
         <translation>Mover guia para a esquerda</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Switch to next tab</source>
         <translation>Alternar para a próxima guia</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+15" />
         <source>Move tab right</source>
         <translation>Mover guia para a direita</translation>
     </message>
@@ -20178,7 +20273,7 @@ Além disso, Shift+Enter insere um caractere de escape na posição do cursor e 
     <message>
         <location line="+72" />
         <source>&amp;Automatically Insert Matching Characters</source>
-        <translation>Insira automaticamente caracteres correspondentes</translation>
+        <translation>Insir&amp;a automaticamente caracteres correspondentes</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
@@ -20187,8 +20282,8 @@ Além disso, Shift+Enter insere um caractere de escape na posição do cursor e 
     </message>
     <message>
         <location line="+2" />
-        <source>Automatically creates a Doxygen comment upon pressing enter after a '/**', '/*!', '//!' or '///'.</source>
-        <translation>Cria automaticamente um comentário Doxygen ao pressionar enter após '/**', '/*!', '//!' ou '///'.</translation>
+        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
+        <translation>Cria automaticamente um comentário Doxygen ao pressionar enter após &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; ou &apos;///&apos;.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20207,8 +20302,8 @@ Além disso, Shift+Enter insere um caractere de escape na posição do cursor e 
     </message>
     <message>
         <location line="+2" />
-        <source>Adds leading asterisks when continuing C/C++ "/*", Qt "/*!" and Java "/**" style comments on new lines.</source>
-        <translation>Adiciona asteriscos iniciais ao continuar C/C++ "/*", Qt "/*!" e comentários estilo Java "/**" em novas linhas.</translation>
+        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
+        <translation>Adiciona asteriscos iniciais ao continuar C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; e comentários estilo Java &quot;/**&quot; em novas linhas.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20217,12 +20312,12 @@ Além disso, Shift+Enter insere um caractere de escape na posição do cursor e 
     </message>
     <message>
         <location line="+1" />
-        <source>Doxygen allows "@" and "\" to start commands.
-By default, "@" is used if the surrounding comment starts with "/**" or "///", and "\" is used
-if the comment starts with "/*!" or "//!".</source>
-        <translation>Doxygen permite que "@" e "\" inicie os comandos.
- Por padrão, "@" é usado se o comentário ao redor começar com "/**" ou "///", e "\" for usado
- Se o comentário começar com "/*!" ou "//!".</translation>
+        <source>Doxygen allows &quot;@&quot; and &quot;\&quot; to start commands.
+By default, &quot;@&quot; is used if the surrounding comment starts with &quot;/**&quot; or &quot;///&quot;, and &quot;\&quot; is used
+if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
+        <translation>Doxygen permite que &quot;@&quot; e &quot;\&quot; inicie os comandos.
+ Por padrão, &quot;@&quot; é usado se o comentário ao redor começar com &quot;/**&quot; ou &quot;///&quot;, e &quot;\&quot; for usado
+ Se o comentário começar com &quot;/*!&quot; ou &quot;//!&quot;.</translation>
     </message>
     <message>
         <source>&amp;Automatically insert matching characters</source>
@@ -20397,8 +20492,8 @@ if the comment starts with "/*!" or "//!".</source>
     </message>
     <message>
         <location line="+36" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding. Editing not possible.</source>
-        <translation>&lt;b&gt;Erro:&lt;/b&gt; Não foi possível decodificar "%1" com a codificação "%2". Edição não é possível.</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
+        <translation>&lt;b&gt;Erro:&lt;/b&gt; Não foi possível decodificar &quot;%1&quot; com a codificação &quot;%2&quot;. Edição não é possível.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -20497,31 +20592,7 @@ Influences the indentation of continuation lines.
 &lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;cabeça/&gt;&lt;corpo&gt;
-Influencia o recuo das linhas de continuação.
-
-&lt;ul&gt;
-&lt;li&gt;Not At All: Não alinhe nada. As linhas só serão recuadas até a profundidade de recuo lógico atual.
-&lt;pré&gt;
-(tab)int i = foo(a, b
-(tab)c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;Com espaços: sempre use espaços para alinhamento, independentemente das outras configurações de recuo.
-&lt;pré&gt;
-(tab)int i = foo(a, b
-(tab) c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;Com recuo regular: use tabulações e/ou espaços para alinhamento, conforme configurado acima.
-&lt;pré&gt;
-(tab)int i = foo(a, b
-(tab)(tab)(tab) c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+31" />
@@ -20530,8 +20601,8 @@ Influencia o recuo das linhas de continuação.
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;i&gt;Code indentation is configured in &lt;a href="C++"&gt;C++&lt;/a&gt; and &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;O recuo do código é configurado nas configurações &lt;a href="C++"&gt;C++&lt;/a&gt; e &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt;.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;O recuo do código é configurado nas configurações &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; e &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt;.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20641,20 +20712,7 @@ Specifies how backspace interacts with indentation.
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation>&lt;html&gt;&lt;cabeça/&gt;&lt;corpo&gt;
-Especifica como o backspace interage com o recuo.
-
-&lt;ul&gt;
-&lt;li&gt;Nenhuma: nenhuma interação. Comportamento regular de backspace simples.
-&lt;/li&gt;
-
-&lt;li&gt;Segue os recuos anteriores: No espaço em branco à esquerda, levará o cursor de volta ao nível de recuo mais próximo usado nas linhas anteriores.
-&lt;/li&gt;
-
-&lt;li&gt;Desindentar: Se o caractere atrás do cursor for um espaço, ele se comportará como um backtab.
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17" />
@@ -20761,13 +20819,7 @@ Especifica como o backspace interage com o recuo.
 &lt;li&gt;&lt;i&gt;Always Delete:&lt;/i&gt; never write an UTF-8 BOM, possibly deleting a pre-existing one.&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;Note that UTF-8 BOMs are uncommon and treated incorrectly by some editors, so it usually makes little sense to add any.&lt;/p&gt;
 &lt;p&gt;This setting does &lt;b&gt;not&lt;/b&gt; influence the use of UTF-16 and UTF-32 BOMs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;cabeça/&gt;&lt;corpo&gt;
-&lt;p&gt;Como os editores de texto devem lidar com marcas de ordem de byte UTF-8. As opções são:&lt;/p&gt;
-&lt;ul &gt;&lt;li&gt;&lt;i&gt;Adicionar se a codificação for UTF-8:&lt;/i&gt; sempre adicione um BOM ao salvar um arquivo na codificação UTF-8. Observe que isso não funcionará se a codificação for &lt;i&gt;Sistema&lt;/i&gt;, pois o editor de texto não sabe o que realmente é.&lt;/li&gt;
-&lt;li&gt;&lt;i&gt;Manter se já estiver presente: &lt;/i&gt;salve o arquivo com um BOM se já tiver um quando foi carregado.&lt;/li&gt;
-&lt;li&gt;&lt;i&gt;Sempre excluir:&lt;/i&gt; nunca escreva um BOM UTF-8, possivelmente excluindo um pré-existente.&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;Observe que as BOMs UTF-8 são incomuns e tratadas incorretamente por alguns editores, por isso geralmente não faz sentido adicionar nenhuma.&lt;/p&gt;
-&lt;p&gt;Esta configuração &lt;b&gt;não&lt;/b&gt; influencia o uso de BOMs UTF-16 e UTF-32.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11" />
@@ -20777,7 +20829,7 @@ Especifica como o backspace interage com o recuo.
     <message>
         <location line="+2" />
         <source>Enable scroll &amp;wheel zooming</source>
-        <translation>Ativar zoom de rolagem e roda</translation>
+        <translation>&amp;Ativar zoom de rolagem e roda</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20883,7 +20935,7 @@ Especifica como o backspace interage com o recuo.
     <message>
         <location line="-256" />
         <source>Display line &amp;numbers</source>
-        <translation>Exibir linhas e números</translation>
+        <translation>Exibir li&amp;nhas e números</translation>
     </message>
     <message>
         <location line="+4" />
@@ -20898,7 +20950,7 @@ Especifica como o backspace interage com o recuo.
     <message>
         <location line="+1" />
         <source>Display &amp;folding markers</source>
-        <translation>Marcadores de exibição e dobra</translation>
+        <translation>&amp;Marcadores de exibição e dobra</translation>
     </message>
     <message>
         <location line="+8" />
@@ -20913,12 +20965,12 @@ Especifica como o backspace interage com o recuo.
     <message>
         <location line="-39" />
         <source>Enable text &amp;wrapping</source>
-        <translation>Ativar quebra de texto</translation>
+        <translation>&amp;Ativar quebra de texto</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;i&gt;Set &lt;a href="font zoom"&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;Defina o &lt;a href="font zoom"&gt;espaçamento da linha da fonte&lt;/a&gt; para 100% para ativar a opção de quebra automática de texto.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;Defina o &lt;a href=&quot;font zoom&quot;&gt;espaçamento da linha da fonte&lt;/a&gt; para 100% para ativar a opção de quebra automática de texto.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -20998,7 +21050,7 @@ Especifica como o backspace interage com o recuo.
     <message>
         <location line="+2" />
         <source>&amp;Highlight selection</source>
-        <translation>E seleção de destaque</translation>
+        <translation>&amp;E seleção de destaque</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21079,8 +21131,8 @@ Um valor inferior a 100% pode resultar em gráficos sobrepostos e desalinhados.<
     </message>
     <message>
         <location line="+16" />
-        <source>Color Scheme for Theme "%1"</source>
-        <translation>Esquema de Cores para o Tema "%1"</translation>
+        <source>Color Scheme for Theme &quot;%1&quot;</source>
+        <translation>Esquema de Cores para o Tema &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+16" />
@@ -21201,8 +21253,8 @@ Um valor inferior a 100% pode resultar em gráficos sobrepostos e desalinhados.<
     </message>
     <message>
         <location line="-12" />
-        <source>Cannot import code style from "%1".</source>
-        <translation>Não é possível importar o estilo de código de "%1".</translation>
+        <source>Cannot import code style from &quot;%1&quot;.</source>
+        <translation>Não é possível importar o estilo de código de &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -21231,8 +21283,8 @@ Um valor inferior a 100% pode resultar em gráficos sobrepostos e desalinhados.<
     </message>
     <message>
         <location line="+1" />
-        <source>The color scheme "%1" was modified, do you want to save the changes?</source>
-        <translation>O esquema de cores "%1" foi modificado. Deseja salvar as alterações?</translation>
+        <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
+        <translation>O esquema de cores &quot;%1&quot; foi modificado. Deseja salvar as alterações?</translation>
     </message>
     <message>
         <location line="+7" />
@@ -21246,8 +21298,8 @@ Um valor inferior a 100% pode resultar em gráficos sobrepostos e desalinhados.<
     </message>
     <message>
         <location line="+16" />
-        <source>File "%1":</source>
-        <translation>Arquivo "%1":</translation>
+        <source>File &quot;%1&quot;:</source>
+        <translation>Arquivo &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -21301,8 +21353,8 @@ Um valor inferior a 100% pode resultar em gráficos sobrepostos e desalinhados.<
     </message>
     <message>
         <location line="+27" />
-        <source>&lt;p align='center'&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href="copy"&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;p align='center'&gt;&lt;b&gt;Esquemas de cores de construção precisam ser &lt;a href="copy"&gt;copiados&lt;/a&gt;&lt;br/&gt; antes de serem alterados&lt;/b&gt;&lt;/p&gt;</translation>
+        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Esquemas de cores de construção precisam ser &lt;a href=&quot;copy&quot;&gt;copiados&lt;/a&gt;&lt;br/&gt; antes de serem alterados&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -21421,7 +21473,7 @@ Um valor inferior a 100% pode resultar em gráficos sobrepostos e desalinhados.<
     <message>
         <location line="+2" />
         <source>Line %1</source>
-        <translation>Linha 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2" />
@@ -21501,12 +21553,12 @@ Um valor inferior a 100% pode resultar em gráficos sobrepostos e desalinhados.<
     </message>
     <message>
         <location line="+7" />
-        <source>Current document's font size in points.</source>
+        <source>Current document&apos;s font size in points.</source>
         <translation>Tamanho da fonte do documento atual em pontos.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Word under the current document's text cursor.</source>
+        <source>Word under the current document&apos;s text cursor.</source>
         <translation>Word sob o cursor de texto do documento atual.</translation>
     </message>
     <message>
@@ -21540,7 +21592,7 @@ Um valor inferior a 100% pode resultar em gráficos sobrepostos e desalinhados.<
     <message>
         <location line="+3" />
         <source>Enable Text &amp;Wrapping</source>
-        <translation>Ativar texto e quebra automática</translation>
+        <translation>&amp;Ativar texto e quebra automática</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21780,12 +21832,12 @@ Um valor inferior a 100% pode resultar em gráficos sobrepostos e desalinhados.<
     <message>
         <location line="+4" />
         <source>Toggle Comment &amp;Selection</source>
-        <translation>Alternar comentário e seleção</translation>
+        <translation>Alternar comentário e &amp;seleção</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Cut &amp;Line</source>
-        <translation>Linha de corte</translation>
+        <translation>&amp;Linha de corte</translation>
     </message>
     <message>
         <location line="+4" />
@@ -21904,7 +21956,7 @@ Um valor inferior a 100% pode resultar em gráficos sobrepostos e desalinhados.<
     <message>
         <location line="+4" />
         <source>Toggle &amp;Fold All</source>
-        <translation>Alternar e dobrar tudo</translation>
+        <translation>&amp;Alternar e dobrar tudo</translation>
     </message>
     <message>
         <location line="+11" />
@@ -22378,7 +22430,7 @@ Usado para marcar a função contendo o uso do símbolo.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Class' data members.</source>
+        <source>Class&apos; data members.</source>
         <translation>Membros de dados da classe.</translation>
     </message>
     <message>
@@ -23011,152 +23063,152 @@ Não será aplicado a espaços em branco em comentários e strings.</translation
         <translation>Não é um arquivo de esquema de cores.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>derivado de QObject</translation>
     </message>
     <message>
         <location line="+1" />
         <source>derived from QWidget</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>derivado do QWidget</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>modelo</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with if</source>
-        <comment>group:'C++' trigger:'else'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
         <translation>com se</translation>
     </message>
     <message>
         <location line="+1" />
         <source>range-based</source>
-        <comment>group:'C++' trigger:'for'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
         <translation>baseado em intervalo</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and else</source>
-        <comment>group:'C++' trigger:'if'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
         <translation>e mais</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with closing brace comment</source>
-        <comment>group:'C++' trigger:'namespace'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
         <translation>com comentário de chave de fechamento</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and catch</source>
-        <comment>group:'C++' trigger:'try'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
         <translation>e pegar</translation>
     </message>
     <message>
         <location line="+1" />
         <source>namespace</source>
-        <comment>group:'C++' trigger:'using'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
         <translation>namespace</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'struct'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
         <translation>modelo</translation>
     </message>
     <message>
         <location line="+1" />
         <source>(type name READ name WRITE setName NOTIFY nameChanged FINAL)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation>(Nome do tipo Leia Nome Write SetName Notify NameChanged final)</translation>
     </message>
     <message>
         <source>(type name READ name WRITE setName NOTIFY nameChanged)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation type="vanished">(tipo nome READ nome WRITE setName NOTIFY nomeAlterado)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>com alvos</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>com alvo</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>com alvos</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>com alvo</translation>
     </message>
     <message>
         <location line="+3" />
         <source>QuickTest Test Case</source>
-        <comment>group:'QML' trigger:'TestCase'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>Caso de teste QuickTest</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Function</source>
-        <comment>group:'C++' trigger:'TEST'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST&apos;</comment>
         <translation>Função gtest</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Fixture</source>
-        <comment>group:'C++' trigger:'TEST_F'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_F&apos;</comment>
         <translation>GTEst Fixtle</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Parameterized</source>
-        <comment>group:'C++' trigger:'TEST_P'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_P&apos;</comment>
         <translation>Gtest parametrizado</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Case</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_CASE&apos;</comment>
         <translation>Caso de teste</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Suite</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_SUITE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_SUITE&apos;</comment>
         <translation>Suíte de teste</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Test Case</source>
-        <comment>group:'C++' trigger:'TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_CASE&apos;</comment>
         <translation>Caso de teste de captura</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Scenario</source>
-        <comment>group:'C++' trigger:'SCENARIO'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;SCENARIO&apos;</comment>
         <translation>Cenário de captura</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="+3" />
         <source>example</source>
-        <comment>group:'Text' trigger:'global'</comment>
+        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
         <translation>exemplo</translation>
     </message>
     <message>
@@ -23172,17 +23224,17 @@ Não será aplicado a espaços em branco em comentários e strings.</translation
     <message numerus="yes">
         <location line="+3" />
         <source>%n found.</source>
-        <translation>
-            <numerusform>%n encontrado.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+29" />
         <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>%n ocorrências substituídas.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -23193,7 +23245,7 @@ Não será aplicado a espaços em branco em comentários e strings.</translation
     <message>
         <location filename="../../../src/plugins/texteditor/codeassist/functionhintproposalwidget.cpp" line="+371" />
         <source>%1 of %2</source>
-        <translation>%1 de 2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+52" />
@@ -23217,8 +23269,8 @@ Não será aplicado a espaços em branco em comentários e strings.</translation
     </message>
     <message>
         <location line="+25" />
-        <source>Folder "%2":</source>
-        <translation>Pasta "%2":</translation>
+        <source>Folder &quot;%2&quot;:</source>
+        <translation>Pasta &quot;%2&quot;:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -23240,7 +23292,7 @@ Excluindo: %3
     <message>
         <location line="+20" />
         <source>Director&amp;y:</source>
-        <translation>Diretório:</translation>
+        <translation>&amp;Diretório:</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23271,8 +23323,8 @@ Excluindo: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/formattexteditor.cpp" line="+71" />
-        <source>Cannot create temporary file "%1": %2.</source>
-        <translation>Não é possível criar o arquivo temporário "%1": %2.</translation>
+        <source>Cannot create temporary file &quot;%1&quot;: %2.</source>
+        <translation>Não é possível criar o arquivo temporário &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <source>TextEditor</source>
@@ -23281,8 +23333,8 @@ Excluindo: %3
     </message>
     <message>
         <location line="+21" />
-        <source>Cannot read file "%1": %2.</source>
-        <translation>Não é possível ler o arquivo "%1": %2.</translation>
+        <source>Cannot read file &quot;%1&quot;: %2.</source>
+        <translation>Não é possível ler o arquivo &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -23336,8 +23388,8 @@ Excluindo: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As definições de destaque são fornecidas pelo &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/ um&gt; motor.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4" />
@@ -23411,7 +23463,7 @@ Excluindo: %3
         <translation>Filtrar árvore</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+130" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+140" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
         <source>Sort Alphabetically</source>
         <translation>Ordenar Alfabeticamente</translation>
@@ -23433,8 +23485,8 @@ Excluindo: %3
     </message>
     <message>
         <location line="+15" />
-        <source>Expected mangler ID "l" (lowercase), "u" (uppercase), or "c" (titlecase) after colon.</source>
-        <translation>ID do mangler esperado "l" (minúscula), "u" (maiúscula) ou "c" (titlecase) após dois pontos.</translation>
+        <source>Expected mangler ID &quot;l&quot; (lowercase), &quot;u&quot; (uppercase), or &quot;c&quot; (titlecase) after colon.</source>
+        <translation>ID do mangler esperado &quot;l&quot; (minúscula), &quot;u&quot; (maiúscula) ou &quot;c&quot; (titlecase) após dois pontos.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -23486,7 +23538,7 @@ Excluindo: %3
     </message>
     <message>
         <location line="+1" />
-        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark's note text.</source>
+        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark&apos;s note text.</source>
         <translation>Localiza os favoritos. Filtre o nome do arquivo, pelo texto na linha do marcador ou pelo texto da nota do marcador.</translation>
     </message>
     <message>
@@ -23540,7 +23592,7 @@ Excluindo: %3
     <message>
         <location line="-15" />
         <source>&amp;Bookmarks</source>
-        <translation>E favoritos</translation>
+        <translation>&amp;E favoritos</translation>
     </message>
     <message>
         <location line="+53" />
@@ -23657,8 +23709,8 @@ Excluindo: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot create temporary directory "%1": %2</source>
-        <translation>Não é possível criar o diretório temporário "%1": %2</translation>
+        <source>Cannot create temporary directory &quot;%1&quot;: %2</source>
+        <translation>Não é possível criar o diretório temporário &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23667,13 +23719,13 @@ Excluindo: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot change to working directory "%1": %2</source>
-        <translation>Não é possível mudar para o diretório de trabalho "%1": %2</translation>
+        <source>Cannot change to working directory &quot;%1&quot;: %2</source>
+        <translation>Não é possível mudar para o diretório de trabalho &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1": %2</source>
-        <translation>Não é possível executar "%1": %2</translation>
+        <source>Cannot execute &quot;%1&quot;: %2</source>
+        <translation>Não é possível executar &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+109" />
@@ -23682,12 +23734,12 @@ Excluindo: %3
     </message>
     <message>
         <location line="+60" />
-        <source>Cannot set permissions on temporary directory "%1": %2</source>
-        <translation>Não é possível definir permissões no diretório temporário " %1": %2</translation>
+        <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
+        <translation>Não é possível definir permissões no diretório temporário &quot; %1&quot;: %2</translation>
     </message>
     <message>
-        <source>The process "%1" could not be started: %2</source>
-        <translation type="vanished">O processo "%1" não pôde ser iniciado: %2</translation>
+        <source>The process &quot;%1&quot; could not be started: %2</source>
+        <translation type="vanished">O processo &quot;%1&quot; não pôde ser iniciado: %2</translation>
     </message>
     <message>
         <source>Quoting error in command.</source>
@@ -23706,13 +23758,13 @@ Excluindo: %3
         <translation type="vanished">O comando do terminal pode não ser um comando shell.</translation>
     </message>
     <message>
-        <source>Cannot start the terminal emulator "%1", change the setting in the Environment preferences. (%2)</source>
-        <translation type="vanished">Não é possível iniciar o emulador de terminal "%1", altere a configuração nas preferências do ambiente. (%2)</translation>
+        <source>Cannot start the terminal emulator &quot;%1&quot;, change the setting in the Environment preferences. (%2)</source>
+        <translation type="vanished">Não é possível iniciar o emulador de terminal &quot;%1&quot;, altere a configuração nas preferências do ambiente. (%2)</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Cannot create socket "%1": %2</source>
-        <translation>Não é possível criar o soquete "%1": %2</translation>
+        <source>Cannot create socket &quot;%1&quot;: %2</source>
+        <translation>Não é possível criar o soquete &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="-171" />
@@ -23730,28 +23782,28 @@ Excluindo: %3
     <message numerus="yes">
         <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
-        <translation>
-            <numerusform>%1: cancelado. %n ocorrências encontradas em %2 arquivos.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+6" />
         <source>%1: %n occurrences found in %2 files.</source>
-        <translation>
-            <numerusform>%1: %n ocorrências encontradas em %2 arquivos.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+280" />
         <source>Fi&amp;le pattern:</source>
-        <translation>Padrão de arquivo:</translation>
+        <translation>&amp;Padrão de arquivo:</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Excl&amp;usion pattern:</source>
-        <translation>Padrão de exclusão:</translation>
+        <translation>Padrão de excl&amp;usão:</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23796,8 +23848,8 @@ Excluindo: %3
     </message>
     <message>
         <location line="+69" />
-        <source>The default suffix if you do not explicitly specify a file extension is ".%1".</source>
-        <translation>O sufixo padrão se você não especificar explicitamente uma extensão de arquivo é ".%1".</translation>
+        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
+        <translation>O sufixo padrão se você não especificar explicitamente uma extensão de arquivo é &quot;.%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
@@ -23838,51 +23890,51 @@ Excluindo: %3
     </message>
     <message>
         <location line="+176" />
-        <source>The path "%1" expanded to an empty string.</source>
-        <translation>O caminho "%1" foi expandido para uma string vazia.</translation>
+        <source>The path &quot;%1&quot; expanded to an empty string.</source>
+        <translation>O caminho &quot;%1&quot; foi expandido para uma string vazia.</translation>
     </message>
     <message>
         <location line="-72" />
         <location line="+10" />
         <location line="+20" />
-        <source>The path "%1" does not exist.</source>
-        <translation>O caminho "%1" não existe.</translation>
+        <source>The path &quot;%1&quot; does not exist.</source>
+        <translation>O caminho &quot;%1&quot; não existe.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+36" />
-        <source>The path "%1" is not a directory.</source>
-        <translation>O caminho "%1" não é um diretório.</translation>
+        <source>The path &quot;%1&quot; is not a directory.</source>
+        <translation>O caminho &quot;%1&quot; não é um diretório.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+10" />
-        <source>The path "%1" is not a file.</source>
-        <translation>O caminho "%1" não é um arquivo.</translation>
+        <source>The path &quot;%1&quot; is not a file.</source>
+        <translation>O caminho &quot;%1&quot; não é um arquivo.</translation>
     </message>
     <message>
         <location line="-4" />
-        <source>The directory "%1" does not exist.</source>
-        <translation>O diretório "%1" não existe.</translation>
+        <source>The directory &quot;%1&quot; does not exist.</source>
+        <translation>O diretório &quot;%1&quot; não existe.</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>The path "%1" is not an executable file.</source>
-        <translation>O caminho "%1" não é um arquivo executável.</translation>
+        <source>The path &quot;%1&quot; is not an executable file.</source>
+        <translation>O caminho &quot;%1&quot; não é um arquivo executável.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid path "%1".</source>
-        <translation>Caminho inválido "%1".</translation>
+        <source>Invalid path &quot;%1&quot;.</source>
+        <translation>Caminho inválido &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1".</source>
-        <translation>Não é possível executar "%1".</translation>
+        <source>Cannot execute &quot;%1&quot;.</source>
+        <translation>Não é possível executar &quot;%1&quot;.</translation>
     </message>
     <message>
-        <source>Full path: "%1"</source>
-        <translation type="vanished">Caminho completo: "%1"</translation>
+        <source>Full path: &quot;%1&quot;</source>
+        <translation type="vanished">Caminho completo: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-58" />
@@ -23922,8 +23974,8 @@ Excluindo: %3
     </message>
     <message>
         <location line="+121" />
-        <source>Directory "%1" will be created.</source>
-        <translation>O diretório "%1" será criado.</translation>
+        <source>Directory &quot;%1&quot; will be created.</source>
+        <translation>O diretório &quot;%1&quot; será criado.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -23942,13 +23994,13 @@ Excluindo: %3
     </message>
     <message>
         <location line="+12" />
-        <source>Invalid character ".".</source>
-        <translation>Caractere inválido ".".</translation>
+        <source>Invalid character &quot;.&quot;.</source>
+        <translation>Caractere inválido &quot;.&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Invalid character "%1" found.</source>
-        <translation>Caractere inválido "%1" encontrado.</translation>
+        <source>Invalid character &quot;%1&quot; found.</source>
+        <translation>Caractere inválido &quot;%1&quot; encontrado.</translation>
     </message>
     <message>
         <location line="-232" />
@@ -24010,12 +24062,12 @@ Excluindo: %3
     <message>
         <location line="+7" />
         <source>C&amp;lose All</source>
-        <translation>Feche tudo</translation>
+        <translation>&amp;Feche tudo</translation>
     </message>
     <message>
         <location line="-3" />
         <source>Save &amp;as...</source>
-        <translation>Salvar como...</translation>
+        <translation>S&amp;alvar como...</translation>
     </message>
     <message>
         <location line="+5" />
@@ -24103,14 +24155,11 @@ Excluindo: %3
         <location line="-16" />
         <location line="+20" />
         <source>Running %1
-in "%2".
+in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
-        <translation>Executando%1
-em 2".
-
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/aspects.cpp" line="+1208" />
@@ -24156,7 +24205,7 @@ em 2".
     <message>
         <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
         <source>Do not &amp;ask again</source>
-        <translation>Não pergunte novamente</translation>
+        <translation>Não pergunte nov&amp;amente</translation>
     </message>
     <message>
         <location line="+8" />
@@ -24184,8 +24233,8 @@ em 2".
         <translation>Detalhes</translation>
     </message>
     <message>
-        <source>copyFile is not implemented for "%1"</source>
-        <translation type="vanished">copyFile não está implementado para "%1"</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">copyFile não está implementado para &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Cannot copy from %1, it is not a directory.</source>
@@ -24197,61 +24246,61 @@ em 2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to create tar archive from source: %3</source>
-        <translation>Falha ao copiar recursivamente de "%1" para "%2" ao tentar criar arquivo tar a partir da fonte: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
+        <translation>Falha ao copiar recursivamente de &quot;%1&quot; para &quot;%2&quot; ao tentar criar arquivo tar a partir da fonte: %3</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to extract tar archive to target: %3</source>
-        <translation>Falha ao copiar recursivamente de "%1" para "%2" ao tentar extrair o arquivo tar para o destino: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
+        <translation>Falha ao copiar recursivamente de &quot;%1&quot; para &quot;%2&quot; ao tentar extrair o arquivo tar para o destino: %3</translation>
     </message>
     <message>
-        <source>fileContents is not implemented for "%1"</source>
-        <translation type="vanished">fileContents não está implementado para "%1"</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">fileContents não está implementado para &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>writeFileContents is not implemented for "%1"</source>
-        <translation type="vanished">writeFileContents não está implementado para "%1"</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">writeFileContents não está implementado para &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>createTempFile is not implemented for "%1"</source>
-        <translation type="vanished">createTempFile não está implementado para "%1"</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">createTempFile não está implementado para &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-139" />
         <location line="+409" />
-        <source>Path "%1" exists but is not a writable directory.</source>
-        <translation>O caminho "%1" existe, mas não é um diretório gravável.</translation>
+        <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
+        <translation>O caminho &quot;%1&quot; existe, mas não é um diretório gravável.</translation>
     </message>
     <message>
         <location line="-356" />
-        <source>copyFile is not implemented for "%1".</source>
-        <translation>CopyFile não é implementado para "%1".</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;.</source>
+        <translation>CopyFile não é implementado para &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+30" />
-        <source>Cannot copy from "%1", it is not a directory.</source>
-        <translation>Não é possível copiar de "%1", não é um diretório.</translation>
+        <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
+        <translation>Não é possível copiar de &quot;%1&quot;, não é um diretório.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Cannot copy "%1" to "%2": %3</source>
-        <translation>Não é possível copiar "%1" para "%2":%3</translation>
+        <source>Cannot copy &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Não é possível copiar &quot;%1&quot; para &quot;%2&quot;:%3</translation>
     </message>
     <message>
         <location line="+103" />
-        <source>fileContents is not implemented for "%1".</source>
-        <translation>O FileContents não é implementado para "%1".</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>O FileContents não é implementado para &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for "%1".</source>
-        <translation>WriteFileContents não é implementado para "%1".</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>WriteFileContents não é implementado para &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+66" />
-        <source>createTempFile is not implemented for "%1".</source>
-        <translation>CreateTempFile não é implementado para "%1".</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation>CreateTempFile não é implementado para &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24260,8 +24309,8 @@ em 2".
     </message>
     <message>
         <location line="+180" />
-        <source>Refusing to remove the standard directory "%1".</source>
-        <translation>Recusando -se a remover o diretório padrão "%1".</translation>
+        <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
+        <translation>Recusando -se a remover o diretório padrão &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -24275,81 +24324,81 @@ em 2".
     </message>
     <message>
         <location line="+37" />
-        <source>Failed to remove directory "%1".</source>
-        <translation>Falha ao remover o diretório "%1".</translation>
+        <source>Failed to remove directory &quot;%1&quot;.</source>
+        <translation>Falha ao remover o diretório &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Failed to remove file "%1".</source>
-        <translation>Falha ao remover o arquivo "%1".</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>Falha ao remover o arquivo &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+551" />
-        <source>Failed creating temporary file "%1" (too many tries).</source>
-        <translation>Falhou na criação do arquivo temporário "%1" (muitas tentativas).</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
+        <translation>Falhou na criação do arquivo temporário &quot;%1&quot; (muitas tentativas).</translation>
     </message>
     <message>
-        <source>Failed to copy file "%1" to "%2".</source>
-        <translation type="vanished">Falha ao copiar o arquivo "%1" para "%2".</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation type="vanished">Falha ao copiar o arquivo &quot;%1&quot; para &quot;%2&quot;.</translation>
     </message>
     <message>
-        <source>File "%1" does not exist</source>
-        <translation type="vanished">O arquivo "%1" não existe</translation>
+        <source>File &quot;%1&quot; does not exist</source>
+        <translation type="vanished">O arquivo &quot;%1&quot; não existe</translation>
     </message>
     <message>
-        <source>Could not open File "%1"</source>
-        <translation type="vanished">Não foi possível abrir o arquivo "%1"</translation>
+        <source>Could not open File &quot;%1&quot;</source>
+        <translation type="vanished">Não foi possível abrir o arquivo &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-449" />
-        <source>Cannot read "%1": %2</source>
-        <translation>Não é possível ler "%1": %2</translation>
+        <source>Cannot read &quot;%1&quot;: %2</source>
+        <translation>Não é possível ler &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>Could not open file "%1" for writing</source>
-        <translation type="vanished">Não foi possível abrir o arquivo "%1" para gravação</translation>
+        <source>Could not open file &quot;%1&quot; for writing</source>
+        <translation type="vanished">Não foi possível abrir o arquivo &quot;%1&quot; para gravação</translation>
     </message>
     <message>
-        <source>Could not write to file "%1" (only %2 of %3 bytes written)</source>
-        <translation type="vanished">Não foi possível gravar no arquivo "%1" (somente %2 de %3 bytes gravados)</translation>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
+        <translation type="vanished">Não foi possível gravar no arquivo &quot;%1&quot; (somente %2 de %3 bytes gravados)</translation>
     </message>
     <message>
-        <source>Could not create temporary file in "%1" (%2)</source>
-        <translation type="vanished">Não foi possível criar arquivo temporário em "%1" (%2)</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
+        <translation type="vanished">Não foi possível criar arquivo temporário em &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="-87" />
         <location line="+406" />
-        <source>Failed to copy file "%1" to "%2": %3</source>
-        <translation>Falha ao copiar o arquivo "%1" para "%2": %3</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Falha ao copiar o arquivo &quot;%1&quot; para &quot;%2&quot;: %3</translation>
     </message>
     <message>
         <location line="-333" />
-        <source>File "%1" does not exist.</source>
-        <translation>O arquivo "%1" não existe.</translation>
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>O arquivo &quot;%1&quot; não existe.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File "%1".</source>
-        <translation>Não foi possível abrir o arquivo "%1".</translation>
+        <source>Could not open File &quot;%1&quot;.</source>
+        <translation>Não foi possível abrir o arquivo &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Could not open file "%1" for writing.</source>
-        <translation>Não foi possível abrir o arquivo "%1" para escrever.</translation>
+        <source>Could not open file &quot;%1&quot; for writing.</source>
+        <translation>Não foi possível abrir o arquivo &quot;%1&quot; para escrever.</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
-        <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %n byte(s) written).</source>
         <translation>
-            <numerusform>Não foi possível escrever para arquivar " %1" (apenas %2 de %n bytes escritos).</numerusform>
-            <numerusform>Não foi possível escrever para arquivar " %1" (apenas %2 de %n bytes escritos).</numerusform>
+            <numerusform>Não foi possível escrever para arquivar &quot; %1&quot; (apenas %2 de %n bytes escritos).</numerusform>
+            <numerusform>Não foi possível escrever para arquivar &quot; %1&quot; (apenas %2 de %n bytes escritos).</numerusform>
         </translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Could not create temporary file in "%1" (%2).</source>
-        <translation>Não foi possível criar um arquivo temporário em "%1" (%2).</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2).</source>
+        <translation>Não foi possível criar um arquivo temporário em &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location line="+138" />
@@ -24358,22 +24407,22 @@ em 2".
     </message>
     <message>
         <location line="+202" />
-        <source>Failed reading file "%1": %2</source>
-        <translation>Falha ao ler o arquivo "%1": %2</translation>
+        <source>Failed reading file &quot;%1&quot;: %2</source>
+        <translation>Falha ao ler o arquivo &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Failed writing file "%1": %2</source>
-        <translation>Falha ao gravar o arquivo "%1": %2</translation>
+        <source>Failed writing file &quot;%1&quot;: %2</source>
+        <translation>Falha ao gravar o arquivo &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Failed creating temporary file "%1": %2</source>
-        <translation>Falha ao criar o arquivo temporário "%1": %2</translation>
+        <source>Failed creating temporary file &quot;%1&quot;: %2</source>
+        <translation>Falha ao criar o arquivo temporário &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>Failed creating temporary file "%1" (too many tries)</source>
-        <translation type="vanished">Falha ao criar arquivo temporário "%1" (muitas tentativas)</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
+        <translation type="vanished">Falha ao criar arquivo temporário &quot;%1&quot; (muitas tentativas)</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
@@ -24392,18 +24441,18 @@ em 2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/elfreader.cpp" line="+130" />
-        <source>"%1" is an invalid ELF object (%2)</source>
-        <translation>"%1" é um objeto ELF inválido (%2)</translation>
+        <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
+        <translation>&quot;%1&quot; é um objeto ELF inválido (%2)</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>"%1" is not an ELF object (file too small)</source>
-        <translation>"%1" não é um objeto ELF (arquivo muito pequeno)</translation>
+        <source>&quot;%1&quot; is not an ELF object (file too small)</source>
+        <translation>&quot;%1&quot; não é um objeto ELF (arquivo muito pequeno)</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>"%1" is not an ELF object</source>
-        <translation>"%1" não é um objeto ELF</translation>
+        <source>&quot;%1&quot; is not an ELF object</source>
+        <translation>&quot;%1&quot; não é um objeto ELF</translation>
     </message>
     <message>
         <location line="+8" />
@@ -24428,9 +24477,9 @@ em 2".
     <message numerus="yes">
         <location line="+9" />
         <source>announced %n sections, each %1 bytes, exceed file size</source>
-        <translation>
-            <numerusform>%n seções anunciadas, cada %1 bytes, excedem o tamanho do arquivo</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -24455,14 +24504,14 @@ To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-To disable a variable, prefix the line with "#".</source>
+To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="vanished">Insira uma variável de ambiente por linha.
 Para definir ou alterar uma variável, use VARIABLE=VALUE.
 Para anexar a uma variável, use VARIABLE+=VALUE.
 Para preceder uma variável, use VARIABLE=+VALUE.
 As variáveis existentes podem ser referenciadas em um VALUE com ${OTHER}.
 Para limpar uma variável, coloque seu nome em uma linha sem mais nada.
-Para desabilitar uma variável, prefixe a linha com "#".</translation>
+Para desabilitar uma variável, prefixe a linha com &quot;#&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
@@ -24502,13 +24551,13 @@ Para desabilitar uma variável, prefixe a linha com "#".</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Invalid character "%1".</source>
-        <translation>Caractere inválido "%1".</translation>
+        <source>Invalid character &quot;%1&quot;.</source>
+        <translation>Caractere inválido &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid characters "%1".</source>
-        <translation>Caracteres inválidos "%1".</translation>
+        <source>Invalid characters &quot;%1&quot;.</source>
+        <translation>Caracteres inválidos &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -24549,13 +24598,13 @@ Para desabilitar uma variável, prefixe a linha com "#".</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Could not set permissions on "%1"</source>
-        <translation>Não foi possível definir permissões em "%1"</translation>
+        <source>Could not set permissions on &quot;%1&quot;</source>
+        <translation>Não foi possível definir permissões em &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+250" />
-        <source>No "localSource" device hook set.</source>
-        <translation>Nenhum gancho de dispositivo "localSource" definido.</translation>
+        <source>No &quot;localSource&quot; device hook set.</source>
+        <translation>Nenhum gancho de dispositivo &quot;localSource&quot; definido.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
@@ -24637,20 +24686,20 @@ Para desabilitar uma variável, prefixe a linha com "#".</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Overwrite existing file "%1"?</source>
-        <translation>Substituir o arquivo existente "%1"?</translation>
+        <source>Overwrite existing file &quot;%1&quot;?</source>
+        <translation>Substituir o arquivo existente &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+21" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>Não foi possível copiar o arquivo "%1" para "%2".</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>Não foi possível copiar o arquivo &quot;%1&quot; para &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
         <location line="+409" />
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
-        <source>Failed to create directory "%1".</source>
-        <translation>Falha ao criar o diretório "%1".</translation>
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>Falha ao criar o diretório &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
@@ -24711,15 +24760,15 @@ Para desabilitar uma variável, prefixe a linha com "#".</translation>
         <location line="+14" />
         <location line="+2" />
         <source>%n Items</source>
-        <translation>
-            <numerusform>%n itens</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
-        <source>Failed to start process launcher at "%1": %2</source>
-        <translation>Falha ao iniciar o iniciador do processo em "%1": %2</translation>
+        <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
+        <translation>Falha ao iniciar o iniciador do processo em &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24835,20 +24884,20 @@ Para desabilitar uma variável, prefixe a linha com "#".</translation>
         <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
-To disable a variable, prefix this line with "#".
+To disable a variable, prefix this line with &quot;#&quot;.
 To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-Lines starting with "##" will be treated as comments.</source>
+Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Digite uma variável de ambiente por linha.
  Para definir ou alterar uma variável, use variável = valor.
- Para desativar uma variável, prefixo esta linha com "#".
+ Para desativar uma variável, prefixo esta linha com &quot;#&quot;.
  Para anexar uma variável, use variável+= valor.
  Para prender a uma variável, use variável =+valor.
  As variáveis ​​existentes podem ser referenciadas em um valor com $ {outros}.
  Para limpar uma variável, coloque seu nome em uma linha sem mais nada nela.
- As linhas que começam com "##" serão tratadas como comentários.</translation>
+ As linhas que começam com &quot;##&quot; serão tratadas como comentários.</translation>
     </message>
     <message>
         <location line="+112" />
@@ -24867,18 +24916,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+29" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>O programa "%1" não existe ou não é executável.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>O programa &quot;%1&quot; não existe ou não é executável.</translation>
     </message>
     <message>
         <location line="+79" />
-        <source>The program "%1" could not be found.</source>
-        <translation>O programa "%1" não pôde ser encontrado.</translation>
+        <source>The program &quot;%1&quot; could not be found.</source>
+        <translation>O programa &quot;%1&quot; não pôde ser encontrado.</translation>
     </message>
     <message>
         <location line="+908" />
-        <source>Failed to create process interface for "%1".</source>
-        <translation>Falha ao criar interface de processo para "%1".</translation>
+        <source>Failed to create process interface for &quot;%1&quot;.</source>
+        <translation>Falha ao criar interface de processo para &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+163" />
@@ -24892,8 +24941,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The process "%1" is not responding.</source>
-        <translation>O processo "%1" não está respondendo.</translation>
+        <source>The process &quot;%1&quot; is not responding.</source>
+        <translation>O processo &quot;%1&quot; não está respondendo.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -24902,32 +24951,32 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+233" />
-        <source>The command "%1" finished successfully.</source>
-        <translation>O comando "%1" foi concluído com sucesso.</translation>
+        <source>The command &quot;%1&quot; finished successfully.</source>
+        <translation>O comando &quot;%1&quot; foi concluído com sucesso.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated with exit code %2.</source>
-        <translation>O comando "%1" terminou com o código de saída %2.</translation>
+        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
+        <translation>O comando &quot;%1&quot; terminou com o código de saída %2.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated abnormally.</source>
-        <translation>O comando "%1" foi finalizado de forma anormal.</translation>
+        <source>The command &quot;%1&quot; terminated abnormally.</source>
+        <translation>O comando &quot;%1&quot; foi finalizado de forma anormal.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" could not be started.</source>
-        <translation>O comando "%1" não pôde ser iniciado.</translation>
+        <source>The command &quot;%1&quot; could not be started.</source>
+        <translation>O comando &quot;%1&quot; não pôde ser iniciado.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>The command "%1" was canceled after %2 ms.</source>
-        <translation>O comando " %1" foi cancelado após %2 ms.</translation>
+        <source>The command &quot;%1&quot; was canceled after %2 ms.</source>
+        <translation>O comando &quot; %1&quot; foi cancelado após %2 ms.</translation>
     </message>
     <message>
-        <source>The command "%1" did not respond within the timeout limit (%2 s).</source>
-        <translation type="vanished">O comando "%1" não respondeu dentro do limite de tempo limite (%2 s).</translation>
+        <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
+        <translation type="vanished">O comando &quot;%1&quot; não respondeu dentro do limite de tempo limite (%2 s).</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
@@ -24966,8 +25015,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open "%1".</source>
-        <translation>Não foi possível abrir "%1".</translation>
+        <source>Could not open &quot;%1&quot;.</source>
+        <translation>Não foi possível abrir &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -24988,13 +25037,13 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="-264" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Nenhum arquivo de configurações válido foi encontrado.&lt;/p&gt;&lt;p&gt;Todos os arquivos de configurações encontrados no diretório "%1" eram inadequados para a versão atual de %2, por exemplo, porque foram escritos por uma versão incompatível de %2 ou porque um caminho de configuração diferente foi usado.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Nenhum arquivo de configurações válido foi encontrado.&lt;/p&gt;&lt;p&gt;Todos os arquivos de configurações encontrados no diretório &quot;%1&quot; eram inadequados para a versão atual de %2, por exemplo, porque foram escritos por uma versão incompatível de %2 ou porque um caminho de configuração diferente foi usado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+265" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were either too new or too old to be read.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Nenhum arquivo de configurações válido foi encontrado.&lt;/p&gt;&lt;p&gt;Todos os arquivos de configurações encontrados no diretório "%1" eram muito novos ou muito antigos para serem lidos.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Nenhum arquivo de configurações válido foi encontrado.&lt;/p&gt;&lt;p&gt;Todos os arquivos de configurações encontrados no diretório &quot;%1&quot; eram muito novos ou muito antigos para serem lidos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+11" />
@@ -25003,18 +25052,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>&lt;p&gt;The versioned backup "%1" of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;O backup com versão "%1" do arquivo de configurações é usado porque o arquivo sem versão foi criado por uma versão incompatível de %2.&lt;/p&gt;&lt;p&gt;Alterações de configurações feitas desde a última vez que esta versão do %2 foi usado são ignorados e as alterações feitas agora &lt;b&gt;não&lt;/b&gt; serão propagadas para a versão mais recente.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;The versioned backup &quot;%1&quot; of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;O backup com versão &quot;%1&quot; do arquivo de configurações é usado porque o arquivo sem versão foi criado por uma versão incompatível de %2.&lt;/p&gt;&lt;p&gt;Alterações de configurações feitas desde a última vez que esta versão do %2 foi usado são ignorados e as alterações feitas agora &lt;b&gt;não&lt;/b&gt; serão propagadas para a versão mais recente.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Settings File for "%1" from a Different Environment?</source>
-        <translation>Arquivo de configurações para "%1" de um ambiente diferente?</translation>
+        <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
+        <translation>Arquivo de configurações para &quot;%1&quot; de um ambiente diferente?</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file "%2"?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Nenhum arquivo de configurações criado por esta instância de %1 foi encontrado.&lt;/p&gt;&lt;p&gt;Você trabalhou com este projeto em outra máquina ou usando um caminho de configurações diferente antes?&lt;/p&gt;&lt;p&gt;Você ainda deseja carregar o arquivo de configurações "%2"?&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file &quot;%2&quot;?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Nenhum arquivo de configurações criado por esta instância de %1 foi encontrado.&lt;/p&gt;&lt;p&gt;Você trabalhou com este projeto em outra máquina ou usando um caminho de configurações diferente antes?&lt;/p&gt;&lt;p&gt;Você ainda deseja carregar o arquivo de configurações &quot;%2&quot;?&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+55" />
@@ -25023,8 +25072,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" is not supported by %2. Do you want to try loading it anyway?</source>
-        <translation>"%1" não é suportado por %2. Deseja tentar carregá-lo mesmo assim?</translation>
+        <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
+        <translation>&quot;%1&quot; não é suportado por %2. Deseja tentar carregá-lo mesmo assim?</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/aspects.cpp" line="+92" />
@@ -25079,7 +25128,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variável&lt;/th&gt;&lt;th&gt;Expande para&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td &gt;diretório do arquivo atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;nome do arquivo (com caminho completo)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;% n&lt;/td&gt;&lt;td&gt;nome do arquivo (sem caminho)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
@@ -25099,8 +25148,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+3" />
         <location line="+7" />
-        <source>Insert "%1"</source>
-        <translation>Insira "%1"</translation>
+        <source>Insert &quot;%1&quot;</source>
+        <translation>Insira &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-3" />
@@ -25141,8 +25190,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+7" />
-        <source>Command "%1" was not found.</source>
-        <translation>O comando "%1" não foi encontrado.</translation>
+        <source>Command &quot;%1&quot; was not found.</source>
+        <translation>O comando &quot;%1&quot; não foi encontrado.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -25167,8 +25216,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+28" />
         <location line="+45" />
-        <source>Failed to start terminal process: "%1".</source>
-        <translation>Falha ao iniciar o processo do terminal: "%1".</translation>
+        <source>Failed to start terminal process: &quot;%1&quot;.</source>
+        <translation>Falha ao iniciar o processo do terminal: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
@@ -25220,9 +25269,9 @@ Lines starting with "##" will be treated as comments.</source>
     <name>TextEditor::Internal::Snippets</name>
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippetscollection.cpp" line="-255" />
-        <source />
+        <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
-        <translation />
+        <translation></translation>
     </message>
 </context>
 </TS>

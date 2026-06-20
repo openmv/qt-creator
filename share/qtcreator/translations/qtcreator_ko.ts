@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+838" />
         <source>Copy</source>
         <translation>복사</translation>
     </message>
@@ -30,82 +30,82 @@
         <translation>OpenMV 캠 설정</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Turn on WiFi Shield on startup</source>
         <translation>시작할 때 WiFi 쉴드 켜기</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Client Mode (Normal)</source>
         <translation>클라이언트 모드(일반)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Password</source>
         <translation>비밀번호</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter your WiFi network password here</source>
         <translation>여기에 Wi-Fi 네트워크 비밀번호를 입력하세요.</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Type</source>
         <translation>유형</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Open (No password)</source>
         <translation>열기(비밀번호 없음)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WPA (Modern WiFi Security)</source>
         <translation>WPA(최신 WiFi 보안)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WEP (Hexadecimal password)</source>
         <translation>WEP(16진수 암호)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>SSID</source>
         <translation>SSID</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter or select your WiFi network here</source>
         <translation>여기에 WiFi 네트워크를 입력하거나 선택하십시오.</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Acess Point Mode</source>
         <translation>액세스 포인트 모드</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
         <translation>여기에 비밀번호를 생성하려면 WiFi 네트워크 이름을 입력하세요.</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
         <translation>여기에 만들 WiFI 네트워크의 이름을 입력하세요.</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Board Name</source>
         <translation>보드명</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
         <translation>여기에 OpenMV Cam의 이름을 입력하세요.</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Duplicate REPL on the UART on startup</source>
         <translation>시작 시 UART에 REPL 복제</translation>
     </message>
@@ -118,42 +118,42 @@
         <translation>000</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Max</source>
         <translation>최대</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Median</source>
         <translation>중앙값</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mode</source>
         <translation>방법</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>LQ</source>
         <translation>엘큐</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Min</source>
         <translation>분</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mean</source>
         <translation>평균</translation>
     </message>
@@ -205,41 +205,41 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for '%1'...</source>
-        <translation>'%1'에 대한 새 구문 정의 다운로드 중...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation>&apos;%1&apos;에 대한 새 구문 정의 다운로드 중...</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for '%1' to version %2...</source>
-        <translation>'%1'에 대한 구문 정의를 %2 버전으로 업데이트하는 중...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation>&apos;%1&apos;에 대한 구문 정의를 %2 버전으로 업데이트하는 중...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
         <source>Copy/Convert Python File</source>
         <translation>파이썬 파일을 복사/변환합니다</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+21" />
         <location line="+7" />
-        <location line="+94" />
+        <location line="+91" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+76" />
         <location line="+7" />
         <source>Unable to overwrite output file!</source>
         <translation>출력 파일을 덮어 쓸 수 없습니다!</translation>
     </message>
     <message>
-        <location line="-125" />
+        <location line="-124" />
         <source>Model Zoo</source>
         <translation>모델 동물원</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+77" />
         <source>Model conversion is unnecessary for this board, as it lacks an NPU accelerator.</source>
         <translation>NPU 가속기가 없기 때문에이 보드의 모델 변환은 불필요합니다.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <source>Convert Model</source>
         <translation>변환 모델</translation>
     </message>
@@ -335,8 +335,8 @@
         <translation type="vanished">작업 공간 관리자</translation>
     </message>
     <message>
-        <source>&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;What is a Workspace?&lt;/a&gt;</source>
-        <translation type="vanished">&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;작업공간이란 무엇입니까?&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;작업공간이란 무엇입니까?&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Workspace</source>
@@ -639,7 +639,7 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Request Copilot suggestion at the current editor's cursor position.</source>
+        <source>Request Copilot suggestion at the current editor&apos;s cursor position.</source>
         <translation>현재 편집기의 커서 위치에서 Copilot 제안을 요청하십시오.</translation>
     </message>
     <message>
@@ -893,8 +893,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>"%1"에 대한 편집기를 열지 못했습니다.</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;에 대한 편집기를 열지 못했습니다.</translation>
     </message>
     <message>
         <location line="+28" />
@@ -929,7 +929,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-2268" />
         <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+445" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
@@ -1027,8 +1027,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+74" />
-        <source>An item named "%1" already exists at this location. Do you want to overwrite it?</source>
-        <translation>이름이 "%1"인 항목이 이 위치에 이미 있습니다. 덮어쓰시겠습니까?</translation>
+        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
+        <translation>이름이 &quot;%1&quot;인 항목이 이 위치에 이미 있습니다. 덮어쓰시겠습니까?</translation>
     </message>
     <message>
         <location line="+230" />
@@ -1146,7 +1146,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="+12" />
         <source>Ad&amp;vanced</source>
-        <translation>고급의</translation>
+        <translation>고급의 (&amp;V)</translation>
     </message>
     <message>
         <location line="+38" />
@@ -1155,12 +1155,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+7" />
-        <source>X-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>화면에 상대적인 현재 편집기의 왼쪽 위 모서리 X 좌표입니다.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Y-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>화면을 기준으로 현재 편집기의 왼쪽 위 모서리에 대한 Y 좌표입니다.</translation>
     </message>
     <message>
@@ -1170,27 +1170,27 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <source>The text file "%1" has the size %2MB and might take more memory to open and process than available.
+        <source>The text file &quot;%1&quot; has the size %2MB and might take more memory to open and process than available.
 
 Continue?</source>
-        <translation>텍스트 파일 "%1"의 크기는 %2MB이며 열고 처리하는 데 사용할 수 있는 것보다 더 많은 메모리가 필요할 수 있습니다.
+        <translation>텍스트 파일 &quot;%1&quot;의 크기는 %2MB이며 열고 처리하는 데 사용할 수 있는 것보다 더 많은 메모리가 필요할 수 있습니다.
 
 계속하다?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>Could not open "%1": Cannot open files of type "%2".</source>
-        <translation>"%1"을(를) 열 수 없음: "%2" 유형의 파일을 열 수 없습니다.</translation>
+        <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot;을(를) 열 수 없음: &quot;%2&quot; 유형의 파일을 열 수 없습니다.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not open "%1" for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>읽기용으로 "%1"을(를) 열 수 없습니다. 파일이 존재하지 않거나 파일을 열 수 있는 권한이 없습니다.</translation>
+        <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
+        <translation>읽기용으로 &quot;%1&quot;을(를) 열 수 없습니다. 파일이 존재하지 않거나 파일을 열 수 있는 권한이 없습니다.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Could not open "%1": Unknown error.</source>
-        <translation>"%1"을(를) 열 수 없습니다: 알 수 없는 오류입니다.</translation>
+        <source>Could not open &quot;%1&quot;: Unknown error.</source>
+        <translation>&quot;%1&quot;을(를) 열 수 없습니다: 알 수 없는 오류입니다.</translation>
     </message>
     <message>
         <location line="+1130" />
@@ -1210,7 +1210,7 @@ Continue?</source>
     <message>
         <location line="+1" />
         <source>Save %1 &amp;As...</source>
-        <translation>%1을(를) 다른 이름으로 저장...</translation>
+        <translation>%1을(를) 다른 이름으로 저장... (&amp;A)</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1267,18 +1267,18 @@ Continue?</source>
     </message>
     <message>
         <location line="+308" />
-        <source>Close "%1"</source>
-        <translation>"%1" 닫기</translation>
+        <source>Close &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; 닫기</translation>
     </message>
     <message>
         <location line="+27" />
-        <source>Unpin "%1"</source>
-        <translation>"%1" 고정 해제</translation>
+        <source>Unpin &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; 고정 해제</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Pin "%1"</source>
-        <translation>핀 "%1"</translation>
+        <source>Pin &quot;%1&quot;</source>
+        <translation>핀 &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1403,7 +1403,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+2" />
-        <source>Don't Round</source>
+        <source>Don&apos;t Round</source>
         <translation>둥글지 마십시오</translation>
     </message>
     <message>
@@ -1555,8 +1555,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+35" />
-        <source>Command line arguments used for "Run in terminal".</source>
-        <translation>"터미널에서 실행"에 사용되는 명령줄 인수입니다.</translation>
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>&quot;터미널에서 실행&quot;에 사용되는 명령줄 인수입니다.</translation>
     </message>
     <message>
         <location line="-50" />
@@ -1580,8 +1580,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+105" />
-        <source>Command line arguments used for "%1".</source>
-        <translation>"%1"에 사용된 명령줄 인수입니다.</translation>
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;에 사용된 명령줄 인수입니다.</translation>
     </message>
     <message>
         <location line="+34" />
@@ -1637,8 +1637,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+147" />
-        <source>Maximum number of entries in "Recent Files":</source>
-        <translation>"최근 파일"의 최대 항목 수:</translation>
+        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
+        <translation>&quot;최근 파일&quot;의 최대 항목 수:</translation>
     </message>
     <message>
         <location line="+12" />
@@ -1698,7 +1698,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>산출</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1773" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1787" />
         <source>&amp;File</source>
         <translation>&amp;파일</translation>
     </message>
@@ -1723,7 +1723,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>&amp;돕다</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+122" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+128" />
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2620" />
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
@@ -1735,7 +1735,7 @@ provided they were unmodified before the refactoring.</source>
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
-        <translation>다른 이름으로 저장...</translation>
+        <translation>다른 이름으로 저장... (&amp;A)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+3" />
@@ -1748,13 +1748,13 @@ provided they were unmodified before the refactoring.</source>
         <translation>모두 저장(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-279" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>%1을(를) 종료하시겠습니까?</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+106" />
         <source>&amp;View</source>
         <translation>&amp;보다</translation>
     </message>
@@ -1797,7 +1797,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+10" />
         <source>Recent &amp;Files</source>
-        <translation>최근 파일</translation>
+        <translation>최근 파일 (&amp;F)</translation>
     </message>
     <message>
         <location line="+20" />
@@ -1812,7 +1812,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+8" />
         <source>E&amp;xit</source>
-        <translation>출구</translation>
+        <translation>출구 (&amp;X)</translation>
     </message>
     <message>
         <location line="+3" />
@@ -1842,7 +1842,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+6" />
         <source>Cu&amp;t</source>
-        <translation>자르다</translation>
+        <translation>자르다 (&amp;T)</translation>
     </message>
     <message>
         <location line="+8" />
@@ -1857,7 +1857,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+8" />
         <source>Select &amp;All</source>
-        <translation>모두 선택</translation>
+        <translation>모두 선택 (&amp;A)</translation>
     </message>
     <message>
         <location line="+8" />
@@ -1947,8 +1947,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the "%2" action from the "%3" locator filter (%4).</source>
-        <translation>메뉴 막대가 완전히 숨 깁니다. %1을 입력하여 다시 표시 할 수 있습니다. &lt;br&gt; &lt;br&gt; 또는 "%3"로케이터 필터 (%4)에서 "%2"동작을 트리거하십시오.</translation>
+        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the &quot;%2&quot; action from the &quot;%3&quot; locator filter (%4).</source>
+        <translation>메뉴 막대가 완전히 숨 깁니다. %1을 입력하여 다시 표시 할 수 있습니다. &lt;br&gt; &lt;br&gt; 또는 &quot;%3&quot;로케이터 필터 (%4)에서 &quot;%2&quot;동작을 트리거하십시오.</translation>
     </message>
     <message>
         <location line="+21" />
@@ -2001,7 +2001,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>숨겨진</translation>
     </message>
     <message>
-        <location line="+460" />
+        <location line="+474" />
         <source>Version:</source>
         <translation>버전:</translation>
     </message>
@@ -2021,7 +2021,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>&lt;p&gt;Qt Creator 개발자는 Qt Creator 메일링 리스트:&lt;/p&gt;%1&lt;p&gt;또는 Libera.Chat IRC의 #qt-creator 채널:&lt;/p&gt;%2&lt;p&gt;버그 추적기에서 연락할 수 있습니다. 은(는) %3에 있습니다.&lt;/p&gt;&lt;p&gt;더 큰 텍스트 덩어리는 %4를 사용하세요.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-803" />
+        <location line="-817" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -2054,7 +2054,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+240" />
+        <location line="+244" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>문서 열기</translation>
@@ -2076,8 +2076,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Close All Except "%1"</source>
-        <translation>"%1"을(를) 제외한 모두 닫기</translation>
+        <source>Close All Except &quot;%1&quot;</source>
+        <translation>&quot;%1&quot;을(를) 제외한 모두 닫기</translation>
     </message>
     <message>
         <location line="+1" />
@@ -2113,16 +2113,16 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+927" />
-        <location line="+13" />
-        <location line="+11" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location line="+16" />
+        <location line="+14" />
         <source>Save Log</source>
         <translation>로그를 저장하다</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-617" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
         <source>Clear</source>
         <translation>분명한</translation>
     </message>
@@ -2263,8 +2263,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+51" />
-        <source>Failed to open preset file "%1" for reading.</source>
-        <translation>읽기를 위해 사전 설정 파일 "%1"을 열지 못했습니다.</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading.</source>
+        <translation>읽기를 위해 사전 설정 파일 &quot;%1&quot;을 열지 못했습니다.</translation>
     </message>
     <message>
         <location line="-172" />
@@ -2278,13 +2278,13 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+16" />
-        <source>Failed to write logs to "%1".</source>
-        <translation>"%1"에 로그를 쓰지 못했습니다.</translation>
+        <source>Failed to write logs to &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;에 로그를 쓰지 못했습니다.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open file "%1" for writing logs.</source>
-        <translation>로그를 쓰기 위해 파일 "%1"을(를) 열지 못했습니다.</translation>
+        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
+        <translation>로그를 쓰기 위해 파일 &quot;%1&quot;을(를) 열지 못했습니다.</translation>
     </message>
     <message>
         <source>Save Enabled Categories As</source>
@@ -2292,8 +2292,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+45" />
-        <source>Failed to write preset file "%1".</source>
-        <translation>사전 설정 파일 "%1"을(를) 쓰지 못했습니다.</translation>
+        <source>Failed to write preset file &quot;%1&quot;.</source>
+        <translation>사전 설정 파일 &quot;%1&quot;을(를) 쓰지 못했습니다.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -2301,13 +2301,13 @@ provided they were unmodified before the refactoring.</source>
         <translation>다음에서 활성화된 범주 로드</translation>
     </message>
     <message>
-        <source>Failed to open preset file "%1" for reading</source>
-        <translation type="vanished">사전 설정 파일 "%1"을(를) 읽기 위해 열지 못했습니다.</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading</source>
+        <translation type="vanished">사전 설정 파일 &quot;%1&quot;을(를) 읽기 위해 열지 못했습니다.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Failed to read preset file "%1": %2</source>
-        <translation>사전 설정 파일 "%1" 읽기 실패: %2</translation>
+        <source>Failed to read preset file &quot;%1&quot;: %2</source>
+        <translation>사전 설정 파일 &quot;%1&quot; 읽기 실패: %2</translation>
     </message>
     <message>
         <location line="+29" />
@@ -2342,7 +2342,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+64" />
         <source>Out&amp;put</source>
-        <translation>산출</translation>
+        <translation>산출 (&amp;P)</translation>
     </message>
     <message>
         <location line="+406" />
@@ -2466,17 +2466,17 @@ provided they were unmodified before the refactoring.</source>
         <translation>프로세스</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-75" />
         <source>&amp;Diff</source>
         <translation>차이(&amp;D)</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Do &amp;Not Save</source>
-        <translation>저장하지 마십시오</translation>
+        <translation>저장하지 마십시오 (&amp;N)</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+72" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
         <translation>비교(&amp;D) &amp;&amp; 취소</translation>
     </message>
@@ -2570,13 +2570,13 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+4" />
-        <source>Use "Cmd", "Opt", "Ctrl", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>수정자 키는 "Cmd", "Opt", "Ctrl" 및 "Shift"를 사용하십시오. 특수 키에는 "Escape", "Backspace", "Delete", "Insert", "Home" 등을 사용하십시오. 개별 키를 "+"로 결합하고 여러 바로 가기를 ","로 바로 가기 시퀀스로 결합합니다. 예를 들어 사용자가 Esc 키를 누른 상태에서 Ctrl 및 Shift 보조 키를 누른 상태에서 손을 떼고 A 키를 눌러야 하는 경우 "Ctrl+Shift+Escape,A"를 입력합니다.</translation>
+        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>수정자 키는 &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot; 및 &quot;Shift&quot;를 사용하십시오. 특수 키에는 &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; 등을 사용하십시오. 개별 키를 &quot;+&quot;로 결합하고 여러 바로 가기를 &quot;,&quot;로 바로 가기 시퀀스로 결합합니다. 예를 들어 사용자가 Esc 키를 누른 상태에서 Ctrl 및 Shift 보조 키를 누른 상태에서 손을 떼고 A 키를 눌러야 하는 경우 &quot;Ctrl+Shift+Escape,A&quot;를 입력합니다.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Use "Ctrl", "Alt", "Meta", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>수정자 키는 "Ctrl", "Alt", "Meta" 및 "Shift"를 사용하십시오. 특수 키에는 "Escape", "Backspace", "Delete", "Insert", "Home" 등을 사용하십시오. 개별 키를 "+"로 결합하고 여러 바로 가기를 ","로 바로 가기 시퀀스로 결합합니다. 예를 들어 사용자가 Esc 키를 누른 상태에서 Ctrl 및 Shift 보조 키를 누른 상태에서 손을 떼고 A 키를 눌러야 하는 경우 "Ctrl+Shift+Escape,A"를 입력합니다.</translation>
+        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>수정자 키는 &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot; 및 &quot;Shift&quot;를 사용하십시오. 특수 키에는 &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; 등을 사용하십시오. 개별 키를 &quot;+&quot;로 결합하고 여러 바로 가기를 &quot;,&quot;로 바로 가기 시퀀스로 결합합니다. 예를 들어 사용자가 Esc 키를 누른 상태에서 Ctrl 및 Shift 보조 키를 누른 상태에서 손을 떼고 A 키를 눌러야 하는 경우 &quot;Ctrl+Shift+Escape,A&quot;를 입력합니다.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -2585,8 +2585,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+24" />
-        <source>Key sequence has potential conflicts. &lt;a href="#conflicts"&gt;Show.&lt;/a&gt;</source>
-        <translation>키 시퀀스에 잠재적인 충돌이 있습니다. &lt;a href="#conflicts"&gt;보이기&lt;/a&gt;</translation>
+        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
+        <translation>키 시퀀스에 잠재적인 충돌이 있습니다. &lt;a href=&quot;#conflicts&quot;&gt;보이기&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+122" />
@@ -2606,7 +2606,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+4" />
         <source>Search &amp;&amp; &amp;Replace</source>
-        <translation>검색 &amp;&amp;바꾸기</translation>
+        <translation>검색 &amp;&amp;바꾸기 (&amp;R)</translation>
     </message>
     <message>
         <location line="+7" />
@@ -2626,7 +2626,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+3" />
         <source>Sco&amp;pe:</source>
-        <translation>범위:</translation>
+        <translation>범위: (&amp;P)</translation>
     </message>
     <message>
         <location line="-9" />
@@ -2645,7 +2645,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-333" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-335" />
         <source>Open Advanced Find...</source>
         <translation>고급 찾기 열기...</translation>
     </message>
@@ -2667,12 +2667,11 @@ provided they were unmodified before the refactoring.</source>
         <translation>찾기 문자열 입력</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+E</source>
-        <translation>Ctrl+E</translation>
+        <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Find Next</source>
         <translation>다음 찾기</translation>
     </message>
@@ -2692,24 +2691,24 @@ provided they were unmodified before the refactoring.</source>
         <translation>바꾸기 &amp;&amp; 이전 찾기</translation>
     </message>
     <message>
-        <location line="-246" />
-        <location line="+259" />
+        <location line="-248" />
+        <location line="+261" />
         <source>Replace All</source>
         <translation>모두 다 바꿔</translation>
     </message>
     <message>
-        <location line="-309" />
+        <location line="-311" />
         <source>Find Flags</source>
         <translation>플래그 찾기</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+235" />
+        <location line="+237" />
         <source>Replace &amp;&amp; Find</source>
         <translation>바꾸기 &amp;&amp; 찾기</translation>
     </message>
     <message>
-        <location line="-148" />
+        <location line="-150" />
         <location line="+13" />
         <source>Shift+Enter</source>
         <translation>쉬프트+엔터</translation>
@@ -2726,7 +2725,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>찾기/바꾸기</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+59" />
         <source>Find Next (Selected)</source>
         <translation>다음 찾기(선택됨)</translation>
     </message>
@@ -2785,7 +2784,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>다음으로 교체...</translation>
     </message>
     <message>
-        <location line="-520" />
+        <location line="-522" />
         <source>Find</source>
         <translation>찾다</translation>
     </message>
@@ -2824,7 +2823,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+705" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
         <source>Collapse All</source>
         <translation>모든 축소</translation>
     </message>
@@ -2851,7 +2850,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+225" />
+        <location line="+227" />
         <source>Replace</source>
         <translation>바꾸다</translation>
     </message>
@@ -2867,11 +2866,11 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Open file "%1" with:</source>
-        <translation>다음을 사용하여 파일 "%1" 열기:</translation>
+        <source>Open file &quot;%1&quot; with:</source>
+        <translation>다음을 사용하여 파일 &quot;%1&quot; 열기:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-455" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
         <source>Show Hidden Files</source>
         <translation>숨겨진 파일 표시</translation>
     </message>
@@ -2897,15 +2896,15 @@ provided they were unmodified before the refactoring.</source>
         <translation>새로운 파일</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="+156" />
         <location line="+78" />
         <source>New Folder</source>
         <translation>새 폴더</translation>
     </message>
     <message>
         <location line="-18" />
-        <source>Open "%1"</source>
-        <translation>"%1" 열기</translation>
+        <source>Open &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; 열기</translation>
     </message>
     <message>
         <location line="+20" />
@@ -2965,7 +2964,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>제거하다...</translation>
     </message>
     <message>
-        <location line="-618" />
+        <location line="-622" />
         <source>Synchronize with Editor</source>
         <translation>편집기와 동기화</translation>
     </message>
@@ -3000,8 +2999,8 @@ provided they were unmodified before the refactoring.</source>
         <translation>일반 디렉터리 필터</translation>
     </message>
     <message>
-        <source>Matches all files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">사용자 정의 디렉토리 세트의 모든 파일과 일치합니다. 주어진 줄 번호로 이동하려면 "+&lt;번호&gt;" 또는 ":&lt;번호&gt;"를 추가하십시오. 다른 "+&lt;숫자&gt;" 또는 ":&lt;숫자&gt;"를 추가하여 열 번호로 이동합니다.</translation>
+        <source>Matches all files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">사용자 정의 디렉토리 세트의 모든 파일과 일치합니다. 주어진 줄 번호로 이동하려면 &quot;+&lt;번호&gt;&quot; 또는 &quot;:&lt;번호&gt;&quot;를 추가하십시오. 다른 &quot;+&lt;숫자&gt;&quot; 또는 &quot;:&lt;숫자&gt;&quot;를 추가하여 열 번호로 이동합니다.</translation>
     </message>
     <message>
         <location line="+273" />
@@ -3152,8 +3151,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-78" />
-        <source>Locates files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>사용자 정의 디렉토리 세트에서 파일을 찾습니다. 주어진 줄 번호로 점프하려면 "+&lt;number&gt;"또는 ": &lt;number&gt;"를 추가하십시오. 다른 "+&lt;번호&gt;"또는 ": &lt;number&gt;"를 추가하여 열 번호로 이동하십시오.</translation>
+        <source>Locates files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>사용자 정의 디렉토리 세트에서 파일을 찾습니다. 주어진 줄 번호로 점프하려면 &quot;+&lt;number&gt;&quot;또는 &quot;: &lt;number&gt;&quot;를 추가하십시오. 다른 &quot;+&lt;번호&gt;&quot;또는 &quot;: &lt;number&gt;&quot;를 추가하여 열 번호로 이동하십시오.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -3240,13 +3239,10 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;What to do with the executable's standard output.
+&lt;p&gt;What to do with the executable&apos;s standard output.
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation>&lt;html&gt;&lt;헤드/&gt;&lt;본문&gt;
-&lt;p&gt;실행 파일의 표준 출력으로 수행할 작업.
-&lt;ul&gt;&lt;li&gt;무시: 아무것도 하지 않습니다.&lt;/li&gt;&lt;li&gt;일반 메시지에 표시합니다.&lt;/li&gt;&lt;li&gt;선택 바꾸기: 현재 문서의 현재 선택을 해당 항목으로 바꿉니다.&lt;/li&gt; &lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7" />
@@ -3274,17 +3270,12 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
-&lt;p &gt;What to do with the executable's standard error output.&lt;/p&gt;
+&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
 &lt;li&gt;Show in General Messages.&lt;/li&gt;
 &lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;헤드&gt;&lt;본문&gt;
-&lt;p&gt;실행 파일의 표준 오류 출력으로 수행할 작업&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;무시: 아무것도 하지 않습니다.&lt;/li&gt;
-&lt;li&gt;일반 메시지에 표시.&lt;/li&gt;
-&lt;li&gt;선택 항목 바꾸기: 현재 문서의 현재 선택 항목을 해당 항목으로 바꿉니다.&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12" />
@@ -3401,12 +3392,12 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <source>Opens a file given by a relative path to the current document, or absolute path. "~" refers to your home directory. You have the option to create a file if it does not exist yet.</source>
-        <translation>현재 문서에 대한 상대 경로 또는 절대 경로로 지정된 파일을 엽니다. "~"는 홈 디렉토리를 나타냅니다. 아직 존재하지 않는 경우 파일을 생성할 수 있는 옵션이 있습니다.</translation>
+        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
+        <translation>현재 문서에 대한 상대 경로 또는 절대 경로로 지정된 파일을 엽니다. &quot;~&quot;는 홈 디렉토리를 나타냅니다. 아직 존재하지 않는 경우 파일을 생성할 수 있는 옵션이 있습니다.</translation>
     </message>
     <message>
-        <source>Create and Open "%1"</source>
-        <translation type="vanished">"%1" 생성 및 열기</translation>
+        <source>Create and Open &quot;%1&quot;</source>
+        <translation type="vanished">&quot;%1&quot; 생성 및 열기</translation>
     </message>
     <message>
         <location line="-46" />
@@ -3415,8 +3406,8 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="-13" />
-        <source>Create "%1"?</source>
-        <translation>"%1"을(를) 만드시겠습니까?</translation>
+        <source>Create &quot;%1&quot;?</source>
+        <translation>&quot;%1&quot;을(를) 만드시겠습니까?</translation>
     </message>
     <message>
         <location line="+6" />
@@ -3435,8 +3426,8 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <source>Cannot create file "%1".</source>
-        <translation>"%1"파일을 만들 수 없습니다.</translation>
+        <source>Cannot create file &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;파일을 만들 수 없습니다.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -3445,13 +3436,13 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+164" />
-        <source>Create and Open File "%1"</source>
-        <translation>"%1"파일 생성 및 열기</translation>
+        <source>Create and Open File &quot;%1&quot;</source>
+        <translation>&quot;%1&quot;파일 생성 및 열기</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Create Directory "%1"</source>
-        <translation>디렉토리 만들기 "%1"</translation>
+        <source>Create Directory &quot;%1&quot;</source>
+        <translation>디렉토리 만들기 &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+58" />
@@ -3469,7 +3460,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>사용 가능한 필터</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+557" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
         <source>Open as Centered Popup</source>
         <translation>중앙 팝업으로 열기</translation>
     </message>
@@ -3510,18 +3501,18 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+143" />
-        <source>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;문서 열기&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; 파일 &gt; 파일 열기(%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; 파일 &gt; 예시 &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; 파일 &gt; 최근 파일&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; 파일을 여기로 드래그 앤 드롭&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;문서 열기&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 파일 &gt; 파일 열기(%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 파일 &gt; 예시 &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 파일 &gt; 최근 파일&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 파일을 여기로 드래그 앤 드롭&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+37" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- 클래스 정의로 이동하려면 &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;를 입력하세요.&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- 클래스 정의로 이동하려면 &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;를 입력하세요.&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- 함수 정의로 이동하려면 &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;를 입력하세요.&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- 함수 정의로 이동하려면 &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;를 입력하세요.&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+121" />
@@ -3597,7 +3588,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>관습</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-113" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-116" />
         <source>Save Changes</source>
         <translation>변경 사항을 저장하다</translation>
     </message>
@@ -3731,14 +3722,14 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>기본 설정</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+488" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
         <source>Options</source>
         <translation>옵션</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13" />
-        <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
+        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
         <translation>번역자의 ts 파일에서 애플리케이션이 사용할 수 있는 qm 번역 파일을 생성합니다.</translation>
     </message>
     <message>
@@ -3747,14 +3738,14 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>릴리스 번역(lrelease)</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+5" />
         <source>Linguist</source>
         <translation>언어학자</translation>
     </message>
     <message>
-        <location line="-12" />
-        <source>Synchronizes translator's ts files with the program code</source>
+        <location line="-2" />
+        <source>Synchronizes translator&apos;s ts files with the program code</source>
         <translation>번역기의 ts 파일을 프로그램 코드와 동기화</translation>
     </message>
     <message>
@@ -3774,13 +3765,13 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <location line="+10" />
+        <location line="+15" />
         <location line="+5" />
         <source>Text</source>
         <translation>텍스트</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-17" />
         <source>Runs the current QML file with QML utility.</source>
         <translation>QML 유틸리티로 현재 QML 파일을 실행합니다.</translation>
     </message>
@@ -3806,7 +3797,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Qt Quick 2 미리보기(qmlscene)</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+4" />
         <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>vi에서 현재 파일을 엽니다.</translation>
@@ -3824,8 +3815,8 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by "&gt;". For example "sess def" matches "File &gt; Sessions &gt; Default".</source>
-        <translation>작업을 트리거합니다. 메뉴에 있는 경우 "&gt;"로 구분된 메뉴 계층 구조의 일부와 일치합니다. 예를 들어 "sess def"는 "파일 &gt; 세션 &gt; 기본값"과 일치합니다.</translation>
+        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
+        <translation>작업을 트리거합니다. 메뉴에 있는 경우 &quot;&gt;&quot;로 구분된 메뉴 계층 구조의 일부와 일치합니다. 예를 들어 &quot;sess def&quot;는 &quot;파일 &gt; 세션 &gt; 기본값&quot;과 일치합니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
@@ -3969,9 +3960,9 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+12" />
-        <source>The settings file "%1" is not writable.
+        <source>The settings file &quot;%1&quot; is not writable.
 You will not be able to store any %2 settings.</source>
-        <translation>설정 파일 "%1"에 쓸 수 없습니다.
+        <translation>설정 파일 &quot;%1&quot;에 쓸 수 없습니다.
 %2 설정을 저장할 수 없습니다.</translation>
     </message>
     <message>
@@ -3986,9 +3977,9 @@ You will not be able to store any %2 settings.</source>
     </message>
     <message>
         <location line="+4" />
-        <source>Error reading settings file "%1": %2
+        <source>Error reading settings file &quot;%1&quot;: %2
 You will likely experience further problems using this instance of %3.</source>
-        <translation>설정 파일 "%1" 읽기 오류: %2
+        <translation>설정 파일 &quot;%1&quot; 읽기 오류: %2
 이 %3 인스턴스를 사용하면 더 많은 문제가 발생할 수 있습니다.</translation>
     </message>
     <message>
@@ -4058,8 +4049,8 @@ You will likely experience further problems using this instance of %3.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Select encoding for "%1".%2</source>
-        <translation>"%1"에 대한 인코딩을 선택하십시오.%2</translation>
+        <source>Select encoding for &quot;%1&quot;.%2</source>
+        <translation>&quot;%1&quot;에 대한 인코딩을 선택하십시오.%2</translation>
     </message>
     <message>
         <location line="+49" />
@@ -4241,7 +4232,7 @@ Do you want to check them out now?</source>
 지금 확인하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-943" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-948" />
         <source>Restart Required</source>
         <translation>다시 시작 필요</translation>
     </message>
@@ -4277,23 +4268,23 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
-        <source>Could not find executable for "%1" (expanded "%2")</source>
-        <translation>"%1"에 대한 실행 파일을 찾을 수 없습니다(확장된 "%2").</translation>
+        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
+        <translation>&quot;%1&quot;에 대한 실행 파일을 찾을 수 없습니다(확장된 &quot;%2&quot;).</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>Starting external tool "%1"</source>
-        <translation>외부 도구 "%1" 시작</translation>
+        <source>Starting external tool &quot;%1&quot;</source>
+        <translation>외부 도구 &quot;%1&quot; 시작</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>"%1" finished</source>
-        <translation>"%1" 완료</translation>
+        <source>&quot;%1&quot; finished</source>
+        <translation>&quot;%1&quot; 완료</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" finished with error</source>
-        <translation>"%1"이(가) 오류로 종료되었습니다.</translation>
+        <source>&quot;%1&quot; finished with error</source>
+        <translation>&quot;%1&quot;이(가) 오류로 종료되었습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
@@ -4330,10 +4321,10 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>"%1" returned the following error:
+        <source>&quot;%1&quot; returned the following error:
 
 %2</source>
-        <translation>"%1"이(가) 다음 오류를 반환했습니다.
+        <translation>&quot;%1&quot;이(가) 다음 오류를 반환했습니다.
 
 %2</translation>
     </message>
@@ -4393,24 +4384,24 @@ Do you want to check them out now?</source>
     <message>
         <location line="+6" />
         <source>Open Command Prompt With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>명령 프롬프트 열기</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open Terminal With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>터미널 열기</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file "%1".</source>
-        <translation>파일 "%1"을(를) 제거하지 못했습니다.</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>파일 &quot;%1&quot;을(를) 제거하지 못했습니다.</translation>
     </message>
     <message>
         <location line="+40" />
-        <source>Failed to rename the include guard in file "%1".</source>
-        <translation>파일 "%1"에서 포함 가드의 이름을 바꾸지 못했습니다.</translation>
+        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
+        <translation>파일 &quot;%1&quot;에서 포함 가드의 이름을 바꾸지 못했습니다.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
@@ -4420,7 +4411,7 @@ Do you want to check them out now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+369" />
+        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+394" />
         <source>Case sensitive</source>
         <translation>대소문자 구분</translation>
     </message>
@@ -4561,8 +4552,8 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
-        <source>Factory with id="%1" already registered. Deleting.</source>
-        <translation>id="%1"인 공장이 이미 등록되었습니다. 삭제 중.</translation>
+        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
+        <translation>id=&quot;%1&quot;인 공장이 이미 등록되었습니다. 삭제 중.</translation>
     </message>
     <message>
         <location line="+230" />
@@ -4576,18 +4567,18 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
-        <source>Error in "%1": %2</source>
-        <translation>"%1" 오류: %2</translation>
+        <source>Error in &quot;%1&quot;: %2</source>
+        <translation>&quot;%1&quot; 오류: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>Cannot convert result of "%1" to string.</source>
-        <translation>"%1"의 결과를 문자열로 변환할 수 없습니다.</translation>
+        <source>Cannot convert result of &quot;%1&quot; to string.</source>
+        <translation>&quot;%1&quot;의 결과를 문자열로 변환할 수 없습니다.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal '}' characters must be escaped as "\}", '\' characters must be escaped as "\\", and "%{" must be escaped as "%\{".</source>
-        <translation>간단한 JavaScript 문을 평가합니다.&lt;br&gt;리터럴 '}' 문자는 "\}"로 이스케이프되어야 하고 '\' 문자는 "\\"로 이스케이프되어야 하며 "%{"는 "%\{"로 이스케이프되어야 합니다.</translation>
+        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
+        <translation>간단한 JavaScript 문을 평가합니다.&lt;br&gt;리터럴 &apos;}&apos; 문자는 &quot;\}&quot;로 이스케이프되어야 하고 &apos;\&apos; 문자는 &quot;\\&quot;로 이스케이프되어야 하며 &quot;%{&quot;는 &quot;%\{&quot;로 이스케이프되어야 합니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
@@ -4601,9 +4592,9 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location line="+68" />
-        <source>Previous command is still running ("%1").
+        <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
-        <translation>이전 명령이 아직 실행 중입니다("%1").
+        <translation>이전 명령이 아직 실행 중입니다(&quot;%1&quot;).
 죽이고 싶니?</translation>
     </message>
     <message>
@@ -4613,13 +4604,13 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+46" />
-        <source>Could not find executable for "%1".</source>
-        <translation>"%1"에 대한 실행 파일을 찾을 수 없습니다.</translation>
+        <source>Could not find executable for &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;에 대한 실행 파일을 찾을 수 없습니다.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Starting command "%1".</source>
-        <translation>명령 "%1"을(를) 시작합니다.</translation>
+        <source>Starting command &quot;%1&quot;.</source>
+        <translation>명령 &quot;%1&quot;을(를) 시작합니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+21" />
@@ -4674,8 +4665,8 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
-        <source>Locator: Error occurred when running "%1".</source>
-        <translation>로케이터: "%1"을(를) 실행하는 동안 오류가 발생했습니다.</translation>
+        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
+        <translation>로케이터: &quot;%1&quot;을(를) 실행하는 동안 오류가 발생했습니다.</translation>
     </message>
     <message>
         <location line="-71" />
@@ -4689,8 +4680,8 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Locator query string with quotes escaped with backslash and spaces replaced with "*" wildcards.</source>
-        <translation>백슬래시로 이스케이프된 따옴표와 "*" 와일드카드로 대체된 공백이 있는 로케이터 쿼리 문자열입니다.</translation>
+        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
+        <translation>백슬래시로 이스케이프된 따옴표와 &quot;*&quot; 와일드카드로 대체된 공백이 있는 로케이터 쿼리 문자열입니다.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -4704,8 +4695,8 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>글로벌 파일 시스템 인덱스 (Spotlight, Locate, Everything)에서 파일을 찾습니다. 주어진 줄 번호로 점프하려면 "+&lt;number&gt;"또는 ": &lt;number&gt;"를 추가하십시오. 다른 "+&lt;번호&gt;"또는 ": &lt;number&gt;"를 추가하여 열 번호로 이동하십시오.</translation>
+        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>글로벌 파일 시스템 인덱스 (Spotlight, Locate, Everything)에서 파일을 찾습니다. 주어진 줄 번호로 점프하려면 &quot;+&lt;number&gt;&quot;또는 &quot;: &lt;number&gt;&quot;를 추가하십시오. 다른 &quot;+&lt;번호&gt;&quot;또는 &quot;: &lt;number&gt;&quot;를 추가하여 열 번호로 이동하십시오.</translation>
     </message>
     <message>
         <location line="+113" />
@@ -4713,8 +4704,8 @@ Do you want to kill it?</source>
         <translation>결과를 정렬하십시오</translation>
     </message>
     <message>
-        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">전역 파일 시스템 인덱스(Spotlight, Locate, Everything)에서 파일을 찾습니다. 주어진 줄 번호로 이동하려면 "+&lt;번호&gt;" 또는 ":&lt;번호&gt;"를 추가하십시오. 다른 "+&lt;숫자&gt;" 또는 ":&lt;숫자&gt;"를 추가하여 열 번호로 이동합니다.</translation>
+        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">전역 파일 시스템 인덱스(Spotlight, Locate, Everything)에서 파일을 찾습니다. 주어진 줄 번호로 이동하려면 &quot;+&lt;번호&gt;&quot; 또는 &quot;:&lt;번호&gt;&quot;를 추가하십시오. 다른 &quot;+&lt;숫자&gt;&quot; 또는 &quot;:&lt;숫자&gt;&quot;를 추가하여 열 번호로 이동합니다.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -4723,9 +4714,9 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110" />
-        <source>Add "%1" placeholder for the query string.
+        <source>Add &quot;%1&quot; placeholder for the query string.
 Double-click to edit item.</source>
-        <translation>쿼리 문자열에 "%1" 자리 표시자를 추가합니다.
+        <translation>쿼리 문자열에 &quot;%1&quot; 자리 표시자를 추가합니다.
 항목을 편집하려면 두 번 클릭하십시오.</translation>
     </message>
     <message>
@@ -4759,13 +4750,13 @@ Double-click to edit item.</source>
         <translation>매직 헤더 추가</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME 매직 데이터는 &lt;a href="http://standards.freedesktop.org/shared-mime-info-의 공유 MIME 정보 데이터베이스 사양에 정의된 대로 해석됩니다. spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME 매직 데이터는 &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-의 공유 MIME 정보 데이터베이스 사양에 정의된 대로 해석됩니다. spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; Mime Magic Data는 &lt;a href = "https://www.freedesktop.org/wiki/specifications/shared-의 공유 MIME-Info 데이터베이스 사양에 의해 정의 된 것으로 해석됩니다. mime-info-spec/"&gt; freedesktop.org &lt;/a&gt;. &lt;hr/&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; Mime Magic Data는 &lt;a href = &quot;https://www.freedesktop.org/wiki/specifications/shared-의 공유 MIME-Info 데이터베이스 사양에 의해 정의 된 것으로 해석됩니다. mime-info-spec/&quot;&gt; freedesktop.org &lt;/a&gt;. &lt;hr/&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+9" />
@@ -4819,8 +4810,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;참고: 넓은 범위의 값은 파일을 열 때 성능에 영향을 미칠 수 있습니다.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;참고: 넓은 범위의 값은 파일을 열 때 성능에 영향을 미칠 수 있습니다.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4899,13 +4890,13 @@ Double-click to edit item.</source>
 </translation>
     </message>
     <message>
-        <location line="+298" />
+        <location line="+308" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>텍스트 파일(*.txt);;모든 파일(*)</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+11" />
+        <location line="+14" />
         <source>Error: %L1!</source>
         <translation>오류: %L1!</translation>
     </message>
@@ -4936,23 +4927,23 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>There is no patch-command configured in the general "Environment" settings.</source>
-        <translation>일반 "환경" 설정에 구성된 패치 명령이 없습니다.</translation>
+        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
+        <translation>일반 &quot;환경&quot; 설정에 구성된 패치 명령이 없습니다.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The patch-command configured in the general "Environment" settings does not exist.</source>
-        <translation>일반 "환경" 설정에 구성된 패치 명령이 존재하지 않습니다.</translation>
+        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
+        <translation>일반 &quot;환경&quot; 설정에 구성된 패치 명령이 존재하지 않습니다.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Running in "%1": %2 %3.</source>
-        <translation>" %1"로 실행 : %2 %3.</translation>
+        <source>Running in &quot;%1&quot;: %2 %3.</source>
+        <translation>&quot; %1&quot;로 실행 : %2 %3.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>A timeout occurred running "%1".</source>
-        <translation>"%1"을 실행하는 시간 초과가 발생했습니다.</translation>
+        <source>A timeout occurred running &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;을 실행하는 시간 초과가 발생했습니다.</translation>
     </message>
     <message>
         <source>Running in %1: %2 %3</source>
@@ -4960,22 +4951,22 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="-11" />
-        <source>Unable to launch "%1": %2</source>
-        <translation>"%1"을(를) 실행할 수 없음: %2</translation>
+        <source>Unable to launch &quot;%1&quot;: %2</source>
+        <translation>&quot;%1&quot;을(를) 실행할 수 없음: %2</translation>
     </message>
     <message>
-        <source>A timeout occurred running "%1"</source>
-        <translation type="vanished">"%1" 실행 중 시간 초과가 발생했습니다.</translation>
+        <source>A timeout occurred running &quot;%1&quot;</source>
+        <translation type="vanished">&quot;%1&quot; 실행 중 시간 초과가 발생했습니다.</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>"%1" crashed.</source>
-        <translation>"%1"이(가) 충돌했습니다.</translation>
+        <source>&quot;%1&quot; crashed.</source>
+        <translation>&quot;%1&quot;이(가) 충돌했습니다.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"%1" failed (exit code %2).</source>
-        <translation>"%1" 실패(종료 코드 %2).</translation>
+        <source>&quot;%1&quot; failed (exit code %2).</source>
+        <translation>&quot;%1&quot; 실패(종료 코드 %2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
@@ -5068,8 +5059,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>"%1" will be installed into "%2".</source>
-        <translation>"%1"이(가) "%2"에 설치됩니다.</translation>
+        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot;이(가) &quot;%2&quot;에 설치됩니다.</translation>
     </message>
     <message>
         <location line="+29" />
@@ -5078,8 +5069,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The file "%1" exists. Overwrite?</source>
-        <translation>파일 "%1"이(가) 있습니다. 덮어쓰시겠습니까?</translation>
+        <source>The file &quot;%1&quot; exists. Overwrite?</source>
+        <translation>파일 &quot;%1&quot;이(가) 있습니다. 덮어쓰시겠습니까?</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5093,8 +5084,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to write file "%1".</source>
-        <translation>파일 "%1"에 쓰지 못했습니다.</translation>
+        <source>Failed to write file &quot;%1&quot;.</source>
+        <translation>파일 &quot;%1&quot;에 쓰지 못했습니다.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -5313,8 +5304,8 @@ to version control (%2)
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
-        <source>Could not parse patch file "%1". The content is not of unified diff format.</source>
-        <translation>패치 파일 "%1"을(를) 구문 분석할 수 없습니다. 콘텐츠가 통합 diff 형식이 아닙니다.</translation>
+        <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
+        <translation>패치 파일 &quot;%1&quot;을(를) 구문 분석할 수 없습니다. 콘텐츠가 통합 diff 형식이 아닙니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
@@ -5393,23 +5384,23 @@ to version control (%2)
     </message>
     <message>
         <location line="+52" />
-        <source>Diff "%1"</source>
-        <translation>"%1" 비교</translation>
+        <source>Diff &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; 비교</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+28" />
         <source>Select First File for Diff</source>
         <translation>Diff를 위한 첫 번째 파일 선택</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+7" />
         <source>Select Second File for Diff</source>
         <translation>Diff를 위한 두 번째 파일 선택</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>Diff "%1", "%2"</source>
-        <translation>"%1", "%2" 비교</translation>
+        <location line="+10" />
+        <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
+        <translation>&quot;%1&quot;, &quot;%2&quot; 비교</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
@@ -5428,8 +5419,8 @@ to version control (%2)
     </message>
     <message>
         <location line="+31" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding.</source>
-        <translation>&lt;b&gt;오류:&lt;/b&gt; "%2" 인코딩으로 "%1"을(를) 디코딩할 수 없습니다.</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
+        <translation>&lt;b&gt;오류:&lt;/b&gt; &quot;%2&quot; 인코딩으로 &quot;%1&quot;을(를) 디코딩할 수 없습니다.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5588,8 +5579,8 @@ to version control (%2)
     </message>
     <message>
         <location line="+1" />
-        <source>%1 (current: "%2")</source>
-        <translation>%1(현재: "%2")</translation>
+        <source>%1 (current: &quot;%2&quot;)</source>
+        <translation>%1(현재: &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5628,7 +5619,7 @@ to version control (%2)
     </message>
     <message>
         <location line="+4" />
-        <source>Plugin's initialization function succeeded.</source>
+        <source>Plugin&apos;s initialization function succeeded.</source>
         <translation>플러그인의 초기화 기능이 성공했습니다.</translation>
     </message>
     <message>
@@ -5869,8 +5860,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The last time you started %1, it seems to have closed because of a problem with the "%2" plugin. Temporarily disable the plugin?</source>
-        <translation>마지막으로 %1을(를) 시작했을 때 "%2" 플러그인 문제로 인해 종료된 것 같습니다. 플러그인을 일시적으로 비활성화하시겠습니까?</translation>
+        <source>The last time you started %1, it seems to have closed because of a problem with the &quot;%2&quot; plugin. Temporarily disable the plugin?</source>
+        <translation>마지막으로 %1을(를) 시작했을 때 &quot;%2&quot; 플러그인 문제로 인해 종료된 것 같습니다. 플러그인을 일시적으로 비활성화하시겠습니까?</translation>
     </message>
     <message>
         <location line="+8" />
@@ -5886,26 +5877,26 @@ Reason: %3</source>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
-        <source>The plugin "%1" is specified twice for testing.</source>
-        <translation>테스트를 위해 플러그인 "%1"이(가) 두 번 지정되었습니다.</translation>
+        <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
+        <translation>테스트를 위해 플러그인 &quot;%1&quot;이(가) 두 번 지정되었습니다.</translation>
     </message>
     <message>
         <location line="+7" />
         <location line="+18" />
         <location line="+47" />
         <location line="+25" />
-        <source>The plugin "%1" does not exist.</source>
-        <translation>플러그인 "%1"이(가) 없습니다.</translation>
+        <source>The plugin &quot;%1&quot; does not exist.</source>
+        <translation>플러그인 &quot;%1&quot;이(가) 없습니다.</translation>
     </message>
     <message>
         <location line="-79" />
-        <source>The plugin "%1" is not tested.</source>
-        <translation>플러그인 "%1"은(는) 테스트되지 않았습니다.</translation>
+        <source>The plugin &quot;%1&quot; is not tested.</source>
+        <translation>플러그인 &quot;%1&quot;은(는) 테스트되지 않았습니다.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Cannot request scenario "%1" as it was already requested.</source>
-        <translation>시나리오 "%1"은(는) 이미 요청되었으므로 요청할 수 없습니다.</translation>
+        <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
+        <translation>시나리오 &quot;%1&quot;은(는) 이미 요청되었으므로 요청할 수 없습니다.</translation>
     </message>
     <message>
         <location line="+130" />
@@ -5924,8 +5915,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency '%1(%2)'</source>
-        <translation>종속성 '%1(%2)'을(를) 해결할 수 없습니다.</translation>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation>종속성 &apos;%1(%2)&apos;을(를) 해결할 수 없습니다.</translation>
     </message>
     <message>
         <location line="+61" />
@@ -5939,8 +5930,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="-416" />
-        <source>"%1" is missing</source>
-        <translation>"%1"이(가) 없습니다.</translation>
+        <source>&quot;%1&quot; is missing</source>
+        <translation>&quot;%1&quot;이(가) 없습니다.</translation>
     </message>
     <message>
         <location line="-24" />
@@ -5949,28 +5940,28 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+29" />
-        <source>Value for key "%1" is not a string</source>
-        <translation>키 "%1"의 값이 문자열이 아닙니다.</translation>
+        <source>Value for key &quot;%1&quot; is not a string</source>
+        <translation>키 &quot;%1&quot;의 값이 문자열이 아닙니다.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a bool</source>
-        <translation>키 "%1"의 값이 bool이 아닙니다.</translation>
+        <source>Value for key &quot;%1&quot; is not a bool</source>
+        <translation>키 &quot;%1&quot;의 값이 bool이 아닙니다.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not an array of objects</source>
-        <translation>키 "%1"의 값이 개체 배열이 아닙니다.</translation>
+        <source>Value for key &quot;%1&quot; is not an array of objects</source>
+        <translation>키 &quot;%1&quot;의 값이 개체 배열이 아닙니다.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a string and not an array of strings</source>
-        <translation>키 "%1"의 값은 문자열이 아니며 문자열 배열이 아닙니다.</translation>
+        <source>Value for key &quot;%1&quot; is not a string and not an array of strings</source>
+        <translation>키 &quot;%1&quot;의 값은 문자열이 아니며 문자열 배열이 아닙니다.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Value "%2" for key "%1" has invalid format</source>
-        <translation>키 "%1"의 값 "%2"에 잘못된 형식이 있습니다.</translation>
+        <source>Value &quot;%2&quot; for key &quot;%1&quot; has invalid format</source>
+        <translation>키 &quot;%1&quot;의 값 &quot;%2&quot;에 잘못된 형식이 있습니다.</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5979,8 +5970,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected IID "%1", but found "%2"</source>
-        <translation>예상 된 IID "%1"이지만 "%2"를 찾았습니다.</translation>
+        <source>Expected IID &quot;%1&quot;, but found &quot;%2&quot;</source>
+        <translation>예상 된 IID &quot;%1&quot;이지만 &quot;%2&quot;를 찾았습니다.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -5989,8 +5980,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+108" />
-        <source>Invalid platform specification "%1": %2</source>
-        <translation>잘못된 플랫폼 지정 "%1": %2</translation>
+        <source>Invalid platform specification &quot;%1&quot;: %2</source>
+        <translation>잘못된 플랫폼 지정 &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+18" />
@@ -6003,8 +5994,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+13" />
-        <source>Dependency: "%1" must be "%2" or "%3" (is "%4").</source>
-        <translation>종속성: "%1"은(는) "%2" 또는 "%3"("%4"임)여야 합니다.</translation>
+        <source>Dependency: &quot;%1&quot; must be &quot;%2&quot; or &quot;%3&quot; (is &quot;%4&quot;).</source>
+        <translation>종속성: &quot;%1&quot;은(는) &quot;%2&quot; 또는 &quot;%3&quot;(&quot;%4&quot;임)여야 합니다.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -6016,8 +6007,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="-13" />
-        <source>Argument: "%1" is empty</source>
-        <translation>인수: "%1"이(가) 비어 있습니다.</translation>
+        <source>Argument: &quot;%1&quot; is empty</source>
+        <translation>인수: &quot;%1&quot;이(가) 비어 있습니다.</translation>
     </message>
     <message>
         <location line="+182" />
@@ -6174,13 +6165,13 @@ Would you like to overwrite it?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+161" />
-        <source>Exported "%1", %2x%3, %4 bytes</source>
-        <translation>내보낸 "%1", %2x%3, %4바이트</translation>
+        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
+        <translation>내보낸 &quot;%1&quot;, %2x%3, %4바이트</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Could not write file "%1".</source>
-        <translation>파일 "%1"에 쓸 수 없습니다.</translation>
+        <source>Could not write file &quot;%1&quot;.</source>
+        <translation>파일 &quot;%1&quot;에 쓸 수 없습니다.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6351,8 +6342,8 @@ Would you like to overwrite it?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>A comma-separated list of size specifications of the form "&lt;width&gt;x&lt;height&gt;".</source>
-        <translation>"&lt;너비&gt;x&lt;높이&gt;" 형식의 쉼표로 구분된 크기 사양 목록입니다.</translation>
+        <source>A comma-separated list of size specifications of the form &quot;&lt;width&gt;x&lt;height&gt;&quot;.</source>
+        <translation>&quot;&lt;너비&gt;x&lt;높이&gt;&quot; 형식의 쉼표로 구분된 크기 사양 목록입니다.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6397,7 +6388,7 @@ Would you like to overwrite them?</source>
         <translation>오류 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+60" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
         <source>Deprecated</source>
         <translation>더 이상 사용되지 않았습니다</translation>
     </message>
@@ -6422,7 +6413,7 @@ Would you like to overwrite them?</source>
         <translation>파생</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+212" />
         <source>Call Hierarchy</source>
         <translation>계층 구조를 호출하십시오</translation>
     </message>
@@ -6432,13 +6423,13 @@ Would you like to overwrite them?</source>
         <translation>커서 위치 아래의 기호에 대한 호출 계층 구조를 다시로드합니다.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+394" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
         <translation>%1의 %2</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+230" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>비 초기화</translation>
@@ -6481,15 +6472,15 @@ Would you like to overwrite them?</source>
     </message>
     <message>
         <location line="+1342" />
-        <source>Invalid parameter in "%1":
+        <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
-        <translation>"%1"의 잘못된 매개 변수 :
+        <translation>&quot;%1&quot;의 잘못된 매개 변수 :
  %2</translation>
     </message>
     <message>
         <location line="+219" />
-        <source>Language Server "%1" Initialization Error</source>
-        <translation>언어 서버 "%1"초기화 오류</translation>
+        <source>Language Server &quot;%1&quot; Initialization Error</source>
+        <translation>언어 서버 &quot;%1&quot;초기화 오류</translation>
     </message>
     <message>
         <location line="+13" />
@@ -6563,8 +6554,8 @@ Would you like to overwrite them?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientinterface.cpp" line="+77" />
-        <source>Cannot handle MIME type "%1" of message.</source>
-        <translation>메시지의 Mime Type "%1"을 처리 할 수 ​​없습니다.</translation>
+        <source>Cannot handle MIME type &quot;%1&quot; of message.</source>
+        <translation>메시지의 Mime Type &quot;%1&quot;을 처리 할 수 ​​없습니다.</translation>
     </message>
     <message>
         <location line="+70" />
@@ -6582,7 +6573,7 @@ Would you like to overwrite them?</source>
         <translation>예기치 않게 완료되었습니다.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+217" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+82" />
         <source>Expand All</source>
         <translation>모든 것을 확장하십시오</translation>
@@ -6666,8 +6657,8 @@ Example: *.cpp%1*.h</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Language server-specific JSON to pass via "initializationOptions" field of "initialize" request.</source>
-        <translation>언어 서버 별 JSON은 "초기화"요청의 "초기화"필드를 통해 전달합니다.</translation>
+        <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
+        <translation>언어 서버 별 JSON은 &quot;초기화&quot;요청의 &quot;초기화&quot;필드를 통해 전달합니다.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6744,8 +6735,8 @@ See the documentation of the specific language server for valid settings.</sourc
     <message numerus="yes">
         <location line="+21" />
         <source>Re&amp;name %n files</source>
-        <translation>
-            <numerusform>RE &amp; NAME %N 파일</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -6803,23 +6794,23 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+6" />
-        <source>Running "%1" to install %2.</source>
-        <translation>" %1"을 실행하여 %2를 설치합니다.</translation>
+        <source>Running &quot;%1&quot; to install %2.</source>
+        <translation>&quot; %1&quot;을 실행하여 %2를 설치합니다.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>"%1"의 설치는 타임 아웃으로 취소되었습니다.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>&quot;%1&quot;의 설치는 타임 아웃으로 취소되었습니다.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>"%1"의 설치는 사용자가 취소했습니다.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>&quot;%1&quot;의 설치는 사용자가 취소했습니다.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>출구 코드 %로 " %1"설치가 실패했습니다.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+56" />
@@ -6926,33 +6917,33 @@ See the documentation of the specific language server for valid settings.</sourc
     <name>QtC::LanguageServerProtocol</name>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
-        <source>Cannot decode content with "%1". Falling back to "%2".</source>
-        <translation>"%1"으로 콘텐츠를 디코딩 할 수 없습니다. "%2"로 돌아갑니다.</translation>
+        <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot;으로 콘텐츠를 디코딩 할 수 없습니다. &quot;%2&quot;로 돌아갑니다.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Expected an integer in "%1", but got "%2".</source>
-        <translation>"%1"으로 정수를 예상했지만 "%2"를 얻었습니다.</translation>
+        <source>Expected an integer in &quot;%1&quot;, but got &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot;으로 정수를 예상했지만 &quot;%2&quot;를 얻었습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
-        <source>Could not parse JSON message: "%1".</source>
-        <translation>JSON 메시지를 구문 분석 할 수 없습니다 : "%1".</translation>
+        <source>Could not parse JSON message: &quot;%1&quot;.</source>
+        <translation>JSON 메시지를 구문 분석 할 수 없습니다 : &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected a JSON object, but got a JSON "%1" value.</source>
-        <translation>JSON 객체를 예상하지만 JSON "%1"값을 얻었습니다.</translation>
+        <source>Expected a JSON object, but got a JSON &quot;%1&quot; value.</source>
+        <translation>JSON 객체를 예상하지만 JSON &quot;%1&quot;값을 얻었습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
-        <source>No parameters in "%1".</source>
-        <translation>"%1"의 매개 변수가 없습니다.</translation>
+        <source>No parameters in &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;의 매개 변수가 없습니다.</translation>
     </message>
     <message>
         <location line="+213" />
-        <source>No ID set in "%1".</source>
-        <translation>"%1"로 설정되지 않았습니다.</translation>
+        <source>No ID set in &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;로 설정되지 않았습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
@@ -7040,7 +7031,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7052,60 +7043,60 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+156" />
         <location line="+823" />
         <source>Dataset Editor</source>
         <translation>데이터세트 편집기</translation>
     </message>
     <message>
-        <location line="-364" />
+        <location line="-366" />
         <source>Please enter a class name</source>
         <translation>클래스 이름을 입력하세요.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+604" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+412" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+70" />
+        <location line="+72" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-732" />
         <location line="+19" />
-        <location line="+115" />
-        <location line="+1483" />
+        <location line="+111" />
+        <location line="+1514" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+124" />
-        <location line="+180" />
-        <location line="+308" />
+        <location line="+139" />
+        <location line="+202" />
+        <location line="+306" />
         <location line="+13" />
-        <location line="+168" />
-        <location line="+145" />
+        <location line="+169" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
-        <location line="+254" />
+        <location line="+117" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+378" />
+        <location line="+273" />
         <location line="+86" />
-        <location line="+1017" />
-        <location line="+895" />
+        <location line="+1142" />
+        <location line="+1075" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+539" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
         <location line="+19" />
         <location line="+11" />
@@ -7113,8 +7104,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>오류: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3475" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-309" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3541" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7124,30 +7115,30 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+9" />
         <location line="+25" />
         <location line="+9" />
-        <source>Failed to create "%L1"!</source>
-        <translation>"%L1"을(를) 만들지 못했습니다!</translation>
+        <source>Failed to create &quot;%L1&quot;!</source>
+        <translation>&quot;%L1&quot;을(를) 만들지 못했습니다!</translation>
     </message>
     <message>
-        <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2513" />
-        <location line="+1446" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
+        <location line="+33" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
+        <location line="+1442" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>알 수 없는 이유로 이미지 파일을 저장하지 못했습니다!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581" />
-        <location line="+239" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
+        <location line="+224" />
         <source>Delete</source>
         <translation>삭제</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309" />
-        <source>Are you sure you want to permanetly delete "%L1"?</source>
-        <translation>"%L1"을(를) 영구적으로 삭제하시겠습니까?</translation>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
+        <translation>&quot;%L1&quot;을(를) 영구적으로 삭제하시겠습니까?</translation>
     </message>
     <message>
         <location line="-86" />
@@ -7172,10 +7163,10 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>알 수 없는 이유로 파일 이름을 바꾸지 못했습니다!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5164" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5247" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>파일 "%1"을(를) "%2"(으)로 복사할 수 없습니다.</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>파일 &quot;%1&quot;을(를) &quot;%2&quot;(으)로 복사할 수 없습니다.</translation>
     </message>
     <message>
         <source>Invalid argument (%1) for -override_read_timeout</source>
@@ -7199,19 +7190,19 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>-serial_number_filter에 대한 누락된 인수</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+145" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2349" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2677" />
         <location line="+9" />
         <location line="+13" />
-        <location line="+59" />
+        <location line="+63" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+830" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
         <location line="+36" />
         <location line="+7" />
@@ -7220,13 +7211,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+7" />
         <source>
 
-Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>
 
 OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프로그램을 닫은 다음 OpenMV IDE를 다시 시작하십시오!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-65" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>임계값 편집기로 그레이스케일 임계값 편집</translation>
     </message>
@@ -7236,18 +7227,18 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <translation>임계값 편집기로 LAB 임계값 편집</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+221" />
         <source>Missing argument for -form_key</source>
         <translation>-form_key에 대한 누락된 인수</translation>
     </message>
     <message>
-        <location line="+1066" />
+        <location line="+1074" />
         <source>About OpenMV Viewer...</source>
         <translation>OpenMV 뷰어 정보...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;%L4 %L1 소개&lt;/b&gt;&lt;/p&gt;&lt;p&gt;: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU 일반 공중 사용 허가&lt;/b&gt;&lt;/p&gt;서 &lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;이 프로그램은 유용할 것이라는 희망으로 배포되지만 어떠한 보증도 없이 배포됩니다. 상품성 또는 특정 목적에의 적합성에 대한 묵시적 보증도 없습니다. 자세한 내용은 &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License를 참조하십시오&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;질문이나 의견이 있으십니까?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io 로 문의하십시오&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;%L4 %L1 소개&lt;/b&gt;&lt;/p&gt;&lt;p&gt;: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU 일반 공중 사용 허가&lt;/b&gt;&lt;/p&gt;서 &lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;이 프로그램은 유용할 것이라는 희망으로 배포되지만 어떠한 보증도 없이 배포됩니다. 상품성 또는 특정 목적에의 적합성에 대한 묵시적 보증도 없습니다. 자세한 내용은 &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License를 참조하십시오&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;질문이나 의견이 있으십니까?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io 로 문의하십시오&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+17" />
@@ -7255,7 +7246,7 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <translation>OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1039" />
+        <location line="-1050" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -7268,7 +7259,7 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <translation type="vanished">-override_per_command_wait에 대한 인수가 없습니다</translation>
     </message>
     <message>
-        <location line="-460" />
+        <location line="-468" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>-auto_update에 대한 인수가 잘못되었습니다(%1)</translation>
     </message>
@@ -7278,20 +7269,18 @@ OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프
         <translation>-auto_update에 대한 인수가 없습니다</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+248" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
-        <translation>구문 분석 &lt;user_resources&gt;/openmvide/firmware/settings.json- %l1의 오류!
-
- JSON 파일에 오류가 있는지 확인하고 수정하십시오.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.\n\nOpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
         <translation type="vanished">v4.3.0 이전에 v4.3.0 이전 에이 파일이없고 리소스 설치시 삭제했을 것입니다.</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+188" />
         <source>Form Key</source>
         <translation>양식 키</translation>
     </message>
@@ -7301,7 +7290,7 @@ Check the json file for errors and fix them.</source>
         <translation>양식 키를 입력하십시오</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+80" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7311,7 +7300,7 @@ Check the json file for errors and fix them.</source>
         <location line="-13" />
         <location line="+7" />
         <location line="+7" />
-        <source>Can't open the new file!</source>
+        <source>Can&apos;t open the new file!</source>
         <translation>새 파일을 열 수 없습니다!</translation>
     </message>
     <message>
@@ -7321,8 +7310,8 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Add some code to "%L1"</source>
-        <translation>"%L1"에 코드 추가</translation>
+        <source>Add some code to &quot;%L1&quot;</source>
+        <translation>&quot;%L1&quot;에 코드 추가</translation>
     </message>
     <message>
         <location line="+12" />
@@ -7358,7 +7347,7 @@ Check the json file for errors and fix them.</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <source>Are you sure you want to erase your OpenMV Cam's onboard flash drive?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s onboard flash drive?</source>
         <translation type="vanished">OpenMV Cam의 온보드 플래시 드라이브를 지우시겠습니까?</translation>
     </message>
     <message>
@@ -7392,7 +7381,7 @@ Check the json file for errors and fix them.</source>
         <translation>OpenMV Cam과 Documents 폴더 간에 라이브러리를 자동으로 동기화합니다.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+24" />
         <source>Filter examples by board and sensor type</source>
         <translation>보드 및 센서 유형별로 예제 필터링</translation>
     </message>
@@ -7422,40 +7411,40 @@ Check the json file for errors and fix them.</source>
         <translation>OpenMV 캠 재설정</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Install the Latest Development Release</source>
         <translation>최신 개발 릴리스 설치</translation>
     </message>
     <message>
-        <location line="+77" />
-        <location line="+3764" />
+        <location line="+75" />
+        <location line="+3823" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>터미널 열기</translation>
     </message>
     <message>
-        <location line="-3818" />
+        <location line="-3877" />
         <source>Machine Vision</source>
         <translation>머신 비전</translation>
     </message>
     <message>
-        <location line="+181" />
-        <location line="+3668" />
-        <location line="+76" />
+        <location line="+175" />
+        <location line="+3733" />
+        <location line="+75" />
         <source>Threshold Editor</source>
         <translation>임계값 편집기</translation>
     </message>
     <message>
-        <location line="-3739" />
-        <location line="+3817" />
+        <location line="-3803" />
+        <location line="+3880" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>키포인트 편집기</translation>
     </message>
     <message>
-        <location line="-3810" />
-        <location line="+3976" />
-        <location line="+98" />
+        <location line="-3873" />
+        <location line="+4037" />
+        <location line="+97" />
         <location line="+24" />
         <location line="+11" />
         <location line="+18" />
@@ -7463,7 +7452,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag 생성기</translation>
     </message>
     <message>
-        <location line="-4124" />
+        <location line="-4184" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 제품군(30개 태그)</translation>
     </message>
@@ -7501,16 +7490,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+371" />
+        <location line="+367" />
         <location line="+14" />
         <location line="+33" />
-        <location line="+916" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
-        <source>Failed to open: "%L1"</source>
-        <translation>열지 못했습니다: "%L1"</translation>
+        <location line="+918" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-223" />
+        <source>Failed to open: &quot;%L1&quot;</source>
+        <translation>열지 못했습니다: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1358" />
+        <location line="-1356" />
         <source>DataMatrix Generator</source>
         <translation>데이터 매트릭스 생성기</translation>
     </message>
@@ -7536,29 +7525,29 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">OpenMV Cam에서 네트워크를 저장할 위치</translation>
     </message>
     <message>
-        <location line="+228" />
-        <location line="+2357" />
-        <location line="+1290" />
+        <location line="+225" />
+        <location line="+2424" />
+        <location line="+1288" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
-        <location line="+67" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382" />
-        <location line="+364" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899" />
-        <location line="+208" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-393" />
+        <location line="+375" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+900" />
+        <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>파일 확장자를 추가해주세요!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-269" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+112" />
-        <location line="+207" />
+        <location line="+119" />
+        <location line="+203" />
         <source>Unable to overwrite output file!</source>
         <translation>출력 파일을 덮어쓸 수 없습니다!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3860" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3922" />
         <source>Video Tools</source>
         <translation>비디오 도구</translation>
     </message>
@@ -7574,23 +7563,23 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-437" />
-        <location line="+273" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-439" />
+        <location line="+275" />
         <source>Play RTSP Stream</source>
         <translation>RTSP 스트림 재생</translation>
     </message>
     <message>
         <location line="+16" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+15" />
         <location line="+6" />
-        <location line="+46" />
+        <location line="+48" />
         <location line="+19" />
         <source>New Dataset</source>
         <translation>새 데이터세트</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-98" />
         <source>Dataset Editor - Choose a folder to build the dataset in</source>
         <translation>데이터세트 편집기 - 데이터세트를 빌드할 폴더를 선택합니다.</translation>
     </message>
@@ -7601,17 +7590,17 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+15" />
-        <location line="+207" />
+        <location line="+205" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-209" />
         <location line="+34" />
         <location line="+48" />
         <location line="+33" />
-        <source>Failed to remove "%L1"!</source>
-        <translation>"%L1"을(를) 제거하지 못했습니다!</translation>
+        <source>Failed to remove &quot;%L1&quot;!</source>
+        <translation>&quot;%L1&quot;을(를) 제거하지 못했습니다!</translation>
     </message>
     <message>
-        <location line="-128" />
-        <location line="+30" />
+        <location line="-125" />
+        <location line="+29" />
         <source>Open Dataset</source>
         <translation>오픈 데이터세트</translation>
     </message>
@@ -7626,7 +7615,7 @@ Check the json file for errors and fix them.</source>
         <translation>선택한 폴더는 유효한 OpenMV Cam 이미지 데이터 세트가 아닌 것 같습니다!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export</source>
         <translation>내보내다</translation>
     </message>
@@ -7636,7 +7625,7 @@ Check the json file for errors and fix them.</source>
         <translation>데이터세트를 Zip 파일로 내보내기</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <location line="+7" />
         <location line="+42" />
         <location line="+21" />
@@ -7654,38 +7643,38 @@ Check the json file for errors and fix them.</source>
         <translation>내보내는 중...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-520" />
-        <location line="+237" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-522" />
+        <location line="+239" />
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1482" />
+        <location line="+1513" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+258" />
-        <location line="+533" />
-        <location line="+145" />
+        <location line="+273" />
+        <location line="+554" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location line="+433" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
-        <location line="+288" />
-        <location line="+143" />
-        <location line="+1023" />
+        <location line="+117" />
+        <location line="+428" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-131" />
+        <location line="+289" />
+        <location line="+165" />
+        <location line="+1148" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1339" />
         <location line="+85" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Cancel</source>
         <translation>취소</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3673" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3737" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Edge Impulse 프로젝트에 업로드</translation>
     </message>
@@ -7764,8 +7753,8 @@ Check the json file for errors and fix them.</source>
         <translation>OpenMV IDE에 대해...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;OpenMV IDE %L1 정보&lt;/b&gt;&lt;/p&gt;&lt;p&gt;작성자: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;이 프로그램은 유용할 것이라는 희망으로 배포되지만 어떠한 보증도 하지 않습니다. 상품성 또는 특정 목적에의 적합성에 대한 묵시적 보증 없이도. 자세한 내용은 &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU 일반 공중 라이선스&lt;/a&gt;를 참조하세요.&lt;/p&gt;&lt;p &gt;&lt;b&gt;질문이나 의견이 있으신가요?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;로 문의하세요.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;OpenMV IDE %L1 정보&lt;/b&gt;&lt;/p&gt;&lt;p&gt;작성자: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;이 프로그램은 유용할 것이라는 희망으로 배포되지만 어떠한 보증도 하지 않습니다. 상품성 또는 특정 목적에의 적합성에 대한 묵시적 보증 없이도. 자세한 내용은 &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU 일반 공중 라이선스&lt;/a&gt;를 참조하세요.&lt;/p&gt;&lt;p &gt;&lt;b&gt;질문이나 의견이 있으신가요?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;로 문의하세요.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
@@ -7786,11 +7775,11 @@ Check the json file for errors and fix them.</source>
         <translation>OpenMV 뷰어</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+73" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
         <location line="+37" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-221" />
         <location line="+87" />
         <location line="+55" />
@@ -7826,11 +7815,11 @@ Check the json file for errors and fix them.</source>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-195" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-197" />
         <location line="+9" />
-        <location line="+89" />
-        <location line="+13" />
-        <location line="+42" />
+        <location line="+95" />
+        <location line="+11" />
+        <location line="+40" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
@@ -7860,53 +7849,61 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1064" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1189" />
         <location line="+6" />
         <location line="+28" />
         <location line="+52" />
         <location line="+8" />
         <location line="+35" />
-        <location line="+320" />
-        <location line="+62" />
-        <location line="+99" />
-        <location line="+49" />
-        <location line="+67" />
-        <location line="+12" />
-        <location line="+77" />
+        <location line="+329" />
+        <location line="+136" />
+        <location line="+28" />
+        <location line="+100" />
+        <location line="+56" />
+        <location line="+68" />
+        <location line="+13" />
+        <location line="+81" />
         <location line="+10" />
         <location line="+12" />
         <location line="+28" />
-        <location line="+36" />
-        <location line="+84" />
+        <location line="+34" />
+        <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+86" />
+        <location line="+97" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
-        <location line="+108" />
+        <location line="+116" />
         <location line="+83" />
-        <location line="+42" />
-        <location line="+38" />
-        <location line="+52" />
-        <location line="+38" />
+        <location line="+82" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+46" />
+        <location line="+54" />
+        <location line="+51" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
         <location line="+21" />
         <location line="+20" />
         <location line="+24" />
-        <location line="+121" />
-        <location line="+214" />
+        <location line="+135" />
+        <location line="+217" />
         <location line="+33" />
-        <location line="+248" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+658" />
+        <location line="+268" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+668" />
         <location line="+48" />
         <source>Connect</source>
         <translation>연결하다</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-42" />
         <source>No settings for the selected board type %L1!</source>
         <translation>선택한 보드 유형 %L1에 대한 설정이 없습니다!</translation>
     </message>
@@ -7917,12 +7914,12 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Only firmware recovery is supported using the Alif Semiconductor's SE Tools.</source>
+        <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>Alif Semiconductor의 SE 도구를 사용하여 펌웨어 복구 만 지원됩니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
         <source>Disconnect</source>
@@ -7981,12 +7978,11 @@ Check the json file for errors and fix them.</source>
         <translation>크기에 맞게 확대</translation>
     </message>
     <message>
-        <location line="+30" />
         <source>JPG</source>
-        <translation>JPG</translation>
+        <translation type="vanished">JPG</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+31" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG는 고성능을 위해 프레임 버퍼를 압축합니다.</translation>
     </message>
@@ -8005,7 +8001,7 @@ Check the json file for errors and fix them.</source>
         <translation>최대 성능을 위해 프레임 버퍼 비활성화</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+52" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>프레임 버퍼 비활성화 - 활성화하려면 비활성화 버튼을 다시 클릭합니다(오른쪽 상단).</translation>
     </message>
@@ -8074,17 +8070,15 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">해상도(w:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1574" />
+        <location line="-1582" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>오류를 읽는 오류 &lt;user_resources&gt; /openmvide/firmware/settings.json : %l1. 
-
-v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치시이를 삭제했을 것입니다.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2512" />
+        <location line="+346" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2858" />
         <source>Load Custom Firmware</source>
         <translation>사용자 정의 펌웨어를로드하십시오</translation>
     </message>
@@ -8096,7 +8090,7 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
     </message>
     <message>
         <location line="+1" />
-        <source>Are you sure you want to erase your OpenMV Cam's internal FAT file system?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s internal FAT file system?</source>
         <translation>OpenMV Cam의 내부 지방 파일 시스템을 지우고 싶습니까?</translation>
     </message>
     <message>
@@ -8125,15 +8119,20 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
         <translation>OpenMV 캠에서 ROMF를 재설정합니다</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+84" />
+        <source>Force enter OpenMV Cam bootloader</source>
+        <translation>OpenMV Cam 부트로더 강제 실행</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>MicroPython Tools</source>
         <translation>마이크로 파이썬 도구</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+6" />
         <location line="+7" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -8143,39 +8142,50 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
         <translation>파이썬 파일을 복사/변환합니다</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Open Model Zoo</source>
         <translation>오픈 모델 동물원</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+87" />
         <source>Convert Model for NPU</source>
         <translation>NPU의 모델 변환</translation>
     </message>
     <message>
+        <location line="+6" />
+        <location line="+9" />
+        <location line="+12" />
         <location line="+7" />
-        <location line="+10" />
-        <location line="+13" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-176" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>변환 모델</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location line="+420" />
         <source>Show Code Profiler</source>
         <translation>코드 프로파일러 표시</translation>
     </message>
     <message>
         <location line="+101" />
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;%L4 %L1 정보&lt;/b&gt;&lt;/p&gt;&lt;p&gt;작성자: Ibrahim Abdelkader 및 Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;공장 버전&lt;/b&gt;&lt;/p&gt;&lt;p&gt;허가를 받은 제조업체에만 해당됩니다.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU 일반 공용 라이센스&lt;/b&gt;&lt;/p&gt;&lt;p&gt;저작권(C) %L2 %L3&lt;/p&gt;&lt;p&gt;이 프로그램은 유용할 것이라는 희망으로 배포되지만 어떠한 보증도 제공하지 않습니다. 상품성이나 특정 목적에의 적합성에 대한 묵시적인 보증도 제공되지 않습니다. 자세한 내용은 &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU 일반 공중 라이선스&lt;/a&gt;를 참조하세요.&lt;/p&gt;&lt;p&gt;&lt;b&gt;질문이나 의견이 있으신가요?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;로 문의하세요.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;%L4 %L1 정보&lt;/b&gt;&lt;/p&gt;&lt;p&gt;작성자: Ibrahim Abdelkader 및 Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;공장 버전&lt;/b&gt;&lt;/p&gt;&lt;p&gt;허가를 받은 제조업체에만 해당됩니다.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU 일반 공용 라이센스&lt;/b&gt;&lt;/p&gt;&lt;p&gt;저작권(C) %L2 %L3&lt;/p&gt;&lt;p&gt;이 프로그램은 유용할 것이라는 희망으로 배포되지만 어떠한 보증도 제공하지 않습니다. 상품성이나 특정 목적에의 적합성에 대한 묵시적인 보증도 제공되지 않습니다. 자세한 내용은 &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU 일반 공중 라이선스&lt;/a&gt;를 참조하세요.&lt;/p&gt;&lt;p&gt;&lt;b&gt;질문이나 의견이 있으신가요?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;로 문의하세요.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+196" />
+        <location line="+26" />
+        <source>JPG Mode</source>
+        <translation>JPG 모드</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>RAW Mode</source>
+        <translation>RAW 모드</translation>
+    </message>
+    <message>
+        <location line="+113" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>해상도(w:%1, h:%2) - ROI(x:%3, y:%4, w:%5, h:%6) - 픽셀(%7) - 포커스(%8)</translation>
@@ -8213,7 +8223,7 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2737" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
         <source>Board:</source>
         <translation>판자:</translation>
     </message>
@@ -8257,9 +8267,9 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-301" />
-        <location line="+303" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
+        <location line="+324" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
         <source>Drive:</source>
         <translation>운전하다:</translation>
     </message>
@@ -8280,8 +8290,8 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
         <translation>카메라 FPS와 다를 수 있음</translation>
     </message>
     <message>
-        <location line="+309" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2952" />
+        <location line="+307" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
         <source>Update Available</source>
         <translation>업데이트 가능</translation>
     </message>
@@ -8296,7 +8306,7 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
         <translation>다운로드</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
         <translation>WiFi 프로그래밍 비활성화!</translation>
     </message>
@@ -8334,11 +8344,11 @@ v4.3.0 이전의 OpenMV IDE 버전에는이 파일이 없으며 리소스 설치
         <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
-Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
 
 Blinking Green:
 
-Your OpenMV Cam's onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
 
 Blinking Blue:
 
@@ -8346,11 +8356,11 @@ Your OpenMV Cam is running the default main.py script onboard.
 
 If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
 
-If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+If the LED is blinking blue but OpenMV IDE can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
 
 Blinking White:
 
-Your OpenMV Cam's firmware is panicking because of a hardware failure. Please check that your OpenMV Cam's camera module is installed securely.
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
         <translation>OpenMV Cam과 OpenMV IDE를 사용해 주셔서 감사합니다!
@@ -8377,27 +8387,27 @@ LED가 파란색으로 깜박이지만 OpenMV IDE가 OpenMV Cam에 연결할 수
     </message>
     <message>
         <location line="+93" />
-        <location line="+1176" />
+        <location line="+1212" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>직렬 포트 - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1144" />
+        <location line="-1180" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+791" />
-        <location line="+145" />
+        <location line="+827" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
+        <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>연결 중...(30초 제한 시간)</translation>
     </message>
     <message>
-        <location line="-1783" />
+        <location line="-1820" />
         <source>
 
 Try doing:
@@ -8450,12 +8460,12 @@ sudo adduser %L1 다이얼아웃
     </message>
     <message>
         <location line="+17" />
-        <location line="+1233" />
+        <location line="+1270" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP 서버 연결 - %1</translation>
     </message>
     <message>
-        <location line="-1159" />
+        <location line="-1196" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>-open_udp_server_terminal에 대한 잘못된 포트 인수(%1)</translation>
     </message>
@@ -8486,12 +8496,12 @@ sudo adduser %L1 다이얼아웃
     </message>
     <message>
         <location line="+17" />
-        <location line="+1279" />
+        <location line="+1317" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP 서버 연결 - %1</translation>
     </message>
     <message>
-        <location line="-1205" />
+        <location line="-1243" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>-open_tcp_server_terminal에 대한 잘못된 포트 인수(%1)</translation>
     </message>
@@ -8501,15 +8511,17 @@ sudo adduser %L1 다이얼아웃
         <translation>-open_tcp_server_terminal에 대한 누락된 인수</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+58" />
         <location line="+18" />
+        <location line="+6" />
+        <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
         <location line="+9" />
         <location line="+45" />
-        <location line="+79" />
-        <location line="+8" />
+        <location line="+82" />
+        <location line="+27" />
         <location line="+6" />
         <location line="+6" />
         <location line="+6" />
@@ -8518,15 +8530,15 @@ sudo adduser %L1 다이얼아웃
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2389" />
-        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location line="+10" />
         <location line="+8" />
-        <location line="+19" />
+        <location line="+22" />
         <source>Register OpenMV Cam</source>
         <translation>OpenMV 캠 등록</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="-278" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8546,13 +8558,24 @@ Examples-&gt;HelloWorld-&gt;helloworld.py를 실행하여 비전 품질을 테�
     </message>
     <message>
         <location line="+7" />
-        <location line="+17" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65" />
+        <location line="+29" />
+        <location line="+172" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-69" />
         <source>Registered</source>
         <translation>등기</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-190" />
+        <source>Board type not available for this form key!</source>
+        <translation>이 양식 키에는 보드 유형을 사용할 수 없습니다!</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Registration limit reached for this board type!</source>
+        <translation>이 보드 유형의 등록 한도에 도달했습니다!</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8568,27 +8591,27 @@ Examples-&gt;HelloWorld-&gt;helloworld.py를 실행하여 비전 품질을 테�
     </message>
     <message>
         <location line="+17" />
-        <location line="+182" />
+        <location line="+204" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>데이터베이스 오류!</translation>
     </message>
     <message>
-        <location line="-165" />
-        <location line="+178" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+17" />
+        <location line="-187" />
+        <location line="+200" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+18" />
         <source>GET Network error!</source>
         <translation>GET 네트워크 오류!</translation>
     </message>
     <message>
-        <location line="-169" />
-        <location line="+177" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+19" />
+        <location line="-191" />
+        <location line="+199" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+22" />
         <source>GET network error!</source>
         <translation>GET 네트워크 오류!</translation>
     </message>
     <message>
-        <location line="-170" />
+        <location line="-192" />
         <location line="+10" />
         <location line="+10" />
         <source>Unregistered OpenMV Cam Detected</source>
@@ -8596,7 +8619,7 @@ Examples-&gt;HelloWorld-&gt;helloworld.py를 실행하여 비전 품질을 테�
     </message>
     <message>
         <location line="-19" />
-        <source>Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
         <translation>OpenMV Cam이 등록되지 않았습니다. 중단 없이 OpenMV IDE를 무제한으로 사용하려면 OpenMV에 OpenMV Cam을 등록해야 합니다.
@@ -8623,8 +8646,8 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+19" />
-        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href="https://openmv.io/products/openmv-cam-board-key"&gt;here&lt;/a&gt;.</source>
-        <translation>OpenMV Cam을 등록하려면 보드 키를 입력하세요.&lt;br/&gt;&lt;br/&gt;보드 키가 없으면 OpenMV &lt;a href="https://openmv.io/products/openmv-에서 보드 키를 구입할 수 있습니다. cam-board-key"&gt;여기&lt;/a&gt;.</translation>
+        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>OpenMV Cam을 등록하려면 보드 키를 입력하세요.&lt;br/&gt;&lt;br/&gt;보드 키가 없으면 OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-에서 보드 키를 구입할 수 있습니다. cam-board-key&quot;&gt;여기&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+47" />
@@ -8632,12 +8655,12 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>OpenMV 카메라 등록 중...</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+33" />
         <source>Thank you for registering your OpenMV Cam!</source>
         <translation>OpenMV Cam을 등록해 주셔서 감사합니다!</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+27" />
         <source>Invalid Board Key for Board Type!</source>
         <translation>보드 유형에 대한 보드 키가 잘못되었습니다!</translation>
     </message>
@@ -8662,10 +8685,10 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>잘못된 형식의 보드 키!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+223" />
-        <location line="+482" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+225" />
+        <location line="+503" />
         <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-83" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-84" />
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
@@ -8674,7 +8697,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">설정 구성</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+389" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+395" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>스크립트 저장</translation>
@@ -8685,7 +8708,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>주석을 제거하고 공백을 탭으로 변환하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
@@ -8702,8 +8725,8 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>이미지 파일(*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Template</source>
@@ -8716,26 +8739,26 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+23" />
-        <location line="+67" />
+        <location line="+65" />
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>OpenMV Cam에서 유효한 경로를 선택하십시오!</translation>
     </message>
     <message>
-        <location line="-52" />
-        <location line="+67" />
-        <source>"%L1" is longer than a max length of %L2 characters!</source>
-        <translation>"%L1"이(가) 최대 길이인 %L2자보다 깁니다!</translation>
+        <location line="-50" />
+        <location line="+65" />
+        <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
+        <translation>&quot;%L1&quot;이(가) 최대 길이인 %L2자보다 깁니다!</translation>
     </message>
     <message>
-        <location line="-40" />
-        <location line="+7" />
+        <location line="-41" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Descriptor</source>
         <translation>설명자 저장</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8743,7 +8766,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>키포인트 파일(*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1113" />
+        <location line="-1112" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8761,17 +8784,17 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="-19" />
         <location line="+13" />
-        <source>Cannot open the file "%L1"!</source>
-        <translation>파일 "%L1"을(를) 열 수 없습니다!</translation>
+        <source>Cannot open the file &quot;%L1&quot;!</source>
+        <translation>파일 &quot;%L1&quot;을(를) 열 수 없습니다!</translation>
     </message>
     <message>
         <location line="-13" />
         <location line="+13" />
-        <source>Cannot open the example file "%L1"!</source>
-        <translation>예제 파일 "%L1"을(를) 열 수 없습니다!</translation>
+        <source>Cannot open the example file &quot;%L1&quot;!</source>
+        <translation>예제 파일 &quot;%L1&quot;을(를) 열 수 없습니다!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-467" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-468" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>드라이브 선택</translation>
@@ -8782,8 +8805,8 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>OpenMV Cam과 연결할 유효한 드라이브가 없습니다!</translation>
     </message>
     <message>
-        <source>"%L1" is the only drive available so it must be your OpenMV Cam's drive.</source>
-        <translation type="vanished">"%L1"은 사용 가능한 유일한 드라이브이므로 OpenMV Cam의 드라이브여야 합니다.</translation>
+        <source>&quot;%L1&quot; is the only drive available so it must be your OpenMV Cam&apos;s drive.</source>
+        <translation type="vanished">&quot;%L1&quot;은 사용 가능한 유일한 드라이브이므로 OpenMV Cam의 드라이브여야 합니다.</translation>
     </message>
     <message>
         <location line="+27" />
@@ -8791,12 +8814,12 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>드라이브를 OpenMV Cam과 연결하십시오.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>Drive: %L1</source>
         <translation>드라이브: %L1</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+42" />
         <source>Debug Protocol Settings</source>
         <translation>디버그 프로토콜 설정</translation>
     </message>
@@ -8866,30 +8889,30 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>코드 프로파일러 폴링(ms)</translation>
     </message>
     <message>
-        <location line="+354" />
+        <location line="+391" />
         <location line="+26" />
         <location line="+7" />
-        <source>Failed to flush "%L1"!</source>
-        <translation>"%L1"을(를) 플러시하지 못했습니다!</translation>
+        <source>Failed to flush &quot;%L1&quot;!</source>
+        <translation>&quot;%L1&quot;을(를) 플러시하지 못했습니다!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34" />
-        <location line="+13" />
+        <location line="+12" />
         <location line="+31" />
         <location line="+9" />
-        <location line="+87" />
+        <location line="+89" />
         <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -8899,7 +8922,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>새 터미널</translation>
     </message>
     <message>
-        <location line="-637" />
+        <location line="-641" />
         <source>Connect to serial port</source>
         <translation>직렬 포트에 연결</translation>
     </message>
@@ -8920,7 +8943,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2021" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2227" />
         <source>Please select a serial port</source>
         <translation>직렬 포트를 선택하십시오</translation>
     </message>
@@ -8930,7 +8953,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>전송 속도를 입력하십시오</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+96" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
         <source>Try doing:
 
@@ -8947,15 +8970,15 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+17" />
-        <location line="+138" />
+        <location line="+139" />
         <location line="+7" />
-        <location line="+236" />
+        <location line="+237" />
         <location line="+7" />
-        <source>Invalid string: "%L1"!</source>
-        <translation>잘못된 문자열: "%L1"!</translation>
+        <source>Invalid string: &quot;%L1&quot;!</source>
+        <translation>잘못된 문자열: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-381" />
         <source>No serial ports found!</source>
         <translation>직렬 포트를 찾을 수 없습니다!</translation>
     </message>
@@ -8966,45 +8989,45 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+3" />
-        <location line="+243" />
+        <location line="+244" />
         <source> Connect to a Server </source>
         <translation> 서버에 연결 </translation>
     </message>
     <message>
-        <location line="-242" />
-        <location line="+243" />
+        <location line="-243" />
+        <location line="+244" />
         <source> Start a Server </source>
         <translation> 서버 시작 </translation>
     </message>
     <message>
         <location line="-234" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>IP 주소(또는 도메인 이름) 및 포트(예: xxx.xxx.xxx.xxx:xxxx)를 입력하십시오.</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-222" />
         <source>UDP Client Connection - %1</source>
         <translation>UDP 클라이언트 연결 - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>포트 번호를 입력하십시오(임의의 사용 가능한 포트는 0 입력).</translation>
     </message>
     <message>
-        <location line="-137" />
+        <location line="-138" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>TCP 서버에 클라이언트로 연결하거나 TCP 서버를 시작하시겠습니까?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+36" />
         <source>TCP Client Connection - %1</source>
         <translation>TCP 클라이언트 연결 - %1</translation>
     </message>
     <message>
-        <location line="+244" />
+        <location line="+243" />
         <source>Error: Option Index!</source>
         <translation>오류: 옵션 인덱스!</translation>
     </message>
@@ -9029,7 +9052,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation> 이미지 파일 </translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>선택한 임계값 튜플은 닫을 때 업데이트됩니다.</translation>
@@ -9045,8 +9068,8 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>이미지 파일</translation>
     </message>
     <message>
-        <location line="+71" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+70" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+704" />
         <source>What would you like to do?</source>
         <translation>무엇을하고 싶으십니까?</translation>
     </message>
@@ -9061,7 +9084,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation> 파일 병합 </translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9111,12 +9134,12 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>알 수 없는 이유로 첫 번째 키포인트 파일을 로드하지 못했습니다!</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>What tag images from the %L1 tag family do you want to generate?</source>
         <translation>생성하려는 %L1 태그 패밀리의 태그 이미지는 무엇입니까?</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Min (%1)</source>
         <translation>최소(%1)</translation>
     </message>
@@ -9158,7 +9181,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>세대 완료!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1510" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>새로운 OpenMV IDE 리소스를 사용할 수 있습니다(예: 예제, 펌웨어, 설명서 등).</translation>
     </message>
@@ -9169,42 +9192,42 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+7" />
-        <location line="+288" />
-        <location line="+143" />
+        <location line="+289" />
+        <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
         <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
         <location line="+46" />
-        <location line="+75" />
+        <location line="+73" />
         <location line="+46" />
-        <location line="+74" />
+        <location line="+72" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+400" />
         <location line="+50" />
-        <location line="+873" />
+        <location line="+871" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>다운로드 중...</translation>
     </message>
     <message>
-        <location line="-417" />
+        <location line="-440" />
         <source>Installing...</source>
         <translation>설치 중...</translation>
     </message>
     <message>
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
-        <source>Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+        <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>OpenMV IDE의 응용 프로그램 데이터를 보거나 편집하는 모든 프로그램을 닫은 다음 OpenMV IDE를 다시 시작하십시오!</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
         <translation>설치 성공! OpenMV IDE를 다시 시작하십시오.</translation>
     </message>
@@ -9217,69 +9240,119 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-27" />
-        <location line="+254" />
+        <location line="+273" />
         <location line="+88" />
-        <source>Cannot open the resources file "%L1"!</source>
-        <translation>리소스 파일 "%L1"을(를) 열 수 없습니다!</translation>
+        <source>Cannot open the resources file &quot;%L1&quot;!</source>
+        <translation>리소스 파일 &quot;%L1&quot;을(를) 열 수 없습니다!</translation>
     </message>
     <message>
-        <location line="-314" />
-        <location line="+254" />
+        <location line="-333" />
+        <location line="+273" />
         <location line="+95" />
-        <source>Network request failed "%L1"!</source>
-        <translation>네트워크 요청 실패 "%L1"!</translation>
+        <source>Network request failed &quot;%L1&quot;!</source>
+        <translation>네트워크 요청 실패 &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-315" />
+        <location line="-335" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation>펌웨어 바이너리 ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+119" />
-        <location line="+588" />
-        <location line="+217" />
-        <location line="+2205" />
+        <location line="+12" />
+        <location line="+117" />
+        <location line="+720" />
+        <location line="+227" />
+        <location line="+2414" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>내부 지방 파일 시스템을 지우십시오</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+119" />
-        <location line="+589" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+117" />
+        <location line="+722" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
-        <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>이 옵션을 활성화하면 OpenMV Cam의 내부 지방 파일 시스템의 모든 파일이 삭제됩니다. 제거 가능한 SD 카드의 파일을 지우지 않습니다 (삽입 된 경우).</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+708" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+839" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>ROMFS 파일 시스템을 재설정합니다</translation>
     </message>
     <message>
-        <location line="-3203" />
-        <location line="+708" />
-        <location line="+215" />
-        <location line="+2205" />
+        <location line="-3552" />
+        <location line="+840" />
+        <location line="+225" />
+        <location line="+2412" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>이 옵션을 활성화하면 OpenMV 캠의 ROM 파일 시스템이 기본값으로 다시 재설정됩니다.</translation>
     </message>
     <message>
-        <location line="-3160" />
+        <location line="-3510" />
         <location line="+45" />
         <source>Bootloader</source>
         <translation>부트로더</translation>
     </message>
     <message>
-        <location line="+2991" />
+        <location line="+28" />
+        <source>Force bootloader</source>
+        <translation>강제 부트로더</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Force enter the OpenMV Cam bootloader. May result in the OpenMV Cam bootloader not automatically exiting on older boards.</source>
+        <translation>OpenMV Cam 부트로더를 강제로 시작합니다. 이전 보드에서는 OpenMV Cam 부트로더가 자동으로 종료되지 않을 수 있습니다.</translation>
+    </message>
+    <message>
+        <location line="+693" />
+        <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
+        <translation>최신 릴리스 펌웨어(v%L1.%L2.%L3)를 설치합니다.</translation>
+    </message>
+    <message>
+        <location line="+1063" />
+        <location line="+192" />
+        <source>Failed to copy firmware files to temporary directory!</source>
+        <translation>펌웨어 파일을 임시 디렉터리에 복사하지 못했습니다!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Original firmware folder does not exist!</source>
+        <translation>원본 펌웨어 폴더가 존재하지 않습니다!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Failed to create temporary directory!</source>
+        <translation>임시 디렉터리를 생성하지 못했습니다!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <source>Only loading bootloader.bin files is supported with the ST Cube Programmer!</source>
+        <translation>ST Cube Programmer에서는 bootloader.bin 파일 로딩만 지원됩니다!</translation>
+    </message>
+    <message>
+        <location line="+151" />
+        <source>Bootloader update complete!
+
+</source>
+        <translation>부트로더 업데이트가 완료되었습니다!</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Connect your OpenMV Cam now.</source>
+        <translation>지금 OpenMV Cam을 연결하세요.</translation>
+    </message>
+    <message>
+        <location line="+1377" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9288,8 +9361,8 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 특히 이미지 처리 -&gt; 색상 추적 및 기계 학습 -&gt; TensorFlow 예제를 확인하세요.</translation>
     </message>
     <message>
-        <location line="-3104" />
-        <location line="+4" />
+        <location line="-3455" />
+        <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
         <source>Firmware Path</source>
@@ -9304,26 +9377,26 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation type="vanished">내부 파일 시스템 지우기</translation>
     </message>
     <message>
-        <source>If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">이 옵션을 활성화하면 OpenMV Cam의 내부 플래시 드라이브에 있는 모든 파일이 삭제됩니다. 이동식 SD 카드(삽입된 경우)의 파일은 삭제되지 않습니다.</translation>
     </message>
     <message>
-        <source>Loading firmware via DFU always erases your OpenMV Cam's internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
+        <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">DFU를 통해 펌웨어를 로드하면 항상 OpenMV Cam의 내부 플래시 드라이브가 지워집니다. 이동식 SD 카드(삽입된 경우)의 파일은 삭제되지 않습니다.</translation>
     </message>
     <message>
         <location line="+21" />
-        <location line="+130" />
+        <location line="+148" />
         <source>Run</source>
         <translation>달리다</translation>
     </message>
     <message>
-        <location line="-86" />
-        <source>"%L1" is not a file!</source>
-        <translation>"%L1"은(는) 파일이 아닙니다!</translation>
+        <location line="-105" />
+        <source>&quot;%L1&quot; is not a file!</source>
+        <translation>&quot;%L1&quot;은(는) 파일이 아닙니다!</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+67" />
         <source>Update ROMFS file system</source>
         <translation>ROMFS 파일 시스템을 업데이트합니다</translation>
     </message>
@@ -9333,7 +9406,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>이 옵션을 활성화하면 OpenMV 캠의 ROM 파일 시스템이 최신 개발 릴리스로 업데이트됩니다.</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+125" />
         <source>Extracting...</source>
         <translation>적출...</translation>
     </message>
@@ -9353,17 +9426,16 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>알 수없는 보드</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+344" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>DFU 모드의 보드가 감지되었습니다. 무엇을하고 싶으십니까?</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Install the lastest release firmware (v%L1.%L2.%L3)</source>
-        <translation>최신 릴리스 펌웨어를 설치합니다(v%L1.%L2.%L3).</translation>
+        <translation type="vanished">최신 릴리스 펌웨어를 설치합니다(v%L1.%L2.%L3).</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Load a specific firmware</source>
         <translation>특정 펌웨어 로드</translation>
     </message>
@@ -9372,36 +9444,35 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation type="vanished">내부 파일 시스템을 지우십시오.</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+92" />
         <source>No OpenMV Cams found!</source>
         <translation>OpenMV 캠을 찾을 수 없습니다!</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+56" />
         <source>Do you have an OpenMV Cam connected and is it bricked?</source>
         <translation>OpenMV Cam이 연결되어 있고 벽돌로 되어 있습니까?</translation>
     </message>
     <message>
-        <location line="+849" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
-Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
-        <translation>STM32 복구 부트 로더에 대한로드 *.dfu 파일 만 지원됩니다!
+Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!</source>
+        <translation type="vanished">STM32 복구 부트 로더에 대한로드 *.dfu 파일 만 지원됩니다!
 
  bootloade.dfu 파일을 선택하고 다시 시도하십시오. 칩의 ROM 부트 로더의 버그로 인해 펌웨어 .dfu 또는 OpenMv.dfu (부트 로더 + 펌웨어)를로드하면 STM32H7 보드에서 작동하지 않을 수 있습니다!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+987" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>내부 부트 로더에 대해 *.bin 및 *.img 파일 만로드합니다!</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Only loading *.bin and *.img files are supported for the IMX bootloader!</source>
         <translation>IMX 부트 로더에 대해 *.bin 및 *.img 파일 만로드합니다!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+107" />
         <source>Only loading *.bin, *.dfu, and *.img files are supported for the Arduino bootloader!</source>
         <translation>Arduino Bootloader에 대해 *.bin, *.dfu 및 *.img 파일 만로드합니다!</translation>
     </message>
@@ -9417,7 +9488,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
     </message>
     <message>
         <location line="+24" />
-        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
+        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
         <translation>칩의 ROM 부트 로더의 버그로 인해 펌웨어 .dfu 또는 OpenMv.dfu (부트 로더 + 펌웨어)를로드하면 STM32H7 보드에서 작동하지 않을 수 있습니다!
@@ -9427,9 +9498,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-976" />
-        <location line="+657" />
-        <location line="+1750" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1398" />
+        <location line="+252" />
+        <location line="+681" />
+        <location line="+1936" />
         <source>Please select the board type</source>
         <translation>보드 종류를 선택해주세요</translation>
     </message>
@@ -9438,39 +9510,37 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">내부 파일 시스템을 지우시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2295" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2500" />
         <source>No released firmware available for the attached board!</source>
         <translation>부착된 보드에 사용할 수 있는 릴리스된 펌웨어가 없습니다!</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+61" />
         <source>Please select a DFU Device</source>
         <translation>DFU 장치를 선택하십시오</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-83" />
         <location line="+170" />
         <location line="+44" />
-        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>부트로더를 최신 버전으로 업데이트하고 SoftDevice를 설치하여 OpenMV 펌웨어를 플래시하십시오. 자세한 내용은 &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;에서 확인할 수 있습니다.</translation>
+        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>부트로더를 최신 버전으로 업데이트하고 SoftDevice를 설치하여 OpenMV 펌웨어를 플래시하십시오. 자세한 내용은 &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;에서 확인할 수 있습니다.</translation>
     </message>
     <message>
-        <location line="-1065" />
-        <location line="+3012" />
+        <location line="-1191" />
+        <location line="+3343" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>경고 : 새 펌웨어 버전으로 업그레이드하려면 지방 파일 시스템을 지워야합니다.</translation>
     </message>
     <message>
-        <location line="-2527" />
+        <location line="-2848" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
-        <translation>이 시스템에 있는 아래 장치의 OS에서 USB 문제가 감지되었습니다. 연결 문제를 일으킬 수 있으므로 이러한 장치를 수정하거나 제거하십시오. 
-
-% 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+173" />
         <source>Just erase the internal FAT file system</source>
         <translation>내부 지방 파일 시스템을 지우십시오</translation>
     </message>
@@ -9485,17 +9555,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>ROM 파일 시스템을 재설정합니다</translation>
     </message>
     <message>
-        <location line="+219" />
-        <location line="+2206" />
+        <location line="+229" />
+        <location line="+2415" />
         <source>Upgrade options:</source>
         <translation>업그레이드 옵션 :</translation>
     </message>
     <message>
-        <location line="-2122" />
+        <location line="-2327" />
         <location line="+169" />
         <location line="+44" />
-        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>REC를 GND로 단락시키고 보드를 재설정하십시오. 자세한 내용은 &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;에서 확인할 수 있습니다.</translation>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>REC를 GND로 단락시키고 보드를 재설정하십시오. 자세한 내용은 &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;에서 확인할 수 있습니다.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -9507,7 +9577,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (5초 이상 걸리면 취소를 누르십시오).</translation>
     </message>
     <message>
-        <location line="+132" />
+        <location line="+143" />
         <source>Timeout error while getting firmware version!</source>
         <translation>펌웨어 버전을 가져오는 동안 시간 초과 오류가 발생했습니다!</translation>
     </message>
@@ -9523,8 +9593,8 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+191" />
-        <location line="+570" />
+        <location line="+199" />
+        <location line="+733" />
         <source>Timeout error while getting board architecture!</source>
         <translation>보드 아키텍처를 가져오는 동안 시간 초과 오류가 발생했습니다!</translation>
     </message>
@@ -9533,7 +9603,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">지원되지 않는 보드 아키텍처!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-633" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>OpenMV Cam을 분리했다가 다시 연결하십시오...</translation>
@@ -9566,12 +9636,12 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+38" />
-        <source>Unable to connect to your OpenMV Cam's normal bootloader!</source>
+        <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>OpenMV Cam의 일반 부트로더에 연결할 수 없습니다!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+129" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+131" />
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
         <translation>OpenMV IDE는 여전히 OpenMV Cam의 DFU 부트로더를 사용하여 OpenMV Cam 복구를 시도할 수 있습니다.
@@ -9580,9 +9650,9 @@ Continue?</source>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-288" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
         <location line="+46" />
-        <location line="+195" />
+        <location line="+191" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>지우는 중...</translation>
@@ -9601,7 +9671,7 @@ Continue?</source>
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-837" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-835" />
         <location line="+41" />
         <location line="+51" />
         <location line="+44" />
@@ -9618,7 +9688,7 @@ Continue?</source>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+221" />
+        <location line="+219" />
         <location line="+50" />
         <location line="+51" />
         <location line="+42" />
@@ -9682,11 +9752,11 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
         <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
-        <source>Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.</source>
+        <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>OpenMV Cam의 RGB LED가 파란색으로 깜박이기 시작하면 확인을 클릭합니다. 자체 테스트가 완료되었음을 나타냅니다.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
@@ -9704,7 +9774,7 @@ Continue?</source>
 
 If you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py.
 
-In this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).</source>
+In this case click OK when you see your OpenMV Cam&apos;s internal flash drive mount (a window may or may not pop open).</source>
         <translation>
 
 OpenMV Cam에서 main.py를 덮어쓰고 디스크를 지우지 않은 경우 OpenMV Cam은 해당 main.py를 실행합니다.
@@ -9727,8 +9797,8 @@ OpenMV Cam에서 main.py를 덮어쓰고 디스크를 지우지 않은 경우 Op
         <translation>IMX 설정이 없습니다!</translation>
     </message>
     <message>
-        <source>Failed to eject "%L1"!</source>
-        <translation type="vanished">"%L1"을(를) 꺼내지 못했습니다!</translation>
+        <source>Failed to eject &quot;%L1&quot;!</source>
+        <translation type="vanished">&quot;%L1&quot;을(를) 꺼내지 못했습니다!</translation>
     </message>
     <message>
         <location line="+14" />
@@ -9741,7 +9811,7 @@ SBL 재프로그래밍으로 건너뛰려면 취소를 누르십시오.</transla
     </message>
     <message>
         <location line="+42" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
         <translation>OpenMV IDE는 여전히 OpenMV Cam의 SBL 부트로더를 사용하여 OpenMV Cam 복구를 시도할 수 있습니다.
@@ -9752,7 +9822,7 @@ Continue?</source>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
         <translation>컴퓨터에서 OpenMV Cam을 분리하고 SBL과 3.3V 핀 사이에 점퍼 와이어를 추가한 다음 OpenMV Cam을 컴퓨터에 다시 연결합니다.
 
 OpenMV Cam의 SBL 부트로더가 열거된 후 확인 버튼을 클릭합니다.</translation>
@@ -9804,19 +9874,19 @@ OpenMV Cam의 SBL 부트로더가 열거된 후 확인 버튼을 클릭합니다
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-345" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-347" />
         <source>No DFU settings for the selected board type!</source>
         <translation>선택한 보드 유형에 대한 DFU 설정이 없습니다!</translation>
     </message>
     <message>
         <location line="+55" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+104" />
         <source>No DFU settings for the selected device!</source>
         <translation>선택한 장치에 대한 DFU 설정이 없습니다!</translation>
     </message>
     <message>
         <location line="+32" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+47" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
         <source>Erasing Disk</source>
         <translation>디스크 지우기</translation>
@@ -9845,8 +9915,8 @@ OpenMV Cam의 SBL 부트로더가 열거된 후 확인 버튼을 클릭합니다
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-933" />
-        <location line="+934" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-931" />
+        <location line="+932" />
         <source>Flashing Firmware</source>
         <translation>플래싱 펌웨어</translation>
     </message>
@@ -9892,17 +9962,17 @@ OpenMV Cam의 SBL 부트로더가 열거된 후 확인 버튼을 클릭합니다
     </message>
     <message>
         <location line="+14" />
-        <source>Your %1 doesn't have an internal FAT file system.</source>
+        <source>Your %1 doesn&apos;t have an internal FAT file system.</source>
         <translation>%1에는 내부 지방 파일 시스템이 없습니다.</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
-        <source>Your %1 doesn't have an ROM file system.</source>
+        <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>%1에는 ROM 파일 시스템이 없습니다.</translation>
     </message>
     <message>
-        <source>Your Nano 33 BLE doesn't have an onboard data flash disk.</source>
+        <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
         <translation type="vanished">Nano 33 BLE에는 온보드 데이터 플래시 디스크가 없습니다.</translation>
     </message>
     <message>
@@ -9963,7 +10033,7 @@ Continue?</source>
     </message>
     <message>
         <location line="+65" />
-        <source>DFU update erases your OpenMV Cam's internal flash file system.
+        <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
         <translation>DFU 업데이트는 OpenMV Cam의 내부 플래시 파일 시스템을 지웁니다.
@@ -9974,7 +10044,7 @@ Backup your data before continuing!</source>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.</source>
         <translation>컴퓨터에서 OpenMV Cam을 분리하고 BOOT와 RST 핀 사이에 점퍼 와이어를 추가한 다음 OpenMV Cam을 컴퓨터에 다시 연결합니다.
 
 OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다.</translation>
@@ -10027,13 +10097,13 @@ OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다
         <translation>DFU 부트로더 재설정 실패!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-271" />
         <source>None</source>
         <translation>없음</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+16" />
+        <location line="+30" />
         <location line="+56" />
         <source>Unknown</source>
         <translation>알려지지 않은</translation>
@@ -10049,12 +10119,12 @@ OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다
         <translation>미등록</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+94" />
         <source>Timeout error while learning MTU!</source>
         <translation>MTU 학습 중 시간 초과 오류!</translation>
     </message>
     <message>
-        <location line="+167" />
+        <location line="+170" />
         <source>Board: %L1</source>
         <translation>보드: %L1</translation>
     </message>
@@ -10079,13 +10149,13 @@ OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다
         <translation>직렬 포트: %L1</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+85" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ 오래된 - 업그레이드하려면 여기를 클릭하십시오 ]</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Your OpenMV Cam's firmware is out of date. Would you like to upgrade?</source>
+        <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>OpenMV Cam의 펌웨어가 오래되었습니다. 업그레이드하시겠습니까?</translation>
     </message>
     <message>
@@ -10094,7 +10164,7 @@ OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다
         <translation> - [ 최신 ]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-674" />
         <source>Failed to open or parse ELF: %1</source>
         <translation>ELF를 열거나 구문 분석하지 못했습니다: %1</translation>
     </message>
@@ -10106,7 +10176,7 @@ OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다
     <message>
         <location line="+176" />
         <source>Event %1</source>
-        <translation>이벤트% 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4" />
@@ -10150,7 +10220,7 @@ OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다
     </message>
     <message>
         <location line="+396" />
-        <location line="+172" />
+        <location line="+177" />
         <source>Code Profiler</source>
         <translation>코드 프로파일러</translation>
     </message>
@@ -10204,7 +10274,7 @@ OpenMV Cam의 DFU 부트로더가 열거된 후 확인 버튼을 클릭합니다
         <translation type="vanished">시작</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+588" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+592" />
         <source>More Examples</source>
         <translation>더 많은 예</translation>
     </message>
@@ -10217,29 +10287,29 @@ In particular, checkout the Color-Tracking examples.</source>
 특히 색상 추적 예제를 확인하십시오.</translation>
     </message>
     <message>
-        <location line="+28" />
-        <location line="+69" />
-        <location line="+9" />
+        <location line="+27" />
+        <location line="+70" />
+        <location line="+8" />
         <source>Firmware Update</source>
         <translation>펌웨어 업데이트</translation>
     </message>
     <message>
         <location line="-75" />
-        <source>Update your OpenMV Cam's firmware to the latest version?</source>
+        <source>Update your OpenMV Cam&apos;s firmware to the latest version?</source>
         <translation>OpenMV Cam의 펌웨어를 최신 버전으로 업데이트하시겠습니까?</translation>
     </message>
     <message>
-        <location line="+67" />
-        <source>Your OpenMV Cam's firmware is up to date.</source>
+        <location line="+68" />
+        <source>Your OpenMV Cam&apos;s firmware is up to date.</source>
         <translation>OpenMV Cam의 펌웨어가 최신 버전입니다.</translation>
     </message>
     <message>
-        <location line="+11" />
-        <source>Need to reset your OpenMV Cam's firmware to the release version?</source>
+        <location line="+10" />
+        <source>Need to reset your OpenMV Cam&apos;s firmware to the release version?</source>
         <translation>OpenMV Cam의 펌웨어를 릴리스 버전으로 재설정해야 합니까?</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+86" />
         <source>No board settings for the connected board found!</source>
         <translation>연결된 보드에 대한 보드 설정이 없습니다!</translation>
     </message>
@@ -10334,10 +10404,10 @@ In particular, checkout the Color-Tracking examples.</source>
     </message>
     <message>
         <location line="-223" />
-        <source>Module "%L1" on your OpenMV Cam is different than the copy on your computer.
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
 Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>OpenMV Cam의 모듈 "%L1"은 컴퓨터의 복사본과 다릅니다.
+        <translation>OpenMV Cam의 모듈 &quot;%L1&quot;은 컴퓨터의 복사본과 다릅니다.
 
 OpenMV IDE에서 OpenMV Cam의 모듈을 업데이트하시겠습니까?</translation>
     </message>
@@ -10348,15 +10418,15 @@ OpenMV IDE에서 OpenMV Cam의 모듈을 업데이트하시겠습니까?</transl
     </message>
     <message>
         <location line="+91" />
-        <source>Module "%L1" may be required to run your script.
+        <source>Module &quot;%L1&quot; may be required to run your script.
 
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>스크립트를 실행하려면 "%L1" 모듈이 필요할 수 있습니다.
+        <translation>스크립트를 실행하려면 &quot;%L1&quot; 모듈이 필요할 수 있습니다.
 
 OpenMV IDE에서 OpenMV Cam으로 복사하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-366" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10369,18 +10439,18 @@ OpenMV IDE에서 OpenMV Cam으로 복사하시겠습니까?</translation>
         <translation>텍스트 파일(*.txt);;모든 파일(*)</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+228" />
         <source>Zoom: %1%</source>
         <translation>줌: %1%</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4310" />
-        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4365" />
+        <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280" />
-        <location line="+236" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-265" />
+        <location line="+221" />
         <source>Model Zoo</source>
         <translation>모델 동물원</translation>
     </message>
@@ -10416,7 +10486,7 @@ OpenMV IDE에서 OpenMV Cam으로 복사하시겠습니까?</translation>
         <translation>찾다</translation>
     </message>
     <message>
-        <location line="+226" />
+        <location line="+239" />
         <source>Serial Terminal</source>
         <translation>직렬 터미널</translation>
     </message>
@@ -10437,8 +10507,8 @@ OpenMV IDE에서 OpenMV Cam으로 복사하시겠습니까?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Run "/main.py"</source>
-        <translation>"/main.py" 실행</translation>
+        <source>Run &quot;/main.py&quot;</source>
+        <translation>&quot;/main.py&quot; 실행</translation>
     </message>
     <message>
         <location line="+0" />
@@ -10461,31 +10531,31 @@ OpenMV IDE에서 OpenMV Cam으로 복사하시겠습니까?</translation>
         <translation>보싹</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-360" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-150" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>장치 가져오기</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-293" />
         <location line="+79" />
         <source>Query failed!</source>
         <translation>쿼리 실패!</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+44" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+119" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+120" />
+        <location line="+118" />
         <source>DFU Util</source>
         <translation>DFU 유틸리티</translation>
     </message>
@@ -10510,7 +10580,7 @@ OpenMV IDE에서 OpenMV Cam으로 복사하시겠습니까?</translation>
         <translation>시간이 걸릴 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-87" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
         <source>Dataset Split</source>
         <translation>데이터세트 분할</translation>
     </message>
@@ -10522,7 +10592,7 @@ OpenMV recommends leaving this at the default 80/20% split.</source>
 OpenMV는 이것을 기본 80/20% 분할로 둘 것을 권장합니다.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <location line="+16" />
         <source>Training Data
 Percentage
@@ -10544,7 +10614,7 @@ Percentage
     <message>
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+58" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
         <location line="+50" />
         <source>Uploading...</source>
@@ -10585,12 +10655,12 @@ Percentage
         <location line="+10" />
         <source>Nothing to upload
 
-Only jpg/png/bmp images with a numeric name (e.g. "00001.jpg")
-in class folders ("*.class") can be uploaded.</source>
+Only jpg/png/bmp images with a numeric name (e.g. &quot;00001.jpg&quot;)
+in class folders (&quot;*.class&quot;) can be uploaded.</source>
         <translation>업로드할 항목 없음
 
-숫자 이름이 있는 jpg/png/bmp 이미지만(예: "00001.jpg")
-클래스 폴더("*.class")에 업로드할 수 있습니다.</translation>
+숫자 이름이 있는 jpg/png/bmp 이미지만(예: &quot;00001.jpg&quot;)
+클래스 폴더(&quot;*.class&quot;)에 업로드할 수 있습니다.</translation>
     </message>
     <message>
         <location line="+43" />
@@ -10598,31 +10668,31 @@ in class folders ("*.class") can be uploaded.</source>
         <location line="+21" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+164" />
+        <location line="+155" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+23" />
         <location line="+9" />
         <location line="+9" />
         <source>Edge Impulse Projects</source>
         <translation>에지 임펄스 프로젝트</translation>
     </message>
     <message>
-        <location line="-276" />
+        <location line="-266" />
         <location line="+35" />
-        <location line="+71" />
-        <location line="+129" />
-        <location line="+42" />
+        <location line="+67" />
+        <location line="+124" />
+        <location line="+41" />
         <source>No request data received</source>
         <translation>수신된 요청 데이터 없음</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-246" />
         <source>An unkown error occured</source>
         <translation>알 수 없는 오류가 발생했습니다.</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+62" />
         <location line="+11" />
         <location line="+7" />
         <location line="+10" />
@@ -10639,7 +10709,7 @@ Open a data set to upload it.</source>
 업로드할 데이터 세트를 엽니다.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+33" />
         <source>Email Address</source>
         <translation>이메일 주소</translation>
     </message>
@@ -10654,17 +10724,17 @@ Open a data set to upload it.</source>
         <translation>비밀번호</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+66" />
         <source>Please select a project</source>
         <translation>프로젝트를 선택하세요.</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+60" />
         <source>No projects found</source>
         <translation>프로젝트를 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+45" />
         <source>Upload Project</source>
         <translation>프로젝트 업로드</translation>
     </message>
@@ -10674,7 +10744,7 @@ Open a data set to upload it.</source>
         <translation>Edge Impluse 프로젝트 API 키를 입력하세요.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1017" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1015" />
         <location line="+144" />
         <location line="+36" />
         <location line="+41" />
@@ -10693,7 +10763,7 @@ Open a data set to upload it.</source>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+41" />
+        <location line="+39" />
         <location line="+135" />
         <location line="+45" />
         <location line="+50" />
@@ -10729,8 +10799,8 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1337" />
-        <location line="+923" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1335" />
+        <location line="+921" />
         <source>This feature is not supported on this machine!</source>
         <translation>이 기능은 이 컴퓨터에서 지원되지 않습니다!</translation>
     </message>
@@ -10762,15 +10832,15 @@ The camera must be power cycled after a system package update.</source>
 시스템 패키지 업데이트 후 카메라는 전원 순환해야합니다.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-472" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-470" />
         <location line="+51" />
         <location line="+91" />
-        <location line="+346" />
+        <location line="+344" />
         <location line="+51" />
         <location line="+50" />
         <location line="+94" />
         <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>이 명령은 실행하는 데 시간이 걸립니다. 기다려주십시오.</translation>
@@ -10791,7 +10861,7 @@ The camera must be power cycled after a system package update.</source>
         <translation>완료</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
         <source>PicoTool</source>
         <translation>피코툴</translation>
     </message>
@@ -10923,12 +10993,12 @@ The camera must be power cycled after a system package update.</source>
     </message>
     <message>
         <location line="-77" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Transcoding File...</source>
         <translation>파일 트랜스코딩...</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-594" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10989,29 +11059,29 @@ The camera must be power cycled after a system package update.</source>
         <translation>입력 형식 가져오기</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+37" />
         <location line="+111" />
-        <location line="+100" />
+        <location line="+98" />
         <location line="+15" />
-        <location line="+372" />
+        <location line="+371" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
         <location line="+16" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+14" />
+        <location line="+19" />
         <location line="+36" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+21" />
+        <location line="+23" />
         <location line="+7" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+20" />
+        <location line="+22" />
         <location line="+7" />
         <source>Convert Video</source>
         <translation>비디오 변환</translation>
@@ -11031,7 +11101,7 @@ The camera must be power cycled after a system package update.</source>
         <translation>FFMPEG는 이 플랫폼에서 지원되지 않습니다.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+98" />
         <source>Unable to write to output video file!</source>
         <translation>출력 비디오 파일에 쓸 수 없습니다!</translation>
     </message>
@@ -11042,79 +11112,79 @@ The camera must be power cycled after a system package update.</source>
     </message>
     <message>
         <location line="+163" />
-        <location line="+411" />
+        <location line="+415" />
         <source>Play Video</source>
         <translation>동영상 재생</translation>
     </message>
     <message>
-        <location line="-410" />
+        <location line="-414" />
         <location line="+163" />
         <source>Failed to launch ffplay!</source>
         <translation>ffplay를 실행하지 못했습니다!</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>Convert Video Source</source>
         <translation>비디오 소스 변환</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+235" />
+        <location line="+240" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</source>
         <translation>비디오 파일(*.mp4 *.*);;OpenMV ImageWriter 파일(*.bin);;</translation>
     </message>
     <message>
-        <location line="-230" />
+        <location line="-235" />
         <location line="+11" />
-        <location line="+117" />
+        <location line="+122" />
         <location line="+7" />
         <source>Convert Video Output</source>
         <translation>비디오 출력 변환</translation>
     </message>
     <message>
-        <location line="-130" />
-        <location line="+125" />
-        <location line="+208" />
+        <location line="-135" />
+        <location line="+130" />
+        <location line="+204" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
         <translation>비디오 파일(*.mp4 *.*);;OpenMV ImageReader 파일(*.bin);;</translation>
     </message>
     <message>
-        <location line="-327" />
+        <location line="-328" />
         <source>Please select output format</source>
         <translation>출력 형식을 선택하십시오</translation>
     </message>
     <message>
         <location line="+15" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Rescale the video?</source>
         <translation>비디오 크기를 조정하시겠습니까?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter a new width (the aspect ratio will be kept the same)</source>
         <translation>새 너비를 입력하십시오(가로세로 비율은 동일하게 유지됨).</translation>
     </message>
     <message>
-        <location line="-320" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-321" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Skip frames?</source>
         <translation>프레임을 건너뛰시겠습니까?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter how many frames to skip at a time</source>
         <translation>한 번에 건너뛸 프레임 수 입력</translation>
     </message>
     <message>
-        <location line="-278" />
-        <location line="+91" />
-        <location line="+207" />
+        <location line="-274" />
+        <location line="+93" />
+        <location line="+203" />
         <source>Video conversion finished!</source>
         <translation>영상 변환 완료!</translation>
     </message>
@@ -11144,13 +11214,13 @@ The camera must be power cycled after a system package update.</source>
         <translation>놀다</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+47" />
         <location line="+7" />
         <source>Save Video</source>
         <translation>비디오 저장</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
         <source>Busy</source>
         <translation>바쁘다</translation>
     </message>
@@ -11166,13 +11236,11 @@ The camera must be power cycled after a system package update.</source>
         <translation>세부 정보 숨기기</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-335" />
-        <location line="+102" />
         <source>No matching interface for the selected file name!</source>
-        <translation>선택한 파일 이름에 대한 일치하는 인터페이스가 없습니다!</translation>
+        <translation type="vanished">선택한 파일 이름에 대한 일치하는 인터페이스가 없습니다!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-745" />
         <source>Please select the target</source>
         <translation>목표를 선택하십시오</translation>
     </message>
@@ -11195,70 +11263,70 @@ OpenMV IDE will just copy the model as is.</source>
 OpenMV IDE는 모델을 그대로 복사합니다.</translation>
     </message>
     <message>
-        <location line="+145" />
-        <location line="+36" />
+        <location line="+147" />
+        <location line="+35" />
         <location line="+6" />
         <location line="+8" />
-        <location line="+40" />
-        <location line="+17" />
-        <location line="+20" />
-        <location line="+6" />
-        <location line="+8" />
+        <location line="+42" />
+        <location line="+16" />
         <location line="+21" />
-        <location line="+19" />
-        <location line="+20" />
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
         <location line="+93" />
-        <location line="+9" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+13" />
-        <location line="+14" />
-        <location line="+45" />
-        <location line="+17" />
-        <location line="+28" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+40" />
+        <location line="+15" />
         <location line="+27" />
+        <location line="+24" />
         <location line="+53" />
-        <location line="+67" />
+        <location line="+63" />
         <location line="+6" />
         <location line="+21" />
         <source>Edit ROMFS</source>
         <translation>ROMF를 편집하십시오</translation>
     </message>
     <message>
-        <location line="-620" />
-        <location line="+91" />
+        <location line="-606" />
+        <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>이름이 같은 폴더가 이미 존재합니다!</translation>
     </message>
     <message>
-        <location line="-85" />
-        <location line="+91" />
+        <location line="-87" />
+        <location line="+93" />
         <source>File already exists! Overwrite?</source>
         <translation>파일이 이미 존재합니다! 덮어 쓰기?</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+91" />
+        <location line="-85" />
+        <location line="+93" />
         <source>Failed to remove file!</source>
         <translation>파일을 제거하지 못했습니다!</translation>
     </message>
     <message>
         <location line="-51" />
-        <location line="+72" />
+        <location line="+74" />
         <source>Failed to copy file!</source>
         <translation>파일을 복사하지 못했습니다!</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+17" />
         <source>Folder Name</source>
         <translation>폴더 이름</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Failed to create folder!</source>
         <translation>폴더를 만들지 못했습니다!</translation>
     </message>
@@ -11279,58 +11347,58 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>폴더를 저장할 수 없습니다!</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+14" />
+        <location line="+6" />
+        <location line="+15" />
         <location line="+19" />
-        <location line="+240" />
+        <location line="+225" />
         <source>Extract File</source>
         <translation>추출 파일</translation>
     </message>
     <message>
-        <location line="-246" />
+        <location line="-231" />
         <source>View/Edit</source>
         <translation>보기/편집</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+237" />
+        <location line="+222" />
         <source>Add File</source>
         <translation>파일 추가</translation>
     </message>
     <message>
-        <location line="-236" />
-        <location line="+238" />
+        <location line="-221" />
+        <location line="+223" />
         <source>New Folder</source>
         <translation>새로운 폴더</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+14" />
-        <location line="+322" />
-        <location line="+12" />
+        <location line="-135" />
+        <location line="+13" />
+        <location line="+303" />
+        <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>이 보드에서 ROMF는 지원되지 않습니다!</translation>
     </message>
     <message>
-        <location line="-290" />
-        <location line="+45" />
+        <location line="-275" />
+        <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>ROMF를 풀지 못했습니다!</translation>
     </message>
     <message>
         <location line="-19" />
-        <location line="+28" />
+        <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>OpenMV 롬프</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+172" />
+        <location line="-25" />
+        <location line="+165" />
         <source>ROMFS Images (*.img)</source>
         <translation>ROMFS 이미지 (*.img)</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="-101" />
         <source>Commit</source>
         <translation>저지르다</translation>
     </message>
@@ -11345,17 +11413,17 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>ROMF를 파일에 저장하십시오</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location line="+8" />
+        <location line="+105" />
+        <location line="+7" />
+        <location line="+11" />
         <location line="+12" />
-        <location line="+13" />
-        <location line="+12" />
+        <location line="+11" />
         <source>Reset ROMFS</source>
         <translation>ROMF를 재설정하십시오</translation>
     </message>
     <message>
-        <location line="-44" />
-        <source>Are you sure you want to reset your OpenMV Cam's ROM file system?</source>
+        <location line="-40" />
+        <source>Are you sure you want to reset your OpenMV Cam&apos;s ROM file system?</source>
         <translation>OpenMV Cam의 ROM 파일 시스템을 재설정 하시겠습니까?</translation>
     </message>
     <message>
@@ -11385,12 +11453,12 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>&lt;a href="https://pypi.org/project/mpy-cross/"&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://pypi.org/project/mpy-cross/"&gt; MPY Cross Compilier CLI 옵션 &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://pypi.org/project/mpy-cross/&quot;&gt; MPY Cross Compilier CLI 옵션 &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
         <source>Advanced</source>
         <translation>고급의</translation>
@@ -11403,7 +11471,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
     </message>
     <message>
         <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+90" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
         <source>Compiling</source>
         <translation>컴파일</translation>
@@ -11415,9 +11483,9 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-780" />
         <source>Success - Press Ok to close the window</source>
         <translation>성공 - 확인을 누르면 창을 닫습니다</translation>
     </message>
@@ -11430,18 +11498,18 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>실패 - 취소를 눌러 창을 닫습니다</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+126" />
+        <location line="+111" />
         <location line="+14" />
-        <location line="+173" />
+        <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>Stedge 컴파일러</translation>
     </message>
     <message>
-        <location line="-334" />
+        <location line="-300" />
         <source>Failed to copy JSON file!</source>
         <translation>JSON 파일을 복사하지 못했습니다!</translation>
     </message>
@@ -11478,14 +11546,13 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+24" />
         <source>--verbosity 2</source>
         <translation>-verbosity 2</translation>
     </message>
     <message>
-        <location line="-22" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; stedgeai 코어 CLI 옵션 &lt;/a&gt;</translation>
+        <location line="+2" />
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; stedgeai 코어 CLI 옵션 &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -11494,16 +11561,15 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; stedgeai 신경계 CLI 옵션 &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; stedgeai 신경계 CLI 옵션 &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; stedgeai 재배치 CLI 옵션 &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href = &quot;%1&quot;&gt; stedgeai 재배치 CLI 옵션 &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+75" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>JSON 파일을 열지 못했습니다!</translation>
@@ -11514,7 +11580,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>Stedgeai</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+140" />
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
         <translation>Stedgeai 컴파일리어는이 플랫폼에서 지원되지 않습니다.</translation>
     </message>
@@ -11542,8 +11608,8 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md"&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/options.md"&gt; Vela Compilier CLI 옵션 &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/options.md&quot;&gt; Vela Compilier CLI 옵션 &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+67" />
@@ -11566,6 +11632,31 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <source>STM32 Programmer is not supported on this platform.</source>
         <translation>STM32 프로그래머는이 플랫폼에서 지원되지 않습니다.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <source>the detected board</source>
+        <translation>감지된 보드</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>The selected file &quot;%L1&quot; does not match any firmware interface for %L2.</source>
+        <translation>선택한 파일 &quot;%L1&quot;은(는) %L2의 펌웨어 인터페이스와 일치하지 않습니다.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%L1 accepts files named:</source>
+        <translation>%L1은 다음 이름의 파일을 허용합니다:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Rename your firmware file to one of the names above (or select the correct file) and try again.</source>
+        <translation>펌웨어 파일 이름을 위 이름 중 하나로 바꾸고(또는 올바른 파일을 선택) 다시 시도하십시오.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>This board does not define any loadable firmware interfaces in its settings.</source>
+        <translation>이 보드는 설정에서 로드 가능한 펌웨어 인터페이스를 정의하지 않습니다.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
@@ -11575,91 +11666,39 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+28" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+235" />
         <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
         <location line="+15" />
         <location line="+22" />
-        <location line="+132" />
         <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+21" />
         <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+306" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+144" />
         <source>Project Location</source>
         <translation>프로젝트 위치</translation>
     </message>
     <message>
-        <location line="-895" />
-        <location line="+28" />
-        <location line="+21" />
+        <location line="-886" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
-        <location line="+15" />
         <location line="+22" />
-        <location line="+24" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+11" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
-        <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+28" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+20" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+81" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
@@ -11669,7 +11708,59 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+94" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+15" />
+        <location line="+22" />
+        <location line="+18" />
+        <location line="+21" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+51" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
         <source>Location</source>
         <translation>위치</translation>
     </message>
@@ -11678,7 +11769,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">Qt 테스트</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-516" />
         <source>Google Test</source>
         <translation>구글 테스트</translation>
     </message>
@@ -11698,49 +11789,49 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>캐치2</translation>
     </message>
     <message>
-        <location line="-762" />
+        <location line="-371" />
         <location line="+25" />
         <location line="+26" />
-        <location line="+712" />
+        <location line="+321" />
         <source>Test framework:</source>
         <translation>테스트 프레임워크:</translation>
     </message>
     <message>
-        <location line="-687" />
+        <location line="-296" />
         <source>GUI Application</source>
         <translation>GUI 애플리케이션</translation>
     </message>
     <message>
         <location line="-75" />
         <location line="+51" />
-        <location line="+715" />
+        <location line="+324" />
         <source>Test suite name:</source>
         <translation>테스트 스위트 이름:</translation>
     </message>
     <message>
-        <location line="-790" />
-        <location line="+25" />
+        <location line="-374" />
         <location line="+24" />
         <location line="+27" />
         <location line="+21" />
-        <location line="+694" />
+        <location line="+22" />
+        <location line="+281" />
         <source>Test case name:</source>
         <translation>테스트 케이스 이름:</translation>
     </message>
     <message>
-        <location line="-693" />
+        <location line="-302" />
         <source>Requires QApplication</source>
         <translation>QApplication 필요</translation>
     </message>
     <message>
-        <location line="-97" />
+        <location line="+22" />
         <source>Generate setup code</source>
         <translation>설정 코드 생성</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+98" />
-        <location line="+692" />
+        <location line="-20" />
+        <location line="+21" />
+        <location line="+280" />
         <source>Generate initialization and cleanup code</source>
         <translation>초기화 및 정리 코드 생성</translation>
     </message>
@@ -11749,17 +11840,17 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">C++11 활성화</translation>
     </message>
     <message>
-        <location line="-766" />
+        <location line="-324" />
         <source>Googletest source directory (optional):</source>
         <translation>Googletest 소스 디렉토리(선택 사항):</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>부스트 포함 디렉터리(선택 사항):</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 포함 디렉터리(선택 사항):</translation>
     </message>
@@ -11769,154 +11860,154 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>Qt 라이브러리 사용</translation>
     </message>
     <message>
-        <location line="-50" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+45" />
-        <location line="+47" />
-        <location line="+84" />
+        <location line="+107" />
+        <location line="+46" />
+        <location line="+43" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
+        <location line="+105" />
+        <location line="+48" />
         <location line="+43" />
-        <location line="+49" />
-        <location line="+84" />
         <source>CMake</source>
         <translation>씨메이크</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+85" />
+        <location line="+153" />
+        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+314" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build system:</source>
         <translation>빌드 시스템:</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>프로젝트 및 테스트 정보</translation>
     </message>
     <message>
-        <location line="-120" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-93" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+26" />
-        <location line="+51" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+79" />
+        <location line="+116" />
         <location line="+18" />
         <location line="+4" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+41" />
+        <location line="+17" />
+        <location line="+33" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+70" />
-        <location line="+220" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+28" />
+        <location line="+142" />
         <source>Details</source>
         <translation>세부</translation>
     </message>
     <message>
-        <location line="-869" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-887" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>키트 선택</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -11924,101 +12015,101 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>키트</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+18" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <source>Project Management</source>
         <translation>프로젝트 관리</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+37" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+41" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>요약</translation>
@@ -12028,9 +12119,9 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">새 단위 테스트 프로젝트를 만듭니다. 단위 테스트를 통해 코드가 사용하기에 적합하고 회귀가 없는지 확인할 수 있습니다.</translation>
     </message>
     <message>
-        <location line="-466" />
-        <location line="+12" />
-        <location line="+456" />
+        <location line="-715" />
+        <location line="+380" />
+        <location line="+165" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>다른 프로젝트</translation>
@@ -12040,36 +12131,36 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">자동 테스트 프로젝트</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="-620" />
         <source>Fully qualified name, including namespaces</source>
         <translation>네임스페이스를 포함한 정규화된 이름</translation>
     </message>
     <message>
-        <location line="-645" />
-        <location line="+36" />
-        <location line="+276" />
-        <location line="+80" />
-        <location line="+235" />
-        <location line="+19" />
+        <location line="+1" />
         <location line="+22" />
+        <location line="+19" />
+        <location line="+289" />
+        <location line="+145" />
+        <location line="+40" />
+        <location line="+119" />
         <source>Class name:</source>
         <translation>클래스 이름:</translation>
     </message>
     <message>
-        <location line="-631" />
-        <location line="+592" />
-        <location line="+18" />
+        <location line="-633" />
+        <location line="+42" />
+        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;커스텀&gt;</translation>
     </message>
     <message>
-        <location line="-646" />
-        <location line="+37" />
-        <location line="+282" />
-        <location line="+73" />
-        <location line="+237" />
-        <location line="+18" />
+        <location line="-474" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+294" />
+        <location line="+139" />
+        <location line="+39" />
+        <location line="+119" />
         <source>Base class:</source>
         <translation>기본 클래스:</translation>
     </message>
@@ -12078,7 +12169,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-632" />
         <source>Include QObject</source>
         <translation>QObject 포함</translation>
     </message>
@@ -12116,70 +12207,70 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>QML_ELEMENT 추가</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+68" />
-        <location line="+262" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+315" />
+        <location line="+292" />
         <source>Header file:</source>
         <translation>헤더 파일:</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+288" />
-        <location line="+68" />
-        <location line="+220" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+215" />
         <location line="+1" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+80" />
+        <location line="+133" />
+        <location line="+39" />
+        <location line="+120" />
         <source>Source file:</source>
         <translation>소스 파일:</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+392" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+34" />
-        <location line="+19" />
-        <location line="+444" />
-        <location line="+19" />
-        <location line="+22" />
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>길:</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+596" />
-        <location line="+22" />
+        <location line="-739" />
+        <location line="+38" />
+        <location line="+429" />
+        <location line="+39" />
         <source>Define Class</source>
         <translation>클래스 정의</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-502" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>C++ 프로젝트에 추가할 수 있는 새 클래스에 대한 C++ 헤더 및 소스 파일을 만듭니다.</translation>
     </message>
     <message>
-        <location line="-203" />
-        <location line="+130" />
-        <location line="+74" />
+        <location line="+1" />
+        <location line="+65" />
+        <location line="+9" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-73" />
         <source>C++ Class</source>
         <translation>C++ 클래스</translation>
     </message>
@@ -12219,22 +12310,22 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>Qt 항목 모델을 만듭니다.</translation>
     </message>
     <message>
-        <location line="-231" />
-        <location line="+39" />
-        <location line="+26" />
-        <location line="+65" />
-        <location line="+18" />
-        <location line="+84" />
+        <location line="+1" />
+        <location line="+66" />
+        <location line="+57" />
+        <location line="+62" />
+        <location line="+9" />
+        <location line="+59" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-252" />
         <source>Qt Item Model</source>
         <translation>Qt 항목 모델</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+4" />
         <source>Qt for Python module:</source>
         <translation>Python용 Qt 모듈:</translation>
     </message>
@@ -12259,8 +12350,8 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>QtQuick 가져오기</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
         <location line="+6" />
@@ -12268,18 +12359,18 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>새 Python 클래스 파일을 만듭니다.</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+71" />
+        <location line="+1" />
+        <location line="+158" />
         <source>Python</source>
         <translation>파이썬</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-157" />
         <source>Python Class</source>
         <translation>파이썬 클래스</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+3" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>코드 조각을 입력할 수 있는 CMake 기반 테스트 프로젝트를 만듭니다.</translation>
     </message>
@@ -12334,7 +12425,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>코드 조각</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="+7" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>C/C++ 프로젝트에 추가할 수 있는 헤더 파일을 만듭니다.</translation>
     </message>
@@ -12344,7 +12435,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>C/C++ 헤더 파일</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>C/C++ 프로젝트에 추가할 수 있는 소스 파일을 생성합니다.</translation>
     </message>
@@ -12354,7 +12445,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>C/C++ 소스 파일</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>양식 템플릿 선택</translation>
     </message>
@@ -12372,12 +12463,12 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation type="vanished">Qt 디자이너 양식</translation>
     </message>
     <message>
-        <location line="-15" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>GLSL(Desktop OpenGL Shading Language)로 조각 셰이더를 만듭니다. 조각 셰이더는 OpenGL로 렌더링된 삼각형, 점 및 선에 대한 최종 픽셀 색상을 생성합니다.</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+1" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -12385,12 +12476,12 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-26" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>단편 셰이더(데스크탑 OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>GLSL(Desktop OpenGL Shading Language)로 버텍스 셰이더를 생성합니다. 정점 셰이더는 OpenGL로 렌더링된 삼각형, 점 및 선의 위치, 법선 및 텍스처 좌표를 변환합니다.</translation>
     </message>
@@ -12400,7 +12491,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>버텍스 셰이더(데스크탑 OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>OpenGL/ES 2.0 Shading Language(GLSL/ES)로 조각 셰이더를 만듭니다. 조각 셰이더는 OpenGL로 렌더링된 삼각형, 점 및 선에 대한 최종 픽셀 색상을 생성합니다.</translation>
     </message>
@@ -12410,7 +12501,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>단편 셰이더(OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>OpenGL/ES 2.0 Shading Language(GLSL/ES)로 정점 셰이더를 생성합니다. 정점 셰이더는 OpenGL로 렌더링된 삼각형, 점 및 선의 위치, 법선 및 텍스처 좌표를 변환합니다.</translation>
     </message>
@@ -12420,7 +12511,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>정점 셰이더(OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="+7" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>상용구 코드로 Java 파일을 생성합니다.</translation>
     </message>
@@ -12435,7 +12526,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>자바 파일</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>상태 비저장 라이브러리</translation>
     </message>
@@ -12456,25 +12547,25 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>JS 파일</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+12" />
         <source>Model name:</source>
         <translation>모델명:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
+        <location line="+1" />
+        <location line="+67" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>위치:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
-        <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" 파일 시스템에 존재합니다.</translation>
+        <location line="-66" />
+        <location line="+67" />
+        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; 파일 시스템에 존재합니다.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model Name and Location</source>
         <translation>모델명 및 위치</translation>
     </message>
@@ -12484,19 +12575,19 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>빈 다이어그램이 있는 새 빈 모델을 만듭니다.</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+53" />
-        <location line="+12" />
+        <location line="+1" />
+        <location line="+5" />
+        <location line="+62" />
         <source>Modeling</source>
         <translation>모델링</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model</source>
         <translation>모델</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+3" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>임시 파일을 사용하여 스크래치 모델을 생성합니다.</translation>
     </message>
@@ -12506,23 +12597,23 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>스크래치 모델</translation>
     </message>
     <message>
-        <location line="-81" />
+        <location line="+7" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>UTF-8 문자 집합을 사용하여 빈 Nim 파일을 만듭니다.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+14" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>님</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>님 파일</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>UTF-8 문자 집합을 사용하여 빈 Nim 스크립트 파일을 만듭니다.</translation>
     </message>
@@ -12532,7 +12623,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>님 스크립트 파일</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+7" />
         <source>Creates an empty Python script file using UTF-8 charset.</source>
         <translation>UTF-8 문자 집합을 사용하여 빈 Python 스크립트 파일을 만듭니다.</translation>
     </message>
@@ -12542,7 +12633,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>파이썬 파일</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Qt 리소스 파일(.qrc)을 만듭니다.</translation>
     </message>
@@ -12552,9 +12643,9 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>Qt 리소스 파일</translation>
     </message>
     <message>
-        <location line="-67" />
-        <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
-        <translation>"import QtQuick"으로 시작하는 상용구 코드로 QML 파일을 생성합니다.</translation>
+        <location line="+7" />
+        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
+        <translation>&quot;import QtQuick&quot;으로 시작하는 상용구 코드로 QML 파일을 생성합니다.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12562,21 +12653,21 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>QML 파일(Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="-32" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>임시 파일을 사용하여 스크래치 버퍼를 생성합니다.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+57" />
-        <location line="+47" />
+        <location line="-66" />
+        <location line="+67" />
+        <location line="+45" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>일반적인</translation>
     </message>
     <message>
-        <location line="-634" />
+        <location line="-401" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>이 마법사는 Boost를 사용하여 간단한 단위 테스트 프로젝트를 만듭니다.</translation>
     </message>
@@ -12601,21 +12692,21 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>부스트를 사용하여 새로운 단위 테스트 프로젝트를 만듭니다. 단위 테스트를 통해 코드가 사용하기에 적합하고 회귀가 없음을 확인할 수 있습니다.</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+25" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Test Project</source>
         <translation>테스트 프로젝트</translation>
     </message>
     <message>
-        <location line="-21" />
+        <location line="-93" />
         <source>Boost Test Project</source>
         <translation>테스트 프로젝트 부스트</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>이 마법사는 Catch2를 사용하여 간단한 단위 테스트 프로젝트를 만듭니다.</translation>
     </message>
@@ -12650,7 +12741,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>Catch2 테스트 프로젝트</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>이 마법사는 Google 테스트를 사용하여 간단한 단위 테스트 프로젝트를 만듭니다.</translation>
     </message>
@@ -12680,7 +12771,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>Google 테스트 프로젝트</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>이 마법사는 QT 테스트를 사용하여 간단한 단위 테스트 프로젝트를 만듭니다.</translation>
     </message>
@@ -12695,7 +12786,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>QT 테스트 프로젝트</translation>
     </message>
     <message>
-        <location line="-116" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>이 마법사는 QT 빠른 테스트를 사용하여 간단한 단위 테스트 프로젝트를 만듭니다.</translation>
     </message>
@@ -12710,17 +12801,17 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>QT 빠른 테스트 프로젝트</translation>
     </message>
     <message>
-        <location line="+815" />
+        <location line="+10" />
         <source>Include QQuickItem</source>
         <translation>Qquickitem을 포함하십시오</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+67" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>CMAKE 기반 테스트 프로젝트를 작성하여 코드 스 니펫을 입력하여 컴파일하고 확인할 수 있습니다.</translation>
     </message>
     <message>
-        <location line="-121" />
+        <location line="+29" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>QT 위젯 프로젝트에 추가 할 수있는 QT 위젯 디자이너 양식을 만듭니다. UI 비즈니스 로직에 대한 기존 클래스가 이미있는 경우 유용합니다.</translation>
     </message>
@@ -12730,7 +12821,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>QT 위젯 디자이너 양식</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="+64" />
         <source>Creates a markdown file.</source>
         <translation>마크 다운 파일을 만듭니다.</translation>
     </message>
@@ -12740,12 +12831,12 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>마크 다운 파일</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="+67" />
         <source>Scratch Buffer</source>
         <translation>스크래치 버퍼</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>상태 차트 이름:</translation>
     </message>
@@ -12765,7 +12856,7 @@ OpenMV IDE는 모델을 그대로 복사합니다.</translation>
         <translation>상태 차트</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -12805,7 +12896,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>테스트 케이스</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>빈 파일을 만듭니다.</translation>
     </message>
@@ -12815,7 +12906,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>빈 파일</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>QT 프로젝트에 추가 할 수있는 번역 파일을 만듭니다.</translation>
     </message>
@@ -12825,61 +12916,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QT 번역 파일</translation>
     </message>
     <message>
-        <location line="-623" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>이 마법사는 간단한 Qt 기반 콘솔 응용 프로그램을 만듭니다.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+83" />
+        <location line="+195" />
         <source>Meson</source>
         <translation>중간자</translation>
     </message>
     <message>
-        <location line="-442" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-326" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Define Build System</source>
         <translation>빌드 시스템 정의</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-328" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build System</source>
         <translation>시스템 구축</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-328" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation File</source>
         <translation>번역 파일</translation>
     </message>
     <message>
-        <location line="-591" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-479" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation</source>
         <translation>번역</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-262" />
         <source>Define Python Interpreter</source>
         <translation>Python 통역사를 정의하십시오</translation>
     </message>
@@ -12894,7 +12985,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QT 위젯 디자이너 기반 위젯 (UI 파일)이 포함 된 Python Application 용 QT를 만듭니다. .ui에서 파이썬 변환이 필요합니다.</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+38" />
         <source>Qt 6.4</source>
         <translation>QT 6.4</translation>
     </message>
@@ -12909,7 +13000,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QML 및 C ++ 코드를 모두 가질 수있는 QT 빠른 응용 프로그램을 만듭니다. 응용 프로그램을 빌드하여 데스크탑, 내장 및 모바일 대상 플랫폼에 배포 할 수 있습니다.</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="+42" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -12918,7 +13009,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  전체 응용 프로그램을 개발하려면 대신 QT 빠른 응용 프로그램 프로젝트를 만듭니다.</translation>
     </message>
     <message>
-        <location line="+173" />
+        <location line="+30" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -12935,31 +13026,31 @@ Preselects a desktop Qt for building the application if available.</source>
 사용 가능한 경우 애플리케이션 구축을 위해 데스크톱 Qt를 미리 선택합니다.</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+32" />
-        <location line="+299" />
-        <location line="+114" />
+        <location line="-337" />
+        <location line="+266" />
+        <location line="+28" />
+        <location line="+44" />
         <source>Application (Qt)</source>
         <translation>애플리케이션(Qt)</translation>
     </message>
     <message>
-        <location line="-412" />
+        <location line="-337" />
         <source>Qt Console Application</source>
         <translation>Qt 콘솔 애플리케이션</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>이 마법사는 C++ 라이브러리 프로젝트를 생성합니다.</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+84" />
+        <location line="+308" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>스켈레톤 소스 코드 파일을 생성할 클래스에 대한 기본 정보를 지정하십시오.</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="-307" />
         <source>Shared Library</source>
         <translation>공유 라이브러리</translation>
     </message>
@@ -12975,17 +13066,17 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+35" />
+        <location line="+46" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>유형:</translation>
     </message>
     <message>
-        <source>%{JS: value('Type') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</source>
-        <translation type="vanished">%{JS: 값('유형') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</translation>
+        <source>%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</source>
+        <translation type="vanished">%{JS: 값(&apos;유형&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -13051,14 +13142,14 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Qt 모듈:</translation>
     </message>
     <message>
-        <location line="-519" />
-        <location line="+147" />
-        <location line="+70" />
+        <location line="+3" />
+        <location line="+116" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+59" />
-        <location line="+42" />
+        <location line="+68" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+170" />
         <source>Define Project Details</source>
         <translation>프로젝트 세부 정보 정의</translation>
     </message>
@@ -13067,38 +13158,38 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">C++ 라이브러리를 생성합니다. 이것은 다음을 생성하는 데 사용할 수 있습니다.&lt;ul&gt;&lt;li&gt;&lt;tt&gt;QPluginLoader&lt;/tt&gt; 및 런타임(플러그인)과 함께 사용하기 위한 공유 C++ 라이브러리&lt;/li&gt;&lt;li&gt;다른 것과 함께 사용하기 위한 공유 또는 정적 C++ 라이브러리 링크타임에 프로젝트&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-513" />
-        <location line="+460" />
-        <location line="+62" />
-        <location line="+7" />
+        <location line="-427" />
+        <location line="+18" />
+        <location line="+186" />
+        <location line="+232" />
         <source>Library</source>
         <translation>도서관</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-435" />
         <source>C++ Library</source>
         <translation>C++ 라이브러리</translation>
     </message>
     <message>
-        <location line="-366" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>간단한 Nim 애플리케이션을 만듭니다.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+229" />
+        <location line="+40" />
         <location line="+18" />
-        <location line="+157" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Qt가 아닌 프로젝트</translation>
     </message>
     <message>
-        <location line="-403" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>님 신청</translation>
     </message>
     <message>
-        <location line="+369" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>바이너리</translation>
     </message>
@@ -13113,13 +13204,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>작가:</translation>
     </message>
     <message>
-        <location line="-544" />
-        <location line="+545" />
+        <location line="+1" />
+        <location line="+402" />
         <source>Description:</source>
         <translation>설명:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-401" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -13184,13 +13275,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>다른</translation>
     </message>
     <message>
-        <location line="-560" />
-        <location line="+561" />
+        <location line="+1" />
+        <location line="+386" />
         <source>License:</source>
         <translation>특허:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-385" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>씨</translation>
@@ -13231,22 +13322,22 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>프로젝트 구성 정의</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="+1" />
+        <location line="+253" />
+        <location line="+1" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+202" />
         <source>Configuration</source>
         <translation>구성</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-343" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Nimble을 사용하여 Nim 애플리케이션을 만듭니다.</translation>
     </message>
@@ -13256,7 +13347,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>민첩한 애플리케이션</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>종속성이 없는 간단한 C 응용 프로그램을 만듭니다.</translation>
     </message>
@@ -13266,7 +13357,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>일반 C 응용 프로그램</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>종속성이 없는 간단한 C++ 응용 프로그램을 만듭니다.</translation>
     </message>
@@ -13276,7 +13367,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>일반 C++ 애플리케이션</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>이 마법사는 빈 .pro 파일을 생성합니다.</translation>
     </message>
@@ -13295,43 +13386,43 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">파이사이드 버전:</translation>
     </message>
     <message>
-        <location line="-218" />
+        <location line="+13" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>QApplication에 대한 기본 코드만 포함하는 Python용 Qt 응용 프로그램을 만듭니다.</translation>
     </message>
     <message>
-        <location line="-14" />
-        <location line="+15" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+18" />
+        <location line="+21" />
         <source>Application (Qt for Python)</source>
         <translation>애플리케이션(Python용 Qt)</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-60" />
         <source>Empty Application</source>
         <translation>빈 신청서</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: 값('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: 값(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</source>
-        <translation type="vanished">%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</translation>
+        <source>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</source>
+        <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-28" />
-        <location line="+37" />
+        <location line="+9" />
+        <location line="+39" />
         <source>Project file:</source>
         <translation>프로젝트 파일:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>빈 창을 포함하는 Qt for Python 응용 프로그램을 만듭니다.</translation>
     </message>
@@ -13341,15 +13432,15 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>빈 창</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+15" />
+        <location line="-32" />
         <location line="+22" />
         <location line="+15" />
+        <location line="+24" />
         <source>PySide 6</source>
         <translation>파이사이드 6</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-211" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -13358,19 +13449,19 @@ Preselects a desktop Qt for building the application if available.</source>
  사용 가능한 경우 응용 프로그램을 구축하기 위해 데스크탑 QT를 사전 선택합니다.</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation>C ++ 라이브러리를 만듭니다. &lt;ul&gt; &lt;li&gt; &lt;ul&gt; &lt;li&gt; &lt;tt&gt; qpluginloader &lt;/tt&gt; 및 런타임 (플러그인)과 함께 사용할 공유 C ++ 라이브러리 &lt;/li&gt; &lt;li&gt; 링크 타임에서 다른 프로젝트와 함께 사용하기위한 공유 또는 정적 C ++ 라이브러리 &lt;/li&gt; &lt;/ul&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+15" />
+        <location line="+107" />
         <location line="+22" />
+        <location line="+39" />
         <source>PySide 2</source>
         <translation>파이 사이드 2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="-24" />
         <source>PySide 5.15</source>
         <translation>파이사이드 5.15</translation>
     </message>
@@ -13404,50 +13495,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Qt Designer 기반 위젯(ui 파일)을 포함하는 Python용 Qt 응용 프로그램을 생성합니다. - .ui에서 Python으로 변환해야 합니다.</translation>
     </message>
     <message>
-        <location line="-55" />
+        <location line="+21" />
         <source>Window UI</source>
         <translation>창 UI</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+311" />
+        <location line="+10" />
         <location line="+25" />
+        <location line="+23" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-335" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
         <location line="+23" />
+        <location line="+25" />
         <source>Minimum required Qt version:</source>
         <translation>최소 필수 Qt 버전:</translation>
     </message>
     <message>
-        <location line="-22" />
+        <location line="-47" />
         <source>MyItem</source>
         <translation>내 아이템</translation>
     </message>
@@ -13495,9 +13586,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Qt Design Studio(.qmlproject를 통해) 및 Qt Creator(CMakeLists.txt를 통해)와 모두 호환되는 구조로 프로젝트를 만듭니다. 여기에는 Qt Design Studio에서 시각적으로 편집할 수 있는 .ui.qml 형식이 포함되어 있습니다.</translation>
     </message>
     <message>
-        <location line="-324" />
-        <location line="+274" />
-        <location line="+55" />
+        <location line="+5" />
+        <location line="+30" />
+        <location line="+16" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Qt 가상 키보드 사용</translation>
     </message>
@@ -13510,18 +13601,18 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">빈 창을 포함하는 Qt Quick 응용 프로그램을 만듭니다. 선택적으로 Qt Design Studio 프로젝트를 만들 수 있습니다.</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-33" />
         <source>Qt Quick Application</source>
         <translation>Qt 빠른 애플리케이션</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="+26" />
         <source>Creates a Qt Quick application that contains an empty window.
 
-Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
+Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
         <translation>빈 창을 포함하는 Qt Quick 응용 프로그램을 만듭니다.
 
-CMake 또는 6보다 낮은 Qt 버전 이외의 다른 빌드 시스템을 사용하려면 이 "호환" 버전을 사용하십시오.</translation>
+CMake 또는 6보다 낮은 Qt 버전 이외의 다른 빌드 시스템을 사용하려면 이 &quot;호환&quot; 버전을 사용하십시오.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13537,18 +13628,18 @@ Use this only if you are prototyping. You cannot create a full application with 
 프로토타이핑하는 경우에만 사용하십시오. 이것으로 전체 응용 프로그램을 만들 수 없습니다. 대신 Qt Quick Application 프로젝트 사용을 고려하십시오.</translation>
     </message>
     <message>
-        <location line="+272" />
+        <location line="+14" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt 퀵 UI 프로토타입</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>이 마법사는 Qt 위젯 응용 프로그램 프로젝트를 생성합니다. 애플리케이션은 기본적으로 QApplication에서 파생되며 빈 위젯을 포함합니다.</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
         <location line="+15" />
@@ -13556,8 +13647,8 @@ Use this only if you are prototyping. You cannot create a full application with 
         <translation>양식 생성</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), 'ui')}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), 'ui')}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13583,27 +13674,27 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Qt 위젯 애플리케이션</translation>
     </message>
     <message>
-        <location line="-332" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>지금 &lt;b&gt;%{vcsName}&lt;/b&gt;을(를) 구성하십시오.</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-93" />
+        <location line="+52" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository:</source>
         <translation>저장소:</translation>
     </message>
     <message>
         <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>저장소 URL이 유효하지 않습니다.</translation>
@@ -13613,24 +13704,24 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
         <source>Directory:</source>
         <translation>예배 규칙서:</translation>
     </message>
     <message>
-        <location line="-94" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
-        <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" 파일 시스템에 존재합니다.</translation>
+        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; 파일 시스템에 존재합니다.</translation>
     </message>
     <message>
-        <location line="-52" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>기존 디렉터리 사용</translation>
     </message>
@@ -13706,13 +13797,13 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+3" />
-        <location line="+19" />
+        <location line="+60" />
         <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>리포지토리 URL, 체크아웃 디렉터리 및 경로를 지정합니다.</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>바자점 운영중...</translation>
     </message>
@@ -13731,9 +13822,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Bazaar 분기를 복제하고 포함된 프로젝트를 로드하려고 시도합니다.</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+1" />
+        <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <location line="+20" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
@@ -13741,12 +13832,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>프로젝트 가져오기</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>바자 클론(또는 브랜치)</translation>
     </message>
     <message>
-        <location line="-69" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>기준 치수:</translation>
     </message>
@@ -13765,7 +13856,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+52" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+19" />
         <location line="+1" />
@@ -13773,7 +13864,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>점검</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>CVS 저장소를 체크아웃하고 포함된 프로젝트를 로드하려고 시도합니다.</translation>
     </message>
@@ -13823,7 +13914,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>힘내 클론</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>Mercurial 클론 실행 중...</translation>
     </message>
@@ -13858,7 +13949,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Subversion 체크아웃</translation>
     </message>
     <message>
-        <location line="-394" />
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>이 마법사는 사용자 정의 Qt Creator 플러그인을 생성합니다.</translation>
     </message>
@@ -13868,8 +13959,8 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>사용자 정의 Qt Creator 플러그인에 대한 세부 정보를 지정합니다.</translation>
     </message>
     <message>
-        <source>%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</source>
-        <translation type="vanished">%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</translation>
+        <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
+        <translation type="vanished">%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13907,8 +13998,8 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>여기에 플러그인에 대한 간단한 설명을 입력하세요.</translation>
     </message>
     <message>
-        <source>https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</source>
-        <translation type="vanished">https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</translation>
+        <source>https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</source>
+        <translation type="vanished">https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13933,7 +14024,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
         <source>S&amp;essions</source>
-        <translation>S &amp; ESSIONS</translation>
+        <translation>S &amp;ESSIONS</translation>
     </message>
     <message>
         <location line="+9" />
@@ -14000,8 +14091,8 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+42" />
-        <source>Could not save session to file "%1"</source>
-        <translation>"%1"을 제출하기 위해 세션을 저장할 수 없습니다.</translation>
+        <source>Could not save session to file &quot;%1&quot;</source>
+        <translation>&quot;%1&quot;을 제출하기 위해 세션을 저장할 수 없습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
@@ -14026,12 +14117,12 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+2" />
         <source>&amp;Rename...</source>
-        <translation>&amp; 이름 바꾸기 ...</translation>
+        <translation>&amp;이름 바꾸기 ...</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C&amp;lone...</source>
-        <translation>C &amp; Lone ...</translation>
+        <translation>C &amp;Lone ...</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14072,17 +14163,17 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+0" />
         <source>Create and &amp;Open</source>
-        <translation>생성 및 개방</translation>
+        <translation>생성 및 개방 (&amp;O)</translation>
     </message>
     <message>
         <location line="+11" />
         <source>&amp;Clone</source>
-        <translation>&amp; 클론</translation>
+        <translation>&amp;클론</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Clone and &amp;Open</source>
-        <translation>복제 및 &amp; 개방</translation>
+        <translation>복제 및 &amp;개방</translation>
     </message>
     <message>
         <location line="+22" />
@@ -14092,12 +14183,12 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+1" />
         <source>&amp;Rename</source>
-        <translation>&amp; 이름 바꾸기</translation>
+        <translation>&amp;이름 바꾸기</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Rename and &amp;Open</source>
-        <translation>이름을 바꾸고 &amp; 오픈합니다</translation>
+        <translation>이름을 바꾸고 &amp;오픈합니다</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
@@ -14111,38 +14202,38 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+72" />
-        <source>Could not create directory "%1"</source>
-        <translation>디렉토리 "%1"을 만들 수 없습니다.</translation>
+        <source>Could not create directory &quot;%1&quot;</source>
+        <translation>디렉토리 &quot;%1&quot;을 만들 수 없습니다.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>프로그램 "%1"은 존재하지 않거나 실행 가능하지 않습니다.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>프로그램 &quot;%1&quot;은 존재하지 않거나 실행 가능하지 않습니다.</translation>
     </message>
     <message>
         <location line="+34" />
-        <source>Starting: "%1" %2</source>
-        <translation>시작 : " %1" %2</translation>
+        <source>Starting: &quot;%1&quot; %2</source>
+        <translation>시작 : &quot; %1&quot; %2</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The process "%1" exited normally.</source>
-        <translation>프로세스 "%1"은 정상적으로 종료되었습니다.</translation>
+        <source>The process &quot;%1&quot; exited normally.</source>
+        <translation>프로세스 &quot;%1&quot;은 정상적으로 종료되었습니다.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The process "%1" exited with code %2.</source>
-        <translation>프로세스 " %1"은 코드 %2로 종료되었습니다.</translation>
+        <source>The process &quot;%1&quot; exited with code %2.</source>
+        <translation>프로세스 &quot; %1&quot;은 코드 %2로 종료되었습니다.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Could not start process "%1" %2.</source>
-        <translation>프로세스를 시작할 수 없습니다 " %1" %2.</translation>
+        <source>Could not start process &quot;%1&quot; %2.</source>
+        <translation>프로세스를 시작할 수 없습니다 &quot; %1&quot; %2.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The process "%1" crashed.</source>
-        <translation>프로세스 "%1"이 충돌했습니다.</translation>
+        <source>The process &quot;%1&quot; crashed.</source>
+        <translation>프로세스 &quot;%1&quot;이 충돌했습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
@@ -14183,8 +14274,8 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files of all open projects. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>모든 열린 프로젝트의 파일을 찾습니다. 주어진 줄 번호로 점프하려면 "+&lt;number&gt;"또는 ": &lt;number&gt;"를 추가하십시오. 다른 "+&lt;번호&gt;"또는 ": &lt;number&gt;"를 추가하여 열 번호로 이동하십시오.</translation>
+        <source>Locates files of all open projects. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>모든 열린 프로젝트의 파일을 찾습니다. 주어진 줄 번호로 점프하려면 &quot;+&lt;number&gt;&quot;또는 &quot;: &lt;number&gt;&quot;를 추가하십시오. 다른 &quot;+&lt;번호&gt;&quot;또는 &quot;: &lt;number&gt;&quot;를 추가하여 열 번호로 이동하십시오.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
@@ -14239,7 +14330,7 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>Show &amp;App Output</source>
-        <translation>표시 및 앱 출력</translation>
+        <translation>표시 및 앱 출력 (&amp;A)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14360,13 +14451,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+105" />
-        <source>Build directory contains potentially problematic character "%1".</source>
-        <translation>빌드 디렉토리에는 잠재적 인 문제가있는 문자 "%1"이 포함되어 있습니다.</translation>
+        <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
+        <translation>빌드 디렉토리에는 잠재적 인 문제가있는 문자 &quot;%1&quot;이 포함되어 있습니다.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>This warning can be suppressed &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>이 경고는 &lt;a href = "더미"&gt; 여기 &lt;/a&gt;를 억제 할 수 있습니다.</translation>
+        <source>This warning can be suppressed &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>이 경고는 &lt;a href = &quot;더미&quot;&gt; 여기 &lt;/a&gt;를 억제 할 수 있습니다.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -14422,7 +14513,7 @@ Excluding: %2
     </message>
     <message>
         <location line="+4" />
-        <source>Variables in the build configuration's environment</source>
+        <source>Variables in the build configuration&apos;s environment</source>
         <translation>빌드 구성 환경의 변수</translation>
     </message>
     <message>
@@ -14464,12 +14555,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build configuration</source>
+        <source>Name of the project&apos;s active build configuration</source>
         <translation>프로젝트의 활성 빌드 구성의 이름</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build system</source>
+        <source>Name of the project&apos;s active build system</source>
         <translation>프로젝트의 활성 빌드 시스템의 이름</translation>
     </message>
     <message>
@@ -14479,13 +14570,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Type of the project's active build configuration</source>
+        <source>Type of the project&apos;s active build configuration</source>
         <translation>프로젝트의 활성 빌드 구성 유형</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>No build device is set for the kit "%1".</source>
-        <translation>키트 "%1"에 대한 빌드 장치가 설정되지 않습니다.</translation>
+        <source>No build device is set for the kit &quot;%1&quot;.</source>
+        <translation>키트 &quot;%1&quot;에 대한 빌드 장치가 설정되지 않습니다.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -14494,13 +14585,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+7" />
-        <source>The build device "%1" cannot reach the project directory.</source>
-        <translation>빌드 장치 "%1"은 프로젝트 디렉토리에 도달 할 수 없습니다.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the project directory.</source>
+        <translation>빌드 장치 &quot;%1&quot;은 프로젝트 디렉토리에 도달 할 수 없습니다.</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The build device "%1" cannot reach the build directory.</source>
-        <translation>빌드 장치 "%1"은 빌드 디렉토리에 도달 할 수 없습니다.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the build directory.</source>
+        <translation>빌드 장치 &quot;%1&quot;은 빌드 디렉토리에 도달 할 수 없습니다.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
@@ -14532,7 +14623,7 @@ Excluding: %2
     <message>
         <location line="+138" />
         <source>Compile</source>
-        <comment>Category for compiler issues listed under 'Issues'</comment>
+        <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>엮다</translation>
     </message>
     <message>
@@ -14543,7 +14634,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Build System</source>
-        <comment>Category for build system issues listed under 'Issues'</comment>
+        <comment>Category for build system issues listed under &apos;Issues&apos;</comment>
         <translation>시스템 빌드 시스템</translation>
     </message>
     <message>
@@ -14554,7 +14645,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Deployment</source>
-        <comment>Category for deployment issues listed under 'Issues'</comment>
+        <comment>Category for deployment issues listed under &apos;Issues&apos;</comment>
         <translation>전개</translation>
     </message>
     <message>
@@ -14565,7 +14656,7 @@ Excluding: %2
     <message>
         <location line="+4" />
         <source>Autotests</source>
-        <comment>Category for autotest issues listed under 'Issues'</comment>
+        <comment>Category for autotest issues listed under &apos;Issues&apos;</comment>
         <translation>자동 테스트</translation>
     </message>
     <message>
@@ -14582,7 +14673,7 @@ Excluding: %2
         <location line="+8" />
         <location line="+59" />
         <source>Clean</source>
-        <extracomment>Displayed name for a "cleaning" build step
+        <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
 Display name of the clean build step list. Used as part of the labels in the project window.</extracomment>
         <translation>깨끗한</translation>
@@ -14646,8 +14737,8 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location line="+98" />
-        <source>When executing step "%1"</source>
-        <translation>"%1"단계를 실행할 때</translation>
+        <source>When executing step &quot;%1&quot;</source>
+        <translation>&quot;%1&quot;단계를 실행할 때</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
@@ -14864,8 +14955,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+3" />
-        <source>The project file "%1" does not exist.</source>
-        <translation>프로젝트 파일 "%1"은 존재하지 않습니다.</translation>
+        <source>The project file &quot;%1&quot; does not exist.</source>
+        <translation>프로젝트 파일 &quot;%1&quot;은 존재하지 않습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/codestylesettingspropertiespage.cpp" line="+60" />
@@ -14892,7 +14983,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+38" />
         <source>Show Compile &amp;Output</source>
-        <translation>컴파일 및 출력을 보여줍니다</translation>
+        <translation>컴파일 및 출력을 보여줍니다 (&amp;O)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14962,13 +15053,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from the current document's project. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>현재 문서 프로젝트에서 파일을 찾습니다. 주어진 줄 번호로 점프하려면 "+&lt;number&gt;"또는 ": &lt;number&gt;"를 추가하십시오. 다른 "+&lt;번호&gt;"또는 ": &lt;number&gt;"를 추가하여 열 번호로 이동하십시오.</translation>
+        <source>Locates files from the current document&apos;s project. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>현재 문서 프로젝트에서 파일을 찾습니다. 주어진 줄 번호로 점프하려면 &quot;+&lt;number&gt;&quot;또는 &quot;: &lt;number&gt;&quot;를 추가하십시오. 다른 &quot;+&lt;번호&gt;&quot;또는 &quot;: &lt;number&gt;&quot;를 추가하여 열 번호로 이동하십시오.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
-        <source>Project "%1"</source>
-        <translation>프로젝트 "%1"</translation>
+        <source>Project &quot;%1&quot;</source>
+        <translation>프로젝트 &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14977,8 +15068,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>Project "%1":</source>
-        <translation>프로젝트 "%1":</translation>
+        <source>Project &quot;%1&quot;:</source>
+        <translation>프로젝트 &quot;%1&quot;:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
@@ -14999,8 +15090,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
-        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>사용자 정의 출력 파서는 사용자가 제공 한 오류 패턴에 대한 명령 줄 출력을 스캔하여 문제에서 항목을 생성합니다. &lt;br&gt; 파서는 &lt;a href = "dummy"&gt; here &lt;/a&gt;를 구성 할 수 있습니다.</translation>
+        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+82" />
@@ -15022,19 +15113,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>&amp;Error message capture pattern:</source>
-        <translation>&amp; 오류 메시지 캡처 패턴 :</translation>
+        <translation>&amp;오류 메시지 캡처 패턴 :</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+33" />
         <source>&amp;File name:</source>
-        <translation>&amp; 파일 이름 :</translation>
+        <translation>&amp;파일 이름 :</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Line number:</source>
-        <translation>&amp; 라인 번호 :</translation>
+        <translation>&amp;라인 번호 :</translation>
     </message>
     <message>
         <location line="-32" />
@@ -15057,7 +15148,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-31" />
         <source>E&amp;rror message:</source>
-        <translation>e &amp; rror 메시지 :</translation>
+        <translation>e &amp;rror 메시지 :</translation>
     </message>
     <message>
         <location line="+33" />
@@ -15142,7 +15233,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
-        <source>Custom output parsers defined here can be enabled individually in the project's build or run settings.</source>
+        <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>여기에 정의 된 사용자 정의 출력 파서는 프로젝트의 빌드 또는 실행 설정에서 개별적으로 활성화 할 수 있습니다.</translation>
     </message>
     <message>
@@ -15235,44 +15326,44 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
         <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>&amp; 컴파일러 경로 :</translation>
+        <translation>&amp;컴파일러 경로 :</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Make path:</source>
-        <translation>&amp; 경로 만들기 :</translation>
+        <translation>&amp;경로 만들기 :</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
         <source>&amp;ABI:</source>
-        <translation>&amp; ABI :</translation>
+        <translation>&amp;ABI :</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Predefined macros:</source>
-        <translation>사전 정의 된 매크로 :</translation>
+        <translation>사전 정의 된 매크로 : (&amp;P)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Header paths:</source>
-        <translation>&amp; 헤더 경로 :</translation>
+        <translation>&amp;헤더 경로 :</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C++11 &amp;flags:</source>
-        <translation>C ++ 11 및 플래그 :</translation>
+        <translation>&amp;C ++ 11 및 플래그 :</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Qt mkspecs:</source>
-        <translation>&amp; qt mkspecs :</translation>
+        <translation>&amp;qt mkspecs :</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Error parser:</source>
-        <translation>&amp; 오류 파서 :</translation>
+        <translation>&amp;오류 파서 :</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/dependenciespanel.cpp" line="+83" />
@@ -15427,24 +15518,24 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
-        <source>No device for path "%1"</source>
-        <translation>"%1"경로를위한 장치 없음</translation>
+        <source>No device for path &quot;%1&quot;</source>
+        <translation>&quot;%1&quot;경로를위한 장치 없음</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
-        <source>No device found for path "%1"</source>
-        <translation>"%1"경로에 대한 장치가 없습니다.</translation>
+        <source>No device found for path &quot;%1&quot;</source>
+        <translation>&quot;%1&quot;경로에 대한 장치가 없습니다.</translation>
     </message>
     <message>
         <location line="-9" />
-        <source>No file access for device "%1"</source>
-        <translation>장치 "%1"에 대한 파일 액세스 없음</translation>
+        <source>No file access for device &quot;%1&quot;</source>
+        <translation>장치 &quot;%1&quot;에 대한 파일 액세스 없음</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
         <source>%1 (default for %2)</source>
-        <translation>%1 (기본값 2)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceprocessesdialog.cpp" line="+103" />
@@ -15464,12 +15555,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+22" />
         <source>&amp;Update List</source>
-        <translation>&amp; 업데이트 목록</translation>
+        <translation>&amp;업데이트 목록</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Kill Process</source>
-        <translation>&amp; 킬 프로세스</translation>
+        <translation>&amp;킬 프로세스</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15509,7 +15600,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+4" />
         <source>&amp;Start Wizard to Add Device...</source>
-        <translation>&amp; 장치를 추가하려면 Wizard를 시작하십시오 ...</translation>
+        <translation>&amp;장치를 추가하려면 Wizard를 시작하십시오 ...</translation>
     </message>
     <message>
         <location line="+12" />
@@ -15534,8 +15625,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+87" />
-        <source>Yes (id is "%1")</source>
-        <translation>예 (ID는 "%1"입니다)</translation>
+        <source>Yes (id is &quot;%1&quot;)</source>
+        <translation>예 (ID는 &quot;%1&quot;입니다)</translation>
     </message>
     <message>
         <location line="+0" />
@@ -15663,13 +15754,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>No device for given path: "%1".</source>
-        <translation>주어진 경로에 대한 장치가 없습니다 : "%1".</translation>
+        <source>No device for given path: &quot;%1&quot;.</source>
+        <translation>주어진 경로에 대한 장치가 없습니다 : &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Device for path "%1" does not support killing processes.</source>
-        <translation>경로 "%1"장치는 킬 프로세스를 지원하지 않습니다.</translation>
+        <source>Device for path &quot;%1&quot; does not support killing processes.</source>
+        <translation>경로 &quot;%1&quot;장치는 킬 프로세스를 지원하지 않습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
@@ -15752,7 +15843,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>열에서 오른쪽 및 마진 표시 :</translation>
+        <translation>열에서 오른쪽 및 마진 표시 : (&amp;M)</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15801,7 +15892,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-278" />
         <source>Ed&amp;it</source>
-        <translation>편집하다</translation>
+        <translation>편집하다 (&amp;I)</translation>
     </message>
     <message>
         <location line="+4" />
@@ -15816,7 +15907,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>&amp;Unset</source>
-        <translation>&amp; unset</translation>
+        <translation>&amp;unset</translation>
     </message>
     <message>
         <location line="+14" />
@@ -15831,7 +15922,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+9" />
         <source>Open &amp;Terminal</source>
-        <translation>오픈 및 터미널</translation>
+        <translation>오픈 및 터미널 (&amp;T)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15840,33 +15931,33 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+123" />
-        <source>Unset &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>unset &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>unset &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation>&lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;%2 &lt;/b&gt;를 설정하십시오</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;%2 &lt;/b&gt;를 설정하십시오</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>&lt;b&gt;%2 &lt;/b&gt; ~ &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>&lt;b&gt;%2 &lt;/b&gt; ~ &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>prepend &lt;b&gt;%2 &lt;/b&gt; ~ &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>prepend &lt;b&gt;%2 &lt;/b&gt; ~ &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
-        <translation>&lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;%2 &lt;/b&gt; [비활성화]</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;%2 &lt;/b&gt; [비활성화]</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Use &lt;b&gt;%1&lt;/b&gt;</source>
-        <extracomment>%1 is "System Environment" or some such.</extracomment>
+        <extracomment>%1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>&lt;b&gt;%1 &lt;/b&gt;를 사용하십시오</translation>
     </message>
     <message>
@@ -15877,7 +15968,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>Use &lt;b&gt;%1&lt;/b&gt; and</source>
-        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is "System Environment" or some such.</extracomment>
+        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>&lt;b&gt;%1 &lt;/b&gt;를 사용하십시오</translation>
     </message>
     <message>
@@ -15975,58 +16066,58 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Field "%1" has no type.</source>
-        <translation>필드 "%1"에는 유형이 없습니다.</translation>
+        <source>Field &quot;%1&quot; has no type.</source>
+        <translation>필드 &quot;%1&quot;에는 유형이 없습니다.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Field "%1" has unsupported type "%2".</source>
-        <translation>필드 "%1"에는 지원되지 않은 유형 "%2"가 있습니다.</translation>
+        <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
+        <translation>필드 &quot;%1&quot;에는 지원되지 않은 유형 &quot;%2&quot;가 있습니다.</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>When parsing Field "%1": %2</source>
-        <translation>구문 분석 필드 " %1": %2</translation>
+        <source>When parsing Field &quot;%1&quot;: %2</source>
+        <translation>구문 분석 필드 &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+208" />
-        <source>Label ("%1") data is not an object.</source>
-        <translation>레이블 ( "%1") 데이터는 객체가 아닙니다.</translation>
+        <source>Label (&quot;%1&quot;) data is not an object.</source>
+        <translation>레이블 ( &quot;%1&quot;) 데이터는 객체가 아닙니다.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Label ("%1") has no trText.</source>
-        <translation>레이블 ( "%1")에는 trtext가 없습니다.</translation>
+        <source>Label (&quot;%1&quot;) has no trText.</source>
+        <translation>레이블 ( &quot;%1&quot;)에는 trtext가 없습니다.</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>Spacer ("%1") data is not an object.</source>
-        <translation>스페이서 ( "%1") 데이터는 객체가 아닙니다.</translation>
+        <source>Spacer (&quot;%1&quot;) data is not an object.</source>
+        <translation>스페이서 ( &quot;%1&quot;) 데이터는 객체가 아닙니다.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Spacer ("%1") property "factor" is no integer value.</source>
-        <translation>스페이서 ( "%1") 속성 "요소"는 정수 값이 아닙니다.</translation>
+        <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
+        <translation>스페이서 ( &quot;%1&quot;) 속성 &quot;요소&quot;는 정수 값이 아닙니다.</translation>
     </message>
     <message>
         <location line="+35" />
-        <source>LineEdit ("%1") data is not an object.</source>
-        <translation>lineedit ( "%1") 데이터는 객체가 아닙니다.</translation>
+        <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>lineedit ( &quot;%1&quot;) 데이터는 객체가 아닙니다.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>LineEdit ("%1") has an invalid regular expression "%2" in "validator".</source>
-        <translation>LineEdit ( "%1")에는 "Validator"에서 잘못된 정규식 "%2"가 있습니다.</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
+        <translation>LineEdit ( &quot;%1&quot;)에는 &quot;Validator&quot;에서 잘못된 정규식 &quot;%2&quot;가 있습니다.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>LineEdit ("%1") has an invalid value "%2" in "completion".</source>
-        <translation>LineEdit ( "%1")은 "완료"에서 "%2"가 잘못된 값 을가집니다.</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
+        <translation>LineEdit ( &quot;%1&quot;)은 &quot;완료&quot;에서 &quot;%2&quot;가 잘못된 값 을가집니다.</translation>
     </message>
     <message>
         <location line="+166" />
-        <source>TextEdit ("%1") data is not an object.</source>
-        <translation>textedit ( "%1") 데이터는 객체가 아닙니다.</translation>
+        <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>textedit ( &quot;%1&quot;) 데이터는 객체가 아닙니다.</translation>
     </message>
     <message>
         <location line="+83" />
@@ -16035,18 +16126,18 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+26" />
-        <source>kind "%1" is not one of the supported "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any".</source>
-        <translation>Kind "%1"은 지원되는 "기존 디렉토리", "디렉토리", "파일", "savefile", "기존 커뮤니케이션", "명령", "any"중 하나가 아닙니다.</translation>
+        <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
+        <translation>Kind &quot;%1&quot;은 지원되는 &quot;기존 디렉토리&quot;, &quot;디렉토리&quot;, &quot;파일&quot;, &quot;savefile&quot;, &quot;기존 커뮤니케이션&quot;, &quot;명령&quot;, &quot;any&quot;중 하나가 아닙니다.</translation>
     </message>
     <message>
         <location line="+80" />
-        <source>CheckBox ("%1") data is not an object.</source>
-        <translation>CheckBox ( "%1") 데이터는 객체가 아닙니다.</translation>
+        <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
+        <translation>CheckBox ( &quot;%1&quot;) 데이터는 객체가 아닙니다.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>CheckBox ("%1") values for checked and unchecked state are identical.</source>
-        <translation>점검 및 확인되지 않은 상태의 CheckBox ( "%1") 값은 동일합니다.</translation>
+        <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
+        <translation>점검 및 확인되지 않은 상태의 CheckBox ( &quot;%1&quot;) 값은 동일합니다.</translation>
     </message>
     <message>
         <location line="+80" />
@@ -16055,33 +16146,33 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>No "key" found in List items.</source>
-        <translation>목록 항목에 "키"가 없습니다.</translation>
+        <source>No &quot;key&quot; found in List items.</source>
+        <translation>목록 항목에 &quot;키&quot;가 없습니다.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>%1 ("%2") data is not an object.</source>
-        <translation>%1 ( "%2") 데이터는 객체가 아닙니다.</translation>
+        <source>%1 (&quot;%2&quot;) data is not an object.</source>
+        <translation>%1 ( &quot;%2&quot;) 데이터는 객체가 아닙니다.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>%1 ("%2") "index" is not an integer value.</source>
-        <translation>%1 ( "%2") "색인"은 정수 값이 아닙니다.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
+        <translation>%1 ( &quot;%2&quot;) &quot;색인&quot;은 정수 값이 아닙니다.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>%1 ("%2") "disabledIndex" is not an integer value.</source>
-        <translation>%1 ( "%2") "disabledIndex"는 정수 값이 아닙니다.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
+        <translation>%1 ( &quot;%2&quot;) &quot;disabledIndex&quot;는 정수 값이 아닙니다.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>%1 ("%2") "items" missing.</source>
-        <translation>%1 ( "%2") "항목"누락.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
+        <translation>%1 ( &quot;%2&quot;) &quot;항목&quot;누락.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>%1 ("%2") "items" is not a JSON list.</source>
-        <translation>%1 ( "%2") "항목"은 JSON 목록이 아닙니다.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
+        <translation>%1 ( &quot;%2&quot;) &quot;항목&quot;은 JSON 목록이 아닙니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
@@ -16105,8 +16196,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+13" />
-        <source>No "%1" key found in feature list object.</source>
-        <translation>기능 목록 개체에서 찾은 "%1"키 없음.</translation>
+        <source>No &quot;%1&quot; key found in feature list object.</source>
+        <translation>기능 목록 개체에서 찾은 &quot;%1&quot;키 없음.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -16120,8 +16211,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Error message from Version Control System: "%1".</source>
-        <translation>버전 제어 시스템의 오류 메시지 : "%1".</translation>
+        <source>Error message from Version Control System: &quot;%1&quot;.</source>
+        <translation>버전 제어 시스템의 오류 메시지 : &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16132,18 +16223,18 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="-11" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
-        <source>Failed to add subproject "%1"
-to project "%2".</source>
-        <translation>하위 프로젝트 "%1"을 추가하지 못했습니다.
- "%2"를 투영합니다.</translation>
+        <source>Failed to add subproject &quot;%1&quot;
+to project &quot;%2&quot;.</source>
+        <translation>하위 프로젝트 &quot;%1&quot;을 추가하지 못했습니다.
+ &quot;%2&quot;를 투영합니다.</translation>
     </message>
     <message>
         <location line="+12" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
         <source>Failed to add one or more files to project
-"%1" (%2).</source>
+&quot;%1&quot; (%2).</source>
         <translation>프로젝트에 하나 이상의 파일을 추가하지 못했습니다
- "%1"(%2).</translation>
+ &quot;%1&quot;(%2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
@@ -16163,13 +16254,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+33" />
-        <source>Check whether a variable exists.&lt;br&gt;Returns "true" if it does and an empty string if not.</source>
-        <translation>변수가 존재하는지 확인하십시오. &lt;br&gt; 그렇지 않은 경우 "True"를 반환하고 그렇지 않은 경우 빈 문자열이 있습니다.</translation>
+        <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
+        <translation>변수가 존재하는지 확인하십시오. &lt;br&gt; 그렇지 않은 경우 &quot;True&quot;를 반환하고 그렇지 않은 경우 빈 문자열이 있습니다.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not determine target path. "TargetPath" was not set on any page.</source>
-        <translation>대상 경로를 결정할 수 없었습니다. "TargetPath"는 어떤 페이지에도 설정되지 않았습니다.</translation>
+        <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
+        <translation>대상 경로를 결정할 수 없었습니다. &quot;TargetPath&quot;는 어떤 페이지에도 설정되지 않았습니다.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -16178,13 +16269,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The wizard failed to generate files.&lt;br&gt;The error message was: "%1".</source>
-        <translation>마법사는 파일을 생성하지 못했습니다. &lt;br&gt; 오류 메시지는 "%1"입니다.</translation>
+        <source>The wizard failed to generate files.&lt;br&gt;The error message was: &quot;%1&quot;.</source>
+        <translation>마법사는 파일을 생성하지 못했습니다. &lt;br&gt; 오류 메시지는 &quot;%1&quot;입니다.</translation>
     </message>
     <message>
         <location line="+63" />
-        <source>No 'key' in options object.</source>
-        <translation>옵션 객체에서 '키'가 없습니다.</translation>
+        <source>No &apos;key&apos; in options object.</source>
+        <translation>옵션 객체에서 &apos;키&apos;가 없습니다.</translation>
     </message>
     <message>
         <location line="+88" />
@@ -16218,24 +16309,24 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+58" />
-        <source>"%1" does not exist in the file system.</source>
-        <translation>"%1"은 파일 시스템에 존재하지 않습니다.</translation>
+        <source>&quot;%1&quot; does not exist in the file system.</source>
+        <translation>&quot;%1&quot;은 파일 시스템에 존재하지 않습니다.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open "%1" as a project.</source>
-        <translation>프로젝트로 "%1"을 열지 못했습니다.</translation>
+        <source>Failed to open &quot;%1&quot; as a project.</source>
+        <translation>프로젝트로 &quot;%1&quot;을 열지 못했습니다.</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+46" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>"%1"의 편집기를 열지 못했습니다.</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;의 편집기를 열지 못했습니다.</translation>
     </message>
     <message>
         <location line="-27" />
-        <source>No file to open found in "%1".</source>
-        <translation>"%1"에서 찾을 수있는 파일이 없습니다.</translation>
+        <source>No file to open found in &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;에서 찾을 수있는 파일이 없습니다.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16244,8 +16335,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to open project in "%1".</source>
-        <translation>"%1"로 프로젝트를 열지 못했습니다.</translation>
+        <source>Failed to open project in &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;로 프로젝트를 열지 못했습니다.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16265,31 +16356,31 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+7" />
-        <source>TypeId "%1" of generator is unknown. Supported typeIds are: "%2".</source>
-        <translation>생성기의 typeid "%1"은 알려져 있지 않습니다. 지원되는 TypeID는 "%2"입니다.</translation>
+        <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>생성기의 typeid &quot;%1&quot;은 알려져 있지 않습니다. 지원되는 TypeID는 &quot;%2&quot;입니다.</translation>
     </message>
     <message>
         <location line="+56" />
         <location line="+241" />
-        <source>Path "%1" does not exist when checking JSON wizard search paths.</source>
-        <translation>JSON 마법사 검색 경로를 확인할 때 경로 "%1"은 존재하지 않습니다.</translation>
+        <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
+        <translation>JSON 마법사 검색 경로를 확인할 때 경로 &quot;%1&quot;은 존재하지 않습니다.</translation>
     </message>
     <message>
         <location line="-228" />
-        <source>Checking "%1" for %2.</source>
-        <translation>%2에 대해 " %1"을 확인합니다.</translation>
+        <source>Checking &quot;%1&quot; for %2.</source>
+        <translation>%2에 대해 &quot; %1&quot;을 확인합니다.</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+233" />
-        <source>* Failed to parse "%1":%2:%3: %4</source>
-        <translation>* "%1":%2 :%3 :%4를 구문 분석하지 못했습니다</translation>
+        <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
+        <translation>* &quot;%1&quot;:%2 :%3 :%4를 구문 분석하지 못했습니다</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>* Did not find a JSON object in "%1".
+        <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* "%1"에서 JSON 객체를 찾지 못했습니다.</translation>
+        <translation>* &quot;%1&quot;에서 JSON 객체를 찾지 못했습니다.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -16299,8 +16390,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="-224" />
-        <source>JsonWizard: "%1" not found.</source>
-        <translation>JSONWIZARD : "%1"은 찾을 수 없습니다.</translation>
+        <source>JsonWizard: &quot;%1&quot; not found.</source>
+        <translation>JSONWIZARD : &quot;%1&quot;은 찾을 수 없습니다.</translation>
     </message>
     <message>
         <location line="+96" />
@@ -16314,18 +16405,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>TypeId "%1" of page is unknown. Supported typeIds are: "%2".</source>
-        <translation>페이지의 typeid "%1"은 알려져 있지 않습니다. 지원되는 TypeID는 "%2"입니다.</translation>
+        <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>페이지의 typeid &quot;%1&quot;은 알려져 있지 않습니다. 지원되는 TypeID는 &quot;%2&quot;입니다.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Page with typeId "%1" has invalid "index".</source>
-        <translation>typeid "%1"인 페이지가 유효하지 않은 "index"가 있습니다.</translation>
+        <source>Page with typeId &quot;%1&quot; has invalid &quot;index&quot;.</source>
+        <translation>typeid &quot;%1&quot;인 페이지가 유효하지 않은 &quot;index&quot;가 있습니다.</translation>
     </message>
     <message>
         <location line="+89" />
-        <source>* Did not find a JSON object in "%1".</source>
-        <translation>* "%1"에서 JSON 객체를 찾지 못했습니다.</translation>
+        <source>* Did not find a JSON object in &quot;%1&quot;.</source>
+        <translation>* &quot;%1&quot;에서 JSON 객체를 찾지 못했습니다.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16364,13 +16455,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+32" />
-        <source>"kind" value "%1" is not "class" (deprecated), "file" or "project".</source>
-        <translation>"Kind"Value "%1"은 "클래스"(감가 상승), "파일"또는 "프로젝트"가 아닙니다.</translation>
+        <source>&quot;kind&quot; value &quot;%1&quot; is not &quot;class&quot; (deprecated), &quot;file&quot; or &quot;project&quot;.</source>
+        <translation>&quot;Kind&quot;Value &quot;%1&quot;은 &quot;클래스&quot;(감가 상승), &quot;파일&quot;또는 &quot;프로젝트&quot;가 아닙니다.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"kind" is "file" or "class" (deprecated) and "%1" is also set.</source>
-        <translation>"Kind"는 "File"또는 "Class"(감가 상승) 및 "%1"도 설정됩니다.</translation>
+        <source>&quot;kind&quot; is &quot;file&quot; or &quot;class&quot; (deprecated) and &quot;%1&quot; is also set.</source>
+        <translation>&quot;Kind&quot;는 &quot;File&quot;또는 &quot;Class&quot;(감가 상승) 및 &quot;%1&quot;도 설정됩니다.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -16384,13 +16475,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Icon file "%1" not found.</source>
-        <translation>아이콘 파일 "%1"을 찾을 수 없습니다.</translation>
+        <source>Icon file &quot;%1&quot; not found.</source>
+        <translation>아이콘 파일 &quot;%1&quot;을 찾을 수 없습니다.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Image file "%1" not found.</source>
-        <translation>이미지 파일 "%1"을 찾을 수 없습니다.</translation>
+        <source>Image file &quot;%1&quot; not found.</source>
+        <translation>이미지 파일 &quot;%1&quot;을 찾을 수 없습니다.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16409,13 +16500,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>When parsing "generators": %1</source>
-        <translation>"발전기"를 구문 분석 할 때 : %1</translation>
+        <source>When parsing &quot;generators&quot;: %1</source>
+        <translation>&quot;발전기&quot;를 구문 분석 할 때 : %1</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>When parsing "pages": %1</source>
-        <translation>"페이지"를 구문 분석 할 때 : %1</translation>
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation>&quot;페이지&quot;를 구문 분석 할 때 : %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
@@ -16429,8 +16520,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+57" />
-        <source>When processing "%1":&lt;br&gt;%2</source>
-        <translation>"%1"을 처리 할 때 : &lt;br&gt;%2</translation>
+        <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
+        <translation>&quot;%1&quot;을 처리 할 때 : &lt;br&gt;%2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
@@ -16456,43 +16547,43 @@ to project "%2".</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
-        <source>When parsing fields of page "%1": %2</source>
-        <translation>" %1"페이지의 필드를 구문 분석 할 때 : %2</translation>
+        <source>When parsing fields of page &quot;%1&quot;: %2</source>
+        <translation>&quot; %1&quot;페이지의 필드를 구문 분석 할 때 : %2</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "File" page needs to be unset or an empty object.</source>
-        <translation>"파일"페이지의 "데이터"는 설정이 없거나 빈 객체 여야합니다.</translation>
+        <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
+        <translation>&quot;파일&quot;페이지의 &quot;데이터&quot;는 설정이 없거나 빈 객체 여야합니다.</translation>
     </message>
     <message>
         <location line="+48" />
-        <source>Error parsing "%1" in "Kits" page: %2</source>
-        <translation>"키트"페이지에서 " %1"오류 파싱 페이지 : %2</translation>
+        <source>Error parsing &quot;%1&quot; in &quot;Kits&quot; page: %2</source>
+        <translation>&quot;키트&quot;페이지에서 &quot; %1&quot;오류 파싱 페이지 : %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>"data" must be a JSON object for "Kits" pages.</source>
-        <translation>"데이터"는 "키트"페이지의 JSON 개체 여야합니다.</translation>
+        <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
+        <translation>&quot;데이터&quot;는 &quot;키트&quot;페이지의 JSON 개체 여야합니다.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>"Kits" page requires a "%1" set.</source>
-        <translation>"키트"페이지에는 "%1"세트가 필요합니다.</translation>
+        <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
+        <translation>&quot;키트&quot;페이지에는 &quot;%1&quot;세트가 필요합니다.</translation>
     </message>
     <message>
         <location line="+62" />
-        <source>"data" must be empty or a JSON object for "Project" pages.</source>
-        <translation>"데이터"는 비어 있거나 "프로젝트"페이지의 JSON 개체 여야합니다.</translation>
+        <source>&quot;data&quot; must be empty or a JSON object for &quot;Project&quot; pages.</source>
+        <translation>&quot;데이터&quot;는 비어 있거나 &quot;프로젝트&quot;페이지의 JSON 개체 여야합니다.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Invalid regular expression "%1" in "%2". %3</source>
-        <translation>"%2"에서 "%1"이 유효하지 않은 정규 표현. %3</translation>
+        <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
+        <translation>&quot;%2&quot;에서 &quot;%1&quot;이 유효하지 않은 정규 표현. %3</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "Summary" page can be unset or needs to be an object.</source>
-        <translation>"요약"페이지의 "데이터"는 설정이 없거나 객체가 필요할 수 있습니다.</translation>
+        <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
+        <translation>&quot;요약&quot;페이지의 &quot;데이터&quot;는 설정이 없거나 객체가 필요할 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
@@ -16501,13 +16592,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Pattern "%1" is no valid regular expression.</source>
-        <translation>패턴 "%1"은 유효한 정규 표현이 아닙니다.</translation>
+        <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
+        <translation>패턴 &quot;%1&quot;은 유효한 정규 표현이 아닙니다.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>ScannerGenerator: Binary pattern "%1" not valid.</source>
-        <translation>SCANNERGENERATOR : 이진 패턴 "%1"유효하지 않습니다.</translation>
+        <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
+        <translation>SCANNERGENERATOR : 이진 패턴 &quot;%1&quot;유효하지 않습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
@@ -16564,18 +16655,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+17" />
-        <source>Sys Root "%1" does not exist in the file system.</source>
-        <translation>SYS 루트 "%1"은 파일 시스템에 존재하지 않습니다.</translation>
+        <source>Sys Root &quot;%1&quot; does not exist in the file system.</source>
+        <translation>SYS 루트 &quot;%1&quot;은 파일 시스템에 존재하지 않습니다.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is not a directory.</source>
-        <translation>SYS 루트 "%1"은 디렉토리가 아닙니다.</translation>
+        <source>Sys Root &quot;%1&quot; is not a directory.</source>
+        <translation>SYS 루트 &quot;%1&quot;은 디렉토리가 아닙니다.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is empty.</source>
-        <translation>SYS 루트 "%1"은 비어 있습니다.</translation>
+        <source>Sys Root &quot;%1&quot; is empty.</source>
+        <translation>SYS 루트 &quot;%1&quot;은 비어 있습니다.</translation>
     </message>
     <message>
         <location line="+14" />
@@ -17058,13 +17149,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href="projectmode"&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation>&lt;스타일 유형 = Text/CSS&gt; A : Link {Color : RGB (128, 128, 255);} &lt;/style&gt; 프로젝트 &lt;b&gt;%1 &lt;/b&gt;는 아직 구성되지 않았습니다 &lt;br/&gt; &lt;br/ &gt; &lt;a href = "projectMode"&gt; 프로젝트 모드 &lt;/a&gt; &lt;br/&gt;에서 구성 할 수 있습니다</translation>
+        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href=&quot;projectmode&quot;&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
+        <translation>&lt;스타일 유형 = Text/CSS&gt; A : Link {Color : RGB (128, 128, 255);} &lt;/style&gt; 프로젝트 &lt;b&gt;%1 &lt;/b&gt;는 아직 구성되지 않았습니다 &lt;br/&gt; &lt;br/ &gt; &lt;a href = &quot;projectMode&quot;&gt; 프로젝트 모드 &lt;/a&gt; &lt;br/&gt;에서 구성 할 수 있습니다</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
-        <source>Falling back to use the cached environment for "%1" after:</source>
-        <translation>다음과 같은 "%1"에 캐시 된 환경을 사용하기 위해 다시 떨어졌습니다.</translation>
+        <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
+        <translation>다음과 같은 &quot;%1&quot;에 캐시 된 환경을 사용하기 위해 다시 떨어졌습니다.</translation>
     </message>
     <message>
         <location line="+483" />
@@ -17086,9 +17177,9 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+796" />
-        <source>Failed to retrieve MSVC Environment from "%1":
+        <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
-        <translation>"%1"에서 MSVC 환경을 검색하지 못했습니다.
+        <translation>&quot;%1&quot;에서 MSVC 환경을 검색하지 못했습니다.
  %2</translation>
     </message>
     <message>
@@ -17135,8 +17226,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open file: "%1": %2</source>
-        <translation>파일을 열 수 없음 : " %1": %2</translation>
+        <source>Could not open file: &quot;%1&quot;: %2</source>
+        <translation>파일을 열 수 없음 : &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
@@ -17246,13 +17337,13 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+92" />
-        <source>Project "%1" was configured for kit "%2" with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
-        <translation>프로젝트 "%1"은 더 이상 존재하지 않는 ID%3으로 키트 "%2"에 대해 구성되었습니다. 새 키트를 만들거나 사라진 키트의 단계를 %4 모드의 다른 키트에 복사 할 수 있습니다.</translation>
+        <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
+        <translation>프로젝트 &quot;%1&quot;은 더 이상 존재하지 않는 ID%3으로 키트 &quot;%2&quot;에 대해 구성되었습니다. 새 키트를 만들거나 사라진 키트의 단계를 %4 모드의 다른 키트에 복사 할 수 있습니다.</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+622" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+626" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
@@ -17261,79 +17352,79 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+265" />
-        <source>Could not find any qml_*.qm file at "%1"</source>
-        <translation>"%1"에서 QML _*. QM 파일을 찾을 수 없습니다.</translation>
+        <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
+        <translation>&quot;%1&quot;에서 QML _*. QM 파일을 찾을 수 없습니다.</translation>
     </message>
     <message>
         <location line="+87" />
         <source>%1: Name.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1 : 이름.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to main file.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1 : 기본 파일의 전체 경로.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1 : 프로젝트 디렉토리의 전체 경로.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: The name of the active kit.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1 : 활성 키트의 이름.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Name of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1 : 활성 빌드 구성의 이름.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Type of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1 : 활성 빌드 구성의 유형.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Full build path of active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1 : 활성 빌드 구성의 전체 빌드 경로.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Variables in the active build environment.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1 : 활성 빌드 환경의 변수.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Name of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1 : 활성 실행 구성의 이름.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Executable of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1 : 활성 실행 구성 실행 가능.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Variables in the environment of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1 : 활성 실행 구성 환경의 변수.</translation>
     </message>
     <message>
         <location line="+12" />
         <source>%1: Working directory of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1 : 활성 실행 구성의 작업 디렉토리.</translation>
     </message>
     <message>
@@ -17376,12 +17467,12 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+7" />
         <source>&amp;Debug</source>
-        <translation>&amp; 디버그</translation>
+        <translation>&amp;디버그</translation>
     </message>
     <message>
         <location line="+6" />
         <source>&amp;Start Debugging</source>
-        <translation>&amp; 디버깅을 시작하십시오</translation>
+        <translation>&amp;디버깅을 시작하십시오</translation>
     </message>
     <message>
         <location line="+82" />
@@ -17416,7 +17507,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+17" />
         <source>Recent P&amp;rojects</source>
-        <translation>최근 P &amp; Rojects</translation>
+        <translation>최근 P &amp;Rojects</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17426,8 +17517,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="-347" />
-        <source>Close Pro&amp;ject "%1"</source>
-        <translation>닫기 프로젝트 "%1"</translation>
+        <source>Close Pro&amp;ject &quot;%1&quot;</source>
+        <translation>닫기 프로젝트 &quot;%1&quot; (&amp;J)</translation>
     </message>
     <message>
         <location line="+10" />
@@ -17437,13 +17528,13 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <location line="+328" />
-        <source>Close All Files in Project "%1"</source>
-        <translation>프로젝트 "%1"의 모든 파일을 닫습니다.</translation>
+        <source>Close All Files in Project &quot;%1&quot;</source>
+        <translation>프로젝트 &quot;%1&quot;의 모든 파일을 닫습니다.</translation>
     </message>
     <message>
         <location line="-316" />
         <source>Close Pro&amp;ject</source>
-        <translation>닫기 프로젝트</translation>
+        <translation>닫기 프로젝트 (&amp;J)</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17501,8 +17592,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Build Project "%1"</source>
-        <translation>프로젝트 구축 "%1"</translation>
+        <source>Build Project &quot;%1&quot;</source>
+        <translation>프로젝트 구축 &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17511,18 +17602,18 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Build Project "%1" for All Configurations</source>
-        <translation>모든 구성에 대한 프로젝트 "%1"을 구축하십시오</translation>
+        <source>Build Project &quot;%1&quot; for All Configurations</source>
+        <translation>모든 구성에 대한 프로젝트 &quot;%1&quot;을 구축하십시오</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Build for &amp;Run Configuration</source>
-        <translation>구성 및 실행 구성</translation>
+        <translation>구성 및 실행 구성 (&amp;R)</translation>
     </message>
     <message>
         <location line="+0" />
-        <source>Build for &amp;Run Configuration "%1"</source>
-        <translation>구성 및 실행 구성 "%1"</translation>
+        <source>Build for &amp;Run Configuration &quot;%1&quot;</source>
+        <translation>구성 및 실행 구성 &quot;%1&quot; (&amp;R)</translation>
     </message>
     <message>
         <location line="+13" />
@@ -17615,8 +17706,8 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+9" />
         <location line="+1621" />
-        <source>Close Project "%1"</source>
-        <translation>닫기 프로젝트 "%1"</translation>
+        <source>Close Project &quot;%1&quot;</source>
+        <translation>닫기 프로젝트 &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-1614" />
@@ -17625,8 +17716,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Close All Projects Except "%1"</source>
-        <translation>"%1"을 제외한 모든 프로젝트를 닫으십시오.</translation>
+        <source>Close All Projects Except &quot;%1&quot;</source>
+        <translation>&quot;%1&quot;을 제외한 모든 프로젝트를 닫으십시오.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -17661,8 +17752,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Set "%1" as Active Project</source>
-        <translation>"%1"을 활성 프로젝트로 설정하십시오</translation>
+        <source>Set &quot;%1&quot; as Active Project</source>
+        <translation>&quot;%1&quot;을 활성 프로젝트로 설정하십시오</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17747,7 +17838,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+62" />
         <source>Sanitizer</source>
-        <comment>Category for sanitizer issues listed under 'Issues'</comment>
+        <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
         <translation>소독제</translation>
     </message>
     <message>
@@ -17788,8 +17879,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+48" />
-        <source>Failed opening project "%1": No plugin can open project type "%2".</source>
-        <translation>오픈 프로젝트 실패 "%1": 플러그인이 프로젝트 유형 "%2"를 열 수 없습니다.</translation>
+        <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
+        <translation>오픈 프로젝트 실패 &quot;%1&quot;: 플러그인이 프로젝트 유형 &quot;%2&quot;를 열 수 없습니다.</translation>
     </message>
     <message>
         <location line="+195" />
@@ -17820,18 +17911,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+23" />
-        <source>Open Project in "%1"</source>
-        <translation>"%1"의 개방 프로젝트</translation>
+        <source>Open Project in &quot;%1&quot;</source>
+        <translation>&quot;%1&quot;의 개방 프로젝트</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Open Project "%1"</source>
-        <translation>오픈 프로젝트 "%1"</translation>
+        <source>Open Project &quot;%1&quot;</source>
+        <translation>오픈 프로젝트 &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>The file "%1" was renamed to "%2", but the following projects could not be automatically changed: %3</source>
-        <translation>"%1"파일은 "%2"로 이름이 바뀌었지만 다음 프로젝트는 자동으로 변경 될 수 없습니다.%3</translation>
+        <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
+        <translation>&quot;%1&quot;파일은 &quot;%2&quot;로 이름이 바뀌었지만 다음 프로젝트는 자동으로 변경 될 수 없습니다.%3</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17848,8 +17939,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+62" />
-        <source>Building "%1" is disabled: %2&lt;br&gt;</source>
-        <translation>" %1"빌딩 비활성화 : %2 &lt;br&gt;</translation>
+        <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
+        <translation>&quot; %1&quot;빌딩 비활성화 : %2 &lt;br&gt;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17910,18 +18001,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>The project "%1" is not configured.</source>
-        <translation>프로젝트 "%1"은 구성되지 않았습니다.</translation>
+        <source>The project &quot;%1&quot; is not configured.</source>
+        <translation>프로젝트 &quot;%1&quot;은 구성되지 않았습니다.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The project "%1" has no active kit.</source>
-        <translation>프로젝트 "%1"에는 활성 키트가 없습니다.</translation>
+        <source>The project &quot;%1&quot; has no active kit.</source>
+        <translation>프로젝트 &quot;%1&quot;에는 활성 키트가 없습니다.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The kit "%1" for the project "%2" has no active run configuration.</source>
-        <translation>프로젝트 "%2"의 키트 "%1"에는 활성 실행 구성이 없습니다.</translation>
+        <source>The kit &quot;%1&quot; for the project &quot;%2&quot; has no active run configuration.</source>
+        <translation>프로젝트 &quot;%2&quot;의 키트 &quot;%1&quot;에는 활성 실행 구성이 없습니다.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -17930,8 +18021,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>Cannot run "%1".</source>
-        <translation>"%1"을 실행할 수 없습니다.</translation>
+        <source>Cannot run &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;을 실행할 수 없습니다.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17957,8 +18048,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+41" />
-        <source>The following subprojects could not be added to project "%1":</source>
-        <translation>"%1"프로젝트에는 다음과 같은 하위 프로젝트를 추가 할 수 없습니다.</translation>
+        <source>The following subprojects could not be added to project &quot;%1&quot;:</source>
+        <translation>&quot;%1&quot;프로젝트에는 다음과 같은 하위 프로젝트를 추가 할 수 없습니다.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18007,15 +18098,15 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>File "%1" was not removed, because the project has changed in the meantime.
+        <source>File &quot;%1&quot; was not removed, because the project has changed in the meantime.
 Please try again.</source>
-        <translation>그 동안 프로젝트가 변경되었으므로 "%1"은 제거되지 않았습니다.
+        <translation>그 동안 프로젝트가 변경되었으므로 &quot;%1&quot;은 제거되지 않았습니다.
  다시 시도하십시오.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Could not remove file "%1" from project "%2".</source>
-        <translation>프로젝트 "%2"에서 파일 "%1"을 제거 할 수 없습니다.</translation>
+        <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
+        <translation>프로젝트 &quot;%2&quot;에서 파일 &quot;%1&quot;을 제거 할 수 없습니다.</translation>
     </message>
     <message>
         <location line="+36" />
@@ -18040,13 +18131,13 @@ Please try again.</source>
     </message>
     <message>
         <location line="-9" />
-        <source>Failed to copy file "%1" to "%2": %3.</source>
-        <translation>"%1"을 "%2"로 복사하지 못했습니다.</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Failed to add new file "%1" to the project.</source>
-        <translation>프로젝트에 새 파일 "%1"을 추가하지 못했습니다.</translation>
+        <source>Failed to add new file &quot;%1&quot; to the project.</source>
+        <translation>프로젝트에 새 파일 &quot;%1&quot;을 추가하지 못했습니다.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18085,7 +18176,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+15" />
         <source>The file %1 could not be renamed %2.</source>
-        <translation>파일 %1의 이름을 바꿀 수 없습니다.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5" />
@@ -18094,8 +18185,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+192" />
-        <source>Locates files from all project directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>모든 프로젝트 디렉토리에서 파일을 찾습니다. 주어진 줄 번호로 점프하려면 "+&lt;number&gt;"또는 ": &lt;number&gt;"를 추가하십시오. 다른 "+&lt;번호&gt;"또는 ": &lt;number&gt;"를 추가하여 열 번호로 이동하십시오.</translation>
+        <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>모든 프로젝트 디렉토리에서 파일을 찾습니다. 주어진 줄 번호로 점프하려면 &quot;+&lt;number&gt;&quot;또는 &quot;: &lt;number&gt;&quot;를 추가하십시오. 다른 &quot;+&lt;번호&gt;&quot;또는 &quot;: &lt;number&gt;&quot;를 추가하여 열 번호로 이동하십시오.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -18152,13 +18243,13 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
         <source>s</source>
-        <extracomment>Suffix for "seconds"</extracomment>
+        <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>에스</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The amount of seconds to wait between a "soft kill" and a "hard kill" of a running application.</source>
-        <translation>"소프트 킬"과 러닝 애플리케이션의 "하드 킬"사이에서 기다리는 몇 초.</translation>
+        <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
+        <translation>&quot;소프트 킬&quot;과 러닝 애플리케이션의 &quot;하드 킬&quot;사이에서 기다리는 몇 초.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -18222,8 +18313,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Some legacy build tools do not deal well with paths that contain "special" characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
-        <translation>일부 레거시 빌드 도구는 공간과 같은 "특별한"문자가 포함 된 경로를 잘 다루지 않으므로 가짜 빌드 오류가 발생할 수 있습니다. &lt;p&gt; 이러한 도구로 작업하지 않으면이 옵션을 선택 취소하십시오.</translation>
+        <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
+        <translation>일부 레거시 빌드 도구는 공간과 같은 &quot;특별한&quot;문자가 포함 된 경로를 잘 다루지 않으므로 가짜 빌드 오류가 발생할 수 있습니다. &lt;p&gt; 이러한 도구로 작업하지 않으면이 옵션을 선택 취소하십시오.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18282,13 +18373,13 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Show all kits in "Build &amp; Run" in "Projects" mode</source>
-        <translation>"프로젝트"모드에서 "빌드 및 실행"에서 모든 키트 표시</translation>
+        <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
+        <translation>&quot;프로젝트&quot;모드에서 &quot;빌드 및 실행&quot;에서 모든 키트 표시</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Show also inactive kits in "Build &amp; Run" in "Projects" mode.</source>
-        <translation>"프로젝트"모드에서 "빌드 및 실행"에서 비활성 키트를 표시하십시오.</translation>
+        <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
+        <translation>&quot;프로젝트&quot;모드에서 &quot;빌드 및 실행&quot;에서 비활성 키트를 표시하십시오.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18327,8 +18418,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Default for "Run in terminal":</source>
-        <translation>"터미널에서 실행"의 기본값 :</translation>
+        <source>Default for &quot;Run in terminal&quot;:</source>
+        <translation>&quot;터미널에서 실행&quot;의 기본값 :</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18359,7 +18450,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+1" />
         <source>No build found in %1 matching project %2.</source>
-        <translation>%1 매칭 프로젝트 %에서 빌드가 없습니다.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17" />
@@ -18408,8 +18499,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
-        <source>No kits are enabled for this project. Enable kits in the "Projects" mode.</source>
-        <translation>이 프로젝트에는 키트가 활성화되지 않습니다. "프로젝트"모드에서 키트를 활성화하십시오.</translation>
+        <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
+        <translation>이 프로젝트에는 키트가 활성화되지 않습니다. &quot;프로젝트&quot;모드에서 키트를 활성화하십시오.</translation>
     </message>
     <message>
         <location line="+89" />
@@ -18516,7 +18607,7 @@ What should %1 do now?</source>
         <translation>&lt;b&gt; 경고 : &lt;/b&gt;이 파일은 프로젝트 디렉토리 외부에 있습니다.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-391" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-395" />
         <source>Simplify Tree</source>
         <translation>트리를 단순화하십시오</translation>
     </message>
@@ -18566,7 +18657,7 @@ What should %1 do now?</source>
         <translation>필터 트리</translation>
     </message>
     <message>
-        <location line="+194" />
+        <location line="+198" />
         <source>Meta+X</source>
         <translation>메타+x</translation>
     </message>
@@ -18602,18 +18693,18 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+50" />
-        <source>Open %1 "%2"</source>
-        <translation>개방 %1 " %2"</translation>
+        <source>Open %1 &quot;%2&quot;</source>
+        <translation>개방 %1 &quot; %2&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Open %1 "%2" (%3)</source>
-        <translation>개방%1 "%2"(%3)</translation>
+        <source>Open %1 &quot;%2&quot; (%3)</source>
+        <translation>개방%1 &quot;%2&quot;(%3)</translation>
     </message>
     <message>
         <location line="+20" />
         <source>session</source>
-        <comment>Appears in "Open session &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>세션</translation>
     </message>
     <message>
@@ -18640,7 +18731,7 @@ What should %1 do now?</source>
     <message>
         <location line="+125" />
         <source>project</source>
-        <comment>Appears in "Open project &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>프로젝트</translation>
     </message>
     <message>
@@ -18675,7 +18766,7 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+118" />
-        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project's settings:</source>
+        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>이 프로젝트는 더 이상 존재하지 않는 키트에 대해 구성되었습니다. 컨텍스트 메뉴에서 다음 옵션 중 하나를 선택하여 프로젝트 설정을 복원하십시오.</translation>
     </message>
     <message>
@@ -18706,8 +18797,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+12" />
-        <source>Remove Vanished Target "%1"</source>
-        <translation>사라진 대상 "%1"제거</translation>
+        <source>Remove Vanished Target &quot;%1&quot;</source>
+        <translation>사라진 대상 &quot;%1&quot;제거</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18775,7 +18866,7 @@ What should %1 do now?</source>
     <message>
         <location line="+63" />
         <source>Add to &amp;version control:</source>
-        <translation>추가 및 버전 제어 :</translation>
+        <translation>추가 및 버전 제어 : (&amp;V)</translation>
     </message>
     <message>
         <location line="+88" />
@@ -18785,17 +18876,17 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Add to &amp;project:</source>
-        <translation>추가 및 프로젝트 :</translation>
+        <translation>추가 및 프로젝트 : (&amp;P)</translation>
     </message>
     <message>
         <location line="+74" />
-        <source>A version control system repository could not be created in "%1".</source>
-        <translation>버전 제어 시스템 저장소는 "%1"로 만들 수 없습니다.</translation>
+        <source>A version control system repository could not be created in &quot;%1&quot;.</source>
+        <translation>버전 제어 시스템 저장소는 &quot;%1&quot;로 만들 수 없습니다.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to add "%1" to the version control system.</source>
-        <translation>버전 제어 시스템에 "%1"을 추가하지 못했습니다.</translation>
+        <source>Failed to add &quot;%1&quot; to the version control system.</source>
+        <translation>버전 제어 시스템에 &quot;%1&quot;을 추가하지 못했습니다.</translation>
     </message>
     <message>
         <location line="+94" />
@@ -18831,17 +18922,17 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>The run configuration's working directory.</source>
+        <source>The run configuration&apos;s working directory.</source>
         <translation>실행 구성의 작업 디렉토리.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The run configuration's name.</source>
+        <source>The run configuration&apos;s name.</source>
         <translation>실행 구성 이름.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The run configuration's executable.</source>
+        <source>The run configuration&apos;s executable.</source>
         <translation>실행 구성의 실행 가능.</translation>
     </message>
     <message>
@@ -18858,7 +18949,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
-        <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
+        <extracomment>Shown in Run configuration, Add menu: &quot;name of runnable (on device name)&quot;</extracomment>
         <translation>%1 (on %{device : name})</translation>
     </message>
     <message>
@@ -18991,12 +19082,12 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Force &amp;Quit</source>
-        <translation>힘과 종료</translation>
+        <translation>힘과 종료 (&amp;Q)</translation>
     </message>
     <message>
         <location line="+0" />
         <source>&amp;Keep Running</source>
-        <translation>&amp; 계속 달리기</translation>
+        <translation>&amp;계속 달리기</translation>
     </message>
     <message>
         <location line="+246" />
@@ -19060,8 +19151,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Either the invoked program "%1" is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>호출 된 프로그램 "%1"이 누락되었거나 프로그램을 호출 할 권한이 충분하지 않을 수 있습니다.</translation>
+        <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>호출 된 프로그램 &quot;%1&quot;이 누락되었거나 프로그램을 호출 할 권한이 충분하지 않을 수 있습니다.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19255,12 +19346,12 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Imports existing projects that do not use qmake, CMake, Qbs, Meson, or Autotools.&lt;p&gt;This creates a project file that allows you to use %1 as a code editor and as a launcher for debugging and analyzing tools. If you want to build the project, you might need to edit the generated project file.</source>
-        <translation>QMake, CMake, QBS, Meson 또는 Autotools를 사용하지 않는 기존 프로젝트를 가져옵니다. &lt;p&gt; &lt;p&gt; 이것은 코드 편집기 및 도구 디버깅 및 분석을위한 런처로 %1을 사용할 수있는 프로젝트 파일을 만듭니다. 프로젝트를 구축하려면 생성 된 프로젝트 파일을 편집해야 할 수도 있습니다.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+172" />
-        <source>Unknown build system "%1"</source>
-        <translation>알 수없는 빌드 시스템 "%1"</translation>
+        <source>Unknown build system &quot;%1&quot;</source>
+        <translation>알 수없는 빌드 시스템 &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
@@ -19285,7 +19376,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
         <source>&amp;Configure Project</source>
-        <translation>&amp; 프로젝트 구성</translation>
+        <translation>&amp;프로젝트 구성</translation>
     </message>
     <message>
         <location line="+91" />
@@ -19320,8 +19411,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+71" />
-        <source>Enable Kit for Project "%1"</source>
-        <translation>프로젝트 "%1"에 대한 키트 활성화</translation>
+        <source>Enable Kit for Project &quot;%1&quot;</source>
+        <translation>프로젝트 &quot;%1&quot;에 대한 키트 활성화</translation>
     </message>
     <message>
         <location line="+7" />
@@ -19330,8 +19421,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Disable Kit for Project "%1"</source>
-        <translation>프로젝트 "%1"에 대한 키트 비활성화</translation>
+        <source>Disable Kit for Project &quot;%1&quot;</source>
+        <translation>프로젝트 &quot;%1&quot;에 대한 키트 비활성화</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19340,8 +19431,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Disable Kit "%1" in This Project?</source>
-        <translation>이 프로젝트에서 키트 "%1"비활성화?</translation>
+        <source>Disable Kit &quot;%1&quot; in This Project?</source>
+        <translation>이 프로젝트에서 키트 &quot;%1&quot;비활성화?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19375,8 +19466,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Add a kit in the &lt;a href="buildandrun"&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
-        <translation>&lt;a href = "buildAndrun"&gt; 옵션 &lt;/a&gt; 또는 SDK의 유지 보수 도구를 통해 키트를 추가하십시오.</translation>
+        <source>Add a kit in the &lt;a href=&quot;buildandrun&quot;&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
+        <translation>&lt;a href = &quot;buildAndrun&quot;&gt; 옵션 &lt;/a&gt; 또는 SDK의 유지 보수 도구를 통해 키트를 추가하십시오.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19472,7 +19563,7 @@ These files are preserved.</source>
         <translation>문제</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+53" />
         <source>Show Warnings</source>
         <translation>경고를 보여주십시오</translation>
     </message>
@@ -19484,7 +19575,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-152" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
-        <translation>&lt;BOBR&gt; &lt;B&gt; ABI : &lt;/b&gt; %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1" />
@@ -19554,7 +19645,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
         <source>&amp;Annotate</source>
-        <translation>&amp; 주석</translation>
+        <translation>&amp;주석</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19640,18 +19731,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+24" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>"%1"의 설치는 타임 아웃으로 취소되었습니다.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>&quot;%1&quot;의 설치는 타임 아웃으로 취소되었습니다.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>"%1"의 설치는 사용자가 취소했습니다.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>&quot;%1&quot;의 설치는 사용자가 취소했습니다.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>출구 코드 %로 " %1"설치가 실패했습니다.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
@@ -19728,23 +19819,23 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" not found.</source>
-        <translation>파이썬 "%1"을 찾을 수 없습니다.</translation>
+        <source>Python &quot;%1&quot; not found.</source>
+        <translation>파이썬 &quot;%1&quot;을 찾을 수 없습니다.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" is not executable.</source>
-        <translation>Python "%1"은 실행 가능하지 않습니다.</translation>
+        <source>Python &quot;%1&quot; is not executable.</source>
+        <translation>Python &quot;%1&quot;은 실행 가능하지 않습니다.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Python "%1" does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
-        <translation>Python "%1"에는 사용 가능한 PIP가 포함되어 있지 않습니다. PIPS는 Pyside 및 Python Language Server와 같은 Python 패키지 인덱스에서 Python 패키지를 설치하려면 PIP가 필요합니다. 해당 기능을 사용하려면 해당 파이썬에 PIP가 설치되어 있는지 확인하십시오.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
+        <translation>Python &quot;%1&quot;에는 사용 가능한 PIP가 포함되어 있지 않습니다. PIPS는 Pyside 및 Python Language Server와 같은 Python 패키지 인덱스에서 Python 패키지를 설치하려면 PIP가 필요합니다. 해당 기능을 사용하려면 해당 파이썬에 PIP가 설치되어 있는지 확인하십시오.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Python "%1" does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
-        <translation>Python "%1"에는 사용 가능한 venv가 포함되어 있지 않습니다. VENV는 전 세계적으로 설치된 Python에서 프로젝트의 개발 환경을 분리하는 권장 방법입니다.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
+        <translation>Python &quot;%1&quot;에는 사용 가능한 venv가 포함되어 있지 않습니다. VENV는 전 세계적으로 설치된 Python에서 프로젝트의 개발 환경을 분리하는 권장 방법입니다.</translation>
     </message>
     <message>
         <location line="+32" />
@@ -19798,8 +19889,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
-        <source>No Python interpreter set for kit "%1".</source>
-        <translation>키트 "%1"에 대한 Python 통역사 세트가 없습니다.</translation>
+        <source>No Python interpreter set for kit &quot;%1&quot;.</source>
+        <translation>키트 &quot;%1&quot;에 대한 Python 통역사 세트가 없습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
@@ -19818,7 +19909,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
         <source>Python:</source>
         <translation>파이썬 :</translation>
     </message>
@@ -19828,7 +19919,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>실행 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
         <location line="+283" />
         <source>Name:</source>
         <translation>이름:</translation>
@@ -19846,13 +19937,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" does not exist.</source>
-        <translation>"%1"은 존재하지 않습니다.</translation>
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot;은 존재하지 않습니다.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" is not an executable file.</source>
-        <translation>"%1"은 실행 파일이 아닙니다.</translation>
+        <source>&quot;%1&quot; is not an executable file.</source>
+        <translation>&quot;%1&quot;은 실행 파일이 아닙니다.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -19870,18 +19961,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <location line="-183" />
         <location line="+185" />
         <source>&amp;Make Default</source>
-        <translation>&amp; 기본값을 만드십시오</translation>
+        <translation>&amp;기본값을 만드십시오</translation>
     </message>
     <message>
         <location line="-183" />
         <source>&amp;Generate Kit</source>
-        <translation>&amp; 키트를 생성합니다</translation>
+        <translation>&amp;키트를 생성합니다</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+179" />
         <source>&amp;Clean Up</source>
-        <translation>&amp; 정리</translation>
+        <translation>&amp;정리</translation>
     </message>
     <message>
         <location line="-178" />
@@ -19919,7 +20010,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>언어 서버 구성</translation>
     </message>
     <message>
-        <location line="+476" />
+        <location line="+489" />
         <source>Python interpreter:</source>
         <translation>Python 통역사 :</translation>
     </message>
@@ -19951,8 +20042,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+11" />
-        <source>Found "%1" (%2)</source>
-        <translation>발견 된 "%1"(%2)</translation>
+        <source>Found &quot;%1&quot; (%2)</source>
+        <translation>발견 된 &quot;%1&quot;(%2)</translation>
     </message>
     <message>
         <location line="+9" />
@@ -19961,13 +20052,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
-        <source>"data" of a Python wizard page expects a map with "items" containing a list of objects.</source>
-        <translation>Python Wizard 페이지의 "데이터"는 객체 목록이 포함 된 "항목"이 포함 된 맵을 기대합니다.</translation>
+        <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
+        <translation>Python Wizard 페이지의 &quot;데이터&quot;는 객체 목록이 포함 된 &quot;항목&quot;이 포함 된 맵을 기대합니다.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>An item of Python wizard page data expects a "trKey" field containing the UI visible string for that Python version and a "value" field containing an object with a "PySideVersion" field used for import statements in the Python files.</source>
-        <translation>Python Wizard Page 데이터의 항목은 해당 Python 버전의 UI 표시 문자열이 포함 된 "트키"필드와 Python 파일의 가져 오기 문에 사용되는 "PyseDversion"필드가있는 객체를 포함하는 "값"필드를 기대합니다.</translation>
+        <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
+        <translation>Python Wizard Page 데이터의 항목은 해당 Python 버전의 UI 표시 문자열이 포함 된 &quot;트키&quot;필드와 Python 파일의 가져 오기 문에 사용되는 &quot;PyseDversion&quot;필드가있는 객체를 포함하는 &quot;값&quot;필드를 기대합니다.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -19992,17 +20083,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+126" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
         <source>Move tab left</source>
         <translation>탭을 왼쪽으로 이동</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Switch to next tab</source>
         <translation>다음 탭으로 전환</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+15" />
         <source>Move tab right</source>
         <translation>탭을 오른쪽으로 이동</translation>
     </message>
@@ -20164,7 +20255,7 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     <message>
         <location line="+72" />
         <source>&amp;Automatically Insert Matching Characters</source>
-        <translation>일치하는 문자를 자동으로 삽입하십시오</translation>
+        <translation>일치하는 문자를 자동으로 삽입하십시오 (&amp;A)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
@@ -20173,8 +20264,8 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     </message>
     <message>
         <location line="+2" />
-        <source>Automatically creates a Doxygen comment upon pressing enter after a '/**', '/*!', '//!' or '///'.</source>
-        <translation>'/**', '/*!', '//!' 뒤에 Enter 키를 누르면 Doxygen 주석이 자동으로 생성됩니다. 또는 '///'.</translation>
+        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
+        <translation>&apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; 뒤에 Enter 키를 누르면 Doxygen 주석이 자동으로 생성됩니다. 또는 &apos;///&apos;.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20193,8 +20284,8 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     </message>
     <message>
         <location line="+2" />
-        <source>Adds leading asterisks when continuing C/C++ "/*", Qt "/*!" and Java "/**" style comments on new lines.</source>
-        <translation>C/C++ "/*", Qt "/*!"를 계속할 때 선행 별표를 추가합니다. 및 Java "/**" 스타일 주석이 새 줄에 표시됩니다.</translation>
+        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
+        <translation>C/C++ &quot;/*&quot;, Qt &quot;/*!&quot;를 계속할 때 선행 별표를 추가합니다. 및 Java &quot;/**&quot; 스타일 주석이 새 줄에 표시됩니다.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20203,12 +20294,12 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     </message>
     <message>
         <location line="+1" />
-        <source>Doxygen allows "@" and "\" to start commands.
-By default, "@" is used if the surrounding comment starts with "/**" or "///", and "\" is used
-if the comment starts with "/*!" or "//!".</source>
-        <translation>doxygen은 "@"및 "\"가 명령을 시작할 수 있도록 허용합니다.
- 기본적으로 "@"는 주변 주석이 "/**"또는 "///"로 시작하고 "\"가 사용되는 경우 사용됩니다.
- 댓글이 "/*!"로 시작되면 또는 "//!".</translation>
+        <source>Doxygen allows &quot;@&quot; and &quot;\&quot; to start commands.
+By default, &quot;@&quot; is used if the surrounding comment starts with &quot;/**&quot; or &quot;///&quot;, and &quot;\&quot; is used
+if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
+        <translation>doxygen은 &quot;@&quot;및 &quot;\&quot;가 명령을 시작할 수 있도록 허용합니다.
+ 기본적으로 &quot;@&quot;는 주변 주석이 &quot;/**&quot;또는 &quot;///&quot;로 시작하고 &quot;\&quot;가 사용되는 경우 사용됩니다.
+ 댓글이 &quot;/*!&quot;로 시작되면 또는 &quot;//!&quot;.</translation>
     </message>
     <message>
         <source>&amp;Automatically insert matching characters</source>
@@ -20383,8 +20474,8 @@ if the comment starts with "/*!" or "//!".</source>
     </message>
     <message>
         <location line="+36" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding. Editing not possible.</source>
-        <translation>&lt;b&gt;오류:&lt;/b&gt; "%2" 인코딩으로 "%1"을(를) 디코딩할 수 없습니다. 편집이 불가능합니다.</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
+        <translation>&lt;b&gt;오류:&lt;/b&gt; &quot;%2&quot; 인코딩으로 &quot;%1&quot;을(를) 디코딩할 수 없습니다. 편집이 불가능합니다.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -20483,31 +20574,7 @@ Influences the indentation of continuation lines.
 &lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;헤드/&gt;&lt;본문&gt;
-이어지는 줄의 들여쓰기에 영향을 줍니다.
-
-&lt;ul&gt;
-&lt;li&gt;전혀 아님: 전혀 정렬하지 않습니다. 줄은 현재 논리적 들여쓰기 깊이까지만 들여쓰기됩니다.
-&lt;예비&gt;
-(탭)int i = foo(a, b
-(탭)c, d);
-&lt;/pre&gt;
-&lt;/리&gt;
-
-&lt;li&gt;공백 있음: 다른 들여쓰기 설정에 관계없이 항상 정렬에 공백을 사용합니다.
-&lt;예비&gt;
-(탭)int i = foo(a, b
-(탭) c, d);
-&lt;/pre&gt;
-&lt;/리&gt;
-
-&lt;li&gt;일반 들여쓰기 사용: 위에서 구성한 대로 탭 및/또는 공백을 사용하여 정렬합니다.
-&lt;예비&gt;
-(탭)int i = foo(a, b
-(탭)(탭)(탭) c, d);
-&lt;/pre&gt;
-&lt;/리&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+31" />
@@ -20516,8 +20583,8 @@ Influences the indentation of continuation lines.
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;i&gt;Code indentation is configured in &lt;a href="C++"&gt;C++&lt;/a&gt; and &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;코드 들여쓰기는 &lt;a href="C++"&gt;C++&lt;/a&gt; 및 &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; 설정에서 구성됩니다.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;코드 들여쓰기는 &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; 및 &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; 설정에서 구성됩니다.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20627,20 +20694,7 @@ Specifies how backspace interacts with indentation.
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation>&lt;html&gt;&lt;헤드/&gt;&lt;본문&gt;
-백스페이스가 들여쓰기와 상호 작용하는 방식을 지정합니다.
-
-&lt;ul&gt;
-&lt;li&gt;없음: 상호작용이 전혀 없습니다. 일반 일반 백스페이스 동작.
-&lt;/리&gt;
-
-&lt;li&gt;Follows Previous Indents: 선행 공백에서 커서를 이전 줄에서 사용된 가장 가까운 들여쓰기 수준으로 되돌립니다.
-&lt;/리&gt;
-
-&lt;li&gt;들여쓰기 취소: 커서 뒤의 문자가 공백이면 백탭처럼 동작합니다.
-&lt;/리&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17" />
@@ -20747,13 +20801,7 @@ Specifies how backspace interacts with indentation.
 &lt;li&gt;&lt;i&gt;Always Delete:&lt;/i&gt; never write an UTF-8 BOM, possibly deleting a pre-existing one.&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;Note that UTF-8 BOMs are uncommon and treated incorrectly by some editors, so it usually makes little sense to add any.&lt;/p&gt;
 &lt;p&gt;This setting does &lt;b&gt;not&lt;/b&gt; influence the use of UTF-16 and UTF-32 BOMs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;헤드/&gt;&lt;본문&gt;
-&lt;p&gt;텍스트 편집기가 UTF-8 바이트 순서 표시를 처리하는 방법. 옵션은 다음과 같습니다.&lt;/p&gt;
-&lt;ul &gt;&lt;li&gt;&lt;i&gt;인코딩이 UTF-8인 경우 추가:&lt;/i&gt; UTF-8 인코딩으로 파일을 저장할 때 항상 BOM을 추가합니다. 인코딩이 &lt;i&gt;시스템&lt;/i&gt;인 경우 텍스트 편집기가 실제로 무엇인지 모르기 때문에 작동하지 않습니다.&lt;/li&gt;
-&lt;li&gt;&lt;i&gt;이미 있는 경우 유지: &lt;/i&gt;로드될 때 BOM이 이미 있는 경우 BOM과 함께 파일을 저장합니다.&lt;/li&gt;
-&lt;li&gt;&lt;i&gt;항상 삭제:&lt;/i&gt; UTF-8 BOM을 작성하지 마십시오. 기존 BOM이 삭제될 수 있습니다.&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;UTF-8 BOM은 일반적이지 않으며 일부 편집자에 의해 잘못 취급되므로 일반적으로 BOM을 추가하는 것은 거의 의미가 없습니다.&lt;/p&gt;
-&lt;p&gt;이 설정은 UTF-16 및 UTF-32 BOM 사용에 영향을 미치지 &lt;b&gt;않습니다&lt;/b&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11" />
@@ -20763,7 +20811,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location line="+2" />
         <source>Enable scroll &amp;wheel zooming</source>
-        <translation>스크롤 및 휠 확대/축소 활성화</translation>
+        <translation>스크롤 및 휠 확대/축소 활성화 (&amp;W)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20903,8 +20951,8 @@ Specifies how backspace interacts with indentation.
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;i&gt;Set &lt;a href="font zoom"&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;텍스트 배치 옵션을 사용하려면 &lt;a href="font zoom"&gt;글꼴 줄 간격&lt;/a&gt;을 100%로 설정하세요.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;텍스트 배치 옵션을 사용하려면 &lt;a href=&quot;font zoom&quot;&gt;글꼴 줄 간격&lt;/a&gt;을 100%로 설정하세요.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -20984,7 +21032,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location line="+2" />
         <source>&amp;Highlight selection</source>
-        <translation>&amp; 하이라이트 선택</translation>
+        <translation>&amp;하이라이트 선택</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21065,8 +21113,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+16" />
-        <source>Color Scheme for Theme "%1"</source>
-        <translation>테마 "%1"의 색 구성표</translation>
+        <source>Color Scheme for Theme &quot;%1&quot;</source>
+        <translation>테마 &quot;%1&quot;의 색 구성표</translation>
     </message>
     <message>
         <location line="+16" />
@@ -21187,8 +21235,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="-12" />
-        <source>Cannot import code style from "%1".</source>
-        <translation>"%1"에서 코드 스타일을 가져올 수 없습니다.</translation>
+        <source>Cannot import code style from &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;에서 코드 스타일을 가져올 수 없습니다.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -21217,8 +21265,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+1" />
-        <source>The color scheme "%1" was modified, do you want to save the changes?</source>
-        <translation>색 구성표 "%1"이(가) 수정되었습니다. 변경 사항을 저장하시겠습니까?</translation>
+        <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
+        <translation>색 구성표 &quot;%1&quot;이(가) 수정되었습니다. 변경 사항을 저장하시겠습니까?</translation>
     </message>
     <message>
         <location line="+7" />
@@ -21232,8 +21280,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+16" />
-        <source>File "%1":</source>
-        <translation>파일 "%1":</translation>
+        <source>File &quot;%1&quot;:</source>
+        <translation>파일 &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -21287,8 +21335,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+27" />
-        <source>&lt;p align='center'&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href="copy"&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;p align='center'&gt;&lt;b&gt;내장 색 구성표는 변경하기 전에 &lt;a href="copy"&gt;복사&lt;/a&gt;&lt;br/&gt;해야 합니다&lt;/b&gt;&lt;/p&gt;</translation>
+        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;내장 색 구성표는 변경하기 전에 &lt;a href=&quot;copy&quot;&gt;복사&lt;/a&gt;&lt;br/&gt;해야 합니다&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -21487,12 +21535,12 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+7" />
-        <source>Current document's font size in points.</source>
+        <source>Current document&apos;s font size in points.</source>
         <translation>현재 문서의 글꼴 크기(포인트)입니다.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Word under the current document's text cursor.</source>
+        <source>Word under the current document&apos;s text cursor.</source>
         <translation>현재 문서의 텍스트 커서 아래에 있는 단어입니다.</translation>
     </message>
     <message>
@@ -21771,7 +21819,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+4" />
         <source>Cut &amp;Line</source>
-        <translation>절단 선</translation>
+        <translation>절단 선 (&amp;L)</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22364,7 +22412,7 @@ Used to mark containing function of the symbol usage.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Class' data members.</source>
+        <source>Class&apos; data members.</source>
         <translation>클래스의 데이터 멤버.</translation>
     </message>
     <message>
@@ -22997,152 +23045,152 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>색 구성표 파일이 아닙니다.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>QObject에서 파생</translation>
     </message>
     <message>
         <location line="+1" />
         <source>derived from QWidget</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>QWidget에서 파생</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>주형</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with if</source>
-        <comment>group:'C++' trigger:'else'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
         <translation>만약에</translation>
     </message>
     <message>
         <location line="+1" />
         <source>range-based</source>
-        <comment>group:'C++' trigger:'for'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
         <translation>범위 기반</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and else</source>
-        <comment>group:'C++' trigger:'if'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
         <translation>그리고 그렇지 않으면</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with closing brace comment</source>
-        <comment>group:'C++' trigger:'namespace'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
         <translation>닫는 중괄호 주석 포함</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and catch</source>
-        <comment>group:'C++' trigger:'try'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
         <translation>그리고 잡아</translation>
     </message>
     <message>
         <location line="+1" />
         <source>namespace</source>
-        <comment>group:'C++' trigger:'using'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
         <translation>네임스페이스</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'struct'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
         <translation>주형</translation>
     </message>
     <message>
         <location line="+1" />
         <source>(type name READ name WRITE setName NOTIFY nameChanged FINAL)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation>(유형 이름 읽기 이름 쓰기 setName 알림 namechanged final)</translation>
     </message>
     <message>
         <source>(type name READ name WRITE setName NOTIFY nameChanged)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation type="vanished">(유형 이름 READ 이름 WRITE setName NOTIFY nameChanged)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>목표와 함께</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>대상으로</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>목표와 함께</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>대상으로</translation>
     </message>
     <message>
         <location line="+3" />
         <source>QuickTest Test Case</source>
-        <comment>group:'QML' trigger:'TestCase'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>가장 빠른 테스트 케이스</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Function</source>
-        <comment>group:'C++' trigger:'TEST'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST&apos;</comment>
         <translation>GTEST 기능</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Fixture</source>
-        <comment>group:'C++' trigger:'TEST_F'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_F&apos;</comment>
         <translation>GTEST 고정물</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Parameterized</source>
-        <comment>group:'C++' trigger:'TEST_P'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_P&apos;</comment>
         <translation>GTEST 매개 변수화</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Case</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_CASE&apos;</comment>
         <translation>테스트 케이스</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Suite</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_SUITE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_SUITE&apos;</comment>
         <translation>테스트 스위트</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Test Case</source>
-        <comment>group:'C++' trigger:'TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_CASE&apos;</comment>
         <translation>테스트 케이스를 잡습니다</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Scenario</source>
-        <comment>group:'C++' trigger:'SCENARIO'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;SCENARIO&apos;</comment>
         <translation>시나리오를 잡습니다</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="+3" />
         <source>example</source>
-        <comment>group:'Text' trigger:'global'</comment>
+        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
         <translation>예</translation>
     </message>
     <message>
@@ -23201,8 +23249,8 @@ Will not be applied to whitespace in comments and strings.</source>
     </message>
     <message>
         <location line="+25" />
-        <source>Folder "%2":</source>
-        <translation>폴더 "%2":</translation>
+        <source>Folder &quot;%2&quot;:</source>
+        <translation>폴더 &quot;%2&quot;:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -23224,7 +23272,7 @@ Excluding: %3
     <message>
         <location line="+20" />
         <source>Director&amp;y:</source>
-        <translation>예배 규칙서:</translation>
+        <translation>예배 규칙서: (&amp;Y)</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23255,8 +23303,8 @@ Excluding: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/formattexteditor.cpp" line="+71" />
-        <source>Cannot create temporary file "%1": %2.</source>
-        <translation>임시 파일 "%1"을(를) 만들 수 없습니다: %2.</translation>
+        <source>Cannot create temporary file &quot;%1&quot;: %2.</source>
+        <translation>임시 파일 &quot;%1&quot;을(를) 만들 수 없습니다: %2.</translation>
     </message>
     <message>
         <source>TextEditor</source>
@@ -23265,8 +23313,8 @@ Excluding: %3
     </message>
     <message>
         <location line="+21" />
-        <source>Cannot read file "%1": %2.</source>
-        <translation>파일 "%1"을(를) 읽을 수 없습니다: %2.</translation>
+        <source>Cannot read file &quot;%1&quot;: %2.</source>
+        <translation>파일 &quot;%1&quot;을(를) 읽을 수 없습니다: %2.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -23320,8 +23368,8 @@ Excluding: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;하이라이트 정의는 &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/ a&gt; 엔진.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;하이라이트 정의는 &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/ a&gt; 엔진.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23395,7 +23443,7 @@ Excluding: %3
         <translation>필터 트리</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+130" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+140" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
         <source>Sort Alphabetically</source>
         <translation>알파벳순으로 정렬</translation>
@@ -23417,8 +23465,8 @@ Excluding: %3
     </message>
     <message>
         <location line="+15" />
-        <source>Expected mangler ID "l" (lowercase), "u" (uppercase), or "c" (titlecase) after colon.</source>
-        <translation>콜론 뒤에 mangler ID "l"(소문자), "u"(대문자) 또는 "c"(제목 대소문자)가 있어야 합니다.</translation>
+        <source>Expected mangler ID &quot;l&quot; (lowercase), &quot;u&quot; (uppercase), or &quot;c&quot; (titlecase) after colon.</source>
+        <translation>콜론 뒤에 mangler ID &quot;l&quot;(소문자), &quot;u&quot;(대문자) 또는 &quot;c&quot;(제목 대소문자)가 있어야 합니다.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -23470,7 +23518,7 @@ Excluding: %3
     </message>
     <message>
         <location line="+1" />
-        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark's note text.</source>
+        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark&apos;s note text.</source>
         <translation>북마크를 찾습니다. 파일 이름, 북마크 줄의 텍스트 또는 북마크의 노트 텍스트별로 필터.</translation>
     </message>
     <message>
@@ -23524,7 +23572,7 @@ Excluding: %3
     <message>
         <location line="-15" />
         <source>&amp;Bookmarks</source>
-        <translation>&amp; 북마크</translation>
+        <translation>&amp;북마크</translation>
     </message>
     <message>
         <location line="+53" />
@@ -23641,8 +23689,8 @@ Excluding: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot create temporary directory "%1": %2</source>
-        <translation>임시 디렉터리 "%1"을(를) 만들 수 없습니다: %2</translation>
+        <source>Cannot create temporary directory &quot;%1&quot;: %2</source>
+        <translation>임시 디렉터리 &quot;%1&quot;을(를) 만들 수 없습니다: %2</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23651,13 +23699,13 @@ Excluding: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot change to working directory "%1": %2</source>
-        <translation>작업 디렉터리 "%1"(으)로 변경할 수 없습니다: %2</translation>
+        <source>Cannot change to working directory &quot;%1&quot;: %2</source>
+        <translation>작업 디렉터리 &quot;%1&quot;(으)로 변경할 수 없습니다: %2</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1": %2</source>
-        <translation>"%1"을(를) 실행할 수 없습니다: %2</translation>
+        <source>Cannot execute &quot;%1&quot;: %2</source>
+        <translation>&quot;%1&quot;을(를) 실행할 수 없습니다: %2</translation>
     </message>
     <message>
         <location line="+109" />
@@ -23666,12 +23714,12 @@ Excluding: %3
     </message>
     <message>
         <location line="+60" />
-        <source>Cannot set permissions on temporary directory "%1": %2</source>
-        <translation>임시 디렉토리 " %1": %2에 대한 권한을 설정할 수 없습니다</translation>
+        <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
+        <translation>임시 디렉토리 &quot; %1&quot;: %2에 대한 권한을 설정할 수 없습니다</translation>
     </message>
     <message>
-        <source>The process "%1" could not be started: %2</source>
-        <translation type="vanished">프로세스 "%1"을(를) 시작할 수 없습니다: %2</translation>
+        <source>The process &quot;%1&quot; could not be started: %2</source>
+        <translation type="vanished">프로세스 &quot;%1&quot;을(를) 시작할 수 없습니다: %2</translation>
     </message>
     <message>
         <source>Quoting error in command.</source>
@@ -23690,13 +23738,13 @@ Excluding: %3
         <translation type="vanished">터미널 명령은 쉘 명령이 아닐 수 있습니다.</translation>
     </message>
     <message>
-        <source>Cannot start the terminal emulator "%1", change the setting in the Environment preferences. (%2)</source>
-        <translation type="vanished">터미널 에뮬레이터 "%1"을(를) 시작할 수 없습니다. 환경 기본 설정에서 설정을 변경하십시오. (%2)</translation>
+        <source>Cannot start the terminal emulator &quot;%1&quot;, change the setting in the Environment preferences. (%2)</source>
+        <translation type="vanished">터미널 에뮬레이터 &quot;%1&quot;을(를) 시작할 수 없습니다. 환경 기본 설정에서 설정을 변경하십시오. (%2)</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Cannot create socket "%1": %2</source>
-        <translation>소켓 "%1"을(를) 만들 수 없습니다: %2</translation>
+        <source>Cannot create socket &quot;%1&quot;: %2</source>
+        <translation>소켓 &quot;%1&quot;을(를) 만들 수 없습니다: %2</translation>
     </message>
     <message>
         <location line="-171" />
@@ -23778,8 +23826,8 @@ Excluding: %3
     </message>
     <message>
         <location line="+69" />
-        <source>The default suffix if you do not explicitly specify a file extension is ".%1".</source>
-        <translation>파일 확장자를 명시적으로 지정하지 않은 경우 기본 접미사는 ".%1"입니다.</translation>
+        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
+        <translation>파일 확장자를 명시적으로 지정하지 않은 경우 기본 접미사는 &quot;.%1&quot;입니다.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
@@ -23820,51 +23868,51 @@ Excluding: %3
     </message>
     <message>
         <location line="+176" />
-        <source>The path "%1" expanded to an empty string.</source>
-        <translation>경로 "%1"이(가) 빈 문자열로 확장되었습니다.</translation>
+        <source>The path &quot;%1&quot; expanded to an empty string.</source>
+        <translation>경로 &quot;%1&quot;이(가) 빈 문자열로 확장되었습니다.</translation>
     </message>
     <message>
         <location line="-72" />
         <location line="+10" />
         <location line="+20" />
-        <source>The path "%1" does not exist.</source>
-        <translation>경로 "%1"이(가) 존재하지 않습니다.</translation>
+        <source>The path &quot;%1&quot; does not exist.</source>
+        <translation>경로 &quot;%1&quot;이(가) 존재하지 않습니다.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+36" />
-        <source>The path "%1" is not a directory.</source>
-        <translation>경로 "%1"은(는) 디렉토리가 아닙니다.</translation>
+        <source>The path &quot;%1&quot; is not a directory.</source>
+        <translation>경로 &quot;%1&quot;은(는) 디렉토리가 아닙니다.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+10" />
-        <source>The path "%1" is not a file.</source>
-        <translation>경로 "%1"은(는) 파일이 아닙니다.</translation>
+        <source>The path &quot;%1&quot; is not a file.</source>
+        <translation>경로 &quot;%1&quot;은(는) 파일이 아닙니다.</translation>
     </message>
     <message>
         <location line="-4" />
-        <source>The directory "%1" does not exist.</source>
-        <translation>"%1" 디렉터리가 없습니다.</translation>
+        <source>The directory &quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot; 디렉터리가 없습니다.</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>The path "%1" is not an executable file.</source>
-        <translation>경로 "%1"은(는) 실행 파일이 아닙니다.</translation>
+        <source>The path &quot;%1&quot; is not an executable file.</source>
+        <translation>경로 &quot;%1&quot;은(는) 실행 파일이 아닙니다.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid path "%1".</source>
-        <translation>경로 "%1"이(가) 잘못되었습니다.</translation>
+        <source>Invalid path &quot;%1&quot;.</source>
+        <translation>경로 &quot;%1&quot;이(가) 잘못되었습니다.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1".</source>
-        <translation>"%1"을(를) 실행할 수 없습니다.</translation>
+        <source>Cannot execute &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;을(를) 실행할 수 없습니다.</translation>
     </message>
     <message>
-        <source>Full path: "%1"</source>
-        <translation type="vanished">전체 경로: "%1"</translation>
+        <source>Full path: &quot;%1&quot;</source>
+        <translation type="vanished">전체 경로: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-58" />
@@ -23904,8 +23952,8 @@ Excluding: %3
     </message>
     <message>
         <location line="+121" />
-        <source>Directory "%1" will be created.</source>
-        <translation>디렉터리 "%1"이 생성됩니다.</translation>
+        <source>Directory &quot;%1&quot; will be created.</source>
+        <translation>디렉터리 &quot;%1&quot;이 생성됩니다.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -23924,13 +23972,13 @@ Excluding: %3
     </message>
     <message>
         <location line="+12" />
-        <source>Invalid character ".".</source>
-        <translation>잘못된 문자 ".".</translation>
+        <source>Invalid character &quot;.&quot;.</source>
+        <translation>잘못된 문자 &quot;.&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Invalid character "%1" found.</source>
-        <translation>잘못된 문자 "%1"이(가) 발견되었습니다.</translation>
+        <source>Invalid character &quot;%1&quot; found.</source>
+        <translation>잘못된 문자 &quot;%1&quot;이(가) 발견되었습니다.</translation>
     </message>
     <message>
         <location line="-232" />
@@ -23997,7 +24045,7 @@ Excluding: %3
     <message>
         <location line="-3" />
         <source>Save &amp;as...</source>
-        <translation>다른 이름으로 저장...</translation>
+        <translation>다른 이름으로 저장... (&amp;A)</translation>
     </message>
     <message>
         <location line="+5" />
@@ -24085,12 +24133,12 @@ Excluding: %3
         <location line="-16" />
         <location line="+20" />
         <source>Running %1
-in "%2".
+in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
         <translation>실행 중 %1
-"%2"에서.
+&quot;%2&quot;에서.
 
 </translation>
     </message>
@@ -24138,12 +24186,12 @@ in "%2".
     <message>
         <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
         <source>Do not &amp;ask again</source>
-        <translation>다시 묻지 마세요</translation>
+        <translation>다시 묻지 마세요 (&amp;A)</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Do not &amp;show again</source>
-        <translation>다시 표시하지 않습니다</translation>
+        <translation>다시 표시하지 않습니다 (&amp;S)</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
@@ -24166,8 +24214,8 @@ in "%2".
         <translation>세부</translation>
     </message>
     <message>
-        <source>copyFile is not implemented for "%1"</source>
-        <translation type="vanished">"%1"에 대해 copyFile이 구현되지 않았습니다.</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">&quot;%1&quot;에 대해 copyFile이 구현되지 않았습니다.</translation>
     </message>
     <message>
         <source>Cannot copy from %1, it is not a directory.</source>
@@ -24179,61 +24227,61 @@ in "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to create tar archive from source: %3</source>
-        <translation>소스에서 tar 아카이브를 만드는 동안 "%1"에서 "%2"(으)로 재귀적으로 복사하지 못했습니다: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
+        <translation>소스에서 tar 아카이브를 만드는 동안 &quot;%1&quot;에서 &quot;%2&quot;(으)로 재귀적으로 복사하지 못했습니다: %3</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to extract tar archive to target: %3</source>
-        <translation>tar 아카이브를 대상으로 추출하는 동안 "%1"에서 "%2"(으)로 재귀적으로 복사하지 못했습니다: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
+        <translation>tar 아카이브를 대상으로 추출하는 동안 &quot;%1&quot;에서 &quot;%2&quot;(으)로 재귀적으로 복사하지 못했습니다: %3</translation>
     </message>
     <message>
-        <source>fileContents is not implemented for "%1"</source>
-        <translation type="vanished">"%1"에 대해 fileContents가 구현되지 않았습니다.</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">&quot;%1&quot;에 대해 fileContents가 구현되지 않았습니다.</translation>
     </message>
     <message>
-        <source>writeFileContents is not implemented for "%1"</source>
-        <translation type="vanished">"%1"에 대해 writeFileContents가 구현되지 않았습니다.</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">&quot;%1&quot;에 대해 writeFileContents가 구현되지 않았습니다.</translation>
     </message>
     <message>
-        <source>createTempFile is not implemented for "%1"</source>
-        <translation type="vanished">"%1"에 대해 createTempFile이 구현되지 않았습니다.</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">&quot;%1&quot;에 대해 createTempFile이 구현되지 않았습니다.</translation>
     </message>
     <message>
         <location line="-139" />
         <location line="+409" />
-        <source>Path "%1" exists but is not a writable directory.</source>
-        <translation>경로 "%1"은 존재하지만 쓰기 가능한 디렉토리는 아닙니다.</translation>
+        <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
+        <translation>경로 &quot;%1&quot;은 존재하지만 쓰기 가능한 디렉토리는 아닙니다.</translation>
     </message>
     <message>
         <location line="-356" />
-        <source>copyFile is not implemented for "%1".</source>
-        <translation>카피 파일은 "%1"으로 구현되지 않았습니다.</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;.</source>
+        <translation>카피 파일은 &quot;%1&quot;으로 구현되지 않았습니다.</translation>
     </message>
     <message>
         <location line="+30" />
-        <source>Cannot copy from "%1", it is not a directory.</source>
-        <translation>"%1"에서 복사 할 수 없으며 디렉토리가 아닙니다.</translation>
+        <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
+        <translation>&quot;%1&quot;에서 복사 할 수 없으며 디렉토리가 아닙니다.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Cannot copy "%1" to "%2": %3</source>
-        <translation>"%1"을 "%2"로 복사 할 수 없습니다 :%3</translation>
+        <source>Cannot copy &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>&quot;%1&quot;을 &quot;%2&quot;로 복사 할 수 없습니다 :%3</translation>
     </message>
     <message>
         <location line="+103" />
-        <source>fileContents is not implemented for "%1".</source>
-        <translation>FileContents는 "%1"으로 구현되지 않았습니다.</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>FileContents는 &quot;%1&quot;으로 구현되지 않았습니다.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for "%1".</source>
-        <translation>WriteFileContents는 "%1"에 대해 구현되지 않았습니다.</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>WriteFileContents는 &quot;%1&quot;에 대해 구현되지 않았습니다.</translation>
     </message>
     <message>
         <location line="+66" />
-        <source>createTempFile is not implemented for "%1".</source>
-        <translation>CreateTempFile은 "%1"으로 구현되지 않았습니다.</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation>CreateTempFile은 &quot;%1&quot;으로 구현되지 않았습니다.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24242,8 +24290,8 @@ in "%2".
     </message>
     <message>
         <location line="+180" />
-        <source>Refusing to remove the standard directory "%1".</source>
-        <translation>표준 디렉토리 "%1"제거 거부.</translation>
+        <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
+        <translation>표준 디렉토리 &quot;%1&quot;제거 거부.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -24257,80 +24305,80 @@ in "%2".
     </message>
     <message>
         <location line="+37" />
-        <source>Failed to remove directory "%1".</source>
-        <translation>"%1" 디렉터리를 제거하지 못했습니다.</translation>
+        <source>Failed to remove directory &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; 디렉터리를 제거하지 못했습니다.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Failed to remove file "%1".</source>
-        <translation>파일 "%1"을(를) 제거하지 못했습니다.</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>파일 &quot;%1&quot;을(를) 제거하지 못했습니다.</translation>
     </message>
     <message>
         <location line="+551" />
-        <source>Failed creating temporary file "%1" (too many tries).</source>
-        <translation>임시 파일 "%1"(너무 많은 시도)를 만드는 데 실패했습니다.</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
+        <translation>임시 파일 &quot;%1&quot;(너무 많은 시도)를 만드는 데 실패했습니다.</translation>
     </message>
     <message>
-        <source>Failed to copy file "%1" to "%2".</source>
-        <translation type="vanished">파일 "%1"을(를) "%2"(으)로 복사하지 못했습니다.</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation type="vanished">파일 &quot;%1&quot;을(를) &quot;%2&quot;(으)로 복사하지 못했습니다.</translation>
     </message>
     <message>
-        <source>File "%1" does not exist</source>
-        <translation type="vanished">파일 "%1"이(가) 존재하지 않습니다</translation>
+        <source>File &quot;%1&quot; does not exist</source>
+        <translation type="vanished">파일 &quot;%1&quot;이(가) 존재하지 않습니다</translation>
     </message>
     <message>
-        <source>Could not open File "%1"</source>
-        <translation type="vanished">파일 "%1"을(를) 열 수 없습니다</translation>
+        <source>Could not open File &quot;%1&quot;</source>
+        <translation type="vanished">파일 &quot;%1&quot;을(를) 열 수 없습니다</translation>
     </message>
     <message>
         <location line="-449" />
-        <source>Cannot read "%1": %2</source>
-        <translation>"%1"을(를) 읽을 수 없습니다: %2</translation>
+        <source>Cannot read &quot;%1&quot;: %2</source>
+        <translation>&quot;%1&quot;을(를) 읽을 수 없습니다: %2</translation>
     </message>
     <message>
-        <source>Could not open file "%1" for writing</source>
-        <translation type="vanished">쓰기 위해 파일 "%1"을(를) 열 수 없습니다</translation>
+        <source>Could not open file &quot;%1&quot; for writing</source>
+        <translation type="vanished">쓰기 위해 파일 &quot;%1&quot;을(를) 열 수 없습니다</translation>
     </message>
     <message>
-        <source>Could not write to file "%1" (only %2 of %3 bytes written)</source>
-        <translation type="vanished">파일 "%1"에 쓸 수 없습니다(%3바이트 중 %2만 기록됨).</translation>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
+        <translation type="vanished">파일 &quot;%1&quot;에 쓸 수 없습니다(%3바이트 중 %2만 기록됨).</translation>
     </message>
     <message>
-        <source>Could not create temporary file in "%1" (%2)</source>
-        <translation type="vanished">"%1"(%2)에 임시 파일을 만들 수 없습니다.</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
+        <translation type="vanished">&quot;%1&quot;(%2)에 임시 파일을 만들 수 없습니다.</translation>
     </message>
     <message>
         <location line="-87" />
         <location line="+406" />
-        <source>Failed to copy file "%1" to "%2": %3</source>
-        <translation>파일 "%1"을(를) "%2"(으)로 복사하지 못했습니다: %3</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>파일 &quot;%1&quot;을(를) &quot;%2&quot;(으)로 복사하지 못했습니다: %3</translation>
     </message>
     <message>
         <location line="-333" />
-        <source>File "%1" does not exist.</source>
-        <translation>파일 "%1"은 존재하지 않습니다.</translation>
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>파일 &quot;%1&quot;은 존재하지 않습니다.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File "%1".</source>
-        <translation>"%1"파일을 열 수 없습니다.</translation>
+        <source>Could not open File &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;파일을 열 수 없습니다.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Could not open file "%1" for writing.</source>
-        <translation>글쓰기를 위해 "%1"파일을 열 수 없습니다.</translation>
+        <source>Could not open file &quot;%1&quot; for writing.</source>
+        <translation>글쓰기를 위해 &quot;%1&quot;파일을 열 수 없습니다.</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
-        <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %n byte(s) written).</source>
         <translation>
-            <numerusform>" %1"파일에 쓸 수 없습니다 ( %n 바이트의 %2 만 작성).</numerusform>
+            <numerusform>&quot; %1&quot;파일에 쓸 수 없습니다 ( %n 바이트의 %2 만 작성).</numerusform>
         </translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Could not create temporary file in "%1" (%2).</source>
-        <translation>"%1"(%2)에서 임시 파일을 만들 수 없습니다.</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2).</source>
+        <translation>&quot;%1&quot;(%2)에서 임시 파일을 만들 수 없습니다.</translation>
     </message>
     <message>
         <location line="+138" />
@@ -24339,22 +24387,22 @@ in "%2".
     </message>
     <message>
         <location line="+202" />
-        <source>Failed reading file "%1": %2</source>
-        <translation>파일 "%1" 읽기 실패: %2</translation>
+        <source>Failed reading file &quot;%1&quot;: %2</source>
+        <translation>파일 &quot;%1&quot; 읽기 실패: %2</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Failed writing file "%1": %2</source>
-        <translation>파일 "%1" 쓰기 실패: %2</translation>
+        <source>Failed writing file &quot;%1&quot;: %2</source>
+        <translation>파일 &quot;%1&quot; 쓰기 실패: %2</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Failed creating temporary file "%1": %2</source>
-        <translation>임시 파일 "%1" 생성 실패: %2</translation>
+        <source>Failed creating temporary file &quot;%1&quot;: %2</source>
+        <translation>임시 파일 &quot;%1&quot; 생성 실패: %2</translation>
     </message>
     <message>
-        <source>Failed creating temporary file "%1" (too many tries)</source>
-        <translation type="vanished">임시 파일 "%1" 생성 실패(너무 많이 시도함)</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
+        <translation type="vanished">임시 파일 &quot;%1&quot; 생성 실패(너무 많이 시도함)</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
@@ -24373,18 +24421,18 @@ in "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/elfreader.cpp" line="+130" />
-        <source>"%1" is an invalid ELF object (%2)</source>
-        <translation>"%1"은(는) 잘못된 ELF 개체입니다(%2).</translation>
+        <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
+        <translation>&quot;%1&quot;은(는) 잘못된 ELF 개체입니다(%2).</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>"%1" is not an ELF object (file too small)</source>
-        <translation>"%1"은(는) ELF 개체가 아닙니다(파일이 너무 작음).</translation>
+        <source>&quot;%1&quot; is not an ELF object (file too small)</source>
+        <translation>&quot;%1&quot;은(는) ELF 개체가 아닙니다(파일이 너무 작음).</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>"%1" is not an ELF object</source>
-        <translation>"%1"은(는) ELF 개체가 아닙니다.</translation>
+        <source>&quot;%1&quot; is not an ELF object</source>
+        <translation>&quot;%1&quot;은(는) ELF 개체가 아닙니다.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -24435,14 +24483,14 @@ To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-To disable a variable, prefix the line with "#".</source>
+To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="vanished">한 줄에 하나의 환경 변수를 입력합니다.
 변수를 설정하거나 변경하려면 VARIABLE=VALUE를 사용하십시오.
 변수에 추가하려면 VARIABLE+=VALUE를 사용합니다.
 변수 앞에 추가하려면 VARIABLE=+VALUE를 사용합니다.
 ${OTHER}로 VALUE에서 기존 변수를 참조할 수 있습니다.
 변수를 지우려면 아무 것도 없는 행에 이름을 입력하십시오.
-변수를 비활성화하려면 줄 앞에 "#"을 붙입니다.</translation>
+변수를 비활성화하려면 줄 앞에 &quot;#&quot;을 붙입니다.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
@@ -24482,13 +24530,13 @@ ${OTHER}로 VALUE에서 기존 변수를 참조할 수 있습니다.
     </message>
     <message>
         <location line="+2" />
-        <source>Invalid character "%1".</source>
-        <translation>잘못된 문자 "%1".</translation>
+        <source>Invalid character &quot;%1&quot;.</source>
+        <translation>잘못된 문자 &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid characters "%1".</source>
-        <translation>잘못된 문자 "%1".</translation>
+        <source>Invalid characters &quot;%1&quot;.</source>
+        <translation>잘못된 문자 &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -24529,13 +24577,13 @@ ${OTHER}로 VALUE에서 기존 변수를 참조할 수 있습니다.
     </message>
     <message>
         <location line="+5" />
-        <source>Could not set permissions on "%1"</source>
-        <translation>"%1"에 대한 권한을 설정할 수 없습니다.</translation>
+        <source>Could not set permissions on &quot;%1&quot;</source>
+        <translation>&quot;%1&quot;에 대한 권한을 설정할 수 없습니다.</translation>
     </message>
     <message>
         <location line="+250" />
-        <source>No "localSource" device hook set.</source>
-        <translation>"localSource" 장치 후크 세트가 없습니다.</translation>
+        <source>No &quot;localSource&quot; device hook set.</source>
+        <translation>&quot;localSource&quot; 장치 후크 세트가 없습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
@@ -24617,20 +24665,20 @@ ${OTHER}로 VALUE에서 기존 변수를 참조할 수 있습니다.
     </message>
     <message>
         <location line="+1" />
-        <source>Overwrite existing file "%1"?</source>
-        <translation>기존 파일 "%1"을(를) 덮어쓰시겠습니까?</translation>
+        <source>Overwrite existing file &quot;%1&quot;?</source>
+        <translation>기존 파일 &quot;%1&quot;을(를) 덮어쓰시겠습니까?</translation>
     </message>
     <message>
         <location line="+21" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>파일 "%1"을(를) "%2"(으)로 복사할 수 없습니다.</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>파일 &quot;%1&quot;을(를) &quot;%2&quot;(으)로 복사할 수 없습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
         <location line="+409" />
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
-        <source>Failed to create directory "%1".</source>
-        <translation>"%1" 디렉터리를 만들지 못했습니다.</translation>
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; 디렉터리를 만들지 못했습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
@@ -24697,8 +24745,8 @@ ${OTHER}로 VALUE에서 기존 변수를 참조할 수 있습니다.
     </message>
     <message>
         <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
-        <source>Failed to start process launcher at "%1": %2</source>
-        <translation>"%1"에서 프로세스 시작 프로그램 시작 실패: %2</translation>
+        <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
+        <translation>&quot;%1&quot;에서 프로세스 시작 프로그램 시작 실패: %2</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24814,20 +24862,20 @@ ${OTHER}로 VALUE에서 기존 변수를 참조할 수 있습니다.
         <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
-To disable a variable, prefix this line with "#".
+To disable a variable, prefix this line with &quot;#&quot;.
 To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-Lines starting with "##" will be treated as comments.</source>
+Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>라인 당 하나의 환경 변수를 입력하십시오.
  변수를 설정하거나 변경하려면 변수 = 값을 사용하십시오.
- 변수를 비활성화하려면이 라인을 "#"로 접두사하십시오.
+ 변수를 비활성화하려면이 라인을 &quot;#&quot;로 접두사하십시오.
  변수에 추가하려면 변수+= 값을 사용하십시오.
  변수로 전제하려면 변수 =+값을 사용하십시오.
  기존 변수는 $ {Other}의 값으로 참조 할 수 있습니다.
  변수를 지우려면 이름을 다른 것이없는 줄에 넣으십시오.
- "##"로 시작하는 줄은 주석으로 취급됩니다.</translation>
+ &quot;##&quot;로 시작하는 줄은 주석으로 취급됩니다.</translation>
     </message>
     <message>
         <location line="+112" />
@@ -24846,18 +24894,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+29" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>프로그램 "%1"이(가) 없거나 실행할 수 없습니다.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>프로그램 &quot;%1&quot;이(가) 없거나 실행할 수 없습니다.</translation>
     </message>
     <message>
         <location line="+79" />
-        <source>The program "%1" could not be found.</source>
-        <translation>프로그램 "%1"을 찾을 수 없었습니다.</translation>
+        <source>The program &quot;%1&quot; could not be found.</source>
+        <translation>프로그램 &quot;%1&quot;을 찾을 수 없었습니다.</translation>
     </message>
     <message>
         <location line="+908" />
-        <source>Failed to create process interface for "%1".</source>
-        <translation>"%1"에 대한 프로세스 인터페이스를 만들지 못했습니다.</translation>
+        <source>Failed to create process interface for &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;에 대한 프로세스 인터페이스를 만들지 못했습니다.</translation>
     </message>
     <message>
         <location line="+163" />
@@ -24871,8 +24919,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The process "%1" is not responding.</source>
-        <translation>프로세스 "%1"이(가) 응답하지 않습니다.</translation>
+        <source>The process &quot;%1&quot; is not responding.</source>
+        <translation>프로세스 &quot;%1&quot;이(가) 응답하지 않습니다.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -24881,32 +24929,32 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+233" />
-        <source>The command "%1" finished successfully.</source>
-        <translation>"%1" 명령이 성공적으로 완료되었습니다.</translation>
+        <source>The command &quot;%1&quot; finished successfully.</source>
+        <translation>&quot;%1&quot; 명령이 성공적으로 완료되었습니다.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated with exit code %2.</source>
-        <translation>"%1" 명령이 종료 코드 %2(으)로 종료되었습니다.</translation>
+        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
+        <translation>&quot;%1&quot; 명령이 종료 코드 %2(으)로 종료되었습니다.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated abnormally.</source>
-        <translation>"%1" 명령이 비정상적으로 종료되었습니다.</translation>
+        <source>The command &quot;%1&quot; terminated abnormally.</source>
+        <translation>&quot;%1&quot; 명령이 비정상적으로 종료되었습니다.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" could not be started.</source>
-        <translation>"%1" 명령을 시작할 수 없습니다.</translation>
+        <source>The command &quot;%1&quot; could not be started.</source>
+        <translation>&quot;%1&quot; 명령을 시작할 수 없습니다.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>The command "%1" was canceled after %2 ms.</source>
-        <translation>" %1"명령은 %2ms 후에 취소되었습니다.</translation>
+        <source>The command &quot;%1&quot; was canceled after %2 ms.</source>
+        <translation>&quot; %1&quot;명령은 %2ms 후에 취소되었습니다.</translation>
     </message>
     <message>
-        <source>The command "%1" did not respond within the timeout limit (%2 s).</source>
-        <translation type="vanished">"%1" 명령이 제한 시간(%2초) 내에 응답하지 않았습니다.</translation>
+        <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
+        <translation type="vanished">&quot;%1&quot; 명령이 제한 시간(%2초) 내에 응답하지 않았습니다.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
@@ -24945,8 +24993,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open "%1".</source>
-        <translation>"%1"을(를) 열 수 없습니다.</translation>
+        <source>Could not open &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot;을(를) 열 수 없습니다.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -24967,13 +25015,13 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="-264" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;유효한 설정 파일을 찾을 수 없습니다.&lt;/p&gt;&lt;p&gt;디렉토리 "%1"에서 찾은 모든 설정 파일은 %2의 현재 버전에 적합하지 않습니다. 예를 들어 %의 호환되지 않는 버전으로 작성되었기 때문입니다. 2, 또는 다른 설정 경로가 사용되었기 때문입니다.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+265" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were either too new or too old to be read.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;유효한 설정 파일을 찾을 수 없습니다.&lt;/p&gt;&lt;p&gt;디렉토리 "%1"에서 찾은 모든 설정 파일이 너무 새롭거나 너무 오래되어 읽을 수 없습니다.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;유효한 설정 파일을 찾을 수 없습니다.&lt;/p&gt;&lt;p&gt;디렉토리 &quot;%1&quot;에서 찾은 모든 설정 파일이 너무 새롭거나 너무 오래되어 읽을 수 없습니다.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+11" />
@@ -24982,18 +25030,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>&lt;p&gt;The versioned backup "%1" of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;버전이 지정되지 않은 파일이 %2의 호환되지 않는 버전에 의해 생성되었기 때문에 설정 파일의 버전이 지정된 백업 "%1"이(가) 사용되었습니다.&lt;/p&gt;&lt;p&gt;이 버전이 마지막으로 변경된 이후 설정이 변경되었습니다. 사용된 %2는 무시되며 지금 변경된 사항은 최신 버전으로 전파되지 &lt;b&gt;않습니다&lt;/b&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;The versioned backup &quot;%1&quot; of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;버전이 지정되지 않은 파일이 %2의 호환되지 않는 버전에 의해 생성되었기 때문에 설정 파일의 버전이 지정된 백업 &quot;%1&quot;이(가) 사용되었습니다.&lt;/p&gt;&lt;p&gt;이 버전이 마지막으로 변경된 이후 설정이 변경되었습니다. 사용된 %2는 무시되며 지금 변경된 사항은 최신 버전으로 전파되지 &lt;b&gt;않습니다&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Settings File for "%1" from a Different Environment?</source>
-        <translation>다른 환경에서 "%1"에 대한 설정 파일이 있습니까?</translation>
+        <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
+        <translation>다른 환경에서 &quot;%1&quot;에 대한 설정 파일이 있습니까?</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file "%2"?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;%1의 이 인스턴스에서 만든 설정 파일을 찾을 수 없습니다.&lt;/p&gt;&lt;p&gt;이 프로젝트를 다른 컴퓨터에서 작업했거나 이전에 다른 설정 경로를 사용했습니까?&lt;/p&gt;&lt;p&gt;아직도 설정 파일 "%2"을(를) 로드하시겠습니까?&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file &quot;%2&quot;?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;%1의 이 인스턴스에서 만든 설정 파일을 찾을 수 없습니다.&lt;/p&gt;&lt;p&gt;이 프로젝트를 다른 컴퓨터에서 작업했거나 이전에 다른 설정 경로를 사용했습니까?&lt;/p&gt;&lt;p&gt;아직도 설정 파일 &quot;%2&quot;을(를) 로드하시겠습니까?&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+55" />
@@ -25002,8 +25050,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" is not supported by %2. Do you want to try loading it anyway?</source>
-        <translation>"%1"은(는) %2에서 지원하지 않습니다. 그래도 로드하시겠습니까?</translation>
+        <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
+        <translation>&quot;%1&quot;은(는) %2에서 지원하지 않습니다. 그래도 로드하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/aspects.cpp" line="+92" />
@@ -25058,7 +25106,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;변수&lt;/th&gt;&lt;th&gt;다음으로 확장&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td &gt;현재 파일의 디렉토리&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;파일 이름(전체 경로 포함)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;% n&lt;/td&gt;&lt;td&gt;파일 이름(경로 제외)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
@@ -25078,8 +25126,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+3" />
         <location line="+7" />
-        <source>Insert "%1"</source>
-        <translation>"%1" 삽입</translation>
+        <source>Insert &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; 삽입</translation>
     </message>
     <message>
         <location line="-3" />
@@ -25120,8 +25168,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+7" />
-        <source>Command "%1" was not found.</source>
-        <translation>명령 "%1"은 발견되지 않았습니다.</translation>
+        <source>Command &quot;%1&quot; was not found.</source>
+        <translation>명령 &quot;%1&quot;은 발견되지 않았습니다.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -25146,8 +25194,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+28" />
         <location line="+45" />
-        <source>Failed to start terminal process: "%1".</source>
-        <translation>터미널 프로세스를 시작하지 못했습니다 : "%1".</translation>
+        <source>Failed to start terminal process: &quot;%1&quot;.</source>
+        <translation>터미널 프로세스를 시작하지 못했습니다 : &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
@@ -25199,9 +25247,9 @@ Lines starting with "##" will be treated as comments.</source>
     <name>TextEditor::Internal::Snippets</name>
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippetscollection.cpp" line="-255" />
-        <source />
+        <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
-        <translation />
+        <translation></translation>
     </message>
 </context>
 </TS>

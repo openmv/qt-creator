@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+838" />
         <source>Copy</source>
         <translation>Kopiera</translation>
     </message>
@@ -30,82 +30,82 @@
         <translation>Öppna MV Cam Settings</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Turn on WiFi Shield on startup</source>
         <translation>Slå på WiFi Shield vid start</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Client Mode (Normal)</source>
         <translation>Klientläge (normalt)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Password</source>
         <translation>Lösenord</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter your WiFi network password here</source>
         <translation>Vänligen ange ditt WiFi-nätverkslösenord här</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Open (No password)</source>
         <translation>Öppna (inget lösenord)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WPA (Modern WiFi Security)</source>
         <translation>WPA (Modern WiFi Security)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WEP (Hexadecimal password)</source>
         <translation>WEP (hexadecimalt lösenord)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>SSID</source>
         <translation>SSID</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter or select your WiFi network here</source>
         <translation>Ange eller välj ditt WiFi-nätverk här</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Acess Point Mode</source>
         <translation>Åtkomstpunktsläge</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
         <translation>Vänligen ange namnet på WiFi-nätverket för att skapa lösenord här</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
         <translation>Ange namnet på det WiFI-nätverk som du vill skapa här</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Board Name</source>
         <translation>Styrelsens namn</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
         <translation>Vänligen ange ett namn för din OpenMV Cam här</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Duplicate REPL on the UART on startup</source>
         <translation>Duplicera REPL på UART vid start</translation>
     </message>
@@ -118,42 +118,42 @@
         <translation>000</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Max</source>
         <translation>Max</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Median</source>
         <translation>Median</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mode</source>
         <translation>Läge</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Min</source>
         <translation>Min</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mean</source>
         <translation>Betyda</translation>
     </message>
@@ -205,41 +205,41 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for '%1'...</source>
-        <translation>Hämtar ny syntaxdefinition för '%1'...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation>Hämtar ny syntaxdefinition för &apos;%1&apos;...</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for '%1' to version %2...</source>
-        <translation>Uppdaterar syntaxdefinitionen för '%1' till version %2...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation>Uppdaterar syntaxdefinitionen för &apos;%1&apos; till version %2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
         <source>Copy/Convert Python File</source>
         <translation>Kopiera/konvertera pythonfil</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+21" />
         <location line="+7" />
-        <location line="+94" />
+        <location line="+91" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+76" />
         <location line="+7" />
         <source>Unable to overwrite output file!</source>
         <translation>Det går inte att skriva över utgångsfilen!</translation>
     </message>
     <message>
-        <location line="-125" />
+        <location line="-124" />
         <source>Model Zoo</source>
         <translation>Modell Zoo</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+77" />
         <source>Model conversion is unnecessary for this board, as it lacks an NPU accelerator.</source>
         <translation>Modellomvandling är onödig för detta kort, eftersom det saknar en NPU -accelerator.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <source>Convert Model</source>
         <translation>Konvertera modell</translation>
     </message>
@@ -335,8 +335,8 @@
         <translation type="vanished">Arbetsplatsansvarig</translation>
     </message>
     <message>
-        <source>&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;What is a Workspace?&lt;/a&gt;</source>
-        <translation type="vanished">&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;Vad är en arbetsyta?&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;Vad är en arbetsyta?&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Workspace</source>
@@ -639,7 +639,7 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Request Copilot suggestion at the current editor's cursor position.</source>
+        <source>Request Copilot suggestion at the current editor&apos;s cursor position.</source>
         <translation>Begär copilotförslag vid den nuvarande redaktörens markörposition.</translation>
     </message>
     <message>
@@ -893,8 +893,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>Det gick inte att öppna en redigerare för "%1".</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>Det gick inte att öppna en redigerare för &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+28" />
@@ -929,7 +929,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-2268" />
         <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+445" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
@@ -1027,8 +1027,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+74" />
-        <source>An item named "%1" already exists at this location. Do you want to overwrite it?</source>
-        <translation>Ett objekt med namnet "%1" finns redan på den här platsen. Vill du skriva över det?</translation>
+        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
+        <translation>Ett objekt med namnet &quot;%1&quot; finns redan på den här platsen. Vill du skriva över det?</translation>
     </message>
     <message>
         <location line="+230" />
@@ -1146,7 +1146,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="+12" />
         <source>Ad&amp;vanced</source>
-        <translation>Avancerad</translation>
+        <translation>A&amp;vancerad</translation>
     </message>
     <message>
         <location line="+38" />
@@ -1155,12 +1155,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+7" />
-        <source>X-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>X-koordinat för den aktuella redigerarens övre vänstra hörn, i förhållande till skärmen.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Y-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>Y-koordinat för den aktuella redigerarens övre vänstra hörn, relativt skärmen.</translation>
     </message>
     <message>
@@ -1170,27 +1170,27 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <source>The text file "%1" has the size %2MB and might take more memory to open and process than available.
+        <source>The text file &quot;%1&quot; has the size %2MB and might take more memory to open and process than available.
 
 Continue?</source>
-        <translation>Textfilen "%1" har storleken %2MB och kan ta mer minne att öppna och bearbeta än tillgängligt.
+        <translation>Textfilen &quot;%1&quot; har storleken %2MB och kan ta mer minne att öppna och bearbeta än tillgängligt.
 
 Fortsätta?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>Could not open "%1": Cannot open files of type "%2".</source>
-        <translation>Kunde inte öppna "%1": Kan inte öppna filer av typen "%2".</translation>
+        <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
+        <translation>Kunde inte öppna &quot;%1&quot;: Kan inte öppna filer av typen &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not open "%1" for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>Kunde inte öppna "%1" för läsning. Antingen finns inte filen eller så har du inte behörighet att öppna den.</translation>
+        <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
+        <translation>Kunde inte öppna &quot;%1&quot; för läsning. Antingen finns inte filen eller så har du inte behörighet att öppna den.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Could not open "%1": Unknown error.</source>
-        <translation>Kunde inte öppna "%1": Okänt fel.</translation>
+        <source>Could not open &quot;%1&quot;: Unknown error.</source>
+        <translation>Kunde inte öppna &quot;%1&quot;: Okänt fel.</translation>
     </message>
     <message>
         <location line="+1130" />
@@ -1267,18 +1267,18 @@ Fortsätta?</translation>
     </message>
     <message>
         <location line="+308" />
-        <source>Close "%1"</source>
-        <translation>Stäng "%1"</translation>
+        <source>Close &quot;%1&quot;</source>
+        <translation>Stäng &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+27" />
-        <source>Unpin "%1"</source>
-        <translation>Lossa "%1"</translation>
+        <source>Unpin &quot;%1&quot;</source>
+        <translation>Lossa &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Pin "%1"</source>
-        <translation>Fäst "%1"</translation>
+        <source>Pin &quot;%1&quot;</source>
+        <translation>Fäst &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1403,7 +1403,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+2" />
-        <source>Don't Round</source>
+        <source>Don&apos;t Round</source>
         <translation>Inte runda</translation>
     </message>
     <message>
@@ -1555,8 +1555,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+35" />
-        <source>Command line arguments used for "Run in terminal".</source>
-        <translation>Kommandoradsargument som används för "Kör i terminal".</translation>
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>Kommandoradsargument som används för &quot;Kör i terminal&quot;.</translation>
     </message>
     <message>
         <location line="-50" />
@@ -1580,8 +1580,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+105" />
-        <source>Command line arguments used for "%1".</source>
-        <translation>Kommandoradsargument som används för "%1".</translation>
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>Kommandoradsargument som används för &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+34" />
@@ -1637,8 +1637,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+147" />
-        <source>Maximum number of entries in "Recent Files":</source>
-        <translation>Maximalt antal poster i "Senaste filer":</translation>
+        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
+        <translation>Maximalt antal poster i &quot;Senaste filer&quot;:</translation>
     </message>
     <message>
         <location line="+12" />
@@ -1698,7 +1698,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <translation>Produktion</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1773" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1787" />
         <source>&amp;File</source>
         <translation>&amp;Fil</translation>
     </message>
@@ -1723,7 +1723,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <translation>&amp;Hjälp</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+122" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+128" />
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2620" />
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
@@ -1735,7 +1735,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
-        <translation>Spara som...</translation>
+        <translation>Sp&amp;ara som...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+3" />
@@ -1745,16 +1745,16 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+701" />
         <source>Save A&amp;ll</source>
-        <translation>Rädda alla</translation>
+        <translation>Rädda a&amp;lla</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-279" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>Avsluta %1?</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+106" />
         <source>&amp;View</source>
         <translation>&amp;Se</translation>
     </message>
@@ -1797,7 +1797,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     <message>
         <location line="+10" />
         <source>Recent &amp;Files</source>
-        <translation>Senaste filer</translation>
+        <translation>Senaste &amp;filer</translation>
     </message>
     <message>
         <location line="+20" />
@@ -1812,7 +1812,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     <message>
         <location line="+8" />
         <source>E&amp;xit</source>
-        <translation>Utgång</translation>
+        <translation>&amp;Utgång</translation>
     </message>
     <message>
         <location line="+3" />
@@ -1842,7 +1842,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     <message>
         <location line="+6" />
         <source>Cu&amp;t</source>
-        <translation>Skära</translation>
+        <translation>&amp;Skära</translation>
     </message>
     <message>
         <location line="+8" />
@@ -1857,7 +1857,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     <message>
         <location line="+8" />
         <source>Select &amp;All</source>
-        <translation>Välj alla</translation>
+        <translation>Välj &amp;alla</translation>
     </message>
     <message>
         <location line="+8" />
@@ -1913,7 +1913,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     <message>
         <location line="+11" />
         <source>Pr&amp;eferences...</source>
-        <translation>Preferenser...</translation>
+        <translation>Pr&amp;eferenser...</translation>
     </message>
     <message>
         <location line="+26" />
@@ -1947,8 +1947,8 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the "%2" action from the "%3" locator filter (%4).</source>
-        <translation>Detta kommer att dölja menyfältet helt. Du kan visa det igen genom att skriva%1. &lt;br&gt; &lt;br&gt; eller utlösa åtgärden "%2" från "%3" -lokalfiltret (%4).</translation>
+        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the &quot;%2&quot; action from the &quot;%3&quot; locator filter (%4).</source>
+        <translation>Detta kommer att dölja menyfältet helt. Du kan visa det igen genom att skriva%1. &lt;br&gt; &lt;br&gt; eller utlösa åtgärden &quot;%2&quot; från &quot;%3&quot; -lokalfiltret (%4).</translation>
     </message>
     <message>
         <location line="+21" />
@@ -2001,7 +2001,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <translation>Dold</translation>
     </message>
     <message>
-        <location line="+460" />
+        <location line="+474" />
         <source>Version:</source>
         <translation>Version:</translation>
     </message>
@@ -2021,7 +2021,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <translation>&lt;p&gt;Qt Creator-utvecklare kan nås på Qt Creators e-postlista:&lt;/p&gt;%1&lt;p&gt;eller #qt-creator-kanalen på Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;Vår buggspårare finns på %3.&lt;/p&gt;&lt;p&gt;Använd %4 för större textbitar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-803" />
+        <location line="-817" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -2054,7 +2054,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+240" />
+        <location line="+244" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>Öppna dokument</translation>
@@ -2076,8 +2076,8 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Close All Except "%1"</source>
-        <translation>Stäng alla utom "%1"</translation>
+        <source>Close All Except &quot;%1&quot;</source>
+        <translation>Stäng alla utom &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
@@ -2113,16 +2113,16 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+927" />
-        <location line="+13" />
-        <location line="+11" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location line="+16" />
+        <location line="+14" />
         <source>Save Log</source>
         <translation>Spara logg</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-617" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
         <source>Clear</source>
         <translation>Klar</translation>
     </message>
@@ -2263,8 +2263,8 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location line="+51" />
-        <source>Failed to open preset file "%1" for reading.</source>
-        <translation>Det gick inte att öppna förinställningsfil "%1" för läsning.</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading.</source>
+        <translation>Det gick inte att öppna förinställningsfil &quot;%1&quot; för läsning.</translation>
     </message>
     <message>
         <location line="-172" />
@@ -2278,13 +2278,13 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>Failed to write logs to "%1".</source>
-        <translation>Det gick inte att skriva loggar till "%1".</translation>
+        <source>Failed to write logs to &quot;%1&quot;.</source>
+        <translation>Det gick inte att skriva loggar till &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open file "%1" for writing logs.</source>
-        <translation>Det gick inte att öppna filen "%1" för att skriva loggar.</translation>
+        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
+        <translation>Det gick inte att öppna filen &quot;%1&quot; för att skriva loggar.</translation>
     </message>
     <message>
         <source>Save Enabled Categories As</source>
@@ -2292,8 +2292,8 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location line="+45" />
-        <source>Failed to write preset file "%1".</source>
-        <translation>Det gick inte att skriva förinställd fil "%1".</translation>
+        <source>Failed to write preset file &quot;%1&quot;.</source>
+        <translation>Det gick inte att skriva förinställd fil &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -2301,13 +2301,13 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <translation>Ladda aktiverade kategorier från</translation>
     </message>
     <message>
-        <source>Failed to open preset file "%1" for reading</source>
-        <translation type="vanished">Det gick inte att öppna förinställd fil "%1" för läsning</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading</source>
+        <translation type="vanished">Det gick inte att öppna förinställd fil &quot;%1&quot; för läsning</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Failed to read preset file "%1": %2</source>
-        <translation>Det gick inte att läsa förinställd fil "%1": %2</translation>
+        <source>Failed to read preset file &quot;%1&quot;: %2</source>
+        <translation>Det gick inte att läsa förinställd fil &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+29" />
@@ -2342,7 +2342,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     <message>
         <location line="+64" />
         <source>Out&amp;put</source>
-        <translation>Produktion</translation>
+        <translation>&amp;Produktion</translation>
     </message>
     <message>
         <location line="+406" />
@@ -2466,17 +2466,17 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <translation>Processer</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-75" />
         <source>&amp;Diff</source>
         <translation>&amp;Diff</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Do &amp;Not Save</source>
-        <translation>Spara inte</translation>
+        <translation>Spara i&amp;nte</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+72" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
         <translation>&amp;Diff &amp;&amp; Avbryt</translation>
     </message>
@@ -2570,13 +2570,13 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Use "Cmd", "Opt", "Ctrl", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>Använd "Cmd", "Opt", "Ctrl" och "Shift" för modifieringstangenter. Använd "Escape", "Backsteg", "Radera", "Infoga", "Hem" och så vidare för specialtangenter. Kombinera individuella tangenter med "+" och kombinera flera genvägar till en genvägssekvens med ",". Om användaren till exempel måste hålla ned Ctrl- och Shift-modifieringstangenterna medan du trycker på Escape, och sedan släpper och trycker på A, anger du "Ctrl+Shift+Escape,A".</translation>
+        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Använd &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot; och &quot;Shift&quot; för modifieringstangenter. Använd &quot;Escape&quot;, &quot;Backsteg&quot;, &quot;Radera&quot;, &quot;Infoga&quot;, &quot;Hem&quot; och så vidare för specialtangenter. Kombinera individuella tangenter med &quot;+&quot; och kombinera flera genvägar till en genvägssekvens med &quot;,&quot;. Om användaren till exempel måste hålla ned Ctrl- och Shift-modifieringstangenterna medan du trycker på Escape, och sedan släpper och trycker på A, anger du &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Use "Ctrl", "Alt", "Meta", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>Använd "Ctrl", "Alt", "Meta" och "Shift" för modifieringstangenter. Använd "Escape", "Backsteg", "Radera", "Infoga", "Hem" och så vidare för specialtangenter. Kombinera individuella tangenter med "+" och kombinera flera genvägar till en genvägssekvens med ",". Om användaren till exempel måste hålla ned Ctrl- och Shift-modifieringstangenterna medan du trycker på Escape, och sedan släpper och trycker på A, anger du "Ctrl+Shift+Escape,A".</translation>
+        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Använd &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot; och &quot;Shift&quot; för modifieringstangenter. Använd &quot;Escape&quot;, &quot;Backsteg&quot;, &quot;Radera&quot;, &quot;Infoga&quot;, &quot;Hem&quot; och så vidare för specialtangenter. Kombinera individuella tangenter med &quot;+&quot; och kombinera flera genvägar till en genvägssekvens med &quot;,&quot;. Om användaren till exempel måste hålla ned Ctrl- och Shift-modifieringstangenterna medan du trycker på Escape, och sedan släpper och trycker på A, anger du &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -2585,8 +2585,8 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Key sequence has potential conflicts. &lt;a href="#conflicts"&gt;Show.&lt;/a&gt;</source>
-        <translation>Nyckelsekvensen har potentiella konflikter. &lt;a href="#conflicts"&gt;Visa.&lt;/a&gt;</translation>
+        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
+        <translation>Nyckelsekvensen har potentiella konflikter. &lt;a href=&quot;#conflicts&quot;&gt;Visa.&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+122" />
@@ -2611,22 +2611,22 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     <message>
         <location line="+7" />
         <source>Search f&amp;or:</source>
-        <translation>Söka efter:</translation>
+        <translation>&amp;Söka efter:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Whole words o&amp;nly</source>
-        <translation>Endast hela ord</translation>
+        <translation>E&amp;ndast hela ord</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Use re&amp;gular expressions</source>
-        <translation>Använd vanliga uttryck</translation>
+        <translation>Använd vanli&amp;ga uttryck</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Sco&amp;pe:</source>
-        <translation>Omfattning:</translation>
+        <translation>&amp;Omfattning:</translation>
     </message>
     <message>
         <location line="-9" />
@@ -2645,7 +2645,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-333" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-335" />
         <source>Open Advanced Find...</source>
         <translation>Öppna Avancerad sökning...</translation>
     </message>
@@ -2667,12 +2667,11 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <translation>Ange Söksträng</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+E</source>
-        <translation>Ctrl+E</translation>
+        <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Find Next</source>
         <translation>Hitta nästa</translation>
     </message>
@@ -2692,24 +2691,24 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <translation>Ersätt &amp;&amp; Hitta föregående</translation>
     </message>
     <message>
-        <location line="-246" />
-        <location line="+259" />
+        <location line="-248" />
+        <location line="+261" />
         <source>Replace All</source>
         <translation>Ersätt alla</translation>
     </message>
     <message>
-        <location line="-309" />
+        <location line="-311" />
         <source>Find Flags</source>
         <translation>Hitta flaggor</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+235" />
+        <location line="+237" />
         <source>Replace &amp;&amp; Find</source>
         <translation>Ersätt &amp;&amp; Hitta</translation>
     </message>
     <message>
-        <location line="-148" />
+        <location line="-150" />
         <location line="+13" />
         <source>Shift+Enter</source>
         <translation>Skift+Enter</translation>
@@ -2726,7 +2725,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <translation>Hitta/ersätt</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+59" />
         <source>Find Next (Selected)</source>
         <translation>Hitta nästa (vald)</translation>
     </message>
@@ -2785,7 +2784,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <translation>Ersätta med...</translation>
     </message>
     <message>
-        <location line="-520" />
+        <location line="-522" />
         <source>Find</source>
         <translation>Hitta</translation>
     </message>
@@ -2824,7 +2823,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+705" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
         <source>Collapse All</source>
         <translation>Kollapsa alla</translation>
     </message>
@@ -2851,7 +2850,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+225" />
+        <location line="+227" />
         <source>Replace</source>
         <translation>Byta ut</translation>
     </message>
@@ -2867,11 +2866,11 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Open file "%1" with:</source>
-        <translation>Öppna filen "%1" med:</translation>
+        <source>Open file &quot;%1&quot; with:</source>
+        <translation>Öppna filen &quot;%1&quot; med:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-455" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
         <source>Show Hidden Files</source>
         <translation>Visa gömda filer</translation>
     </message>
@@ -2897,15 +2896,15 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <translation>Ny fil</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="+156" />
         <location line="+78" />
         <source>New Folder</source>
         <translation>Ny mapp</translation>
     </message>
     <message>
         <location line="-18" />
-        <source>Open "%1"</source>
-        <translation>Öppna "%1"</translation>
+        <source>Open &quot;%1&quot;</source>
+        <translation>Öppna &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -2965,7 +2964,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <translation>Avlägsna...</translation>
     </message>
     <message>
-        <location line="-618" />
+        <location line="-622" />
         <source>Synchronize with Editor</source>
         <translation>Synkronisera med Editor</translation>
     </message>
@@ -3000,8 +2999,8 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
         <translation>Generiskt katalogfilter</translation>
     </message>
     <message>
-        <source>Matches all files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">Matchar alla filer från en anpassad uppsättning kataloger. Lägg till "+&lt;nummer&gt;" eller ":&lt;nummer&gt;" för att hoppa till det angivna radnumret. Lägg till ett annat "+&lt;nummer&gt;" eller ":&lt;nummer&gt;" för att också hoppa till kolumnnumret.</translation>
+        <source>Matches all files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">Matchar alla filer från en anpassad uppsättning kataloger. Lägg till &quot;+&lt;nummer&gt;&quot; eller &quot;:&lt;nummer&gt;&quot; för att hoppa till det angivna radnumret. Lägg till ett annat &quot;+&lt;nummer&gt;&quot; eller &quot;:&lt;nummer&gt;&quot; för att också hoppa till kolumnnumret.</translation>
     </message>
     <message>
         <location line="+273" />
@@ -3016,9 +3015,9 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     <message numerus="yes">
         <location line="-264" />
         <source>%1 filter update: %n files</source>
-        <translation>
-            <numerusform>%1 filteruppdatering: %n filer</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -3153,8 +3152,8 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-78" />
-        <source>Locates files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Lokaljer filer från en anpassad uppsättning kataloger. Bifoga "+&lt;nummer&gt;" eller ": &lt;nummer&gt;" för att hoppa till det givna radnumret. Lägg till en annan "+&lt;nummer&gt;" eller ": &lt;nummer&gt;" för att hoppa till kolumnnumret också.</translation>
+        <source>Locates files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Lokaljer filer från en anpassad uppsättning kataloger. Bifoga &quot;+&lt;nummer&gt;&quot; eller &quot;: &lt;nummer&gt;&quot; för att hoppa till det givna radnumret. Lägg till en annan &quot;+&lt;nummer&gt;&quot; eller &quot;: &lt;nummer&gt;&quot; för att hoppa till kolumnnumret också.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -3241,7 +3240,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;What to do with the executable's standard output.
+&lt;p&gt;What to do with the executable&apos;s standard output.
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
@@ -3275,7 +3274,7 @@ förutsatt att de var omodifierade före omstruktureringen.</translation>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
-&lt;p &gt;What to do with the executable's standard error output.&lt;/p&gt;
+&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
 &lt;li&gt;Show in General Messages.&lt;/li&gt;
 &lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
@@ -3402,12 +3401,12 @@ För att göra detta skriver du den här genvägen och ett mellanslag i inmatnin
     </message>
     <message>
         <location line="+1" />
-        <source>Opens a file given by a relative path to the current document, or absolute path. "~" refers to your home directory. You have the option to create a file if it does not exist yet.</source>
-        <translation>Öppnar en fil som ges av en relativ sökväg till det aktuella dokumentet, eller absolut sökväg. "~" refererar till din hemkatalog. Du har möjlighet att skapa en fil om den inte finns ännu.</translation>
+        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
+        <translation>Öppnar en fil som ges av en relativ sökväg till det aktuella dokumentet, eller absolut sökväg. &quot;~&quot; refererar till din hemkatalog. Du har möjlighet att skapa en fil om den inte finns ännu.</translation>
     </message>
     <message>
-        <source>Create and Open "%1"</source>
-        <translation type="vanished">Skapa och öppna "%1"</translation>
+        <source>Create and Open &quot;%1&quot;</source>
+        <translation type="vanished">Skapa och öppna &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-46" />
@@ -3416,8 +3415,8 @@ För att göra detta skriver du den här genvägen och ett mellanslag i inmatnin
     </message>
     <message>
         <location line="-13" />
-        <source>Create "%1"?</source>
-        <translation>Skapa "%1"?</translation>
+        <source>Create &quot;%1&quot;?</source>
+        <translation>Skapa &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+6" />
@@ -3436,8 +3435,8 @@ För att göra detta skriver du den här genvägen och ett mellanslag i inmatnin
     </message>
     <message>
         <location line="+1" />
-        <source>Cannot create file "%1".</source>
-        <translation>Kan inte skapa fil "%1".</translation>
+        <source>Cannot create file &quot;%1&quot;.</source>
+        <translation>Kan inte skapa fil &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -3446,13 +3445,13 @@ För att göra detta skriver du den här genvägen och ett mellanslag i inmatnin
     </message>
     <message>
         <location line="+164" />
-        <source>Create and Open File "%1"</source>
-        <translation>Skapa och öppna filen "%1"</translation>
+        <source>Create and Open File &quot;%1&quot;</source>
+        <translation>Skapa och öppna filen &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Create Directory "%1"</source>
-        <translation>Skapa katalog "%1"</translation>
+        <source>Create Directory &quot;%1&quot;</source>
+        <translation>Skapa katalog &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+58" />
@@ -3470,7 +3469,7 @@ För att göra detta skriver du den här genvägen och ett mellanslag i inmatnin
         <translation>Tillgängliga filter</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+557" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
         <source>Open as Centered Popup</source>
         <translation>Öppna som centrerad popup</translation>
     </message>
@@ -3511,18 +3510,18 @@ För att göra detta skriver du den här genvägen och ett mellanslag i inmatnin
     </message>
     <message>
         <location line="+143" />
-        <source>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Öppna ett dokument&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Arkiv &gt; Öppna fil (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Arkiv &gt; Exempel &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Arkiv &gt; Senaste filer&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Dra och släpp filer här&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Öppna ett dokument&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Arkiv &gt; Öppna fil (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Arkiv &gt; Exempel &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Arkiv &gt; Senaste filer&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Dra och släpp filer här&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+37" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- skriv &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; för att hoppa till en klassdefinition&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- skriv &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; för att hoppa till en klassdefinition&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- skriv &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; för att hoppa till en funktionsdefinition&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- skriv &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; för att hoppa till en funktionsdefinition&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+121" />
@@ -3598,7 +3597,7 @@ För att göra detta skriver du den här genvägen och ett mellanslag i inmatnin
         <translation>Beställnings</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-113" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-116" />
         <source>Save Changes</source>
         <translation>Spara ändringar</translation>
     </message>
@@ -3732,14 +3731,14 @@ För att göra detta skriver du den här genvägen och ett mellanslag i inmatnin
         <translation>Inställningar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+488" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
         <source>Options</source>
         <translation>alternativ</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13" />
-        <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
+        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
         <translation>Skapar qm-översättningsfiler som kan användas av en applikation från översättarens ts-filer</translation>
     </message>
     <message>
@@ -3748,14 +3747,14 @@ För att göra detta skriver du den här genvägen och ett mellanslag i inmatnin
         <translation>Release Translations (lrelease)</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+5" />
         <source>Linguist</source>
         <translation>Lingvist</translation>
     </message>
     <message>
-        <location line="-12" />
-        <source>Synchronizes translator's ts files with the program code</source>
+        <location line="-2" />
+        <source>Synchronizes translator&apos;s ts files with the program code</source>
         <translation>Synkroniserar översättarens ts-filer med programkoden</translation>
     </message>
     <message>
@@ -3775,13 +3774,13 @@ För att göra detta skriver du den här genvägen och ett mellanslag i inmatnin
     </message>
     <message>
         <location line="+1" />
-        <location line="+10" />
+        <location line="+15" />
         <location line="+5" />
         <source>Text</source>
         <translation>Text</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-17" />
         <source>Runs the current QML file with QML utility.</source>
         <translation>Kör den aktuella QML-filen med QML-verktyget.</translation>
     </message>
@@ -3807,7 +3806,7 @@ För att göra detta skriver du den här genvägen och ett mellanslag i inmatnin
         <translation>Qt Quick 2 Preview (qmlscene)</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+4" />
         <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Öppnar den aktuella filen i vi</translation>
@@ -3825,8 +3824,8 @@ För att göra detta skriver du den här genvägen och ett mellanslag i inmatnin
     </message>
     <message>
         <location line="+1" />
-        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by "&gt;". For example "sess def" matches "File &gt; Sessions &gt; Default".</source>
-        <translation>Utlöser en åtgärd. Om det är från menyn matchar det någon del av en menyhierarki, separerade med "&gt;". Till exempel "sess def" matchar "Arkiv &gt; Sessioner &gt; Standard".</translation>
+        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
+        <translation>Utlöser en åtgärd. Om det är från menyn matchar det någon del av en menyhierarki, separerade med &quot;&gt;&quot;. Till exempel &quot;sess def&quot; matchar &quot;Arkiv &gt; Sessioner &gt; Standard&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
@@ -3970,9 +3969,9 @@ För att göra detta skriver du den här genvägen och ett mellanslag i inmatnin
     </message>
     <message>
         <location line="+12" />
-        <source>The settings file "%1" is not writable.
+        <source>The settings file &quot;%1&quot; is not writable.
 You will not be able to store any %2 settings.</source>
-        <translation>Inställningsfilen "%1" är inte skrivbar.
+        <translation>Inställningsfilen &quot;%1&quot; är inte skrivbar.
 Du kommer inte att kunna lagra några %2-inställningar.</translation>
     </message>
     <message>
@@ -3987,9 +3986,9 @@ Du kommer inte att kunna lagra några %2-inställningar.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Error reading settings file "%1": %2
+        <source>Error reading settings file &quot;%1&quot;: %2
 You will likely experience further problems using this instance of %3.</source>
-        <translation>Det gick inte att läsa inställningsfilen "%1": %2
+        <translation>Det gick inte att läsa inställningsfilen &quot;%1&quot;: %2
 Du kommer sannolikt att uppleva ytterligare problem med att använda den här instansen av %3.</translation>
     </message>
     <message>
@@ -4059,8 +4058,8 @@ Du kommer sannolikt att uppleva ytterligare problem med att använda den här in
     </message>
     <message>
         <location line="+1" />
-        <source>Select encoding for "%1".%2</source>
-        <translation>Välj kodning för "%1".%2</translation>
+        <source>Select encoding for &quot;%1&quot;.%2</source>
+        <translation>Välj kodning för &quot;%1&quot;.%2</translation>
     </message>
     <message>
         <location line="+49" />
@@ -4242,7 +4241,7 @@ Do you want to check them out now?</source>
 Vill du kolla in dem nu?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-943" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-948" />
         <source>Restart Required</source>
         <translation>Omstart krävs</translation>
     </message>
@@ -4278,23 +4277,23 @@ Vill du kolla in dem nu?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
-        <source>Could not find executable for "%1" (expanded "%2")</source>
-        <translation>Det gick inte att hitta körbar fil för "%1" (utökad "%2")</translation>
+        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
+        <translation>Det gick inte att hitta körbar fil för &quot;%1&quot; (utökad &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>Starting external tool "%1"</source>
-        <translation>Startar externt verktyg "%1"</translation>
+        <source>Starting external tool &quot;%1&quot;</source>
+        <translation>Startar externt verktyg &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>"%1" finished</source>
-        <translation>"%1" är klar</translation>
+        <source>&quot;%1&quot; finished</source>
+        <translation>&quot;%1&quot; är klar</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" finished with error</source>
-        <translation>"%1" slutade med fel</translation>
+        <source>&quot;%1&quot; finished with error</source>
+        <translation>&quot;%1&quot; slutade med fel</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
@@ -4331,10 +4330,10 @@ Vill du kolla in dem nu?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>"%1" returned the following error:
+        <source>&quot;%1&quot; returned the following error:
 
 %2</source>
-        <translation>"%1" returnerade följande fel:
+        <translation>&quot;%1&quot; returnerade följande fel:
 
 %2</translation>
     </message>
@@ -4394,35 +4393,35 @@ Vill du kolla in dem nu?</translation>
     <message>
         <location line="+6" />
         <source>Open Command Prompt With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Öppna kommandotolken med</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open Terminal With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Öppna terminalen med</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file "%1".</source>
-        <translation>Det gick inte att ta bort filen "%1".</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>Det gick inte att ta bort filen &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+40" />
-        <source>Failed to rename the include guard in file "%1".</source>
-        <translation>Det gick inte att byta namn på inkluderingsskyddet i filen "%1".</translation>
+        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
+        <translation>Det gick inte att byta namn på inkluderingsskyddet i filen &quot;%1&quot;.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
         <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>%n förekomster har ersatts.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+369" />
+        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+394" />
         <source>Case sensitive</source>
         <translation>Skiftlägeskänsliga</translation>
     </message>
@@ -4469,7 +4468,7 @@ Vill du kolla in dem nu?</translation>
     <message>
         <location line="+5" />
         <source>Repla&amp;ce with:</source>
-        <translation>Ersätta med:</translation>
+        <translation>&amp;Ersätta med:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -4494,9 +4493,9 @@ Vill du kolla in dem nu?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>The search resulted in more than %n items, do you still want to continue?</source>
-        <translation>
-            <numerusform>Sökningen resulterade i mer än %n objekt, vill du fortfarande fortsätta?</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4512,9 +4511,9 @@ Vill du kolla in dem nu?</translation>
     <message numerus="yes">
         <location line="+82" />
         <source>%n matches found.</source>
-        <translation>
-            <numerusform>%n matchningar hittades.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4565,8 +4564,8 @@ Vill du kolla in dem nu?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
-        <source>Factory with id="%1" already registered. Deleting.</source>
-        <translation>Fabrik med id="%1" redan registrerat. Tar bort.</translation>
+        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
+        <translation>Fabrik med id=&quot;%1&quot; redan registrerat. Tar bort.</translation>
     </message>
     <message>
         <location line="+230" />
@@ -4580,18 +4579,18 @@ Vill du kolla in dem nu?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
-        <source>Error in "%1": %2</source>
-        <translation>Fel i "%1": %2</translation>
+        <source>Error in &quot;%1&quot;: %2</source>
+        <translation>Fel i &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>Cannot convert result of "%1" to string.</source>
-        <translation>Kan inte konvertera resultatet av "%1" till sträng.</translation>
+        <source>Cannot convert result of &quot;%1&quot; to string.</source>
+        <translation>Kan inte konvertera resultatet av &quot;%1&quot; till sträng.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal '}' characters must be escaped as "\}", '\' characters must be escaped as "\\", and "%{" must be escaped as "%\{".</source>
-        <translation>Utvärdera enkla JavaScript-satser.&lt;br&gt;Ordagliga '}'-tecken måste escapes som "\}", '\'-tecken måste escapes som "\\" och "%{" måste escapes som "%\{".</translation>
+        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
+        <translation>Utvärdera enkla JavaScript-satser.&lt;br&gt;Ordagliga &apos;}&apos;-tecken måste escapes som &quot;\}&quot;, &apos;\&apos;-tecken måste escapes som &quot;\\&quot; och &quot;%{&quot; måste escapes som &quot;%\{&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
@@ -4605,9 +4604,9 @@ Vill du kolla in dem nu?</translation>
     </message>
     <message>
         <location line="+68" />
-        <source>Previous command is still running ("%1").
+        <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
-        <translation>Föregående kommando körs fortfarande ("%1").
+        <translation>Föregående kommando körs fortfarande (&quot;%1&quot;).
 Vill du döda den?</translation>
     </message>
     <message>
@@ -4617,13 +4616,13 @@ Vill du döda den?</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>Could not find executable for "%1".</source>
-        <translation>Det gick inte att hitta körbar fil för "%1".</translation>
+        <source>Could not find executable for &quot;%1&quot;.</source>
+        <translation>Det gick inte att hitta körbar fil för &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Starting command "%1".</source>
-        <translation>Startar kommandot "%1".</translation>
+        <source>Starting command &quot;%1&quot;.</source>
+        <translation>Startar kommandot &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+21" />
@@ -4678,8 +4677,8 @@ Vill du döda den?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
-        <source>Locator: Error occurred when running "%1".</source>
-        <translation>Locator: Fel uppstod när "%1" kördes.</translation>
+        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
+        <translation>Locator: Fel uppstod när &quot;%1&quot; kördes.</translation>
     </message>
     <message>
         <location line="-71" />
@@ -4693,8 +4692,8 @@ Vill du döda den?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Locator query string with quotes escaped with backslash and spaces replaced with "*" wildcards.</source>
-        <translation>Sökfrågesträng med citattecken escaped med omvänt snedstreck och mellanslag ersatta med "*" jokertecken.</translation>
+        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
+        <translation>Sökfrågesträng med citattecken escaped med omvänt snedstreck och mellanslag ersatta med &quot;*&quot; jokertecken.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -4708,8 +4707,8 @@ Vill du döda den?</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Lokaliserar filer från ett globalt filsystemindex (spotlight, lokaliserar, allt). Bifoga "+&lt;nummer&gt;" eller ": &lt;nummer&gt;" för att hoppa till det givna radnumret. Lägg till en annan "+&lt;nummer&gt;" eller ": &lt;nummer&gt;" för att hoppa till kolumnnumret också.</translation>
+        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Lokaliserar filer från ett globalt filsystemindex (spotlight, lokaliserar, allt). Bifoga &quot;+&lt;nummer&gt;&quot; eller &quot;: &lt;nummer&gt;&quot; för att hoppa till det givna radnumret. Lägg till en annan &quot;+&lt;nummer&gt;&quot; eller &quot;: &lt;nummer&gt;&quot; för att hoppa till kolumnnumret också.</translation>
     </message>
     <message>
         <location line="+113" />
@@ -4717,8 +4716,8 @@ Vill du döda den?</translation>
         <translation>Sorteringsresultat</translation>
     </message>
     <message>
-        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">Matchar filer från ett globalt filsystemindex (Spotlight, Locate, Everything). Lägg till "+&lt;nummer&gt;" eller ":&lt;nummer&gt;" för att hoppa till det givna radnumret. Lägg till ett annat "+&lt;nummer&gt;" eller ":&lt;nummer&gt;" för att också hoppa till kolumnnumret.</translation>
+        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">Matchar filer från ett globalt filsystemindex (Spotlight, Locate, Everything). Lägg till &quot;+&lt;nummer&gt;&quot; eller &quot;:&lt;nummer&gt;&quot; för att hoppa till det givna radnumret. Lägg till ett annat &quot;+&lt;nummer&gt;&quot; eller &quot;:&lt;nummer&gt;&quot; för att också hoppa till kolumnnumret.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -4727,9 +4726,9 @@ Vill du döda den?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110" />
-        <source>Add "%1" placeholder for the query string.
+        <source>Add &quot;%1&quot; placeholder for the query string.
 Double-click to edit item.</source>
-        <translation>Lägg till "%1" platshållare för frågesträngen.
+        <translation>Lägg till &quot;%1&quot; platshållare för frågesträngen.
 Dubbelklicka för att redigera objektet.</translation>
     </message>
     <message>
@@ -4763,13 +4762,13 @@ Dubbelklicka för att redigera objektet.</translation>
         <translation>Lägg till Magic Header</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magiska data tolkas enligt definitionen av Shared MIME-info Database-specifikationen från &lt;a href="http://standards.freedesktop.org/shared-mime-info- spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magiska data tolkas enligt definitionen av Shared MIME-info Database-specifikationen från &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info- spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; mime magiska data tolkas enligt definitionen av den delade MIME-INFO-databasspecifikationen från &lt;a href = "https://www.freedesktop.org/wiki/specifications/shared-- MIME-INFO-SPEC/"&gt; Freedesktop.org &lt;/a&gt;. &lt;HR/&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; mime magiska data tolkas enligt definitionen av den delade MIME-INFO-databasspecifikationen från &lt;a href = &quot;https://www.freedesktop.org/wiki/specifications/shared-- MIME-INFO-SPEC/&quot;&gt; Freedesktop.org &lt;/a&gt;. &lt;HR/&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+9" />
@@ -4823,8 +4822,8 @@ Dubbelklicka för att redigera objektet.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Obs! Stora värden kan påverka prestandan när du öppnar filer.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Obs! Stora värden kan påverka prestandan när du öppnar filer.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4891,9 +4890,9 @@ Dubbelklicka för att redigera objektet.</translation>
     <message numerus="yes">
         <location line="+159" />
         <source>Elided %n characters due to Application Output settings</source>
-        <translation>
-            <numerusform>%n tecken har tagits bort på grund av inställningar för programutdata</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4904,13 +4903,13 @@ Dubbelklicka för att redigera objektet.</translation>
 </translation>
     </message>
     <message>
-        <location line="+298" />
+        <location line="+308" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Textfiler (*.txt);;Alla filer (*)</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+11" />
+        <location line="+14" />
         <source>Error: %L1!</source>
         <translation>Fel: %L1!</translation>
     </message>
@@ -4941,23 +4940,23 @@ Dubbelklicka för att redigera objektet.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>There is no patch-command configured in the general "Environment" settings.</source>
-        <translation>Det finns inget patch-kommando konfigurerat i de allmänna "Environment"-inställningarna.</translation>
+        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
+        <translation>Det finns inget patch-kommando konfigurerat i de allmänna &quot;Environment&quot;-inställningarna.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The patch-command configured in the general "Environment" settings does not exist.</source>
-        <translation>Det patch-kommando som konfigurerats i de allmänna inställningarna för "Environment" existerar inte.</translation>
+        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
+        <translation>Det patch-kommando som konfigurerats i de allmänna inställningarna för &quot;Environment&quot; existerar inte.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Running in "%1": %2 %3.</source>
-        <translation>Kör i " %1": %2 %3.</translation>
+        <source>Running in &quot;%1&quot;: %2 %3.</source>
+        <translation>Kör i &quot; %1&quot;: %2 %3.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>A timeout occurred running "%1".</source>
-        <translation>En timeout inträffade med "%1".</translation>
+        <source>A timeout occurred running &quot;%1&quot;.</source>
+        <translation>En timeout inträffade med &quot;%1&quot;.</translation>
     </message>
     <message>
         <source>Running in %1: %2 %3</source>
@@ -4965,22 +4964,22 @@ Dubbelklicka för att redigera objektet.</translation>
     </message>
     <message>
         <location line="-11" />
-        <source>Unable to launch "%1": %2</source>
-        <translation>Det gick inte att starta "%1": %2</translation>
+        <source>Unable to launch &quot;%1&quot;: %2</source>
+        <translation>Det gick inte att starta &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>A timeout occurred running "%1"</source>
-        <translation type="vanished">En timeout inträffade när "%1" kördes</translation>
+        <source>A timeout occurred running &quot;%1&quot;</source>
+        <translation type="vanished">En timeout inträffade när &quot;%1&quot; kördes</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>"%1" crashed.</source>
-        <translation>"%1" kraschade.</translation>
+        <source>&quot;%1&quot; crashed.</source>
+        <translation>&quot;%1&quot; kraschade.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"%1" failed (exit code %2).</source>
-        <translation>"%1" misslyckades (utgångskod %2).</translation>
+        <source>&quot;%1&quot; failed (exit code %2).</source>
+        <translation>&quot;%1&quot; misslyckades (utgångskod %2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
@@ -5073,8 +5072,8 @@ Dubbelklicka för att redigera objektet.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>"%1" will be installed into "%2".</source>
-        <translation>"%1" kommer att installeras i "%2".</translation>
+        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot; kommer att installeras i &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+29" />
@@ -5083,8 +5082,8 @@ Dubbelklicka för att redigera objektet.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The file "%1" exists. Overwrite?</source>
-        <translation>Filen "%1" finns. Skriva över?</translation>
+        <source>The file &quot;%1&quot; exists. Overwrite?</source>
+        <translation>Filen &quot;%1&quot; finns. Skriva över?</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5098,8 +5097,8 @@ Dubbelklicka för att redigera objektet.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to write file "%1".</source>
-        <translation>Det gick inte att skriva filen "%1".</translation>
+        <source>Failed to write file &quot;%1&quot;.</source>
+        <translation>Det gick inte att skriva filen &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -5318,8 +5317,8 @@ till versionskontroll (%2)
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
-        <source>Could not parse patch file "%1". The content is not of unified diff format.</source>
-        <translation>Det gick inte att analysera korrigeringsfilen "%1". Innehållet är inte av enhetligt diff-format.</translation>
+        <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
+        <translation>Det gick inte att analysera korrigeringsfilen &quot;%1&quot;. Innehållet är inte av enhetligt diff-format.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
@@ -5398,23 +5397,23 @@ till versionskontroll (%2)
     </message>
     <message>
         <location line="+52" />
-        <source>Diff "%1"</source>
-        <translation>Skillnad "%1"</translation>
+        <source>Diff &quot;%1&quot;</source>
+        <translation>Skillnad &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+28" />
         <source>Select First File for Diff</source>
         <translation>Välj Första filen för Diff</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+7" />
         <source>Select Second File for Diff</source>
         <translation>Välj andra fil för Diff</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>Diff "%1", "%2"</source>
-        <translation>Diff "%1", "%2"</translation>
+        <location line="+10" />
+        <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
+        <translation>Diff &quot;%1&quot;, &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
@@ -5433,8 +5432,8 @@ till versionskontroll (%2)
     </message>
     <message>
         <location line="+31" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding.</source>
-        <translation>&lt;b&gt;Fel:&lt;/b&gt; Kunde inte avkoda "%1" med "%2"-kodning.</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
+        <translation>&lt;b&gt;Fel:&lt;/b&gt; Kunde inte avkoda &quot;%1&quot; med &quot;%2&quot;-kodning.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5477,9 +5476,9 @@ till versionskontroll (%2)
     <message numerus="yes">
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
         <source>Skipped %n lines...</source>
-        <translation>
-            <numerusform>Hoppade över %n rader...</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -5594,8 +5593,8 @@ till versionskontroll (%2)
     </message>
     <message>
         <location line="+1" />
-        <source>%1 (current: "%2")</source>
-        <translation>%1 (nuvarande: "%2")</translation>
+        <source>%1 (current: &quot;%2&quot;)</source>
+        <translation>%1 (nuvarande: &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5634,7 +5633,7 @@ till versionskontroll (%2)
     </message>
     <message>
         <location line="+4" />
-        <source>Plugin's initialization function succeeded.</source>
+        <source>Plugin&apos;s initialization function succeeded.</source>
         <translation>Insticksprogrammets initieringsfunktion lyckades.</translation>
     </message>
     <message>
@@ -5875,8 +5874,8 @@ Orsak: %3</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The last time you started %1, it seems to have closed because of a problem with the "%2" plugin. Temporarily disable the plugin?</source>
-        <translation>Senast du startade %1 verkar det ha stängts på grund av ett problem med insticksprogrammet "%2". Inaktivera plugin-programmet tillfälligt?</translation>
+        <source>The last time you started %1, it seems to have closed because of a problem with the &quot;%2&quot; plugin. Temporarily disable the plugin?</source>
+        <translation>Senast du startade %1 verkar det ha stängts på grund av ett problem med insticksprogrammet &quot;%2&quot;. Inaktivera plugin-programmet tillfälligt?</translation>
     </message>
     <message>
         <location line="+8" />
@@ -5892,26 +5891,26 @@ Orsak: %3</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
-        <source>The plugin "%1" is specified twice for testing.</source>
-        <translation>Insticksprogrammet "%1" anges två gånger för testning.</translation>
+        <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
+        <translation>Insticksprogrammet &quot;%1&quot; anges två gånger för testning.</translation>
     </message>
     <message>
         <location line="+7" />
         <location line="+18" />
         <location line="+47" />
         <location line="+25" />
-        <source>The plugin "%1" does not exist.</source>
-        <translation>Insticksprogrammet "%1" finns inte.</translation>
+        <source>The plugin &quot;%1&quot; does not exist.</source>
+        <translation>Insticksprogrammet &quot;%1&quot; finns inte.</translation>
     </message>
     <message>
         <location line="-79" />
-        <source>The plugin "%1" is not tested.</source>
-        <translation>Insticksprogrammet "%1" är inte testat.</translation>
+        <source>The plugin &quot;%1&quot; is not tested.</source>
+        <translation>Insticksprogrammet &quot;%1&quot; är inte testat.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Cannot request scenario "%1" as it was already requested.</source>
-        <translation>Kan inte begära scenariot "%1" eftersom det redan begärdes.</translation>
+        <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
+        <translation>Kan inte begära scenariot &quot;%1&quot; eftersom det redan begärdes.</translation>
     </message>
     <message>
         <location line="+130" />
@@ -5930,8 +5929,8 @@ Orsak: %3</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency '%1(%2)'</source>
-        <translation>Kunde inte lösa beroendet '%1(%2)'</translation>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation>Kunde inte lösa beroendet &apos;%1(%2)&apos;</translation>
     </message>
     <message>
         <location line="+61" />
@@ -5945,8 +5944,8 @@ Orsak: %3</translation>
     </message>
     <message>
         <location line="-416" />
-        <source>"%1" is missing</source>
-        <translation>"%1" saknas</translation>
+        <source>&quot;%1&quot; is missing</source>
+        <translation>&quot;%1&quot; saknas</translation>
     </message>
     <message>
         <location line="-24" />
@@ -5955,28 +5954,28 @@ Orsak: %3</translation>
     </message>
     <message>
         <location line="+29" />
-        <source>Value for key "%1" is not a string</source>
-        <translation>Värdet för nyckeln "%1" är inte en sträng</translation>
+        <source>Value for key &quot;%1&quot; is not a string</source>
+        <translation>Värdet för nyckeln &quot;%1&quot; är inte en sträng</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a bool</source>
-        <translation>Värdet för nyckeln "%1" är inte en bool</translation>
+        <source>Value for key &quot;%1&quot; is not a bool</source>
+        <translation>Värdet för nyckeln &quot;%1&quot; är inte en bool</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not an array of objects</source>
-        <translation>Värdet för nyckeln "%1" är inte en array av objekt</translation>
+        <source>Value for key &quot;%1&quot; is not an array of objects</source>
+        <translation>Värdet för nyckeln &quot;%1&quot; är inte en array av objekt</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a string and not an array of strings</source>
-        <translation>Värdet för nyckeln "%1" är inte en sträng och inte en array av strängar</translation>
+        <source>Value for key &quot;%1&quot; is not a string and not an array of strings</source>
+        <translation>Värdet för nyckeln &quot;%1&quot; är inte en sträng och inte en array av strängar</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Value "%2" for key "%1" has invalid format</source>
-        <translation>Värdet "%2" för nyckeln "%1" har ogiltigt format</translation>
+        <source>Value &quot;%2&quot; for key &quot;%1&quot; has invalid format</source>
+        <translation>Värdet &quot;%2&quot; för nyckeln &quot;%1&quot; har ogiltigt format</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5985,8 +5984,8 @@ Orsak: %3</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected IID "%1", but found "%2"</source>
-        <translation>Förväntat iid "%1", men hittade "%2"</translation>
+        <source>Expected IID &quot;%1&quot;, but found &quot;%2&quot;</source>
+        <translation>Förväntat iid &quot;%1&quot;, men hittade &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+6" />
@@ -5995,8 +5994,8 @@ Orsak: %3</translation>
     </message>
     <message>
         <location line="+108" />
-        <source>Invalid platform specification "%1": %2</source>
-        <translation>Ogiltig plattformsspecifikation "%1": %2</translation>
+        <source>Invalid platform specification &quot;%1&quot;: %2</source>
+        <translation>Ogiltig plattformsspecifikation &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+18" />
@@ -6009,8 +6008,8 @@ Orsak: %3</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Dependency: "%1" must be "%2" or "%3" (is "%4").</source>
-        <translation>Beroende: "%1" måste vara "%2" eller "%3" (är "%4").</translation>
+        <source>Dependency: &quot;%1&quot; must be &quot;%2&quot; or &quot;%3&quot; (is &quot;%4&quot;).</source>
+        <translation>Beroende: &quot;%1&quot; måste vara &quot;%2&quot; eller &quot;%3&quot; (är &quot;%4&quot;).</translation>
     </message>
     <message>
         <location line="+25" />
@@ -6022,8 +6021,8 @@ Orsak: %3</translation>
     </message>
     <message>
         <location line="-13" />
-        <source>Argument: "%1" is empty</source>
-        <translation>Argument: "%1" är tomt</translation>
+        <source>Argument: &quot;%1&quot; is empty</source>
+        <translation>Argument: &quot;%1&quot; är tomt</translation>
     </message>
     <message>
         <location line="+182" />
@@ -6180,13 +6179,13 @@ Vill du skriva över det?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+161" />
-        <source>Exported "%1", %2x%3, %4 bytes</source>
-        <translation>Exporterade "%1", %2x%3, %4 byte</translation>
+        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
+        <translation>Exporterade &quot;%1&quot;, %2x%3, %4 byte</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Could not write file "%1".</source>
-        <translation>Kunde inte skriva filen "%1".</translation>
+        <source>Could not write file &quot;%1&quot;.</source>
+        <translation>Kunde inte skriva filen &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6357,8 +6356,8 @@ Vill du skriva över det?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>A comma-separated list of size specifications of the form "&lt;width&gt;x&lt;height&gt;".</source>
-        <translation>En kommaseparerad lista med storleksspecifikationer i formen "&lt;bredd&gt;x&lt;höjd&gt;".</translation>
+        <source>A comma-separated list of size specifications of the form &quot;&lt;width&gt;x&lt;height&gt;&quot;.</source>
+        <translation>En kommaseparerad lista med storleksspecifikationer i formen &quot;&lt;bredd&gt;x&lt;höjd&gt;&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6403,7 +6402,7 @@ Vill du skriva över dem?</translation>
         <translation>Fel %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+60" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
         <source>Deprecated</source>
         <translation>Avskriven</translation>
     </message>
@@ -6428,7 +6427,7 @@ Vill du skriva över dem?</translation>
         <translation>Härledd</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+212" />
         <source>Call Hierarchy</source>
         <translation>Ringhierarki</translation>
     </message>
@@ -6438,13 +6437,13 @@ Vill du skriva över dem?</translation>
         <translation>Ladda om samtalshierarkin för symbolen under markörpositionen.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+394" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
         <translation>%1 för %2</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+230" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>oinitialiserad</translation>
@@ -6487,15 +6486,15 @@ Vill du skriva över dem?</translation>
     </message>
     <message>
         <location line="+1342" />
-        <source>Invalid parameter in "%1":
+        <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
-        <translation>Ogiltig parameter i "%1":
+        <translation>Ogiltig parameter i &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
         <location line="+219" />
-        <source>Language Server "%1" Initialization Error</source>
-        <translation>Språkserver "%1" initialiseringsfel</translation>
+        <source>Language Server &quot;%1&quot; Initialization Error</source>
+        <translation>Språkserver &quot;%1&quot; initialiseringsfel</translation>
     </message>
     <message>
         <location line="+13" />
@@ -6569,8 +6568,8 @@ Vill du skriva över dem?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientinterface.cpp" line="+77" />
-        <source>Cannot handle MIME type "%1" of message.</source>
-        <translation>Kan inte hantera mimtyp "%1" av meddelandet.</translation>
+        <source>Cannot handle MIME type &quot;%1&quot; of message.</source>
+        <translation>Kan inte hantera mimtyp &quot;%1&quot; av meddelandet.</translation>
     </message>
     <message>
         <location line="+70" />
@@ -6588,7 +6587,7 @@ Vill du skriva över dem?</translation>
         <translation>Oväntat färdig.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+217" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+82" />
         <source>Expand All</source>
         <translation>Utvidga alla</translation>
@@ -6672,8 +6671,8 @@ Example: *.cpp%1*.h</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Language server-specific JSON to pass via "initializationOptions" field of "initialize" request.</source>
-        <translation>Språkserverspecifik JSON för att passera via "Initialiseringsoptions" -fältet "Initialisera" begäran.</translation>
+        <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
+        <translation>Språkserverspecifik JSON för att passera via &quot;Initialiseringsoptions&quot; -fältet &quot;Initialisera&quot; begäran.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6751,8 +6750,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+21" />
         <source>Re&amp;name %n files</source>
         <translation>
-            <numerusform>Re &amp; name %n filer</numerusform>
-            <numerusform>Re &amp; name %n filer</numerusform>
+            <numerusform>Re &amp;name %n filer</numerusform>
+            <numerusform>Re &amp;name %n filer</numerusform>
         </translation>
     </message>
     <message>
@@ -6810,23 +6809,23 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+6" />
-        <source>Running "%1" to install %2.</source>
-        <translation>Kör " %1" för att installera %2.</translation>
+        <source>Running &quot;%1&quot; to install %2.</source>
+        <translation>Kör &quot; %1&quot; för att installera %2.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>Installationen av "%1" avbröts av timeout.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>Installationen av &quot;%1&quot; avbröts av timeout.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>Installationen av "%1" avbröts av användaren.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>Installationen av &quot;%1&quot; avbröts av användaren.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>Installera " %1" misslyckades med exitkod %2.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>Installera &quot; %1&quot; misslyckades med exitkod %2.</translation>
     </message>
     <message>
         <location line="+56" />
@@ -6933,33 +6932,33 @@ See the documentation of the specific language server for valid settings.</sourc
     <name>QtC::LanguageServerProtocol</name>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
-        <source>Cannot decode content with "%1". Falling back to "%2".</source>
-        <translation>Kan inte avkoda innehåll med "%1". Faller tillbaka till "%2".</translation>
+        <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
+        <translation>Kan inte avkoda innehåll med &quot;%1&quot;. Faller tillbaka till &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Expected an integer in "%1", but got "%2".</source>
-        <translation>Förväntade ett heltal i "%1", men fick "%2".</translation>
+        <source>Expected an integer in &quot;%1&quot;, but got &quot;%2&quot;.</source>
+        <translation>Förväntade ett heltal i &quot;%1&quot;, men fick &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
-        <source>Could not parse JSON message: "%1".</source>
-        <translation>Kunde inte analysera JSON -meddelandet: "%1".</translation>
+        <source>Could not parse JSON message: &quot;%1&quot;.</source>
+        <translation>Kunde inte analysera JSON -meddelandet: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected a JSON object, but got a JSON "%1" value.</source>
-        <translation>Förväntade ett JSON -objekt, men fick ett JSON "%1" -värde.</translation>
+        <source>Expected a JSON object, but got a JSON &quot;%1&quot; value.</source>
+        <translation>Förväntade ett JSON -objekt, men fick ett JSON &quot;%1&quot; -värde.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
-        <source>No parameters in "%1".</source>
-        <translation>Inga parametrar i "%1".</translation>
+        <source>No parameters in &quot;%1&quot;.</source>
+        <translation>Inga parametrar i &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+213" />
-        <source>No ID set in "%1".</source>
-        <translation>Inget ID -inställning i "%1".</translation>
+        <source>No ID set in &quot;%1&quot;.</source>
+        <translation>Inget ID -inställning i &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
@@ -7047,7 +7046,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7059,60 +7058,60 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+156" />
         <location line="+823" />
         <source>Dataset Editor</source>
         <translation>Dataset Editor</translation>
     </message>
     <message>
-        <location line="-364" />
+        <location line="-366" />
         <source>Please enter a class name</source>
         <translation>Ange ett klassnamn</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+604" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+412" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+70" />
+        <location line="+72" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-732" />
         <location line="+19" />
-        <location line="+115" />
-        <location line="+1483" />
+        <location line="+111" />
+        <location line="+1514" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+124" />
-        <location line="+180" />
-        <location line="+308" />
+        <location line="+139" />
+        <location line="+202" />
+        <location line="+306" />
         <location line="+13" />
-        <location line="+168" />
-        <location line="+145" />
+        <location line="+169" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
-        <location line="+254" />
+        <location line="+117" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+378" />
+        <location line="+273" />
         <location line="+86" />
-        <location line="+1017" />
-        <location line="+895" />
+        <location line="+1142" />
+        <location line="+1075" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+539" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
         <location line="+19" />
         <location line="+11" />
@@ -7120,8 +7119,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Fel: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3475" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-309" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3541" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7131,30 +7130,30 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+9" />
         <location line="+25" />
         <location line="+9" />
-        <source>Failed to create "%L1"!</source>
-        <translation>Det gick inte att skapa "%L1"!</translation>
+        <source>Failed to create &quot;%L1&quot;!</source>
+        <translation>Det gick inte att skapa &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2513" />
-        <location line="+1446" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
+        <location line="+33" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
+        <location line="+1442" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Det gick inte att spara bildfilen av okänd anledning!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581" />
-        <location line="+239" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
+        <location line="+224" />
         <source>Delete</source>
         <translation>Radera</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309" />
-        <source>Are you sure you want to permanetly delete "%L1"?</source>
-        <translation>Är du säker på att du vill ta bort "%L1" permanent?</translation>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
+        <translation>Är du säker på att du vill ta bort &quot;%L1&quot; permanent?</translation>
     </message>
     <message>
         <location line="-86" />
@@ -7179,10 +7178,10 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Det gick inte att byta namn på filen av okänd anledning!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5164" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5247" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>Kunde inte kopiera filen "%1" till "%2".</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>Kunde inte kopiera filen &quot;%1&quot; till &quot;%2&quot;.</translation>
     </message>
     <message>
         <source>Invalid argument (%1) for -override_read_timeout</source>
@@ -7206,19 +7205,19 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Saknas argument för -serienummer_filter</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+145" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2349" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2677" />
         <location line="+9" />
         <location line="+13" />
-        <location line="+59" />
+        <location line="+63" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+830" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
         <location line="+36" />
         <location line="+7" />
@@ -7227,13 +7226,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+7" />
         <source>
 
-Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>
 
 Stäng alla program som tittar på/redigerar OpenMV IDEs applikationsdata och starta sedan om OpenMV IDE!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-65" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Redigera gråskaletröskel med Threshold Editor</translation>
     </message>
@@ -7243,18 +7242,18 @@ Stäng alla program som tittar på/redigerar OpenMV IDEs applikationsdata och st
         <translation>Redigera LAB-tröskel med Threshold Editor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+221" />
         <source>Missing argument for -form_key</source>
         <translation>Saknas argument för -form_key</translation>
     </message>
     <message>
-        <location line="+1066" />
+        <location line="+1074" />
         <source>About OpenMV Viewer...</source>
         <translation>Om OpenMV Viewer...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;Om %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Av: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Detta program distribueras i hopp om att det ska vara användbart, men UTAN NÅGON GARANTI; utan ens den underförstådda garantin om SÄLJBARHET eller LÄMPLIGHET FÖR ETT VISST ÄNDAMÅL. Se &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; för mer information.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Frågor eller kommentarer?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kontakta oss på &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Om %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Av: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Detta program distribueras i hopp om att det ska vara användbart, men UTAN NÅGON GARANTI; utan ens den underförstådda garantin om SÄLJBARHET eller LÄMPLIGHET FÖR ETT VISST ÄNDAMÅL. Se &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; för mer information.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Frågor eller kommentarer?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kontakta oss på &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+17" />
@@ -7262,7 +7261,7 @@ Stäng alla program som tittar på/redigerar OpenMV IDEs applikationsdata och st
         <translation>OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1039" />
+        <location line="-1050" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -7275,7 +7274,7 @@ Stäng alla program som tittar på/redigerar OpenMV IDEs applikationsdata och st
         <translation type="vanished">Argument saknas för -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="-460" />
+        <location line="-468" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>Ogiltigt argument (%1) för -auto_update</translation>
     </message>
@@ -7285,7 +7284,7 @@ Stäng alla program som tittar på/redigerar OpenMV IDEs applikationsdata och st
         <translation>Argument saknas för -auto_update</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+248" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7298,7 +7297,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Felläsning &lt;User_Resources&gt; /openmvide/firmware/settings.json: %L1. \ N \ nopenmv ide -versioner innan v4.3.0 har inte den här filen och skulle ha tagit bort den vid installationen av resurser.</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+188" />
         <source>Form Key</source>
         <translation>Nyckel för formulär</translation>
     </message>
@@ -7308,7 +7307,7 @@ Check the json file for errors and fix them.</source>
         <translation>Ange formulärnyckeln</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+80" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7318,7 +7317,7 @@ Check the json file for errors and fix them.</source>
         <location line="-13" />
         <location line="+7" />
         <location line="+7" />
-        <source>Can't open the new file!</source>
+        <source>Can&apos;t open the new file!</source>
         <translation>Kan inte öppna den nya filen!</translation>
     </message>
     <message>
@@ -7328,8 +7327,8 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Add some code to "%L1"</source>
-        <translation>Lägg till lite kod till "%L1"</translation>
+        <source>Add some code to &quot;%L1&quot;</source>
+        <translation>Lägg till lite kod till &quot;%L1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -7365,7 +7364,7 @@ Check the json file for errors and fix them.</source>
         <translation>Ctrl+Skift+E</translation>
     </message>
     <message>
-        <source>Are you sure you want to erase your OpenMV Cam's onboard flash drive?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s onboard flash drive?</source>
         <translation type="vanished">Är du säker på att du vill radera din OpenMV Cams inbyggda flashenhet?</translation>
     </message>
     <message>
@@ -7399,7 +7398,7 @@ Check the json file for errors and fix them.</source>
         <translation>Synkroniserar bibliotek mellan din OpenMV Cam och dokumentmappen automatiskt.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+24" />
         <source>Filter examples by board and sensor type</source>
         <translation>Filtrera exempel efter kort- och sensortyp</translation>
     </message>
@@ -7429,40 +7428,40 @@ Check the json file for errors and fix them.</source>
         <translation>Återställ OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Install the Latest Development Release</source>
         <translation>Installera den senaste utvecklingsversionen</translation>
     </message>
     <message>
-        <location line="+77" />
-        <location line="+3764" />
+        <location line="+75" />
+        <location line="+3823" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Öppna Terminal</translation>
     </message>
     <message>
-        <location line="-3818" />
+        <location line="-3877" />
         <source>Machine Vision</source>
         <translation>Machine Vision</translation>
     </message>
     <message>
-        <location line="+181" />
-        <location line="+3668" />
-        <location line="+76" />
+        <location line="+175" />
+        <location line="+3733" />
+        <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Tröskelredaktör</translation>
     </message>
     <message>
-        <location line="-3739" />
-        <location line="+3817" />
+        <location line="-3803" />
+        <location line="+3880" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Keypoints Editor</translation>
     </message>
     <message>
-        <location line="-3810" />
-        <location line="+3976" />
-        <location line="+98" />
+        <location line="-3873" />
+        <location line="+4037" />
+        <location line="+97" />
         <location line="+24" />
         <location line="+11" />
         <location line="+18" />
@@ -7470,7 +7469,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag Generator</translation>
     </message>
     <message>
-        <location line="-4124" />
+        <location line="-4184" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5-familjen (30 taggar)</translation>
     </message>
@@ -7508,16 +7507,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+371" />
+        <location line="+367" />
         <location line="+14" />
         <location line="+33" />
-        <location line="+916" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
-        <source>Failed to open: "%L1"</source>
-        <translation>Det gick inte att öppna: "%L1"</translation>
+        <location line="+918" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-223" />
+        <source>Failed to open: &quot;%L1&quot;</source>
+        <translation>Det gick inte att öppna: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1358" />
+        <location line="-1356" />
         <source>DataMatrix Generator</source>
         <translation>DataMatrix Generator</translation>
     </message>
@@ -7543,29 +7542,29 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Var man sparar nätverket på OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+228" />
-        <location line="+2357" />
-        <location line="+1290" />
+        <location line="+225" />
+        <location line="+2424" />
+        <location line="+1288" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
-        <location line="+67" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382" />
-        <location line="+364" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899" />
-        <location line="+208" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-393" />
+        <location line="+375" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+900" />
+        <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Vänligen lägg till ett filtillägg!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-269" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+112" />
-        <location line="+207" />
+        <location line="+119" />
+        <location line="+203" />
         <source>Unable to overwrite output file!</source>
         <translation>Det går inte att skriva över utdatafilen!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3860" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3922" />
         <source>Video Tools</source>
         <translation>Videoverktyg</translation>
     </message>
@@ -7581,23 +7580,23 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-437" />
-        <location line="+273" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-439" />
+        <location line="+275" />
         <source>Play RTSP Stream</source>
         <translation>Spela RTSP Stream</translation>
     </message>
     <message>
         <location line="+16" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+15" />
         <location line="+6" />
-        <location line="+46" />
+        <location line="+48" />
         <location line="+19" />
         <source>New Dataset</source>
         <translation>Ny datauppsättning</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-98" />
         <source>Dataset Editor - Choose a folder to build the dataset in</source>
         <translation>Dataset Editor - Välj en mapp att bygga datamängden i</translation>
     </message>
@@ -7608,17 +7607,17 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+15" />
-        <location line="+207" />
+        <location line="+205" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-209" />
         <location line="+34" />
         <location line="+48" />
         <location line="+33" />
-        <source>Failed to remove "%L1"!</source>
-        <translation>Det gick inte att ta bort "%L1"!</translation>
+        <source>Failed to remove &quot;%L1&quot;!</source>
+        <translation>Det gick inte att ta bort &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-128" />
-        <location line="+30" />
+        <location line="-125" />
+        <location line="+29" />
         <source>Open Dataset</source>
         <translation>Öppna Dataset</translation>
     </message>
@@ -7633,7 +7632,7 @@ Check the json file for errors and fix them.</source>
         <translation>Den valda mappen verkar inte vara en giltig OpenMV Cam Image Dataset!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export</source>
         <translation>Exportera</translation>
     </message>
@@ -7643,7 +7642,7 @@ Check the json file for errors and fix them.</source>
         <translation>Exportera datauppsättning till zip-fil</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <location line="+7" />
         <location line="+42" />
         <location line="+21" />
@@ -7661,38 +7660,38 @@ Check the json file for errors and fix them.</source>
         <translation>Exporterar...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-520" />
-        <location line="+237" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-522" />
+        <location line="+239" />
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1482" />
+        <location line="+1513" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+258" />
-        <location line="+533" />
-        <location line="+145" />
+        <location line="+273" />
+        <location line="+554" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location line="+433" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
-        <location line="+288" />
-        <location line="+143" />
-        <location line="+1023" />
+        <location line="+117" />
+        <location line="+428" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-131" />
+        <location line="+289" />
+        <location line="+165" />
+        <location line="+1148" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1339" />
         <location line="+85" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Cancel</source>
         <translation>Annullera</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3673" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3737" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Ladda upp till Edge Impulse Project</translation>
     </message>
@@ -7771,8 +7770,8 @@ Check the json file for errors and fix them.</source>
         <translation>Om OpenMV IDE...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;Om OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Av: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Detta program distribueras i hopp om att det ska vara användbart, men UTAN NÅGON GARANTI; utan ens den underförstådda garantin för SÄLJBARHET eller LÄMPLIGHET FÖR ETT SÄRSKILT SYFTE. Se &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; för mer information.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Frågor eller kommentarer?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kontakta oss på &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Om OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Av: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Detta program distribueras i hopp om att det ska vara användbart, men UTAN NÅGON GARANTI; utan ens den underförstådda garantin för SÄLJBARHET eller LÄMPLIGHET FÖR ETT SÄRSKILT SYFTE. Se &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; för mer information.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Frågor eller kommentarer?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kontakta oss på &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
@@ -7793,11 +7792,11 @@ Check the json file for errors and fix them.</source>
         <translation>OpenMV Viewer</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+73" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
         <location line="+37" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-221" />
         <location line="+87" />
         <location line="+55" />
@@ -7833,11 +7832,11 @@ Check the json file for errors and fix them.</source>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-195" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-197" />
         <location line="+9" />
-        <location line="+89" />
-        <location line="+13" />
-        <location line="+42" />
+        <location line="+95" />
+        <location line="+11" />
+        <location line="+40" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
@@ -7867,53 +7866,61 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1064" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1189" />
         <location line="+6" />
         <location line="+28" />
         <location line="+52" />
         <location line="+8" />
         <location line="+35" />
-        <location line="+320" />
-        <location line="+62" />
-        <location line="+99" />
-        <location line="+49" />
-        <location line="+67" />
-        <location line="+12" />
-        <location line="+77" />
+        <location line="+329" />
+        <location line="+136" />
+        <location line="+28" />
+        <location line="+100" />
+        <location line="+56" />
+        <location line="+68" />
+        <location line="+13" />
+        <location line="+81" />
         <location line="+10" />
         <location line="+12" />
         <location line="+28" />
-        <location line="+36" />
-        <location line="+84" />
+        <location line="+34" />
+        <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+86" />
+        <location line="+97" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
-        <location line="+108" />
+        <location line="+116" />
         <location line="+83" />
-        <location line="+42" />
-        <location line="+38" />
-        <location line="+52" />
-        <location line="+38" />
+        <location line="+82" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+46" />
+        <location line="+54" />
+        <location line="+51" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
         <location line="+21" />
         <location line="+20" />
         <location line="+24" />
-        <location line="+121" />
-        <location line="+214" />
+        <location line="+135" />
+        <location line="+217" />
         <location line="+33" />
-        <location line="+248" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+658" />
+        <location line="+268" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+668" />
         <location line="+48" />
         <source>Connect</source>
         <translation>Ansluta</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-42" />
         <source>No settings for the selected board type %L1!</source>
         <translation>Inga inställningar för den valda korttyp %L1!</translation>
     </message>
@@ -7924,12 +7931,12 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Only firmware recovery is supported using the Alif Semiconductor's SE Tools.</source>
+        <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>Endast återhämtning av firmware stöds med ALIF -halvledarens SE -verktyg.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
         <source>Disconnect</source>
@@ -7988,12 +7995,11 @@ Check the json file for errors and fix them.</source>
         <translation>Zooma för att passa</translation>
     </message>
     <message>
-        <location line="+30" />
         <source>JPG</source>
-        <translation>JPG</translation>
+        <translation type="vanished">JPG</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+31" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG-komprimera rambufferten för högre prestanda</translation>
     </message>
@@ -8012,7 +8018,7 @@ Check the json file for errors and fix them.</source>
         <translation>Inaktivera rambufferten för maximal prestanda</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+52" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>Frame Buffer Disabled - klicka på inaktivera-knappen igen för att aktivera (överst till höger)</translation>
     </message>
@@ -8081,7 +8087,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Upplösning (vikt:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1574" />
+        <location line="-1582" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
@@ -8090,8 +8096,8 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
 OpenMV IDE -versioner före v4.3.0 har inte den här filen och skulle ha tagit bort den vid installation av resurser.</translation>
     </message>
     <message>
-        <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2512" />
+        <location line="+346" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2858" />
         <source>Load Custom Firmware</source>
         <translation>Ladda anpassad firmware</translation>
     </message>
@@ -8103,7 +8109,7 @@ OpenMV IDE -versioner före v4.3.0 har inte den här filen och skulle ha tagit b
     </message>
     <message>
         <location line="+1" />
-        <source>Are you sure you want to erase your OpenMV Cam's internal FAT file system?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s internal FAT file system?</source>
         <translation>Är du säker på att du vill radera din OpenMV Cams interna fettfilsystem?</translation>
     </message>
     <message>
@@ -8132,15 +8138,20 @@ OpenMV IDE -versioner före v4.3.0 har inte den här filen och skulle ha tagit b
         <translation>Återställ romfs på OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+84" />
+        <source>Force enter OpenMV Cam bootloader</source>
+        <translation>Tvinga in OpenMV Cam bootloader</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>MicroPython Tools</source>
         <translation>Microython -verktyg</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+6" />
         <location line="+7" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -8150,39 +8161,50 @@ OpenMV IDE -versioner före v4.3.0 har inte den här filen och skulle ha tagit b
         <translation>Kopiera/konvertera pythonfil</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Open Model Zoo</source>
         <translation>Open Model Zoo</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+87" />
         <source>Convert Model for NPU</source>
         <translation>Konvertera modell för NPU</translation>
     </message>
     <message>
+        <location line="+6" />
+        <location line="+9" />
+        <location line="+12" />
         <location line="+7" />
-        <location line="+10" />
-        <location line="+13" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-176" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Konvertera modell</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location line="+420" />
         <source>Show Code Profiler</source>
         <translation>Visa kodprofilerare</translation>
     </message>
     <message>
         <location line="+101" />
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Om %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Av: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FABRIKSVERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Endast avsedd för licensierade tillverkare.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE (GNU GENERAL PUBLIC LICENSE (GNU GENERAL PUBLIC LICENSE)p&gt;&lt;p&gt;Copy/Copyright %L3&lt;/p&gt;&lt;p&gt;Detta program distribueras i hopp om att det ska vara användbart, men UTAN NÅGON GARANTI; utan ens den underförstådda garantin för SÄLJBARHET eller LÄMPLIGHET FÖR ETT SÄRSKILT SYFTE. Se &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; för mer information.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Frågor eller kommentarer?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kontakta oss på &lt;a href="mailto:openav.iom&gt;&lt;/p&gt;&lt;b&gt;iom.</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+196" />
+        <location line="+26" />
+        <source>JPG Mode</source>
+        <translation>JPG-läge</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>RAW Mode</source>
+        <translation>RAW-läge</translation>
+    </message>
+    <message>
+        <location line="+113" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>Res (w:%1, h:%2) – ROI (x:%3, y:%4, w:%5, h:%6) – Pixlar (%7) – Fokus (%8)</translation>
@@ -8220,7 +8242,7 @@ OpenMV IDE -versioner före v4.3.0 har inte den här filen och skulle ha tagit b
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2737" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
         <source>Board:</source>
         <translation>Styrelse:</translation>
     </message>
@@ -8264,9 +8286,9 @@ OpenMV IDE -versioner före v4.3.0 har inte den här filen och skulle ha tagit b
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-301" />
-        <location line="+303" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
+        <location line="+324" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
         <source>Drive:</source>
         <translation>Kör:</translation>
     </message>
@@ -8287,8 +8309,8 @@ OpenMV IDE -versioner före v4.3.0 har inte den här filen och skulle ha tagit b
         <translation>Kan skilja sig från kamerans FPS</translation>
     </message>
     <message>
-        <location line="+309" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2952" />
+        <location line="+307" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
         <source>Update Available</source>
         <translation>Uppdatering tillgänglig</translation>
     </message>
@@ -8303,7 +8325,7 @@ OpenMV IDE -versioner före v4.3.0 har inte den här filen och skulle ha tagit b
         <translation>Ladda ner</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
         <translation>WiFi-programmering inaktiverad!</translation>
     </message>
@@ -8341,11 +8363,11 @@ OpenMV IDE -versioner före v4.3.0 har inte den här filen och skulle ha tagit b
         <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
-Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
 
 Blinking Green:
 
-Your OpenMV Cam's onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
 
 Blinking Blue:
 
@@ -8353,11 +8375,11 @@ Your OpenMV Cam is running the default main.py script onboard.
 
 If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
 
-If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+If the LED is blinking blue but OpenMV IDE can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
 
 Blinking White:
 
-Your OpenMV Cam's firmware is panicking because of a hardware failure. Please check that your OpenMV Cam's camera module is installed securely.
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
         <translation>Tack för att du använder OpenMV Cam och OpenMV IDE!
@@ -8384,27 +8406,27 @@ Din OpenMV Cams firmware får panik på grund av ett maskinvarufel. Kontrollera 
     </message>
     <message>
         <location line="+93" />
-        <location line="+1176" />
+        <location line="+1212" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Seriell port - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1144" />
+        <location line="-1180" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+791" />
-        <location line="+145" />
+        <location line="+827" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
+        <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>Ansluter... (30 sekunders timeout)</translation>
     </message>
     <message>
-        <location line="-1783" />
+        <location line="-1820" />
         <source>
 
 Try doing:
@@ -8457,12 +8479,12 @@ sudo adduser %L1 uppringning
     </message>
     <message>
         <location line="+17" />
-        <location line="+1233" />
+        <location line="+1270" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP-serveranslutning - %1</translation>
     </message>
     <message>
-        <location line="-1159" />
+        <location line="-1196" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Ogiltigt portargument (%1) för -open_udp_server_terminal</translation>
     </message>
@@ -8493,12 +8515,12 @@ sudo adduser %L1 uppringning
     </message>
     <message>
         <location line="+17" />
-        <location line="+1279" />
+        <location line="+1317" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP-serveranslutning - %1</translation>
     </message>
     <message>
-        <location line="-1205" />
+        <location line="-1243" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Ogiltigt portargument (%1) för -open_tcp_server_terminal</translation>
     </message>
@@ -8508,15 +8530,17 @@ sudo adduser %L1 uppringning
         <translation>Saknade argument för -open_tcp_server_terminal</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+58" />
         <location line="+18" />
+        <location line="+6" />
+        <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
         <location line="+9" />
         <location line="+45" />
-        <location line="+79" />
-        <location line="+8" />
+        <location line="+82" />
+        <location line="+27" />
         <location line="+6" />
         <location line="+6" />
         <location line="+6" />
@@ -8525,15 +8549,15 @@ sudo adduser %L1 uppringning
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2389" />
-        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location line="+10" />
         <location line="+8" />
-        <location line="+19" />
+        <location line="+22" />
         <source>Register OpenMV Cam</source>
         <translation>Registrera OpenMV Cam</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="-278" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8553,13 +8577,24 @@ Kör Exempel-&gt;HelloWorld-&gt;helloworld.py för att testa synkvaliteten och f
     </message>
     <message>
         <location line="+7" />
-        <location line="+17" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65" />
+        <location line="+29" />
+        <location line="+172" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-69" />
         <source>Registered</source>
         <translation>Registrerad</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-190" />
+        <source>Board type not available for this form key!</source>
+        <translation>Styrelsetyp inte tillgänglig för denna formulärnyckel!</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Registration limit reached for this board type!</source>
+        <translation>Registreringsgränsen nådd för denna typ av bräda!</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8575,27 +8610,27 @@ Kör Exempel-&gt;HelloWorld-&gt;helloworld.py för att testa synkvaliteten och f
     </message>
     <message>
         <location line="+17" />
-        <location line="+182" />
+        <location line="+204" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>Databas fel!</translation>
     </message>
     <message>
-        <location line="-165" />
-        <location line="+178" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+17" />
+        <location line="-187" />
+        <location line="+200" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+18" />
         <source>GET Network error!</source>
         <translation>GET nätverksfel!</translation>
     </message>
     <message>
-        <location line="-169" />
-        <location line="+177" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+19" />
+        <location line="-191" />
+        <location line="+199" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+22" />
         <source>GET network error!</source>
         <translation>GET nätverksfel!</translation>
     </message>
     <message>
-        <location line="-170" />
+        <location line="-192" />
         <location line="+10" />
         <location line="+10" />
         <source>Unregistered OpenMV Cam Detected</source>
@@ -8603,7 +8638,7 @@ Kör Exempel-&gt;HelloWorld-&gt;helloworld.py för att testa synkvaliteten och f
     </message>
     <message>
         <location line="-19" />
-        <source>Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
         <translation>Din OpenMV Cam är inte registrerad. Du måste registrera din OpenMV Cam med OpenMV för obegränsad användning med OpenMV IDE utan några avbrott.
@@ -8630,8 +8665,8 @@ Vill du registrera din OpenMV Cam nu?</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href="https://openmv.io/products/openmv-cam-board-key"&gt;here&lt;/a&gt;.</source>
-        <translation>Ange en kortnyckel för att registrera din OpenMV Cam.&lt;br/&gt;&lt;br/&gt;Om du inte har en kortnyckel kan du köpa en från OpenMV &lt;a href="https://openmv.io/products/openmv- cam-board-key"&gt;här&lt;/a&gt;.</translation>
+        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Ange en kortnyckel för att registrera din OpenMV Cam.&lt;br/&gt;&lt;br/&gt;Om du inte har en kortnyckel kan du köpa en från OpenMV &lt;a href=&quot;https://openmv.io/products/openmv- cam-board-key&quot;&gt;här&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+47" />
@@ -8639,12 +8674,12 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation>Registrerar OpenMV Cam...</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+33" />
         <source>Thank you for registering your OpenMV Cam!</source>
         <translation>Tack för att du registrerade din OpenMV Cam!</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+27" />
         <source>Invalid Board Key for Board Type!</source>
         <translation>Ogiltig kortnyckel för korttyp!</translation>
     </message>
@@ -8669,10 +8704,10 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation>Ogiltigt formaterad brädnyckel!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+223" />
-        <location line="+482" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+225" />
+        <location line="+503" />
         <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-83" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-84" />
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
@@ -8681,7 +8716,7 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation type="vanished">Konfigurera inställningar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+389" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+395" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>Spara skript</translation>
@@ -8692,7 +8727,7 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation>Vill du ta bort kommentarer och konvertera mellanslag till flikar?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
@@ -8709,8 +8744,8 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation>Bildfiler (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Template</source>
@@ -8723,26 +8758,26 @@ Vill du registrera din OpenMV Cam nu?</translation>
     </message>
     <message>
         <location line="+23" />
-        <location line="+67" />
+        <location line="+65" />
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>Välj en giltig sökväg på OpenMV Cam!</translation>
     </message>
     <message>
-        <location line="-52" />
-        <location line="+67" />
-        <source>"%L1" is longer than a max length of %L2 characters!</source>
-        <translation>"%L1" är längre än en maxlängd på %L2 tecken!</translation>
+        <location line="-50" />
+        <location line="+65" />
+        <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
+        <translation>&quot;%L1&quot; är längre än en maxlängd på %L2 tecken!</translation>
     </message>
     <message>
-        <location line="-40" />
-        <location line="+7" />
+        <location line="-41" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Descriptor</source>
         <translation>Spara beskrivning</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8750,7 +8785,7 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation>Keypoints-filer (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1113" />
+        <location line="-1112" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8768,17 +8803,17 @@ Vill du registrera din OpenMV Cam nu?</translation>
     <message>
         <location line="-19" />
         <location line="+13" />
-        <source>Cannot open the file "%L1"!</source>
-        <translation>Kan inte öppna filen "%L1"!</translation>
+        <source>Cannot open the file &quot;%L1&quot;!</source>
+        <translation>Kan inte öppna filen &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="-13" />
         <location line="+13" />
-        <source>Cannot open the example file "%L1"!</source>
-        <translation>Kan inte öppna exempelfilen "%L1"!</translation>
+        <source>Cannot open the example file &quot;%L1&quot;!</source>
+        <translation>Kan inte öppna exempelfilen &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-467" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-468" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>Välj Drive</translation>
@@ -8789,8 +8824,8 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation>Inga giltiga enheter hittades att associera med din OpenMV Cam!</translation>
     </message>
     <message>
-        <source>"%L1" is the only drive available so it must be your OpenMV Cam's drive.</source>
-        <translation type="vanished">"%L1" är den enda tillgängliga enheten så det måste vara din OpenMV Cams enhet.</translation>
+        <source>&quot;%L1&quot; is the only drive available so it must be your OpenMV Cam&apos;s drive.</source>
+        <translation type="vanished">&quot;%L1&quot; är den enda tillgängliga enheten så det måste vara din OpenMV Cams enhet.</translation>
     </message>
     <message>
         <location line="+27" />
@@ -8798,12 +8833,12 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation>Vänligen koppla en enhet till din OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>Drive: %L1</source>
         <translation>Enhet: %L1</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+42" />
         <source>Debug Protocol Settings</source>
         <translation>Inställningar för felsökningsprotokoll</translation>
     </message>
@@ -8873,30 +8908,30 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation>Kodprofilundersökning (ms)</translation>
     </message>
     <message>
-        <location line="+354" />
+        <location line="+391" />
         <location line="+26" />
         <location line="+7" />
-        <source>Failed to flush "%L1"!</source>
-        <translation>Det gick inte att tömma "%L1"!</translation>
+        <source>Failed to flush &quot;%L1&quot;!</source>
+        <translation>Det gick inte att tömma &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34" />
-        <location line="+13" />
+        <location line="+12" />
         <location line="+31" />
         <location line="+9" />
-        <location line="+87" />
+        <location line="+89" />
         <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -8906,7 +8941,7 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation>Ny terminal</translation>
     </message>
     <message>
-        <location line="-637" />
+        <location line="-641" />
         <source>Connect to serial port</source>
         <translation>Anslut till seriell port</translation>
     </message>
@@ -8927,7 +8962,7 @@ Vill du registrera din OpenMV Cam nu?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2021" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2227" />
         <source>Please select a serial port</source>
         <translation>Välj en seriell port</translation>
     </message>
@@ -8937,7 +8972,7 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation>Vänligen ange en överföringshastighet</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+96" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
         <source>Try doing:
 
@@ -8954,15 +8989,15 @@ Vill du registrera din OpenMV Cam nu?</translation>
     </message>
     <message>
         <location line="+17" />
-        <location line="+138" />
+        <location line="+139" />
         <location line="+7" />
-        <location line="+236" />
+        <location line="+237" />
         <location line="+7" />
-        <source>Invalid string: "%L1"!</source>
-        <translation>Ogiltig sträng: "%L1"!</translation>
+        <source>Invalid string: &quot;%L1&quot;!</source>
+        <translation>Ogiltig sträng: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-381" />
         <source>No serial ports found!</source>
         <translation>Inga seriella portar hittades!</translation>
     </message>
@@ -8973,45 +9008,45 @@ Vill du registrera din OpenMV Cam nu?</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+243" />
+        <location line="+244" />
         <source> Connect to a Server </source>
         <translation> Anslut till en server </translation>
     </message>
     <message>
-        <location line="-242" />
-        <location line="+243" />
+        <location line="-243" />
+        <location line="+244" />
         <source> Start a Server </source>
         <translation> Starta en server </translation>
     </message>
     <message>
         <location line="-234" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>Ange en IP-adress (eller domännamn) och port (t.ex. xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-222" />
         <source>UDP Client Connection - %1</source>
         <translation>UDP-klientanslutning - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>Vänligen ange ett portnummer (ange 0 för valfri slumpmässig ledig port)</translation>
     </message>
     <message>
-        <location line="-137" />
+        <location line="-138" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>Ansluta till en TCP-server som en klient eller starta en TCP-server?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+36" />
         <source>TCP Client Connection - %1</source>
         <translation>TCP-klientanslutning - %1</translation>
     </message>
     <message>
-        <location line="+244" />
+        <location line="+243" />
         <source>Error: Option Index!</source>
         <translation>Fel: Alternativindex!</translation>
     </message>
@@ -9036,7 +9071,7 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation> Bildfil </translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>Den valda tröskeltuppeln kommer att uppdateras vid stängning.</translation>
@@ -9052,8 +9087,8 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation>Bildfil</translation>
     </message>
     <message>
-        <location line="+71" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+70" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+704" />
         <source>What would you like to do?</source>
         <translation>Vad skulle du vilja göra?</translation>
     </message>
@@ -9068,7 +9103,7 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation> Slå samman filer </translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9118,12 +9153,12 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation>Det gick inte att ladda den första nyckelpunktsfilen av okänd anledning!</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>What tag images from the %L1 tag family do you want to generate?</source>
         <translation>Vilka taggarbilder från %L1-taggfamiljen vill du generera?</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Min (%1)</source>
         <translation>Min (%1)</translation>
     </message>
@@ -9140,9 +9175,9 @@ Vill du registrera din OpenMV Cam nu?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>AprilTag Generator - Where do you want to save %n tag image(s) to?</source>
-        <translation>
-            <numerusform>AprilTag Generator - Var vill du spara %n taggbild(er) till?</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -9166,7 +9201,7 @@ Vill du registrera din OpenMV Cam nu?</translation>
         <translation>Generation klar!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1510" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>Nya OpenMV IDE-resurser är tillgängliga (t.ex. exempel, firmware, dokumentation, etc.).</translation>
     </message>
@@ -9177,42 +9212,42 @@ Vill du registrera din OpenMV Cam nu?</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+288" />
-        <location line="+143" />
+        <location line="+289" />
+        <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
         <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
         <location line="+46" />
-        <location line="+75" />
+        <location line="+73" />
         <location line="+46" />
-        <location line="+74" />
+        <location line="+72" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+400" />
         <location line="+50" />
-        <location line="+873" />
+        <location line="+871" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>Laddar ner...</translation>
     </message>
     <message>
-        <location line="-417" />
+        <location line="-440" />
         <source>Installing...</source>
         <translation>Installerar...</translation>
     </message>
     <message>
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
-        <source>Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+        <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>Stäng alla program som tittar på/redigerar OpenMV IDEs applikationsdata och starta sedan om OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
         <translation>Installationen lyckades! Vänligen starta om OpenMV IDE.</translation>
     </message>
@@ -9225,69 +9260,119 @@ Vill du registrera din OpenMV Cam nu?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+254" />
+        <location line="+273" />
         <location line="+88" />
-        <source>Cannot open the resources file "%L1"!</source>
-        <translation>Kan inte öppna resursfilen "%L1"!</translation>
+        <source>Cannot open the resources file &quot;%L1&quot;!</source>
+        <translation>Kan inte öppna resursfilen &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-314" />
-        <location line="+254" />
+        <location line="-333" />
+        <location line="+273" />
         <location line="+95" />
-        <source>Network request failed "%L1"!</source>
-        <translation>Nätverksbegäran misslyckades "%L1"!</translation>
+        <source>Network request failed &quot;%L1&quot;!</source>
+        <translation>Nätverksbegäran misslyckades &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-315" />
+        <location line="-335" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation>Firmware binär ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+119" />
-        <location line="+588" />
-        <location line="+217" />
-        <location line="+2205" />
+        <location line="+12" />
+        <location line="+117" />
+        <location line="+720" />
+        <location line="+227" />
+        <location line="+2414" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Radera internt fettfilsystem</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+119" />
-        <location line="+589" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+117" />
+        <location line="+722" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
-        <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Om du aktiverar det här alternativet kommer alla filer på din OpenMV Cams interna fettfilsystem att raderas. Detta raderar inte filer på något avtagbart SD -kort (om de infogas).</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+708" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+839" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Återställ ROMFS -filsystem</translation>
     </message>
     <message>
-        <location line="-3203" />
-        <location line="+708" />
-        <location line="+215" />
-        <location line="+2205" />
+        <location line="-3552" />
+        <location line="+840" />
+        <location line="+225" />
+        <location line="+2412" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Om du aktiverar det här alternativet återställs ROM -filsystemet på din OpenMV Cam till standard.</translation>
     </message>
     <message>
-        <location line="-3160" />
+        <location line="-3510" />
         <location line="+45" />
         <source>Bootloader</source>
         <translation>Bootloader</translation>
     </message>
     <message>
-        <location line="+2991" />
+        <location line="+28" />
+        <source>Force bootloader</source>
+        <translation>Force bootloader</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Force enter the OpenMV Cam bootloader. May result in the OpenMV Cam bootloader not automatically exiting on older boards.</source>
+        <translation>Tvinga in OpenMV Cam bootloader. Kan resultera i att OpenMV Cam bootloader inte automatiskt avslutas på äldre kort.</translation>
+    </message>
+    <message>
+        <location line="+693" />
+        <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
+        <translation>Installera den senaste versionen av firmware (v%L1.%L2.%L3)</translation>
+    </message>
+    <message>
+        <location line="+1063" />
+        <location line="+192" />
+        <source>Failed to copy firmware files to temporary directory!</source>
+        <translation>Det gick inte att kopiera firmwarefiler till temporär katalog!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Original firmware folder does not exist!</source>
+        <translation>Den ursprungliga firmwaremappen finns inte!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Failed to create temporary directory!</source>
+        <translation>Det gick inte att skapa en tillfällig katalog!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <source>Only loading bootloader.bin files is supported with the ST Cube Programmer!</source>
+        <translation>Endast laddning av bootloader.bin-filer stöds med ST Cube Programmer!</translation>
+    </message>
+    <message>
+        <location line="+151" />
+        <source>Bootloader update complete!
+
+</source>
+        <translation>Uppdatering av bootloader klar!</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Connect your OpenMV Cam now.</source>
+        <translation>Anslut din OpenMV Cam nu.</translation>
+    </message>
+    <message>
+        <location line="+1377" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9296,8 +9381,8 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 I synnerhet, kolla in Bildbehandling -&gt; Färgspårning och maskininlärning -&gt; TensorFlow-exemplen.</translation>
     </message>
     <message>
-        <location line="-3104" />
-        <location line="+4" />
+        <location line="-3455" />
+        <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
         <source>Firmware Path</source>
@@ -9312,26 +9397,26 @@ I synnerhet, kolla in Bildbehandling -&gt; Färgspårning och maskininlärning -
         <translation type="vanished">Radera det interna filsystemet</translation>
     </message>
     <message>
-        <source>If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">Om du aktiverar det här alternativet kommer alla filer på din OpenMV Cams interna flashenhet att raderas. Detta raderar inte filer på något flyttbart SD-kort (om det är isatt).</translation>
     </message>
     <message>
-        <source>Loading firmware via DFU always erases your OpenMV Cam's internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
+        <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">När du laddar fast programvara via DFU raderas alltid din OpenMV Cams interna flashenhet. Detta raderar inte filer på något flyttbart SD-kort (om det är isatt).</translation>
     </message>
     <message>
         <location line="+21" />
-        <location line="+130" />
+        <location line="+148" />
         <source>Run</source>
         <translation>Springa</translation>
     </message>
     <message>
-        <location line="-86" />
-        <source>"%L1" is not a file!</source>
-        <translation>"%L1" är inte en fil!</translation>
+        <location line="-105" />
+        <source>&quot;%L1&quot; is not a file!</source>
+        <translation>&quot;%L1&quot; är inte en fil!</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+67" />
         <source>Update ROMFS file system</source>
         <translation>Uppdatera ROMFS -filsystem</translation>
     </message>
@@ -9341,7 +9426,7 @@ I synnerhet, kolla in Bildbehandling -&gt; Färgspårning och maskininlärning -
         <translation>Om du aktiverar det här alternativet kommer ROM -filsystemet på din OpenMV CAM att uppdateras till den senaste utvecklingen.</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+125" />
         <source>Extracting...</source>
         <translation>Extraherar...</translation>
     </message>
@@ -9361,17 +9446,16 @@ I synnerhet, kolla in Bildbehandling -&gt; Färgspårning och maskininlärning -
         <translation>Okänd bräde</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+344" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Ett kort i DFU-läge upptäcktes. Vad skulle du vilja göra?</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Install the lastest release firmware (v%L1.%L2.%L3)</source>
-        <translation>Installera den senaste versionen av firmware (v%L1.%L2.%L3)</translation>
+        <translation type="vanished">Installera den senaste versionen av firmware (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Load a specific firmware</source>
         <translation>Ladda en specifik firmware</translation>
     </message>
@@ -9380,36 +9464,35 @@ I synnerhet, kolla in Bildbehandling -&gt; Färgspårning och maskininlärning -
         <translation type="vanished">Radera bara det interna filsystemet</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+92" />
         <source>No OpenMV Cams found!</source>
         <translation>Inga OpenMV-kameror hittades!</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+56" />
         <source>Do you have an OpenMV Cam connected and is it bricked?</source>
         <translation>Har du en OpenMV Cam ansluten och är den murad?</translation>
     </message>
     <message>
-        <location line="+849" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
-Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
-        <translation>Endast Loading *.dfu -filer stöds för STM32 Recovery Bootloader!
+Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!</source>
+        <translation type="vanished">Endast Loading *.dfu -filer stöds för STM32 Recovery Bootloader!
 
  Välj en bootloader.dfu -fil och försök igen. Observera att ladda firmware.dfu eller openmv.dfu (bootloader + firmware) kanske inte fungerar på STM32H7 -kort på grund av ett fel i chipets ROM -bootloader!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+987" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>Endast lastning *.Bin och *.img -filer stöds för den interna startlastaren!</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Only loading *.bin and *.img files are supported for the IMX bootloader!</source>
         <translation>Endast laddar *.Bin och *.img -filer stöds för IMX -bootloader!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+107" />
         <source>Only loading *.bin, *.dfu, and *.img files are supported for the Arduino bootloader!</source>
         <translation>Endast lastning *.Bin, *.dfu och *.img -filer stöds för Arduino bootloader!</translation>
     </message>
@@ -9425,7 +9508,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
     </message>
     <message>
         <location line="+24" />
-        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
+        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
         <translation>Observera att ladda firmware.dfu eller openmv.dfu (bootloader + firmware) kanske inte fungerar på STM32H7 -kort på grund av ett fel i chipets ROM -bootloader!
@@ -9435,9 +9518,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-976" />
-        <location line="+657" />
-        <location line="+1750" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1398" />
+        <location line="+252" />
+        <location line="+681" />
+        <location line="+1936" />
         <source>Please select the board type</source>
         <translation>Välj typ av bräda</translation>
     </message>
@@ -9446,30 +9530,30 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Radera det interna filsystemet?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2295" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2500" />
         <source>No released firmware available for the attached board!</source>
         <translation>Ingen frigiven firmware tillgänglig för det bifogade kortet!</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+61" />
         <source>Please select a DFU Device</source>
         <translation>Välj en DFU-enhet</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-83" />
         <location line="+170" />
         <location line="+44" />
-        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Uppdatera starthanteraren till den senaste versionen och installera SoftDevice för att flasha OpenMV-firmware. Mer information finns på &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Uppdatera starthanteraren till den senaste versionen och installera SoftDevice för att flasha OpenMV-firmware. Mer information finns på &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-1065" />
-        <location line="+3012" />
+        <location line="-1191" />
+        <location line="+3343" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>VARNING: Uppgradering till den nya firmwareversionen kräver att FAT -filsystemet raderas.</translation>
     </message>
     <message>
-        <location line="-2527" />
+        <location line="-2848" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
@@ -9478,7 +9562,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 %1</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+173" />
         <source>Just erase the internal FAT file system</source>
         <translation>Radera bara det interna fettfilsystemet</translation>
     </message>
@@ -9493,17 +9577,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Återställ ROM -filsystemet</translation>
     </message>
     <message>
-        <location line="+219" />
-        <location line="+2206" />
+        <location line="+229" />
+        <location line="+2415" />
         <source>Upgrade options:</source>
         <translation>Uppgraderingsalternativ:</translation>
     </message>
     <message>
-        <location line="-2122" />
+        <location line="-2327" />
         <location line="+169" />
         <location line="+44" />
-        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Vänligen korta REC till GND och återställ din bräda. Mer information finns på &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Vänligen korta REC till GND och återställ din bräda. Mer information finns på &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+25" />
@@ -9515,7 +9599,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (Klicka på avbryt om detta tar mer än 5 sekunder).</translation>
     </message>
     <message>
-        <location line="+132" />
+        <location line="+143" />
         <source>Timeout error while getting firmware version!</source>
         <translation>Timeout-fel när den fasta programvaran hämtades!</translation>
     </message>
@@ -9531,8 +9615,8 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+191" />
-        <location line="+570" />
+        <location line="+199" />
+        <location line="+733" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Timeout-fel när kortets arkitektur hämtades!</translation>
     </message>
@@ -9541,7 +9625,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Styrelsens arkitektur stöds inte!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-633" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Koppla bort din OpenMV Cam och anslut den sedan igen...</translation>
@@ -9574,12 +9658,12 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+38" />
-        <source>Unable to connect to your OpenMV Cam's normal bootloader!</source>
+        <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>Det går inte att ansluta till din OpenMV Cams normala bootloader!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+129" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+131" />
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
         <translation>OpenMV IDE kan fortfarande försöka reparera din OpenMV Cam med din OpenMV Cams DFU Bootloader.
@@ -9588,9 +9672,9 @@ Fortsätta?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-288" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
         <location line="+46" />
-        <location line="+195" />
+        <location line="+191" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>Raderar...</translation>
@@ -9609,7 +9693,7 @@ Fortsätta?</translation>
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-837" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-835" />
         <location line="+41" />
         <location line="+51" />
         <location line="+44" />
@@ -9626,7 +9710,7 @@ Fortsätta?</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+221" />
+        <location line="+219" />
         <location line="+50" />
         <location line="+51" />
         <location line="+42" />
@@ -9690,11 +9774,11 @@ Fortsätta?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
         <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
-        <source>Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.</source>
+        <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>Klicka på OK när din OpenMV Cams RGB LED börjar blinka blått - vilket indikerar att självtestet är klart.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
@@ -9712,7 +9796,7 @@ Fortsätta?</translation>
 
 If you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py.
 
-In this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).</source>
+In this case click OK when you see your OpenMV Cam&apos;s internal flash drive mount (a window may or may not pop open).</source>
         <translation>
 
 Om du skrev över main.py på din OpenMV Cam och inte raderade disken så kör din OpenMV Cam bara den main.py.
@@ -9735,8 +9819,8 @@ I det här fallet klickar du på OK när du ser din OpenMV Cams interna flashenh
         <translation>Inga IMX-inställningar hittades!</translation>
     </message>
     <message>
-        <source>Failed to eject "%L1"!</source>
-        <translation type="vanished">Det gick inte att mata ut "%L1"!</translation>
+        <source>Failed to eject &quot;%L1&quot;!</source>
+        <translation type="vanished">Det gick inte att mata ut &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="+14" />
@@ -9749,7 +9833,7 @@ Tryck på avbryt för att hoppa till SBL-omprogrammering.</translation>
     </message>
     <message>
         <location line="+42" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
         <translation>OpenMV IDE kan fortfarande försöka reparera din OpenMV Cam med din OpenMV Cams SBL Bootloader.
@@ -9760,7 +9844,7 @@ Fortsätta?</translation>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
         <translation>Koppla bort din OpenMV Cam från din dator, lägg till en bygelkabel mellan SBL- och 3,3V-stiften och anslut sedan din OpenMV Cam till din dator igen.
 
 Klicka på OK-knappen efter att din OpenMV Cams SBL Bootloader har räknats upp.</translation>
@@ -9812,19 +9896,19 @@ Klicka på OK-knappen efter att din OpenMV Cams SBL Bootloader har räknats upp.
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-345" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-347" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Inga DFU-inställningar för vald korttyp!</translation>
     </message>
     <message>
         <location line="+55" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+104" />
         <source>No DFU settings for the selected device!</source>
         <translation>Inga DFU-inställningar för den valda enheten!</translation>
     </message>
     <message>
         <location line="+32" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+47" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
         <source>Erasing Disk</source>
         <translation>Radera disk</translation>
@@ -9853,8 +9937,8 @@ Klicka på OK-knappen efter att din OpenMV Cams SBL Bootloader har räknats upp.
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-933" />
-        <location line="+934" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-931" />
+        <location line="+932" />
         <source>Flashing Firmware</source>
         <translation>Blinkande firmware</translation>
     </message>
@@ -9900,17 +9984,17 @@ Klicka på OK-knappen efter att din OpenMV Cams SBL Bootloader har räknats upp.
     </message>
     <message>
         <location line="+14" />
-        <source>Your %1 doesn't have an internal FAT file system.</source>
+        <source>Your %1 doesn&apos;t have an internal FAT file system.</source>
         <translation>Din %1 har inte ett internt fettfilsystem.</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
-        <source>Your %1 doesn't have an ROM file system.</source>
+        <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>Din %1 har inte ett ROM -filsystem.</translation>
     </message>
     <message>
-        <source>Your Nano 33 BLE doesn't have an onboard data flash disk.</source>
+        <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
         <translation type="vanished">Din Nano 33 BLE har ingen inbyggd dataflashdisk.</translation>
     </message>
     <message>
@@ -9971,7 +10055,7 @@ Fortsätta?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>DFU update erases your OpenMV Cam's internal flash file system.
+        <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
         <translation>DFU-uppdateringen raderar din OpenMV Cams interna flash-filsystem.
@@ -9982,7 +10066,7 @@ Säkerhetskopiera dina data innan du fortsätter!</translation>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.</source>
         <translation>Koppla bort din OpenMV Cam från din dator, lägg till en bygelkabel mellan BOOT- och RST-stiften och anslut sedan din OpenMV Cam till din dator igen.
 
 Klicka på OK-knappen efter att din OpenMV Cams DFU Bootloader har räknats upp.</translation>
@@ -10035,13 +10119,13 @@ Klicka på OK-knappen efter att din OpenMV Cams DFU Bootloader har räknats upp.
         <translation>DFU bootloader återställning misslyckades!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-271" />
         <source>None</source>
         <translation>Ingen</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+16" />
+        <location line="+30" />
         <location line="+56" />
         <source>Unknown</source>
         <translation>Okänd</translation>
@@ -10057,12 +10141,12 @@ Klicka på OK-knappen efter att din OpenMV Cams DFU Bootloader har räknats upp.
         <translation>Oregistrerad</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+94" />
         <source>Timeout error while learning MTU!</source>
         <translation>Timeout-fel vid inlärning av MTU!</translation>
     </message>
     <message>
-        <location line="+167" />
+        <location line="+170" />
         <source>Board: %L1</source>
         <translation>Kort: %L1</translation>
     </message>
@@ -10087,13 +10171,13 @@ Klicka på OK-knappen efter att din OpenMV Cams DFU Bootloader har räknats upp.
         <translation>Seriell port: %L1</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+85" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ inaktuell - klicka här för att uppgradera ]</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Your OpenMV Cam's firmware is out of date. Would you like to upgrade?</source>
+        <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>Din OpenMV Cams firmware är inaktuell. Vill du uppgradera?</translation>
     </message>
     <message>
@@ -10102,7 +10186,7 @@ Klicka på OK-knappen efter att din OpenMV Cams DFU Bootloader har räknats upp.
         <translation> - [senaste]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-674" />
         <source>Failed to open or parse ELF: %1</source>
         <translation>Det gick inte att öppna eller analysera ELF: %1</translation>
     </message>
@@ -10158,7 +10242,7 @@ Klicka på OK-knappen efter att din OpenMV Cams DFU Bootloader har räknats upp.
     </message>
     <message>
         <location line="+396" />
-        <location line="+172" />
+        <location line="+177" />
         <source>Code Profiler</source>
         <translation>Kodprofilerare</translation>
     </message>
@@ -10212,7 +10296,7 @@ Klicka på OK-knappen efter att din OpenMV Cams DFU Bootloader har räknats upp.
         <translation type="vanished">Start</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+588" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+592" />
         <source>More Examples</source>
         <translation>Fler exempel</translation>
     </message>
@@ -10225,29 +10309,29 @@ In particular, checkout the Color-Tracking examples.</source>
 Kolla i synnerhet färgspårningsexemplen.</translation>
     </message>
     <message>
-        <location line="+28" />
-        <location line="+69" />
-        <location line="+9" />
+        <location line="+27" />
+        <location line="+70" />
+        <location line="+8" />
         <source>Firmware Update</source>
         <translation>Firmware-uppdatering</translation>
     </message>
     <message>
         <location line="-75" />
-        <source>Update your OpenMV Cam's firmware to the latest version?</source>
+        <source>Update your OpenMV Cam&apos;s firmware to the latest version?</source>
         <translation>Uppdatera din OpenMV Cams firmware till den senaste versionen?</translation>
     </message>
     <message>
-        <location line="+67" />
-        <source>Your OpenMV Cam's firmware is up to date.</source>
+        <location line="+68" />
+        <source>Your OpenMV Cam&apos;s firmware is up to date.</source>
         <translation>Din OpenMV Cams firmware är uppdaterad.</translation>
     </message>
     <message>
-        <location line="+11" />
-        <source>Need to reset your OpenMV Cam's firmware to the release version?</source>
+        <location line="+10" />
+        <source>Need to reset your OpenMV Cam&apos;s firmware to the release version?</source>
         <translation>Behöver du återställa din OpenMV Cams firmware till releaseversionen?</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+86" />
         <source>No board settings for the connected board found!</source>
         <translation>Inga kortinställningar för det anslutna kortet hittades!</translation>
     </message>
@@ -10342,10 +10426,10 @@ Kolla i synnerhet färgspårningsexemplen.</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>Module "%L1" on your OpenMV Cam is different than the copy on your computer.
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
 Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>Modulen "%L1" på din OpenMV Cam är annorlunda än kopian på din dator.
+        <translation>Modulen &quot;%L1&quot; på din OpenMV Cam är annorlunda än kopian på din dator.
 
 Vill du att OpenMV IDE ska uppdatera modulen på din OpenMV Cam?</translation>
     </message>
@@ -10356,15 +10440,15 @@ Vill du att OpenMV IDE ska uppdatera modulen på din OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+91" />
-        <source>Module "%L1" may be required to run your script.
+        <source>Module &quot;%L1&quot; may be required to run your script.
 
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>Modulen "%L1" kan behövas för att köra ditt skript.
+        <translation>Modulen &quot;%L1&quot; kan behövas för att köra ditt skript.
 
 Vill du att OpenMV IDE ska kopiera den till din OpenMV Cam?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-366" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10377,18 +10461,18 @@ Vill du att OpenMV IDE ska kopiera den till din OpenMV Cam?</translation>
         <translation>Textfiler (*.txt);;Alla filer (*)</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+228" />
         <source>Zoom: %1%</source>
         <translation>Zooma: %1%</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4310" />
-        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4365" />
+        <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280" />
-        <location line="+236" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-265" />
+        <location line="+221" />
         <source>Model Zoo</source>
         <translation>Modell Zoo</translation>
     </message>
@@ -10424,7 +10508,7 @@ Vill du att OpenMV IDE ska kopiera den till din OpenMV Cam?</translation>
         <translation>Hitta</translation>
     </message>
     <message>
-        <location line="+226" />
+        <location line="+239" />
         <source>Serial Terminal</source>
         <translation>Seriell terminal</translation>
     </message>
@@ -10445,8 +10529,8 @@ Vill du att OpenMV IDE ska kopiera den till din OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Run "/main.py"</source>
-        <translation>Kör "/main.py"</translation>
+        <source>Run &quot;/main.py&quot;</source>
+        <translation>Kör &quot;/main.py&quot;</translation>
     </message>
     <message>
         <location line="+0" />
@@ -10469,31 +10553,31 @@ Vill du att OpenMV IDE ska kopiera den till din OpenMV Cam?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-360" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-150" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Skaffa enheter</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-293" />
         <location line="+79" />
         <source>Query failed!</source>
         <translation>Frågan misslyckades!</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+44" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+119" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+120" />
+        <location line="+118" />
         <source>DFU Util</source>
         <translation>DFU Util</translation>
     </message>
@@ -10518,7 +10602,7 @@ Vill du att OpenMV IDE ska kopiera den till din OpenMV Cam?</translation>
         <translation>Det kan ta ett tag, vattenpaus?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-87" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
         <source>Dataset Split</source>
         <translation>Uppdelning av datauppsättning</translation>
     </message>
@@ -10530,7 +10614,7 @@ OpenMV recommends leaving this at the default 80/20% split.</source>
 OpenMV rekommenderar att du lämnar detta vid standardfördelningen 80/20 %.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <location line="+16" />
         <source>Training Data
 Percentage
@@ -10552,7 +10636,7 @@ Procentsats
     <message>
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+58" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
         <location line="+50" />
         <source>Uploading...</source>
@@ -10593,12 +10677,12 @@ Procentsats
         <location line="+10" />
         <source>Nothing to upload
 
-Only jpg/png/bmp images with a numeric name (e.g. "00001.jpg")
-in class folders ("*.class") can be uploaded.</source>
+Only jpg/png/bmp images with a numeric name (e.g. &quot;00001.jpg&quot;)
+in class folders (&quot;*.class&quot;) can be uploaded.</source>
         <translation>Inget att ladda upp
 
-Endast jpg/png/bmp-bilder med ett numeriskt namn (t.ex. "00001.jpg")
-i klassmappar ("*.class") kan laddas upp.</translation>
+Endast jpg/png/bmp-bilder med ett numeriskt namn (t.ex. &quot;00001.jpg&quot;)
+i klassmappar (&quot;*.class&quot;) kan laddas upp.</translation>
     </message>
     <message>
         <location line="+43" />
@@ -10606,31 +10690,31 @@ i klassmappar ("*.class") kan laddas upp.</translation>
         <location line="+21" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+164" />
+        <location line="+155" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+23" />
         <location line="+9" />
         <location line="+9" />
         <source>Edge Impulse Projects</source>
         <translation>Edge Impulse-projekt</translation>
     </message>
     <message>
-        <location line="-276" />
+        <location line="-266" />
         <location line="+35" />
-        <location line="+71" />
-        <location line="+129" />
-        <location line="+42" />
+        <location line="+67" />
+        <location line="+124" />
+        <location line="+41" />
         <source>No request data received</source>
         <translation>Inga förfrågningsuppgifter mottogs</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-246" />
         <source>An unkown error occured</source>
         <translation>Ett okänt fel uppstod</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+62" />
         <location line="+11" />
         <location line="+7" />
         <location line="+10" />
@@ -10647,7 +10731,7 @@ Open a data set to upload it.</source>
 Öppna en datamängd för att ladda upp den.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+33" />
         <source>Email Address</source>
         <translation>E-postadress</translation>
     </message>
@@ -10662,17 +10746,17 @@ Open a data set to upload it.</source>
         <translation>Lösenord</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+66" />
         <source>Please select a project</source>
         <translation>Välj ett projekt</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+60" />
         <source>No projects found</source>
         <translation>Inga projekt hittades</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+45" />
         <source>Upload Project</source>
         <translation>Ladda upp projekt</translation>
     </message>
@@ -10682,7 +10766,7 @@ Open a data set to upload it.</source>
         <translation>Ange en Edge Impluse Project API-nyckel</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1017" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1015" />
         <location line="+144" />
         <location line="+36" />
         <location line="+41" />
@@ -10701,7 +10785,7 @@ Open a data set to upload it.</source>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+41" />
+        <location line="+39" />
         <location line="+135" />
         <location line="+45" />
         <location line="+50" />
@@ -10737,8 +10821,8 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1337" />
-        <location line="+923" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1335" />
+        <location line="+921" />
         <source>This feature is not supported on this machine!</source>
         <translation>Denna funktion stöds inte på den här maskinen!</translation>
     </message>
@@ -10770,15 +10854,15 @@ The camera must be power cycled after a system package update.</source>
 Kameran måste vara kraftcyklerad efter en systempaketuppdatering.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-472" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-470" />
         <location line="+51" />
         <location line="+91" />
-        <location line="+346" />
+        <location line="+344" />
         <location line="+51" />
         <location line="+50" />
         <location line="+94" />
         <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Detta kommando tar ett tag att köra. Var tålmodig.</translation>
@@ -10799,7 +10883,7 @@ Kameran måste vara kraftcyklerad efter en systempaketuppdatering.</translation>
         <translation>Gjort</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
@@ -10931,12 +11015,12 @@ Kameran måste vara kraftcyklerad efter en systempaketuppdatering.</translation>
     </message>
     <message>
         <location line="-77" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Transcoding File...</source>
         <translation>Omkodar fil...</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-594" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10997,29 +11081,29 @@ Kameran måste vara kraftcyklerad efter en systempaketuppdatering.</translation>
         <translation>Hämta inmatningsformat</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+37" />
         <location line="+111" />
-        <location line="+100" />
+        <location line="+98" />
         <location line="+15" />
-        <location line="+372" />
+        <location line="+371" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
         <location line="+16" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+14" />
+        <location line="+19" />
         <location line="+36" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+21" />
+        <location line="+23" />
         <location line="+7" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+20" />
+        <location line="+22" />
         <location line="+7" />
         <source>Convert Video</source>
         <translation>Konvertera video</translation>
@@ -11039,7 +11123,7 @@ Kameran måste vara kraftcyklerad efter en systempaketuppdatering.</translation>
         <translation>FFMPEG stöds inte på den här plattformen.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+98" />
         <source>Unable to write to output video file!</source>
         <translation>Det går inte att skriva till utdatafilen!</translation>
     </message>
@@ -11050,79 +11134,79 @@ Kameran måste vara kraftcyklerad efter en systempaketuppdatering.</translation>
     </message>
     <message>
         <location line="+163" />
-        <location line="+411" />
+        <location line="+415" />
         <source>Play Video</source>
         <translation>Spela filmen</translation>
     </message>
     <message>
-        <location line="-410" />
+        <location line="-414" />
         <location line="+163" />
         <source>Failed to launch ffplay!</source>
         <translation>Det gick inte att starta ffplay!</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>Convert Video Source</source>
         <translation>Konvertera videokälla</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+235" />
+        <location line="+240" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</source>
         <translation>Videofiler (*.mp4 *.*);;OpenMV ImageWriter-filer (*.bin);;</translation>
     </message>
     <message>
-        <location line="-230" />
+        <location line="-235" />
         <location line="+11" />
-        <location line="+117" />
+        <location line="+122" />
         <location line="+7" />
         <source>Convert Video Output</source>
         <translation>Konvertera videoutgång</translation>
     </message>
     <message>
-        <location line="-130" />
-        <location line="+125" />
-        <location line="+208" />
+        <location line="-135" />
+        <location line="+130" />
+        <location line="+204" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
         <translation>Videofiler (*.mp4 *.*);;OpenMV ImageReader-filer (*.bin);;</translation>
     </message>
     <message>
-        <location line="-327" />
+        <location line="-328" />
         <source>Please select output format</source>
         <translation>Välj utdataformat</translation>
     </message>
     <message>
         <location line="+15" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Rescale the video?</source>
         <translation>Skala om videon?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter a new width (the aspect ratio will be kept the same)</source>
         <translation>Ange en ny bredd (bildförhållandet kommer att behållas)</translation>
     </message>
     <message>
-        <location line="-320" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-321" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Skip frames?</source>
         <translation>Hoppa över ramar?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter how many frames to skip at a time</source>
         <translation>Ange hur många bildrutor som ska hoppa över åt gången</translation>
     </message>
     <message>
-        <location line="-278" />
-        <location line="+91" />
-        <location line="+207" />
+        <location line="-274" />
+        <location line="+93" />
+        <location line="+203" />
         <source>Video conversion finished!</source>
         <translation>Videokonvertering avslutad!</translation>
     </message>
@@ -11152,13 +11236,13 @@ Kameran måste vara kraftcyklerad efter en systempaketuppdatering.</translation>
         <translation>Spela</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+47" />
         <location line="+7" />
         <source>Save Video</source>
         <translation>Spara video</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
         <source>Busy</source>
         <translation>Upptagen</translation>
     </message>
@@ -11174,13 +11258,11 @@ Kameran måste vara kraftcyklerad efter en systempaketuppdatering.</translation>
         <translation>Gömma detaljer</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-335" />
-        <location line="+102" />
         <source>No matching interface for the selected file name!</source>
-        <translation>Inget matchande gränssnitt för det valda filnamnet!</translation>
+        <translation type="vanished">Inget matchande gränssnitt för det valda filnamnet!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-745" />
         <source>Please select the target</source>
         <translation>Välj målet</translation>
     </message>
@@ -11203,70 +11285,70 @@ OpenMV IDE will just copy the model as is.</source>
 OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
     </message>
     <message>
-        <location line="+145" />
-        <location line="+36" />
+        <location line="+147" />
+        <location line="+35" />
         <location line="+6" />
         <location line="+8" />
-        <location line="+40" />
-        <location line="+17" />
-        <location line="+20" />
-        <location line="+6" />
-        <location line="+8" />
+        <location line="+42" />
+        <location line="+16" />
         <location line="+21" />
-        <location line="+19" />
-        <location line="+20" />
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
         <location line="+93" />
-        <location line="+9" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+13" />
-        <location line="+14" />
-        <location line="+45" />
-        <location line="+17" />
-        <location line="+28" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+40" />
+        <location line="+15" />
         <location line="+27" />
+        <location line="+24" />
         <location line="+53" />
-        <location line="+67" />
+        <location line="+63" />
         <location line="+6" />
         <location line="+21" />
         <source>Edit ROMFS</source>
         <translation>Redigera romfs</translation>
     </message>
     <message>
-        <location line="-620" />
-        <location line="+91" />
+        <location line="-606" />
+        <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>En mapp med samma namn finns redan!</translation>
     </message>
     <message>
-        <location line="-85" />
-        <location line="+91" />
+        <location line="-87" />
+        <location line="+93" />
         <source>File already exists! Overwrite?</source>
         <translation>Fil finns redan! Skriva över?</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+91" />
+        <location line="-85" />
+        <location line="+93" />
         <source>Failed to remove file!</source>
         <translation>Det gick inte att ta bort filen!</translation>
     </message>
     <message>
         <location line="-51" />
-        <location line="+72" />
+        <location line="+74" />
         <source>Failed to copy file!</source>
         <translation>Det gick inte att kopiera fil!</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+17" />
         <source>Folder Name</source>
         <translation>Mappnamn</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Failed to create folder!</source>
         <translation>Det gick inte att skapa mapp!</translation>
     </message>
@@ -11287,58 +11369,58 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Kan inte spara en mapp!</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+14" />
+        <location line="+6" />
+        <location line="+15" />
         <location line="+19" />
-        <location line="+240" />
+        <location line="+225" />
         <source>Extract File</source>
         <translation>Extrahera fil</translation>
     </message>
     <message>
-        <location line="-246" />
+        <location line="-231" />
         <source>View/Edit</source>
         <translation>Visa/redigera</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+237" />
+        <location line="+222" />
         <source>Add File</source>
         <translation>Lägg till fil</translation>
     </message>
     <message>
-        <location line="-236" />
-        <location line="+238" />
+        <location line="-221" />
+        <location line="+223" />
         <source>New Folder</source>
         <translation>Nymapp</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+14" />
-        <location line="+322" />
-        <location line="+12" />
+        <location line="-135" />
+        <location line="+13" />
+        <location line="+303" />
+        <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS stöds inte på detta styrelse!</translation>
     </message>
     <message>
-        <location line="-290" />
-        <location line="+45" />
+        <location line="-275" />
+        <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Det gick inte att packa upp romfs!</translation>
     </message>
     <message>
         <location line="-19" />
-        <location line="+28" />
+        <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>OpenMV Romfs</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+172" />
+        <location line="-25" />
+        <location line="+165" />
         <source>ROMFS Images (*.img)</source>
         <translation>ROMFS -bilder (*.img)</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="-101" />
         <source>Commit</source>
         <translation>Begå</translation>
     </message>
@@ -11353,17 +11435,17 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Spara romfs för att arkivera</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location line="+8" />
+        <location line="+105" />
+        <location line="+7" />
+        <location line="+11" />
         <location line="+12" />
-        <location line="+13" />
-        <location line="+12" />
+        <location line="+11" />
         <source>Reset ROMFS</source>
         <translation>Återställa romfs</translation>
     </message>
     <message>
-        <location line="-44" />
-        <source>Are you sure you want to reset your OpenMV Cam's ROM file system?</source>
+        <location line="-40" />
+        <source>Are you sure you want to reset your OpenMV Cam&apos;s ROM file system?</source>
         <translation>Är du säker på att du vill återställa ditt OpenMV Cams ROM -filsystem?</translation>
     </message>
     <message>
@@ -11393,12 +11475,12 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>&lt;a href="https://pypi.org/project/mpy-cross/"&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://pypi.org/project/mpy-cross/"&gt; mpy cross compilier cli-alternativ &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://pypi.org/project/mpy-cross/&quot;&gt; mpy cross compilier cli-alternativ &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
         <source>Advanced</source>
         <translation>Avancerad</translation>
@@ -11411,7 +11493,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
     </message>
     <message>
         <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+90" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
         <source>Compiling</source>
         <translation>Kompilering</translation>
@@ -11423,9 +11505,9 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-780" />
         <source>Success - Press Ok to close the window</source>
         <translation>Framgång - Tryck på OK för att stänga fönstret</translation>
     </message>
@@ -11438,18 +11520,18 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Misslyckande - Tryck på Avbryt för att stänga fönstret</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+126" />
+        <location line="+111" />
         <location line="+14" />
-        <location line="+173" />
+        <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>Stedge Compiler</translation>
     </message>
     <message>
-        <location line="-334" />
+        <location line="-300" />
         <source>Failed to copy JSON file!</source>
         <translation>Det gick inte att kopiera JSON -fil!</translation>
     </message>
@@ -11486,14 +11568,13 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+24" />
         <source>--verbosity 2</source>
         <translation>--verbositet 2</translation>
     </message>
     <message>
-        <location line="-22" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; Stedgeai Core CLI -alternativ &lt;/a&gt;</translation>
+        <location line="+2" />
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; Stedgeai Core CLI -alternativ &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -11502,16 +11583,15 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation>&lt;A HREF = "%1"&gt; Stedgeai Neural-Art CLI-alternativ &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
+        <translation>&lt;A HREF = &quot;%1&quot;&gt; Stedgeai Neural-Art CLI-alternativ &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; Stedgeai Relocation CLI -alternativ &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href = &quot;%1&quot;&gt; Stedgeai Relocation CLI -alternativ &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+75" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>Det gick inte att öppna JSON -filen!</translation>
@@ -11522,7 +11602,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Stedgeai</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+140" />
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
         <translation>Stedgeai -kompilatorn stöds inte på denna plattform.</translation>
     </message>
@@ -11550,8 +11630,8 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md"&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/options.md"&gt; Vela Compilier CLI-alternativ &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/options.md&quot;&gt; Vela Compilier CLI-alternativ &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+67" />
@@ -11574,6 +11654,31 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <source>STM32 Programmer is not supported on this platform.</source>
         <translation>STM32 -programmerare stöds inte på denna plattform.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <source>the detected board</source>
+        <translation>den upptäckta brädan</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>The selected file &quot;%L1&quot; does not match any firmware interface for %L2.</source>
+        <translation>Den valda filen &quot;%L1&quot; matchar inte något firmware-gränssnitt för %L2.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%L1 accepts files named:</source>
+        <translation>%L1 accepterar filer med namnet:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Rename your firmware file to one of the names above (or select the correct file) and try again.</source>
+        <translation>Byt namn på din firmwarefil till ett av namnen ovan (eller välj rätt fil) och försök igen.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>This board does not define any loadable firmware interfaces in its settings.</source>
+        <translation>Detta kort definierar inga laddningsbara firmware-gränssnitt i sina inställningar.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
@@ -11583,91 +11688,39 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+28" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+235" />
         <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
         <location line="+15" />
         <location line="+22" />
-        <location line="+132" />
         <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+21" />
         <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+306" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+144" />
         <source>Project Location</source>
         <translation>Projektplats</translation>
     </message>
     <message>
-        <location line="-895" />
-        <location line="+28" />
-        <location line="+21" />
+        <location line="-886" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
-        <location line="+15" />
         <location line="+22" />
-        <location line="+24" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+11" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
-        <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+28" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+20" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+81" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
@@ -11677,7 +11730,59 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+94" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+15" />
+        <location line="+22" />
+        <location line="+18" />
+        <location line="+21" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+51" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
         <source>Location</source>
         <translation>Plats</translation>
     </message>
@@ -11686,7 +11791,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation type="vanished">Qt-test</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-516" />
         <source>Google Test</source>
         <translation>Google Test</translation>
     </message>
@@ -11706,49 +11811,49 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Fångst 2</translation>
     </message>
     <message>
-        <location line="-762" />
+        <location line="-371" />
         <location line="+25" />
         <location line="+26" />
-        <location line="+712" />
+        <location line="+321" />
         <source>Test framework:</source>
         <translation>Testramverk:</translation>
     </message>
     <message>
-        <location line="-687" />
+        <location line="-296" />
         <source>GUI Application</source>
         <translation>GUI-applikation</translation>
     </message>
     <message>
         <location line="-75" />
         <location line="+51" />
-        <location line="+715" />
+        <location line="+324" />
         <source>Test suite name:</source>
         <translation>Testsvitens namn:</translation>
     </message>
     <message>
-        <location line="-790" />
-        <location line="+25" />
+        <location line="-374" />
         <location line="+24" />
         <location line="+27" />
         <location line="+21" />
-        <location line="+694" />
+        <location line="+22" />
+        <location line="+281" />
         <source>Test case name:</source>
         <translation>Testfallsnamn:</translation>
     </message>
     <message>
-        <location line="-693" />
+        <location line="-302" />
         <source>Requires QApplication</source>
         <translation>Kräver QApplication</translation>
     </message>
     <message>
-        <location line="-97" />
+        <location line="+22" />
         <source>Generate setup code</source>
         <translation>Generera inställningskod</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+98" />
-        <location line="+692" />
+        <location line="-20" />
+        <location line="+21" />
+        <location line="+280" />
         <source>Generate initialization and cleanup code</source>
         <translation>Generera initierings- och rensningskod</translation>
     </message>
@@ -11757,17 +11862,17 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation type="vanished">Aktivera C++11</translation>
     </message>
     <message>
-        <location line="-766" />
+        <location line="-324" />
         <source>Googletest source directory (optional):</source>
         <translation>Googletest källkatalog (valfritt):</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>Boost inkluderar katalog (valfritt):</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 inkluderar katalog (valfritt):</translation>
     </message>
@@ -11777,154 +11882,154 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Använd Qt-bibliotek</translation>
     </message>
     <message>
-        <location line="-50" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+45" />
-        <location line="+47" />
-        <location line="+84" />
+        <location line="+107" />
+        <location line="+46" />
+        <location line="+43" />
         <source>qmake</source>
         <translation>qgöra</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
+        <location line="+105" />
+        <location line="+48" />
         <location line="+43" />
-        <location line="+49" />
-        <location line="+84" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+85" />
+        <location line="+153" />
+        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+314" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build system:</source>
         <translation>Byggsystem:</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Projekt- och testinformation</translation>
     </message>
     <message>
-        <location line="-120" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-93" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+26" />
-        <location line="+51" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+79" />
+        <location line="+116" />
         <location line="+18" />
         <location line="+4" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+41" />
+        <location line="+17" />
+        <location line="+33" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+70" />
-        <location line="+220" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+28" />
+        <location line="+142" />
         <source>Details</source>
         <translation>Detaljer</translation>
     </message>
     <message>
-        <location line="-869" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-887" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Urval av kit</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -11932,101 +12037,101 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Kit</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+18" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <source>Project Management</source>
         <translation>Projektledning</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+37" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+41" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Sammanfattning</translation>
@@ -12036,9 +12141,9 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation type="vanished">Skapar ett nytt enhetstestprojekt. Med enhetstester kan du verifiera att koden är lämplig att använda och att det inte finns några regressioner.</translation>
     </message>
     <message>
-        <location line="-466" />
-        <location line="+12" />
-        <location line="+456" />
+        <location line="-715" />
+        <location line="+380" />
+        <location line="+165" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Annat projekt</translation>
@@ -12048,36 +12153,36 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation type="vanished">Autotestprojekt</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="-620" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Fullständigt namn, inklusive namnutrymmen</translation>
     </message>
     <message>
-        <location line="-645" />
-        <location line="+36" />
-        <location line="+276" />
-        <location line="+80" />
-        <location line="+235" />
-        <location line="+19" />
+        <location line="+1" />
         <location line="+22" />
+        <location line="+19" />
+        <location line="+289" />
+        <location line="+145" />
+        <location line="+40" />
+        <location line="+119" />
         <source>Class name:</source>
         <translation>Klassnamn:</translation>
     </message>
     <message>
-        <location line="-631" />
-        <location line="+592" />
-        <location line="+18" />
+        <location line="-633" />
+        <location line="+42" />
+        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Anpassad&gt;</translation>
     </message>
     <message>
-        <location line="-646" />
-        <location line="+37" />
-        <location line="+282" />
-        <location line="+73" />
-        <location line="+237" />
-        <location line="+18" />
+        <location line="-474" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+294" />
+        <location line="+139" />
+        <location line="+39" />
+        <location line="+119" />
         <source>Base class:</source>
         <translation>Basklass:</translation>
     </message>
@@ -12086,7 +12191,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-632" />
         <source>Include QObject</source>
         <translation>Inkludera QObject</translation>
     </message>
@@ -12124,70 +12229,70 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Lägg till QML_ELEMENT</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+68" />
-        <location line="+262" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+315" />
+        <location line="+292" />
         <source>Header file:</source>
         <translation>Rubrikfil:</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+288" />
-        <location line="+68" />
-        <location line="+220" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+215" />
         <location line="+1" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+80" />
+        <location line="+133" />
+        <location line="+39" />
+        <location line="+120" />
         <source>Source file:</source>
         <translation>Källfilen:</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+392" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+34" />
-        <location line="+19" />
-        <location line="+444" />
-        <location line="+19" />
-        <location line="+22" />
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Väg:</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+596" />
-        <location line="+22" />
+        <location line="-739" />
+        <location line="+38" />
+        <location line="+429" />
+        <location line="+39" />
         <source>Define Class</source>
         <translation>Definiera klass</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-502" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Skapar ett C++-huvud och en källfil för en ny klass som du kan lägga till i ett C++-projekt.</translation>
     </message>
     <message>
-        <location line="-203" />
-        <location line="+130" />
-        <location line="+74" />
+        <location line="+1" />
+        <location line="+65" />
+        <location line="+9" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-73" />
         <source>C++ Class</source>
         <translation>C++ klass</translation>
     </message>
@@ -12227,22 +12332,22 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Skapar en Qt-objektmodell.</translation>
     </message>
     <message>
-        <location line="-231" />
-        <location line="+39" />
-        <location line="+26" />
-        <location line="+65" />
-        <location line="+18" />
-        <location line="+84" />
+        <location line="+1" />
+        <location line="+66" />
+        <location line="+57" />
+        <location line="+62" />
+        <location line="+9" />
+        <location line="+59" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-252" />
         <source>Qt Item Model</source>
         <translation>Qt artikelmodell</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+4" />
         <source>Qt for Python module:</source>
         <translation>Qt för Python-modul:</translation>
     </message>
@@ -12267,8 +12372,8 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Importera QtQuick</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
         <location line="+6" />
@@ -12276,18 +12381,18 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Skapar ny Python-klassfil.</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+71" />
+        <location line="+1" />
+        <location line="+158" />
         <source>Python</source>
         <translation>Pytonorm</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-157" />
         <source>Python Class</source>
         <translation>Python klass</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+3" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Skapar ett CMake-baserat testprojekt för vilket ett kodavsnitt kan anges.</translation>
     </message>
@@ -12342,7 +12447,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Kodavsnitt</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="+7" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Skapar en rubrikfil som du kan lägga till i ett C/C++-projekt.</translation>
     </message>
@@ -12352,7 +12457,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>C/C++ Header-fil</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Skapar en källfil som du kan lägga till i ett C/C++-projekt.</translation>
     </message>
@@ -12362,7 +12467,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>C/C++ källfil</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>Välj en formulärmall</translation>
     </message>
@@ -12380,12 +12485,12 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation type="vanished">Qt Designer Form</translation>
     </message>
     <message>
-        <location line="-15" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Skapar en fragmentskuggning i Desktop OpenGL Shading Language (GLSL). Fragmentskuggningar genererar de slutliga pixelfärgerna för trianglar, punkter och linjer som återges med OpenGL.</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+1" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -12393,12 +12498,12 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-26" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragment Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Skapar en vertex shader i Desktop OpenGL Shading Language (GLSL). Vertex shaders transformerar positioner, normaler och texturkoordinater för trianglar, punkter och linjer som återges med OpenGL.</translation>
     </message>
@@ -12408,7 +12513,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Vertex Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Skapar en fragmentskuggning i OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragmentskuggningar genererar de slutliga pixelfärgerna för trianglar, punkter och linjer som återges med OpenGL.</translation>
     </message>
@@ -12418,7 +12523,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Fragment Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Skapar en vertex shader i OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transformerar positioner, normaler och texturkoordinater för trianglar, punkter och linjer som återges med OpenGL.</translation>
     </message>
@@ -12428,7 +12533,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="+7" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Skapar en Java-fil med standardkod.</translation>
     </message>
@@ -12443,7 +12548,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Java-fil</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>Statslösa bibliotek</translation>
     </message>
@@ -12464,25 +12569,25 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>JS fil</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+12" />
         <source>Model name:</source>
         <translation>Modellnamn:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
+        <location line="+1" />
+        <location line="+67" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Plats:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
-        <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" finns i filsystemet.</translation>
+        <location line="-66" />
+        <location line="+67" />
+        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; finns i filsystemet.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model Name and Location</source>
         <translation>Modellens namn och plats</translation>
     </message>
@@ -12492,19 +12597,19 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Skapar en ny tom modell med ett tomt diagram.</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+53" />
-        <location line="+12" />
+        <location line="+1" />
+        <location line="+5" />
+        <location line="+62" />
         <source>Modeling</source>
         <translation>Modellering</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model</source>
         <translation>Modell</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+3" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Skapar en skrapmodell med hjälp av en temporär fil.</translation>
     </message>
@@ -12514,23 +12619,23 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Scratch modell</translation>
     </message>
     <message>
-        <location line="-81" />
+        <location line="+7" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Skapar en tom Nim-fil med UTF-8-teckenuppsättning.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+14" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>Nim fil</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Skapar en tom Nim-skriptfil med UTF-8-teckenuppsättning.</translation>
     </message>
@@ -12540,7 +12645,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Nim skriptfil</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+7" />
         <source>Creates an empty Python script file using UTF-8 charset.</source>
         <translation>Skapar en tom Python-skriptfil med UTF-8-teckenuppsättning.</translation>
     </message>
@@ -12550,7 +12655,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Python-fil</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Skapar en Qt-resursfil (.qrc).</translation>
     </message>
@@ -12560,9 +12665,9 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Qt resursfil</translation>
     </message>
     <message>
-        <location line="-67" />
-        <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
-        <translation>Skapar en QML-fil med boilerplate-kod, som börjar med "import QtQuick".</translation>
+        <location line="+7" />
+        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
+        <translation>Skapar en QML-fil med boilerplate-kod, som börjar med &quot;import QtQuick&quot;.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12570,21 +12675,21 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>QML-fil (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="-32" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Skapar en skrapbuffert med hjälp av en temporär fil.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+57" />
-        <location line="+47" />
+        <location line="-66" />
+        <location line="+67" />
+        <location line="+45" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Allmän</translation>
     </message>
     <message>
-        <location line="-634" />
+        <location line="-401" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Denna trollkarl skapar ett enkelt enhetstestprojekt med Boost.</translation>
     </message>
@@ -12609,21 +12714,21 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Skapar ett nytt enhetstestprojekt med Boost. Enhetstester låter dig verifiera att koden är lämplig för användning och att det inte finns några regressioner.</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+25" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Test Project</source>
         <translation>Testprojekt</translation>
     </message>
     <message>
-        <location line="-21" />
+        <location line="-93" />
         <source>Boost Test Project</source>
         <translation>Boost Test Project</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Denna trollkarl skapar ett enkelt enhetstestprojekt med Catch2.</translation>
     </message>
@@ -12658,7 +12763,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Catch2 Test Project</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Denna trollkarl skapar ett enkelt enhetstestprojekt med Google Test.</translation>
     </message>
@@ -12688,7 +12793,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Google Test Project</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Denna trollkarl skapar ett enkelt enhetstestprojekt med QT -test.</translation>
     </message>
@@ -12703,7 +12808,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>QT -testprojekt</translation>
     </message>
     <message>
-        <location line="-116" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Denna trollkarl skapar ett enkelt enhetstestprojekt med QT Quick Test.</translation>
     </message>
@@ -12718,17 +12823,17 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>QT Quick Test Project</translation>
     </message>
     <message>
-        <location line="+815" />
+        <location line="+10" />
         <source>Include QQuickItem</source>
         <translation>Inkludera qquickitem</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+67" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>Skapar ett CMake-baserat testprojekt där du kan ange ett kodavsnitt för att kompilera och kontrollera det.</translation>
     </message>
     <message>
-        <location line="-121" />
+        <location line="+29" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>Skapar ett QT -widgets designerform som du kan lägga till i ett QT -widgetprojekt. Detta är användbart om du redan har en befintlig klass för UI -affärslogiken.</translation>
     </message>
@@ -12738,7 +12843,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Qt -widgets designerformulär</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="+64" />
         <source>Creates a markdown file.</source>
         <translation>Skapar en Markdown -fil.</translation>
     </message>
@@ -12748,12 +12853,12 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Markeringsfil</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="+67" />
         <source>Scratch Buffer</source>
         <translation>Scratch Buffer</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>Namn på statens diagram:</translation>
     </message>
@@ -12773,7 +12878,7 @@ OpenMV IDE kommer bara att kopiera modellen som den är.</translation>
         <translation>Statsdiagram</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -12813,7 +12918,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Testfall</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>Skapar en tom fil.</translation>
     </message>
@@ -12823,7 +12928,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Tom fil</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Skapar en översättningsfil som du kan lägga till ett QT -projekt.</translation>
     </message>
@@ -12833,61 +12938,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QT -översättningsfil</translation>
     </message>
     <message>
-        <location line="-623" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Den här guiden skapar en enkel Qt-baserad konsolapplikation.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+83" />
+        <location line="+195" />
         <source>Meson</source>
         <translation>Meson</translation>
     </message>
     <message>
-        <location line="-442" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-326" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Define Build System</source>
         <translation>Definiera byggsystem</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-328" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build System</source>
         <translation>Bygg system</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-328" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation File</source>
         <translation>Översättningsfil</translation>
     </message>
     <message>
-        <location line="-591" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-479" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation</source>
         <translation>Översättning</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-262" />
         <source>Define Python Interpreter</source>
         <translation>Definiera Python -tolk</translation>
     </message>
@@ -12902,7 +13007,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Skapar en QT för Python-applikation som innehåller en QT-widgets designerbaserad widget (UI-fil). Kräver .ui till Python -konvertering.</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+38" />
         <source>Qt 6.4</source>
         <translation>Qt 6.4</translation>
     </message>
@@ -12917,7 +13022,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Skapar en QT -snabbapplikation som kan ha både QML och C ++ -kod. Du kan bygga applikationen och distribuera den på skrivbords-, inbäddade och mobila målplattformar.</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="+42" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -12926,7 +13031,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  För att utveckla en fullständig applikation skapar du istället ett QT Quick Application -projekt.</translation>
     </message>
     <message>
-        <location line="+173" />
+        <location line="+30" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -12943,31 +13048,31 @@ Preselects a desktop Qt for building the application if available.</source>
 Förväljer en stationär Qt för att bygga programmet om tillgängligt.</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+32" />
-        <location line="+299" />
-        <location line="+114" />
+        <location line="-337" />
+        <location line="+266" />
+        <location line="+28" />
+        <location line="+44" />
         <source>Application (Qt)</source>
         <translation>Applikation (Qt)</translation>
     </message>
     <message>
-        <location line="-412" />
+        <location line="-337" />
         <source>Qt Console Application</source>
         <translation>Qt Console-applikation</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Den här guiden skapar ett C++-biblioteksprojekt.</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+84" />
+        <location line="+308" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Ange grundläggande information om de klasser som du vill generera skelettkällkodsfiler för.</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="-307" />
         <source>Shared Library</source>
         <translation>Delat bibliotek</translation>
     </message>
@@ -12983,17 +13088,17 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
     </message>
     <message>
         <location line="+1" />
-        <location line="+35" />
+        <location line="+46" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Typ:</translation>
     </message>
     <message>
-        <source>%{JS: value('Type') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</source>
-        <translation type="vanished">%{JS: value('Type') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</translation>
+        <source>%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</source>
+        <translation type="vanished">%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -13059,14 +13164,14 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Qt-modul:</translation>
     </message>
     <message>
-        <location line="-519" />
-        <location line="+147" />
-        <location line="+70" />
+        <location line="+3" />
+        <location line="+116" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+59" />
-        <location line="+42" />
+        <location line="+68" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+170" />
         <source>Define Project Details</source>
         <translation>Definiera projektdetaljer</translation>
     </message>
@@ -13075,38 +13180,38 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation type="vanished">Skapar ett C++-bibliotek. Detta kan användas för att skapa:&lt;ul&gt;&lt;li&gt;ett delat C++-bibliotek för användning med &lt;tt&gt;QPluginLoader&lt;/tt&gt; och runtime (Plugins)&lt;/li&gt;&lt;li&gt;ett delat eller statiskt C++-bibliotek för användning med en annan projekt vid länktid&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-513" />
-        <location line="+460" />
-        <location line="+62" />
-        <location line="+7" />
+        <location line="-427" />
+        <location line="+18" />
+        <location line="+186" />
+        <location line="+232" />
         <source>Library</source>
         <translation>Bibliotek</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-435" />
         <source>C++ Library</source>
         <translation>C++ bibliotek</translation>
     </message>
     <message>
-        <location line="-366" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>Skapar en enkel Nim-applikation.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+229" />
+        <location line="+40" />
         <location line="+18" />
-        <location line="+157" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Icke-Qt-projekt</translation>
     </message>
     <message>
-        <location line="-403" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>Nim applikation</translation>
     </message>
     <message>
-        <location line="+369" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>Binär</translation>
     </message>
@@ -13121,13 +13226,13 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Författare:</translation>
     </message>
     <message>
-        <location line="-544" />
-        <location line="+545" />
+        <location line="+1" />
+        <location line="+402" />
         <source>Description:</source>
         <translation>Beskrivning:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-401" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -13192,13 +13297,13 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Övrig</translation>
     </message>
     <message>
-        <location line="-560" />
-        <location line="+561" />
+        <location line="+1" />
+        <location line="+386" />
         <source>License:</source>
         <translation>Licens:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-385" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -13239,22 +13344,22 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Definiera projektkonfiguration</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="+1" />
+        <location line="+253" />
+        <location line="+1" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+202" />
         <source>Configuration</source>
         <translation>Konfiguration</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-343" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Skapar en Nim-applikation med Nimble.</translation>
     </message>
@@ -13264,7 +13369,7 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Smidig applikation</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Skapar en enkel C-applikation utan beroenden.</translation>
     </message>
@@ -13274,7 +13379,7 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Vanlig C-applikation</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Skapar en enkel C++-applikation utan beroenden.</translation>
     </message>
@@ -13284,7 +13389,7 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Vanlig C++-applikation</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Den här guiden skapar en tom .pro-fil.</translation>
     </message>
@@ -13303,43 +13408,43 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation type="vanished">PySide version:</translation>
     </message>
     <message>
-        <location line="-218" />
+        <location line="+13" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Skapar en Qt for Python-applikation som endast innehåller huvudkoden för en QApplication.</translation>
     </message>
     <message>
-        <location line="-14" />
-        <location line="+15" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+18" />
+        <location line="+21" />
         <source>Application (Qt for Python)</source>
         <translation>Applikation (Qt för Python)</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-60" />
         <source>Empty Application</source>
         <translation>Tom applikation</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</source>
-        <translation type="vanished">%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</translation>
+        <source>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</source>
+        <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-28" />
-        <location line="+37" />
+        <location line="+9" />
+        <location line="+39" />
         <source>Project file:</source>
         <translation>Projektfil:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Skapar en Qt for Python-applikation som innehåller ett tomt fönster.</translation>
     </message>
@@ -13349,15 +13454,15 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Tomt fönster</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+15" />
+        <location line="-32" />
         <location line="+22" />
         <location line="+15" />
+        <location line="+24" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-211" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -13366,19 +13471,19 @@ Preselects a desktop Qt for building the application if available.</source>
  Förväljer ett skrivbord Qt för att bygga applikationen om det är tillgängligt.</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Skapar ett C ++ -bibliotek. Du kan skapa: &lt;ul&gt; &lt;li&gt; Ett delat C ++ -bibliotek för användning med &lt;tt&gt; qpluginloader &lt;/tt&gt; och runtime (plugins) &lt;/li&gt; &lt;li&gt; ett delat eller statiskt C ++ -bibliotek för användning med ett annat projekt på LinkTime &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+15" />
+        <location line="+107" />
         <location line="+22" />
+        <location line="+39" />
         <source>PySide 2</source>
         <translation>Pyside 2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="-24" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -13412,50 +13517,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Skapar en Qt for Python-applikation som inkluderar en Qt Designer-baserad widget (ui-fil) - Kräver konvertering från .ui till Python</translation>
     </message>
     <message>
-        <location line="-55" />
+        <location line="+21" />
         <source>Window UI</source>
         <translation>Fönster UI</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+311" />
+        <location line="+10" />
         <location line="+25" />
+        <location line="+23" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-335" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
         <location line="+23" />
+        <location line="+25" />
         <source>Minimum required Qt version:</source>
         <translation>Minsta obligatoriska Qt-version:</translation>
     </message>
     <message>
-        <location line="-22" />
+        <location line="-47" />
         <source>MyItem</source>
         <translation>MyItem</translation>
     </message>
@@ -13503,9 +13608,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Skapa ett projekt med en struktur som är kompatibel både med Qt Design Studio (via .qmlproject) och med Qt Creator (via CMakeLists.txt). Den innehåller ett .ui.qml-formulär som du visuellt kan redigera i Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="-324" />
-        <location line="+274" />
-        <location line="+55" />
+        <location line="+5" />
+        <location line="+30" />
+        <location line="+16" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Använd Qt Virtual Keyboard</translation>
     </message>
@@ -13518,18 +13623,18 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Skapar en Qt Quick-applikation som innehåller ett tomt fönster. Alternativt kan du skapa ett Qt Design Studio-projekt.</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-33" />
         <source>Qt Quick Application</source>
         <translation>Qt snabbapplikation</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="+26" />
         <source>Creates a Qt Quick application that contains an empty window.
 
-Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
+Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
         <translation>Skapar en Qt Quick-applikation som innehåller ett tomt fönster.
 
-Använd denna "compat"-version om du vill använda andra byggsystem än CMake eller Qt-versioner lägre än 6.</translation>
+Använd denna &quot;compat&quot;-version om du vill använda andra byggsystem än CMake eller Qt-versioner lägre än 6.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13545,18 +13650,18 @@ Use this only if you are prototyping. You cannot create a full application with 
 Använd detta endast om du gör prototyper. Du kan inte skapa en fullständig applikation med detta. Överväg att använda ett Qt Quick Application-projekt istället.</translation>
     </message>
     <message>
-        <location line="+272" />
+        <location line="+14" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt Quick UI prototyp</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Den här guiden genererar ett Qt Widgets Application-projekt. Applikationen härrör som standard från QApplication och innehåller en tom widget.</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
         <location line="+15" />
@@ -13564,8 +13669,8 @@ Använd detta endast om du gör prototyper. Du kan inte skapa en fullständig ap
         <translation>Skapa formulär</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), 'ui')}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Klass'), 'ui')}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Klass&apos;), &apos;ui&apos;)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13591,27 +13696,27 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Qt Widgets-applikation</translation>
     </message>
     <message>
-        <location line="-332" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Vänligen konfigurera &lt;b&gt;%{vcsName}&lt;/b&gt; nu.</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-93" />
+        <location line="+52" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository:</source>
         <translation>Förvar:</translation>
     </message>
     <message>
         <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>Repository URL är inte giltig</translation>
@@ -13621,24 +13726,24 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
         <source>Directory:</source>
         <translation>Katalog:</translation>
     </message>
     <message>
-        <location line="-94" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
-        <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" finns i filsystemet.</translation>
+        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; finns i filsystemet.</translation>
     </message>
     <message>
-        <location line="-52" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>Använd befintlig katalog</translation>
     </message>
@@ -13714,13 +13819,13 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
     </message>
     <message>
         <location line="+3" />
-        <location line="+19" />
+        <location line="+60" />
         <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Ange arkivets URL, kassakatalog och sökväg.</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>Kör Bazaar-gren...</translation>
     </message>
@@ -13739,9 +13844,9 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Klonar en Bazaar-gren och försöker ladda det inneslutna projektet.</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+1" />
+        <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <location line="+20" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
@@ -13749,12 +13854,12 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Importera projekt</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Bazaar Clone (eller gren)</translation>
     </message>
     <message>
-        <location line="-69" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>Modul:</translation>
     </message>
@@ -13773,7 +13878,7 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+52" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+19" />
         <location line="+1" />
@@ -13781,7 +13886,7 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Kolla upp</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Kollar in ett CVS-förråd och försöker ladda det inneslutna projektet.</translation>
     </message>
@@ -13831,7 +13936,7 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>Kör Mercurial-klon...</translation>
     </message>
@@ -13866,7 +13971,7 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Subversion Checkout</translation>
     </message>
     <message>
-        <location line="-394" />
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Den här guiden skapar ett anpassat Qt Creator-plugin.</translation>
     </message>
@@ -13876,8 +13981,8 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Ange detaljer om ditt anpassade Qt Creator-plugin.</translation>
     </message>
     <message>
-        <source>%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</source>
-        <translation type="vanished">%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</translation>
+        <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
+        <translation type="vanished">%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13915,8 +14020,8 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
         <translation>Lägg en kort beskrivning av ditt plugin här</translation>
     </message>
     <message>
-        <source>https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</source>
-        <translation type="vanished">https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</translation>
+        <source>https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</source>
+        <translation type="vanished">https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13941,7 +14046,7 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
     <message>
         <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
         <source>S&amp;essions</source>
-        <translation>S &amp; essions</translation>
+        <translation>S &amp;essions</translation>
     </message>
     <message>
         <location line="+9" />
@@ -14008,8 +14113,8 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
     </message>
     <message>
         <location line="+42" />
-        <source>Could not save session to file "%1"</source>
-        <translation>Kunde inte spara session för att arkivera "%1"</translation>
+        <source>Could not save session to file &quot;%1&quot;</source>
+        <translation>Kunde inte spara session för att arkivera &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
@@ -14039,7 +14144,7 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
     <message>
         <location line="+1" />
         <source>C&amp;lone...</source>
-        <translation>Klona...</translation>
+        <translation>K&amp;lona...</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14080,7 +14185,7 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
     <message>
         <location line="+0" />
         <source>Create and &amp;Open</source>
-        <translation>Skapa och öppna</translation>
+        <translation>Skapa &amp;och öppna</translation>
     </message>
     <message>
         <location line="+11" />
@@ -14090,7 +14195,7 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
     <message>
         <location line="+0" />
         <source>Clone and &amp;Open</source>
-        <translation>Klon och öppen</translation>
+        <translation>Kl&amp;on och öppen</translation>
     </message>
     <message>
         <location line="+22" />
@@ -14105,7 +14210,7 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
     <message>
         <location line="+0" />
         <source>Rename and &amp;Open</source>
-        <translation>Byta namn och öppna</translation>
+        <translation>Byta namn &amp;och öppna</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
@@ -14119,38 +14224,38 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
     </message>
     <message>
         <location line="+72" />
-        <source>Could not create directory "%1"</source>
-        <translation>Kunde inte skapa katalog "%1"</translation>
+        <source>Could not create directory &quot;%1&quot;</source>
+        <translation>Kunde inte skapa katalog &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>Programmet "%1" finns inte eller är inte körbart.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>Programmet &quot;%1&quot; finns inte eller är inte körbart.</translation>
     </message>
     <message>
         <location line="+34" />
-        <source>Starting: "%1" %2</source>
-        <translation>Start: " %1" %2</translation>
+        <source>Starting: &quot;%1&quot; %2</source>
+        <translation>Start: &quot; %1&quot; %2</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The process "%1" exited normally.</source>
-        <translation>Processen "%1" lämnade normalt.</translation>
+        <source>The process &quot;%1&quot; exited normally.</source>
+        <translation>Processen &quot;%1&quot; lämnade normalt.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The process "%1" exited with code %2.</source>
-        <translation>Processen " %1" lämnade med kod %2.</translation>
+        <source>The process &quot;%1&quot; exited with code %2.</source>
+        <translation>Processen &quot; %1&quot; lämnade med kod %2.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Could not start process "%1" %2.</source>
-        <translation>Kunde inte starta processen " %1" %2.</translation>
+        <source>Could not start process &quot;%1&quot; %2.</source>
+        <translation>Kunde inte starta processen &quot; %1&quot; %2.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The process "%1" crashed.</source>
-        <translation>Processen "%1" kraschade.</translation>
+        <source>The process &quot;%1&quot; crashed.</source>
+        <translation>Processen &quot;%1&quot; kraschade.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
@@ -14191,8 +14296,8 @@ Förväljer en stationär Qt för att bygga programmet om tillgängligt.</transl
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files of all open projects. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Lokaljer filer från alla öppna projekt. Bifoga "+&lt;nummer&gt;" eller ": &lt;nummer&gt;" för att hoppa till det givna radnumret. Lägg till en annan "+&lt;nummer&gt;" eller ": &lt;nummer&gt;" för att hoppa till kolumnnumret också.</translation>
+        <source>Locates files of all open projects. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Lokaljer filer från alla öppna projekt. Bifoga &quot;+&lt;nummer&gt;&quot; eller &quot;: &lt;nummer&gt;&quot; för att hoppa till det givna radnumret. Lägg till en annan &quot;+&lt;nummer&gt;&quot; eller &quot;: &lt;nummer&gt;&quot; för att hoppa till kolumnnumret också.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
@@ -14247,7 +14352,7 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>Show &amp;App Output</source>
-        <translation>SHOW &amp; APP Output</translation>
+        <translation>SHOW &amp;APP Output</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14368,13 +14473,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+105" />
-        <source>Build directory contains potentially problematic character "%1".</source>
-        <translation>Build Directory innehåller potentiellt problematiskt tecken "%1".</translation>
+        <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
+        <translation>Build Directory innehåller potentiellt problematiskt tecken &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>This warning can be suppressed &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>Denna varning kan undertryckas &lt;a href = "dummy"&gt; här &lt;/a&gt;.</translation>
+        <source>This warning can be suppressed &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Denna varning kan undertryckas &lt;a href = &quot;dummy&quot;&gt; här &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -14430,7 +14535,7 @@ Excluding: %2
     </message>
     <message>
         <location line="+4" />
-        <source>Variables in the build configuration's environment</source>
+        <source>Variables in the build configuration&apos;s environment</source>
         <translation>Variabler i byggkonfigurationens miljö</translation>
     </message>
     <message>
@@ -14472,12 +14577,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build configuration</source>
+        <source>Name of the project&apos;s active build configuration</source>
         <translation>Namnet på projektets aktiva byggkonfiguration</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build system</source>
+        <source>Name of the project&apos;s active build system</source>
         <translation>Namnet på projektets aktiva byggsystem</translation>
     </message>
     <message>
@@ -14487,13 +14592,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Type of the project's active build configuration</source>
+        <source>Type of the project&apos;s active build configuration</source>
         <translation>Typ av projektets aktiva byggkonfiguration</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>No build device is set for the kit "%1".</source>
-        <translation>Ingen build -enhet är inställd på satsen "%1".</translation>
+        <source>No build device is set for the kit &quot;%1&quot;.</source>
+        <translation>Ingen build -enhet är inställd på satsen &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -14502,13 +14607,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+7" />
-        <source>The build device "%1" cannot reach the project directory.</source>
-        <translation>Byggenheten "%1" kan inte nå projektkatalogen.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the project directory.</source>
+        <translation>Byggenheten &quot;%1&quot; kan inte nå projektkatalogen.</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The build device "%1" cannot reach the build directory.</source>
-        <translation>Byggenheten "%1" kan inte nå byggkatalogen.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the build directory.</source>
+        <translation>Byggenheten &quot;%1&quot; kan inte nå byggkatalogen.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
@@ -14541,7 +14646,7 @@ Excluding: %2
     <message>
         <location line="+138" />
         <source>Compile</source>
-        <comment>Category for compiler issues listed under 'Issues'</comment>
+        <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>Sammanställa</translation>
     </message>
     <message>
@@ -14552,7 +14657,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Build System</source>
-        <comment>Category for build system issues listed under 'Issues'</comment>
+        <comment>Category for build system issues listed under &apos;Issues&apos;</comment>
         <translation>Byggsystem</translation>
     </message>
     <message>
@@ -14563,7 +14668,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Deployment</source>
-        <comment>Category for deployment issues listed under 'Issues'</comment>
+        <comment>Category for deployment issues listed under &apos;Issues&apos;</comment>
         <translation>Spridning</translation>
     </message>
     <message>
@@ -14574,7 +14679,7 @@ Excluding: %2
     <message>
         <location line="+4" />
         <source>Autotests</source>
-        <comment>Category for autotest issues listed under 'Issues'</comment>
+        <comment>Category for autotest issues listed under &apos;Issues&apos;</comment>
         <translation>Autotest</translation>
     </message>
     <message>
@@ -14591,7 +14696,7 @@ Excluding: %2
         <location line="+8" />
         <location line="+59" />
         <source>Clean</source>
-        <extracomment>Displayed name for a "cleaning" build step
+        <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
 Display name of the clean build step list. Used as part of the labels in the project window.</extracomment>
         <translation>Rena</translation>
@@ -14655,8 +14760,8 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location line="+98" />
-        <source>When executing step "%1"</source>
-        <translation>När du kör steg "%1"</translation>
+        <source>When executing step &quot;%1&quot;</source>
+        <translation>När du kör steg &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
@@ -14873,8 +14978,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+3" />
-        <source>The project file "%1" does not exist.</source>
-        <translation>Projektfilen "%1" finns inte.</translation>
+        <source>The project file &quot;%1&quot; does not exist.</source>
+        <translation>Projektfilen &quot;%1&quot; finns inte.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/codestylesettingspropertiespage.cpp" line="+60" />
@@ -14901,7 +15006,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+38" />
         <source>Show Compile &amp;Output</source>
-        <translation>Visa kompilering och utgång</translation>
+        <translation>Visa k&amp;ompilering och utgång</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14971,13 +15076,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from the current document's project. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Lokaljer filer från det aktuella dokumentets projekt. Bifoga "+&lt;nummer&gt;" eller ": &lt;nummer&gt;" för att hoppa till det givna radnumret. Lägg till en annan "+&lt;nummer&gt;" eller ": &lt;nummer&gt;" för att hoppa till kolumnnumret också.</translation>
+        <source>Locates files from the current document&apos;s project. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Lokaljer filer från det aktuella dokumentets projekt. Bifoga &quot;+&lt;nummer&gt;&quot; eller &quot;: &lt;nummer&gt;&quot; för att hoppa till det givna radnumret. Lägg till en annan &quot;+&lt;nummer&gt;&quot; eller &quot;: &lt;nummer&gt;&quot; för att hoppa till kolumnnumret också.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
-        <source>Project "%1"</source>
-        <translation>Projekt "%1"</translation>
+        <source>Project &quot;%1&quot;</source>
+        <translation>Projekt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14986,8 +15091,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>Project "%1":</source>
-        <translation>Projekt "%1":</translation>
+        <source>Project &quot;%1&quot;:</source>
+        <translation>Projekt &quot;%1&quot;:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
@@ -15008,8 +15113,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
-        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>Anpassade utgångsparers skanna kommandoradsutdata för användarutgivna felmönster &lt;br&gt; För att skapa poster i problem. &lt;br&gt; Parsers kan konfigureras &lt;a href = "dummy"&gt; här &lt;/a&gt;.</translation>
+        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Anpassade utgångsparers skanna kommandoradsutdata för användarutgivna felmönster &lt;br&gt; För att skapa poster i problem. &lt;br&gt; Parsers kan konfigureras &lt;a href = &quot;dummy&quot;&gt; här &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+82" />
@@ -15019,9 +15124,9 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+2" />
         <source>There are %n custom parsers active</source>
-        <translation>
-            <numerusform>Det finns %N Custom Parsers Active</numerusform>
-            <numerusform>Det finns %N Custom Parsers Active</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -15032,7 +15137,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>&amp;Error message capture pattern:</source>
-        <translation>&amp; Felmeddelandefångstmönster:</translation>
+        <translation>&amp;Felmeddelandefångstmönster:</translation>
     </message>
     <message>
         <location line="+3" />
@@ -15067,7 +15172,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-31" />
         <source>E&amp;rror message:</source>
-        <translation>E &amp; RROR -meddelande:</translation>
+        <translation>E &amp;RROR -meddelande:</translation>
     </message>
     <message>
         <location line="+33" />
@@ -15152,7 +15257,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
-        <source>Custom output parsers defined here can be enabled individually in the project's build or run settings.</source>
+        <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>Anpassade utgångsparare som definieras här kan aktiveras individuellt i projektets bygg- eller körinställningar.</translation>
     </message>
     <message>
@@ -15246,44 +15351,44 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
         <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>&amp; Kompilatorväg:</translation>
+        <translation>&amp;Kompilatorväg:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Make path:</source>
-        <translation>&amp; Gör väg:</translation>
+        <translation>&amp;Gör väg:</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
         <source>&amp;ABI:</source>
-        <translation>&amp; Abi:</translation>
+        <translation>&amp;Abi:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Predefined macros:</source>
-        <translation>Fördefinierade makron:</translation>
+        <translation>&amp;Fördefinierade makron:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Header paths:</source>
-        <translation>&amp; Rubrikvägar:</translation>
+        <translation>&amp;Rubrikvägar:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C++11 &amp;flags:</source>
-        <translation>C ++ 11 &amp; flaggor:</translation>
+        <translation>C ++ 11 &amp;flaggor:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Qt mkspecs:</source>
-        <translation>&amp; Qt mkspecs:</translation>
+        <translation>&amp;Qt mkspecs:</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Error parser:</source>
-        <translation>&amp; Felparser:</translation>
+        <translation>&amp;Felparser:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/dependenciespanel.cpp" line="+83" />
@@ -15438,19 +15543,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
-        <source>No device for path "%1"</source>
-        <translation>Ingen enhet för sökväg "%1"</translation>
+        <source>No device for path &quot;%1&quot;</source>
+        <translation>Ingen enhet för sökväg &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
-        <source>No device found for path "%1"</source>
-        <translation>Ingen enhet hittades för sökvägen "%1"</translation>
+        <source>No device found for path &quot;%1&quot;</source>
+        <translation>Ingen enhet hittades för sökvägen &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-9" />
-        <source>No file access for device "%1"</source>
-        <translation>Ingen filåtkomst för enhet "%1"</translation>
+        <source>No file access for device &quot;%1&quot;</source>
+        <translation>Ingen filåtkomst för enhet &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
@@ -15475,12 +15580,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+22" />
         <source>&amp;Update List</source>
-        <translation>Och uppdateringslista</translation>
+        <translation>Och &amp;uppdateringslista</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Kill Process</source>
-        <translation>&amp; Kill Process</translation>
+        <translation>&amp;Kill Process</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15520,7 +15625,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+4" />
         <source>&amp;Start Wizard to Add Device...</source>
-        <translation>&amp; Starta guiden för att lägga till enhet ...</translation>
+        <translation>&amp;Starta guiden för att lägga till enhet ...</translation>
     </message>
     <message>
         <location line="+12" />
@@ -15545,8 +15650,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+87" />
-        <source>Yes (id is "%1")</source>
-        <translation>Ja (id är "%1")</translation>
+        <source>Yes (id is &quot;%1&quot;)</source>
+        <translation>Ja (id är &quot;%1&quot;)</translation>
     </message>
     <message>
         <location line="+0" />
@@ -15675,13 +15780,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>No device for given path: "%1".</source>
-        <translation>Ingen enhet för given sökväg: "%1".</translation>
+        <source>No device for given path: &quot;%1&quot;.</source>
+        <translation>Ingen enhet för given sökväg: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Device for path "%1" does not support killing processes.</source>
-        <translation>Enhet för sökväg "%1" stöder inte dödande processer.</translation>
+        <source>Device for path &quot;%1&quot; does not support killing processes.</source>
+        <translation>Enhet för sökväg &quot;%1&quot; stöder inte dödande processer.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
@@ -15764,7 +15869,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Visa höger och marginal vid kolumnen:</translation>
+        <translation>Visa höger och &amp;marginal vid kolumnen:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15813,7 +15918,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-278" />
         <source>Ed&amp;it</source>
-        <translation>Redigera</translation>
+        <translation>Red&amp;igera</translation>
     </message>
     <message>
         <location line="+4" />
@@ -15828,7 +15933,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>&amp;Unset</source>
-        <translation>&amp; Unset</translation>
+        <translation>&amp;Unset</translation>
     </message>
     <message>
         <location line="+14" />
@@ -15843,7 +15948,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+9" />
         <source>Open &amp;Terminal</source>
-        <translation>Öppen och terminal</translation>
+        <translation>Öppen och &amp;terminal</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15852,33 +15957,33 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+123" />
-        <source>Unset &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Unset &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Unset &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation>Set &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; till &lt;b&gt;%2 &lt;/b&gt;</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
+        <translation>Set &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; till &lt;b&gt;%2 &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Bifoga &lt;b&gt;%2 &lt;/b&gt; till &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Bifoga &lt;b&gt;%2 &lt;/b&gt; till &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Förbered &lt;b&gt;%2 &lt;/b&gt; till &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Förbered &lt;b&gt;%2 &lt;/b&gt; till &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
-        <translation>Set &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; till &lt;b&gt;%2 &lt;/b&gt; [inaktiverad]</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
+        <translation>Set &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; till &lt;b&gt;%2 &lt;/b&gt; [inaktiverad]</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Use &lt;b&gt;%1&lt;/b&gt;</source>
-        <extracomment>%1 is "System Environment" or some such.</extracomment>
+        <extracomment>%1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Använd &lt;b&gt;%1 &lt;/b&gt;</translation>
     </message>
     <message>
@@ -15889,7 +15994,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>Use &lt;b&gt;%1&lt;/b&gt; and</source>
-        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is "System Environment" or some such.</extracomment>
+        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Använd &lt;b&gt;%1 &lt;/b&gt; och</translation>
     </message>
     <message>
@@ -15987,58 +16092,58 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Field "%1" has no type.</source>
-        <translation>Fält "%1" har ingen typ.</translation>
+        <source>Field &quot;%1&quot; has no type.</source>
+        <translation>Fält &quot;%1&quot; har ingen typ.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Field "%1" has unsupported type "%2".</source>
-        <translation>Fält "%1" har typ "%2".</translation>
+        <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
+        <translation>Fält &quot;%1&quot; har typ &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>When parsing Field "%1": %2</source>
-        <translation>När de analyserar fältet " %1": %2</translation>
+        <source>When parsing Field &quot;%1&quot;: %2</source>
+        <translation>När de analyserar fältet &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+208" />
-        <source>Label ("%1") data is not an object.</source>
-        <translation>Etikett ("%1") Data är inte ett objekt.</translation>
+        <source>Label (&quot;%1&quot;) data is not an object.</source>
+        <translation>Etikett (&quot;%1&quot;) Data är inte ett objekt.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Label ("%1") has no trText.</source>
-        <translation>Etikett ("%1") har ingen trtext.</translation>
+        <source>Label (&quot;%1&quot;) has no trText.</source>
+        <translation>Etikett (&quot;%1&quot;) har ingen trtext.</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>Spacer ("%1") data is not an object.</source>
-        <translation>Spacer ("%1") Data är inte ett objekt.</translation>
+        <source>Spacer (&quot;%1&quot;) data is not an object.</source>
+        <translation>Spacer (&quot;%1&quot;) Data är inte ett objekt.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Spacer ("%1") property "factor" is no integer value.</source>
-        <translation>Spacer ("%1") Faktor "är inget heltal.</translation>
+        <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
+        <translation>Spacer (&quot;%1&quot;) Faktor &quot;är inget heltal.</translation>
     </message>
     <message>
         <location line="+35" />
-        <source>LineEdit ("%1") data is not an object.</source>
-        <translation>LineEdit ("%1") Data är inte ett objekt.</translation>
+        <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>LineEdit (&quot;%1&quot;) Data är inte ett objekt.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>LineEdit ("%1") has an invalid regular expression "%2" in "validator".</source>
-        <translation>LineEdit ("%1") har ett ogiltigt regelbundet uttryck "%2" i "Validator".</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
+        <translation>LineEdit (&quot;%1&quot;) har ett ogiltigt regelbundet uttryck &quot;%2&quot; i &quot;Validator&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>LineEdit ("%1") has an invalid value "%2" in "completion".</source>
-        <translation>LineEdit ("%1") har ett ogiltigt värde "%2" i "slutförande".</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
+        <translation>LineEdit (&quot;%1&quot;) har ett ogiltigt värde &quot;%2&quot; i &quot;slutförande&quot;.</translation>
     </message>
     <message>
         <location line="+166" />
-        <source>TextEdit ("%1") data is not an object.</source>
-        <translation>Textedit ("%1") Data är inte ett objekt.</translation>
+        <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>Textedit (&quot;%1&quot;) Data är inte ett objekt.</translation>
     </message>
     <message>
         <location line="+83" />
@@ -16047,18 +16152,18 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+26" />
-        <source>kind "%1" is not one of the supported "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any".</source>
-        <translation>Kind "%1" är inte en av de stödda "Befintliga Directory", "Directory", "File", "SaveFile", "Befintlig Command", "Command", "Any".</translation>
+        <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
+        <translation>Kind &quot;%1&quot; är inte en av de stödda &quot;Befintliga Directory&quot;, &quot;Directory&quot;, &quot;File&quot;, &quot;SaveFile&quot;, &quot;Befintlig Command&quot;, &quot;Command&quot;, &quot;Any&quot;.</translation>
     </message>
     <message>
         <location line="+80" />
-        <source>CheckBox ("%1") data is not an object.</source>
-        <translation>Kryssrutan ("%1") Data är inte ett objekt.</translation>
+        <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
+        <translation>Kryssrutan (&quot;%1&quot;) Data är inte ett objekt.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>CheckBox ("%1") values for checked and unchecked state are identical.</source>
-        <translation>Kryssrutan ("%1") Värden för kontrollerat och okontrollerat tillstånd är identiska.</translation>
+        <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
+        <translation>Kryssrutan (&quot;%1&quot;) Värden för kontrollerat och okontrollerat tillstånd är identiska.</translation>
     </message>
     <message>
         <location line="+80" />
@@ -16067,33 +16172,33 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>No "key" found in List items.</source>
-        <translation>Ingen "nyckel" som finns i listobjekt.</translation>
+        <source>No &quot;key&quot; found in List items.</source>
+        <translation>Ingen &quot;nyckel&quot; som finns i listobjekt.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>%1 ("%2") data is not an object.</source>
-        <translation>%1 ("%2") Data är inte ett objekt.</translation>
+        <source>%1 (&quot;%2&quot;) data is not an object.</source>
+        <translation>%1 (&quot;%2&quot;) Data är inte ett objekt.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>%1 ("%2") "index" is not an integer value.</source>
-        <translation>%1 ("%2") "Index" är inte ett heltal.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;Index&quot; är inte ett heltal.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>%1 ("%2") "disabledIndex" is not an integer value.</source>
-        <translation>%1 ("%2") "DisabledIndex" är inte ett heltal.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;DisabledIndex&quot; är inte ett heltal.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>%1 ("%2") "items" missing.</source>
-        <translation>%1 ("%2") "Objekt" saknas.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;Objekt&quot; saknas.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>%1 ("%2") "items" is not a JSON list.</source>
-        <translation>%1 ("%2") "Objekt" är inte en JSON -lista.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;Objekt&quot; är inte en JSON -lista.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
@@ -16117,8 +16222,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+13" />
-        <source>No "%1" key found in feature list object.</source>
-        <translation>Ingen "%1" -nyckel som finns i objektet av funktionslistan.</translation>
+        <source>No &quot;%1&quot; key found in feature list object.</source>
+        <translation>Ingen &quot;%1&quot; -nyckel som finns i objektet av funktionslistan.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -16132,8 +16237,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Error message from Version Control System: "%1".</source>
-        <translation>Felmeddelande från versionskontrollsystemet: "%1".</translation>
+        <source>Error message from Version Control System: &quot;%1&quot;.</source>
+        <translation>Felmeddelande från versionskontrollsystemet: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16144,18 +16249,18 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="-11" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
-        <source>Failed to add subproject "%1"
-to project "%2".</source>
-        <translation>Det gick inte att lägga till delprojekt "%1"
- att projicera "%2".</translation>
+        <source>Failed to add subproject &quot;%1&quot;
+to project &quot;%2&quot;.</source>
+        <translation>Det gick inte att lägga till delprojekt &quot;%1&quot;
+ att projicera &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
         <source>Failed to add one or more files to project
-"%1" (%2).</source>
+&quot;%1&quot; (%2).</source>
         <translation>Det gick inte att lägga till en eller flera filer för att projicera
- "%1" (%2).</translation>
+ &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
@@ -16175,13 +16280,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+33" />
-        <source>Check whether a variable exists.&lt;br&gt;Returns "true" if it does and an empty string if not.</source>
-        <translation>Kontrollera om det finns en variabel. &lt;br&gt; Returnerar "sant" om den gör det och en tom sträng om inte.</translation>
+        <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
+        <translation>Kontrollera om det finns en variabel. &lt;br&gt; Returnerar &quot;sant&quot; om den gör det och en tom sträng om inte.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not determine target path. "TargetPath" was not set on any page.</source>
-        <translation>Kunde inte bestämma målvägen. "TargetPath" sattes inte på någon sida.</translation>
+        <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
+        <translation>Kunde inte bestämma målvägen. &quot;TargetPath&quot; sattes inte på någon sida.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -16190,13 +16295,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The wizard failed to generate files.&lt;br&gt;The error message was: "%1".</source>
-        <translation>Guiden misslyckades med att generera filer. &lt;br&gt; Felmeddelandet var: "%1".</translation>
+        <source>The wizard failed to generate files.&lt;br&gt;The error message was: &quot;%1&quot;.</source>
+        <translation>Guiden misslyckades med att generera filer. &lt;br&gt; Felmeddelandet var: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+63" />
-        <source>No 'key' in options object.</source>
-        <translation>Ingen "nyckel" i alternativobjektet.</translation>
+        <source>No &apos;key&apos; in options object.</source>
+        <translation>Ingen &quot;nyckel&quot; i alternativobjektet.</translation>
     </message>
     <message>
         <location line="+88" />
@@ -16230,24 +16335,24 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+58" />
-        <source>"%1" does not exist in the file system.</source>
-        <translation>"%1" finns inte i filsystemet.</translation>
+        <source>&quot;%1&quot; does not exist in the file system.</source>
+        <translation>&quot;%1&quot; finns inte i filsystemet.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open "%1" as a project.</source>
-        <translation>Det gick inte att öppna "%1" som ett projekt.</translation>
+        <source>Failed to open &quot;%1&quot; as a project.</source>
+        <translation>Det gick inte att öppna &quot;%1&quot; som ett projekt.</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+46" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>Det gick inte att öppna en redaktör för "%1".</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>Det gick inte att öppna en redaktör för &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-27" />
-        <source>No file to open found in "%1".</source>
-        <translation>Ingen fil som ska öppnas i "%1".</translation>
+        <source>No file to open found in &quot;%1&quot;.</source>
+        <translation>Ingen fil som ska öppnas i &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16256,8 +16361,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to open project in "%1".</source>
-        <translation>Det gick inte att öppna projektet i "%1".</translation>
+        <source>Failed to open project in &quot;%1&quot;.</source>
+        <translation>Det gick inte att öppna projektet i &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16277,31 +16382,31 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+7" />
-        <source>TypeId "%1" of generator is unknown. Supported typeIds are: "%2".</source>
-        <translation>Typid "%1" av generator är okänd. Stödda typider är: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>Typid &quot;%1&quot; av generator är okänd. Stödda typider är: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+56" />
         <location line="+241" />
-        <source>Path "%1" does not exist when checking JSON wizard search paths.</source>
-        <translation>Sökväg "%1" finns inte när du kontrollerar JSON -guiden sökvägar.</translation>
+        <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
+        <translation>Sökväg &quot;%1&quot; finns inte när du kontrollerar JSON -guiden sökvägar.</translation>
     </message>
     <message>
         <location line="-228" />
-        <source>Checking "%1" for %2.</source>
-        <translation>Kontrollera " %1" för %2.</translation>
+        <source>Checking &quot;%1&quot; for %2.</source>
+        <translation>Kontrollera &quot; %1&quot; för %2.</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+233" />
-        <source>* Failed to parse "%1":%2:%3: %4</source>
-        <translation>* Misslyckades med att analysera "%1":%2:%3:%4</translation>
+        <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
+        <translation>* Misslyckades med att analysera &quot;%1&quot;:%2:%3:%4</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>* Did not find a JSON object in "%1".
+        <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* Hittade inte ett JSON -objekt i "%1".</translation>
+        <translation>* Hittade inte ett JSON -objekt i &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -16311,8 +16416,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="-224" />
-        <source>JsonWizard: "%1" not found.</source>
-        <translation>JSONWIZARD: "%1" hittades inte.</translation>
+        <source>JsonWizard: &quot;%1&quot; not found.</source>
+        <translation>JSONWIZARD: &quot;%1&quot; hittades inte.</translation>
     </message>
     <message>
         <location line="+96" />
@@ -16326,18 +16431,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>TypeId "%1" of page is unknown. Supported typeIds are: "%2".</source>
-        <translation>Typid "%1" av sidan är okänd. Stödda typider är: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>Typid &quot;%1&quot; av sidan är okänd. Stödda typider är: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Page with typeId "%1" has invalid "index".</source>
-        <translation>Sidan med typid "%1" har ogiltigt "index".</translation>
+        <source>Page with typeId &quot;%1&quot; has invalid &quot;index&quot;.</source>
+        <translation>Sidan med typid &quot;%1&quot; har ogiltigt &quot;index&quot;.</translation>
     </message>
     <message>
         <location line="+89" />
-        <source>* Did not find a JSON object in "%1".</source>
-        <translation>* Hittade inte ett JSON -objekt i "%1".</translation>
+        <source>* Did not find a JSON object in &quot;%1&quot;.</source>
+        <translation>* Hittade inte ett JSON -objekt i &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16376,13 +16481,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+32" />
-        <source>"kind" value "%1" is not "class" (deprecated), "file" or "project".</source>
-        <translation>"snäll" värde "%1" är inte "klass" (förinställd), "fil" eller "projekt".</translation>
+        <source>&quot;kind&quot; value &quot;%1&quot; is not &quot;class&quot; (deprecated), &quot;file&quot; or &quot;project&quot;.</source>
+        <translation>&quot;snäll&quot; värde &quot;%1&quot; är inte &quot;klass&quot; (förinställd), &quot;fil&quot; eller &quot;projekt&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"kind" is "file" or "class" (deprecated) and "%1" is also set.</source>
-        <translation>"Kind" är "fil" eller "klass" (avskrivad) och "%1" är också inställd.</translation>
+        <source>&quot;kind&quot; is &quot;file&quot; or &quot;class&quot; (deprecated) and &quot;%1&quot; is also set.</source>
+        <translation>&quot;Kind&quot; är &quot;fil&quot; eller &quot;klass&quot; (avskrivad) och &quot;%1&quot; är också inställd.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -16396,13 +16501,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Icon file "%1" not found.</source>
-        <translation>Ikonfil "%1" hittades inte.</translation>
+        <source>Icon file &quot;%1&quot; not found.</source>
+        <translation>Ikonfil &quot;%1&quot; hittades inte.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Image file "%1" not found.</source>
-        <translation>Bildfil "%1" hittades inte.</translation>
+        <source>Image file &quot;%1&quot; not found.</source>
+        <translation>Bildfil &quot;%1&quot; hittades inte.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16421,13 +16526,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>When parsing "generators": %1</source>
-        <translation>När man analyserar "generatorer": %1</translation>
+        <source>When parsing &quot;generators&quot;: %1</source>
+        <translation>När man analyserar &quot;generatorer&quot;: %1</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>When parsing "pages": %1</source>
-        <translation>När du analyserar "sidor": %1</translation>
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation>När du analyserar &quot;sidor&quot;: %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
@@ -16441,8 +16546,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+57" />
-        <source>When processing "%1":&lt;br&gt;%2</source>
-        <translation>När bearbetar "%1": &lt;br&gt;%2</translation>
+        <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
+        <translation>När bearbetar &quot;%1&quot;: &lt;br&gt;%2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
@@ -16468,43 +16573,43 @@ to project "%2".</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
-        <source>When parsing fields of page "%1": %2</source>
-        <translation>När de analyserar fält på sidan " %1": %2</translation>
+        <source>When parsing fields of page &quot;%1&quot;: %2</source>
+        <translation>När de analyserar fält på sidan &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "File" page needs to be unset or an empty object.</source>
-        <translation>"Data" för en "fil" -sida måste vara oupptäckta eller ett tomt objekt.</translation>
+        <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
+        <translation>&quot;Data&quot; för en &quot;fil&quot; -sida måste vara oupptäckta eller ett tomt objekt.</translation>
     </message>
     <message>
         <location line="+48" />
-        <source>Error parsing "%1" in "Kits" page: %2</source>
-        <translation>Fel att analysera " %1" på "kit" -sida: %2</translation>
+        <source>Error parsing &quot;%1&quot; in &quot;Kits&quot; page: %2</source>
+        <translation>Fel att analysera &quot; %1&quot; på &quot;kit&quot; -sida: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>"data" must be a JSON object for "Kits" pages.</source>
-        <translation>"Data" måste vara ett JSON -objekt för "kit" -sidor.</translation>
+        <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
+        <translation>&quot;Data&quot; måste vara ett JSON -objekt för &quot;kit&quot; -sidor.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>"Kits" page requires a "%1" set.</source>
-        <translation>"Kits" -sida kräver en "%1" -uppsättning.</translation>
+        <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
+        <translation>&quot;Kits&quot; -sida kräver en &quot;%1&quot; -uppsättning.</translation>
     </message>
     <message>
         <location line="+62" />
-        <source>"data" must be empty or a JSON object for "Project" pages.</source>
-        <translation>"Data" måste vara tomma eller ett JSON -objekt för "projekt" -sidor.</translation>
+        <source>&quot;data&quot; must be empty or a JSON object for &quot;Project&quot; pages.</source>
+        <translation>&quot;Data&quot; måste vara tomma eller ett JSON -objekt för &quot;projekt&quot; -sidor.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Invalid regular expression "%1" in "%2". %3</source>
-        <translation>Ogiltigt regelbundet uttryck "%1" i "%2". %3</translation>
+        <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
+        <translation>Ogiltigt regelbundet uttryck &quot;%1&quot; i &quot;%2&quot;. %3</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "Summary" page can be unset or needs to be an object.</source>
-        <translation>"Data" för en "sammanfattning" -sida kan vara oupptäckt eller måste vara ett objekt.</translation>
+        <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
+        <translation>&quot;Data&quot; för en &quot;sammanfattning&quot; -sida kan vara oupptäckt eller måste vara ett objekt.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
@@ -16513,13 +16618,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Pattern "%1" is no valid regular expression.</source>
-        <translation>Mönster "%1" är inget giltigt regelbundet uttryck.</translation>
+        <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
+        <translation>Mönster &quot;%1&quot; är inget giltigt regelbundet uttryck.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>ScannerGenerator: Binary pattern "%1" not valid.</source>
-        <translation>ScannerGenerator: Binary Mönster "%1" inte giltigt.</translation>
+        <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
+        <translation>ScannerGenerator: Binary Mönster &quot;%1&quot; inte giltigt.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
@@ -16576,18 +16681,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+17" />
-        <source>Sys Root "%1" does not exist in the file system.</source>
-        <translation>Sys root "%1" finns inte i filsystemet.</translation>
+        <source>Sys Root &quot;%1&quot; does not exist in the file system.</source>
+        <translation>Sys root &quot;%1&quot; finns inte i filsystemet.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is not a directory.</source>
-        <translation>Sys root "%1" är inte en katalog.</translation>
+        <source>Sys Root &quot;%1&quot; is not a directory.</source>
+        <translation>Sys root &quot;%1&quot; är inte en katalog.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is empty.</source>
-        <translation>Sys root "%1" är tom.</translation>
+        <source>Sys Root &quot;%1&quot; is empty.</source>
+        <translation>Sys root &quot;%1&quot; är tom.</translation>
     </message>
     <message>
         <location line="+14" />
@@ -17070,13 +17175,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href="projectmode"&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation>&lt;stil typ = text/css&gt; a: länk {färg: rgb (128, 128, 255);} &lt;/stil&gt; Projektet &lt;b&gt;%1 &lt;/b&gt; är ännu inte konfigurerat &lt;br/&gt; &lt;br/ &gt; Du kan konfigurera det i &lt;a href = "ProjectMode"&gt; Projektläge &lt;/a&gt; &lt;br/&gt;</translation>
+        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href=&quot;projectmode&quot;&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
+        <translation>&lt;stil typ = text/css&gt; a: länk {färg: rgb (128, 128, 255);} &lt;/stil&gt; Projektet &lt;b&gt;%1 &lt;/b&gt; är ännu inte konfigurerat &lt;br/&gt; &lt;br/ &gt; Du kan konfigurera det i &lt;a href = &quot;ProjectMode&quot;&gt; Projektläge &lt;/a&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
-        <source>Falling back to use the cached environment for "%1" after:</source>
-        <translation>Faller tillbaka för att använda den cachade miljön för "%1" efter:</translation>
+        <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
+        <translation>Faller tillbaka för att använda den cachade miljön för &quot;%1&quot; efter:</translation>
     </message>
     <message>
         <location line="+483" />
@@ -17098,9 +17203,9 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+796" />
-        <source>Failed to retrieve MSVC Environment from "%1":
+        <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
-        <translation>Det gick inte att hämta MSVC -miljö från "%1":
+        <translation>Det gick inte att hämta MSVC -miljö från &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
@@ -17147,8 +17252,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open file: "%1": %2</source>
-        <translation>Kunde inte öppna fil: " %1": %2</translation>
+        <source>Could not open file: &quot;%1&quot;: %2</source>
+        <translation>Kunde inte öppna fil: &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
@@ -17258,13 +17363,13 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+92" />
-        <source>Project "%1" was configured for kit "%2" with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
-        <translation>Projekt "%1" konfigurerades för kit "%2" med ID%3, vilket inte finns längre. Du kan skapa ett nytt kit eller kopiera stegen på det försvunna kit till ett annat kit i %4 -läge.</translation>
+        <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
+        <translation>Projekt &quot;%1&quot; konfigurerades för kit &quot;%2&quot; med ID%3, vilket inte finns längre. Du kan skapa ett nytt kit eller kopiera stegen på det försvunna kit till ett annat kit i %4 -läge.</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+622" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+626" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
@@ -17273,79 +17378,79 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+265" />
-        <source>Could not find any qml_*.qm file at "%1"</source>
-        <translation>Kunde inte hitta någon QML _*. Qm -fil på "%1"</translation>
+        <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
+        <translation>Kunde inte hitta någon QML _*. Qm -fil på &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+87" />
         <source>%1: Name.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Namn.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to main file.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Hela sökvägen till huvudfilen.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Full sökväg till projektkatalog.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: The name of the active kit.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Namnet på det aktiva satsen.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Name of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Namn på den aktiva byggkonfigurationen.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Type of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Typ av den aktiva byggkonfigurationen.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Full build path of active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Full byggväg för aktiv byggkonfiguration.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Variables in the active build environment.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Variabler i den aktiva byggmiljön.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Name of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Namn på den aktiva körkonfigurationen.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Executable of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: körbar för den aktiva körkonfigurationen.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Variables in the environment of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Variabler i miljön i den aktiva körkonfigurationen.</translation>
     </message>
     <message>
         <location line="+12" />
         <source>%1: Working directory of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Arbetskatalog för den aktiva körkonfigurationen.</translation>
     </message>
     <message>
@@ -17388,12 +17493,12 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+7" />
         <source>&amp;Debug</source>
-        <translation>&amp; Felsökning</translation>
+        <translation>&amp;Felsökning</translation>
     </message>
     <message>
         <location line="+6" />
         <source>&amp;Start Debugging</source>
-        <translation>&amp; Börja felsökning</translation>
+        <translation>&amp;Börja felsökning</translation>
     </message>
     <message>
         <location line="+82" />
@@ -17428,7 +17533,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+17" />
         <source>Recent P&amp;rojects</source>
-        <translation>Senaste P &amp; Rojebes</translation>
+        <translation>Senaste P &amp;Rojebes</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17438,8 +17543,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="-347" />
-        <source>Close Pro&amp;ject "%1"</source>
-        <translation>Stäng projektet "%1"</translation>
+        <source>Close Pro&amp;ject &quot;%1&quot;</source>
+        <translation>Stäng pro&amp;jektet &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -17449,13 +17554,13 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <location line="+328" />
-        <source>Close All Files in Project "%1"</source>
-        <translation>Stäng alla filer i projektet "%1"</translation>
+        <source>Close All Files in Project &quot;%1&quot;</source>
+        <translation>Stäng alla filer i projektet &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-316" />
         <source>Close Pro&amp;ject</source>
-        <translation>Stänga projektet</translation>
+        <translation>Stänga pro&amp;jektet</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17513,8 +17618,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Build Project "%1"</source>
-        <translation>Bygg projekt "%1"</translation>
+        <source>Build Project &quot;%1&quot;</source>
+        <translation>Bygg projekt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17523,18 +17628,18 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Build Project "%1" for All Configurations</source>
-        <translation>Bygg projekt "%1" för alla konfigurationer</translation>
+        <source>Build Project &quot;%1&quot; for All Configurations</source>
+        <translation>Bygg projekt &quot;%1&quot; för alla konfigurationer</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Build for &amp;Run Configuration</source>
-        <translation>Bygg för &amp; körkonfiguration</translation>
+        <translation>Bygg för &amp;körkonfiguration</translation>
     </message>
     <message>
         <location line="+0" />
-        <source>Build for &amp;Run Configuration "%1"</source>
-        <translation>Bygg för &amp; körkonfiguration "%1"</translation>
+        <source>Build for &amp;Run Configuration &quot;%1&quot;</source>
+        <translation>Bygg för &amp;körkonfiguration &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+13" />
@@ -17627,8 +17732,8 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+9" />
         <location line="+1621" />
-        <source>Close Project "%1"</source>
-        <translation>Stäng projektet "%1"</translation>
+        <source>Close Project &quot;%1&quot;</source>
+        <translation>Stäng projektet &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-1614" />
@@ -17637,8 +17742,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Close All Projects Except "%1"</source>
-        <translation>Stäng alla projekt utom "%1"</translation>
+        <source>Close All Projects Except &quot;%1&quot;</source>
+        <translation>Stäng alla projekt utom &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -17673,8 +17778,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Set "%1" as Active Project</source>
-        <translation>Ställ in "%1" som aktivt projekt</translation>
+        <source>Set &quot;%1&quot; as Active Project</source>
+        <translation>Ställ in &quot;%1&quot; som aktivt projekt</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17759,7 +17864,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+62" />
         <source>Sanitizer</source>
-        <comment>Category for sanitizer issues listed under 'Issues'</comment>
+        <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
         <translation>Saneringsmedel</translation>
     </message>
     <message>
@@ -17800,8 +17905,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+48" />
-        <source>Failed opening project "%1": No plugin can open project type "%2".</source>
-        <translation>Misslyckade öppningsprojekt "%1": Inget plugin kan öppna projekttyp "%2".</translation>
+        <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
+        <translation>Misslyckade öppningsprojekt &quot;%1&quot;: Inget plugin kan öppna projekttyp &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+195" />
@@ -17832,18 +17937,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+23" />
-        <source>Open Project in "%1"</source>
-        <translation>Öppet projekt i "%1"</translation>
+        <source>Open Project in &quot;%1&quot;</source>
+        <translation>Öppet projekt i &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Open Project "%1"</source>
-        <translation>Öppet projekt "%1"</translation>
+        <source>Open Project &quot;%1&quot;</source>
+        <translation>Öppet projekt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>The file "%1" was renamed to "%2", but the following projects could not be automatically changed: %3</source>
-        <translation>Filen "%1" döptes till "%2", men följande projekt kunde inte ändras automatiskt:%3 3</translation>
+        <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
+        <translation>Filen &quot;%1&quot; döptes till &quot;%2&quot;, men följande projekt kunde inte ändras automatiskt:%3 3</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17860,8 +17965,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+62" />
-        <source>Building "%1" is disabled: %2&lt;br&gt;</source>
-        <translation>Byggande " %1" är inaktiverad: %2 &lt;br&gt;</translation>
+        <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
+        <translation>Byggande &quot; %1&quot; är inaktiverad: %2 &lt;br&gt;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17922,18 +18027,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>The project "%1" is not configured.</source>
-        <translation>Projektet "%1" är inte konfigurerat.</translation>
+        <source>The project &quot;%1&quot; is not configured.</source>
+        <translation>Projektet &quot;%1&quot; är inte konfigurerat.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The project "%1" has no active kit.</source>
-        <translation>Projektet "%1" har inget aktivt kit.</translation>
+        <source>The project &quot;%1&quot; has no active kit.</source>
+        <translation>Projektet &quot;%1&quot; har inget aktivt kit.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The kit "%1" for the project "%2" has no active run configuration.</source>
-        <translation>Satsen "%1" för projektet "%2" har ingen aktiv körkonfiguration.</translation>
+        <source>The kit &quot;%1&quot; for the project &quot;%2&quot; has no active run configuration.</source>
+        <translation>Satsen &quot;%1&quot; för projektet &quot;%2&quot; har ingen aktiv körkonfiguration.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -17942,8 +18047,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>Cannot run "%1".</source>
-        <translation>Kan inte köra "%1".</translation>
+        <source>Cannot run &quot;%1&quot;.</source>
+        <translation>Kan inte köra &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17969,8 +18074,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+41" />
-        <source>The following subprojects could not be added to project "%1":</source>
-        <translation>Följande delprojekt kunde inte läggas till i projektet "%1":</translation>
+        <source>The following subprojects could not be added to project &quot;%1&quot;:</source>
+        <translation>Följande delprojekt kunde inte läggas till i projektet &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18019,15 +18124,15 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>File "%1" was not removed, because the project has changed in the meantime.
+        <source>File &quot;%1&quot; was not removed, because the project has changed in the meantime.
 Please try again.</source>
-        <translation>Fil "%1" togs inte bort, eftersom projektet har förändrats under tiden.
+        <translation>Fil &quot;%1&quot; togs inte bort, eftersom projektet har förändrats under tiden.
  Försök igen.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Could not remove file "%1" from project "%2".</source>
-        <translation>Kunde inte ta bort filen "%1" från projektet "%2".</translation>
+        <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
+        <translation>Kunde inte ta bort filen &quot;%1&quot; från projektet &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+36" />
@@ -18052,13 +18157,13 @@ Please try again.</source>
     </message>
     <message>
         <location line="-9" />
-        <source>Failed to copy file "%1" to "%2": %3.</source>
-        <translation>Det gick inte att kopiera fil "%1" till "%2":%3.</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
+        <translation>Det gick inte att kopiera fil &quot;%1&quot; till &quot;%2&quot;:%3.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Failed to add new file "%1" to the project.</source>
-        <translation>Det gick inte att lägga till ny fil "%1" till projektet.</translation>
+        <source>Failed to add new file &quot;%1&quot; to the project.</source>
+        <translation>Det gick inte att lägga till ny fil &quot;%1&quot; till projektet.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18106,8 +18211,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+192" />
-        <source>Locates files from all project directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Hitta filer från alla projektkataloger. Bifoga "+&lt;nummer&gt;" eller ": &lt;nummer&gt;" för att hoppa till det givna radnumret. Lägg till en annan "+&lt;nummer&gt;" eller ": &lt;nummer&gt;" för att hoppa till kolumnnumret också.</translation>
+        <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Hitta filer från alla projektkataloger. Bifoga &quot;+&lt;nummer&gt;&quot; eller &quot;: &lt;nummer&gt;&quot; för att hoppa till det givna radnumret. Lägg till en annan &quot;+&lt;nummer&gt;&quot; eller &quot;: &lt;nummer&gt;&quot; för att hoppa till kolumnnumret också.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -18164,13 +18269,13 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
         <source>s</source>
-        <extracomment>Suffix for "seconds"</extracomment>
+        <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>s</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The amount of seconds to wait between a "soft kill" and a "hard kill" of a running application.</source>
-        <translation>Mängden sekunder att vänta mellan ett "mjukt död" och ett "hårt död" av en löpande applikation.</translation>
+        <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
+        <translation>Mängden sekunder att vänta mellan ett &quot;mjukt död&quot; och ett &quot;hårt död&quot; av en löpande applikation.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -18234,8 +18339,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Some legacy build tools do not deal well with paths that contain "special" characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
-        <translation>Vissa arvsbyggnadsverktyg handlar inte bra med vägar som innehåller "speciella" karaktärer som utrymmen, vilket kan leda till falska byggfel. &lt;P&gt; avmarkerar detta alternativ om du inte arbetar med sådana verktyg.</translation>
+        <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
+        <translation>Vissa arvsbyggnadsverktyg handlar inte bra med vägar som innehåller &quot;speciella&quot; karaktärer som utrymmen, vilket kan leda till falska byggfel. &lt;P&gt; avmarkerar detta alternativ om du inte arbetar med sådana verktyg.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18294,13 +18399,13 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Show all kits in "Build &amp; Run" in "Projects" mode</source>
-        <translation>Visa alla satser i "build &amp; run" i "projekt" -läge</translation>
+        <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
+        <translation>Visa alla satser i &quot;build &amp; run&quot; i &quot;projekt&quot; -läge</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Show also inactive kits in "Build &amp; Run" in "Projects" mode.</source>
-        <translation>Visa också inaktiva kit i "Build &amp; Run" i "projekt" -läge.</translation>
+        <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
+        <translation>Visa också inaktiva kit i &quot;Build &amp; Run&quot; i &quot;projekt&quot; -läge.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18339,8 +18444,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Default for "Run in terminal":</source>
-        <translation>Standard för "Kör i terminal":</translation>
+        <source>Default for &quot;Run in terminal&quot;:</source>
+        <translation>Standard för &quot;Kör i terminal&quot;:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18420,8 +18525,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
-        <source>No kits are enabled for this project. Enable kits in the "Projects" mode.</source>
-        <translation>Inga kit är aktiverade för detta projekt. Aktivera satser i läget "projekt".</translation>
+        <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
+        <translation>Inga kit är aktiverade för detta projekt. Aktivera satser i läget &quot;projekt&quot;.</translation>
     </message>
     <message>
         <location line="+89" />
@@ -18528,7 +18633,7 @@ What should %1 do now?</source>
         <translation>&lt;b&gt; Varning: &lt;/b&gt; Den här filen ligger utanför projektkatalogen.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-391" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-395" />
         <source>Simplify Tree</source>
         <translation>Förenkla trädet</translation>
     </message>
@@ -18578,7 +18683,7 @@ What should %1 do now?</source>
         <translation>Filterträd</translation>
     </message>
     <message>
-        <location line="+194" />
+        <location line="+198" />
         <source>Meta+X</source>
         <translation>Meta+x</translation>
     </message>
@@ -18614,18 +18719,18 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+50" />
-        <source>Open %1 "%2"</source>
-        <translation>Öppna %1 " %2"</translation>
+        <source>Open %1 &quot;%2&quot;</source>
+        <translation>Öppna %1 &quot; %2&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Open %1 "%2" (%3)</source>
-        <translation>Öppna%1 "%2" (%3)</translation>
+        <source>Open %1 &quot;%2&quot; (%3)</source>
+        <translation>Öppna%1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
         <location line="+20" />
         <source>session</source>
-        <comment>Appears in "Open session &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>session</translation>
     </message>
     <message>
@@ -18652,7 +18757,7 @@ What should %1 do now?</source>
     <message>
         <location line="+125" />
         <source>project</source>
-        <comment>Appears in "Open project &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>projekt</translation>
     </message>
     <message>
@@ -18687,7 +18792,7 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+118" />
-        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project's settings:</source>
+        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>Projektet konfigurerades för satser som inte längre finns. Välj ett av följande alternativ i kontextmenyn för att återställa projektets inställningar:</translation>
     </message>
     <message>
@@ -18718,8 +18823,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+12" />
-        <source>Remove Vanished Target "%1"</source>
-        <translation>Ta bort försvunnen mål "%1"</translation>
+        <source>Remove Vanished Target &quot;%1&quot;</source>
+        <translation>Ta bort försvunnen mål &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18787,7 +18892,7 @@ What should %1 do now?</source>
     <message>
         <location line="+63" />
         <source>Add to &amp;version control:</source>
-        <translation>Lägg till och versionskontroll:</translation>
+        <translation>Lägg till och &amp;versionskontroll:</translation>
     </message>
     <message>
         <location line="+88" />
@@ -18797,17 +18902,17 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Add to &amp;project:</source>
-        <translation>Lägg till och projekt:</translation>
+        <translation>Lägg till och &amp;projekt:</translation>
     </message>
     <message>
         <location line="+74" />
-        <source>A version control system repository could not be created in "%1".</source>
-        <translation>Ett versionskontrollsystemförvar kunde inte skapas i "%1".</translation>
+        <source>A version control system repository could not be created in &quot;%1&quot;.</source>
+        <translation>Ett versionskontrollsystemförvar kunde inte skapas i &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to add "%1" to the version control system.</source>
-        <translation>Det gick inte att lägga till "%1" i versionskontrollsystemet.</translation>
+        <source>Failed to add &quot;%1&quot; to the version control system.</source>
+        <translation>Det gick inte att lägga till &quot;%1&quot; i versionskontrollsystemet.</translation>
     </message>
     <message>
         <location line="+94" />
@@ -18843,17 +18948,17 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>The run configuration's working directory.</source>
+        <source>The run configuration&apos;s working directory.</source>
         <translation>Körkonfigurationens arbetskatalog.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The run configuration's name.</source>
+        <source>The run configuration&apos;s name.</source>
         <translation>Körkonfigurationens namn.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The run configuration's executable.</source>
+        <source>The run configuration&apos;s executable.</source>
         <translation>Körkonfigurationen är körbar.</translation>
     </message>
     <message>
@@ -18870,7 +18975,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
-        <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
+        <extracomment>Shown in Run configuration, Add menu: &quot;name of runnable (on device name)&quot;</extracomment>
         <translation>%1 (på %{enhet: namn})</translation>
     </message>
     <message>
@@ -19003,12 +19108,12 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Force &amp;Quit</source>
-        <translation>Force &amp; Sluta</translation>
+        <translation>Force &amp;Sluta</translation>
     </message>
     <message>
         <location line="+0" />
         <source>&amp;Keep Running</source>
-        <translation>&amp; Fortsätt springa</translation>
+        <translation>&amp;Fortsätt springa</translation>
     </message>
     <message>
         <location line="+246" />
@@ -19072,8 +19177,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Either the invoked program "%1" is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>Antingen det åkallade programmet "%1" saknas, eller så kan du ha otillräckliga behörigheter för att åberopa programmet.</translation>
+        <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>Antingen det åkallade programmet &quot;%1&quot; saknas, eller så kan du ha otillräckliga behörigheter för att åberopa programmet.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19273,8 +19378,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+172" />
-        <source>Unknown build system "%1"</source>
-        <translation>Okänt byggsystem "%1"</translation>
+        <source>Unknown build system &quot;%1&quot;</source>
+        <translation>Okänt byggsystem &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
@@ -19299,7 +19404,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
         <source>&amp;Configure Project</source>
-        <translation>&amp; Konfigurera projektet</translation>
+        <translation>&amp;Konfigurera projektet</translation>
     </message>
     <message>
         <location line="+91" />
@@ -19334,8 +19439,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+71" />
-        <source>Enable Kit for Project "%1"</source>
-        <translation>Aktivera kit för projekt "%1"</translation>
+        <source>Enable Kit for Project &quot;%1&quot;</source>
+        <translation>Aktivera kit för projekt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7" />
@@ -19344,8 +19449,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Disable Kit for Project "%1"</source>
-        <translation>Inaktivera kit för projekt "%1"</translation>
+        <source>Disable Kit for Project &quot;%1&quot;</source>
+        <translation>Inaktivera kit för projekt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19354,8 +19459,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Disable Kit "%1" in This Project?</source>
-        <translation>Inaktivera kit "%1" i detta projekt?</translation>
+        <source>Disable Kit &quot;%1&quot; in This Project?</source>
+        <translation>Inaktivera kit &quot;%1&quot; i detta projekt?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19389,8 +19494,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Add a kit in the &lt;a href="buildandrun"&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
-        <translation>Lägg till ett kit i &lt;a href = "buildandrun"&gt; alternativ &lt;/a&gt; eller via underhållsverktyget för SDK.</translation>
+        <source>Add a kit in the &lt;a href=&quot;buildandrun&quot;&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
+        <translation>Lägg till ett kit i &lt;a href = &quot;buildandrun&quot;&gt; alternativ &lt;/a&gt; eller via underhållsverktyget för SDK.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19486,7 +19591,7 @@ These files are preserved.</source>
         <translation>Utfärdar</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+53" />
         <source>Show Warnings</source>
         <translation>Visa varningar</translation>
     </message>
@@ -19654,18 +19759,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+24" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>Installationen av "%1" avbröts av timeout.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>Installationen av &quot;%1&quot; avbröts av timeout.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>Installationen av "%1" avbröts av användaren.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>Installationen av &quot;%1&quot; avbröts av användaren.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>Installera " %1" misslyckades med exitkod %2.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>Installera &quot; %1&quot; misslyckades med exitkod %2.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
@@ -19742,23 +19847,23 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" not found.</source>
-        <translation>Python "%1" hittades inte.</translation>
+        <source>Python &quot;%1&quot; not found.</source>
+        <translation>Python &quot;%1&quot; hittades inte.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" is not executable.</source>
-        <translation>Python "%1" är inte körbar.</translation>
+        <source>Python &quot;%1&quot; is not executable.</source>
+        <translation>Python &quot;%1&quot; är inte körbar.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Python "%1" does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
-        <translation>Python "%1" innehåller inte en användbar PIP. PIP behövs för att installera Python -paket från Python -paketindexet, som Pyside och Python Language Server. För att använda någon av den funktionen säkerställa att PIP är installerad för den pythonen.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
+        <translation>Python &quot;%1&quot; innehåller inte en användbar PIP. PIP behövs för att installera Python -paket från Python -paketindexet, som Pyside och Python Language Server. För att använda någon av den funktionen säkerställa att PIP är installerad för den pythonen.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Python "%1" does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
-        <translation>Python "%1" innehåller inte en användbar VENV. VENV är det rekommenderade sättet att isolera en utvecklingsmiljö för ett projekt från den globala installerade pythonen.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
+        <translation>Python &quot;%1&quot; innehåller inte en användbar VENV. VENV är det rekommenderade sättet att isolera en utvecklingsmiljö för ett projekt från den globala installerade pythonen.</translation>
     </message>
     <message>
         <location line="+32" />
@@ -19812,8 +19917,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
-        <source>No Python interpreter set for kit "%1".</source>
-        <translation>Ingen Python -tolk för kit "%1".</translation>
+        <source>No Python interpreter set for kit &quot;%1&quot;.</source>
+        <translation>Ingen Python -tolk för kit &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
@@ -19832,7 +19937,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
         <source>Python:</source>
         <translation>Pytonorm:</translation>
     </message>
@@ -19842,7 +19947,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Kör %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
         <location line="+283" />
         <source>Name:</source>
         <translation>Namn:</translation>
@@ -19860,13 +19965,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" does not exist.</source>
-        <translation>"%1" finns inte.</translation>
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot; finns inte.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" is not an executable file.</source>
-        <translation>"%1" är inte en körbar fil.</translation>
+        <source>&quot;%1&quot; is not an executable file.</source>
+        <translation>&quot;%1&quot; är inte en körbar fil.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -19884,18 +19989,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <location line="-183" />
         <location line="+185" />
         <source>&amp;Make Default</source>
-        <translation>&amp; Göra standard</translation>
+        <translation>&amp;Göra standard</translation>
     </message>
     <message>
         <location line="-183" />
         <source>&amp;Generate Kit</source>
-        <translation>&amp; Generera kit</translation>
+        <translation>&amp;Generera kit</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+179" />
         <source>&amp;Clean Up</source>
-        <translation>&amp; Städa upp</translation>
+        <translation>&amp;Städa upp</translation>
     </message>
     <message>
         <location line="-178" />
@@ -19933,7 +20038,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Språkserverkonfiguration</translation>
     </message>
     <message>
-        <location line="+476" />
+        <location line="+489" />
         <source>Python interpreter:</source>
         <translation>Python -tolk:</translation>
     </message>
@@ -19965,8 +20070,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+11" />
-        <source>Found "%1" (%2)</source>
-        <translation>Hittade "%1" (%2)</translation>
+        <source>Found &quot;%1&quot; (%2)</source>
+        <translation>Hittade &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="+9" />
@@ -19975,13 +20080,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
-        <source>"data" of a Python wizard page expects a map with "items" containing a list of objects.</source>
-        <translation>"Data" på en Python Wizard -sida förväntar sig en karta med "objekt" som innehåller en lista med objekt.</translation>
+        <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
+        <translation>&quot;Data&quot; på en Python Wizard -sida förväntar sig en karta med &quot;objekt&quot; som innehåller en lista med objekt.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>An item of Python wizard page data expects a "trKey" field containing the UI visible string for that Python version and a "value" field containing an object with a "PySideVersion" field used for import statements in the Python files.</source>
-        <translation>Ett objekt av Python Wizard -siddata förväntar sig ett "trKEY" -fält som innehåller UI -synliga strängen för den Python -versionen och ett "värde" -fält som innehåller ett objekt med ett "pysideversion" -fält som används för importuttalanden i Python -filerna.</translation>
+        <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
+        <translation>Ett objekt av Python Wizard -siddata förväntar sig ett &quot;trKEY&quot; -fält som innehåller UI -synliga strängen för den Python -versionen och ett &quot;värde&quot; -fält som innehåller ett objekt med ett &quot;pysideversion&quot; -fält som används för importuttalanden i Python -filerna.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -20006,17 +20111,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+126" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
         <source>Move tab left</source>
         <translation>Flytta fliken åt vänster</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Switch to next tab</source>
         <translation>Växla till nästa flik</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+15" />
         <source>Move tab right</source>
         <translation>Flytta fliken åt höger</translation>
     </message>
@@ -20178,7 +20283,7 @@ Dessutom infogar Skift+Enter ett escape-tecken vid markörens position och flytt
     <message>
         <location line="+72" />
         <source>&amp;Automatically Insert Matching Characters</source>
-        <translation>Sätt in matchande tecken automatiskt</translation>
+        <translation>Sätt in m&amp;atchande tecken automatiskt</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
@@ -20187,8 +20292,8 @@ Dessutom infogar Skift+Enter ett escape-tecken vid markörens position och flytt
     </message>
     <message>
         <location line="+2" />
-        <source>Automatically creates a Doxygen comment upon pressing enter after a '/**', '/*!', '//!' or '///'.</source>
-        <translation>Skapar automatiskt en Doxygen-kommentar när du trycker på enter efter en '/**', '/*!', '//!' eller '///'.</translation>
+        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
+        <translation>Skapar automatiskt en Doxygen-kommentar när du trycker på enter efter en &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; eller &apos;///&apos;.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20207,8 +20312,8 @@ Dessutom infogar Skift+Enter ett escape-tecken vid markörens position och flytt
     </message>
     <message>
         <location line="+2" />
-        <source>Adds leading asterisks when continuing C/C++ "/*", Qt "/*!" and Java "/**" style comments on new lines.</source>
-        <translation>Lägger till inledande asterisker när du fortsätter C/C++ "/*", Qt "/*!" och Java "/**"-stilkommentarer på nya rader.</translation>
+        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
+        <translation>Lägger till inledande asterisker när du fortsätter C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; och Java &quot;/**&quot;-stilkommentarer på nya rader.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20217,12 +20322,12 @@ Dessutom infogar Skift+Enter ett escape-tecken vid markörens position och flytt
     </message>
     <message>
         <location line="+1" />
-        <source>Doxygen allows "@" and "\" to start commands.
-By default, "@" is used if the surrounding comment starts with "/**" or "///", and "\" is used
-if the comment starts with "/*!" or "//!".</source>
-        <translation>Doxygen tillåter "@" och "\" att starta kommandon.
- Som standard används "@" om den omgivande kommentaren börjar med "/**" eller "///" och "\" används
- Om kommentaren börjar med "/*!" eller "//!".</translation>
+        <source>Doxygen allows &quot;@&quot; and &quot;\&quot; to start commands.
+By default, &quot;@&quot; is used if the surrounding comment starts with &quot;/**&quot; or &quot;///&quot;, and &quot;\&quot; is used
+if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
+        <translation>Doxygen tillåter &quot;@&quot; och &quot;\&quot; att starta kommandon.
+ Som standard används &quot;@&quot; om den omgivande kommentaren börjar med &quot;/**&quot; eller &quot;///&quot; och &quot;\&quot; används
+ Om kommentaren börjar med &quot;/*!&quot; eller &quot;//!&quot;.</translation>
     </message>
     <message>
         <source>&amp;Automatically insert matching characters</source>
@@ -20397,8 +20502,8 @@ if the comment starts with "/*!" or "//!".</source>
     </message>
     <message>
         <location line="+36" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding. Editing not possible.</source>
-        <translation>&lt;b&gt;Fel:&lt;/b&gt; Kunde inte avkoda "%1" med "%2"-kodning. Det går inte att redigera.</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
+        <translation>&lt;b&gt;Fel:&lt;/b&gt; Kunde inte avkoda &quot;%1&quot; med &quot;%2&quot;-kodning. Det går inte att redigera.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -20530,8 +20635,8 @@ Påverkar indragningen av fortsättningslinjer.
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;i&gt;Code indentation is configured in &lt;a href="C++"&gt;C++&lt;/a&gt; and &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;Kodinentering konfigureras i inställningarna &lt;a href="C++"&gt;C++&lt;/a&gt; och &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt;.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;Kodinentering konfigureras i inställningarna &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; och &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt;.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20777,7 +20882,7 @@ Anger hur backsteg interagerar med indrag.
     <message>
         <location line="+2" />
         <source>Enable scroll &amp;wheel zooming</source>
-        <translation>Aktivera rull- och hjulzoomning</translation>
+        <translation>&amp;Aktivera rull- och hjulzoomning</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20917,8 +21022,8 @@ Anger hur backsteg interagerar med indrag.
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;i&gt;Set &lt;a href="font zoom"&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;Ställ in &lt;a href="font zoom"&gt;teckensnittets radavstånd&lt;/a&gt; till 100 % för att aktivera alternativet för textbrytning.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;Ställ in &lt;a href=&quot;font zoom&quot;&gt;teckensnittets radavstånd&lt;/a&gt; till 100 % för att aktivera alternativet för textbrytning.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -20998,7 +21103,7 @@ Anger hur backsteg interagerar med indrag.
     <message>
         <location line="+2" />
         <source>&amp;Highlight selection</source>
-        <translation>&amp; Markera val</translation>
+        <translation>&amp;Markera val</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21079,8 +21184,8 @@ Ett värde som är mindre än 100 % kan resultera i överlappande och feljustera
     </message>
     <message>
         <location line="+16" />
-        <source>Color Scheme for Theme "%1"</source>
-        <translation>Färgschema för tema "%1"</translation>
+        <source>Color Scheme for Theme &quot;%1&quot;</source>
+        <translation>Färgschema för tema &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+16" />
@@ -21201,8 +21306,8 @@ Ett värde som är mindre än 100 % kan resultera i överlappande och feljustera
     </message>
     <message>
         <location line="-12" />
-        <source>Cannot import code style from "%1".</source>
-        <translation>Det går inte att importera kodformat från "%1".</translation>
+        <source>Cannot import code style from &quot;%1&quot;.</source>
+        <translation>Det går inte att importera kodformat från &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -21231,8 +21336,8 @@ Ett värde som är mindre än 100 % kan resultera i överlappande och feljustera
     </message>
     <message>
         <location line="+1" />
-        <source>The color scheme "%1" was modified, do you want to save the changes?</source>
-        <translation>Färgschemat "%1" har ändrats, vill du spara ändringarna?</translation>
+        <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
+        <translation>Färgschemat &quot;%1&quot; har ändrats, vill du spara ändringarna?</translation>
     </message>
     <message>
         <location line="+7" />
@@ -21246,8 +21351,8 @@ Ett värde som är mindre än 100 % kan resultera i överlappande och feljustera
     </message>
     <message>
         <location line="+16" />
-        <source>File "%1":</source>
-        <translation>Fil "%1":</translation>
+        <source>File &quot;%1&quot;:</source>
+        <translation>Fil &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -21301,8 +21406,8 @@ Ett värde som är mindre än 100 % kan resultera i överlappande och feljustera
     </message>
     <message>
         <location line="+27" />
-        <source>&lt;p align='center'&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href="copy"&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;p align='center'&gt;&lt;b&gt;Inbyggda färgscheman måste &lt;a href="copy"&gt;kopieras&lt;/a&gt;&lt;br/&gt; innan de kan ändras&lt;/b&gt;&lt;/p&gt;</translation>
+        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Inbyggda färgscheman måste &lt;a href=&quot;copy&quot;&gt;kopieras&lt;/a&gt;&lt;br/&gt; innan de kan ändras&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -21421,7 +21526,7 @@ Ett värde som är mindre än 100 % kan resultera i överlappande och feljustera
     <message>
         <location line="+2" />
         <source>Line %1</source>
-        <translation>Linje 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2" />
@@ -21501,12 +21606,12 @@ Ett värde som är mindre än 100 % kan resultera i överlappande och feljustera
     </message>
     <message>
         <location line="+7" />
-        <source>Current document's font size in points.</source>
+        <source>Current document&apos;s font size in points.</source>
         <translation>Aktuellt dokuments teckensnittsstorlek i punkter.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Word under the current document's text cursor.</source>
+        <source>Word under the current document&apos;s text cursor.</source>
         <translation>Word under det aktuella dokumentets textmarkör.</translation>
     </message>
     <message>
@@ -21785,7 +21890,7 @@ Ett värde som är mindre än 100 % kan resultera i överlappande och feljustera
     <message>
         <location line="+4" />
         <source>Cut &amp;Line</source>
-        <translation>Snittlinje</translation>
+        <translation>Snitt&amp;linje</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22378,7 +22483,7 @@ Används för att markera innehållande funktion för symbolanvändningen.</tran
     </message>
     <message>
         <location line="+1" />
-        <source>Class' data members.</source>
+        <source>Class&apos; data members.</source>
         <translation>Klassens datamedlemmar.</translation>
     </message>
     <message>
@@ -23011,152 +23116,152 @@ Kommer inte att tillämpas på blanksteg i kommentarer och strängar.</translati
         <translation>Inte en färgschemafil.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>härlett från QObject</translation>
     </message>
     <message>
         <location line="+1" />
         <source>derived from QWidget</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>härledd från QWidget</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>mall</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with if</source>
-        <comment>group:'C++' trigger:'else'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
         <translation>med om</translation>
     </message>
     <message>
         <location line="+1" />
         <source>range-based</source>
-        <comment>group:'C++' trigger:'for'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
         <translation>räckviddsbaserad</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and else</source>
-        <comment>group:'C++' trigger:'if'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
         <translation>och annat</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with closing brace comment</source>
-        <comment>group:'C++' trigger:'namespace'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
         <translation>med avslutande kommentar</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and catch</source>
-        <comment>group:'C++' trigger:'try'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
         <translation>och fånga</translation>
     </message>
     <message>
         <location line="+1" />
         <source>namespace</source>
-        <comment>group:'C++' trigger:'using'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
         <translation>namnutrymme</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'struct'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
         <translation>mall</translation>
     </message>
     <message>
         <location line="+1" />
         <source>(type name READ name WRITE setName NOTIFY nameChanged FINAL)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation>(Typ Namn Läs Namn Skriv SetName Notify NameChanged Final)</translation>
     </message>
     <message>
         <source>(type name READ name WRITE setName NOTIFY nameChanged)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation type="vanished">(typ namn LÄS namn SKRIV setNamn MEDDELANDE namnÄndrad)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>med mål</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>med mål</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>med mål</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>med mål</translation>
     </message>
     <message>
         <location line="+3" />
         <source>QuickTest Test Case</source>
-        <comment>group:'QML' trigger:'TestCase'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>QuickTest Test Case</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Function</source>
-        <comment>group:'C++' trigger:'TEST'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST&apos;</comment>
         <translation>Gtestfunktion</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Fixture</source>
-        <comment>group:'C++' trigger:'TEST_F'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_F&apos;</comment>
         <translation>Gtest -fixturen</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Parameterized</source>
-        <comment>group:'C++' trigger:'TEST_P'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_P&apos;</comment>
         <translation>Gtest parametrerad</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Case</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_CASE&apos;</comment>
         <translation>Testfall</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Suite</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_SUITE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_SUITE&apos;</comment>
         <translation>Testsvit</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Test Case</source>
-        <comment>group:'C++' trigger:'TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_CASE&apos;</comment>
         <translation>Fånga testväska</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Scenario</source>
-        <comment>group:'C++' trigger:'SCENARIO'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;SCENARIO&apos;</comment>
         <translation>Fånga scenario</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="+3" />
         <source>example</source>
-        <comment>group:'Text' trigger:'global'</comment>
+        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
         <translation>exempel</translation>
     </message>
     <message>
@@ -23172,17 +23277,17 @@ Kommer inte att tillämpas på blanksteg i kommentarer och strängar.</translati
     <message numerus="yes">
         <location line="+3" />
         <source>%n found.</source>
-        <translation>
-            <numerusform>%n hittades.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+29" />
         <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>%n förekomster har ersatts.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -23217,8 +23322,8 @@ Kommer inte att tillämpas på blanksteg i kommentarer och strängar.</translati
     </message>
     <message>
         <location line="+25" />
-        <source>Folder "%2":</source>
-        <translation>Mapp "%2":</translation>
+        <source>Folder &quot;%2&quot;:</source>
+        <translation>Mapp &quot;%2&quot;:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -23271,8 +23376,8 @@ Exklusive: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/formattexteditor.cpp" line="+71" />
-        <source>Cannot create temporary file "%1": %2.</source>
-        <translation>Kan inte skapa den tillfälliga filen "%1": %2.</translation>
+        <source>Cannot create temporary file &quot;%1&quot;: %2.</source>
+        <translation>Kan inte skapa den tillfälliga filen &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <source>TextEditor</source>
@@ -23281,8 +23386,8 @@ Exklusive: %3
     </message>
     <message>
         <location line="+21" />
-        <source>Cannot read file "%1": %2.</source>
-        <translation>Kan inte läsa filen "%1": %2.</translation>
+        <source>Cannot read file &quot;%1&quot;: %2.</source>
+        <translation>Kan inte läsa filen &quot;%1&quot;: %2.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -23336,8 +23441,8 @@ Exklusive: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight-definitioner tillhandahålls av &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/ a&gt; motor.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight-definitioner tillhandahålls av &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/ a&gt; motor.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23411,7 +23516,7 @@ Exklusive: %3
         <translation>Filterträd</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+130" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+140" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
         <source>Sort Alphabetically</source>
         <translation>Sortera alfabetiskt</translation>
@@ -23433,8 +23538,8 @@ Exklusive: %3
     </message>
     <message>
         <location line="+15" />
-        <source>Expected mangler ID "l" (lowercase), "u" (uppercase), or "c" (titlecase) after colon.</source>
-        <translation>Förväntat saknas ID "l" (gemener), "u" (versaler) eller "c" (rubrik) efter kolon.</translation>
+        <source>Expected mangler ID &quot;l&quot; (lowercase), &quot;u&quot; (uppercase), or &quot;c&quot; (titlecase) after colon.</source>
+        <translation>Förväntat saknas ID &quot;l&quot; (gemener), &quot;u&quot; (versaler) eller &quot;c&quot; (rubrik) efter kolon.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -23486,7 +23591,7 @@ Exklusive: %3
     </message>
     <message>
         <location line="+1" />
-        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark's note text.</source>
+        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark&apos;s note text.</source>
         <translation>Lokaliserar bokmärken. Filtrera efter filnamn, efter texten på raden i bokmärket eller med bokmärkets anteckningstext.</translation>
     </message>
     <message>
@@ -23540,7 +23645,7 @@ Exklusive: %3
     <message>
         <location line="-15" />
         <source>&amp;Bookmarks</source>
-        <translation>&amp; Bokmärken</translation>
+        <translation>&amp;Bokmärken</translation>
     </message>
     <message>
         <location line="+53" />
@@ -23657,8 +23762,8 @@ Exklusive: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot create temporary directory "%1": %2</source>
-        <translation>Kan inte skapa den tillfälliga katalogen "%1": %2</translation>
+        <source>Cannot create temporary directory &quot;%1&quot;: %2</source>
+        <translation>Kan inte skapa den tillfälliga katalogen &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23667,13 +23772,13 @@ Exklusive: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot change to working directory "%1": %2</source>
-        <translation>Kan inte ändra till arbetskatalogen "%1": %2</translation>
+        <source>Cannot change to working directory &quot;%1&quot;: %2</source>
+        <translation>Kan inte ändra till arbetskatalogen &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1": %2</source>
-        <translation>Kan inte köra "%1": %2</translation>
+        <source>Cannot execute &quot;%1&quot;: %2</source>
+        <translation>Kan inte köra &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+109" />
@@ -23682,12 +23787,12 @@ Exklusive: %3
     </message>
     <message>
         <location line="+60" />
-        <source>Cannot set permissions on temporary directory "%1": %2</source>
-        <translation>Kan inte ställa in behörigheter i tillfällig katalog " %1": %2</translation>
+        <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
+        <translation>Kan inte ställa in behörigheter i tillfällig katalog &quot; %1&quot;: %2</translation>
     </message>
     <message>
-        <source>The process "%1" could not be started: %2</source>
-        <translation type="vanished">Processen "%1" kunde inte startas: %2</translation>
+        <source>The process &quot;%1&quot; could not be started: %2</source>
+        <translation type="vanished">Processen &quot;%1&quot; kunde inte startas: %2</translation>
     </message>
     <message>
         <source>Quoting error in command.</source>
@@ -23706,13 +23811,13 @@ Exklusive: %3
         <translation type="vanished">Terminalkommandot kanske inte är ett skalkommando.</translation>
     </message>
     <message>
-        <source>Cannot start the terminal emulator "%1", change the setting in the Environment preferences. (%2)</source>
-        <translation type="vanished">Det går inte att starta terminalemulatorn "%1", ändra inställningen i miljöinställningarna. (%2)</translation>
+        <source>Cannot start the terminal emulator &quot;%1&quot;, change the setting in the Environment preferences. (%2)</source>
+        <translation type="vanished">Det går inte att starta terminalemulatorn &quot;%1&quot;, ändra inställningen i miljöinställningarna. (%2)</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Cannot create socket "%1": %2</source>
-        <translation>Kan inte skapa socket "%1": %2</translation>
+        <source>Cannot create socket &quot;%1&quot;: %2</source>
+        <translation>Kan inte skapa socket &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="-171" />
@@ -23730,28 +23835,28 @@ Exklusive: %3
     <message numerus="yes">
         <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
-        <translation>
-            <numerusform>%1: avbruten. %n förekomster hittades i %2 filer.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+6" />
         <source>%1: %n occurrences found in %2 files.</source>
-        <translation>
-            <numerusform>%1: %n förekomster hittades i %2 filer.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+280" />
         <source>Fi&amp;le pattern:</source>
-        <translation>Filmönster:</translation>
+        <translation>Fi&amp;lmönster:</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Excl&amp;usion pattern:</source>
-        <translation>Uteslutningsmönster:</translation>
+        <translation>&amp;Uteslutningsmönster:</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23796,8 +23901,8 @@ Exklusive: %3
     </message>
     <message>
         <location line="+69" />
-        <source>The default suffix if you do not explicitly specify a file extension is ".%1".</source>
-        <translation>Standardsuffixet om du inte uttryckligen anger ett filtillägg är ".%1".</translation>
+        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
+        <translation>Standardsuffixet om du inte uttryckligen anger ett filtillägg är &quot;.%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
@@ -23838,51 +23943,51 @@ Exklusive: %3
     </message>
     <message>
         <location line="+176" />
-        <source>The path "%1" expanded to an empty string.</source>
-        <translation>Sökvägen "%1" utökades till en tom sträng.</translation>
+        <source>The path &quot;%1&quot; expanded to an empty string.</source>
+        <translation>Sökvägen &quot;%1&quot; utökades till en tom sträng.</translation>
     </message>
     <message>
         <location line="-72" />
         <location line="+10" />
         <location line="+20" />
-        <source>The path "%1" does not exist.</source>
-        <translation>Sökvägen "%1" finns inte.</translation>
+        <source>The path &quot;%1&quot; does not exist.</source>
+        <translation>Sökvägen &quot;%1&quot; finns inte.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+36" />
-        <source>The path "%1" is not a directory.</source>
-        <translation>Sökvägen "%1" är inte en katalog.</translation>
+        <source>The path &quot;%1&quot; is not a directory.</source>
+        <translation>Sökvägen &quot;%1&quot; är inte en katalog.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+10" />
-        <source>The path "%1" is not a file.</source>
-        <translation>Sökvägen "%1" är inte en fil.</translation>
+        <source>The path &quot;%1&quot; is not a file.</source>
+        <translation>Sökvägen &quot;%1&quot; är inte en fil.</translation>
     </message>
     <message>
         <location line="-4" />
-        <source>The directory "%1" does not exist.</source>
-        <translation>Katalogen "%1" finns inte.</translation>
+        <source>The directory &quot;%1&quot; does not exist.</source>
+        <translation>Katalogen &quot;%1&quot; finns inte.</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>The path "%1" is not an executable file.</source>
-        <translation>Sökvägen "%1" är inte en körbar fil.</translation>
+        <source>The path &quot;%1&quot; is not an executable file.</source>
+        <translation>Sökvägen &quot;%1&quot; är inte en körbar fil.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid path "%1".</source>
-        <translation>Ogiltig sökväg "%1".</translation>
+        <source>Invalid path &quot;%1&quot;.</source>
+        <translation>Ogiltig sökväg &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1".</source>
-        <translation>Kan inte köra "%1".</translation>
+        <source>Cannot execute &quot;%1&quot;.</source>
+        <translation>Kan inte köra &quot;%1&quot;.</translation>
     </message>
     <message>
-        <source>Full path: "%1"</source>
-        <translation type="vanished">Fullständig sökväg: "%1"</translation>
+        <source>Full path: &quot;%1&quot;</source>
+        <translation type="vanished">Fullständig sökväg: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-58" />
@@ -23922,8 +24027,8 @@ Exklusive: %3
     </message>
     <message>
         <location line="+121" />
-        <source>Directory "%1" will be created.</source>
-        <translation>Katalogen "%1" kommer att skapas.</translation>
+        <source>Directory &quot;%1&quot; will be created.</source>
+        <translation>Katalogen &quot;%1&quot; kommer att skapas.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -23942,13 +24047,13 @@ Exklusive: %3
     </message>
     <message>
         <location line="+12" />
-        <source>Invalid character ".".</source>
-        <translation>Ogiltigt tecken ".".</translation>
+        <source>Invalid character &quot;.&quot;.</source>
+        <translation>Ogiltigt tecken &quot;.&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Invalid character "%1" found.</source>
-        <translation>Ogiltigt tecken "%1" hittades.</translation>
+        <source>Invalid character &quot;%1&quot; found.</source>
+        <translation>Ogiltigt tecken &quot;%1&quot; hittades.</translation>
     </message>
     <message>
         <location line="-232" />
@@ -24010,12 +24115,12 @@ Exklusive: %3
     <message>
         <location line="+7" />
         <source>C&amp;lose All</source>
-        <translation>Stäng alla</translation>
+        <translation>Stäng a&amp;lla</translation>
     </message>
     <message>
         <location line="-3" />
         <source>Save &amp;as...</source>
-        <translation>Spara som...</translation>
+        <translation>Sp&amp;ara som...</translation>
     </message>
     <message>
         <location line="+5" />
@@ -24103,12 +24208,12 @@ Exklusive: %3
         <location line="-16" />
         <location line="+20" />
         <source>Running %1
-in "%2".
+in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
         <translation>Kör %1
-i "%2".
+i &quot;%2&quot;.
 
 </translation>
     </message>
@@ -24156,12 +24261,12 @@ i "%2".
     <message>
         <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
         <source>Do not &amp;ask again</source>
-        <translation>Fråga inte igen</translation>
+        <translation>Fråg&amp;a inte igen</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Do not &amp;show again</source>
-        <translation>Visa inte igen</translation>
+        <translation>Vi&amp;sa inte igen</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
@@ -24184,8 +24289,8 @@ i "%2".
         <translation>Detaljer</translation>
     </message>
     <message>
-        <source>copyFile is not implemented for "%1"</source>
-        <translation type="vanished">copyFile är inte implementerad för "%1"</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">copyFile är inte implementerad för &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Cannot copy from %1, it is not a directory.</source>
@@ -24197,61 +24302,61 @@ i "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to create tar archive from source: %3</source>
-        <translation>Det gick inte att kopiera rekursivt från "%1" till "%2" vid försök att skapa tar-arkiv från källan: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
+        <translation>Det gick inte att kopiera rekursivt från &quot;%1&quot; till &quot;%2&quot; vid försök att skapa tar-arkiv från källan: %3</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to extract tar archive to target: %3</source>
-        <translation>Det gick inte att kopiera rekursivt från "%1" till "%2" vid försök att extrahera tar-arkivet till målet: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
+        <translation>Det gick inte att kopiera rekursivt från &quot;%1&quot; till &quot;%2&quot; vid försök att extrahera tar-arkivet till målet: %3</translation>
     </message>
     <message>
-        <source>fileContents is not implemented for "%1"</source>
-        <translation type="vanished">fileContents är inte implementerat för "%1"</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">fileContents är inte implementerat för &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>writeFileContents is not implemented for "%1"</source>
-        <translation type="vanished">writeFileContents är inte implementerat för "%1"</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">writeFileContents är inte implementerat för &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>createTempFile is not implemented for "%1"</source>
-        <translation type="vanished">createTempFile är inte implementerad för "%1"</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">createTempFile är inte implementerad för &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-139" />
         <location line="+409" />
-        <source>Path "%1" exists but is not a writable directory.</source>
-        <translation>Sökväg "%1" finns men är inte en skrivbar katalog.</translation>
+        <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
+        <translation>Sökväg &quot;%1&quot; finns men är inte en skrivbar katalog.</translation>
     </message>
     <message>
         <location line="-356" />
-        <source>copyFile is not implemented for "%1".</source>
-        <translation>CopyFile implementeras inte för "%1".</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;.</source>
+        <translation>CopyFile implementeras inte för &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+30" />
-        <source>Cannot copy from "%1", it is not a directory.</source>
-        <translation>Det går inte att kopiera från "%1", det är inte en katalog.</translation>
+        <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
+        <translation>Det går inte att kopiera från &quot;%1&quot;, det är inte en katalog.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Cannot copy "%1" to "%2": %3</source>
-        <translation>Kan inte kopiera "%1" till "%2":%3</translation>
+        <source>Cannot copy &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Kan inte kopiera &quot;%1&quot; till &quot;%2&quot;:%3</translation>
     </message>
     <message>
         <location line="+103" />
-        <source>fileContents is not implemented for "%1".</source>
-        <translation>FileContents implementeras inte för "%1".</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>FileContents implementeras inte för &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for "%1".</source>
-        <translation>WriteFilecontents implementeras inte för "%1".</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>WriteFilecontents implementeras inte för &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+66" />
-        <source>createTempFile is not implemented for "%1".</source>
-        <translation>CreateTempFile implementeras inte för "%1".</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation>CreateTempFile implementeras inte för &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24260,8 +24365,8 @@ i "%2".
     </message>
     <message>
         <location line="+180" />
-        <source>Refusing to remove the standard directory "%1".</source>
-        <translation>Vägrar att ta bort standardkatalogen "%1".</translation>
+        <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
+        <translation>Vägrar att ta bort standardkatalogen &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -24275,81 +24380,81 @@ i "%2".
     </message>
     <message>
         <location line="+37" />
-        <source>Failed to remove directory "%1".</source>
-        <translation>Det gick inte att ta bort katalogen "%1".</translation>
+        <source>Failed to remove directory &quot;%1&quot;.</source>
+        <translation>Det gick inte att ta bort katalogen &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Failed to remove file "%1".</source>
-        <translation>Det gick inte att ta bort filen "%1".</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>Det gick inte att ta bort filen &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+551" />
-        <source>Failed creating temporary file "%1" (too many tries).</source>
-        <translation>Misslyckades med att skapa tillfällig fil "%1" (för många försök).</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
+        <translation>Misslyckades med att skapa tillfällig fil &quot;%1&quot; (för många försök).</translation>
     </message>
     <message>
-        <source>Failed to copy file "%1" to "%2".</source>
-        <translation type="vanished">Det gick inte att kopiera filen "%1" till "%2".</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation type="vanished">Det gick inte att kopiera filen &quot;%1&quot; till &quot;%2&quot;.</translation>
     </message>
     <message>
-        <source>File "%1" does not exist</source>
-        <translation type="vanished">Filen "%1" finns inte</translation>
+        <source>File &quot;%1&quot; does not exist</source>
+        <translation type="vanished">Filen &quot;%1&quot; finns inte</translation>
     </message>
     <message>
-        <source>Could not open File "%1"</source>
-        <translation type="vanished">Kunde inte öppna filen "%1"</translation>
+        <source>Could not open File &quot;%1&quot;</source>
+        <translation type="vanished">Kunde inte öppna filen &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-449" />
-        <source>Cannot read "%1": %2</source>
-        <translation>Kan inte läsa "%1": %2</translation>
+        <source>Cannot read &quot;%1&quot;: %2</source>
+        <translation>Kan inte läsa &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>Could not open file "%1" for writing</source>
-        <translation type="vanished">Kunde inte öppna filen "%1" för skrivning</translation>
+        <source>Could not open file &quot;%1&quot; for writing</source>
+        <translation type="vanished">Kunde inte öppna filen &quot;%1&quot; för skrivning</translation>
     </message>
     <message>
-        <source>Could not write to file "%1" (only %2 of %3 bytes written)</source>
-        <translation type="vanished">Kunde inte skriva till filen "%1" (endast %2 av %3 byte skrivna)</translation>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
+        <translation type="vanished">Kunde inte skriva till filen &quot;%1&quot; (endast %2 av %3 byte skrivna)</translation>
     </message>
     <message>
-        <source>Could not create temporary file in "%1" (%2)</source>
-        <translation type="vanished">Kunde inte skapa en temporär fil i "%1" (%2)</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
+        <translation type="vanished">Kunde inte skapa en temporär fil i &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="-87" />
         <location line="+406" />
-        <source>Failed to copy file "%1" to "%2": %3</source>
-        <translation>Det gick inte att kopiera filen "%1" till "%2": %3</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Det gick inte att kopiera filen &quot;%1&quot; till &quot;%2&quot;: %3</translation>
     </message>
     <message>
         <location line="-333" />
-        <source>File "%1" does not exist.</source>
-        <translation>Fil "%1" finns inte.</translation>
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>Fil &quot;%1&quot; finns inte.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File "%1".</source>
-        <translation>Kunde inte öppna filen "%1".</translation>
+        <source>Could not open File &quot;%1&quot;.</source>
+        <translation>Kunde inte öppna filen &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Could not open file "%1" for writing.</source>
-        <translation>Kunde inte öppna filen "%1" för att skriva.</translation>
+        <source>Could not open file &quot;%1&quot; for writing.</source>
+        <translation>Kunde inte öppna filen &quot;%1&quot; för att skriva.</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
-        <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %n byte(s) written).</source>
         <translation>
-            <numerusform>Kunde inte skriva för att arkivera " %1" (endast %2 av %n byte (er) skriven).</numerusform>
-            <numerusform>Kunde inte skriva för att arkivera " %1" (endast %2 av %n byte (er) skriven).</numerusform>
+            <numerusform>Kunde inte skriva för att arkivera &quot; %1&quot; (endast %2 av %n byte (er) skriven).</numerusform>
+            <numerusform>Kunde inte skriva för att arkivera &quot; %1&quot; (endast %2 av %n byte (er) skriven).</numerusform>
         </translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Could not create temporary file in "%1" (%2).</source>
-        <translation>Kunde inte skapa tillfällig fil i "%1" (%2).</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2).</source>
+        <translation>Kunde inte skapa tillfällig fil i &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location line="+138" />
@@ -24358,22 +24463,22 @@ i "%2".
     </message>
     <message>
         <location line="+202" />
-        <source>Failed reading file "%1": %2</source>
-        <translation>Det gick inte att läsa filen "%1": %2</translation>
+        <source>Failed reading file &quot;%1&quot;: %2</source>
+        <translation>Det gick inte att läsa filen &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Failed writing file "%1": %2</source>
-        <translation>Det gick inte att skriva filen "%1": %2</translation>
+        <source>Failed writing file &quot;%1&quot;: %2</source>
+        <translation>Det gick inte att skriva filen &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Failed creating temporary file "%1": %2</source>
-        <translation>Det gick inte att skapa den tillfälliga filen "%1": %2</translation>
+        <source>Failed creating temporary file &quot;%1&quot;: %2</source>
+        <translation>Det gick inte att skapa den tillfälliga filen &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>Failed creating temporary file "%1" (too many tries)</source>
-        <translation type="vanished">Det gick inte att skapa den tillfälliga filen "%1" (för många försök)</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
+        <translation type="vanished">Det gick inte att skapa den tillfälliga filen &quot;%1&quot; (för många försök)</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
@@ -24392,18 +24497,18 @@ i "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/elfreader.cpp" line="+130" />
-        <source>"%1" is an invalid ELF object (%2)</source>
-        <translation>"%1" är ett ogiltigt ELF-objekt (%2)</translation>
+        <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
+        <translation>&quot;%1&quot; är ett ogiltigt ELF-objekt (%2)</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>"%1" is not an ELF object (file too small)</source>
-        <translation>"%1" är inte ett ELF-objekt (filen är för liten)</translation>
+        <source>&quot;%1&quot; is not an ELF object (file too small)</source>
+        <translation>&quot;%1&quot; är inte ett ELF-objekt (filen är för liten)</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>"%1" is not an ELF object</source>
-        <translation>"%1" är inte ett ELF-objekt</translation>
+        <source>&quot;%1&quot; is not an ELF object</source>
+        <translation>&quot;%1&quot; är inte ett ELF-objekt</translation>
     </message>
     <message>
         <location line="+8" />
@@ -24428,9 +24533,9 @@ i "%2".
     <message numerus="yes">
         <location line="+9" />
         <source>announced %n sections, each %1 bytes, exceed file size</source>
-        <translation>
-            <numerusform>meddelade att %n avsnitt, varje %1 byte, överskrider filstorleken</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -24455,14 +24560,14 @@ To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-To disable a variable, prefix the line with "#".</source>
+To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="vanished">Ange en miljövariabel per rad.
 För att ställa in eller ändra en variabel, använd VARIABLE=VALUE.
 För att lägga till en variabel, använd VARIABLE+=VALUE.
 För att lägga till en variabel, använd VARIABLE=+VALUE.
 Befintliga variabler kan refereras i ett VALUE med ${OTHER}.
 För att rensa en variabel, skriv dess namn på en rad med inget annat på den.
-För att inaktivera en variabel, prefix raden med "#".</translation>
+För att inaktivera en variabel, prefix raden med &quot;#&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
@@ -24502,13 +24607,13 @@ För att inaktivera en variabel, prefix raden med "#".</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Invalid character "%1".</source>
-        <translation>Ogiltigt tecken "%1".</translation>
+        <source>Invalid character &quot;%1&quot;.</source>
+        <translation>Ogiltigt tecken &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid characters "%1".</source>
-        <translation>Ogiltiga tecken "%1".</translation>
+        <source>Invalid characters &quot;%1&quot;.</source>
+        <translation>Ogiltiga tecken &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -24549,13 +24654,13 @@ För att inaktivera en variabel, prefix raden med "#".</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Could not set permissions on "%1"</source>
-        <translation>Kunde inte ställa in behörigheter för "%1"</translation>
+        <source>Could not set permissions on &quot;%1&quot;</source>
+        <translation>Kunde inte ställa in behörigheter för &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+250" />
-        <source>No "localSource" device hook set.</source>
-        <translation>Ingen "localSource" enhetskrok inställd.</translation>
+        <source>No &quot;localSource&quot; device hook set.</source>
+        <translation>Ingen &quot;localSource&quot; enhetskrok inställd.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
@@ -24637,20 +24742,20 @@ För att inaktivera en variabel, prefix raden med "#".</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Overwrite existing file "%1"?</source>
-        <translation>Vill du skriva över befintlig fil "%1"?</translation>
+        <source>Overwrite existing file &quot;%1&quot;?</source>
+        <translation>Vill du skriva över befintlig fil &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+21" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>Kunde inte kopiera filen "%1" till "%2".</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>Kunde inte kopiera filen &quot;%1&quot; till &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
         <location line="+409" />
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
-        <source>Failed to create directory "%1".</source>
-        <translation>Det gick inte att skapa katalogen "%1".</translation>
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>Det gick inte att skapa katalogen &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
@@ -24711,15 +24816,15 @@ För att inaktivera en variabel, prefix raden med "#".</translation>
         <location line="+14" />
         <location line="+2" />
         <source>%n Items</source>
-        <translation>
-            <numerusform>%n objekt</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
-        <source>Failed to start process launcher at "%1": %2</source>
-        <translation>Det gick inte att starta processstartaren vid "%1": %2</translation>
+        <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
+        <translation>Det gick inte att starta processstartaren vid &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24835,20 +24940,20 @@ För att inaktivera en variabel, prefix raden med "#".</translation>
         <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
-To disable a variable, prefix this line with "#".
+To disable a variable, prefix this line with &quot;#&quot;.
 To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-Lines starting with "##" will be treated as comments.</source>
+Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Ange en miljövariabel per rad.
  För att ställa in eller ändra en variabel, använd variabel = värde.
- För att inaktivera en variabel, prefix denna rad med "#".
+ För att inaktivera en variabel, prefix denna rad med &quot;#&quot;.
  För att bifoga till en variabel, använd variabel+= värde.
  För att förbereda till en variabel, använd variabel =+värde.
  Befintliga variabler kan hänvisas till i ett värde med $ {andra}.
  För att rensa en variabel, lägg sitt namn på en linje med ingenting annat på den.
- Linjer som börjar med "##" kommer att behandlas som kommentarer.</translation>
+ Linjer som börjar med &quot;##&quot; kommer att behandlas som kommentarer.</translation>
     </message>
     <message>
         <location line="+112" />
@@ -24867,18 +24972,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+29" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>Programmet "%1" finns inte eller är inte körbart.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>Programmet &quot;%1&quot; finns inte eller är inte körbart.</translation>
     </message>
     <message>
         <location line="+79" />
-        <source>The program "%1" could not be found.</source>
-        <translation>Programmet "%1" kunde inte hittas.</translation>
+        <source>The program &quot;%1&quot; could not be found.</source>
+        <translation>Programmet &quot;%1&quot; kunde inte hittas.</translation>
     </message>
     <message>
         <location line="+908" />
-        <source>Failed to create process interface for "%1".</source>
-        <translation>Det gick inte att skapa processgränssnitt för "%1".</translation>
+        <source>Failed to create process interface for &quot;%1&quot;.</source>
+        <translation>Det gick inte att skapa processgränssnitt för &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+163" />
@@ -24892,8 +24997,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The process "%1" is not responding.</source>
-        <translation>Processen "%1" svarar inte.</translation>
+        <source>The process &quot;%1&quot; is not responding.</source>
+        <translation>Processen &quot;%1&quot; svarar inte.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -24902,32 +25007,32 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+233" />
-        <source>The command "%1" finished successfully.</source>
-        <translation>Kommandot "%1" slutfördes.</translation>
+        <source>The command &quot;%1&quot; finished successfully.</source>
+        <translation>Kommandot &quot;%1&quot; slutfördes.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated with exit code %2.</source>
-        <translation>Kommandot "%1" avslutades med utgångskoden %2.</translation>
+        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
+        <translation>Kommandot &quot;%1&quot; avslutades med utgångskoden %2.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated abnormally.</source>
-        <translation>Kommandot "%1" avslutades på ett onormalt sätt.</translation>
+        <source>The command &quot;%1&quot; terminated abnormally.</source>
+        <translation>Kommandot &quot;%1&quot; avslutades på ett onormalt sätt.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" could not be started.</source>
-        <translation>Kommandot "%1" kunde inte startas.</translation>
+        <source>The command &quot;%1&quot; could not be started.</source>
+        <translation>Kommandot &quot;%1&quot; kunde inte startas.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>The command "%1" was canceled after %2 ms.</source>
-        <translation>Kommandot " %1" avbröts efter %2 ms.</translation>
+        <source>The command &quot;%1&quot; was canceled after %2 ms.</source>
+        <translation>Kommandot &quot; %1&quot; avbröts efter %2 ms.</translation>
     </message>
     <message>
-        <source>The command "%1" did not respond within the timeout limit (%2 s).</source>
-        <translation type="vanished">Kommandot "%1" svarade inte inom tidsgränsen (%2 s).</translation>
+        <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
+        <translation type="vanished">Kommandot &quot;%1&quot; svarade inte inom tidsgränsen (%2 s).</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
@@ -24966,8 +25071,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open "%1".</source>
-        <translation>Kunde inte öppna "%1".</translation>
+        <source>Could not open &quot;%1&quot;.</source>
+        <translation>Kunde inte öppna &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -24988,13 +25093,13 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="-264" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Ingen giltig inställningsfil kunde hittas.&lt;/p&gt;&lt;p&gt;Alla inställningsfiler som hittades i katalogen "%1" var olämpliga för den aktuella versionen av %2, till exempel för att de skrevs av en inkompatibel version av %2, eller för att en annan inställningssökväg användes.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Ingen giltig inställningsfil kunde hittas.&lt;/p&gt;&lt;p&gt;Alla inställningsfiler som hittades i katalogen &quot;%1&quot; var olämpliga för den aktuella versionen av %2, till exempel för att de skrevs av en inkompatibel version av %2, eller för att en annan inställningssökväg användes.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+265" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were either too new or too old to be read.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Ingen giltig inställningsfil kunde hittas.&lt;/p&gt;&lt;p&gt;Alla inställningsfiler som hittades i katalogen "%1" var antingen för nya eller för gamla för att kunna läsas.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Ingen giltig inställningsfil kunde hittas.&lt;/p&gt;&lt;p&gt;Alla inställningsfiler som hittades i katalogen &quot;%1&quot; var antingen för nya eller för gamla för att kunna läsas.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+11" />
@@ -25003,18 +25108,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>&lt;p&gt;The versioned backup "%1" of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Den versionsbaserade säkerhetskopian "%1" av inställningsfilen används, eftersom den icke-versionerade filen skapades av en inkompatibel version av %2.&lt;/p&gt;&lt;p&gt;Inställningsändringar gjorda sedan senaste gången denna version av %2 användes ignoreras, och ändringar som görs nu kommer &lt;b&gt;inte&lt;/b&gt; att överföras till den nyare versionen.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;The versioned backup &quot;%1&quot; of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Den versionsbaserade säkerhetskopian &quot;%1&quot; av inställningsfilen används, eftersom den icke-versionerade filen skapades av en inkompatibel version av %2.&lt;/p&gt;&lt;p&gt;Inställningsändringar gjorda sedan senaste gången denna version av %2 användes ignoreras, och ändringar som görs nu kommer &lt;b&gt;inte&lt;/b&gt; att överföras till den nyare versionen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Settings File for "%1" from a Different Environment?</source>
-        <translation>Inställningsfil för "%1" från en annan miljö?</translation>
+        <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
+        <translation>Inställningsfil för &quot;%1&quot; från en annan miljö?</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file "%2"?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Ingen inställningsfil skapad av den här instansen av %1 hittades.&lt;/p&gt;&lt;p&gt;Arbetade du med det här projektet på en annan dator eller använde du en annan inställningssökväg tidigare?&lt;/p&gt;&lt;p&gt;Har du fortfarande vill du ladda inställningsfilen "%2"?&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file &quot;%2&quot;?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Ingen inställningsfil skapad av den här instansen av %1 hittades.&lt;/p&gt;&lt;p&gt;Arbetade du med det här projektet på en annan dator eller använde du en annan inställningssökväg tidigare?&lt;/p&gt;&lt;p&gt;Har du fortfarande vill du ladda inställningsfilen &quot;%2&quot;?&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+55" />
@@ -25023,8 +25128,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" is not supported by %2. Do you want to try loading it anyway?</source>
-        <translation>"%1" stöds inte av %2. Vill du försöka ladda den ändå?</translation>
+        <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
+        <translation>&quot;%1&quot; stöds inte av %2. Vill du försöka ladda den ändå?</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/aspects.cpp" line="+92" />
@@ -25079,7 +25184,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variabel&lt;/th&gt;&lt;th&gt;Expanderar till&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td &gt;katalog för aktuell fil&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;filnamn (med fullständig sökväg)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;% n&lt;/td&gt;&lt;td&gt;filnamn (utan sökväg)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
@@ -25099,8 +25204,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+3" />
         <location line="+7" />
-        <source>Insert "%1"</source>
-        <translation>Infoga "%1"</translation>
+        <source>Insert &quot;%1&quot;</source>
+        <translation>Infoga &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-3" />
@@ -25141,8 +25246,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+7" />
-        <source>Command "%1" was not found.</source>
-        <translation>Kommando "%1" hittades inte.</translation>
+        <source>Command &quot;%1&quot; was not found.</source>
+        <translation>Kommando &quot;%1&quot; hittades inte.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -25167,8 +25272,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+28" />
         <location line="+45" />
-        <source>Failed to start terminal process: "%1".</source>
-        <translation>Det gick inte att starta terminalprocessen: "%1".</translation>
+        <source>Failed to start terminal process: &quot;%1&quot;.</source>
+        <translation>Det gick inte att starta terminalprocessen: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
@@ -25220,9 +25325,9 @@ Lines starting with "##" will be treated as comments.</source>
     <name>TextEditor::Internal::Snippets</name>
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippetscollection.cpp" line="-255" />
-        <source />
+        <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
-        <translation />
+        <translation></translation>
     </message>
 </context>
 </TS>

@@ -30,82 +30,82 @@
         <translation>การตั้งค่ากล้อง OpenMV</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Turn on WiFi Shield on startup</source>
         <translation>เปิด WiFi Shield เมื่อเริ่มต้นระบบ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Client Mode (Normal)</source>
         <translation>โหมดไคลเอนต์ (ปกติ)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Password</source>
         <translation>รหัสผ่าน</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter your WiFi network password here</source>
         <translation>กรุณากรอกรหัสผ่านเครือข่าย WiFi ของคุณที่นี่</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Type</source>
         <translation>พิมพ์</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Open (No password)</source>
         <translation>เปิด (ไม่มีรหัสผ่าน)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WPA (Modern WiFi Security)</source>
         <translation>WPA (ความปลอดภัย WiFi สมัยใหม่)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WEP (Hexadecimal password)</source>
         <translation>WEP (รหัสผ่านเลขฐานสิบหก)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>SSID</source>
         <translation>SSID</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter or select your WiFi network here</source>
         <translation>โปรดป้อนหรือเลือกเครือข่าย WiFi ของคุณที่นี่</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Acess Point Mode</source>
         <translation>โหมดจุดเข้าใช้งาน</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
         <translation>โปรดป้อนชื่อเครือข่าย WiFi เพื่อสร้างรหัสผ่านที่นี่</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
         <translation>โปรดป้อนชื่อเครือข่าย WiFI ที่จะสร้างที่นี่</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Board Name</source>
         <translation>ชื่อคณะกรรมการ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
         <translation>กรุณากรอกชื่อ OpenMV Cam ของคุณที่นี่</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Duplicate REPL on the UART on startup</source>
         <translation>ทำซ้ำ REPL บน UART เมื่อเริ่มต้นระบบ</translation>
     </message>
@@ -118,42 +118,42 @@
         <translation>000</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Max</source>
         <translation>สูงสุด</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Median</source>
         <translation>ค่ามัธยฐาน</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mode</source>
         <translation>โหมด</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>LQ</source>
         <translation>แอลคิว</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>UQ</source>
         <translation>ยูคิว</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>StDev</source>
         <translation>เซนต์เดฟ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Min</source>
         <translation>นาที</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mean</source>
         <translation>หมายถึง</translation>
     </message>
@@ -205,13 +205,13 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for '%1'...</source>
-        <translation>กำลังดาวน์โหลดคำจำกัดความไวยากรณ์ใหม่สำหรับ '%1'...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation>กำลังดาวน์โหลดคำจำกัดความไวยากรณ์ใหม่สำหรับ &apos;%1&apos;...</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for '%1' to version %2...</source>
-        <translation>กำลังอัปเดตคำจำกัดความไวยากรณ์สำหรับ '%1' เป็นเวอร์ชัน %2...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation>กำลังอัปเดตคำจำกัดความไวยากรณ์สำหรับ &apos;%1&apos; เป็นเวอร์ชัน %2...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
@@ -500,7 +500,7 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Request Copilot suggestion at the current editor's cursor position.</source>
+        <source>Request Copilot suggestion at the current editor&apos;s cursor position.</source>
         <translation>ขอคำแนะนำ Copilot ที่ตำแหน่งเคอร์เซอร์ของตัวแก้ไขปัจจุบัน</translation>
     </message>
     <message>
@@ -736,7 +736,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <name>QtC::Core</name>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
-        <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
+        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
         <translation>สร้างไฟล์แปล qm ที่แอปพลิเคชันสามารถใช้งานได้จากไฟล์ ts ของนักแปล</translation>
     </message>
     <message>
@@ -752,7 +752,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="-2" />
-        <source>Synchronizes translator's ts files with the program code</source>
+        <source>Synchronizes translator&apos;s ts files with the program code</source>
         <translation>ซิงโครไนซ์ไฟล์ ts ของนักแปลกับโค้ดโปรแกรม</translation>
     </message>
     <message>
@@ -885,8 +885,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by "&gt;". For example "sess def" matches "File &gt; Sessions &gt; Default".</source>
-        <translation>ทริกเกอร์การกระทำ หากมาจากเมนู จะตรงกับส่วนใดๆ ของลำดับชั้นเมนู โดยคั่นด้วย "&gt;" ตัวอย่างเช่น "sess def" จะตรงกับ "ไฟล์ &gt; เซสชัน &gt; ค่าเริ่มต้น"</translation>
+        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
+        <translation>ทริกเกอร์การกระทำ หากมาจากเมนู จะตรงกับส่วนใดๆ ของลำดับชั้นเมนู โดยคั่นด้วย &quot;&gt;&quot; ตัวอย่างเช่น &quot;sess def&quot; จะตรงกับ &quot;ไฟล์ &gt; เซสชัน &gt; ค่าเริ่มต้น&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+71" />
@@ -903,8 +903,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>ไม่สามารถเปิดตัวแก้ไขสำหรับ "%1"</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>ไม่สามารถเปิดตัวแก้ไขสำหรับ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+28" />
@@ -1105,9 +1105,9 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+12" />
-        <source>The settings file "%1" is not writable.
+        <source>The settings file &quot;%1&quot; is not writable.
 You will not be able to store any %2 settings.</source>
-        <translation>ไฟล์การตั้งค่า "%1" ไม่สามารถเขียนได้ 
+        <translation>ไฟล์การตั้งค่า &quot;%1&quot; ไม่สามารถเขียนได้ 
 คุณจะไม่สามารถจัดเก็บการตั้งค่า %2 ใดๆ ได้</translation>
     </message>
     <message>
@@ -1122,9 +1122,9 @@ You will not be able to store any %2 settings.</source>
     </message>
     <message>
         <location line="+4" />
-        <source>Error reading settings file "%1": %2
+        <source>Error reading settings file &quot;%1&quot;: %2
 You will likely experience further problems using this instance of %3.</source>
-        <translation>เกิดข้อผิดพลาดในการอ่านไฟล์การตั้งค่า "%1": %2 
+        <translation>เกิดข้อผิดพลาดในการอ่านไฟล์การตั้งค่า &quot;%1&quot;: %2 
 คุณอาจจะประสบปัญหาเพิ่มเติมเมื่อใช้อินสแตนซ์ของ %3 นี้</translation>
     </message>
     <message>
@@ -1194,8 +1194,8 @@ You will likely experience further problems using this instance of %3.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Select encoding for "%1".%2</source>
-        <translation>เลือกการเข้ารหัสสำหรับ "%1".%2</translation>
+        <source>Select encoding for &quot;%1&quot;.%2</source>
+        <translation>เลือกการเข้ารหัสสำหรับ &quot;%1&quot;.%2</translation>
     </message>
     <message>
         <location line="+49" />
@@ -1283,10 +1283,10 @@ You will likely experience further problems using this instance of %3.</source>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;What to do with the executable's standard output.
+&lt;p&gt;What to do with the executable&apos;s standard output.
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation type="unfinished" />
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7" />
@@ -1314,12 +1314,12 @@ You will likely experience further problems using this instance of %3.</source>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
-&lt;p &gt;What to do with the executable's standard error output.&lt;/p&gt;
+&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
 &lt;li&gt;Show in General Messages.&lt;/li&gt;
 &lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished" />
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12" />
@@ -1586,8 +1586,8 @@ You will likely experience further problems using this instance of %3.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Open file "%1" with:</source>
-        <translation>เปิดไฟล์ "%1" ด้วย:</translation>
+        <source>Open file &quot;%1&quot; with:</source>
+        <translation>เปิดไฟล์ &quot;%1&quot; ด้วย:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+61" />
@@ -1834,13 +1834,13 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location line="+4" />
-        <source>Use "Cmd", "Opt", "Ctrl", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>ใช้ "Cmd", "Opt", "Ctrl" และ "Shift" สำหรับคีย์ตัวปรับแต่ง ใช้ "Escape", "Backspace", "Delete", "Insert", "Home" และอื่นๆ สำหรับคีย์พิเศษ รวมแต่ละคีย์ด้วย "+" และรวมทางลัดหลายรายการเข้ากับลำดับทางลัดด้วย "," ตัวอย่างเช่น หากผู้ใช้ต้องกดปุ่ม Ctrl และ Shift ค้างไว้ขณะกด Escape จากนั้นปล่อยและกด A ให้ป้อน "Ctrl+Shift+Escape,A"</translation>
+        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>ใช้ &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot; และ &quot;Shift&quot; สำหรับคีย์ตัวปรับแต่ง ใช้ &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; และอื่นๆ สำหรับคีย์พิเศษ รวมแต่ละคีย์ด้วย &quot;+&quot; และรวมทางลัดหลายรายการเข้ากับลำดับทางลัดด้วย &quot;,&quot; ตัวอย่างเช่น หากผู้ใช้ต้องกดปุ่ม Ctrl และ Shift ค้างไว้ขณะกด Escape จากนั้นปล่อยและกด A ให้ป้อน &quot;Ctrl+Shift+Escape,A&quot;</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Use "Ctrl", "Alt", "Meta", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>ใช้ "Ctrl", "Alt", "Meta" และ "Shift" สำหรับคีย์ตัวปรับแต่ง ใช้ "Escape", "Backspace", "Delete", "Insert", "Home" และอื่นๆ สำหรับคีย์พิเศษ รวมแต่ละคีย์ด้วย "+" และรวมทางลัดหลายรายการเข้ากับลำดับทางลัดด้วย "," ตัวอย่างเช่น หากผู้ใช้ต้องกดปุ่ม Ctrl และ Shift ค้างไว้ขณะกด Escape จากนั้นปล่อยและกด A ให้ป้อน "Ctrl+Shift+Escape,A"</translation>
+        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>ใช้ &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot; และ &quot;Shift&quot; สำหรับคีย์ตัวปรับแต่ง ใช้ &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; และอื่นๆ สำหรับคีย์พิเศษ รวมแต่ละคีย์ด้วย &quot;+&quot; และรวมทางลัดหลายรายการเข้ากับลำดับทางลัดด้วย &quot;,&quot; ตัวอย่างเช่น หากผู้ใช้ต้องกดปุ่ม Ctrl และ Shift ค้างไว้ขณะกด Escape จากนั้นปล่อยและกด A ให้ป้อน &quot;Ctrl+Shift+Escape,A&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -1849,8 +1849,8 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location line="+24" />
-        <source>Key sequence has potential conflicts. &lt;a href="#conflicts"&gt;Show.&lt;/a&gt;</source>
-        <translation>ลำดับคีย์อาจมีข้อขัดแย้งที่อาจเกิดขึ้น &lt;a href="#conflicts"&gt;แสดง&lt;/a&gt;</translation>
+        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
+        <translation>ลำดับคีย์อาจมีข้อขัดแย้งที่อาจเกิดขึ้น &lt;a href=&quot;#conflicts&quot;&gt;แสดง&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+74" />
@@ -1925,8 +1925,8 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>An item named "%1" already exists at this location. Do you want to overwrite it?</source>
-        <translation>มีรายการที่ชื่อ "%1" อยู่แล้วที่ตำแหน่งนี้ คุณต้องการเขียนทับมันหรือไม่?</translation>
+        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
+        <translation>มีรายการที่ชื่อ &quot;%1&quot; อยู่แล้วที่ตำแหน่งนี้ คุณต้องการเขียนทับมันหรือไม่?</translation>
     </message>
     <message>
         <location line="+67" />
@@ -1956,7 +1956,7 @@ Do you want to check them out now?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+288" />
         <source>&lt;no document&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;ไม่มีเอกสาร&gt;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -2139,12 +2139,12 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location line="+7" />
-        <source>X-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>พิกัด X ของมุมซ้ายบนของตัวแก้ไขปัจจุบัน สัมพันธ์กับหน้าจอ</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Y-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>พิกัด Y ของมุมซ้ายบนของตัวแก้ไขปัจจุบันสัมพันธ์กับหน้าจอ</translation>
     </message>
     <message>
@@ -2154,27 +2154,27 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The text file "%1" has the size %2MB and might take more memory to open and process than available.
+        <source>The text file &quot;%1&quot; has the size %2MB and might take more memory to open and process than available.
 
 Continue?</source>
-        <translation>ไฟล์ข้อความ "%1" มีขนาด %2MB และอาจใช้หน่วยความจำในการเปิดและประมวลผลมากกว่าที่มีอยู่ 
+        <translation>ไฟล์ข้อความ &quot;%1&quot; มีขนาด %2MB และอาจใช้หน่วยความจำในการเปิดและประมวลผลมากกว่าที่มีอยู่ 
 
 ดำเนินการต่อ?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>Could not open "%1": Cannot open files of type "%2".</source>
-        <translation>ไม่สามารถเปิด "%1": ไม่สามารถเปิดไฟล์ประเภท "%2"</translation>
+        <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
+        <translation>ไม่สามารถเปิด &quot;%1&quot;: ไม่สามารถเปิดไฟล์ประเภท &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not open "%1" for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>ไม่สามารถเปิด "%1" เพื่ออ่านได้ ไม่มีไฟล์อยู่หรือคุณไม่มีสิทธิ์เปิดไฟล์</translation>
+        <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
+        <translation>ไม่สามารถเปิด &quot;%1&quot; เพื่ออ่านได้ ไม่มีไฟล์อยู่หรือคุณไม่มีสิทธิ์เปิดไฟล์</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Could not open "%1": Unknown error.</source>
-        <translation>ไม่สามารถเปิด "%1": ข้อผิดพลาดที่ไม่รู้จัก</translation>
+        <source>Could not open &quot;%1&quot;: Unknown error.</source>
+        <translation>ไม่สามารถเปิด &quot;%1&quot;: ข้อผิดพลาดที่ไม่รู้จัก</translation>
     </message>
     <message>
         <location line="+1130" />
@@ -2256,8 +2256,8 @@ Continue?</source>
     </message>
     <message>
         <location line="+308" />
-        <source>Close "%1"</source>
-        <translation>ปิด "%1"</translation>
+        <source>Close &quot;%1&quot;</source>
+        <translation>ปิด &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
@@ -2266,8 +2266,8 @@ Continue?</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Close All Except "%1"</source>
-        <translation>ปิดทั้งหมดยกเว้น "%1"</translation>
+        <source>Close All Except &quot;%1&quot;</source>
+        <translation>ปิดทั้งหมดยกเว้น &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
@@ -2276,13 +2276,13 @@ Continue?</source>
     </message>
     <message>
         <location line="+23" />
-        <source>Unpin "%1"</source>
-        <translation>เลิกปักหมุด "%1"</translation>
+        <source>Unpin &quot;%1&quot;</source>
+        <translation>เลิกปักหมุด &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Pin "%1"</source>
-        <translation>ปักหมุด "%1"</translation>
+        <source>Pin &quot;%1&quot;</source>
+        <translation>ปักหมุด &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -2348,23 +2348,23 @@ Continue?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
-        <source>Could not find executable for "%1" (expanded "%2")</source>
-        <translation>ไม่พบไฟล์ปฏิบัติการสำหรับ "%1" (ขยาย "%2")</translation>
+        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
+        <translation>ไม่พบไฟล์ปฏิบัติการสำหรับ &quot;%1&quot; (ขยาย &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>Starting external tool "%1"</source>
-        <translation>กำลังเริ่มเครื่องมือภายนอก "%1"</translation>
+        <source>Starting external tool &quot;%1&quot;</source>
+        <translation>กำลังเริ่มเครื่องมือภายนอก &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>"%1" finished</source>
-        <translation>"%1" เสร็จสิ้นแล้ว</translation>
+        <source>&quot;%1&quot; finished</source>
+        <translation>&quot;%1&quot; เสร็จสิ้นแล้ว</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" finished with error</source>
-        <translation>"%1" เสร็จสิ้นโดยมีข้อผิดพลาด</translation>
+        <source>&quot;%1&quot; finished with error</source>
+        <translation>&quot;%1&quot; เสร็จสิ้นโดยมีข้อผิดพลาด</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
@@ -2399,10 +2399,10 @@ Continue?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>"%1" returned the following error:
+        <source>&quot;%1&quot; returned the following error:
 
 %2</source>
-        <translation>"%1" ส่งกลับข้อผิดพลาดต่อไปนี้: 
+        <translation>&quot;%1&quot; ส่งกลับข้อผิดพลาดต่อไปนี้: 
 
 %2</translation>
     </message>
@@ -2454,29 +2454,31 @@ Continue?</source>
     <message>
         <location line="+6" />
         <source>Open Command Prompt With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>เปิดพร้อมท์คำสั่งด้วย</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open Terminal With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>เปิดเทอร์มินัลด้วย</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file "%1".</source>
-        <translation>ไม่สามารถลบไฟล์ "%1"</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>ไม่สามารถลบไฟล์ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+40" />
-        <source>Failed to rename the include guard in file "%1".</source>
-        <translation>ไม่สามารถเปลี่ยนชื่อตัวป้องกันการรวมในไฟล์ "%1"</translation>
+        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
+        <translation>ไม่สามารถเปลี่ยนชื่อตัวป้องกันการรวมในไฟล์ &quot;%1&quot;</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
         <source>%n occurrences replaced.</source>
-        <translation><numerusform>แทนที่ %n รายการแล้ว</numerusform></translation>
+        <translation>
+            <numerusform>แทนที่ %n รายการแล้ว</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+312" />
@@ -2763,7 +2765,9 @@ Continue?</source>
     <message numerus="yes">
         <location line="+18" />
         <source>The search resulted in more than %n items, do you still want to continue?</source>
-        <translation><numerusform>การค้นหาส่งผลให้มีมากกว่า %n รายการ คุณยังต้องการดำเนินการต่อหรือไม่?</numerusform></translation>
+        <translation>
+            <numerusform>การค้นหาส่งผลให้มีมากกว่า %n รายการ คุณยังต้องการดำเนินการต่อหรือไม่?</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+3" />
@@ -2778,7 +2782,9 @@ Continue?</source>
     <message numerus="yes">
         <location line="+82" />
         <source>%n matches found.</source>
-        <translation><numerusform>พบ %n รายการที่ตรงกัน</numerusform></translation>
+        <translation>
+            <numerusform>พบ %n รายการที่ตรงกัน</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+2" />
@@ -2879,8 +2885,8 @@ Continue?</source>
     </message>
     <message>
         <location line="-18" />
-        <source>Open "%1"</source>
-        <translation>เปิด "%1"</translation>
+        <source>Open &quot;%1&quot;</source>
+        <translation>เปิด &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -3015,7 +3021,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+2" />
-        <source>Don't Round</source>
+        <source>Don&apos;t Round</source>
         <translation>อย่ากลม</translation>
     </message>
     <message>
@@ -3041,7 +3047,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+44" />
         <source>&lt;System Language&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;ภาษาของระบบ&gt;</translation>
     </message>
     <message>
         <location line="+92" />
@@ -3393,8 +3399,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+1" />
-        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the "%2" action from the "%3" locator filter (%4).</source>
-        <translation>นี่จะเป็นการซ่อนแถบเมนูโดยสมบูรณ์ คุณสามารถแสดงอีกครั้งโดยพิมพ์ %1&lt;br&gt;&lt;br&gt;หรือทริกเกอร์การดำเนินการ "%2" จากตัวกรองตัวระบุตำแหน่ง "%3" (%4)</translation>
+        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the &quot;%2&quot; action from the &quot;%3&quot; locator filter (%4).</source>
+        <translation>นี่จะเป็นการซ่อนแถบเมนูโดยสมบูรณ์ คุณสามารถแสดงอีกครั้งโดยพิมพ์ %1&lt;br&gt;&lt;br&gt;หรือทริกเกอร์การดำเนินการ &quot;%2&quot; จากตัวกรองตัวระบุตำแหน่ง &quot;%3&quot; (%4)</translation>
     </message>
     <message>
         <location line="+21" />
@@ -3483,8 +3489,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
-        <source>Factory with id="%1" already registered. Deleting.</source>
-        <translation>โรงงานที่มี id="%1" ลงทะเบียนแล้ว กำลังลบ</translation>
+        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
+        <translation>โรงงานที่มี id=&quot;%1&quot; ลงทะเบียนแล้ว กำลังลบ</translation>
     </message>
     <message>
         <location line="+230" />
@@ -3498,18 +3504,18 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
-        <source>Error in "%1": %2</source>
-        <translation>ข้อผิดพลาดใน "%1": %2</translation>
+        <source>Error in &quot;%1&quot;: %2</source>
+        <translation>ข้อผิดพลาดใน &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>Cannot convert result of "%1" to string.</source>
-        <translation>ไม่สามารถแปลงผลลัพธ์ของ "%1" เป็นสตริงได้</translation>
+        <source>Cannot convert result of &quot;%1&quot; to string.</source>
+        <translation>ไม่สามารถแปลงผลลัพธ์ของ &quot;%1&quot; เป็นสตริงได้</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal '}' characters must be escaped as "\}", '\' characters must be escaped as "\\", and "%{" must be escaped as "%\{".</source>
-        <translation>ประเมินคำสั่ง JavaScript แบบง่าย&lt;br&gt;อักขระตัวอักษร '}' จะต้องเป็นอักขระหลีกเป็น "\}", อักขระ '\' จะต้องเป็นอักขระหลีกเป็น "\\" และ "%{" จะต้องเป็นอักขระหลีกเป็น "%\{"</translation>
+        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
+        <translation>ประเมินคำสั่ง JavaScript แบบง่าย&lt;br&gt;อักขระตัวอักษร &apos;}&apos; จะต้องเป็นอักขระหลีกเป็น &quot;\}&quot;, อักขระ &apos;\&apos; จะต้องเป็นอักขระหลีกเป็น &quot;\\&quot; และ &quot;%{&quot; จะต้องเป็นอักขระหลีกเป็น &quot;%\{&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-110" />
@@ -3524,12 +3530,14 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message numerus="yes">
         <location line="+5" />
         <source>%1 filter update: %n files</source>
-        <translation><numerusform>การอัปเดตตัวกรอง %1: %n ไฟล์</numerusform></translation>
+        <translation>
+            <numerusform>การอัปเดตตัวกรอง %1: %n ไฟล์</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Locates files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>ค้นหาไฟล์จากชุดไดเร็กทอรีที่กำหนดเอง เพิ่ม "+&lt;number&gt;" หรือ ":&lt;number&gt;" ต่อท้ายเพื่อข้ามไปยังหมายเลขบรรทัดที่กำหนด เติม "+&lt;number&gt;" หรือ ":&lt;number&gt;" อื่นต่อท้ายเพื่อข้ามไปยังหมายเลขคอลัมน์ด้วย</translation>
+        <source>Locates files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>ค้นหาไฟล์จากชุดไดเร็กทอรีที่กำหนดเอง เพิ่ม &quot;+&lt;number&gt;&quot; หรือ &quot;:&lt;number&gt;&quot; ต่อท้ายเพื่อข้ามไปยังหมายเลขบรรทัดที่กำหนด เติม &quot;+&lt;number&gt;&quot; หรือ &quot;:&lt;number&gt;&quot; อื่นต่อท้ายเพื่อข้ามไปยังหมายเลขคอลัมน์ด้วย</translation>
     </message>
     <message>
         <location line="+92" />
@@ -3577,9 +3585,9 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+68" />
-        <source>Previous command is still running ("%1").
+        <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
-        <translation>คำสั่งก่อนหน้ายังคงทำงานอยู่ ("%1") 
+        <translation>คำสั่งก่อนหน้ายังคงทำงานอยู่ (&quot;%1&quot;) 
 คุณต้องการที่จะฆ่ามัน?</translation>
     </message>
     <message>
@@ -3589,13 +3597,13 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+46" />
-        <source>Could not find executable for "%1".</source>
-        <translation>ไม่พบไฟล์ปฏิบัติการสำหรับ "%1"</translation>
+        <source>Could not find executable for &quot;%1&quot;.</source>
+        <translation>ไม่พบไฟล์ปฏิบัติการสำหรับ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Starting command "%1".</source>
-        <translation>คำสั่งเริ่มต้น "%1"</translation>
+        <source>Starting command &quot;%1&quot;.</source>
+        <translation>คำสั่งเริ่มต้น &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+21" />
@@ -3609,8 +3617,8 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+63" />
-        <source>Create "%1"?</source>
-        <translation>สร้าง "%1" หรือไม่?</translation>
+        <source>Create &quot;%1&quot;?</source>
+        <translation>สร้าง &quot;%1&quot; หรือไม่?</translation>
     </message>
     <message>
         <location line="+5" />
@@ -3634,8 +3642,8 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Cannot create file "%1".</source>
-        <translation>ไม่สามารถสร้างไฟล์ "%1"</translation>
+        <source>Cannot create file &quot;%1&quot;.</source>
+        <translation>ไม่สามารถสร้างไฟล์ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -3649,18 +3657,18 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Opens a file given by a relative path to the current document, or absolute path. "~" refers to your home directory. You have the option to create a file if it does not exist yet.</source>
-        <translation>เปิดไฟล์ที่กำหนดโดยพาธสัมพัทธ์ไปยังเอกสารปัจจุบัน หรือพาธสัมบูรณ์ "~" หมายถึงโฮมไดเร็กตอรี่ของคุณ คุณมีตัวเลือกในการสร้างไฟล์หากยังไม่มี</translation>
+        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
+        <translation>เปิดไฟล์ที่กำหนดโดยพาธสัมพัทธ์ไปยังเอกสารปัจจุบัน หรือพาธสัมบูรณ์ &quot;~&quot; หมายถึงโฮมไดเร็กตอรี่ของคุณ คุณมีตัวเลือกในการสร้างไฟล์หากยังไม่มี</translation>
     </message>
     <message>
         <location line="+138" />
-        <source>Create and Open File "%1"</source>
-        <translation>สร้างและเปิดไฟล์ "%1"</translation>
+        <source>Create and Open File &quot;%1&quot;</source>
+        <translation>สร้างและเปิดไฟล์ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Create Directory "%1"</source>
-        <translation>สร้างไดเรกทอรี "%1"</translation>
+        <source>Create Directory &quot;%1&quot;</source>
+        <translation>สร้างไดเรกทอรี &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+58" />
@@ -3765,18 +3773,18 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+143" />
-        <source>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;เปิดเอกสาร&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; ไฟล์ &gt; เปิดไฟล์ (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; ไฟล์ &gt; ตัวอย่าง &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; ไฟล์ &gt; ไฟล์ล่าสุด&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; ลากและวางไฟล์ที่นี่&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;เปิดเอกสาร&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; ไฟล์ &gt; เปิดไฟล์ (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; ไฟล์ &gt; ตัวอย่าง &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; ไฟล์ &gt; ไฟล์ล่าสุด&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; ลากและวางไฟล์ที่นี่&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+37" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- พิมพ์ &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; เพื่อข้ามไปยังคำจำกัดความของคลาส&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- พิมพ์ &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; เพื่อข้ามไปยังคำจำกัดความของคลาส&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- พิมพ์ &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; เพื่อข้ามไปยังคำจำกัดความของฟังก์ชัน&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- พิมพ์ &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; เพื่อข้ามไปยังคำจำกัดความของฟังก์ชัน&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+121" />
@@ -3886,8 +3894,8 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Locator query string with quotes escaped with backslash and spaces replaced with "*" wildcards.</source>
-        <translation>สตริงการสืบค้นตัวระบุตำแหน่งที่มีเครื่องหมายคำพูดเป็นอักขระหลีกด้วยแบ็กสแลชและช่องว่างแทนที่ด้วยไวด์การ์ด "*"</translation>
+        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
+        <translation>สตริงการสืบค้นตัวระบุตำแหน่งที่มีเครื่องหมายคำพูดเป็นอักขระหลีกด้วยแบ็กสแลชและช่องว่างแทนที่ด้วยไวด์การ์ด &quot;*&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -3901,13 +3909,13 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>ค้นหาไฟล์จากดัชนีระบบไฟล์ส่วนกลาง (Spotlight, Locate, Everything) เพิ่ม "+&lt;number&gt;" หรือ ":&lt;number&gt;" ต่อท้ายเพื่อข้ามไปยังหมายเลขบรรทัดที่กำหนด เติม "+&lt;number&gt;" หรือ ":&lt;number&gt;" อื่นต่อท้ายเพื่อข้ามไปยังหมายเลขคอลัมน์ด้วย</translation>
+        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>ค้นหาไฟล์จากดัชนีระบบไฟล์ส่วนกลาง (Spotlight, Locate, Everything) เพิ่ม &quot;+&lt;number&gt;&quot; หรือ &quot;:&lt;number&gt;&quot; ต่อท้ายเพื่อข้ามไปยังหมายเลขบรรทัดที่กำหนด เติม &quot;+&lt;number&gt;&quot; หรือ &quot;:&lt;number&gt;&quot; อื่นต่อท้ายเพื่อข้ามไปยังหมายเลขคอลัมน์ด้วย</translation>
     </message>
     <message>
         <location line="+42" />
-        <source>Locator: Error occurred when running "%1".</source>
-        <translation>ตัวระบุตำแหน่ง: เกิดข้อผิดพลาดขณะเรียกใช้ "%1"</translation>
+        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
+        <translation>ตัวระบุตำแหน่ง: เกิดข้อผิดพลาดขณะเรียกใช้ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+71" />
@@ -3921,9 +3929,9 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110" />
-        <source>Add "%1" placeholder for the query string.
+        <source>Add &quot;%1&quot; placeholder for the query string.
 Double-click to edit item.</source>
-        <translation>เพิ่มตัวยึดตำแหน่ง "%1" สำหรับสตริงการสืบค้น 
+        <translation>เพิ่มตัวยึดตำแหน่ง &quot;%1&quot; สำหรับสตริงการสืบค้น 
 ดับเบิลคลิกเพื่อแก้ไขรายการ</translation>
     </message>
     <message>
@@ -4116,13 +4124,13 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+16" />
-        <source>Failed to write logs to "%1".</source>
-        <translation>ไม่สามารถเขียนบันทึกไปที่ "%1"</translation>
+        <source>Failed to write logs to &quot;%1&quot;.</source>
+        <translation>ไม่สามารถเขียนบันทึกไปที่ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open file "%1" for writing logs.</source>
-        <translation>ไม่สามารถเปิดไฟล์ "%1" เพื่อเขียนบันทึกได้</translation>
+        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
+        <translation>ไม่สามารถเปิดไฟล์ &quot;%1&quot; เพื่อเขียนบันทึกได้</translation>
     </message>
     <message>
         <location line="+8" />
@@ -4131,8 +4139,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+37" />
-        <source>Failed to write preset file "%1".</source>
-        <translation>ไม่สามารถเขียนไฟล์ที่กำหนดไว้ล่วงหน้า "%1"</translation>
+        <source>Failed to write preset file &quot;%1&quot;.</source>
+        <translation>ไม่สามารถเขียนไฟล์ที่กำหนดไว้ล่วงหน้า &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+6" />
@@ -4141,13 +4149,13 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Failed to open preset file "%1" for reading.</source>
-        <translation>ไม่สามารถเปิดไฟล์ที่กำหนดไว้ล่วงหน้า "%1" เพื่อการอ่านได้</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading.</source>
+        <translation>ไม่สามารถเปิดไฟล์ที่กำหนดไว้ล่วงหน้า &quot;%1&quot; เพื่อการอ่านได้</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to read preset file "%1": %2</source>
-        <translation>ไม่สามารถอ่านไฟล์ที่กำหนดไว้ล่วงหน้า "%1": %2</translation>
+        <source>Failed to read preset file &quot;%1&quot;: %2</source>
+        <translation>ไม่สามารถอ่านไฟล์ที่กำหนดไว้ล่วงหน้า &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+29" />
@@ -4171,8 +4179,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+4" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ข้อมูลเวทย์มนตร์ MIME ได้รับการตีความตามที่กำหนดโดยข้อกำหนดฐานข้อมูล MIME ที่แชร์จาก &lt;a href="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"&gt;freedesktop.org&lt;/a&gt;&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ข้อมูลเวทย์มนตร์ MIME ได้รับการตีความตามที่กำหนดโดยข้อกำหนดฐานข้อมูล MIME ที่แชร์จาก &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+9" />
@@ -4226,8 +4234,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;หมายเหตุ: ค่าที่มีช่วงกว้างอาจส่งผลต่อประสิทธิภาพเมื่อเปิดไฟล์&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;หมายเหตุ: ค่าที่มีช่วงกว้างอาจส่งผลต่อประสิทธิภาพเมื่อเปิดไฟล์&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4416,7 +4424,9 @@ Double-click to edit item.</source>
     <message numerus="yes">
         <location line="+159" />
         <source>Elided %n characters due to Application Output settings</source>
-        <translation><numerusform>ลบ %n อักขระเนื่องจากการตั้งค่าเอาต์พุตของแอปพลิเคชัน</numerusform></translation>
+        <translation>
+            <numerusform>ลบ %n อักขระเนื่องจากการตั้งค่าเอาต์พุตของแอปพลิเคชัน</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+154" />
@@ -4462,38 +4472,38 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>There is no patch-command configured in the general "Environment" settings.</source>
-        <translation>ไม่มีคำสั่งแพตช์ที่กำหนดค่าในการตั้งค่า "สภาพแวดล้อม" ทั่วไป</translation>
+        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
+        <translation>ไม่มีคำสั่งแพตช์ที่กำหนดค่าในการตั้งค่า &quot;สภาพแวดล้อม&quot; ทั่วไป</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The patch-command configured in the general "Environment" settings does not exist.</source>
-        <translation>ไม่มีคำสั่ง patch ที่กำหนดค่าในการตั้งค่า "สภาพแวดล้อม" ทั่วไป</translation>
+        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
+        <translation>ไม่มีคำสั่ง patch ที่กำหนดค่าในการตั้งค่า &quot;สภาพแวดล้อม&quot; ทั่วไป</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Running in "%1": %2 %3.</source>
-        <translation>ทำงานใน "%1": %2 %3</translation>
+        <source>Running in &quot;%1&quot;: %2 %3.</source>
+        <translation>ทำงานใน &quot;%1&quot;: %2 %3</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Unable to launch "%1": %2</source>
-        <translation>ไม่สามารถเปิด "%1": %2</translation>
+        <source>Unable to launch &quot;%1&quot;: %2</source>
+        <translation>ไม่สามารถเปิด &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>A timeout occurred running "%1".</source>
-        <translation>เกิดการหมดเวลาขณะเรียกใช้ "%1"</translation>
+        <source>A timeout occurred running &quot;%1&quot;.</source>
+        <translation>เกิดการหมดเวลาขณะเรียกใช้ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>"%1" crashed.</source>
-        <translation>"%1" ขัดข้อง</translation>
+        <source>&quot;%1&quot; crashed.</source>
+        <translation>&quot;%1&quot; ขัดข้อง</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"%1" failed (exit code %2).</source>
-        <translation>"%1" ล้มเหลว (รหัสออก %2)</translation>
+        <source>&quot;%1&quot; failed (exit code %2).</source>
+        <translation>&quot;%1&quot; ล้มเหลว (รหัสออก %2)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+2" />
@@ -4607,8 +4617,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>"%1" will be installed into "%2".</source>
-        <translation>"%1" จะถูกติดตั้งลงใน "%2"</translation>
+        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot; จะถูกติดตั้งลงใน &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+29" />
@@ -4617,8 +4627,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The file "%1" exists. Overwrite?</source>
-        <translation>มีไฟล์ "%1" อยู่แล้ว เขียนทับ?</translation>
+        <source>The file &quot;%1&quot; exists. Overwrite?</source>
+        <translation>มีไฟล์ &quot;%1&quot; อยู่แล้ว เขียนทับ?</translation>
     </message>
     <message>
         <location line="+3" />
@@ -4632,8 +4642,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to write file "%1".</source>
-        <translation>ไม่สามารถเขียนไฟล์ "%1"</translation>
+        <source>Failed to write file &quot;%1&quot;.</source>
+        <translation>ไม่สามารถเขียนไฟล์ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -4794,13 +4804,13 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Command line arguments used for "Run in terminal".</source>
-        <translation>อาร์กิวเมนต์บรรทัดคำสั่งที่ใช้สำหรับ "Run in Terminal"</translation>
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>อาร์กิวเมนต์บรรทัดคำสั่งที่ใช้สำหรับ &quot;Run in Terminal&quot;</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Command line arguments used for "%1".</source>
-        <translation>อาร์กิวเมนต์บรรทัดคำสั่งที่ใช้สำหรับ "%1"</translation>
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>อาร์กิวเมนต์บรรทัดคำสั่งที่ใช้สำหรับ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4836,8 +4846,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Maximum number of entries in "Recent Files":</source>
-        <translation>จำนวนรายการสูงสุดใน "ไฟล์ล่าสุด":</translation>
+        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
+        <translation>จำนวนรายการสูงสุดใน &quot;ไฟล์ล่าสุด&quot;:</translation>
     </message>
     <message>
         <location line="+12" />
@@ -5065,8 +5075,8 @@ to version control (%2)
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
-        <source>Could not parse patch file "%1". The content is not of unified diff format.</source>
-        <translation>ไม่สามารถแยกวิเคราะห์ไฟล์แพทช์ "%1" เนื้อหาไม่มีรูปแบบที่แตกต่างกันแบบครบวงจร</translation>
+        <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
+        <translation>ไม่สามารถแยกวิเคราะห์ไฟล์แพทช์ &quot;%1&quot; เนื้อหาไม่มีรูปแบบที่แตกต่างกันแบบครบวงจร</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
@@ -5145,8 +5155,8 @@ to version control (%2)
     </message>
     <message>
         <location line="+52" />
-        <source>Diff "%1"</source>
-        <translation>ส่วนต่าง "%1"</translation>
+        <source>Diff &quot;%1&quot;</source>
+        <translation>ส่วนต่าง &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+28" />
@@ -5160,8 +5170,8 @@ to version control (%2)
     </message>
     <message>
         <location line="+10" />
-        <source>Diff "%1", "%2"</source>
-        <translation>ส่วนต่าง "%1", "%2"</translation>
+        <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
+        <translation>ส่วนต่าง &quot;%1&quot;, &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
@@ -5180,8 +5190,8 @@ to version control (%2)
     </message>
     <message>
         <location line="+31" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding.</source>
-        <translation>&lt;b&gt;ข้อผิดพลาด:&lt;/b&gt; ไม่สามารถถอดรหัส "%1" ด้วยการเข้ารหัส "%2" ได้</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
+        <translation>&lt;b&gt;ข้อผิดพลาด:&lt;/b&gt; ไม่สามารถถอดรหัส &quot;%1&quot; ด้วยการเข้ารหัส &quot;%2&quot; ได้</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5206,7 +5216,9 @@ to version control (%2)
     <message numerus="yes">
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
         <source>Skipped %n lines...</source>
-        <translation><numerusform>ข้าม %n บรรทัดแล้ว...</numerusform></translation>
+        <translation>
+            <numerusform>ข้าม %n บรรทัดแล้ว...</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+2" />
@@ -5245,26 +5257,26 @@ to version control (%2)
     <name>QtC::ExtensionSystem</name>
     <message>
         <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
-        <source>The plugin "%1" is specified twice for testing.</source>
-        <translation>มีการระบุปลั๊กอิน "%1" สองครั้งสำหรับการทดสอบ</translation>
+        <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
+        <translation>มีการระบุปลั๊กอิน &quot;%1&quot; สองครั้งสำหรับการทดสอบ</translation>
     </message>
     <message>
         <location line="+7" />
         <location line="+18" />
         <location line="+47" />
         <location line="+25" />
-        <source>The plugin "%1" does not exist.</source>
-        <translation>ไม่มีปลั๊กอิน "%1"</translation>
+        <source>The plugin &quot;%1&quot; does not exist.</source>
+        <translation>ไม่มีปลั๊กอิน &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-79" />
-        <source>The plugin "%1" is not tested.</source>
-        <translation>ปลั๊กอิน "%1" ไม่ได้ถูกทดสอบ</translation>
+        <source>The plugin &quot;%1&quot; is not tested.</source>
+        <translation>ปลั๊กอิน &quot;%1&quot; ไม่ได้ถูกทดสอบ</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Cannot request scenario "%1" as it was already requested.</source>
-        <translation>ไม่สามารถร้องขอสถานการณ์สมมติ "%1" ได้เนื่องจากมีการร้องขอแล้ว</translation>
+        <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
+        <translation>ไม่สามารถร้องขอสถานการณ์สมมติ &quot;%1&quot; ได้เนื่องจากมีการร้องขอแล้ว</translation>
     </message>
     <message>
         <location line="+130" />
@@ -5353,8 +5365,8 @@ to version control (%2)
     </message>
     <message>
         <location line="+1" />
-        <source>%1 (current: "%2")</source>
-        <translation>%1 (ปัจจุบัน: "%2")</translation>
+        <source>%1 (current: &quot;%2&quot;)</source>
+        <translation>%1 (ปัจจุบัน: &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5439,7 +5451,7 @@ to version control (%2)
     </message>
     <message>
         <location line="+1" />
-        <source>Plugin's initialization function succeeded.</source>
+        <source>Plugin&apos;s initialization function succeeded.</source>
         <translation>ฟังก์ชันการเริ่มต้นของปลั๊กอินสำเร็จแล้ว</translation>
     </message>
     <message>
@@ -5521,8 +5533,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The last time you started %1, it seems to have closed because of a problem with the "%2" plugin. Temporarily disable the plugin?</source>
-        <translation>ครั้งล่าสุดที่คุณเริ่ม %1 ดูเหมือนว่าจะปิดไปแล้วเนื่องจากปัญหากับปลั๊กอิน "%2" ปิดการใช้งานปลั๊กอินชั่วคราวหรือไม่?</translation>
+        <source>The last time you started %1, it seems to have closed because of a problem with the &quot;%2&quot; plugin. Temporarily disable the plugin?</source>
+        <translation>ครั้งล่าสุดที่คุณเริ่ม %1 ดูเหมือนว่าจะปิดไปแล้วเนื่องจากปัญหากับปลั๊กอิน &quot;%2&quot; ปิดการใช้งานปลั๊กอินชั่วคราวหรือไม่?</translation>
     </message>
     <message>
         <location line="+8" />
@@ -5543,33 +5555,33 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+24" />
-        <source>"%1" is missing</source>
-        <translation>"%1" หายไป</translation>
+        <source>&quot;%1&quot; is missing</source>
+        <translation>&quot;%1&quot; หายไป</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a string</source>
-        <translation>ค่าสำหรับคีย์ "%1" ไม่ใช่สตริง</translation>
+        <source>Value for key &quot;%1&quot; is not a string</source>
+        <translation>ค่าสำหรับคีย์ &quot;%1&quot; ไม่ใช่สตริง</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a bool</source>
-        <translation>ค่าสำหรับคีย์ "%1" ไม่ใช่ค่าบูล</translation>
+        <source>Value for key &quot;%1&quot; is not a bool</source>
+        <translation>ค่าสำหรับคีย์ &quot;%1&quot; ไม่ใช่ค่าบูล</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not an array of objects</source>
-        <translation>ค่าสำหรับคีย์ "%1" ไม่ใช่อาร์เรย์ของออบเจ็กต์</translation>
+        <source>Value for key &quot;%1&quot; is not an array of objects</source>
+        <translation>ค่าสำหรับคีย์ &quot;%1&quot; ไม่ใช่อาร์เรย์ของออบเจ็กต์</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a string and not an array of strings</source>
-        <translation>ค่าสำหรับคีย์ "%1" ไม่ใช่สตริงและไม่ใช่อาร์เรย์ของสตริง</translation>
+        <source>Value for key &quot;%1&quot; is not a string and not an array of strings</source>
+        <translation>ค่าสำหรับคีย์ &quot;%1&quot; ไม่ใช่สตริงและไม่ใช่อาร์เรย์ของสตริง</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Value "%2" for key "%1" has invalid format</source>
-        <translation>ค่า "%2" สำหรับคีย์ "%1" มีรูปแบบที่ไม่ถูกต้อง</translation>
+        <source>Value &quot;%2&quot; for key &quot;%1&quot; has invalid format</source>
+        <translation>ค่า &quot;%2&quot; สำหรับคีย์ &quot;%1&quot; มีรูปแบบที่ไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5578,8 +5590,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected IID "%1", but found "%2"</source>
-        <translation>คาดหวัง IID "%1" แต่พบ "%2"</translation>
+        <source>Expected IID &quot;%1&quot;, but found &quot;%2&quot;</source>
+        <translation>คาดหวัง IID &quot;%1&quot; แต่พบ &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+6" />
@@ -5588,8 +5600,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+108" />
-        <source>Invalid platform specification "%1": %2</source>
-        <translation>ข้อมูลจำเพาะแพลตฟอร์มไม่ถูกต้อง "%1": %2</translation>
+        <source>Invalid platform specification &quot;%1&quot;: %2</source>
+        <translation>ข้อมูลจำเพาะแพลตฟอร์มไม่ถูกต้อง &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+18" />
@@ -5602,8 +5614,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+13" />
-        <source>Dependency: "%1" must be "%2" or "%3" (is "%4").</source>
-        <translation>การขึ้นต่อกัน: "%1" ต้องเป็น "%2" หรือ "%3" (คือ "%4")</translation>
+        <source>Dependency: &quot;%1&quot; must be &quot;%2&quot; or &quot;%3&quot; (is &quot;%4&quot;).</source>
+        <translation>การขึ้นต่อกัน: &quot;%1&quot; ต้องเป็น &quot;%2&quot; หรือ &quot;%3&quot; (คือ &quot;%4&quot;)</translation>
     </message>
     <message>
         <location line="+25" />
@@ -5615,8 +5627,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="-13" />
-        <source>Argument: "%1" is empty</source>
-        <translation>อาร์กิวเมนต์: "%1" ว่างเปล่า</translation>
+        <source>Argument: &quot;%1&quot; is empty</source>
+        <translation>อาร์กิวเมนต์: &quot;%1&quot; ว่างเปล่า</translation>
     </message>
     <message>
         <location line="+78" />
@@ -5625,8 +5637,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency '%1(%2)'</source>
-        <translation>ไม่สามารถแก้ไขการขึ้นต่อกัน '%1(%2)'</translation>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation>ไม่สามารถแก้ไขการขึ้นต่อกัน &apos;%1(%2)&apos;</translation>
     </message>
     <message>
         <location line="+61" />
@@ -5823,13 +5835,13 @@ Would you like to overwrite it?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+161" />
-        <source>Exported "%1", %2x%3, %4 bytes</source>
-        <translation>ส่งออก "%1", %2x%3, %4 ไบต์แล้ว</translation>
+        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
+        <translation>ส่งออก &quot;%1&quot;, %2x%3, %4 ไบต์แล้ว</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Could not write file "%1".</source>
-        <translation>ไม่สามารถเขียนไฟล์ "%1" ได้</translation>
+        <source>Could not write file &quot;%1&quot;.</source>
+        <translation>ไม่สามารถเขียนไฟล์ &quot;%1&quot; ได้</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6000,8 +6012,8 @@ Would you like to overwrite it?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>A comma-separated list of size specifications of the form "&lt;width&gt;x&lt;height&gt;".</source>
-        <translation>รายการข้อกำหนดขนาดในรูปแบบ "&lt;width&gt;x&lt;height&gt;" ที่คั่นด้วยเครื่องหมายจุลภาค</translation>
+        <source>A comma-separated list of size specifications of the form &quot;&lt;width&gt;x&lt;height&gt;&quot;.</source>
+        <translation>รายการข้อกำหนดขนาดในรูปแบบ &quot;&lt;width&gt;x&lt;height&gt;&quot; ที่คั่นด้วยเครื่องหมายจุลภาค</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6130,15 +6142,15 @@ Would you like to overwrite them?</source>
     </message>
     <message>
         <location line="+1342" />
-        <source>Invalid parameter in "%1":
+        <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
-        <translation>พารามิเตอร์ไม่ถูกต้องใน "%1": 
+        <translation>พารามิเตอร์ไม่ถูกต้องใน &quot;%1&quot;: 
 %2</translation>
     </message>
     <message>
         <location line="+219" />
-        <source>Language Server "%1" Initialization Error</source>
-        <translation>เซิร์ฟเวอร์ภาษา "%1" เกิดข้อผิดพลาดในการเริ่มต้น</translation>
+        <source>Language Server &quot;%1&quot; Initialization Error</source>
+        <translation>เซิร์ฟเวอร์ภาษา &quot;%1&quot; เกิดข้อผิดพลาดในการเริ่มต้น</translation>
     </message>
     <message>
         <location line="+13" />
@@ -6212,8 +6224,8 @@ Would you like to overwrite them?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientinterface.cpp" line="+77" />
-        <source>Cannot handle MIME type "%1" of message.</source>
-        <translation>ไม่สามารถจัดการข้อความประเภท MIME "%1" ได้</translation>
+        <source>Cannot handle MIME type &quot;%1&quot; of message.</source>
+        <translation>ไม่สามารถจัดการข้อความประเภท MIME &quot;%1&quot; ได้</translation>
     </message>
     <message>
         <location line="+70" />
@@ -6315,8 +6327,8 @@ Example: *.cpp%1*.h</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Language server-specific JSON to pass via "initializationOptions" field of "initialize" request.</source>
-        <translation>JSON เฉพาะเซิร์ฟเวอร์ภาษาที่จะส่งผ่านช่อง "initializationOptions" ของคำขอ "initialize"</translation>
+        <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
+        <translation>JSON เฉพาะเซิร์ฟเวอร์ภาษาที่จะส่งผ่านช่อง &quot;initializationOptions&quot; ของคำขอ &quot;initialize&quot;</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6393,7 +6405,9 @@ See the documentation of the specific language server for valid settings.</sourc
     <message numerus="yes">
         <location line="+21" />
         <source>Re&amp;name %n files</source>
-        <translation><numerusform>เปลี่ยนชื่อ %n ไฟล์ (&amp;N)</numerusform></translation>
+        <translation>
+            <numerusform>เปลี่ยนชื่อ %n ไฟล์ (&amp;N)</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+5" />
@@ -6450,23 +6464,23 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+6" />
-        <source>Running "%1" to install %2.</source>
-        <translation>กำลังเรียกใช้ "%1" เพื่อติดตั้ง %2</translation>
+        <source>Running &quot;%1&quot; to install %2.</source>
+        <translation>กำลังเรียกใช้ &quot;%1&quot; เพื่อติดตั้ง %2</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>การติดตั้ง "%1" ถูกยกเลิกโดยการหมดเวลา</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>การติดตั้ง &quot;%1&quot; ถูกยกเลิกโดยการหมดเวลา</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>การติดตั้ง "%1" ถูกยกเลิกโดยผู้ใช้</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>การติดตั้ง &quot;%1&quot; ถูกยกเลิกโดยผู้ใช้</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>การติดตั้ง "%1" ล้มเหลวด้วยรหัสออก %2</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>การติดตั้ง &quot;%1&quot; ล้มเหลวด้วยรหัสออก %2</translation>
     </message>
     <message>
         <location line="+56" />
@@ -6546,7 +6560,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+10" />
         <source>&lt;Select&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;เลือก&gt;</translation>
     </message>
     <message>
         <location line="+3" />
@@ -6573,33 +6587,33 @@ See the documentation of the specific language server for valid settings.</sourc
     <name>QtC::LanguageServerProtocol</name>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
-        <source>Cannot decode content with "%1". Falling back to "%2".</source>
-        <translation>ไม่สามารถถอดรหัสเนื้อหาด้วย "%1" ตกลงไปที่ "%2"</translation>
+        <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
+        <translation>ไม่สามารถถอดรหัสเนื้อหาด้วย &quot;%1&quot; ตกลงไปที่ &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Expected an integer in "%1", but got "%2".</source>
-        <translation>ต้องการจำนวนเต็มใน "%1" แต่ได้รับ "%2"</translation>
+        <source>Expected an integer in &quot;%1&quot;, but got &quot;%2&quot;.</source>
+        <translation>ต้องการจำนวนเต็มใน &quot;%1&quot; แต่ได้รับ &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
-        <source>Could not parse JSON message: "%1".</source>
-        <translation>ไม่สามารถแยกวิเคราะห์ข้อความ JSON: "%1"</translation>
+        <source>Could not parse JSON message: &quot;%1&quot;.</source>
+        <translation>ไม่สามารถแยกวิเคราะห์ข้อความ JSON: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected a JSON object, but got a JSON "%1" value.</source>
-        <translation>ต้องการออบเจ็กต์ JSON แต่ได้รับค่า JSON "%1"</translation>
+        <source>Expected a JSON object, but got a JSON &quot;%1&quot; value.</source>
+        <translation>ต้องการออบเจ็กต์ JSON แต่ได้รับค่า JSON &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
-        <source>No parameters in "%1".</source>
-        <translation>ไม่มีพารามิเตอร์ใน "%1"</translation>
+        <source>No parameters in &quot;%1&quot;.</source>
+        <translation>ไม่มีพารามิเตอร์ใน &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+213" />
-        <source>No ID set in "%1".</source>
-        <translation>ไม่ได้ตั้งค่า ID ใน "%1"</translation>
+        <source>No ID set in &quot;%1&quot;.</source>
+        <translation>ไม่ได้ตั้งค่า ID ใน &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
@@ -6769,7 +6783,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+9" />
-        <source>Only firmware recovery is supported using the Alif Semiconductor's SE Tools.</source>
+        <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>รองรับการกู้คืนเฟิร์มแวร์โดยใช้เครื่องมือ SE ของ Alif Semiconductor เท่านั้น</translation>
     </message>
     <message>
@@ -6813,7 +6827,7 @@ See the documentation of the specific language server for valid settings.</sourc
 
 If you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py.
 
-In this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).</source>
+In this case click OK when you see your OpenMV Cam&apos;s internal flash drive mount (a window may or may not pop open).</source>
         <translation>หากคุณเขียนทับ main.py บน OpenMV Cam ของคุณและไม่ได้ลบดิสก์ OpenMV Cam ของคุณก็จะเรียกใช้ main.py นั้น 
 
 ในกรณีนี้ คลิกตกลง เมื่อคุณเห็นการติดตั้งแฟลชไดรฟ์ภายในของ OpenMV Cam (หน้าต่างอาจเปิดหรือไม่เปิดก็ได้)</translation>
@@ -6916,7 +6930,7 @@ In this case click OK when you see your OpenMV Cam's internal flash drive mount 
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
         <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
-        <source>Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.</source>
+        <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>คลิก ตกลง เมื่อไฟ LED RGB ของ OpenMV Cam ของคุณเริ่มกะพริบเป็นสีน้ำเงิน ซึ่งแสดงว่าการทดสอบตัวเองเสร็จสมบูรณ์</translation>
     </message>
     <message>
@@ -7089,7 +7103,7 @@ Continue?</source>
     </message>
     <message>
         <location line="+37" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
         <translation>OpenMV IDE ยังสามารถลองซ่อมแซม OpenMV Cam ของคุณได้โดยใช้ DFU Bootloader ของ OpenMV Cam 
@@ -7132,7 +7146,7 @@ Continue?</source>
     </message>
     <message>
         <location line="+40" />
-        <source>DFU update erases your OpenMV Cam's internal flash file system.
+        <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
         <translation>การอัปเดต DFU จะลบระบบไฟล์แฟลชภายในของ OpenMV Cam 
@@ -7143,7 +7157,7 @@ Backup your data before continuing!</source>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.</source>
         <translation>ถอด OpenMV Cam ออกจากคอมพิวเตอร์ เพิ่มสายจัมเปอร์ระหว่างพิน BOOT และ RST จากนั้นเชื่อมต่อ OpenMV Cam เข้ากับคอมพิวเตอร์อีกครั้ง 
 
 คลิกปุ่มตกลงหลังจาก DFU Bootloader ของ OpenMV Cam ของคุณแจกแจงแล้ว</translation>
@@ -7204,13 +7218,13 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
     </message>
     <message>
         <location line="+14" />
-        <source>Your %1 doesn't have an internal FAT file system.</source>
+        <source>Your %1 doesn&apos;t have an internal FAT file system.</source>
         <translation>%1 ของคุณไม่มีระบบไฟล์ FAT ภายใน</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
-        <source>Your %1 doesn't have an ROM file system.</source>
+        <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>%1 ของคุณไม่มีระบบไฟล์ ROM</translation>
     </message>
     <message>
@@ -7232,8 +7246,8 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
     </message>
     <message>
         <location line="+15" />
-        <source>The selected file "%L1" does not match any firmware interface for %L2.</source>
-        <translation>ไฟล์ที่เลือก "%L1" ไม่ตรงกับอินเทอร์เฟซเฟิร์มแวร์ใดๆ สำหรับ %L2</translation>
+        <source>The selected file &quot;%L1&quot; does not match any firmware interface for %L2.</source>
+        <translation>ไฟล์ที่เลือก &quot;%L1&quot; ไม่ตรงกับอินเทอร์เฟซเฟิร์มแวร์ใดๆ สำหรับ %L2</translation>
     </message>
     <message>
         <location line="+6" />
@@ -7269,12 +7283,12 @@ Hit cancel to skip to SBL reprogramming.</source>
     </message>
     <message>
         <location line="+38" />
-        <source>Unable to connect to your OpenMV Cam's normal bootloader!</source>
+        <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>ไม่สามารถเชื่อมต่อกับ bootloader ปกติของ OpenMV Cam ได้!</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
         <translation>OpenMV IDE ยังสามารถลองซ่อมแซม OpenMV Cam ของคุณได้โดยใช้ SBL Bootloader ของ OpenMV Cam 
@@ -7285,7 +7299,7 @@ Continue?</source>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
         <translation>ถอด OpenMV Cam ออกจากคอมพิวเตอร์ เพิ่มสายจัมเปอร์ระหว่างพิน SBL และ 3.3V จากนั้นเชื่อมต่อ OpenMV Cam เข้ากับคอมพิวเตอร์อีกครั้ง 
 
 คลิกปุ่มตกลงหลังจาก SBL Bootloader ของ OpenMV Cam ของคุณระบุแล้ว</translation>
@@ -7428,8 +7442,8 @@ Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</sour
         <location line="+9" />
         <location line="+25" />
         <location line="+9" />
-        <source>Failed to create "%L1"!</source>
-        <translation>ไม่สามารถสร้าง "%L1"!</translation>
+        <source>Failed to create &quot;%L1&quot;!</source>
+        <translation>ไม่สามารถสร้าง &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="+33" />
@@ -7450,8 +7464,8 @@ Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</sour
         <location line="+5" />
         <location line="+107" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
-        <source>Are you sure you want to permanetly delete "%L1"?</source>
-        <translation>คุณแน่ใจหรือไม่ว่าต้องการลบ "%L1" อย่างถาวร</translation>
+        <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
+        <translation>คุณแน่ใจหรือไม่ว่าต้องการลบ &quot;%L1&quot; อย่างถาวร</translation>
     </message>
     <message>
         <location line="-86" />
@@ -7505,8 +7519,8 @@ Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</sour
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-972" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-308" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>ไม่สามารถคัดลอกไฟล์ "%1" ไปยัง "%2"</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>ไม่สามารถคัดลอกไฟล์ &quot;%1&quot; ไปยัง &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+40" />
@@ -7545,7 +7559,7 @@ Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</sour
         <location line="+7" />
         <source>
 
-Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>โปรดปิดโปรแกรมที่กำลังดู/แก้ไขข้อมูลแอปพลิเคชันของ OpenMV IDE จากนั้นรีสตาร์ท OpenMV IDE!</translation>
     </message>
     <message>
@@ -7597,7 +7611,7 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
         <location line="-13" />
         <location line="+7" />
         <location line="+7" />
-        <source>Can't open the new file!</source>
+        <source>Can&apos;t open the new file!</source>
         <translation>เปิดไฟล์ใหม่ไม่ได้!</translation>
     </message>
     <message>
@@ -7607,8 +7621,8 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
     </message>
     <message>
         <location line="+8" />
-        <source>Add some code to "%L1"</source>
-        <translation>เพิ่มโค้ดบางส่วนใน "%L1"</translation>
+        <source>Add some code to &quot;%L1&quot;</source>
+        <translation>เพิ่มโค้ดบางส่วนใน &quot;%L1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -7649,7 +7663,7 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
     </message>
     <message>
         <location line="+5" />
-        <source>Are you sure you want to erase your OpenMV Cam's internal FAT file system?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s internal FAT file system?</source>
         <translation>คุณแน่ใจหรือไม่ว่าต้องการลบระบบไฟล์ FAT ภายในของ OpenMV Cam</translation>
     </message>
     <message>
@@ -7867,8 +7881,8 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
         <location line="+33" />
         <location line="+918" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+149" />
-        <source>Failed to open: "%L1"</source>
-        <translation>ไม่สามารถเปิดได้: "%L1"</translation>
+        <source>Failed to open: &quot;%L1&quot;</source>
+        <translation>ไม่สามารถเปิดได้: &quot;%L1&quot;</translation>
     </message>
     <message>
         <location line="-1356" />
@@ -7929,8 +7943,8 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
         <location line="+34" />
         <location line="+48" />
         <location line="+33" />
-        <source>Failed to remove "%L1"!</source>
-        <translation>ไม่สามารถลบ "%L1"!</translation>
+        <source>Failed to remove &quot;%L1&quot;!</source>
+        <translation>ไม่สามารถลบ &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="-125" />
@@ -8080,8 +8094,8 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
     </message>
     <message>
         <location line="+5" />
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;เกี่ยวกับ %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;โดย: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;เวอร์ชันโรงงาน&lt;/b&gt;&lt;/p&gt;&lt;p&gt;มีไว้สำหรับผู้ผลิตที่ได้รับอนุญาตเท่านั้น&lt;/p&gt;&lt;p&gt;&lt;b&gt;ใบอนุญาตสาธารณะทั่วไปของ GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;ลิขสิทธิ์ (C) %L2 %L3&lt;/p&gt;&lt;p&gt;สิ่งนี้ มีการเผยแพร่โปรแกรมด้วยความหวังว่าจะมีประโยชน์ แต่ไม่มีการรับประกันใดๆ โดยไม่มีการรับประกันโดยนัยถึงความสามารถในการซื้อขายหรือความเหมาะสมสำหรับวัตถุประสงค์เฉพาะ ดู&lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; สำหรับรายละเอียดเพิ่มเติม&lt;/p&gt;&lt;p&gt;&lt;b&gt;หากมีคำถามหรือความคิดเห็น&lt;/b&gt;&lt;/p&gt;&lt;p&gt;ติดต่อเราได้ที่ &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;เกี่ยวกับ %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;โดย: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;เวอร์ชันโรงงาน&lt;/b&gt;&lt;/p&gt;&lt;p&gt;มีไว้สำหรับผู้ผลิตที่ได้รับอนุญาตเท่านั้น&lt;/p&gt;&lt;p&gt;&lt;b&gt;ใบอนุญาตสาธารณะทั่วไปของ GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;ลิขสิทธิ์ (C) %L2 %L3&lt;/p&gt;&lt;p&gt;สิ่งนี้ มีการเผยแพร่โปรแกรมด้วยความหวังว่าจะมีประโยชน์ แต่ไม่มีการรับประกันใดๆ โดยไม่มีการรับประกันโดยนัยถึงความสามารถในการซื้อขายหรือความเหมาะสมสำหรับวัตถุประสงค์เฉพาะ ดู&lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; สำหรับรายละเอียดเพิ่มเติม&lt;/p&gt;&lt;p&gt;&lt;b&gt;หากมีคำถามหรือความคิดเห็น&lt;/b&gt;&lt;/p&gt;&lt;p&gt;ติดต่อเราได้ที่ &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -8405,11 +8419,11 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
         <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
-Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
 
 Blinking Green:
 
-Your OpenMV Cam's onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
 
 Blinking Blue:
 
@@ -8417,11 +8431,11 @@ Your OpenMV Cam is running the default main.py script onboard.
 
 If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
 
-If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+If the LED is blinking blue but OpenMV IDE can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
 
 Blinking White:
 
-Your OpenMV Cam's firmware is panicking because of a hardware failure. Please check that your OpenMV Cam's camera module is installed securely.
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
         <translation>ขอขอบคุณที่ใช้ OpenMV Cam และ OpenMV IDE! 
@@ -8676,7 +8690,7 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
     </message>
     <message>
         <location line="-19" />
-        <source>Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
         <translation>OpenMV Cam ของคุณไม่ได้ลงทะเบียน คุณต้องลงทะเบียน OpenMV Cam ของคุณด้วย OpenMV เพื่อใช้งาน OpenMV IDE ได้ไม่จำกัดโดยไม่หยุดชะงัก 
@@ -8703,8 +8717,8 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+19" />
-        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href="https://openmv.io/products/openmv-cam-board-key"&gt;here&lt;/a&gt;.</source>
-        <translation>โปรดป้อนรหัสบอร์ดเพื่อลงทะเบียน OpenMV Cam ของคุณ&lt;br/&gt;&lt;br/&gt;หากคุณไม่มีรหัสบอร์ด คุณสามารถซื้อได้จาก OpenMV &lt;a href="https://openmv.io/products/openmv-cam-board-key"&gt;ที่นี่&lt;/a&gt;</translation>
+        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>โปรดป้อนรหัสบอร์ดเพื่อลงทะเบียน OpenMV Cam ของคุณ&lt;br/&gt;&lt;br/&gt;หากคุณไม่มีรหัสบอร์ด คุณสามารถซื้อได้จาก OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;ที่นี่&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+47" />
@@ -8777,14 +8791,14 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="-19" />
         <location line="+13" />
-        <source>Cannot open the file "%L1"!</source>
-        <translation>ไม่สามารถเปิดไฟล์ "%L1" ได้!</translation>
+        <source>Cannot open the file &quot;%L1&quot;!</source>
+        <translation>ไม่สามารถเปิดไฟล์ &quot;%L1&quot; ได้!</translation>
     </message>
     <message>
         <location line="-13" />
         <location line="+13" />
-        <source>Cannot open the example file "%L1"!</source>
-        <translation>ไม่สามารถเปิดไฟล์ตัวอย่าง "%L1" ได้!</translation>
+        <source>Cannot open the example file &quot;%L1&quot;!</source>
+        <translation>ไม่สามารถเปิดไฟล์ตัวอย่าง &quot;%L1&quot; ได้!</translation>
     </message>
     <message>
         <location line="+34" />
@@ -8863,8 +8877,8 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+7" />
         <location line="+237" />
         <location line="+7" />
-        <source>Invalid string: "%L1"!</source>
-        <translation>สตริงไม่ถูกต้อง: "%L1"!</translation>
+        <source>Invalid string: &quot;%L1&quot;!</source>
+        <translation>สตริงไม่ถูกต้อง: &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="-381" />
@@ -9053,7 +9067,9 @@ Would you like to register your OpenMV Cam now?</source>
     <message numerus="yes">
         <location line="+18" />
         <source>AprilTag Generator - Where do you want to save %n tag image(s) to?</source>
-        <translation><numerusform>AprilTag Generator - คุณต้องการบันทึกรูปภาพแท็ก %n ไว้ที่ใด</numerusform></translation>
+        <translation>
+            <numerusform>AprilTag Generator - คุณต้องการบันทึกรูปภาพแท็ก %n ไว้ที่ใด</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+5" />
@@ -9118,7 +9134,7 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
-        <source>Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+        <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>โปรดปิดโปรแกรมที่กำลังดู/แก้ไขข้อมูลแอปพลิเคชันของ OpenMV IDE จากนั้นรีสตาร์ท OpenMV IDE!</translation>
     </message>
     <message>
@@ -9137,15 +9153,15 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="-27" />
         <location line="+273" />
         <location line="+88" />
-        <source>Cannot open the resources file "%L1"!</source>
-        <translation>ไม่สามารถเปิดไฟล์ทรัพยากร "%L1" ได้!</translation>
+        <source>Cannot open the resources file &quot;%L1&quot;!</source>
+        <translation>ไม่สามารถเปิดไฟล์ทรัพยากร &quot;%L1&quot; ได้!</translation>
     </message>
     <message>
         <location line="-333" />
         <location line="+273" />
         <location line="+95" />
-        <source>Network request failed "%L1"!</source>
-        <translation>คำขอเครือข่ายล้มเหลว "%L1"!</translation>
+        <source>Network request failed &quot;%L1&quot;!</source>
+        <translation>คำขอเครือข่ายล้มเหลว &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="-336" />
@@ -9177,7 +9193,7 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+226" />
         <location line="+2413" />
         <location line="+78" />
-        <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>หากคุณเปิดใช้งานตัวเลือกนี้ ไฟล์ทั้งหมดในระบบไฟล์ FAT ภายในของ OpenMV Cam จะถูกลบ การดำเนินการนี้จะไม่ลบไฟล์ในการ์ด SD แบบถอดได้ (หากเสียบไว้)</translation>
     </message>
     <message>
@@ -9212,8 +9228,8 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-44" />
-        <source>"%L1" is not a file!</source>
-        <translation>"%L1" ไม่ใช่ไฟล์!</translation>
+        <source>&quot;%L1&quot; is not a file!</source>
+        <translation>&quot;%L1&quot; ไม่ใช่ไฟล์!</translation>
     </message>
     <message>
         <location line="+67" />
@@ -9320,15 +9336,15 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="-2337" />
         <location line="+170" />
         <location line="+44" />
-        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>โปรดอัปเดต bootloader เป็นเวอร์ชันล่าสุดและติดตั้ง SoftDevice เพื่อแฟลชเฟิร์มแวร์ OpenMV สามารถดูข้อมูลเพิ่มเติมได้ที่ &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>โปรดอัปเดต bootloader เป็นเวอร์ชันล่าสุดและติดตั้ง SoftDevice เพื่อแฟลชเฟิร์มแวร์ OpenMV สามารถดูข้อมูลเพิ่มเติมได้ที่ &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="-204" />
         <location line="+169" />
         <location line="+44" />
-        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>โปรดย่อ REC เป็น GND และรีเซ็ตบอร์ดของคุณ สามารถดูข้อมูลเพิ่มเติมได้ที่ &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>โปรดย่อ REC เป็น GND และรีเซ็ตบอร์ดของคุณ สามารถดูข้อมูลเพิ่มเติมได้ที่ &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="-201" />
@@ -9433,7 +9449,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+24" />
-        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
+        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
         <translation>โปรดทราบว่าการโหลด Firmware.dfu หรือ openmv.dfu (bootloader + เฟิร์มแวร์) อาจใช้งานไม่ได้บนบอร์ด STM32H7 เนื่องจากข้อผิดพลาดใน ROM bootloader ของชิป! 
@@ -9507,7 +9523,7 @@ OpenMV แนะนำให้โหลดเฉพาะ bootloader.dfu เพ
     </message>
     <message>
         <location line="+5" />
-        <source>Your OpenMV Cam's firmware is out of date. Would you like to upgrade?</source>
+        <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>เฟิร์มแวร์ของ OpenMV Cam ของคุณล้าสมัย คุณต้องการอัพเกรดหรือไม่?</translation>
     </message>
     <message>
@@ -9538,17 +9554,17 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
     </message>
     <message>
         <location line="-75" />
-        <source>Update your OpenMV Cam's firmware to the latest version?</source>
+        <source>Update your OpenMV Cam&apos;s firmware to the latest version?</source>
         <translation>อัปเดตเฟิร์มแวร์ของ OpenMV Cam ของคุณเป็นเวอร์ชันล่าสุดหรือไม่</translation>
     </message>
     <message>
         <location line="+68" />
-        <source>Your OpenMV Cam's firmware is up to date.</source>
+        <source>Your OpenMV Cam&apos;s firmware is up to date.</source>
         <translation>เฟิร์มแวร์ของ OpenMV Cam ของคุณเป็นเวอร์ชันล่าสุดแล้ว</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Need to reset your OpenMV Cam's firmware to the release version?</source>
+        <source>Need to reset your OpenMV Cam&apos;s firmware to the release version?</source>
         <translation>ต้องการรีเซ็ตเฟิร์มแวร์ของ OpenMV Cam ให้เป็นเวอร์ชันวางจำหน่ายหรือไม่?</translation>
     </message>
     <message>
@@ -9653,10 +9669,10 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
     </message>
     <message>
         <location line="-223" />
-        <source>Module "%L1" on your OpenMV Cam is different than the copy on your computer.
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
 Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>โมดูล "%L1" บน OpenMV Cam ของคุณแตกต่างจากสำเนาบนคอมพิวเตอร์ของคุณ 
+        <translation>โมดูล &quot;%L1&quot; บน OpenMV Cam ของคุณแตกต่างจากสำเนาบนคอมพิวเตอร์ของคุณ 
 
 คุณต้องการให้ OpenMV IDE อัปเดตโมดูลบน OpenMV Cam ของคุณหรือไม่</translation>
     </message>
@@ -9667,10 +9683,10 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
     </message>
     <message>
         <location line="+91" />
-        <source>Module "%L1" may be required to run your script.
+        <source>Module &quot;%L1&quot; may be required to run your script.
 
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>อาจจำเป็นต้องใช้โมดูล "%L1" เพื่อเรียกใช้สคริปต์ของคุณ 
+        <translation>อาจจำเป็นต้องใช้โมดูล &quot;%L1&quot; เพื่อเรียกใช้สคริปต์ของคุณ 
 
 คุณต้องการให้ OpenMV IDE คัดลอกไปยัง OpenMV Cam ของคุณหรือไม่?</translation>
     </message>
@@ -9798,8 +9814,8 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     <message>
         <location line="-50" />
         <location line="+65" />
-        <source>"%L1" is longer than a max length of %L2 characters!</source>
-        <translation>"%L1" ยาวเกินความยาวสูงสุด %L2 ตัวอักษร!</translation>
+        <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
+        <translation>&quot;%L1&quot; ยาวเกินความยาวสูงสุด %L2 ตัวอักษร!</translation>
     </message>
     <message>
         <location line="-41" />
@@ -9813,8 +9829,8 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <location line="+124" />
         <location line="+26" />
         <location line="+7" />
-        <source>Failed to flush "%L1"!</source>
-        <translation>ไม่สามารถล้างข้อมูล "%L1"!</translation>
+        <source>Failed to flush &quot;%L1&quot;!</source>
+        <translation>ไม่สามารถล้างข้อมูล &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-674" />
@@ -10106,7 +10122,7 @@ OpenMV IDE จะคัดลอกโมเดลตามที่เป็น
     </message>
     <message>
         <location line="-40" />
-        <source>Are you sure you want to reset your OpenMV Cam's ROM file system?</source>
+        <source>Are you sure you want to reset your OpenMV Cam&apos;s ROM file system?</source>
         <translation>คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ตระบบไฟล์ ROM ของ OpenMV Cam</translation>
     </message>
     <message>
@@ -10164,8 +10180,8 @@ OpenMV IDE จะคัดลอกโมเดลตามที่เป็น
     </message>
     <message>
         <location line="+6" />
-        <source>Run "/main.py"</source>
-        <translation>เรียกใช้ "/main.py"</translation>
+        <source>Run &quot;/main.py&quot;</source>
+        <translation>เรียกใช้ &quot;/main.py&quot;</translation>
     </message>
     <message>
         <location line="+0" />
@@ -10362,12 +10378,12 @@ Percentage
         <location line="+10" />
         <source>Nothing to upload
 
-Only jpg/png/bmp images with a numeric name (e.g. "00001.jpg")
-in class folders ("*.class") can be uploaded.</source>
+Only jpg/png/bmp images with a numeric name (e.g. &quot;00001.jpg&quot;)
+in class folders (&quot;*.class&quot;) can be uploaded.</source>
         <translation>ไม่มีอะไรจะอัปโหลด 
 
-เฉพาะรูปภาพ jpg/png/bmp ที่มีชื่อเป็นตัวเลข (เช่น "00001.jpg") 
-ในโฟลเดอร์คลาส ("*.class") สามารถอัปโหลดได้</translation>
+เฉพาะรูปภาพ jpg/png/bmp ที่มีชื่อเป็นตัวเลข (เช่น &quot;00001.jpg&quot;) 
+ในโฟลเดอร์คลาส (&quot;*.class&quot;) สามารถอัปโหลดได้</translation>
     </message>
     <message>
         <location line="+43" />
@@ -10555,8 +10571,8 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="+13" />
-        <source>&lt;a href="https://pypi.org/project/mpy-cross/"&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href="https://pypi.org/project/mpy-cross/"&gt;ตัวเลือก CLI ข้ามคอมไพเลอร์ MPY&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;ตัวเลือก CLI ข้ามคอมไพเลอร์ MPY&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -10669,8 +10685,8 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href="%1"&gt;ตัวเลือก STEdgeAI Core CLI&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href=&quot;%1&quot;&gt;ตัวเลือก STEdgeAI Core CLI&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -10679,8 +10695,8 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href="%1"&gt;ตัวเลือก STEdgeAI Neural-ART CLI&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href=&quot;%1&quot;&gt;ตัวเลือก STEdgeAI Neural-ART CLI&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+75" />
@@ -10817,8 +10833,8 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md"&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href="https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md"&gt;ตัวเลือก CLI ของคอมไพเลอร์ Vela&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;ตัวเลือก CLI ของคอมไพเลอร์ Vela&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+67" />
@@ -11674,7 +11690,7 @@ Open a data set to upload it.</source>
         <location line="+42" />
         <location line="+433" />
         <source>&lt;Custom&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;กำหนดเอง&gt;</translation>
     </message>
     <message>
         <location line="-474" />
@@ -12089,8 +12105,8 @@ Open a data set to upload it.</source>
     <message>
         <location line="-66" />
         <location line="+67" />
-        <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" มีอยู่ในระบบไฟล์</translation>
+        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; มีอยู่ในระบบไฟล์</translation>
     </message>
     <message>
         <location line="-66" />
@@ -12172,8 +12188,8 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="+7" />
-        <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
-        <translation>สร้างไฟล์ QML ด้วยโค้ดสำเร็จรูป โดยเริ่มต้นด้วย "import QtQuick"</translation>
+        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
+        <translation>สร้างไฟล์ QML ด้วยโค้ดสำเร็จรูป โดยเริ่มต้นด้วย &quot;import QtQuick&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12914,10 +12930,10 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+26" />
         <source>Creates a Qt Quick application that contains an empty window.
 
-Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
+Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
         <translation>สร้างแอปพลิเคชัน Qt Quick ที่มีหน้าต่างว่าง 
 
-ใช้เวอร์ชัน "เข้ากันได้" นี้หากคุณต้องการใช้ระบบบิลด์อื่นที่ไม่ใช่ CMake หรือ Qt เวอร์ชันที่ต่ำกว่า 6</translation>
+ใช้เวอร์ชัน &quot;เข้ากันได้&quot; นี้หากคุณต้องการใช้ระบบบิลด์อื่นที่ไม่ใช่ CMake หรือ Qt เวอร์ชันที่ต่ำกว่า 6</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13012,8 +13028,8 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+21" />
         <location line="+21" />
         <location line="+19" />
-        <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" มีอยู่ในระบบไฟล์</translation>
+        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; มีอยู่ในระบบไฟล์</translation>
     </message>
     <message>
         <location line="-93" />
@@ -13171,7 +13187,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+8" />
         <source>&lt;default branch&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;สาขาเริ่มต้น&gt;</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13378,8 +13394,8 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+42" />
-        <source>Could not save session to file "%1"</source>
-        <translation>ไม่สามารถบันทึกเซสชันลงในไฟล์ "%1"</translation>
+        <source>Could not save session to file &quot;%1&quot;</source>
+        <translation>ไม่สามารถบันทึกเซสชันลงในไฟล์ &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
@@ -13480,7 +13496,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
         <source>&lt;custom&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;กำหนดเอง&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+98" />
@@ -13489,38 +13505,38 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+72" />
-        <source>Could not create directory "%1"</source>
-        <translation>ไม่สามารถสร้างไดเรกทอรี "%1"</translation>
+        <source>Could not create directory &quot;%1&quot;</source>
+        <translation>ไม่สามารถสร้างไดเรกทอรี &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>ไม่มีโปรแกรม "%1" หรือไม่สามารถเรียกใช้งานได้</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>ไม่มีโปรแกรม &quot;%1&quot; หรือไม่สามารถเรียกใช้งานได้</translation>
     </message>
     <message>
         <location line="+34" />
-        <source>Starting: "%1" %2</source>
-        <translation>เริ่มต้น: "%1" %2</translation>
+        <source>Starting: &quot;%1&quot; %2</source>
+        <translation>เริ่มต้น: &quot;%1&quot; %2</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The process "%1" exited normally.</source>
-        <translation>กระบวนการ "%1" ออกจากการทำงานตามปกติ</translation>
+        <source>The process &quot;%1&quot; exited normally.</source>
+        <translation>กระบวนการ &quot;%1&quot; ออกจากการทำงานตามปกติ</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The process "%1" exited with code %2.</source>
-        <translation>กระบวนการ "%1" จบการทำงานด้วยรหัส %2</translation>
+        <source>The process &quot;%1&quot; exited with code %2.</source>
+        <translation>กระบวนการ &quot;%1&quot; จบการทำงานด้วยรหัส %2</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Could not start process "%1" %2.</source>
-        <translation>ไม่สามารถเริ่มกระบวนการ "%1" %2 ได้</translation>
+        <source>Could not start process &quot;%1&quot; %2.</source>
+        <translation>ไม่สามารถเริ่มกระบวนการ &quot;%1&quot; %2 ได้</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The process "%1" crashed.</source>
-        <translation>กระบวนการ "%1" ล้มเหลว</translation>
+        <source>The process &quot;%1&quot; crashed.</source>
+        <translation>กระบวนการ &quot;%1&quot; ล้มเหลว</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
@@ -13561,8 +13577,8 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files of all open projects. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>ค้นหาไฟล์ของโครงการที่เปิดอยู่ทั้งหมด เพิ่ม "+&lt;number&gt;" หรือ ":&lt;number&gt;" ต่อท้ายเพื่อข้ามไปยังหมายเลขบรรทัดที่กำหนด เติม "+&lt;number&gt;" หรือ ":&lt;number&gt;" อื่นต่อท้ายเพื่อข้ามไปยังหมายเลขคอลัมน์ด้วย</translation>
+        <source>Locates files of all open projects. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>ค้นหาไฟล์ของโครงการที่เปิดอยู่ทั้งหมด เพิ่ม &quot;+&lt;number&gt;&quot; หรือ &quot;:&lt;number&gt;&quot; ต่อท้ายเพื่อข้ามไปยังหมายเลขบรรทัดที่กำหนด เติม &quot;+&lt;number&gt;&quot; หรือ &quot;:&lt;number&gt;&quot; อื่นต่อท้ายเพื่อข้ามไปยังหมายเลขคอลัมน์ด้วย</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
@@ -13738,13 +13754,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+105" />
-        <source>Build directory contains potentially problematic character "%1".</source>
-        <translation>สร้างไดเร็กทอรีมีอักขระที่อาจเป็นปัญหา "%1"</translation>
+        <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
+        <translation>สร้างไดเร็กทอรีมีอักขระที่อาจเป็นปัญหา &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>This warning can be suppressed &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>คำเตือนนี้สามารถระงับได้&lt;a href="dummy"&gt;ที่นี่&lt;/a&gt;</translation>
+        <source>This warning can be suppressed &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>คำเตือนนี้สามารถระงับได้&lt;a href=&quot;dummy&quot;&gt;ที่นี่&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+25" />
@@ -13800,7 +13816,7 @@ Excluding: %2
     </message>
     <message>
         <location line="+4" />
-        <source>Variables in the build configuration's environment</source>
+        <source>Variables in the build configuration&apos;s environment</source>
         <translation>ตัวแปรในสภาพแวดล้อมของการกำหนดค่าบิลด์</translation>
     </message>
     <message>
@@ -13842,12 +13858,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build configuration</source>
+        <source>Name of the project&apos;s active build configuration</source>
         <translation>ชื่อของการกำหนดค่าบิลด์ที่ใช้งานอยู่ของโปรเจ็กต์</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build system</source>
+        <source>Name of the project&apos;s active build system</source>
         <translation>ชื่อของระบบบิลด์ที่ใช้งานอยู่ของโปรเจ็กต์</translation>
     </message>
     <message>
@@ -13857,13 +13873,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Type of the project's active build configuration</source>
+        <source>Type of the project&apos;s active build configuration</source>
         <translation>ประเภทของการกำหนดค่าบิลด์ที่ใช้งานอยู่ของโปรเจ็กต์</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>No build device is set for the kit "%1".</source>
-        <translation>ไม่มีการตั้งค่าอุปกรณ์บิลด์สำหรับชุด "%1"</translation>
+        <source>No build device is set for the kit &quot;%1&quot;.</source>
+        <translation>ไม่มีการตั้งค่าอุปกรณ์บิลด์สำหรับชุด &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -13872,18 +13888,20 @@ Excluding: %2
     </message>
     <message>
         <location line="+7" />
-        <source>The build device "%1" cannot reach the project directory.</source>
-        <translation>อุปกรณ์บิลด์ "%1" ไม่สามารถเข้าถึงไดเร็กทอรีโครงการ</translation>
+        <source>The build device &quot;%1&quot; cannot reach the project directory.</source>
+        <translation>อุปกรณ์บิลด์ &quot;%1&quot; ไม่สามารถเข้าถึงไดเร็กทอรีโครงการ</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The build device "%1" cannot reach the build directory.</source>
-        <translation>อุปกรณ์บิลด์ "%1" ไม่สามารถเข้าถึงไดเร็กทอรีบิลด์</translation>
+        <source>The build device &quot;%1&quot; cannot reach the build directory.</source>
+        <translation>อุปกรณ์บิลด์ &quot;%1&quot; ไม่สามารถเข้าถึงไดเร็กทอรีบิลด์</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
         <source>Finished %1 of %n steps</source>
-        <translation><numerusform>เสร็จสิ้น %1 จาก %n ขั้นตอน</numerusform></translation>
+        <translation>
+            <numerusform>เสร็จสิ้น %1 จาก %n ขั้นตอน</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+82" />
@@ -13908,7 +13926,7 @@ Excluding: %2
     <message>
         <location line="+138" />
         <source>Compile</source>
-        <comment>Category for compiler issues listed under 'Issues'</comment>
+        <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>รวบรวม</translation>
     </message>
     <message>
@@ -13919,7 +13937,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Build System</source>
-        <comment>Category for build system issues listed under 'Issues'</comment>
+        <comment>Category for build system issues listed under &apos;Issues&apos;</comment>
         <translation>สร้างระบบ</translation>
     </message>
     <message>
@@ -13930,7 +13948,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Deployment</source>
-        <comment>Category for deployment issues listed under 'Issues'</comment>
+        <comment>Category for deployment issues listed under &apos;Issues&apos;</comment>
         <translation>การปรับใช้</translation>
     </message>
     <message>
@@ -13941,7 +13959,7 @@ Excluding: %2
     <message>
         <location line="+4" />
         <source>Autotests</source>
-        <comment>Category for autotest issues listed under 'Issues'</comment>
+        <comment>Category for autotest issues listed under &apos;Issues&apos;</comment>
         <translation>การทดสอบอัตโนมัติ</translation>
     </message>
     <message>
@@ -13958,7 +13976,7 @@ Excluding: %2
         <location line="+8" />
         <location line="+59" />
         <source>Clean</source>
-        <extracomment>Displayed name for a "cleaning" build step
+        <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
 Display name of the clean build step list. Used as part of the labels in the project window.</extracomment>
         <translation>ทำความสะอาด</translation>
@@ -14022,8 +14040,8 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location line="+98" />
-        <source>When executing step "%1"</source>
-        <translation>เมื่อดำเนินการขั้นตอน "%1"</translation>
+        <source>When executing step &quot;%1&quot;</source>
+        <translation>เมื่อดำเนินการขั้นตอน &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
@@ -14240,8 +14258,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+3" />
-        <source>The project file "%1" does not exist.</source>
-        <translation>ไม่มีไฟล์โครงการ "%1"</translation>
+        <source>The project file &quot;%1&quot; does not exist.</source>
+        <translation>ไม่มีไฟล์โครงการ &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/codestylesettingspropertiespage.cpp" line="+60" />
@@ -14338,13 +14356,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from the current document's project. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>ค้นหาไฟล์จากโครงการของเอกสารปัจจุบัน เพิ่ม "+&lt;number&gt;" หรือ ":&lt;number&gt;" ต่อท้ายเพื่อข้ามไปยังหมายเลขบรรทัดที่กำหนด เติม "+&lt;number&gt;" หรือ ":&lt;number&gt;" อื่นต่อท้ายเพื่อข้ามไปยังหมายเลขคอลัมน์ด้วย</translation>
+        <source>Locates files from the current document&apos;s project. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>ค้นหาไฟล์จากโครงการของเอกสารปัจจุบัน เพิ่ม &quot;+&lt;number&gt;&quot; หรือ &quot;:&lt;number&gt;&quot; ต่อท้ายเพื่อข้ามไปยังหมายเลขบรรทัดที่กำหนด เติม &quot;+&lt;number&gt;&quot; หรือ &quot;:&lt;number&gt;&quot; อื่นต่อท้ายเพื่อข้ามไปยังหมายเลขคอลัมน์ด้วย</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
-        <source>Project "%1"</source>
-        <translation>โครงการ "%1"</translation>
+        <source>Project &quot;%1&quot;</source>
+        <translation>โครงการ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14353,8 +14371,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>Project "%1":</source>
-        <translation>โครงการ "%1":</translation>
+        <source>Project &quot;%1&quot;:</source>
+        <translation>โครงการ &quot;%1&quot;:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
@@ -14375,8 +14393,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
-        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>ตัวแยกวิเคราะห์เอาต์พุตแบบกำหนดเองจะสแกนเอาต์พุตบรรทัดคำสั่งสำหรับรูปแบบข้อผิดพลาดที่ผู้ใช้ระบุ&lt;br&gt;เพื่อสร้างรายการในประเด็น&lt;br&gt;สามารถกำหนดค่าตัวแยกวิเคราะห์ได้&lt;a href="dummy"&gt;ที่นี่&lt;/a&gt;</translation>
+        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>ตัวแยกวิเคราะห์เอาต์พุตแบบกำหนดเองจะสแกนเอาต์พุตบรรทัดคำสั่งสำหรับรูปแบบข้อผิดพลาดที่ผู้ใช้ระบุ&lt;br&gt;เพื่อสร้างรายการในประเด็น&lt;br&gt;สามารถกำหนดค่าตัวแยกวิเคราะห์ได้&lt;a href=&quot;dummy&quot;&gt;ที่นี่&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+82" />
@@ -14386,7 +14404,9 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+2" />
         <source>There are %n custom parsers active</source>
-        <translation><numerusform>มีตัวแยกวิเคราะห์แบบกำหนดเองที่ทำงานอยู่ %n ตัว</numerusform></translation>
+        <translation>
+            <numerusform>มีตัวแยกวิเคราะห์แบบกำหนดเองที่ทำงานอยู่ %n ตัว</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+32" />
@@ -14516,7 +14536,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
-        <source>Custom output parsers defined here can be enabled individually in the project's build or run settings.</source>
+        <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>ตัวแยกวิเคราะห์เอาต์พุตแบบกำหนดเองที่กำหนดไว้ที่นี่สามารถเปิดใช้งานทีละรายการในการตั้งค่าบิลด์หรือรันของโปรเจ็กต์</translation>
     </message>
     <message>
@@ -14569,7 +14589,9 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+44" />
         <source>%n entries</source>
-        <translation><numerusform>%n รายการ</numerusform></translation>
+        <translation>
+            <numerusform>%n รายการ</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+0" />
@@ -14649,7 +14671,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/dependenciespanel.cpp" line="+83" />
         <source>&lt;No other projects in this session&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;ไม่มีโครงการอื่นในเซสชั่นนี้&gt;</translation>
     </message>
     <message>
         <location line="+30" />
@@ -14799,19 +14821,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
-        <source>No device for path "%1"</source>
-        <translation>ไม่มีอุปกรณ์สำหรับเส้นทาง "%1"</translation>
+        <source>No device for path &quot;%1&quot;</source>
+        <translation>ไม่มีอุปกรณ์สำหรับเส้นทาง &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
-        <source>No device found for path "%1"</source>
-        <translation>ไม่พบอุปกรณ์สำหรับเส้นทาง "%1"</translation>
+        <source>No device found for path &quot;%1&quot;</source>
+        <translation>ไม่พบอุปกรณ์สำหรับเส้นทาง &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-9" />
-        <source>No file access for device "%1"</source>
-        <translation>ไม่มีการเข้าถึงไฟล์สำหรับอุปกรณ์ "%1"</translation>
+        <source>No file access for device &quot;%1&quot;</source>
+        <translation>ไม่มีการเข้าถึงไฟล์สำหรับอุปกรณ์ &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
@@ -14906,8 +14928,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+87" />
-        <source>Yes (id is "%1")</source>
-        <translation>ใช่ (รหัสคือ "%1")</translation>
+        <source>Yes (id is &quot;%1&quot;)</source>
+        <translation>ใช่ (รหัสคือ &quot;%1&quot;)</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14948,7 +14970,9 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+41" />
         <source>Found %n free ports.</source>
-        <translation><numerusform>พบ %n พอร์ตที่ว่าง</numerusform></translation>
+        <translation>
+            <numerusform>พบ %n พอร์ตที่ว่าง</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+11" />
@@ -15033,13 +15057,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>No device for given path: "%1".</source>
-        <translation>ไม่มีอุปกรณ์สำหรับเส้นทางที่ระบุ: "%1"</translation>
+        <source>No device for given path: &quot;%1&quot;.</source>
+        <translation>ไม่มีอุปกรณ์สำหรับเส้นทางที่ระบุ: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Device for path "%1" does not support killing processes.</source>
-        <translation>อุปกรณ์สำหรับเส้นทาง "%1" ไม่สนับสนุนกระบวนการฆ่า</translation>
+        <source>Device for path &quot;%1&quot; does not support killing processes.</source>
+        <translation>อุปกรณ์สำหรับเส้นทาง &quot;%1&quot; ไม่สนับสนุนกระบวนการฆ่า</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
@@ -15210,33 +15234,33 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+123" />
-        <source>Unset &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>ยกเลิกการตั้งค่า &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</translation>
+        <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>ยกเลิกการตั้งค่า &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation>ตั้งค่า &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; เป็น &lt;b&gt;%2&lt;/b&gt;</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
+        <translation>ตั้งค่า &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; เป็น &lt;b&gt;%2&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>เพิ่ม &lt;b&gt;%2&lt;/b&gt; ต่อท้าย &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</translation>
+        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>เพิ่ม &lt;b&gt;%2&lt;/b&gt; ต่อท้าย &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>เพิ่ม &lt;b&gt;%2&lt;/b&gt; ไว้หน้า &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</translation>
+        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>เพิ่ม &lt;b&gt;%2&lt;/b&gt; ไว้หน้า &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
-        <translation>ตั้งค่า &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; เป็น &lt;b&gt;%2&lt;/b&gt; [ปิดใช้งาน]</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
+        <translation>ตั้งค่า &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; เป็น &lt;b&gt;%2&lt;/b&gt; [ปิดใช้งาน]</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Use &lt;b&gt;%1&lt;/b&gt;</source>
-        <extracomment>%1 is "System Environment" or some such.</extracomment>
+        <extracomment>%1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>ใช้ &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
@@ -15247,7 +15271,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>Use &lt;b&gt;%1&lt;/b&gt; and</source>
-        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is "System Environment" or some such.</extracomment>
+        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>ใช้ &lt;b&gt;%1&lt;/b&gt; และ</translation>
     </message>
     <message>
@@ -15345,58 +15369,58 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Field "%1" has no type.</source>
-        <translation>ฟิลด์ "%1" ไม่มีประเภท</translation>
+        <source>Field &quot;%1&quot; has no type.</source>
+        <translation>ฟิลด์ &quot;%1&quot; ไม่มีประเภท</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Field "%1" has unsupported type "%2".</source>
-        <translation>ฟิลด์ "%1" มีประเภทที่ไม่สนับสนุน "%2"</translation>
+        <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
+        <translation>ฟิลด์ &quot;%1&quot; มีประเภทที่ไม่สนับสนุน &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>When parsing Field "%1": %2</source>
-        <translation>เมื่อแยกวิเคราะห์ฟิลด์ "%1": %2</translation>
+        <source>When parsing Field &quot;%1&quot;: %2</source>
+        <translation>เมื่อแยกวิเคราะห์ฟิลด์ &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+208" />
-        <source>Label ("%1") data is not an object.</source>
-        <translation>ข้อมูลป้ายกำกับ ("%1") ไม่ใช่ออบเจ็กต์</translation>
+        <source>Label (&quot;%1&quot;) data is not an object.</source>
+        <translation>ข้อมูลป้ายกำกับ (&quot;%1&quot;) ไม่ใช่ออบเจ็กต์</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Label ("%1") has no trText.</source>
-        <translation>ป้ายกำกับ ("%1") ไม่มี trText</translation>
+        <source>Label (&quot;%1&quot;) has no trText.</source>
+        <translation>ป้ายกำกับ (&quot;%1&quot;) ไม่มี trText</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>Spacer ("%1") data is not an object.</source>
-        <translation>ข้อมูล Spacer ("%1") ไม่ใช่วัตถุ</translation>
+        <source>Spacer (&quot;%1&quot;) data is not an object.</source>
+        <translation>ข้อมูล Spacer (&quot;%1&quot;) ไม่ใช่วัตถุ</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Spacer ("%1") property "factor" is no integer value.</source>
-        <translation>คุณสมบัติ Spacer ("%1") "factor" ไม่ใช่ค่าจำนวนเต็ม</translation>
+        <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
+        <translation>คุณสมบัติ Spacer (&quot;%1&quot;) &quot;factor&quot; ไม่ใช่ค่าจำนวนเต็ม</translation>
     </message>
     <message>
         <location line="+35" />
-        <source>LineEdit ("%1") data is not an object.</source>
-        <translation>ข้อมูล LineEdit ("%1") ไม่ใช่วัตถุ</translation>
+        <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>ข้อมูล LineEdit (&quot;%1&quot;) ไม่ใช่วัตถุ</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>LineEdit ("%1") has an invalid regular expression "%2" in "validator".</source>
-        <translation>LineEdit ("%1") มีนิพจน์ทั่วไป "%2" ที่ไม่ถูกต้องใน "validator"</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
+        <translation>LineEdit (&quot;%1&quot;) มีนิพจน์ทั่วไป &quot;%2&quot; ที่ไม่ถูกต้องใน &quot;validator&quot;</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>LineEdit ("%1") has an invalid value "%2" in "completion".</source>
-        <translation>LineEdit ("%1") มีค่า "%2" ไม่ถูกต้องใน "เสร็จสิ้น"</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
+        <translation>LineEdit (&quot;%1&quot;) มีค่า &quot;%2&quot; ไม่ถูกต้องใน &quot;เสร็จสิ้น&quot;</translation>
     </message>
     <message>
         <location line="+166" />
-        <source>TextEdit ("%1") data is not an object.</source>
-        <translation>ข้อมูล TextEdit ("%1") ไม่ใช่วัตถุ</translation>
+        <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>ข้อมูล TextEdit (&quot;%1&quot;) ไม่ใช่วัตถุ</translation>
     </message>
     <message>
         <location line="+83" />
@@ -15405,18 +15429,18 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+26" />
-        <source>kind "%1" is not one of the supported "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any".</source>
-        <translation>ประเภท "%1" ไม่ใช่หนึ่งใน "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any" ที่สนับสนุน</translation>
+        <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
+        <translation>ประเภท &quot;%1&quot; ไม่ใช่หนึ่งใน &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot; ที่สนับสนุน</translation>
     </message>
     <message>
         <location line="+80" />
-        <source>CheckBox ("%1") data is not an object.</source>
-        <translation>ข้อมูลช่องทำเครื่องหมาย ("%1") ไม่ใช่วัตถุ</translation>
+        <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
+        <translation>ข้อมูลช่องทำเครื่องหมาย (&quot;%1&quot;) ไม่ใช่วัตถุ</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>CheckBox ("%1") values for checked and unchecked state are identical.</source>
-        <translation>ค่ากล่องกาเครื่องหมาย ("%1") สำหรับสถานะที่เลือกและไม่ได้เลือกจะเหมือนกัน</translation>
+        <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
+        <translation>ค่ากล่องกาเครื่องหมาย (&quot;%1&quot;) สำหรับสถานะที่เลือกและไม่ได้เลือกจะเหมือนกัน</translation>
     </message>
     <message>
         <location line="+80" />
@@ -15425,33 +15449,33 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>No "key" found in List items.</source>
-        <translation>ไม่พบ "คีย์" ในรายการ</translation>
+        <source>No &quot;key&quot; found in List items.</source>
+        <translation>ไม่พบ &quot;คีย์&quot; ในรายการ</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>%1 ("%2") data is not an object.</source>
-        <translation>ข้อมูล %1 ("%2") ไม่ใช่วัตถุ</translation>
+        <source>%1 (&quot;%2&quot;) data is not an object.</source>
+        <translation>ข้อมูล %1 (&quot;%2&quot;) ไม่ใช่วัตถุ</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>%1 ("%2") "index" is not an integer value.</source>
-        <translation>%1 ("%2") "index" ไม่ใช่ค่าจำนวนเต็ม</translation>
+        <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;index&quot; ไม่ใช่ค่าจำนวนเต็ม</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>%1 ("%2") "disabledIndex" is not an integer value.</source>
-        <translation>%1 ("%2") "disabledIndex" ไม่ใช่ค่าจำนวนเต็ม</translation>
+        <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; ไม่ใช่ค่าจำนวนเต็ม</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>%1 ("%2") "items" missing.</source>
-        <translation>%1 ("%2") "รายการ" หายไป</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;รายการ&quot; หายไป</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>%1 ("%2") "items" is not a JSON list.</source>
-        <translation>%1 ("%2") "items" ไม่ใช่รายการ JSON</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;items&quot; ไม่ใช่รายการ JSON</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
@@ -15475,8 +15499,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+13" />
-        <source>No "%1" key found in feature list object.</source>
-        <translation>ไม่พบคีย์ "%1" ในวัตถุรายการคุณลักษณะ</translation>
+        <source>No &quot;%1&quot; key found in feature list object.</source>
+        <translation>ไม่พบคีย์ &quot;%1&quot; ในวัตถุรายการคุณลักษณะ</translation>
     </message>
     <message>
         <location line="+9" />
@@ -15490,8 +15514,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Error message from Version Control System: "%1".</source>
-        <translation>ข้อความแสดงข้อผิดพลาดจากระบบควบคุมเวอร์ชัน: "%1"</translation>
+        <source>Error message from Version Control System: &quot;%1&quot;.</source>
+        <translation>ข้อความแสดงข้อผิดพลาดจากระบบควบคุมเวอร์ชัน: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+16" />
@@ -15502,18 +15526,18 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="-11" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
-        <source>Failed to add subproject "%1"
-to project "%2".</source>
-        <translation>ไม่สามารถเพิ่มโครงการย่อย "%1" 
-เพื่อโปรเจ็กต์ "%2"</translation>
+        <source>Failed to add subproject &quot;%1&quot;
+to project &quot;%2&quot;.</source>
+        <translation>ไม่สามารถเพิ่มโครงการย่อย &quot;%1&quot; 
+เพื่อโปรเจ็กต์ &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+12" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
         <source>Failed to add one or more files to project
-"%1" (%2).</source>
+&quot;%1&quot; (%2).</source>
         <translation>ไม่สามารถเพิ่มไฟล์อย่างน้อย 1 ไฟล์ในโครงการ 
-"%1" (%2)</translation>
+&quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
@@ -15533,13 +15557,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+33" />
-        <source>Check whether a variable exists.&lt;br&gt;Returns "true" if it does and an empty string if not.</source>
-        <translation>ตรวจสอบว่ามีตัวแปรอยู่หรือไม่&lt;br&gt;ส่งคืน "true" หากมี และส่งคืนสตริงว่างหากไม่มี</translation>
+        <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
+        <translation>ตรวจสอบว่ามีตัวแปรอยู่หรือไม่&lt;br&gt;ส่งคืน &quot;true&quot; หากมี และส่งคืนสตริงว่างหากไม่มี</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not determine target path. "TargetPath" was not set on any page.</source>
-        <translation>ไม่สามารถระบุเส้นทางเป้าหมายได้ ไม่ได้ตั้งค่า "TargetPath" บนหน้าใดๆ</translation>
+        <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
+        <translation>ไม่สามารถระบุเส้นทางเป้าหมายได้ ไม่ได้ตั้งค่า &quot;TargetPath&quot; บนหน้าใดๆ</translation>
     </message>
     <message>
         <location line="+17" />
@@ -15548,13 +15572,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The wizard failed to generate files.&lt;br&gt;The error message was: "%1".</source>
-        <translation>ตัวช่วยสร้างล้มเหลวในการสร้างไฟล์&lt;br&gt;ข้อความแสดงข้อผิดพลาดคือ: "%1"</translation>
+        <source>The wizard failed to generate files.&lt;br&gt;The error message was: &quot;%1&quot;.</source>
+        <translation>ตัวช่วยสร้างล้มเหลวในการสร้างไฟล์&lt;br&gt;ข้อความแสดงข้อผิดพลาดคือ: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+63" />
-        <source>No 'key' in options object.</source>
-        <translation>ไม่มี 'รหัส' ในวัตถุตัวเลือก</translation>
+        <source>No &apos;key&apos; in options object.</source>
+        <translation>ไม่มี &apos;รหัส&apos; ในวัตถุตัวเลือก</translation>
     </message>
     <message>
         <location line="+88" />
@@ -15588,24 +15612,24 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+58" />
-        <source>"%1" does not exist in the file system.</source>
-        <translation>"%1" ไม่มีอยู่ในระบบไฟล์</translation>
+        <source>&quot;%1&quot; does not exist in the file system.</source>
+        <translation>&quot;%1&quot; ไม่มีอยู่ในระบบไฟล์</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open "%1" as a project.</source>
-        <translation>ไม่สามารถเปิด "%1" เป็นโครงการได้</translation>
+        <source>Failed to open &quot;%1&quot; as a project.</source>
+        <translation>ไม่สามารถเปิด &quot;%1&quot; เป็นโครงการได้</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+46" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>ไม่สามารถเปิดตัวแก้ไขสำหรับ "%1"</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>ไม่สามารถเปิดตัวแก้ไขสำหรับ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-27" />
-        <source>No file to open found in "%1".</source>
-        <translation>ไม่พบไฟล์ที่จะเปิดใน "%1"</translation>
+        <source>No file to open found in &quot;%1&quot;.</source>
+        <translation>ไม่พบไฟล์ที่จะเปิดใน &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -15614,8 +15638,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to open project in "%1".</source>
-        <translation>ไม่สามารถเปิดโครงการใน "%1"</translation>
+        <source>Failed to open project in &quot;%1&quot;.</source>
+        <translation>ไม่สามารถเปิดโครงการใน &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15635,31 +15659,31 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+7" />
-        <source>TypeId "%1" of generator is unknown. Supported typeIds are: "%2".</source>
-        <translation>ไม่ทราบ TypeId "%1" ของเครื่องกำเนิดไฟฟ้า typeIds ที่สนับสนุนคือ: "%2"</translation>
+        <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>ไม่ทราบ TypeId &quot;%1&quot; ของเครื่องกำเนิดไฟฟ้า typeIds ที่สนับสนุนคือ: &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+56" />
         <location line="+241" />
-        <source>Path "%1" does not exist when checking JSON wizard search paths.</source>
-        <translation>ไม่มีเส้นทาง "%1" เมื่อตรวจสอบเส้นทางการค้นหาของตัวช่วยสร้าง JSON</translation>
+        <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
+        <translation>ไม่มีเส้นทาง &quot;%1&quot; เมื่อตรวจสอบเส้นทางการค้นหาของตัวช่วยสร้าง JSON</translation>
     </message>
     <message>
         <location line="-228" />
-        <source>Checking "%1" for %2.</source>
-        <translation>กำลังตรวจสอบ "%1" สำหรับ %2</translation>
+        <source>Checking &quot;%1&quot; for %2.</source>
+        <translation>กำลังตรวจสอบ &quot;%1&quot; สำหรับ %2</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+233" />
-        <source>* Failed to parse "%1":%2:%3: %4</source>
-        <translation>* ไม่สามารถแยกวิเคราะห์ "%1":%2:%3: %4</translation>
+        <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
+        <translation>* ไม่สามารถแยกวิเคราะห์ &quot;%1&quot;:%2:%3: %4</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>* Did not find a JSON object in "%1".
+        <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* ไม่พบวัตถุ JSON ใน "%1"</translation>
+        <translation>* ไม่พบวัตถุ JSON ใน &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+6" />
@@ -15669,8 +15693,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="-224" />
-        <source>JsonWizard: "%1" not found.</source>
-        <translation>JsonWizard: ไม่พบ "%1"</translation>
+        <source>JsonWizard: &quot;%1&quot; not found.</source>
+        <translation>JsonWizard: ไม่พบ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+96" />
@@ -15684,18 +15708,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>TypeId "%1" of page is unknown. Supported typeIds are: "%2".</source>
-        <translation>ไม่ทราบ TypeId "%1" ของหน้า typeIds ที่สนับสนุนคือ: "%2"</translation>
+        <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>ไม่ทราบ TypeId &quot;%1&quot; ของหน้า typeIds ที่สนับสนุนคือ: &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Page with typeId "%1" has invalid "index".</source>
-        <translation>หน้าที่มี typeId "%1" มี "ดัชนี" ที่ไม่ถูกต้อง</translation>
+        <source>Page with typeId &quot;%1&quot; has invalid &quot;index&quot;.</source>
+        <translation>หน้าที่มี typeId &quot;%1&quot; มี &quot;ดัชนี&quot; ที่ไม่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+89" />
-        <source>* Did not find a JSON object in "%1".</source>
-        <translation>* ไม่พบวัตถุ JSON ใน "%1"</translation>
+        <source>* Did not find a JSON object in &quot;%1&quot;.</source>
+        <translation>* ไม่พบวัตถุ JSON ใน &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -15734,13 +15758,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+32" />
-        <source>"kind" value "%1" is not "class" (deprecated), "file" or "project".</source>
-        <translation>ค่า "kind" "%1" ไม่ใช่ "class" (เลิกใช้แล้ว), "file" หรือ "project"</translation>
+        <source>&quot;kind&quot; value &quot;%1&quot; is not &quot;class&quot; (deprecated), &quot;file&quot; or &quot;project&quot;.</source>
+        <translation>ค่า &quot;kind&quot; &quot;%1&quot; ไม่ใช่ &quot;class&quot; (เลิกใช้แล้ว), &quot;file&quot; หรือ &quot;project&quot;</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"kind" is "file" or "class" (deprecated) and "%1" is also set.</source>
-        <translation>"kind" คือ "file" หรือ "class" (เลิกใช้แล้ว) และ "%1" ก็ได้รับการตั้งค่าเช่นกัน</translation>
+        <source>&quot;kind&quot; is &quot;file&quot; or &quot;class&quot; (deprecated) and &quot;%1&quot; is also set.</source>
+        <translation>&quot;kind&quot; คือ &quot;file&quot; หรือ &quot;class&quot; (เลิกใช้แล้ว) และ &quot;%1&quot; ก็ได้รับการตั้งค่าเช่นกัน</translation>
     </message>
     <message>
         <location line="+10" />
@@ -15754,13 +15778,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Icon file "%1" not found.</source>
-        <translation>ไม่พบไฟล์ไอคอน "%1"</translation>
+        <source>Icon file &quot;%1&quot; not found.</source>
+        <translation>ไม่พบไฟล์ไอคอน &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Image file "%1" not found.</source>
-        <translation>ไม่พบไฟล์รูปภาพ "%1"</translation>
+        <source>Image file &quot;%1&quot; not found.</source>
+        <translation>ไม่พบไฟล์รูปภาพ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+16" />
@@ -15779,13 +15803,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>When parsing "generators": %1</source>
-        <translation>เมื่อแยกวิเคราะห์ "เครื่องกำเนิดไฟฟ้า": %1</translation>
+        <source>When parsing &quot;generators&quot;: %1</source>
+        <translation>เมื่อแยกวิเคราะห์ &quot;เครื่องกำเนิดไฟฟ้า&quot;: %1</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>When parsing "pages": %1</source>
-        <translation>เมื่อแยกวิเคราะห์ "หน้า": %1</translation>
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation>เมื่อแยกวิเคราะห์ &quot;หน้า&quot;: %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
@@ -15799,8 +15823,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+57" />
-        <source>When processing "%1":&lt;br&gt;%2</source>
-        <translation>เมื่อประมวลผล "%1":&lt;br&gt;%2</translation>
+        <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
+        <translation>เมื่อประมวลผล &quot;%1&quot;:&lt;br&gt;%2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
@@ -15826,43 +15850,43 @@ to project "%2".</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
-        <source>When parsing fields of page "%1": %2</source>
-        <translation>เมื่อแยกวิเคราะห์ฟิลด์ของหน้า "%1": %2</translation>
+        <source>When parsing fields of page &quot;%1&quot;: %2</source>
+        <translation>เมื่อแยกวิเคราะห์ฟิลด์ของหน้า &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "File" page needs to be unset or an empty object.</source>
-        <translation>"data" สำหรับหน้า "ไฟล์" จะต้องไม่ได้ตั้งค่า หรือมีออบเจ็กต์ว่างเปล่า</translation>
+        <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
+        <translation>&quot;data&quot; สำหรับหน้า &quot;ไฟล์&quot; จะต้องไม่ได้ตั้งค่า หรือมีออบเจ็กต์ว่างเปล่า</translation>
     </message>
     <message>
         <location line="+48" />
-        <source>Error parsing "%1" in "Kits" page: %2</source>
-        <translation>เกิดข้อผิดพลาดในการแยกวิเคราะห์ "%1" ในหน้า "ชุดอุปกรณ์": %2</translation>
+        <source>Error parsing &quot;%1&quot; in &quot;Kits&quot; page: %2</source>
+        <translation>เกิดข้อผิดพลาดในการแยกวิเคราะห์ &quot;%1&quot; ในหน้า &quot;ชุดอุปกรณ์&quot;: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>"data" must be a JSON object for "Kits" pages.</source>
-        <translation>"data" ต้องเป็นออบเจ็กต์ JSON สำหรับหน้า "Kits"</translation>
+        <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
+        <translation>&quot;data&quot; ต้องเป็นออบเจ็กต์ JSON สำหรับหน้า &quot;Kits&quot;</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>"Kits" page requires a "%1" set.</source>
-        <translation>หน้า "ชุดอุปกรณ์" จำเป็นต้องมีชุด "%1"</translation>
+        <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
+        <translation>หน้า &quot;ชุดอุปกรณ์&quot; จำเป็นต้องมีชุด &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+62" />
-        <source>"data" must be empty or a JSON object for "Project" pages.</source>
-        <translation>"data" ต้องว่างเปล่าหรือเป็นออบเจ็กต์ JSON สำหรับหน้า "โครงการ"</translation>
+        <source>&quot;data&quot; must be empty or a JSON object for &quot;Project&quot; pages.</source>
+        <translation>&quot;data&quot; ต้องว่างเปล่าหรือเป็นออบเจ็กต์ JSON สำหรับหน้า &quot;โครงการ&quot;</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Invalid regular expression "%1" in "%2". %3</source>
-        <translation>นิพจน์ทั่วไป "%1" ใน "%2" ไม่ถูกต้อง %3</translation>
+        <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
+        <translation>นิพจน์ทั่วไป &quot;%1&quot; ใน &quot;%2&quot; ไม่ถูกต้อง %3</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "Summary" page can be unset or needs to be an object.</source>
-        <translation>"data" สำหรับหน้า "สรุป" สามารถยกเลิกการตั้งค่าได้หรือจำเป็นต้องเป็นออบเจ็กต์</translation>
+        <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
+        <translation>&quot;data&quot; สำหรับหน้า &quot;สรุป&quot; สามารถยกเลิกการตั้งค่าได้หรือจำเป็นต้องเป็นออบเจ็กต์</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
@@ -15871,13 +15895,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Pattern "%1" is no valid regular expression.</source>
-        <translation>รูปแบบ "%1" ไม่ใช่นิพจน์ทั่วไปที่ถูกต้อง</translation>
+        <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
+        <translation>รูปแบบ &quot;%1&quot; ไม่ใช่นิพจน์ทั่วไปที่ถูกต้อง</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>ScannerGenerator: Binary pattern "%1" not valid.</source>
-        <translation>ScannerGenerator: รูปแบบไบนารี "%1" ไม่ถูกต้อง</translation>
+        <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
+        <translation>ScannerGenerator: รูปแบบไบนารี &quot;%1&quot; ไม่ถูกต้อง</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
@@ -15934,18 +15958,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+17" />
-        <source>Sys Root "%1" does not exist in the file system.</source>
-        <translation>Sys Root "%1" ไม่มีอยู่ในระบบไฟล์</translation>
+        <source>Sys Root &quot;%1&quot; does not exist in the file system.</source>
+        <translation>Sys Root &quot;%1&quot; ไม่มีอยู่ในระบบไฟล์</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is not a directory.</source>
-        <translation>Sys Root "%1" ไม่ใช่ไดเรกทอรี</translation>
+        <source>Sys Root &quot;%1&quot; is not a directory.</source>
+        <translation>Sys Root &quot;%1&quot; ไม่ใช่ไดเรกทอรี</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is empty.</source>
-        <translation>Sys Root "%1" ว่างเปล่า</translation>
+        <source>Sys Root &quot;%1&quot; is empty.</source>
+        <translation>Sys Root &quot;%1&quot; ว่างเปล่า</translation>
     </message>
     <message>
         <location line="+14" />
@@ -15956,7 +15980,7 @@ to project "%2".</source>
     <message>
         <location line="+112" />
         <source>&lt;No compiler&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;ไม่มีคอมไพเลอร์&gt;</translation>
     </message>
     <message>
         <location line="+94" />
@@ -16428,13 +16452,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href="projectmode"&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;โปรเจ็กต์ &lt;b&gt;%1&lt;/b&gt; ยังไม่ได้กำหนดค่า&lt;br/&gt;&lt;br/&gt;คุณสามารถกำหนดค่าได้ใน &lt;a href="projectmode"&gt;โหมดโปรเจ็กต์&lt;/a&gt;&lt;br/&gt;</translation>
+        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href=&quot;projectmode&quot;&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
+        <translation>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;โปรเจ็กต์ &lt;b&gt;%1&lt;/b&gt; ยังไม่ได้กำหนดค่า&lt;br/&gt;&lt;br/&gt;คุณสามารถกำหนดค่าได้ใน &lt;a href=&quot;projectmode&quot;&gt;โหมดโปรเจ็กต์&lt;/a&gt;&lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
-        <source>Falling back to use the cached environment for "%1" after:</source>
-        <translation>ถอยกลับไปใช้สภาพแวดล้อมที่แคชไว้สำหรับ "%1" หลังจาก:</translation>
+        <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
+        <translation>ถอยกลับไปใช้สภาพแวดล้อมที่แคชไว้สำหรับ &quot;%1&quot; หลังจาก:</translation>
     </message>
     <message>
         <location line="+483" />
@@ -16447,7 +16471,7 @@ to project "%2".</source>
         <location line="-197" />
         <location line="+170" />
         <source>&lt;empty&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;ว่างเปล่า&gt;</translation>
     </message>
     <message>
         <location line="-154" />
@@ -16456,9 +16480,9 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+796" />
-        <source>Failed to retrieve MSVC Environment from "%1":
+        <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
-        <translation>ไม่สามารถดึงข้อมูลสภาพแวดล้อม MSVC จาก "%1": 
+        <translation>ไม่สามารถดึงข้อมูลสภาพแวดล้อม MSVC จาก &quot;%1&quot;: 
 %2</translation>
     </message>
     <message>
@@ -16505,8 +16529,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open file: "%1": %2</source>
-        <translation>ไม่สามารถเปิดไฟล์: "%1": %2</translation>
+        <source>Could not open file: &quot;%1&quot;: %2</source>
+        <translation>ไม่สามารถเปิดไฟล์: &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
@@ -16616,8 +16640,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+92" />
-        <source>Project "%1" was configured for kit "%2" with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
-        <translation>โครงการ "%1" ได้รับการกำหนดค่าสำหรับชุด "%2" ด้วยรหัส %3 ซึ่งไม่มีอยู่อีกต่อไป คุณสามารถสร้างชุดอุปกรณ์ใหม่หรือคัดลอกขั้นตอนของชุดอุปกรณ์ที่หายไปไปยังชุดอุปกรณ์อื่นในโหมด %4</translation>
+        <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
+        <translation>โครงการ &quot;%1&quot; ได้รับการกำหนดค่าสำหรับชุด &quot;%2&quot; ด้วยรหัส %3 ซึ่งไม่มีอยู่อีกต่อไป คุณสามารถสร้างชุดอุปกรณ์ใหม่หรือคัดลอกขั้นตอนของชุดอุปกรณ์ที่หายไปไปยังชุดอุปกรณ์อื่นในโหมด %4</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16631,79 +16655,79 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+265" />
-        <source>Could not find any qml_*.qm file at "%1"</source>
-        <translation>ไม่พบไฟล์ qml_*.qm ใด ๆ ที่ "%1"</translation>
+        <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
+        <translation>ไม่พบไฟล์ qml_*.qm ใด ๆ ที่ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+87" />
         <source>%1: Name.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: ชื่อ</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to main file.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: เส้นทางแบบเต็มไปยังไฟล์หลัก</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: เส้นทางแบบเต็มไปยังไดเรกทอรีโครงการ</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: The name of the active kit.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: ชื่อของชุดที่ใช้งานอยู่</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Name of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: ชื่อของการกำหนดค่าบิลด์ที่ใช้งานอยู่</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Type of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: ประเภทของการกำหนดค่าบิลด์ที่ใช้งานอยู่</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Full build path of active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: เส้นทางการสร้างแบบเต็มของการกำหนดค่าการสร้างที่ใช้งานอยู่</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Variables in the active build environment.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: ตัวแปรในสภาพแวดล้อมบิลด์ที่ใช้งานอยู่</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Name of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: ชื่อของการกำหนดค่าการทำงานที่ใช้งานอยู่</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Executable of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: สามารถดำเนินการได้ของการกำหนดค่าการรันที่ใช้งานอยู่</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Variables in the environment of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: ตัวแปรในสภาพแวดล้อมของการกำหนดค่าการทำงานที่ใช้งานอยู่</translation>
     </message>
     <message>
         <location line="+12" />
         <source>%1: Working directory of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: ไดเร็กทอรีการทำงานของการกำหนดค่าการรันที่ใช้งานอยู่</translation>
     </message>
     <message>
@@ -16796,8 +16820,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="-347" />
-        <source>Close Pro&amp;ject "%1"</source>
-        <translation>ปิดโครงการ "%1" (&amp;J)</translation>
+        <source>Close Pro&amp;ject &quot;%1&quot;</source>
+        <translation>ปิดโครงการ &quot;%1&quot; (&amp;J)</translation>
     </message>
     <message>
         <location line="+10" />
@@ -16807,8 +16831,8 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <location line="+328" />
-        <source>Close All Files in Project "%1"</source>
-        <translation>ปิดไฟล์ทั้งหมดในโครงการ "%1"</translation>
+        <source>Close All Files in Project &quot;%1&quot;</source>
+        <translation>ปิดไฟล์ทั้งหมดในโครงการ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-316" />
@@ -16871,8 +16895,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Build Project "%1"</source>
-        <translation>สร้างโครงการ "%1"</translation>
+        <source>Build Project &quot;%1&quot;</source>
+        <translation>สร้างโครงการ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16881,8 +16905,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Build Project "%1" for All Configurations</source>
-        <translation>สร้างโครงการ "%1" สำหรับการกำหนดค่าทั้งหมด</translation>
+        <source>Build Project &quot;%1&quot; for All Configurations</source>
+        <translation>สร้างโครงการ &quot;%1&quot; สำหรับการกำหนดค่าทั้งหมด</translation>
     </message>
     <message>
         <location line="+20" />
@@ -16891,8 +16915,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Build for &amp;Run Configuration "%1"</source>
-        <translation>สร้างสำหรับ &amp;เรียกใช้การกำหนดค่า "%1"</translation>
+        <source>Build for &amp;Run Configuration &quot;%1&quot;</source>
+        <translation>สร้างสำหรับ &amp;เรียกใช้การกำหนดค่า &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+13" />
@@ -16985,8 +17009,8 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+9" />
         <location line="+1621" />
-        <source>Close Project "%1"</source>
-        <translation>ปิดโครงการ "%1"</translation>
+        <source>Close Project &quot;%1&quot;</source>
+        <translation>ปิดโครงการ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-1614" />
@@ -16995,8 +17019,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Close All Projects Except "%1"</source>
-        <translation>ปิดโครงการทั้งหมดยกเว้น "%1"</translation>
+        <source>Close All Projects Except &quot;%1&quot;</source>
+        <translation>ปิดโครงการทั้งหมดยกเว้น &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -17031,8 +17055,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Set "%1" as Active Project</source>
-        <translation>ตั้งค่า "%1" เป็นโครงการที่ใช้งานอยู่</translation>
+        <source>Set &quot;%1&quot; as Active Project</source>
+        <translation>ตั้งค่า &quot;%1&quot; เป็นโครงการที่ใช้งานอยู่</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17117,7 +17141,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+62" />
         <source>Sanitizer</source>
-        <comment>Category for sanitizer issues listed under 'Issues'</comment>
+        <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
         <translation>น้ำยาฆ่าเชื้อ</translation>
     </message>
     <message>
@@ -17158,8 +17182,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+48" />
-        <source>Failed opening project "%1": No plugin can open project type "%2".</source>
-        <translation>การเปิดโครงการ "%1" ล้มเหลว: ไม่มีปลั๊กอินใดที่สามารถเปิดโครงการประเภท "%2" ได้</translation>
+        <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
+        <translation>การเปิดโครงการ &quot;%1&quot; ล้มเหลว: ไม่มีปลั๊กอินใดที่สามารถเปิดโครงการประเภท &quot;%2&quot; ได้</translation>
     </message>
     <message>
         <location line="+195" />
@@ -17190,18 +17214,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+23" />
-        <source>Open Project in "%1"</source>
-        <translation>เปิดโครงการใน "%1"</translation>
+        <source>Open Project in &quot;%1&quot;</source>
+        <translation>เปิดโครงการใน &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Open Project "%1"</source>
-        <translation>เปิดโครงการ "%1"</translation>
+        <source>Open Project &quot;%1&quot;</source>
+        <translation>เปิดโครงการ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>The file "%1" was renamed to "%2", but the following projects could not be automatically changed: %3</source>
-        <translation>ไฟล์ "%1" ถูกเปลี่ยนชื่อเป็น "%2" แต่โครงการต่อไปนี้ไม่สามารถเปลี่ยนแปลงได้โดยอัตโนมัติ: %3</translation>
+        <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
+        <translation>ไฟล์ &quot;%1&quot; ถูกเปลี่ยนชื่อเป็น &quot;%2&quot; แต่โครงการต่อไปนี้ไม่สามารถเปลี่ยนแปลงได้โดยอัตโนมัติ: %3</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17218,8 +17242,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+62" />
-        <source>Building "%1" is disabled: %2&lt;br&gt;</source>
-        <translation>อาคาร "%1" ถูกปิดใช้งาน: %2&lt;br&gt;</translation>
+        <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
+        <translation>อาคาร &quot;%1&quot; ถูกปิดใช้งาน: %2&lt;br&gt;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17280,18 +17304,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>The project "%1" is not configured.</source>
-        <translation>ไม่ได้กำหนดค่าโครงการ "%1"</translation>
+        <source>The project &quot;%1&quot; is not configured.</source>
+        <translation>ไม่ได้กำหนดค่าโครงการ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The project "%1" has no active kit.</source>
-        <translation>โครงการ "%1" ไม่มีชุดอุปกรณ์ที่ใช้งานอยู่</translation>
+        <source>The project &quot;%1&quot; has no active kit.</source>
+        <translation>โครงการ &quot;%1&quot; ไม่มีชุดอุปกรณ์ที่ใช้งานอยู่</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The kit "%1" for the project "%2" has no active run configuration.</source>
-        <translation>ชุด "%1" สำหรับโครงการ "%2" ไม่มีการกำหนดค่าการทำงานที่ใช้งานอยู่</translation>
+        <source>The kit &quot;%1&quot; for the project &quot;%2&quot; has no active run configuration.</source>
+        <translation>ชุด &quot;%1&quot; สำหรับโครงการ &quot;%2&quot; ไม่มีการกำหนดค่าการทำงานที่ใช้งานอยู่</translation>
     </message>
     <message>
         <location line="+16" />
@@ -17300,8 +17324,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>Cannot run "%1".</source>
-        <translation>ไม่สามารถเรียกใช้ "%1"</translation>
+        <source>Cannot run &quot;%1&quot;.</source>
+        <translation>ไม่สามารถเรียกใช้ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17327,8 +17351,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+41" />
-        <source>The following subprojects could not be added to project "%1":</source>
-        <translation>ไม่สามารถเพิ่มโครงการย่อยต่อไปนี้ในโครงการ "%1":</translation>
+        <source>The following subprojects could not be added to project &quot;%1&quot;:</source>
+        <translation>ไม่สามารถเพิ่มโครงการย่อยต่อไปนี้ในโครงการ &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -17377,15 +17401,15 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>File "%1" was not removed, because the project has changed in the meantime.
+        <source>File &quot;%1&quot; was not removed, because the project has changed in the meantime.
 Please try again.</source>
-        <translation>ไฟล์ "%1" ไม่ได้ถูกลบออก เนื่องจากโครงการมีการเปลี่ยนแปลงในระหว่างนี้ 
+        <translation>ไฟล์ &quot;%1&quot; ไม่ได้ถูกลบออก เนื่องจากโครงการมีการเปลี่ยนแปลงในระหว่างนี้ 
 โปรดลองอีกครั้ง</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Could not remove file "%1" from project "%2".</source>
-        <translation>ไม่สามารถลบไฟล์ "%1" ออกจากโครงการ "%2"</translation>
+        <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
+        <translation>ไม่สามารถลบไฟล์ &quot;%1&quot; ออกจากโครงการ &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+36" />
@@ -17410,13 +17434,13 @@ Please try again.</source>
     </message>
     <message>
         <location line="-9" />
-        <source>Failed to copy file "%1" to "%2": %3.</source>
-        <translation>ไม่สามารถคัดลอกไฟล์ "%1" ไปยัง "%2": %3</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
+        <translation>ไม่สามารถคัดลอกไฟล์ &quot;%1&quot; ไปยัง &quot;%2&quot;: %3</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Failed to add new file "%1" to the project.</source>
-        <translation>ไม่สามารถเพิ่มไฟล์ใหม่ "%1" ในโครงการได้</translation>
+        <source>Failed to add new file &quot;%1&quot; to the project.</source>
+        <translation>ไม่สามารถเพิ่มไฟล์ใหม่ &quot;%1&quot; ในโครงการได้</translation>
     </message>
     <message>
         <location line="+17" />
@@ -17464,8 +17488,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+192" />
-        <source>Locates files from all project directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>ค้นหาไฟล์จากไดเรกทอรีโครงการทั้งหมด เพิ่ม "+&lt;number&gt;" หรือ ":&lt;number&gt;" ต่อท้ายเพื่อข้ามไปยังหมายเลขบรรทัดที่กำหนด เติม "+&lt;number&gt;" หรือ ":&lt;number&gt;" อื่นต่อท้ายเพื่อข้ามไปยังหมายเลขคอลัมน์ด้วย</translation>
+        <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>ค้นหาไฟล์จากไดเรกทอรีโครงการทั้งหมด เพิ่ม &quot;+&lt;number&gt;&quot; หรือ &quot;:&lt;number&gt;&quot; ต่อท้ายเพื่อข้ามไปยังหมายเลขบรรทัดที่กำหนด เติม &quot;+&lt;number&gt;&quot; หรือ &quot;:&lt;number&gt;&quot; อื่นต่อท้ายเพื่อข้ามไปยังหมายเลขคอลัมน์ด้วย</translation>
     </message>
     <message>
         <location line="+102" />
@@ -17522,13 +17546,13 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
         <source>s</source>
-        <extracomment>Suffix for "seconds"</extracomment>
+        <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>ส</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The amount of seconds to wait between a "soft kill" and a "hard kill" of a running application.</source>
-        <translation>จำนวนวินาทีที่ต้องรอระหว่าง "soft kill" และ "hard kill" ของแอปพลิเคชันที่ทำงานอยู่</translation>
+        <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
+        <translation>จำนวนวินาทีที่ต้องรอระหว่าง &quot;soft kill&quot; และ &quot;hard kill&quot; ของแอปพลิเคชันที่ทำงานอยู่</translation>
     </message>
     <message>
         <location line="+3" />
@@ -17592,8 +17616,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Some legacy build tools do not deal well with paths that contain "special" characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
-        <translation>เครื่องมือสร้างแบบเดิมบางอย่างทำงานได้ไม่ดีกับเส้นทางที่มีอักขระ "พิเศษ" เช่น ช่องว่าง ซึ่งอาจทำให้เกิดข้อผิดพลาดในการสร้างปลอมได้&lt;p&gt;ยกเลิกการเลือกตัวเลือกนี้หากคุณไม่ได้ใช้งานเครื่องมือดังกล่าว</translation>
+        <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
+        <translation>เครื่องมือสร้างแบบเดิมบางอย่างทำงานได้ไม่ดีกับเส้นทางที่มีอักขระ &quot;พิเศษ&quot; เช่น ช่องว่าง ซึ่งอาจทำให้เกิดข้อผิดพลาดในการสร้างปลอมได้&lt;p&gt;ยกเลิกการเลือกตัวเลือกนี้หากคุณไม่ได้ใช้งานเครื่องมือดังกล่าว</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17652,13 +17676,13 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Show all kits in "Build &amp; Run" in "Projects" mode</source>
-        <translation>แสดงชุดอุปกรณ์ทั้งหมดใน "Build &amp; Run" ในโหมด "Projects"</translation>
+        <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
+        <translation>แสดงชุดอุปกรณ์ทั้งหมดใน &quot;Build &amp; Run&quot; ในโหมด &quot;Projects&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Show also inactive kits in "Build &amp; Run" in "Projects" mode.</source>
-        <translation>แสดงชุดอุปกรณ์ที่ไม่ได้ใช้งานใน "Build &amp; Run" ในโหมด "Projects"</translation>
+        <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
+        <translation>แสดงชุดอุปกรณ์ที่ไม่ได้ใช้งานใน &quot;Build &amp; Run&quot; ในโหมด &quot;Projects&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -17697,8 +17721,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Default for "Run in terminal":</source>
-        <translation>ค่าเริ่มต้นสำหรับ "Run in Terminal":</translation>
+        <source>Default for &quot;Run in terminal&quot;:</source>
+        <translation>ค่าเริ่มต้นสำหรับ &quot;Run in Terminal&quot;:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -17778,8 +17802,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
-        <source>No kits are enabled for this project. Enable kits in the "Projects" mode.</source>
-        <translation>ไม่มีการเปิดใช้งานชุดอุปกรณ์สำหรับโปรเจ็กต์นี้ เปิดใช้งานชุดอุปกรณ์ในโหมด "โครงการ"</translation>
+        <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
+        <translation>ไม่มีการเปิดใช้งานชุดอุปกรณ์สำหรับโปรเจ็กต์นี้ เปิดใช้งานชุดอุปกรณ์ในโหมด &quot;โครงการ&quot;</translation>
     </message>
     <message>
         <location line="+89" />
@@ -17972,18 +17996,18 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+50" />
-        <source>Open %1 "%2"</source>
-        <translation>เปิด %1 "%2"</translation>
+        <source>Open %1 &quot;%2&quot;</source>
+        <translation>เปิด %1 &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Open %1 "%2" (%3)</source>
-        <translation>เปิด %1 "%2" (%3)</translation>
+        <source>Open %1 &quot;%2&quot; (%3)</source>
+        <translation>เปิด %1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
         <location line="+20" />
         <source>session</source>
-        <comment>Appears in "Open session &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>การประชุม</translation>
     </message>
     <message>
@@ -18010,7 +18034,7 @@ What should %1 do now?</source>
     <message>
         <location line="+125" />
         <source>project</source>
-        <comment>Appears in "Open project &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>โครงการ</translation>
     </message>
     <message>
@@ -18045,7 +18069,7 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+118" />
-        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project's settings:</source>
+        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>โปรเจ็กต์ได้รับการกำหนดค่าสำหรับชุดอุปกรณ์ที่ไม่มีอยู่แล้ว เลือกหนึ่งในตัวเลือกต่อไปนี้ในเมนูบริบทเพื่อคืนค่าการตั้งค่าของโครงการ:</translation>
     </message>
     <message>
@@ -18076,8 +18100,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+12" />
-        <source>Remove Vanished Target "%1"</source>
-        <translation>ลบเป้าหมายที่หายไป "%1"</translation>
+        <source>Remove Vanished Target &quot;%1&quot;</source>
+        <translation>ลบเป้าหมายที่หายไป &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18135,12 +18159,12 @@ What should %1 do now?</source>
         <location line="+65" />
         <location line="+177" />
         <source>&lt;None&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;ไม่มี&gt;</translation>
     </message>
     <message>
         <location line="-175" />
         <source>&lt;Implicitly Add&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;เพิ่มโดยปริยาย&gt;</translation>
     </message>
     <message>
         <location line="+63" />
@@ -18159,13 +18183,13 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+74" />
-        <source>A version control system repository could not be created in "%1".</source>
-        <translation>ไม่สามารถสร้างที่เก็บระบบควบคุมเวอร์ชันใน "%1" ได้</translation>
+        <source>A version control system repository could not be created in &quot;%1&quot;.</source>
+        <translation>ไม่สามารถสร้างที่เก็บระบบควบคุมเวอร์ชันใน &quot;%1&quot; ได้</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to add "%1" to the version control system.</source>
-        <translation>ไม่สามารถเพิ่ม "%1" ให้กับระบบควบคุมเวอร์ชันได้</translation>
+        <source>Failed to add &quot;%1&quot; to the version control system.</source>
+        <translation>ไม่สามารถเพิ่ม &quot;%1&quot; ให้กับระบบควบคุมเวอร์ชันได้</translation>
     </message>
     <message>
         <location line="+94" />
@@ -18201,17 +18225,17 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>The run configuration's working directory.</source>
+        <source>The run configuration&apos;s working directory.</source>
         <translation>ไดเร็กทอรีการทำงานของการกำหนดค่าการรัน</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The run configuration's name.</source>
+        <source>The run configuration&apos;s name.</source>
         <translation>ชื่อของการกำหนดค่าการรัน</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The run configuration's executable.</source>
+        <source>The run configuration&apos;s executable.</source>
         <translation>ปฏิบัติการของการกำหนดค่าการรัน</translation>
     </message>
     <message>
@@ -18228,7 +18252,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
-        <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
+        <extracomment>Shown in Run configuration, Add menu: &quot;name of runnable (on device name)&quot;</extracomment>
         <translation>%1 (บน %{อุปกรณ์:ชื่อ})</translation>
     </message>
     <message>
@@ -18430,8 +18454,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Either the invoked program "%1" is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>โปรแกรมที่เรียกใช้ "%1" หายไป หรือคุณอาจมีสิทธิ์ไม่เพียงพอที่จะเรียกใช้โปรแกรม</translation>
+        <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>โปรแกรมที่เรียกใช้ &quot;%1&quot; หายไป หรือคุณอาจมีสิทธิ์ไม่เพียงพอที่จะเรียกใช้โปรแกรม</translation>
     </message>
     <message>
         <location line="+5" />
@@ -18567,8 +18591,10 @@ What should %1 do now?</source>
         <location line="+11" />
         <source>Not showing %n files that are outside of the base directory.
 These files are preserved.</source>
-        <translation><numerusform>ไม่แสดงไฟล์ %n ที่อยู่นอกไดเร็กทอรีฐาน 
-ไฟล์เหล่านี้จะถูกเก็บรักษาไว้</numerusform></translation>
+        <translation>
+            <numerusform>ไม่แสดงไฟล์ %n ที่อยู่นอกไดเร็กทอรีฐาน 
+ไฟล์เหล่านี้จะถูกเก็บรักษาไว้</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+29" />
@@ -18627,8 +18653,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+172" />
-        <source>Unknown build system "%1"</source>
-        <translation>ระบบบิลด์ที่ไม่รู้จัก "%1"</translation>
+        <source>Unknown build system &quot;%1&quot;</source>
+        <translation>ระบบบิลด์ที่ไม่รู้จัก &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
@@ -18688,8 +18714,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+71" />
-        <source>Enable Kit for Project "%1"</source>
-        <translation>เปิดใช้งาน Kit สำหรับโครงการ "%1"</translation>
+        <source>Enable Kit for Project &quot;%1&quot;</source>
+        <translation>เปิดใช้งาน Kit สำหรับโครงการ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7" />
@@ -18698,8 +18724,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Disable Kit for Project "%1"</source>
-        <translation>ปิดการใช้งาน Kit สำหรับโครงการ "%1"</translation>
+        <source>Disable Kit for Project &quot;%1&quot;</source>
+        <translation>ปิดการใช้งาน Kit สำหรับโครงการ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -18708,8 +18734,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Disable Kit "%1" in This Project?</source>
-        <translation>ปิดการใช้งานชุด "%1" ในโปรเจ็กต์นี้หรือไม่</translation>
+        <source>Disable Kit &quot;%1&quot; in This Project?</source>
+        <translation>ปิดการใช้งานชุด &quot;%1&quot; ในโปรเจ็กต์นี้หรือไม่</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18743,8 +18769,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Add a kit in the &lt;a href="buildandrun"&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
-        <translation>เพิ่มชุดอุปกรณ์ใน&lt;a href="buildandrun"&gt;ตัวเลือก&lt;/a&gt;หรือผ่านเครื่องมือบำรุงรักษาของ SDK</translation>
+        <source>Add a kit in the &lt;a href=&quot;buildandrun&quot;&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
+        <translation>เพิ่มชุดอุปกรณ์ใน&lt;a href=&quot;buildandrun&quot;&gt;ตัวเลือก&lt;/a&gt;หรือผ่านเครื่องมือบำรุงรักษาของ SDK</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19008,18 +19034,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+24" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>การติดตั้ง "%1" ถูกยกเลิกโดยการหมดเวลา</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>การติดตั้ง &quot;%1&quot; ถูกยกเลิกโดยการหมดเวลา</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>การติดตั้ง "%1" ถูกยกเลิกโดยผู้ใช้</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>การติดตั้ง &quot;%1&quot; ถูกยกเลิกโดยผู้ใช้</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>การติดตั้ง "%1" ล้มเหลวด้วยรหัสออก %2</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>การติดตั้ง &quot;%1&quot; ล้มเหลวด้วยรหัสออก %2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
@@ -19096,23 +19122,23 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" not found.</source>
-        <translation>ไม่พบหลาม "%1"</translation>
+        <source>Python &quot;%1&quot; not found.</source>
+        <translation>ไม่พบหลาม &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" is not executable.</source>
-        <translation>Python "%1" ไม่สามารถเรียกใช้งานได้</translation>
+        <source>Python &quot;%1&quot; is not executable.</source>
+        <translation>Python &quot;%1&quot; ไม่สามารถเรียกใช้งานได้</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Python "%1" does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
-        <translation>Python "%1" ไม่มี pip ที่ใช้งานได้ pip จำเป็นสำหรับการติดตั้งแพ็คเกจ Python จาก Python Package Index เช่น PySide และเซิร์ฟเวอร์ภาษา Python หากต้องการใช้ฟังก์ชันใดๆ ดังกล่าว ตรวจสอบให้แน่ใจว่าได้ติดตั้ง pip สำหรับ Python นั้นแล้ว</translation>
+        <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
+        <translation>Python &quot;%1&quot; ไม่มี pip ที่ใช้งานได้ pip จำเป็นสำหรับการติดตั้งแพ็คเกจ Python จาก Python Package Index เช่น PySide และเซิร์ฟเวอร์ภาษา Python หากต้องการใช้ฟังก์ชันใดๆ ดังกล่าว ตรวจสอบให้แน่ใจว่าได้ติดตั้ง pip สำหรับ Python นั้นแล้ว</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Python "%1" does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
-        <translation>Python "%1" ไม่มี venv ที่ใช้งานได้ venv เป็นวิธีที่แนะนำในการแยกสภาพแวดล้อมการพัฒนาสำหรับโปรเจ็กต์จาก Python ที่ติดตั้งส่วนกลาง</translation>
+        <source>Python &quot;%1&quot; does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
+        <translation>Python &quot;%1&quot; ไม่มี venv ที่ใช้งานได้ venv เป็นวิธีที่แนะนำในการแยกสภาพแวดล้อมการพัฒนาสำหรับโปรเจ็กต์จาก Python ที่ติดตั้งส่วนกลาง</translation>
     </message>
     <message>
         <location line="+32" />
@@ -19166,8 +19192,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
-        <source>No Python interpreter set for kit "%1".</source>
-        <translation>ไม่มีการตั้งค่าล่าม Python สำหรับชุด "%1"</translation>
+        <source>No Python interpreter set for kit &quot;%1&quot;.</source>
+        <translation>ไม่มีการตั้งค่าล่าม Python สำหรับชุด &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
@@ -19214,13 +19240,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" does not exist.</source>
-        <translation>"%1" ไม่มีอยู่</translation>
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot; ไม่มีอยู่</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" is not an executable file.</source>
-        <translation>"%1" ไม่ใช่ไฟล์ปฏิบัติการ</translation>
+        <source>&quot;%1&quot; is not an executable file.</source>
+        <translation>&quot;%1&quot; ไม่ใช่ไฟล์ปฏิบัติการ</translation>
     </message>
     <message>
         <location line="+16" />
@@ -19319,8 +19345,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+11" />
-        <source>Found "%1" (%2)</source>
-        <translation>พบ "%1" (%2)</translation>
+        <source>Found &quot;%1&quot; (%2)</source>
+        <translation>พบ &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="+9" />
@@ -19329,13 +19355,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
-        <source>"data" of a Python wizard page expects a map with "items" containing a list of objects.</source>
-        <translation>"data" ของหน้าตัวช่วยสร้าง Python คาดว่าจะมีแผนที่ที่มี "รายการ" ที่มีรายการวัตถุ</translation>
+        <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
+        <translation>&quot;data&quot; ของหน้าตัวช่วยสร้าง Python คาดว่าจะมีแผนที่ที่มี &quot;รายการ&quot; ที่มีรายการวัตถุ</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>An item of Python wizard page data expects a "trKey" field containing the UI visible string for that Python version and a "value" field containing an object with a "PySideVersion" field used for import statements in the Python files.</source>
-        <translation>รายการของข้อมูลหน้าตัวช่วยสร้าง Python คาดว่าจะมีฟิลด์ "trKey" ที่มีสตริงที่มองเห็นได้ของ UI สำหรับเวอร์ชัน Python นั้น และฟิลด์ "value" ที่มีออบเจ็กต์ที่มีฟิลด์ "PySideVersion" ที่ใช้สำหรับคำสั่งนำเข้าในไฟล์ Python</translation>
+        <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
+        <translation>รายการของข้อมูลหน้าตัวช่วยสร้าง Python คาดว่าจะมีฟิลด์ &quot;trKey&quot; ที่มีสตริงที่มองเห็นได้ของ UI สำหรับเวอร์ชัน Python นั้น และฟิลด์ &quot;value&quot; ที่มีออบเจ็กต์ที่มีฟิลด์ &quot;PySideVersion&quot; ที่ใช้สำหรับคำสั่งนำเข้าในไฟล์ Python</translation>
     </message>
     <message>
         <location line="+15" />
@@ -19388,145 +19414,145 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>มาจาก QObject</translation>
     </message>
     <message>
         <location line="+1" />
         <source>derived from QWidget</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>มาจาก QWidget</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>แม่แบบ</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with if</source>
-        <comment>group:'C++' trigger:'else'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
         <translation>ด้วยถ้า</translation>
     </message>
     <message>
         <location line="+1" />
         <source>range-based</source>
-        <comment>group:'C++' trigger:'for'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
         <translation>ตามช่วง</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and else</source>
-        <comment>group:'C++' trigger:'if'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
         <translation>และอื่น ๆ</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with closing brace comment</source>
-        <comment>group:'C++' trigger:'namespace'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
         <translation>มีความคิดเห็นวงเล็บปีกกาปิด</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and catch</source>
-        <comment>group:'C++' trigger:'try'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
         <translation>และจับ</translation>
     </message>
     <message>
         <location line="+1" />
         <source>namespace</source>
-        <comment>group:'C++' trigger:'using'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
         <translation>เนมสเปซ</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'struct'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
         <translation>แม่แบบ</translation>
     </message>
     <message>
         <location line="+1" />
         <source>(type name READ name WRITE setName NOTIFY nameChanged FINAL)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation>(พิมพ์ชื่อ อ่านชื่อ เขียน setName แจ้งเปลี่ยนชื่อ FINAL)</translation>
     </message>
     <message>
         <location line="+3" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>มีเป้าหมาย</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>โดยมีเป้าหมาย</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>มีเป้าหมาย</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>โดยมีเป้าหมาย</translation>
     </message>
     <message>
         <location line="+3" />
         <source>QuickTest Test Case</source>
-        <comment>group:'QML' trigger:'TestCase'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>กรณีทดสอบ QuickTest</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Function</source>
-        <comment>group:'C++' trigger:'TEST'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST&apos;</comment>
         <translation>ฟังก์ชัน Gtest</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Fixture</source>
-        <comment>group:'C++' trigger:'TEST_F'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_F&apos;</comment>
         <translation>โปรแกรมการแข่งขัน Gtest</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Parameterized</source>
-        <comment>group:'C++' trigger:'TEST_P'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_P&apos;</comment>
         <translation>Gtest กำหนดพารามิเตอร์แล้ว</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Case</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_CASE&apos;</comment>
         <translation>กรณีทดสอบ</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Suite</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_SUITE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_SUITE&apos;</comment>
         <translation>ชุดทดสอบ</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Test Case</source>
-        <comment>group:'C++' trigger:'TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_CASE&apos;</comment>
         <translation>กรณีทดสอบการจับ</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Scenario</source>
-        <comment>group:'C++' trigger:'SCENARIO'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;SCENARIO&apos;</comment>
         <translation>จับสถานการณ์</translation>
     </message>
     <message>
         <location line="+3" />
         <source>example</source>
-        <comment>group:'Text' trigger:'global'</comment>
+        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
         <translation>ตัวอย่าง</translation>
     </message>
     <message>
@@ -19548,12 +19574,16 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message numerus="yes">
         <location line="+3" />
         <source>%n found.</source>
-        <translation><numerusform>พบ %n</numerusform></translation>
+        <translation>
+            <numerusform>พบ %n</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <location line="+29" />
         <source>%n occurrences replaced.</source>
-        <translation><numerusform>แทนที่ %n รายการแล้ว</numerusform></translation>
+        <translation>
+            <numerusform>แทนที่ %n รายการแล้ว</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+178" />
@@ -19631,7 +19661,7 @@ Specifies how backspace interacts with indentation.
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation type="unfinished" />
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+15" />
@@ -19763,7 +19793,7 @@ Specifies how backspace interacts with indentation.
 &lt;li&gt;&lt;i&gt;Always Delete:&lt;/i&gt; never write an UTF-8 BOM, possibly deleting a pre-existing one.&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;Note that UTF-8 BOMs are uncommon and treated incorrectly by some editors, so it usually makes little sense to add any.&lt;/p&gt;
 &lt;p&gt;This setting does &lt;b&gt;not&lt;/b&gt; influence the use of UTF-16 and UTF-32 BOMs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished" />
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11" />
@@ -19890,7 +19920,7 @@ Specifies how backspace interacts with indentation.
     </message>
     <message>
         <location line="+1" />
-        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark's note text.</source>
+        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark&apos;s note text.</source>
         <translation>ค้นหาบุ๊กมาร์ก กรองตามชื่อไฟล์ ตามข้อความบนบรรทัดของบุ๊กมาร์ก หรือตามข้อความบันทึกย่อของบุ๊กมาร์ก</translation>
     </message>
     <message>
@@ -20059,8 +20089,8 @@ Specifies how backspace interacts with indentation.
     </message>
     <message>
         <location line="-12" />
-        <source>Cannot import code style from "%1".</source>
-        <translation>ไม่สามารถนำเข้ารูปแบบโค้ดจาก "%1"</translation>
+        <source>Cannot import code style from &quot;%1&quot;.</source>
+        <translation>ไม่สามารถนำเข้ารูปแบบโค้ดจาก &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -20094,8 +20124,8 @@ Specifies how backspace interacts with indentation.
     </message>
     <message>
         <location line="+27" />
-        <source>&lt;p align='center'&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href="copy"&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;p align='center'&gt;&lt;b&gt;โครงร่างสีในตัวจำเป็นต้อง&lt;a href="copy"&gt;คัดลอก&lt;/a&gt;&lt;br/&gt;ก่อนจึงจะเปลี่ยนแปลงได้&lt;/b&gt;&lt;/p&gt;</translation>
+        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;โครงร่างสีในตัวจำเป็นต้อง&lt;a href=&quot;copy&quot;&gt;คัดลอก&lt;/a&gt;&lt;br/&gt;ก่อนจึงจะเปลี่ยนแปลงได้&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -20209,8 +20239,8 @@ Specifies how backspace interacts with indentation.
     </message>
     <message>
         <location line="+2" />
-        <source>Automatically creates a Doxygen comment upon pressing enter after a '/**', '/*!', '//!' or '///'.</source>
-        <translation>สร้างความคิดเห็น Doxygen โดยอัตโนมัติเมื่อกด Enter หลังจาก '/**', '/*!', '//!' หรือ '///'.</translation>
+        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
+        <translation>สร้างความคิดเห็น Doxygen โดยอัตโนมัติเมื่อกด Enter หลังจาก &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; หรือ &apos;///&apos;.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20229,8 +20259,8 @@ Specifies how backspace interacts with indentation.
     </message>
     <message>
         <location line="+2" />
-        <source>Adds leading asterisks when continuing C/C++ "/*", Qt "/*!" and Java "/**" style comments on new lines.</source>
-        <translation>เพิ่มเครื่องหมายดอกจันนำหน้าเมื่อดำเนินการต่อ C/C++ "/*", Qt "/*!" และความคิดเห็นสไตล์ Java "/**" ในบรรทัดใหม่</translation>
+        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
+        <translation>เพิ่มเครื่องหมายดอกจันนำหน้าเมื่อดำเนินการต่อ C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; และความคิดเห็นสไตล์ Java &quot;/**&quot; ในบรรทัดใหม่</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20239,12 +20269,12 @@ Specifies how backspace interacts with indentation.
     </message>
     <message>
         <location line="+1" />
-        <source>Doxygen allows "@" and "\" to start commands.
-By default, "@" is used if the surrounding comment starts with "/**" or "///", and "\" is used
-if the comment starts with "/*!" or "//!".</source>
-        <translation>Doxygen อนุญาตให้ "@" และ "\" เริ่มคำสั่ง 
-ตามค่าเริ่มต้น จะใช้ "@" หากความคิดเห็นโดยรอบขึ้นต้นด้วย "/**" หรือ "///" และใช้ "\" 
-หากความคิดเห็นขึ้นต้นด้วย "/*!" หรือ "//!".</translation>
+        <source>Doxygen allows &quot;@&quot; and &quot;\&quot; to start commands.
+By default, &quot;@&quot; is used if the surrounding comment starts with &quot;/**&quot; or &quot;///&quot;, and &quot;\&quot; is used
+if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
+        <translation>Doxygen อนุญาตให้ &quot;@&quot; และ &quot;\&quot; เริ่มคำสั่ง 
+ตามค่าเริ่มต้น จะใช้ &quot;@&quot; หากความคิดเห็นโดยรอบขึ้นต้นด้วย &quot;/**&quot; หรือ &quot;///&quot; และใช้ &quot;\&quot; 
+หากความคิดเห็นขึ้นต้นด้วย &quot;/*!&quot; หรือ &quot;//!&quot;.</translation>
     </message>
     <message>
         <location line="+66" />
@@ -20412,8 +20442,8 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;i&gt;Set &lt;a href="font zoom"&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;ตั้งค่า &lt;a href="font Zoom"&gt;ระยะห่างระหว่างบรรทัดแบบอักษร&lt;/a&gt; เป็น 100% เพื่อเปิดใช้งานตัวเลือกการตัดข้อความ&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;ตั้งค่า &lt;a href=&quot;font Zoom&quot;&gt;ระยะห่างระหว่างบรรทัดแบบอักษร&lt;/a&gt; เป็น 100% เพื่อเปิดใช้งานตัวเลือกการตัดข้อความ&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -20588,8 +20618,8 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     </message>
     <message>
         <location line="+16" />
-        <source>File "%1":</source>
-        <translation>ไฟล์ "%1":</translation>
+        <source>File &quot;%1&quot;:</source>
+        <translation>ไฟล์ &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -20611,8 +20641,8 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     </message>
     <message>
         <location line="+25" />
-        <source>Folder "%2":</source>
-        <translation>โฟลเดอร์ "%2":</translation>
+        <source>Folder &quot;%2&quot;:</source>
+        <translation>โฟลเดอร์ &quot;%2&quot;:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -20693,8 +20723,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+16" />
-        <source>Color Scheme for Theme "%1"</source>
-        <translation>โครงร่างสีสำหรับธีม "%1"</translation>
+        <source>Color Scheme for Theme &quot;%1&quot;</source>
+        <translation>โครงร่างสีสำหรับธีม &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+14" />
@@ -20766,8 +20796,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+1" />
-        <source>The color scheme "%1" was modified, do you want to save the changes?</source>
-        <translation>รูปแบบสี "%1" ได้รับการแก้ไข คุณต้องการบันทึกการเปลี่ยนแปลงหรือไม่</translation>
+        <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
+        <translation>รูปแบบสี &quot;%1&quot; ได้รับการแก้ไข คุณต้องการบันทึกการเปลี่ยนแปลงหรือไม่</translation>
     </message>
     <message>
         <location line="+7" />
@@ -20776,8 +20806,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/formattexteditor.cpp" line="+71" />
-        <source>Cannot create temporary file "%1": %2.</source>
-        <translation>ไม่สามารถสร้างไฟล์ชั่วคราว "%1": %2</translation>
+        <source>Cannot create temporary file &quot;%1&quot;: %2.</source>
+        <translation>ไม่สามารถสร้างไฟล์ชั่วคราว &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+11" />
@@ -20786,8 +20816,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+10" />
-        <source>Cannot read file "%1": %2.</source>
-        <translation>ไม่สามารถอ่านไฟล์ "%1": %2</translation>
+        <source>Cannot read file &quot;%1&quot;: %2.</source>
+        <translation>ไม่สามารถอ่านไฟล์ &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+15" />
@@ -20831,8 +20861,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;คำจำกัดความของไฮไลต์มีให้โดยกลไก &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;คำจำกัดความของไฮไลต์มีให้โดยกลไก &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -20908,7 +20938,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+1" />
         <source>&lt;line&gt;:&lt;column&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;line&gt;:&lt;คอลัมน์&gt;</translation>
     </message>
     <message>
         <location line="+28" />
@@ -20987,8 +21017,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+15" />
-        <source>Expected mangler ID "l" (lowercase), "u" (uppercase), or "c" (titlecase) after colon.</source>
-        <translation>คาดว่า Mangler ID "l" (ตัวพิมพ์เล็ก), "u" (ตัวพิมพ์ใหญ่) หรือ "c" (ตัวพิมพ์) หลังเครื่องหมายทวิภาค</translation>
+        <source>Expected mangler ID &quot;l&quot; (lowercase), &quot;u&quot; (uppercase), or &quot;c&quot; (titlecase) after colon.</source>
+        <translation>คาดว่า Mangler ID &quot;l&quot; (ตัวพิมพ์เล็ก), &quot;u&quot; (ตัวพิมพ์ใหญ่) หรือ &quot;c&quot; (ตัวพิมพ์) หลังเครื่องหมายทวิภาค</translation>
     </message>
     <message>
         <location line="+23" />
@@ -21095,7 +21125,7 @@ Influences the indentation of continuation lines.
 &lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished" />
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+31" />
@@ -21104,8 +21134,8 @@ Influences the indentation of continuation lines.
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;i&gt;Code indentation is configured in &lt;a href="C++"&gt;C++&lt;/a&gt; and &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;การเยื้องโค้ดได้รับการกำหนดค่าในการตั้งค่า &lt;a href="C++"&gt;C++&lt;/a&gt; และ &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt;&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;การเยื้องโค้ดได้รับการกำหนดค่าในการตั้งค่า &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; และ &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt;&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -21264,8 +21294,8 @@ Influences the indentation of continuation lines.
     </message>
     <message>
         <location line="+36" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding. Editing not possible.</source>
-        <translation>&lt;b&gt;ข้อผิดพลาด:&lt;/b&gt; ไม่สามารถถอดรหัส "%1" ด้วยการเข้ารหัส "%2" ได้ ไม่สามารถแก้ไขได้</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
+        <translation>&lt;b&gt;ข้อผิดพลาด:&lt;/b&gt; ไม่สามารถถอดรหัส &quot;%1&quot; ด้วยการเข้ารหัส &quot;%2&quot; ได้ ไม่สามารถแก้ไขได้</translation>
     </message>
     <message>
         <location line="+2" />
@@ -21350,12 +21380,12 @@ Influences the indentation of continuation lines.
     </message>
     <message>
         <location line="+7" />
-        <source>Current document's font size in points.</source>
+        <source>Current document&apos;s font size in points.</source>
         <translation>ขนาดแบบอักษรของเอกสารปัจจุบันเป็นจุด</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Word under the current document's text cursor.</source>
+        <source>Word under the current document&apos;s text cursor.</source>
         <translation>Word ใต้เคอร์เซอร์ข้อความของเอกสารปัจจุบัน</translation>
     </message>
     <message>
@@ -22210,7 +22240,7 @@ Used to mark containing function of the symbol usage.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Class' data members.</source>
+        <source>Class&apos; data members.</source>
         <translation>สมาชิกข้อมูลของชั้นเรียน</translation>
     </message>
     <message>
@@ -22934,55 +22964,55 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+124" />
         <location line="+409" />
-        <source>Path "%1" exists but is not a writable directory.</source>
-        <translation>มีเส้นทาง "%1" อยู่แต่ไม่ใช่ไดเร็กทอรีแบบเขียนได้</translation>
+        <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
+        <translation>มีเส้นทาง &quot;%1&quot; อยู่แต่ไม่ใช่ไดเร็กทอรีแบบเขียนได้</translation>
     </message>
     <message>
         <location line="-400" />
         <location line="+409" />
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+706" />
-        <source>Failed to create directory "%1".</source>
-        <translation>ไม่สามารถสร้างไดเรกทอรี "%1"</translation>
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>ไม่สามารถสร้างไดเรกทอรี &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-365" />
-        <source>copyFile is not implemented for "%1".</source>
-        <translation>copyFile ไม่ได้ถูกนำมาใช้กับ "%1"</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;.</source>
+        <translation>copyFile ไม่ได้ถูกนำมาใช้กับ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+30" />
-        <source>Cannot copy from "%1", it is not a directory.</source>
-        <translation>ไม่สามารถคัดลอกจาก "%1" ได้ เนื่องจากไม่ใช่ไดเร็กทอรี</translation>
+        <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
+        <translation>ไม่สามารถคัดลอกจาก &quot;%1&quot; ได้ เนื่องจากไม่ใช่ไดเร็กทอรี</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Cannot copy "%1" to "%2": %3</source>
-        <translation>ไม่สามารถคัดลอก "%1" ไปยัง "%2": %3</translation>
+        <source>Cannot copy &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>ไม่สามารถคัดลอก &quot;%1&quot; ไปยัง &quot;%2&quot;: %3</translation>
     </message>
     <message>
         <location line="+44" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to create tar archive from source: %3</source>
-        <translation>ไม่สามารถคัดลอกซ้ำจาก "%1" ถึง "%2" ในขณะที่พยายามสร้างไฟล์เก็บถาวร tar จากแหล่งที่มา: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
+        <translation>ไม่สามารถคัดลอกซ้ำจาก &quot;%1&quot; ถึง &quot;%2&quot; ในขณะที่พยายามสร้างไฟล์เก็บถาวร tar จากแหล่งที่มา: %3</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to extract tar archive to target: %3</source>
-        <translation>ไม่สามารถคัดลอกซ้ำจาก "%1" ถึง "%2" ในขณะที่พยายามแยกไฟล์ tar ไปยังเป้าหมาย: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
+        <translation>ไม่สามารถคัดลอกซ้ำจาก &quot;%1&quot; ถึง &quot;%2&quot; ในขณะที่พยายามแยกไฟล์ tar ไปยังเป้าหมาย: %3</translation>
     </message>
     <message>
         <location line="+51" />
-        <source>fileContents is not implemented for "%1".</source>
-        <translation>fileContents ไม่ได้ถูกนำมาใช้สำหรับ "%1"</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>fileContents ไม่ได้ถูกนำมาใช้สำหรับ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for "%1".</source>
-        <translation>writeFileContents ไม่ได้ถูกนำมาใช้กับ "%1"</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>writeFileContents ไม่ได้ถูกนำมาใช้กับ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+66" />
-        <source>createTempFile is not implemented for "%1".</source>
-        <translation>createTempFile ไม่ได้ถูกนำมาใช้กับ "%1"</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation>createTempFile ไม่ได้ถูกนำมาใช้กับ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7" />
@@ -22991,8 +23021,8 @@ Will not be applied to whitespace in comments and strings.</source>
     </message>
     <message>
         <location line="+180" />
-        <source>Refusing to remove the standard directory "%1".</source>
-        <translation>ปฏิเสธที่จะลบไดเรกทอรีมาตรฐาน "%1"</translation>
+        <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
+        <translation>ปฏิเสธที่จะลบไดเรกทอรีมาตรฐาน &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -23006,49 +23036,51 @@ Will not be applied to whitespace in comments and strings.</source>
     </message>
     <message>
         <location line="+37" />
-        <source>Failed to remove directory "%1".</source>
-        <translation>ไม่สามารถลบไดเรกทอรี "%1"</translation>
+        <source>Failed to remove directory &quot;%1&quot;.</source>
+        <translation>ไม่สามารถลบไดเรกทอรี &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Failed to remove file "%1".</source>
-        <translation>ไม่สามารถลบไฟล์ "%1"</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>ไม่สามารถลบไฟล์ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+15" />
         <location line="+406" />
-        <source>Failed to copy file "%1" to "%2": %3</source>
-        <translation>ไม่สามารถคัดลอกไฟล์ "%1" ไปยัง "%2": %3</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>ไม่สามารถคัดลอกไฟล์ &quot;%1&quot; ไปยัง &quot;%2&quot;: %3</translation>
     </message>
     <message>
         <location line="-333" />
-        <source>File "%1" does not exist.</source>
-        <translation>ไม่มีไฟล์ "%1"</translation>
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>ไม่มีไฟล์ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File "%1".</source>
-        <translation>ไม่สามารถเปิดไฟล์ "%1"</translation>
+        <source>Could not open File &quot;%1&quot;.</source>
+        <translation>ไม่สามารถเปิดไฟล์ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>Cannot read "%1": %2</source>
-        <translation>ไม่สามารถอ่าน "%1": %2</translation>
+        <source>Cannot read &quot;%1&quot;: %2</source>
+        <translation>ไม่สามารถอ่าน &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Could not open file "%1" for writing.</source>
-        <translation>ไม่สามารถเปิดไฟล์ "%1" เพื่อเขียนได้</translation>
+        <source>Could not open file &quot;%1&quot; for writing.</source>
+        <translation>ไม่สามารถเปิดไฟล์ &quot;%1&quot; เพื่อเขียนได้</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
-        <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
-        <translation><numerusform>ไม่สามารถเขียนไปยังไฟล์ "%1" (เขียนได้เพียง %2 จาก %n ไบต์)</numerusform></translation>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %n byte(s) written).</source>
+        <translation>
+            <numerusform>ไม่สามารถเขียนไปยังไฟล์ &quot;%1&quot; (เขียนได้เพียง %2 จาก %n ไบต์)</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Could not create temporary file in "%1" (%2).</source>
-        <translation>ไม่สามารถสร้างไฟล์ชั่วคราวใน "%1" (%2)</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2).</source>
+        <translation>ไม่สามารถสร้างไฟล์ชั่วคราวใน &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="+138" />
@@ -23057,23 +23089,23 @@ Will not be applied to whitespace in comments and strings.</source>
     </message>
     <message>
         <location line="+202" />
-        <source>Failed reading file "%1": %2</source>
-        <translation>การอ่านไฟล์ "%1" ล้มเหลว: %2</translation>
+        <source>Failed reading file &quot;%1&quot;: %2</source>
+        <translation>การอ่านไฟล์ &quot;%1&quot; ล้มเหลว: %2</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Failed writing file "%1": %2</source>
-        <translation>ไม่สามารถเขียนไฟล์ "%1": %2</translation>
+        <source>Failed writing file &quot;%1&quot;: %2</source>
+        <translation>ไม่สามารถเขียนไฟล์ &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Failed creating temporary file "%1": %2</source>
-        <translation>ไม่สามารถสร้างไฟล์ชั่วคราว "%1": %2</translation>
+        <source>Failed creating temporary file &quot;%1&quot;: %2</source>
+        <translation>ไม่สามารถสร้างไฟล์ชั่วคราว &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+30" />
-        <source>Failed creating temporary file "%1" (too many tries).</source>
-        <translation>ไม่สามารถสร้างไฟล์ชั่วคราว "%1" ได้ (พยายามมากเกินไป)</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
+        <translation>ไม่สามารถสร้างไฟล์ชั่วคราว &quot;%1&quot; ได้ (พยายามมากเกินไป)</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/deviceshell.cpp" line="+189" />
@@ -23094,8 +23126,8 @@ Will not be applied to whitespace in comments and strings.</source>
     </message>
     <message>
         <location line="+7" />
-        <source>Command "%1" was not found.</source>
-        <translation>ไม่พบคำสั่ง "%1"</translation>
+        <source>Command &quot;%1&quot; was not found.</source>
+        <translation>ไม่พบคำสั่ง &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -23129,18 +23161,18 @@ Will not be applied to whitespace in comments and strings.</source>
     </message>
     <message>
         <location filename="../../../src/libs/utils/elfreader.cpp" line="+130" />
-        <source>"%1" is an invalid ELF object (%2)</source>
-        <translation>"%1" เป็นวัตถุ ELF ที่ไม่ถูกต้อง (%2)</translation>
+        <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
+        <translation>&quot;%1&quot; เป็นวัตถุ ELF ที่ไม่ถูกต้อง (%2)</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>"%1" is not an ELF object (file too small)</source>
-        <translation>"%1" ไม่ใช่วัตถุ ELF (ไฟล์เล็กเกินไป)</translation>
+        <source>&quot;%1&quot; is not an ELF object (file too small)</source>
+        <translation>&quot;%1&quot; ไม่ใช่วัตถุ ELF (ไฟล์เล็กเกินไป)</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>"%1" is not an ELF object</source>
-        <translation>"%1" ไม่ใช่วัตถุ ELF</translation>
+        <source>&quot;%1&quot; is not an ELF object</source>
+        <translation>&quot;%1&quot; ไม่ใช่วัตถุ ELF</translation>
     </message>
     <message>
         <location line="+8" />
@@ -23165,7 +23197,9 @@ Will not be applied to whitespace in comments and strings.</source>
     <message numerus="yes">
         <location line="+9" />
         <source>announced %n sections, each %1 bytes, exceed file size</source>
-        <translation><numerusform>ประกาศ %n ส่วน แต่ละ %1 ไบต์ เกินขนาดไฟล์</numerusform></translation>
+        <translation>
+            <numerusform>ประกาศ %n ส่วน แต่ละ %1 ไบต์ เกินขนาดไฟล์</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+23" />
@@ -23185,7 +23219,7 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+35" />
         <source>&lt;UNSET&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;ยกเลิกการตั้งค่า&gt;</translation>
     </message>
     <message>
         <location line="+156" />
@@ -23205,8 +23239,8 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location line="+28" />
         <location line="+45" />
-        <source>Failed to start terminal process: "%1".</source>
-        <translation>ไม่สามารถเริ่มกระบวนการเทอร์มินัล: "%1"</translation>
+        <source>Failed to start terminal process: &quot;%1&quot;.</source>
+        <translation>ไม่สามารถเริ่มกระบวนการเทอร์มินัล: &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
@@ -23242,13 +23276,13 @@ Will not be applied to whitespace in comments and strings.</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Invalid character "%1".</source>
-        <translation>อักขระไม่ถูกต้อง "%1"</translation>
+        <source>Invalid character &quot;%1&quot;.</source>
+        <translation>อักขระไม่ถูกต้อง &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid characters "%1".</source>
-        <translation>อักขระไม่ถูกต้อง "%1"</translation>
+        <source>Invalid characters &quot;%1&quot;.</source>
+        <translation>อักขระไม่ถูกต้อง &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -23289,23 +23323,27 @@ Will not be applied to whitespace in comments and strings.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Could not set permissions on "%1"</source>
-        <translation>ไม่สามารถตั้งค่าการอนุญาตบน "%1"</translation>
+        <source>Could not set permissions on &quot;%1&quot;</source>
+        <translation>ไม่สามารถตั้งค่าการอนุญาตบน &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+250" />
-        <source>No "localSource" device hook set.</source>
-        <translation>ไม่มีการตั้งค่าการเชื่อมต่ออุปกรณ์ "localSource"</translation>
+        <source>No &quot;localSource&quot; device hook set.</source>
+        <translation>ไม่มีการตั้งค่าการเชื่อมต่ออุปกรณ์ &quot;localSource&quot;</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
-        <translation><numerusform>%1: ยกเลิกแล้ว พบ %n รายการใน %2 ไฟล์</numerusform></translation>
+        <translation>
+            <numerusform>%1: ยกเลิกแล้ว พบ %n รายการใน %2 ไฟล์</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <location line="+6" />
         <source>%1: %n occurrences found in %2 files.</source>
-        <translation><numerusform>%1: พบ %n รายการใน %2 ไฟล์</numerusform></translation>
+        <translation>
+            <numerusform>%1: พบ %n รายการใน %2 ไฟล์</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+280" />
@@ -23434,13 +23472,13 @@ Will not be applied to whitespace in comments and strings.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Overwrite existing file "%1"?</source>
-        <translation>เขียนทับไฟล์ที่มีอยู่ "%1" หรือไม่</translation>
+        <source>Overwrite existing file &quot;%1&quot;?</source>
+        <translation>เขียนทับไฟล์ที่มีอยู่ &quot;%1&quot; หรือไม่</translation>
     </message>
     <message>
         <location line="+21" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>ไม่สามารถคัดลอกไฟล์ "%1" ไปยัง "%2"</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>ไม่สามารถคัดลอกไฟล์ &quot;%1&quot; ไปยัง &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filewizardpage.cpp" line="+48" />
@@ -23466,8 +23504,8 @@ Will not be applied to whitespace in comments and strings.</source>
     </message>
     <message>
         <location line="+69" />
-        <source>The default suffix if you do not explicitly specify a file extension is ".%1".</source>
-        <translation>ส่วนต่อท้ายเริ่มต้นหากคุณไม่ได้ระบุนามสกุลไฟล์อย่างชัดเจนคือ ".%1"</translation>
+        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
+        <translation>ส่วนต่อท้ายเริ่มต้นหากคุณไม่ได้ระบุนามสกุลไฟล์อย่างชัดเจนคือ &quot;.%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
@@ -23528,12 +23566,14 @@ Will not be applied to whitespace in comments and strings.</source>
         <location line="+14" />
         <location line="+2" />
         <source>%n Items</source>
-        <translation><numerusform>%n รายการ</numerusform></translation>
+        <translation>
+            <numerusform>%n รายการ</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
-        <source>Failed to start process launcher at "%1": %2</source>
-        <translation>ไม่สามารถเริ่มตัวเรียกใช้กระบวนการที่ "%1": %2</translation>
+        <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
+        <translation>ไม่สามารถเริ่มตัวเรียกใช้กระบวนการที่ &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+7" />
@@ -23629,20 +23669,20 @@ Will not be applied to whitespace in comments and strings.</source>
         <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
-To disable a variable, prefix this line with "#".
+To disable a variable, prefix this line with &quot;#&quot;.
 To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-Lines starting with "##" will be treated as comments.</source>
+Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>ป้อนตัวแปรสภาพแวดล้อมหนึ่งรายการต่อบรรทัด 
 หากต้องการตั้งค่าหรือเปลี่ยนแปลงตัวแปร ให้ใช้ VARIABLE=VALUE 
-หากต้องการปิดใช้งานตัวแปร ให้นำหน้าบรรทัดนี้ด้วย "#" 
+หากต้องการปิดใช้งานตัวแปร ให้นำหน้าบรรทัดนี้ด้วย &quot;#&quot; 
 หากต้องการต่อท้ายตัวแปร ให้ใช้ VARIABLE+=VALUE 
 หากต้องการเพิ่มตัวแปร ให้ใช้ VARIABLE=+VALUE 
 ตัวแปรที่มีอยู่สามารถอ้างอิงได้ใน VALUE ด้วย ${OTHER} 
 หากต้องการล้างตัวแปร ให้ใส่ชื่อลงในบรรทัดโดยไม่มีสิ่งอื่นใดอยู่ 
-บรรทัดที่ขึ้นต้นด้วย "##" จะถือเป็นความคิดเห็น</translation>
+บรรทัดที่ขึ้นต้นด้วย &quot;##&quot; จะถือเป็นความคิดเห็น</translation>
     </message>
     <message>
         <location line="+112" />
@@ -23716,45 +23756,45 @@ Lines starting with "##" will be treated as comments.</source>
         <location line="-65" />
         <location line="+10" />
         <location line="+20" />
-        <source>The path "%1" does not exist.</source>
-        <translation>ไม่มีเส้นทาง "%1"</translation>
+        <source>The path &quot;%1&quot; does not exist.</source>
+        <translation>ไม่มีเส้นทาง &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+36" />
-        <source>The path "%1" is not a directory.</source>
-        <translation>เส้นทาง "%1" ไม่ใช่ไดเรกทอรี</translation>
+        <source>The path &quot;%1&quot; is not a directory.</source>
+        <translation>เส้นทาง &quot;%1&quot; ไม่ใช่ไดเรกทอรี</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+10" />
-        <source>The path "%1" is not a file.</source>
-        <translation>เส้นทาง "%1" ไม่ใช่ไฟล์</translation>
+        <source>The path &quot;%1&quot; is not a file.</source>
+        <translation>เส้นทาง &quot;%1&quot; ไม่ใช่ไฟล์</translation>
     </message>
     <message>
         <location line="-4" />
-        <source>The directory "%1" does not exist.</source>
-        <translation>ไม่มีไดเรกทอรี "%1"</translation>
+        <source>The directory &quot;%1&quot; does not exist.</source>
+        <translation>ไม่มีไดเรกทอรี &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>The path "%1" is not an executable file.</source>
-        <translation>เส้นทาง "%1" ไม่ใช่ไฟล์ปฏิบัติการ</translation>
+        <source>The path &quot;%1&quot; is not an executable file.</source>
+        <translation>เส้นทาง &quot;%1&quot; ไม่ใช่ไฟล์ปฏิบัติการ</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid path "%1".</source>
-        <translation>เส้นทางไม่ถูกต้อง "%1"</translation>
+        <source>Invalid path &quot;%1&quot;.</source>
+        <translation>เส้นทางไม่ถูกต้อง &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1".</source>
-        <translation>ไม่สามารถดำเนินการ "%1" ได้</translation>
+        <source>Cannot execute &quot;%1&quot;.</source>
+        <translation>ไม่สามารถดำเนินการ &quot;%1&quot; ได้</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>The path "%1" expanded to an empty string.</source>
-        <translation>เส้นทาง "%1" ขยายเป็นสตริงว่าง</translation>
+        <source>The path &quot;%1&quot; expanded to an empty string.</source>
+        <translation>เส้นทาง &quot;%1&quot; ขยายเป็นสตริงว่าง</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+101" />
@@ -23798,8 +23838,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+104" />
-        <source>Directory "%1" will be created.</source>
-        <translation>ไดเรกทอรี "%1" จะถูกสร้างขึ้น</translation>
+        <source>Directory &quot;%1&quot; will be created.</source>
+        <translation>ไดเรกทอรี &quot;%1&quot; จะถูกสร้างขึ้น</translation>
     </message>
     <message>
         <location line="+9" />
@@ -23818,13 +23858,13 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+12" />
-        <source>Invalid character ".".</source>
-        <translation>อักขระไม่ถูกต้อง "."</translation>
+        <source>Invalid character &quot;.&quot;.</source>
+        <translation>อักขระไม่ถูกต้อง &quot;.&quot;</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Invalid character "%1" found.</source>
-        <translation>พบอักขระที่ไม่ถูกต้อง "%1"</translation>
+        <source>Invalid character &quot;%1&quot; found.</source>
+        <translation>พบอักขระที่ไม่ถูกต้อง &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+267" />
@@ -23833,18 +23873,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+29" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>ไม่มีโปรแกรม "%1" หรือไม่สามารถเรียกใช้งานได้</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>ไม่มีโปรแกรม &quot;%1&quot; หรือไม่สามารถเรียกใช้งานได้</translation>
     </message>
     <message>
         <location line="+79" />
-        <source>The program "%1" could not be found.</source>
-        <translation>ไม่พบโปรแกรม "%1"</translation>
+        <source>The program &quot;%1&quot; could not be found.</source>
+        <translation>ไม่พบโปรแกรม &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+908" />
-        <source>Failed to create process interface for "%1".</source>
-        <translation>ไม่สามารถสร้างส่วนต่อประสานกระบวนการสำหรับ "%1"</translation>
+        <source>Failed to create process interface for &quot;%1&quot;.</source>
+        <translation>ไม่สามารถสร้างส่วนต่อประสานกระบวนการสำหรับ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+163" />
@@ -23858,8 +23898,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The process "%1" is not responding.</source>
-        <translation>กระบวนการ "%1" ไม่ตอบสนอง</translation>
+        <source>The process &quot;%1&quot; is not responding.</source>
+        <translation>กระบวนการ &quot;%1&quot; ไม่ตอบสนอง</translation>
     </message>
     <message>
         <location line="+3" />
@@ -23868,28 +23908,28 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+233" />
-        <source>The command "%1" finished successfully.</source>
-        <translation>คำสั่ง "%1" เสร็จสิ้นเรียบร้อยแล้ว</translation>
+        <source>The command &quot;%1&quot; finished successfully.</source>
+        <translation>คำสั่ง &quot;%1&quot; เสร็จสิ้นเรียบร้อยแล้ว</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated with exit code %2.</source>
-        <translation>คำสั่ง "%1" สิ้นสุดลงด้วยรหัสออก %2</translation>
+        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
+        <translation>คำสั่ง &quot;%1&quot; สิ้นสุดลงด้วยรหัสออก %2</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated abnormally.</source>
-        <translation>คำสั่ง "%1" สิ้นสุดอย่างผิดปกติ</translation>
+        <source>The command &quot;%1&quot; terminated abnormally.</source>
+        <translation>คำสั่ง &quot;%1&quot; สิ้นสุดอย่างผิดปกติ</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" could not be started.</source>
-        <translation>ไม่สามารถเริ่มคำสั่ง "%1" ได้</translation>
+        <source>The command &quot;%1&quot; could not be started.</source>
+        <translation>ไม่สามารถเริ่มคำสั่ง &quot;%1&quot; ได้</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>The command "%1" was canceled after %2 ms.</source>
-        <translation>คำสั่ง "%1" ถูกยกเลิกหลังจาก %2 ms</translation>
+        <source>The command &quot;%1&quot; was canceled after %2 ms.</source>
+        <translation>คำสั่ง &quot;%1&quot; ถูกยกเลิกหลังจาก %2 ms</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+23" />
@@ -23990,8 +24030,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open "%1".</source>
-        <translation>ไม่สามารถเปิด "%1"</translation>
+        <source>Could not open &quot;%1&quot;.</source>
+        <translation>ไม่สามารถเปิด &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+23" />
@@ -24012,13 +24052,13 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="-264" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;ไม่พบไฟล์การตั้งค่าที่ถูกต้อง&lt;/p&gt;&lt;p&gt;ไฟล์การตั้งค่าทั้งหมดที่พบในไดเร็กทอรี "%1" ไม่เหมาะสมกับเวอร์ชันปัจจุบันของ %2 เช่น เนื่องจากไฟล์เหล่านี้เขียนโดย %2 เวอร์ชันที่เข้ากันไม่ได้ หรือเนื่องจากมีการใช้พาธการตั้งค่าอื่น&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;ไม่พบไฟล์การตั้งค่าที่ถูกต้อง&lt;/p&gt;&lt;p&gt;ไฟล์การตั้งค่าทั้งหมดที่พบในไดเร็กทอรี &quot;%1&quot; ไม่เหมาะสมกับเวอร์ชันปัจจุบันของ %2 เช่น เนื่องจากไฟล์เหล่านี้เขียนโดย %2 เวอร์ชันที่เข้ากันไม่ได้ หรือเนื่องจากมีการใช้พาธการตั้งค่าอื่น&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+265" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were either too new or too old to be read.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;ไม่พบไฟล์การตั้งค่าที่ถูกต้อง&lt;/p&gt;&lt;p&gt;ไฟล์การตั้งค่าทั้งหมดที่พบในไดเรกทอรี "%1" เป็นไฟล์ใหม่หรือเก่าเกินกว่าจะอ่านได้&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;ไม่พบไฟล์การตั้งค่าที่ถูกต้อง&lt;/p&gt;&lt;p&gt;ไฟล์การตั้งค่าทั้งหมดที่พบในไดเรกทอรี &quot;%1&quot; เป็นไฟล์ใหม่หรือเก่าเกินกว่าจะอ่านได้&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+11" />
@@ -24027,18 +24067,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>&lt;p&gt;The versioned backup "%1" of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;มีการใช้การสำรองข้อมูลเวอร์ชัน "%1" ของไฟล์การตั้งค่า เนื่องจากไฟล์ที่ไม่ใช่เวอร์ชันถูกสร้างขึ้นโดยเวอร์ชันที่เข้ากันไม่ได้ของ %2&lt;/p&gt;&lt;p&gt;การเปลี่ยนแปลงการตั้งค่าที่เกิดขึ้นตั้งแต่ครั้งล่าสุดที่ใช้ %2 เวอร์ชันนี้จะถูกละเว้น และการเปลี่ยนแปลงที่ทำในขณะนี้จะ&lt;b&gt;ไม่&lt;/b&gt;ถูกเผยแพร่ไปยังเวอร์ชันที่ใหม่กว่า&lt;/p&gt;</translation>
+        <source>&lt;p&gt;The versioned backup &quot;%1&quot; of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;มีการใช้การสำรองข้อมูลเวอร์ชัน &quot;%1&quot; ของไฟล์การตั้งค่า เนื่องจากไฟล์ที่ไม่ใช่เวอร์ชันถูกสร้างขึ้นโดยเวอร์ชันที่เข้ากันไม่ได้ของ %2&lt;/p&gt;&lt;p&gt;การเปลี่ยนแปลงการตั้งค่าที่เกิดขึ้นตั้งแต่ครั้งล่าสุดที่ใช้ %2 เวอร์ชันนี้จะถูกละเว้น และการเปลี่ยนแปลงที่ทำในขณะนี้จะ&lt;b&gt;ไม่&lt;/b&gt;ถูกเผยแพร่ไปยังเวอร์ชันที่ใหม่กว่า&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Settings File for "%1" from a Different Environment?</source>
-        <translation>ไฟล์การตั้งค่าสำหรับ "%1" จากสภาพแวดล้อมอื่นหรือไม่</translation>
+        <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
+        <translation>ไฟล์การตั้งค่าสำหรับ &quot;%1&quot; จากสภาพแวดล้อมอื่นหรือไม่</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file "%2"?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;ไม่พบไฟล์การตั้งค่าที่สร้างโดยอินสแตนซ์ %1 นี้&lt;/p&gt;&lt;p&gt;คุณเคยทำงานกับโปรเจ็กต์นี้บนเครื่องอื่นหรือใช้เส้นทางการตั้งค่าอื่นมาก่อนหรือไม่&lt;/p&gt;&lt;p&gt;คุณยังต้องการโหลดไฟล์การตั้งค่า "%2" หรือไม่&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file &quot;%2&quot;?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;ไม่พบไฟล์การตั้งค่าที่สร้างโดยอินสแตนซ์ %1 นี้&lt;/p&gt;&lt;p&gt;คุณเคยทำงานกับโปรเจ็กต์นี้บนเครื่องอื่นหรือใช้เส้นทางการตั้งค่าอื่นมาก่อนหรือไม่&lt;/p&gt;&lt;p&gt;คุณยังต้องการโหลดไฟล์การตั้งค่า &quot;%2&quot; หรือไม่&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+55" />
@@ -24047,8 +24087,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" is not supported by %2. Do you want to try loading it anyway?</source>
-        <translation>"%1" ไม่ได้รับการสนับสนุนโดย %2 คุณต้องการลองโหลดมันต่อไปหรือไม่?</translation>
+        <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
+        <translation>&quot;%1&quot; ไม่ได้รับการสนับสนุนโดย %2 คุณต้องการลองโหลดมันต่อไปหรือไม่?</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/settingsselector.cpp" line="-82" />
@@ -24097,8 +24137,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot create temporary directory "%1": %2</source>
-        <translation>ไม่สามารถสร้างไดเรกทอรีชั่วคราว "%1": %2</translation>
+        <source>Cannot create temporary directory &quot;%1&quot;: %2</source>
+        <translation>ไม่สามารถสร้างไดเรกทอรีชั่วคราว &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5" />
@@ -24107,13 +24147,13 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot change to working directory "%1": %2</source>
-        <translation>ไม่สามารถเปลี่ยนเป็นไดเร็กทอรีการทำงาน "%1": %2</translation>
+        <source>Cannot change to working directory &quot;%1&quot;: %2</source>
+        <translation>ไม่สามารถเปลี่ยนเป็นไดเร็กทอรีการทำงาน &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1": %2</source>
-        <translation>ไม่สามารถดำเนินการ "%1": %2</translation>
+        <source>Cannot execute &quot;%1&quot;: %2</source>
+        <translation>ไม่สามารถดำเนินการ &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+6" />
@@ -24127,13 +24167,13 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+60" />
-        <source>Cannot set permissions on temporary directory "%1": %2</source>
-        <translation>ไม่สามารถตั้งค่าสิทธิ์ในไดเรกทอรีชั่วคราว "%1": %2</translation>
+        <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
+        <translation>ไม่สามารถตั้งค่าสิทธิ์ในไดเรกทอรีชั่วคราว &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Cannot create socket "%1": %2</source>
-        <translation>ไม่สามารถสร้างซ็อกเก็ต "%1": %2</translation>
+        <source>Cannot create socket &quot;%1&quot;: %2</source>
+        <translation>ไม่สามารถสร้างซ็อกเก็ต &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/textfileformat.cpp" line="+196" />
@@ -24186,12 +24226,12 @@ Lines starting with "##" will be treated as comments.</source>
         <location line="-16" />
         <location line="+20" />
         <source>Running %1
-in "%2".
+in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
         <translation>กำลังดำเนินการ %1 
-ใน "%2"</translation>
+ใน &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
@@ -24216,8 +24256,8 @@ in "%2".
     <message>
         <location line="+3" />
         <location line="+7" />
-        <source>Insert "%1"</source>
-        <translation>แทรก "%1"</translation>
+        <source>Insert &quot;%1&quot;</source>
+        <translation>แทรก &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-3" />
@@ -24242,7 +24282,7 @@ in "%2".
     <message>
         <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-35" />
         <source>&lt;VARIABLE&gt;</source>
-        <translation type="unfinished" />
+        <translation>&lt;ตัวแปร&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+160" />
@@ -24254,9 +24294,9 @@ in "%2".
     <name>TextEditor::Internal::Snippets</name>
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippetscollection.cpp" line="-255" />
-        <source />
+        <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
-        <translation />
+        <translation></translation>
     </message>
 </context>
 </TS>

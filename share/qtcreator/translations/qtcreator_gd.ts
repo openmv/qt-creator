@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+838" />
         <source>Copy</source>
         <translation>Dèan lethbhreac</translation>
     </message>
@@ -30,82 +30,82 @@
         <translation>Roghainnean OpenMV Cam</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Turn on WiFi Shield on startup</source>
         <translation>Tionndaidh air WiFi Shield nuair a thòisicheas tu</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Client Mode (Normal)</source>
         <translation>Modh teachdaiche (àbhaisteach)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Password</source>
         <translation>Facal-faire</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter your WiFi network password here</source>
         <translation>Feuch an cuir thu a-steach am facal-faire lìonra WiFi agad an seo</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Type</source>
         <translation>Seòrsa</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Open (No password)</source>
         <translation>Fosgail (Gun fhacal-faire)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WPA (Modern WiFi Security)</source>
         <translation>WPA (Tèarainteachd WiFi an latha an-diugh)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WEP (Hexadecimal password)</source>
         <translation>WEP (facal-faire hexadecimal)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>SSID</source>
         <translation>SSID</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter or select your WiFi network here</source>
         <translation>Feuch an cuir thu a-steach no tagh an lìonra WiFi agad an seo</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Acess Point Mode</source>
         <translation>Modh puing inntrigidh</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
         <translation>Feuch an cuir thu a-steach ainm an lìonra WiFi gus facal-faire a chruthachadh an seo</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
         <translation>Feuch an cuir thu a-steach ainm an lìonra WiFI a chruthaicheas tu an seo</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Board Name</source>
-        <translation>Ainm a' Bhùird</translation>
+        <translation>Ainm a&apos; Bhùird</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
         <translation>Feuch an cuir thu a-steach ainm airson do OpenMV Cam an seo</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Duplicate REPL on the UART on startup</source>
         <translation>Dèan dùblachadh REPL air an UART nuair a thòisicheas tu</translation>
     </message>
@@ -118,42 +118,42 @@
         <translation>000</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Max</source>
         <translation>Max</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Median</source>
         <translation>Meadhanach</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mode</source>
         <translation>Modh</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Min</source>
         <translation>Min</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mean</source>
         <translation>Ciall</translation>
     </message>
@@ -205,41 +205,41 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for '%1'...</source>
-        <translation>A' luchdachadh a-nuas mìneachadh syntax ùr airson '%1'...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation>A&apos; luchdachadh a-nuas mìneachadh syntax ùr airson &apos;%1&apos;...</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for '%1' to version %2...</source>
-        <translation>Ag ùrachadh mìneachadh co-chàradh airson '%1' gu tionndadh %2...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation>Ag ùrachadh mìneachadh co-chàradh airson &apos;%1&apos; gu tionndadh %2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
         <source>Copy/Convert Python File</source>
         <translation>Dèan lethbhreac / tionndaidh faidhle python</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+21" />
         <location line="+7" />
-        <location line="+94" />
+        <location line="+91" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+76" />
         <location line="+7" />
         <source>Unable to overwrite output file!</source>
         <translation>Cha ghabh am faidhle toraidh a thilgeil thairis!</translation>
     </message>
     <message>
-        <location line="-125" />
+        <location line="-124" />
         <source>Model Zoo</source>
         <translation>Modail Zoo</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+77" />
         <source>Model conversion is unnecessary for this board, as it lacks an NPU accelerator.</source>
-        <translation>Chan eil e neo-riatanach airson a 'Bhùird seo a dhèanamh airson a' Bhùird sa Bhòrd seo, oir chan eil stànnsaiche NPU ann.</translation>
+        <translation>Chan eil e neo-riatanach airson a &apos;Bhùird seo a dhèanamh airson a&apos; Bhùird sa Bhòrd seo, oir chan eil stànnsaiche NPU ann.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <source>Convert Model</source>
         <translation>Modail tionndaidh</translation>
     </message>
@@ -335,8 +335,8 @@
         <translation type="vanished">Manaidsear àite-obrach</translation>
     </message>
     <message>
-        <source>&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;What is a Workspace?&lt;/a&gt;</source>
-        <translation type="vanished">&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;Dè a th’ ann an Àite-obrach?&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;Dè a th’ ann an Àite-obrach?&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Workspace</source>
@@ -511,7 +511,7 @@
     <message>
         <location line="+23" />
         <source>Copying Failed</source>
-        <translation>Dh'fhàillig lethbhreacadh</translation>
+        <translation>Dh&apos;fhàillig lethbhreacadh</translation>
     </message>
     <message>
         <location line="+1" />
@@ -579,17 +579,17 @@
         <source>A browser window will open. Enter the code %1 when asked.
 The code has been copied to your clipboard.</source>
         <translation>Fosglaidh uinneag brobhsair. Cuir a-steach an còd%1 nuair a thèid faighneachd dhut.
- Chaidh an còd a chopaigeadh chun a 'bhòrd bhidio agad.</translation>
+ Chaidh an còd a chopaigeadh chun a &apos;bhòrd bhidio agad.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Login Failed</source>
-        <translation>Dh'fhàillig logadh a-steach</translation>
+        <translation>Dh&apos;fhàillig logadh a-steach</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The login request failed: %1</source>
-        <translation>Dh'fhàillig an t-iarrtas logadh a-steach:%1</translation>
+        <translation>Dh&apos;fhàillig an t-iarrtas logadh a-steach:%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/copilot/copilotclient.cpp" line="+336" />
@@ -639,7 +639,7 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Request Copilot suggestion at the current editor's cursor position.</source>
+        <source>Request Copilot suggestion at the current editor&apos;s cursor position.</source>
         <translation>Iarr moladh copilat aig suidheachadh cursair gnàthach an neach-deasachaidh gnàthach.</translation>
     </message>
     <message>
@@ -650,7 +650,7 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+1" />
         <source>Cycles through the received Copilot Suggestions showing the next available Suggestion.</source>
-        <translation>Cycles tro na molaidhean coput a fhuaireadh a 'sealltainn an ath mholadh a tha ri fhaighinn.</translation>
+        <translation>Cycles tro na molaidhean coput a fhuaireadh a &apos;sealltainn an ath mholadh a tha ri fhaighinn.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -660,7 +660,7 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+1" />
         <source>Cycles through the received Copilot Suggestions showing the previous available Suggestion.</source>
-        <translation>Cuairtean tro na molaidhean coput a fhuaireadh a 'sealltainn an moladh a bh' ann roimhe.</translation>
+        <translation>Cuairtean tro na molaidhean coput a fhuaireadh a &apos;sealltainn an moladh a bh&apos; ann roimhe.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -694,7 +694,7 @@ The code has been copied to your clipboard.</source>
     <message>
         <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+1" />
         <source>Enables the Copilot integration.</source>
-        <translation>A 'comasachadh amalachadh copty.</translation>
+        <translation>A &apos;comasachadh amalachadh copty.</translation>
     </message>
     <message>
         <location line="+84" />
@@ -848,12 +848,12 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+2" />
         <source>Reject unauthorized certificates from the proxy server. Turning this off is a security risk.</source>
-        <translation>Diùltadh teisteanasan gun chead bhon t-seirbheisiche proxy. Tha a bhith a 'tionndadh seo dheth tha cunnart tèarainteachd.</translation>
+        <translation>Diùltadh teisteanasan gun chead bhon t-seirbheisiche proxy. Tha a bhith a &apos;tionndadh seo dheth tha cunnart tèarainteachd.</translation>
     </message>
     <message>
         <location line="+31" />
         <source>Enabling %1 is subject to your agreement and abidance with your applicable %1 terms. It is your responsibility to know and accept the requirements and parameters of using tools like %1. This may include, but is not limited to, ensuring you have the rights to allow %1 access to your code, as well as understanding any implications of your use of %1 and suggestions produced (like copyright, accuracy, etc.).</source>
-        <translation>Tha comas%1 an urra ri aonta agus do phàigheadh ​​a-steach do na teirmean iomchaidh 1 1 agad. Tha e an urra riut fios a bhith agad agus gabhail ris na riatanasan agus paramadairean a bhith a 'cleachdadh innealan mar%1. Faodaidh seo gabhail a-steach, ach chan eil e cuingealaichte ri, a 'dèanamh cinnteach gu bheil na còraichean agad leigeil le%1 fhaighinn air a' chòd agad, a bharrachd air a bhith a 'tuigsinn buaidh sam bith de%1 agus mholaidhean air an dèanamh (mar dhleastanas, cruinneas, msaa).</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16" />
@@ -889,12 +889,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+142" />
         <source>Unable to create the directory %1.</source>
-        <translation>Cha b' urrainn dhuinn am pasgan %1 a chruthachadh.</translation>
+        <translation>Cha b&apos; urrainn dhuinn am pasgan %1 a chruthachadh.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>Dh'fhàillig fosgladh deasaiche airson "%1".</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>Dh&apos;fhàillig fosgladh deasaiche airson &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+28" />
@@ -915,7 +915,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <location line="+40" />
         <source>The project directory %1 contains files which cannot be overwritten:
 %2.</source>
-        <translation>Tha faidhlichean ann an eòlaire a' phròiseict %1 nach gabh sgrìobhadh thairis orra:
+        <translation>Tha faidhlichean ann an eòlaire a&apos; phròiseict %1 nach gabh sgrìobhadh thairis orra:
 %2.</translation>
     </message>
     <message>
@@ -929,7 +929,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-2268" />
         <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+445" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
@@ -989,13 +989,13 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="+2669" />
         <source>Opening File</source>
-        <translation>A' fosgladh Faidhle</translation>
+        <translation>A&apos; fosgladh Faidhle</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+696" />
         <source>Could not save the files.</source>
         <comment>error message</comment>
-        <translation>Cha b' urrainn dhuinn na faidhlichean a shàbhaladh.</translation>
+        <translation>Cha b&apos; urrainn dhuinn na faidhlichean a shàbhaladh.</translation>
     </message>
     <message>
         <location line="+47" />
@@ -1011,7 +1011,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-600" />
         <source>Error while saving file: %1</source>
-        <translation>Mearachd fhad 's a bha sinn a' sàbhaladh an fhaidhle: %1</translation>
+        <translation>Mearachd fhad &apos;s a bha sinn a&apos; sàbhaladh an fhaidhle: %1</translation>
     </message>
     <message>
         <location line="+22" />
@@ -1027,8 +1027,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+74" />
-        <source>An item named "%1" already exists at this location. Do you want to overwrite it?</source>
-        <translation>Tha nì leis an ainm "%1" san ionad seo mu thràth. A bheil thu airson sgrìobhadh thairis air?</translation>
+        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
+        <translation>Tha nì leis an ainm &quot;%1&quot; san ionad seo mu thràth. A bheil thu airson sgrìobhadh thairis air?</translation>
     </message>
     <message>
         <location line="+230" />
@@ -1146,7 +1146,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="+12" />
         <source>Ad&amp;vanced</source>
-        <translation>Adhartach</translation>
+        <translation>&amp;Adhartach</translation>
     </message>
     <message>
         <location line="+38" />
@@ -1155,12 +1155,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+7" />
-        <source>X-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>X-co-chomharran oisean gu h-àrd air an taobh chlì den deasaiche làithreach, an coimeas ris an sgrion.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Y-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>Y-co-chomharran aig oisean gu h-àrd air an taobh chlì den deasaiche làithreach, an coimeas ris an sgrion.</translation>
     </message>
     <message>
@@ -1170,27 +1170,27 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <source>The text file "%1" has the size %2MB and might take more memory to open and process than available.
+        <source>The text file &quot;%1&quot; has the size %2MB and might take more memory to open and process than available.
 
 Continue?</source>
-        <translation>Tha meud %2MB san fhaidhle teacsa "%1" agus 's dòcha gun toir e barrachd cuimhne a dh'fhosgladh 's a phròiseasadh na tha ri làimh.
+        <translation>Tha meud %2MB san fhaidhle teacsa &quot;%1&quot; agus &apos;s dòcha gun toir e barrachd cuimhne a dh&apos;fhosgladh &apos;s a phròiseasadh na tha ri làimh.
 
 Lean air adhart?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>Could not open "%1": Cannot open files of type "%2".</source>
-        <translation>Cha b' urrainn dhuinn "%1" fhosgladh: Chan urrainn dhuinn faidhlichean dhen t-seòrsa "%2" fhosgladh.</translation>
+        <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
+        <translation>Cha b&apos; urrainn dhuinn &quot;%1&quot; fhosgladh: Chan urrainn dhuinn faidhlichean dhen t-seòrsa &quot;%2&quot; fhosgladh.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not open "%1" for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>Cha b' urrainn dhuinn "%1" fhosgladh airson a leughadh. An dàrna cuid chan eil am faidhle ann no chan eil na ceadan agad airson fhosgladh.</translation>
+        <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
+        <translation>Cha b&apos; urrainn dhuinn &quot;%1&quot; fhosgladh airson a leughadh. An dàrna cuid chan eil am faidhle ann no chan eil na ceadan agad airson fhosgladh.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Could not open "%1": Unknown error.</source>
-        <translation>Cha b' urrainn dhuinn "%1" fhosgladh: Mearachd neo-aithnichte.</translation>
+        <source>Could not open &quot;%1&quot;: Unknown error.</source>
+        <translation>Cha b&apos; urrainn dhuinn &quot;%1&quot; fhosgladh: Mearachd neo-aithnichte.</translation>
     </message>
     <message>
         <location line="+1130" />
@@ -1245,7 +1245,7 @@ Lean air adhart?</translation>
     <message>
         <location line="+301" />
         <source>You will lose your current changes if you proceed reverting %1.</source>
-        <translation>Caillidh tu na h-atharraichean làithreach agad ma chumas tu air adhart a' tilleadh %1.</translation>
+        <translation>Caillidh tu na h-atharraichean làithreach agad ma chumas tu air adhart a&apos; tilleadh %1.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -1263,22 +1263,22 @@ Lean air adhart?</translation>
     <message>
         <location line="+5" />
         <source>Cancel &amp;&amp; &amp;Diff</source>
-        <translation>Sguir &amp;&amp;Diff</translation>
+        <translation>Sguir &amp;&amp;&amp;Diff</translation>
     </message>
     <message>
         <location line="+308" />
-        <source>Close "%1"</source>
-        <translation>Dùin "%1"</translation>
+        <source>Close &quot;%1&quot;</source>
+        <translation>Dùin &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+27" />
-        <source>Unpin "%1"</source>
-        <translation>Unpin "%1"</translation>
+        <source>Unpin &quot;%1&quot;</source>
+        <translation>Unpin &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Pin "%1"</source>
-        <translation>Pin "%1"</translation>
+        <source>Pin &quot;%1&quot;</source>
+        <translation>Pin &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1372,7 +1372,7 @@ Lean air adhart?</translation>
     <message>
         <location line="+4" />
         <source>Override cursors for views</source>
-        <translation>A 'toirt a-null gu beachdan airson beachdan</translation>
+        <translation>A &apos;toirt a-null gu beachdan airson beachdan</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1394,7 +1394,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+1" />
         <source>Always Round Down</source>
-        <translation>An-còmhnaidh a 'dol sìos</translation>
+        <translation>An-còmhnaidh a &apos;dol sìos</translation>
     </message>
     <message>
         <location line="+1" />
@@ -1403,7 +1403,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+2" />
-        <source>Don't Round</source>
+        <source>Don&apos;t Round</source>
         <translation>Na bi timcheall</translation>
     </message>
     <message>
@@ -1444,7 +1444,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+14" />
         <source>The DPI rounding policy change will take effect after restart.</source>
-        <translation>Bidh an atharrachadh poileasaidh cruinneachaidh DPI a 'tighinn gu buil às deidh ath-thòiseachadh.</translation>
+        <translation>Bidh an atharrachadh poileasaidh cruinneachaidh DPI a &apos;tighinn gu buil às deidh ath-thòiseachadh.</translation>
     </message>
     <message>
         <location line="+19" />
@@ -1555,8 +1555,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+35" />
-        <source>Command line arguments used for "Run in terminal".</source>
-        <translation>Argumaidean loidhne-àithne air an cleachdadh airson "Run in terminal".</translation>
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>Argumaidean loidhne-àithne air an cleachdadh airson &quot;Run in terminal&quot;.</translation>
     </message>
     <message>
         <location line="-50" />
@@ -1580,8 +1580,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+105" />
-        <source>Command line arguments used for "%1".</source>
-        <translation>Argumaidean loidhne-àithne a chleachdar airson "%1".</translation>
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>Argumaidean loidhne-àithne a chleachdar airson &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+34" />
@@ -1637,7 +1637,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+147" />
-        <source>Maximum number of entries in "Recent Files":</source>
+        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
         <translation>An àireamh as motha de chlàran ann an “Faidhlichean o chionn ghoirid”:</translation>
     </message>
     <message>
@@ -1654,14 +1654,14 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+7" />
         <source>Automatically creates temporary copies of modified files. If %1 is restarted after a crash or power failure, it asks whether to recover the auto-saved content.</source>
-        <translation>Cruthaichidh gu fèin-ghluasadach lethbhric sealach de fhaidhlichean atharraichte. Ma thèid %1 ath-thòiseachadh às dèidh tubaist neo cumhachd, bidh e a' faighneachd am bu chòir dhut an t-susbaint a shàbhalas gu fèin-obrachail fhaighinn air ais.</translation>
+        <translation>Cruthaichidh gu fèin-ghluasadach lethbhric sealach de fhaidhlichean atharraichte. Ma thèid %1 ath-thòiseachadh às dèidh tubaist neo cumhachd, bidh e a&apos; faighneachd am bu chòir dhut an t-susbaint a shàbhalas gu fèin-obrachail fhaighinn air ais.</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Automatically saves all open files affected by a refactoring operation,
 provided they were unmodified before the refactoring.</source>
         <translation>Sàbhalaidh e gu fèin-ghluasadach a h-uile faidhle fosgailte air a bheil buaidh aig gnìomhachd ath-leasachaidh,
-fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
+fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+183" />
@@ -1698,7 +1698,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Toradh</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1773" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1787" />
         <source>&amp;File</source>
         <translation>&amp;Faidhle</translation>
     </message>
@@ -1723,7 +1723,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>&amp;Cuideachadh</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+122" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+128" />
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2620" />
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
@@ -1735,7 +1735,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
-        <translation>Sàbhail &amp; Mar...</translation>
+        <translation>Sàbhail &amp;Mar...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+3" />
@@ -1748,13 +1748,13 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Sàbhail A&amp;ll</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-279" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
         <location line="+1" />
         <source>Exit %1?</source>
-        <translation>A bheil thu a' fàgail %1?</translation>
+        <translation>A bheil thu a&apos; fàgail %1?</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+106" />
         <source>&amp;View</source>
         <translation>&amp;Seall</translation>
     </message>
@@ -1787,7 +1787,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     <message>
         <location line="+13" />
         <source>Open File &amp;With...</source>
-        <translation>Fosgail am faidhle &amp; Le ...</translation>
+        <translation>Fosgail am faidhle &amp;Le ...</translation>
     </message>
     <message>
         <location line="+9" />
@@ -1797,7 +1797,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     <message>
         <location line="+10" />
         <source>Recent &amp;Files</source>
-        <translation>Faidhlichean o chionn ghoirid &amp;</translation>
+        <translation>&amp;Faidhlichean o chionn ghoirid &amp;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -1857,7 +1857,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     <message>
         <location line="+8" />
         <source>Select &amp;All</source>
-        <translation>Tagh &amp; Uile</translation>
+        <translation>Tagh &amp;Uile</translation>
     </message>
     <message>
         <location line="+8" />
@@ -1947,8 +1947,8 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the "%2" action from the "%3" locator filter (%4).</source>
-        <translation>Cuiridh seo falach a 'bhàr-taice gu tur. Faodaidh tu sealltainn a-rithist le bhith a 'taipeadh%1. &lt;br&gt; &lt;br&gt; no, a' brosnachadh sìolachadh "%2 3" (%4).</translation>
+        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the &quot;%2&quot; action from the &quot;%3&quot; locator filter (%4).</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21" />
@@ -2001,7 +2001,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Falaichte</translation>
     </message>
     <message>
-        <location line="+460" />
+        <location line="+474" />
         <source>Version:</source>
         <translation>Tionndadh:</translation>
     </message>
@@ -2021,7 +2021,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>&lt;p&gt;Faodar luchd-leasachaidh Qt Creator a ruighinn air liosta puist Qt Creator:&lt;/p&gt;%1&lt;p&gt;no an t-seanail #qt-creator air Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;An rianaire bug againn suidhichte aig %3.&lt;/p&gt;&lt;p&gt;Cleachd %4 airson pìosan teacsa nas motha.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-803" />
+        <location line="-817" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -2054,7 +2054,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+240" />
+        <location line="+244" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>Sgrìobhainnean Fosgailte</translation>
@@ -2076,8 +2076,8 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Close All Except "%1"</source>
-        <translation>Dùin Uile ach "%1"</translation>
+        <source>Close All Except &quot;%1&quot;</source>
+        <translation>Dùin Uile ach &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
@@ -2113,16 +2113,16 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+927" />
-        <location line="+13" />
-        <location line="+11" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location line="+16" />
+        <location line="+14" />
         <source>Save Log</source>
         <translation>Sàbhail Log</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-617" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
         <source>Clear</source>
         <translation>Soilleir</translation>
     </message>
@@ -2159,7 +2159,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     <message>
         <location line="-411" />
         <source>Entry is missing a logging category name.</source>
-        <translation>Tha inntrigeadh a 'call ainm roinn-iarainn.</translation>
+        <translation>Tha inntrigeadh a &apos;call ainm roinn-iarainn.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -2219,7 +2219,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     <message>
         <location line="+85" />
         <source>Start Logging</source>
-        <translation>Tòisich a 'logadh</translation>
+        <translation>Tòisich a &apos;logadh</translation>
     </message>
     <message>
         <location line="+37" />
@@ -2263,8 +2263,8 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+51" />
-        <source>Failed to open preset file "%1" for reading.</source>
-        <translation>Dh'fhàillig fosgladh faidhle ro-shuidhichte "%1" airson leughadh.</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading.</source>
+        <translation>Dh&apos;fhàillig fosgladh faidhle ro-shuidhichte &quot;%1&quot; airson leughadh.</translation>
     </message>
     <message>
         <location line="-172" />
@@ -2278,13 +2278,13 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>Failed to write logs to "%1".</source>
-        <translation>Dh'fhàillig sgrìobhadh logaichean gu "%1".</translation>
+        <source>Failed to write logs to &quot;%1&quot;.</source>
+        <translation>Dh&apos;fhàillig sgrìobhadh logaichean gu &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open file "%1" for writing logs.</source>
-        <translation>Cha b' urrainn dhuinn am faidhle "%1" fhosgladh airson logaichean a sgrìobhadh.</translation>
+        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
+        <translation>Cha b&apos; urrainn dhuinn am faidhle &quot;%1&quot; fhosgladh airson logaichean a sgrìobhadh.</translation>
     </message>
     <message>
         <source>Save Enabled Categories As</source>
@@ -2292,8 +2292,8 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+45" />
-        <source>Failed to write preset file "%1".</source>
-        <translation>Dh'fhàillig sgrìobhadh am faidhle ro-shuidhichte "%1".</translation>
+        <source>Failed to write preset file &quot;%1&quot;.</source>
+        <translation>Dh&apos;fhàillig sgrìobhadh am faidhle ro-shuidhichte &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -2301,13 +2301,13 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Luchdaich roinnean comasach bho</translation>
     </message>
     <message>
-        <source>Failed to open preset file "%1" for reading</source>
-        <translation type="vanished">Dh'fhàillig fosgladh am faidhle ro-shuidhichte "%1" airson a leughadh</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading</source>
+        <translation type="vanished">Dh&apos;fhàillig fosgladh am faidhle ro-shuidhichte &quot;%1&quot; airson a leughadh</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Failed to read preset file "%1": %2</source>
-        <translation>Dh'fhàillig leughadh am faidhle ro-shuidhichte "%1": %2</translation>
+        <source>Failed to read preset file &quot;%1&quot;: %2</source>
+        <translation>Dh&apos;fhàillig leughadh am faidhle ro-shuidhichte &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+29" />
@@ -2466,17 +2466,17 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Pròiseasan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-75" />
         <source>&amp;Diff</source>
         <translation>&amp;Diff</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Do &amp;Not Save</source>
-        <translation>Dèan &amp; Na sàbhail</translation>
+        <translation>Dèan &amp;Na sàbhail</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+72" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
         <translation>&amp;Diff &amp;&amp; Sguir dheth</translation>
     </message>
@@ -2570,13 +2570,13 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Use "Cmd", "Opt", "Ctrl", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>Cleachd "Cmd", "Opt", "Ctrl", agus "Shift" airson iuchraichean mion-atharrachaidh. Cleachd "Escape", "Backspace", "Sguab às", "Cuir a-steach", "Home", agus mar sin air adhart, airson iuchraichean sònraichte. Cuir còmhla iuchraichean fa leth le "+", agus cuir còmhla iomadh ath-ghoirid gu sreath ath-ghoirid le ",". Mar eisimpleir, ma dh'fheumas an neach-cleachdaidh na h-iuchraichean mion-atharrachaidh Ctrl agus Shift a chumail fhad 'sa tha iad a' putadh air Escape, agus an uairsin a leigeil ma sgaoil agus brùth A, cuir a-steach "Ctrl + Shift + Escape, A".</translation>
+        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Cleachd &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, agus &quot;Shift&quot; airson iuchraichean mion-atharrachaidh. Cleachd &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Sguab às&quot;, &quot;Cuir a-steach&quot;, &quot;Home&quot;, agus mar sin air adhart, airson iuchraichean sònraichte. Cuir còmhla iuchraichean fa leth le &quot;+&quot;, agus cuir còmhla iomadh ath-ghoirid gu sreath ath-ghoirid le &quot;,&quot;. Mar eisimpleir, ma dh&apos;fheumas an neach-cleachdaidh na h-iuchraichean mion-atharrachaidh Ctrl agus Shift a chumail fhad &apos;sa tha iad a&apos; putadh air Escape, agus an uairsin a leigeil ma sgaoil agus brùth A, cuir a-steach &quot;Ctrl + Shift + Escape, A&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Use "Ctrl", "Alt", "Meta", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>Cleachd "Ctrl", "Alt", "Meta", agus "Shift" airson iuchraichean mion-atharrachaidh. Cleachd "Escape", "Backspace", "Sguab às", "Cuir a-steach", "Home", agus mar sin air adhart, airson iuchraichean sònraichte. Cuir còmhla iuchraichean fa leth le "+", agus cuir còmhla iomadh ath-ghoirid gu sreath ath-ghoirid le ",". Mar eisimpleir, ma dh'fheumas an neach-cleachdaidh na h-iuchraichean mion-atharrachaidh Ctrl agus Shift a chumail fhad 'sa tha iad a' putadh air Escape, agus an uairsin a leigeil ma sgaoil agus brùth A, cuir a-steach "Ctrl + Shift + Escape, A".</translation>
+        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Cleachd &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, agus &quot;Shift&quot; airson iuchraichean mion-atharrachaidh. Cleachd &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Sguab às&quot;, &quot;Cuir a-steach&quot;, &quot;Home&quot;, agus mar sin air adhart, airson iuchraichean sònraichte. Cuir còmhla iuchraichean fa leth le &quot;+&quot;, agus cuir còmhla iomadh ath-ghoirid gu sreath ath-ghoirid le &quot;,&quot;. Mar eisimpleir, ma dh&apos;fheumas an neach-cleachdaidh na h-iuchraichean mion-atharrachaidh Ctrl agus Shift a chumail fhad &apos;sa tha iad a&apos; putadh air Escape, agus an uairsin a leigeil ma sgaoil agus brùth A, cuir a-steach &quot;Ctrl + Shift + Escape, A&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -2585,8 +2585,8 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Key sequence has potential conflicts. &lt;a href="#conflicts"&gt;Show.&lt;/a&gt;</source>
-        <translation>Tha còmhstri comasach aig prìomh shreath. &lt;a href="#conflicts"&gt;Seall.&lt;/a&gt;</translation>
+        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
+        <translation>Tha còmhstri comasach aig prìomh shreath. &lt;a href=&quot;#conflicts&quot;&gt;Seall.&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+122" />
@@ -2611,7 +2611,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     <message>
         <location line="+7" />
         <source>Search f&amp;or:</source>
-        <translation>Lorg &amp; airson:</translation>
+        <translation>Lorg &amp;airson:</translation>
     </message>
     <message>
         <location line="+14" />
@@ -2645,7 +2645,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-333" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-335" />
         <source>Open Advanced Find...</source>
         <translation>Fosgail Lorg Adhartach...</translation>
     </message>
@@ -2667,12 +2667,11 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Cuir a-steach Lorg String</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+E</source>
-        <translation>Ctrl+E</translation>
+        <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Find Next</source>
         <translation>Lorg Air adhart</translation>
     </message>
@@ -2692,24 +2691,24 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Cuir an àite &amp;&amp; Lorg air Roimhe</translation>
     </message>
     <message>
-        <location line="-246" />
-        <location line="+259" />
+        <location line="-248" />
+        <location line="+261" />
         <source>Replace All</source>
         <translation>Cuir an àite na h-uile</translation>
     </message>
     <message>
-        <location line="-309" />
+        <location line="-311" />
         <source>Find Flags</source>
         <translation>Lorg Brataichean</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+235" />
+        <location line="+237" />
         <source>Replace &amp;&amp; Find</source>
         <translation>Cuir an àite &amp;&amp; Lorg</translation>
     </message>
     <message>
-        <location line="-148" />
+        <location line="-150" />
         <location line="+13" />
         <source>Shift+Enter</source>
         <translation>Shift+Cuir a-steach</translation>
@@ -2726,7 +2725,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Lorg/Cuir na àite</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+59" />
         <source>Find Next (Selected)</source>
         <translation>Lorg Air adhart (Taghte)</translation>
     </message>
@@ -2785,7 +2784,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Cuir na àite le ...</translation>
     </message>
     <message>
-        <location line="-520" />
+        <location line="-522" />
         <source>Find</source>
         <translation>Lorg</translation>
     </message>
@@ -2824,7 +2823,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+705" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
         <source>Collapse All</source>
         <translation>Cuir às do na h-uile</translation>
     </message>
@@ -2851,7 +2850,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+225" />
+        <location line="+227" />
         <source>Replace</source>
         <translation>Cuir na àite</translation>
     </message>
@@ -2867,11 +2866,11 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Open file "%1" with:</source>
-        <translation>Fosgail faidhle "%1" le:</translation>
+        <source>Open file &quot;%1&quot; with:</source>
+        <translation>Fosgail faidhle &quot;%1&quot; le:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-455" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
         <source>Show Hidden Files</source>
         <translation>Seall Faidhlichean Falaichte</translation>
     </message>
@@ -2897,15 +2896,15 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Faidhle Ùr</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="+156" />
         <location line="+78" />
         <source>New Folder</source>
         <translation>Pasgan Ùr</translation>
     </message>
     <message>
         <location line="-18" />
-        <source>Open "%1"</source>
-        <translation>Fosgail "%1"</translation>
+        <source>Open &quot;%1&quot;</source>
+        <translation>Fosgail &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -2965,7 +2964,7 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Thoir air falbh...</translation>
     </message>
     <message>
-        <location line="-618" />
+        <location line="-622" />
         <source>Synchronize with Editor</source>
         <translation>Sioncronaich leis an neach-deasachaidh</translation>
     </message>
@@ -3000,8 +2999,8 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Filter leabhar-seòlaidh coitcheann</translation>
     </message>
     <message>
-        <source>Matches all files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">A’ maidseadh a h-uile faidhle bho sheata àbhaisteach de chlàran. Cuir "+ &lt;number&gt;" no ":&lt;number&gt;" ris gus leum chun àireamh loidhne a chaidh a thoirt seachad. Cuir "+&lt;number&gt;" no ":&lt;number&gt;" eile ris gus leum gu àireamh a' cholbh cuideachd.</translation>
+        <source>Matches all files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">A’ maidseadh a h-uile faidhle bho sheata àbhaisteach de chlàran. Cuir &quot;+ &lt;number&gt;&quot; no &quot;:&lt;number&gt;&quot; ris gus leum chun àireamh loidhne a chaidh a thoirt seachad. Cuir &quot;+&lt;number&gt;&quot; no &quot;:&lt;number&gt;&quot; eile ris gus leum gu àireamh a&apos; cholbh cuideachd.</translation>
     </message>
     <message>
         <location line="+273" />
@@ -3016,11 +3015,11 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     <message numerus="yes">
         <location line="-264" />
         <source>%1 filter update: %n files</source>
-        <translation>
-            <numerusform>Ùrachadh sìoltachain %1: %n faidhle</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -3155,8 +3154,8 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-78" />
-        <source>Locates files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Paidhlichean a bhrosnachadh bho sheata de eòlaichean àbhaisteach. Pàipear-taice "+ &lt;àireamh&gt;" no ": &lt;àireamh&gt;" gus leum chun àireamh loidhne a chaidh a thoirt seachad. Pàipear-taice "+ no àireamh bheag&gt;" no ": &lt;àireamh&gt;" gus leum chun àireamh a 'cholbh cuideachd.</translation>
+        <source>Locates files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Paidhlichean a bhrosnachadh bho sheata de eòlaichean àbhaisteach. Pàipear-taice &quot;+ &lt;àireamh&gt;&quot; no &quot;: &lt;àireamh&gt;&quot; gus leum chun àireamh loidhne a chaidh a thoirt seachad. Pàipear-taice &quot;+ no àireamh bheag&gt;&quot; no &quot;: &lt;àireamh&gt;&quot; gus leum chun àireamh a &apos;cholbh cuideachd.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -3243,13 +3242,10 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;What to do with the executable's standard output.
+&lt;p&gt;What to do with the executable&apos;s standard output.
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation>&lt;html&gt;&lt;ceann/&gt;&lt;body&gt;
-&lt;p&gt;Dè nì thu le toradh àbhaisteach a’ cho-ghnìomhaiche.
-&lt;ul&gt;&lt;li&gt;More: Na dèan càil leis.&lt;/li&gt;&lt;li&gt;Seall ann am brathan coitcheann.&lt;/li&gt;&lt;li&gt;Cuir an àite an taghadh: Cuir e an àite an taghadh làithreach san sgrìobhainn làithreach.&lt;/li&gt; &lt;/ul&gt;&lt;/p&gt;&lt;/corp&gt;&lt;/html&gt;
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7" />
@@ -3277,17 +3273,12 @@ fhad 's nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
-&lt;p &gt;What to do with the executable's standard error output.&lt;/p&gt;
+&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
 &lt;li&gt;Show in General Messages.&lt;/li&gt;
 &lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;ceann&gt;corp&gt;
-&lt;p&gt;Dè nì thu le toradh mearachd àbhaisteach an gnìomhaiche.&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Ignore: Na dèan càil leis.&lt;/li&gt;
-&lt;li&gt;Seall ann am brathan coitcheann.&lt;/li&gt;
-&lt;li&gt;Cuir an àite an taghaidh: Cuir e na àite an taghadh làithreach san sgrìobhainn làithreach.&lt;/li&gt;
-&lt;/ul&gt;&lt;/corp&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12" />
@@ -3404,12 +3395,12 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     </message>
     <message>
         <location line="+1" />
-        <source>Opens a file given by a relative path to the current document, or absolute path. "~" refers to your home directory. You have the option to create a file if it does not exist yet.</source>
-        <translation>Fosglaidh faidhle air a thoirt seachad le slighe càirdeach don sgrìobhainn làithreach, no slighe iomlan. Tha "~" a' toirt iomradh air an eòlaire dachaigh agad. Tha roghainn agad faidhle a chruthachadh mura h-eil e ann fhathast.</translation>
+        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
+        <translation>Fosglaidh faidhle air a thoirt seachad le slighe càirdeach don sgrìobhainn làithreach, no slighe iomlan. Tha &quot;~&quot; a&apos; toirt iomradh air an eòlaire dachaigh agad. Tha roghainn agad faidhle a chruthachadh mura h-eil e ann fhathast.</translation>
     </message>
     <message>
-        <source>Create and Open "%1"</source>
-        <translation type="vanished">Cruthaich is fosgail "%1"</translation>
+        <source>Create and Open &quot;%1&quot;</source>
+        <translation type="vanished">Cruthaich is fosgail &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-46" />
@@ -3418,8 +3409,8 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     </message>
     <message>
         <location line="-13" />
-        <source>Create "%1"?</source>
-        <translation>Cruthaich "%1"?</translation>
+        <source>Create &quot;%1&quot;?</source>
+        <translation>Cruthaich &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+6" />
@@ -3438,8 +3429,8 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     </message>
     <message>
         <location line="+1" />
-        <source>Cannot create file "%1".</source>
-        <translation>Cha ghabh faidhle a chruthachadh "%1".</translation>
+        <source>Cannot create file &quot;%1&quot;.</source>
+        <translation>Cha ghabh faidhle a chruthachadh &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -3448,13 +3439,13 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     </message>
     <message>
         <location line="+164" />
-        <source>Create and Open File "%1"</source>
-        <translation>Cruthaich agus fosgail faidhle "%1"</translation>
+        <source>Create and Open File &quot;%1&quot;</source>
+        <translation>Cruthaich agus fosgail faidhle &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Create Directory "%1"</source>
-        <translation>Cruthaich Directory "%1"</translation>
+        <source>Create Directory &quot;%1&quot;</source>
+        <translation>Cruthaich Directory &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+58" />
@@ -3472,7 +3463,7 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
         <translation>Filters rim faighinn</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+557" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
         <source>Open as Centered Popup</source>
         <translation>Fosgail mar Central Popup</translation>
     </message>
@@ -3499,12 +3490,12 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     <message>
         <location line="+6" />
         <source>Triggers a web search with the selected search engine.</source>
-        <translation>A 'brosnachadh sgrùdadh lìn leis an einnsean sgrùdaidh taghte.</translation>
+        <translation>A &apos;brosnachadh sgrùdadh lìn leis an einnsean sgrùdaidh taghte.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Triggers a search in the Qt bug tracker.</source>
-        <translation>A 'brosnachadh sgrùdadh ann an lorgan qt bug.</translation>
+        <translation>A &apos;brosnachadh sgrùdadh ann an lorgan qt bug.</translation>
     </message>
     <message>
         <location line="+27" />
@@ -3513,18 +3504,18 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     </message>
     <message>
         <location line="+143" />
-        <source>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Fosgail sgrìobhainn&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Faidhle &gt; Fosgail am faidhle (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Faidhle &gt; Eisimpleirean &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Faidhle &gt; Faidhlichean o chionn ghoirid&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Slaod is leig às na faidhlichean an-seo &lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Fosgail sgrìobhainn&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Faidhle &gt; Fosgail am faidhle (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Faidhle &gt; Eisimpleirean &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Faidhle &gt; Faidhlichean o chionn ghoirid&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Slaod is leig às na faidhlichean an-seo &lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+37" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- seòrsa &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; gus leum gu mìneachadh clas&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- seòrsa &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; gus leum gu mìneachadh clas&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- seòrsa &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; gus leum gu mìneachadh gnìomh&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- seòrsa &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; gus leum gu mìneachadh gnìomh&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+121" />
@@ -3561,7 +3552,7 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     <message>
         <location line="+9" />
         <source>Locator filters show relative paths to the active project when possible.</source>
-        <translation>Bidh Locar sìoltachain a 'sealltainn slighean comais chun phròiseact gnìomhach nuair as urrainn dhut.</translation>
+        <translation>Bidh Locar sìoltachain a &apos;sealltainn slighean comais chun phròiseact gnìomhach nuair as urrainn dhut.</translation>
     </message>
     <message>
         <location line="+71" />
@@ -3600,7 +3591,7 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
         <translation>Gnàthach</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-113" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-116" />
         <source>Save Changes</source>
         <translation>Sàbhail Atharrachaidhean</translation>
     </message>
@@ -3734,14 +3725,14 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
         <translation>Roghainnean</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+488" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
         <source>Options</source>
         <translation>Roghainnean</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13" />
-        <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
+        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
         <translation>Cruthaich faidhlichean eadar-theangachaidh qm a ghabhas cleachdadh le tagradh bho fhaidhlichean ts an eadar-theangair</translation>
     </message>
     <message>
@@ -3750,14 +3741,14 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
         <translation>Sgaoileadh Eadar-theangachaidhean (lrelease)</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+5" />
         <source>Linguist</source>
         <translation>Cànanach</translation>
     </message>
     <message>
-        <location line="-12" />
-        <source>Synchronizes translator's ts files with the program code</source>
+        <location line="-2" />
+        <source>Synchronizes translator&apos;s ts files with the program code</source>
         <translation>Sioncronaich faidhlichean ts an eadar-theangair le còd a’ phrògraim</translation>
     </message>
     <message>
@@ -3777,13 +3768,13 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     </message>
     <message>
         <location line="+1" />
-        <location line="+10" />
+        <location line="+15" />
         <location line="+5" />
         <source>Text</source>
         <translation>Teacs</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-17" />
         <source>Runs the current QML file with QML utility.</source>
         <translation>A’ ruith am faidhle QML gnàthach le goireas QML.</translation>
     </message>
@@ -3809,7 +3800,7 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
         <translation>Ro-shealladh Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+4" />
         <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Fosglaidh seo am faidhle làithreach ann an vi</translation>
@@ -3827,8 +3818,8 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     </message>
     <message>
         <location line="+1" />
-        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by "&gt;". For example "sess def" matches "File &gt; Sessions &gt; Default".</source>
-        <translation>A 'brosnachadh gnìomh. Mas ann bhon chlàr a tha e bidh e a’ maidseadh pàirt sam bith de rangachd clàr, air a sgaradh le "&gt;". Mar eisimpleir tha "sess def" a' maidseadh "File&gt; Sessions&gt; Default".</translation>
+        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
+        <translation>A &apos;brosnachadh gnìomh. Mas ann bhon chlàr a tha e bidh e a’ maidseadh pàirt sam bith de rangachd clàr, air a sgaradh le &quot;&gt;&quot;. Mar eisimpleir tha &quot;sess def&quot; a&apos; maidseadh &quot;File&gt; Sessions&gt; Default&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
@@ -3888,22 +3879,22 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     <message>
         <location line="+3" />
         <source>Is %1 running on Windows?</source>
-        <translation>A bheil %1 a' ruith air Windows?</translation>
+        <translation>A bheil %1 a&apos; ruith air Windows?</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Is %1 running on OS X?</source>
-        <translation>A bheil %1 a' ruith air OS X?</translation>
+        <translation>A bheil %1 a&apos; ruith air OS X?</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Is %1 running on Linux?</source>
-        <translation>A bheil %1 a' ruith air Linux?</translation>
+        <translation>A bheil %1 a&apos; ruith air Linux?</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Is %1 running on any unix-based platform?</source>
-        <translation>A bheil %1 a' ruith air ùrlar stèidhichte air unix?</translation>
+        <translation>A bheil %1 a&apos; ruith air ùrlar stèidhichte air unix?</translation>
     </message>
     <message>
         <location line="+6" />
@@ -3928,7 +3919,7 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     <message>
         <location line="+4" />
         <source>The directory where %1 puts custom user data.</source>
-        <translation>An eòlaire far a bheil%1 a 'cur dàta cleachdaiche àbhaisteach.</translation>
+        <translation>An eòlaire far a bheil%1 a &apos;cur dàta cleachdaiche àbhaisteach.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -3972,9 +3963,9 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     </message>
     <message>
         <location line="+12" />
-        <source>The settings file "%1" is not writable.
+        <source>The settings file &quot;%1&quot; is not writable.
 You will not be able to store any %2 settings.</source>
-        <translation>Chan urrainn faidhle nan roghainnean "%1" a sgrìobhadh.
+        <translation>Chan urrainn faidhle nan roghainnean &quot;%1&quot; a sgrìobhadh.
 Chan urrainn dhut roghainnean %2 sam bith a stòradh.</translation>
     </message>
     <message>
@@ -3989,9 +3980,9 @@ Chan urrainn dhut roghainnean %2 sam bith a stòradh.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Error reading settings file "%1": %2
+        <source>Error reading settings file &quot;%1&quot;: %2
 You will likely experience further problems using this instance of %3.</source>
-        <translation>Mearachd a' leughadh faidhle nan roghainnean "%1": %2
+        <translation>Mearachd a&apos; leughadh faidhle nan roghainnean &quot;%1&quot;: %2
 Is dòcha gum bi duilgheadasan eile agad leis an t-eisimpleir seo de %3.</translation>
     </message>
     <message>
@@ -4002,7 +3993,7 @@ Is dòcha gum bi duilgheadasan eile agad leis an t-eisimpleir seo de %3.</transl
     <message>
         <location line="+2" />
         <source>%1 can collect crash reports for the sole purpose of fixing bugs. To enable this feature go to %2.</source>
-        <translation>'S urrainn dha %1 aithrisean tuislidh a chruinneachadh airson bugaichean a chàradh a-mhàin. Rach gu %2 gus am feart seo a chur an comas.</translation>
+        <translation>&apos;S urrainn dha %1 aithrisean tuislidh a chruinneachadh airson bugaichean a chàradh a-mhàin. Rach gu %2 gus am feart seo a chur an comas.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -4061,8 +4052,8 @@ Is dòcha gum bi duilgheadasan eile agad leis an t-eisimpleir seo de %3.</transl
     </message>
     <message>
         <location line="+1" />
-        <source>Select encoding for "%1".%2</source>
-        <translation>Tagh còdachadh airson "%1".%2</translation>
+        <source>Select encoding for &quot;%1&quot;.%2</source>
+        <translation>Tagh còdachadh airson &quot;%1&quot;.%2</translation>
     </message>
     <message>
         <location line="+49" />
@@ -4152,12 +4143,12 @@ Am bu toil leat an sgrìobhadh thairis orra?</translation>
     <message>
         <location line="-185" />
         <source>Failed to %1 File</source>
-        <translation>Dh'fhàillig le faidhle %1</translation>
+        <translation>Dh&apos;fhàillig le faidhle %1</translation>
     </message>
     <message>
         <location line="+1" />
         <source>%1 file %2 from version control system %3 failed.</source>
-        <translation>Dh'fhàillig %1 faidhle %2 o shiostam smachd an tionndaidh %3.</translation>
+        <translation>Dh&apos;fhàillig %1 faidhle %2 o shiostam smachd an tionndaidh %3.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -4229,7 +4220,7 @@ Cha deach siostam smachd dreach a lorg.</translation>
     <message>
         <location line="+12" />
         <source>Change &amp;Permission</source>
-        <translation>Atharrachadh &amp; Cead</translation>
+        <translation>Atharrachadh &amp;Cead</translation>
     </message>
     <message>
         <location line="+8" />
@@ -4244,7 +4235,7 @@ Do you want to check them out now?</source>
 A bheil thu airson sùil a thoirt orra a-nis?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-943" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-948" />
         <source>Restart Required</source>
         <translation>Ath-thòiseachadh a dhìth</translation>
     </message>
@@ -4276,27 +4267,27 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     <message>
         <location line="+10" />
         <source>Could not open URL %1.</source>
-        <translation>Cha b' urrainn dhuinn URL %1 fhosgladh.</translation>
+        <translation>Cha b&apos; urrainn dhuinn URL %1 fhosgladh.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
-        <source>Could not find executable for "%1" (expanded "%2")</source>
-        <translation>Cha deach gnìomh a lorg airson "%1" (leudaichte "%2")</translation>
+        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
+        <translation>Cha deach gnìomh a lorg airson &quot;%1&quot; (leudaichte &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>Starting external tool "%1"</source>
-        <translation>A' tòiseachadh inneal taobh a-muigh "%1"</translation>
+        <source>Starting external tool &quot;%1&quot;</source>
+        <translation>A&apos; tòiseachadh inneal taobh a-muigh &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>"%1" finished</source>
-        <translation>Chrìochnaich "%1"</translation>
+        <source>&quot;%1&quot; finished</source>
+        <translation>Chrìochnaich &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" finished with error</source>
-        <translation>Chrìochnaich "%1" le mearachd</translation>
+        <source>&quot;%1&quot; finished with error</source>
+        <translation>Chrìochnaich &quot;%1&quot; le mearachd</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
@@ -4306,7 +4297,7 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     <message>
         <location line="+52" />
         <source>Error while parsing external tool %1: %2</source>
-        <translation>Mearachd fhad 's a bha sinn a' parsadh inneal taobh a-muigh %1: %2</translation>
+        <translation>Mearachd fhad &apos;s a bha sinn a&apos; parsadh inneal taobh a-muigh %1: %2</translation>
     </message>
     <message>
         <location line="+9" />
@@ -4316,7 +4307,7 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+60" />
         <source>Launching a file browser failed</source>
-        <translation>Dh'fhàillig cur air bhog brabhsair faidhle</translation>
+        <translation>Dh&apos;fhàillig cur air bhog brabhsair faidhle</translation>
     </message>
     <message>
         <location line="+1" />
@@ -4325,7 +4316,7 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
 %1
 
 </source>
-        <translation>Cha b' urrainn dhuinn am manaidsear fhaidhlichean a thòiseachadh:
+        <translation>Cha b&apos; urrainn dhuinn am manaidsear fhaidhlichean a thòiseachadh:
 
 %1
 
@@ -4333,16 +4324,16 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>"%1" returned the following error:
+        <source>&quot;%1&quot; returned the following error:
 
 %2</source>
-        <translation>Thill "%1" am mearachd a leanas:
+        <translation>Thill &quot;%1&quot; am mearachd a leanas:
 
 %2</translation>
     </message>
     <message>
         <source>Launching Windows Explorer Failed</source>
-        <translation type="vanished">Dh'fhàillig cur air bhog Windows Explorer</translation>
+        <translation type="vanished">Dh&apos;fhàillig cur air bhog Windows Explorer</translation>
     </message>
     <message>
         <source>Could not find explorer.exe in path to launch Windows Explorer.</source>
@@ -4356,7 +4347,7 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     <message>
         <location line="+4" />
         <source>Error while starting file browser.</source>
-        <translation>Thachair mearachd fhad 's a bha thu a' tòiseachadh brabhsair fhaidhlichean.</translation>
+        <translation>Thachair mearachd fhad &apos;s a bha thu a&apos; tòiseachadh brabhsair fhaidhlichean.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -4396,37 +4387,37 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     <message>
         <location line="+6" />
         <source>Open Command Prompt With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Fosgail Command Prompt Le</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open Terminal With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Terminal fosgailte le</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file "%1".</source>
-        <translation>Dh'fhàillig toirt air falbh am faidhle "%1".</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>Dh&apos;fhàillig toirt air falbh am faidhle &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+40" />
-        <source>Failed to rename the include guard in file "%1".</source>
-        <translation>Dh'fhàillig ath-ainmeachadh a' gheàrd gabhail a-steach am faidhle "%1".</translation>
+        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
+        <translation>Dh&apos;fhàillig ath-ainmeachadh a&apos; gheàrd gabhail a-steach am faidhle &quot;%1&quot;.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
         <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>Chaidh %n tachartas a chur na àite.</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+369" />
+        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+394" />
         <source>Case sensitive</source>
         <translation>Cùis mothachail</translation>
     </message>
@@ -4478,7 +4469,7 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     <message>
         <location line="+6" />
         <source>Preser&amp;ve case</source>
-        <translation>Glèidh &amp; ve cùis</translation>
+        <translation>Glèidh &amp;ve cùis</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4498,11 +4489,11 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>The search resulted in more than %n items, do you still want to continue?</source>
-        <translation>
-            <numerusform>Thàinig barrachd air %n rud mar thoradh air an rannsachadh, a bheil thu airson leantainn air adhart fhathast?</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4518,17 +4509,17 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     <message numerus="yes">
         <location line="+82" />
         <source>%n matches found.</source>
-        <translation>
-            <numerusform>Chaidh %n maids a lorg.</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+2" />
         <source>Searching...</source>
-        <translation>A' lorg...</translation>
+        <translation>A&apos; lorg...</translation>
     </message>
     <message>
         <location line="+2" />
@@ -4573,8 +4564,8 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
-        <source>Factory with id="%1" already registered. Deleting.</source>
-        <translation>Factory with id="%1" clàraichte mu thràth. A' sguabadh às.</translation>
+        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
+        <translation>Factory with id=&quot;%1&quot; clàraichte mu thràth. A&apos; sguabadh às.</translation>
     </message>
     <message>
         <location line="+230" />
@@ -4588,18 +4579,18 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
-        <source>Error in "%1": %2</source>
-        <translation>Mearachd ann an "%1": %2</translation>
+        <source>Error in &quot;%1&quot;: %2</source>
+        <translation>Mearachd ann an &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>Cannot convert result of "%1" to string.</source>
-        <translation>Chan urrainn dhuinn toradh "%1" a thionndadh gu sreang.</translation>
+        <source>Cannot convert result of &quot;%1&quot; to string.</source>
+        <translation>Chan urrainn dhuinn toradh &quot;%1&quot; a thionndadh gu sreang.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal '}' characters must be escaped as "\}", '\' characters must be escaped as "\\", and "%{" must be escaped as "%\{".</source>
-        <translation>Dèan measadh air aithrisean JavaScript sìmplidh.&lt;br&gt;Feumar caractaran '}' litireil a theicheadh mar "\}", feumaidh '\' caractaran a bhith air an teicheadh mar "\\", agus feumaidh "%{" a bhith air an teicheadh mar "%\{".</translation>
+        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
+        <translation>Dèan measadh air aithrisean JavaScript sìmplidh.&lt;br&gt;Feumar caractaran &apos;}&apos; litireil a theicheadh mar &quot;\}&quot;, feumaidh &apos;\&apos; caractaran a bhith air an teicheadh mar &quot;\\&quot;, agus feumaidh &quot;%{&quot; a bhith air an teicheadh mar &quot;%\{&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
@@ -4613,25 +4604,25 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     </message>
     <message>
         <location line="+68" />
-        <source>Previous command is still running ("%1").
+        <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
-        <translation>Tha an àithne roimhe seo fhathast a' ruith ("%1").
+        <translation>Tha an àithne roimhe seo fhathast a&apos; ruith (&quot;%1&quot;).
 A bheil thu airson a mharbhadh?</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Kill Previous Process?</source>
-        <translation>A 'marbhadh pròiseas roimhe?</translation>
+        <translation>A &apos;marbhadh pròiseas roimhe?</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>Could not find executable for "%1".</source>
-        <translation>Cha deach gnìomh a lorg airson "%1".</translation>
+        <source>Could not find executable for &quot;%1&quot;.</source>
+        <translation>Cha deach gnìomh a lorg airson &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Starting command "%1".</source>
-        <translation>Àithne tòiseachaidh "%1".</translation>
+        <source>Starting command &quot;%1&quot;.</source>
+        <translation>Àithne tòiseachaidh &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+21" />
@@ -4666,7 +4657,7 @@ A bheil thu airson a mharbhadh?</translation>
     <message>
         <location line="-190" />
         <source>The evaluation was interrupted.</source>
-        <translation>Chaidh stad a chuir air a 'mheasadh.</translation>
+        <translation>Chaidh stad a chuir air a &apos;mheasadh.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -4686,8 +4677,8 @@ A bheil thu airson a mharbhadh?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
-        <source>Locator: Error occurred when running "%1".</source>
-        <translation>locator: Thachair mearachd le ruith "%1".</translation>
+        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
+        <translation>locator: Thachair mearachd le ruith &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-71" />
@@ -4701,8 +4692,8 @@ A bheil thu airson a mharbhadh?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Locator query string with quotes escaped with backslash and spaces replaced with "*" wildcards.</source>
-        <translation>Theich sreang ceist locator le briathran le cùl-taic agus chaidh cairtean-fiadhaich "*" a chur nan àite.</translation>
+        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
+        <translation>Theich sreang ceist locator le briathran le cùl-taic agus chaidh cairtean-fiadhaich &quot;*&quot; a chur nan àite.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -4716,8 +4707,8 @@ A bheil thu airson a mharbhadh?</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>LÀRAICHEAN LEABHLACH BHO A 'GABHAIL A-STEACH Clàr-amais siostam faidhle cruinneil (Spotlight, lorg, a h-uile càil). Pàipear-taice "+ &lt;àireamh&gt;" no ": &lt;àireamh&gt;" gus leum chun àireamh loidhne a chaidh a thoirt seachad. Pàipear-taice "+ no àireamh bheag&gt;" no ": &lt;àireamh&gt;" gus leum chun àireamh a 'cholbh cuideachd.</translation>
+        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>LÀRAICHEAN LEABHLACH BHO A &apos;GABHAIL A-STEACH Clàr-amais siostam faidhle cruinneil (Spotlight, lorg, a h-uile càil). Pàipear-taice &quot;+ &lt;àireamh&gt;&quot; no &quot;: &lt;àireamh&gt;&quot; gus leum chun àireamh loidhne a chaidh a thoirt seachad. Pàipear-taice &quot;+ no àireamh bheag&gt;&quot; no &quot;: &lt;àireamh&gt;&quot; gus leum chun àireamh a &apos;cholbh cuideachd.</translation>
     </message>
     <message>
         <location line="+113" />
@@ -4725,8 +4716,8 @@ A bheil thu airson a mharbhadh?</translation>
         <translation>Deasaich Toraidhean</translation>
     </message>
     <message>
-        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">A’ maidseadh faidhlichean bho chlàr-amais siostam faidhle cruinneil (Spotlight, Locate, Everything). Cuir "+ &lt;number&gt;" no ":&lt;number&gt;" ris gus leum chun àireamh loidhne a chaidh a thoirt seachad. Cuir "+&lt;number&gt;" no ":&lt;number&gt;" eile ris gus leum gu àireamh a' cholbh cuideachd.</translation>
+        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">A’ maidseadh faidhlichean bho chlàr-amais siostam faidhle cruinneil (Spotlight, Locate, Everything). Cuir &quot;+ &lt;number&gt;&quot; no &quot;:&lt;number&gt;&quot; ris gus leum chun àireamh loidhne a chaidh a thoirt seachad. Cuir &quot;+&lt;number&gt;&quot; no &quot;:&lt;number&gt;&quot; eile ris gus leum gu àireamh a&apos; cholbh cuideachd.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -4735,9 +4726,9 @@ A bheil thu airson a mharbhadh?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110" />
-        <source>Add "%1" placeholder for the query string.
+        <source>Add &quot;%1&quot; placeholder for the query string.
 Double-click to edit item.</source>
-        <translation>Cuir ionad-àite "%1" ris airson sreang na ceiste.
+        <translation>Cuir ionad-àite &quot;%1&quot; ris airson sreang na ceiste.
 Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     </message>
     <message>
@@ -4771,13 +4762,13 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
         <translation>Cuir a-steach Magic Header</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tha dàta draoidheachd MIME air a mhìneachadh mar a tha e air a mhìneachadh leis an t-sònrachadh Stòr-dàta Co-roinnte MIME-info o &lt;a href="http://standards.freedesktop.org/shared-mime-info-- spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tha dàta draoidheachd MIME air a mhìneachadh mar a tha e air a mhìneachadh leis an t-sònrachadh Stòr-dàta Co-roinnte MIME-info o &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-- spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;Head /&gt; &lt;Body&gt; &lt;p&gt; Tha dàta draoidheachd co-roinnte air a mhìneachadh mar an sònrachadh stòr-lìonraidh MIM-Fiosrachadh MIME-INVE-Info-Info-Spect / "&gt; Fredesdesktop.org &lt;/a&gt;. &lt;hr / p&gt; &lt;/ HTML&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -4831,8 +4822,8 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style="font-style: italic;"&gt; Nòta: Dh’ fhaodadh buaidh a bhith aig luachan farsaing air coileanadh nuair a dh’fhosglas tu faidhlichean.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;font-style: italic;&quot;&gt; Nòta: Dh’ fhaodadh buaidh a bhith aig luachan farsaing air coileanadh nuair a dh’fhosglas tu faidhlichean.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4899,11 +4890,11 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     <message numerus="yes">
         <location line="+159" />
         <source>Elided %n characters due to Application Output settings</source>
-        <translation>
-            <numerusform>Chaidh %n caractar a sguabadh às a chionn 's gu bheil roghainnean an aplacaid a' dol a-mach</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4914,13 +4905,13 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
 </translation>
     </message>
     <message>
-        <location line="+298" />
+        <location line="+308" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Faidhlichean teacsa (*.txt);;A h-uile faidhle (*)</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+11" />
+        <location line="+14" />
         <source>Error: %L1!</source>
         <translation>Mearachd: %L1!</translation>
     </message>
@@ -4951,46 +4942,46 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>There is no patch-command configured in the general "Environment" settings.</source>
+        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
         <translation>Chan eil àithne paiste air a rèiteachadh anns na roghainnean coitcheann “Àrainneachd”.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The patch-command configured in the general "Environment" settings does not exist.</source>
+        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
         <translation>Chan eil an àithne paiste a chaidh a rèiteachadh anns na roghainnean coitcheann “Àrainneachd” ann.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Running in "%1": %2 %3.</source>
-        <translation>A 'ruith ann an "%1":%2%3.</translation>
+        <source>Running in &quot;%1&quot;: %2 %3.</source>
+        <translation>A &apos;ruith ann an &quot;%1&quot;:%2%3.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>A timeout occurred running "%1".</source>
-        <translation>Thachair ùine a 'ruith "%1".</translation>
+        <source>A timeout occurred running &quot;%1&quot;.</source>
+        <translation>Thachair ùine a &apos;ruith &quot;%1&quot;.</translation>
     </message>
     <message>
         <source>Running in %1: %2 %3</source>
-        <translation type="vanished">A' ruith ann an %1: %2 %3</translation>
+        <translation type="vanished">A&apos; ruith ann an %1: %2 %3</translation>
     </message>
     <message>
         <location line="-11" />
-        <source>Unable to launch "%1": %2</source>
-        <translation>Cha b' urrainn dhuinn "%1" a chur air bhog: %2</translation>
+        <source>Unable to launch &quot;%1&quot;: %2</source>
+        <translation>Cha b&apos; urrainn dhuinn &quot;%1&quot; a chur air bhog: %2</translation>
     </message>
     <message>
-        <source>A timeout occurred running "%1"</source>
-        <translation type="vanished">Thachair ùine a' ruith "%1"</translation>
+        <source>A timeout occurred running &quot;%1&quot;</source>
+        <translation type="vanished">Thachair ùine a&apos; ruith &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>"%1" crashed.</source>
-        <translation>Thachair "%1"</translation>
+        <source>&quot;%1&quot; crashed.</source>
+        <translation>Thachair &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"%1" failed (exit code %2).</source>
-        <translation>Dh'fhàillig "%1" (còd fàgail %2).</translation>
+        <source>&quot;%1&quot; failed (exit code %2).</source>
+        <translation>Dh&apos;fhàillig &quot;%1&quot; (còd fàgail %2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
@@ -5015,7 +5006,7 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     <message>
         <location line="+29" />
         <source>Checking archive...</source>
-        <translation>A' sgrùdadh tasglann...</translation>
+        <translation>A&apos; sgrùdadh tasglann...</translation>
     </message>
     <message>
         <source>The file is not an archive.</source>
@@ -5029,7 +5020,7 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     <message>
         <location line="+40" />
         <source>There was an error while unarchiving.</source>
-        <translation>Bha mearachd ann fhad 's a bha sinn a' dì-thasglannachadh.</translation>
+        <translation>Bha mearachd ann fhad &apos;s a bha sinn a&apos; dì-thasglannachadh.</translation>
     </message>
     <message>
         <location line="+14" />
@@ -5064,7 +5055,7 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     <message>
         <location line="+2" />
         <source>The plugin will be available to all compatible %1 installations, but only for the current user.</source>
-        <translation>Bidh am plugan ri làimh airson a h-uile stàladh %1 a tha co-chòrdail, ach airson a' chleachdaiche làithreach a-mhàin.</translation>
+        <translation>Bidh am plugan ri làimh airson a h-uile stàladh %1 a tha co-chòrdail, ach airson a&apos; chleachdaiche làithreach a-mhàin.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -5083,8 +5074,8 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>"%1" will be installed into "%2".</source>
-        <translation>Thèid "%1" a stàladh ann an "%2".</translation>
+        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
+        <translation>Thèid &quot;%1&quot; a stàladh ann an &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+29" />
@@ -5093,8 +5084,8 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The file "%1" exists. Overwrite?</source>
-        <translation>Tha am faidhle "%1" ann. Ath-sgrìobhadh?</translation>
+        <source>The file &quot;%1&quot; exists. Overwrite?</source>
+        <translation>Tha am faidhle &quot;%1&quot; ann. Ath-sgrìobhadh?</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5104,12 +5095,12 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     <message>
         <location line="+10" />
         <source>Failed to Write File</source>
-        <translation>Dh'fhàillig sgrìobhadh am faidhle</translation>
+        <translation>Dh&apos;fhàillig sgrìobhadh am faidhle</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to write file "%1".</source>
-        <translation>Dh'fhàillig sgrìobhadh am faidhle "%1".</translation>
+        <source>Failed to write file &quot;%1&quot;.</source>
+        <translation>Dh&apos;fhàillig sgrìobhadh am faidhle &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -5144,7 +5135,7 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+263" />
         <source>%1 repository was detected but %1 is not configured.</source>
-        <translation>Chaidh ionad-tasgaidh %1 a lorg ach chan eil %1 'ga rèiteachadh.</translation>
+        <translation>Chaidh ionad-tasgaidh %1 a lorg ach chan eil %1 &apos;ga rèiteachadh.</translation>
     </message>
     <message>
         <location line="+72" />
@@ -5163,7 +5154,7 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     <message>
         <location line="+2" />
         <source>Note: This might remove the local file.</source>
-        <translation>Nota: Dh 'fhaodadh seo am faidhle ionadail a thoirt air falbh.</translation>
+        <translation>Nota: Dh &apos;fhaodadh seo am faidhle ionadail a thoirt air falbh.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -5191,7 +5182,7 @@ gu smachd tionndaidh (%2)?</translation>
     <message>
         <location line="+6" />
         <source>Adding to Version Control Failed</source>
-        <translation>Dh'fhàillig cur ri smachd an tionndaidh</translation>
+        <translation>Dh&apos;fhàillig cur ri smachd an tionndaidh</translation>
     </message>
     <message>
         <location line="+6" />
@@ -5199,7 +5190,7 @@ gu smachd tionndaidh (%2)?</translation>
 %1
 to version control (%2)
 </source>
-        <translation>Cha b' urrainn dhuinn am faidhle a chur ris
+        <translation>Cha b&apos; urrainn dhuinn am faidhle a chur ris
 %1
 gu smachd an tionndaidh (%2)
 </translation>
@@ -5208,7 +5199,7 @@ gu smachd an tionndaidh (%2)
         <location line="+2" />
         <source>Could not add the following files to version control (%1)
 %2</source>
-        <translation>Cha b' urrainn dhuinn na faidhlichean a leanas a chur ri smachd an tionndaidh (%1)
+        <translation>Cha b&apos; urrainn dhuinn na faidhlichean a leanas a chur ri smachd an tionndaidh (%1)
 %2</translation>
     </message>
     <message>
@@ -5234,7 +5225,7 @@ gu smachd an tionndaidh (%2)
     <message>
         <location line="+9" />
         <source>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Copyright 2008-%6 %7. All rights reserved.&lt;br/&gt;&lt;br/&gt;The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;br/&gt;</source>
-        <translation>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Dlighe-sgrìobhaidh 2008- %6 %7. A h-uile còir glèidhte.&lt;br/&gt;&lt;br/&gt;Tha am prògram air a sholarachadh MAR THA GUN BARANTAS DE SHINEACHADH, A' GABHAIL A-STEACH BARANTAS DEARADH, MARSANTACHD AGUS FIOSRACHADH AIRSON Adhbhar SHÒNRAICHTE.&lt;br/&gt;</translation>
+        <translation>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Dlighe-sgrìobhaidh 2008- %6 %7. A h-uile còir glèidhte.&lt;br/&gt;&lt;br/&gt;Tha am prògram air a sholarachadh MAR THA GUN BARANTAS DE SHINEACHADH, A&apos; GABHAIL A-STEACH BARANTAS DEARADH, MARSANTACHD AGUS FIOSRACHADH AIRSON Adhbhar SHÒNRAICHTE.&lt;br/&gt;</translation>
     </message>
     <message>
         <location line="+19" />
@@ -5328,8 +5319,8 @@ gu smachd an tionndaidh (%2)
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
-        <source>Could not parse patch file "%1". The content is not of unified diff format.</source>
-        <translation>Cha b' urrainn dhuinn am faidhle paiste "%1" a pharsadh. Chan eil an susbaint ann an cruth diff aonaichte.</translation>
+        <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
+        <translation>Cha b&apos; urrainn dhuinn am faidhle paiste &quot;%1&quot; a pharsadh. Chan eil an susbaint ann an cruth diff aonaichte.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
@@ -5408,23 +5399,23 @@ gu smachd an tionndaidh (%2)
     </message>
     <message>
         <location line="+52" />
-        <source>Diff "%1"</source>
-        <translation>Diofar "%1"</translation>
+        <source>Diff &quot;%1&quot;</source>
+        <translation>Diofar &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+28" />
         <source>Select First File for Diff</source>
         <translation>Tagh First File airson Diff</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+7" />
         <source>Select Second File for Diff</source>
         <translation>Tagh an dàrna faidhle airson Diff</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>Diff "%1", "%2"</source>
-        <translation>Diofar "%1", "%2"</translation>
+        <location line="+10" />
+        <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
+        <translation>Diofar &quot;%1&quot;, &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
@@ -5443,8 +5434,8 @@ gu smachd an tionndaidh (%2)
     </message>
     <message>
         <location line="+31" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding.</source>
-        <translation>&lt;b&gt;Mearachd:&lt;/b&gt; Cha b' urrainn dhuinn "%1" a dhì-chòdachadh le "%2"-còdachadh.</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
+        <translation>&lt;b&gt;Mearachd:&lt;/b&gt; Cha b&apos; urrainn dhuinn &quot;%1&quot; a dhì-chòdachadh le &quot;%2&quot;-còdachadh.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5463,7 +5454,7 @@ gu smachd an tionndaidh (%2)
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+817" />
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+69" />
         <source>Waiting for data...</source>
-        <translation>A' feitheamh ri dàta...</translation>
+        <translation>A&apos; feitheamh ri dàta...</translation>
     </message>
     <message>
         <location line="+9" />
@@ -5472,7 +5463,7 @@ gu smachd an tionndaidh (%2)
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+57" />
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+392" />
         <source>Retrieving data failed.</source>
-        <translation>Dh'fhàillig a' faighinn dàta air ais.</translation>
+        <translation>Dh&apos;fhàillig a&apos; faighinn dàta air ais.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-33" />
@@ -5487,11 +5478,11 @@ gu smachd an tionndaidh (%2)
     <message numerus="yes">
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
         <source>Skipped %n lines...</source>
-        <translation>
-            <numerusform>Chaidh %n loidhne seachad...</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -5519,7 +5510,7 @@ gu smachd an tionndaidh (%2)
         <location line="+152" />
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+75" />
         <source>Rendering diff</source>
-        <translation>A 'toirt seachad eadar-dhealachadh</translation>
+        <translation>A &apos;toirt seachad eadar-dhealachadh</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-487" />
@@ -5606,8 +5597,8 @@ gu smachd an tionndaidh (%2)
     </message>
     <message>
         <location line="+1" />
-        <source>%1 (current: "%2")</source>
-        <translation>%1 (an-dràsta: "%2")</translation>
+        <source>%1 (current: &quot;%2&quot;)</source>
+        <translation>%1 (an-dràsta: &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5646,7 +5637,7 @@ gu smachd an tionndaidh (%2)
     </message>
     <message>
         <location line="+4" />
-        <source>Plugin's initialization function succeeded.</source>
+        <source>Plugin&apos;s initialization function succeeded.</source>
         <translation>Shoirbhich le gnìomh tòiseachaidh Plugin.</translation>
     </message>
     <message>
@@ -5757,7 +5748,7 @@ Tha am plugan à comas le argamaid loidhne-àithne.</translation>
     <message>
         <location line="+36" />
         <source>Enabling Plugins</source>
-        <translation>A 'comasachadh plugins</translation>
+        <translation>A &apos;comasachadh plugins</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5784,7 +5775,7 @@ cuiridh e an comas na plugins a leanas cuideachd:
 will also disable the following plugins:
 
 %2</source>
-        <translation>A' cur à comas
+        <translation>A&apos; cur à comas
 %1
 cuiridh e à comas na plugins a leanas cuideachd:
 
@@ -5818,7 +5809,7 @@ cuiridh e à comas na plugins a leanas cuideachd:
     <message>
         <location line="+4" />
         <source>Running</source>
-        <translation>A' ruith</translation>
+        <translation>A&apos; ruith</translation>
     </message>
     <message>
         <location line="+4" />
@@ -5854,7 +5845,7 @@ cuiridh e à comas na plugins a leanas cuideachd:
         <location line="+21" />
         <source>Cannot load plugin because dependency failed to load: %1 (%2)
 Reason: %3</source>
-        <translation>Cha ghabh plugan a luchdadh a chionn 's nach deach an eisimeileachd a luchdadh: %1 (%2)
+        <translation>Cha ghabh plugan a luchdadh a chionn &apos;s nach deach an eisimeileachd a luchdadh: %1 (%2)
 Adhbhar: %3</translation>
     </message>
     <message>
@@ -5870,7 +5861,7 @@ Adhbhar: %3</translation>
     <message>
         <location line="+2" />
         <source>If you temporarily disable %1, the following plugins that depend on it are also disabled: %2.</source>
-        <translation>Ma dhùisgeas tu airson ùine ghoirid, tha na plugins a leanas a tha an urra ri ciorramaichte:%2.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>If you temporarily disable %1, the following plugins that depend on it are also disabled: %2.
@@ -5887,8 +5878,8 @@ Adhbhar: %3</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The last time you started %1, it seems to have closed because of a problem with the "%2" plugin. Temporarily disable the plugin?</source>
-        <translation>An turas mu dheireadh a thòisich thu air %1, tha coltas gun do dhùin e air sgàth duilgheadas leis a' plugan "%2". Cuir à comas am plugan gu sealach?</translation>
+        <source>The last time you started %1, it seems to have closed because of a problem with the &quot;%2&quot; plugin. Temporarily disable the plugin?</source>
+        <translation>An turas mu dheireadh a thòisich thu air %1, tha coltas gun do dhùin e air sgàth duilgheadas leis a&apos; plugan &quot;%2&quot;. Cuir à comas am plugan gu sealach?</translation>
     </message>
     <message>
         <location line="+8" />
@@ -5899,31 +5890,31 @@ Adhbhar: %3</translation>
         <location line="+73" />
         <source>Cannot load plugin because dependency failed to load: %1(%2)
 Reason: %3</source>
-        <translation>Cha ghabh plugan a luchdadh a chionn 's nach deach an eisimeileachd a luchdadh: %1(%2)
+        <translation>Cha ghabh plugan a luchdadh a chionn &apos;s nach deach an eisimeileachd a luchdadh: %1(%2)
 Adhbhar: %3</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
-        <source>The plugin "%1" is specified twice for testing.</source>
-        <translation>Tha plugan "%1" air a shònrachadh dà uair airson deuchainn.</translation>
+        <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
+        <translation>Tha plugan &quot;%1&quot; air a shònrachadh dà uair airson deuchainn.</translation>
     </message>
     <message>
         <location line="+7" />
         <location line="+18" />
         <location line="+47" />
         <location line="+25" />
-        <source>The plugin "%1" does not exist.</source>
-        <translation>Chan eil plugan "%1" ann.</translation>
+        <source>The plugin &quot;%1&quot; does not exist.</source>
+        <translation>Chan eil plugan &quot;%1&quot; ann.</translation>
     </message>
     <message>
         <location line="-79" />
-        <source>The plugin "%1" is not tested.</source>
-        <translation>Chan eil plugan "%1" 'ga dheuchainn.</translation>
+        <source>The plugin &quot;%1&quot; is not tested.</source>
+        <translation>Chan eil plugan &quot;%1&quot; &apos;ga dheuchainn.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Cannot request scenario "%1" as it was already requested.</source>
-        <translation>Chan urrainn dhuinn suidheachadh "%1" iarraidh mar a chaidh iarraidh mu thràth.</translation>
+        <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
+        <translation>Chan urrainn dhuinn suidheachadh &quot;%1&quot; iarraidh mar a chaidh iarraidh mu thràth.</translation>
     </message>
     <message>
         <location line="+130" />
@@ -5938,17 +5929,17 @@ Adhbhar: %3</translation>
     <message>
         <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+1071" />
         <source>Resolving dependencies failed because state != Read</source>
-        <translation>Dh'fhàillig fuasgladh eisimeileachd a chionn 's gu bheil state!=Leugh</translation>
+        <translation>Dh&apos;fhàillig fuasgladh eisimeileachd a chionn &apos;s gu bheil state!=Leugh</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency '%1(%2)'</source>
-        <translation>Cha b' urrainn dhuinn eisimeileachd '%1(%2)' a rèiteach</translation>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation>Cha b&apos; urrainn dhuinn eisimeileachd &apos;%1(%2)&apos; a rèiteach</translation>
     </message>
     <message>
         <location line="+61" />
         <source>Loading the library failed because state != Resolved</source>
-        <translation>Dh'fhàillig luchdadh an leabharlainn a chionn 's state!=Rugadh</translation>
+        <translation>Dh&apos;fhàillig luchdadh an leabharlainn a chionn &apos;s state!=Rugadh</translation>
     </message>
     <message>
         <location line="+10" />
@@ -5957,8 +5948,8 @@ Adhbhar: %3</translation>
     </message>
     <message>
         <location line="-416" />
-        <source>"%1" is missing</source>
-        <translation>Tha "%1" a dhìth</translation>
+        <source>&quot;%1&quot; is missing</source>
+        <translation>Tha &quot;%1&quot; a dhìth</translation>
     </message>
     <message>
         <location line="-24" />
@@ -5967,28 +5958,28 @@ Adhbhar: %3</translation>
     </message>
     <message>
         <location line="+29" />
-        <source>Value for key "%1" is not a string</source>
-        <translation>Chan e sreang a th' ann an luach na h-iuchrach "%1".</translation>
+        <source>Value for key &quot;%1&quot; is not a string</source>
+        <translation>Chan e sreang a th&apos; ann an luach na h-iuchrach &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a bool</source>
-        <translation>Chan eil luach na h-iuchrach "%1" 'na bholg</translation>
+        <source>Value for key &quot;%1&quot; is not a bool</source>
+        <translation>Chan eil luach na h-iuchrach &quot;%1&quot; &apos;na bholg</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not an array of objects</source>
-        <translation>Chan e sreath de nithean a tha ann an luach na h-iuchrach "%1".</translation>
+        <source>Value for key &quot;%1&quot; is not an array of objects</source>
+        <translation>Chan e sreath de nithean a tha ann an luach na h-iuchrach &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a string and not an array of strings</source>
-        <translation>Chan e sreang a tha ann an luach na h-iuchrach "%1" agus chan e sreath de shreathan</translation>
+        <source>Value for key &quot;%1&quot; is not a string and not an array of strings</source>
+        <translation>Chan e sreang a tha ann an luach na h-iuchrach &quot;%1&quot; agus chan e sreath de shreathan</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Value "%2" for key "%1" has invalid format</source>
-        <translation>Tha fòrmat mì-dhligheach aig luach "%2" airson na h-iuchrach "%1".</translation>
+        <source>Value &quot;%2&quot; for key &quot;%1&quot; has invalid format</source>
+        <translation>Tha fòrmat mì-dhligheach aig luach &quot;%2&quot; airson na h-iuchrach &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5997,8 +5988,8 @@ Adhbhar: %3</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected IID "%1", but found "%2"</source>
-        <translation>An dùil ath-ghoid "%1", ach lorg e "%2"</translation>
+        <source>Expected IID &quot;%1&quot;, but found &quot;%2&quot;</source>
+        <translation>An dùil ath-ghoid &quot;%1&quot;, ach lorg e &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6007,8 +5998,8 @@ Adhbhar: %3</translation>
     </message>
     <message>
         <location line="+108" />
-        <source>Invalid platform specification "%1": %2</source>
-        <translation>Sònrachadh ùrlair mì-dhligheach "%1": %2</translation>
+        <source>Invalid platform specification &quot;%1&quot;: %2</source>
+        <translation>Sònrachadh ùrlair mì-dhligheach &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+18" />
@@ -6021,8 +6012,8 @@ Adhbhar: %3</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Dependency: "%1" must be "%2" or "%3" (is "%4").</source>
-        <translation>An eisimeil: Feumaidh "%1" a bhith "%2" no "%3" ('s e "%4").</translation>
+        <source>Dependency: &quot;%1&quot; must be &quot;%2&quot; or &quot;%3&quot; (is &quot;%4&quot;).</source>
+        <translation>An eisimeil: Feumaidh &quot;%1&quot; a bhith &quot;%2&quot; no &quot;%3&quot; (&apos;s e &quot;%4&quot;).</translation>
     </message>
     <message>
         <location line="+25" />
@@ -6034,13 +6025,13 @@ Adhbhar: %3</translation>
     </message>
     <message>
         <location line="-13" />
-        <source>Argument: "%1" is empty</source>
-        <translation>Argument: Tha "%1" falamh</translation>
+        <source>Argument: &quot;%1&quot; is empty</source>
+        <translation>Argument: Tha &quot;%1&quot; falamh</translation>
     </message>
     <message>
         <location line="+182" />
         <source>Initializing the plugin failed because state != Loaded</source>
-        <translation>Dh'fhàillig tòiseachadh a' phlugan a chionn 's gu bheil state!=Air a luchdadh</translation>
+        <translation>Dh&apos;fhàillig tòiseachadh a&apos; phlugan a chionn &apos;s gu bheil state!=Air a luchdadh</translation>
     </message>
     <message>
         <location line="+5" />
@@ -6050,7 +6041,7 @@ Adhbhar: %3</translation>
     <message>
         <location line="+5" />
         <source>Plugin initialization failed: %1</source>
-        <translation>Dh'fhàillig tòiseachadh a' phlugain: %1</translation>
+        <translation>Dh&apos;fhàillig tòiseachadh a&apos; phlugain: %1</translation>
     </message>
     <message>
         <location line="+18" />
@@ -6192,13 +6183,13 @@ Am bu toil leat sgrìobhadh thairis air?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+161" />
-        <source>Exported "%1", %2x%3, %4 bytes</source>
-        <translation>Às-phortaich "%1", %2x%3, %4 bytes</translation>
+        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
+        <translation>Às-phortaich &quot;%1&quot;, %2x%3, %4 bytes</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Could not write file "%1".</source>
-        <translation>Cha b' urrainn dhuinn am faidhle "%1" a sgrìobhadh.</translation>
+        <source>Could not write file &quot;%1&quot;.</source>
+        <translation>Cha b&apos; urrainn dhuinn am faidhle &quot;%1&quot; a sgrìobhadh.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6294,13 +6285,13 @@ Am bu toil leat sgrìobhadh thairis air?</translation>
     <message>
         <location line="+12" />
         <source>Failed to read SVG image.</source>
-        <translation>Cha b' urrainn dhuinn an dealbh SVG a leughadh.</translation>
+        <translation>Cha b&apos; urrainn dhuinn an dealbh SVG a leughadh.</translation>
     </message>
     <message>
         <location line="+13" />
         <location line="+15" />
         <source>Failed to read image.</source>
-        <translation>Dh'fhàillig leughadh an dealbh.</translation>
+        <translation>Dh&apos;fhàillig leughadh an dealbh.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageviewer.cpp" line="+36" />
@@ -6369,8 +6360,8 @@ Am bu toil leat sgrìobhadh thairis air?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>A comma-separated list of size specifications of the form "&lt;width&gt;x&lt;height&gt;".</source>
-        <translation>Liosta de shònrachaidhean meud an fhoirm "&lt;width&gt; x&lt;height&gt;" air a sgaradh le cromag.</translation>
+        <source>A comma-separated list of size specifications of the form &quot;&lt;width&gt;x&lt;height&gt;&quot;.</source>
+        <translation>Liosta de shònrachaidhean meud an fhoirm &quot;&lt;width&gt; x&lt;height&gt;&quot; air a sgaradh le cromag.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6415,14 +6406,14 @@ Am bu toil leat an sgrìobhadh thairis orra?</translation>
         <translation>Mearachd%1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+60" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
         <source>Deprecated</source>
         <translation>Ìsleachadh</translation>
     </message>
     <message>
         <location line="+88" />
         <source>Incoming</source>
-        <translation>A 'tighinn a-steach</translation>
+        <translation>A &apos;tighinn a-steach</translation>
     </message>
     <message>
         <location line="+21" />
@@ -6437,10 +6428,10 @@ Am bu toil leat an sgrìobhadh thairis orra?</translation>
     <message>
         <location line="+21" />
         <source>Derived</source>
-        <translation>A 'tighinn</translation>
+        <translation>A &apos;tighinn</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+212" />
         <source>Call Hierarchy</source>
         <translation>Cuir fòn gu rangachd</translation>
     </message>
@@ -6450,13 +6441,13 @@ Am bu toil leat an sgrìobhadh thairis orra?</translation>
         <translation>Ath-luchdaich an rangachd gairm airson an samhla fo shuidheachadh curto.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+394" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
         <translation>%1 airson%2</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+230" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>neo-iomchaidh</translation>
@@ -6471,7 +6462,7 @@ Am bu toil leat an sgrìobhadh thairis orra?</translation>
         <location line="+2" />
         <source>failed to initialize</source>
         <extracomment>language client state</extracomment>
-        <translation>Dh'fhàillig tòiseachadh</translation>
+        <translation>Dh&apos;fhàillig tòiseachadh</translation>
     </message>
     <message>
         <location line="+2" />
@@ -6499,15 +6490,15 @@ Am bu toil leat an sgrìobhadh thairis orra?</translation>
     </message>
     <message>
         <location line="+1342" />
-        <source>Invalid parameter in "%1":
+        <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
-        <translation>Paramadair neo-dhligheach ann an "%1":
+        <translation>Paramadair neo-dhligheach ann an &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
         <location line="+219" />
-        <source>Language Server "%1" Initialization Error</source>
-        <translation>Frithealaiche Cànan "%1" Mearachd tòiseachaidh "</translation>
+        <source>Language Server &quot;%1&quot; Initialization Error</source>
+        <translation>Frithealaiche Cànan &quot;%1&quot; Mearachd tòiseachaidh &quot;</translation>
     </message>
     <message>
         <location line="+13" />
@@ -6562,12 +6553,12 @@ Am bu toil leat an sgrìobhadh thairis orra?</translation>
     <message>
         <location line="+2" />
         <source>Classes and Structs in Workspace</source>
-        <translation>Clasaichean agus a 'structaradh ann an àite-obrach</translation>
+        <translation>Clasaichean agus a &apos;structaradh ann an àite-obrach</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Locates classes and structs in the language server workspace.</source>
-        <translation>A 'togail chlasaichean agus a' structacadh anns an fhrithealaiche cànain cànain.</translation>
+        <translation>A &apos;togail chlasaichean agus a&apos; structacadh anns an fhrithealaiche cànain cànain.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -6577,12 +6568,12 @@ Am bu toil leat an sgrìobhadh thairis orra?</translation>
     <message>
         <location line="+2" />
         <source>Locates functions and methods in the language server workspace.</source>
-        <translation>A 'soirbheachadh gnìomhan agus modhan ann an àite-obrach an fhrithealaiche cànain.</translation>
+        <translation>A &apos;soirbheachadh gnìomhan agus modhan ann an àite-obrach an fhrithealaiche cànain.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientinterface.cpp" line="+77" />
-        <source>Cannot handle MIME type "%1" of message.</source>
-        <translation>Chan urrainn dhaibh a bhith a 'làimhseachadh seòrsa MIME "%1" de theachdaireachd.</translation>
+        <source>Cannot handle MIME type &quot;%1&quot; of message.</source>
+        <translation>Chan urrainn dhaibh a bhith a &apos;làimhseachadh seòrsa MIME &quot;%1&quot; de theachdaireachd.</translation>
     </message>
     <message>
         <location line="+70" />
@@ -6600,7 +6591,7 @@ Am bu toil leat an sgrìobhadh thairis orra?</translation>
         <translation>Chrìochnaichte gun dùil.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+217" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+82" />
         <source>Expand All</source>
         <translation>Leudaich a h-uile càil</translation>
@@ -6633,12 +6624,12 @@ Am bu toil leat an sgrìobhadh thairis orra?</translation>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+185" />
         <source>&amp;Add</source>
-        <translation>&amp; Cuir ris</translation>
+        <translation>&amp;Cuir ris</translation>
     </message>
     <message>
         <location line="+11" />
         <source>&amp;Delete</source>
-        <translation>&amp; Cuir às do</translation>
+        <translation>&amp;Cuir às do</translation>
     </message>
     <message>
         <location line="+106" />
@@ -6680,12 +6671,12 @@ Example: *.cpp%1*.h</source>
     <message>
         <location line="+18" />
         <source>Failed to parse JSON at %1: %2</source>
-        <translation>Dh 'fhàillig gu parse JSON aig%1:%2</translation>
+        <translation>Dh &apos;fhàillig gu parse JSON aig%1:%2</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Language server-specific JSON to pass via "initializationOptions" field of "initialize" request.</source>
-        <translation>Bidh JSON a tha sònraichte don Fhrithealaiche a 'dol seachad tro "ciad-cheistean" mar raon "tòiseachadh".</translation>
+        <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
+        <translation>Bidh JSON a tha sònraichte don Fhrithealaiche a &apos;dol seachad tro &quot;ciad-cheistean&quot; mar raon &quot;tòiseachadh&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6746,7 +6737,7 @@ Example: *.cpp%1*.h</source>
         <location line="+2" />
         <source>Additional JSON configuration sent to all running language servers for this project.
 See the documentation of the specific language server for valid settings.</source>
-        <translation>Chuir rèiteachadh JOSON a bharrachd air na frithealaichean cànain a tha a 'ruith gu gach neach a' ruith airson a 'phròiseict seo.
+        <translation>Chuir rèiteachadh JOSON a bharrachd air na frithealaichean cànain a tha a &apos;ruith gu gach neach a&apos; ruith airson a &apos;phròiseict seo.
  Faic sgrìobhainnean an fhrithealaiche cànain sònraichte airson suidheachaidhean dligheach.</translation>
     </message>
     <message>
@@ -6762,11 +6753,11 @@ See the documentation of the specific language server for valid settings.</sourc
     <message numerus="yes">
         <location line="+21" />
         <source>Re&amp;name %n files</source>
-        <translation>
-            <numerusform>Re &amp; ainm% n faidhlichean</numerusform>
-            <numerusform>Re &amp; ainm% n faidhlichean</numerusform>
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -6785,17 +6776,17 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="-144" />
         <source>Renaming is not supported with %1</source>
-        <translation>Chan eil ath-dhealbhadh a 'faighinn taic bho%1</translation>
+        <translation>Chan eil ath-dhealbhadh a &apos;faighinn taic bho%1</translation>
     </message>
     <message>
         <location line="+168" />
         <source>%1 is not reachable anymore.</source>
-        <translation>Chan eil%1 a 'faighinn fois-inntinn tuilleadh.</translation>
+        <translation>Chan eil%1 a &apos;faighinn fois-inntinn tuilleadh.</translation>
     </message>
     <message>
         <location line="+33" />
         <source>Start typing to see replacements.</source>
-        <translation>Tòisich a 'taipeadh ri ath-nuadhachadh.</translation>
+        <translation>Tòisich a &apos;taipeadh ri ath-nuadhachadh.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+158" />
@@ -6824,23 +6815,23 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+6" />
-        <source>Running "%1" to install %2.</source>
-        <translation>A 'ruith "%1" gus%2 a chuir a-steach.</translation>
+        <source>Running &quot;%1&quot; to install %2.</source>
+        <translation>A &apos;ruith &quot;%1&quot; gus%2 a chuir a-steach.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>Chaidh stad a chuir air "%1" le linn ùine.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>Chaidh stad a chuir air &quot;%1&quot; le linn ùine.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>Chaidh stad a chuir air "%1" leis an neach-cleachdaidh.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>Chaidh stad a chuir air &quot;%1&quot; leis an neach-cleachdaidh.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>Dh'fhàillig le "%1" le còd fàgail%2.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>Dh&apos;fhàillig le &quot;%1&quot; le còd fàgail%2.</translation>
     </message>
     <message>
         <location line="+56" />
@@ -6947,33 +6938,33 @@ See the documentation of the specific language server for valid settings.</sourc
     <name>QtC::LanguageServerProtocol</name>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
-        <source>Cannot decode content with "%1". Falling back to "%2".</source>
-        <translation>Chan urrainn dhaibh susbaint a dhealbhadh le "%1". A 'tuiteam air ais gu "%2".</translation>
+        <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
+        <translation>Chan urrainn dhaibh susbaint a dhealbhadh le &quot;%1&quot;. A &apos;tuiteam air ais gu &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Expected an integer in "%1", but got "%2".</source>
-        <translation>An dùil in integer ann an "%1", ach fhuair e "%2".</translation>
+        <source>Expected an integer in &quot;%1&quot;, but got &quot;%2&quot;.</source>
+        <translation>An dùil in integer ann an &quot;%1&quot;, ach fhuair e &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
-        <source>Could not parse JSON message: "%1".</source>
-        <translation>Cha b 'urrainn dhuinn teachdaireachd JSON a phring: "%1".</translation>
+        <source>Could not parse JSON message: &quot;%1&quot;.</source>
+        <translation>Cha b &apos;urrainn dhuinn teachdaireachd JSON a phring: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected a JSON object, but got a JSON "%1" value.</source>
-        <translation>An dùil ri stuth JSON, ach fhuair luach JSON 1 ".</translation>
+        <source>Expected a JSON object, but got a JSON &quot;%1&quot; value.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
-        <source>No parameters in "%1".</source>
-        <translation>Chan eil paramadairean ann an "%1".</translation>
+        <source>No parameters in &quot;%1&quot;.</source>
+        <translation>Chan eil paramadairean ann an &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+213" />
-        <source>No ID set in "%1".</source>
-        <translation>Chan eil ID suidhichte ann an "%1".</translation>
+        <source>No ID set in &quot;%1&quot;.</source>
+        <translation>Chan eil ID suidhichte ann an &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
@@ -7061,7 +7052,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7073,60 +7064,60 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+156" />
         <location line="+823" />
         <source>Dataset Editor</source>
         <translation>Deasaiche stòr-dàta</translation>
     </message>
     <message>
-        <location line="-364" />
+        <location line="-366" />
         <source>Please enter a class name</source>
         <translation>Feuch an cuir thu a-steach ainm clas</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+604" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+412" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+70" />
+        <location line="+72" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-732" />
         <location line="+19" />
-        <location line="+115" />
-        <location line="+1483" />
+        <location line="+111" />
+        <location line="+1514" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+124" />
-        <location line="+180" />
-        <location line="+308" />
+        <location line="+139" />
+        <location line="+202" />
+        <location line="+306" />
         <location line="+13" />
-        <location line="+168" />
-        <location line="+145" />
+        <location line="+169" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
-        <location line="+254" />
+        <location line="+117" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+378" />
+        <location line="+273" />
         <location line="+86" />
-        <location line="+1017" />
-        <location line="+895" />
+        <location line="+1142" />
+        <location line="+1075" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+539" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
         <location line="+19" />
         <location line="+11" />
@@ -7134,8 +7125,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Mearachd: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3475" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-309" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3541" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7145,30 +7136,30 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+9" />
         <location line="+25" />
         <location line="+9" />
-        <source>Failed to create "%L1"!</source>
-        <translation>Dh'fhàillig cruthachadh "%L1"!</translation>
+        <source>Failed to create &quot;%L1&quot;!</source>
+        <translation>Dh&apos;fhàillig cruthachadh &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2513" />
-        <location line="+1446" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
+        <location line="+33" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
+        <location line="+1442" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
         <source>Failed to save the image file for an unknown reason!</source>
-        <translation>Cha b' urrainn dhuinn am faidhle dealbh a shàbhaladh airson adhbhar neo-aithnichte!</translation>
+        <translation>Cha b&apos; urrainn dhuinn am faidhle dealbh a shàbhaladh airson adhbhar neo-aithnichte!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581" />
-        <location line="+239" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
+        <location line="+224" />
         <source>Delete</source>
         <translation>Sguab às</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309" />
-        <source>Are you sure you want to permanetly delete "%L1"?</source>
-        <translation>A bheil thu cinnteach gu bheil thu airson "%L1" a sguabadh às gu buan?</translation>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
+        <translation>A bheil thu cinnteach gu bheil thu airson &quot;%L1&quot; a sguabadh às gu buan?</translation>
     </message>
     <message>
         <location line="-86" />
@@ -7185,18 +7176,18 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="-13" />
         <location line="+26" />
         <source>Failed to rename the folder for an unknown reason!</source>
-        <translation>Cha b' urrainn dhuinn am pasgan ath-ainmeachadh airson adhbhar neo-aithnichte!</translation>
+        <translation>Cha b&apos; urrainn dhuinn am pasgan ath-ainmeachadh airson adhbhar neo-aithnichte!</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Failed to rename the file for an unknown reason!</source>
-        <translation>Cha b' urrainn dhuinn am faidhle ath-ainmeachadh airson adhbhar neo-aithnichte!</translation>
+        <translation>Cha b&apos; urrainn dhuinn am faidhle ath-ainmeachadh airson adhbhar neo-aithnichte!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5164" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5247" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>Cha b' urrainn dhuinn lethbhreac a dhèanamh dhen fhaidhle "%1" gu "%2".</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>Cha b&apos; urrainn dhuinn lethbhreac a dhèanamh dhen fhaidhle &quot;%1&quot; gu &quot;%2&quot;.</translation>
     </message>
     <message>
         <source>Invalid argument (%1) for -override_read_timeout</source>
@@ -7220,19 +7211,19 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Argamaid a dhìth airson -serial_number_filter</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+145" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2349" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2677" />
         <location line="+9" />
         <location line="+13" />
-        <location line="+59" />
+        <location line="+63" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+830" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
         <location line="+36" />
         <location line="+7" />
@@ -7241,13 +7232,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+7" />
         <source>
 
-Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>
 
 Feuch an dùin thu prògraman sam bith a tha a’ coimhead / a’ deasachadh dàta tagraidh OpenMV IDE agus an uairsin ath-thòiseachadh OpenMV IDE!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-65" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Deasaich stairsneach Sgèile Liath le Deasaiche Threshold</translation>
     </message>
@@ -7257,18 +7248,18 @@ Feuch an dùin thu prògraman sam bith a tha a’ coimhead / a’ deasachadh dà
         <translation>Deasaich stairsneach LAB le Deasaiche Threshold</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+221" />
         <source>Missing argument for -form_key</source>
         <translation>Argamaid a dhìth airson -form_key</translation>
     </message>
     <message>
-        <location line="+1066" />
+        <location line="+1074" />
         <source>About OpenMV Viewer...</source>
         <translation>Mu dheidhinn OpenMV Viewer...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;Mu %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Le: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;CEADACHD POBLACH COITCHEANN GNU&lt;/b&gt; /p&gt;&lt;p&gt;Dlighe-sgrìobhaidh (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Tha am prògram seo ga sgaoileadh an dòchas gum bi e feumail, ach GUN BARANTAS sam bith; às aonais eadhon am barantas so-thuigsinn a thaobh MARSANTACHD no IONNSACHADH AIRSON AIRSON PUINGEAN SÒNRAICHTE. Faic an &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; airson barrachd fiosrachaidh.&lt;/p&gt;&lt;p &lt;b&gt;Ceistean no Beachdan?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cuir fios thugainn aig &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Mu %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Le: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;CEADACHD POBLACH COITCHEANN GNU&lt;/b&gt; /p&gt;&lt;p&gt;Dlighe-sgrìobhaidh (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Tha am prògram seo ga sgaoileadh an dòchas gum bi e feumail, ach GUN BARANTAS sam bith; às aonais eadhon am barantas so-thuigsinn a thaobh MARSANTACHD no IONNSACHADH AIRSON AIRSON PUINGEAN SÒNRAICHTE. Faic an &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; airson barrachd fiosrachaidh.&lt;/p&gt;&lt;p &lt;b&gt;Ceistean no Beachdan?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cuir fios thugainn aig &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+17" />
@@ -7276,7 +7267,7 @@ Feuch an dùin thu prògraman sam bith a tha a’ coimhead / a’ deasachadh dà
         <translation>FosgailMV IDE</translation>
     </message>
     <message>
-        <location line="-1039" />
+        <location line="-1050" />
         <source>untitled_$.py</source>
         <translation>gun tiotal_$.py</translation>
     </message>
@@ -7289,7 +7280,7 @@ Feuch an dùin thu prògraman sam bith a tha a’ coimhead / a’ deasachadh dà
         <translation type="vanished">Argamaid a dhìth airson -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="-460" />
+        <location line="-468" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>Argamaid mì-dhligheach (%1) airson -auto_update</translation>
     </message>
@@ -7299,20 +7290,18 @@ Feuch an dùin thu prògraman sam bith a tha a’ coimhead / a’ deasachadh dà
         <translation>Argamaid a dhìth airson -auto_update</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+248" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
-        <translation>Mearachd ann am parash &lt;work_re_recespeces&gt; /opeenvide/firdowortsTes.json -% L1!
-
- Thoir sùil air faidhle JSON airson mearachdan agus socraich iad iad.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.\n\nOpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation type="vanished">Mearachd a 'leughadh &lt;cleachdaiche_respources&gt; /opemvide/firdower/FECETS:% l1 Chan eil an faidhle seo aig v4.3.0 L1.0 Chan eil e air a dhubhadh às le bhith a' stàladh ghoireasan.</translation>
+        <translation type="vanished">Mearachd a &apos;leughadh &lt;cleachdaiche_respources&gt; /opemvide/firdower/FECETS:% l1 Chan eil an faidhle seo aig v4.3.0 L1.0 Chan eil e air a dhubhadh às le bhith a&apos; stàladh ghoireasan.</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+188" />
         <source>Form Key</source>
         <translation>Foirm iuchair</translation>
     </message>
@@ -7322,7 +7311,7 @@ Check the json file for errors and fix them.</source>
         <translation>Feuch an cuir thu a-steach iuchair an fhoirm</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+80" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7332,7 +7321,7 @@ Check the json file for errors and fix them.</source>
         <location line="-13" />
         <location line="+7" />
         <location line="+7" />
-        <source>Can't open the new file!</source>
+        <source>Can&apos;t open the new file!</source>
         <translation>Chan urrainn dhuinn am faidhle ùr fhosgladh!</translation>
     </message>
     <message>
@@ -7342,8 +7331,8 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Add some code to "%L1"</source>
-        <translation>Cuir còd air choireigin ri "%L1"</translation>
+        <source>Add some code to &quot;%L1&quot;</source>
+        <translation>Cuir còd air choireigin ri &quot;%L1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -7379,7 +7368,7 @@ Check the json file for errors and fix them.</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <source>Are you sure you want to erase your OpenMV Cam's onboard flash drive?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s onboard flash drive?</source>
         <translation type="vanished">A bheil thu cinnteach gu bheil thu airson an draibhear flash air bòrd OpenMV agad a sguabadh às?</translation>
     </message>
     <message>
@@ -7413,7 +7402,7 @@ Check the json file for errors and fix them.</source>
         <translation>Sioncronaich leabharlannan eadar an OpenMV Cam agad agus am pasgan sgrìobhainnean gu fèin-ghluasadach.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+24" />
         <source>Filter examples by board and sensor type</source>
         <translation>Criathraich eisimpleirean a rèir seòrsa bùird agus sensor</translation>
     </message>
@@ -7443,40 +7432,40 @@ Check the json file for errors and fix them.</source>
         <translation>Ath-shuidhich OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Install the Latest Development Release</source>
         <translation>Stàlaich an sgaoileadh leasachaidh as ùire</translation>
     </message>
     <message>
-        <location line="+77" />
-        <location line="+3764" />
+        <location line="+75" />
+        <location line="+3823" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Terminal fosgailte</translation>
     </message>
     <message>
-        <location line="-3818" />
+        <location line="-3877" />
         <source>Machine Vision</source>
         <translation>Sealladh inneal</translation>
     </message>
     <message>
-        <location line="+181" />
-        <location line="+3668" />
-        <location line="+76" />
+        <location line="+175" />
+        <location line="+3733" />
+        <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Deasaiche Treas</translation>
     </message>
     <message>
-        <location line="-3739" />
-        <location line="+3817" />
+        <location line="-3803" />
+        <location line="+3880" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Deasaiche prìomh fhaclan</translation>
     </message>
     <message>
-        <location line="-3810" />
-        <location line="+3976" />
-        <location line="+98" />
+        <location line="-3873" />
+        <location line="+4037" />
+        <location line="+97" />
         <location line="+24" />
         <location line="+11" />
         <location line="+18" />
@@ -7484,7 +7473,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag Gineadair</translation>
     </message>
     <message>
-        <location line="-4124" />
+        <location line="-4184" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Teaghlach TAG16H5 (30 taga)</translation>
     </message>
@@ -7522,16 +7511,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+371" />
+        <location line="+367" />
         <location line="+14" />
         <location line="+33" />
-        <location line="+916" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
-        <source>Failed to open: "%L1"</source>
-        <translation>Dh'fhàillig fosgladh: "%L1"</translation>
+        <location line="+918" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-223" />
+        <source>Failed to open: &quot;%L1&quot;</source>
+        <translation>Dh&apos;fhàillig fosgladh: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1358" />
+        <location line="-1356" />
         <source>DataMatrix Generator</source>
         <translation>Gineadair DataMatrix</translation>
     </message>
@@ -7557,29 +7546,29 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Càite an sàbhail thu an lìonra air an OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+228" />
-        <location line="+2357" />
-        <location line="+1290" />
+        <location line="+225" />
+        <location line="+2424" />
+        <location line="+1288" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
-        <location line="+67" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382" />
-        <location line="+364" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899" />
-        <location line="+208" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-393" />
+        <location line="+375" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+900" />
+        <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Feuch an cuir thu leudachan faidhle ris!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-269" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+112" />
-        <location line="+207" />
+        <location line="+119" />
+        <location line="+203" />
         <source>Unable to overwrite output file!</source>
         <translation>Cha ghabh ath-sgrìobhadh a dhèanamh air an fhaidhle toraidh!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3860" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3922" />
         <source>Video Tools</source>
         <translation>Innealan bhidio</translation>
     </message>
@@ -7595,23 +7584,23 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-437" />
-        <location line="+273" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-439" />
+        <location line="+275" />
         <source>Play RTSP Stream</source>
         <translation>Cluich RTSP Stream</translation>
     </message>
     <message>
         <location line="+16" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+15" />
         <location line="+6" />
-        <location line="+46" />
+        <location line="+48" />
         <location line="+19" />
         <source>New Dataset</source>
         <translation>Seata-dàta ùr</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-98" />
         <source>Dataset Editor - Choose a folder to build the dataset in</source>
         <translation>Deasaiche Set Data - Tagh pasgan airson an dàta a thogail a-steach</translation>
     </message>
@@ -7622,17 +7611,17 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+15" />
-        <location line="+207" />
+        <location line="+205" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-209" />
         <location line="+34" />
         <location line="+48" />
         <location line="+33" />
-        <source>Failed to remove "%L1"!</source>
-        <translation>Cha b' urrainn dhuinn "%L1" a thoirt air falbh!</translation>
+        <source>Failed to remove &quot;%L1&quot;!</source>
+        <translation>Cha b&apos; urrainn dhuinn &quot;%L1&quot; a thoirt air falbh!</translation>
     </message>
     <message>
-        <location line="-128" />
-        <location line="+30" />
+        <location line="-125" />
+        <location line="+29" />
         <source>Open Dataset</source>
         <translation>Fosgail stòr-dàta</translation>
     </message>
@@ -7647,7 +7636,7 @@ Check the json file for errors and fix them.</source>
         <translation>Chan eil coltas gu bheil am pasgan taghte na sheata dàta Ìomhaigh Cam OpenMV dligheach!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export</source>
         <translation>Às-mhalairt</translation>
     </message>
@@ -7657,7 +7646,7 @@ Check the json file for errors and fix them.</source>
         <translation>Às-mhalairt stòr-dàta gu Zip File</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <location line="+7" />
         <location line="+42" />
         <location line="+21" />
@@ -7675,38 +7664,38 @@ Check the json file for errors and fix them.</source>
         <translation>Às-mhalairt...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-520" />
-        <location line="+237" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-522" />
+        <location line="+239" />
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1482" />
+        <location line="+1513" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+258" />
-        <location line="+533" />
-        <location line="+145" />
+        <location line="+273" />
+        <location line="+554" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location line="+433" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
-        <location line="+288" />
-        <location line="+143" />
-        <location line="+1023" />
+        <location line="+117" />
+        <location line="+428" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-131" />
+        <location line="+289" />
+        <location line="+165" />
+        <location line="+1148" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1339" />
         <location line="+85" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Cancel</source>
         <translation>Sguir dheth</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3673" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3737" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Luchdaich sìos gu Edge Impulse Project</translation>
     </message>
@@ -7785,8 +7774,8 @@ Check the json file for errors and fix them.</source>
         <translation>Mu dheidhinn OpenMV IDE...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;Mu OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Le: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;CEADACHD POBLACH COITCHEANN GNU&lt;/b&gt; /p&gt;&lt;p&gt;Dlighe-sgrìobhaidh (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Tha am prògram seo ga sgaoileadh an dòchas gum bi e feumail, ach GUN BARANTAS sam bith; às aonais eadhon am barantas so-thuigsinn a thaobh MARSANTACHD no IONNSACHADH AIRSON AIRSON PUINGEAN SÒNRAICHTE. Faic an &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; airson barrachd fiosrachaidh.&lt;/p&gt;&lt;p &lt;b&gt;Ceistean no Beachdan?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cuir fios thugainn aig &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Mu OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Le: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;CEADACHD POBLACH COITCHEANN GNU&lt;/b&gt; /p&gt;&lt;p&gt;Dlighe-sgrìobhaidh (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Tha am prògram seo ga sgaoileadh an dòchas gum bi e feumail, ach GUN BARANTAS sam bith; às aonais eadhon am barantas so-thuigsinn a thaobh MARSANTACHD no IONNSACHADH AIRSON AIRSON PUINGEAN SÒNRAICHTE. Faic an &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; airson barrachd fiosrachaidh.&lt;/p&gt;&lt;p &lt;b&gt;Ceistean no Beachdan?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cuir fios thugainn aig &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
@@ -7807,11 +7796,11 @@ Check the json file for errors and fix them.</source>
         <translation>Sealladair OpenMV</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+73" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
         <location line="+37" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-221" />
         <location line="+87" />
         <location line="+55" />
@@ -7847,11 +7836,11 @@ Check the json file for errors and fix them.</source>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-195" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-197" />
         <location line="+9" />
-        <location line="+89" />
-        <location line="+13" />
-        <location line="+42" />
+        <location line="+95" />
+        <location line="+11" />
+        <location line="+40" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
@@ -7881,55 +7870,63 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1064" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1189" />
         <location line="+6" />
         <location line="+28" />
         <location line="+52" />
         <location line="+8" />
         <location line="+35" />
-        <location line="+320" />
-        <location line="+62" />
-        <location line="+99" />
-        <location line="+49" />
-        <location line="+67" />
-        <location line="+12" />
-        <location line="+77" />
+        <location line="+329" />
+        <location line="+136" />
+        <location line="+28" />
+        <location line="+100" />
+        <location line="+56" />
+        <location line="+68" />
+        <location line="+13" />
+        <location line="+81" />
         <location line="+10" />
         <location line="+12" />
         <location line="+28" />
-        <location line="+36" />
-        <location line="+84" />
+        <location line="+34" />
+        <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+86" />
+        <location line="+97" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
-        <location line="+108" />
+        <location line="+116" />
         <location line="+83" />
-        <location line="+42" />
-        <location line="+38" />
-        <location line="+52" />
-        <location line="+38" />
+        <location line="+82" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+46" />
+        <location line="+54" />
+        <location line="+51" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
         <location line="+21" />
         <location line="+20" />
         <location line="+24" />
-        <location line="+121" />
-        <location line="+214" />
+        <location line="+135" />
+        <location line="+217" />
         <location line="+33" />
-        <location line="+248" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+658" />
+        <location line="+268" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+668" />
         <location line="+48" />
         <source>Connect</source>
         <translation>Ceangail</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-42" />
         <source>No settings for the selected board type %L1!</source>
-        <translation>Gun shuidheachaidhean airson a 'Bhùird taghte a chaidh a thaghadh% L1!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -7938,12 +7935,12 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Only firmware recovery is supported using the Alif Semiconductor's SE Tools.</source>
-        <translation>Chan eil ach ath-bheothachadh firmware a 'faighinn taic a bhith a' cleachdadh innealan se semicontion an alIf.</translation>
+        <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
+        <translation>Chan eil ach ath-bheothachadh firmware a &apos;faighinn taic a bhith a&apos; cleachdadh innealan se semicontion an alIf.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
         <source>Disconnect</source>
@@ -8002,12 +7999,11 @@ Check the json file for errors and fix them.</source>
         <translation>Sùm gus a bhith iomchaidh</translation>
     </message>
     <message>
-        <location line="+30" />
         <source>JPG</source>
-        <translation>JPG</translation>
+        <translation type="vanished">JPG</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+31" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>Bidh JPEG a’ teannachadh am Frame Buffer airson coileanadh nas àirde</translation>
     </message>
@@ -8026,7 +8022,7 @@ Check the json file for errors and fix them.</source>
         <translation>Cuir à comas am Frame Buffer airson an coileanadh as àirde</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+52" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>Frame Buffer Disabled - cliog air a’ phutan cuir à comas a-rithist gus a chomasachadh (gu h-àrd air an làimh dheis)</translation>
     </message>
@@ -8095,17 +8091,15 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">A ath (w:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1574" />
+        <location line="-1582" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>Mearachd a 'leughadh &lt;cleachdaiche_recesources&gt; /opeenvide/firdowaretsTes.json:% L1. 
-
-Chan eil am faidhle seo aig v4.3.3.3.0.0 aig a bheil am faidhle seo agus bhiodh e air a dhubhadh às mu bhith a 'stàladh ghoireasan.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2512" />
+        <location line="+346" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2858" />
         <source>Load Custom Firmware</source>
         <translation>Luchdaich firmware gnàthaichte</translation>
     </message>
@@ -8117,7 +8111,7 @@ Chan eil am faidhle seo aig v4.3.3.3.0.0 aig a bheil am faidhle seo agus bhiodh 
     </message>
     <message>
         <location line="+1" />
-        <source>Are you sure you want to erase your OpenMV Cam's internal FAT file system?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s internal FAT file system?</source>
         <translation>A bheil thu cinnteach gu bheil thu airson gun cuir thu às don t-siostam faidhle geir a-staigh agad?</translation>
     </message>
     <message>
@@ -8146,15 +8140,20 @@ Chan eil am faidhle seo aig v4.3.3.3.0.0 aig a bheil am faidhle seo agus bhiodh 
         <translation>Ath-shuidheachadh romfs air cam fosgailte</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+84" />
+        <source>Force enter OpenMV Cam bootloader</source>
+        <translation>Feachd a-steach OpenMV Cam bootloader</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>MicroPython Tools</source>
         <translation>Innealan micropython</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+6" />
         <location line="+7" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -8164,39 +8163,50 @@ Chan eil am faidhle seo aig v4.3.3.3.0.0 aig a bheil am faidhle seo agus bhiodh 
         <translation>Dèan lethbhreac / tionndaidh faidhle python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Open Model Zoo</source>
         <translation>Zoo Fun Modail</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+87" />
         <source>Convert Model for NPU</source>
         <translation>Dèan modail airson NPU</translation>
     </message>
     <message>
+        <location line="+6" />
+        <location line="+9" />
+        <location line="+12" />
         <location line="+7" />
-        <location line="+10" />
-        <location line="+13" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-176" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Modail tionndaidh</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location line="+420" />
         <source>Show Code Profiler</source>
         <translation>Seall Còd Profiler</translation>
     </message>
     <message>
         <location line="+101" />
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Mu %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Le: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;Tionndaidh Factaraidh&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Air a chiallachadh airson luchd-saothrachaidh le cead a-mhàin.&lt;/p&gt;&lt;pb&gt;GNU GENERAL PUBLIC/LICENSE (%CoLpy&gt;)&lt;/p&gt; %L3&lt;/p&gt;&lt;p&gt;Tha am prògram seo ga sgaoileadh an dòchas gum bi e feumail, ach GUN BARANTAS sam bith; às aonais eadhon am barantas so-thuigsinn a thaobh MARSACHD no IONNSACHADH AIRSON AIRSON AIRSON AIRSON. Faic an &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;Ceadachas Poblach Coitcheann GNU&lt;/a&gt; airson tuilleadh fiosrachaidh.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Ceistean no Beachdan?&lt;/b&gt;&lt;/p&gt;Cuir fios thugainn aig &lt;a href="mailto:openmv@openmv&gt;&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+196" />
+        <location line="+26" />
+        <source>JPG Mode</source>
+        <translation>Modh JPG</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>RAW Mode</source>
+        <translation>Modh RAW</translation>
+    </message>
+    <message>
+        <location line="+113" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - piogsail (%7) - Fòcas (%8)</translation>
@@ -8234,7 +8244,7 @@ Chan eil am faidhle seo aig v4.3.3.3.0.0 aig a bheil am faidhle seo agus bhiodh 
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2737" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
         <source>Board:</source>
         <translation>Bòrd:</translation>
     </message>
@@ -8278,9 +8288,9 @@ Chan eil am faidhle seo aig v4.3.3.3.0.0 aig a bheil am faidhle seo agus bhiodh 
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-301" />
-        <location line="+303" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
+        <location line="+324" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
         <source>Drive:</source>
         <translation>Drive:</translation>
     </message>
@@ -8301,8 +8311,8 @@ Chan eil am faidhle seo aig v4.3.3.3.0.0 aig a bheil am faidhle seo agus bhiodh 
         <translation>Faodaidh e a bhith eadar-dhealaichte bho FPS camara</translation>
     </message>
     <message>
-        <location line="+309" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2952" />
+        <location line="+307" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
         <source>Update Available</source>
         <translation>Ùrachadh ri fhaighinn</translation>
     </message>
@@ -8317,7 +8327,7 @@ Chan eil am faidhle seo aig v4.3.3.3.0.0 aig a bheil am faidhle seo agus bhiodh 
         <translation>Luchdaich sìos</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
         <translation>Prògramadh WiFi ciorramach!</translation>
     </message>
@@ -8334,7 +8344,7 @@ Chan eil am faidhle seo aig v4.3.3.3.0.0 aig a bheil am faidhle seo agus bhiodh 
     <message>
         <location line="+1" />
         <source>Failed to create the documents folder!</source>
-        <translation>Cha b' urrainn dhuinn pasgan nan sgrìobhainnean a chruthachadh!</translation>
+        <translation>Cha b&apos; urrainn dhuinn pasgan nan sgrìobhainnean a chruthachadh!</translation>
     </message>
     <message>
         <location line="+22" />
@@ -8355,11 +8365,11 @@ Chan eil am faidhle seo aig v4.3.3.3.0.0 aig a bheil am faidhle seo agus bhiodh 
         <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
-Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
 
 Blinking Green:
 
-Your OpenMV Cam's onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
 
 Blinking Blue:
 
@@ -8367,22 +8377,22 @@ Your OpenMV Cam is running the default main.py script onboard.
 
 If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
 
-If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+If the LED is blinking blue but OpenMV IDE can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
 
 Blinking White:
 
-Your OpenMV Cam's firmware is panicking because of a hardware failure. Please check that your OpenMV Cam's camera module is installed securely.
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
         <translation>Tapadh leibh airson an OpenMV Cam agus OpenMV IDE a chleachdadh!
 
 Bidh an LED air bòrd OpenMV agad a’ brùthadh le dathan eadar-dhealaichte gus a staid a nochdadh:
 
-A' priobadh uaine:
+A&apos; priobadh uaine:
 
 Tha an bootloader air bòrd OpenMV Cam agad a’ ruith. Bidh an bootloader air bòrd a’ ruith airson beagan dhiog nuair a bhios an OpenMV Cam agad air a stiùireadh tro USB gus leigeil le OpenMV IDE do OpenMV Cam ath-chlàradh.
 
-A' sèideadh gorm:
+A&apos; sèideadh gorm:
 
 Tha an OpenMV Cam agad a’ ruith an sgriobt main.py bunaiteach air bòrd.
 
@@ -8390,7 +8400,7 @@ Ma tha cairt SD agad air a chuir a-steach no ma tha thu air sgrìobhadh thairis 
 
 Ma tha an LED a’ priobadh gorm ach nach urrainn OpenMV IDE ceangal a dhèanamh ris an OpenMV Cam agad feuch an dèan thu cinnteach gu bheil thu a’ ceangal do OpenMV Cam ris a’ PC agad le càball USB a bheir seachad an dà chuid dàta agus cumhachd.
 
-A' Blinking White:
+A&apos; Blinking White:
 
 Tha am bathar-bog OpenMV Cam agad a’ clisgeadh air sgàth fàilligeadh bathar-cruaidh. Feuch an dèan thu cinnteach gu bheil am modal camara OpenMV Cam agad air a chuir a-steach gu tèarainte.
 
@@ -8398,27 +8408,27 @@ Tha am bathar-bog OpenMV Cam agad a’ clisgeadh air sgàth fàilligeadh bathar-
     </message>
     <message>
         <location line="+93" />
-        <location line="+1176" />
+        <location line="+1212" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Port sreathach - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1144" />
+        <location line="-1180" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+791" />
-        <location line="+145" />
+        <location line="+827" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
+        <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
-        <translation>A' ceangal... (ùine-ama 30 diog)</translation>
+        <translation>A&apos; ceangal... (ùine-ama 30 diog)</translation>
     </message>
     <message>
-        <location line="-1783" />
+        <location line="-1820" />
         <source>
 
 Try doing:
@@ -8471,12 +8481,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1233" />
+        <location line="+1270" />
         <source>UDP Server Connection - %1</source>
         <translation>Ceangal frithealaiche UDP - %1</translation>
     </message>
     <message>
-        <location line="-1159" />
+        <location line="-1196" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Argamaid puirt mì-dhligheach (%1) airson -open_udp_server_terminal</translation>
     </message>
@@ -8507,12 +8517,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1279" />
+        <location line="+1317" />
         <source>TCP Server Connection - %1</source>
         <translation>Ceangal frithealaiche TCP - %1</translation>
     </message>
     <message>
-        <location line="-1205" />
+        <location line="-1243" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Argamaid puirt mì-dhligheach (%1) airson -open_tcp_server_terminal</translation>
     </message>
@@ -8522,15 +8532,17 @@ sudo adduser %L1 dialout
         <translation>Argumaidean a dhìth airson -open_tcp_server_terminal</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+58" />
         <location line="+18" />
+        <location line="+6" />
+        <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
         <location line="+9" />
         <location line="+45" />
-        <location line="+79" />
-        <location line="+8" />
+        <location line="+82" />
+        <location line="+27" />
         <location line="+6" />
         <location line="+6" />
         <location line="+6" />
@@ -8539,15 +8551,15 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2389" />
-        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location line="+10" />
         <location line="+8" />
-        <location line="+19" />
+        <location line="+22" />
         <source>Register OpenMV Cam</source>
         <translation>Clàraich OpenMV Cam</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="-278" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8567,13 +8579,24 @@ Feuch an ruith thu eisimpleirean-&gt; HelloWorld-&gt; helloworld.py gus càileac
     </message>
     <message>
         <location line="+7" />
-        <location line="+17" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65" />
+        <location line="+29" />
+        <location line="+172" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-69" />
         <source>Registered</source>
         <translation>Clàraichte</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-190" />
+        <source>Board type not available for this form key!</source>
+        <translation>Chan eil seòrsa bùird ri fhaighinn airson an iuchair fhoirm seo!</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Registration limit reached for this board type!</source>
+        <translation>Crìoch clàraidh air a ruighinn airson an seòrsa bùird seo!</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8589,27 +8612,27 @@ Feuch an ruith thu eisimpleirean-&gt; HelloWorld-&gt; helloworld.py gus càileac
     </message>
     <message>
         <location line="+17" />
-        <location line="+182" />
+        <location line="+204" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>Mearachd stòr-dàta!</translation>
     </message>
     <message>
-        <location line="-165" />
-        <location line="+178" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+17" />
+        <location line="-187" />
+        <location line="+200" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+18" />
         <source>GET Network error!</source>
         <translation>Mearachd lìonra GET!</translation>
     </message>
     <message>
-        <location line="-169" />
-        <location line="+177" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+19" />
+        <location line="-191" />
+        <location line="+199" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+22" />
         <source>GET network error!</source>
         <translation>GET mearachd lìonra!</translation>
     </message>
     <message>
-        <location line="-170" />
+        <location line="-192" />
         <location line="+10" />
         <location line="+10" />
         <source>Unregistered OpenMV Cam Detected</source>
@@ -8617,7 +8640,7 @@ Feuch an ruith thu eisimpleirean-&gt; HelloWorld-&gt; helloworld.py gus càileac
     </message>
     <message>
         <location line="-19" />
-        <source>Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
         <translation>Chan eil an OpenMV Cam agad clàraichte. Feumaidh tu do OpenMV Cam a chlàradh le OpenMV airson a chleachdadh gun chrìoch le OpenMV IDE gun bhriseadh sam bith.
@@ -8644,21 +8667,21 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href="https://openmv.io/products/openmv-cam-board-key"&gt;here&lt;/a&gt;.</source>
-        <translation>Cuir a-steach iuchair bùird gus an OpenMV Cam agad a chlàradh.&lt;br/&gt;&lt;br/&gt;Mura h-eil iuchair bùird agad faodaidh tu fear a cheannach o OpenMV &lt;a href="https://openmv.io/products/openmv- cam-board-key"&gt;an seo&lt;/a&gt;.</translation>
+        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Cuir a-steach iuchair bùird gus an OpenMV Cam agad a chlàradh.&lt;br/&gt;&lt;br/&gt;Mura h-eil iuchair bùird agad faodaidh tu fear a cheannach o OpenMV &lt;a href=&quot;https://openmv.io/products/openmv- cam-board-key&quot;&gt;an seo&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+47" />
         <source>Registering OpenMV Cam...</source>
-        <translation>A' clàradh OpenMV Cam...</translation>
+        <translation>A&apos; clàradh OpenMV Cam...</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+33" />
         <source>Thank you for registering your OpenMV Cam!</source>
         <translation>Tapadh leibh airson do OpenMV Cam a chlàradh!</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+27" />
         <source>Invalid Board Key for Board Type!</source>
         <translation>Iuchair Bùird neo-dhligheach airson Seòrsa Bùird!</translation>
     </message>
@@ -8683,10 +8706,10 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Iuchair Bùird ann an cruth neo-dhligheach!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+223" />
-        <location line="+482" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+225" />
+        <location line="+503" />
         <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-83" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-84" />
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
@@ -8695,7 +8718,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation type="vanished">Dèan rèiteachadh air na roghainnean</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+389" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+395" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>Sàbhail Sgriobt</translation>
@@ -8706,7 +8729,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Strì beachdan agus atharraich àiteachan gu tabaichean?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
@@ -8723,8 +8746,8 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Faidhlichean Ìomhaigh (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Template</source>
@@ -8737,26 +8760,26 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
         <location line="+23" />
-        <location line="+67" />
+        <location line="+65" />
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>Feuch an tagh thu slighe dhligheach air an OpenMV Cam!</translation>
     </message>
     <message>
-        <location line="-52" />
-        <location line="+67" />
-        <source>"%L1" is longer than a max length of %L2 characters!</source>
-        <translation>Tha "%L1" nas fhaide na an fhad as motha de %L2 caractairean!</translation>
+        <location line="-50" />
+        <location line="+65" />
+        <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
+        <translation>Tha &quot;%L1&quot; nas fhaide na an fhad as motha de %L2 caractairean!</translation>
     </message>
     <message>
-        <location line="-40" />
-        <location line="+7" />
+        <location line="-41" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Descriptor</source>
         <translation>Sàbhail tuairisgeul</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8764,7 +8787,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Prìomh phuingean faidhlichean (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1113" />
+        <location line="-1112" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8782,17 +8805,17 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     <message>
         <location line="-19" />
         <location line="+13" />
-        <source>Cannot open the file "%L1"!</source>
-        <translation>Chan urrainn dhuinn am faidhle "%L1" fhosgladh!</translation>
+        <source>Cannot open the file &quot;%L1&quot;!</source>
+        <translation>Chan urrainn dhuinn am faidhle &quot;%L1&quot; fhosgladh!</translation>
     </message>
     <message>
         <location line="-13" />
         <location line="+13" />
-        <source>Cannot open the example file "%L1"!</source>
-        <translation>Chan urrainn dhuinn am faidhle eisimpleir "%L1" fhosgladh!</translation>
+        <source>Cannot open the example file &quot;%L1&quot;!</source>
+        <translation>Chan urrainn dhuinn am faidhle eisimpleir &quot;%L1&quot; fhosgladh!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-467" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-468" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>Tagh Drive</translation>
@@ -8803,8 +8826,8 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Cha deach draibhearan dligheach sam bith a lorg a bha co-cheangailte ris an OpenMV Cam agad!</translation>
     </message>
     <message>
-        <source>"%L1" is the only drive available so it must be your OpenMV Cam's drive.</source>
-        <translation type="vanished">'S e "%L1" an aon dhràibhear a tha ri làimh agus mar sin feumaidh gur e an draibhear OpenMV Cam agad a tha ann.</translation>
+        <source>&quot;%L1&quot; is the only drive available so it must be your OpenMV Cam&apos;s drive.</source>
+        <translation type="vanished">&apos;S e &quot;%L1&quot; an aon dhràibhear a tha ri làimh agus mar sin feumaidh gur e an draibhear OpenMV Cam agad a tha ann.</translation>
     </message>
     <message>
         <location line="+27" />
@@ -8812,19 +8835,19 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Feuch an ceangail thu draibhear leis an OpenMV Cam agad</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>Drive: %L1</source>
         <translation>Dràibhear: %L1</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+42" />
         <source>Debug Protocol Settings</source>
         <translation>Roghainnean Pròtacal Debug</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Protocol Version %1 - System Info:</source>
-        <translation>Tionndadh protocol % 1 - Fiosrachadh mun t-siostam:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25" />
@@ -8887,30 +8910,30 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Cunntas pròifil còd (ms)</translation>
     </message>
     <message>
-        <location line="+354" />
+        <location line="+391" />
         <location line="+26" />
         <location line="+7" />
-        <source>Failed to flush "%L1"!</source>
-        <translation>Dh'fhàillig le sruthadh "%L1"!</translation>
+        <source>Failed to flush &quot;%L1&quot;!</source>
+        <translation>Dh&apos;fhàillig le sruthadh &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34" />
-        <location line="+13" />
+        <location line="+12" />
         <location line="+31" />
         <location line="+9" />
-        <location line="+87" />
+        <location line="+89" />
         <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -8920,7 +8943,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Terminal Ùr</translation>
     </message>
     <message>
-        <location line="-637" />
+        <location line="-641" />
         <source>Connect to serial port</source>
         <translation>Ceangail ris an t-sreath port</translation>
     </message>
@@ -8941,7 +8964,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2021" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2227" />
         <source>Please select a serial port</source>
         <translation>Feuch an tagh thu port sreathach</translation>
     </message>
@@ -8951,7 +8974,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Feuch an cuir thu a-steach ìre baud</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+96" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
         <source>Try doing:
 
@@ -8968,15 +8991,15 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
         <location line="+17" />
-        <location line="+138" />
+        <location line="+139" />
         <location line="+7" />
-        <location line="+236" />
+        <location line="+237" />
         <location line="+7" />
-        <source>Invalid string: "%L1"!</source>
-        <translation>Sreang mì-dhligheach: "%L1"!</translation>
+        <source>Invalid string: &quot;%L1&quot;!</source>
+        <translation>Sreang mì-dhligheach: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-381" />
         <source>No serial ports found!</source>
         <translation>Cha deach puirt sreathach a lorg!</translation>
     </message>
@@ -8987,45 +9010,45 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+243" />
+        <location line="+244" />
         <source> Connect to a Server </source>
         <translation> Ceangail ri frithealaiche </translation>
     </message>
     <message>
-        <location line="-242" />
-        <location line="+243" />
+        <location line="-243" />
+        <location line="+244" />
         <source> Start a Server </source>
         <translation> Tòisich frithealaiche </translation>
     </message>
     <message>
         <location line="-234" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>Feuch an cuir thu a-steach seòladh IP (no ainm àrainn) agus port (m. e. xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-222" />
         <source>UDP Client Connection - %1</source>
         <translation>Ceangal Cliant UDP - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>Cuir a-steach àireamh puirt (cuir a-steach 0 airson port sam bith an-asgaidh air thuaiream)</translation>
     </message>
     <message>
-        <location line="-137" />
+        <location line="-138" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>Ceangail ri frithealaiche TCP mar neach-dèiligidh no tòisich air frithealaiche TCP?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+36" />
         <source>TCP Client Connection - %1</source>
         <translation>Ceangal Cliant TCP - %1</translation>
     </message>
     <message>
-        <location line="+244" />
+        <location line="+243" />
         <source>Error: Option Index!</source>
         <translation>Mearachd: Clàr-innse roghainnean!</translation>
     </message>
@@ -9050,7 +9073,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation> Faidhle Dhealbh </translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>Thèid an tuple stairsneach taghte ùrachadh nuair a thig e gu crìch.</translation>
@@ -9066,8 +9089,8 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Faidhle Dhealbh</translation>
     </message>
     <message>
-        <location line="+71" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+70" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+704" />
         <source>What would you like to do?</source>
         <translation>Dè bu toil leat a dhèanamh?</translation>
     </message>
@@ -9082,7 +9105,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation> Cuir còmhla Faidhlichean </translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9096,7 +9119,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     <message>
         <location line="+1" />
         <source>Failed to save the edited keypoints for an unknown reason!</source>
-        <translation>Dh'fhàillig leis na prìomh phuingean deasaichte a shàbhaladh airson adhbhar neo-aithnichte!</translation>
+        <translation>Dh&apos;fhàillig leis na prìomh phuingean deasaichte a shàbhaladh airson adhbhar neo-aithnichte!</translation>
     </message>
     <message>
         <location line="+13" />
@@ -9106,7 +9129,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     <message>
         <location line="+7" />
         <source>Failed to load the keypoints file for an unknown reason!</source>
-        <translation>Dh'fhàillig luchdachadh am faidhle prìomh phuingean airson adhbhar neo-aithnichte!</translation>
+        <translation>Dh&apos;fhàillig luchdachadh am faidhle prìomh phuingean airson adhbhar neo-aithnichte!</translation>
     </message>
     <message>
         <location line="+7" />
@@ -9124,20 +9147,20 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     <message>
         <location line="+1" />
         <source>Failed to save the merged keypoints for an unknown reason!</source>
-        <translation>Dh'fhàillig leis na prìomh phuingean aonaichte a shàbhaladh airson adhbhar neo-aithnichte!</translation>
+        <translation>Dh&apos;fhàillig leis na prìomh phuingean aonaichte a shàbhaladh airson adhbhar neo-aithnichte!</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Failed to load the first keypoints file for an unknown reason!</source>
-        <translation>Dh'fhàillig luchdachadh a' chiad fhaidhle prìomh phuingean airson adhbhar neo-aithnichte!</translation>
+        <translation>Dh&apos;fhàillig luchdachadh a&apos; chiad fhaidhle prìomh phuingean airson adhbhar neo-aithnichte!</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>What tag images from the %L1 tag family do you want to generate?</source>
         <translation>Dè na dealbhan taga on teaghlach taga %L1 a tha thu airson a ghineadh?</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Min (%1)</source>
         <translation>Min (%1)</translation>
     </message>
@@ -9154,11 +9177,11 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>AprilTag Generator - Where do you want to save %n tag image(s) to?</source>
-        <translation>
-            <numerusform>AprilTag Generator - Càite a bheil thu airson %n dealbh(nan) taga a shàbhaladh dha?</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -9174,7 +9197,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     <message>
         <location line="+24" />
         <source>Painting - end failed!</source>
-        <translation>Peantadh - dh'fhàillig an deireadh!</translation>
+        <translation>Peantadh - dh&apos;fhàillig an deireadh!</translation>
     </message>
     <message>
         <location line="+29" />
@@ -9182,7 +9205,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Ginealach coileanta!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1510" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>Tha goireasan ùra OpenMV IDE rim faighinn (me eisimpleirean, firmware, sgrìobhainnean, msaa).</translation>
     </message>
@@ -9193,42 +9216,42 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+288" />
-        <location line="+143" />
+        <location line="+289" />
+        <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
         <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
         <location line="+46" />
-        <location line="+75" />
+        <location line="+73" />
         <location line="+46" />
-        <location line="+74" />
+        <location line="+72" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+400" />
         <location line="+50" />
-        <location line="+873" />
+        <location line="+871" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
         <location line="+57" />
         <source>Downloading...</source>
-        <translation>A' luchdachadh sìos...</translation>
+        <translation>A&apos; luchdachadh sìos...</translation>
     </message>
     <message>
-        <location line="-417" />
+        <location line="-440" />
         <source>Installing...</source>
-        <translation>A' stàladh...</translation>
+        <translation>A&apos; stàladh...</translation>
     </message>
     <message>
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
-        <source>Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+        <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>Feuch an dùin thu prògraman sam bith a tha a’ coimhead / a’ deasachadh dàta tagraidh OpenMV IDE agus an uairsin ath-thòiseachadh OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
         <translation>Stàladh soirbheachail! Feuch an ath-thòisich thu OpenMV IDE.</translation>
     </message>
@@ -9241,69 +9264,119 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+254" />
+        <location line="+273" />
         <location line="+88" />
-        <source>Cannot open the resources file "%L1"!</source>
-        <translation>Chan urrainn dhuinn am faidhle ghoireasan "%L1" fhosgladh!</translation>
+        <source>Cannot open the resources file &quot;%L1&quot;!</source>
+        <translation>Chan urrainn dhuinn am faidhle ghoireasan &quot;%L1&quot; fhosgladh!</translation>
     </message>
     <message>
-        <location line="-314" />
-        <location line="+254" />
+        <location line="-333" />
+        <location line="+273" />
         <location line="+95" />
-        <source>Network request failed "%L1"!</source>
-        <translation>Dh'fhàillig iarrtas lìonraidh "%L1"!</translation>
+        <source>Network request failed &quot;%L1&quot;!</source>
+        <translation>Dh&apos;fhàillig iarrtas lìonraidh &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-315" />
+        <location line="-335" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation>Binary binary (* .bin * .fu * .img)</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+119" />
-        <location line="+588" />
-        <location line="+217" />
-        <location line="+2205" />
+        <location line="+12" />
+        <location line="+117" />
+        <location line="+720" />
+        <location line="+227" />
+        <location line="+2414" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Cuir às do shiostam faidhle geir taobh a-staigh</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+119" />
-        <location line="+589" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+117" />
+        <location line="+722" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
-        <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
-        <translation>Ma bheir thu an roghainn seo an roghainn seo bidh a h-uile faidhle air an t-siostam faidhle geir a-staigh aig an t-siostam faidhle a-staigh agad air an toirt às. Chan eil seo a 'cur às do fhaidhlichean air cairt SD sam bith a ghabhas toirt air falbh (ma thèid a chuir a-steach).</translation>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <translation>Ma bheir thu an roghainn seo an roghainn seo bidh a h-uile faidhle air an t-siostam faidhle geir a-staigh aig an t-siostam faidhle a-staigh agad air an toirt às. Chan eil seo a &apos;cur às do fhaidhlichean air cairt SD sam bith a ghabhas toirt air falbh (ma thèid a chuir a-steach).</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+708" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+839" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Ath-shuidheachadh siostam faidhle romfs</translation>
     </message>
     <message>
-        <location line="-3203" />
-        <location line="+708" />
-        <location line="+215" />
-        <location line="+2205" />
+        <location line="-3552" />
+        <location line="+840" />
+        <location line="+225" />
+        <location line="+2412" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Ma bheir thu an roghainn seo an roghainn seo thèid an siostam faidhle rom air an cam fosgailte agad ath-shuidheachadh air ais gu bunaiteach.</translation>
     </message>
     <message>
-        <location line="-3160" />
+        <location line="-3510" />
         <location line="+45" />
         <source>Bootloader</source>
         <translation>Bootloader</translation>
     </message>
     <message>
-        <location line="+2991" />
+        <location line="+28" />
+        <source>Force bootloader</source>
+        <translation>Neart bootloader</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Force enter the OpenMV Cam bootloader. May result in the OpenMV Cam bootloader not automatically exiting on older boards.</source>
+        <translation>Feachd a-steach don bootloader OpenMV Cam. Dh’ fhaodadh nach fàg an luchd-luaidh OpenMV Cam gu fèin-ghluasadach air bùird nas sine.</translation>
+    </message>
+    <message>
+        <location line="+693" />
+        <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
+        <translation>Stàlaich am bathar-bog fuasglaidh as ùire (v%L1.%L2.%L3)</translation>
+    </message>
+    <message>
+        <location line="+1063" />
+        <location line="+192" />
+        <source>Failed to copy firmware files to temporary directory!</source>
+        <translation>Dh&apos;fhàillig lethbhreac a dhèanamh de na faidhlichean firmware dhan eòlaire sealach!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Original firmware folder does not exist!</source>
+        <translation>Chan eil am pasgan firmware tùsail ann!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Failed to create temporary directory!</source>
+        <translation>Dh&apos;fhàillig cruthachadh eòlaire sealach!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <source>Only loading bootloader.bin files is supported with the ST Cube Programmer!</source>
+        <translation>Chan eil ach luchdachadh faidhlichean bootloader.bin a’ faighinn taic bhon phrògramadair ST Cube!</translation>
+    </message>
+    <message>
+        <location line="+151" />
+        <source>Bootloader update complete!
+
+</source>
+        <translation>Ùrachadh Bootloader deiseil!</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Connect your OpenMV Cam now.</source>
+        <translation>Ceangail do OpenMV Cam a-nis.</translation>
+    </message>
+    <message>
+        <location line="+1377" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9312,8 +9385,8 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Gu sònraichte, thoir sùil air Pròiseas Ìomhaighean -&gt; Sgrùdadh Dhathan agus Ionnsachadh Innealan -&gt; eisimpleirean TensorFlow.</translation>
     </message>
     <message>
-        <location line="-3104" />
-        <location line="+4" />
+        <location line="-3455" />
+        <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
         <source>Firmware Path</source>
@@ -9328,43 +9401,43 @@ Gu sònraichte, thoir sùil air Pròiseas Ìomhaighean -&gt; Sgrùdadh Dhathan a
         <translation type="vanished">Sguab às an siostam faidhle a-staigh</translation>
     </message>
     <message>
-        <source>If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">Ma bheir thu comas don roghainn seo thèid a h-uile faidhle air an draibhear flash a-staigh aig OpenMV Cam agad a dhubhadh às. Cha sguab seo às faidhlichean air cairt SD sam bith a ghabhas toirt air falbh (ma thèid a chuir a-steach).</translation>
     </message>
     <message>
-        <source>Loading firmware via DFU always erases your OpenMV Cam's internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
+        <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">Le bhith a’ luchdachadh firmware tro DFU bidh e an-còmhnaidh a’ sguabadh às do dhràibhear flash a-staigh aig OpenMV Cam. Cha sguab seo às faidhlichean air cairt SD sam bith a ghabhas toirt air falbh (ma thèid a chuir a-steach).</translation>
     </message>
     <message>
         <location line="+21" />
-        <location line="+130" />
+        <location line="+148" />
         <source>Run</source>
         <translation>Ruith</translation>
     </message>
     <message>
-        <location line="-86" />
-        <source>"%L1" is not a file!</source>
-        <translation>Chan e faidhle a tha ann an "%L1"!</translation>
+        <location line="-105" />
+        <source>&quot;%L1&quot; is not a file!</source>
+        <translation>Chan e faidhle a tha ann an &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+67" />
         <source>Update ROMFS file system</source>
         <translation>Ùraich siostam faidhle romfs</translation>
     </message>
     <message>
         <location line="+3" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be updated to the latest development release.</source>
-        <translation>Ma tha thu a 'toirt cothrom don roghainn seo thèid siostam faidhle an Ròm air an cam fosgailte agad ùrachadh chun an naidheachd leasachaidh as ùire.</translation>
+        <translation>Ma tha thu a &apos;toirt cothrom don roghainn seo thèid siostam faidhle an Ròm air an cam fosgailte agad ùrachadh chun an naidheachd leasachaidh as ùire.</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+125" />
         <source>Extracting...</source>
-        <translation>A' toirt a-mach...</translation>
+        <translation>A&apos; toirt a-mach...</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Unable to extract firmware!</source>
-        <translation>Cha b' urrainn dhuinn firmware a thoirt a-mach!</translation>
+        <translation>Cha b&apos; urrainn dhuinn firmware a thoirt a-mach!</translation>
     </message>
     <message>
         <location line="+148" />
@@ -9377,17 +9450,16 @@ Gu sònraichte, thoir sùil air Pròiseas Ìomhaighean -&gt; Sgrùdadh Dhathan a
         <translation>Bòrd neo-aithnichte</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+344" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Chaidh bòrd ann am modh DFU a lorg. Dè bu toil leat a dhèanamh?</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Install the lastest release firmware (v%L1.%L2.%L3)</source>
-        <translation>Stàlaich am bathar-bog fuasglaidh as ùire (v%L1.%L2.%L3)</translation>
+        <translation type="vanished">Stàlaich am bathar-bog fuasglaidh as ùire (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Load a specific firmware</source>
         <translation>Luchdaich a-nuas firmware sònraichte</translation>
     </message>
@@ -9396,64 +9468,64 @@ Gu sònraichte, thoir sùil air Pròiseas Ìomhaighean -&gt; Sgrùdadh Dhathan a
         <translation type="vanished">Dìreach sguab às an siostam faidhle a-staigh</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+92" />
         <source>No OpenMV Cams found!</source>
         <translation>Cha deach OpenMV Cams a lorg!</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+56" />
         <source>Do you have an OpenMV Cam connected and is it bricked?</source>
         <translation>A bheil OpenMV Cam agad ceangailte agus a bheil e air a bhreabadh?</translation>
     </message>
     <message>
-        <location line="+849" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
-Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
-        <translation>Dìreach a 'luchdachadh * tha faidhlichean * .fuu a' faighinn taic airson anootloader for-bheothachaidh STM32!
+Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!</source>
+        <translation type="vanished">Dìreach a &apos;luchdachadh * tha faidhlichean * .fuu a&apos; faighinn taic airson anootloader for-bheothachaidh STM32!
 
  Tagh faidhle bootloader.dfu agus feuch ris a-rithist. Thoir fa-near nach luchdaich thu am firmware.fu no fosgailte (Bootloader + firmware) bùird stm32h7 mar thoradh air bùird air Bog ann an rom bootloader rom an t-sianail!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+987" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
-        <translation>A-mhàin a 'luchdachadh * .bin agus * .img faidhlichean a' faighinn taic don chorpoader a-staigh!</translation>
+        <translation>A-mhàin a &apos;luchdachadh * .bin agus * .img faidhlichean a&apos; faighinn taic don chorpoader a-staigh!</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Only loading *.bin and *.img files are supported for the IMX bootloader!</source>
-        <translation>A-mhàin a 'luchdachadh * .bin agus * .ime .img a' faighinn taic airson a 'chorpoloader Imx!</translation>
+        <translation>A-mhàin a &apos;luchdachadh * .bin agus * .ime .img a&apos; faighinn taic airson a &apos;chorpoloader Imx!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+107" />
         <source>Only loading *.bin, *.dfu, and *.img files are supported for the Arduino bootloader!</source>
-        <translation>Dìreach a 'luchdachadh * .bin, * .fu, agus * .ime .img a' faighinn taic don Ardumo Bootloader Ardumino!</translation>
+        <translation>Dìreach a &apos;luchdachadh * .bin, * .fu, agus * .ime .img a&apos; faighinn taic don Ardumo Bootloader Ardumino!</translation>
     </message>
     <message>
         <location line="+21" />
         <source>Only loading *.bin files is supported for the Bossac bootloader!</source>
-        <translation>Dìreach a 'luchdachadh * .bin faidhlichean</translation>
+        <translation>Dìreach a &apos;luchdachadh * .bin faidhlichean</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Only loading *.bin files is supported for the Picotool bootloader!</source>
-        <translation>Dìreach a 'luchdachadh * .bin tha faidhlichean * .bin a' faighinn taic airson a 'Pholotoloader Picotool!</translation>
+        <translation>Dìreach a &apos;luchdachadh * .bin tha faidhlichean * .bin a&apos; faighinn taic airson a &apos;Pholotoloader Picotool!</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
+        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
         <translation>Thoir fa-near nach luchdaich thu am firmware.fu no fosgailte (Bootloader + firmware) bùird stm32h7 mar thoradh air bùird air Bog ann an rom bootloader rom an t-sianail!
 
- Tha OpenMV a 'moladh nach eil a' luchdachadh a-mhàin a 'luchdachadh a' chorpoloader.dfu gus am bootloader a chàradh.</translation>
+ Tha OpenMV a &apos;moladh nach eil a&apos; luchdachadh a-mhàin a &apos;luchdachadh a&apos; chorpoloader.dfu gus am bootloader a chàradh.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-976" />
-        <location line="+657" />
-        <location line="+1750" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1398" />
+        <location line="+252" />
+        <location line="+681" />
+        <location line="+1936" />
         <source>Please select the board type</source>
         <translation>Feuch an tagh thu an seòrsa bùird</translation>
     </message>
@@ -9462,30 +9534,30 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Sguab às an siostam faidhle a-staigh?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2295" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2500" />
         <source>No released firmware available for the attached board!</source>
         <translation>Chan eil firmware a chaidh a leigeil ma sgaoil ri fhaighinn airson a’ bhòrd ceangailte!</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+61" />
         <source>Please select a DFU Device</source>
         <translation>Feuch an tagh thu inneal DFU</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-83" />
         <location line="+170" />
         <location line="+44" />
-        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Feuch an ùraich thu an bootloader chun dreach as ùire agus stàlaich an SoftDevice gus am firmware OpenMV a ghlasadh. Gheibhear barrachd fiosrachaidh air &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Feuch an ùraich thu an bootloader chun dreach as ùire agus stàlaich an SoftDevice gus am firmware OpenMV a ghlasadh. Gheibhear barrachd fiosrachaidh air &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-1065" />
-        <location line="+3012" />
+        <location line="-1191" />
+        <location line="+3343" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Rabhadh: Feumaidh ùrachadh chun dreach firmware ùr an t-siostam faidhle geir a chuir às a-mach.</translation>
     </message>
     <message>
-        <location line="-2527" />
+        <location line="-2848" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
@@ -9494,7 +9566,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 %1</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+173" />
         <source>Just erase the internal FAT file system</source>
         <translation>Dìreach cuir às don t-siostam faidhle geir a-staigh</translation>
     </message>
@@ -9509,29 +9581,29 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Ath-shuidhich an siostam faidhle rom</translation>
     </message>
     <message>
-        <location line="+219" />
-        <location line="+2206" />
+        <location line="+229" />
+        <location line="+2415" />
         <source>Upgrade options:</source>
         <translation>Roghainnean ùrachadh:</translation>
     </message>
     <message>
-        <location line="-2122" />
+        <location line="-2327" />
         <location line="+169" />
         <location line="+44" />
-        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Feuch an cuir thu goirid REC gu GND agus ath-shuidhich am bòrd agad. Gheibhear barrachd fiosrachaidh air &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Feuch an cuir thu goirid REC gu GND agus ath-shuidhich am bòrd agad. Gheibhear barrachd fiosrachaidh air &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+25" />
         <source>Connecting...
 
 (Hit cancel if this takes more than 5 seconds).</source>
-        <translation>A' ceangal...
+        <translation>A&apos; ceangal...
 
 (Buail cuir dheth ma bheir seo barrachd air 5 diogan).</translation>
     </message>
     <message>
-        <location line="+132" />
+        <location line="+143" />
         <source>Timeout error while getting firmware version!</source>
         <translation>Mearachd ùine fhad ‘s a bha thu a’ faighinn dreach firmware!</translation>
     </message>
@@ -9547,8 +9619,8 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+191" />
-        <location line="+570" />
+        <location line="+199" />
+        <location line="+733" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Mearachd ùine fhad ‘s a tha thu a’ faighinn ailtireachd bùird!</translation>
     </message>
@@ -9557,7 +9629,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Ailtireachd bùird gun taic!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-633" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Cuir dheth an OpenMV Cam agad agus an uairsin ath-cheangail e ...</translation>
@@ -9590,12 +9662,12 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+38" />
-        <source>Unable to connect to your OpenMV Cam's normal bootloader!</source>
+        <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>Cha ghabh ceangal a dhèanamh ris an luchd-luachaidh àbhaisteach aig OpenMV Cam agad!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+129" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+131" />
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
         <translation>Faodaidh OpenMV IDE fhathast feuchainn ris an OpenMV Cam agad a chàradh a’ cleachdadh an Bootloader DFU aig OpenMV Cam agad.
@@ -9604,12 +9676,12 @@ Lean air adhart?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-288" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
         <location line="+46" />
-        <location line="+195" />
+        <location line="+191" />
         <location line="+47" />
         <source>Erasing...</source>
-        <translation>A' sguabadh às...</translation>
+        <translation>A&apos; sguabadh às...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-173" />
@@ -9625,7 +9697,7 @@ Lean air adhart?</translation>
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-837" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-835" />
         <location line="+41" />
         <location line="+51" />
         <location line="+44" />
@@ -9642,7 +9714,7 @@ Lean air adhart?</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+221" />
+        <location line="+219" />
         <location line="+50" />
         <location line="+51" />
         <location line="+42" />
@@ -9706,11 +9778,11 @@ Lean air adhart?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
         <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
-        <source>Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.</source>
+        <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>Cliog air OK nuair a thòisicheas an RGB LED OpenMV Cam agad a’ priobadh gorm - a tha a’ nochdadh gu bheil am fèin-dheuchainn deiseil.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
@@ -9728,7 +9800,7 @@ Lean air adhart?</translation>
 
 If you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py.
 
-In this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).</source>
+In this case click OK when you see your OpenMV Cam&apos;s internal flash drive mount (a window may or may not pop open).</source>
         <translation>
 
 Ma sgrìobh thu thairis air main.py air an OpenMV Cam agad agus nach do sguab thu às an diosc, bidh an OpenMV Cam agad dìreach a’ ruith am prìomh.py sin.
@@ -9751,8 +9823,8 @@ Anns a’ chùis seo cliog air OK nuair a chì thu an draibhear flash a-staigh a
         <translation>Cha deach roghainnean IMX a lorg!</translation>
     </message>
     <message>
-        <source>Failed to eject "%L1"!</source>
-        <translation type="vanished">Cha b' urrainn dhuinn "%L1" a chur a-mach!</translation>
+        <source>Failed to eject &quot;%L1&quot;!</source>
+        <translation type="vanished">Cha b&apos; urrainn dhuinn &quot;%L1&quot; a chur a-mach!</translation>
     </message>
     <message>
         <location line="+14" />
@@ -9765,7 +9837,7 @@ Buail Sguir dheth gus leum gu ath-chlàradh SBL.</translation>
     </message>
     <message>
         <location line="+42" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
         <translation>Faodaidh OpenMV IDE fhathast feuchainn ris an OpenMV Cam agad a chàradh a’ cleachdadh an Bootloader SBL aig OpenMV Cam agad.
@@ -9776,7 +9848,7 @@ Lean air adhart?</translation>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
         <translation>Cuir dheth an OpenMV Cam agad bhon choimpiutair agad, cuir uèir geansaidh eadar na prìnichean SBL agus 3.3V, agus an uairsin ath-cheangail an OpenMV Cam agad ris a’ choimpiutair agad.
 
 Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.</translation>
@@ -9786,7 +9858,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
         <source>If you are forcing SBL mode, disconnect your OpenMV Cam from your computer and remove the SBL wire jumper. Then reconnect your OpenMV Cam to your computer.
 
 </source>
-        <translation>Ma tha thu a 'toirt seachad modh sbl, dì-cheangail an cam fosgailte agad bhon choimpiutair agad agus thoir air falbh geansaidh Sbl Wire. An uairsin ath-cheangal an cam fosgailte agad chun choimpiutair agad.</translation>
+        <translation>Ma tha thu a &apos;toirt seachad modh sbl, dì-cheangail an cam fosgailte agad bhon choimpiutair agad agus thoir air falbh geansaidh Sbl Wire. An uairsin ath-cheangal an cam fosgailte agad chun choimpiutair agad.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-2" />
@@ -9828,22 +9900,22 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-345" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-347" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Chan eil suidheachadh DFU ann airson an seòrsa bùird taghte!</translation>
     </message>
     <message>
         <location line="+55" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+104" />
         <source>No DFU settings for the selected device!</source>
         <translation>Chan eil roghainnean DFU ann airson an inneal taghte!</translation>
     </message>
     <message>
         <location line="+32" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+47" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
         <source>Erasing Disk</source>
-        <translation>A' sguabadh às diosc</translation>
+        <translation>A&apos; sguabadh às diosc</translation>
     </message>
     <message>
         <location line="+59" />
@@ -9869,8 +9941,8 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-933" />
-        <location line="+934" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-931" />
+        <location line="+932" />
         <source>Flashing Firmware</source>
         <translation>Firmware airson flashing</translation>
     </message>
@@ -9883,7 +9955,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
         <location line="+26" />
         <location line="+41" />
         <source>DFU firmware update failed!</source>
-        <translation>Dh'fhàillig ùrachadh firmware DFU!</translation>
+        <translation>Dh&apos;fhàillig ùrachadh firmware DFU!</translation>
     </message>
     <message>
         <location line="-13" />
@@ -9916,17 +9988,17 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
     </message>
     <message>
         <location line="+14" />
-        <source>Your %1 doesn't have an internal FAT file system.</source>
+        <source>Your %1 doesn&apos;t have an internal FAT file system.</source>
         <translation>Chan eil siostam faidhle geir a-staigh aig do%1%.</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
-        <source>Your %1 doesn't have an ROM file system.</source>
+        <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>Chan eil siostam faidhle rom aig an%1 agad.</translation>
     </message>
     <message>
-        <source>Your Nano 33 BLE doesn't have an onboard data flash disk.</source>
+        <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
         <translation type="vanished">Chan eil diosc flash dàta air bòrd agad Nano 33 BLE.</translation>
     </message>
     <message>
@@ -9941,7 +10013,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
     <message>
         <location line="+13" />
         <source>BOSSAC firmware update failed!</source>
-        <translation>Dh'fhàillig ùrachadh firmware BOSSAC!</translation>
+        <translation>Dh&apos;fhàillig ùrachadh firmware BOSSAC!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-50" />
@@ -9965,7 +10037,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
     <message>
         <location line="+13" />
         <source>PicoTool firmware update failed!</source>
-        <translation>Dh'fhàillig ùrachadh firmware PicoTool!</translation>
+        <translation>Dh&apos;fhàillig ùrachadh firmware PicoTool!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-521" />
@@ -9987,7 +10059,7 @@ Lean air adhart?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>DFU update erases your OpenMV Cam's internal flash file system.
+        <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
         <translation>Bidh ùrachadh DFU a’ sguabadh às an t-siostam faidhle flash a-staigh aig OpenMV Cam agad.
@@ -9998,7 +10070,7 @@ Dèan cùl-taic den dàta agad mus lean thu air adhart!</translation>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.</source>
         <translation>Cuir dheth an OpenMV Cam agad bhon choimpiutair agad, cuir uèir geansaidh eadar na prìnichean BOOT agus RST, agus an uairsin ath-cheangail an OpenMV Cam agad ris a’ choimpiutair agad.
 
 Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.</translation>
@@ -10048,16 +10120,16 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
     <message>
         <location line="+14" />
         <source>DFU bootloader reset failed!</source>
-        <translation>Dh'fhàillig ath-shuidheachadh bootloader DFU!</translation>
+        <translation>Dh&apos;fhàillig ath-shuidheachadh bootloader DFU!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-271" />
         <source>None</source>
         <translation>Chan eil gin</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+16" />
+        <location line="+30" />
         <location line="+56" />
         <source>Unknown</source>
         <translation>Neo-aithnichte</translation>
@@ -10073,12 +10145,12 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
         <translation>Gun chlàradh</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+94" />
         <source>Timeout error while learning MTU!</source>
         <translation>Mearachd ùine fhad ‘s a tha thu ag ionnsachadh MTU!</translation>
     </message>
     <message>
-        <location line="+167" />
+        <location line="+170" />
         <source>Board: %L1</source>
         <translation>Bòrd: %L1</translation>
     </message>
@@ -10103,13 +10175,13 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
         <translation>Port sreathach: %L1</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+85" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ sean - cliog an seo gus ùrachadh ]</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Your OpenMV Cam's firmware is out of date. Would you like to upgrade?</source>
+        <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>Tha am firmware OpenMV Cam agad sean. Am bu toil leat àrdachadh?</translation>
     </message>
     <message>
@@ -10118,9 +10190,9 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
         <translation> - [as ùire]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-674" />
         <source>Failed to open or parse ELF: %1</source>
-        <translation>Dh'fhàillig fosgladh no parsadh ELF: %1</translation>
+        <translation>Dh&apos;fhàillig fosgladh no parsadh ELF: %1</translation>
     </message>
     <message>
         <location line="+42" />
@@ -10130,7 +10202,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
     <message>
         <location line="+176" />
         <source>Event %1</source>
-        <translation>Tachartas % 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4" />
@@ -10174,7 +10246,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
     </message>
     <message>
         <location line="+396" />
-        <location line="+172" />
+        <location line="+177" />
         <source>Code Profiler</source>
         <translation>Pròifil còd</translation>
     </message>
@@ -10216,19 +10288,19 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
     <message>
         <location line="+165" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
-        <translation>Gnìomhan: % 1, Gairmean Iomlan: % 2, μs Iomlan: % 3, Cuairtean Iomlan: % 4, Tachartasan Iomlan: % 5</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4</source>
-        <translation>Gnìomhan: % 1, Gairmean Iomlan: % 2, μs Iomlan: % 3, Cuairtean Iomlan: % 4</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Start</source>
         <translation type="vanished">Tòisich</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+588" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+592" />
         <source>More Examples</source>
         <translation>Tuilleadh Eisimpleirean</translation>
     </message>
@@ -10241,31 +10313,31 @@ In particular, checkout the Color-Tracking examples.</source>
 Gu sònraichte, thoir sùil air na h-eisimpleirean Tracadh Dhathan.</translation>
     </message>
     <message>
-        <location line="+28" />
-        <location line="+69" />
-        <location line="+9" />
+        <location line="+27" />
+        <location line="+70" />
+        <location line="+8" />
         <source>Firmware Update</source>
         <translation>Firmware ùrachadh</translation>
     </message>
     <message>
         <location line="-75" />
-        <source>Update your OpenMV Cam's firmware to the latest version?</source>
+        <source>Update your OpenMV Cam&apos;s firmware to the latest version?</source>
         <translation>Ùraich am firmware OpenMV Cam agad chun dreach as ùire?</translation>
     </message>
     <message>
-        <location line="+67" />
-        <source>Your OpenMV Cam's firmware is up to date.</source>
+        <location line="+68" />
+        <source>Your OpenMV Cam&apos;s firmware is up to date.</source>
         <translation>Tha am firmware OpenMV Cam agad ùraichte.</translation>
     </message>
     <message>
-        <location line="+11" />
-        <source>Need to reset your OpenMV Cam's firmware to the release version?</source>
+        <location line="+10" />
+        <source>Need to reset your OpenMV Cam&apos;s firmware to the release version?</source>
         <translation>A bheil feum agad air am bathar-bog OpenMV Cam agad ath-shuidheachadh chun dreach fuasglaidh?</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+86" />
         <source>No board settings for the connected board found!</source>
-        <translation>Chan eil suidheachaidhean a 'Bhùird airson Bòrd ceangailte a chaidh a lorg!</translation>
+        <translation>Chan eil suidheachaidhean a &apos;Bhùird airson Bòrd ceangailte a chaidh a lorg!</translation>
     </message>
     <message>
         <source>Cannot open firmware.txt!</source>
@@ -10358,10 +10430,10 @@ Gu sònraichte, thoir sùil air na h-eisimpleirean Tracadh Dhathan.</translation
     </message>
     <message>
         <location line="-223" />
-        <source>Module "%L1" on your OpenMV Cam is different than the copy on your computer.
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
 Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>Tha modal "%L1" air an OpenMV Cam agad eadar-dhealaichte seach an lethbhreac air a' choimpiutair agad.
+        <translation>Tha modal &quot;%L1&quot; air an OpenMV Cam agad eadar-dhealaichte seach an lethbhreac air a&apos; choimpiutair agad.
 
 Am bu toil leat OpenMV IDE am modal ùrachadh air an OpenMV Cam agad?</translation>
     </message>
@@ -10372,7 +10444,7 @@ Am bu toil leat OpenMV IDE am modal ùrachadh air an OpenMV Cam agad?</translati
     </message>
     <message>
         <location line="+91" />
-        <source>Module "%L1" may be required to run your script.
+        <source>Module &quot;%L1&quot; may be required to run your script.
 
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>Dh’fhaoidte gu bheil feum air modal “%L1” gus an sgriobt agad a ruith.
@@ -10380,7 +10452,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
 Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-366" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10393,18 +10465,18 @@ Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
         <translation>Faidhlichean teacsa (*.txt);;A h-uile faidhle (*)</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+228" />
         <source>Zoom: %1%</source>
         <translation>Meudachadh: %1%</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4310" />
-        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4365" />
+        <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280" />
-        <location line="+236" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-265" />
+        <location line="+221" />
         <source>Model Zoo</source>
         <translation>Modail Zoo</translation>
     </message>
@@ -10440,7 +10512,7 @@ Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
         <translation>Lorg</translation>
     </message>
     <message>
-        <location line="+226" />
+        <location line="+239" />
         <source>Serial Terminal</source>
         <translation>Terminal sreathach</translation>
     </message>
@@ -10461,8 +10533,8 @@ Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Run "/main.py"</source>
-        <translation>Ruith "/main.py"</translation>
+        <source>Run &quot;/main.py&quot;</source>
+        <translation>Ruith &quot;/main.py&quot;</translation>
     </message>
     <message>
         <location line="+0" />
@@ -10485,31 +10557,31 @@ Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-360" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-150" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Faigh Innealan</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-293" />
         <location line="+79" />
         <source>Query failed!</source>
-        <translation>Dh'fhàillig a' cheist!</translation>
+        <translation>Dh&apos;fhàillig a&apos; cheist!</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+44" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+119" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+120" />
+        <location line="+118" />
         <source>DFU Util</source>
         <translation>DFU Util</translation>
     </message>
@@ -10534,7 +10606,7 @@ Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
         <translation>Is dòcha gun toir seo greis, briseadh uisge?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-87" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
         <source>Dataset Split</source>
         <translation>Sgoltadh stòr-dàta</translation>
     </message>
@@ -10546,7 +10618,7 @@ OpenMV recommends leaving this at the default 80/20% split.</source>
 Tha OpenMV a’ moladh seo fhàgail aig an sgaradh bunaiteach 80/20%.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <location line="+16" />
         <source>Training Data
 Percentage
@@ -10568,11 +10640,11 @@ Ceudad
     <message>
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+58" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
         <location line="+50" />
         <source>Uploading...</source>
-        <translation>A' luchdachadh suas...</translation>
+        <translation>A&apos; luchdachadh suas...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+30" />
@@ -10586,7 +10658,7 @@ Ceudad
     <message>
         <location line="-37" />
         <source>Error posting!</source>
-        <translation>Mearachd a' postadh!</translation>
+        <translation>Mearachd a&apos; postadh!</translation>
     </message>
     <message>
         <location line="+28" />
@@ -10597,24 +10669,18 @@ Ceudad
 
 %L3 New Images Added
 %L4 Marked as Duplicates</source>
-        <translation>Staitistig luchdadh suas:
-
-%L1 faidhlichean air an luchdachadh suas
-% L2 Freagairtean o Edge Impulse
-
-%L3 Dealbhan ùra air an cur ris
-%L4 Air a chomharrachadh mar dhùblaidhean</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10" />
         <source>Nothing to upload
 
-Only jpg/png/bmp images with a numeric name (e.g. "00001.jpg")
-in class folders ("*.class") can be uploaded.</source>
+Only jpg/png/bmp images with a numeric name (e.g. &quot;00001.jpg&quot;)
+in class folders (&quot;*.class&quot;) can be uploaded.</source>
         <translation>Chan eil dad ri luchdachadh suas
 
 Dìreach dealbhan jpg/png/bmp le ainm àireamhach (m. e. “00001.jpg”)
-ann am pasganan clas ("*.class") a luchdachadh suas.</translation>
+ann am pasganan clas (&quot;*.class&quot;) a luchdachadh suas.</translation>
     </message>
     <message>
         <location line="+43" />
@@ -10622,31 +10688,31 @@ ann am pasganan clas ("*.class") a luchdachadh suas.</translation>
         <location line="+21" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+164" />
+        <location line="+155" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+23" />
         <location line="+9" />
         <location line="+9" />
         <source>Edge Impulse Projects</source>
         <translation>Pròiseactan Edge Impulse</translation>
     </message>
     <message>
-        <location line="-276" />
+        <location line="-266" />
         <location line="+35" />
-        <location line="+71" />
-        <location line="+129" />
-        <location line="+42" />
+        <location line="+67" />
+        <location line="+124" />
+        <location line="+41" />
         <source>No request data received</source>
         <translation>Cha d’ fhuaireadh dàta iarrtas</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-246" />
         <source>An unkown error occured</source>
         <translation>Thachair mearachd neo-aithnichte</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+62" />
         <location line="+11" />
         <location line="+7" />
         <location line="+10" />
@@ -10663,7 +10729,7 @@ Open a data set to upload it.</source>
 Fosgail seata dàta airson a luchdachadh suas.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+33" />
         <source>Email Address</source>
         <translation>Seòladh puist-d</translation>
     </message>
@@ -10678,17 +10744,17 @@ Fosgail seata dàta airson a luchdachadh suas.</translation>
         <translation>Facal-faire</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+66" />
         <source>Please select a project</source>
         <translation>Feuch an tagh thu pròiseact</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+60" />
         <source>No projects found</source>
         <translation>Cha deach pròiseactan a lorg</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+45" />
         <source>Upload Project</source>
         <translation>Pròiseact a luchdadh a-nuas</translation>
     </message>
@@ -10698,7 +10764,7 @@ Fosgail seata dàta airson a luchdachadh suas.</translation>
         <translation>Feuch an cuir thu a-steach iuchair API Pròiseact Edge Impluse</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1017" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1015" />
         <location line="+144" />
         <location line="+36" />
         <location line="+41" />
@@ -10717,7 +10783,7 @@ Fosgail seata dàta airson a luchdachadh suas.</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+41" />
+        <location line="+39" />
         <location line="+135" />
         <location line="+45" />
         <location line="+50" />
@@ -10749,12 +10815,12 @@ Fosgail seata dàta airson a luchdachadh suas.</translation>
     <message>
         <location line="-602" />
         <source>Please turn on the hard maintenance mode switch, it not enabled, and then press the user button on your OpenMV Cam.</source>
-        <translation>Feuch an tionndaidh thu air an tionndadh modh cumail suas cruaidh, nach eil e air a chomasachadh, agus an uairsin brùth air a 'phutan cleachdaiche agad air an cam fosgailte agad.</translation>
+        <translation>Feuch an tionndaidh thu air an tionndadh modh cumail suas cruaidh, nach eil e air a chomasachadh, agus an uairsin brùth air a &apos;phutan cleachdaiche agad air an cam fosgailte agad.</translation>
     </message>
     <message>
         <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1337" />
-        <location line="+923" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1335" />
+        <location line="+921" />
         <source>This feature is not supported on this machine!</source>
         <translation>Chan eil am feart seo a’ faighinn taic air an inneal seo!</translation>
     </message>
@@ -10786,15 +10852,15 @@ The camera must be power cycled after a system package update.</source>
 Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh pacaid siostam.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-472" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-470" />
         <location line="+51" />
         <location line="+91" />
-        <location line="+346" />
+        <location line="+344" />
         <location line="+51" />
         <location line="+50" />
         <location line="+94" />
         <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Bheir an àithne seo beagan ùine airson a chuir an gnìomh. Feuch gum bi thu foighidneach.</translation>
@@ -10807,7 +10873,7 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
     <message>
         <location line="+6" />
         <source>Show Octave %L1</source>
-        <translation>Seall Octave % L1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19" />
@@ -10815,7 +10881,7 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
         <translation>Dèanta</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
         <source>PicoTool</source>
         <translation>Inneal Pico</translation>
     </message>
@@ -10947,12 +11013,12 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
     </message>
     <message>
         <location line="-77" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Transcoding File...</source>
         <translation>Ag iompachadh faidhle...</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-594" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10966,7 +11032,7 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
         <location line="-24" />
         <location line="+14" />
         <source>Painter Failed!</source>
-        <translation>Dh'fhàillig am peantair!</translation>
+        <translation>Dh&apos;fhàillig am peantair!</translation>
     </message>
     <message>
         <location line="+11" />
@@ -11013,29 +11079,29 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
         <translation>Luchdaich a-nuas cruthan-clò a-steach</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+37" />
         <location line="+111" />
-        <location line="+100" />
+        <location line="+98" />
         <location line="+15" />
-        <location line="+372" />
+        <location line="+371" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
         <location line="+16" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+14" />
+        <location line="+19" />
         <location line="+36" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+21" />
+        <location line="+23" />
         <location line="+7" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+20" />
+        <location line="+22" />
         <location line="+7" />
         <source>Convert Video</source>
         <translation>Tionndadh bhidio</translation>
@@ -11055,7 +11121,7 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
         <translation>Chan eil taic ri FFMPEG air an àrd-ùrlar seo.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+98" />
         <source>Unable to write to output video file!</source>
         <translation>Cha ghabh sgrìobhadh gu faidhle bhidio toraidh!</translation>
     </message>
@@ -11066,79 +11132,79 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
     </message>
     <message>
         <location line="+163" />
-        <location line="+411" />
+        <location line="+415" />
         <source>Play Video</source>
         <translation>Cluich Video</translation>
     </message>
     <message>
-        <location line="-410" />
+        <location line="-414" />
         <location line="+163" />
         <source>Failed to launch ffplay!</source>
         <translation>Cha b’ urrainn dhuinn ffplay a chuir air bhog!</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>Convert Video Source</source>
         <translation>Tionndadh Video Source</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+235" />
+        <location line="+240" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</source>
         <translation>Faidhlichean bhidio (*.mp4 *.*);;Faidhlichean OpenMV ImageWriter (*.bin);;</translation>
     </message>
     <message>
-        <location line="-230" />
+        <location line="-235" />
         <location line="+11" />
-        <location line="+117" />
+        <location line="+122" />
         <location line="+7" />
         <source>Convert Video Output</source>
         <translation>Tionndaidh toradh bhidio</translation>
     </message>
     <message>
-        <location line="-130" />
-        <location line="+125" />
-        <location line="+208" />
+        <location line="-135" />
+        <location line="+130" />
+        <location line="+204" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
         <translation>Faidhlichean bhidio (*.mp4 *.*);;Faidhlichean OpenMV ImageReader (*.bin);;</translation>
     </message>
     <message>
-        <location line="-327" />
+        <location line="-328" />
         <source>Please select output format</source>
         <translation>Feuch an tagh thu cruth toraidh</translation>
     </message>
     <message>
         <location line="+15" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Rescale the video?</source>
         <translation>Ath-sgèile a’ bhidio?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter a new width (the aspect ratio will be kept the same)</source>
         <translation>Cuir a-steach leud ùr (thèid an co-mheas taobh a chumail mar an ceudna)</translation>
     </message>
     <message>
-        <location line="-320" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-321" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Skip frames?</source>
         <translation>Sgap frèamaichean?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter how many frames to skip at a time</source>
         <translation>Cuir a-steach cia mheud frèam airson leum aig aon àm</translation>
     </message>
     <message>
-        <location line="-278" />
-        <location line="+91" />
-        <location line="+207" />
+        <location line="-274" />
+        <location line="+93" />
+        <location line="+203" />
         <source>Video conversion finished!</source>
         <translation>Tionndadh bhidio deiseil!</translation>
     </message>
@@ -11168,13 +11234,13 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
         <translation>Seinn</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+47" />
         <location line="+7" />
         <source>Save Video</source>
         <translation>Sàbhail bhidio</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
         <source>Busy</source>
         <translation>Trang</translation>
     </message>
@@ -11190,13 +11256,11 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
         <translation>Falaich mion-fhiosrachadh</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-335" />
-        <location line="+102" />
         <source>No matching interface for the selected file name!</source>
-        <translation>Gun eadar-aghaidh maidsidh airson ainm faidhle taghte!</translation>
+        <translation type="vanished">Gun eadar-aghaidh maidsidh airson ainm faidhle taghte!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-745" />
         <source>Please select the target</source>
         <translation>Tagh an targaid</translation>
     </message>
@@ -11207,7 +11271,7 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
 OpenMV IDE will just copy the model as is.</source>
         <translation>Chaidh am modail a thionndadh mu thràth airson feallsanachd-u npu. 
 
-Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</translation>
+Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a tha.</translation>
     </message>
     <message>
         <location line="+27" />
@@ -11216,75 +11280,75 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
 OpenMV IDE will just copy the model as is.</source>
         <translation>Chaidh am modail a thionndadh mu thràth airson an NPU NPU. 
 
-Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</translation>
+Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a tha.</translation>
     </message>
     <message>
-        <location line="+145" />
-        <location line="+36" />
+        <location line="+147" />
+        <location line="+35" />
         <location line="+6" />
         <location line="+8" />
-        <location line="+40" />
-        <location line="+17" />
-        <location line="+20" />
-        <location line="+6" />
-        <location line="+8" />
+        <location line="+42" />
+        <location line="+16" />
         <location line="+21" />
-        <location line="+19" />
-        <location line="+20" />
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
         <location line="+93" />
-        <location line="+9" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+13" />
-        <location line="+14" />
-        <location line="+45" />
-        <location line="+17" />
-        <location line="+28" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+40" />
+        <location line="+15" />
         <location line="+27" />
+        <location line="+24" />
         <location line="+53" />
-        <location line="+67" />
+        <location line="+63" />
         <location line="+6" />
         <location line="+21" />
         <source>Edit ROMFS</source>
         <translation>Deasaich romfs</translation>
     </message>
     <message>
-        <location line="-620" />
-        <location line="+91" />
+        <location line="-606" />
+        <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>Tha pasgan leis an aon ainm ann mu thràth!</translation>
     </message>
     <message>
-        <location line="-85" />
-        <location line="+91" />
+        <location line="-87" />
+        <location line="+93" />
         <source>File already exists! Overwrite?</source>
-        <translation>Tha am faidhle ann mu thràth! A bheil thu a 'sruthadh?</translation>
+        <translation>Tha am faidhle ann mu thràth! A bheil thu a &apos;sruthadh?</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+91" />
+        <location line="-85" />
+        <location line="+93" />
         <source>Failed to remove file!</source>
-        <translation>Dh'fhàillig am faidhle a thoirt air falbh!</translation>
+        <translation>Dh&apos;fhàillig am faidhle a thoirt air falbh!</translation>
     </message>
     <message>
         <location line="-51" />
-        <location line="+72" />
+        <location line="+74" />
         <source>Failed to copy file!</source>
-        <translation>Dh'fhàillig fuasgladh a dhèanamh air faidhle!</translation>
+        <translation>Dh&apos;fhàillig fuasgladh a dhèanamh air faidhle!</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+17" />
         <source>Folder Name</source>
         <translation>Ainm pasgan</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Failed to create folder!</source>
-        <translation>Dh'fhàillig a bhith a 'cruthachadh pasgan!</translation>
+        <translation>Dh&apos;fhàillig a bhith a &apos;cruthachadh pasgan!</translation>
     </message>
     <message>
         <location line="+12" />
@@ -11295,7 +11359,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
     <message>
         <location line="-15" />
         <source>Failed to remove file or folder!</source>
-        <translation>Dh'fhàillig a bhith a 'toirt air falbh am faidhle no pasgan a thoirt air falbh!</translation>
+        <translation>Dh&apos;fhàillig a bhith a &apos;toirt air falbh am faidhle no pasgan a thoirt air falbh!</translation>
     </message>
     <message>
         <location line="+23" />
@@ -11303,58 +11367,58 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Cha ghabh pasgan a shàbhaladh!</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+14" />
+        <location line="+6" />
+        <location line="+15" />
         <location line="+19" />
-        <location line="+240" />
+        <location line="+225" />
         <source>Extract File</source>
         <translation>Faidhle a-mach</translation>
     </message>
     <message>
-        <location line="-246" />
+        <location line="-231" />
         <source>View/Edit</source>
         <translation>Faic / Deasaich</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+237" />
+        <location line="+222" />
         <source>Add File</source>
         <translation>Cuir faidhle</translation>
     </message>
     <message>
-        <location line="-236" />
-        <location line="+238" />
+        <location line="-221" />
+        <location line="+223" />
         <source>New Folder</source>
         <translation>Pasgan ùr</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+14" />
-        <location line="+322" />
-        <location line="+12" />
+        <location line="-135" />
+        <location line="+13" />
+        <location line="+303" />
+        <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
-        <translation>Chan eil taic aig romfs air a 'bhòrd seo!</translation>
+        <translation>Chan eil taic aig romfs air a &apos;bhòrd seo!</translation>
     </message>
     <message>
-        <location line="-290" />
-        <location line="+45" />
+        <location line="-275" />
+        <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
-        <translation>Dh'fhàillig unfack Unfacks a lìonadh!</translation>
+        <translation>Dh&apos;fhàillig unfack Unfacks a lìonadh!</translation>
     </message>
     <message>
         <location line="-19" />
-        <location line="+28" />
+        <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>Romfs fosgailte</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+172" />
+        <location line="-25" />
+        <location line="+165" />
         <source>ROMFS Images (*.img)</source>
         <translation>Ìomhaighean romfs (* .img)</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="-101" />
         <source>Commit</source>
         <translation>Gealltainn</translation>
     </message>
@@ -11369,17 +11433,17 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Sàbhail romfs gu faidhle</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location line="+8" />
+        <location line="+105" />
+        <location line="+7" />
+        <location line="+11" />
         <location line="+12" />
-        <location line="+13" />
-        <location line="+12" />
+        <location line="+11" />
         <source>Reset ROMFS</source>
         <translation>Ath-shuidheachadh romfs</translation>
     </message>
     <message>
-        <location line="-44" />
-        <source>Are you sure you want to reset your OpenMV Cam's ROM file system?</source>
+        <location line="-40" />
+        <source>Are you sure you want to reset your OpenMV Cam&apos;s ROM file system?</source>
         <translation>A bheil thu cinnteach gu bheil thu airson an siostam faidhle ROM aca ath-shuidheachadh?</translation>
     </message>
     <message>
@@ -11409,12 +11473,12 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
     </message>
     <message>
         <location line="+13" />
-        <source>&lt;a href="https://pypi.org/project/mpy-cross/"&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;A Href = "https://pyopoizeboje.org/project/mpy-cross/"&gt; Roghainnean CLI Co-rèiteachadh MPY cross rop &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;A Href = &quot;https://pyopoizeboje.org/project/mpy-cross/&quot;&gt; Roghainnean CLI Co-rèiteachadh MPY cross rop &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
         <source>Advanced</source>
         <translation>Adhartach</translation>
@@ -11427,21 +11491,21 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
     </message>
     <message>
         <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+90" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
         <source>Compiling</source>
-        <translation>A 'cur ri chèile</translation>
+        <translation>A &apos;cur ri chèile</translation>
     </message>
     <message>
         <location line="+113" />
         <source>The MPY Cross Compilier is not supported on this platform.</source>
-        <translation>Chan eil taic ris a 'chrois mpy Hallilier air an àrd-ùrlar seo.</translation>
+        <translation>Chan eil taic ris a &apos;chrois mpy Hallilier air an àrd-ùrlar seo.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-780" />
         <source>Success - Press Ok to close the window</source>
         <translation>Soirbheachas - Brùth air OK gus an uinneag a dhùnadh</translation>
     </message>
@@ -11454,25 +11518,25 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Fàilligeadh - brùth air Sguir dheth gus an uinneag a dhùnadh</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+126" />
+        <location line="+111" />
         <location line="+14" />
-        <location line="+173" />
+        <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>SPTGE SPTGER</translation>
     </message>
     <message>
-        <location line="-334" />
+        <location line="-300" />
         <source>Failed to copy JSON file!</source>
-        <translation>Dh'fhàillig leth-bhreac faidhle JSON a chopaigeadh!</translation>
+        <translation>Dh&apos;fhàillig leth-bhreac faidhle JSON a chopaigeadh!</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Failed to copy MPOOL file!</source>
-        <translation>Dh'fhàillig leth-bhreac faidhle MOPOP!</translation>
+        <translation>Dh&apos;fhàillig leth-bhreac faidhle MOPOP!</translation>
     </message>
     <message>
         <location line="+12" />
@@ -11502,14 +11566,13 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
     </message>
     <message>
         <location line="+12" />
-        <location line="+24" />
         <source>--verbosity 2</source>
         <translation>--verbosity 2</translation>
     </message>
     <message>
-        <location line="-22" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation>&lt;A Href = "%1"&gt; STTGEAI SPTGAI Roghainnean CLI &lt;/a&gt;</translation>
+        <location line="+2" />
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
+        <translation>&lt;A Href = &quot;%1&quot;&gt; STTGEAI SPTGAI Roghainnean CLI &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -11518,19 +11581,18 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation>&lt;A Href = "%1"&gt; Stedgeai Sentgeai Neurach Roghainnean CLI &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
+        <translation>&lt;A Href = &quot;%1&quot;&gt; Stedgeai Sentgeai Neurach Roghainnean CLI &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
-        <translation>&lt;A Href = "%1"&gt; Rèithean Cli Targuegai Rèinne Cli &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
+        <translation type="vanished">&lt;A Href = &quot;%1&quot;&gt; Rèithean Cli Targuegai Rèinne Cli &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+75" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
-        <translation>Dh'fhàillig fosgladh faidhle JSON!</translation>
+        <translation>Dh&apos;fhàillig fosgladh faidhle JSON!</translation>
     </message>
     <message>
         <location line="+14" />
@@ -11538,9 +11600,9 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Stedgeai</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+140" />
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
-        <translation>Chan eil taic ris a 'chompanaidh stedgeai a' faighinn taic bhon àrd-ùrlar seo.</translation>
+        <translation>Chan eil taic ris a &apos;chompanaidh stedgeai a&apos; faighinn taic bhon àrd-ùrlar seo.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-13" />
@@ -11566,8 +11628,8 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md"&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;A HREF = "https://gitlab.arm.com/artlicial-intelliChotion/Aplob/Mand.md"&gt; Vela "&gt; Vela Roghainnean Cli &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;A HREF = &quot;https://gitlab.arm.com/artlicial-intelliChotion/Aplob/Mand.md&quot;&gt; Vela &quot;&gt; Vela Roghainnean Cli &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+67" />
@@ -11588,7 +11650,32 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
     <message>
         <location line="+1" />
         <source>STM32 Programmer is not supported on this platform.</source>
-        <translation>Chan eil taic ri Stm32 pròiseact a 'faighinn taic air an àrd-ùrlar seo.</translation>
+        <translation>Chan eil taic ri Stm32 pròiseact a &apos;faighinn taic air an àrd-ùrlar seo.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <source>the detected board</source>
+        <translation>am bòrd a chaidh a lorg</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>The selected file &quot;%L1&quot; does not match any firmware interface for %L2.</source>
+        <translation>Chan eil am faidhle &quot;%L1&quot; a thagh thu a&apos; freagairt ri eadar-aghaidh firmware sam bith airson %L2.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%L1 accepts files named:</source>
+        <translation>Gabhaidh %L1 ri faidhlichean leis an ainm:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Rename your firmware file to one of the names above (or select the correct file) and try again.</source>
+        <translation>Ath-ainmich am faidhle firmware agad gu aon de na h-ainmean gu h-àrd (no tagh am faidhle ceart) agus feuch ris a-rithist.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>This board does not define any loadable firmware interfaces in its settings.</source>
+        <translation>Chan eil am bòrd seo a’ mìneachadh eadar-aghaidh firmware luchdaichte sam bith anns na roghainnean aige.</translation>
     </message>
 </context>
 <context>
@@ -11599,91 +11686,39 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+28" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+235" />
         <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
         <location line="+15" />
         <location line="+22" />
-        <location line="+132" />
         <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+21" />
         <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+306" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+144" />
         <source>Project Location</source>
         <translation>Àite pròiseict</translation>
     </message>
     <message>
-        <location line="-895" />
-        <location line="+28" />
-        <location line="+21" />
+        <location line="-886" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
-        <location line="+15" />
         <location line="+22" />
-        <location line="+24" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+11" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
-        <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+28" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+20" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+81" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
@@ -11693,7 +11728,59 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+94" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+15" />
+        <location line="+22" />
+        <location line="+18" />
+        <location line="+21" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+51" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
         <source>Location</source>
         <translation>Àite</translation>
     </message>
@@ -11702,7 +11789,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation type="vanished">Deuchainn Qt</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-516" />
         <source>Google Test</source>
         <translation>Deuchainn Google</translation>
     </message>
@@ -11722,49 +11809,49 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Glac 2</translation>
     </message>
     <message>
-        <location line="-762" />
+        <location line="-371" />
         <location line="+25" />
         <location line="+26" />
-        <location line="+712" />
+        <location line="+321" />
         <source>Test framework:</source>
         <translation>Frèam deuchainn:</translation>
     </message>
     <message>
-        <location line="-687" />
+        <location line="-296" />
         <source>GUI Application</source>
         <translation>Iarrtas GUI</translation>
     </message>
     <message>
         <location line="-75" />
         <location line="+51" />
-        <location line="+715" />
+        <location line="+324" />
         <source>Test suite name:</source>
         <translation>Ainm an t-sreath deuchainn:</translation>
     </message>
     <message>
-        <location line="-790" />
-        <location line="+25" />
+        <location line="-374" />
         <location line="+24" />
         <location line="+27" />
         <location line="+21" />
-        <location line="+694" />
+        <location line="+22" />
+        <location line="+281" />
         <source>Test case name:</source>
         <translation>Ainm na cùise deuchainn:</translation>
     </message>
     <message>
-        <location line="-693" />
+        <location line="-302" />
         <source>Requires QApplication</source>
         <translation>Tha feum air QApplication</translation>
     </message>
     <message>
-        <location line="-97" />
+        <location line="+22" />
         <source>Generate setup code</source>
         <translation>Cruthaich còd rèiteachaidh</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+98" />
-        <location line="+692" />
+        <location line="-20" />
+        <location line="+21" />
+        <location line="+280" />
         <source>Generate initialization and cleanup code</source>
         <translation>Cruthaich còd tòiseachaidh is glanaidh</translation>
     </message>
@@ -11773,17 +11860,17 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation type="vanished">Cuir an comas C++11</translation>
     </message>
     <message>
-        <location line="-766" />
+        <location line="-324" />
         <source>Googletest source directory (optional):</source>
         <translation>Eòlaire stòr Googletest (roghainneil):</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>Brosnachadh a’ toirt a-steach eòlaire (roghainneil):</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 gabhail a-steach eòlaire (roghainneil):</translation>
     </message>
@@ -11793,154 +11880,154 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Cleachd leabharlannan Qt</translation>
     </message>
     <message>
-        <location line="-50" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+45" />
-        <location line="+47" />
-        <location line="+84" />
+        <location line="+107" />
+        <location line="+46" />
+        <location line="+43" />
         <source>qmake</source>
         <translation>dèan</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
+        <location line="+105" />
+        <location line="+48" />
         <location line="+43" />
-        <location line="+49" />
-        <location line="+84" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+85" />
+        <location line="+153" />
+        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+314" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build system:</source>
         <translation>Siostam togail:</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Fiosrachadh mu phròiseact agus deuchainn</translation>
     </message>
     <message>
-        <location line="-120" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-93" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+26" />
-        <location line="+51" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+79" />
+        <location line="+116" />
         <location line="+18" />
         <location line="+4" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+41" />
+        <location line="+17" />
+        <location line="+33" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+70" />
-        <location line="+220" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+28" />
+        <location line="+142" />
         <source>Details</source>
         <translation>Mion-fhiosrachadh</translation>
     </message>
     <message>
-        <location line="-869" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-887" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Taghadh Kit</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -11948,101 +12035,101 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Cisean</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+18" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <source>Project Management</source>
         <translation>Stiùireadh pròiseict</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+37" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+41" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Geàrr-chunntas</translation>
@@ -12052,9 +12139,9 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation type="vanished">Cruthaich pròiseact deuchainn aonad ùr. Leigidh deuchainnean aonaid leat dearbhadh gu bheil an còd iomchaidh airson a chleachdadh agus nach eil ais-tharraing ann.</translation>
     </message>
     <message>
-        <location line="-466" />
-        <location line="+12" />
-        <location line="+456" />
+        <location line="-715" />
+        <location line="+380" />
+        <location line="+165" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Pròiseact Eile</translation>
@@ -12064,36 +12151,36 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation type="vanished">Pròiseact fèin-deuchainn a</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="-620" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Ainm làn-teisteanas, a’ gabhail a-steach ainmean-àite</translation>
     </message>
     <message>
-        <location line="-645" />
-        <location line="+36" />
-        <location line="+276" />
-        <location line="+80" />
-        <location line="+235" />
-        <location line="+19" />
+        <location line="+1" />
         <location line="+22" />
+        <location line="+19" />
+        <location line="+289" />
+        <location line="+145" />
+        <location line="+40" />
+        <location line="+119" />
         <source>Class name:</source>
         <translation>Ainm clas:</translation>
     </message>
     <message>
-        <location line="-631" />
-        <location line="+592" />
-        <location line="+18" />
+        <location line="-633" />
+        <location line="+42" />
+        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Custom&gt;</translation>
     </message>
     <message>
-        <location line="-646" />
-        <location line="+37" />
-        <location line="+282" />
-        <location line="+73" />
-        <location line="+237" />
-        <location line="+18" />
+        <location line="-474" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+294" />
+        <location line="+139" />
+        <location line="+39" />
+        <location line="+119" />
         <source>Base class:</source>
         <translation>Bun-chlas:</translation>
     </message>
@@ -12102,7 +12189,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-632" />
         <source>Include QObject</source>
         <translation>Cuir a-steach QObject</translation>
     </message>
@@ -12140,70 +12227,70 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Cuir QML_ELEMENT ris</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(luach('Clas'), Util.preferredSuffix('text/x-c++hdr'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(luach(&apos;Clas&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+68" />
-        <location line="+262" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+315" />
+        <location line="+292" />
         <source>Header file:</source>
         <translation>Faidhle ceann-cinn:</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(luach('Clas'), Util.preferredSuffix('text/x-c++src'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(luach(&apos;Clas&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+288" />
-        <location line="+68" />
-        <location line="+220" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+215" />
         <location line="+1" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+80" />
+        <location line="+133" />
+        <location line="+39" />
+        <location line="+120" />
         <source>Source file:</source>
         <translation>Stòr faidhle:</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+392" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+34" />
-        <location line="+19" />
-        <location line="+444" />
-        <location line="+19" />
-        <location line="+22" />
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Slighe:</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+596" />
-        <location line="+22" />
+        <location line="-739" />
+        <location line="+38" />
+        <location line="+429" />
+        <location line="+39" />
         <source>Define Class</source>
         <translation>Sònraich Clas</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-502" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Cruthaich bann-cinn C ++ agus faidhle stòr airson clas ùr as urrainn dhut a chur ri pròiseact C ++.</translation>
     </message>
     <message>
-        <location line="-203" />
-        <location line="+130" />
-        <location line="+74" />
+        <location line="+1" />
+        <location line="+65" />
+        <location line="+9" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-73" />
         <source>C++ Class</source>
         <translation>Clas C++</translation>
     </message>
@@ -12243,22 +12330,22 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Cruthaich modal nì Qt.</translation>
     </message>
     <message>
-        <location line="-231" />
-        <location line="+39" />
-        <location line="+26" />
-        <location line="+65" />
-        <location line="+18" />
-        <location line="+84" />
+        <location line="+1" />
+        <location line="+66" />
+        <location line="+57" />
+        <location line="+62" />
+        <location line="+9" />
+        <location line="+59" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-252" />
         <source>Qt Item Model</source>
         <translation>Modail Nì Qt</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+4" />
         <source>Qt for Python module:</source>
         <translation>Qt airson modal Python:</translation>
     </message>
@@ -12283,8 +12370,8 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Cuir a-steach QtQuick</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Util.fileName(value('Clas'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Util.fileName(value(&apos;Clas&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
         <location line="+6" />
@@ -12292,18 +12379,18 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Cruthaich faidhle clas Python ùr.</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+71" />
+        <location line="+1" />
+        <location line="+158" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-157" />
         <source>Python Class</source>
         <translation>Clas Python</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+3" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>A’ cruthachadh pròiseact deuchainn stèidhichte air CMake airson an tèid criomag còd a chuir a-steach.</translation>
     </message>
@@ -12358,7 +12445,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Geàrr-chunntas còd</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="+7" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Cruthaich faidhle cinn as urrainn dhut a chur ri pròiseact C/C ++.</translation>
     </message>
@@ -12368,7 +12455,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>C/C++ faidhle cinn</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Cruthaich faidhle stòr as urrainn dhut a chur ri pròiseact C/C ++.</translation>
     </message>
@@ -12378,7 +12465,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>C/C++ Source File</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>Tagh Teamplaid Foirm</translation>
     </message>
@@ -12396,12 +12483,12 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation type="vanished">Foirm Qt Designer</translation>
     </message>
     <message>
-        <location line="-15" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>A’ cruthachadh sgàilear criomag anns a’ Chànan Sgàilidh OpenGL Desktop (GLSL). Bidh sgàilearan bloigh a’ gineadh na dathan piogsail mu dheireadh airson triantanan, puingean agus loidhnichean air an toirt seachad le OpenGL.</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+1" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -12409,12 +12496,12 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-26" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Sgàil-sgàilean (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>A’ cruthachadh sgàilear vertex anns a’ chànan deasg OpenGL Shading (GLSL). Bidh sgàilearan vertex ag atharrachadh suidheachadh, gnàthasan agus co-chomharran inneach thriantanan, puingean agus loidhnichean air an toirt seachad le OpenGL.</translation>
     </message>
@@ -12424,7 +12511,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Vertex Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>A’ cruthachadh sgàilear criomag anns a’ chànan sgàileadh OpenGL/ES 2.0 (GLSL/ES). Bidh sgàilearan bloigh a’ gineadh na dathan piogsail mu dheireadh airson triantanan, puingean agus loidhnichean air an toirt seachad le OpenGL.</translation>
     </message>
@@ -12434,7 +12521,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Sgàil-sgàilean (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>A’ cruthachadh sgàilear vertex anns a’ chànan sgàile OpenGL/ES 2.0 (GLSL/ES). Bidh sgàilearan vertex ag atharrachadh suidheachadh, gnàthasan agus co-chomharran inneach thriantanan, puingean agus loidhnichean air an toirt seachad le OpenGL.</translation>
     </message>
@@ -12444,7 +12531,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="+7" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Cruthaich faidhle Java le còd boilerplate.</translation>
     </message>
@@ -12459,7 +12546,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Faidhle Java</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>Leabharlann gun stàit</translation>
     </message>
@@ -12480,25 +12567,25 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>JS Faidhle</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+12" />
         <source>Model name:</source>
-        <translation>Ainm a' mhodail:</translation>
+        <translation>Ainm a&apos; mhodail:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
+        <location line="+1" />
+        <location line="+67" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Àite:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
-        <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
-        <translation>Tha "%{JS: Util.toNativeSeparators(value('TargetPath'))}" san t-siostam fhaidhlichean.</translation>
+        <location line="-66" />
+        <location line="+67" />
+        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
+        <translation>Tha &quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; san t-siostam fhaidhlichean.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model Name and Location</source>
         <translation>Ainm Modail agus Àite</translation>
     </message>
@@ -12508,21 +12595,21 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Cruthaich modail falamh ùr le diagram falamh.</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+53" />
-        <location line="+12" />
+        <location line="+1" />
+        <location line="+5" />
+        <location line="+62" />
         <source>Modeling</source>
         <translation>Modaileadh</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model</source>
         <translation>Modail</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+3" />
         <source>Creates a scratch model using a temporary file.</source>
-        <translation>A 'cruthachadh modail sgrìobadh a' cleachdadh faidhle sealach.</translation>
+        <translation>A &apos;cruthachadh modail sgrìobadh a&apos; cleachdadh faidhle sealach.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12530,23 +12617,23 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Modail Scratch</translation>
     </message>
     <message>
-        <location line="-81" />
+        <location line="+7" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Cruthaich faidhle Nim falamh a’ cleachdadh charset UTF-8.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+14" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>Nim File</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Cruthaich faidhle sgriobt Nim falamh a’ cleachdadh charset UTF-8.</translation>
     </message>
@@ -12556,7 +12643,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Faidhle Sgriobt Nim</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+7" />
         <source>Creates an empty Python script file using UTF-8 charset.</source>
         <translation>Cruthaich faidhle sgriobt Python falamh a’ cleachdadh charset UTF-8.</translation>
     </message>
@@ -12566,7 +12653,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Faidhle Python</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Cruthaich faidhle goireas Qt (.qrc).</translation>
     </message>
@@ -12576,8 +12663,8 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Qt File Goireas</translation>
     </message>
     <message>
-        <location line="-67" />
-        <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
+        <location line="+7" />
+        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Cruthaich faidhle QML le còd boilerplate, a’ tòiseachadh le “import QtQuick”.</translation>
     </message>
     <message>
@@ -12586,23 +12673,23 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Faidhle QML (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="-32" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Cruthaich bufair sgrìob a’ cleachdadh faidhle sealach.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+57" />
-        <location line="+47" />
+        <location line="-66" />
+        <location line="+67" />
+        <location line="+45" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Coitcheann</translation>
     </message>
     <message>
-        <location line="-634" />
+        <location line="-401" />
         <source>This wizard creates a simple unit test project using Boost.</source>
-        <translation>Bidh an draoidh seo a 'cruthachadh pròiseact deuchainn aonad sìmplidh a' cleachdadh àrdachadh.</translation>
+        <translation>Bidh an draoidh seo a &apos;cruthachadh pròiseact deuchainn aonad sìmplidh a&apos; cleachdadh àrdachadh.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -12622,26 +12709,26 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
     <message>
         <location line="+11" />
         <source>Creates a new unit test project using Boost. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
-        <translation>A 'cruthachadh pròiseact deuchainn aonad ùr a' cleachdadh àrdachadh. Leigidh deuchainnean aonadan dhut dearbhadh gu bheil an còd iomchaidh airson a chleachdadh agus nach eil de luchd-casaid ann.</translation>
+        <translation>A &apos;cruthachadh pròiseact deuchainn aonad ùr a&apos; cleachdadh àrdachadh. Leigidh deuchainnean aonadan dhut dearbhadh gu bheil an còd iomchaidh airson a chleachdadh agus nach eil de luchd-casaid ann.</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+25" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Test Project</source>
         <translation>Pròiseact deuchainn</translation>
     </message>
     <message>
-        <location line="-21" />
+        <location line="-93" />
         <source>Boost Test Project</source>
         <translation>Pròiseact Deuchainn Bood</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
-        <translation>Bidh an draoidh seo a 'cruthachadh pròiseact deuchainn aonad sìmplidh a' cleachdadh Gets2.</translation>
+        <translation>Bidh an draoidh seo a &apos;cruthachadh pròiseact deuchainn aonad sìmplidh a&apos; cleachdadh Gets2.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -12666,7 +12753,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
     <message>
         <location line="+12" />
         <source>Creates a new unit test project using Catch2. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
-        <translation>A 'cruthachadh pròiseact deuchainn aonad ùr a' cleachdadh Gets2. Leigidh deuchainnean aonadan dhut dearbhadh gu bheil an còd iomchaidh airson a chleachdadh agus nach eil de luchd-casaid ann.</translation>
+        <translation>A &apos;cruthachadh pròiseact deuchainn aonad ùr a&apos; cleachdadh Gets2. Leigidh deuchainnean aonadan dhut dearbhadh gu bheil an còd iomchaidh airson a chleachdadh agus nach eil de luchd-casaid ann.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12674,9 +12761,9 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Pròiseact Deuchainn Catchte2</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
-        <translation>Bidh an draoidh seo a 'cruthachadh pròiseact deuchainn aonad sìmplidh a' cleachdadh Google Deuchainn.</translation>
+        <translation>Bidh an draoidh seo a &apos;cruthachadh pròiseact deuchainn aonad sìmplidh a&apos; cleachdadh Google Deuchainn.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -12696,7 +12783,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
     <message>
         <location line="+11" />
         <source>Creates a new unit test project using Google Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
-        <translation>A 'cruthachadh pròiseact deuchainn aonad ùr a' cleachdadh deuchainn Google. Leigidh deuchainnean aonadan dhut dearbhadh gu bheil an còd iomchaidh airson a chleachdadh agus nach eil de luchd-casaid ann.</translation>
+        <translation>A &apos;cruthachadh pròiseact deuchainn aonad ùr a&apos; cleachdadh deuchainn Google. Leigidh deuchainnean aonadan dhut dearbhadh gu bheil an còd iomchaidh airson a chleachdadh agus nach eil de luchd-casaid ann.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12704,14 +12791,14 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Pròiseact Deuchainn Google</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
-        <translation>Bidh an draoidh seo a 'cruthachadh pròiseact deuchainn aonad sìmplidh a' cleachdadh Deuchainn QT.</translation>
+        <translation>Bidh an draoidh seo a &apos;cruthachadh pròiseact deuchainn aonad sìmplidh a&apos; cleachdadh Deuchainn QT.</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Creates a new unit test project using Qt Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
-        <translation>A 'cruthachadh pròiseact deuchainn aonad ùr a' cleachdadh deuchainn QT. Leigidh deuchainnean aonadan dhut dearbhadh gu bheil an còd iomchaidh airson a chleachdadh agus nach eil de luchd-casaid ann.</translation>
+        <translation>A &apos;cruthachadh pròiseact deuchainn aonad ùr a&apos; cleachdadh deuchainn QT. Leigidh deuchainnean aonadan dhut dearbhadh gu bheil an còd iomchaidh airson a chleachdadh agus nach eil de luchd-casaid ann.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12719,14 +12806,14 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Pròiseact Deuchainn QT</translation>
     </message>
     <message>
-        <location line="-116" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
-        <translation>Bidh an draoidh seo a 'cruthachadh pròiseact deuchainn aonad sìmplidh a' cleachdadh deuchainn luath QT.</translation>
+        <translation>Bidh an draoidh seo a &apos;cruthachadh pròiseact deuchainn aonad sìmplidh a&apos; cleachdadh deuchainn luath QT.</translation>
     </message>
     <message>
         <location line="+16" />
         <source>Creates a new unit test project using Qt Quick Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
-        <translation>A 'cruthachadh pròiseact deuchainn aonad ùr a' cleachdadh deuchainn luath QT. Leigidh deuchainnean aonadan dhut dearbhadh gu bheil an còd iomchaidh airson a chleachdadh agus nach eil de luchd-casaid ann.</translation>
+        <translation>A &apos;cruthachadh pròiseact deuchainn aonad ùr a&apos; cleachdadh deuchainn luath QT. Leigidh deuchainnean aonadan dhut dearbhadh gu bheil an còd iomchaidh airson a chleachdadh agus nach eil de luchd-casaid ann.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12734,19 +12821,19 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Pròiseact Deuchainn QT QT</translation>
     </message>
     <message>
-        <location line="+815" />
+        <location line="+10" />
         <source>Include QQuickItem</source>
         <translation>Cuir a-steach qquickitem</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+67" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
-        <translation>A 'cruthachadh pròiseact deuchainn stèidhichte air camake far am faod thu a dhol a-steach do chriomag còd gus cur ri chèile agus sùil a thoirt air.</translation>
+        <translation>A &apos;cruthachadh pròiseact deuchainn stèidhichte air camake far am faod thu a dhol a-steach do chriomag còd gus cur ri chèile agus sùil a thoirt air.</translation>
     </message>
     <message>
-        <location line="-121" />
+        <location line="+29" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
-        <translation>A 'cruthachadh dealbhaiche dealbhaidh Qt Former as urrainn dhut cur ri Pròiseact Widged Qt. Tha seo feumail ma tha clas gnàthach agad mu thràth airson loidsig gnìomhachas UI.</translation>
+        <translation>A &apos;cruthachadh dealbhaiche dealbhaidh Qt Former as urrainn dhut cur ri Pròiseact Widged Qt. Tha seo feumail ma tha clas gnàthach agad mu thràth airson loidsig gnìomhachas UI.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12754,9 +12841,9 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Foirm dealbhaidh QT</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="+64" />
         <source>Creates a markdown file.</source>
-        <translation>A 'cruthachadh faidhle Markdown.</translation>
+        <translation>A &apos;cruthachadh faidhle Markdown.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12764,12 +12851,12 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Faidhle Markdown</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="+67" />
         <source>Scratch Buffer</source>
         <translation>Bufair sgrìobadh</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>Ainm cairt stàite:</translation>
     </message>
@@ -12789,11 +12876,11 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a 'mhodail mar a tha.</t
         <translation>Cairt Stàite</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
-        <translation>Feumaidh tu QT a lorg dè am frèam deuchainn a thèid a chleachdadh am broinn a 'phròiseict.
+        <translation>Feumaidh tu QT a lorg dè am frèam deuchainn a thèid a chleachdadh am broinn a &apos;phròiseict.
 
  Cha bu chòir dhut grunn fhrèamaichean deuchainn a mheasachadh ann am pròiseact.</translation>
     </message>
@@ -12820,7 +12907,7 @@ You should not mix multiple test frameworks in a project.</source>
     <message>
         <location line="+4" />
         <source>Creates a source file that you can add to an existing test project.</source>
-        <translation>A 'cruthachadh faidhle stòr as urrainn dhut cur ri pròiseact deuchainn a tha ann.</translation>
+        <translation>A &apos;cruthachadh faidhle stòr as urrainn dhut cur ri pròiseact deuchainn a tha ann.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -12829,7 +12916,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Cùis deuchainn</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>Cruthaich faidhle falamh.</translation>
     </message>
@@ -12839,9 +12926,9 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Faidhle falamh</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
-        <translation>A 'cruthachadh faidhle eadar-theangachaidh as urrainn dhut cur ri pròiseact QT.</translation>
+        <translation>A &apos;cruthachadh faidhle eadar-theangachaidh as urrainn dhut cur ri pròiseact QT.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12849,61 +12936,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Faidhle eadar-theangachaidh Qt</translation>
     </message>
     <message>
-        <location line="-623" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Bidh an draoidh seo a’ cruthachadh tagradh tòcan sìmplidh stèidhichte air Qt.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+83" />
+        <location line="+195" />
         <source>Meson</source>
         <translation>Meson</translation>
     </message>
     <message>
-        <location line="-442" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-326" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Define Build System</source>
         <translation>Sònraich siostam togail</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-328" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build System</source>
         <translation>Siostam togail</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-328" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation File</source>
         <translation>Eadar-theangachadh Faidhle</translation>
     </message>
     <message>
-        <location line="-591" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-479" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation</source>
         <translation>Eadar-theangachadh</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-262" />
         <source>Define Python Interpreter</source>
         <translation>Mìnich eadar-theangair Python</translation>
     </message>
@@ -12915,10 +13002,10 @@ You should not mix multiple test frameworks in a project.</source>
     <message>
         <location line="+5" />
         <source>Creates a Qt for Python application that includes a Qt Widgets Designer-based widget (ui file). Requires .ui to Python conversion.</source>
-        <translation>A 'cruthachadh QT airson Iarrtas Python a tha a' toirt a-steach substget lidgetse agus faidhle UI). Feumach air .ui gu tionndadh python.</translation>
+        <translation>A &apos;cruthachadh QT airson Iarrtas Python a tha a&apos; toirt a-steach substget lidgetse agus faidhle UI). Feumach air .ui gu tionndadh python.</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+38" />
         <source>Qt 6.4</source>
         <translation>QT 6.4</translation>
     </message>
@@ -12930,23 +13017,23 @@ You should not mix multiple test frameworks in a project.</source>
     <message>
         <location line="+8" />
         <source>Creates a Qt Quick application that can have both QML and C++ code. You can build the application and deploy it to desktop, embedded, and mobile target platforms.</source>
-        <translation>A 'cruthachadh tagradh luath QT a dh' fhaodas an dà chuid còd Qml agus C ++. Faodaidh tu an tagradh agus an cleachdadh a thogail gu àrd-ùrlaran cuairteachaidh, agus gluasadach-làimhe agus gluasadach.</translation>
+        <translation>A &apos;cruthachadh tagradh luath QT a dh&apos; fhaodas an dà chuid còd Qml agus C ++. Faodaidh tu an tagradh agus an cleachdadh a thogail gu àrd-ùrlaran cuairteachaidh, agus gluasadach-làimhe agus gluasadach.</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="+42" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
-        <translation>A 'cruthachadh pròiseact QT luath Ui airson ro-shealladh agus dealbhadh prototyping.
+        <translation>A &apos;cruthachadh pròiseact QT luath Ui airson ro-shealladh agus dealbhadh prototyping.
 
  Gus làn thagradh a leasachadh, pròiseact tagraidh QT Qt QT a chruthachadh na àite.</translation>
     </message>
     <message>
-        <location line="+173" />
+        <location line="+30" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
-        <translation>A 'cruthachadh tagradh QT stèidhichte air Wannget-a tha anns an dealbhaiche Widgets Sidset stèidhichte air dealbh de dh' uinneig agus faidhlichean c ++ Stòr agus Patter Files gus loidsig an tagraidh a bhuileachadh.
+        <translation>A &apos;cruthachadh tagradh QT stèidhichte air Wannget-a tha anns an dealbhaiche Widgets Sidset stèidhichte air dealbh de dh&apos; uinneig agus faidhlichean c ++ Stòr agus Patter Files gus loidsig an tagraidh a bhuileachadh.
 
  Cuir a-steach deasgg qt airson an tagradh a thogail ma tha iad rim faighinn.</translation>
     </message>
@@ -12959,31 +13046,31 @@ Preselects a desktop Qt for building the application if available.</source>
 A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+32" />
-        <location line="+299" />
-        <location line="+114" />
+        <location line="-337" />
+        <location line="+266" />
+        <location line="+28" />
+        <location line="+44" />
         <source>Application (Qt)</source>
         <translation>Iarrtas (Qt)</translation>
     </message>
     <message>
-        <location line="-412" />
+        <location line="-337" />
         <source>Qt Console Application</source>
         <translation>Iarrtas Qt Console</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Bidh an draoidh seo a’ cruthachadh pròiseact leabharlainn C ++.</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+84" />
+        <location line="+308" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Sònraich fiosrachadh bunaiteach mu na clasaichean airson a bheil thu airson faidhlichean còd stòr cnàimhneach a ghineadh.</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="-307" />
         <source>Shared Library</source>
         <translation>Leabharlann co-roinnte</translation>
     </message>
@@ -12999,17 +13086,17 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     </message>
     <message>
         <location line="+1" />
-        <location line="+35" />
+        <location line="+46" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Seòrsa:</translation>
     </message>
     <message>
-        <source>%{JS: value('Type') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</source>
-        <translation type="vanished">%{ JS: value('Type') === 'qtplugin' ? luach ('BaseClassName'). slice(1) : (luach ('ProjectName').charAt(0).toUpperCase() + luach('ProjectName'). slice(1))}</translation>
+        <source>%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</source>
+        <translation type="vanished">%{ JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? luach (&apos;BaseClassName&apos;). slice(1) : (luach (&apos;ProjectName&apos;).charAt(0).toUpperCase() + luach(&apos;ProjectName&apos;). slice(1))}</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -13075,14 +13162,14 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Qt modal:</translation>
     </message>
     <message>
-        <location line="-519" />
-        <location line="+147" />
-        <location line="+70" />
+        <location line="+3" />
+        <location line="+116" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+59" />
-        <location line="+42" />
+        <location line="+68" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+170" />
         <source>Define Project Details</source>
         <translation>Sònraich mion-fhiosrachadh a’ phròiseict</translation>
     </message>
@@ -13091,38 +13178,38 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation type="vanished">Cruthaich leabharlann C ++. Gabhaidh seo a chleachdadh gus: &lt;ul&gt;&lt;li&gt;leabharlann C++ co-roinnte a chruthachadh airson a chleachdadh le &lt;tt&gt;QPluginLoader&lt;/tt&gt; agus ùine ruith (Plugins)&lt;/li&gt;&lt;li&gt;leabharlann C++ co-roinnte neo statach airson a chleachdadh le fear eile pròiseact aig àm ceangail&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-513" />
-        <location line="+460" />
-        <location line="+62" />
-        <location line="+7" />
+        <location line="-427" />
+        <location line="+18" />
+        <location line="+186" />
+        <location line="+232" />
         <source>Library</source>
         <translation>Leabharlann</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-435" />
         <source>C++ Library</source>
         <translation>Leabharlann C++</translation>
     </message>
     <message>
-        <location line="-366" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
-        <translation>A 'cruthachadh tagradh Nim sìmplidh.</translation>
+        <translation>A &apos;cruthachadh tagradh Nim sìmplidh.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+229" />
+        <location line="+40" />
         <location line="+18" />
-        <location line="+157" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Pròiseact neo-Qt</translation>
     </message>
     <message>
-        <location line="-403" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>Iarrtas Nim</translation>
     </message>
     <message>
-        <location line="+369" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>Binary</translation>
     </message>
@@ -13137,13 +13224,13 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Ùghdar:</translation>
     </message>
     <message>
-        <location line="-544" />
-        <location line="+545" />
+        <location line="+1" />
+        <location line="+402" />
         <source>Description:</source>
         <translation>Tuairisgeul:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-401" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -13208,13 +13295,13 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Eile</translation>
     </message>
     <message>
-        <location line="-560" />
-        <location line="+561" />
+        <location line="+1" />
+        <location line="+386" />
         <source>License:</source>
         <translation>Cead:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-385" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>c</translation>
@@ -13255,22 +13342,22 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Sònraich rèiteachadh pròiseict</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="+1" />
+        <location line="+253" />
+        <location line="+1" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+202" />
         <source>Configuration</source>
         <translation>Rèiteachadh</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-343" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>A’ cruthachadh tagradh Nim le Nimble.</translation>
     </message>
@@ -13280,7 +13367,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Iarrtas sùbailte</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>A’ cruthachadh tagradh C sìmplidh gun eisimeileachd sam bith.</translation>
     </message>
@@ -13290,7 +13377,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Iarrtas àbhaisteach C</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Cruthaich tagradh sìmplidh C ++ gun eisimeileachd sam bith.</translation>
     </message>
@@ -13300,7 +13387,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Iarrtas soilleir C++</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Bidh an draoidh seo a’ cruthachadh faidhle .pro falamh.</translation>
     </message>
@@ -13319,43 +13406,43 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation type="vanished">Tionndadh PySide:</translation>
     </message>
     <message>
-        <location line="-218" />
+        <location line="+13" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>A’ cruthachadh tagradh Qt for Python anns nach eil ach am prìomh chòd airson QApplication.</translation>
     </message>
     <message>
-        <location line="-14" />
-        <location line="+15" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+18" />
+        <location line="+21" />
         <source>Application (Qt for Python)</source>
         <translation>Iarrtas (Qt airson Python)</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-60" />
         <source>Empty Application</source>
         <translation>Iarrtas falamh</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: luach ('BaseCB') ? luach ('BaseCB'). slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: luach (&apos;BaseCB&apos;) ? luach (&apos;BaseCB&apos;). slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(luach('Clas'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(luach(&apos;Clas&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</source>
-        <translation type="vanished">%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</translation>
+        <source>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</source>
+        <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-28" />
-        <location line="+37" />
+        <location line="+9" />
+        <location line="+39" />
         <source>Project file:</source>
         <translation>Faidhle pròiseict:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>A’ cruthachadh tagradh Qt for Python anns a bheil uinneag falamh.</translation>
     </message>
@@ -13365,36 +13452,36 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Uinneag falamh</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+15" />
+        <location line="-32" />
         <location line="+22" />
         <location line="+15" />
+        <location line="+24" />
         <source>PySide 6</source>
         <translation>Taobh 6</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-211" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
-        <translation>A 'cruthachadh pròiseact anns a bheil aon fhaidhle prìomh fhacal le stup buileachadh agus gun ui grafaigeach.
+        <translation>A &apos;cruthachadh pròiseact anns a bheil aon fhaidhle prìomh fhacal le stup buileachadh agus gun ui grafaigeach.
 
  Cuir a-steach deasgg qt airson an tagradh a thogail ma tha iad rim faighinn.</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation>A 'cruthachadh leabharlann C ++. Faodaidh tu cruthachadh: &lt;ul&gt; &lt;li&gt; Leabharlann Copy C ++ airson a chleachdadh le &lt;TT&gt; QPLUGINALLIG &lt;PLUGINS) &lt;/ plugins) &lt;/ li&gt; &lt;/ ul&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+15" />
+        <location line="+107" />
         <location line="+22" />
+        <location line="+39" />
         <source>PySide 2</source>
         <translation>Pyside 2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="-24" />
         <source>PySide 5.15</source>
         <translation>Taobh Pytha 5.15</translation>
     </message>
@@ -13428,50 +13515,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">A’ cruthachadh tagradh Qt for Python anns a bheil widget stèidhichte air Qt Designer (faidhle ui) - Feumaidh tionndadh .ui gu Python</translation>
     </message>
     <message>
-        <location line="-55" />
+        <location line="+21" />
         <source>Window UI</source>
         <translation>UI uinneag</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+311" />
+        <location line="+10" />
         <location line="+25" />
+        <location line="+23" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-335" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
         <location line="+23" />
+        <location line="+25" />
         <source>Minimum required Qt version:</source>
         <translation>Tionndadh Qt as ìsle a tha a dhìth:</translation>
     </message>
     <message>
-        <location line="-22" />
+        <location line="-47" />
         <source>MyItem</source>
         <translation>Mo Nì</translation>
     </message>
@@ -13519,9 +13606,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Cruthaich pròiseact le structar a tha co-chòrdail an dà chuid le Qt Design Studio (via .qmlproject) agus le Qt Creator (tro CMakeLists.txt). Tha foirm .ui.qml ann as urrainn dhut a dheasachadh gu fradharcach ann an Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="-324" />
-        <location line="+274" />
-        <location line="+55" />
+        <location line="+5" />
+        <location line="+30" />
+        <location line="+16" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Cleachd Qt Virtual Keyboard</translation>
     </message>
@@ -13534,15 +13621,15 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Cruthaich tagradh Qt Quick anns a bheil uinneag falamh. Gu roghnach, faodaidh tu pròiseact Qt Design Studio a chruthachadh.</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-33" />
         <source>Qt Quick Application</source>
         <translation>Iarrtas luath Qt</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="+26" />
         <source>Creates a Qt Quick application that contains an empty window.
 
-Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
+Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
         <translation>Cruthaich tagradh Qt Quick anns a bheil uinneag falamh.
 
 Cleachd an dreach “compat” seo ma tha thu airson siostaman togail eile a chleachdadh na dreachan CMake no Qt nas ìsle na 6.</translation>
@@ -13561,18 +13648,18 @@ Use this only if you are prototyping. You cannot create a full application with 
 Cleachd seo a-mhàin ma tha thu a’ prototyping. Chan urrainn dhut tagradh slàn a chruthachadh le seo. Beachdaich air pròiseact Qt Quick Application a chleachdadh na àite.</translation>
     </message>
     <message>
-        <location line="+272" />
+        <location line="+14" />
         <source>Qt Quick UI Prototype</source>
         <translation>Prototype UI Quick Qt</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Bidh an draoidh seo a’ gineadh pròiseact Iarrtas Qt Widgets. Bidh an aplacaid a’ tighinn gu bunaiteach bho QApplication agus a’ toirt a-steach widget falamh.</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: luach ('BaseClass') ? luach ('BaseClas'). slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: luach (&apos;BaseClass&apos;) ? luach (&apos;BaseClas&apos;). slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
         <location line="+15" />
@@ -13580,8 +13667,8 @@ Cleachd seo a-mhàin ma tha thu a’ prototyping. Chan urrainn dhut tagradh slà
         <translation>Cruthaich foirm</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), 'ui')}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(luach ('Clas'), 'ui')}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(luach (&apos;Clas&apos;), &apos;ui&apos;)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13607,27 +13694,27 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Iarrtas Qt Widgets</translation>
     </message>
     <message>
-        <location line="-332" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Feuch an rèiteachadh thu &lt;b&gt;%{vcsName}&lt;/b&gt; an-dràsta fhèin.</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-93" />
+        <location line="+52" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository:</source>
         <translation>Stòr-tasgaidh:</translation>
     </message>
     <message>
         <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>Chan eil URL an stòrais dligheach</translation>
@@ -13637,24 +13724,24 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
         <source>Directory:</source>
         <translation>Leabhar-seòlaidh:</translation>
     </message>
     <message>
-        <location line="-94" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
-        <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
-        <translation>Tha "%{JS: Util.toNativeSeparators('%{TargetPath}')}" san t-siostam fhaidhlichean.</translation>
+        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
+        <translation>Tha &quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; san t-siostam fhaidhlichean.</translation>
     </message>
     <message>
-        <location line="-52" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>Cleachd eòlaire gnàthaichte</translation>
     </message>
@@ -13730,13 +13817,13 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     </message>
     <message>
         <location line="+3" />
-        <location line="+19" />
+        <location line="+60" />
         <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Sònraich URL stòr-dàta, eòlaire pàighidh, agus slighe.</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>A’ ruith meur Bazaar...</translation>
     </message>
@@ -13755,9 +13842,9 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Clones meur Bazaar agus feuchaidh e ris a’ phròiseact a tha ann a luchdachadh.</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+1" />
+        <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <location line="+20" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
@@ -13765,12 +13852,12 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Pròiseact ion-phortadh</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Clone Bazaar (no meur)</translation>
     </message>
     <message>
-        <location line="-69" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>Modal:</translation>
     </message>
@@ -13782,14 +13869,14 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     <message>
         <location line="+1" />
         <source>Running CVS checkout...</source>
-        <translation>A' ruith CVS checkout...</translation>
+        <translation>A&apos; ruith CVS checkout...</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+52" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+19" />
         <location line="+1" />
@@ -13797,7 +13884,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Dèan sgrùdadh air</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Thoir sùil air stòr CVS agus feuchaidh sinn ris a’ phròiseact a tha ann a luchdachadh.</translation>
     </message>
@@ -13834,7 +13921,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     <message>
         <location line="+1" />
         <source>Running Git clone...</source>
-        <translation>A 'ruith Git clone. .</translation>
+        <translation>A &apos;ruith Git clone. .</translation>
     </message>
     <message>
         <location line="+3" />
@@ -13847,9 +13934,9 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
-        <translation>A 'ruith clone Mercurial ...</translation>
+        <translation>A &apos;ruith clone Mercurial ...</translation>
     </message>
     <message>
         <location line="+3" />
@@ -13882,7 +13969,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Subversion Checkout</translation>
     </message>
     <message>
-        <location line="-394" />
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Cruthaichidh an draoidh seo plugan gnàthaichte Qt Creator.</translation>
     </message>
@@ -13892,8 +13979,8 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Sònraich mion-fhiosrachadh mun plugan àbhaisteach Qt Creator agad.</translation>
     </message>
     <message>
-        <source>%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</source>
-        <translation type="vanished">%{JS: luach('ProjectName').charAt(0).toUpperCase() + luach('ProjectName').slice(1)}</translation>
+        <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
+        <translation type="vanished">%{JS: luach(&apos;ProjectName&apos;).charAt(0).toUpperCase() + luach(&apos;ProjectName&apos;).slice(1)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13931,8 +14018,8 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Cuir tuairisgeul goirid air do plugan an seo</translation>
     </message>
     <message>
-        <source>https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</source>
-        <translation type="vanished">https://www.%{JS: encodeURICComponent(value('VendorName').toLowerCase())}.com</translation>
+        <source>https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</source>
+        <translation type="vanished">https://www.%{JS: encodeURICComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13957,12 +14044,12 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     <message>
         <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
         <source>S&amp;essions</source>
-        <translation>S &amp; essions</translation>
+        <translation>S &amp;essions</translation>
     </message>
     <message>
         <location line="+9" />
         <source>&amp;Manage...</source>
-        <translation>&amp; A 'riaghladh ...</translation>
+        <translation>&amp;A &apos;riaghladh ...</translation>
     </message>
     <message>
         <location line="+13" />
@@ -13999,12 +14086,12 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     <message>
         <location line="+308" />
         <source>Error while restoring session</source>
-        <translation>Mearachd fhad 's a tha e ag ath-nuadhachadh seisean</translation>
+        <translation>Mearachd fhad &apos;s a tha e ag ath-nuadhachadh seisean</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Could not restore session %1</source>
-        <translation>Cha b 'urrainn dhuinn seisean%1 a thoirt air ais</translation>
+        <translation>Cha b &apos;urrainn dhuinn seisean%1 a thoirt air ais</translation>
     </message>
     <message>
         <location line="+44" />
@@ -14015,17 +14102,17 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <location line="+47" />
         <location line="+42" />
         <source>Error while saving session</source>
-        <translation>Mearachd fhad 's a tha thu a' sàbhaladh seisean</translation>
+        <translation>Mearachd fhad &apos;s a tha thu a&apos; sàbhaladh seisean</translation>
     </message>
     <message>
         <location line="-41" />
         <source>Could not save session %1</source>
-        <translation>Cha b 'urrainn dhuinn seisean%1 a shàbhaladh</translation>
+        <translation>Cha b &apos;urrainn dhuinn seisean%1 a shàbhaladh</translation>
     </message>
     <message>
         <location line="+42" />
-        <source>Could not save session to file "%1"</source>
-        <translation>Cha b 'urrainn dhuinn seisean a shàbhaladh gus freagairt "%1"</translation>
+        <source>Could not save session to file &quot;%1&quot;</source>
+        <translation>Cha b &apos;urrainn dhuinn seisean a shàbhaladh gus freagairt &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
@@ -14040,27 +14127,27 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     <message>
         <location line="+7" />
         <source>&amp;New...</source>
-        <translation>&amp; Ùr ...</translation>
+        <translation>&amp;Ùr ...</translation>
     </message>
     <message>
         <location line="+3" />
         <source>&amp;Open</source>
-        <translation>&amp; Fosgailte</translation>
+        <translation>&amp;Fosgailte</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Rename...</source>
-        <translation>&amp; Ath-ainm ...</translation>
+        <translation>&amp;Ath-ainm ...</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C&amp;lone...</source>
-        <translation>C &amp; LONE ...</translation>
+        <translation>C &amp;LONE ...</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Delete...</source>
-        <translation>&amp; Cuir às ...</translation>
+        <translation>&amp;Cuir às ...</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14070,7 +14157,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     <message>
         <location line="+9" />
         <source>What is a Session?</source>
-        <translation>Dè a th 'ann an seisean?</translation>
+        <translation>Dè a th &apos;ann an seisean?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+55" />
@@ -14091,22 +14178,22 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     <message>
         <location line="-10" />
         <source>&amp;Create</source>
-        <translation>&amp; Cruthaich</translation>
+        <translation>&amp;Cruthaich</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Create and &amp;Open</source>
-        <translation>Cruthaich agus &amp; fosgailte</translation>
+        <translation>Cruthaich agus &amp;fosgailte</translation>
     </message>
     <message>
         <location line="+11" />
         <source>&amp;Clone</source>
-        <translation>&amp; Clone</translation>
+        <translation>&amp;Clone</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Clone and &amp;Open</source>
-        <translation>Clone agus &amp; fosgailte</translation>
+        <translation>Clone agus &amp;fosgailte</translation>
     </message>
     <message>
         <location line="+22" />
@@ -14116,12 +14203,12 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     <message>
         <location line="+1" />
         <source>&amp;Rename</source>
-        <translation>&amp; Ath-ainm</translation>
+        <translation>&amp;Ath-ainm</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Rename and &amp;Open</source>
-        <translation>Ath-ainm agus &amp; Fosgailte</translation>
+        <translation>Ath-ainm agus &amp;Fosgailte</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
@@ -14135,38 +14222,38 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     </message>
     <message>
         <location line="+72" />
-        <source>Could not create directory "%1"</source>
-        <translation>Cha b 'urrainn dhaibh eòlaire a chruthachadh "%1"</translation>
+        <source>Could not create directory &quot;%1&quot;</source>
+        <translation>Cha b &apos;urrainn dhaibh eòlaire a chruthachadh &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>Chan eil am prògram "%1 1" ann no chan eil e air a shuidheachadh gu bàs.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>Chan eil am prògram &quot;%1 1&quot; ann no chan eil e air a shuidheachadh gu bàs.</translation>
     </message>
     <message>
         <location line="+34" />
-        <source>Starting: "%1" %2</source>
-        <translation>A 'tòiseachadh: "%1"%2</translation>
+        <source>Starting: &quot;%1&quot; %2</source>
+        <translation>A &apos;tòiseachadh: &quot;%1&quot;%2</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The process "%1" exited normally.</source>
-        <translation>Am pròiseas "%1" air a chuairteachadh gu h-àbhaisteach.</translation>
+        <source>The process &quot;%1&quot; exited normally.</source>
+        <translation>Am pròiseas &quot;%1&quot; air a chuairteachadh gu h-àbhaisteach.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The process "%1" exited with code %2.</source>
-        <translation>Am pròiseas "%1" air a nochdadh le còd%2.</translation>
+        <source>The process &quot;%1&quot; exited with code %2.</source>
+        <translation>Am pròiseas &quot;%1&quot; air a nochdadh le còd%2.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Could not start process "%1" %2.</source>
-        <translation>Cha b 'urrainn dhaibh tòiseachadh air pròiseas "%1"%2.</translation>
+        <source>Could not start process &quot;%1&quot; %2.</source>
+        <translation>Cha b &apos;urrainn dhaibh tòiseachadh air pròiseas &quot;%1&quot;%2.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The process "%1" crashed.</source>
-        <translation>Thuit am pròiseas "%1".</translation>
+        <source>The process &quot;%1&quot; crashed.</source>
+        <translation>Thuit am pròiseas &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
@@ -14207,8 +14294,8 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files of all open projects. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>A 'togail fhaidhlichean de a h-uile pròiseact fosgailte. Pàipear-taice "+ &lt;àireamh&gt;" no ": &lt;àireamh&gt;" gus leum chun àireamh loidhne a chaidh a thoirt seachad. Pàipear-taice "+ no àireamh bheag&gt;" no ": &lt;àireamh&gt;" gus leum chun àireamh a 'cholbh cuideachd.</translation>
+        <source>Locates files of all open projects. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>A &apos;togail fhaidhlichean de a h-uile pròiseact fosgailte. Pàipear-taice &quot;+ &lt;àireamh&gt;&quot; no &quot;: &lt;àireamh&gt;&quot; gus leum chun àireamh loidhne a chaidh a thoirt seachad. Pàipear-taice &quot;+ no àireamh bheag&gt;&quot; no &quot;: &lt;àireamh&gt;&quot; gus leum chun àireamh a &apos;cholbh cuideachd.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
@@ -14263,12 +14350,12 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>Show &amp;App Output</source>
-        <translation>Taisbeanadh Taisbeanadh &amp; App</translation>
+        <translation>Taisbeanadh Taisbeanadh &amp;App</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Show the output that generated this issue in Application Output.</source>
-        <translation>Seall an toradh a ghineadh a 'chùis seo ann an toradh Iarrtais.</translation>
+        <translation>Seall an toradh a ghineadh a &apos;chùis seo ann an toradh Iarrtais.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14289,7 +14376,7 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>Stop running program.</source>
-        <translation>Prògram a tha a 'ruith stad.</translation>
+        <translation>Prògram a tha a &apos;ruith stad.</translation>
     </message>
     <message>
         <location line="+232" />
@@ -14342,7 +14429,7 @@ Excluding: %2
     <message>
         <location line="+1" />
         <source>On First Output Only</source>
-        <translation>Air a 'chiad toradh a-mhàin</translation>
+        <translation>Air a &apos;chiad toradh a-mhàin</translation>
     </message>
     <message>
         <location line="+14" />
@@ -14353,12 +14440,12 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>Open Application Output when running:</source>
-        <translation>Toradh Iarrtas Iarrtas nuair a bhios tu a 'ruith:</translation>
+        <translation>Toradh Iarrtas Iarrtas nuair a bhios tu a &apos;ruith:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Open Application Output when debugging:</source>
-        <translation>Toradh Iarrtas Iarrtas nuair a dh 'fhillte:</translation>
+        <translation>Toradh Iarrtas Iarrtas nuair a dh &apos;fhillte:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+146" />
@@ -14384,13 +14471,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+105" />
-        <source>Build directory contains potentially problematic character "%1".</source>
-        <translation>Tha caractar a 'togail caractar "%1" ann an eòlaire togail.</translation>
+        <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
+        <translation>Tha caractar a &apos;togail caractar &quot;%1&quot; ann an eòlaire togail.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>This warning can be suppressed &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>Faodar an rabhadh seo a chuir dheth &lt;a href = "Dummy"&gt; an seo &lt;/a&gt;.</translation>
+        <source>This warning can be suppressed &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Faodar an rabhadh seo a chuir dheth &lt;a href = &quot;Dummy&quot;&gt; an seo &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -14425,7 +14512,7 @@ Excluding: %2
     <message>
         <location line="+1" />
         <source>Makes output parsers look for diagnostics on stdout rather than stderr.</source>
-        <translation>A 'dèanamh prothers topeute a' coimhead airson Diagnostics air STDDUUT seach staderr.</translation>
+        <translation>A &apos;dèanamh prothers topeute a&apos; coimhead airson Diagnostics air STDDUUT seach staderr.</translation>
     </message>
     <message>
         <location line="+56" />
@@ -14446,7 +14533,7 @@ Excluding: %2
     </message>
     <message>
         <location line="+4" />
-        <source>Variables in the build configuration's environment</source>
+        <source>Variables in the build configuration&apos;s environment</source>
         <translation>Ceapairean ann an àrainneachd rèiteachaidh togail</translation>
     </message>
     <message>
@@ -14457,7 +14544,7 @@ Excluding: %2
     <message>
         <location line="+1" />
         <source>Appears as a tooltip when hovering the build configuration</source>
-        <translation>A 'nochdadh mar inneal inneal nuair a bhios tu a' gluasad an rèiteachadh togail</translation>
+        <translation>A &apos;nochdadh mar inneal inneal nuair a bhios tu a&apos; gluasad an rèiteachadh togail</translation>
     </message>
     <message>
         <location line="+281" />
@@ -14479,22 +14566,22 @@ Excluding: %2
     <message>
         <location line="+52" />
         <source>Main file of the project</source>
-        <translation>Prìomh fhaidhle a 'phròiseict</translation>
+        <translation>Prìomh fhaidhle a &apos;phròiseict</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Name of the project</source>
-        <translation>Ainm a 'phròiseict</translation>
+        <translation>Ainm a &apos;phròiseict</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build configuration</source>
-        <translation>Ainm a 'phròiseict gnìomhach a' phròiseict</translation>
+        <source>Name of the project&apos;s active build configuration</source>
+        <translation>Ainm a &apos;phròiseict gnìomhach a&apos; phròiseict</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build system</source>
-        <translation>Ainm siostam togail gnìomhach a 'phròiseict</translation>
+        <source>Name of the project&apos;s active build system</source>
+        <translation>Ainm siostam togail gnìomhach a &apos;phròiseict</translation>
     </message>
     <message>
         <location line="+3" />
@@ -14503,37 +14590,37 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Type of the project's active build configuration</source>
-        <translation>Seòrsa rèiteachadh gnìomhach a 'phròiseict</translation>
+        <source>Type of the project&apos;s active build configuration</source>
+        <translation>Seòrsa rèiteachadh gnìomhach a &apos;phròiseict</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>No build device is set for the kit "%1".</source>
-        <translation>Chan eil inneal togail air a shuidheachadh airson a 'phiseag "%1".</translation>
+        <source>No build device is set for the kit &quot;%1&quot;.</source>
+        <translation>Chan eil inneal togail air a shuidheachadh airson a &apos;phiseag &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>You can try mounting the folder in your device settings.</source>
-        <translation>Faodaidh tu feuchainn ris a 'phasgan a chuir sìos ann an roghainnean an inneal agad.</translation>
+        <translation>Faodaidh tu feuchainn ris a &apos;phasgan a chuir sìos ann an roghainnean an inneal agad.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The build device "%1" cannot reach the project directory.</source>
-        <translation>Chan urrainn don inneal togail "%1" eòlaire a 'phrògraim a ruighinn.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the project directory.</source>
+        <translation>Chan urrainn don inneal togail &quot;%1&quot; eòlaire a &apos;phrògraim a ruighinn.</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The build device "%1" cannot reach the build directory.</source>
-        <translation>Chan urrainn don inneal togail "%1" an eòlaire togail a ruighinn.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the build directory.</source>
+        <translation>Chan urrainn don inneal togail &quot;%1&quot; an eòlaire togail a ruighinn.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
         <source>Finished %1 of %n steps</source>
-        <translation>
-            <numerusform>Crìochnaich%1 de% n ceumannan</numerusform>
-            <numerusform>Crìochnaich%1 de% n ceumannan</numerusform>
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -14549,17 +14636,17 @@ Excluding: %2
     <message>
         <location line="+26" />
         <source>The project %1 is not configured, skipping it.</source>
-        <translation>Chan eil am pròiseact%1 air a rèiteachadh, a 'sgìtheadh ​​e.</translation>
+        <translation>Chan eil am pròiseact%1 air a rèiteachadh, a &apos;sgìtheadh ​​e.</translation>
     </message>
     <message>
         <location line="+11" />
         <source>The build device failed to prepare for the build of %1 (%2).</source>
-        <translation>Dh'fhàillig an inneal togail ullachadh airson togail%1 (%2).</translation>
+        <translation>Dh&apos;fhàillig an inneal togail ullachadh airson togail%1 (%2).</translation>
     </message>
     <message>
         <location line="+138" />
         <source>Compile</source>
-        <comment>Category for compiler issues listed under 'Issues'</comment>
+        <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>Cuir ri chèile</translation>
     </message>
     <message>
@@ -14570,7 +14657,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Build System</source>
-        <comment>Category for build system issues listed under 'Issues'</comment>
+        <comment>Category for build system issues listed under &apos;Issues&apos;</comment>
         <translation>Siostam togail</translation>
     </message>
     <message>
@@ -14581,24 +14668,24 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Deployment</source>
-        <comment>Category for deployment issues listed under 'Issues'</comment>
+        <comment>Category for deployment issues listed under &apos;Issues&apos;</comment>
         <translation>Cleachdadh</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Issues found when deploying applications to devices.</source>
-        <translation>Cùisean a gheibhear nuair a bha iad a 'cleachdadh thagraidhean gu innealan.</translation>
+        <translation>Cùisean a gheibhear nuair a bha iad a &apos;cleachdadh thagraidhean gu innealan.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Autotests</source>
-        <comment>Category for autotest issues listed under 'Issues'</comment>
+        <comment>Category for autotest issues listed under &apos;Issues&apos;</comment>
         <translation>Autotests</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Issues found when running tests.</source>
-        <translation>Cùisean rim faighinn nuair a bhios tu a 'ruith deuchainnean.</translation>
+        <translation>Cùisean rim faighinn nuair a bhios tu a &apos;ruith deuchainnean.</translation>
     </message>
     <message>
         <location line="+151" />
@@ -14609,7 +14696,7 @@ Excluding: %2
         <location line="+8" />
         <location line="+59" />
         <source>Clean</source>
-        <extracomment>Displayed name for a "cleaning" build step
+        <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
 Display name of the clean build step list. Used as part of the labels in the project window.</extracomment>
         <translation>Glan</translation>
@@ -14657,24 +14744,24 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+8" />
         <source>Skipping disabled step %1.</source>
-        <translation>A 'sgìtheadh ​​ceum Ciorramach 1.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+104" />
         <source>Error while building/deploying project %1 (kit: %2)</source>
-        <translation>Mearachd fhad 's a tha thu a' togail / a 'cleachdadh pròiseact%1 (Kit:%2)</translation>
+        <translation>Mearachd fhad &apos;s a tha thu a&apos; togail / a &apos;cleachdadh pròiseact%1 (Kit:%2)</translation>
     </message>
     <message>
         <location line="-100" />
         <source>The kit %1 has configuration issues which might be the root cause for this problem.</source>
-        <translation>Tha cùisean rèiteachaidh air a 'Chit%1 a dh' fhaodadh a bhith mar an adhbhar root airson an duilgheadas seo.</translation>
+        <translation>Tha cùisean rèiteachaidh air a &apos;Chit%1 a dh&apos; fhaodadh a bhith mar an adhbhar root airson an duilgheadas seo.</translation>
     </message>
     <message>
         <location line="+4" />
         <location line="+98" />
-        <source>When executing step "%1"</source>
-        <translation>Nuair a chuireas tu a-steach ceum "%1"</translation>
+        <source>When executing step &quot;%1&quot;</source>
+        <translation>Nuair a chuireas tu a-steach ceum &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
@@ -14705,7 +14792,7 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+2" />
         <source>Template used to construct the default build directory.&lt;br&gt;&lt;br&gt;The default value can be set using the environment variable &lt;tt&gt;%1&lt;/tt&gt;.</source>
-        <translation>Teamplaid a chaidh a chleachdadh gus an eòlaire togail bunaiteach a thogail. &lt;br&gt; &lt;br&gt; Faodar an luach bunaiteach a shuidheachadh a 'cleachdadh an àrainneachd &lt;TT&gt;%1 &lt;/ tt&gt;.</translation>
+        <translation>Teamplaid a chaidh a chleachdadh gus an eòlaire togail bunaiteach a thogail. &lt;br&gt; &lt;br&gt; Faodar an luach bunaiteach a shuidheachadh a &apos;cleachdadh an àrainneachd &lt;TT&gt;%1 &lt;/ tt&gt;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -14720,7 +14807,7 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+23" />
         <source>Default Build Properties</source>
-        <translation>Togalaichean a 'togail thogalaichean</translation>
+        <translation>Togalaichean a &apos;togail thogalaichean</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+57" />
@@ -14811,12 +14898,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>Remove Build Configuration %1?</source>
-        <translation>Thoir air falbh rèiteachadh a 'togail%1?</translation>
+        <translation>Thoir air falbh rèiteachadh a &apos;togail%1?</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The build configuration &lt;b&gt;%1&lt;/b&gt; is currently being built.</source>
-        <translation>Thathas a 'togail an rèiteachadh togail &lt;B&gt;%1 &lt;/ b&gt; an-dràsta.</translation>
+        <translation>Thathas a &apos;togail an rèiteachadh togail &lt;B&gt;%1 &lt;/ b&gt; an-dràsta.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14872,27 +14959,27 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+39" />
         <source>Removing Step failed</source>
-        <translation>Dh'fhàillig ceum air falbh</translation>
+        <translation>Dh&apos;fhàillig ceum air falbh</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Cannot remove build step while building</source>
-        <translation>Chan urrainn dhaibh ceum togail a thoirt air falbh fhad 's a tha iad a' togail</translation>
+        <translation>Chan urrainn dhaibh ceum togail a thoirt air falbh fhad &apos;s a tha iad a&apos; togail</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+394" />
         <source>The project is currently being parsed.</source>
-        <translation>Thathas an-dràsta a 'parsadh a' phròiseict an-dràsta.</translation>
+        <translation>Thathas an-dràsta a &apos;parsadh a&apos; phròiseict an-dràsta.</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The project could not be fully parsed.</source>
-        <translation>Cha b 'urrainn don phròiseact a bhith làn phiaclan.</translation>
+        <translation>Cha b &apos;urrainn don phròiseact a bhith làn phiaclan.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The project file "%1" does not exist.</source>
-        <translation>Chan eil faidhle a 'phròiseict "%1" ann.</translation>
+        <source>The project file &quot;%1&quot; does not exist.</source>
+        <translation>Chan eil faidhle a &apos;phròiseict &quot;%1&quot; ann.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/codestylesettingspropertiespage.cpp" line="+60" />
@@ -14919,12 +15006,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+38" />
         <source>Show Compile &amp;Output</source>
-        <translation>Seall ri chur ri chèile &amp; toradh</translation>
+        <translation>Seall ri chur ri chèile &amp;toradh</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Show the output that generated this issue in Compile Output.</source>
-        <translation>Seall an toradh a ghineadh a 'chùis seo ann an toradh farmad.</translation>
+        <translation>Seall an toradh a ghineadh a &apos;chùis seo ann an toradh farmad.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14949,12 +15036,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+25" />
         <source>Copying finished.</source>
-        <translation>Le bhith a 'dèanamh lethbhreac de chrìochnaichte.</translation>
+        <translation>Le bhith a &apos;dèanamh lethbhreac de chrìochnaichte.</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Copying failed.</source>
-        <translation>Dh'fhàillig copaidh air fàiligeadh.</translation>
+        <translation>Dh&apos;fhàillig copaidh air fàiligeadh.</translation>
     </message>
     <message>
         <location line="+22" />
@@ -14989,13 +15076,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from the current document's project. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>A 'lorg fhaidhlichean bho phròiseact sgrìobhainnean an-dràsta. Pàipear-taice "+ &lt;àireamh&gt;" no ": &lt;àireamh&gt;" gus leum chun àireamh loidhne a chaidh a thoirt seachad. Pàipear-taice "+ no àireamh bheag&gt;" no ": &lt;àireamh&gt;" gus leum chun àireamh a 'cholbh cuideachd.</translation>
+        <source>Locates files from the current document&apos;s project. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>A &apos;lorg fhaidhlichean bho phròiseact sgrìobhainnean an-dràsta. Pàipear-taice &quot;+ &lt;àireamh&gt;&quot; no &quot;: &lt;àireamh&gt;&quot; gus leum chun àireamh loidhne a chaidh a thoirt seachad. Pàipear-taice &quot;+ no àireamh bheag&gt;&quot; no &quot;: &lt;àireamh&gt;&quot; gus leum chun àireamh a &apos;cholbh cuideachd.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
-        <source>Project "%1"</source>
-        <translation>Pròiseact "%1"</translation>
+        <source>Project &quot;%1&quot;</source>
+        <translation>Pròiseact &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -15004,8 +15091,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>Project "%1":</source>
-        <translation>Pròiseact "%1":</translation>
+        <source>Project &quot;%1&quot;:</source>
+        <translation>Pròiseact &quot;%1&quot;:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
@@ -15022,12 +15109,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+7" />
         <source>You need to set an executable in the custom run configuration.</source>
-        <translation>Feumaidh tu gealltanas a chuir air adhart anns an rèiteachadh Ruith a 'Chlàr.</translation>
+        <translation>Feumaidh tu gealltanas a chuir air adhart anns an rèiteachadh Ruith a &apos;Chlàr.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
-        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>Toradh Toradh Toradh Custom Scan Scan airson pàtranan mearachd a chaidh a thoirt do neach-cleachdaidh &lt;&lt;br&gt; Faodar na parsers a chruthachadh ann an cùisean &lt;a href = "Dummy"&gt; an seo &lt;/a&gt;.</translation>
+        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+82" />
@@ -15037,11 +15124,11 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+2" />
         <source>There are %n custom parsers active</source>
-        <translation>
-            <numerusform>Tha% n cleachdaidh parersers àbhaisteach gnìomhach</numerusform>
-            <numerusform>Tha% n cleachdaidh parersers àbhaisteach gnìomhach</numerusform>
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -15052,25 +15139,25 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>&amp;Error message capture pattern:</source>
-        <translation>&amp; Mearachd teachdaireachd a 'glacadh pàtran glacaidh:</translation>
+        <translation>&amp;Mearachd teachdaireachd a &apos;glacadh pàtran glacaidh:</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+33" />
         <source>&amp;File name:</source>
-        <translation>&amp; Ainm faidhle:</translation>
+        <translation>&amp;Ainm faidhle:</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Line number:</source>
-        <translation>&amp; Àireamh loidhne:</translation>
+        <translation>&amp;Àireamh loidhne:</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Message:</source>
-        <translation>&amp; Teachdaireachd:</translation>
+        <translation>&amp;Teachdaireachd:</translation>
     </message>
     <message>
         <location line="-15" />
@@ -15087,7 +15174,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-31" />
         <source>E&amp;rror message:</source>
-        <translation>TEAGASG AITHISG E &amp; RURE:</translation>
+        <translation>TEAGASG AITHISG E &amp;RURE:</translation>
     </message>
     <message>
         <location line="+33" />
@@ -15109,7 +15196,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="-22" />
         <location line="+29" />
         <source>Capture Output Channels</source>
-        <translation>A 'GABHAIL A-STEACH Sianalan Toradh</translation>
+        <translation>A &apos;GABHAIL A-STEACH Sianalan Toradh</translation>
     </message>
     <message>
         <location line="-25" />
@@ -15168,12 +15255,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>Pattern does not match the message.</source>
-        <translation>Chan eil pàtran a 'freagairt ris an teachdaireachd.</translation>
+        <translation>Chan eil pàtran a &apos;freagairt ris an teachdaireachd.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
-        <source>Custom output parsers defined here can be enabled individually in the project's build or run settings.</source>
-        <translation>Faodar parrsairean toraidh àbhaisteach a mhìneachadh an seo a bhith comasach a chomasachadh leotha fhèin a 'phròiseact togail no ruith a' phròiseict.</translation>
+        <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
+        <translation>Faodar parrsairean toraidh àbhaisteach a mhìneachadh an seo a bhith comasach a chomasachadh leotha fhèin a &apos;phròiseact togail no ruith a&apos; phròiseict.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -15225,11 +15312,11 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+44" />
         <source>%n entries</source>
-        <translation>
-            <numerusform>% n inntrigidhean</numerusform>
-            <numerusform>% n inntrigidhean</numerusform>
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -15245,17 +15332,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>Each line defines a macro. Format is MACRO[=VALUE].</source>
-        <translation>Tha gach loidhne a 'mìneachadh macro. Is e cruth Macro [= Luach].</translation>
+        <translation>Tha gach loidhne a &apos;mìneachadh macro. Is e cruth Macro [= Luach].</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Each line adds a global header lookup path.</source>
-        <translation>Bidh gach loidhne a 'cur slighe sgrùdaidh ceann cruinne.</translation>
+        <translation>Bidh gach loidhne a &apos;cur slighe sgrùdaidh ceann cruinne.</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Comma-separated list of flags that turn on C++11 support.</source>
-        <translation>Liosta Dearchraichte de bhrataichean a tha a 'tionndadh air taic C ++ 11.</translation>
+        <translation>Liosta Dearchraichte de bhrataichean a tha a &apos;tionndadh air taic C ++ 11.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15268,44 +15355,44 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
         <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>&amp; Slighe Chompilear:</translation>
+        <translation>&amp;Slighe Chompilear:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Make path:</source>
-        <translation>&amp; Dèan slighe:</translation>
+        <translation>&amp;Dèan slighe:</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
         <source>&amp;ABI:</source>
-        <translation>&amp; ABI:</translation>
+        <translation>&amp;ABI:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Predefined macros:</source>
-        <translation>Macros ro mhuin:</translation>
+        <translation>&amp;Macros ro mhuin:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Header paths:</source>
-        <translation>&amp; Slighean subhachais:</translation>
+        <translation>&amp;Slighean subhachais:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C++11 &amp;flags:</source>
-        <translation>C ++ 11 &amp; Brataichean:</translation>
+        <translation>C ++ 11 &amp;Brataichean:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Qt mkspecs:</source>
-        <translation>&amp; Qt mkspecs:</translation>
+        <translation>&amp;Qt mkspecs:</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Error parser:</source>
-        <translation>&amp; Passer Mearachd:</translation>
+        <translation>&amp;Passer Mearachd:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/dependenciespanel.cpp" line="+83" />
@@ -15409,7 +15496,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+11" />
         <source>DebugBreakProcess failed:</source>
-        <translation>Dh'fhàillig dìleab air fàiligeadh:</translation>
+        <translation>Dh&apos;fhàillig dìleab air fàiligeadh:</translation>
     </message>
     <message>
         <location line="+10" />
@@ -15424,7 +15511,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+8" />
         <source>could not break the process.</source>
-        <translation>cha b 'urrainn dhaibh am pròiseas a bhriseadh.</translation>
+        <translation>cha b &apos;urrainn dhaibh am pròiseas a bhriseadh.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicecheckbuildstep.cpp" line="+38" />
@@ -15441,7 +15528,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+1" />
         <source>There is no device set up for this kit. Do you want to add a device?</source>
-        <translation>Chan eil inneal air a stèidheachadh airson a 'phiseag seo. A bheil thu airson inneal a chuir ris?</translation>
+        <translation>Chan eil inneal air a stèidheachadh airson a &apos;phiseag seo. A bheil thu airson inneal a chuir ris?</translation>
     </message>
     <message>
         <location line="+32" />
@@ -15460,19 +15547,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
-        <source>No device for path "%1"</source>
-        <translation>No inneal airson slighe "%1"</translation>
+        <source>No device for path &quot;%1&quot;</source>
+        <translation>No inneal airson slighe &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
-        <source>No device found for path "%1"</source>
-        <translation>Cha deach inneal a lorg airson slighe "%1"</translation>
+        <source>No device found for path &quot;%1&quot;</source>
+        <translation>Cha deach inneal a lorg airson slighe &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-9" />
-        <source>No file access for device "%1"</source>
-        <translation>Gun ruigsinneachd faidhle airson inneal "%1"</translation>
+        <source>No file access for device &quot;%1&quot;</source>
+        <translation>Gun ruigsinneachd faidhle airson inneal &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
@@ -15497,17 +15584,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+22" />
         <source>&amp;Update List</source>
-        <translation>&amp; Liosta ùrachaidh</translation>
+        <translation>&amp;Liosta ùrachaidh</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Kill Process</source>
-        <translation>&amp; A 'marbhadh pròiseas</translation>
+        <translation>&amp;A &apos;marbhadh pròiseas</translation>
     </message>
     <message>
         <location line="+8" />
         <source>&amp;Filter:</source>
-        <translation>&amp; Filter:</translation>
+        <translation>&amp;Filter:</translation>
     </message>
     <message>
         <location line="+64" />
@@ -15517,7 +15604,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-253" />
         <source>&amp;Device:</source>
-        <translation>&amp; Inneal:</translation>
+        <translation>&amp;Inneal:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15527,7 +15614,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>&amp;Remove</source>
-        <translation>&amp; Thoir air falbh</translation>
+        <translation>&amp;Thoir air falbh</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15537,12 +15624,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>&amp;Add...</source>
-        <translation>&amp; Cuir ris ...</translation>
+        <translation>&amp;Cuir ris ...</translation>
     </message>
     <message>
         <location line="+4" />
         <source>&amp;Start Wizard to Add Device...</source>
-        <translation>&amp; Draoidh Draoidh gus inneal a chuir ris ...</translation>
+        <translation>&amp;Draoidh Draoidh gus inneal a chuir ris ...</translation>
     </message>
     <message>
         <location line="+12" />
@@ -15553,7 +15640,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+34" />
         <source>&amp;Name:</source>
-        <translation>&amp; Ainm:</translation>
+        <translation>&amp;Ainm:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -15567,8 +15654,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+87" />
-        <source>Yes (id is "%1")</source>
-        <translation>Tha (id "%1")</translation>
+        <source>Yes (id is &quot;%1&quot;)</source>
+        <translation>Tha (id &quot;%1&quot;)</translation>
     </message>
     <message>
         <location line="+0" />
@@ -15599,7 +15686,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>Device test failed.</source>
-        <translation>Dh'fhàillig an deuchainn inneal.</translation>
+        <translation>Dh&apos;fhàillig an deuchainn inneal.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceusedportsgatherer.cpp" line="+81" />
@@ -15609,17 +15696,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+41" />
         <source>Found %n free ports.</source>
-        <translation>
-            <numerusform>Lorg% n puirt an-asgaidh.</numerusform>
-            <numerusform>Lorg% n puirt an-asgaidh.</numerusform>
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+11" />
         <source>Checking available ports...</source>
-        <translation>A 'sgrùdadh puirt ri fhaighinn ...</translation>
+        <translation>A &apos;sgrùdadh puirt ri fhaighinn ...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+70" />
@@ -15699,13 +15786,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>No device for given path: "%1".</source>
-        <translation>Gun inneal airson an t-slighe air a thoirt seachad: "%1".</translation>
+        <source>No device for given path: &quot;%1&quot;.</source>
+        <translation>Gun inneal airson an t-slighe air a thoirt seachad: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Device for path "%1" does not support killing processes.</source>
-        <translation>Chan eil inneal airson slighe "%1" a 'toirt taic do phròiseasan marbhadh.</translation>
+        <source>Device for path &quot;%1&quot; does not support killing processes.</source>
+        <translation>Chan eil inneal airson slighe &quot;%1&quot; a &apos;toirt taic do phròiseasan marbhadh.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
@@ -15720,7 +15807,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+13" />
         <source>Fetching process list. This might take a while.</source>
-        <translation>Liosta pròiseas fhaighinn. Dh 'fhaodadh seo greis a thoirt.</translation>
+        <translation>Liosta pròiseas fhaighinn. Dh &apos;fhaodadh seo greis a thoirt.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettingspage.cpp" line="+61" />
@@ -15788,7 +15875,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Taisbeanadh ceart &amp; iomall aig colbh:</translation>
+        <translation>Taisbeanadh ceart &amp;iomall aig colbh:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15816,12 +15903,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+43" />
         <source>Base environment for this run configuration:</source>
-        <translation>Àrainneachd Base airson an rèiteachadh a tha a 'ruith seo:</translation>
+        <translation>Àrainneachd Base airson an rèiteachadh a tha a &apos;ruith seo:</translation>
     </message>
     <message>
         <location line="+29" />
         <source>Show in Application Output when running</source>
-        <translation>Taisbeanadh ann an toradh tagraidh nuair a bhios iad a 'ruith</translation>
+        <translation>Taisbeanadh ann an toradh tagraidh nuair a bhios iad a &apos;ruith</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+2" />
@@ -15837,22 +15924,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-278" />
         <source>Ed&amp;it</source>
-        <translation>Ed &amp; It</translation>
+        <translation>Ed &amp;It</translation>
     </message>
     <message>
         <location line="+4" />
         <source>&amp;Add</source>
-        <translation>&amp; Cuir ris</translation>
+        <translation>&amp;Cuir ris</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&amp;Reset</source>
-        <translation>&amp; Ath-shuidheachadh</translation>
+        <translation>&amp;Ath-shuidheachadh</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&amp;Unset</source>
-        <translation>&amp; UNSET</translation>
+        <translation>&amp;UNSET</translation>
     </message>
     <message>
         <location line="+14" />
@@ -15867,7 +15954,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+9" />
         <source>Open &amp;Terminal</source>
-        <translation>Fosgailte &amp; Terminal</translation>
+        <translation>Fosgailte &amp;Terminal</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15876,33 +15963,33 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+123" />
-        <source>Unset &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Uillt &lt;A Href = "%1"&gt; &lt;b&gt;%1 &lt;/ b&gt; &lt;/a&gt;</translation>
+        <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Uillt &lt;A Href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/ b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation>Suidhich &lt;A Href = "%1"&gt; &lt;B&gt;%1 &lt;/ B&gt; &lt;/a&gt; gu &lt;b&gt;%2 &lt;/ b&gt;</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
+        <translation>Suidhich &lt;A Href = &quot;%1&quot;&gt; &lt;B&gt;%1 &lt;/ B&gt; &lt;/a&gt; gu &lt;b&gt;%2 &lt;/ b&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Pàipear-taice &lt;b&gt;%2 &lt;/ b&gt; gu &lt;%1 "&gt; &lt;B&gt;%1 &lt;/ b&gt; &lt;/a&gt;</translation>
+        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Ath-cheannach &lt;B&gt;%2 &lt;/ b&gt; gu &lt;%1 "&gt; &lt;B&gt;%1 &lt;/ b&gt; &lt;/a&gt;</translation>
+        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
-        <translation>Suidhich &lt;A Href = "%1"&gt; &lt;B&gt;%1 &lt;/ B&gt; &lt;/a&gt; gu &lt;B&gt; [Ciorramach]</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11" />
         <source>Use &lt;b&gt;%1&lt;/b&gt;</source>
-        <extracomment>%1 is "System Environment" or some such.</extracomment>
+        <extracomment>%1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Cleachd &lt;b&gt;%1 &lt;/ b&gt;</translation>
     </message>
     <message>
@@ -15913,13 +16000,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>Use &lt;b&gt;%1&lt;/b&gt; and</source>
-        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is "System Environment" or some such.</extracomment>
+        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Cleachd &lt;b&gt;%1 &lt;/ b&gt; agus</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+28" />
         <source>Files in All Project Directories</source>
-        <translation>Faidhlichean anns a h-uile clàr-bìdh a 'phròiseict</translation>
+        <translation>Faidhlichean anns a h-uile clàr-bìdh a &apos;phròiseict</translation>
     </message>
     <message>
         <location line="+38" />
@@ -15950,14 +16037,14 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+1259" />
         <source>Override for code model</source>
-        <translation>A 'dol thairis air modail còd</translation>
+        <translation>A &apos;dol thairis air modail còd</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Enable in the rare case that the code model
 fails because Clang does not understand the target architecture.</source>
-        <translation>Dèan comas air a 'chùis tearc gu bheil am modail còd
- a 'fàiligeadh leis nach eil Clang a' tuigsinn an ailtireachd targaid.</translation>
+        <translation>Dèan comas air a &apos;chùis tearc gu bheil am modail còd
+ a &apos;fàiligeadh leis nach eil Clang a&apos; tuigsinn an ailtireachd targaid.</translation>
     </message>
     <message>
         <location line="+45" />
@@ -15997,12 +16084,12 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+2" />
         <source>The text edit input to fix up.</source>
-        <translation>Bidh an teacsa deasachadh a 'cur a-steach airson a chàradh suas.</translation>
+        <translation>Bidh an teacsa deasachadh a &apos;cur a-steach airson a chàradh suas.</translation>
     </message>
     <message>
         <location line="+61" />
         <source>Field is not an object.</source>
-        <translation>Chan e rud a th 'ann an achadh.</translation>
+        <translation>Chan e rud a th &apos;ann an achadh.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -16011,78 +16098,78 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Field "%1" has no type.</source>
-        <translation>Chan eil seòrsa aig raon "%1".</translation>
+        <source>Field &quot;%1&quot; has no type.</source>
+        <translation>Chan eil seòrsa aig raon &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Field "%1" has unsupported type "%2".</source>
-        <translation>Chan eil seòrsa "%2 2" aig raon "%1".</translation>
+        <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
+        <translation>Chan eil seòrsa &quot;%2 2&quot; aig raon &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>When parsing Field "%1": %2</source>
-        <translation>Nuair a tha an raon parsing "%1":%2</translation>
+        <source>When parsing Field &quot;%1&quot;: %2</source>
+        <translation>Nuair a tha an raon parsing &quot;%1&quot;:%2</translation>
     </message>
     <message>
         <location line="+208" />
-        <source>Label ("%1") data is not an object.</source>
-        <translation>Chan e rud a th 'ann an leubail ("%1") chan e rud a th' ann an dàta.</translation>
+        <source>Label (&quot;%1&quot;) data is not an object.</source>
+        <translation>Chan e rud a th &apos;ann an leubail (&quot;%1&quot;) chan e rud a th&apos; ann an dàta.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Label ("%1") has no trText.</source>
-        <translation>Chan eil tttext aig leubail ("%1").</translation>
+        <source>Label (&quot;%1&quot;) has no trText.</source>
+        <translation>Chan eil tttext aig leubail (&quot;%1&quot;).</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>Spacer ("%1") data is not an object.</source>
-        <translation>Spacer (chan e rud a th 'ann an dàta "%1") chan e rud a th' ann an dàta.</translation>
+        <source>Spacer (&quot;%1&quot;) data is not an object.</source>
+        <translation>Spacer (chan e rud a th &apos;ann an dàta &quot;%1&quot;) chan e rud a th&apos; ann an dàta.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Spacer ("%1") property "factor" is no integer value.</source>
-        <translation>Spacer (chan eil luach iomlan "%1") le luach iomlan.</translation>
+        <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
+        <translation>Spacer (chan eil luach iomlan &quot;%1&quot;) le luach iomlan.</translation>
     </message>
     <message>
         <location line="+35" />
-        <source>LineEdit ("%1") data is not an object.</source>
-        <translation>Chan e rud a th 'ann an loidhne-loidhne ("%1") chan e rud a th' ann an dàta.</translation>
+        <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>Chan e rud a th &apos;ann an loidhne-loidhne (&quot;%1&quot;) chan e rud a th&apos; ann an dàta.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>LineEdit ("%1") has an invalid regular expression "%2" in "validator".</source>
-        <translation>Tha abairtean cunbhalach neo-dhligheach aig loidhne-loidhne ("%1").%2 2 "ann an" Dearbhadh ".</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
+        <translation>Tha abairtean cunbhalach neo-dhligheach aig loidhne-loidhne (&quot;%1&quot;).%2 2 &quot;ann an&quot; Dearbhadh &quot;.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>LineEdit ("%1") has an invalid value "%2" in "completion".</source>
-        <translation>Tha luach neo-dhligheach aig loidhne-loidhne ("%1").%2 2 "ann an" crìochnachadh ".</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
+        <translation>Tha luach neo-dhligheach aig loidhne-loidhne (&quot;%1&quot;).%2 2 &quot;ann an&quot; crìochnachadh &quot;.</translation>
     </message>
     <message>
         <location line="+166" />
-        <source>TextEdit ("%1") data is not an object.</source>
-        <translation>Chan e rud a th 'ann an teacsadh ("%1") chan e rud a th' ann an dàta.</translation>
+        <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>Chan e rud a th &apos;ann an teacsadh (&quot;%1&quot;) chan e rud a th&apos; ann an dàta.</translation>
     </message>
     <message>
         <location line="+83" />
         <source>PathChooser data is not an object.</source>
-        <translation>Chan e rud a th 'ann an dàta Punchchooler nì.</translation>
+        <translation>Chan e rud a th &apos;ann an dàta Punchchooler nì.</translation>
     </message>
     <message>
         <location line="+26" />
-        <source>kind "%1" is not one of the supported "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any".</source>
-        <translation>Chan e coibhneil "%1" aon de na "gnàth-shoireach" a tha a 'toirt taic "," File "," Sàbhailteachd "," Command "," sam bith ".</translation>
+        <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
+        <translation>Chan e coibhneil &quot;%1&quot; aon de na &quot;gnàth-shoireach&quot; a tha a &apos;toirt taic &quot;,&quot; File &quot;,&quot; Sàbhailteachd &quot;,&quot; Command &quot;,&quot; sam bith &quot;.</translation>
     </message>
     <message>
         <location line="+80" />
-        <source>CheckBox ("%1") data is not an object.</source>
-        <translation>Chan e rud a th 'ann am bogsa sgrùdaidh ("%1") chan e rud a th' ann an dàta.</translation>
+        <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
+        <translation>Chan e rud a th &apos;ann am bogsa sgrùdaidh (&quot;%1&quot;) chan e rud a th&apos; ann an dàta.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>CheckBox ("%1") values for checked and unchecked state are identical.</source>
-        <translation>Bogsa-seic ("%1") Tha luachan airson stàite sgrùdaichte agus gun sgrùdadh co-ionann.</translation>
+        <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
+        <translation>Bogsa-seic (&quot;%1&quot;) Tha luachan airson stàite sgrùdaichte agus gun sgrùdadh co-ionann.</translation>
     </message>
     <message>
         <location line="+80" />
@@ -16091,33 +16178,33 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>No "key" found in List items.</source>
-        <translation>Chan eil "iuchair" a lorgar air nithean liosta.</translation>
+        <source>No &quot;key&quot; found in List items.</source>
+        <translation>Chan eil &quot;iuchair&quot; a lorgar air nithean liosta.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>%1 ("%2") data is not an object.</source>
-        <translation>%1 ("%2") Chan e rud a th 'ann an dàta.</translation>
+        <source>%1 (&quot;%2&quot;) data is not an object.</source>
+        <translation>%1 (&quot;%2&quot;) Chan e rud a th &apos;ann an dàta.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>%1 ("%2") "index" is not an integer value.</source>
-        <translation>Chan e luach intex "a th 'ann an%1 1 ("%2 ").</translation>
+        <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
+        <translation>Chan e luach intex &quot;a th &apos;ann an%1 1 (&quot;%2 &quot;).</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>%1 ("%2") "disabledIndex" is not an integer value.</source>
-        <translation>Chan e luach iomlan a th 'ann an "%2 ("%2.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7" />
-        <source>%1 ("%2") "items" missing.</source>
-        <translation>%1 ("%2") "nithean" a dhìth.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;nithean&quot; a dhìth.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>%1 ("%2") "items" is not a JSON list.</source>
-        <translation>Chan e liosta Jonson%1 (%2 a th 'ann an%1 1 ("%2").</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
@@ -16141,45 +16228,45 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+13" />
-        <source>No "%1" key found in feature list object.</source>
-        <translation>Chan eil iuchair "%1" air a lorg air an t-seòrsa rud a chaidh a lorg.</translation>
+        <source>No &quot;%1&quot; key found in feature list object.</source>
+        <translation>Chan eil iuchair &quot;%1&quot; air a lorg air an t-seòrsa rud a chaidh a lorg.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Feature list element is not a string or object.</source>
-        <translation>Chan e sreang no rud a th 'ann an eileamaid liosta feart.</translation>
+        <translation>Chan e sreang no rud a th &apos;ann an eileamaid liosta feart.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+161" />
         <source>Failed to Commit to Version Control</source>
-        <translation>Dh 'fhàillig a dhol gu smachd dreach</translation>
+        <translation>Dh &apos;fhàillig a dhol gu smachd dreach</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Error message from Version Control System: "%1".</source>
-        <translation>Teachdaireachd mearachd bho shiostam smachd dreach: "%1".</translation>
+        <source>Error message from Version Control System: &quot;%1&quot;.</source>
+        <translation>Teachdaireachd mearachd bho shiostam smachd dreach: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+16" />
         <location line="+12" />
         <source>Failed to Add to Project</source>
-        <translation>Dh'fhàillig cur ris a 'phròiseact</translation>
+        <translation>Dh&apos;fhàillig cur ris a &apos;phròiseact</translation>
     </message>
     <message>
         <location line="-11" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
-        <source>Failed to add subproject "%1"
-to project "%2".</source>
-        <translation>Dh'fhàillig a bhith a 'cur subproject "%1"
- gu pròiseact "%2".</translation>
+        <source>Failed to add subproject &quot;%1&quot;
+to project &quot;%2&quot;.</source>
+        <translation>Dh&apos;fhàillig a bhith a &apos;cur subproject &quot;%1&quot;
+ gu pròiseact &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
         <source>Failed to add one or more files to project
-"%1" (%2).</source>
+&quot;%1&quot; (%2).</source>
         <translation>Cha do chuir e ri aon no barrachd fhaidhlichean a chur ri pròiseact
- "%1" (%2).</translation>
+ &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
@@ -16195,93 +16282,93 @@ to project "%2".</source>
     <message>
         <location line="+15" />
         <source>The project contains more than one project file. Select the one you would like to use.</source>
-        <translation>Tha barrachd air aon fhaidhle pròiseict anns a 'phròiseact. Tagh am fear a bu mhath leat a chleachdadh.</translation>
+        <translation>Tha barrachd air aon fhaidhle pròiseict anns a &apos;phròiseact. Tagh am fear a bu mhath leat a chleachdadh.</translation>
     </message>
     <message>
         <location line="+33" />
-        <source>Check whether a variable exists.&lt;br&gt;Returns "true" if it does and an empty string if not.</source>
-        <translation>Dèan cinnteach a bheil caochladair ann an caochladair. &lt;br&gt; A 'tilleadh "fìor" ma nì e agus sreang falamh mura h-eil.</translation>
+        <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
+        <translation>Dèan cinnteach a bheil caochladair ann an caochladair. &lt;br&gt; A &apos;tilleadh &quot;fìor&quot; ma nì e agus sreang falamh mura h-eil.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not determine target path. "TargetPath" was not set on any page.</source>
-        <translation>Cha b 'urrainn dhuinn an t-slighe targaid a dhearbhadh. Cha deach "targaid" a shuidheachadh air duilleag sam bith.</translation>
+        <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
+        <translation>Cha b &apos;urrainn dhuinn an t-slighe targaid a dhearbhadh. Cha deach &quot;targaid&quot; a shuidheachadh air duilleag sam bith.</translation>
     </message>
     <message>
         <location line="+17" />
         <source>File Generation Failed</source>
-        <translation>Dh'fhàillig gineadh faidhle air fàiligeadh</translation>
+        <translation>Dh&apos;fhàillig gineadh faidhle air fàiligeadh</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The wizard failed to generate files.&lt;br&gt;The error message was: "%1".</source>
-        <translation>Dh'fhàillig an draoidh faidhlichean a ghineadh. &lt;br&gt; B 'e an teachdaireachd mearachd: "%1".</translation>
+        <source>The wizard failed to generate files.&lt;br&gt;The error message was: &quot;%1&quot;.</source>
+        <translation>Dh&apos;fhàillig an draoidh faidhlichean a ghineadh. &lt;br&gt; B &apos;e an teachdaireachd mearachd: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+63" />
-        <source>No 'key' in options object.</source>
-        <translation>Chan eil 'iuchair' ann an nì roghainnean.</translation>
+        <source>No &apos;key&apos; in options object.</source>
+        <translation>Chan eil &apos;iuchair&apos; ann an nì roghainnean.</translation>
     </message>
     <message>
         <location line="+88" />
         <source>Failed to Overwrite Files</source>
-        <translation>Dh'fhàillig a bhith a 'toirt thairis air faidhlichean</translation>
+        <translation>Dh&apos;fhàillig a bhith a &apos;toirt thairis air faidhlichean</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Failed to Format Files</source>
-        <translation>Dh'fhàillig faidhlichean cruth</translation>
+        <translation>Dh&apos;fhàillig faidhlichean cruth</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Failed to Write Files</source>
-        <translation>Dh'fhàillig faidhlichean a sgrìobhadh</translation>
+        <translation>Dh&apos;fhàillig faidhlichean a sgrìobhadh</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Failed to Post-Process Files</source>
-        <translation>Dh'fhàillig faidhlichean a phàigheadh</translation>
+        <translation>Dh&apos;fhàillig faidhlichean a phàigheadh</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Failed to Polish Files</source>
-        <translation>Dh'fhàillig faidhleadh faidhlichean</translation>
+        <translation>Dh&apos;fhàillig faidhleadh faidhlichean</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Failed to Open Files</source>
-        <translation>Dh'fhàillig fosgladh faidhlichean</translation>
+        <translation>Dh&apos;fhàillig fosgladh faidhlichean</translation>
     </message>
     <message>
         <location line="+58" />
-        <source>"%1" does not exist in the file system.</source>
-        <translation>Chan eil "%1" ann san t-siostam faidhle.</translation>
+        <source>&quot;%1&quot; does not exist in the file system.</source>
+        <translation>Chan eil &quot;%1&quot; ann san t-siostam faidhle.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open "%1" as a project.</source>
-        <translation>Dh'fhàillig fosgladh "%1" mar phròiseact.</translation>
+        <source>Failed to open &quot;%1&quot; as a project.</source>
+        <translation>Dh&apos;fhàillig fosgladh &quot;%1&quot; mar phròiseact.</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+46" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>Dh'fhàillig fosgladh neach-deasachaidh airson "%1".</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>Dh&apos;fhàillig fosgladh neach-deasachaidh airson &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-27" />
-        <source>No file to open found in "%1".</source>
-        <translation>No faidhle ri fhosgladh ann an "%1".</translation>
+        <source>No file to open found in &quot;%1&quot;.</source>
+        <translation>No faidhle ri fhosgladh ann an &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Failed to open project.</source>
-        <translation>Dh'fhàillig am pròiseact fosgailte.</translation>
+        <translation>Dh&apos;fhàillig am pròiseact fosgailte.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to open project in "%1".</source>
-        <translation>Dh 'fhàillig am pròiseact fhosgladh ann an "%1".</translation>
+        <source>Failed to open project in &quot;%1&quot;.</source>
+        <translation>Dh &apos;fhàillig am pròiseact fhosgladh ann an &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16292,7 +16379,7 @@ to project "%2".</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+151" />
         <source>Generator is not a object.</source>
-        <translation>Chan e rud a th 'ann an gineadair.</translation>
+        <translation>Chan e rud a th &apos;ann an gineadair.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -16301,31 +16388,31 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+7" />
-        <source>TypeId "%1" of generator is unknown. Supported typeIds are: "%2".</source>
-        <translation>Chan eil fhios cò a 'ghineadair "%1" de ghineadair. Is iad na seòrsaichean le taic: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>Chan eil fhios cò a &apos;ghineadair &quot;%1&quot; de ghineadair. Is iad na seòrsaichean le taic: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+56" />
         <location line="+241" />
-        <source>Path "%1" does not exist when checking JSON wizard search paths.</source>
-        <translation>Chan eil an t-slighe "%1" ann nuair a bhios tu a 'sgrùdadh slighean sgrùdaidh JSON Draoidh.</translation>
+        <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
+        <translation>Chan eil an t-slighe &quot;%1&quot; ann nuair a bhios tu a &apos;sgrùdadh slighean sgrùdaidh JSON Draoidh.</translation>
     </message>
     <message>
         <location line="-228" />
-        <source>Checking "%1" for %2.</source>
-        <translation>A 'sgrùdadh "%1" airson%2.</translation>
+        <source>Checking &quot;%1&quot; for %2.</source>
+        <translation>A &apos;sgrùdadh &quot;%1&quot; airson%2.</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+233" />
-        <source>* Failed to parse "%1":%2:%3: %4</source>
-        <translation>* Dh 'fhàilnich e gu ìre "%1":%2:%3:%4</translation>
+        <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
+        <translation>* Dh &apos;fhàilnich e gu ìre &quot;%1&quot;:%2:%3:%4</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>* Did not find a JSON object in "%1".
+        <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* Cha do lorg thu rud json ann an "%1".</translation>
+        <translation>* Cha do lorg thu rud json ann an &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -16335,8 +16422,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="-224" />
-        <source>JsonWizard: "%1" not found.</source>
-        <translation>JSONwizard: "%1" Cha deach a lorg.</translation>
+        <source>JsonWizard: &quot;%1&quot; not found.</source>
+        <translation>JSONwizard: &quot;%1&quot; Cha deach a lorg.</translation>
     </message>
     <message>
         <location line="+96" />
@@ -16350,28 +16437,28 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>TypeId "%1" of page is unknown. Supported typeIds are: "%2".</source>
-        <translation>Chan eil fhios cò às a tha "%1" den duilleag. Is iad na seòrsaichean le taic: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>Chan eil fhios cò às a tha &quot;%1&quot; den duilleag. Is iad na seòrsaichean le taic: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Page with typeId "%1" has invalid "index".</source>
-        <translation>Duilleag le seòrsa "%1" Tha "clàr-amais" neo-dhligheach.</translation>
+        <source>Page with typeId &quot;%1&quot; has invalid &quot;index&quot;.</source>
+        <translation>Duilleag le seòrsa &quot;%1&quot; Tha &quot;clàr-amais&quot; neo-dhligheach.</translation>
     </message>
     <message>
         <location line="+89" />
-        <source>* Did not find a JSON object in "%1".</source>
-        <translation>* Cha do lorg thu rud json ann an "%1".</translation>
+        <source>* Did not find a JSON object in &quot;%1&quot;.</source>
+        <translation>* Cha do lorg thu rud json ann an &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
         <source>* Version %1 not supported.</source>
-        <translation>* Cha d 'fhuair dreach%1 le taic.</translation>
+        <translation>* Cha d &apos;fhuair dreach%1 le taic.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>* Failed to create: %1</source>
-        <translation>* Dh'fhàillig cruthachadh:%1</translation>
+        <translation>* Dh&apos;fhàillig cruthachadh:%1</translation>
     </message>
     <message>
         <location line="+227" />
@@ -16400,13 +16487,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+32" />
-        <source>"kind" value "%1" is not "class" (deprecated), "file" or "project".</source>
-        <translation>Chan eil luach "Seòrsa" "%1" a 'chlas "(a rèir àireamh)," faidhle "no" pròiseact ".</translation>
+        <source>&quot;kind&quot; value &quot;%1&quot; is not &quot;class&quot; (deprecated), &quot;file&quot; or &quot;project&quot;.</source>
+        <translation>Chan eil luach &quot;Seòrsa&quot; &quot;%1&quot; a &apos;chlas &quot;(a rèir àireamh),&quot; faidhle &quot;no&quot; pròiseact &quot;.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"kind" is "file" or "class" (deprecated) and "%1" is also set.</source>
-        <translation>Is e "seòrsa" "faidhle" no "clas" (ìsleachadh) agus "%1".</translation>
+        <source>&quot;kind&quot; is &quot;file&quot; or &quot;class&quot; (deprecated) and &quot;%1&quot; is also set.</source>
+        <translation>Is e &quot;seòrsa&quot; &quot;faidhle&quot; no &quot;clas&quot; (ìsleachadh) agus &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -16420,13 +16507,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Icon file "%1" not found.</source>
-        <translation>Cha deach am faidhle ìomhaigh "%1" a lorg.</translation>
+        <source>Icon file &quot;%1&quot; not found.</source>
+        <translation>Cha deach am faidhle ìomhaigh &quot;%1&quot; a lorg.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Image file "%1" not found.</source>
-        <translation>Faidhle ìomhaigh "%1" cha deach a lorg.</translation>
+        <source>Image file &quot;%1&quot; not found.</source>
+        <translation>Faidhle ìomhaigh &quot;%1&quot; cha deach a lorg.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16445,18 +16532,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>When parsing "generators": %1</source>
-        <translation>Nuair a phorgas tu "gineadairean":%1</translation>
+        <source>When parsing &quot;generators&quot;: %1</source>
+        <translation>Nuair a phorgas tu &quot;gineadairean&quot;:%1</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>When parsing "pages": %1</source>
-        <translation>Nuair a phosgallaich "duilleagan":%1</translation>
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation>Nuair a phosgallaich &quot;duilleagan&quot;:%1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
         <source>Files data list entry is not an object.</source>
-        <translation>Chan e rud a th 'ann an inntrigeadh dàta faidhlichean.</translation>
+        <translation>Chan e rud a th &apos;ann an inntrigeadh dàta faidhlichean.</translation>
     </message>
     <message>
         <location line="+21" />
@@ -16465,8 +16552,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+57" />
-        <source>When processing "%1":&lt;br&gt;%2</source>
-        <translation>Nuair a bhios tu a 'giullachd "%1": &lt;br&gt;%2</translation>
+        <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
+        <translation>Nuair a bhios tu a &apos;giullachd &quot;%1&quot;: &lt;br&gt;%2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
@@ -16487,63 +16574,63 @@ to project "%2".</source>
         <location line="+6" />
         <source>The directory %1 contains files which cannot be overwritten:
 %2.</source>
-        <translation>Anns an eòlaire%1 tha faidhlichean a dh 'fhaodar a chuir thairis:
+        <translation>Anns an eòlaire%1 tha faidhlichean a dh &apos;fhaodar a chuir thairis:
  %2.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
-        <source>When parsing fields of page "%1": %2</source>
-        <translation>Nuair a bhios raointean parsing na duilleige "%1":%2</translation>
+        <source>When parsing fields of page &quot;%1&quot;: %2</source>
+        <translation>Nuair a bhios raointean parsing na duilleige &quot;%1&quot;:%2</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "File" page needs to be unset or an empty object.</source>
-        <translation>Feumaidh an duilleag "Dàta" airson duilleag "faidhle" a bhith trom no nì falamh.</translation>
+        <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
+        <translation>Feumaidh an duilleag &quot;Dàta&quot; airson duilleag &quot;faidhle&quot; a bhith trom no nì falamh.</translation>
     </message>
     <message>
         <location line="+48" />
-        <source>Error parsing "%1" in "Kits" page: %2</source>
-        <translation>Mearachd a 'parsadh "%1" ann an "Kits" duilleag:%2</translation>
+        <source>Error parsing &quot;%1&quot; in &quot;Kits&quot; page: %2</source>
+        <translation>Mearachd a &apos;parsadh &quot;%1&quot; ann an &quot;Kits&quot; duilleag:%2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>"data" must be a JSON object for "Kits" pages.</source>
-        <translation>Feumaidh "dàta" a bhith ann an duilleag json airson duilleagan "Kits".</translation>
+        <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
+        <translation>Feumaidh &quot;dàta&quot; a bhith ann an duilleag json airson duilleagan &quot;Kits&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>"Kits" page requires a "%1" set.</source>
-        <translation>Tha duilleag "Kits" ag iarraidh air seata "%1".</translation>
+        <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
+        <translation>Tha duilleag &quot;Kits&quot; ag iarraidh air seata &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+62" />
-        <source>"data" must be empty or a JSON object for "Project" pages.</source>
-        <translation>Feumaidh "dàta" a bhith falamh no rud json airson duilleagan "Pròiseact".</translation>
+        <source>&quot;data&quot; must be empty or a JSON object for &quot;Project&quot; pages.</source>
+        <translation>Feumaidh &quot;dàta&quot; a bhith falamh no rud json airson duilleagan &quot;Pròiseact&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Invalid regular expression "%1" in "%2". %3</source>
-        <translation>Faireachdainn cunbhalach neo-dhligheach "%1" ann an "%2". %3</translation>
+        <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
+        <translation>Faireachdainn cunbhalach neo-dhligheach &quot;%1&quot; ann an &quot;%2&quot;. %3</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "Summary" page can be unset or needs to be an object.</source>
-        <translation>Faodaidh "Dàta" airson duilleag "geàrr-chunntas" a bhith trom no fheum a bhith na nì.</translation>
+        <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
+        <translation>Faodaidh &quot;Dàta&quot; airson duilleag &quot;geàrr-chunntas&quot; a bhith trom no fheum a bhith na nì.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
         <source>Key is not an object.</source>
-        <translation>Chan e rud a th 'ann an iuchair.</translation>
+        <translation>Chan e rud a th &apos;ann an iuchair.</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>Pattern "%1" is no valid regular expression.</source>
-        <translation>Chan eil am pàtran "%1" na mhìneachadh cunbhalach.</translation>
+        <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
+        <translation>Chan eil am pàtran &quot;%1&quot; na mhìneachadh cunbhalach.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>ScannerGenerator: Binary pattern "%1" not valid.</source>
-        <translation>Scannergerrator: Pàtran binary "%1" Chan eil dligheach.</translation>
+        <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
+        <translation>Scannergerrator: Pàtran binary &quot;%1&quot; Chan eil dligheach.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
@@ -16560,7 +16647,7 @@ to project "%2".</source>
     <message>
         <location line="+2" />
         <source>Kit ID</source>
-        <translation>ID a 'chiall</translation>
+        <translation>ID a &apos;chiall</translation>
     </message>
     <message>
         <location line="+2" />
@@ -16570,17 +16657,17 @@ to project "%2".</source>
     <message>
         <location line="+6" />
         <source>The name of the kit.</source>
-        <translation>Ainm a 'phit.</translation>
+        <translation>Ainm a &apos;phit.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>The name of the kit in a filesystem-friendly version.</source>
-        <translation>Ainm a 'chnuic ann an dreach a tha càirdeil do fhaidhlichean.</translation>
+        <translation>Ainm a &apos;chnuic ann an dreach a tha càirdeil do fhaidhlichean.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>The ID of the kit.</source>
-        <translation>ID a 'phit.</translation>
+        <translation>ID a &apos;phit.</translation>
     </message>
     <message>
         <location line="+669" />
@@ -16596,22 +16683,22 @@ to project "%2".</source>
     <message>
         <location line="+1" />
         <source>The root directory of the system image to use.&lt;br&gt;Leave empty when building for the desktop.</source>
-        <translation>An eòlaire freumh den ìomhaigh an t-siostaim ri chleachdadh. &lt;br&gt; Fàg falamh nuair a bhios tu a 'togail airson an deasg.</translation>
+        <translation>An eòlaire freumh den ìomhaigh an t-siostaim ri chleachdadh. &lt;br&gt; Fàg falamh nuair a bhios tu a &apos;togail airson an deasg.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Sys Root "%1" does not exist in the file system.</source>
-        <translation>Chan eil root Sys "%1" ann san t-siostam faidhle.</translation>
+        <source>Sys Root &quot;%1&quot; does not exist in the file system.</source>
+        <translation>Chan eil root Sys &quot;%1&quot; ann san t-siostam faidhle.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is not a directory.</source>
-        <translation>Chan e eòlaire a th 'ann am freumhachadh "%1".</translation>
+        <source>Sys Root &quot;%1&quot; is not a directory.</source>
+        <translation>Chan e eòlaire a th &apos;ann am freumhachadh &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is empty.</source>
-        <translation>Tha root sys "%1" falamh.</translation>
+        <source>Sys Root &quot;%1&quot; is empty.</source>
+        <translation>Tha root sys &quot;%1&quot; falamh.</translation>
     </message>
     <message>
         <location line="+14" />
@@ -16634,12 +16721,12 @@ to project "%2".</source>
     <message>
         <location line="-147" />
         <source>The compiler to use for building.&lt;br&gt;Make sure the compiler will produce binaries compatible with the target device, Qt version and other libraries used.</source>
-        <translation>An neach-cruinneachaidh a chleachdadh airson togalach. &lt;br&gt; Bidh an neach-cruinneachaidh a 'toirt a-mach binu sinenagan ris an inneal targaid, dreach QT agus leabharlannan eile a chaidh a chleachdadh.</translation>
+        <translation>An neach-cruinneachaidh a chleachdadh airson togalach. &lt;br&gt; Bidh an neach-cruinneachaidh a &apos;toirt a-mach binu sinenagan ris an inneal targaid, dreach QT agus leabharlannan eile a chaidh a chleachdadh.</translation>
     </message>
     <message>
         <location line="+45" />
         <source>Compilers produce code for different ABIs: %1</source>
-        <translation>Bidh luchd-cruinneachaidh a 'toirt a-mach còd airson diofar ABIS:%1</translation>
+        <translation>Bidh luchd-cruinneachaidh a &apos;toirt a-mach còd airson diofar ABIS:%1</translation>
     </message>
     <message>
         <location line="+108" />
@@ -16700,7 +16787,7 @@ to project "%2".</source>
     <message>
         <location line="+2" />
         <source>Device is incompatible with this kit.</source>
-        <translation>Inneal mì-fhreagarrach leis a 'phasgan seo.</translation>
+        <translation>Inneal mì-fhreagarrach leis a &apos;phasgan seo.</translation>
     </message>
     <message>
         <location line="+43" />
@@ -16795,7 +16882,7 @@ to project "%2".</source>
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+153" />
         <source>No changes to apply.</source>
-        <translation>Cha bhith ag atharrachadh ann a bhith a 'buntainn.</translation>
+        <translation>Cha bhith ag atharrachadh ann a bhith a &apos;buntainn.</translation>
     </message>
     <message>
         <location line="+39" />
@@ -16805,12 +16892,12 @@ to project "%2".</source>
     <message>
         <location line="+2" />
         <source>Either switches MSVC to English or keeps the language and just forces UTF-8 output (may vary depending on the used MSVC compiler).</source>
-        <translation>An dàrna cuid Switches MSVC gu Beurla no a 'cumail a' chànain agus dìreach a 'feachdan toradh UTF-8 (faodaidh e eadar-dhealaichte a rèir an t -us-chompile MSVC).</translation>
+        <translation>An dàrna cuid Switches MSVC gu Beurla no a &apos;cumail a&apos; chànain agus dìreach a &apos;feachdan toradh UTF-8 (faodaidh e eadar-dhealaichte a rèir an t -us-chompile MSVC).</translation>
     </message>
     <message>
         <location line="+42" />
         <source>Additional build environment settings when using this kit.</source>
-        <translation>Suidheachaidhean àrainneachd togail a bharrachd nuair a bhios tu a 'cleachdadh a' phit seo.</translation>
+        <translation>Suidheachaidhean àrainneachd togail a bharrachd nuair a bhios tu a &apos;cleachdadh a&apos; phit seo.</translation>
     </message>
     <message>
         <location line="+11" />
@@ -16830,7 +16917,7 @@ to project "%2".</source>
     <message>
         <location line="+131" />
         <source>Loading Kits</source>
-        <translation>A 'luchdachadh chùisean</translation>
+        <translation>A &apos;luchdachadh chùisean</translation>
     </message>
     <message>
         <location line="+293" />
@@ -16857,7 +16944,7 @@ to project "%2".</source>
     <message>
         <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The name of the kit suitable for generating directory names. This value is used for the variable &lt;i&gt;%1&lt;/i&gt;, which for example determines the name of the shadow build directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;Head /&gt; &lt;Body&gt; &lt;p&gt; Ainm a 'Chàrr freagarrach airson ainmean eòlaire a ghineadh. Tha an luach seo air a chleachdadh airson an caochladair &lt;i&gt;%1 &lt;/ i&gt;, a tha mar eisimpleir a 'dearbhadh ainm an t-ainm air ainm an sgàil. &lt;/ P&gt; &lt;/ HTML&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -16867,7 +16954,7 @@ to project "%2".</source>
     <message>
         <location line="+14" />
         <source>Kit icon.</source>
-        <translation>Ìomhaigh a 'chnuic.</translation>
+        <translation>Ìomhaigh a &apos;chnuic.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16918,7 +17005,7 @@ to project "%2".</source>
     <message>
         <location line="+1" />
         <source>Choose which settings to display for this kit.</source>
-        <translation>Tagh dè na suidheachaidhean a tha ri thaisbeanadh airson a 'phiseag seo.</translation>
+        <translation>Tagh dè na suidheachaidhean a tha ri thaisbeanadh airson a &apos;phiseag seo.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16943,7 +17030,7 @@ to project "%2".</source>
     <message>
         <location line="+5" />
         <source>Override MAKEFLAGS</source>
-        <translation>A 'toirt thairis air gobharan</translation>
+        <translation>A &apos;toirt thairis air gobharan</translation>
     </message>
     <message>
         <location line="+5" />
@@ -16953,7 +17040,7 @@ to project "%2".</source>
     <message>
         <location line="+1" />
         <source>Runs this step only for a top-level build.</source>
-        <translation>A 'ruith an ceum seo ach airson togail àrd-ìre.</translation>
+        <translation>A &apos;ruith an ceum seo ach airson togail àrd-ìre.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -16978,7 +17065,7 @@ to project "%2".</source>
     <message>
         <location line="+35" />
         <source>Make command missing. Specify Make command in step configuration.</source>
-        <translation>Dèan àithne a dhìth. Sònraich a bhith a 'dèanamh àithne ann an rèiteachadh ceum.</translation>
+        <translation>Dèan àithne a dhìth. Sònraich a bhith a &apos;dèanamh àithne ann an rèiteachadh ceum.</translation>
     </message>
     <message>
         <location line="+163" />
@@ -16998,7 +17085,7 @@ to project "%2".</source>
     <message>
         <location line="+20" />
         <source>Overriding &lt;code&gt;MAKEFLAGS&lt;/code&gt; environment variable.</source>
-        <translation>A 'dol thairis air &lt;code&gt; affAflags &lt;/ code&gt; Àitiable Àrainneachd.</translation>
+        <translation>A &apos;dol thairis air &lt;code&gt; affAflags &lt;/ code&gt; Àitiable Àrainneachd.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -17094,20 +17181,20 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href="projectmode"&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation>&lt;seòrsa ann an seòrsa stoidhle = Teacs / CSS&gt; A: ceangal «Dath: RGB (128, 258, 258, rèiteachadh &lt;/ B&gt; &lt;&gt; &lt;BR / &gt; Faodaidh tu a rèiteachadh anns an &lt;a href = "Pròiseactmad"&gt; Modh Pròiseactan &lt;/a&gt; &lt;a&gt; &lt;br/&gt;</translation>
+        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href=&quot;projectmode&quot;&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
-        <source>Falling back to use the cached environment for "%1" after:</source>
-        <translation>A 'tuiteam air ais gus an àrainneachd chathaichte a chleachdadh airson "%1" às deidh:</translation>
+        <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
+        <translation>A &apos;tuiteam air ais gus an àrainneachd chathaichte a chleachdadh airson &quot;%1&quot; às deidh:</translation>
     </message>
     <message>
         <location line="+483" />
         <location line="+71" />
         <location line="+177" />
         <source>Initialization:</source>
-        <translation>A 'chiad thòiseachadh:</translation>
+        <translation>A &apos;chiad thòiseachadh:</translation>
     </message>
     <message>
         <location line="-197" />
@@ -17122,9 +17209,9 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+796" />
-        <source>Failed to retrieve MSVC Environment from "%1":
+        <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
-        <translation>Dh'fhàillig an àrainneachd MSVC fhaighinn air ais bho "%1":
+        <translation>Dh&apos;fhàillig an àrainneachd MSVC fhaighinn air ais bho &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
@@ -17142,7 +17229,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+44" />
         <source>Parse Build Output</source>
-        <translation>Panse a 'togail toradh</translation>
+        <translation>Panse a &apos;togail toradh</translation>
     </message>
     <message>
         <location line="+2" />
@@ -17167,12 +17254,12 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+5" />
         <source>Could Not Open File</source>
-        <translation>Cha b 'urrainn dhuinn faidhle fhosgladh</translation>
+        <translation>Cha b &apos;urrainn dhuinn faidhle fhosgladh</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open file: "%1": %2</source>
-        <translation>Cha b 'urrainn dhuinn faidhle fhosgladh: "%1":%2</translation>
+        <source>Could not open file: &quot;%1&quot;: %2</source>
+        <translation>Cha b &apos;urrainn dhuinn faidhle fhosgladh: &quot;%1&quot;:%2</translation>
     </message>
     <message>
         <location line="+23" />
@@ -17197,7 +17284,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <source>Cannot parse: The chosen kit does not provide an output parser.</source>
-        <translation>Cha ghabh a 'phantadh: chan eil an crois taghte a' toirt seachad parser toraidh.</translation>
+        <translation>Cha ghabh a &apos;phantadh: chan eil an crois taghte a&apos; toirt seachad parser toraidh.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+31" />
@@ -17227,7 +17314,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+1" />
         <source>Project Name</source>
-        <translation>Ainm a 'phròiseict</translation>
+        <translation>Ainm a &apos;phròiseict</translation>
     </message>
     <message>
         <location line="+282" />
@@ -17268,12 +17355,12 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+1" />
         <source>Some configurations could not be copied.</source>
-        <translation>Cha b 'urrainnear copadh a dhèanamh air cuid de rèiteachaidhean.</translation>
+        <translation>Cha b &apos;urrainnear copadh a dhèanamh air cuid de rèiteachaidhean.</translation>
     </message>
     <message>
         <location line="+105" />
         <source>Could not load kits in a reasonable amount of time.</source>
-        <translation>Cha b 'urrainn dhuinn a bhith a' luchdachadh air adhart ann an ùine reusanta.</translation>
+        <translation>Cha b &apos;urrainn dhuinn a bhith a&apos; luchdachadh air adhart ann an ùine reusanta.</translation>
     </message>
     <message>
         <location line="+88" />
@@ -17282,13 +17369,13 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+92" />
-        <source>Project "%1" was configured for kit "%2" with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
-        <translation>Chaidh am pròiseact "%1" a rèiteachadh airson a 'chnuic "%2" le ID%3, nach eil ann tuilleadh. Faodaidh tu pasgan ùr a chruthachadh no lethbhreac a dhèanamh de steapaichean an t-slighe a chaidh às-bhacadh do chruim eile ann an%4 Modh.</translation>
+        <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
+        <translation>Chaidh am pròiseact &quot;%1&quot; a rèiteachadh airson a &apos;chnuic &quot;%2&quot; le ID%3, nach eil ann tuilleadh. Faodaidh tu pasgan ùr a chruthachadh no lethbhreac a dhèanamh de steapaichean an t-slighe a chaidh às-bhacadh do chruim eile ann an%4 Modh.</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+622" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+626" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
@@ -17297,79 +17384,79 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+265" />
-        <source>Could not find any qml_*.qm file at "%1"</source>
-        <translation>Cha b 'urrainn dhaibh QML _ * a lorg. File QM aig "%1"</translation>
+        <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
+        <translation>Cha b &apos;urrainn dhaibh QML _ * a lorg. File QM aig &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+87" />
         <source>%1: Name.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Ainm.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to main file.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Làn an t-slighe chun phrìomh fhaidhle.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>%1: làn shlighe gu eòlaire a 'phròiseict.</translation>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
+        <translation>%1: làn shlighe gu eòlaire a &apos;phròiseict.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: The name of the active kit.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
-        <translation>%1: Ainm a 'Chàrr gnìomhach.</translation>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
+        <translation>%1: Ainm a &apos;Chàrr gnìomhach.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Name of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Ainm an rèiteachaidh togail gnìomhach.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Type of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Seòrsa an rèiteachaidh togail gnìomhach.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Full build path of active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: làn shlighe togail iomlan de rèiteachaidh gnìomhach.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Variables in the active build environment.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: caochladairean ann an àrainneachd togail gnìomhach.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Name of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Ainm an rèiteachaidh ruith gnìomhach.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Executable of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Cur gu bàs an rèiteachadh ruith gnìomhach.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Variables in the environment of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: caochladairean ann an àrainneachd an rèiteachaidh ruith gnìomhach.</translation>
     </message>
     <message>
         <location line="+12" />
         <source>%1: Working directory of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Directory obrach den rèiteachaidh ruith gnìomhach.</translation>
     </message>
     <message>
@@ -17385,7 +17472,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+12" />
         <source>Project Environment</source>
-        <translation>Àrainneachd a 'phròiseict</translation>
+        <translation>Àrainneachd a &apos;phròiseict</translation>
     </message>
     <message>
         <location line="+81" />
@@ -17407,17 +17494,17 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+7" />
         <source>&amp;Build</source>
-        <translation>&amp; Buil</translation>
+        <translation>&amp;Buil</translation>
     </message>
     <message>
         <location line="+7" />
         <source>&amp;Debug</source>
-        <translation>&amp; Deasbad</translation>
+        <translation>&amp;Deasbad</translation>
     </message>
     <message>
         <location line="+6" />
         <source>&amp;Start Debugging</source>
-        <translation>&amp; Tòisich ebugging</translation>
+        <translation>&amp;Tòisich ebugging</translation>
     </message>
     <message>
         <location line="+82" />
@@ -17452,7 +17539,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+17" />
         <source>Recent P&amp;rojects</source>
-        <translation>P &amp; Reic na Reiceachd o chionn ghoirid</translation>
+        <translation>P &amp;Reic na Reiceachd o chionn ghoirid</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17462,8 +17549,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="-347" />
-        <source>Close Pro&amp;ject "%1"</source>
-        <translation>Pròiseact dlùth "%1"</translation>
+        <source>Close Pro&amp;ject &quot;%1&quot;</source>
+        <translation>&amp;Pròiseact dlùth &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -17473,13 +17560,13 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <location line="+328" />
-        <source>Close All Files in Project "%1"</source>
-        <translation>Dùin gach faidhle sa phròiseact "%1"</translation>
+        <source>Close All Files in Project &quot;%1&quot;</source>
+        <translation>Dùin gach faidhle sa phròiseact &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-316" />
         <source>Close Pro&amp;ject</source>
-        <translation>Pròiseact dlùth</translation>
+        <translation>&amp;Pròiseact dlùth</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17537,8 +17624,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Build Project "%1"</source>
-        <translation>Pròiseact Togail "%1"</translation>
+        <source>Build Project &quot;%1&quot;</source>
+        <translation>Pròiseact Togail &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17547,18 +17634,18 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Build Project "%1" for All Configurations</source>
-        <translation>Pròiseact Togail "%1" airson a h-uile rèiteachadh</translation>
+        <source>Build Project &quot;%1&quot; for All Configurations</source>
+        <translation>Pròiseact Togail &quot;%1&quot; airson a h-uile rèiteachadh</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Build for &amp;Run Configuration</source>
-        <translation>Tog rèiteachadh &amp; ruith Run</translation>
+        <translation>Tog rèiteachadh &amp;ruith Run</translation>
     </message>
     <message>
         <location line="+0" />
-        <source>Build for &amp;Run Configuration "%1"</source>
-        <translation>Tog rèiteachadh &amp; ruith rèiteachaidh "%1"</translation>
+        <source>Build for &amp;Run Configuration &quot;%1&quot;</source>
+        <translation>Tog rèiteachadh &amp;ruith rèiteachaidh &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+13" />
@@ -17593,7 +17680,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+8" />
         <source>Cancel Build</source>
-        <translation>Cuir dheth a 'togail</translation>
+        <translation>Cuir dheth a &apos;togail</translation>
     </message>
     <message>
         <location line="+32" />
@@ -17631,7 +17718,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+8" />
         <source>Add Existing Projects...</source>
-        <translation>Cuir pròiseactan ris a th 'ann ...</translation>
+        <translation>Cuir pròiseactan ris a th &apos;ann ...</translation>
     </message>
     <message>
         <location line="+7" />
@@ -17651,8 +17738,8 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+9" />
         <location line="+1621" />
-        <source>Close Project "%1"</source>
-        <translation>Pròiseact dlùth "%1"</translation>
+        <source>Close Project &quot;%1&quot;</source>
+        <translation>Pròiseact dlùth &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-1614" />
@@ -17661,8 +17748,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Close All Projects Except "%1"</source>
-        <translation>Dùin gach pròiseact ach "%1"</translation>
+        <source>Close All Projects Except &quot;%1&quot;</source>
+        <translation>Dùin gach pròiseact ach &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -17697,8 +17784,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Set "%1" as Active Project</source>
-        <translation>Suidhich "%1" mar Phròiseact Gnìomhach</translation>
+        <source>Set &quot;%1&quot; as Active Project</source>
+        <translation>Suidhich &quot;%1&quot; mar Phròiseact Gnìomhach</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17718,7 +17805,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+24" />
         <source>Open Build and Run Kit Selector...</source>
-        <translation>Tog a 'togail agus a' ruith seic Tagraiche ...</translation>
+        <translation>Tog a &apos;togail agus a&apos; ruith seic Tagraiche ...</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17733,17 +17820,17 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+6" />
         <source>Current Run Environment</source>
-        <translation>Àrainneachd an dèidh a th 'ann an-dràsta</translation>
+        <translation>Àrainneachd an dèidh a th &apos;ann an-dràsta</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Active build environment of the active project.</source>
-        <translation>Gnìomhach Tog Àrainneachd a 'phròiseict gnìomhach.</translation>
+        <translation>Gnìomhach Tog Àrainneachd a &apos;phròiseict gnìomhach.</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Active run environment of the active project.</source>
-        <translation>Àrainneachd gnìomhach a 'ruith den phròiseact gnìomhach.</translation>
+        <translation>Àrainneachd gnìomhach a &apos;ruith den phròiseact gnìomhach.</translation>
     </message>
     <message>
         <location line="+31" />
@@ -17758,22 +17845,22 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+43" />
         <source>Cancel Build &amp;&amp; Unload</source>
-        <translation>Cuir dheth a 'togail &amp;&amp; luchdachadh sìos</translation>
+        <translation>Cuir dheth a &apos;togail &amp;&amp; luchdachadh sìos</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Do Not Unload</source>
-        <translation>Na bi a 'luchdachadh</translation>
+        <translation>Na bi a &apos;luchdachadh</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Unload Project %1?</source>
-        <translation>A 'toirt a-mach pròiseact%1?</translation>
+        <translation>A &apos;toirt a-mach pròiseact%1?</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The project %1 is currently being built.</source>
-        <translation>Thathas an-dràsta a thogail an-dràsta.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1" />
@@ -17783,13 +17870,13 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+62" />
         <source>Sanitizer</source>
-        <comment>Category for sanitizer issues listed under 'Issues'</comment>
+        <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
         <translation>Comitizer</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Memory handling issues that the address sanitizer found.</source>
-        <translation>A 'làimhseachadh chùisean a' làimhseachadh chùisean gu robh an seòlaidh sanitizer a chaidh a lorg.</translation>
+        <translation>A &apos;làimhseachadh chùisean a&apos; làimhseachadh chùisean gu robh an seòlaidh sanitizer a chaidh a lorg.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -17804,7 +17891,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+23" />
         <source>Parse Build Output...</source>
-        <translation>Panse a 'togail toradh ...</translation>
+        <translation>Panse a &apos;togail toradh ...</translation>
     </message>
     <message>
         <location line="+65" />
@@ -17815,22 +17902,22 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+130" />
         <source>Failed to Open Project</source>
-        <translation>Dh'fhàillig am pròiseact fhosgladh</translation>
+        <translation>Dh&apos;fhàillig am pròiseact fhosgladh</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&lt;h3&gt;Project already open&lt;/h3&gt;</source>
-        <translation>&lt;H3&gt; Tha am pròiseact a 'fosgladh &lt;/ H3&gt;</translation>
+        <translation>&lt;H3&gt; Tha am pròiseact a &apos;fosgladh &lt;/ H3&gt;</translation>
     </message>
     <message>
         <location line="+48" />
-        <source>Failed opening project "%1": No plugin can open project type "%2".</source>
-        <translation>Pròiseact fosglaidh URRAINN "%1": Chan urrainn plugan a phlugan "%2" ".</translation>
+        <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
+        <translation>Pròiseact fosglaidh URRAINN &quot;%1&quot;: Chan urrainn plugan a phlugan &quot;%2&quot; &quot;.</translation>
     </message>
     <message>
         <location line="+195" />
         <source>Ignore All Errors?</source>
-        <translation>A 'seachnadh a h-uile mearachdairean?</translation>
+        <translation>A &apos;seachnadh a h-uile mearachdairean?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -17847,7 +17934,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+1" />
         <source>The configuration that was supposed to run is no longer available.</source>
-        <translation>Chan eil an rèiteachadh a bha còir a bhith a 'ruith ri fhaighinn tuilleadh.</translation>
+        <translation>Chan eil an rèiteachadh a bha còir a bhith a &apos;ruith ri fhaighinn tuilleadh.</translation>
     </message>
     <message>
         <location line="+159" />
@@ -17856,18 +17943,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+23" />
-        <source>Open Project in "%1"</source>
-        <translation>Pròiseact fosgailte ann an "%1"</translation>
+        <source>Open Project in &quot;%1&quot;</source>
+        <translation>Pròiseact fosgailte ann an &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Open Project "%1"</source>
-        <translation>Pròiseact Fosgailte "%1"</translation>
+        <source>Open Project &quot;%1&quot;</source>
+        <translation>Pròiseact Fosgailte &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>The file "%1" was renamed to "%2", but the following projects could not be automatically changed: %3</source>
-        <translation>Chaidh am faidhle "%1" ath-ainmeachadh gu "%2", ach cha b 'urrainnear na pròiseactan a leanas atharrachadh gu fèin-ghluasadach:%3</translation>
+        <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
+        <translation>Chaidh am faidhle &quot;%1&quot; ath-ainmeachadh gu &quot;%2&quot;, ach cha b &apos;urrainnear na pròiseactan a leanas atharrachadh gu fèin-ghluasadach:%3</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17875,17 +17962,17 @@ Do you want to ignore them?</source>
         <location line="+1109" />
         <location line="+26" />
         <source>Project Editing Failed</source>
-        <translation>Dh'fhàillig deasachadh a 'phròiseict</translation>
+        <translation>Dh&apos;fhàillig deasachadh a &apos;phròiseict</translation>
     </message>
     <message>
         <location line="-1139" />
         <source>The following projects failed to automatically remove the file: %1</source>
-        <translation>Dh'fhàillig na pròiseactan a leanas an fhaidhle a thoirt air falbh gu fèin-ghluasadach:%1</translation>
+        <translation>Dh&apos;fhàillig na pròiseactan a leanas an fhaidhle a thoirt air falbh gu fèin-ghluasadach:%1</translation>
     </message>
     <message>
         <location line="+62" />
-        <source>Building "%1" is disabled: %2&lt;br&gt;</source>
-        <translation>Tha togail "%1" ciorramach:%2 &lt;br&gt;</translation>
+        <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
+        <translation>Tha togail &quot;%1&quot; ciorramach:%2 &lt;br&gt;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17896,7 +17983,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="-19" />
         <source>Currently building the active project.</source>
-        <translation>An-dràsta a 'togail a' phròiseict gnìomhach.</translation>
+        <translation>An-dràsta a &apos;togail a&apos; phròiseict gnìomhach.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -17907,12 +17994,12 @@ Do you want to ignore them?</source>
         <location line="+3" />
         <location line="+19" />
         <source>Project has no build settings.</source>
-        <translation>Chan eil suidheachaidhean togail aig a 'phròiseact.</translation>
+        <translation>Chan eil suidheachaidhean togail aig a &apos;phròiseact.</translation>
     </message>
     <message>
         <location line="-3" />
         <source>A build is in progress.</source>
-        <translation>Tha togail a 'dol air adhart.</translation>
+        <translation>Tha togail a &apos;dol air adhart.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -17946,33 +18033,33 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>The project "%1" is not configured.</source>
-        <translation>Chan eil am pròiseact "%1" air a rèiteachadh.</translation>
+        <source>The project &quot;%1&quot; is not configured.</source>
+        <translation>Chan eil am pròiseact &quot;%1&quot; air a rèiteachadh.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The project "%1" has no active kit.</source>
-        <translation>Chan eil piseag gnìomhach aig a 'phròiseact "%1".</translation>
+        <source>The project &quot;%1&quot; has no active kit.</source>
+        <translation>Chan eil piseag gnìomhach aig a &apos;phròiseact &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The kit "%1" for the project "%2" has no active run configuration.</source>
-        <translation>Chan eil rèiteachadh gnìomhach aig a 'chioc "%1" airson a' phròiseict "%2".</translation>
+        <source>The kit &quot;%1&quot; for the project &quot;%2&quot; has no active run configuration.</source>
+        <translation>Chan eil rèiteachadh gnìomhach aig a &apos;chioc &quot;%1&quot; airson a&apos; phròiseict &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+16" />
         <source>A build is still in progress.</source>
-        <translation>Tha togail fhathast a 'dol air adhart.</translation>
+        <translation>Tha togail fhathast a &apos;dol air adhart.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Cannot run "%1".</source>
-        <translation>Chan urrainn dhaibh "%1" a ruith.</translation>
+        <source>Cannot run &quot;%1&quot;.</source>
+        <translation>Chan urrainn dhaibh &quot;%1&quot; a ruith.</translation>
     </message>
     <message>
         <location line="+4" />
         <source>A run action is already scheduled for the active project.</source>
-        <translation>Tha gnìomh ruith mu thràth air a chlàradh airson a 'phròiseict ghnìomhachais.</translation>
+        <translation>Tha gnìomh ruith mu thràth air a chlàradh airson a &apos;phròiseict ghnìomhachais.</translation>
     </message>
     <message>
         <location line="+305" />
@@ -17993,13 +18080,13 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+41" />
-        <source>The following subprojects could not be added to project "%1":</source>
-        <translation>Cha b 'urrainnear na fo-bhailtean a leanas a chur ris a' phròiseact "%1":</translation>
+        <source>The following subprojects could not be added to project &quot;%1&quot;:</source>
+        <translation>Cha b &apos;urrainnear na fo-bhailtean a leanas a chur ris a&apos; phròiseact &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Adding Subproject Failed</source>
-        <translation>A 'cur fo-phroproject</translation>
+        <translation>A &apos;cur fo-phroproject</translation>
     </message>
     <message>
         <location line="+15" />
@@ -18009,12 +18096,12 @@ Do you want to ignore them?</source>
     <message>
         <location line="+33" />
         <source>Could not add following files to project %1:</source>
-        <translation>Cha b 'urrainn dhuinn faidhlichean a chur ris a' phròiseact%1:</translation>
+        <translation>Cha b &apos;urrainn dhuinn faidhlichean a chur ris a&apos; phròiseact%1:</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Adding Files to Project Failed</source>
-        <translation>A 'cur faidhlichean ris a' phròiseact air fàiligeadh</translation>
+        <translation>A &apos;cur faidhlichean ris a&apos; phròiseact air fàiligeadh</translation>
     </message>
     <message>
         <location line="+87" />
@@ -18039,19 +18126,19 @@ Do you want to ignore them?</source>
     <message>
         <location line="+11" />
         <source>Removing File Failed</source>
-        <translation>Dh'fhàillig am faidhle a dh 'fhàillig</translation>
+        <translation>Dh&apos;fhàillig am faidhle a dh &apos;fhàillig</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>File "%1" was not removed, because the project has changed in the meantime.
+        <source>File &quot;%1&quot; was not removed, because the project has changed in the meantime.
 Please try again.</source>
-        <translation>Cha deach faidhle "%1" a thoirt air falbh, oir tha am pròiseact air atharrachadh san eadar-ama.
+        <translation>Cha deach faidhle &quot;%1&quot; a thoirt air falbh, oir tha am pròiseact air atharrachadh san eadar-ama.
  Feuch ris a-rithist.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Could not remove file "%1" from project "%2".</source>
-        <translation>Cha b 'urrainn dhaibh am faidhle "%1" a thoirt air falbh bhon phròiseact "%2".</translation>
+        <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
+        <translation>Cha b &apos;urrainn dhaibh am faidhle &quot;%1&quot; a thoirt air falbh bhon phròiseact &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+36" />
@@ -18072,17 +18159,17 @@ Please try again.</source>
         <location line="+11" />
         <location line="+10" />
         <source>Duplicating File Failed</source>
-        <translation>Dh'fhàillig faidhle dùblachadh</translation>
+        <translation>Dh&apos;fhàillig faidhle dùblachadh</translation>
     </message>
     <message>
         <location line="-9" />
-        <source>Failed to copy file "%1" to "%2": %3.</source>
-        <translation>Dh'fhàillig copaidh faidhle "%1" gu "%2":%3.</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
+        <translation>Dh&apos;fhàillig copaidh faidhle &quot;%1&quot; gu &quot;%2&quot;:%3.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Failed to add new file "%1" to the project.</source>
-        <translation>Dh'fhàillig am faidhle ùr "%1" a chur ris.</translation>
+        <source>Failed to add new file &quot;%1&quot; to the project.</source>
+        <translation>Dh&apos;fhàillig am faidhle ùr &quot;%1&quot; a chur ris.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18097,31 +18184,31 @@ Please try again.</source>
     <message>
         <location line="+17" />
         <source>Deleting File Failed</source>
-        <translation>Dh'fhàillig am faidhle a dhubhadh às</translation>
+        <translation>Dh&apos;fhàillig am faidhle a dhubhadh às</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Could not delete file %1.</source>
-        <translation>Cha b 'urrainn dhuinn faidhle%1 a dhubhadh às.</translation>
+        <translation>Cha b &apos;urrainn dhuinn faidhle%1 a dhubhadh às.</translation>
     </message>
     <message>
         <location line="+37" />
         <source>The project file %1 cannot be automatically changed.
 
 Rename %2 to %3 anyway?</source>
-        <translation>Chan urrainnear am faidhle a 'phròiseict%1 atharrachadh gu fèin-ghluasadach.
+        <translation>Chan urrainnear am faidhle a &apos;phròiseict%1 atharrachadh gu fèin-ghluasadach.
 
  Ath-ainmich%2 gu%3 co-dhiù?</translation>
     </message>
     <message>
         <location line="+17" />
         <source>The file %1 was renamed to %2, but the project file %3 could not be automatically changed.</source>
-        <translation>Chaidh am faidhle%1 ath-ainmeachadh gu%2, ach cha b 'urrainnear faidhle a' phròiseict%3 atharrachadh gu fèin-ghluasadach.</translation>
+        <translation>Chaidh am faidhle%1 ath-ainmeachadh gu%2, ach cha b &apos;urrainnear faidhle a&apos; phròiseict%3 atharrachadh gu fèin-ghluasadach.</translation>
     </message>
     <message>
         <location line="+15" />
         <source>The file %1 could not be renamed %2.</source>
-        <translation>Cha b 'urrainnear am faidhle%1 ath-ainmeachadh gu%2.</translation>
+        <translation>Cha b &apos;urrainnear am faidhle%1 ath-ainmeachadh gu%2.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -18130,8 +18217,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+192" />
-        <source>Locates files from all project directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>A 'lorg fhaidhlichean bho na clàran pròiseict. Pàipear-taice "+ &lt;àireamh&gt;" no ": &lt;àireamh&gt;" gus leum chun àireamh loidhne a chaidh a thoirt seachad. Pàipear-taice "+ no àireamh bheag&gt;" no ": &lt;àireamh&gt;" gus leum chun àireamh a 'cholbh cuideachd.</translation>
+        <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>A &apos;lorg fhaidhlichean bho na clàran pròiseict. Pàipear-taice &quot;+ &lt;àireamh&gt;&quot; no &quot;: &lt;àireamh&gt;&quot; gus leum chun àireamh loidhne a chaidh a thoirt seachad. Pàipear-taice &quot;+ no àireamh bheag&gt;&quot; no &quot;: &lt;àireamh&gt;&quot; gus leum chun àireamh a &apos;cholbh cuideachd.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -18141,17 +18228,17 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+1" />
         <source>Runs a run configuration of the active project.</source>
-        <translation>A 'ruith rèiteachadh ruith den phròiseact gnìomhach.</translation>
+        <translation>A &apos;ruith rèiteachadh ruith den phròiseact gnìomhach.</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Debug Run Configuration</source>
-        <translation>Remugm Run a 'ruith</translation>
+        <translation>Remugm Run a &apos;ruith</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Starts debugging a run configuration of the active project.</source>
-        <translation>A 'tòiseachadh a' dèanamh dìmeas air rèiteachadh ruith den phròiseact gnìomhach.</translation>
+        <translation>A &apos;tòiseachadh a&apos; dèanamh dìmeas air rèiteachadh ruith den phròiseact gnìomhach.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18168,7 +18255,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+1" />
         <source>Switches the active run configuration of the active project.</source>
-        <translation>Cuir suas rèiteachadh ruith ruith a 'phròiseict gnìomhach.</translation>
+        <translation>Cuir suas rèiteachadh ruith ruith a &apos;phròiseict gnìomhach.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
@@ -18188,13 +18275,13 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
         <source>s</source>
-        <extracomment>Suffix for "seconds"</extracomment>
+        <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>s</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The amount of seconds to wait between a "soft kill" and a "hard kill" of a running application.</source>
-        <translation>Na tha de dhiogan ri feitheamh eadar "marbhadh bog" agus "marbhadh cruaidh" de thagradh ruith.</translation>
+        <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
+        <translation>Na tha de dhiogan ri feitheamh eadar &quot;marbhadh bog&quot; agus &quot;marbhadh cruaidh&quot; de thagradh ruith.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -18219,12 +18306,12 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+1" />
         <source>Always deploy project before running it</source>
-        <translation>An-còmhnaidh a 'toirt a-steach pròiseact mus ruith thu e</translation>
+        <translation>An-còmhnaidh a &apos;toirt a-steach pròiseact mus ruith thu e</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Add linker library search paths to run environment</source>
-        <translation>Cuir frith-slighean rannsachaidh leabharlann Linker le bhith a 'ruith na h-àrainneachd</translation>
+        <translation>Cuir frith-slighean rannsachaidh leabharlann Linker le bhith a &apos;ruith na h-àrainneachd</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18258,8 +18345,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Some legacy build tools do not deal well with paths that contain "special" characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
-        <translation>Cha bhith cuid de na h-innealan togail dìleab a 'dèiligeadh gu math ri slighean anns a bheil "sònraichte" leithid àiteachan a dh' fhaodadh a bhith a 'togail mhearachdan an roghainn seo mura h-eil thu ag obair le innealan mar sin.</translation>
+        <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4" />
@@ -18274,7 +18361,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+2" />
         <source>Build Only the Application to Be Run</source>
-        <translation>A 'togail ach an tagradh airson a ruith</translation>
+        <translation>A &apos;togail ach an tagradh airson a ruith</translation>
     </message>
     <message>
         <location line="+6" />
@@ -18318,18 +18405,18 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Show all kits in "Build &amp; Run" in "Projects" mode</source>
-        <translation>Seall a h-uile pisit ann an "Togail &amp; Run" ann am modh "pròiseactan"</translation>
+        <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
+        <translation>Seall a h-uile pisit ann an &quot;Togail &amp; Run&quot; ann am modh &quot;pròiseactan&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Show also inactive kits in "Build &amp; Run" in "Projects" mode.</source>
-        <translation>Seall cuideachd na platan as neo-ghnìomhach ann am modh "Tog &amp; Run" ann am modh "Pròiseactan".</translation>
+        <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
+        <translation>Seall cuideachd na platan as neo-ghnìomhach ann am modh &quot;Tog &amp; Run&quot; ann am modh &quot;Pròiseactan&quot;.</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Environment changes to apply to run configurations, but not build configurations.</source>
-        <translation>Àrainneachd ag atharrachadh gus tagradh a dhèanamh gus rèiteachaidhean a ruith, ach gun a bhith a 'togail rèiteachaidhean rèiteachaidh.</translation>
+        <translation>Àrainneachd ag atharrachadh gus tagradh a dhèanamh gus rèiteachaidhean a ruith, ach gun a bhith a &apos;togail rèiteachaidhean rèiteachaidh.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18363,13 +18450,13 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Default for "Run in terminal":</source>
-        <translation>Àbhaisteach airson "ruith ann an crìochnachaidh":</translation>
+        <source>Default for &quot;Run in terminal&quot;:</source>
+        <translation>Àbhaisteach airson &quot;ruith ann an crìochnachaidh&quot;:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Time to wait before force-stopping applications:</source>
-        <translation>Ùine airson feitheamh ro bhith a 'stad air tagraidhean:</translation>
+        <translation>Ùine airson feitheamh ro bhith a &apos;stad air tagraidhean:</translation>
     </message>
     <message>
         <location line="+125" />
@@ -18425,12 +18512,12 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+205" />
         <source>Failed to restore project files</source>
-        <translation>Dh'fhàillig ath-nuadhachadh faidhlichean pròiseict</translation>
+        <translation>Dh&apos;fhàillig ath-nuadhachadh faidhlichean pròiseict</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Could not restore the following project files:&lt;br&gt;&lt;b&gt;%1&lt;/b&gt;</source>
-        <translation>Cha b 'urrainn dhaibh na faidhlichean pròiseict a leanas ath-nuadhachadh: &lt;br&gt; &lt;b&gt;%1 &lt;/ b&gt;</translation>
+        <translation>Cha b &apos;urrainn dhaibh na faidhlichean pròiseict a leanas ath-nuadhachadh: &lt;br&gt; &lt;b&gt;%1 &lt;/ b&gt;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18444,8 +18531,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
-        <source>No kits are enabled for this project. Enable kits in the "Projects" mode.</source>
-        <translation>Chan eil pìosan air an comasachadh airson a 'phròiseict seo. Buannaich a 'mhodh "phròiseactan".</translation>
+        <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
+        <translation>Chan eil pìosan air an comasachadh airson a &apos;phròiseict seo. Buannaich a &apos;mhodh &quot;phròiseactan&quot;.</translation>
     </message>
     <message>
         <location line="+89" />
@@ -18468,7 +18555,7 @@ Rename %2 to %3 anyway?</source>
         <location line="+4" />
         <source>You just dragged some files from one project node to another.
 What should %1 do now?</source>
-        <translation>Tha thu dìreach air cuid de na faidhlichean a shlaodadh bho aon nód a 'phròiseict gu fear eile.
+        <translation>Tha thu dìreach air cuid de na faidhlichean a shlaodadh bho aon nód a &apos;phròiseict gu fear eile.
  Dè bu chòir%1 a dhèanamh a-nis?</translation>
     </message>
     <message>
@@ -18484,7 +18571,7 @@ What should %1 do now?</source>
     <message>
         <location line="+2" />
         <source>Copy file references and files</source>
-        <translation>Dèan lethbhreac de dh 'iomraidhean faidhle agus faidhlichean</translation>
+        <translation>Dèan lethbhreac de dh &apos;iomraidhean faidhle agus faidhlichean</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18499,7 +18586,7 @@ What should %1 do now?</source>
     <message>
         <location line="+24" />
         <source>Copy File References</source>
-        <translation>Dèan lethbhreac de dh 'iomraidhean faidhle</translation>
+        <translation>Dèan lethbhreac de dh &apos;iomraidhean faidhle</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18514,27 +18601,27 @@ What should %1 do now?</source>
     <message>
         <location line="+2" />
         <source>The following files could not be copied or moved:</source>
-        <translation>Cha b 'urrainnear na faidhlichean a leanas a chopaigeadh no a ghluasad:</translation>
+        <translation>Cha b &apos;urrainnear na faidhlichean a leanas a chopaigeadh no a ghluasad:</translation>
     </message>
     <message>
         <location line="+4" />
         <source>The following files could not be removed from the project file:</source>
-        <translation>Cha b 'urrainnear na faidhlichean a leanas a thoirt a-mach à faidhle a' phròiseict:</translation>
+        <translation>Cha b &apos;urrainnear na faidhlichean a leanas a thoirt a-mach à faidhle a&apos; phròiseict:</translation>
     </message>
     <message>
         <location line="+5" />
         <source>The following files could not be added to the project file:</source>
-        <translation>Cha b 'urrainnear na faidhlichean a leanas a chur ris an fhaidhle a' phròiseict:</translation>
+        <translation>Cha b &apos;urrainnear na faidhlichean a leanas a chur ris an fhaidhle a&apos; phròiseict:</translation>
     </message>
     <message>
         <location line="+5" />
         <source>The following files could not be deleted:</source>
-        <translation>Cha b 'urrainnear na faidhlichean a leanas a dhubhadh às:</translation>
+        <translation>Cha b &apos;urrainnear na faidhlichean a leanas a dhubhadh às:</translation>
     </message>
     <message>
         <location line="+4" />
         <source>A version control operation failed for the following files. Please check your repository.</source>
-        <translation>Dh'fhàillig obair fo smachd dreach airson na faidhlichean a leanas. Feuch an toir thu sùil air an stòr agad.</translation>
+        <translation>Dh&apos;fhàillig obair fo smachd dreach airson na faidhlichean a leanas. Feuch an toir thu sùil air an stòr agad.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18549,10 +18636,10 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is outside the project directory.</source>
-        <translation>&lt;b&gt; Rabhadh: &lt;/ b&gt; Tha am faidhle seo taobh a-muigh eòlaire a 'phròiseict.</translation>
+        <translation>&lt;b&gt; Rabhadh: &lt;/ b&gt; Tha am faidhle seo taobh a-muigh eòlaire a &apos;phròiseict.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-391" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-395" />
         <source>Simplify Tree</source>
         <translation>Sìmpleachadh craobh</translation>
     </message>
@@ -18602,7 +18689,7 @@ What should %1 do now?</source>
         <translation>Craobh sìoltachain</translation>
     </message>
     <message>
-        <location line="+194" />
+        <location line="+198" />
         <source>Meta+X</source>
         <translation>Meta + X.</translation>
     </message>
@@ -18638,18 +18725,18 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+50" />
-        <source>Open %1 "%2"</source>
-        <translation>Fosgailte%1 "%2"</translation>
+        <source>Open %1 &quot;%2&quot;</source>
+        <translation>Fosgailte%1 &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Open %1 "%2" (%3)</source>
-        <translation>Fosgailte%1 "%2" (%3)</translation>
+        <source>Open %1 &quot;%2&quot; (%3)</source>
+        <translation>Fosgailte%1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
         <location line="+20" />
         <source>session</source>
-        <comment>Appears in "Open session &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>Seisean</translation>
     </message>
     <message>
@@ -18676,7 +18763,7 @@ What should %1 do now?</source>
     <message>
         <location line="+125" />
         <source>project</source>
-        <comment>Appears in "Open project &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>Pròiseact</translation>
     </message>
     <message>
@@ -18711,13 +18798,13 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+118" />
-        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project's settings:</source>
-        <translation>Chaidh am pròiseact a rèiteachadh airson na piseagan aig nach eil ann tuilleadh. Tagh aon de na roghainnean a leanas ann am clàr-taice co-theacsa gus roghainnean a 'phròiseict a thoirt air ais:</translation>
+        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
+        <translation>Chaidh am pròiseact a rèiteachadh airson na piseagan aig nach eil ann tuilleadh. Tagh aon de na roghainnean a leanas ann am clàr-taice co-theacsa gus roghainnean a &apos;phròiseict a thoirt air ais:</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Create a new kit with the same name for the same device type, with the original build, deploy, and run steps. Other kit settings are not restored.</source>
-        <translation>Cruthaich pasgan ùr leis an aon ainm airson an aon sheòrsa inneal, leis a 'togail tùsail, cleachdte, agus stadaidhean ruith. Chan eil roghainnean Kit eile air an toirt air ais.</translation>
+        <translation>Cruthaich pasgan ùr leis an aon ainm airson an aon sheòrsa inneal, leis a &apos;togail tùsail, cleachdte, agus stadaidhean ruith. Chan eil roghainnean Kit eile air an toirt air ais.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18742,8 +18829,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+12" />
-        <source>Remove Vanished Target "%1"</source>
-        <translation>Thoir air falbh targaid às-tharraing "%1"</translation>
+        <source>Remove Vanished Target &quot;%1&quot;</source>
+        <translation>Thoir air falbh targaid às-tharraing &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18764,7 +18851,7 @@ What should %1 do now?</source>
         <location line="+268" />
         <location line="+171" />
         <source>Import Existing Build...</source>
-        <translation>In-mhalairt togail a th 'ann ...</translation>
+        <translation>In-mhalairt togail a th &apos;ann ...</translation>
     </message>
     <message>
         <location line="-159" />
@@ -18811,7 +18898,7 @@ What should %1 do now?</source>
     <message>
         <location line="+63" />
         <source>Add to &amp;version control:</source>
-        <translation>Cuir smachd ris &amp; dreach ris:</translation>
+        <translation>Cuir smachd ris &amp;dreach ris:</translation>
     </message>
     <message>
         <location line="+88" />
@@ -18821,17 +18908,17 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Add to &amp;project:</source>
-        <translation>Cuir ris &amp; Pròiseact:</translation>
+        <translation>Cuir ris &amp;Pròiseact:</translation>
     </message>
     <message>
         <location line="+74" />
-        <source>A version control system repository could not be created in "%1".</source>
-        <translation>Cha b 'urrainnear tasgadh siostam smachd dreach dreach a chruthachadh ann an "%1".</translation>
+        <source>A version control system repository could not be created in &quot;%1&quot;.</source>
+        <translation>Cha b &apos;urrainnear tasgadh siostam smachd dreach dreach a chruthachadh ann an &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to add "%1" to the version control system.</source>
-        <translation>Dh'fhàillig "%1 1" a chur ris an t-siostam smachd dreach.</translation>
+        <source>Failed to add &quot;%1&quot; to the version control system.</source>
+        <translation>Dh&apos;fhàillig &quot;%1 1&quot; a chur ris an t-siostam smachd dreach.</translation>
     </message>
     <message>
         <location line="+94" />
@@ -18867,17 +18954,17 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>The run configuration's working directory.</source>
+        <source>The run configuration&apos;s working directory.</source>
         <translation>Eòlaire obair co-dhiù.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The run configuration's name.</source>
+        <source>The run configuration&apos;s name.</source>
         <translation>Ainm an Rise.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The run configuration's executable.</source>
+        <source>The run configuration&apos;s executable.</source>
         <translation>Cur gu bàs an ruith.</translation>
     </message>
     <message>
@@ -18894,7 +18981,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
-        <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
+        <extracomment>Shown in Run configuration, Add menu: &quot;name of runnable (on device name)&quot;</extracomment>
         <translation>%1 (air% {inneal: ainm})</translation>
     </message>
     <message>
@@ -18936,7 +19023,7 @@ What should %1 do now?</source>
     <message>
         <location line="+147" />
         <source>Toggle multi-line mode.</source>
-        <translation>A 'Tog modh ioma-loidhne toggle.</translation>
+        <translation>A &apos;Tog modh ioma-loidhne toggle.</translation>
     </message>
     <message>
         <location line="+53" />
@@ -19012,27 +19099,27 @@ What should %1 do now?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-14" />
         <source>Unexpected run control state %1 when worker %2 started.</source>
-        <translation>Stàit smachd Run nach robh dùil%1 a thòisich an neach-obrach 2 2 a 'tòiseachadh.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+324" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;Head /&gt; &lt;Heart&gt; &lt;wits&gt; Fìor Bidh e a 'ruith? &lt;/ meadhan&gt; &lt;/ html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2" />
         <source>Application Still Running</source>
-        <translation>Iarrtas fhathast a 'ruith</translation>
+        <translation>Iarrtas fhathast a &apos;ruith</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Force &amp;Quit</source>
-        <translation>Feachd &amp; Quit</translation>
+        <translation>Feachd &amp;Quit</translation>
     </message>
     <message>
         <location line="+0" />
         <source>&amp;Keep Running</source>
-        <translation>&amp; Cumail a 'ruith</translation>
+        <translation>&amp;Cumail a &apos;ruith</translation>
     </message>
     <message>
         <location line="+246" />
@@ -19042,7 +19129,7 @@ What should %1 do now?</source>
     <message>
         <location line="+38" />
         <source>User requested stop. Shutting down...</source>
-        <translation>Neach-cleachdaidh a chaidh iarraidh stad. A 'dùnadh sìos ...</translation>
+        <translation>Neach-cleachdaidh a chaidh iarraidh stad. A &apos;dùnadh sìos ...</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19072,7 +19159,7 @@ What should %1 do now?</source>
     <message>
         <location line="+47" />
         <source>Starting %1...</source>
-        <translation>A 'tòiseachadh%1 ...</translation>
+        <translation>A &apos;tòiseachadh%1 ...</translation>
     </message>
     <message>
         <location line="+3" />
@@ -19087,7 +19174,7 @@ What should %1 do now?</source>
     <message>
         <location line="+279" />
         <source>The process failed to start.</source>
-        <translation>Cha do thòisich am pròiseas a 'tòiseachadh.</translation>
+        <translation>Cha do thòisich am pròiseas a &apos;tòiseachadh.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19096,8 +19183,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Either the invoked program "%1" is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>An dàrna cuid tha am prògram containked "%1" a dhìth, no is dòcha nach bi cead gu leòr agad gus am prògram a thoirt a-steach.</translation>
+        <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>An dàrna cuid tha am prògram containked &quot;%1&quot; a dhìth, no is dòcha nach bi cead gu leòr agad gus am prògram a thoirt a-steach.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19107,12 +19194,12 @@ What should %1 do now?</source>
     <message>
         <location line="+8" />
         <source>An error occurred when attempting to write to the process. For example, the process may not be running, or it may have closed its input channel.</source>
-        <translation>Thachair mearachd nuair a bha e a 'feuchainn ri sgrìobhadh chun phròiseas. Mar eisimpleir, is dòcha nach bi am pròiseas a 'ruith, no is dòcha gun do dhùin e an seanal inntrigidh aige.</translation>
+        <translation>Thachair mearachd nuair a bha e a &apos;feuchainn ri sgrìobhadh chun phròiseas. Mar eisimpleir, is dòcha nach bi am pròiseas a &apos;ruith, no is dòcha gun do dhùin e an seanal inntrigidh aige.</translation>
     </message>
     <message>
         <location line="+5" />
         <source>An error occurred when attempting to read from the process. For example, the process may not be running.</source>
-        <translation>Thachair mearachd nuair a bha thu a 'feuchainn ri leughadh bhon phròiseas. Mar eisimpleir, is dòcha nach bi am pròiseas a 'ruith.</translation>
+        <translation>Thachair mearachd nuair a bha thu a &apos;feuchainn ri leughadh bhon phròiseas. Mar eisimpleir, is dòcha nach bi am pròiseas a &apos;ruith.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-186" />
@@ -19168,12 +19255,12 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>Remove Deploy Configuration %1?</source>
-        <translation>Thoir air falbh rèiteachadh air a 'bheachd%1?</translation>
+        <translation>Thoir air falbh rèiteachadh air a &apos;bheachd%1?</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The deploy configuration &lt;b&gt;%1&lt;/b&gt; is currently being built.</source>
-        <translation>Thathas a 'togail a' rèiteachadh an cleachdadh &lt;b&gt;%1 &lt;/ b&gt; an-dràsta.</translation>
+        <translation>Thathas a &apos;togail a&apos; rèiteachadh an cleachdadh &lt;b&gt;%1 &lt;/ b&gt; an-dràsta.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19213,7 +19300,7 @@ What should %1 do now?</source>
     <message>
         <location line="+5" />
         <source>Hide files matching:</source>
-        <translation>Cuir am falach faidhlichean a 'maidseadh:</translation>
+        <translation>Cuir am falach faidhlichean a &apos;maidseadh:</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19225,7 +19312,7 @@ What should %1 do now?</source>
         <source>Generating file list...
 
 %1</source>
-        <translation>Liosta faidhle a 'gineadh ...
+        <translation>Liosta faidhle a &apos;gineadh ...
 
  %1</translation>
     </message>
@@ -19233,13 +19320,11 @@ What should %1 do now?</source>
         <location line="+11" />
         <source>Not showing %n files that are outside of the base directory.
 These files are preserved.</source>
-        <translation>
-            <numerusform>Gun a bhith a 'sealltainn% N Faidhlichean a tha taobh a-muigh an eòlaire muir-loidhne.
- Tha na faidhlichean sin air an gleidheadh.</numerusform>
-            <numerusform>Gun a bhith a 'sealltainn% N Faidhlichean a tha taobh a-muigh an eòlaire muir-loidhne.
- Tha na faidhlichean sin air an gleidheadh.</numerusform>
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -19270,17 +19355,17 @@ These files are preserved.</source>
     <message>
         <location line="+11" />
         <source>Import Existing Project</source>
-        <translation>In-mhalairt a 'phròiseict a th' ann</translation>
+        <translation>In-mhalairt a &apos;phròiseict a th&apos; ann</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Project Name and Location</source>
-        <translation>Ainm a 'phròiseict agus àite</translation>
+        <translation>Ainm a &apos;phròiseict agus àite</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Project name:</source>
-        <translation>Ainm a 'phròiseict:</translation>
+        <translation>Ainm a &apos;phròiseict:</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19295,12 +19380,12 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Imports existing projects that do not use qmake, CMake, Qbs, Meson, or Autotools.&lt;p&gt;This creates a project file that allows you to use %1 as a code editor and as a launcher for debugging and analyzing tools. If you want to build the project, you might need to edit the generated project file.</source>
-        <translation>In-mhalairt pròiseactan a tha ann an-dràsta nach bi a 'cleachdadh Qmake, Cmake, QBan, Meson, no autotools. &lt;P&gt; airson innealan sgrìobhaidh agus mion-sgrùdadh. Ma tha thu airson am pròiseact a thogail, is dòcha gum feum thu a bhith a 'deasachadh faidhle a' phròiseict a ghineadh.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+172" />
-        <source>Unknown build system "%1"</source>
-        <translation>Siostam togail neo-aithnichte "%1"</translation>
+        <source>Unknown build system &quot;%1&quot;</source>
+        <translation>Siostam togail neo-aithnichte &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
@@ -19320,12 +19405,12 @@ These files are preserved.</source>
     <message>
         <location line="+7" />
         <source>Name of current project</source>
-        <translation>Ainm a 'phròiseict làithreach</translation>
+        <translation>Ainm a &apos;phròiseict làithreach</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
         <source>&amp;Configure Project</source>
-        <translation>&amp; Project Project</translation>
+        <translation>&amp;Project Project</translation>
     </message>
     <message>
         <location line="+91" />
@@ -19351,7 +19436,7 @@ These files are preserved.</source>
     <message>
         <location line="+79" />
         <source>Kit is unsuited for project</source>
-        <translation>Tha Kit nach eil airidh air a 'phròiseact</translation>
+        <translation>Tha Kit nach eil airidh air a &apos;phròiseact</translation>
     </message>
     <message>
         <location line="+2" />
@@ -19360,8 +19445,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+71" />
-        <source>Enable Kit for Project "%1"</source>
-        <translation>Dèan comas air a 'phròiseact "%1"</translation>
+        <source>Enable Kit for Project &quot;%1&quot;</source>
+        <translation>Dèan comas air a &apos;phròiseact &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7" />
@@ -19370,18 +19455,18 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Disable Kit for Project "%1"</source>
-        <translation>Cuir à comas Kit airson pròiseact "%1"</translation>
+        <source>Disable Kit for Project &quot;%1&quot;</source>
+        <translation>Cuir à comas Kit airson pròiseact &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Cancel Build and Disable Kit in This Project</source>
-        <translation>Cuir dheth a 'togail agus a' comasachadh Kit sa phròiseact seo</translation>
+        <translation>Cuir dheth a &apos;togail agus a&apos; comasachadh Kit sa phròiseact seo</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Disable Kit "%1" in This Project?</source>
-        <translation>Cuir à comas pasgan "%1" sa phròiseact seo?</translation>
+        <source>Disable Kit &quot;%1&quot; in This Project?</source>
+        <translation>Cuir à comas pasgan &quot;%1&quot; sa phròiseact seo?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19415,8 +19500,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Add a kit in the &lt;a href="buildandrun"&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
-        <translation>Cuir pasgan ris an &lt;a href = "Togail"&gt; Roghainnean &lt;/a&gt; no tron ​​inneal cumail suas an SDK.</translation>
+        <source>Add a kit in the &lt;a href=&quot;buildandrun&quot;&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
+        <translation>Cuir pasgan ris an &lt;a href = &quot;Togail&quot;&gt; Roghainnean &lt;/a&gt; no tron ​​inneal cumail suas an SDK.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19426,7 +19511,7 @@ These files are preserved.</source>
     <message>
         <location line="+4" />
         <source>Type to filter kits by name...</source>
-        <translation>Seòrsa gu sìoltachain a 'criathrachadh le ainm ...</translation>
+        <translation>Seòrsa gu sìoltachain a &apos;criathrachadh le ainm ...</translation>
     </message>
     <message>
         <location line="+144" />
@@ -19454,7 +19539,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+63" />
         <source>%1 needs a compiler set up to build. Configure a compiler in the kit options.</source>
-        <translation>Feumaidh%1 a bhith air a chuir suas airson a thogail. Rèiteachadh cuirtaidhiche anns na roghainnean a 'chiaidh.</translation>
+        <translation>Feumaidh%1 a bhith air a chuir suas airson a thogail. Rèiteachadh cuirtaidhiche anns na roghainnean a &apos;chiaidh.</translation>
     </message>
     <message>
         <location line="+143" />
@@ -19474,7 +19559,7 @@ These files are preserved.</source>
     <message>
         <location line="+43" />
         <source>Ignoring invalid task (no text).</source>
-        <translation>A 'seachnadh gnìomh neo-dhligheach (gun teacsa).</translation>
+        <translation>A &apos;seachnadh gnìomh neo-dhligheach (gun teacsa).</translation>
     </message>
     <message>
         <location line="+49" />
@@ -19512,7 +19597,7 @@ These files are preserved.</source>
         <translation>Cùisean</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+53" />
         <source>Show Warnings</source>
         <translation>Seall rabhaidhean</translation>
     </message>
@@ -19553,7 +19638,7 @@ One for the native x86_64 target, and one for a plain x86 target.
 Enable this if you plan to create 32-bit x86 binaries without using a dedicated cross compiler.</source>
         <translation>Ma thèid sgrùdadh a dhèanamh air, suidhichidh%1 dà shuidheachadh de gach àite X86_64:
  Aon airson an targaid x86_64, agus aon airson targaid plain X86.
- Dèan comas air seo ma tha thu an dùil binionies 32-bit X86 a chruthachadh gun a bhith a 'cleachdadh co-chruinneachadh sònraichte de chrois sònraichte.</translation>
+ Dèan comas air seo ma tha thu an dùil binionies 32-bit X86 a chruthachadh gun a bhith a &apos;cleachdadh co-chruinneachadh sònraichte de chrois sònraichte.</translation>
     </message>
     <message>
         <location line="+39" />
@@ -19594,17 +19679,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
         <source>&amp;Annotate</source>
-        <translation>&amp; Anottate</translation>
+        <translation>&amp;Anottate</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Annotate using version control system.</source>
-        <translation>Cuir nota le bhith a 'cleachdadh siostam smachd dreach.</translation>
+        <translation>Cuir nota le bhith a &apos;cleachdadh siostam smachd dreach.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/waitforstopdialog.cpp" line="+22" />
         <source>Waiting for Applications to Stop</source>
-        <translation>A 'feitheamh ri tagraidhean gus stad</translation>
+        <translation>A &apos;feitheamh ri tagraidhean gus stad</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19614,7 +19699,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+20" />
         <source>Waiting for applications to stop.</source>
-        <translation>A 'feitheamh ri tagraidhean gus stad.</translation>
+        <translation>A &apos;feitheamh ri tagraidhean gus stad.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-3" />
@@ -19635,14 +19720,14 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+56" />
         <location line="+183" />
         <source>Replacing signature</source>
-        <translation>A 'cur ainm-sgrìobhte an àite ainm-sgrìobhte</translation>
+        <translation>A &apos;cur ainm-sgrìobhte an àite ainm-sgrìobhte</translation>
     </message>
     <message>
         <location line="-167" />
         <location line="+145" />
         <location line="+12" />
         <source>Xcodebuild failed.</source>
-        <translation>Cha do dh 'fhàillig XcodebuildBolled.</translation>
+        <translation>Cha do dh &apos;fhàillig XcodebuildBolled.</translation>
     </message>
 </context>
 <context>
@@ -19680,18 +19765,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+24" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>Chaidh stad a chuir air "%1" le linn ùine.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>Chaidh stad a chuir air &quot;%1&quot; le linn ùine.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>Chaidh stad a chuir air "%1" leis an neach-cleachdaidh.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>Chaidh stad a chuir air &quot;%1&quot; leis an neach-cleachdaidh.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>Dh'fhàillig le "%1" le còd fàgail%2.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>Dh&apos;fhàillig le &quot;%1&quot; le còd fàgail%2.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
@@ -19707,7 +19792,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+3" />
         <source>REPL Import File</source>
-        <translation>Faidhle a 'toirt a-steach faidhle in-mhalairt</translation>
+        <translation>Faidhle a &apos;toirt a-steach faidhle in-mhalairt</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19727,7 +19812,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+40" />
         <source>Open interactive Python. Either importing nothing, importing the current file, or importing everything (*) from the current file.</source>
-        <translation>Python eadar-ghnìomhach fosgailte. An dàrna cuid a 'toirt a-steach dad, a' toirt a-steach am faidhle a th 'ann an-dràsta, no a' toirt a-steach a h-uile càil (*) bhon fhaidhle làithreach.</translation>
+        <translation>Python eadar-ghnìomhach fosgailte. An dàrna cuid a &apos;toirt a-steach dad, a&apos; toirt a-steach am faidhle a th &apos;ann an-dràsta, no a&apos; toirt a-steach a h-uile càil (*) bhon fhaidhle làithreach.</translation>
     </message>
     <message>
         <location line="+159" />
@@ -19768,23 +19853,23 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" not found.</source>
-        <translation>Python "%1" Cha deach a lorg.</translation>
+        <source>Python &quot;%1&quot; not found.</source>
+        <translation>Python &quot;%1&quot; Cha deach a lorg.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" is not executable.</source>
-        <translation>Chan eil Python "%1" air a chur gu bàs.</translation>
+        <source>Python &quot;%1&quot; is not executable.</source>
+        <translation>Chan eil Python &quot;%1&quot; air a chur gu bàs.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Python "%1" does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
-        <translation>Chan eil pìoban a ghabhas cleachdadh Python "%1". Tha feum air pip gus pasgan python a chuir a-steach bhon chlàr-amach pacaid python, mar Pyside agus am frithealaiche cànain python. Gus dèanamh cinnteach gu bheil gin de na comas-gnìomh sin a 'dèanamh cinnteach gu bheil pip air a chuir a-steach airson a' phython sin.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
+        <translation>Chan eil pìoban a ghabhas cleachdadh Python &quot;%1&quot;. Tha feum air pip gus pasgan python a chuir a-steach bhon chlàr-amach pacaid python, mar Pyside agus am frithealaiche cànain python. Gus dèanamh cinnteach gu bheil gin de na comas-gnìomh sin a &apos;dèanamh cinnteach gu bheil pip air a chuir a-steach airson a&apos; phython sin.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Python "%1" does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
-        <translation>Chan eil Python "%1" ann an Venv a tha annta. Is e VenV an dòigh a thathar a 'moladh airson àrainneachd leasachaidh a leudachadh airson pròiseact bhon t-slighe bho na cruinne a chaidh a chuir a-steach gu python.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
+        <translation>Chan eil Python &quot;%1&quot; ann an Venv a tha annta. Is e VenV an dòigh a thathar a &apos;moladh airson àrainneachd leasachaidh a leudachadh airson pròiseact bhon t-slighe bho na cruinne a chaidh a chuir a-steach gu python.</translation>
     </message>
     <message>
         <location line="+32" />
@@ -19804,7 +19889,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+303" />
         <source>Install Python language server (PyLS) for %1 (%2). The language server provides Python specific completion and annotation.</source>
-        <translation>Stàlaich frithealaiche cànain Python (PYLS) airson%1 (%2). Bidh an frithealaiche cànain a 'toirt seachad crìochnachadh sònraichte python.</translation>
+        <translation>Stàlaich frithealaiche cànain Python (PYLS) airson%1 (%2). Bidh an frithealaiche cànain a &apos;toirt seachad crìochnachadh sònraichte python.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -19838,8 +19923,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
-        <source>No Python interpreter set for kit "%1".</source>
-        <translation>Chan eil eadar-theangair python deiseil airson piseag "%1".</translation>
+        <source>No Python interpreter set for kit &quot;%1&quot;.</source>
+        <translation>Chan eil eadar-theangair python deiseil airson piseag &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
@@ -19849,7 +19934,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+2" />
         <source>Enabling improves output performance, but results in delayed output.</source>
-        <translation>A 'comasachadh leasachadh coileanadh, ach tha e a' toirt dàil air toradh.</translation>
+        <translation>A &apos;comasachadh leasachadh coileanadh, ach tha e a&apos; toirt dàil air toradh.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -19858,7 +19943,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
         <source>Python:</source>
         <translation>Python:</translation>
     </message>
@@ -19868,7 +19953,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Ruith%1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
         <location line="+283" />
         <source>Name:</source>
         <translation>Ainm:</translation>
@@ -19886,36 +19971,36 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" does not exist.</source>
-        <translation>Chan eil "%1" ann.</translation>
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>Chan eil &quot;%1&quot; ann.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" is not an executable file.</source>
-        <translation>Chan e faidhle gnìomh brosnachail "%1".</translation>
+        <source>&quot;%1&quot; is not an executable file.</source>
+        <translation>Chan e faidhle gnìomh brosnachail &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+16" />
         <location line="+186" />
         <source>&amp;Add</source>
-        <translation>&amp; Cuir ris</translation>
+        <translation>&amp;Cuir ris</translation>
     </message>
     <message>
         <location line="-184" />
         <location line="+185" />
         <source>&amp;Delete</source>
-        <translation>&amp; Cuir às do</translation>
+        <translation>&amp;Cuir às do</translation>
     </message>
     <message>
         <location line="-183" />
         <location line="+185" />
         <source>&amp;Make Default</source>
-        <translation>&amp; Dèan bunaiteach</translation>
+        <translation>&amp;Dèan bunaiteach</translation>
     </message>
     <message>
         <location line="-183" />
         <source>&amp;Generate Kit</source>
-        <translation>&amp; Gineadh pasgan</translation>
+        <translation>&amp;Gineadh pasgan</translation>
     </message>
     <message>
         <location line="+3" />
@@ -19959,7 +20044,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Rèiteachadh frithealaiche cànain</translation>
     </message>
     <message>
-        <location line="+476" />
+        <location line="+489" />
         <source>Python interpreter:</source>
         <translation>Eadar-theangair Python:</translation>
     </message>
@@ -19987,27 +20072,27 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+151" />
         <source>Searching Python binaries...</source>
-        <translation>A 'lorg bindaries python ...</translation>
+        <translation>A &apos;lorg bindaries python ...</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>Found "%1" (%2)</source>
-        <translation>Lorg "%1" (%2)</translation>
+        <source>Found &quot;%1&quot; (%2)</source>
+        <translation>Lorg &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Removing Python</source>
-        <translation>A 'toirt air falbh python</translation>
+        <translation>A &apos;toirt air falbh python</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
-        <source>"data" of a Python wizard page expects a map with "items" containing a list of objects.</source>
-        <translation>Tha "Dàta" de Duilleag Python Draoidh an dùil mapa le "nithean" le liosta de nithean.</translation>
+        <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
+        <translation>Tha &quot;Dàta&quot; de Duilleag Python Draoidh an dùil mapa le &quot;nithean&quot; le liosta de nithean.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>An item of Python wizard page data expects a "trKey" field containing the UI visible string for that Python version and a "value" field containing an object with a "PySideVersion" field used for import statements in the Python files.</source>
-        <translation>Tha rud de dhàta duilleag Python Draoidh an dùil ach achadh "Trkey" anns a bheil sreang Python agus raon "luach" a 'cleachdadh airson aithrisean in-mhalairt anns na faidhlichean python.</translation>
+        <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
+        <translation>Tha rud de dhàta duilleag Python Draoidh an dùil ach achadh &quot;Trkey&quot; anns a bheil sreang Python agus raon &quot;luach&quot; a &apos;cleachdadh airson aithrisean in-mhalairt anns na faidhlichean python.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -20032,17 +20117,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+126" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
         <source>Move tab left</source>
         <translation>Gluais an taba clì</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Switch to next tab</source>
         <translation>Gluais chun ath tab</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+15" />
         <source>Move tab right</source>
         <translation>Gluais an taba deas</translation>
     </message>
@@ -20100,7 +20185,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+5" />
         <source>Autocomplete common &amp;prefix</source>
-        <translation>Autocomplete cumanta &amp; ro-leasachan</translation>
+        <translation>Autocomplete cumanta &amp;ro-leasachan</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20204,7 +20289,7 @@ A bharrachd air an sin, bidh Shift + Enter a’ cuir a-steach caractar teicheadh
     <message>
         <location line="+72" />
         <source>&amp;Automatically Insert Matching Characters</source>
-        <translation>Cuir a-steach caractaran maidsidh gu fèin-ghluasadach</translation>
+        <translation>Cuir &amp;a-steach caractaran maidsidh gu fèin-ghluasadach</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
@@ -20213,8 +20298,8 @@ A bharrachd air an sin, bidh Shift + Enter a’ cuir a-steach caractar teicheadh
     </message>
     <message>
         <location line="+2" />
-        <source>Automatically creates a Doxygen comment upon pressing enter after a '/**', '/*!', '//!' or '///'.</source>
-        <translation>Cruthaich gu fèin-ghluasadach beachd Doxygen nuair a bhrùthas tu a-steach às deidh ‘/**’, ‘/*!’, ‘//!’ no '///'.</translation>
+        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
+        <translation>Cruthaich gu fèin-ghluasadach beachd Doxygen nuair a bhrùthas tu a-steach às deidh ‘/**’, ‘/*!’, ‘//!’ no &apos;///&apos;.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20233,8 +20318,8 @@ A bharrachd air an sin, bidh Shift + Enter a’ cuir a-steach caractar teicheadh
     </message>
     <message>
         <location line="+2" />
-        <source>Adds leading asterisks when continuing C/C++ "/*", Qt "/*!" and Java "/**" style comments on new lines.</source>
-        <translation>A’ cur prìomh rionnagan ris nuair a bhios tu a’ leantainn C/C ++ “/*”, Qt “/*!” agus beachdan stoidhle Java "/**" air loidhnichean ùra.</translation>
+        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
+        <translation>A’ cur prìomh rionnagan ris nuair a bhios tu a’ leantainn C/C ++ “/*”, Qt “/*!” agus beachdan stoidhle Java &quot;/**&quot; air loidhnichean ùra.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20243,12 +20328,12 @@ A bharrachd air an sin, bidh Shift + Enter a’ cuir a-steach caractar teicheadh
     </message>
     <message>
         <location line="+1" />
-        <source>Doxygen allows "@" and "\" to start commands.
-By default, "@" is used if the surrounding comment starts with "/**" or "///", and "\" is used
-if the comment starts with "/*!" or "//!".</source>
-        <translation>Tha Doxegen a 'ceadachadh "@" agus "\" gus tòiseachadh air òrdughan.
- Gu gnàthach, tha "@" air a chleachdadh ma thòisicheas am beachd mun cuairtich le "/ **" no "///", agus tha "\" air a chleachdadh
- Ma thòisicheas a 'bheachd le "/ *!" no "//!".</translation>
+        <source>Doxygen allows &quot;@&quot; and &quot;\&quot; to start commands.
+By default, &quot;@&quot; is used if the surrounding comment starts with &quot;/**&quot; or &quot;///&quot;, and &quot;\&quot; is used
+if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
+        <translation>Tha Doxegen a &apos;ceadachadh &quot;@&quot; agus &quot;\&quot; gus tòiseachadh air òrdughan.
+ Gu gnàthach, tha &quot;@&quot; air a chleachdadh ma thòisicheas am beachd mun cuairtich le &quot;/ **&quot; no &quot;///&quot;, agus tha &quot;\&quot; air a chleachdadh
+ Ma thòisicheas a &apos;bheachd le &quot;/ *!&quot; no &quot;//!&quot;.</translation>
     </message>
     <message>
         <source>&amp;Automatically insert matching characters</source>
@@ -20290,7 +20375,7 @@ if the comment starts with "/*!" or "//!".</source>
     <message>
         <location line="+53" />
         <source>Error reverting snippet.</source>
-        <translation>Mearachd a' tilleadh a' chriomag.</translation>
+        <translation>Mearachd a&apos; tilleadh a&apos; chriomag.</translation>
     </message>
     <message>
         <location line="+98" />
@@ -20344,7 +20429,7 @@ if the comment starts with "/*!" or "//!".</source>
     <message>
         <location line="+8" />
         <source>Cursor position: %1</source>
-        <translation>Suidheachadh a' chùrsair: %1</translation>
+        <translation>Suidheachadh a&apos; chùrsair: %1</translation>
     </message>
     <message>
         <location line="+7" />
@@ -20423,8 +20508,8 @@ if the comment starts with "/*!" or "//!".</source>
     </message>
     <message>
         <location line="+36" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding. Editing not possible.</source>
-        <translation>&lt;b&gt;Mearachd:&lt;/b&gt; Cha b' urrainn dhuinn "%1" a dhì-chòdachadh le "%2"-còdachadh. Chan eil an deasachadh comasach.</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
+        <translation>&lt;b&gt;Mearachd:&lt;/b&gt; Cha b&apos; urrainn dhuinn &quot;%1&quot; a dhì-chòdachadh le &quot;%2&quot;-còdachadh. Chan eil an deasachadh comasach.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -20469,7 +20554,7 @@ if the comment starts with "/*!" or "//!".</source>
     <message>
         <location line="+605" />
         <source>Could not find definition.</source>
-        <translation>Cha b 'urrainn dhaibh mìneachadh a lorg.</translation>
+        <translation>Cha b &apos;urrainn dhaibh mìneachadh a lorg.</translation>
     </message>
     <message>
         <location line="-9882" />
@@ -20484,7 +20569,7 @@ if the comment starts with "/*!" or "//!".</source>
     <message>
         <location line="+7" />
         <source>In entire &amp;document</source>
-        <translation>Gu h-iomlan &amp; sgrìobhainn</translation>
+        <translation>Gu h-iomlan &amp;sgrìobhainn</translation>
     </message>
     <message>
         <location line="-4" />
@@ -20523,31 +20608,7 @@ Influences the indentation of continuation lines.
 &lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;ceann/&gt;&lt;body&gt;
-A 'toirt buaidh air indentation de loidhnichean leantainneach.
-
-&lt;ul&gt;
-&lt;li&gt;Chan eil idir: Na dèan co-thaobhadh idir. Cha tèid loidhnichean a cheangal ach ri doimhneachd an indentation loidsigeach a th’ ann an-dràsta.
-&lt;ro&gt;
-(tab) int i = foo(a, b
-(tab)c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;Le Spaces: Cleachd beàrnan airson co-thaobhadh an-còmhnaidh, ge bith dè na roghainnean indentation eile.
-&lt;ro&gt;
-(tab) int i = foo(a, b
-(tab) c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;Le indent àbhaisteach: Cleachd tabaichean agus/no beàrnan airson co-thaobhadh, mar a chaidh a rèiteachadh gu h-àrd.
-&lt;ro&gt;
-(tab) int i = foo(a, b
-(tab)(tab)(tab) c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/corp&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+31" />
@@ -20556,8 +20617,8 @@ A 'toirt buaidh air indentation de loidhnichean leantainneach.
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;i&gt;Code indentation is configured in &lt;a href="C++"&gt;C++&lt;/a&gt; and &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;Tha indentation a’ chòd air a rèiteachadh ann an &lt;a href="C++"&gt;C++&lt;/a&gt; agus &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; roghainnean.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;Tha indentation a’ chòd air a rèiteachadh ann an &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; agus &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; roghainnean.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20617,7 +20678,7 @@ A 'toirt buaidh air indentation de loidhnichean leantainneach.
     <message>
         <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-65" />
         <source>Enable automatic &amp;indentation</source>
-        <translation>Dèan comas fèin-ghluasadach &amp; indentation</translation>
+        <translation>Dèan comas fèin-ghluasadach &amp;indentation</translation>
     </message>
     <message>
         <location line="-23" />
@@ -20667,20 +20728,7 @@ Specifies how backspace interacts with indentation.
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation>&lt;html&gt;&lt;ceann/&gt;&lt;body&gt;
-Sònraich mar a tha backspace ag eadar-obrachadh le indentation.
-
-&lt;ul&gt;
-&lt;li&gt;Chan eil gin: Chan eil eadar-obrachadh idir ann. Giùlan cùl-raon sìmplidh cunbhalach.
-&lt;/li&gt;
-
-&lt;li&gt;Lean innte roimhe seo: Nuair a bhios tu a’ treòrachadh beàrn geal, bheir e an cursair air ais chun na h-ìre dealachaidh as fhaisge a chaidh a chleachdadh sna loidhnichean roimhe seo.
-&lt;/li&gt;
-
-&lt;li&gt;Unindentents: Mas e beàrn a th’ anns a’ charactar air cùl a’ chursair, bidh e gad ghiùlan fhèin mar taba cùil.
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/corp&gt;&lt;/html&gt;
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17" />
@@ -20711,7 +20759,7 @@ Sònraich mar a tha backspace ag eadar-obrachadh le indentation.
     <message>
         <location line="+3" />
         <source>%1: The highlight definition for the file determines the position. If no highlight definition is available, the comment is placed after leading whitespaces.</source>
-        <translation>%1: Tha am mìneachadh as soilleire airson an fhaidhle a 'dearbhadh an t-suidheachaidh. Mura h-eil mìneachadh maoc-mhara ri fhaighinn, thèid am beachd a chuir às deidh prìomh sheiseanan a phrìomhachadh.</translation>
+        <translation>%1: Tha am mìneachadh as soilleire airson an fhaidhle a &apos;dearbhadh an t-suidheachaidh. Mura h-eil mìneachadh maoc-mhara ri fhaighinn, thèid am beachd a chuir às deidh prìomh sheiseanan a phrìomhachadh.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20721,7 +20769,7 @@ Sònraich mar a tha backspace ag eadar-obrachadh le indentation.
     <message>
         <location line="+2" />
         <source>%1: The comment is placed after leading whitespaces.</source>
-        <translation>%1: Tha am beachd air a chuir às deidh prìomh sheiseanan a thoirt air a bhith a 'stiùireadh.</translation>
+        <translation>%1: Tha am beachd air a chuir às deidh prìomh sheiseanan a thoirt air a bhith a &apos;stiùireadh.</translation>
     </message>
     <message>
         <location line="+22" />
@@ -20736,7 +20784,7 @@ Sònraich mar a tha backspace ag eadar-obrachadh le indentation.
     <message>
         <location line="+1" />
         <source>For the file patterns listed, do not trim trailing whitespace.</source>
-        <translation>Airson na pàtrain fhaidhlichean a tha air an liostadh, na bi a 'trimadh beàrnan geal.</translation>
+        <translation>Airson na pàtrain fhaidhlichean a tha air an liostadh, na bi a &apos;trimadh beàrnan geal.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -20751,7 +20799,7 @@ Sònraich mar a tha backspace ag eadar-obrachadh le indentation.
     <message>
         <location line="+3" />
         <source>Removes trailing whitespace upon saving.</source>
-        <translation>A 'toirt air falbh beàrn geal nuair a thèid a shàbhaladh.</translation>
+        <translation>A &apos;toirt air falbh beàrn geal nuair a thèid a shàbhaladh.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -20787,13 +20835,7 @@ Sònraich mar a tha backspace ag eadar-obrachadh le indentation.
 &lt;li&gt;&lt;i&gt;Always Delete:&lt;/i&gt; never write an UTF-8 BOM, possibly deleting a pre-existing one.&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;Note that UTF-8 BOMs are uncommon and treated incorrectly by some editors, so it usually makes little sense to add any.&lt;/p&gt;
 &lt;p&gt;This setting does &lt;b&gt;not&lt;/b&gt; influence the use of UTF-16 and UTF-32 BOMs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;ceann/&gt;&lt;body&gt;
-&lt;p&gt;Mar a bu chòir do luchd-deasachaidh teacsa dèiligeadh ri Comharran Òrdugh Byte UTF-8. Is iad na roghainnean:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;i&gt;Cuir ris mas e UTF-8 a th’ ann an còdachadh:&lt;/i&gt; cuir BOM an-còmhnaidh nuair a shàbhalas tu faidhle ann an còdachadh UTF-8. Thoir an aire nach obraich seo mas e &lt;i&gt;System&lt;/i&gt; an còdachadh, a chionn 's nach eil fios aig deasaiche an teacsa dè th' ann dha-rìribh.&lt;/li&gt;
-&lt;li&gt;&lt;i&gt;Cum ma tha e mar-thà: &lt;/i&gt; sàbhail am faidhle le BOM ma bha fear ann mu thràth nuair a chaidh a luchdachadh.&lt;/li&gt;
-&lt;li&gt;&lt;i&gt;Sguab às an-còmhnaidh:&lt;/i&gt; na sgrìobh BOM UTF-8 gu bràth, 's dòcha gun sguab thu às fear a tha ann mu thràth.&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;Thoir an aire gu bheil UTF-8 BOMan neo-chumanta agus gun tèid dèiligeadh riutha gu ceàrr le cuid de luchd-deasachaidh, mar sin mar as trice chan eil e ciallach gin a chur ris.&lt;/p&gt;
-&lt;p&gt;Chan eil an suidheachadh seo &lt;b&gt;&lt;/b&gt; a' toirt buaidh air cleachdadh UTF-16 agus UTF-32 BOM.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11" />
@@ -20803,12 +20845,12 @@ Sònraich mar a tha backspace ag eadar-obrachadh le indentation.
     <message>
         <location line="+2" />
         <source>Enable scroll &amp;wheel zooming</source>
-        <translation>Dèan comas scrollaidh &amp; gluasad cuibhle</translation>
+        <translation>Dèan comas scrollaidh &amp;gluasad cuibhle</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Enable built-in camel case &amp;navigation</source>
-        <translation>Dèan comas air cùis camel togte &amp; seòladh</translation>
+        <translation>Dèan comas air cùis camel togte &amp;seòladh</translation>
     </message>
     <message>
         <location line="+2" />
@@ -20909,22 +20951,22 @@ Sònraich mar a tha backspace ag eadar-obrachadh le indentation.
     <message>
         <location line="-256" />
         <source>Display line &amp;numbers</source>
-        <translation>Taisbeanadh loidhne agus àireamhan</translation>
+        <translation>Taisbea&amp;nadh loidhne agus àireamhan</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Mark &amp;text changes</source>
-        <translation>Atharraichean comharra &amp; teacsa</translation>
+        <translation>Atharraichean comharra &amp;teacsa</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Auto-fold first &amp;comment</source>
-        <translation>Auto-pasgadh an toiseach &amp; beachd</translation>
+        <translation>Auto-pasgadh an toiseach &amp;beachd</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Display &amp;folding markers</source>
-        <translation>Comharran taisbeanaidh &amp; pasgadh</translation>
+        <translation>Comharran taisbeanaidh &amp;pasgadh</translation>
     </message>
     <message>
         <location line="+8" />
@@ -20934,22 +20976,22 @@ Sònraich mar a tha backspace ag eadar-obrachadh le indentation.
     <message>
         <location line="-12" />
         <source>Highlight current &amp;line</source>
-        <translation>Thoir cuideam air sruth &amp; loidhne</translation>
+        <translation>Thoir cuideam air sruth &amp;loidhne</translation>
     </message>
     <message>
         <location line="-39" />
         <source>Enable text &amp;wrapping</source>
-        <translation>Cuir an comas teacsa &amp; pasgadh</translation>
+        <translation>Cuir an comas teacsa &amp;pasgadh</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;i&gt;Set &lt;a href="font zoom"&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;Suidhich &lt;a href="font zoom"&gt;bheàrn loidhne a’ chruth-clò&lt;/a&gt; gu 100% gus an roghainn pasgadh teacsa a chur an comas.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;Suidhich &lt;a href=&quot;font zoom&quot;&gt;bheàrn loidhne a’ chruth-clò&lt;/a&gt; gu 100% gus an roghainn pasgadh teacsa a chur an comas.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Seall deas &amp; iomall aig a’ cholbh:</translation>
+        <translation>Seall deas &amp;iomall aig a’ cholbh:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20984,12 +21026,12 @@ Sònraich mar a tha backspace ag eadar-obrachadh le indentation.
     <message>
         <location line="+2" />
         <source>Highlight &amp;blocks</source>
-        <translation>Cuir cuideam air &amp; bacaidhean</translation>
+        <translation>Cuir cuideam air &amp;bacaidhean</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Center &amp;cursor on scroll</source>
-        <translation>Ionad &amp; cursair air scrollaidh</translation>
+        <translation>Ionad &amp;cursair air scrollaidh</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21024,12 +21066,12 @@ Sònraich mar a tha backspace ag eadar-obrachadh le indentation.
     <message>
         <location line="+2" />
         <source>&amp;Highlight selection</source>
-        <translation>&amp; Taghadh a 'soilleireachadh</translation>
+        <translation>&amp;Taghadh a &apos;soilleireachadh</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Adds a colored background and a marker to the scrollbar to occurrences of the selected text.</source>
-        <translation>A 'cur cùl-fhiosrachadh dathte agus comharra don bhàr-scrollaidh gu tachartasan taghte.</translation>
+        <translation>A &apos;cur cùl-fhiosrachadh dathte agus comharra don bhàr-scrollaidh gu tachartasan taghte.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -21073,7 +21115,7 @@ Sònraich mar a tha backspace ag eadar-obrachadh le indentation.
     <message>
         <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-220" />
         <source>Enable &amp;mouse navigation</source>
-        <translation>Dèan comas &amp; seòladh na luchaige</translation>
+        <translation>Dèan comas &amp;seòladh na luchaige</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+547" />
@@ -21105,8 +21147,8 @@ Faodaidh luach nas lugha na 100% leantainn gu grafaigean a tha a’ dol thairis 
     </message>
     <message>
         <location line="+16" />
-        <source>Color Scheme for Theme "%1"</source>
-        <translation>Sgeama dhathan airson cuspair "%1"</translation>
+        <source>Color Scheme for Theme &quot;%1&quot;</source>
+        <translation>Sgeama dhathan airson cuspair &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+16" />
@@ -21227,8 +21269,8 @@ Faodaidh luach nas lugha na 100% leantainn gu grafaigean a tha a’ dol thairis 
     </message>
     <message>
         <location line="-12" />
-        <source>Cannot import code style from "%1".</source>
-        <translation>Chan urrainn dhuinn stoidhle còd ion-phortachadh o "%1".</translation>
+        <source>Cannot import code style from &quot;%1&quot;.</source>
+        <translation>Chan urrainn dhuinn stoidhle còd ion-phortachadh o &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -21257,8 +21299,8 @@ Faodaidh luach nas lugha na 100% leantainn gu grafaigean a tha a’ dol thairis 
     </message>
     <message>
         <location line="+1" />
-        <source>The color scheme "%1" was modified, do you want to save the changes?</source>
-        <translation>Chaidh an sgeama dhathan "%1" atharrachadh, a bheil thu airson na h-atharraichean a shàbhaladh?</translation>
+        <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
+        <translation>Chaidh an sgeama dhathan &quot;%1&quot; atharrachadh, a bheil thu airson na h-atharraichean a shàbhaladh?</translation>
     </message>
     <message>
         <location line="+7" />
@@ -21272,8 +21314,8 @@ Faodaidh luach nas lugha na 100% leantainn gu grafaigean a tha a’ dol thairis 
     </message>
     <message>
         <location line="+16" />
-        <source>File "%1":</source>
-        <translation>Faidhle "%1":</translation>
+        <source>File &quot;%1&quot;:</source>
+        <translation>Faidhle &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -21327,8 +21369,8 @@ Faodaidh luach nas lugha na 100% leantainn gu grafaigean a tha a’ dol thairis 
     </message>
     <message>
         <location line="+27" />
-        <source>&lt;p align='center'&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href="copy"&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;p align='center'&gt;&lt;b&gt;Feumaidh sgeamaichean dhathan togte a bhith &lt;a href="copy"&gt;copaidh&lt;/a&gt;&lt;br/&gt; mus gabh an atharrachadh&lt;/b&gt;&lt;/p&gt;</translation>
+        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Feumaidh sgeamaichean dhathan togte a bhith &lt;a href=&quot;copy&quot;&gt;copaidh&lt;/a&gt;&lt;br/&gt; mus gabh an atharrachadh&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -21527,12 +21569,12 @@ Faodaidh luach nas lugha na 100% leantainn gu grafaigean a tha a’ dol thairis 
     </message>
     <message>
         <location line="+7" />
-        <source>Current document's font size in points.</source>
+        <source>Current document&apos;s font size in points.</source>
         <translation>Meud cruth-clò na sgrìobhainn làithreach ann am puingean.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Word under the current document's text cursor.</source>
+        <source>Word under the current document&apos;s text cursor.</source>
         <translation>Facal fo chursair teacsa na sgrìobhainn làithreach.</translation>
     </message>
     <message>
@@ -21551,7 +21593,7 @@ Faodaidh luach nas lugha na 100% leantainn gu grafaigean a tha a’ dol thairis 
     <message>
         <location line="+124" />
         <source>&amp;Visualize Whitespace</source>
-        <translation>&amp; Seall air Whitespace</translation>
+        <translation>&amp;Seall air Whitespace</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21566,7 +21608,7 @@ Faodaidh luach nas lugha na 100% leantainn gu grafaigean a tha a’ dol thairis 
     <message>
         <location line="+3" />
         <source>Enable Text &amp;Wrapping</source>
-        <translation>Dèan comas air Teacs &amp; Clò-bhualadh</translation>
+        <translation>Dèan comas air Teacs &amp;Clò-bhualadh</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21581,7 +21623,7 @@ Faodaidh luach nas lugha na 100% leantainn gu grafaigean a tha a’ dol thairis 
     <message>
         <location line="-133" />
         <source>Delete &amp;Line</source>
-        <translation>Sguab às &amp; Loidhne</translation>
+        <translation>Sguab às &amp;Loidhne</translation>
     </message>
     <message>
         <location line="+50" />
@@ -21806,17 +21848,17 @@ Faodaidh luach nas lugha na 100% leantainn gu grafaigean a tha a’ dol thairis 
     <message>
         <location line="+4" />
         <source>Toggle Comment &amp;Selection</source>
-        <translation>Tog beachd &amp; taghadh</translation>
+        <translation>Tog beachd &amp;taghadh</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Cut &amp;Line</source>
-        <translation>Gearr &amp; Loidhne</translation>
+        <translation>Gearr &amp;Loidhne</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Copy &amp;Line</source>
-        <translation>Dèan lethbhreac &amp; loidhne</translation>
+        <translation>Dèan lethbhreac &amp;loidhne</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21930,7 +21972,7 @@ Faodaidh luach nas lugha na 100% leantainn gu grafaigean a tha a’ dol thairis 
     <message>
         <location line="+4" />
         <source>Toggle &amp;Fold All</source>
-        <translation>Tog &amp; Paisg na h-uile</translation>
+        <translation>Tog &amp;Paisg na h-uile</translation>
     </message>
     <message>
         <location line="+11" />
@@ -22404,7 +22446,7 @@ Air a chleachdadh airson comharrachadh anns a bheil gnìomh cleachdadh samhla.</
     </message>
     <message>
         <location line="+1" />
-        <source>Class' data members.</source>
+        <source>Class&apos; data members.</source>
         <translation>Buill dàta clas.</translation>
     </message>
     <message>
@@ -23037,152 +23079,152 @@ Cha tèid a chuir an sàs ann an àite geal ann am beachdan agus sreathan.</tran
         <translation>Chan e faidhle sgeama dathan a th’ ann.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>a thàinig bho QObject</translation>
     </message>
     <message>
         <location line="+1" />
         <source>derived from QWidget</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>a thàinig bho QWidget</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>teamplaid</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with if</source>
-        <comment>group:'C++' trigger:'else'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
         <translation>le ma</translation>
     </message>
     <message>
         <location line="+1" />
         <source>range-based</source>
-        <comment>group:'C++' trigger:'for'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
         <translation>stèidhichte air raon</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and else</source>
-        <comment>group:'C++' trigger:'if'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
         <translation>agus eile</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with closing brace comment</source>
-        <comment>group:'C++' trigger:'namespace'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
         <translation>le iomradh brace dùnaidh</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and catch</source>
-        <comment>group:'C++' trigger:'try'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
         <translation>agus glac</translation>
     </message>
     <message>
         <location line="+1" />
         <source>namespace</source>
-        <comment>group:'C++' trigger:'using'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
         <translation>ainm-àite</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'struct'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
         <translation>teamplaid</translation>
     </message>
     <message>
         <location line="+1" />
         <source>(type name READ name WRITE setName NOTIFY nameChanged FINAL)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
-        <translation>(Ainm seòrsa Clàr Leugh Ainm Sìnte Setname NERAMENCTION A 'GABHAIL</translation>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
+        <translation>(Ainm seòrsa Clàr Leugh Ainm Sìnte Setname NERAMENCTION A &apos;GABHAIL</translation>
     </message>
     <message>
         <source>(type name READ name WRITE setName NOTIFY nameChanged)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation type="vanished">(seòrsa ainm LÀRR ainm SGRÌOBH seataName FIOSRACHADH ainm air atharrachadh)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>le targaidean</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>le targaid</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>le targaidean</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>le targaid</translation>
     </message>
     <message>
         <location line="+3" />
         <source>QuickTest Test Case</source>
-        <comment>group:'QML' trigger:'TestCase'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>Cùis deuchainn Quicktest</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Function</source>
-        <comment>group:'C++' trigger:'TEST'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST&apos;</comment>
         <translation>Gnìomh Gtest</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Fixture</source>
-        <comment>group:'C++' trigger:'TEST_F'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_F&apos;</comment>
         <translation>Texture Gtest</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Parameterized</source>
-        <comment>group:'C++' trigger:'TEST_P'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_P&apos;</comment>
         <translation>GTTest Paramaterized</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Case</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_CASE&apos;</comment>
         <translation>Cùis deuchainn</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Suite</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_SUITE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_SUITE&apos;</comment>
         <translation>Teisteanas deuchainn</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Test Case</source>
-        <comment>group:'C++' trigger:'TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_CASE&apos;</comment>
         <translation>Cùis deuchainn glacadh</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Scenario</source>
-        <comment>group:'C++' trigger:'SCENARIO'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;SCENARIO&apos;</comment>
         <translation>Suidheachadh a ghlacadh</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="+3" />
         <source>example</source>
-        <comment>group:'Text' trigger:'global'</comment>
+        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
         <translation>eisimpleir</translation>
     </message>
     <message>
@@ -23193,32 +23235,32 @@ Cha tèid a chuir an sàs ann an àite geal ann am beachdan agus sreathan.</tran
     <message>
         <location line="+219" />
         <source>Searching</source>
-        <translation>A' lorg</translation>
+        <translation>A&apos; lorg</translation>
     </message>
     <message numerus="yes">
         <location line="+3" />
         <source>%n found.</source>
-        <translation>
-            <numerusform>Chaidh %n a lorg.</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+29" />
         <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>Chaidh %n tachartas a chur na àite.</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+178" />
         <source>Aborting replace.</source>
-        <translation>A 'cur às do chur an àite.</translation>
+        <translation>A &apos;cur às do chur an àite.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/codeassist/functionhintproposalwidget.cpp" line="+371" />
@@ -23247,8 +23289,8 @@ Cha tèid a chuir an sàs ann an àite geal ann am beachdan agus sreathan.</tran
     </message>
     <message>
         <location line="+25" />
-        <source>Folder "%2":</source>
-        <translation>Pasgan "%2":</translation>
+        <source>Folder &quot;%2&quot;:</source>
+        <translation>Pasgan &quot;%2&quot;:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -23270,7 +23312,7 @@ Criathrag: %2
     <message>
         <location line="+20" />
         <source>Director&amp;y:</source>
-        <translation>Stiùiriche:</translation>
+        <translation>&amp;Stiùiriche:</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23301,8 +23343,8 @@ Criathrag: %2
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/formattexteditor.cpp" line="+71" />
-        <source>Cannot create temporary file "%1": %2.</source>
-        <translation>Cha b' urrainn dhuinn faidhle sealach "%1" a chruthachadh: %2.</translation>
+        <source>Cannot create temporary file &quot;%1&quot;: %2.</source>
+        <translation>Cha b&apos; urrainn dhuinn faidhle sealach &quot;%1&quot; a chruthachadh: %2.</translation>
     </message>
     <message>
         <source>TextEditor</source>
@@ -23311,13 +23353,13 @@ Criathrag: %2
     </message>
     <message>
         <location line="+21" />
-        <source>Cannot read file "%1": %2.</source>
-        <translation>Cha ghabh am faidhle "%1" a leughadh: %2.</translation>
+        <source>Cannot read file &quot;%1&quot;: %2.</source>
+        <translation>Cha ghabh am faidhle &quot;%1&quot; a leughadh: %2.</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Cannot call %1 or some other error occurred. Timeout reached while formatting file %2.</source>
-        <translation>Chan urrainn dhuinn %1 a ghairm no thachair mearachd eile. Ràinig an ùine-ama fhad 's a bha sinn a' fòrmatadh an fhaidhle %2.</translation>
+        <translation>Chan urrainn dhuinn %1 a ghairm no thachair mearachd eile. Ràinig an ùine-ama fhad &apos;s a bha sinn a&apos; fòrmatadh an fhaidhle %2.</translation>
     </message>
     <message>
         <source>TextEditor</source>
@@ -23327,7 +23369,7 @@ Criathrag: %2
     <message>
         <location line="-25" />
         <source>Failed to format: %1.</source>
-        <translation>Dh'fhàillig cruth:%1.</translation>
+        <translation>Dh&apos;fhàillig cruth:%1.</translation>
     </message>
     <message>
         <location line="+175" />
@@ -23337,7 +23379,7 @@ Criathrag: %2
     <message>
         <location line="+16" />
         <source>Could not format file %1.</source>
-        <translation>Cha b' urrainn fòrmatadh an fhaidhle %1.</translation>
+        <translation>Cha b&apos; urrainn fòrmatadh an fhaidhle %1.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23366,8 +23408,8 @@ Criathrag: %2
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tha mìneachaidhean àrd-sholais air an toirt seachad leis an &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/ a&gt; einnsean.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tha mìneachaidhean àrd-sholais air an toirt seachad leis an &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/ a&gt; einnsean.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23441,7 +23483,7 @@ Criathrag: %2
         <translation>Filter craobh</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+130" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+140" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
         <source>Sort Alphabetically</source>
         <translation>Deasaich a rèir na h-aibideil</translation>
@@ -23463,7 +23505,7 @@ Criathrag: %2
     </message>
     <message>
         <location line="+15" />
-        <source>Expected mangler ID "l" (lowercase), "u" (uppercase), or "c" (titlecase) after colon.</source>
+        <source>Expected mangler ID &quot;l&quot; (lowercase), &quot;u&quot; (uppercase), or &quot;c&quot; (titlecase) after colon.</source>
         <translation>ID mangler ris an robh dùil “l” (leabhran ìosal), “u” (mòr), no “c” (tiotal) às deidh coloin.</translation>
     </message>
     <message>
@@ -23484,7 +23526,7 @@ Criathrag: %2
     <message>
         <location line="+425" />
         <source>Opening File</source>
-        <translation>A' fosgladh Faidhle</translation>
+        <translation>A&apos; fosgladh Faidhle</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+300" />
@@ -23516,8 +23558,8 @@ Criathrag: %2
     </message>
     <message>
         <location line="+1" />
-        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark's note text.</source>
-        <translation>A 'cleachdadh comharran-leabhair. Filter a rèir ainm faidhle, leis an teacsa air loidhne an leabhran-leabhair, no le teacsa nota an leabhair.</translation>
+        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark&apos;s note text.</source>
+        <translation>A &apos;cleachdadh comharran-leabhair. Filter a rèir ainm faidhle, leis an teacsa air loidhne an leabhran-leabhair, no le teacsa nota an leabhair.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-788" />
@@ -23532,12 +23574,12 @@ Criathrag: %2
     <message>
         <location line="+1" />
         <source>&amp;Edit</source>
-        <translation>&amp; Deasaich</translation>
+        <translation>&amp;Deasaich</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Remove</source>
-        <translation>&amp; Thoir air falbh</translation>
+        <translation>&amp;Thoir air falbh</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23570,7 +23612,7 @@ Criathrag: %2
     <message>
         <location line="-15" />
         <source>&amp;Bookmarks</source>
-        <translation>&amp; Comharran leacan</translation>
+        <translation>&amp;Comharran leacan</translation>
     </message>
     <message>
         <location line="+53" />
@@ -23668,7 +23710,7 @@ Criathrag: %2
     <message>
         <location line="+4" />
         <source>The class name contains invalid characters.</source>
-        <translation>Tha caractaran mì-dhligheach ann an ainm a' chlas.</translation>
+        <translation>Tha caractaran mì-dhligheach ann an ainm a&apos; chlas.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/terminalinterface.cpp" line="+23" />
@@ -23687,8 +23729,8 @@ Criathrag: %2
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot create temporary directory "%1": %2</source>
-        <translation>Cha b' urrainn dhuinn eòlaire sealach "%1" a chruthachadh: %2</translation>
+        <source>Cannot create temporary directory &quot;%1&quot;: %2</source>
+        <translation>Cha b&apos; urrainn dhuinn eòlaire sealach &quot;%1&quot; a chruthachadh: %2</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23697,31 +23739,31 @@ Criathrag: %2
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot change to working directory "%1": %2</source>
-        <translation>Cha ghabh atharrachadh dhan eòlaire-obrach "%1": %2</translation>
+        <source>Cannot change to working directory &quot;%1&quot;: %2</source>
+        <translation>Cha ghabh atharrachadh dhan eòlaire-obrach &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1": %2</source>
-        <translation>Cha ghabh "%1" a chur an gnìomh: %2</translation>
+        <source>Cannot execute &quot;%1&quot;: %2</source>
+        <translation>Cha ghabh &quot;%1&quot; a chur an gnìomh: %2</translation>
     </message>
     <message>
         <location line="+109" />
         <source>Failed to start terminal process. The stub exited before the inferior was started.</source>
-        <translation>Dh'fhàillig tòiseachadh air pròiseas crìochnachaidh. Chaidh an stub a chuir a-mach mus deach an ìochdaranach a thòiseachadh.</translation>
+        <translation>Dh&apos;fhàillig tòiseachadh air pròiseas crìochnachaidh. Chaidh an stub a chuir a-mach mus deach an ìochdaranach a thòiseachadh.</translation>
     </message>
     <message>
         <location line="+60" />
-        <source>Cannot set permissions on temporary directory "%1": %2</source>
-        <translation>Cha ghabh ceadan a shuidheachadh air eòlaire sealach "%1":%2</translation>
+        <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
+        <translation>Cha ghabh ceadan a shuidheachadh air eòlaire sealach &quot;%1&quot;:%2</translation>
     </message>
     <message>
-        <source>The process "%1" could not be started: %2</source>
-        <translation type="vanished">Cha b' urrainn dhuinn am pròiseas "%1" a thòiseachadh: %2</translation>
+        <source>The process &quot;%1&quot; could not be started: %2</source>
+        <translation type="vanished">Cha b&apos; urrainn dhuinn am pròiseas &quot;%1&quot; a thòiseachadh: %2</translation>
     </message>
     <message>
         <source>Quoting error in command.</source>
-        <translation type="vanished">A 'toirt iomradh air mearachd san àithne.</translation>
+        <translation type="vanished">A &apos;toirt iomradh air mearachd san àithne.</translation>
     </message>
     <message>
         <source>Debugging complex shell commands in a terminal is currently not supported.</source>
@@ -23736,13 +23778,13 @@ Criathrag: %2
         <translation type="vanished">Is dòcha nach e àithne slige a th’ ann an àithne crìochnachaidh.</translation>
     </message>
     <message>
-        <source>Cannot start the terminal emulator "%1", change the setting in the Environment preferences. (%2)</source>
-        <translation type="vanished">Cha b' urrainn dhuinn an emuladair tùrail "%1" a thòiseachadh, atharraich an suidheachadh ann an roghainnean na h-Àrainneachd. (%2)</translation>
+        <source>Cannot start the terminal emulator &quot;%1&quot;, change the setting in the Environment preferences. (%2)</source>
+        <translation type="vanished">Cha b&apos; urrainn dhuinn an emuladair tùrail &quot;%1&quot; a thòiseachadh, atharraich an suidheachadh ann an roghainnean na h-Àrainneachd. (%2)</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Cannot create socket "%1": %2</source>
-        <translation>Cha b' urrainn dhuinn socaid "%1" a chruthachadh: %2</translation>
+        <source>Cannot create socket &quot;%1&quot;: %2</source>
+        <translation>Cha b&apos; urrainn dhuinn socaid &quot;%1&quot; a chruthachadh: %2</translation>
     </message>
     <message>
         <location line="-171" />
@@ -23751,41 +23793,41 @@ Criathrag: %2
     </message>
     <message>
         <source>Cannot obtain a handle to the inferior: %1</source>
-        <translation type="vanished">Cha b' urrainn làmh fhaighinn dhan t-ìseal: %1</translation>
+        <translation type="vanished">Cha b&apos; urrainn làmh fhaighinn dhan t-ìseal: %1</translation>
     </message>
     <message>
         <source>Cannot obtain exit status from inferior: %1</source>
-        <translation type="vanished">Cha b' urrainn dhuinn inbhe fàgail fhaighinn o na h-ìochdraich: %1</translation>
+        <translation type="vanished">Cha b&apos; urrainn dhuinn inbhe fàgail fhaighinn o na h-ìochdraich: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
-        <translation>
-            <numerusform>%1: air a chur dheth. Chaidh %n tachartas a lorg am broinn %2 faidhle.</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+6" />
         <source>%1: %n occurrences found in %2 files.</source>
-        <translation>
-            <numerusform>%1: Chaidh %n tachartas a lorg ann am faidhlichean %2.</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+280" />
         <source>Fi&amp;le pattern:</source>
-        <translation>Pàtran faidhle:</translation>
+        <translation>Pàtran faidh&amp;le:</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Excl&amp;usion pattern:</source>
-        <translation>Pàtran às-dùnadh &amp; cleachdadh:</translation>
+        <translation>Pàtran às-dùnadh &amp;cleachdadh:</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23795,12 +23837,12 @@ Criathrag: %2
     <message>
         <location line="+2" />
         <source>Files with file name or full file path matching any filter are included.</source>
-        <translation>Tha faidhlichean le ainm faidhle no ainm faidhle làn fhaidhle a 'maidseadh sìoltachan sam bith air an toirt a-steach.</translation>
+        <translation>Tha faidhlichean le ainm faidhle no ainm faidhle làn fhaidhle a &apos;maidseadh sìoltachan sam bith air an toirt a-steach.</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Files with file name or full file path matching any filter are excluded.</source>
-        <translation>Bidh faidhlichean le ainm faidhle no ainm faidhle làn fhaidhle a 'maidseadh sìoltachan sam bith.</translation>
+        <translation>Bidh faidhlichean le ainm faidhle no ainm faidhle làn fhaidhle a &apos;maidseadh sìoltachan sam bith.</translation>
     </message>
     <message>
         <source>List of comma separated wildcard filters. Files with file name or full file path matching any filter are included.</source>
@@ -23830,8 +23872,8 @@ Criathrag: %2
     </message>
     <message>
         <location line="+69" />
-        <source>The default suffix if you do not explicitly specify a file extension is ".%1".</source>
-        <translation>'S e ".%1" an iar-leasachan bunaiteach mura sònraich thu leudachan faidhle gu soilleir.</translation>
+        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
+        <translation>&apos;S e &quot;.%1&quot; an iar-leasachan bunaiteach mura sònraich thu leudachan faidhle gu soilleir.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
@@ -23872,51 +23914,51 @@ Criathrag: %2
     </message>
     <message>
         <location line="+176" />
-        <source>The path "%1" expanded to an empty string.</source>
-        <translation>Leudaich an t-slighe "%1" gu sreang falamh.</translation>
+        <source>The path &quot;%1&quot; expanded to an empty string.</source>
+        <translation>Leudaich an t-slighe &quot;%1&quot; gu sreang falamh.</translation>
     </message>
     <message>
         <location line="-72" />
         <location line="+10" />
         <location line="+20" />
-        <source>The path "%1" does not exist.</source>
-        <translation>Chan eil an t-slighe "%1" ann.</translation>
+        <source>The path &quot;%1&quot; does not exist.</source>
+        <translation>Chan eil an t-slighe &quot;%1&quot; ann.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+36" />
-        <source>The path "%1" is not a directory.</source>
-        <translation>Chan e eòlaire a tha san t-slighe "%1".</translation>
+        <source>The path &quot;%1&quot; is not a directory.</source>
+        <translation>Chan e eòlaire a tha san t-slighe &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+10" />
-        <source>The path "%1" is not a file.</source>
-        <translation>Chan e faidhle a tha san t-slighe "%1".</translation>
+        <source>The path &quot;%1&quot; is not a file.</source>
+        <translation>Chan e faidhle a tha san t-slighe &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-4" />
-        <source>The directory "%1" does not exist.</source>
-        <translation>Chan eil am pasgan "%1" ann.</translation>
+        <source>The directory &quot;%1&quot; does not exist.</source>
+        <translation>Chan eil am pasgan &quot;%1&quot; ann.</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>The path "%1" is not an executable file.</source>
-        <translation>Chan e faidhle so-ghnìomhaichte a tha san t-slighe "%1".</translation>
+        <source>The path &quot;%1&quot; is not an executable file.</source>
+        <translation>Chan e faidhle so-ghnìomhaichte a tha san t-slighe &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid path "%1".</source>
-        <translation>Slighe mì-dhligheach "%1".</translation>
+        <source>Invalid path &quot;%1&quot;.</source>
+        <translation>Slighe mì-dhligheach &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1".</source>
-        <translation>Cha ghabh "%1" a chur an gnìomh.</translation>
+        <source>Cannot execute &quot;%1&quot;.</source>
+        <translation>Cha ghabh &quot;%1&quot; a chur an gnìomh.</translation>
     </message>
     <message>
-        <source>Full path: "%1"</source>
-        <translation type="vanished">Slighe slàn: "%1"</translation>
+        <source>Full path: &quot;%1&quot;</source>
+        <translation type="vanished">Slighe slàn: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-58" />
@@ -23956,8 +23998,8 @@ Criathrag: %2
     </message>
     <message>
         <location line="+121" />
-        <source>Directory "%1" will be created.</source>
-        <translation>Thèid eòlaire "%1" a chruthachadh.</translation>
+        <source>Directory &quot;%1&quot; will be created.</source>
+        <translation>Thèid eòlaire &quot;%1&quot; a chruthachadh.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -23976,13 +24018,13 @@ Criathrag: %2
     </message>
     <message>
         <location line="+12" />
-        <source>Invalid character ".".</source>
-        <translation>Caractar mì-dhligheach ".".</translation>
+        <source>Invalid character &quot;.&quot;.</source>
+        <translation>Caractar mì-dhligheach &quot;.&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Invalid character "%1" found.</source>
-        <translation>Caractar mì-dhligheach "%1" air a lorg.</translation>
+        <source>Invalid character &quot;%1&quot; found.</source>
+        <translation>Caractar mì-dhligheach &quot;%1&quot; air a lorg.</translation>
     </message>
     <message>
         <location line="-232" />
@@ -24029,7 +24071,7 @@ Criathrag: %2
     <message>
         <location line="-31" />
         <source>No to All &amp;&amp; &amp;Diff</source>
-        <translation>Chan eil dha na h-Uile &amp;&amp;Diff</translation>
+        <translation>Chan eil &amp;dha na h-Uile &amp;&amp;Diff</translation>
     </message>
     <message>
         <location line="+25" />
@@ -24044,12 +24086,12 @@ Criathrag: %2
     <message>
         <location line="+7" />
         <source>C&amp;lose All</source>
-        <translation>C &amp; caill na h-uile</translation>
+        <translation>C &amp;caill na h-uile</translation>
     </message>
     <message>
         <location line="-3" />
         <source>Save &amp;as...</source>
-        <translation>Sàbhail &amp; mar...</translation>
+        <translation>Sàbhail &amp;mar...</translation>
     </message>
     <message>
         <location line="+5" />
@@ -24062,7 +24104,7 @@ Criathrag: %2
     </message>
     <message>
         <source>Could not save workspace to file %1</source>
-        <translation type="vanished">Cha b' urrainn dhuinn rum-obrach a shàbhaladh dhan fhaidhle %1</translation>
+        <translation type="vanished">Cha b&apos; urrainn dhuinn rum-obrach a shàbhaladh dhan fhaidhle %1</translation>
     </message>
     <message>
         <source>Delete Workspace</source>
@@ -24095,7 +24137,7 @@ Criathrag: %2
     </message>
     <message>
         <source>Could not restore workspace %1</source>
-        <translation type="vanished">Cha b' urrainn dhuinn ionad-obrach %1 a thoirt air ais</translation>
+        <translation type="vanished">Cha b&apos; urrainn dhuinn ionad-obrach %1 a thoirt air ais</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/unarchiver.cpp" line="+112" />
@@ -24105,7 +24147,7 @@ Criathrag: %2
     <message>
         <location line="+11" />
         <source>Could not find any unarchiving executable in PATH (%1).</source>
-        <translation>Cha b' urrainn dhuinn gnìomh dì-thasglann sam bith a lorg ann am PATH (%1).</translation>
+        <translation>Cha b&apos; urrainn dhuinn gnìomh dì-thasglann sam bith a lorg ann am PATH (%1).</translation>
     </message>
     <message>
         <location line="+18" />
@@ -24120,29 +24162,29 @@ Criathrag: %2
     <message>
         <location line="+14" />
         <source>Failed to open output file.</source>
-        <translation>Dh'fhàillig fosgladh faidhle toraidh.</translation>
+        <translation>Dh&apos;fhàillig fosgladh faidhle toraidh.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Failed to write output file.</source>
-        <translation>Dh'fhàillig sgrìobhadh faidhle toraidh.</translation>
+        <translation>Dh&apos;fhàillig sgrìobhadh faidhle toraidh.</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+21" />
         <source>Command failed.</source>
-        <translation>Dh'fhàillig an àithne.</translation>
+        <translation>Dh&apos;fhàillig an àithne.</translation>
     </message>
     <message>
         <location line="-16" />
         <location line="+20" />
         <source>Running %1
-in "%2".
+in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
-        <translation>A' ruith %1
-ann an "%2".
+        <translation>A&apos; ruith %1
+ann an &quot;%2&quot;.
 
 </translation>
     </message>
@@ -24190,12 +24232,12 @@ ann an "%2".
     <message>
         <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
         <source>Do not &amp;ask again</source>
-        <translation>Na bi &amp; faighnich a-rithist</translation>
+        <translation>Na bi &amp;faighnich a-rithist</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Do not &amp;show again</source>
-        <translation>Na &amp; seall a-rithist</translation>
+        <translation>Na &amp;seall a-rithist</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
@@ -24210,7 +24252,7 @@ ann an "%2".
     <message>
         <location line="+1" />
         <source>The clangd version is %1, but %2 or greater is required.</source>
-        <translation>'S e %1 an tionndadh clangd, ach tha %2 no nas motha a dhìth.</translation>
+        <translation>&apos;S e %1 an tionndadh clangd, ach tha %2 no nas motha a dhìth.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/detailsbutton.cpp" line="+73" />
@@ -24218,12 +24260,12 @@ ann an "%2".
         <translation>Mion-fhiosrachadh</translation>
     </message>
     <message>
-        <source>copyFile is not implemented for "%1"</source>
-        <translation type="vanished">chan eil copyFile an sàs airson "%1"</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">chan eil copyFile an sàs airson &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Cannot copy from %1, it is not a directory.</source>
-        <translation type="vanished">Cha ghabh lethbhreac a dhèanamh o %1, chan e eòlaire a th' ann.</translation>
+        <translation type="vanished">Cha ghabh lethbhreac a dhèanamh o %1, chan e eòlaire a th&apos; ann.</translation>
     </message>
     <message>
         <source>Cannot copy %1 to %2, it is not a writable directory.</source>
@@ -24231,61 +24273,61 @@ ann an "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to create tar archive from source: %3</source>
-        <translation>Dh'fhàillig lethbhreac a dhèanamh a-rithist o "%1" gu "%2" fhad 's a bha sinn a' feuchainn ri tasglann teàrr a chruthachadh on tùs: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
+        <translation>Dh&apos;fhàillig lethbhreac a dhèanamh a-rithist o &quot;%1&quot; gu &quot;%2&quot; fhad &apos;s a bha sinn a&apos; feuchainn ri tasglann teàrr a chruthachadh on tùs: %3</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to extract tar archive to target: %3</source>
-        <translation>Dh'fhàillig lethbhreac a dhèanamh a-rithist o "%1" gu "%2" fhad 's a bha sinn a' feuchainn ri tasglann teàrr a tharraing dhan targaid: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
+        <translation>Dh&apos;fhàillig lethbhreac a dhèanamh a-rithist o &quot;%1&quot; gu &quot;%2&quot; fhad &apos;s a bha sinn a&apos; feuchainn ri tasglann teàrr a tharraing dhan targaid: %3</translation>
     </message>
     <message>
-        <source>fileContents is not implemented for "%1"</source>
-        <translation type="vanished">chan eil susbaint an fhaidhle gnìomhach airson "%1"</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">chan eil susbaint an fhaidhle gnìomhach airson &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>writeFileContents is not implemented for "%1"</source>
-        <translation type="vanished">chan eil writeFileContents 'ga chur an gnìomh airson "%1"</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">chan eil writeFileContents &apos;ga chur an gnìomh airson &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>createTempFile is not implemented for "%1"</source>
-        <translation type="vanished">chan eil createTempFile 'ga chur an gnìomh airson "%1"</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">chan eil createTempFile &apos;ga chur an gnìomh airson &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-139" />
         <location line="+409" />
-        <source>Path "%1" exists but is not a writable directory.</source>
-        <translation>Tha an t-slighe "%1" ann ach chan e eòlaire a tha sgrìobhte.</translation>
+        <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
+        <translation>Tha an t-slighe &quot;%1&quot; ann ach chan e eòlaire a tha sgrìobhte.</translation>
     </message>
     <message>
         <location line="-356" />
-        <source>copyFile is not implemented for "%1".</source>
-        <translation>chan eil copyfile air a bhuileachadh airson "%1".</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;.</source>
+        <translation>chan eil copyfile air a bhuileachadh airson &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+30" />
-        <source>Cannot copy from "%1", it is not a directory.</source>
-        <translation>Chan urrainn dhaibh lethbhreac a dhèanamh bho "%1", chan e eòlaire a th 'ann.</translation>
+        <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
+        <translation>Chan urrainn dhaibh lethbhreac a dhèanamh bho &quot;%1&quot;, chan e eòlaire a th &apos;ann.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Cannot copy "%1" to "%2": %3</source>
-        <translation>Chan urrainn dhaibh "%1 1" a chopaigeadh gu "%2":%3</translation>
+        <source>Cannot copy &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Chan urrainn dhaibh &quot;%1 1&quot; a chopaigeadh gu &quot;%2&quot;:%3</translation>
     </message>
     <message>
         <location line="+103" />
-        <source>fileContents is not implemented for "%1".</source>
-        <translation>Chan eil faidhle faidhle air a bhuileachadh airson "%1".</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>Chan eil faidhle faidhle air a bhuileachadh airson &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for "%1".</source>
-        <translation>Chan eil luchd-labhairt a 'cur an gnìomh airson "%1".</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>Chan eil luchd-labhairt a &apos;cur an gnìomh airson &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+66" />
-        <source>createTempFile is not implemented for "%1".</source>
-        <translation>Chan eil eòlaiche Enetempfile air a bhuileachadh airson "%1".</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation>Chan eil eòlaiche Enetempfile air a bhuileachadh airson &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24294,98 +24336,98 @@ ann an "%2".
     </message>
     <message>
         <location line="+180" />
-        <source>Refusing to remove the standard directory "%1".</source>
-        <translation>A 'diùltadh an eòlaire àbhaisteach "%1" a thoirt air falbh.</translation>
+        <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
+        <translation>A &apos;diùltadh an eòlaire àbhaisteach &quot;%1&quot; a thoirt air falbh.</translation>
     </message>
     <message>
         <location line="+12" />
         <source>Refusing to remove root directory.</source>
-        <translation>A' diùltadh am pasgan root a thoirt air falbh.</translation>
+        <translation>A&apos; diùltadh am pasgan root a thoirt air falbh.</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Refusing to remove your home directory.</source>
-        <translation>A' diùltadh an eòlaire dachaigh agad a thoirt air falbh.</translation>
+        <translation>A&apos; diùltadh an eòlaire dachaigh agad a thoirt air falbh.</translation>
     </message>
     <message>
         <location line="+37" />
-        <source>Failed to remove directory "%1".</source>
-        <translation>Dh'fhàillig toirt air falbh am pasgan "%1".</translation>
+        <source>Failed to remove directory &quot;%1&quot;.</source>
+        <translation>Dh&apos;fhàillig toirt air falbh am pasgan &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Failed to remove file "%1".</source>
-        <translation>Dh'fhàillig toirt air falbh am faidhle "%1".</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>Dh&apos;fhàillig toirt air falbh am faidhle &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+551" />
-        <source>Failed creating temporary file "%1" (too many tries).</source>
-        <translation>Dh'fhàillig a bhith a 'cruthachadh faidhle sealach "%1" (tòrr oidhirpean).</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
+        <translation>Dh&apos;fhàillig a bhith a &apos;cruthachadh faidhle sealach &quot;%1&quot; (tòrr oidhirpean).</translation>
     </message>
     <message>
-        <source>Failed to copy file "%1" to "%2".</source>
-        <translation type="vanished">Dh'fhàillig lethbhreac a dhèanamh dhen fhaidhle "%1" gu "%2".</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation type="vanished">Dh&apos;fhàillig lethbhreac a dhèanamh dhen fhaidhle &quot;%1&quot; gu &quot;%2&quot;.</translation>
     </message>
     <message>
-        <source>File "%1" does not exist</source>
-        <translation type="vanished">Chan eil am faidhle "%1" ann</translation>
+        <source>File &quot;%1&quot; does not exist</source>
+        <translation type="vanished">Chan eil am faidhle &quot;%1&quot; ann</translation>
     </message>
     <message>
-        <source>Could not open File "%1"</source>
-        <translation type="vanished">Cha b' urrainn dhuinn am faidhle "%1" fhosgladh</translation>
+        <source>Could not open File &quot;%1&quot;</source>
+        <translation type="vanished">Cha b&apos; urrainn dhuinn am faidhle &quot;%1&quot; fhosgladh</translation>
     </message>
     <message>
         <location line="-449" />
-        <source>Cannot read "%1": %2</source>
-        <translation>Cha ghabh "%1" a leughadh: %2</translation>
+        <source>Cannot read &quot;%1&quot;: %2</source>
+        <translation>Cha ghabh &quot;%1&quot; a leughadh: %2</translation>
     </message>
     <message>
-        <source>Could not open file "%1" for writing</source>
-        <translation type="vanished">Cha b' urrainn dhuinn am faidhle "%1" fhosgladh airson sgrìobhadh</translation>
+        <source>Could not open file &quot;%1&quot; for writing</source>
+        <translation type="vanished">Cha b&apos; urrainn dhuinn am faidhle &quot;%1&quot; fhosgladh airson sgrìobhadh</translation>
     </message>
     <message>
-        <source>Could not write to file "%1" (only %2 of %3 bytes written)</source>
-        <translation type="vanished">Cha b' urrainn dhuinn sgrìobhadh dhan fhaidhle "%1" (dìreach %2 à %3 byte sgrìobhte)</translation>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
+        <translation type="vanished">Cha b&apos; urrainn dhuinn sgrìobhadh dhan fhaidhle &quot;%1&quot; (dìreach %2 à %3 byte sgrìobhte)</translation>
     </message>
     <message>
-        <source>Could not create temporary file in "%1" (%2)</source>
-        <translation type="vanished">Cha b' urrainn dhuinn faidhle sealach a chruthachadh ann an "%1" (%2)</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
+        <translation type="vanished">Cha b&apos; urrainn dhuinn faidhle sealach a chruthachadh ann an &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="-87" />
         <location line="+406" />
-        <source>Failed to copy file "%1" to "%2": %3</source>
-        <translation>Dh'fhàillig lethbhreac a dhèanamh dhen fhaidhle "%1" gu "%2": %3</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Dh&apos;fhàillig lethbhreac a dhèanamh dhen fhaidhle &quot;%1&quot; gu &quot;%2&quot;: %3</translation>
     </message>
     <message>
         <location line="-333" />
-        <source>File "%1" does not exist.</source>
-        <translation>Chan eil faidhle "%1" ann.</translation>
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>Chan eil faidhle &quot;%1&quot; ann.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File "%1".</source>
-        <translation>Cha b 'urrainn dhuinn faidhle fhosgladh "%1".</translation>
+        <source>Could not open File &quot;%1&quot;.</source>
+        <translation>Cha b &apos;urrainn dhuinn faidhle fhosgladh &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Could not open file "%1" for writing.</source>
-        <translation>Cha b 'urrainn dhuinn faidhle fhosgladh "%1" airson sgrìobhadh.</translation>
+        <source>Could not open file &quot;%1&quot; for writing.</source>
+        <translation>Cha b &apos;urrainn dhuinn faidhle fhosgladh &quot;%1&quot; airson sgrìobhadh.</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
-        <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
-        <translation>
-            <numerusform>Cha b 'urrainn dhaibh sgrìobhadh chun fhaidhle "%1" (dìreach%2 de% n byte (ean) sgrìobhte air an sgrìobhadh).</numerusform>
-            <numerusform>Cha b 'urrainn dhaibh sgrìobhadh chun fhaidhle "%1" (dìreach%2 de% n byte (ean) sgrìobhte air an sgrìobhadh).</numerusform>
-            <numerusform />
-            <numerusform />
+        <source>Could not write to file &quot;%1&quot; (only %2 of %n byte(s) written).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Could not create temporary file in "%1" (%2).</source>
-        <translation>Cha b 'urrainn dhaibh faidhle sealach a chruthachadh ann an "%1" (%2).</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2).</source>
+        <translation>Cha b &apos;urrainn dhaibh faidhle sealach a chruthachadh ann an &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location line="+138" />
@@ -24394,22 +24436,22 @@ ann an "%2".
     </message>
     <message>
         <location line="+202" />
-        <source>Failed reading file "%1": %2</source>
-        <translation>Dh'fhàillig leughadh an fhaidhle "%1": %2</translation>
+        <source>Failed reading file &quot;%1&quot;: %2</source>
+        <translation>Dh&apos;fhàillig leughadh an fhaidhle &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Failed writing file "%1": %2</source>
-        <translation>Dh'fhàillig sgrìobhadh an fhaidhle "%1": %2</translation>
+        <source>Failed writing file &quot;%1&quot;: %2</source>
+        <translation>Dh&apos;fhàillig sgrìobhadh an fhaidhle &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Failed creating temporary file "%1": %2</source>
-        <translation>Dh'fhàillig cruthachadh faidhle sealach "%1": %2</translation>
+        <source>Failed creating temporary file &quot;%1&quot;: %2</source>
+        <translation>Dh&apos;fhàillig cruthachadh faidhle sealach &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>Failed creating temporary file "%1" (too many tries)</source>
-        <translation type="vanished">Dh'fhàillig cruthachadh faidhle sealach "%1" (cus oidhirpean)</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
+        <translation type="vanished">Dh&apos;fhàillig cruthachadh faidhle sealach &quot;%1&quot; (cus oidhirpean)</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
@@ -24428,18 +24470,18 @@ ann an "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/elfreader.cpp" line="+130" />
-        <source>"%1" is an invalid ELF object (%2)</source>
-        <translation>Tha "%1" 'na nì ELF mì-dhligheach (%2)</translation>
+        <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
+        <translation>Tha &quot;%1&quot; &apos;na nì ELF mì-dhligheach (%2)</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>"%1" is not an ELF object (file too small)</source>
-        <translation>Chan e nì ELF a th' ann an "%1" (faidhle ro bheag)</translation>
+        <source>&quot;%1&quot; is not an ELF object (file too small)</source>
+        <translation>Chan e nì ELF a th&apos; ann an &quot;%1&quot; (faidhle ro bheag)</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>"%1" is not an ELF object</source>
-        <translation>Chan e oibseact ELF a tha ann an "%1".</translation>
+        <source>&quot;%1&quot; is not an ELF object</source>
+        <translation>Chan e oibseact ELF a tha ann an &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -24464,11 +24506,11 @@ ann an "%2".
     <message numerus="yes">
         <location line="+9" />
         <source>announced %n sections, each %1 bytes, exceed file size</source>
-        <translation>
-            <numerusform>dh’ainmich %n earrann, gach %1 byte, nas àirde na meud an fhaidhle</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -24493,14 +24535,14 @@ To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-To disable a variable, prefix the line with "#".</source>
+To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="vanished">Cuir a-steach aon caochladair àrainneachd airson gach loidhne.
 Airson caochladair a shuidheachadh no atharrachadh, cleachd VARIABLE=VALUE.
 Gus ceangal a dhèanamh ri caochladair, cleachd VARIABLE+=VALUE.
 Airson ro-shealladh air caochladair, cleachd VARIABLE = + VALUE.
 Faodar iomradh a thoirt air caochladairean gnàthaichte ann an VALUE le ${OTHER}.
 Gus caochladair a ghlanadh, cuir a h-ainm air loidhne gun dad sam bith eile air.
-Gus caochladair a dhì-cheadachadh, cuir "#" air an loidhne.</translation>
+Gus caochladair a dhì-cheadachadh, cuir &quot;#&quot; air an loidhne.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
@@ -24540,13 +24582,13 @@ Gus caochladair a dhì-cheadachadh, cuir "#" air an loidhne.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Invalid character "%1".</source>
-        <translation>Caractar mì-dhligheach "%1".</translation>
+        <source>Invalid character &quot;%1&quot;.</source>
+        <translation>Caractar mì-dhligheach &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid characters "%1".</source>
-        <translation>Caractaran mì-dhligheach "%1".</translation>
+        <source>Invalid characters &quot;%1&quot;.</source>
+        <translation>Caractaran mì-dhligheach &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -24578,21 +24620,21 @@ Gus caochladair a dhì-cheadachadh, cuir "#" air an loidhne.</translation>
     <message>
         <location line="+869" />
         <source>Error while trying to copy file: %1</source>
-        <translation>Thachair mearachd fhad 's a bha sinn a' feuchainn ri lethbhreac a dhèanamh dhen fhaidhle: %1</translation>
+        <translation>Thachair mearachd fhad &apos;s a bha sinn a&apos; feuchainn ri lethbhreac a dhèanamh dhen fhaidhle: %1</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Could not copy file: %1</source>
-        <translation>Cha b' urrainn dhuinn lethbhreac a dhèanamh dhen fhaidhle: %1</translation>
+        <translation>Cha b&apos; urrainn dhuinn lethbhreac a dhèanamh dhen fhaidhle: %1</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Could not set permissions on "%1"</source>
-        <translation>Cha b' urrainn dhuinn ceadan a shuidheachadh air "%1"</translation>
+        <source>Could not set permissions on &quot;%1&quot;</source>
+        <translation>Cha b&apos; urrainn dhuinn ceadan a shuidheachadh air &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+250" />
-        <source>No "localSource" device hook set.</source>
+        <source>No &quot;localSource&quot; device hook set.</source>
         <translation>Chan eil dubhan inneal “localSource” air a shuidheachadh.</translation>
     </message>
     <message>
@@ -24645,7 +24687,7 @@ Gus caochladair a dhì-cheadachadh, cuir "#" air an loidhne.</translation>
     <message>
         <location line="+38" />
         <source>%1: Is a reserved filename on Windows. Cannot save.</source>
-        <translation>%1: 'S e ainm faidhle glèidhte air Windows. Chan urrainn a shàbhaladh.</translation>
+        <translation>%1: &apos;S e ainm faidhle glèidhte air Windows. Chan urrainn a shàbhaladh.</translation>
     </message>
     <message>
         <location line="+24" />
@@ -24675,20 +24717,20 @@ Gus caochladair a dhì-cheadachadh, cuir "#" air an loidhne.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Overwrite existing file "%1"?</source>
-        <translation>A bheil thu airson sgrìobhadh thairis air an fhaidhle "%1" a tha ann mu thràth?</translation>
+        <source>Overwrite existing file &quot;%1&quot;?</source>
+        <translation>A bheil thu airson sgrìobhadh thairis air an fhaidhle &quot;%1&quot; a tha ann mu thràth?</translation>
     </message>
     <message>
         <location line="+21" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>Cha b' urrainn dhuinn lethbhreac a dhèanamh dhen fhaidhle "%1" gu "%2".</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>Cha b&apos; urrainn dhuinn lethbhreac a dhèanamh dhen fhaidhle &quot;%1&quot; gu &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
         <location line="+409" />
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
-        <source>Failed to create directory "%1".</source>
-        <translation>Dh'fhàillig cruthachadh eòlaire "%1".</translation>
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>Dh&apos;fhàillig cruthachadh eòlaire &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
@@ -24749,22 +24791,22 @@ Gus caochladair a dhì-cheadachadh, cuir "#" air an loidhne.</translation>
         <location line="+14" />
         <location line="+2" />
         <source>%n Items</source>
-        <translation>
-            <numerusform>%n Rudan</numerusform>
-            <numerusform />
-            <numerusform />
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
-        <source>Failed to start process launcher at "%1": %2</source>
-        <translation>Dh'fhàillig tòiseachadh leis a' phròiseas tòiseachaidh aig "%1": %2</translation>
+        <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
+        <translation>Dh&apos;fhàillig tòiseachadh leis a&apos; phròiseas tòiseachaidh aig &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Process launcher closed unexpectedly: %1</source>
-        <translation>Dhùin lannsair a' phròiseis gun dùil: %1</translation>
+        <translation>Dhùin lannsair a&apos; phròiseis gun dùil: %1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/launchersocket.cpp" line="+222" />
@@ -24784,12 +24826,12 @@ Gus caochladair a dhì-cheadachadh, cuir "#" air an loidhne.</translation>
     <message>
         <location line="+10" />
         <source>Internal protocol error: invalid packet size %1.</source>
-        <translation>Mearachd a' phròtacail a-staigh: meud pacaid mì-dhligheach %1.</translation>
+        <translation>Mearachd a&apos; phròtacail a-staigh: meud pacaid mì-dhligheach %1.</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Internal protocol error: invalid packet type %1.</source>
-        <translation>Mearachd a' phròtacail a-staigh: seòrsa pacaid mì-dhligheach %1.</translation>
+        <translation>Mearachd a&apos; phròtacail a-staigh: seòrsa pacaid mì-dhligheach %1.</translation>
     </message>
     <message>
         <location line="+14" />
@@ -24804,7 +24846,7 @@ Gus caochladair a dhì-cheadachadh, cuir "#" air an loidhne.</translation>
     <message>
         <location line="+127" />
         <source>%1: Full path including file name.</source>
-        <translation>%1: Slighe shlàn a' gabhail a-steach ainm an fhaidhle.</translation>
+        <translation>%1: Slighe shlàn a&apos; gabhail a-steach ainm an fhaidhle.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -24814,7 +24856,7 @@ Gus caochladair a dhì-cheadachadh, cuir "#" air an loidhne.</translation>
     <message>
         <location line="+6" />
         <source>%1: Full path including file name, with native path separator (backslash on Windows).</source>
-        <translation>%1: Slighe slàn a' gabhail a-steach ainm an fhaidhle, le dealaiche slighe dùthchasach (backslash air Windows).</translation>
+        <translation>%1: Slighe slàn a&apos; gabhail a-steach ainm an fhaidhle, le dealaiche slighe dùthchasach (backslash air Windows).</translation>
     </message>
     <message>
         <location line="+8" />
@@ -24875,20 +24917,20 @@ Gus caochladair a dhì-cheadachadh, cuir "#" air an loidhne.</translation>
         <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
-To disable a variable, prefix this line with "#".
+To disable a variable, prefix this line with &quot;#&quot;.
 To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-Lines starting with "##" will be treated as comments.</source>
+Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Cuir a-steach aon àrainneachd caochlaideach gach loidhne.
  Gus caochladair a shuidheachadh no atharrachadh, caochlaideach = luach.
- Gus caochladair a chuir dheth, ro-leasachan seo le "#".
- Gus pàipear a chuir a-steach, a 'cleachdadh caochlaideach + = luach.
+ Gus caochladair a chuir dheth, ro-leasachan seo le &quot;#&quot;.
+ Gus pàipear a chuir a-steach, a &apos;cleachdadh caochlaideach + = luach.
  Gus faighinn a-steach gu caochladair, cleachd caochlaideach = + luach.
  Faodar iomradh a thoirt air caochladaireachd a tha ann mu thràth ann an luach le $ {eile}.
  Gus caochladair a ghlanadh, cuir ainm air loidhne gun dad eile air.
- Thèid dèiligeadh ri loidhnichean a tha a 'tòiseachadh le "##" mar bheachdan.</translation>
+ Thèid dèiligeadh ri loidhnichean a tha a &apos;tòiseachadh le &quot;##&quot; mar bheachdan.</translation>
     </message>
     <message>
         <location line="+112" />
@@ -24907,33 +24949,33 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+29" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>Chan eil am prògram "%1" ann no chan eil e comasach a chur an gnìomh.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>Chan eil am prògram &quot;%1&quot; ann no chan eil e comasach a chur an gnìomh.</translation>
     </message>
     <message>
         <location line="+79" />
-        <source>The program "%1" could not be found.</source>
-        <translation>Cha b 'urrainnear am prògram "%1 1" a lorg.</translation>
+        <source>The program &quot;%1&quot; could not be found.</source>
+        <translation>Cha b &apos;urrainnear am prògram &quot;%1 1&quot; a lorg.</translation>
     </message>
     <message>
         <location line="+908" />
-        <source>Failed to create process interface for "%1".</source>
-        <translation>Dh'fhàillig cruthachadh eadar-aghaidh pròiseas airson "%1".</translation>
+        <source>Failed to create process interface for &quot;%1&quot;.</source>
+        <translation>Dh&apos;fhàillig cruthachadh eadar-aghaidh pròiseas airson &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+163" />
         <source>Process Not Responding</source>
-        <translation>Pròiseas nach eil a 'freagairt</translation>
+        <translation>Pròiseas nach eil a &apos;freagairt</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The process is not responding.</source>
-        <translation>Chan eil am pròiseas a 'freagairt.</translation>
+        <translation>Chan eil am pròiseas a &apos;freagairt.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The process "%1" is not responding.</source>
-        <translation>Chan eil am pròiseas "%1" a' freagairt.</translation>
+        <source>The process &quot;%1&quot; is not responding.</source>
+        <translation>Chan eil am pròiseas &quot;%1&quot; a&apos; freagairt.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -24942,32 +24984,32 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+233" />
-        <source>The command "%1" finished successfully.</source>
-        <translation>Chrìochnaich an àithne "%1" gu soirbheachail.</translation>
+        <source>The command &quot;%1&quot; finished successfully.</source>
+        <translation>Chrìochnaich an àithne &quot;%1&quot; gu soirbheachail.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated with exit code %2.</source>
-        <translation>Chrìochnaich an àithne "%1" le còd fàgail %2.</translation>
+        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
+        <translation>Chrìochnaich an àithne &quot;%1&quot; le còd fàgail %2.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated abnormally.</source>
-        <translation>Chrìochnaich an àithne "%1" gu mì-àbhaisteach.</translation>
+        <source>The command &quot;%1&quot; terminated abnormally.</source>
+        <translation>Chrìochnaich an àithne &quot;%1&quot; gu mì-àbhaisteach.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" could not be started.</source>
-        <translation>Cha b' urrainn dhuinn an àithne "%1" a thòiseachadh.</translation>
+        <source>The command &quot;%1&quot; could not be started.</source>
+        <translation>Cha b&apos; urrainn dhuinn an àithne &quot;%1&quot; a thòiseachadh.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>The command "%1" was canceled after %2 ms.</source>
-        <translation>Chaidh an àithne "%1" a chuir dheth às deidh%2 ms.</translation>
+        <source>The command &quot;%1&quot; was canceled after %2 ms.</source>
+        <translation>Chaidh an àithne &quot;%1&quot; a chuir dheth às deidh%2 ms.</translation>
     </message>
     <message>
-        <source>The command "%1" did not respond within the timeout limit (%2 s).</source>
-        <translation type="vanished">Cha do fhreagair an àithne "%1" taobh a-staigh a' chrìoch ùine (%2s).</translation>
+        <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
+        <translation type="vanished">Cha do fhreagair an àithne &quot;%1&quot; taobh a-staigh a&apos; chrìoch ùine (%2s).</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
@@ -25002,18 +25044,18 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+114" />
         <source>Failed to Read File</source>
-        <translation>Dh'fhàillig Leughadh an Fhaidhle</translation>
+        <translation>Dh&apos;fhàillig Leughadh an Fhaidhle</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open "%1".</source>
-        <translation>Cha b' urrainn dhuinn "%1" fhosgladh.</translation>
+        <source>Could not open &quot;%1&quot;.</source>
+        <translation>Cha b&apos; urrainn dhuinn &quot;%1&quot; fhosgladh.</translation>
     </message>
     <message>
         <location line="+23" />
         <location line="+10" />
         <source>Failed to Write File</source>
-        <translation>Dh'fhàillig sgrìobhadh an fhaidhle</translation>
+        <translation>Dh&apos;fhàillig sgrìobhadh an fhaidhle</translation>
     </message>
     <message>
         <location line="-9" />
@@ -25028,33 +25070,33 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="-264" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Cha deach faidhle roghainnean dligheach a lorg.&lt;/p&gt;&lt;p&gt;Bha a h-uile faidhle roghainnean a chaidh a lorg san eòlaire "%1" mì-fhreagarrach airson an tionndadh làithreach de %2, mar eisimpleir a chionn 's gun deach an sgrìobhadh le tionndadh neo-chòrdail de %2, no a chionn 's gun deach slighe roghainnean eile a chleachdadh.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Cha deach faidhle roghainnean dligheach a lorg.&lt;/p&gt;&lt;p&gt;Bha a h-uile faidhle roghainnean a chaidh a lorg san eòlaire &quot;%1&quot; mì-fhreagarrach airson an tionndadh làithreach de %2, mar eisimpleir a chionn &apos;s gun deach an sgrìobhadh le tionndadh neo-chòrdail de %2, no a chionn &apos;s gun deach slighe roghainnean eile a chleachdadh.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+265" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were either too new or too old to be read.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Cha deach faidhle roghainnean dligheach a lorg.&lt;/p&gt;&lt;p&gt;Bha a h-uile faidhle roghainnean a chaidh a lorg san eòlaire "%1" an dara cuid ro ùr no ro shean airson a leughadh.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Cha deach faidhle roghainnean dligheach a lorg.&lt;/p&gt;&lt;p&gt;Bha a h-uile faidhle roghainnean a chaidh a lorg san eòlaire &quot;%1&quot; an dara cuid ro ùr no ro shean airson a leughadh.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Using Old Settings</source>
-        <translation>A 'cleachdadh seann shuidheachaidhean</translation>
+        <translation>A &apos;cleachdadh seann shuidheachaidhean</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>&lt;p&gt;The versioned backup "%1" of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Tha an dreach lethbhreac-glèidhidh "%1" dhen fhaidhle roghainnean a chleachdadh a chionn 's gun deach am faidhle a chruthachadh le tionndadh neo-chòrdail de %2.&lt;/p&gt;&lt;p&gt;Roghainnean na h-atharraichean a chaidh a dhèanamh on turas mu dheireadh a chaidh an tionndadh seo de Chaidh %2 a chleachdadh agus cha tèid na h-atharraichean a chaidh a dhèanamh an-dràsta &lt;b&gt;&lt;/b&gt; a ghluasad dhan tionndadh as ùire.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;The versioned backup &quot;%1&quot; of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Tha an dreach lethbhreac-glèidhidh &quot;%1&quot; dhen fhaidhle roghainnean a chleachdadh a chionn &apos;s gun deach am faidhle a chruthachadh le tionndadh neo-chòrdail de %2.&lt;/p&gt;&lt;p&gt;Roghainnean na h-atharraichean a chaidh a dhèanamh on turas mu dheireadh a chaidh an tionndadh seo de Chaidh %2 a chleachdadh agus cha tèid na h-atharraichean a chaidh a dhèanamh an-dràsta &lt;b&gt;&lt;/b&gt; a ghluasad dhan tionndadh as ùire.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Settings File for "%1" from a Different Environment?</source>
-        <translation>Faidhle nan roghainnean airson "%1" à àrainneachd eadar-dhealaichte?</translation>
+        <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
+        <translation>Faidhle nan roghainnean airson &quot;%1&quot; à àrainneachd eadar-dhealaichte?</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file "%2"?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Cha deach faidhle roghainnean a chruthachadh leis an t-eisimpleir seo de %1 a lorg.&lt;/p&gt;&lt;p&gt;An do dh'obraich thu leis a' phròiseact seo air inneal eile no a' cleachdadh slighe roghainnean eile roimhe seo?&lt;/p&gt;&lt;p&gt;A bheil thu fhathast ag iarraidh faidhle nan roghainnean "%2" a luchdadh?&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file &quot;%2&quot;?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Cha deach faidhle roghainnean a chruthachadh leis an t-eisimpleir seo de %1 a lorg.&lt;/p&gt;&lt;p&gt;An do dh&apos;obraich thu leis a&apos; phròiseact seo air inneal eile no a&apos; cleachdadh slighe roghainnean eile roimhe seo?&lt;/p&gt;&lt;p&gt;A bheil thu fhathast ag iarraidh faidhle nan roghainnean &quot;%2&quot; a luchdadh?&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+55" />
@@ -25063,8 +25105,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" is not supported by %2. Do you want to try loading it anyway?</source>
-        <translation>Chan eil "%1" a' cur taic ri %2. A bheil thu airson feuchainn ri a luchdachadh co-dhiù?</translation>
+        <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
+        <translation>Chan eil &quot;%1&quot; a&apos; cur taic ri %2. A bheil thu airson feuchainn ri a luchdachadh co-dhiù?</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/aspects.cpp" line="+92" />
@@ -25119,7 +25161,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellpacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Caochlaideach&lt;/th&gt;&lt;th&gt;A’ leudachadh gu&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td &gt;eòlaire an fhaidhle làithreach&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; %f&lt;/td&gt;&lt;td&gt; ainm an fhaidhle (le slighe slàn)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; % n&lt;/td&gt;&lt;td&gt;ainm an fhaidhle (gun slighe)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
@@ -25139,8 +25181,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+3" />
         <location line="+7" />
-        <source>Insert "%1"</source>
-        <translation>Cuir a-steach "%1"</translation>
+        <source>Insert &quot;%1&quot;</source>
+        <translation>Cuir a-steach &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-3" />
@@ -25165,60 +25207,60 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/deviceshell.cpp" line="+189" />
         <source>The process failed to start.</source>
-        <translation>Cha do thòisich am pròiseas a 'tòiseachadh.</translation>
+        <translation>Cha do thòisich am pròiseas a &apos;tòiseachadh.</translation>
     </message>
     <message>
         <location line="+34" />
         <source>Failed to install shell script: %1
 %2</source>
-        <translation>Dh'fhàillig a chuir a-steach sgriobt sheilc:%1
+        <translation>Dh&apos;fhàillig a chuir a-steach sgriobt sheilc:%1
  %2</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Timeout while trying to check for %1.</source>
-        <translation>Ùine fhad 's a tha thu a' feuchainn ri sgrùdadh airson%1.</translation>
+        <translation>Ùine fhad &apos;s a tha thu a&apos; feuchainn ri sgrùdadh airson%1.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Command "%1" was not found.</source>
-        <translation>Cha deach an àithne "%1" a lorg.</translation>
+        <source>Command &quot;%1&quot; was not found.</source>
+        <translation>Cha deach an àithne &quot;%1&quot; a lorg.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Script installation was forced to fail.</source>
-        <translation>B 'fheudar do stàladh sgriobt fàiligeadh.</translation>
+        <translation>B &apos;fheudar do stàladh sgriobt fàiligeadh.</translation>
     </message>
     <message>
         <location line="+26" />
         <source>Timeout while waiting for shell script installation.</source>
-        <translation>Ùine fhad 's a tha thu a' feitheamh ri stàladh sgriobt slige.</translation>
+        <translation>Ùine fhad &apos;s a tha thu a&apos; feitheamh ri stàladh sgriobt slige.</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Failed to install shell script: %1</source>
-        <translation>Dh'fhàillig a chuir a-steach sgriobt sheilc:%1</translation>
+        <translation>Dh&apos;fhàillig a chuir a-steach sgriobt sheilc:%1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/externalterminalprocessimpl.cpp" line="+124" />
         <source>Failed to open temporary script file.</source>
-        <translation>Dh'fhàillig fosgladh faidhle sgriobt sealach fosgailte.</translation>
+        <translation>Dh&apos;fhàillig fosgladh faidhle sgriobt sealach fosgailte.</translation>
     </message>
     <message>
         <location line="+28" />
         <location line="+45" />
-        <source>Failed to start terminal process: "%1".</source>
-        <translation>Dh'fhàillig tòiseachadh air Pròiseas Crìochachaidh: "%1".</translation>
+        <source>Failed to start terminal process: &quot;%1&quot;.</source>
+        <translation>Dh&apos;fhàillig tòiseachadh air Pròiseas Crìochachaidh: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
         <source>Failed copying file.</source>
-        <translation>Faidhle copaidh a dh 'fhàillig.</translation>
+        <translation>Faidhle copaidh a dh &apos;fhàillig.</translation>
     </message>
     <message>
         <location line="+24" />
         <source>Failed reading file.</source>
-        <translation>Dh'fhàillig faidhle leughaidh.</translation>
+        <translation>Dh&apos;fhàillig faidhle leughaidh.</translation>
     </message>
     <message>
         <location line="+26" />
@@ -25248,7 +25290,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/terminalhooks.cpp" line="+30" />
         <source>Could not find any shell.</source>
-        <translation>Cha b 'urrainn dhuinn slige sam bith a lorg.</translation>
+        <translation>Cha b &apos;urrainn dhuinn slige sam bith a lorg.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+160" />
@@ -25260,9 +25302,9 @@ Lines starting with "##" will be treated as comments.</source>
     <name>TextEditor::Internal::Snippets</name>
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippetscollection.cpp" line="-255" />
-        <source />
+        <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
-        <translation />
+        <translation></translation>
     </message>
 </context>
 </TS>

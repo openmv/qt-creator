@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+838" />
         <source>Copy</source>
         <translation>کپی کنید</translation>
     </message>
@@ -30,82 +30,82 @@
         <translation>تنظیمات دوربین OpenMV</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Turn on WiFi Shield on startup</source>
         <translation>هنگام راه اندازی WiFi Shield را روشن کنید</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Client Mode (Normal)</source>
         <translation>حالت مشتری (عادی)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Password</source>
         <translation>کلمه عبور</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter your WiFi network password here</source>
         <translation>لطفا رمز عبور شبکه وای فای خود را در اینجا وارد کنید</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Type</source>
         <translation>تایپ کنید</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Open (No password)</source>
         <translation>باز کردن (بدون رمز عبور)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WPA (Modern WiFi Security)</source>
         <translation>WPA (امنیت WiFi مدرن)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WEP (Hexadecimal password)</source>
         <translation>WEP (رمز عبور هگزادسیمال)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>SSID</source>
         <translation>SSID</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter or select your WiFi network here</source>
         <translation>لطفاً شبکه WiFi خود را در اینجا وارد یا انتخاب کنید</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Acess Point Mode</source>
         <translation>حالت نقطه دسترسی</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
         <translation>لطفاً نام شبکه WiFi را برای ایجاد رمز عبور در اینجا وارد کنید</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
         <translation>لطفاً نام شبکه WiFI را برای ایجاد در اینجا وارد کنید</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Board Name</source>
         <translation>نام تابلو</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
         <translation>لطفاً یک نام برای دوربین OpenMV خود در اینجا وارد کنید</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Duplicate REPL on the UART on startup</source>
         <translation>REPL تکراری در UART هنگام راه اندازی</translation>
     </message>
@@ -118,42 +118,42 @@
         <translation>000</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Max</source>
         <translation>حداکثر</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Median</source>
         <translation>میانه</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mode</source>
         <translation>حالت</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Min</source>
         <translation>حداقل</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mean</source>
         <translation>منظور داشتن</translation>
     </message>
@@ -205,41 +205,41 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for '%1'...</source>
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
         <translation>در حال بارگیری تعریف نحو جدید برای «%1»...</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for '%1' to version %2...</source>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
         <translation>در حال به روز رسانی تعریف نحو برای «%1» به نسخه %2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
         <source>Copy/Convert Python File</source>
         <translation>پرونده پایتون را کپی/تبدیل کنید</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+21" />
         <location line="+7" />
-        <location line="+94" />
+        <location line="+91" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+76" />
         <location line="+7" />
         <source>Unable to overwrite output file!</source>
         <translation>نمی توان پرونده خروجی را بازنویسی کرد!</translation>
     </message>
     <message>
-        <location line="-125" />
+        <location line="-124" />
         <source>Model Zoo</source>
         <translation>باغ وحش مدل</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+77" />
         <source>Model conversion is unnecessary for this board, as it lacks an NPU accelerator.</source>
         <translation>تبدیل مدل برای این صفحه ضروری نیست ، زیرا فاقد یک شتاب دهنده NPU است.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <source>Convert Model</source>
         <translation>تبدیل مدل</translation>
     </message>
@@ -335,8 +335,8 @@
         <translation type="vanished">مدیر فضای کاری</translation>
     </message>
     <message>
-        <source>&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;What is a Workspace?&lt;/a&gt;</source>
-        <translation type="vanished">&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;Workspace چیست؟&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;Workspace چیست؟&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Workspace</source>
@@ -639,7 +639,7 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Request Copilot suggestion at the current editor's cursor position.</source>
+        <source>Request Copilot suggestion at the current editor&apos;s cursor position.</source>
         <translation>پیشنهاد Copilot را در موقعیت مکان نما ویرایشگر فعلی درخواست کنید.</translation>
     </message>
     <message>
@@ -893,8 +893,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>ویرایشگر برای "%1" باز نشد.</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>ویرایشگر برای &quot;%1&quot; باز نشد.</translation>
     </message>
     <message>
         <location line="+28" />
@@ -929,7 +929,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-2268" />
         <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+445" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
@@ -1027,8 +1027,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+74" />
-        <source>An item named "%1" already exists at this location. Do you want to overwrite it?</source>
-        <translation>موردی به نام "%1" از قبل در این مکان وجود دارد. آیا می خواهید آن را بازنویسی کنید؟</translation>
+        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
+        <translation>موردی به نام &quot;%1&quot; از قبل در این مکان وجود دارد. آیا می خواهید آن را بازنویسی کنید؟</translation>
     </message>
     <message>
         <location line="+230" />
@@ -1155,12 +1155,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+7" />
-        <source>X-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>مختصات X گوشه سمت چپ بالای ویرایشگر فعلی، نسبت به صفحه.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Y-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>مختصات Y گوشه سمت چپ بالای ویرایشگر فعلی، نسبت به صفحه.</translation>
     </message>
     <message>
@@ -1170,27 +1170,27 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <source>The text file "%1" has the size %2MB and might take more memory to open and process than available.
+        <source>The text file &quot;%1&quot; has the size %2MB and might take more memory to open and process than available.
 
 Continue?</source>
-        <translation>فایل متنی "%1" دارای اندازه %2 مگابایت است و ممکن است حافظه بیشتری نسبت به موجود برای باز کردن و پردازش نیاز داشته باشد.
+        <translation>فایل متنی &quot;%1&quot; دارای اندازه %2 مگابایت است و ممکن است حافظه بیشتری نسبت به موجود برای باز کردن و پردازش نیاز داشته باشد.
 
 ادامه هید؟</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>Could not open "%1": Cannot open files of type "%2".</source>
-        <translation>"%1" باز نشد: فایل های نوع "%2" را نمی توان باز کرد.</translation>
+        <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot; باز نشد: فایل های نوع &quot;%2&quot; را نمی توان باز کرد.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not open "%1" for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>"%1" برای خواندن باز نشد. یا فایل وجود ندارد یا شما مجوز باز کردن آن را ندارید.</translation>
+        <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
+        <translation>&quot;%1&quot; برای خواندن باز نشد. یا فایل وجود ندارد یا شما مجوز باز کردن آن را ندارید.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Could not open "%1": Unknown error.</source>
-        <translation>"%1" باز نشد: خطای ناشناخته.</translation>
+        <source>Could not open &quot;%1&quot;: Unknown error.</source>
+        <translation>&quot;%1&quot; باز نشد: خطای ناشناخته.</translation>
     </message>
     <message>
         <location line="+1130" />
@@ -1267,18 +1267,18 @@ Continue?</source>
     </message>
     <message>
         <location line="+308" />
-        <source>Close "%1"</source>
-        <translation>بستن "%1"</translation>
+        <source>Close &quot;%1&quot;</source>
+        <translation>بستن &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+27" />
-        <source>Unpin "%1"</source>
+        <source>Unpin &quot;%1&quot;</source>
         <translation>برداشتن پین «%1»</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Pin "%1"</source>
-        <translation>پین "%1"</translation>
+        <source>Pin &quot;%1&quot;</source>
+        <translation>پین &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1403,7 +1403,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+2" />
-        <source>Don't Round</source>
+        <source>Don&apos;t Round</source>
         <translation>دور نشو</translation>
     </message>
     <message>
@@ -1555,8 +1555,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+35" />
-        <source>Command line arguments used for "Run in terminal".</source>
-        <translation>آرگومان های خط فرمان مورد استفاده برای "اجرا در ترمینال".</translation>
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>آرگومان های خط فرمان مورد استفاده برای &quot;اجرا در ترمینال&quot;.</translation>
     </message>
     <message>
         <location line="-50" />
@@ -1580,8 +1580,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+105" />
-        <source>Command line arguments used for "%1".</source>
-        <translation>آرگومان های خط فرمان استفاده شده برای "%1".</translation>
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>آرگومان های خط فرمان استفاده شده برای &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+34" />
@@ -1637,8 +1637,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+147" />
-        <source>Maximum number of entries in "Recent Files":</source>
-        <translation>حداکثر تعداد ورودی ها در "فایل های اخیر":</translation>
+        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
+        <translation>حداکثر تعداد ورودی ها در &quot;فایل های اخیر&quot;:</translation>
     </message>
     <message>
         <location line="+12" />
@@ -1698,7 +1698,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>خروجی</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1773" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1787" />
         <source>&amp;File</source>
         <translation>&amp;فایل</translation>
     </message>
@@ -1723,7 +1723,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>&amp;کمک</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+122" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+128" />
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2620" />
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
@@ -1735,7 +1735,7 @@ provided they were unmodified before the refactoring.</source>
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
-        <translation>ذخیره به عنوان...</translation>
+        <translation>ذخیره به عنوان... (&amp;A)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+3" />
@@ -1745,16 +1745,16 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+701" />
         <source>Save A&amp;ll</source>
-        <translation>همه را ذخیره کن</translation>
+        <translation>همه را ذخیره کن (&amp;L)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-279" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>خروج از %1؟</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+106" />
         <source>&amp;View</source>
         <translation>&amp;چشم انداز</translation>
     </message>
@@ -1797,7 +1797,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+10" />
         <source>Recent &amp;Files</source>
-        <translation>فایل های اخیر</translation>
+        <translation>فایل های اخیر (&amp;F)</translation>
     </message>
     <message>
         <location line="+20" />
@@ -1842,7 +1842,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+6" />
         <source>Cu&amp;t</source>
-        <translation>برش</translation>
+        <translation>برش (&amp;T)</translation>
     </message>
     <message>
         <location line="+8" />
@@ -1852,12 +1852,12 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+8" />
         <source>&amp;Paste</source>
-        <translation>&amp; چسباندن</translation>
+        <translation>&amp;چسباندن</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Select &amp;All</source>
-        <translation>انتخاب همه</translation>
+        <translation>انتخاب همه (&amp;A)</translation>
     </message>
     <message>
         <location line="+8" />
@@ -1913,7 +1913,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+11" />
         <source>Pr&amp;eferences...</source>
-        <translation>اولویت ها...</translation>
+        <translation>اولویت ها... (&amp;E)</translation>
     </message>
     <message>
         <location line="+26" />
@@ -1947,8 +1947,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the "%2" action from the "%3" locator filter (%4).</source>
-        <translation>این نوار منو را به طور کامل پنهان می کند. می توانید دوباره آن را با تایپ %1 نشان دهید.</translation>
+        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the &quot;%2&quot; action from the &quot;%3&quot; locator filter (%4).</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21" />
@@ -2001,7 +2001,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>پنهان شده است</translation>
     </message>
     <message>
-        <location line="+460" />
+        <location line="+474" />
         <source>Version:</source>
         <translation>نسخه:</translation>
     </message>
@@ -2021,7 +2021,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>&lt;p&gt;توسعه دهندگان Qt Creator را می توان در لیست پستی Qt Creator:&lt;/p&gt;%1&lt;p&gt;یا کانال #qt-creator در Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;ردیاب اشکال ما دسترسی داشت در %3 قرار دارد.&lt;/p&gt;&lt;p&gt;لطفاً از %4 برای تکه های بزرگتر متن استفاده کنید.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-803" />
+        <location line="-817" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -2054,7 +2054,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+240" />
+        <location line="+244" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>اسناد را باز کنید</translation>
@@ -2076,8 +2076,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Close All Except "%1"</source>
-        <translation>بستن همه به جز"%1"</translation>
+        <source>Close All Except &quot;%1&quot;</source>
+        <translation>بستن همه به جز&quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
@@ -2113,16 +2113,16 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+927" />
-        <location line="+13" />
-        <location line="+11" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location line="+16" />
+        <location line="+14" />
         <source>Save Log</source>
         <translation>ذخیره گزارش</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-617" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
         <source>Clear</source>
         <translation>پاک کردن</translation>
     </message>
@@ -2263,8 +2263,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+51" />
-        <source>Failed to open preset file "%1" for reading.</source>
-        <translation>برای خواندن پرونده از پیش تعیین شده "%1" باز نشد.</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading.</source>
+        <translation>برای خواندن پرونده از پیش تعیین شده &quot;%1&quot; باز نشد.</translation>
     </message>
     <message>
         <location line="-172" />
@@ -2278,13 +2278,13 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+16" />
-        <source>Failed to write logs to "%1".</source>
-        <translation>نوشتن گزارش‌ها در "%1" انجام نشد.</translation>
+        <source>Failed to write logs to &quot;%1&quot;.</source>
+        <translation>نوشتن گزارش‌ها در &quot;%1&quot; انجام نشد.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open file "%1" for writing logs.</source>
-        <translation>فایل "%1" برای نوشتن گزارش ها باز نشد.</translation>
+        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
+        <translation>فایل &quot;%1&quot; برای نوشتن گزارش ها باز نشد.</translation>
     </message>
     <message>
         <source>Save Enabled Categories As</source>
@@ -2292,8 +2292,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+45" />
-        <source>Failed to write preset file "%1".</source>
-        <translation>نوشتن فایل از پیش تعیین شده "%1" انجام نشد.</translation>
+        <source>Failed to write preset file &quot;%1&quot;.</source>
+        <translation>نوشتن فایل از پیش تعیین شده &quot;%1&quot; انجام نشد.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -2301,12 +2301,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>بارگیری دسته‌های فعال شده از</translation>
     </message>
     <message>
-        <source>Failed to open preset file "%1" for reading</source>
+        <source>Failed to open preset file &quot;%1&quot; for reading</source>
         <translation type="vanished">فایل از پیش تعیین شده «%1» برای خواندن باز نشد</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Failed to read preset file "%1": %2</source>
+        <source>Failed to read preset file &quot;%1&quot;: %2</source>
         <translation>فایل از پیش تعیین شده «%1» خوانده نشد: %2</translation>
     </message>
     <message>
@@ -2342,7 +2342,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+64" />
         <source>Out&amp;put</source>
-        <translation>خروجی و خروجی</translation>
+        <translation>خروجی و خروجی (&amp;P)</translation>
     </message>
     <message>
         <location line="+406" />
@@ -2466,17 +2466,17 @@ provided they were unmodified before the refactoring.</source>
         <translation>فرآیندها</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-75" />
         <source>&amp;Diff</source>
         <translation>&amp;تفاوت</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Do &amp;Not Save</source>
-        <translation>ذخیره نکن</translation>
+        <translation>ذخیره نکن (&amp;N)</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+72" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
         <translation>&amp;تفاوت &amp;&amp; لغو</translation>
     </message>
@@ -2570,13 +2570,13 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+4" />
-        <source>Use "Cmd", "Opt", "Ctrl", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>از "Cmd"، "Opt"، "Ctrl" و "Shift" برای کلیدهای اصلاح کننده استفاده کنید. برای کلیدهای خاص از «Escape»، «Backspace»، «Delete»، «Insert»، «Home» و غیره استفاده کنید. کلیدهای جداگانه را با "+" ترکیب کنید، و چند میانبر را به دنباله میانبر با "،" ترکیب کنید. به عنوان مثال، اگر کاربر باید کلیدهای تغییر دهنده Ctrl و Shift را در حین فشار دادن Escape نگه دارد و سپس A را رها کرده و فشار دهد، "Ctrl+Shift+Escape,A" را وارد کنید.</translation>
+        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>از &quot;Cmd&quot;، &quot;Opt&quot;، &quot;Ctrl&quot; و &quot;Shift&quot; برای کلیدهای اصلاح کننده استفاده کنید. برای کلیدهای خاص از «Escape»، «Backspace»، «Delete»، «Insert»، «Home» و غیره استفاده کنید. کلیدهای جداگانه را با &quot;+&quot; ترکیب کنید، و چند میانبر را به دنباله میانبر با &quot;،&quot; ترکیب کنید. به عنوان مثال، اگر کاربر باید کلیدهای تغییر دهنده Ctrl و Shift را در حین فشار دادن Escape نگه دارد و سپس A را رها کرده و فشار دهد، &quot;Ctrl+Shift+Escape,A&quot; را وارد کنید.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Use "Ctrl", "Alt", "Meta", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>برای کلیدهای اصلاح کننده از «Ctrl»، «Alt»، «Meta» و «Shift» استفاده کنید. برای کلیدهای خاص از «Escape»، «Backspace»، «Delete»، «Insert»، «Home» و غیره استفاده کنید. کلیدهای جداگانه را با "+" ترکیب کنید، و چند میانبر را به دنباله میانبر با "،" ترکیب کنید. به عنوان مثال، اگر کاربر باید کلیدهای تغییر دهنده Ctrl و Shift را در حین فشار دادن Escape نگه دارد و سپس A را رها کرده و فشار دهد، "Ctrl+Shift+Escape,A" را وارد کنید.</translation>
+        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>برای کلیدهای اصلاح کننده از «Ctrl»، «Alt»، «Meta» و «Shift» استفاده کنید. برای کلیدهای خاص از «Escape»، «Backspace»، «Delete»، «Insert»، «Home» و غیره استفاده کنید. کلیدهای جداگانه را با &quot;+&quot; ترکیب کنید، و چند میانبر را به دنباله میانبر با &quot;،&quot; ترکیب کنید. به عنوان مثال، اگر کاربر باید کلیدهای تغییر دهنده Ctrl و Shift را در حین فشار دادن Escape نگه دارد و سپس A را رها کرده و فشار دهد، &quot;Ctrl+Shift+Escape,A&quot; را وارد کنید.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -2585,8 +2585,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+24" />
-        <source>Key sequence has potential conflicts. &lt;a href="#conflicts"&gt;Show.&lt;/a&gt;</source>
-        <translation>دنباله کلید دارای تضادهای بالقوه است. &lt;a href="#conflicts"&gt;نمایش.&lt;/a&gt;</translation>
+        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
+        <translation>دنباله کلید دارای تضادهای بالقوه است. &lt;a href=&quot;#conflicts&quot;&gt;نمایش.&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+122" />
@@ -2611,12 +2611,12 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+7" />
         <source>Search f&amp;or:</source>
-        <translation>جستجو برای:</translation>
+        <translation>جستجو برای: (&amp;O)</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Whole words o&amp;nly</source>
-        <translation>فقط واژگان کامل</translation>
+        <translation>فقط واژگان کامل (&amp;N)</translation>
     </message>
     <message>
         <location line="+3" />
@@ -2626,7 +2626,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+3" />
         <source>Sco&amp;pe:</source>
-        <translation>محدوده:</translation>
+        <translation>محدوده: (&amp;P)</translation>
     </message>
     <message>
         <location line="-9" />
@@ -2645,7 +2645,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-333" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-335" />
         <source>Open Advanced Find...</source>
         <translation>جستجوی پیشرفته را باز کنید...</translation>
     </message>
@@ -2667,12 +2667,11 @@ provided they were unmodified before the refactoring.</source>
         <translation>Find String را وارد کنید</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+E</source>
-        <translation>Ctrl+E</translation>
+        <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Find Next</source>
         <translation>بعدی را پیدا کنید</translation>
     </message>
@@ -2692,24 +2691,24 @@ provided they were unmodified before the refactoring.</source>
         <translation>جایگزین &amp;&amp;پیدا کردن قبلی</translation>
     </message>
     <message>
-        <location line="-246" />
-        <location line="+259" />
+        <location line="-248" />
+        <location line="+261" />
         <source>Replace All</source>
         <translation>همه را جایگزین کنید</translation>
     </message>
     <message>
-        <location line="-309" />
+        <location line="-311" />
         <source>Find Flags</source>
         <translation>پرچم ها را پیدا کنید</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+235" />
+        <location line="+237" />
         <source>Replace &amp;&amp; Find</source>
         <translation>جایگزین &amp;&amp; پیدا کنید</translation>
     </message>
     <message>
-        <location line="-148" />
+        <location line="-150" />
         <location line="+13" />
         <source>Shift+Enter</source>
         <translation>Shift+Enter</translation>
@@ -2726,7 +2725,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>پیدا کردن/جایگزین کردن</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+59" />
         <source>Find Next (Selected)</source>
         <translation>یافتن بعدی (انتخاب شده)</translation>
     </message>
@@ -2785,7 +2784,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>تعویض با...</translation>
     </message>
     <message>
-        <location line="-520" />
+        <location line="-522" />
         <source>Find</source>
         <translation>پیدا کردن</translation>
     </message>
@@ -2824,7 +2823,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+705" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
         <source>Collapse All</source>
         <translation>جمع کردن همه</translation>
     </message>
@@ -2851,7 +2850,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+225" />
+        <location line="+227" />
         <source>Replace</source>
         <translation>جایگزین کردن</translation>
     </message>
@@ -2867,11 +2866,11 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Open file "%1" with:</source>
-        <translation>باز کردن فایل "%1" با:</translation>
+        <source>Open file &quot;%1&quot; with:</source>
+        <translation>باز کردن فایل &quot;%1&quot; با:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-455" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
         <source>Show Hidden Files</source>
         <translation>نمایش فایلهای مخفی</translation>
     </message>
@@ -2897,15 +2896,15 @@ provided they were unmodified before the refactoring.</source>
         <translation>فایل جدید</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="+156" />
         <location line="+78" />
         <source>New Folder</source>
         <translation>پوشه جدید</translation>
     </message>
     <message>
         <location line="-18" />
-        <source>Open "%1"</source>
-        <translation>بازکردن"%1"</translation>
+        <source>Open &quot;%1&quot;</source>
+        <translation>بازکردن&quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -2965,7 +2964,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>برداشتن...</translation>
     </message>
     <message>
-        <location line="-618" />
+        <location line="-622" />
         <source>Synchronize with Editor</source>
         <translation>همگام سازی با ویرایشگر</translation>
     </message>
@@ -3000,8 +2999,8 @@ provided they were unmodified before the refactoring.</source>
         <translation>فیلتر دایرکتوری عمومی</translation>
     </message>
     <message>
-        <source>Matches all files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">همه فایل ها را از یک مجموعه سفارشی از فهرست ها مطابقت می دهد. برای پرش به شماره خط داده شده، "+&lt;number&gt;" یا ":&lt;number&gt;" را اضافه کنید. برای پرش به شماره ستون نیز یک "+&lt;number&gt;" یا ":&lt;number&gt;" دیگر اضافه کنید.</translation>
+        <source>Matches all files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">همه فایل ها را از یک مجموعه سفارشی از فهرست ها مطابقت می دهد. برای پرش به شماره خط داده شده، &quot;+&lt;number&gt;&quot; یا &quot;:&lt;number&gt;&quot; را اضافه کنید. برای پرش به شماره ستون نیز یک &quot;+&lt;number&gt;&quot; یا &quot;:&lt;number&gt;&quot; دیگر اضافه کنید.</translation>
     </message>
     <message>
         <location line="+273" />
@@ -3152,8 +3151,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-78" />
-        <source>Locates files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>پرونده ها را از مجموعه ای از دایرکتوری ها قرار می دهد. برای پرش به شماره خط داده شده "+&lt;Number&gt;" یا ": &lt;Number&gt;" ضمیمه کنید. برای پرش به شماره ستون ، "+&lt;Number&gt;" یا ": &lt;Number&gt;" را اضافه کنید.</translation>
+        <source>Locates files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>پرونده ها را از مجموعه ای از دایرکتوری ها قرار می دهد. برای پرش به شماره خط داده شده &quot;+&lt;Number&gt;&quot; یا &quot;: &lt;Number&gt;&quot; ضمیمه کنید. برای پرش به شماره ستون ، &quot;+&lt;Number&gt;&quot; یا &quot;: &lt;Number&gt;&quot; را اضافه کنید.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -3240,7 +3239,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;What to do with the executable's standard output.
+&lt;p&gt;What to do with the executable&apos;s standard output.
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
@@ -3274,7 +3273,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
-&lt;p &gt;What to do with the executable's standard error output.&lt;/p&gt;
+&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
 &lt;li&gt;Show in General Messages.&lt;/li&gt;
 &lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
@@ -3401,12 +3400,12 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <source>Opens a file given by a relative path to the current document, or absolute path. "~" refers to your home directory. You have the option to create a file if it does not exist yet.</source>
-        <translation>فایلی را باز می کند که توسط یک مسیر نسبی به سند فعلی یا مسیر مطلق داده شده است. "~" به فهرست اصلی شما اشاره دارد. شما این امکان را دارید که اگر فایلی هنوز وجود نداشته باشد بسازید.</translation>
+        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
+        <translation>فایلی را باز می کند که توسط یک مسیر نسبی به سند فعلی یا مسیر مطلق داده شده است. &quot;~&quot; به فهرست اصلی شما اشاره دارد. شما این امکان را دارید که اگر فایلی هنوز وجود نداشته باشد بسازید.</translation>
     </message>
     <message>
-        <source>Create and Open "%1"</source>
-        <translation type="vanished">ایجاد و بازکردن"%1"</translation>
+        <source>Create and Open &quot;%1&quot;</source>
+        <translation type="vanished">ایجاد و بازکردن&quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-46" />
@@ -3415,8 +3414,8 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="-13" />
-        <source>Create "%1"?</source>
-        <translation>"%1" ایجاد شود؟</translation>
+        <source>Create &quot;%1&quot;?</source>
+        <translation>&quot;%1&quot; ایجاد شود؟</translation>
     </message>
     <message>
         <location line="+6" />
@@ -3435,8 +3434,8 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <source>Cannot create file "%1".</source>
-        <translation>نمی تواند پرونده "%1" ایجاد کند.</translation>
+        <source>Cannot create file &quot;%1&quot;.</source>
+        <translation>نمی تواند پرونده &quot;%1&quot; ایجاد کند.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -3445,13 +3444,13 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+164" />
-        <source>Create and Open File "%1"</source>
-        <translation>ایجاد و باز کردن پرونده "%1"</translation>
+        <source>Create and Open File &quot;%1&quot;</source>
+        <translation>ایجاد و باز کردن پرونده &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Create Directory "%1"</source>
-        <translation>دایرکتوری "%1" ایجاد کنید</translation>
+        <source>Create Directory &quot;%1&quot;</source>
+        <translation>دایرکتوری &quot;%1&quot; ایجاد کنید</translation>
     </message>
     <message>
         <location line="+58" />
@@ -3469,7 +3468,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>فیلترهای موجود</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+557" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
         <source>Open as Centered Popup</source>
         <translation>به عنوان پنجره مرکزی باز کنید</translation>
     </message>
@@ -3510,18 +3509,18 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+143" />
-        <source>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;یک سند را باز کنید&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; فایل &gt; باز کردن فایل (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; فایل &gt; مثال‌ها &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; فایل &gt; فایل های اخیر&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; فایل‌ها را اینجا بکشید و رها کنید&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;یک سند را باز کنید&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; فایل &gt; باز کردن فایل (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; فایل &gt; مثال‌ها &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; فایل &gt; فایل های اخیر&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; فایل‌ها را اینجا بکشید و رها کنید&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+37" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; را تایپ کنید تا به تعریف کلاس بروید&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; را تایپ کنید تا به تعریف کلاس بروید&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- برای رفتن به تعریف تابع، &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; را تایپ کنید&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- برای رفتن به تعریف تابع، &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; را تایپ کنید&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+121" />
@@ -3597,7 +3596,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>سفارشی</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-113" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-116" />
         <source>Save Changes</source>
         <translation>ذخیره تغییرات</translation>
     </message>
@@ -3731,14 +3730,14 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>اولویت ها</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+488" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
         <source>Options</source>
         <translation>گزینه ها</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13" />
-        <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
+        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
         <translation>فایل های ترجمه qm را ایجاد می کند که می تواند توسط یک برنامه کاربردی از فایل های ts مترجم استفاده شود</translation>
     </message>
     <message>
@@ -3747,14 +3746,14 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>ترجمه های انتشار (lrelease)</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+5" />
         <source>Linguist</source>
         <translation>زبانشناس</translation>
     </message>
     <message>
-        <location line="-12" />
-        <source>Synchronizes translator's ts files with the program code</source>
+        <location line="-2" />
+        <source>Synchronizes translator&apos;s ts files with the program code</source>
         <translation>فایل های ts مترجم را با کد برنامه همگام می کند</translation>
     </message>
     <message>
@@ -3774,13 +3773,13 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <location line="+10" />
+        <location line="+15" />
         <location line="+5" />
         <source>Text</source>
         <translation>متن</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-17" />
         <source>Runs the current QML file with QML utility.</source>
         <translation>فایل QML فعلی را با ابزار QML اجرا می کند.</translation>
     </message>
@@ -3806,7 +3805,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>پیش‌نمایش Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+4" />
         <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>فایل فعلی را در vi باز می کند</translation>
@@ -3824,8 +3823,8 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by "&gt;". For example "sess def" matches "File &gt; Sessions &gt; Default".</source>
-        <translation>یک عمل را تحریک می کند. اگر از منو باشد، با هر بخش از سلسله مراتب منو مطابقت دارد که با "&gt;" از هم جدا شده است. به عنوان مثال "sess def" با "File &gt; Sessions &gt; Default" مطابقت دارد.</translation>
+        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
+        <translation>یک عمل را تحریک می کند. اگر از منو باشد، با هر بخش از سلسله مراتب منو مطابقت دارد که با &quot;&gt;&quot; از هم جدا شده است. به عنوان مثال &quot;sess def&quot; با &quot;File &gt; Sessions &gt; Default&quot; مطابقت دارد.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
@@ -3969,9 +3968,9 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+12" />
-        <source>The settings file "%1" is not writable.
+        <source>The settings file &quot;%1&quot; is not writable.
 You will not be able to store any %2 settings.</source>
-        <translation>فایل تنظیمات "%1" قابل نوشتن نیست.
+        <translation>فایل تنظیمات &quot;%1&quot; قابل نوشتن نیست.
 شما نمی توانید تنظیمات %2 را ذخیره کنید.</translation>
     </message>
     <message>
@@ -3986,9 +3985,9 @@ You will not be able to store any %2 settings.</source>
     </message>
     <message>
         <location line="+4" />
-        <source>Error reading settings file "%1": %2
+        <source>Error reading settings file &quot;%1&quot;: %2
 You will likely experience further problems using this instance of %3.</source>
-        <translation>خطا در خواندن فایل تنظیمات "%1": %2
+        <translation>خطا در خواندن فایل تنظیمات &quot;%1&quot;: %2
 احتمالاً با استفاده از این نمونه %3 مشکلات بیشتری را تجربه خواهید کرد.</translation>
     </message>
     <message>
@@ -4058,8 +4057,8 @@ You will likely experience further problems using this instance of %3.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Select encoding for "%1".%2</source>
-        <translation>رمزگذاری "%1" را انتخاب کنید.%2</translation>
+        <source>Select encoding for &quot;%1&quot;.%2</source>
+        <translation>رمزگذاری &quot;%1&quot; را انتخاب کنید.%2</translation>
     </message>
     <message>
         <location line="+49" />
@@ -4241,7 +4240,7 @@ Do you want to check them out now?</source>
 آیا می خواهید اکنون آنها را بررسی کنید؟</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-943" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-948" />
         <source>Restart Required</source>
         <translation>راه اندازی مجدد لازم است</translation>
     </message>
@@ -4277,23 +4276,23 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
-        <source>Could not find executable for "%1" (expanded "%2")</source>
-        <translation>قابل اجرا برای "%1" یافت نشد ("%2" گسترش یافت)</translation>
+        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
+        <translation>قابل اجرا برای &quot;%1&quot; یافت نشد (&quot;%2&quot; گسترش یافت)</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>Starting external tool "%1"</source>
-        <translation>شروع ابزار خارجی "%1"</translation>
+        <source>Starting external tool &quot;%1&quot;</source>
+        <translation>شروع ابزار خارجی &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>"%1" finished</source>
-        <translation>"%1" تمام شد</translation>
+        <source>&quot;%1&quot; finished</source>
+        <translation>&quot;%1&quot; تمام شد</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" finished with error</source>
-        <translation>"%1" با خطا به پایان رسید</translation>
+        <source>&quot;%1&quot; finished with error</source>
+        <translation>&quot;%1&quot; با خطا به پایان رسید</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
@@ -4330,10 +4329,10 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>"%1" returned the following error:
+        <source>&quot;%1&quot; returned the following error:
 
 %2</source>
-        <translation>"%1" خطای زیر را برگرداند:
+        <translation>&quot;%1&quot; خطای زیر را برگرداند:
 
 %2</translation>
     </message>
@@ -4393,24 +4392,24 @@ Do you want to check them out now?</source>
     <message>
         <location line="+6" />
         <source>Open Command Prompt With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Command Prompt را با باز کنید</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open Terminal With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>ترمینال با را باز کنید</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file "%1".</source>
+        <source>Failed to remove file &quot;%1&quot;.</source>
         <translation>فایل «%1» حذف نشد.</translation>
     </message>
     <message>
         <location line="+40" />
-        <source>Failed to rename the include guard in file "%1".</source>
-        <translation>تغییر نام محافظ شامل در فایل "%1" انجام نشد.</translation>
+        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
+        <translation>تغییر نام محافظ شامل در فایل &quot;%1&quot; انجام نشد.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
@@ -4420,7 +4419,7 @@ Do you want to check them out now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+369" />
+        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+394" />
         <source>Case sensitive</source>
         <translation>حساس به حروف کوچک و بزرگ</translation>
     </message>
@@ -4467,12 +4466,12 @@ Do you want to check them out now?</source>
     <message>
         <location line="+5" />
         <source>Repla&amp;ce with:</source>
-        <translation>تعویض با:</translation>
+        <translation>تعویض با: (&amp;C)</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Preser&amp;ve case</source>
-        <translation>محفظه و نگهداری</translation>
+        <translation>محفظه و نگهداری (&amp;V)</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4561,8 +4560,8 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
-        <source>Factory with id="%1" already registered. Deleting.</source>
-        <translation>کارخانه با id="%1" قبلا ثبت شده است. در حال حذف.</translation>
+        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
+        <translation>کارخانه با id=&quot;%1&quot; قبلا ثبت شده است. در حال حذف.</translation>
     </message>
     <message>
         <location line="+230" />
@@ -4576,18 +4575,18 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
-        <source>Error in "%1": %2</source>
+        <source>Error in &quot;%1&quot;: %2</source>
         <translation>خطا در «%1»: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>Cannot convert result of "%1" to string.</source>
+        <source>Cannot convert result of &quot;%1&quot; to string.</source>
         <translation>نمی توان نتیجه «%1» را به رشته تبدیل کرد.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal '}' characters must be escaped as "\}", '\' characters must be escaped as "\\", and "%{" must be escaped as "%\{".</source>
-        <translation>عبارات ساده جاوا اسکریپت را ارزیابی کنید.&lt;br&gt;کاراکترهای '}' تحت اللفظی باید به صورت "\}"، "\" باید به صورت "\\" و "%{" باید به صورت "%\{" فرار کنند.</translation>
+        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
+        <translation>عبارات ساده جاوا اسکریپت را ارزیابی کنید.&lt;br&gt;کاراکترهای &apos;}&apos; تحت اللفظی باید به صورت &quot;\}&quot;، &quot;\&quot; باید به صورت &quot;\\&quot; و &quot;%{&quot; باید به صورت &quot;%\{&quot; فرار کنند.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
@@ -4601,9 +4600,9 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location line="+68" />
-        <source>Previous command is still running ("%1").
+        <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
-        <translation>فرمان قبلی هنوز در حال اجراست ("%1").
+        <translation>فرمان قبلی هنوز در حال اجراست (&quot;%1&quot;).
 میخوای بکشیش؟</translation>
     </message>
     <message>
@@ -4613,13 +4612,13 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+46" />
-        <source>Could not find executable for "%1".</source>
-        <translation>قابل اجرا برای "%1" یافت نشد.</translation>
+        <source>Could not find executable for &quot;%1&quot;.</source>
+        <translation>قابل اجرا برای &quot;%1&quot; یافت نشد.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Starting command "%1".</source>
-        <translation>دستور شروع "%1".</translation>
+        <source>Starting command &quot;%1&quot;.</source>
+        <translation>دستور شروع &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+21" />
@@ -4674,7 +4673,7 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
-        <source>Locator: Error occurred when running "%1".</source>
+        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
         <translation>مکان یاب: هنگام اجرای «%1» خطایی روی داد.</translation>
     </message>
     <message>
@@ -4689,8 +4688,8 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Locator query string with quotes escaped with backslash and spaces replaced with "*" wildcards.</source>
-        <translation>رشته جستجوی مکان یاب با نقل قول ها با اسلش معکوس و فاصله ها با حروف عام "*" جایگزین شده است.</translation>
+        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
+        <translation>رشته جستجوی مکان یاب با نقل قول ها با اسلش معکوس و فاصله ها با حروف عام &quot;*&quot; جایگزین شده است.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -4704,8 +4703,8 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>پرونده ها را از شاخص سیستم فایل جهانی (کانون توجه ، مکان یابی ، همه چیز) قرار می دهد. برای پرش به شماره خط داده شده "+&lt;Number&gt;" یا ": &lt;Number&gt;" ضمیمه کنید. برای پرش به شماره ستون ، "+&lt;Number&gt;" یا ": &lt;Number&gt;" را اضافه کنید.</translation>
+        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>پرونده ها را از شاخص سیستم فایل جهانی (کانون توجه ، مکان یابی ، همه چیز) قرار می دهد. برای پرش به شماره خط داده شده &quot;+&lt;Number&gt;&quot; یا &quot;: &lt;Number&gt;&quot; ضمیمه کنید. برای پرش به شماره ستون ، &quot;+&lt;Number&gt;&quot; یا &quot;: &lt;Number&gt;&quot; را اضافه کنید.</translation>
     </message>
     <message>
         <location line="+113" />
@@ -4713,8 +4712,8 @@ Do you want to kill it?</source>
         <translation>نتایج مرتب سازی</translation>
     </message>
     <message>
-        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">فایل ها را از یک فهرست سیستم فایل جهانی (Spotlight، Locate، Everything) مطابقت می دهد. برای پرش به شماره خط داده شده، "+&lt;number&gt;" یا ":&lt;number&gt;" را اضافه کنید. برای پرش به شماره ستون نیز یک "+&lt;number&gt;" یا ":&lt;number&gt;" دیگر اضافه کنید.</translation>
+        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">فایل ها را از یک فهرست سیستم فایل جهانی (Spotlight، Locate، Everything) مطابقت می دهد. برای پرش به شماره خط داده شده، &quot;+&lt;number&gt;&quot; یا &quot;:&lt;number&gt;&quot; را اضافه کنید. برای پرش به شماره ستون نیز یک &quot;+&lt;number&gt;&quot; یا &quot;:&lt;number&gt;&quot; دیگر اضافه کنید.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -4723,9 +4722,9 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110" />
-        <source>Add "%1" placeholder for the query string.
+        <source>Add &quot;%1&quot; placeholder for the query string.
 Double-click to edit item.</source>
-        <translation>جای جای "%1" را برای رشته پرس و جو اضافه کنید.
+        <translation>جای جای &quot;%1&quot; را برای رشته پرس و جو اضافه کنید.
 برای ویرایش مورد دوبار کلیک کنید.</translation>
     </message>
     <message>
@@ -4759,13 +4758,13 @@ Double-click to edit item.</source>
         <translation>هدر جادویی را اضافه کنید</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;داده‌های جادویی MIME همانطور که توسط مشخصات پایگاه داده مشترک MIME-info از &lt;a href="http://standards.freedesktop.org/shared-mime-info- تعریف شده است تفسیر می‌شود. spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;داده‌های جادویی MIME همانطور که توسط مشخصات پایگاه داده مشترک MIME-info از &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info- تعریف شده است تفسیر می‌شود. spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;Html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; داده های جادویی MIME همانطور که توسط مشخصات مشترک پایگاه داده MIME-INFO از &lt;a href = "https://www.freedesktop.org/wiki/specifications/shared- تعریف شده است ، تفسیر می شود. mime-info-spec/"&gt; freedesktop.org &lt;/a&gt;. &lt;hr/&gt; &lt;/p&gt; &lt;/body&gt; &lt;/hml&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -4819,8 +4818,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;توجه: مقادیر دامنه وسیع ممکن است هنگام باز کردن فایل‌ها بر عملکرد تأثیر بگذارد.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;توجه: مقادیر دامنه وسیع ممکن است هنگام باز کردن فایل‌ها بر عملکرد تأثیر بگذارد.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4899,13 +4898,13 @@ Double-click to edit item.</source>
 </translation>
     </message>
     <message>
-        <location line="+298" />
+        <location line="+308" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>فایل های متنی (*.txt)؛؛ همه فایل ها (*)</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+11" />
+        <location line="+14" />
         <source>Error: %L1!</source>
         <translation>خطا: %L1!</translation>
     </message>
@@ -4936,23 +4935,23 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>There is no patch-command configured in the general "Environment" settings.</source>
-        <translation>هیچ فرمان وصله ای در تنظیمات کلی "محیط زیست" پیکربندی نشده است.</translation>
+        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
+        <translation>هیچ فرمان وصله ای در تنظیمات کلی &quot;محیط زیست&quot; پیکربندی نشده است.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The patch-command configured in the general "Environment" settings does not exist.</source>
-        <translation>فرمان وصله پیکربندی شده در تنظیمات کلی "محیط" وجود ندارد.</translation>
+        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
+        <translation>فرمان وصله پیکربندی شده در تنظیمات کلی &quot;محیط&quot; وجود ندارد.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Running in "%1": %2 %3.</source>
-        <translation>دویدن در "%1": %2 %3.</translation>
+        <source>Running in &quot;%1&quot;: %2 %3.</source>
+        <translation>دویدن در &quot;%1&quot;: %2 %3.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>A timeout occurred running "%1".</source>
-        <translation>زمان وقوع "%1" رخ داد.</translation>
+        <source>A timeout occurred running &quot;%1&quot;.</source>
+        <translation>زمان وقوع &quot;%1&quot; رخ داد.</translation>
     </message>
     <message>
         <source>Running in %1: %2 %3</source>
@@ -4960,22 +4959,22 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="-11" />
-        <source>Unable to launch "%1": %2</source>
-        <translation>"%1" راه اندازی نشد: %2</translation>
+        <source>Unable to launch &quot;%1&quot;: %2</source>
+        <translation>&quot;%1&quot; راه اندازی نشد: %2</translation>
     </message>
     <message>
-        <source>A timeout occurred running "%1"</source>
+        <source>A timeout occurred running &quot;%1&quot;</source>
         <translation type="vanished">مهلت زمانی در اجرای «%1» روی داد</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>"%1" crashed.</source>
-        <translation>"%1" خراب شد.</translation>
+        <source>&quot;%1&quot; crashed.</source>
+        <translation>&quot;%1&quot; خراب شد.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"%1" failed (exit code %2).</source>
-        <translation>"%1" ناموفق بود (کد خروج %2).</translation>
+        <source>&quot;%1&quot; failed (exit code %2).</source>
+        <translation>&quot;%1&quot; ناموفق بود (کد خروج %2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
@@ -5068,8 +5067,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>"%1" will be installed into "%2".</source>
-        <translation>"%1" در "%2" نصب خواهد شد.</translation>
+        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot; در &quot;%2&quot; نصب خواهد شد.</translation>
     </message>
     <message>
         <location line="+29" />
@@ -5078,8 +5077,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The file "%1" exists. Overwrite?</source>
-        <translation>فایل "%1" وجود دارد. زیاد نوشتن؟</translation>
+        <source>The file &quot;%1&quot; exists. Overwrite?</source>
+        <translation>فایل &quot;%1&quot; وجود دارد. زیاد نوشتن؟</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5093,8 +5092,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to write file "%1".</source>
-        <translation>نوشتن فایل "%1" انجام نشد.</translation>
+        <source>Failed to write file &quot;%1&quot;.</source>
+        <translation>نوشتن فایل &quot;%1&quot; انجام نشد.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -5313,8 +5312,8 @@ to version control (%2)
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
-        <source>Could not parse patch file "%1". The content is not of unified diff format.</source>
-        <translation>نتوانست فایل وصله "%1" را تجزیه کند. محتوا از فرمت متفاوت یکپارچه نیست.</translation>
+        <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
+        <translation>نتوانست فایل وصله &quot;%1&quot; را تجزیه کند. محتوا از فرمت متفاوت یکپارچه نیست.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
@@ -5393,22 +5392,22 @@ to version control (%2)
     </message>
     <message>
         <location line="+52" />
-        <source>Diff "%1"</source>
-        <translation>تفاوت"%1"</translation>
+        <source>Diff &quot;%1&quot;</source>
+        <translation>تفاوت&quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+28" />
         <source>Select First File for Diff</source>
         <translation>First File را برای Diff انتخاب کنید</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+7" />
         <source>Select Second File for Diff</source>
         <translation>فایل Second File را برای Diff انتخاب کنید</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>Diff "%1", "%2"</source>
+        <location line="+10" />
+        <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
         <translation>تفاوت «%1»، «%2»</translation>
     </message>
     <message>
@@ -5428,8 +5427,8 @@ to version control (%2)
     </message>
     <message>
         <location line="+31" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding.</source>
-        <translation>&lt;b&gt;خطا:&lt;/b&gt; رمزگشایی "%1" با رمزگذاری "%2" ممکن نیست.</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
+        <translation>&lt;b&gt;خطا:&lt;/b&gt; رمزگشایی &quot;%1&quot; با رمزگذاری &quot;%2&quot; ممکن نیست.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5588,8 +5587,8 @@ to version control (%2)
     </message>
     <message>
         <location line="+1" />
-        <source>%1 (current: "%2")</source>
-        <translation>%1 (جاری: "%2")</translation>
+        <source>%1 (current: &quot;%2&quot;)</source>
+        <translation>%1 (جاری: &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5628,7 +5627,7 @@ to version control (%2)
     </message>
     <message>
         <location line="+4" />
-        <source>Plugin's initialization function succeeded.</source>
+        <source>Plugin&apos;s initialization function succeeded.</source>
         <translation>عملکرد اولیه پلاگین با موفقیت انجام شد.</translation>
     </message>
     <message>
@@ -5869,8 +5868,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The last time you started %1, it seems to have closed because of a problem with the "%2" plugin. Temporarily disable the plugin?</source>
-        <translation>آخرین باری که %1 را شروع کردید، به نظر می رسد به دلیل مشکلی در افزونه "%2" بسته شده است. آیا به طور موقت افزونه را غیرفعال می کنید؟</translation>
+        <source>The last time you started %1, it seems to have closed because of a problem with the &quot;%2&quot; plugin. Temporarily disable the plugin?</source>
+        <translation>آخرین باری که %1 را شروع کردید، به نظر می رسد به دلیل مشکلی در افزونه &quot;%2&quot; بسته شده است. آیا به طور موقت افزونه را غیرفعال می کنید؟</translation>
     </message>
     <message>
         <location line="+8" />
@@ -5886,7 +5885,7 @@ Reason: %3</source>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
-        <source>The plugin "%1" is specified twice for testing.</source>
+        <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>افزونه «%1» دو بار برای آزمایش مشخص شده است.</translation>
     </message>
     <message>
@@ -5894,18 +5893,18 @@ Reason: %3</source>
         <location line="+18" />
         <location line="+47" />
         <location line="+25" />
-        <source>The plugin "%1" does not exist.</source>
-        <translation>افزونه "%1" وجود ندارد.</translation>
+        <source>The plugin &quot;%1&quot; does not exist.</source>
+        <translation>افزونه &quot;%1&quot; وجود ندارد.</translation>
     </message>
     <message>
         <location line="-79" />
-        <source>The plugin "%1" is not tested.</source>
-        <translation>افزونه "%1" آزمایش نشده است.</translation>
+        <source>The plugin &quot;%1&quot; is not tested.</source>
+        <translation>افزونه &quot;%1&quot; آزمایش نشده است.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Cannot request scenario "%1" as it was already requested.</source>
-        <translation>نمی توان سناریوی "%1" را همانطور که قبلاً درخواست شده بود درخواست کرد.</translation>
+        <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
+        <translation>نمی توان سناریوی &quot;%1&quot; را همانطور که قبلاً درخواست شده بود درخواست کرد.</translation>
     </message>
     <message>
         <location line="+130" />
@@ -5924,8 +5923,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency '%1(%2)'</source>
-        <translation>نمی توان وابستگی "%1(%2)" را حل کرد</translation>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation>نمی توان وابستگی &quot;%1(%2)&quot; را حل کرد</translation>
     </message>
     <message>
         <location line="+61" />
@@ -5939,8 +5938,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="-416" />
-        <source>"%1" is missing</source>
-        <translation>"%1" وجود ندارد</translation>
+        <source>&quot;%1&quot; is missing</source>
+        <translation>&quot;%1&quot; وجود ندارد</translation>
     </message>
     <message>
         <location line="-24" />
@@ -5949,28 +5948,28 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+29" />
-        <source>Value for key "%1" is not a string</source>
-        <translation>مقدار کلید "%1" یک رشته نیست</translation>
+        <source>Value for key &quot;%1&quot; is not a string</source>
+        <translation>مقدار کلید &quot;%1&quot; یک رشته نیست</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a bool</source>
-        <translation>مقدار کلید "%1" یک بول نیست</translation>
+        <source>Value for key &quot;%1&quot; is not a bool</source>
+        <translation>مقدار کلید &quot;%1&quot; یک بول نیست</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not an array of objects</source>
-        <translation>مقدار کلید "%1" آرایه ای از اشیا نیست</translation>
+        <source>Value for key &quot;%1&quot; is not an array of objects</source>
+        <translation>مقدار کلید &quot;%1&quot; آرایه ای از اشیا نیست</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a string and not an array of strings</source>
-        <translation>مقدار کلید "%1" رشته ای نیست و آرایه ای از رشته ها نیست</translation>
+        <source>Value for key &quot;%1&quot; is not a string and not an array of strings</source>
+        <translation>مقدار کلید &quot;%1&quot; رشته ای نیست و آرایه ای از رشته ها نیست</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Value "%2" for key "%1" has invalid format</source>
-        <translation>مقدار "%2" برای کلید "%1" دارای قالب نامعتبر است</translation>
+        <source>Value &quot;%2&quot; for key &quot;%1&quot; has invalid format</source>
+        <translation>مقدار &quot;%2&quot; برای کلید &quot;%1&quot; دارای قالب نامعتبر است</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5979,8 +5978,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected IID "%1", but found "%2"</source>
-        <translation>انتظار می رود IID "%1" ، اما "%2" را پیدا کرد</translation>
+        <source>Expected IID &quot;%1&quot;, but found &quot;%2&quot;</source>
+        <translation>انتظار می رود IID &quot;%1&quot; ، اما &quot;%2&quot; را پیدا کرد</translation>
     </message>
     <message>
         <location line="+6" />
@@ -5989,8 +5988,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+108" />
-        <source>Invalid platform specification "%1": %2</source>
-        <translation>مشخصات پلت فرم نامعتبر "%1": %2</translation>
+        <source>Invalid platform specification &quot;%1&quot;: %2</source>
+        <translation>مشخصات پلت فرم نامعتبر &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+18" />
@@ -6003,8 +6002,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+13" />
-        <source>Dependency: "%1" must be "%2" or "%3" (is "%4").</source>
-        <translation>وابستگی: "%1" باید "%2" یا "%3" باشد ("%4" است).</translation>
+        <source>Dependency: &quot;%1&quot; must be &quot;%2&quot; or &quot;%3&quot; (is &quot;%4&quot;).</source>
+        <translation>وابستگی: &quot;%1&quot; باید &quot;%2&quot; یا &quot;%3&quot; باشد (&quot;%4&quot; است).</translation>
     </message>
     <message>
         <location line="+25" />
@@ -6016,8 +6015,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="-13" />
-        <source>Argument: "%1" is empty</source>
-        <translation>آرگومان: "%1" خالی است</translation>
+        <source>Argument: &quot;%1&quot; is empty</source>
+        <translation>آرگومان: &quot;%1&quot; خالی است</translation>
     </message>
     <message>
         <location line="+182" />
@@ -6174,13 +6173,13 @@ Would you like to overwrite it?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+161" />
-        <source>Exported "%1", %2x%3, %4 bytes</source>
-        <translation>"%1"، %2x%3، %4 بایت صادر شد</translation>
+        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
+        <translation>&quot;%1&quot;، %2x%3، %4 بایت صادر شد</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Could not write file "%1".</source>
-        <translation>نمی توان فایل "%1" را نوشت.</translation>
+        <source>Could not write file &quot;%1&quot;.</source>
+        <translation>نمی توان فایل &quot;%1&quot; را نوشت.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6351,8 +6350,8 @@ Would you like to overwrite it?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>A comma-separated list of size specifications of the form "&lt;width&gt;x&lt;height&gt;".</source>
-        <translation>فهرستی از مشخصات اندازه که با کاما از هم جدا شده است به شکل "&lt;width&gt;x&lt;height&gt;".</translation>
+        <source>A comma-separated list of size specifications of the form &quot;&lt;width&gt;x&lt;height&gt;&quot;.</source>
+        <translation>فهرستی از مشخصات اندازه که با کاما از هم جدا شده است به شکل &quot;&lt;width&gt;x&lt;height&gt;&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6397,7 +6396,7 @@ Would you like to overwrite them?</source>
         <translation>خطا %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+60" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
         <source>Deprecated</source>
         <translation>مستهلک</translation>
     </message>
@@ -6422,7 +6421,7 @@ Would you like to overwrite them?</source>
         <translation>مشتق</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+212" />
         <source>Call Hierarchy</source>
         <translation>سلسله مراتب را فراخوانی کنید</translation>
     </message>
@@ -6432,13 +6431,13 @@ Would you like to overwrite them?</source>
         <translation>سلسله مراتب تماس را برای نماد در موقعیت مکان نما بارگیری کنید.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+394" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
         <translation>%1 برای %2</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+230" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>غیر مقبدی</translation>
@@ -6481,15 +6480,15 @@ Would you like to overwrite them?</source>
     </message>
     <message>
         <location line="+1342" />
-        <source>Invalid parameter in "%1":
+        <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
-        <translation>پارامتر نامعتبر در "%1":
+        <translation>پارامتر نامعتبر در &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
         <location line="+219" />
-        <source>Language Server "%1" Initialization Error</source>
-        <translation>خطای اولیه سازی سرور زبان "%1"</translation>
+        <source>Language Server &quot;%1&quot; Initialization Error</source>
+        <translation>خطای اولیه سازی سرور زبان &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+13" />
@@ -6563,8 +6562,8 @@ Would you like to overwrite them?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientinterface.cpp" line="+77" />
-        <source>Cannot handle MIME type "%1" of message.</source>
-        <translation>نمی توان پیام "%1" پیام را کنترل کرد.</translation>
+        <source>Cannot handle MIME type &quot;%1&quot; of message.</source>
+        <translation>نمی توان پیام &quot;%1&quot; پیام را کنترل کرد.</translation>
     </message>
     <message>
         <location line="+70" />
@@ -6582,7 +6581,7 @@ Would you like to overwrite them?</source>
         <translation>به طور غیر منتظره به پایان رسید</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+217" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+82" />
         <source>Expand All</source>
         <translation>همه را گسترش دهید</translation>
@@ -6615,12 +6614,12 @@ Would you like to overwrite them?</source>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+185" />
         <source>&amp;Add</source>
-        <translation>و اضافه کردن</translation>
+        <translation>و اضافه کردن (&amp;A)</translation>
     </message>
     <message>
         <location line="+11" />
         <source>&amp;Delete</source>
-        <translation>و حذف</translation>
+        <translation>و حذف (&amp;D)</translation>
     </message>
     <message>
         <location line="+106" />
@@ -6666,8 +6665,8 @@ Example: *.cpp%1*.h</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Language server-specific JSON to pass via "initializationOptions" field of "initialize" request.</source>
-        <translation>JSON خاص سرور زبان برای عبور از طریق "InitializationOptions" زمینه درخواست "اولیه سازی".</translation>
+        <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
+        <translation>JSON خاص سرور زبان برای عبور از طریق &quot;InitializationOptions&quot; زمینه درخواست &quot;اولیه سازی&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6744,8 +6743,8 @@ See the documentation of the specific language server for valid settings.</sourc
     <message numerus="yes">
         <location line="+21" />
         <source>Re&amp;name %n files</source>
-        <translation>
-            <numerusform>دوباره و نام ٪ n پرونده ها</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -6803,23 +6802,23 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+6" />
-        <source>Running "%1" to install %2.</source>
-        <translation>اجرای "%1" برای نصب %2.</translation>
+        <source>Running &quot;%1&quot; to install %2.</source>
+        <translation>اجرای &quot;%1&quot; برای نصب %2.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>نصب "٪ ​​1" توسط Timeout لغو شد.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>نصب "٪ ​​1" توسط کاربر لغو شد.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>نصب "٪ ​​1" با کد خروجی %2 انجام نشد.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+56" />
@@ -6926,33 +6925,33 @@ See the documentation of the specific language server for valid settings.</sourc
     <name>QtC::LanguageServerProtocol</name>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
-        <source>Cannot decode content with "%1". Falling back to "%2".</source>
-        <translation>نمی توان محتوای "%1" را رمزگشایی کرد. بازگشت به "%2".</translation>
+        <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
+        <translation>نمی توان محتوای &quot;%1&quot; را رمزگشایی کرد. بازگشت به &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Expected an integer in "%1", but got "%2".</source>
-        <translation>انتظار می رود یک عدد صحیح در "%1" باشد ، اما "%2" را بدست آورد.</translation>
+        <source>Expected an integer in &quot;%1&quot;, but got &quot;%2&quot;.</source>
+        <translation>انتظار می رود یک عدد صحیح در &quot;%1&quot; باشد ، اما &quot;%2&quot; را بدست آورد.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
-        <source>Could not parse JSON message: "%1".</source>
-        <translation>نمی توان پیام JSON را تجزیه کرد: "%1".</translation>
+        <source>Could not parse JSON message: &quot;%1&quot;.</source>
+        <translation>نمی توان پیام JSON را تجزیه کرد: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected a JSON object, but got a JSON "%1" value.</source>
-        <translation>انتظار می رود یک شیء JSON ، اما مقدار JSON "%1" را بدست آورد.</translation>
+        <source>Expected a JSON object, but got a JSON &quot;%1&quot; value.</source>
+        <translation>انتظار می رود یک شیء JSON ، اما مقدار JSON &quot;%1&quot; را بدست آورد.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
-        <source>No parameters in "%1".</source>
-        <translation>هیچ پارامتر در "%1" وجود ندارد.</translation>
+        <source>No parameters in &quot;%1&quot;.</source>
+        <translation>هیچ پارامتر در &quot;%1&quot; وجود ندارد.</translation>
     </message>
     <message>
         <location line="+213" />
-        <source>No ID set in "%1".</source>
-        <translation>هیچ شناسه ای در "%1" تنظیم نشده است.</translation>
+        <source>No ID set in &quot;%1&quot;.</source>
+        <translation>هیچ شناسه ای در &quot;%1&quot; تنظیم نشده است.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
@@ -7040,7 +7039,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7052,60 +7051,60 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+156" />
         <location line="+823" />
         <source>Dataset Editor</source>
         <translation>ویرایشگر مجموعه داده</translation>
     </message>
     <message>
-        <location line="-364" />
+        <location line="-366" />
         <source>Please enter a class name</source>
         <translation>لطفا نام کلاس را وارد کنید</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+604" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+412" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+70" />
+        <location line="+72" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-732" />
         <location line="+19" />
-        <location line="+115" />
-        <location line="+1483" />
+        <location line="+111" />
+        <location line="+1514" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+124" />
-        <location line="+180" />
-        <location line="+308" />
+        <location line="+139" />
+        <location line="+202" />
+        <location line="+306" />
         <location line="+13" />
-        <location line="+168" />
-        <location line="+145" />
+        <location line="+169" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
-        <location line="+254" />
+        <location line="+117" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+378" />
+        <location line="+273" />
         <location line="+86" />
-        <location line="+1017" />
-        <location line="+895" />
+        <location line="+1142" />
+        <location line="+1075" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+539" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
         <location line="+19" />
         <location line="+11" />
@@ -7113,8 +7112,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>خطا: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3475" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-309" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3541" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7124,30 +7123,30 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+9" />
         <location line="+25" />
         <location line="+9" />
-        <source>Failed to create "%L1"!</source>
-        <translation>"%L1" ایجاد نشد!</translation>
+        <source>Failed to create &quot;%L1&quot;!</source>
+        <translation>&quot;%L1&quot; ایجاد نشد!</translation>
     </message>
     <message>
-        <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2513" />
-        <location line="+1446" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
+        <location line="+33" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
+        <location line="+1442" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>فایل تصویری به دلیل نامعلومی ذخیره نشد!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581" />
-        <location line="+239" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
+        <location line="+224" />
         <source>Delete</source>
         <translation>حذف</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309" />
-        <source>Are you sure you want to permanetly delete "%L1"?</source>
-        <translation>آیا مطمئن هستید که می خواهید برای همیشه "%L1" را حذف کنید؟</translation>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
+        <translation>آیا مطمئن هستید که می خواهید برای همیشه &quot;%L1&quot; را حذف کنید؟</translation>
     </message>
     <message>
         <location line="-86" />
@@ -7172,10 +7171,10 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>تغییر نام فایل به دلیل نامعلومی انجام نشد!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5164" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5247" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>فایل "%1" در "%2" کپی نشد.</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>فایل &quot;%1&quot; در &quot;%2&quot; کپی نشد.</translation>
     </message>
     <message>
         <source>Invalid argument (%1) for -override_read_timeout</source>
@@ -7199,19 +7198,19 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>آرگومان موجود برای -serial_number_filter</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+145" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2349" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2677" />
         <location line="+9" />
         <location line="+13" />
-        <location line="+59" />
+        <location line="+63" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+830" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
         <location line="+36" />
         <location line="+7" />
@@ -7220,13 +7219,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+7" />
         <source>
 
-Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>
 
 لطفاً هر برنامه‌ای را که در حال مشاهده/ویرایش داده‌های برنامه OpenMV IDE هستند ببندید و سپس OpenMV IDE را مجدداً راه‌اندازی کنید!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-65" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>آستانه مقیاس خاکستری را با ویرایشگر آستانه ویرایش کنید</translation>
     </message>
@@ -7236,18 +7235,18 @@ Please close any programs that are viewing/editing OpenMV IDE's application data
         <translation>آستانه LAB را با ویرایشگر آستانه ویرایش کنید</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+221" />
         <source>Missing argument for -form_key</source>
         <translation>آرگومان برای -form_key وجود ندارد</translation>
     </message>
     <message>
-        <location line="+1066" />
+        <location line="+1074" />
         <source>About OpenMV Viewer...</source>
         <translation>درباره OpenMV Viewer...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;درباره %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;توسط: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;مجوز عمومی GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;کپی رایت (C) %L2 %L3&lt;/p&gt;&lt;p&gt;این برنامه به این امید توزیع می شود که مفید باشد، اما بدون هیچ گونه ضمانتی؛ حتی بدون ضمانت ضمنی قابلیت خرید و فروش یا تناسب اندام برای یک هدف خاص. برای جزئیات بیشتر به &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; مراجعه کنید.&lt;/p&gt;&lt;p&gt;&lt;b&gt;سوال یا نظر؟&lt;/b&gt;&lt;/p&gt;&lt;p&gt;با ما در &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt; تماس بگیرید.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;درباره %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;توسط: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;مجوز عمومی GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;کپی رایت (C) %L2 %L3&lt;/p&gt;&lt;p&gt;این برنامه به این امید توزیع می شود که مفید باشد، اما بدون هیچ گونه ضمانتی؛ حتی بدون ضمانت ضمنی قابلیت خرید و فروش یا تناسب اندام برای یک هدف خاص. برای جزئیات بیشتر به &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; مراجعه کنید.&lt;/p&gt;&lt;p&gt;&lt;b&gt;سوال یا نظر؟&lt;/b&gt;&lt;/p&gt;&lt;p&gt;با ما در &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt; تماس بگیرید.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+17" />
@@ -7255,7 +7254,7 @@ Please close any programs that are viewing/editing OpenMV IDE's application data
         <translation>OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1039" />
+        <location line="-1050" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -7268,9 +7267,9 @@ Please close any programs that are viewing/editing OpenMV IDE's application data
         <translation type="vanished">آرگومان گمشده برای -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="-460" />
+        <location line="-468" />
         <source>Invalid argument (%1) for -auto_update</source>
-        <translation>آرگومان نامعتبر (1%) برای -auto_update</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6" />
@@ -7278,7 +7277,7 @@ Please close any programs that are viewing/editing OpenMV IDE's application data
         <translation>آرگومان از دست رفته برای -auto_update</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+248" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7291,7 +7290,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">خطا در خواندن &lt;user_resource&gt;/openmvide/firmware/settings.json: %L1. \ n \ nopenmv نسخه های IDE قبل از v4.3.0 این پرونده را ندارید و آن را در نصب منابع حذف می کند.</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+188" />
         <source>Form Key</source>
         <translation>کلید فرم</translation>
     </message>
@@ -7301,7 +7300,7 @@ Check the json file for errors and fix them.</source>
         <translation>لطفا کلید فرم را وارد کنید</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+80" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7311,7 +7310,7 @@ Check the json file for errors and fix them.</source>
         <location line="-13" />
         <location line="+7" />
         <location line="+7" />
-        <source>Can't open the new file!</source>
+        <source>Can&apos;t open the new file!</source>
         <translation>فایل جدید باز نمیشه!</translation>
     </message>
     <message>
@@ -7321,8 +7320,8 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Add some code to "%L1"</source>
-        <translation>مقداری کد به "%L1" اضافه کنید</translation>
+        <source>Add some code to &quot;%L1&quot;</source>
+        <translation>مقداری کد به &quot;%L1&quot; اضافه کنید</translation>
     </message>
     <message>
         <location line="+12" />
@@ -7358,7 +7357,7 @@ Check the json file for errors and fix them.</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <source>Are you sure you want to erase your OpenMV Cam's onboard flash drive?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s onboard flash drive?</source>
         <translation type="vanished">آیا مطمئن هستید که می خواهید درایو فلش داخلی OpenMV Cam خود را پاک کنید؟</translation>
     </message>
     <message>
@@ -7392,7 +7391,7 @@ Check the json file for errors and fix them.</source>
         <translation>کتابخانه ها را به طور خودکار بین OpenMV Cam و Documents Folder همگام سازی می کند.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+24" />
         <source>Filter examples by board and sensor type</source>
         <translation>نمونه های فیلتر بر اساس برد و نوع سنسور</translation>
     </message>
@@ -7422,40 +7421,40 @@ Check the json file for errors and fix them.</source>
         <translation>بازنشانی OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Install the Latest Development Release</source>
         <translation>آخرین نسخه توسعه را نصب کنید</translation>
     </message>
     <message>
-        <location line="+77" />
-        <location line="+3764" />
+        <location line="+75" />
+        <location line="+3823" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>ترمینال را باز کنید</translation>
     </message>
     <message>
-        <location line="-3818" />
+        <location line="-3877" />
         <source>Machine Vision</source>
         <translation>ماشین بینایی</translation>
     </message>
     <message>
-        <location line="+181" />
-        <location line="+3668" />
-        <location line="+76" />
+        <location line="+175" />
+        <location line="+3733" />
+        <location line="+75" />
         <source>Threshold Editor</source>
         <translation>ویرایشگر آستانه</translation>
     </message>
     <message>
-        <location line="-3739" />
-        <location line="+3817" />
+        <location line="-3803" />
+        <location line="+3880" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>ویرایشگر نقاط کلیدی</translation>
     </message>
     <message>
-        <location line="-3810" />
-        <location line="+3976" />
-        <location line="+98" />
+        <location line="-3873" />
+        <location line="+4037" />
+        <location line="+97" />
         <location line="+24" />
         <location line="+11" />
         <location line="+18" />
@@ -7463,7 +7462,7 @@ Check the json file for errors and fix them.</source>
         <translation>آوریل تگ ژنراتور</translation>
     </message>
     <message>
-        <location line="-4124" />
+        <location line="-4184" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>خانواده TAG16H5 (30 برچسب)</translation>
     </message>
@@ -7501,16 +7500,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+371" />
+        <location line="+367" />
         <location line="+14" />
         <location line="+33" />
-        <location line="+916" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
-        <source>Failed to open: "%L1"</source>
-        <translation>باز نشد: "%L1"</translation>
+        <location line="+918" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-223" />
+        <source>Failed to open: &quot;%L1&quot;</source>
+        <translation>باز نشد: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1358" />
+        <location line="-1356" />
         <source>DataMatrix Generator</source>
         <translation>مولد DataMatrix</translation>
     </message>
@@ -7536,29 +7535,29 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">محل ذخیره شبکه در OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+228" />
-        <location line="+2357" />
-        <location line="+1290" />
+        <location line="+225" />
+        <location line="+2424" />
+        <location line="+1288" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
-        <location line="+67" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382" />
-        <location line="+364" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899" />
-        <location line="+208" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-393" />
+        <location line="+375" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+900" />
+        <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>لطفا یک پسوند فایل اضافه کنید!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-269" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+112" />
-        <location line="+207" />
+        <location line="+119" />
+        <location line="+203" />
         <source>Unable to overwrite output file!</source>
         <translation>بازنویسی فایل خروجی ممکن نیست!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3860" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3922" />
         <source>Video Tools</source>
         <translation>ابزارهای ویدئویی</translation>
     </message>
@@ -7574,23 +7573,23 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-437" />
-        <location line="+273" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-439" />
+        <location line="+275" />
         <source>Play RTSP Stream</source>
         <translation>RTSP Stream را پخش کنید</translation>
     </message>
     <message>
         <location line="+16" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+15" />
         <location line="+6" />
-        <location line="+46" />
+        <location line="+48" />
         <location line="+19" />
         <source>New Dataset</source>
         <translation>مجموعه داده جدید</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-98" />
         <source>Dataset Editor - Choose a folder to build the dataset in</source>
         <translation>ویرایشگر مجموعه داده - پوشه ای را برای ساخت مجموعه داده انتخاب کنید</translation>
     </message>
@@ -7601,17 +7600,17 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+15" />
-        <location line="+207" />
+        <location line="+205" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-209" />
         <location line="+34" />
         <location line="+48" />
         <location line="+33" />
-        <source>Failed to remove "%L1"!</source>
-        <translation>"%L1" حذف نشد!</translation>
+        <source>Failed to remove &quot;%L1&quot;!</source>
+        <translation>&quot;%L1&quot; حذف نشد!</translation>
     </message>
     <message>
-        <location line="-128" />
-        <location line="+30" />
+        <location line="-125" />
+        <location line="+29" />
         <source>Open Dataset</source>
         <translation>مجموعه داده را باز کنید</translation>
     </message>
@@ -7626,7 +7625,7 @@ Check the json file for errors and fix them.</source>
         <translation>به نظر نمی رسد پوشه انتخاب شده یک مجموعه داده تصویر بادامک OpenMV معتبر باشد!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export</source>
         <translation>صادرات</translation>
     </message>
@@ -7636,7 +7635,7 @@ Check the json file for errors and fix them.</source>
         <translation>مجموعه داده را به فایل فشرده صادر کنید</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <location line="+7" />
         <location line="+42" />
         <location line="+21" />
@@ -7654,38 +7653,38 @@ Check the json file for errors and fix them.</source>
         <translation>در حال صادرات...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-520" />
-        <location line="+237" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-522" />
+        <location line="+239" />
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1482" />
+        <location line="+1513" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+258" />
-        <location line="+533" />
-        <location line="+145" />
+        <location line="+273" />
+        <location line="+554" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location line="+433" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
-        <location line="+288" />
-        <location line="+143" />
-        <location line="+1023" />
+        <location line="+117" />
+        <location line="+428" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-131" />
+        <location line="+289" />
+        <location line="+165" />
+        <location line="+1148" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1339" />
         <location line="+85" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Cancel</source>
         <translation>لغو کنید</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3673" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3737" />
         <source>Upload to Edge Impulse Project</source>
         <translation>در Edge Impulse Project آپلود کنید</translation>
     </message>
@@ -7764,8 +7763,8 @@ Check the json file for errors and fix them.</source>
         <translation>درباره OpenMV IDE...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;درباره OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;توسط: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt; /p&gt;&lt;p&gt;حق نشر (C) %L2 %L3&lt;/p&gt;&lt;p&gt;این برنامه به امید مفید بودن توزیع شده است، اما بدون هیچ گونه ضمانت. حتی بدون ضمانت ضمنی تجارت یا تناسب برای یک هدف خاص. برای جزئیات بیشتر به &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;مجوز عمومی عمومی گنو&lt;/a&gt; مراجعه کنید.&lt;/p&gt;&lt;p. &gt;&lt;b&gt;سؤالات یا نظراتی دارید؟&lt;/b&gt;&lt;/p&gt;&lt;p&gt;با ما در &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt; تماس بگیرید.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;درباره OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;توسط: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt; /p&gt;&lt;p&gt;حق نشر (C) %L2 %L3&lt;/p&gt;&lt;p&gt;این برنامه به امید مفید بودن توزیع شده است، اما بدون هیچ گونه ضمانت. حتی بدون ضمانت ضمنی تجارت یا تناسب برای یک هدف خاص. برای جزئیات بیشتر به &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;مجوز عمومی عمومی گنو&lt;/a&gt; مراجعه کنید.&lt;/p&gt;&lt;p. &gt;&lt;b&gt;سؤالات یا نظراتی دارید؟&lt;/b&gt;&lt;/p&gt;&lt;p&gt;با ما در &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt; تماس بگیرید.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
@@ -7786,11 +7785,11 @@ Check the json file for errors and fix them.</source>
         <translation>نمایشگر OpenMV</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+73" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
         <location line="+37" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-221" />
         <location line="+87" />
         <location line="+55" />
@@ -7826,11 +7825,11 @@ Check the json file for errors and fix them.</source>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-195" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-197" />
         <location line="+9" />
-        <location line="+89" />
-        <location line="+13" />
-        <location line="+42" />
+        <location line="+95" />
+        <location line="+11" />
+        <location line="+40" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
@@ -7860,53 +7859,61 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1064" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1189" />
         <location line="+6" />
         <location line="+28" />
         <location line="+52" />
         <location line="+8" />
         <location line="+35" />
-        <location line="+320" />
-        <location line="+62" />
-        <location line="+99" />
-        <location line="+49" />
-        <location line="+67" />
-        <location line="+12" />
-        <location line="+77" />
+        <location line="+329" />
+        <location line="+136" />
+        <location line="+28" />
+        <location line="+100" />
+        <location line="+56" />
+        <location line="+68" />
+        <location line="+13" />
+        <location line="+81" />
         <location line="+10" />
         <location line="+12" />
         <location line="+28" />
-        <location line="+36" />
-        <location line="+84" />
+        <location line="+34" />
+        <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+86" />
+        <location line="+97" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
-        <location line="+108" />
+        <location line="+116" />
         <location line="+83" />
-        <location line="+42" />
-        <location line="+38" />
-        <location line="+52" />
-        <location line="+38" />
+        <location line="+82" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+46" />
+        <location line="+54" />
+        <location line="+51" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
         <location line="+21" />
         <location line="+20" />
         <location line="+24" />
-        <location line="+121" />
-        <location line="+214" />
+        <location line="+135" />
+        <location line="+217" />
         <location line="+33" />
-        <location line="+248" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+658" />
+        <location line="+268" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+668" />
         <location line="+48" />
         <source>Connect</source>
         <translation>اتصال</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-42" />
         <source>No settings for the selected board type %L1!</source>
         <translation>بدون تنظیم برای نوع صفحه انتخاب شده %L1!</translation>
     </message>
@@ -7917,12 +7924,12 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Only firmware recovery is supported using the Alif Semiconductor's SE Tools.</source>
+        <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>فقط بازیابی سیستم عامل با استفاده از ابزارهای SE نیمه هادی Alif پشتیبانی می شود.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
         <source>Disconnect</source>
@@ -7981,12 +7988,11 @@ Check the json file for errors and fix them.</source>
         <translation>بزرگنمایی به تناسب</translation>
     </message>
     <message>
-        <location line="+30" />
         <source>JPG</source>
-        <translation>JPG</translation>
+        <translation type="vanished">JPG</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+31" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG برای عملکرد بالاتر، بافر فریم را فشرده می کند</translation>
     </message>
@@ -8005,7 +8011,7 @@ Check the json file for errors and fix them.</source>
         <translation>برای حداکثر کارایی، Frame Buffer را غیرفعال کنید</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+52" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>بافر فریم غیرفعال است - دوباره روی دکمه غیرفعال کلیک کنید تا فعال شود (بالا سمت راست)</translation>
     </message>
@@ -8074,17 +8080,15 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">پاسخ (w:%1، h:%2)</translation>
     </message>
     <message>
-        <location line="-1574" />
+        <location line="-1582" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>خطا در خواندن &lt;user_resource&gt;/openmvide/firmware/settings.json: ٪ l1. 
-
-نسخه های OpenMV IDE قبل از v4.3.0 این پرونده را ندارید و آن را در نصب منابع حذف می کنید.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2512" />
+        <location line="+346" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2858" />
         <source>Load Custom Firmware</source>
         <translation>بارگذاری سیستم عامل سفارشی</translation>
     </message>
@@ -8096,7 +8100,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+1" />
-        <source>Are you sure you want to erase your OpenMV Cam's internal FAT file system?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s internal FAT file system?</source>
         <translation>آیا مطمئن هستید که می خواهید سیستم پرونده چربی داخلی CAM OpenMV خود را پاک کنید؟</translation>
     </message>
     <message>
@@ -8125,15 +8129,20 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>بازنشانی ROMF ها در Cam OpenMV</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+84" />
+        <source>Force enter OpenMV Cam bootloader</source>
+        <translation>به اجبار وارد بوت لودر OpenMV Cam شوید</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>MicroPython Tools</source>
         <translation>ابزارهای میکروپیچون</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+6" />
         <location line="+7" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -8143,48 +8152,59 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>پرونده پایتون را کپی/تبدیل کنید</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Open Model Zoo</source>
         <translation>باغ وحش مدل باز</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+87" />
         <source>Convert Model for NPU</source>
         <translation>تبدیل مدل برای NPU</translation>
     </message>
     <message>
+        <location line="+6" />
+        <location line="+9" />
+        <location line="+12" />
         <location line="+7" />
-        <location line="+10" />
-        <location line="+13" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-176" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>تبدیل مدل</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location line="+420" />
         <source>Show Code Profiler</source>
         <translation>نمایش کد نمایه</translation>
     </message>
     <message>
         <location line="+101" />
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;درباره %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;توسط: Ibrahim Abdelkader و Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;فقط برای تولیدکنندگان دارای مجوز.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE (GNU GENERAL PUBLIC LICENSE) (P&lt;2&gt;&lt;pright) %Copyright&lt;/b&gt;Copyright %L3&lt;/p&gt;&lt;p&gt;این برنامه به این امید که مفید باشد، اما بدون ضمانت توزیع شده است. حتی بدون ضمانت ضمنی تجارت یا تناسب برای یک هدف خاص. برای جزئیات بیشتر به &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;مجوز عمومی عمومی گنو&lt;/a&gt; مراجعه کنید.&lt;/p&gt;&lt;p&gt;&lt;b&gt;سوالات یا نظراتی دارید؟&lt;/b&gt;&lt;/p&gt;&lt;p&gt;با ما در &lt;a تماس بگیرید href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+196" />
+        <location line="+26" />
+        <source>JPG Mode</source>
+        <translation>حالت JPG</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>RAW Mode</source>
+        <translation>حالت خام</translation>
+    </message>
+    <message>
+        <location line="+113" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
-        <translation>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - پیکسل ها (7%) - فوکوس (8%)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+9" />
         <source>Res (w:%1, h:%2) - Focus (%3)</source>
-        <translation>Res (w:%1, h:%2) - فوکوس (3%)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+79" />
@@ -8213,7 +8233,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2737" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
         <source>Board:</source>
         <translation>هیئت مدیره:</translation>
     </message>
@@ -8257,9 +8277,9 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-301" />
-        <location line="+303" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
+        <location line="+324" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
         <source>Drive:</source>
         <translation>راندن:</translation>
     </message>
@@ -8280,8 +8300,8 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>ممکن است با FPS دوربین متفاوت باشد</translation>
     </message>
     <message>
-        <location line="+309" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2952" />
+        <location line="+307" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
         <source>Update Available</source>
         <translation>به روز رسانی در دسترس است</translation>
     </message>
@@ -8296,7 +8316,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>دانلود</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
         <translation>برنامه نویسی وای فای غیرفعال شد!</translation>
     </message>
@@ -8334,11 +8354,11 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
-Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
 
 Blinking Green:
 
-Your OpenMV Cam's onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
 
 Blinking Blue:
 
@@ -8346,11 +8366,11 @@ Your OpenMV Cam is running the default main.py script onboard.
 
 If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
 
-If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+If the LED is blinking blue but OpenMV IDE can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
 
 Blinking White:
 
-Your OpenMV Cam's firmware is panicking because of a hardware failure. Please check that your OpenMV Cam's camera module is installed securely.
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
         <translation>برای استفاده از OpenMV Cam و OpenMV IDE متشکریم!
@@ -8377,27 +8397,27 @@ OpenMV Cam شما اسکریپت پیش فرض main.py را اجرا می کند
     </message>
     <message>
         <location line="+93" />
-        <location line="+1176" />
+        <location line="+1212" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>پورت سریال - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1144" />
+        <location line="-1180" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+791" />
-        <location line="+145" />
+        <location line="+827" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
+        <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>در حال اتصال... (تایم ۳۰ ثانیه ای)</translation>
     </message>
     <message>
-        <location line="-1783" />
+        <location line="-1820" />
         <source>
 
 Try doing:
@@ -8450,12 +8470,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1233" />
+        <location line="+1270" />
         <source>UDP Server Connection - %1</source>
         <translation>اتصال سرور UDP - %1</translation>
     </message>
     <message>
-        <location line="-1159" />
+        <location line="-1196" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>آرگومان پورت نامعتبر (%1) برای -open_udp_server_terminal</translation>
     </message>
@@ -8486,12 +8506,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1279" />
+        <location line="+1317" />
         <source>TCP Server Connection - %1</source>
         <translation>اتصال سرور TCP - %1</translation>
     </message>
     <message>
-        <location line="-1205" />
+        <location line="-1243" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>آرگومان پورت (%1) برای -open_tcp_server_terminal نامعتبر است</translation>
     </message>
@@ -8501,15 +8521,17 @@ sudo adduser %L1 dialout
         <translation>آرگومان های موجود برای -open_tcp_server_terminal</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+58" />
         <location line="+18" />
+        <location line="+6" />
+        <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
         <location line="+9" />
         <location line="+45" />
-        <location line="+79" />
-        <location line="+8" />
+        <location line="+82" />
+        <location line="+27" />
         <location line="+6" />
         <location line="+6" />
         <location line="+6" />
@@ -8518,15 +8540,15 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2389" />
-        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location line="+10" />
         <location line="+8" />
-        <location line="+19" />
+        <location line="+22" />
         <source>Register OpenMV Cam</source>
         <translation>ثبت OpenMV Cam</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="-278" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8546,13 +8568,24 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
     </message>
     <message>
         <location line="+7" />
-        <location line="+17" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65" />
+        <location line="+29" />
+        <location line="+172" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-69" />
         <source>Registered</source>
         <translation>ثبت شده است</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-190" />
+        <source>Board type not available for this form key!</source>
+        <translation>نوع تابلو برای این کلید فرم موجود نیست!</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Registration limit reached for this board type!</source>
+        <translation>محدودیت ثبت نام برای این نوع تابلو رسیده است!</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8568,27 +8601,27 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
     </message>
     <message>
         <location line="+17" />
-        <location line="+182" />
+        <location line="+204" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>خطای پایگاه داده!</translation>
     </message>
     <message>
-        <location line="-165" />
-        <location line="+178" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+17" />
+        <location line="-187" />
+        <location line="+200" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+18" />
         <source>GET Network error!</source>
         <translation>دریافت خطای شبکه!</translation>
     </message>
     <message>
-        <location line="-169" />
-        <location line="+177" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+19" />
+        <location line="-191" />
+        <location line="+199" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+22" />
         <source>GET network error!</source>
         <translation>دریافت خطای شبکه!</translation>
     </message>
     <message>
-        <location line="-170" />
+        <location line="-192" />
         <location line="+10" />
         <location line="+10" />
         <source>Unregistered OpenMV Cam Detected</source>
@@ -8596,7 +8629,7 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
     </message>
     <message>
         <location line="-19" />
-        <source>Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
         <translation>OpenMV Cam شما ثبت نشده است. باید OpenMV Cam خود را در OpenMV برای استفاده نامحدود با OpenMV IDE بدون هیچ وقفه ثبت کنید.
@@ -8623,8 +8656,8 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+19" />
-        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href="https://openmv.io/products/openmv-cam-board-key"&gt;here&lt;/a&gt;.</source>
-        <translation>لطفاً یک کلید برد برای ثبت OpenMV Cam خود وارد کنید.&lt;br/&gt;&lt;br/&gt;اگر کلید برد ندارید می‌توانید از OpenMV &lt;a href="https://openmv.io/products/openmv- خریداری کنید. cam-board-key"&gt;اینجا&lt;/a&gt;.</translation>
+        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>لطفاً یک کلید برد برای ثبت OpenMV Cam خود وارد کنید.&lt;br/&gt;&lt;br/&gt;اگر کلید برد ندارید می‌توانید از OpenMV &lt;a href=&quot;https://openmv.io/products/openmv- خریداری کنید. cam-board-key&quot;&gt;اینجا&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+47" />
@@ -8632,12 +8665,12 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>ثبت OpenMV Cam...</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+33" />
         <source>Thank you for registering your OpenMV Cam!</source>
         <translation>از ثبت نام OpenMV Cam خود متشکریم!</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+27" />
         <source>Invalid Board Key for Board Type!</source>
         <translation>کلید تابلو برای نوع تابلو نامعتبر است!</translation>
     </message>
@@ -8662,10 +8695,10 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>کلید هیئت مدیره با فرمت نامعتبر!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+223" />
-        <location line="+482" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+225" />
+        <location line="+503" />
         <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-83" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-84" />
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
@@ -8674,7 +8707,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">تنظیمات را پیکربندی کنید</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+389" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+395" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>ذخیره اسکریپت</translation>
@@ -8685,7 +8718,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>نظرات را حذف کنید و فضاها را به تب تبدیل کنید؟</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
@@ -8702,8 +8735,8 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>فایل های تصویری (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Template</source>
@@ -8716,26 +8749,26 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+23" />
-        <location line="+67" />
+        <location line="+65" />
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>لطفاً یک مسیر معتبر در OpenMV Cam انتخاب کنید!</translation>
     </message>
     <message>
-        <location line="-52" />
-        <location line="+67" />
-        <source>"%L1" is longer than a max length of %L2 characters!</source>
-        <translation>"%L1" بیشتر از طول حداکثر %L2 کاراکتر است!</translation>
+        <location line="-50" />
+        <location line="+65" />
+        <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
+        <translation>&quot;%L1&quot; بیشتر از طول حداکثر %L2 کاراکتر است!</translation>
     </message>
     <message>
-        <location line="-40" />
-        <location line="+7" />
+        <location line="-41" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Descriptor</source>
         <translation>ذخیره توصیفگر</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8743,7 +8776,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>فایل های نقاط کلیدی (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1113" />
+        <location line="-1112" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8761,17 +8794,17 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="-19" />
         <location line="+13" />
-        <source>Cannot open the file "%L1"!</source>
-        <translation>نمی توان فایل "%L1" را باز کرد!</translation>
+        <source>Cannot open the file &quot;%L1&quot;!</source>
+        <translation>نمی توان فایل &quot;%L1&quot; را باز کرد!</translation>
     </message>
     <message>
         <location line="-13" />
         <location line="+13" />
-        <source>Cannot open the example file "%L1"!</source>
-        <translation>نمی توان فایل مثال "%L1" را باز کرد!</translation>
+        <source>Cannot open the example file &quot;%L1&quot;!</source>
+        <translation>نمی توان فایل مثال &quot;%L1&quot; را باز کرد!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-467" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-468" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>Drive را انتخاب کنید</translation>
@@ -8782,8 +8815,8 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>هیچ درایو معتبری برای ارتباط با OpenMV Cam شما پیدا نشد!</translation>
     </message>
     <message>
-        <source>"%L1" is the only drive available so it must be your OpenMV Cam's drive.</source>
-        <translation type="vanished">"%L1" تنها درایو موجود است، بنابراین باید درایو OpenMV Cam شما باشد.</translation>
+        <source>&quot;%L1&quot; is the only drive available so it must be your OpenMV Cam&apos;s drive.</source>
+        <translation type="vanished">&quot;%L1&quot; تنها درایو موجود است، بنابراین باید درایو OpenMV Cam شما باشد.</translation>
     </message>
     <message>
         <location line="+27" />
@@ -8791,19 +8824,19 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>لطفاً یک درایو را با دوربین OpenMV خود مرتبط کنید</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>Drive: %L1</source>
         <translation>درایو: %L1</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+42" />
         <source>Debug Protocol Settings</source>
         <translation>تنظیمات پروتکل اشکال زدایی</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Protocol Version %1 - System Info:</source>
-        <translation>نسخه پروتکل % 1 - اطلاعات سیستم:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25" />
@@ -8866,30 +8899,30 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>نظرسنجی نمایه کد (ms)</translation>
     </message>
     <message>
-        <location line="+354" />
+        <location line="+391" />
         <location line="+26" />
         <location line="+7" />
-        <source>Failed to flush "%L1"!</source>
-        <translation>"%L1" پاک نشد!</translation>
+        <source>Failed to flush &quot;%L1&quot;!</source>
+        <translation>&quot;%L1&quot; پاک نشد!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34" />
-        <location line="+13" />
+        <location line="+12" />
         <location line="+31" />
         <location line="+9" />
-        <location line="+87" />
+        <location line="+89" />
         <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -8899,7 +8932,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>ترمینال جدید</translation>
     </message>
     <message>
-        <location line="-637" />
+        <location line="-641" />
         <source>Connect to serial port</source>
         <translation>اتصال به پورت سریال</translation>
     </message>
@@ -8920,7 +8953,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2021" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2227" />
         <source>Please select a serial port</source>
         <translation>لطفاً یک پورت سریال انتخاب کنید</translation>
     </message>
@@ -8930,7 +8963,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>لطفاً یک نرخ باود وارد کنید</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+96" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
         <source>Try doing:
 
@@ -8947,15 +8980,15 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+17" />
-        <location line="+138" />
+        <location line="+139" />
         <location line="+7" />
-        <location line="+236" />
+        <location line="+237" />
         <location line="+7" />
-        <source>Invalid string: "%L1"!</source>
-        <translation>رشته نامعتبر: "%L1"!</translation>
+        <source>Invalid string: &quot;%L1&quot;!</source>
+        <translation>رشته نامعتبر: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-381" />
         <source>No serial ports found!</source>
         <translation>هیچ پورت سریالی پیدا نشد!</translation>
     </message>
@@ -8966,45 +8999,45 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+3" />
-        <location line="+243" />
+        <location line="+244" />
         <source> Connect to a Server </source>
         <translation> به یک سرور متصل شوید </translation>
     </message>
     <message>
-        <location line="-242" />
-        <location line="+243" />
+        <location line="-243" />
+        <location line="+244" />
         <source> Start a Server </source>
         <translation> یک سرور راه اندازی کنید </translation>
     </message>
     <message>
         <location line="-234" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>لطفاً یک آدرس IP (یا نام دامنه) و پورت (به عنوان مثال xxx.xxx.xxx.xxx:xxxx) را وارد کنید.</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-222" />
         <source>UDP Client Connection - %1</source>
         <translation>اتصال سرویس گیرنده UDP - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>لطفاً یک شماره پورت وارد کنید (0 را برای هر پورت آزاد تصادفی وارد کنید)</translation>
     </message>
     <message>
-        <location line="-137" />
+        <location line="-138" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>به عنوان یک سرویس گیرنده به سرور TCP متصل شوید یا یک سرور TCP راه اندازی کنید؟</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+36" />
         <source>TCP Client Connection - %1</source>
         <translation>اتصال کلاینت TCP - %1</translation>
     </message>
     <message>
-        <location line="+244" />
+        <location line="+243" />
         <source>Error: Option Index!</source>
         <translation>خطا: Option Index!</translation>
     </message>
@@ -9029,7 +9062,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation> فایل تصویری </translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>تاپل آستانه انتخاب شده با بسته شدن به روز می شود.</translation>
@@ -9045,8 +9078,8 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>فایل تصویری</translation>
     </message>
     <message>
-        <location line="+71" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+70" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+704" />
         <source>What would you like to do?</source>
         <translation>دوست دارید چه کار کنید؟</translation>
     </message>
@@ -9061,7 +9094,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation> ادغام فایل ها </translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9111,12 +9144,12 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>بارگیری اولین فایل نقاط کلیدی به دلیل نامعلومی انجام نشد!</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>What tag images from the %L1 tag family do you want to generate?</source>
         <translation>چه تصاویر برچسبی از خانواده برچسب %L1 می خواهید ایجاد کنید؟</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Min (%1)</source>
         <translation>حداقل (%1)</translation>
     </message>
@@ -9158,7 +9191,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>نسل کامل شد!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1510" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>منابع OpenMV IDE جدید در دسترس هستند (به عنوان مثال، سیستم عامل، اسناد و غیره).</translation>
     </message>
@@ -9169,42 +9202,42 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+7" />
-        <location line="+288" />
-        <location line="+143" />
+        <location line="+289" />
+        <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
         <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
         <location line="+46" />
-        <location line="+75" />
+        <location line="+73" />
         <location line="+46" />
-        <location line="+74" />
+        <location line="+72" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+400" />
         <location line="+50" />
-        <location line="+873" />
+        <location line="+871" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>در حال دانلود...</translation>
     </message>
     <message>
-        <location line="-417" />
+        <location line="-440" />
         <source>Installing...</source>
         <translation>در حال نصب...</translation>
     </message>
     <message>
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
-        <source>Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+        <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>لطفاً هر برنامه‌ای را که در حال مشاهده/ویرایش داده‌های برنامه OpenMV IDE هستند ببندید و سپس OpenMV IDE را مجدداً راه‌اندازی کنید!</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
         <translation>نصب با موفقیت انجام شد! لطفا OpenMV IDE را مجددا راه اندازی کنید.</translation>
     </message>
@@ -9217,69 +9250,119 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-27" />
-        <location line="+254" />
+        <location line="+273" />
         <location line="+88" />
-        <source>Cannot open the resources file "%L1"!</source>
-        <translation>فایل منابع "%L1" باز نمی شود!</translation>
+        <source>Cannot open the resources file &quot;%L1&quot;!</source>
+        <translation>فایل منابع &quot;%L1&quot; باز نمی شود!</translation>
     </message>
     <message>
-        <location line="-314" />
-        <location line="+254" />
+        <location line="-333" />
+        <location line="+273" />
         <location line="+95" />
-        <source>Network request failed "%L1"!</source>
-        <translation>درخواست شبکه "%L1" ناموفق بود!</translation>
+        <source>Network request failed &quot;%L1&quot;!</source>
+        <translation>درخواست شبکه &quot;%L1&quot; ناموفق بود!</translation>
     </message>
     <message>
-        <location line="-315" />
+        <location line="-335" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation>باینری سیستم عامل ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+119" />
-        <location line="+588" />
-        <location line="+217" />
-        <location line="+2205" />
+        <location line="+12" />
+        <location line="+117" />
+        <location line="+720" />
+        <location line="+227" />
+        <location line="+2414" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>سیستم پرونده چربی داخلی را پاک کنید</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+119" />
-        <location line="+589" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+117" />
+        <location line="+722" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
-        <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>اگر این گزینه را فعال کنید ، تمام پرونده های موجود در سیستم فایل چربی داخلی CAM OpenMV شما حذف می شوند. این پرونده ها را بر روی هر کارت SD قابل جابجایی پاک نمی کند (در صورت درج).</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+708" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+839" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>تنظیم مجدد سیستم پرونده ROMFS</translation>
     </message>
     <message>
-        <location line="-3203" />
-        <location line="+708" />
-        <location line="+215" />
-        <location line="+2205" />
+        <location line="-3552" />
+        <location line="+840" />
+        <location line="+225" />
+        <location line="+2412" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>اگر این گزینه را فعال کنید ، سیستم فایل ROM در دوربین OpenMV شما به طور پیش فرض مجدداً تنظیم می شود.</translation>
     </message>
     <message>
-        <location line="-3160" />
+        <location line="-3510" />
         <location line="+45" />
         <source>Bootloader</source>
         <translation>بوت لودر</translation>
     </message>
     <message>
-        <location line="+2991" />
+        <location line="+28" />
+        <source>Force bootloader</source>
+        <translation>بوت لودر اجباری</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Force enter the OpenMV Cam bootloader. May result in the OpenMV Cam bootloader not automatically exiting on older boards.</source>
+        <translation>به اجبار بوت لودر OpenMV Cam را وارد کنید. ممکن است منجر به عدم خروج خودکار بوت لودر OpenMV Cam در بردهای قدیمی شود.</translation>
+    </message>
+    <message>
+        <location line="+693" />
+        <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
+        <translation>آخرین نسخه سیستم عامل (v%L1.%L2.%L3) را نصب کنید</translation>
+    </message>
+    <message>
+        <location line="+1063" />
+        <location line="+192" />
+        <source>Failed to copy firmware files to temporary directory!</source>
+        <translation>فایل‌های میان‌افزار در فهرست موقت کپی نشد!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Original firmware folder does not exist!</source>
+        <translation>پوشه سیستم عامل اصلی وجود ندارد!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Failed to create temporary directory!</source>
+        <translation>ایجاد دایرکتوری موقت ناموفق بود!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <source>Only loading bootloader.bin files is supported with the ST Cube Programmer!</source>
+        <translation>فقط بارگذاری فایل‌های bootloader.bin با برنامه‌نویس ST Cube پشتیبانی می‌شود!</translation>
+    </message>
+    <message>
+        <location line="+151" />
+        <source>Bootloader update complete!
+
+</source>
+        <translation>به روز رسانی بوت لودر کامل شد!</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Connect your OpenMV Cam now.</source>
+        <translation>اکنون OpenMV Cam خود را وصل کنید.</translation>
+    </message>
+    <message>
+        <location line="+1377" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9288,8 +9371,8 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 به طور خاص، نمونه های پردازش تصویر -&gt; ردیابی رنگ و یادگیری ماشین -&gt; TensorFlow را بررسی کنید.</translation>
     </message>
     <message>
-        <location line="-3104" />
-        <location line="+4" />
+        <location line="-3455" />
+        <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
         <source>Firmware Path</source>
@@ -9304,26 +9387,26 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation type="vanished">پاک کردن فایل سیستم داخلی</translation>
     </message>
     <message>
-        <source>If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">اگر این گزینه را فعال کنید، تمام فایل‌های موجود در درایو فلش داخلی OpenMV Cam شما حذف خواهند شد. این فایل ها را روی هیچ کارت SD قابل جابجایی (در صورت قرار دادن) پاک نمی کند.</translation>
     </message>
     <message>
-        <source>Loading firmware via DFU always erases your OpenMV Cam's internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
+        <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">بارگیری سیستم عامل از طریق DFU همیشه درایو فلش داخلی OpenMV Cam شما را پاک می کند. این فایل ها را روی هیچ کارت SD قابل جابجایی (در صورت قرار دادن) پاک نمی کند.</translation>
     </message>
     <message>
         <location line="+21" />
-        <location line="+130" />
+        <location line="+148" />
         <source>Run</source>
         <translation>اجرا کن</translation>
     </message>
     <message>
-        <location line="-86" />
-        <source>"%L1" is not a file!</source>
-        <translation>"%L1" یک فایل نیست!</translation>
+        <location line="-105" />
+        <source>&quot;%L1&quot; is not a file!</source>
+        <translation>&quot;%L1&quot; یک فایل نیست!</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+67" />
         <source>Update ROMFS file system</source>
         <translation>سیستم فایل ROMFS را به روز کنید</translation>
     </message>
@@ -9333,7 +9416,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>اگر این گزینه را فعال کنید ، سیستم فایل ROM در دوربین OpenMV شما به آخرین نسخه توسعه به روز می شود.</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+125" />
         <source>Extracting...</source>
         <translation>استخراج ...</translation>
     </message>
@@ -9353,17 +9436,16 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>هیئت ناشناخته</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+344" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>یک برد در حالت DFU شناسایی شد. دوست دارید چه کار کنید؟</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Install the lastest release firmware (v%L1.%L2.%L3)</source>
-        <translation>آخرین نسخه سیستم عامل (v%L1.%L2.%L3) را نصب کنید</translation>
+        <translation type="vanished">آخرین نسخه سیستم عامل (v%L1.%L2.%L3) را نصب کنید</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Load a specific firmware</source>
         <translation>یک سیستم عامل خاص را بارگیری کنید</translation>
     </message>
@@ -9372,36 +9454,35 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation type="vanished">فقط فایل سیستم داخلی را پاک کنید</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+92" />
         <source>No OpenMV Cams found!</source>
         <translation>هیچ دوربین OpenMV پیدا نشد!</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+56" />
         <source>Do you have an OpenMV Cam connected and is it bricked?</source>
         <translation>آیا دوربین OpenMV متصل دارید و آیا آجری است؟</translation>
     </message>
     <message>
-        <location line="+849" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
-Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
-        <translation>فقط بارگیری *.DFU پرونده ها برای بوت لودر بازیابی STM32 پشتیبانی می شود!
+Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!</source>
+        <translation type="vanished">فقط بارگیری *.DFU پرونده ها برای بوت لودر بازیابی STM32 پشتیبانی می شود!
 
  لطفاً یک فایل bootloader.dfu را انتخاب کرده و دوباره امتحان کنید. توجه داشته باشید که بارگیری سیستم عامل .dfu یا OpenMv.dfu (bootloader + سیستم عامل) ممکن است به دلیل اشکال موجود در بوت لودر ROM تراشه ، روی تابلوهای STM32H7 کار نکند!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+987" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>فقط فایلهای بارگذاری *.bin و *.img برای بوت لودر داخلی پشتیبانی می شوند!</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Only loading *.bin and *.img files are supported for the IMX bootloader!</source>
         <translation>فقط پرونده های بارگذاری *.bin و *.img برای bootloader IMX پشتیبانی می شوند!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+107" />
         <source>Only loading *.bin, *.dfu, and *.img files are supported for the Arduino bootloader!</source>
         <translation>فقط بارگیری *.bin ، *.dfu و *.IMG پرونده ها برای بوت لودر Arduino پشتیبانی می شوند!</translation>
     </message>
@@ -9417,7 +9498,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
     </message>
     <message>
         <location line="+24" />
-        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
+        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
         <translation>توجه داشته باشید که بارگیری سیستم عامل .dfu یا OpenMv.dfu (bootloader + سیستم عامل) ممکن است به دلیل اشکال موجود در بوت لودر ROM تراشه ، روی تابلوهای STM32H7 کار نکند!
@@ -9427,9 +9508,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-976" />
-        <location line="+657" />
-        <location line="+1750" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1398" />
+        <location line="+252" />
+        <location line="+681" />
+        <location line="+1936" />
         <source>Please select the board type</source>
         <translation>لطفا نوع تابلو را انتخاب کنید</translation>
     </message>
@@ -9438,39 +9520,37 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">فایل سیستم داخلی پاک شود؟</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2295" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2500" />
         <source>No released firmware available for the attached board!</source>
         <translation>هیچ سیستم عامل منتشر شده ای برای برد پیوست شده موجود نیست!</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+61" />
         <source>Please select a DFU Device</source>
         <translation>لطفاً یک دستگاه DFU انتخاب کنید</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-83" />
         <location line="+170" />
         <location line="+44" />
-        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>لطفاً بوت لودر را به آخرین نسخه به روز کنید و SoftDevice را برای فلش کردن سیستم عامل OpenMV نصب کنید. اطلاعات بیشتر را می‌توانید در &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt; پیدا کنید.</translation>
+        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>لطفاً بوت لودر را به آخرین نسخه به روز کنید و SoftDevice را برای فلش کردن سیستم عامل OpenMV نصب کنید. اطلاعات بیشتر را می‌توانید در &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt; پیدا کنید.</translation>
     </message>
     <message>
-        <location line="-1065" />
-        <location line="+3012" />
+        <location line="-1191" />
+        <location line="+3343" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>هشدار: ارتقاء به نسخه جدید سیستم عامل نیاز به پاک شدن سیستم فایل FAT دارد.</translation>
     </message>
     <message>
-        <location line="-2527" />
+        <location line="-2848" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
-        <translation>مشکلات USB توسط سیستم عامل شما با دستگاه های زیر در این سیستم شناسایی شد. لطفاً این دستگاه‌ها را تعمیر یا حذف کنید زیرا باعث مشکلات اتصال می‌شوند. 
-
-% 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+173" />
         <source>Just erase the internal FAT file system</source>
         <translation>فقط سیستم پرونده چربی داخلی را پاک کنید</translation>
     </message>
@@ -9485,17 +9565,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>سیستم فایل ROM را دوباره تنظیم کنید</translation>
     </message>
     <message>
-        <location line="+219" />
-        <location line="+2206" />
+        <location line="+229" />
+        <location line="+2415" />
         <source>Upgrade options:</source>
         <translation>گزینه های ارتقا:</translation>
     </message>
     <message>
-        <location line="-2122" />
+        <location line="-2327" />
         <location line="+169" />
         <location line="+44" />
-        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>لطفاً REC را به GND کوتاه کرده و برد خود را بازنشانی کنید. اطلاعات بیشتر را می‌توانید در &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt; پیدا کنید.</translation>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>لطفاً REC را به GND کوتاه کرده و برد خود را بازنشانی کنید. اطلاعات بیشتر را می‌توانید در &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt; پیدا کنید.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -9507,7 +9587,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (اگر این کار بیش از 5 ثانیه طول کشید، لغو را بزنید).</translation>
     </message>
     <message>
-        <location line="+132" />
+        <location line="+143" />
         <source>Timeout error while getting firmware version!</source>
         <translation>خطای Timeout هنگام دریافت نسخه سیستم عامل!</translation>
     </message>
@@ -9523,8 +9603,8 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+191" />
-        <location line="+570" />
+        <location line="+199" />
+        <location line="+733" />
         <source>Timeout error while getting board architecture!</source>
         <translation>خطای تایم اوت هنگام دریافت معماری برد!</translation>
     </message>
@@ -9533,7 +9613,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">معماری برد پشتیبانی نشده!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-633" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>دوربین OpenMV خود را جدا کرده و دوباره وصل کنید...</translation>
@@ -9566,23 +9646,23 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+38" />
-        <source>Unable to connect to your OpenMV Cam's normal bootloader!</source>
+        <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>اتصال به بوت لودر معمولی OpenMV Cam شما امکان پذیر نیست!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+129" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+131" />
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
-        <translation>OpenMV IDE همچنان می تواند با استفاده از بوت لودر DFU Cam's OpenMV Cam شما را تعمیر کند.
+        <translation>OpenMV IDE همچنان می تواند با استفاده از بوت لودر DFU Cam&apos;s OpenMV Cam شما را تعمیر کند.
 
 ادامه هید؟</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-288" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
         <location line="+46" />
-        <location line="+195" />
+        <location line="+191" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>پاک کردن...</translation>
@@ -9601,7 +9681,7 @@ Continue?</source>
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-837" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-835" />
         <location line="+41" />
         <location line="+51" />
         <location line="+44" />
@@ -9618,7 +9698,7 @@ Continue?</source>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+221" />
+        <location line="+219" />
         <location line="+50" />
         <location line="+51" />
         <location line="+42" />
@@ -9682,11 +9762,11 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
         <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
-        <source>Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.</source>
+        <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>هنگامی که LED RGB OpenMV Cam شروع به چشمک زدن آبی رنگ کرد - تأیید را کلیک کنید - که نشان می دهد خودآزمایی کامل شده است.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
@@ -9704,7 +9784,7 @@ Continue?</source>
 
 If you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py.
 
-In this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).</source>
+In this case click OK when you see your OpenMV Cam&apos;s internal flash drive mount (a window may or may not pop open).</source>
         <translation>
 
 اگر main.py را روی OpenMV Cam خود بازنویسی کردید و دیسک را پاک نکردید، OpenMV Cam شما فقط main.py را اجرا می کند.
@@ -9727,8 +9807,8 @@ In this case click OK when you see your OpenMV Cam's internal flash drive mount 
         <translation>هیچ تنظیمات IMX پیدا نشد!</translation>
     </message>
     <message>
-        <source>Failed to eject "%L1"!</source>
-        <translation type="vanished">"%L1" خارج نشد!</translation>
+        <source>Failed to eject &quot;%L1&quot;!</source>
+        <translation type="vanished">&quot;%L1&quot; خارج نشد!</translation>
     </message>
     <message>
         <location line="+14" />
@@ -9741,7 +9821,7 @@ Hit cancel to skip to SBL reprogramming.</source>
     </message>
     <message>
         <location line="+42" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
         <translation>OpenMV IDE همچنان می تواند با استفاده از بوت لودر SBL OpenMV Cam شما را تعمیر کند.
@@ -9752,10 +9832,10 @@ Continue?</source>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
         <translation>دوربین OpenMV خود را از رایانه خود جدا کنید، یک سیم جامپر بین پایه های SBL و 3.3 ولت اضافه کنید و سپس OpenMV Cam خود را دوباره به رایانه خود وصل کنید.
 
-بعد از اینکه بوت لودر OpenMV Cam's SBL خود را برشمرد، روی دکمه Ok کلیک کنید.</translation>
+بعد از اینکه بوت لودر OpenMV Cam&apos;s SBL خود را برشمرد، روی دکمه Ok کلیک کنید.</translation>
     </message>
     <message>
         <location line="+60" />
@@ -9804,19 +9884,19 @@ Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</sour
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-345" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-347" />
         <source>No DFU settings for the selected board type!</source>
         <translation>بدون تنظیمات DFU برای نوع برد انتخاب شده!</translation>
     </message>
     <message>
         <location line="+55" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+104" />
         <source>No DFU settings for the selected device!</source>
         <translation>بدون تنظیمات DFU برای دستگاه انتخاب شده!</translation>
     </message>
     <message>
         <location line="+32" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+47" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
         <source>Erasing Disk</source>
         <translation>پاک کردن دیسک</translation>
@@ -9845,8 +9925,8 @@ Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</sour
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-933" />
-        <location line="+934" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-931" />
+        <location line="+932" />
         <source>Flashing Firmware</source>
         <translation>نرم افزار فلش</translation>
     </message>
@@ -9892,17 +9972,17 @@ Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</sour
     </message>
     <message>
         <location line="+14" />
-        <source>Your %1 doesn't have an internal FAT file system.</source>
-        <translation>٪ 1 شما سیستم فایل چربی داخلی ندارد.</translation>
+        <source>Your %1 doesn&apos;t have an internal FAT file system.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
-        <source>Your %1 doesn't have an ROM file system.</source>
-        <translation>٪ 1 شما سیستم فایل ROM ندارد.</translation>
+        <source>Your %1 doesn&apos;t have an ROM file system.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Your Nano 33 BLE doesn't have an onboard data flash disk.</source>
+        <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
         <translation type="vanished">Nano 33 BLE شما فلش دیسک داده آنبورد ندارد.</translation>
     </message>
     <message>
@@ -9963,7 +10043,7 @@ Continue?</source>
     </message>
     <message>
         <location line="+65" />
-        <source>DFU update erases your OpenMV Cam's internal flash file system.
+        <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
         <translation>به روز رسانی DFU سیستم فایل فلش داخلی OpenMV Cam شما را پاک می کند.
@@ -9974,10 +10054,10 @@ Backup your data before continuing!</source>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.</source>
         <translation>دوربین OpenMV خود را از رایانه خود جدا کنید، یک سیم جامپر بین پایه های BOOT و RST اضافه کنید و سپس OpenMV Cam خود را دوباره به رایانه خود وصل کنید.
 
-بعد از اینکه بوت لودر DFU Cam's OpenMV خود را برشمردید، روی دکمه Ok کلیک کنید.</translation>
+بعد از اینکه بوت لودر DFU Cam&apos;s OpenMV خود را برشمردید، روی دکمه Ok کلیک کنید.</translation>
     </message>
     <message>
         <location line="+11" />
@@ -10027,13 +10107,13 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
         <translation>بازنشانی بوت لودر DFU انجام نشد!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-271" />
         <source>None</source>
         <translation>هیچ یک</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+16" />
+        <location line="+30" />
         <location line="+56" />
         <source>Unknown</source>
         <translation>ناشناخته</translation>
@@ -10049,12 +10129,12 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
         <translation>ثبت نشده</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+94" />
         <source>Timeout error while learning MTU!</source>
         <translation>خطای Timeout هنگام یادگیری MTU!</translation>
     </message>
     <message>
-        <location line="+167" />
+        <location line="+170" />
         <source>Board: %L1</source>
         <translation>تخته: %L1</translation>
     </message>
@@ -10079,13 +10159,13 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
         <translation>پورت سریال: %L1</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+85" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ قدیمی - برای ارتقا اینجا را کلیک کنید ]</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Your OpenMV Cam's firmware is out of date. Would you like to upgrade?</source>
+        <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>سیستم عامل OpenMV Cam شما قدیمی است. آیا می خواهید ارتقا دهید؟</translation>
     </message>
     <message>
@@ -10094,7 +10174,7 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
         <translation> - [ آخرین ]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-674" />
         <source>Failed to open or parse ELF: %1</source>
         <translation>باز کردن یا تجزیه ELF انجام نشد: %1</translation>
     </message>
@@ -10106,7 +10186,7 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
     <message>
         <location line="+176" />
         <source>Event %1</source>
-        <translation>رویداد % 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4" />
@@ -10150,7 +10230,7 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
     </message>
     <message>
         <location line="+396" />
-        <location line="+172" />
+        <location line="+177" />
         <source>Code Profiler</source>
         <translation>کد پروفایل</translation>
     </message>
@@ -10204,7 +10284,7 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
         <translation type="vanished">شروع کنید</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+588" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+592" />
         <source>More Examples</source>
         <translation>نمونه های بیشتر</translation>
     </message>
@@ -10217,29 +10297,29 @@ In particular, checkout the Color-Tracking examples.</source>
 به طور خاص، نمونه های Color-Tracking را بررسی کنید.</translation>
     </message>
     <message>
-        <location line="+28" />
-        <location line="+69" />
-        <location line="+9" />
+        <location line="+27" />
+        <location line="+70" />
+        <location line="+8" />
         <source>Firmware Update</source>
         <translation>به روز رسانی سیستم عامل</translation>
     </message>
     <message>
         <location line="-75" />
-        <source>Update your OpenMV Cam's firmware to the latest version?</source>
+        <source>Update your OpenMV Cam&apos;s firmware to the latest version?</source>
         <translation>سفت‌افزار OpenMV Cam خود را به آخرین نسخه به‌روزرسانی کنید؟</translation>
     </message>
     <message>
-        <location line="+67" />
-        <source>Your OpenMV Cam's firmware is up to date.</source>
+        <location line="+68" />
+        <source>Your OpenMV Cam&apos;s firmware is up to date.</source>
         <translation>سیستم عامل OpenMV Cam شما به روز است.</translation>
     </message>
     <message>
-        <location line="+11" />
-        <source>Need to reset your OpenMV Cam's firmware to the release version?</source>
+        <location line="+10" />
+        <source>Need to reset your OpenMV Cam&apos;s firmware to the release version?</source>
         <translation>آیا باید سیستم عامل OpenMV Cam خود را به نسخه منتشر شده بازنشانی کنید؟</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+86" />
         <source>No board settings for the connected board found!</source>
         <translation>هیچ تنظیمات هیئت مدیره برای صفحه متصل یافت نشد!</translation>
     </message>
@@ -10334,10 +10414,10 @@ In particular, checkout the Color-Tracking examples.</source>
     </message>
     <message>
         <location line="-223" />
-        <source>Module "%L1" on your OpenMV Cam is different than the copy on your computer.
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
 Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>ماژول "%L1" در OpenMV Cam شما با کپی روی رایانه شما متفاوت است.
+        <translation>ماژول &quot;%L1&quot; در OpenMV Cam شما با کپی روی رایانه شما متفاوت است.
 
 آیا می خواهید OpenMV IDE ماژول را در OpenMV Cam شما به روز کند؟</translation>
     </message>
@@ -10348,15 +10428,15 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
     </message>
     <message>
         <location line="+91" />
-        <source>Module "%L1" may be required to run your script.
+        <source>Module &quot;%L1&quot; may be required to run your script.
 
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>ممکن است برای اجرای اسکریپت شما به ماژول "%L1" نیاز باشد.
+        <translation>ممکن است برای اجرای اسکریپت شما به ماژول &quot;%L1&quot; نیاز باشد.
 
 آیا می خواهید OpenMV IDE آن را در OpenMV Cam شما کپی کند؟</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-366" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10369,18 +10449,18 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>فایل های متنی (*.txt)؛؛ همه فایل ها (*)</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+228" />
         <source>Zoom: %1%</source>
         <translation>بزرگنمایی: %1%</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4310" />
-        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4365" />
+        <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280" />
-        <location line="+236" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-265" />
+        <location line="+221" />
         <source>Model Zoo</source>
         <translation>باغ وحش مدل</translation>
     </message>
@@ -10416,7 +10496,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>پیدا کردن</translation>
     </message>
     <message>
-        <location line="+226" />
+        <location line="+239" />
         <source>Serial Terminal</source>
         <translation>ترمینال سریال</translation>
     </message>
@@ -10437,8 +10517,8 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>Run "/main.py"</source>
-        <translation>"/main.py" را اجرا کنید</translation>
+        <source>Run &quot;/main.py&quot;</source>
+        <translation>&quot;/main.py&quot; را اجرا کنید</translation>
     </message>
     <message>
         <location line="+0" />
@@ -10461,31 +10541,31 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-360" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-150" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>دریافت دستگاه ها</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-293" />
         <location line="+79" />
         <source>Query failed!</source>
         <translation>پرس و جو ناموفق بود!</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+44" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+119" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+120" />
+        <location line="+118" />
         <source>DFU Util</source>
         <translation>کاربرد DFU</translation>
     </message>
@@ -10510,7 +10590,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>این ممکن است مدتی طول بکشد ، استراحت آب؟</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-87" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
         <source>Dataset Split</source>
         <translation>تقسیم مجموعه داده</translation>
     </message>
@@ -10528,7 +10608,7 @@ OpenMV recommends leaving this at the default 80/20% split.</source>
 OpenMV توصیه می کند این را در تقسیم پیش فرض 80/20٪ بگذارید.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <location line="+16" />
         <source>Training Data
 Percentage
@@ -10550,7 +10630,7 @@ Percentage
     <message>
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+58" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
         <location line="+50" />
         <source>Uploading...</source>
@@ -10591,12 +10671,12 @@ Percentage
         <location line="+10" />
         <source>Nothing to upload
 
-Only jpg/png/bmp images with a numeric name (e.g. "00001.jpg")
-in class folders ("*.class") can be uploaded.</source>
+Only jpg/png/bmp images with a numeric name (e.g. &quot;00001.jpg&quot;)
+in class folders (&quot;*.class&quot;) can be uploaded.</source>
         <translation>چیزی برای آپلود نیست
 
-فقط تصاویر jpg/png/bmp با نام عددی (مانند "00001.jpg")
-در پوشه های کلاس ("*.class") می توان آپلود کرد.</translation>
+فقط تصاویر jpg/png/bmp با نام عددی (مانند &quot;00001.jpg&quot;)
+در پوشه های کلاس (&quot;*.class&quot;) می توان آپلود کرد.</translation>
     </message>
     <message>
         <location line="+43" />
@@ -10604,31 +10684,31 @@ in class folders ("*.class") can be uploaded.</source>
         <location line="+21" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+164" />
+        <location line="+155" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+23" />
         <location line="+9" />
         <location line="+9" />
         <source>Edge Impulse Projects</source>
         <translation>پروژه های Edge Impulse</translation>
     </message>
     <message>
-        <location line="-276" />
+        <location line="-266" />
         <location line="+35" />
-        <location line="+71" />
-        <location line="+129" />
-        <location line="+42" />
+        <location line="+67" />
+        <location line="+124" />
+        <location line="+41" />
         <source>No request data received</source>
         <translation>هیچ داده درخواستی دریافت نشد</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-246" />
         <source>An unkown error occured</source>
         <translation>یک خطای ناشناخته رخ داد</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+62" />
         <location line="+11" />
         <location line="+7" />
         <location line="+10" />
@@ -10645,7 +10725,7 @@ Open a data set to upload it.</source>
 یک مجموعه داده را باز کنید تا آن را آپلود کنید.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+33" />
         <source>Email Address</source>
         <translation>آدرس ایمیل</translation>
     </message>
@@ -10660,17 +10740,17 @@ Open a data set to upload it.</source>
         <translation>کلمه عبور</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+66" />
         <source>Please select a project</source>
         <translation>لطفا یک پروژه را انتخاب کنید</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+60" />
         <source>No projects found</source>
         <translation>هیچ پروژه ای یافت نشد</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+45" />
         <source>Upload Project</source>
         <translation>آپلود پروژه</translation>
     </message>
@@ -10680,7 +10760,7 @@ Open a data set to upload it.</source>
         <translation>لطفاً یک کلید Edge Impluse Project API وارد کنید</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1017" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1015" />
         <location line="+144" />
         <location line="+36" />
         <location line="+41" />
@@ -10699,7 +10779,7 @@ Open a data set to upload it.</source>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+41" />
+        <location line="+39" />
         <location line="+135" />
         <location line="+45" />
         <location line="+50" />
@@ -10735,8 +10815,8 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1337" />
-        <location line="+923" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1335" />
+        <location line="+921" />
         <source>This feature is not supported on this machine!</source>
         <translation>این ویژگی در این دستگاه پشتیبانی نمی شود!</translation>
     </message>
@@ -10768,15 +10848,15 @@ The camera must be power cycled after a system package update.</source>
 این دوربین باید پس از بروزرسانی بسته سیستم ، دوچرخه سواری شود.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-472" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-470" />
         <location line="+51" />
         <location line="+91" />
-        <location line="+346" />
+        <location line="+344" />
         <location line="+51" />
         <location line="+50" />
         <location line="+94" />
         <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>اجرای این دستور کمی طول می کشد. لطفا صبور باشید.</translation>
@@ -10797,7 +10877,7 @@ The camera must be power cycled after a system package update.</source>
         <translation>انجام شده</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
@@ -10929,12 +11009,12 @@ The camera must be power cycled after a system package update.</source>
     </message>
     <message>
         <location line="-77" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Transcoding File...</source>
         <translation>رمزگذاری فایل...</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-594" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10995,29 +11075,29 @@ The camera must be power cycled after a system package update.</source>
         <translation>دریافت فرمت های ورودی</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+37" />
         <location line="+111" />
-        <location line="+100" />
+        <location line="+98" />
         <location line="+15" />
-        <location line="+372" />
+        <location line="+371" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
         <location line="+16" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+14" />
+        <location line="+19" />
         <location line="+36" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+21" />
+        <location line="+23" />
         <location line="+7" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+20" />
+        <location line="+22" />
         <location line="+7" />
         <source>Convert Video</source>
         <translation>تبدیل ویدیو</translation>
@@ -11037,7 +11117,7 @@ The camera must be power cycled after a system package update.</source>
         <translation>FFMPEG در این پلتفرم پشتیبانی نمی شود.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+98" />
         <source>Unable to write to output video file!</source>
         <translation>نوشتن در فایل ویدئویی خروجی ممکن نیست!</translation>
     </message>
@@ -11048,79 +11128,79 @@ The camera must be power cycled after a system package update.</source>
     </message>
     <message>
         <location line="+163" />
-        <location line="+411" />
+        <location line="+415" />
         <source>Play Video</source>
         <translation>پخش ویدئو</translation>
     </message>
     <message>
-        <location line="-410" />
+        <location line="-414" />
         <location line="+163" />
         <source>Failed to launch ffplay!</source>
         <translation>ffplay راه اندازی نشد!</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>Convert Video Source</source>
         <translation>تبدیل منبع ویدیو</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+235" />
+        <location line="+240" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</source>
         <translation>فایل های ویدئویی (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</translation>
     </message>
     <message>
-        <location line="-230" />
+        <location line="-235" />
         <location line="+11" />
-        <location line="+117" />
+        <location line="+122" />
         <location line="+7" />
         <source>Convert Video Output</source>
         <translation>تبدیل خروجی ویدیو</translation>
     </message>
     <message>
-        <location line="-130" />
-        <location line="+125" />
-        <location line="+208" />
+        <location line="-135" />
+        <location line="+130" />
+        <location line="+204" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
         <translation>فایل های ویدئویی (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</translation>
     </message>
     <message>
-        <location line="-327" />
+        <location line="-328" />
         <source>Please select output format</source>
         <translation>لطفا فرمت خروجی را انتخاب کنید</translation>
     </message>
     <message>
         <location line="+15" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Rescale the video?</source>
         <translation>مقیاس ویدیو را تغییر دهید؟</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter a new width (the aspect ratio will be kept the same)</source>
         <translation>عرض جدیدی وارد کنید (نسبت تصویر یکسان خواهد ماند)</translation>
     </message>
     <message>
-        <location line="-320" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-321" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Skip frames?</source>
         <translation>از فریم ها بگذریم؟</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter how many frames to skip at a time</source>
         <translation>چند فریم را در یک زمان وارد کنید</translation>
     </message>
     <message>
-        <location line="-278" />
-        <location line="+91" />
-        <location line="+207" />
+        <location line="-274" />
+        <location line="+93" />
+        <location line="+203" />
         <source>Video conversion finished!</source>
         <translation>تبدیل ویدیو به پایان رسید!</translation>
     </message>
@@ -11150,13 +11230,13 @@ The camera must be power cycled after a system package update.</source>
         <translation>بازی</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+47" />
         <location line="+7" />
         <source>Save Video</source>
         <translation>ذخیره ویدیو</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
         <source>Busy</source>
         <translation>مشغول</translation>
     </message>
@@ -11172,13 +11252,11 @@ The camera must be power cycled after a system package update.</source>
         <translation>پنهان کردن جزئیات</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-335" />
-        <location line="+102" />
         <source>No matching interface for the selected file name!</source>
-        <translation>بدون رابط تطبیق برای نام پرونده انتخاب شده!</translation>
+        <translation type="vanished">بدون رابط تطبیق برای نام پرونده انتخاب شده!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-745" />
         <source>Please select the target</source>
         <translation>لطفا هدف را انتخاب کنید</translation>
     </message>
@@ -11201,70 +11279,70 @@ OpenMV IDE will just copy the model as is.</source>
 OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</translation>
     </message>
     <message>
-        <location line="+145" />
-        <location line="+36" />
+        <location line="+147" />
+        <location line="+35" />
         <location line="+6" />
         <location line="+8" />
-        <location line="+40" />
-        <location line="+17" />
-        <location line="+20" />
-        <location line="+6" />
-        <location line="+8" />
+        <location line="+42" />
+        <location line="+16" />
         <location line="+21" />
-        <location line="+19" />
-        <location line="+20" />
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
         <location line="+93" />
-        <location line="+9" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+13" />
-        <location line="+14" />
-        <location line="+45" />
-        <location line="+17" />
-        <location line="+28" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+40" />
+        <location line="+15" />
         <location line="+27" />
+        <location line="+24" />
         <location line="+53" />
-        <location line="+67" />
+        <location line="+63" />
         <location line="+6" />
         <location line="+21" />
         <source>Edit ROMFS</source>
         <translation>ROMFS را ویرایش کنید</translation>
     </message>
     <message>
-        <location line="-620" />
-        <location line="+91" />
+        <location line="-606" />
+        <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>پوشه ای با همین نام در حال حاضر وجود دارد!</translation>
     </message>
     <message>
-        <location line="-85" />
-        <location line="+91" />
+        <location line="-87" />
+        <location line="+93" />
         <source>File already exists! Overwrite?</source>
         <translation>پرونده از قبل وجود دارد! بازنویسی؟</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+91" />
+        <location line="-85" />
+        <location line="+93" />
         <source>Failed to remove file!</source>
         <translation>حذف پرونده انجام نشد!</translation>
     </message>
     <message>
         <location line="-51" />
-        <location line="+72" />
+        <location line="+74" />
         <source>Failed to copy file!</source>
         <translation>کپی کردن پرونده انجام نشد!</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+17" />
         <source>Folder Name</source>
         <translation>نام پوشه</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Failed to create folder!</source>
         <translation>نتوانست پوشه ایجاد کند!</translation>
     </message>
@@ -11285,58 +11363,58 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>نمی تواند یک پوشه را ذخیره کند!</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+14" />
+        <location line="+6" />
+        <location line="+15" />
         <location line="+19" />
-        <location line="+240" />
+        <location line="+225" />
         <source>Extract File</source>
         <translation>پرونده استخراج</translation>
     </message>
     <message>
-        <location line="-246" />
+        <location line="-231" />
         <source>View/Edit</source>
         <translation>مشاهده/ویرایش</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+237" />
+        <location line="+222" />
         <source>Add File</source>
         <translation>پرونده را اضافه کنید</translation>
     </message>
     <message>
-        <location line="-236" />
-        <location line="+238" />
+        <location line="-221" />
+        <location line="+223" />
         <source>New Folder</source>
         <translation>پوشه جدید</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+14" />
-        <location line="+322" />
-        <location line="+12" />
+        <location line="-135" />
+        <location line="+13" />
+        <location line="+303" />
+        <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS در این صفحه پشتیبانی نمی شود!</translation>
     </message>
     <message>
-        <location line="-290" />
-        <location line="+45" />
+        <location line="-275" />
+        <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>نتوانست ROMFS را باز کند!</translation>
     </message>
     <message>
         <location line="-19" />
-        <location line="+28" />
+        <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>ROMF های OpenMV</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+172" />
+        <location line="-25" />
+        <location line="+165" />
         <source>ROMFS Images (*.img)</source>
         <translation>تصاویر ROMFS (*.IMG)</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="-101" />
         <source>Commit</source>
         <translation>متعهد شدن</translation>
     </message>
@@ -11351,17 +11429,17 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>ROMFS را برای ثبت نام ذخیره کنید</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location line="+8" />
+        <location line="+105" />
+        <location line="+7" />
+        <location line="+11" />
         <location line="+12" />
-        <location line="+13" />
-        <location line="+12" />
+        <location line="+11" />
         <source>Reset ROMFS</source>
         <translation>بازنشانی ROMFS</translation>
     </message>
     <message>
-        <location line="-44" />
-        <source>Are you sure you want to reset your OpenMV Cam's ROM file system?</source>
+        <location line="-40" />
+        <source>Are you sure you want to reset your OpenMV Cam&apos;s ROM file system?</source>
         <translation>آیا مطمئن هستید که می خواهید سیستم ROM ROM OpenMV CAM خود را مجدداً تنظیم کنید؟</translation>
     </message>
     <message>
@@ -11391,12 +11469,12 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
     </message>
     <message>
         <location line="+13" />
-        <source>&lt;a href="https://pypi.org/project/mpy-cross/"&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://pypi.org/project/mpy-cross/"&gt; گزینه های CLI COMPILIER COMPILIER MPY &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://pypi.org/project/mpy-cross/&quot;&gt; گزینه های CLI COMPILIER COMPILIER MPY &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
         <source>Advanced</source>
         <translation>پیشرفته</translation>
@@ -11409,7 +11487,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
     </message>
     <message>
         <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+90" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
         <source>Compiling</source>
         <translation>گرداننده</translation>
@@ -11421,9 +11499,9 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-780" />
         <source>Success - Press Ok to close the window</source>
         <translation>موفقیت - برای بستن پنجره ، OK را فشار دهید</translation>
     </message>
@@ -11436,18 +11514,18 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>خرابی - برای بستن پنجره ، لغو را فشار دهید</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+126" />
+        <location line="+111" />
         <location line="+14" />
-        <location line="+173" />
+        <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>تفاله</translation>
     </message>
     <message>
-        <location line="-334" />
+        <location line="-300" />
         <source>Failed to copy JSON file!</source>
         <translation>کپی کردن پرونده JSON انجام نشد!</translation>
     </message>
@@ -11484,14 +11562,13 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
     </message>
     <message>
         <location line="+12" />
-        <location line="+24" />
         <source>--verbosity 2</source>
         <translation>-اوربسی 2</translation>
     </message>
     <message>
-        <location line="-22" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "٪ 1"&gt; گزینه های CLI CORE CORE Stedgeai &lt;/a&gt;</translation>
+        <location line="+2" />
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10" />
@@ -11500,16 +11577,15 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "٪ 1"&gt; گزینه های عصبی stedgeai گزینه های CLI &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+12" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "٪ 1"&gt; گزینه های جابجایی stedgeai گزینه های CLI &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href = &quot;٪ 1&quot;&gt; گزینه های جابجایی stedgeai گزینه های CLI &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+75" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>نتوانست پرونده JSON را باز کند!</translation>
@@ -11520,7 +11596,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>stedgeai</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+140" />
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
         <translation>Compilier Stedgeai در این پلتفرم پشتیبانی نمی شود.</translation>
     </message>
@@ -11548,8 +11624,8 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md"&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-u-vela/-/blob/main/options.md"&gt; گزینه های CLI COMPILIER VELA &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-u-vela/-/blob/main/options.md&quot;&gt; گزینه های CLI COMPILIER VELA &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+67" />
@@ -11572,6 +11648,31 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <source>STM32 Programmer is not supported on this platform.</source>
         <translation>برنامه نویس STM32 در این پلتفرم پشتیبانی نمی شود.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <source>the detected board</source>
+        <translation>برد شناسایی شده</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>The selected file &quot;%L1&quot; does not match any firmware interface for %L2.</source>
+        <translation>فایل انتخابی &quot;%L1&quot; با هیچ رابط میان افزاری برای %L2 مطابقت ندارد.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%L1 accepts files named:</source>
+        <translation>%L1 فایل هایی با نام:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Rename your firmware file to one of the names above (or select the correct file) and try again.</source>
+        <translation>نام فایل سیستم عامل خود را به یکی از نام های بالا تغییر دهید (یا فایل صحیح را انتخاب کنید) و دوباره امتحان کنید.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>This board does not define any loadable firmware interfaces in its settings.</source>
+        <translation>این برد هیچ رابط میان‌افزار قابل بارگیری را در تنظیمات خود تعریف نمی‌کند.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
@@ -11581,91 +11682,39 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+28" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+235" />
         <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
         <location line="+15" />
         <location line="+22" />
-        <location line="+132" />
         <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+21" />
         <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+306" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+144" />
         <source>Project Location</source>
         <translation>محل پروژه</translation>
     </message>
     <message>
-        <location line="-895" />
-        <location line="+28" />
-        <location line="+21" />
+        <location line="-886" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
-        <location line="+15" />
         <location line="+22" />
-        <location line="+24" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+11" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
-        <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+28" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+20" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+81" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
@@ -11675,7 +11724,59 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+94" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+15" />
+        <location line="+22" />
+        <location line="+18" />
+        <location line="+21" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+51" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
         <source>Location</source>
         <translation>محل</translation>
     </message>
@@ -11684,7 +11785,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation type="vanished">تست Qt</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-516" />
         <source>Google Test</source>
         <translation>تست گوگل</translation>
     </message>
@@ -11704,49 +11805,49 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>Catch2</translation>
     </message>
     <message>
-        <location line="-762" />
+        <location line="-371" />
         <location line="+25" />
         <location line="+26" />
-        <location line="+712" />
+        <location line="+321" />
         <source>Test framework:</source>
         <translation>چارچوب تست:</translation>
     </message>
     <message>
-        <location line="-687" />
+        <location line="-296" />
         <source>GUI Application</source>
         <translation>برنامه رابط کاربری گرافیکی</translation>
     </message>
     <message>
         <location line="-75" />
         <location line="+51" />
-        <location line="+715" />
+        <location line="+324" />
         <source>Test suite name:</source>
         <translation>نام مجموعه آزمایشی:</translation>
     </message>
     <message>
-        <location line="-790" />
-        <location line="+25" />
+        <location line="-374" />
         <location line="+24" />
         <location line="+27" />
         <location line="+21" />
-        <location line="+694" />
+        <location line="+22" />
+        <location line="+281" />
         <source>Test case name:</source>
         <translation>نام مورد آزمایشی:</translation>
     </message>
     <message>
-        <location line="-693" />
+        <location line="-302" />
         <source>Requires QApplication</source>
         <translation>نیاز به QApplication دارد</translation>
     </message>
     <message>
-        <location line="-97" />
+        <location line="+22" />
         <source>Generate setup code</source>
         <translation>کد راه اندازی را ایجاد کنید</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+98" />
-        <location line="+692" />
+        <location line="-20" />
+        <location line="+21" />
+        <location line="+280" />
         <source>Generate initialization and cleanup code</source>
         <translation>کد اولیه و پاکسازی را ایجاد کنید</translation>
     </message>
@@ -11755,17 +11856,17 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation type="vanished">C++11 را فعال کنید</translation>
     </message>
     <message>
-        <location line="-766" />
+        <location line="-324" />
         <source>Googletest source directory (optional):</source>
         <translation>فهرست منبع Googletest (اختیاری):</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>تقویت شامل فهرست (اختیاری):</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 شامل فهرست (اختیاری):</translation>
     </message>
@@ -11775,154 +11876,154 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>از کتابخانه های Qt استفاده کنید</translation>
     </message>
     <message>
-        <location line="-50" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+45" />
-        <location line="+47" />
-        <location line="+84" />
+        <location line="+107" />
+        <location line="+46" />
+        <location line="+43" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
+        <location line="+105" />
+        <location line="+48" />
         <location line="+43" />
-        <location line="+49" />
-        <location line="+84" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+85" />
+        <location line="+153" />
+        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+314" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build system:</source>
         <translation>سیستم ساخت:</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>اطلاعات پروژه و تست</translation>
     </message>
     <message>
-        <location line="-120" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-93" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+26" />
-        <location line="+51" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+79" />
+        <location line="+116" />
         <location line="+18" />
         <location line="+4" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+41" />
+        <location line="+17" />
+        <location line="+33" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+70" />
-        <location line="+220" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+28" />
+        <location line="+142" />
         <source>Details</source>
         <translation>جزئیات</translation>
     </message>
     <message>
-        <location line="-869" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-887" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>انتخاب کیت</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -11930,101 +12031,101 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>کیت ها</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+18" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <source>Project Management</source>
         <translation>مدیریت پروژه</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+37" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+41" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>خلاصه</translation>
@@ -12034,9 +12135,9 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation type="vanished">یک پروژه تست واحد جدید ایجاد می کند. تست‌های واحد به شما امکان می‌دهند تا بررسی کنید که کد برای استفاده مناسب است و هیچ رگرسیونی وجود ندارد.</translation>
     </message>
     <message>
-        <location line="-466" />
-        <location line="+12" />
-        <location line="+456" />
+        <location line="-715" />
+        <location line="+380" />
+        <location line="+165" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>پروژه دیگر</translation>
@@ -12046,36 +12147,36 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation type="vanished">پروژه تست خودکار</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="-620" />
         <source>Fully qualified name, including namespaces</source>
         <translation>نام کاملا واجد شرایط، از جمله فضاهای نام</translation>
     </message>
     <message>
-        <location line="-645" />
-        <location line="+36" />
-        <location line="+276" />
-        <location line="+80" />
-        <location line="+235" />
-        <location line="+19" />
+        <location line="+1" />
         <location line="+22" />
+        <location line="+19" />
+        <location line="+289" />
+        <location line="+145" />
+        <location line="+40" />
+        <location line="+119" />
         <source>Class name:</source>
         <translation>نام کلاس:</translation>
     </message>
     <message>
-        <location line="-631" />
-        <location line="+592" />
-        <location line="+18" />
+        <location line="-633" />
+        <location line="+42" />
+        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;سفارشی&gt;</translation>
     </message>
     <message>
-        <location line="-646" />
-        <location line="+37" />
-        <location line="+282" />
-        <location line="+73" />
-        <location line="+237" />
-        <location line="+18" />
+        <location line="-474" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+294" />
+        <location line="+139" />
+        <location line="+39" />
+        <location line="+119" />
         <source>Base class:</source>
         <translation>کلاس پایه:</translation>
     </message>
@@ -12084,7 +12185,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-632" />
         <source>Include QObject</source>
         <translation>شامل QObject</translation>
     </message>
@@ -12122,70 +12223,70 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>QML_ELEMENT را اضافه کنید</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+68" />
-        <location line="+262" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+315" />
+        <location line="+292" />
         <source>Header file:</source>
         <translation>فایل هدر:</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+288" />
-        <location line="+68" />
-        <location line="+220" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+215" />
         <location line="+1" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+80" />
+        <location line="+133" />
+        <location line="+39" />
+        <location line="+120" />
         <source>Source file:</source>
         <translation>منبع فایل:</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+392" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+34" />
-        <location line="+19" />
-        <location line="+444" />
-        <location line="+19" />
-        <location line="+22" />
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>مسیر:</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+596" />
-        <location line="+22" />
+        <location line="-739" />
+        <location line="+38" />
+        <location line="+429" />
+        <location line="+39" />
         <source>Define Class</source>
         <translation>کلاس را تعریف کنید</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-502" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>یک هدر ++C و یک فایل منبع برای یک کلاس جدید ایجاد می کند که می توانید آن را به پروژه C++ اضافه کنید.</translation>
     </message>
     <message>
-        <location line="-203" />
-        <location line="+130" />
-        <location line="+74" />
+        <location line="+1" />
+        <location line="+65" />
+        <location line="+9" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-73" />
         <source>C++ Class</source>
         <translation>کلاس C++</translation>
     </message>
@@ -12225,22 +12326,22 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>یک مدل آیتم Qt ایجاد می کند.</translation>
     </message>
     <message>
-        <location line="-231" />
-        <location line="+39" />
-        <location line="+26" />
-        <location line="+65" />
-        <location line="+18" />
-        <location line="+84" />
+        <location line="+1" />
+        <location line="+66" />
+        <location line="+57" />
+        <location line="+62" />
+        <location line="+9" />
+        <location line="+59" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-252" />
         <source>Qt Item Model</source>
         <translation>مدل آیتم Qt</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+4" />
         <source>Qt for Python module:</source>
         <translation>Qt برای ماژول پایتون:</translation>
     </message>
@@ -12265,8 +12366,8 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>QtQuick را وارد کنید</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
         <location line="+6" />
@@ -12274,18 +12375,18 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>فایل کلاس پایتون جدید ایجاد می کند.</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+71" />
+        <location line="+1" />
+        <location line="+158" />
         <source>Python</source>
         <translation>پایتون</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-157" />
         <source>Python Class</source>
         <translation>کلاس پایتون</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+3" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>یک پروژه آزمایشی مبتنی بر CMake ایجاد می کند که می توان یک قطعه کد برای آن وارد کرد.</translation>
     </message>
@@ -12340,7 +12441,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>قطعه کد</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="+7" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>یک فایل هدر ایجاد می کند که می توانید آن را به پروژه C/C++ اضافه کنید.</translation>
     </message>
@@ -12350,7 +12451,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>فایل هدر C/C++</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>یک فایل منبع ایجاد می کند که می توانید آن را به پروژه C/C++ اضافه کنید.</translation>
     </message>
@@ -12360,7 +12461,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>فایل منبع C/C++</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>یک قالب فرم را انتخاب کنید</translation>
     </message>
@@ -12378,12 +12479,12 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation type="vanished">فرم طراح Qt</translation>
     </message>
     <message>
-        <location line="-15" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>یک سایه‌زن قطعه در زبان سایه‌زنی OpenGL دسکتاپ (GLSL) ایجاد می‌کند. سایه‌زن‌های قطعه، رنگ‌های پیکسل نهایی را برای مثلث‌ها، نقاط و خطوط رندر شده با OpenGL تولید می‌کنند.</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+1" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -12391,12 +12492,12 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-26" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragment Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>یک سایه زن رأس در زبان سایه دهی OpenGL دسکتاپ (GLSL) ایجاد می کند. سایه زن های راس موقعیت ها، معمولی ها و مختصات بافت مثلث ها، نقاط و خطوط ارائه شده با OpenGL را تغییر می دهند.</translation>
     </message>
@@ -12406,7 +12507,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>Vertex Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>یک shader قطعه در زبان سایه زنی OpenGL/ES 2.0 (GLSL/ES) ایجاد می کند. سایه‌زن‌های قطعه، رنگ‌های پیکسل نهایی را برای مثلث‌ها، نقاط و خطوط رندر شده با OpenGL تولید می‌کنند.</translation>
     </message>
@@ -12416,7 +12517,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>Fragment Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>یک سایه‌زن راس در زبان سایه‌زنی OpenGL/ES 2.0 (GLSL/ES) ایجاد می‌کند. سایه زن های راس موقعیت ها، معمولی ها و مختصات بافت مثلث ها، نقاط و خطوط ارائه شده با OpenGL را تغییر می دهند.</translation>
     </message>
@@ -12426,7 +12527,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="+7" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>یک فایل جاوا با کد boilerplate ایجاد می کند.</translation>
     </message>
@@ -12441,7 +12542,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>فایل جاوا</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>کتابخانه بدون تابعیت</translation>
     </message>
@@ -12462,25 +12563,25 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>فایل JS</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+12" />
         <source>Model name:</source>
         <translation>نام مدل:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
+        <location line="+1" />
+        <location line="+67" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>محل:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
-        <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" در فایل سیستم وجود دارد.</translation>
+        <location line="-66" />
+        <location line="+67" />
+        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; در فایل سیستم وجود دارد.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model Name and Location</source>
         <translation>نام مدل و مکان</translation>
     </message>
@@ -12490,19 +12591,19 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>یک مدل خالی جدید با یک نمودار خالی ایجاد می کند.</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+53" />
-        <location line="+12" />
+        <location line="+1" />
+        <location line="+5" />
+        <location line="+62" />
         <source>Modeling</source>
         <translation>مدل سازی</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model</source>
         <translation>مدل</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+3" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>با استفاده از یک فایل موقت یک مدل خراش ایجاد می کند.</translation>
     </message>
@@ -12512,23 +12613,23 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>مدل خراش</translation>
     </message>
     <message>
-        <location line="-81" />
+        <location line="+7" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>با استفاده از UTF-8 یک فایل Nim خالی ایجاد می کند.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+14" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>نیم</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>فایل نیم</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>با استفاده از UTF-8 یک فایل اسکریپت خالی Nim ایجاد می کند.</translation>
     </message>
@@ -12538,7 +12639,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>فایل Nim Script</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+7" />
         <source>Creates an empty Python script file using UTF-8 charset.</source>
         <translation>یک فایل اسکریپت پایتون خالی با استفاده از مجموعه نویسه UTF-8 ایجاد می کند.</translation>
     </message>
@@ -12548,7 +12649,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>فایل پایتون</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>یک فایل Qt Resource (qrc.) ایجاد می کند.</translation>
     </message>
@@ -12558,9 +12659,9 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>فایل منبع Qt</translation>
     </message>
     <message>
-        <location line="-67" />
-        <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
-        <translation>یک فایل QML با کد boilerplate ایجاد می کند که با "import QtQuick" شروع می شود.</translation>
+        <location line="+7" />
+        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
+        <translation>یک فایل QML با کد boilerplate ایجاد می کند که با &quot;import QtQuick&quot; شروع می شود.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12568,21 +12669,21 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>فایل QML (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="-32" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>با استفاده از یک فایل موقت یک بافر خراش ایجاد می کند.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+57" />
-        <location line="+47" />
+        <location line="-66" />
+        <location line="+67" />
+        <location line="+45" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>عمومی</translation>
     </message>
     <message>
-        <location line="-634" />
+        <location line="-401" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>این جادوگر با استفاده از Boost یک پروژه تست واحد ساده ایجاد می کند.</translation>
     </message>
@@ -12607,21 +12708,21 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>با استفاده از Boost یک پروژه آزمایش واحد جدید ایجاد می کند. تست های واحد به شما امکان می دهد تأیید کنید که کد برای استفاده مناسب است و هیچ رگرسیون وجود ندارد.</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+25" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Test Project</source>
         <translation>پروژه آزمایشی</translation>
     </message>
     <message>
-        <location line="-21" />
+        <location line="-93" />
         <source>Boost Test Project</source>
         <translation>افزایش پروژه تست</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>این جادوگر با استفاده از Catch2 یک پروژه آزمایش واحد ساده ایجاد می کند.</translation>
     </message>
@@ -12656,7 +12757,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>پروژه تست Catch2</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>این جادوگر با استفاده از تست Google یک پروژه آزمایش واحد ساده ایجاد می کند.</translation>
     </message>
@@ -12686,7 +12787,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>پروژه تست Google</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>این جادوگر با استفاده از آزمون QT یک پروژه آزمایش واحد ساده ایجاد می کند.</translation>
     </message>
@@ -12701,7 +12802,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>پروژه آزمون qt</translation>
     </message>
     <message>
-        <location line="-116" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>این جادوگر با استفاده از تست QT سریع یک پروژه تست واحد ساده ایجاد می کند.</translation>
     </message>
@@ -12716,17 +12817,17 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>پروژه تست سریع QT</translation>
     </message>
     <message>
-        <location line="+815" />
+        <location line="+10" />
         <source>Include QQuickItem</source>
         <translation>شامل qquickitem</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+67" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>یک پروژه تست مبتنی بر Cmake ایجاد می کند که در آن می توانید یک قطعه کد را برای کامپایل و بررسی آن وارد کنید.</translation>
     </message>
     <message>
-        <location line="-121" />
+        <location line="+29" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>فرم طراح ویجت QT را ایجاد می کند که می توانید به یک پروژه ویجت QT اضافه کنید. اگر شما یک کلاس موجود برای منطق کسب و کار UI داشته باشید ، این مفید است.</translation>
     </message>
@@ -12736,7 +12837,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>فرم طراح ویجت qt</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="+64" />
         <source>Creates a markdown file.</source>
         <translation>یک فایل Markdown ایجاد می کند.</translation>
     </message>
@@ -12746,12 +12847,12 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>پرونده علامت گذاری</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="+67" />
         <source>Scratch Buffer</source>
         <translation>بافر خراش</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>نام نمودار ایالتی:</translation>
     </message>
@@ -12771,7 +12872,7 @@ OpenMV IDE فقط مدل را مطابق آنچه هست کپی می کند.</tr
         <translation>نمودار ایالتی</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -12811,7 +12912,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>مورد آزمایشی</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>یک فایل خالی ایجاد می کند.</translation>
     </message>
@@ -12821,7 +12922,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>فایل خالی</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>یک فایل ترجمه ایجاد می کند که می توانید به یک پروژه QT اضافه کنید.</translation>
     </message>
@@ -12831,61 +12932,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>پرونده ترجمه qt</translation>
     </message>
     <message>
-        <location line="-623" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>این جادوگر یک برنامه کنسول ساده مبتنی بر Qt ایجاد می کند.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+83" />
+        <location line="+195" />
         <source>Meson</source>
         <translation>مزون</translation>
     </message>
     <message>
-        <location line="-442" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-326" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Define Build System</source>
         <translation>سیستم ساخت را تعریف کنید</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-328" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build System</source>
         <translation>ساخت سیستم</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-328" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation File</source>
         <translation>فایل ترجمه</translation>
     </message>
     <message>
-        <location line="-591" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-479" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation</source>
         <translation>ترجمه</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-262" />
         <source>Define Python Interpreter</source>
         <translation>مفسر پایتون را تعریف کنید</translation>
     </message>
@@ -12900,7 +13001,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>یک QT برای برنامه Python ایجاد می کند که شامل یک ویجت مبتنی بر طراح VIDGETS QT (پرونده UI) است. به تبدیل پایتون نیاز دارد.</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+38" />
         <source>Qt 6.4</source>
         <translation>qt 6.4</translation>
     </message>
@@ -12915,7 +13016,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>یک برنامه QT سریع ایجاد می کند که می تواند کد QML و C ++ را داشته باشد. می توانید برنامه را بسازید و آن را در سیستم عامل های هدفمند دسک تاپ ، تعبیه شده و موبایل مستقر کنید.</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="+42" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -12924,7 +13025,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  برای تهیه یک برنامه کامل ، به جای آن یک پروژه برنامه QT سریع ایجاد کنید.</translation>
     </message>
     <message>
-        <location line="+173" />
+        <location line="+30" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -12941,31 +13042,31 @@ Preselects a desktop Qt for building the application if available.</source>
 در صورت وجود، یک Qt دسکتاپ را برای ساخت برنامه از پیش انتخاب می کند.</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+32" />
-        <location line="+299" />
-        <location line="+114" />
+        <location line="-337" />
+        <location line="+266" />
+        <location line="+28" />
+        <location line="+44" />
         <source>Application (Qt)</source>
         <translation>برنامه (Qt)</translation>
     </message>
     <message>
-        <location line="-412" />
+        <location line="-337" />
         <source>Qt Console Application</source>
         <translation>برنامه کنسول Qt</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>این جادوگر یک پروژه کتابخانه ++C ایجاد می کند.</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+84" />
+        <location line="+308" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>اطلاعات اولیه در مورد کلاس هایی که می خواهید فایل های کد منبع اسکلت را برای آنها تولید کنید، مشخص کنید.</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="-307" />
         <source>Shared Library</source>
         <translation>کتابخانه مشترک</translation>
     </message>
@@ -12981,17 +13082,17 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+35" />
+        <location line="+46" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>نوع:</translation>
     </message>
     <message>
-        <source>%{JS: value('Type') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</source>
-        <translation type="vanished">%{JS: value('Type') === 'qtplugin' ? value('BaseClassName').slice(1): (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</translation>
+        <source>%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</source>
+        <translation type="vanished">%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1): (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>پلاگین QAccessible</translation>
     </message>
@@ -13057,14 +13158,14 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>ماژول Qt:</translation>
     </message>
     <message>
-        <location line="-519" />
-        <location line="+147" />
-        <location line="+70" />
+        <location line="+3" />
+        <location line="+116" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+59" />
-        <location line="+42" />
+        <location line="+68" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+170" />
         <source>Define Project Details</source>
         <translation>تعریف جزئیات پروژه</translation>
     </message>
@@ -13073,38 +13174,38 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">یک کتابخانه ++C ایجاد می کند. از این می توان برای ایجاد:&lt;ul&gt;&lt;li&gt;یک کتابخانه C++ مشترک برای استفاده با &lt;tt&gt;QPluginLoader&lt;/tt&gt; و زمان اجرا (افزونه ها)&lt;/li&gt;&lt;li&gt;یک کتابخانه C++ اشتراکی یا ثابت برای استفاده با دیگری استفاده کرد. پروژه در زمان لینک&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-513" />
-        <location line="+460" />
-        <location line="+62" />
-        <location line="+7" />
+        <location line="-427" />
+        <location line="+18" />
+        <location line="+186" />
+        <location line="+232" />
         <source>Library</source>
         <translation>کتابخانه</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-435" />
         <source>C++ Library</source>
         <translation>کتابخانه سی پلاس پلاس</translation>
     </message>
     <message>
-        <location line="-366" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>یک برنامه ساده Nim ایجاد می کند.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+229" />
+        <location line="+40" />
         <location line="+18" />
-        <location line="+157" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>پروژه غیر Qt</translation>
     </message>
     <message>
-        <location line="-403" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>برنامه Nim</translation>
     </message>
     <message>
-        <location line="+369" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>دودویی</translation>
     </message>
@@ -13119,13 +13220,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>نویسنده:</translation>
     </message>
     <message>
-        <location line="-544" />
-        <location line="+545" />
+        <location line="+1" />
+        <location line="+402" />
         <source>Description:</source>
         <translation>شرح:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-401" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -13190,13 +13291,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>دیگر</translation>
     </message>
     <message>
-        <location line="-560" />
-        <location line="+561" />
+        <location line="+1" />
+        <location line="+386" />
         <source>License:</source>
         <translation>مجوز:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-385" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>سی</translation>
@@ -13237,22 +13338,22 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>تعریف پیکربندی پروژه</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="+1" />
+        <location line="+253" />
+        <location line="+1" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+202" />
         <source>Configuration</source>
         <translation>پیکربندی</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-343" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>یک برنامه Nim با Nimble ایجاد می کند.</translation>
     </message>
@@ -13262,7 +13363,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>نرم افزار زیرک</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>یک برنامه ساده C بدون وابستگی ایجاد می کند.</translation>
     </message>
@@ -13272,7 +13373,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>برنامه C ساده</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>یک برنامه C++ ساده بدون وابستگی ایجاد می کند.</translation>
     </message>
@@ -13282,7 +13383,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>برنامه C++ ساده</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>این جادوگر یک فایل .pro خالی ایجاد می کند.</translation>
     </message>
@@ -13301,43 +13402,43 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">نسخه PySide:</translation>
     </message>
     <message>
-        <location line="-218" />
+        <location line="+13" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>یک Qt برای برنامه پایتون ایجاد می کند که فقط شامل کد اصلی یک QApplication است.</translation>
     </message>
     <message>
-        <location line="-14" />
-        <location line="+15" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+18" />
+        <location line="+21" />
         <source>Application (Qt for Python)</source>
         <translation>برنامه (Qt برای پایتون)</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-60" />
         <source>Empty Application</source>
         <translation>برنامه خالی</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseCB') ? value('BaseCB').slice(1): 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1): &apos;MyClass&apos;}</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</source>
-        <translation type="vanished">%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</translation>
+        <source>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</source>
+        <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-28" />
-        <location line="+37" />
+        <location line="+9" />
+        <location line="+39" />
         <source>Project file:</source>
         <translation>فایل پروژه:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>یک Qt برای برنامه پایتون ایجاد می کند که حاوی یک پنجره خالی است.</translation>
     </message>
@@ -13347,15 +13448,15 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>پنجره خالی</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+15" />
+        <location line="-32" />
         <location line="+22" />
         <location line="+15" />
+        <location line="+24" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-211" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -13364,19 +13465,19 @@ Preselects a desktop Qt for building the application if available.</source>
  در صورت وجود یک QT دسک تاپ را برای ساخت برنامه انتخاب می کند.</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation>یک کتابخانه C ++ ایجاد می کند. شما می توانید ایجاد کنید: &lt;/li&gt; &lt;/ul&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+15" />
+        <location line="+107" />
         <location line="+22" />
+        <location line="+39" />
         <source>PySide 2</source>
         <translation>Pyside 2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="-24" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -13410,50 +13511,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">یک برنامه Qt برای Python ایجاد می کند که شامل ویجت مبتنی بر Qt Designer (فایل ui) است - نیاز به تبدیل .ui به پایتون</translation>
     </message>
     <message>
-        <location line="-55" />
+        <location line="+21" />
         <source>Window UI</source>
         <translation>رابط کاربری پنجره</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+311" />
+        <location line="+10" />
         <location line="+25" />
+        <location line="+23" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-335" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
         <location line="+23" />
+        <location line="+25" />
         <source>Minimum required Qt version:</source>
         <translation>حداقل نسخه Qt مورد نیاز:</translation>
     </message>
     <message>
-        <location line="-22" />
+        <location line="-47" />
         <source>MyItem</source>
         <translation>My Item</translation>
     </message>
@@ -13501,9 +13602,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">یک پروژه با ساختاری ایجاد کنید که هم با Qt Design Studio (از طریق .qmlproject) و هم با Qt Creator (از طریق CMakeLists.txt) سازگار باشد. این شامل یک فرم .ui.qml است که می توانید به صورت بصری در استودیو طراحی Qt ویرایش کنید.</translation>
     </message>
     <message>
-        <location line="-324" />
-        <location line="+274" />
-        <location line="+55" />
+        <location line="+5" />
+        <location line="+30" />
+        <location line="+16" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>از صفحه کلید مجازی Qt استفاده کنید</translation>
     </message>
@@ -13516,18 +13617,18 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">یک برنامه Qt Quick ایجاد می کند که حاوی یک پنجره خالی است. به صورت اختیاری، می توانید یک پروژه Qt Design Studio ایجاد کنید.</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-33" />
         <source>Qt Quick Application</source>
         <translation>برنامه Qt Quick</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="+26" />
         <source>Creates a Qt Quick application that contains an empty window.
 
-Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
+Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
         <translation>یک برنامه Qt Quick ایجاد می کند که حاوی یک پنجره خالی است.
 
-اگر می خواهید از سیستم های ساخت دیگری غیر از نسخه های CMake یا Qt کمتر از 6 استفاده کنید، از این نسخه "Compat" استفاده کنید.</translation>
+اگر می خواهید از سیستم های ساخت دیگری غیر از نسخه های CMake یا Qt کمتر از 6 استفاده کنید، از این نسخه &quot;Compat&quot; استفاده کنید.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13543,18 +13644,18 @@ Use this only if you are prototyping. You cannot create a full application with 
 فقط در صورتی از این مورد استفاده کنید که در حال نمونه سازی هستید. با این نمی توانید یک برنامه کامل ایجاد کنید. به جای آن از یک پروژه برنامه کاربردی Qt Quick استفاده کنید.</translation>
     </message>
     <message>
-        <location line="+272" />
+        <location line="+14" />
         <source>Qt Quick UI Prototype</source>
         <translation>نمونه اولیه Qt Quick UI</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>این جادوگر یک پروژه برنامه کاربردی ابزارک Qt ایجاد می کند. این برنامه به طور پیش فرض از QApplication مشتق شده و شامل یک ویجت خالی است.</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseClass') ? value('BaseClass').slice(1): 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1): &apos;MyClass&apos;}</translation>
     </message>
     <message>
         <location line="+15" />
@@ -13562,8 +13663,8 @@ Use this only if you are prototyping. You cannot create a full application with 
         <translation>فرم ایجاد کنید</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), 'ui')}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class')، 'ui')}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;)، &apos;ui&apos;)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13589,27 +13690,27 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>برنامه ابزارک Qt</translation>
     </message>
     <message>
-        <location line="-332" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>لطفاً &lt;b&gt;%{vcsName}&lt;/b&gt; را اکنون پیکربندی کنید.</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-93" />
+        <location line="+52" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository:</source>
         <translation>مخزن:</translation>
     </message>
     <message>
         <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>URL مخزن معتبر نیست</translation>
@@ -13619,24 +13720,24 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
         <source>Directory:</source>
         <translation>فهرست راهنما:</translation>
     </message>
     <message>
-        <location line="-94" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
-        <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" در سیستم فایل وجود دارد.</translation>
+        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; در سیستم فایل وجود دارد.</translation>
     </message>
     <message>
-        <location line="-52" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>از دایرکتوری موجود استفاده کنید</translation>
     </message>
@@ -13712,13 +13813,13 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+3" />
-        <location line="+19" />
+        <location line="+60" />
         <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>URL مخزن، دایرکتوری پرداخت و مسیر را مشخص کنید.</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>شعبه بازار در حال اجرا...</translation>
     </message>
@@ -13737,9 +13838,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>یک شعبه بازار را کلون می کند و سعی می کند پروژه موجود را بارگذاری کند.</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+1" />
+        <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <location line="+20" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
@@ -13747,12 +13848,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>پروژه واردات</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>کلون بازار (یا شعبه)</translation>
     </message>
     <message>
-        <location line="-69" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>مدول:</translation>
     </message>
@@ -13771,7 +13872,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+52" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+19" />
         <location line="+1" />
@@ -13779,7 +13880,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>وارسی</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>یک مخزن CVS را بررسی می کند و سعی می کند پروژه موجود را بارگیری کند.</translation>
     </message>
@@ -13829,7 +13930,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>اجرای کلون مرکوریال...</translation>
     </message>
@@ -13864,7 +13965,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>وارونه پرداخت</translation>
     </message>
     <message>
-        <location line="-394" />
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>این جادوگر یک پلاگین سفارشی Qt Creator ایجاد می کند.</translation>
     </message>
@@ -13874,8 +13975,8 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>جزئیات مربوط به افزونه Qt Creator سفارشی خود را مشخص کنید.</translation>
     </message>
     <message>
-        <source>%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</source>
-        <translation type="vanished">%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</translation>
+        <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
+        <translation type="vanished">%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13913,8 +14014,8 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>شرح مختصری از افزونه خود را در اینجا قرار دهید</translation>
     </message>
     <message>
-        <source>https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</source>
-        <translation type="vanished">https://www.%{JS: encodeURIcomponent(value('VendorName').toLowerCase())}.com</translation>
+        <source>https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</source>
+        <translation type="vanished">https://www.%{JS: encodeURIcomponent(value(&apos;VendorName&apos;).toLowerCase())}.com</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13939,12 +14040,12 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
         <source>S&amp;essions</source>
-        <translation>s &amp; atsions</translation>
+        <translation>s &amp;atsions</translation>
     </message>
     <message>
         <location line="+9" />
         <source>&amp;Manage...</source>
-        <translation>و مدیریت ...</translation>
+        <translation>و مدیریت ... (&amp;M)</translation>
     </message>
     <message>
         <location line="+13" />
@@ -14006,8 +14107,8 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+42" />
-        <source>Could not save session to file "%1"</source>
-        <translation>نمی توان جلسه را برای پرونده "%1" ذخیره کرد</translation>
+        <source>Could not save session to file &quot;%1&quot;</source>
+        <translation>نمی توان جلسه را برای پرونده &quot;%1&quot; ذخیره کرد</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
@@ -14022,27 +14123,27 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+7" />
         <source>&amp;New...</source>
-        <translation>و جدید ...</translation>
+        <translation>و جدید ... (&amp;N)</translation>
     </message>
     <message>
         <location line="+3" />
         <source>&amp;Open</source>
-        <translation>و باز</translation>
+        <translation>و باز (&amp;O)</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Rename...</source>
-        <translation>و تغییر نام ...</translation>
+        <translation>و تغییر نام ... (&amp;R)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C&amp;lone...</source>
-        <translation>C &amp; Lone ...</translation>
+        <translation>C &amp;Lone ...</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Delete...</source>
-        <translation>و حذف ...</translation>
+        <translation>و حذف ... (&amp;D)</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14073,22 +14174,22 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="-10" />
         <source>&amp;Create</source>
-        <translation>و ایجاد</translation>
+        <translation>و ایجاد (&amp;C)</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Create and &amp;Open</source>
-        <translation>ایجاد و و باز</translation>
+        <translation>ایجاد و و باز (&amp;O)</translation>
     </message>
     <message>
         <location line="+11" />
         <source>&amp;Clone</source>
-        <translation>و کلون</translation>
+        <translation>و کلون (&amp;C)</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Clone and &amp;Open</source>
-        <translation>کلون و و باز</translation>
+        <translation>کلون و و باز (&amp;O)</translation>
     </message>
     <message>
         <location line="+22" />
@@ -14098,12 +14199,12 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+1" />
         <source>&amp;Rename</source>
-        <translation>و نامگذاری مجدد</translation>
+        <translation>و نامگذاری مجدد (&amp;R)</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Rename and &amp;Open</source>
-        <translation>تغییر نام و و باز</translation>
+        <translation>تغییر نام و و باز (&amp;O)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
@@ -14117,38 +14218,38 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+72" />
-        <source>Could not create directory "%1"</source>
-        <translation>نمی توان فهرست "%1" را ایجاد کرد</translation>
+        <source>Could not create directory &quot;%1&quot;</source>
+        <translation>نمی توان فهرست &quot;%1&quot; را ایجاد کرد</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>برنامه "%1" وجود ندارد یا قابل اجرا نیست.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>برنامه &quot;%1&quot; وجود ندارد یا قابل اجرا نیست.</translation>
     </message>
     <message>
         <location line="+34" />
-        <source>Starting: "%1" %2</source>
-        <translation>شروع: "%1" %2</translation>
+        <source>Starting: &quot;%1&quot; %2</source>
+        <translation>شروع: &quot;%1&quot; %2</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The process "%1" exited normally.</source>
-        <translation>فرآیند "%1" به طور عادی خارج شد.</translation>
+        <source>The process &quot;%1&quot; exited normally.</source>
+        <translation>فرآیند &quot;%1&quot; به طور عادی خارج شد.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The process "%1" exited with code %2.</source>
-        <translation>فرآیند "%1" با کد %2 خارج شد.</translation>
+        <source>The process &quot;%1&quot; exited with code %2.</source>
+        <translation>فرآیند &quot;%1&quot; با کد %2 خارج شد.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Could not start process "%1" %2.</source>
-        <translation>نمی توان فرآیند "%1" %2 را شروع کرد.</translation>
+        <source>Could not start process &quot;%1&quot; %2.</source>
+        <translation>نمی توان فرآیند &quot;%1&quot; %2 را شروع کرد.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The process "%1" crashed.</source>
-        <translation>روند "%1" سقوط کرد.</translation>
+        <source>The process &quot;%1&quot; crashed.</source>
+        <translation>روند &quot;%1&quot; سقوط کرد.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
@@ -14189,8 +14290,8 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files of all open projects. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>پرونده های کلیه پروژه های باز را پیدا می کند. برای پرش به شماره خط داده شده "+&lt;Number&gt;" یا ": &lt;Number&gt;" ضمیمه کنید. برای پرش به شماره ستون ، "+&lt;Number&gt;" یا ": &lt;Number&gt;" را اضافه کنید.</translation>
+        <source>Locates files of all open projects. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>پرونده های کلیه پروژه های باز را پیدا می کند. برای پرش به شماره خط داده شده &quot;+&lt;Number&gt;&quot; یا &quot;: &lt;Number&gt;&quot; ضمیمه کنید. برای پرش به شماره ستون ، &quot;+&lt;Number&gt;&quot; یا &quot;: &lt;Number&gt;&quot; را اضافه کنید.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
@@ -14208,9 +14309,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <source>Filter: %1
 Excluding: %2
 %3</source>
-        <translation>فیلتر: %1
- به استثنای: %2
- 3 ٪</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+73" />
@@ -14245,7 +14344,7 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>Show &amp;App Output</source>
-        <translation>خروجی برنامه و برنامه</translation>
+        <translation>خروجی برنامه و برنامه (&amp;A)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14366,13 +14465,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+105" />
-        <source>Build directory contains potentially problematic character "%1".</source>
-        <translation>ساخت دایرکتوری حاوی شخصیت بالقوه مشکل ساز "%1" است.</translation>
+        <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
+        <translation>ساخت دایرکتوری حاوی شخصیت بالقوه مشکل ساز &quot;%1&quot; است.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>This warning can be suppressed &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>این هشدار را می توان سرکوب کرد &lt;a href = "dummy"&gt; در اینجا &lt;/a&gt;.</translation>
+        <source>This warning can be suppressed &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>این هشدار را می توان سرکوب کرد &lt;a href = &quot;dummy&quot;&gt; در اینجا &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -14428,7 +14527,7 @@ Excluding: %2
     </message>
     <message>
         <location line="+4" />
-        <source>Variables in the build configuration's environment</source>
+        <source>Variables in the build configuration&apos;s environment</source>
         <translation>متغیرهای موجود در محیط پیکربندی ساخت</translation>
     </message>
     <message>
@@ -14470,12 +14569,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build configuration</source>
+        <source>Name of the project&apos;s active build configuration</source>
         <translation>نام پیکربندی ساخت فعال پروژه</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build system</source>
+        <source>Name of the project&apos;s active build system</source>
         <translation>نام سیستم ساخت فعال پروژه</translation>
     </message>
     <message>
@@ -14485,13 +14584,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Type of the project's active build configuration</source>
+        <source>Type of the project&apos;s active build configuration</source>
         <translation>نوع پیکربندی ساخت فعال پروژه</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>No build device is set for the kit "%1".</source>
-        <translation>هیچ دستگاه ساختمانی برای کیت "%1" تنظیم نشده است.</translation>
+        <source>No build device is set for the kit &quot;%1&quot;.</source>
+        <translation>هیچ دستگاه ساختمانی برای کیت &quot;%1&quot; تنظیم نشده است.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -14500,19 +14599,19 @@ Excluding: %2
     </message>
     <message>
         <location line="+7" />
-        <source>The build device "%1" cannot reach the project directory.</source>
-        <translation>دستگاه ساخت "%1" نمی تواند به فهرست پروژه برسد.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the project directory.</source>
+        <translation>دستگاه ساخت &quot;%1&quot; نمی تواند به فهرست پروژه برسد.</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The build device "%1" cannot reach the build directory.</source>
-        <translation>دستگاه ساخت "%1" نمی تواند به دایرکتوری ساخت برسد.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the build directory.</source>
+        <translation>دستگاه ساخت &quot;%1&quot; نمی تواند به دایرکتوری ساخت برسد.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
         <source>Finished %1 of %n steps</source>
-        <translation>
-            <numerusform>%1 از ٪ n قدم به پایان رسید</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -14538,7 +14637,7 @@ Excluding: %2
     <message>
         <location line="+138" />
         <source>Compile</source>
-        <comment>Category for compiler issues listed under 'Issues'</comment>
+        <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>تالیف کردن</translation>
     </message>
     <message>
@@ -14549,7 +14648,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Build System</source>
-        <comment>Category for build system issues listed under 'Issues'</comment>
+        <comment>Category for build system issues listed under &apos;Issues&apos;</comment>
         <translation>سیستم ساخت</translation>
     </message>
     <message>
@@ -14560,7 +14659,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Deployment</source>
-        <comment>Category for deployment issues listed under 'Issues'</comment>
+        <comment>Category for deployment issues listed under &apos;Issues&apos;</comment>
         <translation>اعزام</translation>
     </message>
     <message>
@@ -14571,7 +14670,7 @@ Excluding: %2
     <message>
         <location line="+4" />
         <source>Autotests</source>
-        <comment>Category for autotest issues listed under 'Issues'</comment>
+        <comment>Category for autotest issues listed under &apos;Issues&apos;</comment>
         <translation>خودکشی</translation>
     </message>
     <message>
@@ -14588,7 +14687,7 @@ Excluding: %2
         <location line="+8" />
         <location line="+59" />
         <source>Clean</source>
-        <extracomment>Displayed name for a "cleaning" build step
+        <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
 Display name of the clean build step list. Used as part of the labels in the project window.</extracomment>
         <translation>تمیز</translation>
@@ -14652,8 +14751,8 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location line="+98" />
-        <source>When executing step "%1"</source>
-        <translation>هنگام اجرای مرحله "%1"</translation>
+        <source>When executing step &quot;%1&quot;</source>
+        <translation>هنگام اجرای مرحله &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
@@ -14870,8 +14969,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+3" />
-        <source>The project file "%1" does not exist.</source>
-        <translation>پرونده پروژه "%1" وجود ندارد.</translation>
+        <source>The project file &quot;%1&quot; does not exist.</source>
+        <translation>پرونده پروژه &quot;%1&quot; وجود ندارد.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/codestylesettingspropertiespage.cpp" line="+60" />
@@ -14898,7 +14997,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+38" />
         <source>Show Compile &amp;Output</source>
-        <translation>کامپایل و خروجی را نشان دهید</translation>
+        <translation>کامپایل و خروجی را نشان دهید (&amp;O)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14968,13 +15067,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from the current document's project. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>پرونده ها را از پروژه سند فعلی قرار می دهد. برای پرش به شماره خط داده شده "+&lt;Number&gt;" یا ": &lt;Number&gt;" ضمیمه کنید. برای پرش به شماره ستون ، "+&lt;Number&gt;" یا ": &lt;Number&gt;" را اضافه کنید.</translation>
+        <source>Locates files from the current document&apos;s project. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>پرونده ها را از پروژه سند فعلی قرار می دهد. برای پرش به شماره خط داده شده &quot;+&lt;Number&gt;&quot; یا &quot;: &lt;Number&gt;&quot; ضمیمه کنید. برای پرش به شماره ستون ، &quot;+&lt;Number&gt;&quot; یا &quot;: &lt;Number&gt;&quot; را اضافه کنید.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
-        <source>Project "%1"</source>
-        <translation>پروژه "%1"</translation>
+        <source>Project &quot;%1&quot;</source>
+        <translation>پروژه &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14983,8 +15082,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>Project "%1":</source>
-        <translation>پروژه "%1":</translation>
+        <source>Project &quot;%1&quot;:</source>
+        <translation>پروژه &quot;%1&quot;:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
@@ -15005,8 +15104,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
-        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>خروجی خروجی سفارشی خروجی خط فرمان برای الگوهای خطای ارائه شده توسط کاربر &lt;br&gt; برای ایجاد مطالب در موارد.</translation>
+        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+82" />
@@ -15016,8 +15115,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+2" />
         <source>There are %n custom parsers active</source>
-        <translation>
-            <numerusform>پارسرهای سفارشی ٪ n فعال هستند</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -15028,25 +15127,25 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>&amp;Error message capture pattern:</source>
-        <translation>و الگوی ضبط پیام خطا:</translation>
+        <translation>و الگوی ضبط پیام خطا: (&amp;E)</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+33" />
         <source>&amp;File name:</source>
-        <translation>&amp; نام پرونده:</translation>
+        <translation>&amp;نام پرونده:</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Line number:</source>
-        <translation>و شماره خط:</translation>
+        <translation>و شماره خط: (&amp;L)</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Message:</source>
-        <translation>و پیام:</translation>
+        <translation>و پیام: (&amp;M)</translation>
     </message>
     <message>
         <location line="-15" />
@@ -15063,7 +15162,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-31" />
         <source>E&amp;rror message:</source>
-        <translation>پیام E &amp; rror:</translation>
+        <translation>پیام E &amp;rror:</translation>
     </message>
     <message>
         <location line="+33" />
@@ -15148,7 +15247,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
-        <source>Custom output parsers defined here can be enabled individually in the project's build or run settings.</source>
+        <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>پارسرهای خروجی سفارشی که در اینجا تعریف شده اند می توانند به صورت جداگانه در تنظیمات ساخت یا اجرای پروژه فعال شوند.</translation>
     </message>
     <message>
@@ -15201,8 +15300,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+44" />
         <source>%n entries</source>
-        <translation>
-            <numerusform>٪ n ورودی ها</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -15241,44 +15340,44 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
         <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>و مسیر کامپایلر:</translation>
+        <translation>و مسیر کامپایلر: (&amp;C)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Make path:</source>
-        <translation>&amp; Path:</translation>
+        <translation>&amp;Path:</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
         <source>&amp;ABI:</source>
-        <translation>&amp; ABI:</translation>
+        <translation>&amp;ABI:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Predefined macros:</source>
-        <translation>ماکروهای از پیش تعریف شده:</translation>
+        <translation>ماکروهای از پیش تعریف شده: (&amp;P)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Header paths:</source>
-        <translation>و مسیرهای هدر:</translation>
+        <translation>و مسیرهای هدر: (&amp;H)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C++11 &amp;flags:</source>
-        <translation>C ++ 11 &amp; Flags:</translation>
+        <translation>C ++ 11 &amp;Flags:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Qt mkspecs:</source>
-        <translation>&amp; qt mkspecs:</translation>
+        <translation>&amp;qt mkspecs:</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Error parser:</source>
-        <translation>و پارسر خطا:</translation>
+        <translation>و پارسر خطا: (&amp;E)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/dependenciespanel.cpp" line="+83" />
@@ -15433,19 +15532,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
-        <source>No device for path "%1"</source>
-        <translation>هیچ وسیله ای برای مسیر "%1"</translation>
+        <source>No device for path &quot;%1&quot;</source>
+        <translation>هیچ وسیله ای برای مسیر &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
-        <source>No device found for path "%1"</source>
-        <translation>هیچ وسیله ای برای مسیر "%1" یافت نمی شود</translation>
+        <source>No device found for path &quot;%1&quot;</source>
+        <translation>هیچ وسیله ای برای مسیر &quot;%1&quot; یافت نمی شود</translation>
     </message>
     <message>
         <location line="-9" />
-        <source>No file access for device "%1"</source>
-        <translation>دسترسی به فایل برای دستگاه "%1"</translation>
+        <source>No file access for device &quot;%1&quot;</source>
+        <translation>دسترسی به فایل برای دستگاه &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
@@ -15470,17 +15569,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+22" />
         <source>&amp;Update List</source>
-        <translation>و لیست به روزرسانی</translation>
+        <translation>و لیست به روزرسانی (&amp;U)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Kill Process</source>
-        <translation>و روند کشتن</translation>
+        <translation>و روند کشتن (&amp;K)</translation>
     </message>
     <message>
         <location line="+8" />
         <source>&amp;Filter:</source>
-        <translation>و فیلتر:</translation>
+        <translation>و فیلتر: (&amp;F)</translation>
     </message>
     <message>
         <location line="+64" />
@@ -15490,7 +15589,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-253" />
         <source>&amp;Device:</source>
-        <translation>و دستگاه:</translation>
+        <translation>و دستگاه: (&amp;D)</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15500,7 +15599,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>&amp;Remove</source>
-        <translation>و حذف</translation>
+        <translation>و حذف (&amp;R)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15510,12 +15609,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>&amp;Add...</source>
-        <translation>و اضافه کردن ...</translation>
+        <translation>و اضافه کردن ... (&amp;A)</translation>
     </message>
     <message>
         <location line="+4" />
         <source>&amp;Start Wizard to Add Device...</source>
-        <translation>&amp; Wizard را برای افزودن دستگاه شروع کنید ...</translation>
+        <translation>&amp;Wizard را برای افزودن دستگاه شروع کنید ...</translation>
     </message>
     <message>
         <location line="+12" />
@@ -15526,7 +15625,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+34" />
         <source>&amp;Name:</source>
-        <translation>و نام:</translation>
+        <translation>و نام: (&amp;N)</translation>
     </message>
     <message>
         <location line="+2" />
@@ -15540,8 +15639,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+87" />
-        <source>Yes (id is "%1")</source>
-        <translation>بله (شناسه "%1" است)</translation>
+        <source>Yes (id is &quot;%1&quot;)</source>
+        <translation>بله (شناسه &quot;%1&quot; است)</translation>
     </message>
     <message>
         <location line="+0" />
@@ -15582,8 +15681,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+41" />
         <source>Found %n free ports.</source>
-        <translation>
-            <numerusform>درگاه های رایگان ٪ n پیدا شده است.</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -15669,13 +15768,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>No device for given path: "%1".</source>
-        <translation>هیچ وسیله ای برای مسیر داده شده: "%1".</translation>
+        <source>No device for given path: &quot;%1&quot;.</source>
+        <translation>هیچ وسیله ای برای مسیر داده شده: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Device for path "%1" does not support killing processes.</source>
-        <translation>دستگاه برای مسیر "%1" از فرایندهای کشتار پشتیبانی نمی کند.</translation>
+        <source>Device for path &quot;%1&quot; does not support killing processes.</source>
+        <translation>دستگاه برای مسیر &quot;%1&quot; از فرایندهای کشتار پشتیبانی نمی کند.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
@@ -15758,7 +15857,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>نمایش راست و حاشیه در ستون:</translation>
+        <translation>نمایش راست و حاشیه در ستون: (&amp;M)</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15807,22 +15906,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-278" />
         <source>Ed&amp;it</source>
-        <translation>اد و آن</translation>
+        <translation>اد و آن (&amp;I)</translation>
     </message>
     <message>
         <location line="+4" />
         <source>&amp;Add</source>
-        <translation>و اضافه کردن</translation>
+        <translation>و اضافه کردن (&amp;A)</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&amp;Reset</source>
-        <translation>و تنظیم مجدد</translation>
+        <translation>و تنظیم مجدد (&amp;R)</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&amp;Unset</source>
-        <translation>و</translation>
+        <translation>و (&amp;U)</translation>
     </message>
     <message>
         <location line="+14" />
@@ -15837,7 +15936,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+9" />
         <source>Open &amp;Terminal</source>
-        <translation>باز و پایانه</translation>
+        <translation>باز و پایانه (&amp;T)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15846,33 +15945,33 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+123" />
-        <source>Unset &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>unset &lt;a href = "%1"&gt; &lt;b&gt; %1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>unset &lt;a href = &quot;%1&quot;&gt; &lt;b&gt; %1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation>تنظیم &lt;a href = "%1"&gt; &lt;b&gt; %1 &lt;/a&gt; &lt;/a&gt; به &lt;b&gt; %2 &lt;/b&gt;</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>ضمیمه &lt;b&gt; %2 &lt;/b&gt; به &lt;a href = "%1"&gt; &lt;b&gt; %1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>ضمیمه &lt;b&gt; %2 &lt;/b&gt; به &lt;a href = &quot;%1&quot;&gt; &lt;b&gt; %1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>پیش بینی &lt;b&gt; %2 &lt;/b&gt; به &lt;a href = "%1"&gt; &lt;b&gt; %1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>پیش بینی &lt;b&gt; %2 &lt;/b&gt; به &lt;a href = &quot;%1&quot;&gt; &lt;b&gt; %1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
-        <translation>تنظیم &lt;a href = "%1"&gt; &lt;b&gt; %1 &lt;/a&gt; &lt;/a&gt; به &lt;b&gt; %2 &lt;/b&gt; [غیرفعال]</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11" />
         <source>Use &lt;b&gt;%1&lt;/b&gt;</source>
-        <extracomment>%1 is "System Environment" or some such.</extracomment>
+        <extracomment>%1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>از &lt;b&gt; %1 &lt;/b&gt; استفاده کنید</translation>
     </message>
     <message>
@@ -15883,7 +15982,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>Use &lt;b&gt;%1&lt;/b&gt; and</source>
-        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is "System Environment" or some such.</extracomment>
+        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>از &lt;b&gt; %1 &lt;/b&gt; استفاده کنید</translation>
     </message>
     <message>
@@ -15981,58 +16080,58 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Field "%1" has no type.</source>
-        <translation>میدان "%1" نوع ندارد.</translation>
+        <source>Field &quot;%1&quot; has no type.</source>
+        <translation>میدان &quot;%1&quot; نوع ندارد.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Field "%1" has unsupported type "%2".</source>
-        <translation>زمینه "%1" از نوع پشتیبانی نشده "%2" پشتیبانی نشده است.</translation>
+        <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
+        <translation>زمینه &quot;%1&quot; از نوع پشتیبانی نشده &quot;%2&quot; پشتیبانی نشده است.</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>When parsing Field "%1": %2</source>
-        <translation>هنگام تجزیه قسمت "%1": %2</translation>
+        <source>When parsing Field &quot;%1&quot;: %2</source>
+        <translation>هنگام تجزیه قسمت &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+208" />
-        <source>Label ("%1") data is not an object.</source>
-        <translation>داده های برچسب ("%1") یک شی نیست.</translation>
+        <source>Label (&quot;%1&quot;) data is not an object.</source>
+        <translation>داده های برچسب (&quot;%1&quot;) یک شی نیست.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Label ("%1") has no trText.</source>
-        <translation>برچسب ("%1") هیچ trtext ندارد.</translation>
+        <source>Label (&quot;%1&quot;) has no trText.</source>
+        <translation>برچسب (&quot;%1&quot;) هیچ trtext ندارد.</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>Spacer ("%1") data is not an object.</source>
-        <translation>داده های Spacer ("%1") یک شی نیست.</translation>
+        <source>Spacer (&quot;%1&quot;) data is not an object.</source>
+        <translation>داده های Spacer (&quot;%1&quot;) یک شی نیست.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Spacer ("%1") property "factor" is no integer value.</source>
-        <translation>ویژگی "" %1 ") خاصیت" فاکتور "هیچ مقدار عدد صحیح نیست.</translation>
+        <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
+        <translation>ویژگی &quot;&quot; %1 &quot;) خاصیت&quot; فاکتور &quot;هیچ مقدار عدد صحیح نیست.</translation>
     </message>
     <message>
         <location line="+35" />
-        <source>LineEdit ("%1") data is not an object.</source>
-        <translation>داده های Lineedit ("%1") یک شی نیست.</translation>
+        <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>داده های Lineedit (&quot;%1&quot;) یک شی نیست.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>LineEdit ("%1") has an invalid regular expression "%2" in "validator".</source>
-        <translation>LineEdit ("%1") یک عبارت منظم نامعتبر "%2" در "اعتبار سنج" دارد.</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
+        <translation>LineEdit (&quot;%1&quot;) یک عبارت منظم نامعتبر &quot;%2&quot; در &quot;اعتبار سنج&quot; دارد.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>LineEdit ("%1") has an invalid value "%2" in "completion".</source>
-        <translation>LineEdit ("%1") در "تکمیل" مقدار نامعتبر "%2" دارد.</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
+        <translation>LineEdit (&quot;%1&quot;) در &quot;تکمیل&quot; مقدار نامعتبر &quot;%2&quot; دارد.</translation>
     </message>
     <message>
         <location line="+166" />
-        <source>TextEdit ("%1") data is not an object.</source>
-        <translation>داده های TEXTEDIT ("%1") یک شی نیست.</translation>
+        <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>داده های TEXTEDIT (&quot;%1&quot;) یک شی نیست.</translation>
     </message>
     <message>
         <location line="+83" />
@@ -16041,18 +16140,18 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+26" />
-        <source>kind "%1" is not one of the supported "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any".</source>
-        <translation>نوع "%1" یکی از پشتیبانی "Directory" موجود ، "دایرکتوری" ، "پرونده" ، "SaveFile" ، "موجود" ، "فرمان" ، "هر" نیست.</translation>
+        <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
+        <translation>نوع &quot;%1&quot; یکی از پشتیبانی &quot;Directory&quot; موجود ، &quot;دایرکتوری&quot; ، &quot;پرونده&quot; ، &quot;SaveFile&quot; ، &quot;موجود&quot; ، &quot;فرمان&quot; ، &quot;هر&quot; نیست.</translation>
     </message>
     <message>
         <location line="+80" />
-        <source>CheckBox ("%1") data is not an object.</source>
-        <translation>کادر انتخاب ("%1") داده ها یک شی نیست.</translation>
+        <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
+        <translation>کادر انتخاب (&quot;%1&quot;) داده ها یک شی نیست.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>CheckBox ("%1") values for checked and unchecked state are identical.</source>
-        <translation>مقادیر کادر انتخاب ("%1") برای حالت بررسی و کنترل نشده یکسان است.</translation>
+        <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
+        <translation>مقادیر کادر انتخاب (&quot;%1&quot;) برای حالت بررسی و کنترل نشده یکسان است.</translation>
     </message>
     <message>
         <location line="+80" />
@@ -16061,33 +16160,33 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>No "key" found in List items.</source>
-        <translation>هیچ "کلید" موجود در موارد لیست وجود ندارد.</translation>
+        <source>No &quot;key&quot; found in List items.</source>
+        <translation>هیچ &quot;کلید&quot; موجود در موارد لیست وجود ندارد.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>%1 ("%2") data is not an object.</source>
-        <translation>%1 ("%2") داده ها یک شی نیست.</translation>
+        <source>%1 (&quot;%2&quot;) data is not an object.</source>
+        <translation>%1 (&quot;%2&quot;) داده ها یک شی نیست.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>%1 ("%2") "index" is not an integer value.</source>
-        <translation>%1 ("%2") "شاخص" یک مقدار عدد صحیح نیست.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;شاخص&quot; یک مقدار عدد صحیح نیست.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>%1 ("%2") "disabledIndex" is not an integer value.</source>
-        <translation>%1 ("%2") "disabledIndex" یک مقدار عدد صحیح نیست.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; یک مقدار عدد صحیح نیست.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>%1 ("%2") "items" missing.</source>
-        <translation>%1 ("%2") "موارد" گم شده است.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;موارد&quot; گم شده است.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>%1 ("%2") "items" is not a JSON list.</source>
-        <translation>%1 ("%2") "موارد" لیست JSON نیست.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;موارد&quot; لیست JSON نیست.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
@@ -16111,8 +16210,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+13" />
-        <source>No "%1" key found in feature list object.</source>
-        <translation>کلید "%1" در شیء لیست ویژگی ها یافت نمی شود.</translation>
+        <source>No &quot;%1&quot; key found in feature list object.</source>
+        <translation>کلید &quot;%1&quot; در شیء لیست ویژگی ها یافت نمی شود.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -16126,8 +16225,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Error message from Version Control System: "%1".</source>
-        <translation>پیام خطا از سیستم کنترل نسخه: "%1".</translation>
+        <source>Error message from Version Control System: &quot;%1&quot;.</source>
+        <translation>پیام خطا از سیستم کنترل نسخه: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16138,18 +16237,18 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="-11" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
-        <source>Failed to add subproject "%1"
-to project "%2".</source>
-        <translation>اضافه کردن زیر مجموعه "%1" انجام نشد
- برای پروژه "%2".</translation>
+        <source>Failed to add subproject &quot;%1&quot;
+to project &quot;%2&quot;.</source>
+        <translation>اضافه کردن زیر مجموعه &quot;%1&quot; انجام نشد
+ برای پروژه &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
         <source>Failed to add one or more files to project
-"%1" (%2).</source>
+&quot;%1&quot; (%2).</source>
         <translation>اضافه نشد یک یا چند پرونده به پروژه
- "%1" (%2).</translation>
+ &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
@@ -16169,13 +16268,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+33" />
-        <source>Check whether a variable exists.&lt;br&gt;Returns "true" if it does and an empty string if not.</source>
-        <translation>بررسی کنید که آیا یک متغیر وجود دارد.</translation>
+        <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not determine target path. "TargetPath" was not set on any page.</source>
-        <translation>نمی تواند مسیر هدف را تعیین کند. "TargetPath" در هیچ صفحه تنظیم نشده است.</translation>
+        <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
+        <translation>نمی تواند مسیر هدف را تعیین کند. &quot;TargetPath&quot; در هیچ صفحه تنظیم نشده است.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -16184,13 +16283,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The wizard failed to generate files.&lt;br&gt;The error message was: "%1".</source>
-        <translation>جادوگر نتوانست پرونده ها را تولید کند. &lt;br&gt; پیام خطا این بود: "%1".</translation>
+        <source>The wizard failed to generate files.&lt;br&gt;The error message was: &quot;%1&quot;.</source>
+        <translation>جادوگر نتوانست پرونده ها را تولید کند. &lt;br&gt; پیام خطا این بود: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+63" />
-        <source>No 'key' in options object.</source>
-        <translation>بدون "کلید" در گزینه گزینه ها.</translation>
+        <source>No &apos;key&apos; in options object.</source>
+        <translation>بدون &quot;کلید&quot; در گزینه گزینه ها.</translation>
     </message>
     <message>
         <location line="+88" />
@@ -16224,24 +16323,24 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+58" />
-        <source>"%1" does not exist in the file system.</source>
-        <translation>"%1" در سیستم پرونده وجود ندارد.</translation>
+        <source>&quot;%1&quot; does not exist in the file system.</source>
+        <translation>&quot;%1&quot; در سیستم پرونده وجود ندارد.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open "%1" as a project.</source>
-        <translation>نتوانست "%1" را به عنوان یک پروژه باز کند.</translation>
+        <source>Failed to open &quot;%1&quot; as a project.</source>
+        <translation>نتوانست &quot;%1&quot; را به عنوان یک پروژه باز کند.</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+46" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>نتوانست ویرایشگر "%1" را باز کند.</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>نتوانست ویرایشگر &quot;%1&quot; را باز کند.</translation>
     </message>
     <message>
         <location line="-27" />
-        <source>No file to open found in "%1".</source>
-        <translation>هیچ پرونده ای برای باز کردن در "%1" وجود ندارد.</translation>
+        <source>No file to open found in &quot;%1&quot;.</source>
+        <translation>هیچ پرونده ای برای باز کردن در &quot;%1&quot; وجود ندارد.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16250,8 +16349,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to open project in "%1".</source>
-        <translation>نتوانست پروژه را در "%1" باز کند.</translation>
+        <source>Failed to open project in &quot;%1&quot;.</source>
+        <translation>نتوانست پروژه را در &quot;%1&quot; باز کند.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16271,31 +16370,31 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+7" />
-        <source>TypeId "%1" of generator is unknown. Supported typeIds are: "%2".</source>
-        <translation>نوع "%1" ژنراتور ناشناخته است. نوع پشتیبانی شده عبارتند از: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>نوع &quot;%1&quot; ژنراتور ناشناخته است. نوع پشتیبانی شده عبارتند از: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+56" />
         <location line="+241" />
-        <source>Path "%1" does not exist when checking JSON wizard search paths.</source>
-        <translation>مسیر "%1" هنگام بررسی مسیرهای جستجوی جادوگر JSON وجود ندارد.</translation>
+        <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
+        <translation>مسیر &quot;%1&quot; هنگام بررسی مسیرهای جستجوی جادوگر JSON وجود ندارد.</translation>
     </message>
     <message>
         <location line="-228" />
-        <source>Checking "%1" for %2.</source>
-        <translation>بررسی "%1" برای %2.</translation>
+        <source>Checking &quot;%1&quot; for %2.</source>
+        <translation>بررسی &quot;%1&quot; برای %2.</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+233" />
-        <source>* Failed to parse "%1":%2:%3: %4</source>
-        <translation>* نتوانست "%1" را تجزیه کند: %2: %3: %4</translation>
+        <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
+        <translation>* نتوانست &quot;%1&quot; را تجزیه کند: %2: %3: %4</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>* Did not find a JSON object in "%1".
+        <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* یک شیء JSON را در "%1" پیدا نکرد.</translation>
+        <translation>* یک شیء JSON را در &quot;%1&quot; پیدا نکرد.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -16305,8 +16404,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="-224" />
-        <source>JsonWizard: "%1" not found.</source>
-        <translation>jsonwizard: "%1" یافت نشد.</translation>
+        <source>JsonWizard: &quot;%1&quot; not found.</source>
+        <translation>jsonwizard: &quot;%1&quot; یافت نشد.</translation>
     </message>
     <message>
         <location line="+96" />
@@ -16320,18 +16419,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>TypeId "%1" of page is unknown. Supported typeIds are: "%2".</source>
-        <translation>نوع "%1" صفحه ناشناخته است. نوع پشتیبانی شده عبارتند از: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>نوع &quot;%1&quot; صفحه ناشناخته است. نوع پشتیبانی شده عبارتند از: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Page with typeId "%1" has invalid "index".</source>
-        <translation>صفحه با نوع "%1" دارای "شاخص" نامعتبر است.</translation>
+        <source>Page with typeId &quot;%1&quot; has invalid &quot;index&quot;.</source>
+        <translation>صفحه با نوع &quot;%1&quot; دارای &quot;شاخص&quot; نامعتبر است.</translation>
     </message>
     <message>
         <location line="+89" />
-        <source>* Did not find a JSON object in "%1".</source>
-        <translation>* یک شیء JSON را در "%1" پیدا نکرد.</translation>
+        <source>* Did not find a JSON object in &quot;%1&quot;.</source>
+        <translation>* یک شیء JSON را در &quot;%1&quot; پیدا نکرد.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16370,13 +16469,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+32" />
-        <source>"kind" value "%1" is not "class" (deprecated), "file" or "project".</source>
-        <translation>"نوع" ارزش "%1" "کلاس" (مستهلک) ، "پرونده" یا "پروژه" نیست.</translation>
+        <source>&quot;kind&quot; value &quot;%1&quot; is not &quot;class&quot; (deprecated), &quot;file&quot; or &quot;project&quot;.</source>
+        <translation>&quot;نوع&quot; ارزش &quot;%1&quot; &quot;کلاس&quot; (مستهلک) ، &quot;پرونده&quot; یا &quot;پروژه&quot; نیست.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"kind" is "file" or "class" (deprecated) and "%1" is also set.</source>
-        <translation>"نوع" "پرونده" یا "کلاس" (مستهلک) و "%1" نیز تنظیم شده است.</translation>
+        <source>&quot;kind&quot; is &quot;file&quot; or &quot;class&quot; (deprecated) and &quot;%1&quot; is also set.</source>
+        <translation>&quot;نوع&quot; &quot;پرونده&quot; یا &quot;کلاس&quot; (مستهلک) و &quot;%1&quot; نیز تنظیم شده است.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -16390,13 +16489,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Icon file "%1" not found.</source>
-        <translation>پرونده نماد "%1" یافت نشد.</translation>
+        <source>Icon file &quot;%1&quot; not found.</source>
+        <translation>پرونده نماد &quot;%1&quot; یافت نشد.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Image file "%1" not found.</source>
-        <translation>پرونده تصویر "%1" یافت نشد.</translation>
+        <source>Image file &quot;%1&quot; not found.</source>
+        <translation>پرونده تصویر &quot;%1&quot; یافت نشد.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16415,13 +16514,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>When parsing "generators": %1</source>
-        <translation>هنگام تجزیه "ژنراتور": %1</translation>
+        <source>When parsing &quot;generators&quot;: %1</source>
+        <translation>هنگام تجزیه &quot;ژنراتور&quot;: %1</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>When parsing "pages": %1</source>
-        <translation>هنگام تجزیه "صفحات": %1</translation>
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation>هنگام تجزیه &quot;صفحات&quot;: %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
@@ -16435,8 +16534,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+57" />
-        <source>When processing "%1":&lt;br&gt;%2</source>
-        <translation>هنگام پردازش "%1": &lt;br&gt; %2</translation>
+        <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
+        <translation>هنگام پردازش &quot;%1&quot;: &lt;br&gt; %2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
@@ -16462,43 +16561,43 @@ to project "%2".</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
-        <source>When parsing fields of page "%1": %2</source>
-        <translation>هنگام تجزیه قسمت های صفحه "%1": %2</translation>
+        <source>When parsing fields of page &quot;%1&quot;: %2</source>
+        <translation>هنگام تجزیه قسمت های صفحه &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "File" page needs to be unset or an empty object.</source>
-        <translation>"داده" برای صفحه "پرونده" باید غیرقانونی یا یک شیء خالی باشد.</translation>
+        <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
+        <translation>&quot;داده&quot; برای صفحه &quot;پرونده&quot; باید غیرقانونی یا یک شیء خالی باشد.</translation>
     </message>
     <message>
         <location line="+48" />
-        <source>Error parsing "%1" in "Kits" page: %2</source>
-        <translation>خطای تجزیه "%1" در "کیت" صفحه: %2</translation>
+        <source>Error parsing &quot;%1&quot; in &quot;Kits&quot; page: %2</source>
+        <translation>خطای تجزیه &quot;%1&quot; در &quot;کیت&quot; صفحه: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>"data" must be a JSON object for "Kits" pages.</source>
-        <translation>"داده" باید یک شیء JSON برای صفحات "کیت" باشد.</translation>
+        <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
+        <translation>&quot;داده&quot; باید یک شیء JSON برای صفحات &quot;کیت&quot; باشد.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>"Kits" page requires a "%1" set.</source>
-        <translation>صفحه "کیت" به مجموعه "%1" نیاز دارد.</translation>
+        <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
+        <translation>صفحه &quot;کیت&quot; به مجموعه &quot;%1&quot; نیاز دارد.</translation>
     </message>
     <message>
         <location line="+62" />
-        <source>"data" must be empty or a JSON object for "Project" pages.</source>
-        <translation>"داده" باید خالی باشد یا یک شیء JSON برای صفحات "پروژه".</translation>
+        <source>&quot;data&quot; must be empty or a JSON object for &quot;Project&quot; pages.</source>
+        <translation>&quot;داده&quot; باید خالی باشد یا یک شیء JSON برای صفحات &quot;پروژه&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Invalid regular expression "%1" in "%2". %3</source>
-        <translation>بیان منظم "%1" در "%2" نامعتبر است. 3 ٪</translation>
+        <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "Summary" page can be unset or needs to be an object.</source>
-        <translation>"داده ها" برای صفحه "خلاصه" می تواند غیرقانونی باشد یا باید یک شی باشد.</translation>
+        <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
+        <translation>&quot;داده ها&quot; برای صفحه &quot;خلاصه&quot; می تواند غیرقانونی باشد یا باید یک شی باشد.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
@@ -16507,13 +16606,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Pattern "%1" is no valid regular expression.</source>
-        <translation>الگوی "%1" بیان منظم معتبر نیست.</translation>
+        <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
+        <translation>الگوی &quot;%1&quot; بیان منظم معتبر نیست.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>ScannerGenerator: Binary pattern "%1" not valid.</source>
-        <translation>ScannerGenerator: الگوی باینری "%1" معتبر نیست.</translation>
+        <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
+        <translation>ScannerGenerator: الگوی باینری &quot;%1&quot; معتبر نیست.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
@@ -16570,18 +16669,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+17" />
-        <source>Sys Root "%1" does not exist in the file system.</source>
-        <translation>ریشه "%1" در سیستم پرونده وجود ندارد.</translation>
+        <source>Sys Root &quot;%1&quot; does not exist in the file system.</source>
+        <translation>ریشه &quot;%1&quot; در سیستم پرونده وجود ندارد.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is not a directory.</source>
-        <translation>ریشه SYS "%1" دایرکتوری نیست.</translation>
+        <source>Sys Root &quot;%1&quot; is not a directory.</source>
+        <translation>ریشه SYS &quot;%1&quot; دایرکتوری نیست.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is empty.</source>
-        <translation>ریشه SYS "%1" خالی است.</translation>
+        <source>Sys Root &quot;%1&quot; is empty.</source>
+        <translation>ریشه SYS &quot;%1&quot; خالی است.</translation>
     </message>
     <message>
         <location line="+14" />
@@ -16604,7 +16703,7 @@ to project "%2".</source>
     <message>
         <location line="-147" />
         <source>The compiler to use for building.&lt;br&gt;Make sure the compiler will produce binaries compatible with the target device, Qt version and other libraries used.</source>
-        <translation>کامپایلر برای استفاده برای ساختمان.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+45" />
@@ -16827,7 +16926,7 @@ to project "%2".</source>
     <message>
         <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The name of the kit suitable for generating directory names. This value is used for the variable &lt;i&gt;%1&lt;/i&gt;, which for example determines the name of the shadow build directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;Html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; نام کیت مناسب برای تولید نام دایرکتوری. این مقدار برای متغیر &lt;i&gt; %1 &lt;/i&gt; استفاده می شود ، که به عنوان مثال نام دایرکتوری ساخت سایه را تعیین می کند.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -17064,13 +17163,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href="projectmode"&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation>&lt;سبک = متن/css&gt; a: پیوند {رنگ: RGB (128 ، 128 ، 255) ؛} &lt;/style&gt; پروژه &lt;b&gt; %1 &lt;/b&gt; هنوز پیکربندی نشده است &lt;br/&gt; &lt;br/ &gt; شما می توانید آن را در حالت پروژه &lt;a href = "projectmode" پیکربندی کنید &lt;/a&gt; &lt;br/&gt;</translation>
+        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href=&quot;projectmode&quot;&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
+        <translation>&lt;سبک = متن/css&gt; a: پیوند {رنگ: RGB (128 ، 128 ، 255) ؛} &lt;/style&gt; پروژه &lt;b&gt; %1 &lt;/b&gt; هنوز پیکربندی نشده است &lt;br/&gt; &lt;br/ &gt; شما می توانید آن را در حالت پروژه &lt;a href = &quot;projectmode&quot; پیکربندی کنید &lt;/a&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
-        <source>Falling back to use the cached environment for "%1" after:</source>
-        <translation>پس از:</translation>
+        <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+483" />
@@ -17092,9 +17191,9 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+796" />
-        <source>Failed to retrieve MSVC Environment from "%1":
+        <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
-        <translation>بازیابی محیط MSVC از "%1" انجام نشد:
+        <translation>بازیابی محیط MSVC از &quot;%1&quot; انجام نشد:
  %2</translation>
     </message>
     <message>
@@ -17141,8 +17240,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open file: "%1": %2</source>
-        <translation>نمی توان پرونده را باز کرد: "%1": %2</translation>
+        <source>Could not open file: &quot;%1&quot;: %2</source>
+        <translation>نمی توان پرونده را باز کرد: &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
@@ -17252,13 +17351,13 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+92" />
-        <source>Project "%1" was configured for kit "%2" with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
-        <translation>پروژه "%1" برای کیت "%2" با شناسه %3 پیکربندی شد که دیگر وجود ندارد. می توانید یک کیت جدید ایجاد کنید یا مراحل کیت ناپدید شده را در حالت 4 %4 کیت کپی کنید.</translation>
+        <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
+        <translation>پروژه &quot;%1&quot; برای کیت &quot;%2&quot; با شناسه %3 پیکربندی شد که دیگر وجود ندارد. می توانید یک کیت جدید ایجاد کنید یا مراحل کیت ناپدید شده را در حالت 4 %4 کیت کپی کنید.</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+622" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+626" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
@@ -17267,79 +17366,79 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+265" />
-        <source>Could not find any qml_*.qm file at "%1"</source>
-        <translation>هیچ پرونده QML _*. QM را در "%1" پیدا نکرد</translation>
+        <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
+        <translation>هیچ پرونده QML _*. QM را در &quot;%1&quot; پیدا نکرد</translation>
     </message>
     <message>
         <location line="+87" />
         <source>%1: Name.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: نام.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to main file.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: مسیر کامل به پرونده اصلی.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: مسیر کامل به دایرکتوری پروژه.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: The name of the active kit.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: نام کیت فعال.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Name of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: نام پیکربندی ساخت فعال.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Type of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: نوع پیکربندی ساخت فعال.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Full build path of active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: مسیر ساخت کامل پیکربندی ساخت فعال.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Variables in the active build environment.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: متغیرهای موجود در محیط ساخت فعال.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Name of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: نام پیکربندی Run Active.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Executable of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: اجرایی پیکربندی اجرا فعال.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Variables in the environment of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: متغیرهای موجود در محیط پیکربندی اجرا فعال.</translation>
     </message>
     <message>
         <location line="+12" />
         <source>%1: Working directory of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: فهرست کار پیکربندی Run Active.</translation>
     </message>
     <message>
@@ -17377,17 +17476,17 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+7" />
         <source>&amp;Build</source>
-        <translation>و ساخت</translation>
+        <translation>و ساخت (&amp;B)</translation>
     </message>
     <message>
         <location line="+7" />
         <source>&amp;Debug</source>
-        <translation>و اشکال زدایی</translation>
+        <translation>و اشکال زدایی (&amp;D)</translation>
     </message>
     <message>
         <location line="+6" />
         <source>&amp;Start Debugging</source>
-        <translation>و اشکال زدایی را شروع کنید</translation>
+        <translation>و اشکال زدایی را شروع کنید (&amp;S)</translation>
     </message>
     <message>
         <location line="+82" />
@@ -17422,7 +17521,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+17" />
         <source>Recent P&amp;rojects</source>
-        <translation>P &amp; rojts اخیر</translation>
+        <translation>P &amp;rojts اخیر</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17432,8 +17531,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="-347" />
-        <source>Close Pro&amp;ject "%1"</source>
-        <translation>پروژه بستن "%1"</translation>
+        <source>Close Pro&amp;ject &quot;%1&quot;</source>
+        <translation>پروژه بستن &quot;%1&quot; (&amp;J)</translation>
     </message>
     <message>
         <location line="+10" />
@@ -17443,13 +17542,13 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <location line="+328" />
-        <source>Close All Files in Project "%1"</source>
-        <translation>همه پرونده ها را در پروژه "%1" ببندید</translation>
+        <source>Close All Files in Project &quot;%1&quot;</source>
+        <translation>همه پرونده ها را در پروژه &quot;%1&quot; ببندید</translation>
     </message>
     <message>
         <location line="-316" />
         <source>Close Pro&amp;ject</source>
-        <translation>پروژه بستن</translation>
+        <translation>پروژه بستن (&amp;J)</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17507,8 +17606,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Build Project "%1"</source>
-        <translation>ساخت پروژه "%1"</translation>
+        <source>Build Project &quot;%1&quot;</source>
+        <translation>ساخت پروژه &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17517,18 +17616,18 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Build Project "%1" for All Configurations</source>
-        <translation>پروژه "%1" را برای همه تنظیمات بسازید</translation>
+        <source>Build Project &quot;%1&quot; for All Configurations</source>
+        <translation>پروژه &quot;%1&quot; را برای همه تنظیمات بسازید</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Build for &amp;Run Configuration</source>
-        <translation>برای پیکربندی و اجرای</translation>
+        <translation>برای پیکربندی و اجرای (&amp;R)</translation>
     </message>
     <message>
         <location line="+0" />
-        <source>Build for &amp;Run Configuration "%1"</source>
-        <translation>پیکربندی و اجرای "%1"</translation>
+        <source>Build for &amp;Run Configuration &quot;%1&quot;</source>
+        <translation>پیکربندی و اجرای &quot;%1&quot; (&amp;R)</translation>
     </message>
     <message>
         <location line="+13" />
@@ -17621,8 +17720,8 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+9" />
         <location line="+1621" />
-        <source>Close Project "%1"</source>
-        <translation>پروژه بستن "%1"</translation>
+        <source>Close Project &quot;%1&quot;</source>
+        <translation>پروژه بستن &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-1614" />
@@ -17631,8 +17730,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Close All Projects Except "%1"</source>
-        <translation>همه پروژه ها را به جز "%1" ببندید</translation>
+        <source>Close All Projects Except &quot;%1&quot;</source>
+        <translation>همه پروژه ها را به جز &quot;%1&quot; ببندید</translation>
     </message>
     <message>
         <location line="+8" />
@@ -17667,8 +17766,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Set "%1" as Active Project</source>
-        <translation>"%1" را به عنوان پروژه فعال تنظیم کنید</translation>
+        <source>Set &quot;%1&quot; as Active Project</source>
+        <translation>&quot;%1&quot; را به عنوان پروژه فعال تنظیم کنید</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17753,7 +17852,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+62" />
         <source>Sanitizer</source>
-        <comment>Category for sanitizer issues listed under 'Issues'</comment>
+        <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
         <translation>دستگاه بهداشتی</translation>
     </message>
     <message>
@@ -17794,8 +17893,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+48" />
-        <source>Failed opening project "%1": No plugin can open project type "%2".</source>
-        <translation>پروژه افتتاحیه ناموفق "%1": هیچ افزونه ای نمی تواند نوع پروژه "%2" را باز کند.</translation>
+        <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
+        <translation>پروژه افتتاحیه ناموفق &quot;%1&quot;: هیچ افزونه ای نمی تواند نوع پروژه &quot;%2&quot; را باز کند.</translation>
     </message>
     <message>
         <location line="+195" />
@@ -17826,18 +17925,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+23" />
-        <source>Open Project in "%1"</source>
-        <translation>پروژه باز در "%1"</translation>
+        <source>Open Project in &quot;%1&quot;</source>
+        <translation>پروژه باز در &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Open Project "%1"</source>
-        <translation>پروژه باز "%1"</translation>
+        <source>Open Project &quot;%1&quot;</source>
+        <translation>پروژه باز &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>The file "%1" was renamed to "%2", but the following projects could not be automatically changed: %3</source>
-        <translation>پرونده "%1" به "%2" تغییر نام داد ، اما پروژه های زیر به طور خودکار قابل تغییر نیست: %3</translation>
+        <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
+        <translation>پرونده &quot;%1&quot; به &quot;%2&quot; تغییر نام داد ، اما پروژه های زیر به طور خودکار قابل تغییر نیست: %3</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17854,8 +17953,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+62" />
-        <source>Building "%1" is disabled: %2&lt;br&gt;</source>
-        <translation>ساختمان "%1" غیرفعال است: %2 &lt;br&gt;</translation>
+        <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
+        <translation>ساختمان &quot;%1&quot; غیرفعال است: %2 &lt;br&gt;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17916,18 +18015,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>The project "%1" is not configured.</source>
-        <translation>پروژه "%1" پیکربندی نشده است.</translation>
+        <source>The project &quot;%1&quot; is not configured.</source>
+        <translation>پروژه &quot;%1&quot; پیکربندی نشده است.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The project "%1" has no active kit.</source>
-        <translation>پروژه "%1" کیت فعال ندارد.</translation>
+        <source>The project &quot;%1&quot; has no active kit.</source>
+        <translation>پروژه &quot;%1&quot; کیت فعال ندارد.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The kit "%1" for the project "%2" has no active run configuration.</source>
-        <translation>کیت "%1" برای پروژه "%2" هیچ پیکربندی اجرا فعال ندارد.</translation>
+        <source>The kit &quot;%1&quot; for the project &quot;%2&quot; has no active run configuration.</source>
+        <translation>کیت &quot;%1&quot; برای پروژه &quot;%2&quot; هیچ پیکربندی اجرا فعال ندارد.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -17936,8 +18035,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>Cannot run "%1".</source>
-        <translation>نمی توان "%1" را اجرا کرد.</translation>
+        <source>Cannot run &quot;%1&quot;.</source>
+        <translation>نمی توان &quot;%1&quot; را اجرا کرد.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17963,8 +18062,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+41" />
-        <source>The following subprojects could not be added to project "%1":</source>
-        <translation>زیر مجموعه های زیر را نمی توان به پروژه "%1" اضافه کرد:</translation>
+        <source>The following subprojects could not be added to project &quot;%1&quot;:</source>
+        <translation>زیر مجموعه های زیر را نمی توان به پروژه &quot;%1&quot; اضافه کرد:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18013,15 +18112,15 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>File "%1" was not removed, because the project has changed in the meantime.
+        <source>File &quot;%1&quot; was not removed, because the project has changed in the meantime.
 Please try again.</source>
-        <translation>پرونده "%1" حذف نشده است ، زیرا در این میان پروژه تغییر کرده است.
+        <translation>پرونده &quot;%1&quot; حذف نشده است ، زیرا در این میان پروژه تغییر کرده است.
  لطفا دوباره امتحان کنید</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Could not remove file "%1" from project "%2".</source>
-        <translation>پرونده "%1" را از پروژه "%2" حذف نکرد.</translation>
+        <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
+        <translation>پرونده &quot;%1&quot; را از پروژه &quot;%2&quot; حذف نکرد.</translation>
     </message>
     <message>
         <location line="+36" />
@@ -18046,13 +18145,13 @@ Please try again.</source>
     </message>
     <message>
         <location line="-9" />
-        <source>Failed to copy file "%1" to "%2": %3.</source>
-        <translation>نتوانست پرونده "%1" را به "%2" کپی کند: %3.</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
+        <translation>نتوانست پرونده &quot;%1&quot; را به &quot;%2&quot; کپی کند: %3.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Failed to add new file "%1" to the project.</source>
-        <translation>افزودن پرونده جدید "%1" به پروژه اضافه نشد.</translation>
+        <source>Failed to add new file &quot;%1&quot; to the project.</source>
+        <translation>افزودن پرونده جدید &quot;%1&quot; به پروژه اضافه نشد.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18100,8 +18199,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+192" />
-        <source>Locates files from all project directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>پرونده ها را از کلیه دایرکتوری های پروژه قرار می دهد. برای پرش به شماره خط داده شده "+&lt;Number&gt;" یا ": &lt;Number&gt;" ضمیمه کنید. برای پرش به شماره ستون ، "+&lt;Number&gt;" یا ": &lt;Number&gt;" را اضافه کنید.</translation>
+        <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>پرونده ها را از کلیه دایرکتوری های پروژه قرار می دهد. برای پرش به شماره خط داده شده &quot;+&lt;Number&gt;&quot; یا &quot;: &lt;Number&gt;&quot; ضمیمه کنید. برای پرش به شماره ستون ، &quot;+&lt;Number&gt;&quot; یا &quot;: &lt;Number&gt;&quot; را اضافه کنید.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -18158,13 +18257,13 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
         <source>s</source>
-        <extracomment>Suffix for "seconds"</extracomment>
+        <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>حرف</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The amount of seconds to wait between a "soft kill" and a "hard kill" of a running application.</source>
-        <translation>مقدار ثانیه برای انتظار بین "قتل نرم" و "کشتن سخت" یک برنامه در حال اجرا.</translation>
+        <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
+        <translation>مقدار ثانیه برای انتظار بین &quot;قتل نرم&quot; و &quot;کشتن سخت&quot; یک برنامه در حال اجرا.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -18228,8 +18327,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Some legacy build tools do not deal well with paths that contain "special" characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
-        <translation>برخی از ابزارهای ساخت میراث با مسیرهایی که حاوی شخصیت های "ویژه" مانند فضاها هستند ، به طور بالقوه منجر به خطاهای ساختگی و ایجاد می شوند. &lt;p&gt; اگر با چنین ابزارهایی کار نمی کنید ، این گزینه را انتخاب کنید.</translation>
+        <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
+        <translation>برخی از ابزارهای ساخت میراث با مسیرهایی که حاوی شخصیت های &quot;ویژه&quot; مانند فضاها هستند ، به طور بالقوه منجر به خطاهای ساختگی و ایجاد می شوند. &lt;p&gt; اگر با چنین ابزارهایی کار نمی کنید ، این گزینه را انتخاب کنید.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18288,13 +18387,13 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Show all kits in "Build &amp; Run" in "Projects" mode</source>
-        <translation>همه کیت ها را در "ساخت و کار" در "پروژه" نشان دهید</translation>
+        <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
+        <translation>همه کیت ها را در &quot;ساخت و کار&quot; در &quot;پروژه&quot; نشان دهید</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Show also inactive kits in "Build &amp; Run" in "Projects" mode.</source>
-        <translation>همچنین کیت های غیرفعال را در حالت "ساخت و اجرا" در "پروژه" نشان دهید.</translation>
+        <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
+        <translation>همچنین کیت های غیرفعال را در حالت &quot;ساخت و اجرا&quot; در &quot;پروژه&quot; نشان دهید.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18333,8 +18432,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Default for "Run in terminal":</source>
-        <translation>پیش فرض برای "اجرای در ترمینال":</translation>
+        <source>Default for &quot;Run in terminal&quot;:</source>
+        <translation>پیش فرض برای &quot;اجرای در ترمینال&quot;:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18414,8 +18513,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
-        <source>No kits are enabled for this project. Enable kits in the "Projects" mode.</source>
-        <translation>هیچ کیت برای این پروژه فعال نیست. کیت ها را در حالت "پروژه ها" فعال کنید.</translation>
+        <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
+        <translation>هیچ کیت برای این پروژه فعال نیست. کیت ها را در حالت &quot;پروژه ها&quot; فعال کنید.</translation>
     </message>
     <message>
         <location line="+89" />
@@ -18519,10 +18618,10 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is outside the project directory.</source>
-        <translation>&lt;b&gt; هشدار: این پرونده خارج از فهرست پروژه است.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-391" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-395" />
         <source>Simplify Tree</source>
         <translation>درخت را ساده کنید</translation>
     </message>
@@ -18572,7 +18671,7 @@ What should %1 do now?</source>
         <translation>درخت</translation>
     </message>
     <message>
-        <location line="+194" />
+        <location line="+198" />
         <source>Meta+X</source>
         <translation>متا+x</translation>
     </message>
@@ -18608,18 +18707,18 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+50" />
-        <source>Open %1 "%2"</source>
-        <translation>%1 "%2" را باز کنید</translation>
+        <source>Open %1 &quot;%2&quot;</source>
+        <translation>%1 &quot;%2&quot; را باز کنید</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Open %1 "%2" (%3)</source>
-        <translation>%1 "%2" را باز کنید (%3)</translation>
+        <source>Open %1 &quot;%2&quot; (%3)</source>
+        <translation>%1 &quot;%2&quot; را باز کنید (%3)</translation>
     </message>
     <message>
         <location line="+20" />
         <source>session</source>
-        <comment>Appears in "Open session &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>جلسه</translation>
     </message>
     <message>
@@ -18646,7 +18745,7 @@ What should %1 do now?</source>
     <message>
         <location line="+125" />
         <source>project</source>
-        <comment>Appears in "Open project &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>طرح</translation>
     </message>
     <message>
@@ -18681,7 +18780,7 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+118" />
-        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project's settings:</source>
+        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>این پروژه برای کیت هایی که دیگر وجود ندارند پیکربندی شده است. برای بازگرداندن تنظیمات پروژه ، یکی از گزینه های زیر را در منوی زمینه انتخاب کنید:</translation>
     </message>
     <message>
@@ -18712,8 +18811,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+12" />
-        <source>Remove Vanished Target "%1"</source>
-        <translation>هدف ناپدید شده "%1" را حذف کنید</translation>
+        <source>Remove Vanished Target &quot;%1&quot;</source>
+        <translation>هدف ناپدید شده &quot;%1&quot; را حذف کنید</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18781,7 +18880,7 @@ What should %1 do now?</source>
     <message>
         <location line="+63" />
         <source>Add to &amp;version control:</source>
-        <translation>اضافه کردن به و کنترل نسخه:</translation>
+        <translation>اضافه کردن به و کنترل نسخه: (&amp;V)</translation>
     </message>
     <message>
         <location line="+88" />
@@ -18791,17 +18890,17 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Add to &amp;project:</source>
-        <translation>اضافه کردن به پروژه:</translation>
+        <translation>اضافه کردن به پروژه: (&amp;P)</translation>
     </message>
     <message>
         <location line="+74" />
-        <source>A version control system repository could not be created in "%1".</source>
-        <translation>مخزن سیستم کنترل نسخه نمی تواند در "%1" ایجاد شود.</translation>
+        <source>A version control system repository could not be created in &quot;%1&quot;.</source>
+        <translation>مخزن سیستم کنترل نسخه نمی تواند در &quot;%1&quot; ایجاد شود.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to add "%1" to the version control system.</source>
-        <translation>اضافه شدن "%1" به سیستم کنترل نسخه انجام نشد.</translation>
+        <source>Failed to add &quot;%1&quot; to the version control system.</source>
+        <translation>اضافه شدن &quot;%1&quot; به سیستم کنترل نسخه انجام نشد.</translation>
     </message>
     <message>
         <location line="+94" />
@@ -18837,17 +18936,17 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>The run configuration's working directory.</source>
+        <source>The run configuration&apos;s working directory.</source>
         <translation>فهرست کار پیکربندی Run.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The run configuration's name.</source>
+        <source>The run configuration&apos;s name.</source>
         <translation>نام پیکربندی Run.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The run configuration's executable.</source>
+        <source>The run configuration&apos;s executable.</source>
         <translation>اجرای پیکربندی اجرا.</translation>
     </message>
     <message>
@@ -18864,7 +18963,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
-        <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
+        <extracomment>Shown in Run configuration, Add menu: &quot;name of runnable (on device name)&quot;</extracomment>
         <translation>%1 (در ٪ {دستگاه: نام})</translation>
     </message>
     <message>
@@ -18987,7 +19086,7 @@ What should %1 do now?</source>
     <message>
         <location line="+324" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;Html&gt; &lt;head/&gt; &lt;body&gt; &lt;senter&gt; &lt;i&gt; %1 &lt;/i&gt; هنوز در حال اجرا است.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2" />
@@ -18997,12 +19096,12 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Force &amp;Quit</source>
-        <translation>زور و ترک</translation>
+        <translation>زور و ترک (&amp;Q)</translation>
     </message>
     <message>
         <location line="+0" />
         <source>&amp;Keep Running</source>
-        <translation>و به کار خود ادامه دهید</translation>
+        <translation>و به کار خود ادامه دهید (&amp;K)</translation>
     </message>
     <message>
         <location line="+246" />
@@ -19066,8 +19165,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Either the invoked program "%1" is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>یا برنامه فراخوانی شده "%1" از دست رفته است ، یا ممکن است مجوزهای کافی برای استناد به این برنامه نداشته باشید.</translation>
+        <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>یا برنامه فراخوانی شده &quot;%1&quot; از دست رفته است ، یا ممکن است مجوزهای کافی برای استناد به این برنامه نداشته باشید.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19203,9 +19302,8 @@ What should %1 do now?</source>
         <location line="+11" />
         <source>Not showing %n files that are outside of the base directory.
 These files are preserved.</source>
-        <translation>
-            <numerusform>نشان نمی دهد ٪ n پرونده هایی که خارج از فهرست پایه هستند.
- این پرونده ها حفظ می شوند.</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -19261,12 +19359,12 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Imports existing projects that do not use qmake, CMake, Qbs, Meson, or Autotools.&lt;p&gt;This creates a project file that allows you to use %1 as a code editor and as a launcher for debugging and analyzing tools. If you want to build the project, you might need to edit the generated project file.</source>
-        <translation>پروژه های موجود را وارد می کند که از Qmake ، Cmake ، QBS ، Meson یا Autotools استفاده نمی کنند. اگر می خواهید پروژه را بسازید ، ممکن است لازم باشد پرونده پروژه تولید شده را ویرایش کنید.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+172" />
-        <source>Unknown build system "%1"</source>
-        <translation>سیستم ساخت ناشناخته "%1"</translation>
+        <source>Unknown build system &quot;%1&quot;</source>
+        <translation>سیستم ساخت ناشناخته &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
@@ -19291,7 +19389,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
         <source>&amp;Configure Project</source>
-        <translation>و پیکربندی پروژه</translation>
+        <translation>و پیکربندی پروژه (&amp;C)</translation>
     </message>
     <message>
         <location line="+91" />
@@ -19326,8 +19424,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+71" />
-        <source>Enable Kit for Project "%1"</source>
-        <translation>کیت را برای پروژه "%1" فعال کنید</translation>
+        <source>Enable Kit for Project &quot;%1&quot;</source>
+        <translation>کیت را برای پروژه &quot;%1&quot; فعال کنید</translation>
     </message>
     <message>
         <location line="+7" />
@@ -19336,8 +19434,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Disable Kit for Project "%1"</source>
-        <translation>کیت را برای پروژه "%1" غیرفعال کنید</translation>
+        <source>Disable Kit for Project &quot;%1&quot;</source>
+        <translation>کیت را برای پروژه &quot;%1&quot; غیرفعال کنید</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19346,8 +19444,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Disable Kit "%1" in This Project?</source>
-        <translation>کیت "%1" را در این پروژه غیرفعال کنید؟</translation>
+        <source>Disable Kit &quot;%1&quot; in This Project?</source>
+        <translation>کیت &quot;%1&quot; را در این پروژه غیرفعال کنید؟</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19381,8 +19479,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Add a kit in the &lt;a href="buildandrun"&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
-        <translation>یک کیت را در گزینه های &lt;a href = "buildandrun"&gt; اضافه کنید &lt;/a&gt; یا از طریق ابزار نگهداری SDK.</translation>
+        <source>Add a kit in the &lt;a href=&quot;buildandrun&quot;&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
+        <translation>یک کیت را در گزینه های &lt;a href = &quot;buildandrun&quot;&gt; اضافه کنید &lt;/a&gt; یا از طریق ابزار نگهداری SDK.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19478,7 +19576,7 @@ These files are preserved.</source>
         <translation>مباحث</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+53" />
         <source>Show Warnings</source>
         <translation>هشدارها را نشان دهید</translation>
     </message>
@@ -19490,7 +19588,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-152" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
-        <translation>&lt;BOBR&gt; &lt;b&gt; ABI: &lt;/b&gt; %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1" />
@@ -19560,7 +19658,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
         <source>&amp;Annotate</source>
-        <translation>و حاشیه نویسی</translation>
+        <translation>و حاشیه نویسی (&amp;A)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19646,18 +19744,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+24" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>نصب "٪ ​​1" توسط Timeout لغو شد.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>نصب "٪ ​​1" توسط کاربر لغو شد.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>نصب "٪ ​​1" با کد خروجی %2 انجام نشد.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
@@ -19734,23 +19832,23 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" not found.</source>
-        <translation>پایتون "%1" یافت نشد.</translation>
+        <source>Python &quot;%1&quot; not found.</source>
+        <translation>پایتون &quot;%1&quot; یافت نشد.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" is not executable.</source>
-        <translation>پایتون "%1" قابل اجرا نیست.</translation>
+        <source>Python &quot;%1&quot; is not executable.</source>
+        <translation>پایتون &quot;%1&quot; قابل اجرا نیست.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Python "%1" does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
-        <translation>پایتون "%1" حاوی پیپ قابل استفاده نیست. PIP برای نصب بسته های پایتون از شاخص بسته Python ، مانند Pyside و Server Python Language لازم است. برای استفاده از هر یک از این قابلیت ها اطمینان حاصل کنید که PIP برای آن پایتون نصب شده است.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
+        <translation>پایتون &quot;%1&quot; حاوی پیپ قابل استفاده نیست. PIP برای نصب بسته های پایتون از شاخص بسته Python ، مانند Pyside و Server Python Language لازم است. برای استفاده از هر یک از این قابلیت ها اطمینان حاصل کنید که PIP برای آن پایتون نصب شده است.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Python "%1" does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
-        <translation>پایتون "%1" حاوی VENV قابل استفاده نیست. VENV روش توصیه شده برای جداسازی یک محیط توسعه برای یک پروژه از پایتون نصب شده در سطح جهانی است.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
+        <translation>پایتون &quot;%1&quot; حاوی VENV قابل استفاده نیست. VENV روش توصیه شده برای جداسازی یک محیط توسعه برای یک پروژه از پایتون نصب شده در سطح جهانی است.</translation>
     </message>
     <message>
         <location line="+32" />
@@ -19804,8 +19902,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
-        <source>No Python interpreter set for kit "%1".</source>
-        <translation>هیچ مترجم پایتون برای کیت "%1" تنظیم نشده است.</translation>
+        <source>No Python interpreter set for kit &quot;%1&quot;.</source>
+        <translation>هیچ مترجم پایتون برای کیت &quot;%1&quot; تنظیم نشده است.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
@@ -19824,7 +19922,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
         <source>Python:</source>
         <translation>پایتون:</translation>
     </message>
@@ -19834,7 +19932,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Run %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
         <location line="+283" />
         <source>Name:</source>
         <translation>نام:</translation>
@@ -19852,42 +19950,42 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" does not exist.</source>
-        <translation>"%1" وجود ندارد.</translation>
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot; وجود ندارد.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" is not an executable file.</source>
-        <translation>"%1" یک پرونده اجرایی نیست.</translation>
+        <source>&quot;%1&quot; is not an executable file.</source>
+        <translation>&quot;%1&quot; یک پرونده اجرایی نیست.</translation>
     </message>
     <message>
         <location line="+16" />
         <location line="+186" />
         <source>&amp;Add</source>
-        <translation>و اضافه کردن</translation>
+        <translation>و اضافه کردن (&amp;A)</translation>
     </message>
     <message>
         <location line="-184" />
         <location line="+185" />
         <source>&amp;Delete</source>
-        <translation>و حذف</translation>
+        <translation>و حذف (&amp;D)</translation>
     </message>
     <message>
         <location line="-183" />
         <location line="+185" />
         <source>&amp;Make Default</source>
-        <translation>و پیش فرض</translation>
+        <translation>و پیش فرض (&amp;M)</translation>
     </message>
     <message>
         <location line="-183" />
         <source>&amp;Generate Kit</source>
-        <translation>و ساخت کیت</translation>
+        <translation>و ساخت کیت (&amp;G)</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+179" />
         <source>&amp;Clean Up</source>
-        <translation>و تمیز کردن</translation>
+        <translation>و تمیز کردن (&amp;C)</translation>
     </message>
     <message>
         <location line="-178" />
@@ -19925,7 +20023,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>پیکربندی سرور زبان</translation>
     </message>
     <message>
-        <location line="+476" />
+        <location line="+489" />
         <source>Python interpreter:</source>
         <translation>مترجم پایتون:</translation>
     </message>
@@ -19957,8 +20055,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+11" />
-        <source>Found "%1" (%2)</source>
-        <translation>"%1" (%2) یافت</translation>
+        <source>Found &quot;%1&quot; (%2)</source>
+        <translation>&quot;%1&quot; (%2) یافت</translation>
     </message>
     <message>
         <location line="+9" />
@@ -19967,13 +20065,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
-        <source>"data" of a Python wizard page expects a map with "items" containing a list of objects.</source>
-        <translation>"داده" از یک صفحه جادوگر پایتون انتظار نقشه با "موارد" دارد که حاوی لیستی از اشیاء است.</translation>
+        <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
+        <translation>&quot;داده&quot; از یک صفحه جادوگر پایتون انتظار نقشه با &quot;موارد&quot; دارد که حاوی لیستی از اشیاء است.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>An item of Python wizard page data expects a "trKey" field containing the UI visible string for that Python version and a "value" field containing an object with a "PySideVersion" field used for import statements in the Python files.</source>
-        <translation>موردی از داده های صفحه Wizard Python انتظار یک قسمت "Trkey" را شامل می شود که شامل رشته قابل مشاهده UI برای آن نسخه Python و یک قسمت "مقدار" حاوی یک شی با یک قسمت "pysideversion" است که برای واردات در پرونده های پایتون استفاده می شود.</translation>
+        <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
+        <translation>موردی از داده های صفحه Wizard Python انتظار یک قسمت &quot;Trkey&quot; را شامل می شود که شامل رشته قابل مشاهده UI برای آن نسخه Python و یک قسمت &quot;مقدار&quot; حاوی یک شی با یک قسمت &quot;pysideversion&quot; است که برای واردات در پرونده های پایتون استفاده می شود.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -19998,17 +20096,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+126" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
         <source>Move tab left</source>
         <translation>برگه را به چپ منتقل کنید</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Switch to next tab</source>
         <translation>به تب بعدی بروید</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+15" />
         <source>Move tab right</source>
         <translation>برگه را به سمت راست حرکت دهید</translation>
     </message>
@@ -20066,7 +20164,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+5" />
         <source>Autocomplete common &amp;prefix</source>
-        <translation>تکمیل خودکار و پیشوند مشترک</translation>
+        <translation>تکمیل خودکار و پیشوند مشترک (&amp;P)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20170,7 +20268,7 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     <message>
         <location line="+72" />
         <source>&amp;Automatically Insert Matching Characters</source>
-        <translation>به طور خودکار کاراکترهای مطابق را وارد کنید</translation>
+        <translation>به طور خودکار کاراکترهای مطابق را وارد کنید (&amp;A)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
@@ -20179,8 +20277,8 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     </message>
     <message>
         <location line="+2" />
-        <source>Automatically creates a Doxygen comment upon pressing enter after a '/**', '/*!', '//!' or '///'.</source>
-        <translation>پس از فشار دادن اینتر پس از '/**'، '/*!'، '//!' به طور خودکار یک نظر Doxygen ایجاد می کند. یا '///'.</translation>
+        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
+        <translation>پس از فشار دادن اینتر پس از &apos;/**&apos;، &apos;/*!&apos;، &apos;//!&apos; به طور خودکار یک نظر Doxygen ایجاد می کند. یا &apos;///&apos;.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20199,8 +20297,8 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     </message>
     <message>
         <location line="+2" />
-        <source>Adds leading asterisks when continuing C/C++ "/*", Qt "/*!" and Java "/**" style comments on new lines.</source>
-        <translation>هنگام ادامه C/C++ "/*"، Qt "/*!"، ستاره های اصلی را اضافه می کند. و نظرات سبک جاوا "/**" در خطوط جدید.</translation>
+        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
+        <translation>هنگام ادامه C/C++ &quot;/*&quot;، Qt &quot;/*!&quot;، ستاره های اصلی را اضافه می کند. و نظرات سبک جاوا &quot;/**&quot; در خطوط جدید.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20209,12 +20307,12 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     </message>
     <message>
         <location line="+1" />
-        <source>Doxygen allows "@" and "\" to start commands.
-By default, "@" is used if the surrounding comment starts with "/**" or "///", and "\" is used
-if the comment starts with "/*!" or "//!".</source>
-        <translation>Doxygen به "@" و "\" اجازه می دهد تا دستورات را شروع کنند.
- به طور پیش فرض ، "@" در صورت استفاده از "/**" یا "///" و "\" استفاده می شود.
- اگر نظر با "/*!" شروع شود یا "//!".</translation>
+        <source>Doxygen allows &quot;@&quot; and &quot;\&quot; to start commands.
+By default, &quot;@&quot; is used if the surrounding comment starts with &quot;/**&quot; or &quot;///&quot;, and &quot;\&quot; is used
+if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
+        <translation>Doxygen به &quot;@&quot; و &quot;\&quot; اجازه می دهد تا دستورات را شروع کنند.
+ به طور پیش فرض ، &quot;@&quot; در صورت استفاده از &quot;/**&quot; یا &quot;///&quot; و &quot;\&quot; استفاده می شود.
+ اگر نظر با &quot;/*!&quot; شروع شود یا &quot;//!&quot;.</translation>
     </message>
     <message>
         <source>&amp;Automatically insert matching characters</source>
@@ -20389,8 +20487,8 @@ if the comment starts with "/*!" or "//!".</source>
     </message>
     <message>
         <location line="+36" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding. Editing not possible.</source>
-        <translation>&lt;b&gt;خطا:&lt;/b&gt; رمزگشایی "%1" با رمزگذاری "%2" ممکن نیست. ویرایش امکان پذیر نیست</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
+        <translation>&lt;b&gt;خطا:&lt;/b&gt; رمزگشایی &quot;%1&quot; با رمزگذاری &quot;%2&quot; ممکن نیست. ویرایش امکان پذیر نیست</translation>
     </message>
     <message>
         <location line="+2" />
@@ -20489,31 +20587,7 @@ Influences the indentation of continuation lines.
 &lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-بر تورفتگی خطوط ادامه تأثیر می گذارد.
-
-&lt;ul&gt;
-&lt;li&gt;اصلاً: اصلاً تراز نکنید. خطوط فقط به عمق تورفتگی منطقی فعلی فرورفته خواهند شد.
-&lt;پیش&gt;
-(tab)int i = foo(a, b
-(tab)c,d)؛
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;با فاصله: همیشه بدون توجه به سایر تنظیمات تورفتگی، از فضاها برای تراز استفاده کنید.
-&lt;پیش&gt;
-(tab)int i = foo(a, b
-(برگه) ج، د)؛
-&lt;/pre&gt;
-&lt;/li&gt;
-
-&lt;li&gt;با تورفتگی منظم: همانطور که در بالا پیکربندی شده است از برگه ها و/یا فاصله ها برای تراز استفاده کنید.
-&lt;پیش&gt;
-(tab)int i = foo(a, b
-(tab)(tab)(tab) c, d);
-&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+31" />
@@ -20522,8 +20596,8 @@ Influences the indentation of continuation lines.
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;i&gt;Code indentation is configured in &lt;a href="C++"&gt;C++&lt;/a&gt; and &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;تورفتگی کد در تنظیمات &lt;a href="C++"&gt;C++&lt;/a&gt; و &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; پیکربندی شده است.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;تورفتگی کد در تنظیمات &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; و &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; پیکربندی شده است.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20583,7 +20657,7 @@ Influences the indentation of continuation lines.
     <message>
         <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-65" />
         <source>Enable automatic &amp;indentation</source>
-        <translation>فعال کردن و تورفتگی خودکار</translation>
+        <translation>فعال کردن و تورفتگی خودکار (&amp;I)</translation>
     </message>
     <message>
         <location line="-23" />
@@ -20769,12 +20843,12 @@ Specifies how backspace interacts with indentation.
     <message>
         <location line="+2" />
         <source>Enable scroll &amp;wheel zooming</source>
-        <translation>بزرگنمایی پیمایش و چرخ را فعال کنید</translation>
+        <translation>بزرگنمایی پیمایش و چرخ را فعال کنید (&amp;W)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Enable built-in camel case &amp;navigation</source>
-        <translation>جابجایی و جابجایی شتر داخلی را فعال کنید</translation>
+        <translation>جابجایی و جابجایی شتر داخلی را فعال کنید (&amp;N)</translation>
     </message>
     <message>
         <location line="+2" />
@@ -20875,12 +20949,12 @@ Specifies how backspace interacts with indentation.
     <message>
         <location line="-256" />
         <source>Display line &amp;numbers</source>
-        <translation>نمایش خطوط و اعداد</translation>
+        <translation>نمایش خطوط و اعداد (&amp;N)</translation>
     </message>
     <message>
         <location line="-35" />
-        <source>&lt;i&gt;Set &lt;a href="font zoom"&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;&lt;a href="font zoom"&gt; font فاصله خطوط&lt;/a&gt; را روی 100٪ تنظیم کنید تا گزینه بسته بندی متن فعال شود.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;&lt;a href=&quot;font zoom&quot;&gt; font فاصله خطوط&lt;/a&gt; را روی 100٪ تنظیم کنید تا گزینه بسته بندی متن فعال شود.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+39" />
@@ -20890,12 +20964,12 @@ Specifies how backspace interacts with indentation.
     <message>
         <location line="+1" />
         <source>Auto-fold first &amp;comment</source>
-        <translation>ابتدا تا کردن خودکار و نظر</translation>
+        <translation>ابتدا تا کردن خودکار و نظر (&amp;C)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Display &amp;folding markers</source>
-        <translation>نشانگرهای تاشو را نمایش دهید</translation>
+        <translation>نشانگرهای تاشو را نمایش دهید (&amp;F)</translation>
     </message>
     <message>
         <location line="+8" />
@@ -20910,16 +20984,16 @@ Specifies how backspace interacts with indentation.
     <message>
         <location line="-39" />
         <source>Enable text &amp;wrapping</source>
-        <translation>متن و بسته بندی را فعال کنید</translation>
+        <translation>متن و بسته بندی را فعال کنید (&amp;W)</translation>
     </message>
     <message>
-        <source>&lt;i&gt;Set &lt;a href="font zoom"&gt;font line spacing&lt;/a&gt; to 100%to enable text wrapping option.&lt;/i&gt;</source>
-        <translation type="vanished">&lt;i&gt;&lt;a href="font zoom"&gt;فاصله خط قلم&lt;/a&gt; را روی 100%تنظیم کنید تا گزینه بسته بندی متن فعال شود.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100%to enable text wrapping option.&lt;/i&gt;</source>
+        <translation type="vanished">&lt;i&gt;&lt;a href=&quot;font zoom&quot;&gt;فاصله خط قلم&lt;/a&gt; را روی 100%تنظیم کنید تا گزینه بسته بندی متن فعال شود.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+22" />
         <source>Display right &amp;margin at column:</source>
-        <translation>نمایش سمت راست و حاشیه در ستون:</translation>
+        <translation>نمایش سمت راست و حاشیه در ستون: (&amp;M)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20939,7 +21013,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location line="+3" />
         <source>&amp;Animate matching parentheses</source>
-        <translation>پرانتزهای منطبق را متحرک کنید</translation>
+        <translation>پرانتزهای منطبق را متحرک کنید (&amp;A)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20954,12 +21028,12 @@ Specifies how backspace interacts with indentation.
     <message>
         <location line="+2" />
         <source>Highlight &amp;blocks</source>
-        <translation>بلوک‌ها را برجسته کنید</translation>
+        <translation>بلوک‌ها را برجسته کنید (&amp;B)</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Center &amp;cursor on scroll</source>
-        <translation>وسط و مکان نما روی پیمایش</translation>
+        <translation>وسط و مکان نما روی پیمایش (&amp;C)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20984,7 +21058,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location line="+1" />
         <source>&amp;Highlight matching parentheses</source>
-        <translation>پرانتزهای منطبق را برجسته کنید</translation>
+        <translation>پرانتزهای منطبق را برجسته کنید (&amp;H)</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20994,7 +21068,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location line="+2" />
         <source>&amp;Highlight selection</source>
-        <translation>و انتخاب برجسته</translation>
+        <translation>و انتخاب برجسته (&amp;H)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21081,8 +21155,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+16" />
-        <source>Color Scheme for Theme "%1"</source>
-        <translation>طرح رنگ برای تم"%1"</translation>
+        <source>Color Scheme for Theme &quot;%1&quot;</source>
+        <translation>طرح رنگ برای تم&quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+16" />
@@ -21203,8 +21277,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="-12" />
-        <source>Cannot import code style from "%1".</source>
-        <translation>نمی توان سبک کد را از "%1" وارد کرد.</translation>
+        <source>Cannot import code style from &quot;%1&quot;.</source>
+        <translation>نمی توان سبک کد را از &quot;%1&quot; وارد کرد.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -21233,8 +21307,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+1" />
-        <source>The color scheme "%1" was modified, do you want to save the changes?</source>
-        <translation>طرح رنگ "%1" اصلاح شد، آیا می خواهید تغییرات را ذخیره کنید؟</translation>
+        <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
+        <translation>طرح رنگ &quot;%1&quot; اصلاح شد، آیا می خواهید تغییرات را ذخیره کنید؟</translation>
     </message>
     <message>
         <location line="+7" />
@@ -21248,8 +21322,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+16" />
-        <source>File "%1":</source>
-        <translation>پرونده "%1":</translation>
+        <source>File &quot;%1&quot;:</source>
+        <translation>پرونده &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -21303,8 +21377,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+27" />
-        <source>&lt;p align='center'&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href="copy"&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;p align='center'&gt;&lt;b&gt;طرح‌های رنگ داخلی باید قبل از تغییر &lt;a href="copy"&gt;کپی شوند&lt;/a&gt;&lt;br/&gt;&lt;/b&gt;&lt;/p&gt;</translation>
+        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;طرح‌های رنگ داخلی باید قبل از تغییر &lt;a href=&quot;copy&quot;&gt;کپی شوند&lt;/a&gt;&lt;br/&gt;&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -21423,7 +21497,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+2" />
         <source>Line %1</source>
-        <translation>خط 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2" />
@@ -21503,12 +21577,12 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+7" />
-        <source>Current document's font size in points.</source>
+        <source>Current document&apos;s font size in points.</source>
         <translation>اندازه فونت سند فعلی بر حسب امتیاز.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Word under the current document's text cursor.</source>
+        <source>Word under the current document&apos;s text cursor.</source>
         <translation>کلمه زیر مکان نما متن سند فعلی.</translation>
     </message>
     <message>
@@ -21542,7 +21616,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+3" />
         <source>Enable Text &amp;Wrapping</source>
-        <translation>متن و بسته بندی را فعال کنید</translation>
+        <translation>متن و بسته بندی را فعال کنید (&amp;W)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21782,12 +21856,12 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+4" />
         <source>Toggle Comment &amp;Selection</source>
-        <translation>گزینه نظر و انتخاب را تغییر دهید</translation>
+        <translation>گزینه نظر و انتخاب را تغییر دهید (&amp;S)</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Cut &amp;Line</source>
-        <translation>خط برش</translation>
+        <translation>خط برش (&amp;L)</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22380,7 +22454,7 @@ Used to mark containing function of the symbol usage.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Class' data members.</source>
+        <source>Class&apos; data members.</source>
         <translation>اعضای داده کلاس</translation>
     </message>
     <message>
@@ -23013,152 +23087,152 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>یک فایل طرح رنگ نیست.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>برگرفته از QObject</translation>
     </message>
     <message>
         <location line="+1" />
         <source>derived from QWidget</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>برگرفته از QWidget</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>قالب</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with if</source>
-        <comment>group:'C++' trigger:'else'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
         <translation>با اگر</translation>
     </message>
     <message>
         <location line="+1" />
         <source>range-based</source>
-        <comment>group:'C++' trigger:'for'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
         <translation>مبتنی بر محدوده</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and else</source>
-        <comment>group:'C++' trigger:'if'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
         <translation>و دیگری</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with closing brace comment</source>
-        <comment>group:'C++' trigger:'namespace'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
         <translation>با نظر پرانتز بسته</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and catch</source>
-        <comment>group:'C++' trigger:'try'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
         <translation>و گرفتن</translation>
     </message>
     <message>
         <location line="+1" />
         <source>namespace</source>
-        <comment>group:'C++' trigger:'using'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
         <translation>فضای نام</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'struct'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
         <translation>قالب</translation>
     </message>
     <message>
         <location line="+1" />
         <source>(type name READ name WRITE setName NOTIFY nameChanged FINAL)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation>(نوع نام خواندن نام نوشتن setName namechanged final)</translation>
     </message>
     <message>
         <source>(type name READ name WRITE setName NOTIFY nameChanged)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation type="vanished">(نام را تایپ کنید READ name بنویسید setName NOTIFY nameChanged)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>با اهداف</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>با هدف</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>با اهداف</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>با هدف</translation>
     </message>
     <message>
         <location line="+3" />
         <source>QuickTest Test Case</source>
-        <comment>group:'QML' trigger:'TestCase'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>مورد تست QuickTest</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Function</source>
-        <comment>group:'C++' trigger:'TEST'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST&apos;</comment>
         <translation>تابع</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Fixture</source>
-        <comment>group:'C++' trigger:'TEST_F'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_F&apos;</comment>
         <translation>فیکسچر gtest</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Parameterized</source>
-        <comment>group:'C++' trigger:'TEST_P'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_P&apos;</comment>
         <translation>gtest پارامتر شده</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Case</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_CASE&apos;</comment>
         <translation>مورد آزمایشی</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Suite</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_SUITE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_SUITE&apos;</comment>
         <translation>مجموعه تست</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Test Case</source>
-        <comment>group:'C++' trigger:'TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_CASE&apos;</comment>
         <translation>مورد تست گرفتن</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Scenario</source>
-        <comment>group:'C++' trigger:'SCENARIO'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;SCENARIO&apos;</comment>
         <translation>سناریو گرفتن</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="+3" />
         <source>example</source>
-        <comment>group:'Text' trigger:'global'</comment>
+        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
         <translation>مثال</translation>
     </message>
     <message>
@@ -23217,7 +23291,7 @@ Will not be applied to whitespace in comments and strings.</source>
     </message>
     <message>
         <location line="+25" />
-        <source>Folder "%2":</source>
+        <source>Folder &quot;%2&quot;:</source>
         <translation>پوشه «%2»:</translation>
     </message>
     <message>
@@ -23240,7 +23314,7 @@ Excluding: %3
     <message>
         <location line="+20" />
         <source>Director&amp;y:</source>
-        <translation>فهرست راهنما:</translation>
+        <translation>فهرست راهنما: (&amp;Y)</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23271,7 +23345,7 @@ Excluding: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/formattexteditor.cpp" line="+71" />
-        <source>Cannot create temporary file "%1": %2.</source>
+        <source>Cannot create temporary file &quot;%1&quot;: %2.</source>
         <translation>فایل موقت «%1» ایجاد نمی شود: %2.</translation>
     </message>
     <message>
@@ -23281,8 +23355,8 @@ Excluding: %3
     </message>
     <message>
         <location line="+21" />
-        <source>Cannot read file "%1": %2.</source>
-        <translation>نمی توان فایل "%1" را خواند: %2.</translation>
+        <source>Cannot read file &quot;%1&quot;: %2.</source>
+        <translation>نمی توان فایل &quot;%1&quot; را خواند: %2.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -23336,8 +23410,8 @@ Excluding: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;تعریف هایلایت توسط &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting ارائه شده است. a&gt; موتور.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4" />
@@ -23411,7 +23485,7 @@ Excluding: %3
         <translation>درخت فیلتر</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+130" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+140" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
         <source>Sort Alphabetically</source>
         <translation>مرتب سازی بر اساس حروف الفبا</translation>
@@ -23433,7 +23507,7 @@ Excluding: %3
     </message>
     <message>
         <location line="+15" />
-        <source>Expected mangler ID "l" (lowercase), "u" (uppercase), or "c" (titlecase) after colon.</source>
+        <source>Expected mangler ID &quot;l&quot; (lowercase), &quot;u&quot; (uppercase), or &quot;c&quot; (titlecase) after colon.</source>
         <translation>پیش‌بینی می‌شود شناسه منگل «l» (حروف کوچک)، «u» (بزرگ) یا «c» (حروف عنوان) بعد از دو نقطه.</translation>
     </message>
     <message>
@@ -23486,7 +23560,7 @@ Excluding: %3
     </message>
     <message>
         <location line="+1" />
-        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark's note text.</source>
+        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark&apos;s note text.</source>
         <translation>نشانک ها را پیدا می کند. نام پرونده را با متن روی خط نشانک یا متن یادداشت نشانک فیلتر کنید.</translation>
     </message>
     <message>
@@ -23502,12 +23576,12 @@ Excluding: %3
     <message>
         <location line="+1" />
         <source>&amp;Edit</source>
-        <translation>و ویرایش</translation>
+        <translation>و ویرایش (&amp;E)</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Remove</source>
-        <translation>و حذف</translation>
+        <translation>و حذف (&amp;R)</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23540,7 +23614,7 @@ Excluding: %3
     <message>
         <location line="-15" />
         <source>&amp;Bookmarks</source>
-        <translation>و نشانه گذاری</translation>
+        <translation>و نشانه گذاری (&amp;B)</translation>
     </message>
     <message>
         <location line="+53" />
@@ -23657,8 +23731,8 @@ Excluding: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot create temporary directory "%1": %2</source>
-        <translation>نمی توان دایرکتوری موقت "%1" ایجاد کرد: %2</translation>
+        <source>Cannot create temporary directory &quot;%1&quot;: %2</source>
+        <translation>نمی توان دایرکتوری موقت &quot;%1&quot; ایجاد کرد: %2</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23667,13 +23741,13 @@ Excluding: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot change to working directory "%1": %2</source>
-        <translation>نمی توان به فهرست کاری "%1" تغییر داد: %2</translation>
+        <source>Cannot change to working directory &quot;%1&quot;: %2</source>
+        <translation>نمی توان به فهرست کاری &quot;%1&quot; تغییر داد: %2</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1": %2</source>
-        <translation>نمی توان "%1" را اجرا کرد: %2</translation>
+        <source>Cannot execute &quot;%1&quot;: %2</source>
+        <translation>نمی توان &quot;%1&quot; را اجرا کرد: %2</translation>
     </message>
     <message>
         <location line="+109" />
@@ -23682,12 +23756,12 @@ Excluding: %3
     </message>
     <message>
         <location line="+60" />
-        <source>Cannot set permissions on temporary directory "%1": %2</source>
-        <translation>نمی توان مجوزهای مربوط به فهرست موقت "%1" را تنظیم کرد: %2</translation>
+        <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
+        <translation>نمی توان مجوزهای مربوط به فهرست موقت &quot;%1&quot; را تنظیم کرد: %2</translation>
     </message>
     <message>
-        <source>The process "%1" could not be started: %2</source>
-        <translation type="vanished">فرآیند "%1" آغاز نشد: %2</translation>
+        <source>The process &quot;%1&quot; could not be started: %2</source>
+        <translation type="vanished">فرآیند &quot;%1&quot; آغاز نشد: %2</translation>
     </message>
     <message>
         <source>Quoting error in command.</source>
@@ -23706,13 +23780,13 @@ Excluding: %3
         <translation type="vanished">فرمان ترمینال ممکن است یک فرمان پوسته نباشد.</translation>
     </message>
     <message>
-        <source>Cannot start the terminal emulator "%1", change the setting in the Environment preferences. (%2)</source>
-        <translation type="vanished">نمی توان شبیه ساز ترمینال "%1" را شروع کرد، تنظیم را در تنظیمات برگزیده محیط تغییر دهید. (%2)</translation>
+        <source>Cannot start the terminal emulator &quot;%1&quot;, change the setting in the Environment preferences. (%2)</source>
+        <translation type="vanished">نمی توان شبیه ساز ترمینال &quot;%1&quot; را شروع کرد، تنظیم را در تنظیمات برگزیده محیط تغییر دهید. (%2)</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Cannot create socket "%1": %2</source>
-        <translation>سوکت "%1" ایجاد نمی شود: %2</translation>
+        <source>Cannot create socket &quot;%1&quot;: %2</source>
+        <translation>سوکت &quot;%1&quot; ایجاد نمی شود: %2</translation>
     </message>
     <message>
         <location line="-171" />
@@ -23749,7 +23823,7 @@ Excluding: %3
     <message>
         <location line="+5" />
         <source>Excl&amp;usion pattern:</source>
-        <translation>الگوی حذف و حذف:</translation>
+        <translation>الگوی حذف و حذف: (&amp;U)</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23794,8 +23868,8 @@ Excluding: %3
     </message>
     <message>
         <location line="+69" />
-        <source>The default suffix if you do not explicitly specify a file extension is ".%1".</source>
-        <translation>پسوند پیش‌فرض اگر به صراحت پسوند فایل را مشخص نکنید، ".%1" است.</translation>
+        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
+        <translation>پسوند پیش‌فرض اگر به صراحت پسوند فایل را مشخص نکنید، &quot;.%1&quot; است.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
@@ -23836,51 +23910,51 @@ Excluding: %3
     </message>
     <message>
         <location line="+176" />
-        <source>The path "%1" expanded to an empty string.</source>
-        <translation>مسیر "%1" به یک رشته خالی گسترش یافت.</translation>
+        <source>The path &quot;%1&quot; expanded to an empty string.</source>
+        <translation>مسیر &quot;%1&quot; به یک رشته خالی گسترش یافت.</translation>
     </message>
     <message>
         <location line="-72" />
         <location line="+10" />
         <location line="+20" />
-        <source>The path "%1" does not exist.</source>
-        <translation>مسیر "%1" وجود ندارد.</translation>
+        <source>The path &quot;%1&quot; does not exist.</source>
+        <translation>مسیر &quot;%1&quot; وجود ندارد.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+36" />
-        <source>The path "%1" is not a directory.</source>
-        <translation>مسیر "%1" یک دایرکتوری نیست.</translation>
+        <source>The path &quot;%1&quot; is not a directory.</source>
+        <translation>مسیر &quot;%1&quot; یک دایرکتوری نیست.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+10" />
-        <source>The path "%1" is not a file.</source>
-        <translation>مسیر "%1" یک فایل نیست.</translation>
+        <source>The path &quot;%1&quot; is not a file.</source>
+        <translation>مسیر &quot;%1&quot; یک فایل نیست.</translation>
     </message>
     <message>
         <location line="-4" />
-        <source>The directory "%1" does not exist.</source>
-        <translation>دایرکتوری "%1" وجود ندارد.</translation>
+        <source>The directory &quot;%1&quot; does not exist.</source>
+        <translation>دایرکتوری &quot;%1&quot; وجود ندارد.</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>The path "%1" is not an executable file.</source>
-        <translation>مسیر "%1" یک فایل اجرایی نیست.</translation>
+        <source>The path &quot;%1&quot; is not an executable file.</source>
+        <translation>مسیر &quot;%1&quot; یک فایل اجرایی نیست.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid path "%1".</source>
+        <source>Invalid path &quot;%1&quot;.</source>
         <translation>مسیر «%1» نامعتبر است.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1".</source>
-        <translation>نمی توان "%1" را اجرا کرد.</translation>
+        <source>Cannot execute &quot;%1&quot;.</source>
+        <translation>نمی توان &quot;%1&quot; را اجرا کرد.</translation>
     </message>
     <message>
-        <source>Full path: "%1"</source>
-        <translation type="vanished">مسیر کامل: "%1"</translation>
+        <source>Full path: &quot;%1&quot;</source>
+        <translation type="vanished">مسیر کامل: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-58" />
@@ -23920,8 +23994,8 @@ Excluding: %3
     </message>
     <message>
         <location line="+121" />
-        <source>Directory "%1" will be created.</source>
-        <translation>دایرکتوری "%1" ایجاد خواهد شد.</translation>
+        <source>Directory &quot;%1&quot; will be created.</source>
+        <translation>دایرکتوری &quot;%1&quot; ایجاد خواهد شد.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -23940,13 +24014,13 @@ Excluding: %3
     </message>
     <message>
         <location line="+12" />
-        <source>Invalid character ".".</source>
-        <translation>نویسه نامعتبر ".".</translation>
+        <source>Invalid character &quot;.&quot;.</source>
+        <translation>نویسه نامعتبر &quot;.&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Invalid character "%1" found.</source>
-        <translation>نویسه نامعتبر "%1" یافت شد.</translation>
+        <source>Invalid character &quot;%1&quot; found.</source>
+        <translation>نویسه نامعتبر &quot;%1&quot; یافت شد.</translation>
     </message>
     <message>
         <location line="-232" />
@@ -24008,12 +24082,12 @@ Excluding: %3
     <message>
         <location line="+7" />
         <source>C&amp;lose All</source>
-        <translation>همه را ببندید</translation>
+        <translation>همه را ببندید (&amp;L)</translation>
     </message>
     <message>
         <location line="-3" />
         <source>Save &amp;as...</source>
-        <translation>ذخیره به عنوان...</translation>
+        <translation>ذخیره به عنوان... (&amp;A)</translation>
     </message>
     <message>
         <location line="+5" />
@@ -24101,14 +24175,11 @@ Excluding: %3
         <location line="-16" />
         <location line="+20" />
         <source>Running %1
-in "%2".
+in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
-        <translation>در حال اجرا %1
-در 2".
-
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/aspects.cpp" line="+1208" />
@@ -24154,12 +24225,12 @@ in "%2".
     <message>
         <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
         <source>Do not &amp;ask again</source>
-        <translation>دوباره نپرس</translation>
+        <translation>دوباره نپرس (&amp;A)</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Do not &amp;show again</source>
-        <translation>دوباره نشان نده</translation>
+        <translation>دوباره نشان نده (&amp;S)</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
@@ -24182,8 +24253,8 @@ in "%2".
         <translation>جزئیات</translation>
     </message>
     <message>
-        <source>copyFile is not implemented for "%1"</source>
-        <translation type="vanished">copyFile برای "%1" اجرا نشده است</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">copyFile برای &quot;%1&quot; اجرا نشده است</translation>
     </message>
     <message>
         <source>Cannot copy from %1, it is not a directory.</source>
@@ -24195,61 +24266,61 @@ in "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to create tar archive from source: %3</source>
-        <translation>هنگام تلاش برای ایجاد آرشیو tar از منبع، به صورت بازگشتی از "%1" به "%2" کپی نشد: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
+        <translation>هنگام تلاش برای ایجاد آرشیو tar از منبع، به صورت بازگشتی از &quot;%1&quot; به &quot;%2&quot; کپی نشد: %3</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to extract tar archive to target: %3</source>
-        <translation>هنگام تلاش برای استخراج آرشیو تار در هدف، کپی بازگشتی از "%1" به "%2" انجام نشد: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
+        <translation>هنگام تلاش برای استخراج آرشیو تار در هدف، کپی بازگشتی از &quot;%1&quot; به &quot;%2&quot; انجام نشد: %3</translation>
     </message>
     <message>
-        <source>fileContents is not implemented for "%1"</source>
-        <translation type="vanished">fileContents برای "%1" اجرا نشده است</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">fileContents برای &quot;%1&quot; اجرا نشده است</translation>
     </message>
     <message>
-        <source>writeFileContents is not implemented for "%1"</source>
-        <translation type="vanished">writeFileContents برای "%1" اجرا نشده است</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">writeFileContents برای &quot;%1&quot; اجرا نشده است</translation>
     </message>
     <message>
-        <source>createTempFile is not implemented for "%1"</source>
-        <translation type="vanished">createTempFile برای"%1" اجرا نشده است</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">createTempFile برای&quot;%1&quot; اجرا نشده است</translation>
     </message>
     <message>
         <location line="-139" />
         <location line="+409" />
-        <source>Path "%1" exists but is not a writable directory.</source>
-        <translation>مسیر "%1" وجود دارد اما یک فهرست قابل نوشتن نیست.</translation>
+        <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
+        <translation>مسیر &quot;%1&quot; وجود دارد اما یک فهرست قابل نوشتن نیست.</translation>
     </message>
     <message>
         <location line="-356" />
-        <source>copyFile is not implemented for "%1".</source>
-        <translation>CopyFile برای "%1" پیاده سازی نشده است.</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;.</source>
+        <translation>CopyFile برای &quot;%1&quot; پیاده سازی نشده است.</translation>
     </message>
     <message>
         <location line="+30" />
-        <source>Cannot copy from "%1", it is not a directory.</source>
-        <translation>نمی توان از "%1" کپی کرد ، دایرکتوری نیست.</translation>
+        <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
+        <translation>نمی توان از &quot;%1&quot; کپی کرد ، دایرکتوری نیست.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Cannot copy "%1" to "%2": %3</source>
-        <translation>نمی توان "%1" را به "%2" کپی کرد: %3</translation>
+        <source>Cannot copy &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>نمی توان &quot;%1&quot; را به &quot;%2&quot; کپی کرد: %3</translation>
     </message>
     <message>
         <location line="+103" />
-        <source>fileContents is not implemented for "%1".</source>
-        <translation>FileContents برای "%1" اجرا نمی شود.</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>FileContents برای &quot;%1&quot; اجرا نمی شود.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for "%1".</source>
-        <translation>WritEfileContents برای "%1" اجرا نمی شود.</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>WritEfileContents برای &quot;%1&quot; اجرا نمی شود.</translation>
     </message>
     <message>
         <location line="+66" />
-        <source>createTempFile is not implemented for "%1".</source>
-        <translation>CreateTempFile برای "%1" اجرا نمی شود.</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation>CreateTempFile برای &quot;%1&quot; اجرا نمی شود.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24258,8 +24329,8 @@ in "%2".
     </message>
     <message>
         <location line="+180" />
-        <source>Refusing to remove the standard directory "%1".</source>
-        <translation>امتناع از حذف فهرست استاندارد "%1".</translation>
+        <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
+        <translation>امتناع از حذف فهرست استاندارد &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -24273,80 +24344,80 @@ in "%2".
     </message>
     <message>
         <location line="+37" />
-        <source>Failed to remove directory "%1".</source>
-        <translation>دایرکتوری "%1" حذف نشد.</translation>
+        <source>Failed to remove directory &quot;%1&quot;.</source>
+        <translation>دایرکتوری &quot;%1&quot; حذف نشد.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Failed to remove file "%1".</source>
+        <source>Failed to remove file &quot;%1&quot;.</source>
         <translation>فایل «%1» حذف نشد.</translation>
     </message>
     <message>
         <location line="+551" />
-        <source>Failed creating temporary file "%1" (too many tries).</source>
-        <translation>ایجاد پرونده موقت "%1" (تلاش های زیادی) انجام نشد.</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
+        <translation>ایجاد پرونده موقت &quot;%1&quot; (تلاش های زیادی) انجام نشد.</translation>
     </message>
     <message>
-        <source>Failed to copy file "%1" to "%2".</source>
-        <translation type="vanished">فایل "%1" در "%2" کپی نشد.</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation type="vanished">فایل &quot;%1&quot; در &quot;%2&quot; کپی نشد.</translation>
     </message>
     <message>
-        <source>File "%1" does not exist</source>
-        <translation type="vanished">فایل "%1" وجود ندارد</translation>
+        <source>File &quot;%1&quot; does not exist</source>
+        <translation type="vanished">فایل &quot;%1&quot; وجود ندارد</translation>
     </message>
     <message>
-        <source>Could not open File "%1"</source>
-        <translation type="vanished">نتوانستپرونده"%1" را باز کند</translation>
+        <source>Could not open File &quot;%1&quot;</source>
+        <translation type="vanished">نتوانستپرونده&quot;%1&quot; را باز کند</translation>
     </message>
     <message>
         <location line="-449" />
-        <source>Cannot read "%1": %2</source>
-        <translation>نمی توان "%1" را خواند: %2</translation>
+        <source>Cannot read &quot;%1&quot;: %2</source>
+        <translation>نمی توان &quot;%1&quot; را خواند: %2</translation>
     </message>
     <message>
-        <source>Could not open file "%1" for writing</source>
-        <translation type="vanished">فایل "%1" برای نوشتن باز نشد</translation>
+        <source>Could not open file &quot;%1&quot; for writing</source>
+        <translation type="vanished">فایل &quot;%1&quot; برای نوشتن باز نشد</translation>
     </message>
     <message>
-        <source>Could not write to file "%1" (only %2 of %3 bytes written)</source>
-        <translation type="vanished">نتوانست در فایل "%1" بنویسد (تنها %2 از %3 بایت نوشته شده است)</translation>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
+        <translation type="vanished">نتوانست در فایل &quot;%1&quot; بنویسد (تنها %2 از %3 بایت نوشته شده است)</translation>
     </message>
     <message>
-        <source>Could not create temporary file in "%1" (%2)</source>
-        <translation type="vanished">نتوانست فایل موقت در "%1" (%2) ایجاد کند</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
+        <translation type="vanished">نتوانست فایل موقت در &quot;%1&quot; (%2) ایجاد کند</translation>
     </message>
     <message>
         <location line="-87" />
         <location line="+406" />
-        <source>Failed to copy file "%1" to "%2": %3</source>
-        <translation>فایل "%1" در "%2" کپی نشد: %3</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>فایل &quot;%1&quot; در &quot;%2&quot; کپی نشد: %3</translation>
     </message>
     <message>
         <location line="-333" />
-        <source>File "%1" does not exist.</source>
-        <translation>پرونده "%1" وجود ندارد.</translation>
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>پرونده &quot;%1&quot; وجود ندارد.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File "%1".</source>
-        <translation>نمی توان پرونده "%1" را باز کرد.</translation>
+        <source>Could not open File &quot;%1&quot;.</source>
+        <translation>نمی توان پرونده &quot;%1&quot; را باز کرد.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Could not open file "%1" for writing.</source>
-        <translation>نمی تواند پرونده "%1" را برای نوشتن باز کند.</translation>
+        <source>Could not open file &quot;%1&quot; for writing.</source>
+        <translation>نمی تواند پرونده &quot;%1&quot; را برای نوشتن باز کند.</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
-        <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
-        <translation>
-            <numerusform>نمی توان برای پرونده "%1" نوشت (فقط %2 ٪ از n بایت (های) نوشته شده).</numerusform>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %n byte(s) written).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Could not create temporary file in "%1" (%2).</source>
-        <translation>نمی توان پرونده موقت را در "%1" (%2) ایجاد کرد.</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2).</source>
+        <translation>نمی توان پرونده موقت را در &quot;%1&quot; (%2) ایجاد کرد.</translation>
     </message>
     <message>
         <location line="+138" />
@@ -24355,21 +24426,21 @@ in "%2".
     </message>
     <message>
         <location line="+202" />
-        <source>Failed reading file "%1": %2</source>
-        <translation>خواندن فایل "%1" ناموفق بود: %2</translation>
+        <source>Failed reading file &quot;%1&quot;: %2</source>
+        <translation>خواندن فایل &quot;%1&quot; ناموفق بود: %2</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Failed writing file "%1": %2</source>
-        <translation>نوشتن فایل "%1" ناموفق بود: %2</translation>
+        <source>Failed writing file &quot;%1&quot;: %2</source>
+        <translation>نوشتن فایل &quot;%1&quot; ناموفق بود: %2</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Failed creating temporary file "%1": %2</source>
+        <source>Failed creating temporary file &quot;%1&quot;: %2</source>
         <translation>ایجاد فایل موقت «%1» ناموفق بود: %2</translation>
     </message>
     <message>
-        <source>Failed creating temporary file "%1" (too many tries)</source>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
         <translation type="vanished">ایجاد فایل موقت «%1» ناموفق بود (تعداد زیاد)</translation>
     </message>
     <message>
@@ -24389,18 +24460,18 @@ in "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/elfreader.cpp" line="+130" />
-        <source>"%1" is an invalid ELF object (%2)</source>
-        <translation>"%1" یک شیء ELF نامعتبر است (%2)</translation>
+        <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
+        <translation>&quot;%1&quot; یک شیء ELF نامعتبر است (%2)</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>"%1" is not an ELF object (file too small)</source>
-        <translation>"%1" یک شی ELF نیست (پرونده خیلی کوچک است)</translation>
+        <source>&quot;%1&quot; is not an ELF object (file too small)</source>
+        <translation>&quot;%1&quot; یک شی ELF نیست (پرونده خیلی کوچک است)</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>"%1" is not an ELF object</source>
-        <translation>"%1" یک شی ELF نیست</translation>
+        <source>&quot;%1&quot; is not an ELF object</source>
+        <translation>&quot;%1&quot; یک شی ELF نیست</translation>
     </message>
     <message>
         <location line="+8" />
@@ -24451,14 +24522,14 @@ To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-To disable a variable, prefix the line with "#".</source>
+To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="vanished">در هر خط یک متغیر محیطی وارد کنید.
 برای تنظیم یا تغییر یک متغیر، از VARIABLE=VALUE استفاده کنید.
 برای الحاق به یک متغیر، از VARIABLE+=VALUE استفاده کنید.
 برای prepend به یک متغیر، از VARIABLE=+VALUE استفاده کنید.
 متغیرهای موجود را می توان در یک VALUE با ${OTHER} ارجاع داد.
 برای پاک کردن یک متغیر، نام آن را در یک خط بدون هیچ چیز دیگری روی آن قرار دهید.
-برای غیرفعال کردن یک متغیر، پیشوند خط را با "#" قرار دهید.</translation>
+برای غیرفعال کردن یک متغیر، پیشوند خط را با &quot;#&quot; قرار دهید.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
@@ -24498,13 +24569,13 @@ To disable a variable, prefix the line with "#".</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Invalid character "%1".</source>
+        <source>Invalid character &quot;%1&quot;.</source>
         <translation>نویسه «%1» نامعتبر است.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid characters "%1".</source>
-        <translation>نویسه های نامعتبر "%1".</translation>
+        <source>Invalid characters &quot;%1&quot;.</source>
+        <translation>نویسه های نامعتبر &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -24545,13 +24616,13 @@ To disable a variable, prefix the line with "#".</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Could not set permissions on "%1"</source>
-        <translation>نمی توان مجوزها را روی "%1" تنظیم کرد</translation>
+        <source>Could not set permissions on &quot;%1&quot;</source>
+        <translation>نمی توان مجوزها را روی &quot;%1&quot; تنظیم کرد</translation>
     </message>
     <message>
         <location line="+250" />
-        <source>No "localSource" device hook set.</source>
-        <translation>هیچ قلاب دستگاه "منبع محلی" تنظیم نشده است.</translation>
+        <source>No &quot;localSource&quot; device hook set.</source>
+        <translation>هیچ قلاب دستگاه &quot;منبع محلی&quot; تنظیم نشده است.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
@@ -24633,20 +24704,20 @@ To disable a variable, prefix the line with "#".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Overwrite existing file "%1"?</source>
-        <translation>فایل موجود "%1" بازنویسی شود؟</translation>
+        <source>Overwrite existing file &quot;%1&quot;?</source>
+        <translation>فایل موجود &quot;%1&quot; بازنویسی شود؟</translation>
     </message>
     <message>
         <location line="+21" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>فایل "%1" در "%2" کپی نشد.</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>فایل &quot;%1&quot; در &quot;%2&quot; کپی نشد.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
         <location line="+409" />
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
-        <source>Failed to create directory "%1".</source>
-        <translation>دایرکتوری "%1" ایجاد نشد.</translation>
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>دایرکتوری &quot;%1&quot; ایجاد نشد.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
@@ -24713,8 +24784,8 @@ To disable a variable, prefix the line with "#".</source>
     </message>
     <message>
         <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
-        <source>Failed to start process launcher at "%1": %2</source>
-        <translation>راه اندازی فرآیند در "%1" آغاز نشد: %2</translation>
+        <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
+        <translation>راه اندازی فرآیند در &quot;%1&quot; آغاز نشد: %2</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24830,20 +24901,20 @@ To disable a variable, prefix the line with "#".</source>
         <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
-To disable a variable, prefix this line with "#".
+To disable a variable, prefix this line with &quot;#&quot;.
 To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-Lines starting with "##" will be treated as comments.</source>
+Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>در هر خط یک متغیر محیط را وارد کنید.
  برای تنظیم یا تغییر متغیر ، از متغیر = مقدار استفاده کنید.
- برای غیرفعال کردن یک متغیر ، این خط را با "#" پیشوند کنید.
+ برای غیرفعال کردن یک متغیر ، این خط را با &quot;#&quot; پیشوند کنید.
  برای پیوستن به یک متغیر ، از متغیر+= مقدار استفاده کنید.
  برای تهیه متغیر ، از متغیر =+مقدار استفاده کنید.
  متغیرهای موجود را می توان در یک مقدار با $ {دیگر} ارجاع داد.
  برای پاک کردن یک متغیر ، نام خود را روی یک خط قرار دهید و هیچ چیز دیگری روی آن نیست.
- خطوط شروع شده با "##" به عنوان نظر رفتار می شوند.</translation>
+ خطوط شروع شده با &quot;##&quot; به عنوان نظر رفتار می شوند.</translation>
     </message>
     <message>
         <location line="+112" />
@@ -24862,18 +24933,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+29" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>برنامه "%1" وجود ندارد یا قابل اجرا نیست.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>برنامه &quot;%1&quot; وجود ندارد یا قابل اجرا نیست.</translation>
     </message>
     <message>
         <location line="+79" />
-        <source>The program "%1" could not be found.</source>
-        <translation>برنامه "%1" یافت نشد.</translation>
+        <source>The program &quot;%1&quot; could not be found.</source>
+        <translation>برنامه &quot;%1&quot; یافت نشد.</translation>
     </message>
     <message>
         <location line="+908" />
-        <source>Failed to create process interface for "%1".</source>
-        <translation>ایجاد رابط فرآیند برای "%1" انجام نشد.</translation>
+        <source>Failed to create process interface for &quot;%1&quot;.</source>
+        <translation>ایجاد رابط فرآیند برای &quot;%1&quot; انجام نشد.</translation>
     </message>
     <message>
         <location line="+163" />
@@ -24887,8 +24958,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The process "%1" is not responding.</source>
-        <translation>فرآیند "%1" پاسخ نمی دهد.</translation>
+        <source>The process &quot;%1&quot; is not responding.</source>
+        <translation>فرآیند &quot;%1&quot; پاسخ نمی دهد.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -24897,32 +24968,32 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+233" />
-        <source>The command "%1" finished successfully.</source>
-        <translation>فرمان "%1" با موفقیت به پایان رسید.</translation>
+        <source>The command &quot;%1&quot; finished successfully.</source>
+        <translation>فرمان &quot;%1&quot; با موفقیت به پایان رسید.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated with exit code %2.</source>
-        <translation>فرمان "%1" با کد خروج %2 خاتمه یافت.</translation>
+        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
+        <translation>فرمان &quot;%1&quot; با کد خروج %2 خاتمه یافت.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated abnormally.</source>
-        <translation>فرمان "%1" به طور غیر عادی خاتمه یافت.</translation>
+        <source>The command &quot;%1&quot; terminated abnormally.</source>
+        <translation>فرمان &quot;%1&quot; به طور غیر عادی خاتمه یافت.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" could not be started.</source>
-        <translation>فرمان "%1" آغاز نشد.</translation>
+        <source>The command &quot;%1&quot; could not be started.</source>
+        <translation>فرمان &quot;%1&quot; آغاز نشد.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>The command "%1" was canceled after %2 ms.</source>
-        <translation>دستور "%1" پس از %2 ms لغو شد.</translation>
+        <source>The command &quot;%1&quot; was canceled after %2 ms.</source>
+        <translation>دستور &quot;%1&quot; پس از %2 ms لغو شد.</translation>
     </message>
     <message>
-        <source>The command "%1" did not respond within the timeout limit (%2 s).</source>
-        <translation type="vanished">فرمان "%1" در محدوده زمانی (%2 s) پاسخ نداد.</translation>
+        <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
+        <translation type="vanished">فرمان &quot;%1&quot; در محدوده زمانی (%2 s) پاسخ نداد.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
@@ -24961,8 +25032,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open "%1".</source>
-        <translation>"%1" باز نشد.</translation>
+        <source>Could not open &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; باز نشد.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -24983,13 +25054,13 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="-264" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;هیچ فایل تنظیمات معتبری یافت نشد.&lt;/p&gt;&lt;p&gt;همه فایلهای تنظیمات یافت شده در فهرست "%1" برای نسخه فعلی %2 نامناسب بودند، به عنوان مثال زیرا توسط نسخه ناسازگار %نوشته شده بودند. 2، یا به این دلیل که از مسیر تنظیمات دیگری استفاده شده است.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+265" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were either too new or too old to be read.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;هیچ فایل تنظیمات معتبری یافت نشد.&lt;/p&gt;&lt;p&gt;همه فایلهای تنظیمات یافت شده در فهرست "%1" بسیار جدید یا قدیمی بودند که قابل خواندن نبودند.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;هیچ فایل تنظیمات معتبری یافت نشد.&lt;/p&gt;&lt;p&gt;همه فایلهای تنظیمات یافت شده در فهرست &quot;%1&quot; بسیار جدید یا قدیمی بودند که قابل خواندن نبودند.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+11" />
@@ -24998,18 +25069,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>&lt;p&gt;The versioned backup "%1" of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
-        <translation>&lt;p&gt; نسخه پشتیبان "%1" از فایل تنظیمات استفاده می شود، زیرا فایل غیرنسخه شده توسط نسخه ناسازگار %2 ایجاد شده است.&lt;/p&gt;&lt;p&gt;تغییر تنظیمات از آخرین باری که این نسخه از %2 استفاده شده نادیده گرفته می شود و تغییرات ایجاد شده در حال حاضر &lt;b&gt;نمی&lt;/b&gt; به نسخه جدیدتر منتشر می شود.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;The versioned backup &quot;%1&quot; of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
+        <translation>&lt;p&gt; نسخه پشتیبان &quot;%1&quot; از فایل تنظیمات استفاده می شود، زیرا فایل غیرنسخه شده توسط نسخه ناسازگار %2 ایجاد شده است.&lt;/p&gt;&lt;p&gt;تغییر تنظیمات از آخرین باری که این نسخه از %2 استفاده شده نادیده گرفته می شود و تغییرات ایجاد شده در حال حاضر &lt;b&gt;نمی&lt;/b&gt; به نسخه جدیدتر منتشر می شود.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Settings File for "%1" from a Different Environment?</source>
-        <translation>فایل تنظیمات برای "%1" از یک محیط متفاوت؟</translation>
+        <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
+        <translation>فایل تنظیمات برای &quot;%1&quot; از یک محیط متفاوت؟</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file "%2"?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;هیچ فایل تنظیمات ایجاد شده توسط این نمونه %1 یافت نشد.&lt;/p&gt;&lt;p&gt;آیا قبلاً با این پروژه در دستگاه دیگری کار می‌کردید یا از مسیر تنظیمات دیگری استفاده می‌کردید؟&lt;/p&gt;&lt;p&gt;آیا هنوز هم دارید؟ می خواهید فایل تنظیمات "%2" را بارگیری کنید؟&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file &quot;%2&quot;?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;هیچ فایل تنظیمات ایجاد شده توسط این نمونه %1 یافت نشد.&lt;/p&gt;&lt;p&gt;آیا قبلاً با این پروژه در دستگاه دیگری کار می‌کردید یا از مسیر تنظیمات دیگری استفاده می‌کردید؟&lt;/p&gt;&lt;p&gt;آیا هنوز هم دارید؟ می خواهید فایل تنظیمات &quot;%2&quot; را بارگیری کنید؟&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+55" />
@@ -25018,8 +25089,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" is not supported by %2. Do you want to try loading it anyway?</source>
-        <translation>"%1" توسط %2 پشتیبانی نمی شود. به هر حال می خواهید بارگیری آن را امتحان کنید؟</translation>
+        <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
+        <translation>&quot;%1&quot; توسط %2 پشتیبانی نمی شود. به هر حال می خواهید بارگیری آن را امتحان کنید؟</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/aspects.cpp" line="+92" />
@@ -25094,8 +25165,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+3" />
         <location line="+7" />
-        <source>Insert "%1"</source>
-        <translation>درج "%1"</translation>
+        <source>Insert &quot;%1&quot;</source>
+        <translation>درج &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-3" />
@@ -25136,8 +25207,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+7" />
-        <source>Command "%1" was not found.</source>
-        <translation>فرمان "%1" یافت نشد.</translation>
+        <source>Command &quot;%1&quot; was not found.</source>
+        <translation>فرمان &quot;%1&quot; یافت نشد.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -25162,8 +25233,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+28" />
         <location line="+45" />
-        <source>Failed to start terminal process: "%1".</source>
-        <translation>شروع به شروع فرآیند ترمینال: "%1".</translation>
+        <source>Failed to start terminal process: &quot;%1&quot;.</source>
+        <translation>شروع به شروع فرآیند ترمینال: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
@@ -25215,9 +25286,9 @@ Lines starting with "##" will be treated as comments.</source>
     <name>TextEditor::Internal::Snippets</name>
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippetscollection.cpp" line="-255" />
-        <source />
+        <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
-        <translation />
+        <translation></translation>
     </message>
 </context>
 </TS>

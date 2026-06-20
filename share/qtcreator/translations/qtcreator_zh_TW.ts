@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+838" />
         <source>Copy</source>
         <translation>复制</translation>
     </message>
@@ -30,82 +30,82 @@
         <translation>OpenMV Cam設定</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Turn on WiFi Shield on startup</source>
         <translation>啟動時開啟WiFi遮罩</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Client Mode (Normal)</source>
         <translation>用戶端模式(正常)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Password</source>
         <translation>密碼</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter your WiFi network password here</source>
         <translation>請在此輸入您的WiFi網路密碼</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Type</source>
         <translation>型態</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Open (No password)</source>
         <translation>開啟(沒有密碼)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WPA (Modern WiFi Security)</source>
         <translation>WPA(現代WiFi安全)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WEP (Hexadecimal password)</source>
         <translation>WEP(十六進位密碼)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>SSID</source>
         <translation>SSID</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter or select your WiFi network here</source>
         <translation>請在此輸入或選擇您的WiFi網路</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Acess Point Mode</source>
         <translation>接入點模式</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
         <translation>請在此處輸入WiFi網路的名稱以建立密碼</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
         <translation>請在此輸入要建立的WiFI網路的名稱</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Board Name</source>
         <translation>板名稱</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
         <translation>請在此為您的OpenMV Cam輸入一個名稱</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Duplicate REPL on the UART on startup</source>
         <translation>啟動時在UART上複製REPL</translation>
     </message>
@@ -118,42 +118,42 @@
         <translation>000</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Max</source>
         <translation>最大</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Median</source>
         <translation>中位數</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mode</source>
         <translation>眾數</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Min</source>
         <translation>最小</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mean</source>
         <translation>平均數</translation>
     </message>
@@ -205,41 +205,41 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for '%1'...</source>
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
         <translation>正在下載“%1”的新語法定義...</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for '%1' to version %2...</source>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
         <translation>正在將“%1”的語法定義更新到版本 %2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
         <source>Copy/Convert Python File</source>
         <translation>复制/转换Python文件</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+21" />
         <location line="+7" />
-        <location line="+94" />
+        <location line="+91" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+76" />
         <location line="+7" />
         <source>Unable to overwrite output file!</source>
         <translation>无法覆盖输出文件！</translation>
     </message>
     <message>
-        <location line="-125" />
+        <location line="-124" />
         <source>Model Zoo</source>
         <translation>模型动物园</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+77" />
         <source>Model conversion is unnecessary for this board, as it lacks an NPU accelerator.</source>
         <translation>对于该板来说，模型转换是不必要的，因为它缺乏NPU加速器。</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <source>Convert Model</source>
         <translation>转换模型</translation>
     </message>
@@ -335,8 +335,8 @@
         <translation type="vanished">工作空間管理器</translation>
     </message>
     <message>
-        <source>&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;What is a Workspace?&lt;/a&gt;</source>
-        <translation type="vanished">&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;什麼是工作空間？&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;什麼是工作空間？&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Workspace</source>
@@ -639,7 +639,7 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Request Copilot suggestion at the current editor's cursor position.</source>
+        <source>Request Copilot suggestion at the current editor&apos;s cursor position.</source>
         <translation>在当前编辑的光标位置请求Copilot建议。</translation>
     </message>
     <message>
@@ -893,8 +893,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>無法開啟"%1"的編輯器。</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>無法開啟&quot;%1&quot;的編輯器。</translation>
     </message>
     <message>
         <location line="+28" />
@@ -929,7 +929,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-2268" />
         <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+445" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
@@ -1027,8 +1027,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+74" />
-        <source>An item named "%1" already exists at this location. Do you want to overwrite it?</source>
-        <translation>在這個位置已經有一個名為"%1"的項目。您想覆蓋它嗎？</translation>
+        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
+        <translation>在這個位置已經有一個名為&quot;%1&quot;的項目。您想覆蓋它嗎？</translation>
     </message>
     <message>
         <location line="+230" />
@@ -1155,12 +1155,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+7" />
-        <source>X-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>目前編輯器相對於螢幕而言的左上角 X 軸座標。</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Y-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>目前編輯器相對於螢幕而言的左上角 Y 軸座標。</translation>
     </message>
     <message>
@@ -1170,27 +1170,27 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <source>The text file "%1" has the size %2MB and might take more memory to open and process than available.
+        <source>The text file &quot;%1&quot; has the size %2MB and might take more memory to open and process than available.
 
 Continue?</source>
-        <translation>文字檔"%1"的大小為%2MB，可能需要更多的記憶體才能開啟和處理。
+        <translation>文字檔&quot;%1&quot;的大小為%2MB，可能需要更多的記憶體才能開啟和處理。
 
 繼續嗎？</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>Could not open "%1": Cannot open files of type "%2".</source>
-        <translation>無法開啟"%1"：無法開啟"%2"類型的檔案。</translation>
+        <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
+        <translation>無法開啟&quot;%1&quot;：無法開啟&quot;%2&quot;類型的檔案。</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not open "%1" for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>無法開啟"%1"進行讀取。檔案不存在或者您沒有開啟它的權限。</translation>
+        <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
+        <translation>無法開啟&quot;%1&quot;進行讀取。檔案不存在或者您沒有開啟它的權限。</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Could not open "%1": Unknown error.</source>
-        <translation>無法開啟"%1"：未知錯誤。</translation>
+        <source>Could not open &quot;%1&quot;: Unknown error.</source>
+        <translation>無法開啟&quot;%1&quot;：未知錯誤。</translation>
     </message>
     <message>
         <location line="+1130" />
@@ -1267,17 +1267,17 @@ Continue?</source>
     </message>
     <message>
         <location line="+308" />
-        <source>Close "%1"</source>
-        <translation>關閉 "%1"</translation>
+        <source>Close &quot;%1&quot;</source>
+        <translation>關閉 &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+27" />
-        <source>Unpin "%1"</source>
+        <source>Unpin &quot;%1&quot;</source>
         <translation>運氣“%1”</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Pin "%1"</source>
+        <source>Pin &quot;%1&quot;</source>
         <translation>引腳“%1”</translation>
     </message>
     <message>
@@ -1403,7 +1403,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+2" />
-        <source>Don't Round</source>
+        <source>Don&apos;t Round</source>
         <translation>不要绕过</translation>
     </message>
     <message>
@@ -1555,7 +1555,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+35" />
-        <source>Command line arguments used for "Run in terminal".</source>
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
         <translation>用於“在終端中運行”的命令行參數。</translation>
     </message>
     <message>
@@ -1580,7 +1580,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+105" />
-        <source>Command line arguments used for "%1".</source>
+        <source>Command line arguments used for &quot;%1&quot;.</source>
         <translation>用於“%1”的命令行參數。</translation>
     </message>
     <message>
@@ -1637,7 +1637,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+147" />
-        <source>Maximum number of entries in "Recent Files":</source>
+        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
         <translation>“最近文件”中的最大條目數：</translation>
     </message>
     <message>
@@ -1698,7 +1698,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>輸出</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1773" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1787" />
         <source>&amp;File</source>
         <translation>檔案(&amp;F)</translation>
     </message>
@@ -1723,7 +1723,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>說明(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+122" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+128" />
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2620" />
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
@@ -1748,15 +1748,15 @@ provided they were unmodified before the refactoring.</source>
         <translation>全部儲存(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-279" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>退出%1？</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+106" />
         <source>&amp;View</source>
-        <translation>＆看法</translation>
+        <translation>&amp;看法</translation>
     </message>
     <message>
         <location line="+72" />
@@ -1766,7 +1766,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+6" />
         <source>&amp;New Project...</source>
-        <translation>＆新項目...</translation>
+        <translation>&amp;新項目...</translation>
     </message>
     <message>
         <location line="+9" />
@@ -1913,7 +1913,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+11" />
         <source>Pr&amp;eferences...</source>
-        <translation>偏好...</translation>
+        <translation>偏好... (&amp;E)</translation>
     </message>
     <message>
         <location line="+26" />
@@ -1947,7 +1947,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the "%2" action from the "%3" locator filter (%4).</source>
+        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the &quot;%2&quot; action from the &quot;%3&quot; locator filter (%4).</source>
         <translation>这将完全隐藏菜单栏。 您可以通过键入%1。&lt;br&gt; &lt;br&gt;再次显示它，或者从“%3”定位器过滤器（%4）触发“%2”动作。</translation>
     </message>
     <message>
@@ -2001,7 +2001,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>隱</translation>
     </message>
     <message>
-        <location line="+460" />
+        <location line="+474" />
         <source>Version:</source>
         <translation>版本：</translation>
     </message>
@@ -2021,7 +2021,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>&lt;p&gt;可以通過 Qt Creator 郵件列表聯繫 Qt Creator 開發人員：&lt;/p&gt;%1&lt;p&gt;或 Libera.Chat IRC 上的 #qt-creator 頻道：&lt;/p&gt;%2&lt;p&gt;我們的錯誤跟踪器位於 %3。&lt;/p&gt;&lt;p&gt;請使用 %4 來獲取更大的文本塊。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-803" />
+        <location line="-817" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -2054,7 +2054,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+240" />
+        <location line="+244" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>開啟文件</translation>
@@ -2076,8 +2076,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Close All Except "%1"</source>
-        <translation>除了 "%1" 以外全部關閉</translation>
+        <source>Close All Except &quot;%1&quot;</source>
+        <translation>除了 &quot;%1&quot; 以外全部關閉</translation>
     </message>
     <message>
         <location line="+1" />
@@ -2113,16 +2113,16 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+927" />
-        <location line="+13" />
-        <location line="+11" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location line="+16" />
+        <location line="+14" />
         <source>Save Log</source>
         <translation>保存日志</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-617" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
         <source>Clear</source>
         <translation>清除</translation>
     </message>
@@ -2263,7 +2263,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+51" />
-        <source>Failed to open preset file "%1" for reading.</source>
+        <source>Failed to open preset file &quot;%1&quot; for reading.</source>
         <translation>无法打开预设文件“%1”进行阅读。</translation>
     </message>
     <message>
@@ -2278,12 +2278,12 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+16" />
-        <source>Failed to write logs to "%1".</source>
+        <source>Failed to write logs to &quot;%1&quot;.</source>
         <translation>無法將日誌寫入“%1”。</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open file "%1" for writing logs.</source>
+        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
         <translation>無法打開文件“%1”以寫入日誌。</translation>
     </message>
     <message>
@@ -2292,7 +2292,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+45" />
-        <source>Failed to write preset file "%1".</source>
+        <source>Failed to write preset file &quot;%1&quot;.</source>
         <translation>無法寫入預設文件“%1”。</translation>
     </message>
     <message>
@@ -2301,12 +2301,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>加載啟用的類別</translation>
     </message>
     <message>
-        <source>Failed to open preset file "%1" for reading</source>
+        <source>Failed to open preset file &quot;%1&quot; for reading</source>
         <translation type="vanished">無法打開預設文件“%1”進行讀取</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Failed to read preset file "%1": %2</source>
+        <source>Failed to read preset file &quot;%1&quot;: %2</source>
         <translation>無法讀取預設文件“%1”：%2</translation>
     </message>
     <message>
@@ -2342,7 +2342,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+64" />
         <source>Out&amp;put</source>
-        <translation>輸出</translation>
+        <translation>輸出 (&amp;P)</translation>
     </message>
     <message>
         <location line="+406" />
@@ -2466,29 +2466,29 @@ provided they were unmodified before the refactoring.</source>
         <translation>行程</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-75" />
         <source>&amp;Diff</source>
         <translation>比較(&amp;D)</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Do &amp;Not Save</source>
-        <translation>不要保存</translation>
+        <translation>不要保存 (&amp;N)</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+72" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
-        <translation>比較&amp;&amp;取消</translation>
+        <translation>比較&amp;&amp;取消 (&amp;D)</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Save All</source>
-        <translation>＆保存全部</translation>
+        <translation>&amp;保存全部</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Diff All &amp;&amp; Cancel</source>
-        <translation>比較全部&amp;&amp;取消</translation>
+        <translation>比較全部&amp;&amp;取消 (&amp;D)</translation>
     </message>
     <message>
         <location line="+4" />
@@ -2498,7 +2498,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+1" />
         <source>&amp;Diff Selected &amp;&amp; Cancel</source>
-        <translation>比較所選內容&amp;&amp;取消</translation>
+        <translation>比較所選內容&amp;&amp;取消 (&amp;D)</translation>
     </message>
     <message>
         <location line="+15" />
@@ -2570,12 +2570,12 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+4" />
-        <source>Use "Cmd", "Opt", "Ctrl", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
+        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>使用「Cmd」、「Opt」、「Ctrl」和「Shift」作為修改鍵。使用「Escape」、「Backspace」、「Delete」、「Insert」、「Home」等作為特殊鍵。將各個鍵用「+」群組合在一起，將多個捷徑用「,”群組合成一個捷徑序列。例如，如果使用者必須在按住Escape鍵的同時按住Ctrl和Shift修改鍵，然後鬆開並按A，則輸入「Ctrl+Shift+Escape,A」。</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Use "Ctrl", "Alt", "Meta", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
+        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>使用「Cmd」、「Alt」、「Meta」和「Shift」作為修改鍵。使用「Escape」、「Backspace」、「Delete」、「Insert」、「Home」等作為特殊鍵。將各個鍵用「+」群組合在一起，將多個捷徑用「,」群組合成一個捷徑序列。例如，如果使用者必須在按住Escape鍵的同時按住Ctrl和Shift修改鍵，然後鬆開並按A，則輸入「Ctrl+Shift+Escape,A」。</translation>
     </message>
     <message>
@@ -2585,8 +2585,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+24" />
-        <source>Key sequence has potential conflicts. &lt;a href="#conflicts"&gt;Show.&lt;/a&gt;</source>
-        <translation>按鍵序列有潛在的衝突。&lt;a href="#conflicts"&gt;顯示。&lt;/a&gt;</translation>
+        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
+        <translation>按鍵序列有潛在的衝突。&lt;a href=&quot;#conflicts&quot;&gt;顯示。&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+122" />
@@ -2611,7 +2611,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+7" />
         <source>Search f&amp;or:</source>
-        <translation>搜索：</translation>
+        <translation>搜索： (&amp;O)</translation>
     </message>
     <message>
         <location line="+14" />
@@ -2631,7 +2631,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="-9" />
         <source>&amp;Case sensitive</source>
-        <translation>＆區分大小寫</translation>
+        <translation>&amp;區分大小寫</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+312" />
@@ -2645,7 +2645,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-333" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-335" />
         <source>Open Advanced Find...</source>
         <translation>開啟進階搜尋...</translation>
     </message>
@@ -2667,12 +2667,11 @@ provided they were unmodified before the refactoring.</source>
         <translation>輸入搜尋字串</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+E</source>
-        <translation>Ctrl+E</translation>
+        <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Find Next</source>
         <translation>尋找下一個</translation>
     </message>
@@ -2692,24 +2691,24 @@ provided they were unmodified before the refactoring.</source>
         <translation>取代並且搜尋前一個</translation>
     </message>
     <message>
-        <location line="-246" />
-        <location line="+259" />
+        <location line="-248" />
+        <location line="+261" />
         <source>Replace All</source>
         <translation>全部取代</translation>
     </message>
     <message>
-        <location line="-309" />
+        <location line="-311" />
         <source>Find Flags</source>
         <translation>查找標誌</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+235" />
+        <location line="+237" />
         <source>Replace &amp;&amp; Find</source>
         <translation>取代並搜尋</translation>
     </message>
     <message>
-        <location line="-148" />
+        <location line="-150" />
         <location line="+13" />
         <source>Shift+Enter</source>
         <translation>Shift+Enter</translation>
@@ -2726,7 +2725,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>搜尋/取代</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+59" />
         <source>Find Next (Selected)</source>
         <translation>尋找下一個(所選)</translation>
     </message>
@@ -2785,7 +2784,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>取代為...</translation>
     </message>
     <message>
-        <location line="-520" />
+        <location line="-522" />
         <source>Find</source>
         <translation>尋找</translation>
     </message>
@@ -2824,7 +2823,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+705" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
         <source>Collapse All</source>
         <translation>全部摺疊</translation>
     </message>
@@ -2851,7 +2850,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+225" />
+        <location line="+227" />
         <source>Replace</source>
         <translation>取代</translation>
     </message>
@@ -2867,11 +2866,11 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Open file "%1" with:</source>
-        <translation>開啟檔案"%1"方式：</translation>
+        <source>Open file &quot;%1&quot; with:</source>
+        <translation>開啟檔案&quot;%1&quot;方式：</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-455" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
         <source>Show Hidden Files</source>
         <translation>顯示隱藏文件</translation>
     </message>
@@ -2897,15 +2896,15 @@ provided they were unmodified before the refactoring.</source>
         <translation>新增檔案</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="+156" />
         <location line="+78" />
         <source>New Folder</source>
         <translation>新資料夾</translation>
     </message>
     <message>
         <location line="-18" />
-        <source>Open "%1"</source>
-        <translation>開啟 "%1"</translation>
+        <source>Open &quot;%1&quot;</source>
+        <translation>開啟 &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -2965,7 +2964,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>消除...</translation>
     </message>
     <message>
-        <location line="-618" />
+        <location line="-622" />
         <source>Synchronize with Editor</source>
         <translation>與編輯器同步</translation>
     </message>
@@ -3000,7 +2999,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>一般目錄篩選</translation>
     </message>
     <message>
-        <source>Matches all files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
+        <source>Matches all files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation type="vanished">匹配一組自定義目錄中的所有文件。附加“+&lt;number&gt;”或“:&lt;number&gt;”可跳轉到給定的行號。附加另一個“+&lt;number&gt;”或“:&lt;number&gt;”也可以跳轉到列號。</translation>
     </message>
     <message>
@@ -3152,7 +3151,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-78" />
-        <source>Locates files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
+        <source>Locates files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation>从自定义的目录集找到文件。 附加“+&lt;数字&gt;”或“：&lt;数字&gt;”跳到给定的行号。 附加另一个“+&lt;数字&gt;”或“：&lt;数字&gt;”也跳到列号。</translation>
     </message>
     <message>
@@ -3240,13 +3239,10 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;What to do with the executable's standard output.
+&lt;p&gt;What to do with the executable&apos;s standard output.
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation>&lt;html&gt;&lt;頭/&gt;&lt;正文&gt;
-&lt;p&gt;如何處理可執行文件的標準輸出。
-&lt;ul&gt;&lt;li&gt;忽略：不執行任何操作。&lt;/li&gt;&lt;li&gt;在常規消息中顯示。&lt;/li&gt;&lt;li&gt;替換選擇：用它替換當前文檔中的當前選擇。&lt;/li&gt; &lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7" />
@@ -3274,17 +3270,12 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
-&lt;p &gt;What to do with the executable's standard error output.&lt;/p&gt;
+&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
 &lt;li&gt;Show in General Messages.&lt;/li&gt;
 &lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;頭&gt;&lt;正文&gt;
-&lt;p&gt;如何處理可執行文件的標準錯誤輸出。&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;忽略：不對其執行任何操作。&lt;/li&gt;
-&lt;li&gt;在一般消息中顯示。&lt;/li&gt;
-&lt;li&gt;替換所選內容：將當前文檔中的當前所選內容替換為當前所選內容。&lt;/li&gt;
-&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12" />
@@ -3401,12 +3392,12 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <source>Opens a file given by a relative path to the current document, or absolute path. "~" refers to your home directory. You have the option to create a file if it does not exist yet.</source>
+        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
         <translation>打開由當前文檔的相對路徑或絕對路徑給出的文件。 “~”指的是你的主目錄。如果文件尚不存在，您可以選擇創建該文件。</translation>
     </message>
     <message>
-        <source>Create and Open "%1"</source>
-        <translation type="vanished">建立並開啟"%1"</translation>
+        <source>Create and Open &quot;%1&quot;</source>
+        <translation type="vanished">建立並開啟&quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-46" />
@@ -3415,7 +3406,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="-13" />
-        <source>Create "%1"?</source>
+        <source>Create &quot;%1&quot;?</source>
         <translation>創建“%1”？</translation>
     </message>
     <message>
@@ -3435,7 +3426,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <source>Cannot create file "%1".</source>
+        <source>Cannot create file &quot;%1&quot;.</source>
         <translation>无法创建文件“%1”。</translation>
     </message>
     <message>
@@ -3445,12 +3436,12 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+164" />
-        <source>Create and Open File "%1"</source>
+        <source>Create and Open File &quot;%1&quot;</source>
         <translation>创建并打开文件“%1”</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Create Directory "%1"</source>
+        <source>Create Directory &quot;%1&quot;</source>
         <translation>创建目录“%1”</translation>
     </message>
     <message>
@@ -3469,7 +3460,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>可使用的篩選器</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+557" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
         <source>Open as Centered Popup</source>
         <translation>作為居中彈出窗口打開</translation>
     </message>
@@ -3510,18 +3501,18 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+143" />
-        <source>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;開啟文件&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; 檔案 &gt;開啟檔案(%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; 檔案 &gt;示例 &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; 檔案&gt; 最近檔案&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; 在這裡拖放檔案&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;開啟文件&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 檔案 &gt;開啟檔案(%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 檔案 &gt;示例 &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 檔案&gt; 最近檔案&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; 在這裡拖放檔案&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+37" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- 輸入&lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;跳轉到類定義&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- 輸入&lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;跳轉到類定義&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- 輸入&lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;跳轉到類定義&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- 輸入&lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;跳轉到類定義&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+121" />
@@ -3597,7 +3588,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>自訂</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-113" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-116" />
         <source>Save Changes</source>
         <translation>儲存變更</translation>
     </message>
@@ -3731,14 +3722,14 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>偏好設定</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+488" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
         <source>Options</source>
         <translation>選項</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13" />
-        <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
+        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
         <translation>從翻譯者翻譯好的 ts 檔產生給應用程式使用的 qm 檔</translation>
     </message>
     <message>
@@ -3747,14 +3738,14 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>釋出翻譯 (lrelease)</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+5" />
         <source>Linguist</source>
         <translation>語言家</translation>
     </message>
     <message>
-        <location line="-12" />
-        <source>Synchronizes translator's ts files with the program code</source>
+        <location line="-2" />
+        <source>Synchronizes translator&apos;s ts files with the program code</source>
         <translation>將給翻譯者翻譯用的 ts 檔案與程式源碼同步</translation>
     </message>
     <message>
@@ -3774,13 +3765,13 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <location line="+10" />
+        <location line="+15" />
         <location line="+5" />
         <source>Text</source>
         <translation>文字</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-17" />
         <source>Runs the current QML file with QML utility.</source>
         <translation>使用 QML 實用程序運行當前的 QML 文件。</translation>
     </message>
@@ -3806,7 +3797,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Qt Quick 2 預覽版 (qmlscene)</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+4" />
         <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>在 vi 中開啟目前檔案</translation>
@@ -3824,7 +3815,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by "&gt;". For example "sess def" matches "File &gt; Sessions &gt; Default".</source>
+        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
         <translation>觸發一個動作。如果它來自菜單，則它與菜單層次結構的任何部分匹配，並用“&gt;”分隔。例如，“sess def”匹配“文件 &gt; 會話 &gt; 默認”。</translation>
     </message>
     <message>
@@ -3969,7 +3960,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+12" />
-        <source>The settings file "%1" is not writable.
+        <source>The settings file &quot;%1&quot; is not writable.
 You will not be able to store any %2 settings.</source>
         <translation>設置文件“%1”不可寫。
 您將無法存儲任何 %2 設置。</translation>
@@ -3986,7 +3977,7 @@ You will not be able to store any %2 settings.</source>
     </message>
     <message>
         <location line="+4" />
-        <source>Error reading settings file "%1": %2
+        <source>Error reading settings file &quot;%1&quot;: %2
 You will likely experience further problems using this instance of %3.</source>
         <translation>讀取設置文件“%1”時出錯：%2
 使用 %3 的此實例時您可能會遇到更多問題。</translation>
@@ -4058,8 +4049,8 @@ You will likely experience further problems using this instance of %3.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Select encoding for "%1".%2</source>
-        <translation>為 "%1" 選擇編碼 。%2</translation>
+        <source>Select encoding for &quot;%1&quot;.%2</source>
+        <translation>為 &quot;%1&quot; 選擇編碼 。%2</translation>
     </message>
     <message>
         <location line="+49" />
@@ -4241,7 +4232,7 @@ Do you want to check them out now?</source>
 是否要現在檢查它們？</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-943" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-948" />
         <source>Restart Required</source>
         <translation>需要重新啟動</translation>
     </message>
@@ -4277,22 +4268,22 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
-        <source>Could not find executable for "%1" (expanded "%2")</source>
-        <translation>無法找到"%1"(展開的"%2")的可執行檔</translation>
+        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
+        <translation>無法找到&quot;%1&quot;(展開的&quot;%2&quot;)的可執行檔</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>Starting external tool "%1"</source>
+        <source>Starting external tool &quot;%1&quot;</source>
         <translation>正在啟動外部工具“%1”</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>"%1" finished</source>
-        <translation>"%1"已完成</translation>
+        <source>&quot;%1&quot; finished</source>
+        <translation>&quot;%1&quot;已完成</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" finished with error</source>
+        <source>&quot;%1&quot; finished with error</source>
         <translation>“%1”已完成，但有錯誤</translation>
     </message>
     <message>
@@ -4330,10 +4321,10 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>"%1" returned the following error:
+        <source>&quot;%1&quot; returned the following error:
 
 %2</source>
-        <translation>"%1"返回了以下錯誤：
+        <translation>&quot;%1&quot;返回了以下錯誤：
 
 %2</translation>
     </message>
@@ -4343,7 +4334,7 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <source>Could not find explorer.exe in path to launch Windows Explorer.</source>
-        <translation type="vanished">在路徑中找不到 explorer.exe，無法啟動　Windows Explorer。</translation>
+        <translation type="vanished">在路徑中找不到 explorer.exe，無法啟動&#x3000;Windows Explorer。</translation>
     </message>
     <message>
         <location line="+30" />
@@ -4393,23 +4384,23 @@ Do you want to check them out now?</source>
     <message>
         <location line="+6" />
         <source>Open Command Prompt With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>打開命令提示符</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open Terminal With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>打開終端</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file "%1".</source>
-        <translation>無法刪除檔案"%1"。</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>無法刪除檔案&quot;%1&quot;。</translation>
     </message>
     <message>
         <location line="+40" />
-        <source>Failed to rename the include guard in file "%1".</source>
+        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
         <translation>無法重命名文件“%1”中的包含保護。</translation>
     </message>
     <message numerus="yes">
@@ -4420,7 +4411,7 @@ Do you want to check them out now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+369" />
+        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+394" />
         <source>Case sensitive</source>
         <translation>區分大小寫</translation>
     </message>
@@ -4462,12 +4453,12 @@ Do you want to check them out now?</source>
     <message>
         <location line="+1" />
         <source>&amp;Search Again</source>
-        <translation>＆再次搜索</translation>
+        <translation>&amp;再次搜索</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Repla&amp;ce with:</source>
-        <translation>用。。。來代替：</translation>
+        <translation>用。。。來代替： (&amp;C)</translation>
     </message>
     <message>
         <location line="+6" />
@@ -4482,7 +4473,7 @@ Do you want to check them out now?</source>
     <message>
         <location line="+1" />
         <source>&amp;Replace</source>
-        <translation>＆代替</translation>
+        <translation>&amp;代替</translation>
     </message>
     <message>
         <location line="+75" />
@@ -4492,8 +4483,8 @@ Do you want to check them out now?</source>
     <message numerus="yes">
         <location line="+18" />
         <source>The search resulted in more than %n items, do you still want to continue?</source>
-        <translation>
-            <numerusform>搜尋結果超過了%n%n項目，您還想繼續嗎？</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4561,8 +4552,8 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
-        <source>Factory with id="%1" already registered. Deleting.</source>
-        <translation>id="%1"的工廠已經註冊。正在刪除。</translation>
+        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
+        <translation>id=&quot;%1&quot;的工廠已經註冊。正在刪除。</translation>
     </message>
     <message>
         <location line="+230" />
@@ -4576,17 +4567,17 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
-        <source>Error in "%1": %2</source>
-        <translation>"%1"中的錯誤：%2</translation>
+        <source>Error in &quot;%1&quot;: %2</source>
+        <translation>&quot;%1&quot;中的錯誤：%2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>Cannot convert result of "%1" to string.</source>
-        <translation>無法將"%1"的結果轉換為字串。</translation>
+        <source>Cannot convert result of &quot;%1&quot; to string.</source>
+        <translation>無法將&quot;%1&quot;的結果轉換為字串。</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal '}' characters must be escaped as "\}", '\' characters must be escaped as "\\", and "%{" must be escaped as "%\{".</source>
+        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
         <translation>評估簡單的 JavaScript 語句。&lt;br&gt;文字“}”字符必須轉義為“\}”，“\”字符必須轉義為“\\”，“%{”必須轉義為“%\{”。</translation>
     </message>
     <message>
@@ -4601,9 +4592,9 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location line="+68" />
-        <source>Previous command is still running ("%1").
+        <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
-        <translation>上一個命令仍在運行("%1")。
+        <translation>上一個命令仍在運行(&quot;%1&quot;)。
 是否要終止它？</translation>
     </message>
     <message>
@@ -4613,13 +4604,13 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+46" />
-        <source>Could not find executable for "%1".</source>
-        <translation>無法找到"%1"的可執行檔。</translation>
+        <source>Could not find executable for &quot;%1&quot;.</source>
+        <translation>無法找到&quot;%1&quot;的可執行檔。</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Starting command "%1".</source>
-        <translation>正在啟動命令"%1"。</translation>
+        <source>Starting command &quot;%1&quot;.</source>
+        <translation>正在啟動命令&quot;%1&quot;。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+21" />
@@ -4674,7 +4665,7 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
-        <source>Locator: Error occurred when running "%1".</source>
+        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
         <translation>定位器：運行“%1”時出錯。</translation>
     </message>
     <message>
@@ -4689,7 +4680,7 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Locator query string with quotes escaped with backslash and spaces replaced with "*" wildcards.</source>
+        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
         <translation>定位器查詢字符串，其中引號用反斜杠轉義，空格用“*”通配符替換。</translation>
     </message>
     <message>
@@ -4704,7 +4695,7 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
+        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation>从全局文件系统索引（聚光灯，定位，所有内容）找到文件。 附加“+&lt;数字&gt;”或“：&lt;数字&gt;”跳到给定的行号。 附加另一个“+&lt;数字&gt;”或“：&lt;数字&gt;”也跳到列号。</translation>
     </message>
     <message>
@@ -4713,7 +4704,7 @@ Do you want to kill it?</source>
         <translation>排序结果</translation>
     </message>
     <message>
-        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
+        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation type="vanished">匹配全局文件系統索引（Spotlight、Locate、Everything）中的文件。附加“+&lt;number&gt;”或“:&lt;number&gt;”可跳轉到給定的行號。附加另一個“+&lt;number&gt;”或“:&lt;number&gt;”也可以跳轉到列號。</translation>
     </message>
     <message>
@@ -4723,7 +4714,7 @@ Do you want to kill it?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110" />
-        <source>Add "%1" placeholder for the query string.
+        <source>Add &quot;%1&quot; placeholder for the query string.
 Double-click to edit item.</source>
         <translation>為查詢字符串添加“%1”佔位符。
 雙擊可編輯項目。</translation>
@@ -4759,13 +4750,13 @@ Double-click to edit item.</source>
         <translation>新增魔法標題</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME魔法資料按照由&lt;a href="http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;中的共用MIME-info資料庫規範的定義解釋。&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME魔法資料按照由&lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;中的共用MIME-info資料庫規範的定義解釋。&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; Mime Magic Data解释为由共享MIME-INFO数据库规范定义的，&lt;a href =“ https://www.freedesktop.org/wiki/wiki/specifications/specifications/specifications/specifications/specifications/shared--shared---- mime-info-spec/“&gt; freedesktop.org &lt;/a&gt;。&lt;hr/&gt; &lt;/p&gt; &lt;/p&gt; &lt;/hody&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -4819,8 +4810,8 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;注意：較大範圍的值可能會影響打開文件時的性能。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;注意：較大範圍的值可能會影響打開文件時的性能。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4899,13 +4890,13 @@ Double-click to edit item.</source>
 </translation>
     </message>
     <message>
-        <location line="+298" />
+        <location line="+308" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>文本文件 (*.txt);;所有的文件 (*)</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+11" />
+        <location line="+14" />
         <source>Error: %L1!</source>
         <translation>錯誤：%L1!</translation>
     </message>
@@ -4936,22 +4927,22 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>There is no patch-command configured in the general "Environment" settings.</source>
+        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
         <translation>在一般「環境」設定中沒有設定修補程式命令。</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The patch-command configured in the general "Environment" settings does not exist.</source>
+        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
         <translation>常規“環境”設置中配置的補丁命令不存在。</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Running in "%1": %2 %3.</source>
+        <source>Running in &quot;%1&quot;: %2 %3.</source>
         <translation>在“%1”中运行：%2%3。</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>A timeout occurred running "%1".</source>
+        <source>A timeout occurred running &quot;%1&quot;.</source>
         <translation>暂停运行“%1”。</translation>
     </message>
     <message>
@@ -4960,22 +4951,22 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="-11" />
-        <source>Unable to launch "%1": %2</source>
-        <translation>無法啟動 "%1"：%2</translation>
+        <source>Unable to launch &quot;%1&quot;: %2</source>
+        <translation>無法啟動 &quot;%1&quot;：%2</translation>
     </message>
     <message>
-        <source>A timeout occurred running "%1"</source>
-        <translation type="vanished">運行"%1"時發生逾時</translation>
+        <source>A timeout occurred running &quot;%1&quot;</source>
+        <translation type="vanished">運行&quot;%1&quot;時發生逾時</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>"%1" crashed.</source>
-        <translation>"%1" 已崩潰。</translation>
+        <source>&quot;%1&quot; crashed.</source>
+        <translation>&quot;%1&quot; 已崩潰。</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"%1" failed (exit code %2).</source>
-        <translation>"%1"失敗(退出代碼%2)。</translation>
+        <source>&quot;%1&quot; failed (exit code %2).</source>
+        <translation>&quot;%1&quot;失敗(退出代碼%2)。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
@@ -5068,7 +5059,7 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>"%1" will be installed into "%2".</source>
+        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
         <translation>“%1”將安裝到“%2”中。</translation>
     </message>
     <message>
@@ -5078,7 +5069,7 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The file "%1" exists. Overwrite?</source>
+        <source>The file &quot;%1&quot; exists. Overwrite?</source>
         <translation>文件“%1”存在。覆蓋？</translation>
     </message>
     <message>
@@ -5093,7 +5084,7 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to write file "%1".</source>
+        <source>Failed to write file &quot;%1&quot;.</source>
         <translation>無法寫入文件“%1”。</translation>
     </message>
     <message>
@@ -5313,7 +5304,7 @@ to version control (%2)
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
-        <source>Could not parse patch file "%1". The content is not of unified diff format.</source>
+        <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
         <translation>無法解析補丁文件“%1”。內容沒有統一的 diff 格式。</translation>
     </message>
     <message>
@@ -5393,22 +5384,22 @@ to version control (%2)
     </message>
     <message>
         <location line="+52" />
-        <source>Diff "%1"</source>
-        <translation>比較 "%1"</translation>
+        <source>Diff &quot;%1&quot;</source>
+        <translation>比較 &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+28" />
         <source>Select First File for Diff</source>
         <translation>選擇第一個文件進行差異</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+7" />
         <source>Select Second File for Diff</source>
         <translation>選擇第二個文件進行差異</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>Diff "%1", "%2"</source>
+        <location line="+10" />
+        <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
         <translation>差異“%1”、“%2”</translation>
     </message>
     <message>
@@ -5428,7 +5419,7 @@ to version control (%2)
     </message>
     <message>
         <location line="+31" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding.</source>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
         <translation>&lt;b&gt;錯誤：&lt;/b&gt;無法使用“%2”編碼解碼“%1”。</translation>
     </message>
     <message>
@@ -5588,8 +5579,8 @@ to version control (%2)
     </message>
     <message>
         <location line="+1" />
-        <source>%1 (current: "%2")</source>
-        <translation>%1 (目前："%2")</translation>
+        <source>%1 (current: &quot;%2&quot;)</source>
+        <translation>%1 (目前：&quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5628,7 +5619,7 @@ to version control (%2)
     </message>
     <message>
         <location line="+4" />
-        <source>Plugin's initialization function succeeded.</source>
+        <source>Plugin&apos;s initialization function succeeded.</source>
         <translation>外掛程式初始化已成功執行。</translation>
     </message>
     <message>
@@ -5869,7 +5860,7 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The last time you started %1, it seems to have closed because of a problem with the "%2" plugin. Temporarily disable the plugin?</source>
+        <source>The last time you started %1, it seems to have closed because of a problem with the &quot;%2&quot; plugin. Temporarily disable the plugin?</source>
         <translation>上次啟動 %1 時，它似乎因“%2”插件出現問題而關閉。暫時禁用該插件？</translation>
     </message>
     <message>
@@ -5886,25 +5877,25 @@ Reason: %3</source>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
-        <source>The plugin "%1" is specified twice for testing.</source>
-        <translation>外掛程式"%1"被指定兩次以進行測試。</translation>
+        <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
+        <translation>外掛程式&quot;%1&quot;被指定兩次以進行測試。</translation>
     </message>
     <message>
         <location line="+7" />
         <location line="+18" />
         <location line="+47" />
         <location line="+25" />
-        <source>The plugin "%1" does not exist.</source>
-        <translation>外掛程式"%1"不存在。</translation>
+        <source>The plugin &quot;%1&quot; does not exist.</source>
+        <translation>外掛程式&quot;%1&quot;不存在。</translation>
     </message>
     <message>
         <location line="-79" />
-        <source>The plugin "%1" is not tested.</source>
-        <translation>外掛程式"%1"未經測試。</translation>
+        <source>The plugin &quot;%1&quot; is not tested.</source>
+        <translation>外掛程式&quot;%1&quot;未經測試。</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Cannot request scenario "%1" as it was already requested.</source>
+        <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
         <translation>無法請求方案“%1”，因為它已被請求。</translation>
     </message>
     <message>
@@ -5924,8 +5915,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency '%1(%2)'</source>
-        <translation>無法解決相依性 '%1(%2)'</translation>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation>無法解決相依性 &apos;%1(%2)&apos;</translation>
     </message>
     <message>
         <location line="+61" />
@@ -5939,8 +5930,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="-416" />
-        <source>"%1" is missing</source>
-        <translation>"%1"缺失</translation>
+        <source>&quot;%1&quot; is missing</source>
+        <translation>&quot;%1&quot;缺失</translation>
     </message>
     <message>
         <location line="-24" />
@@ -5949,28 +5940,28 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+29" />
-        <source>Value for key "%1" is not a string</source>
-        <translation>鍵"%1"的值不是一個字串</translation>
+        <source>Value for key &quot;%1&quot; is not a string</source>
+        <translation>鍵&quot;%1&quot;的值不是一個字串</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a bool</source>
-        <translation>鍵"%1"的值不是一個布林值</translation>
+        <source>Value for key &quot;%1&quot; is not a bool</source>
+        <translation>鍵&quot;%1&quot;的值不是一個布林值</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not an array of objects</source>
-        <translation>鍵"%1"的值不是一個物件陣列</translation>
+        <source>Value for key &quot;%1&quot; is not an array of objects</source>
+        <translation>鍵&quot;%1&quot;的值不是一個物件陣列</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a string and not an array of strings</source>
-        <translation>鍵"%1"的值不是一個字串，也不是一個字串陣列</translation>
+        <source>Value for key &quot;%1&quot; is not a string and not an array of strings</source>
+        <translation>鍵&quot;%1&quot;的值不是一個字串，也不是一個字串陣列</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Value "%2" for key "%1" has invalid format</source>
-        <translation>鍵"%1"的值"%2"格式無效</translation>
+        <source>Value &quot;%2&quot; for key &quot;%1&quot; has invalid format</source>
+        <translation>鍵&quot;%1&quot;的值&quot;%2&quot;格式無效</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5979,7 +5970,7 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected IID "%1", but found "%2"</source>
+        <source>Expected IID &quot;%1&quot;, but found &quot;%2&quot;</source>
         <translation>预计IID“%1”，但发现“%2”</translation>
     </message>
     <message>
@@ -5989,8 +5980,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+108" />
-        <source>Invalid platform specification "%1": %2</source>
-        <translation>無效的平臺規範"%1"：%2</translation>
+        <source>Invalid platform specification &quot;%1&quot;: %2</source>
+        <translation>無效的平臺規範&quot;%1&quot;：%2</translation>
     </message>
     <message>
         <location line="+18" />
@@ -6003,7 +5994,7 @@ Reason: %3</source>
     </message>
     <message>
         <location line="+13" />
-        <source>Dependency: "%1" must be "%2" or "%3" (is "%4").</source>
+        <source>Dependency: &quot;%1&quot; must be &quot;%2&quot; or &quot;%3&quot; (is &quot;%4&quot;).</source>
         <translation>相關性：“%1”必須是“%2”或“%3”（是“%4”）。</translation>
     </message>
     <message>
@@ -6016,8 +6007,8 @@ Reason: %3</source>
     </message>
     <message>
         <location line="-13" />
-        <source>Argument: "%1" is empty</source>
-        <translation>參數："%1"為空</translation>
+        <source>Argument: &quot;%1&quot; is empty</source>
+        <translation>參數：&quot;%1&quot;為空</translation>
     </message>
     <message>
         <location line="+182" />
@@ -6174,12 +6165,12 @@ Would you like to overwrite it?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+161" />
-        <source>Exported "%1", %2x%3, %4 bytes</source>
+        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
         <translation>已導出“%1”，%2x%3，%4 字節</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Could not write file "%1".</source>
+        <source>Could not write file &quot;%1&quot;.</source>
         <translation>無法寫入文件“%1”。</translation>
     </message>
     <message>
@@ -6351,7 +6342,7 @@ Would you like to overwrite it?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>A comma-separated list of size specifications of the form "&lt;width&gt;x&lt;height&gt;".</source>
+        <source>A comma-separated list of size specifications of the form &quot;&lt;width&gt;x&lt;height&gt;&quot;.</source>
         <translation>以逗號分隔的尺寸規格列表，格式為“&lt;寬度&gt;x&lt;高度&gt;”。</translation>
     </message>
     <message>
@@ -6397,7 +6388,7 @@ Would you like to overwrite them?</source>
         <translation>错误%1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+60" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
         <source>Deprecated</source>
         <translation>弃用</translation>
     </message>
@@ -6422,7 +6413,7 @@ Would you like to overwrite them?</source>
         <translation>衍生的</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+212" />
         <source>Call Hierarchy</source>
         <translation>调用层次结构</translation>
     </message>
@@ -6432,13 +6423,13 @@ Would you like to overwrite them?</source>
         <translation>重新加载呼叫层次结构在光标位置下的符号。</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+394" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
         <translation>%1 for%2</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+230" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>非传统化</translation>
@@ -6481,14 +6472,14 @@ Would you like to overwrite them?</source>
     </message>
     <message>
         <location line="+1342" />
-        <source>Invalid parameter in "%1":
+        <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
         <translation>“%1”中的无效参数：
  %2</translation>
     </message>
     <message>
         <location line="+219" />
-        <source>Language Server "%1" Initialization Error</source>
+        <source>Language Server &quot;%1&quot; Initialization Error</source>
         <translation>语言服务器“%1”初始化错误</translation>
     </message>
     <message>
@@ -6563,7 +6554,7 @@ Would you like to overwrite them?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientinterface.cpp" line="+77" />
-        <source>Cannot handle MIME type "%1" of message.</source>
+        <source>Cannot handle MIME type &quot;%1&quot; of message.</source>
         <translation>无法处理消息的MIME类型“%1”。</translation>
     </message>
     <message>
@@ -6582,7 +6573,7 @@ Would you like to overwrite them?</source>
         <translation>出乎意料的结束。</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+217" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+82" />
         <source>Expand All</source>
         <translation>扩展全部</translation>
@@ -6615,12 +6606,12 @@ Would you like to overwrite them?</source>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+185" />
         <source>&amp;Add</source>
-        <translation>＆添加</translation>
+        <translation>&amp;添加</translation>
     </message>
     <message>
         <location line="+11" />
         <source>&amp;Delete</source>
-        <translation>＆删除</translation>
+        <translation>&amp;删除</translation>
     </message>
     <message>
         <location line="+106" />
@@ -6666,7 +6657,7 @@ Example: *.cpp%1*.h</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Language server-specific JSON to pass via "initializationOptions" field of "initialize" request.</source>
+        <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
         <translation>语言服务器特定的JSON通过“初始化”请求的“初始化”字段传递。</translation>
     </message>
     <message>
@@ -6744,8 +6735,8 @@ See the documentation of the specific language server for valid settings.</sourc
     <message numerus="yes">
         <location line="+21" />
         <source>Re&amp;name %n files</source>
-        <translation>
-            <numerusform>RE＆NAME%N文件</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -6803,22 +6794,22 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+6" />
-        <source>Running "%1" to install %2.</source>
+        <source>Running &quot;%1&quot; to install %2.</source>
         <translation>运行“%1”以安装%2。</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>The installation of "%1" was canceled by timeout.</source>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>“%1”的安装被超时取消。</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
         <translation>用户取消了“%1”的安装。</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Installing "%1" failed with exit code %2.</source>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
         <translation>安装“%1”失败，出口代码%2。</translation>
     </message>
     <message>
@@ -6926,32 +6917,32 @@ See the documentation of the specific language server for valid settings.</sourc
     <name>QtC::LanguageServerProtocol</name>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
-        <source>Cannot decode content with "%1". Falling back to "%2".</source>
+        <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
         <translation>无法用“%1”解码内容。 回到“%2”。</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Expected an integer in "%1", but got "%2".</source>
+        <source>Expected an integer in &quot;%1&quot;, but got &quot;%2&quot;.</source>
         <translation>预计“%1”中的整数，但获得了“%2”。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
-        <source>Could not parse JSON message: "%1".</source>
+        <source>Could not parse JSON message: &quot;%1&quot;.</source>
         <translation>无法解析JSON消息：“%1”。</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected a JSON object, but got a JSON "%1" value.</source>
+        <source>Expected a JSON object, but got a JSON &quot;%1&quot; value.</source>
         <translation>期待一个JSON对象，但具有JSON“%1”值。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
-        <source>No parameters in "%1".</source>
+        <source>No parameters in &quot;%1&quot;.</source>
         <translation>“%1”中没有参数。</translation>
     </message>
     <message>
         <location line="+213" />
-        <source>No ID set in "%1".</source>
+        <source>No ID set in &quot;%1&quot;.</source>
         <translation>“%1”中未设置ID。</translation>
     </message>
     <message>
@@ -7040,7 +7031,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7052,60 +7043,60 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+156" />
         <location line="+823" />
         <source>Dataset Editor</source>
         <translation>數據集編輯器</translation>
     </message>
     <message>
-        <location line="-364" />
+        <location line="-366" />
         <source>Please enter a class name</source>
         <translation>請輸入班級名稱</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+604" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+412" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+70" />
+        <location line="+72" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-732" />
         <location line="+19" />
-        <location line="+115" />
-        <location line="+1483" />
+        <location line="+111" />
+        <location line="+1514" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+124" />
-        <location line="+180" />
-        <location line="+308" />
+        <location line="+139" />
+        <location line="+202" />
+        <location line="+306" />
         <location line="+13" />
-        <location line="+168" />
-        <location line="+145" />
+        <location line="+169" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
-        <location line="+254" />
+        <location line="+117" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+378" />
+        <location line="+273" />
         <location line="+86" />
-        <location line="+1017" />
-        <location line="+895" />
+        <location line="+1142" />
+        <location line="+1075" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+539" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
         <location line="+19" />
         <location line="+11" />
@@ -7113,8 +7104,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>錯誤：%L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3475" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-309" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3541" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7124,30 +7115,30 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+9" />
         <location line="+25" />
         <location line="+9" />
-        <source>Failed to create "%L1"!</source>
-        <translation>无法创建"%L1"!</translation>
+        <source>Failed to create &quot;%L1&quot;!</source>
+        <translation>无法创建&quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2513" />
-        <location line="+1446" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
+        <location line="+33" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
+        <location line="+1442" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>因為未知的原因，無法儲存影像檔！</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581" />
-        <location line="+239" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
+        <location line="+224" />
         <source>Delete</source>
         <translation>刪除</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309" />
-        <source>Are you sure you want to permanetly delete "%L1"?</source>
-        <translation>您確定要永久刪除"%L1"嗎？</translation>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
+        <translation>您確定要永久刪除&quot;%L1&quot;嗎？</translation>
     </message>
     <message>
         <location line="-86" />
@@ -7172,10 +7163,10 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>由於未知原因，無法重命名文件！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5164" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5247" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>無法將檔案"%1"複製到"%2"。</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>無法將檔案&quot;%1&quot;複製到&quot;%2&quot;。</translation>
     </message>
     <message>
         <source>Invalid argument (%1) for -override_read_timeout</source>
@@ -7199,19 +7190,19 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>-serial_number_filter 缺少參數</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+145" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2349" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2677" />
         <location line="+9" />
         <location line="+13" />
-        <location line="+59" />
+        <location line="+63" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+830" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
         <location line="+36" />
         <location line="+7" />
@@ -7220,13 +7211,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+7" />
         <source>
 
-Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>
 
 請關閉任何正在檢視/編輯OpenMV IDE應用程式資料的程式，然後重新啟動OpenMV IDE！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-65" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>使用閾值編輯器編輯灰階閾值</translation>
     </message>
@@ -7236,17 +7227,17 @@ Please close any programs that are viewing/editing OpenMV IDE's application data
         <translation>使用閾值編輯器編輯LAB閾值</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+221" />
         <source>Missing argument for -form_key</source>
         <translation>-form_key缺少參數</translation>
     </message>
     <message>
-        <location line="+1066" />
+        <location line="+1074" />
         <source>About OpenMV Viewer...</source>
         <translation>關於OpenMV Viewer...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;約 %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;作者：Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU 通用公共許可證&lt;/b&gt;&lt;/p&gt;&lt;p&gt;版權所有 （C） %L2 %L3&lt;/p&gt;&lt;p&gt;該程式的分發希望是有用的，但沒有任何保證;甚至沒有對適銷性或特定用途適用性的暗示保證。有關詳細資訊，請參閱 &lt;a href=“https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT”&gt;GNU 通用公共許可證&lt;/a&gt;。&lt;/p&gt;&lt;p&gt;&lt;b&gt;問題或意見？&lt;/b&gt;&lt;/p&gt;&lt;p&gt;請撥打 &lt;a href=“mailto:openmv@openmv.io”聯繫我們&gt;openmv@openmv.io&lt;/a&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
@@ -7255,7 +7246,7 @@ Please close any programs that are viewing/editing OpenMV IDE's application data
         <translation>OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1039" />
+        <location line="-1050" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -7268,7 +7259,7 @@ Please close any programs that are viewing/editing OpenMV IDE's application data
         <translation type="vanished">缺少 -override_per_command_wait 的參數</translation>
     </message>
     <message>
-        <location line="-460" />
+        <location line="-468" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>-auto_update 的參數 （%1） 無效</translation>
     </message>
@@ -7278,7 +7269,7 @@ Please close any programs that are viewing/editing OpenMV IDE's application data
         <translation>缺少 -auto_update 的參數</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+248" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7291,7 +7282,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">错误读取&lt;user_resources&gt;/openmvide/firmware/settings.json：%L1。\ n \ n \ nopenmv IDE v4.3.0之前没有此文件，并且会在安装资源时将其删除。</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+188" />
         <source>Form Key</source>
         <translation>表單鍵</translation>
     </message>
@@ -7301,7 +7292,7 @@ Check the json file for errors and fix them.</source>
         <translation>請輸入表單鍵</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+80" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7311,7 +7302,7 @@ Check the json file for errors and fix them.</source>
         <location line="-13" />
         <location line="+7" />
         <location line="+7" />
-        <source>Can't open the new file!</source>
+        <source>Can&apos;t open the new file!</source>
         <translation>無法開啟新檔案！</translation>
     </message>
     <message>
@@ -7321,8 +7312,8 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Add some code to "%L1"</source>
-        <translation>将一些代码添加到"%L1"</translation>
+        <source>Add some code to &quot;%L1&quot;</source>
+        <translation>将一些代码添加到&quot;%L1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -7358,7 +7349,7 @@ Check the json file for errors and fix them.</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <source>Are you sure you want to erase your OpenMV Cam's onboard flash drive?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s onboard flash drive?</source>
         <translation type="vanished">您確定要刪除OpenMV Cam的內置閃存驅動器嗎？</translation>
     </message>
     <message>
@@ -7392,7 +7383,7 @@ Check the json file for errors and fix them.</source>
         <translation>自動在您的 OpenMV Cam 和 Documents 資料夾之間同步庫。</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+24" />
         <source>Filter examples by board and sensor type</source>
         <translation>按電路板和感測器類型劃分的濾波器示例</translation>
     </message>
@@ -7422,40 +7413,40 @@ Check the json file for errors and fix them.</source>
         <translation>重設OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Install the Latest Development Release</source>
         <translation>安裝最新的開發版本</translation>
     </message>
     <message>
-        <location line="+77" />
-        <location line="+3764" />
+        <location line="+75" />
+        <location line="+3823" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>開啟終端</translation>
     </message>
     <message>
-        <location line="-3818" />
+        <location line="-3877" />
         <source>Machine Vision</source>
         <translation>機器視覺</translation>
     </message>
     <message>
-        <location line="+181" />
-        <location line="+3668" />
-        <location line="+76" />
+        <location line="+175" />
+        <location line="+3733" />
+        <location line="+75" />
         <source>Threshold Editor</source>
         <translation>閾值編輯器</translation>
     </message>
     <message>
-        <location line="-3739" />
-        <location line="+3817" />
+        <location line="-3803" />
+        <location line="+3880" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>關鍵點編輯器</translation>
     </message>
     <message>
-        <location line="-3810" />
-        <location line="+3976" />
-        <location line="+98" />
+        <location line="-3873" />
+        <location line="+4037" />
+        <location line="+97" />
         <location line="+24" />
         <location line="+11" />
         <location line="+18" />
@@ -7463,7 +7454,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag產生器</translation>
     </message>
     <message>
-        <location line="-4124" />
+        <location line="-4184" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5家族(30標籤)</translation>
     </message>
@@ -7501,16 +7492,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+371" />
+        <location line="+367" />
         <location line="+14" />
         <location line="+33" />
-        <location line="+916" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
-        <source>Failed to open: "%L1"</source>
-        <translation>無法開啟："%L1"</translation>
+        <location line="+918" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-223" />
+        <source>Failed to open: &quot;%L1&quot;</source>
+        <translation>無法開啟：&quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1358" />
+        <location line="-1356" />
         <source>DataMatrix Generator</source>
         <translation>DataMatrix碼產生器</translation>
     </message>
@@ -7536,29 +7527,29 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">在OpenMV Cam上保存网络的位置</translation>
     </message>
     <message>
-        <location line="+228" />
-        <location line="+2357" />
-        <location line="+1290" />
+        <location line="+225" />
+        <location line="+2424" />
+        <location line="+1288" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
-        <location line="+67" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382" />
-        <location line="+364" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899" />
-        <location line="+208" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-393" />
+        <location line="+375" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+900" />
+        <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>請添加文件擴展名！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-269" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+112" />
-        <location line="+207" />
+        <location line="+119" />
+        <location line="+203" />
         <source>Unable to overwrite output file!</source>
         <translation>無法覆蓋輸出檔！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3860" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3922" />
         <source>Video Tools</source>
         <translation>視頻工具</translation>
     </message>
@@ -7574,23 +7565,23 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-437" />
-        <location line="+273" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-439" />
+        <location line="+275" />
         <source>Play RTSP Stream</source>
         <translation>播放 RTSP 流</translation>
     </message>
     <message>
         <location line="+16" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+15" />
         <location line="+6" />
-        <location line="+46" />
+        <location line="+48" />
         <location line="+19" />
         <source>New Dataset</source>
         <translation>新數據集</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-98" />
         <source>Dataset Editor - Choose a folder to build the dataset in</source>
         <translation>數據集編輯器-選擇要在其中構建數據集的文件夾</translation>
     </message>
@@ -7601,17 +7592,17 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+15" />
-        <location line="+207" />
+        <location line="+205" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-209" />
         <location line="+34" />
         <location line="+48" />
         <location line="+33" />
-        <source>Failed to remove "%L1"!</source>
-        <translation>无法移除"%L1"!</translation>
+        <source>Failed to remove &quot;%L1&quot;!</source>
+        <translation>无法移除&quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-128" />
-        <location line="+30" />
+        <location line="-125" />
+        <location line="+29" />
         <source>Open Dataset</source>
         <translation>打開數據集</translation>
     </message>
@@ -7626,7 +7617,7 @@ Check the json file for errors and fix them.</source>
         <translation>所選文件夾似乎不是有效的OpenMV Cam圖像數據集！</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export</source>
         <translation>出口</translation>
     </message>
@@ -7636,7 +7627,7 @@ Check the json file for errors and fix them.</source>
         <translation>將數據集導出到Zip文件</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <location line="+7" />
         <location line="+42" />
         <location line="+21" />
@@ -7654,38 +7645,38 @@ Check the json file for errors and fix them.</source>
         <translation>出口...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-520" />
-        <location line="+237" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-522" />
+        <location line="+239" />
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1482" />
+        <location line="+1513" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+258" />
-        <location line="+533" />
-        <location line="+145" />
+        <location line="+273" />
+        <location line="+554" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location line="+433" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
-        <location line="+288" />
-        <location line="+143" />
-        <location line="+1023" />
+        <location line="+117" />
+        <location line="+428" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-131" />
+        <location line="+289" />
+        <location line="+165" />
+        <location line="+1148" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1339" />
         <location line="+85" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3673" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3737" />
         <source>Upload to Edge Impulse Project</source>
         <translation>上載到Edge Impulse項目</translation>
     </message>
@@ -7764,8 +7755,8 @@ Check the json file for errors and fix them.</source>
         <translation>關於OpenMV IDE...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;關於OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;通過: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;版權 (C) %L2 %L3&lt;/p&gt;&lt;p&gt;分發該程序是希望它會有用，但是沒有任何保證；甚至沒有針對特定目的的適銷性或適用性的暗示保證. 見 &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; 更多細節.&lt;/p&gt;&lt;p&gt;&lt;b&gt;有疑問或意見嗎？&lt;/b&gt;&lt;/p&gt;&lt;p&gt;與我們聯繫 &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;關於OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;通過: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;版權 (C) %L2 %L3&lt;/p&gt;&lt;p&gt;分發該程序是希望它會有用，但是沒有任何保證；甚至沒有針對特定目的的適銷性或適用性的暗示保證. 見 &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; 更多細節.&lt;/p&gt;&lt;p&gt;&lt;b&gt;有疑問或意見嗎？&lt;/b&gt;&lt;/p&gt;&lt;p&gt;與我們聯繫 &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
@@ -7786,11 +7777,11 @@ Check the json file for errors and fix them.</source>
         <translation>OpenMV 查看器</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+73" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
         <location line="+37" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-221" />
         <location line="+87" />
         <location line="+55" />
@@ -7826,11 +7817,11 @@ Check the json file for errors and fix them.</source>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-195" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-197" />
         <location line="+9" />
-        <location line="+89" />
-        <location line="+13" />
-        <location line="+42" />
+        <location line="+95" />
+        <location line="+11" />
+        <location line="+40" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
@@ -7860,53 +7851,61 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1064" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1189" />
         <location line="+6" />
         <location line="+28" />
         <location line="+52" />
         <location line="+8" />
         <location line="+35" />
-        <location line="+320" />
-        <location line="+62" />
-        <location line="+99" />
-        <location line="+49" />
-        <location line="+67" />
-        <location line="+12" />
-        <location line="+77" />
+        <location line="+329" />
+        <location line="+136" />
+        <location line="+28" />
+        <location line="+100" />
+        <location line="+56" />
+        <location line="+68" />
+        <location line="+13" />
+        <location line="+81" />
         <location line="+10" />
         <location line="+12" />
         <location line="+28" />
-        <location line="+36" />
-        <location line="+84" />
+        <location line="+34" />
+        <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+86" />
+        <location line="+97" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
-        <location line="+108" />
+        <location line="+116" />
         <location line="+83" />
-        <location line="+42" />
-        <location line="+38" />
-        <location line="+52" />
-        <location line="+38" />
+        <location line="+82" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+46" />
+        <location line="+54" />
+        <location line="+51" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
         <location line="+21" />
         <location line="+20" />
         <location line="+24" />
-        <location line="+121" />
-        <location line="+214" />
+        <location line="+135" />
+        <location line="+217" />
         <location line="+33" />
-        <location line="+248" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+658" />
+        <location line="+268" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+668" />
         <location line="+48" />
         <source>Connect</source>
         <translation>連線</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-42" />
         <source>No settings for the selected board type %L1!</source>
         <translation>所选板类型%L1没有设置！</translation>
     </message>
@@ -7917,12 +7916,12 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Only firmware recovery is supported using the Alif Semiconductor's SE Tools.</source>
+        <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>仅使用Alif半导体的SE工具支持固件恢复。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
         <source>Disconnect</source>
@@ -7981,12 +7980,11 @@ Check the json file for errors and fix them.</source>
         <translation>縮放到合適大小</translation>
     </message>
     <message>
-        <location line="+30" />
         <source>JPG</source>
-        <translation>JPG</translation>
+        <translation type="vanished">JPG</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+31" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG壓縮畫面緩衝其區以獲得更高的性能</translation>
     </message>
@@ -8005,7 +8003,7 @@ Check the json file for errors and fix them.</source>
         <translation>禁用畫面緩衝區以獲得最佳性能</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+52" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>禁用畫面緩衝區 - 再次按一下禁用按鈕以啟用(右上角)</translation>
     </message>
@@ -8074,17 +8072,15 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">解析度 (w:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1574" />
+        <location line="-1582" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>错误阅读&lt;user_resources&gt;/openmvide/firmware/settings.json：%l1。 
-
-v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将其删除。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2512" />
+        <location line="+346" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2858" />
         <source>Load Custom Firmware</source>
         <translation>加载自定义固件</translation>
     </message>
@@ -8096,7 +8092,7 @@ v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将�
     </message>
     <message>
         <location line="+1" />
-        <source>Are you sure you want to erase your OpenMV Cam's internal FAT file system?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s internal FAT file system?</source>
         <translation>您确定要删除OpenMV凸轮的内部脂肪文件系统吗？</translation>
     </message>
     <message>
@@ -8125,15 +8121,20 @@ v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将�
         <translation>在OpenMV凸轮上重置romfs</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+84" />
+        <source>Force enter OpenMV Cam bootloader</source>
+        <translation>強制進入 OpenMV Cam 開機載入程序</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>MicroPython Tools</source>
         <translation>Micropython工具</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+6" />
         <location line="+7" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -8143,39 +8144,50 @@ v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将�
         <translation>复制/转换Python文件</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Open Model Zoo</source>
         <translation>开放模型动物园</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+87" />
         <source>Convert Model for NPU</source>
         <translation>转换NPU的模型</translation>
     </message>
     <message>
+        <location line="+6" />
+        <location line="+9" />
+        <location line="+12" />
         <location line="+7" />
-        <location line="+10" />
-        <location line="+13" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-176" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>转换模型</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location line="+420" />
         <source>Show Code Profiler</source>
         <translation>显示代码分析器</translation>
     </message>
     <message>
         <location line="+101" />
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;关于 %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;作者：Ibrahim Abdelkader 和 Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;工厂版本&lt;/b&gt;&lt;/p&gt;&lt;p&gt;仅适用于获得许可的制造商。&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU 通用公共许可证&lt;/b&gt;&lt;/p&gt;&lt;p&gt;版权所有 (C) %L2 %L3&lt;/p&gt;&lt;p&gt;分发此程序的目的是希望它有用，但不提供任何保证； 甚至没有适销性或特定用途适用性的默示保证。 有关更多详细信息，请参阅 &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU 通用公共许可证&lt;/a&gt;。&lt;/p&gt;&lt;p&gt;&lt;b&gt;有问题或意见吗？&lt;/b&gt;&lt;/p&gt;&lt;p&gt;请通过 &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt; 与我们联系。&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;关于 %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;作者：Ibrahim Abdelkader 和 Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;工厂版本&lt;/b&gt;&lt;/p&gt;&lt;p&gt;仅适用于获得许可的制造商。&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU 通用公共许可证&lt;/b&gt;&lt;/p&gt;&lt;p&gt;版权所有 (C) %L2 %L3&lt;/p&gt;&lt;p&gt;分发此程序的目的是希望它有用，但不提供任何保证； 甚至没有适销性或特定用途适用性的默示保证。 有关更多详细信息，请参阅 &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU 通用公共许可证&lt;/a&gt;。&lt;/p&gt;&lt;p&gt;&lt;b&gt;有问题或意见吗？&lt;/b&gt;&lt;/p&gt;&lt;p&gt;请通过 &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt; 与我们联系。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+196" />
+        <location line="+26" />
+        <source>JPG Mode</source>
+        <translation>JPG模式</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>RAW Mode</source>
+        <translation>原始模式</translation>
+    </message>
+    <message>
+        <location line="+113" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>解析度 （w：%1， h：%2） - ROI （x：%3， y：%4， w：%5， h：%6） - 像素 （%7） - 焦點 （%8）</translation>
@@ -8213,7 +8225,7 @@ v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将�
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2737" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
         <source>Board:</source>
         <translation>板:</translation>
     </message>
@@ -8257,9 +8269,9 @@ v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将�
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-301" />
-        <location line="+303" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
+        <location line="+324" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
         <source>Drive:</source>
         <translation>驅動：</translation>
     </message>
@@ -8280,8 +8292,8 @@ v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将�
         <translation>可能與相機FPS不同</translation>
     </message>
     <message>
-        <location line="+309" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2952" />
+        <location line="+307" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
         <source>Update Available</source>
         <translation>更新可用</translation>
     </message>
@@ -8296,7 +8308,7 @@ v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将�
         <translation>下載</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
         <translation>禁用WiFi程式設計！</translation>
     </message>
@@ -8334,11 +8346,11 @@ v4.3.0之前的OpenMV IDE版本没有此文件，并且会在安装资源时将�
         <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
-Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
 
 Blinking Green:
 
-Your OpenMV Cam's onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
 
 Blinking Blue:
 
@@ -8346,11 +8358,11 @@ Your OpenMV Cam is running the default main.py script onboard.
 
 If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
 
-If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+If the LED is blinking blue but OpenMV IDE can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
 
 Blinking White:
 
-Your OpenMV Cam's firmware is panicking because of a hardware failure. Please check that your OpenMV Cam's camera module is installed securely.
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
         <translation>感謝您使用OpenMV Cam和OpenMV IDE！
@@ -8375,27 +8387,27 @@ OpenMV Cam的板載LED閃爍著不同的顏色，以指示其狀態：
     </message>
     <message>
         <location line="+93" />
-        <location line="+1176" />
+        <location line="+1212" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>序列埠 - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1144" />
+        <location line="-1180" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+791" />
-        <location line="+145" />
+        <location line="+827" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
+        <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>正在連線...(30秒逾時)</translation>
     </message>
     <message>
-        <location line="-1783" />
+        <location line="-1820" />
         <source>
 
 Try doing:
@@ -8448,12 +8460,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1233" />
+        <location line="+1270" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP伺服器連線 - %1</translation>
     </message>
     <message>
-        <location line="-1159" />
+        <location line="-1196" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>無效的-open_udp_server_terminal埠參數(%1)</translation>
     </message>
@@ -8484,12 +8496,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1279" />
+        <location line="+1317" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP伺服器連線 - %1</translation>
     </message>
     <message>
-        <location line="-1205" />
+        <location line="-1243" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>無效的-open_tcp_server_terminal埠參數(%1)</translation>
     </message>
@@ -8499,15 +8511,17 @@ sudo adduser %L1 dialout
         <translation>缺少-open_tcp_server_terminal的參數</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+58" />
         <location line="+18" />
+        <location line="+6" />
+        <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
         <location line="+9" />
         <location line="+45" />
-        <location line="+79" />
-        <location line="+8" />
+        <location line="+82" />
+        <location line="+27" />
         <location line="+6" />
         <location line="+6" />
         <location line="+6" />
@@ -8516,15 +8530,15 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2389" />
-        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location line="+10" />
         <location line="+8" />
-        <location line="+19" />
+        <location line="+22" />
         <source>Register OpenMV Cam</source>
         <translation>註冊OpenMV Cam</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="-278" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8544,13 +8558,24 @@ ID：%2
     </message>
     <message>
         <location line="+7" />
-        <location line="+17" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65" />
+        <location line="+29" />
+        <location line="+172" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-69" />
         <source>Registered</source>
         <translation>挂号的</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-190" />
+        <source>Board type not available for this form key!</source>
+        <translation>板類型不適用於此表單鍵！</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Registration limit reached for this board type!</source>
+        <translation>此板類型已達到註冊限制！</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8566,27 +8591,27 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
     </message>
     <message>
         <location line="+17" />
-        <location line="+182" />
+        <location line="+204" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>資料庫錯誤！</translation>
     </message>
     <message>
-        <location line="-165" />
-        <location line="+178" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+17" />
+        <location line="-187" />
+        <location line="+200" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+18" />
         <source>GET Network error!</source>
         <translation>GET網路錯誤！</translation>
     </message>
     <message>
-        <location line="-169" />
-        <location line="+177" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+19" />
+        <location line="-191" />
+        <location line="+199" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+22" />
         <source>GET network error!</source>
         <translation>GET網路錯誤！</translation>
     </message>
     <message>
-        <location line="-170" />
+        <location line="-192" />
         <location line="+10" />
         <location line="+10" />
         <source>Unregistered OpenMV Cam Detected</source>
@@ -8594,7 +8619,7 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
     </message>
     <message>
         <location line="-19" />
-        <source>Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
         <translation>您的OpenMV Cam尚未註冊。您需要使用OpenMV註冊您的OpenMV Cam，才能無限制地使用OpenMV IDE。
@@ -8621,8 +8646,8 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+19" />
-        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href="https://openmv.io/products/openmv-cam-board-key"&gt;here&lt;/a&gt;.</source>
-        <translation>請輸入主機板金鑰以註冊您的OpenMV Cam。&lt;br/&gt;&lt;br/&gt;如果您沒有主機板金鑰，您可以從OpenMV&lt;a href="https://openmv.io/products/openmv-cam-board-key"&gt;這裡&lt;/a&gt;購買一個。</translation>
+        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>請輸入主機板金鑰以註冊您的OpenMV Cam。&lt;br/&gt;&lt;br/&gt;如果您沒有主機板金鑰，您可以從OpenMV&lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;這裡&lt;/a&gt;購買一個。</translation>
     </message>
     <message>
         <location line="+47" />
@@ -8630,12 +8655,12 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>正在註冊OpenMV Cam...</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+33" />
         <source>Thank you for registering your OpenMV Cam!</source>
         <translation>感謝您註冊OpenMV Cam！</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+27" />
         <source>Invalid Board Key for Board Type!</source>
         <translation>板類型的板密鑰無效！</translation>
     </message>
@@ -8660,10 +8685,10 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>主機板金鑰格式不正確！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+223" />
-        <location line="+482" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+225" />
+        <location line="+503" />
         <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-83" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-84" />
         <source>FPS: 0</source>
         <translation>FPS：0</translation>
     </message>
@@ -8672,7 +8697,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">組態設定</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+389" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+395" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>儲存指令碼</translation>
@@ -8683,7 +8708,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>去除注解並將空格轉換為定位字元？</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
@@ -8700,8 +8725,8 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>影像檔(*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Template</source>
@@ -8714,26 +8739,26 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+23" />
-        <location line="+67" />
+        <location line="+65" />
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>請在OpenMV Cam上選擇一個有效的路徑！</translation>
     </message>
     <message>
-        <location line="-52" />
-        <location line="+67" />
-        <source>"%L1" is longer than a max length of %L2 characters!</source>
-        <translation>"%L1"長於%L2的最大字元長度！</translation>
+        <location line="-50" />
+        <location line="+65" />
+        <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
+        <translation>&quot;%L1&quot;長於%L2的最大字元長度！</translation>
     </message>
     <message>
-        <location line="-40" />
-        <location line="+7" />
+        <location line="-41" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Descriptor</source>
         <translation>儲存描述元</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8741,7 +8766,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>關鍵點檔(*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1113" />
+        <location line="-1112" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8759,17 +8784,17 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="-19" />
         <location line="+13" />
-        <source>Cannot open the file "%L1"!</source>
-        <translation>无法打开文件"%L1"!</translation>
+        <source>Cannot open the file &quot;%L1&quot;!</source>
+        <translation>无法打开文件&quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="-13" />
         <location line="+13" />
-        <source>Cannot open the example file "%L1"!</source>
-        <translation>無法開啟示例檔案"%L1"！</translation>
+        <source>Cannot open the example file &quot;%L1&quot;!</source>
+        <translation>無法開啟示例檔案&quot;%L1&quot;！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-467" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-468" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>選擇驅動</translation>
@@ -8780,8 +8805,8 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>沒有發現與您的OpenMV Cam關聯的有效驅動！</translation>
     </message>
     <message>
-        <source>"%L1" is the only drive available so it must be your OpenMV Cam's drive.</source>
-        <translation type="vanished">"%L1"是唯一可用的驅動，因此它必須是您的OpenMV Cam的驅動。</translation>
+        <source>&quot;%L1&quot; is the only drive available so it must be your OpenMV Cam&apos;s drive.</source>
+        <translation type="vanished">&quot;%L1&quot;是唯一可用的驅動，因此它必須是您的OpenMV Cam的驅動。</translation>
     </message>
     <message>
         <location line="+27" />
@@ -8789,12 +8814,12 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>請將驅動與您的OpenMV Cam相關聯</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>Drive: %L1</source>
         <translation>驅動：%L1</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+42" />
         <source>Debug Protocol Settings</source>
         <translation>調試協議設置</translation>
     </message>
@@ -8864,30 +8889,30 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>代码分析器轮询（毫秒）</translation>
     </message>
     <message>
-        <location line="+354" />
+        <location line="+391" />
         <location line="+26" />
         <location line="+7" />
-        <source>Failed to flush "%L1"!</source>
+        <source>Failed to flush &quot;%L1&quot;!</source>
         <translation>刷新“%L1”失败！</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34" />
-        <location line="+13" />
+        <location line="+12" />
         <location line="+31" />
         <location line="+9" />
-        <location line="+87" />
+        <location line="+89" />
         <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -8897,7 +8922,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>新終端</translation>
     </message>
     <message>
-        <location line="-637" />
+        <location line="-641" />
         <source>Connect to serial port</source>
         <translation>連線到序列埠</translation>
     </message>
@@ -8918,7 +8943,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2021" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2227" />
         <source>Please select a serial port</source>
         <translation>請選擇一個序列埠</translation>
     </message>
@@ -8928,7 +8953,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>請輸入一個傳輸速率</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+96" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
         <source>Try doing:
 
@@ -8945,15 +8970,15 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+17" />
-        <location line="+138" />
+        <location line="+139" />
         <location line="+7" />
-        <location line="+236" />
+        <location line="+237" />
         <location line="+7" />
-        <source>Invalid string: "%L1"!</source>
-        <translation>無效的字串："%L1"！</translation>
+        <source>Invalid string: &quot;%L1&quot;!</source>
+        <translation>無效的字串：&quot;%L1&quot;！</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-381" />
         <source>No serial ports found!</source>
         <translation>找不到串行端口！</translation>
     </message>
@@ -8964,45 +8989,45 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+3" />
-        <location line="+243" />
+        <location line="+244" />
         <source> Connect to a Server </source>
         <translation> 連線到伺服器 </translation>
     </message>
     <message>
-        <location line="-242" />
-        <location line="+243" />
+        <location line="-243" />
+        <location line="+244" />
         <source> Start a Server </source>
         <translation> 啟動伺服器 </translation>
     </message>
     <message>
         <location line="-234" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>請輸入IP地址(或網域名稱)和埠(例如xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-222" />
         <source>UDP Client Connection - %1</source>
         <translation>UDP用戶端連線 - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>請輸入一個埠號(對於任意隨機埠輸入0)</translation>
     </message>
     <message>
-        <location line="-137" />
+        <location line="-138" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>作為用戶端連線到TCP伺服器還是啟動TCP伺服器？</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+36" />
         <source>TCP Client Connection - %1</source>
         <translation>TCP用戶端連線 - %1</translation>
     </message>
     <message>
-        <location line="+244" />
+        <location line="+243" />
         <source>Error: Option Index!</source>
         <translation>錯誤：選項索引！</translation>
     </message>
@@ -9027,7 +9052,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation> 影像檔 </translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>所選的閾值元組將在關閉時更新。</translation>
@@ -9043,8 +9068,8 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>影像檔</translation>
     </message>
     <message>
-        <location line="+71" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+70" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+704" />
         <source>What would you like to do?</source>
         <translation>您想做什麼？</translation>
     </message>
@@ -9059,7 +9084,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation> 合併檔案 </translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9109,12 +9134,12 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>由於未知的原因，無法載入第一個關鍵點檔！</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>What tag images from the %L1 tag family do you want to generate?</source>
         <translation>您想要產生哪些來自%L1標記系列的標記圖像？</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Min (%1)</source>
         <translation>最小(%1)</translation>
     </message>
@@ -9156,7 +9181,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>產生完成！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1510" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>新的 OpenMV IDE 資源可用（例如示例、固件、文檔等）。</translation>
     </message>
@@ -9167,42 +9192,42 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+7" />
-        <location line="+288" />
-        <location line="+143" />
+        <location line="+289" />
+        <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
         <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
         <location line="+46" />
-        <location line="+75" />
+        <location line="+73" />
         <location line="+46" />
-        <location line="+74" />
+        <location line="+72" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+400" />
         <location line="+50" />
-        <location line="+873" />
+        <location line="+871" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>正在下載...</translation>
     </message>
     <message>
-        <location line="-417" />
+        <location line="-440" />
         <source>Installing...</source>
         <translation>正在安裝...</translation>
     </message>
     <message>
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
-        <source>Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+        <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>請關閉任何正在檢視/編輯OpenMV IDE應用程式資料的程式，然後重新啟動OpenMV IDE！</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
         <translation>安裝成功！請重新啟動OpenMV IDE。</translation>
     </message>
@@ -9215,69 +9240,119 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-27" />
-        <location line="+254" />
+        <location line="+273" />
         <location line="+88" />
-        <source>Cannot open the resources file "%L1"!</source>
-        <translation>無法開啟資源檔"%L1"！</translation>
+        <source>Cannot open the resources file &quot;%L1&quot;!</source>
+        <translation>無法開啟資源檔&quot;%L1&quot;！</translation>
     </message>
     <message>
-        <location line="-314" />
-        <location line="+254" />
+        <location line="-333" />
+        <location line="+273" />
         <location line="+95" />
-        <source>Network request failed "%L1"!</source>
-        <translation>網路要求失敗"%L1"！</translation>
+        <source>Network request failed &quot;%L1&quot;!</source>
+        <translation>網路要求失敗&quot;%L1&quot;！</translation>
     </message>
     <message>
-        <location line="-315" />
+        <location line="-335" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation>固件二进制（ *.bin *.dfu *.img）</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+119" />
-        <location line="+588" />
-        <location line="+217" />
-        <location line="+2205" />
+        <location line="+12" />
+        <location line="+117" />
+        <location line="+720" />
+        <location line="+227" />
+        <location line="+2414" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>擦除内部脂肪文件系统</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+119" />
-        <location line="+589" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+117" />
+        <location line="+722" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
-        <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>如果启用此选项，则将删除OpenMV Cam的内部脂肪文件系统上的所有文件。 这不会在任何可移动的SD卡上删除文件（如果已插入）。</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+708" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+839" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>重置romfs文件系统</translation>
     </message>
     <message>
-        <location line="-3203" />
-        <location line="+708" />
-        <location line="+215" />
-        <location line="+2205" />
+        <location line="-3552" />
+        <location line="+840" />
+        <location line="+225" />
+        <location line="+2412" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>如果启用此选项，则OpenMV凸轮上的ROM文件系统将重置为默认值。</translation>
     </message>
     <message>
-        <location line="-3160" />
+        <location line="-3510" />
         <location line="+45" />
         <source>Bootloader</source>
         <translation>引導程式</translation>
     </message>
     <message>
-        <location line="+2991" />
+        <location line="+28" />
+        <source>Force bootloader</source>
+        <translation>強制引導程式</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Force enter the OpenMV Cam bootloader. May result in the OpenMV Cam bootloader not automatically exiting on older boards.</source>
+        <translation>強制進入 OpenMV Cam 開機載入程式。 可能會導致 OpenMV Cam 引導程式在舊板上無法自動退出。</translation>
+    </message>
+    <message>
+        <location line="+693" />
+        <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
+        <translation>安裝最新版本韌體 (v%L1.%L2.%L3)</translation>
+    </message>
+    <message>
+        <location line="+1063" />
+        <location line="+192" />
+        <source>Failed to copy firmware files to temporary directory!</source>
+        <translation>無法將韌體檔案複製到臨時目錄！</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Original firmware folder does not exist!</source>
+        <translation>原廠韌體資料夾不存在！</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Failed to create temporary directory!</source>
+        <translation>建立暫存目錄失敗！</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <source>Only loading bootloader.bin files is supported with the ST Cube Programmer!</source>
+        <translation>ST Cube Programmer 僅支援載入 bootloader.bin 檔案！</translation>
+    </message>
+    <message>
+        <location line="+151" />
+        <source>Bootloader update complete!
+
+</source>
+        <translation>引導程式更新完成！</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Connect your OpenMV Cam now.</source>
+        <translation>立即連接您的 OpenMV 相機。</translation>
+    </message>
+    <message>
+        <location line="+1377" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9286,8 +9361,8 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 特别是，请查看图像处理 -&gt; 颜色跟踪和机器学习 -&gt; TensorFlow 示例。</translation>
     </message>
     <message>
-        <location line="-3104" />
-        <location line="+4" />
+        <location line="-3455" />
+        <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
         <source>Firmware Path</source>
@@ -9302,26 +9377,26 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation type="vanished">擦除內部檔案系統</translation>
     </message>
     <message>
-        <source>If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">如果啟用此選項，則將刪除OpenMV Cam的內部閃存驅動器上的所有文件。這不會刪除任何可移動SD卡（如果已插入）上的文件。</translation>
     </message>
     <message>
-        <source>Loading firmware via DFU always erases your OpenMV Cam's internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
+        <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">通過DFU加載固件始終會擦除OpenMV Cam的內部閃存驅動器。這不會刪除任何可移動SD卡（如果已插入）上的文件。</translation>
     </message>
     <message>
         <location line="+21" />
-        <location line="+130" />
+        <location line="+148" />
         <source>Run</source>
         <translation>執行</translation>
     </message>
     <message>
-        <location line="-86" />
-        <source>"%L1" is not a file!</source>
-        <translation>"%L1"不是一個檔案！</translation>
+        <location line="-105" />
+        <source>&quot;%L1&quot; is not a file!</source>
+        <translation>&quot;%L1&quot;不是一個檔案！</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+67" />
         <source>Update ROMFS file system</source>
         <translation>更新ROMFS文件系统</translation>
     </message>
@@ -9331,7 +9406,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>如果启用此选项，则将在OpenMV凸轮上的ROM文件系统更新到最新的开发版本。</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+125" />
         <source>Extracting...</source>
         <translation>提取...</translation>
     </message>
@@ -9351,17 +9426,16 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>未知的董事会</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+344" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>檢測到DFU模式單板。你想幹什麼？</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Install the lastest release firmware (v%L1.%L2.%L3)</source>
-        <translation>安裝最新版本的固件（v%L1.%L2.%L3）</translation>
+        <translation type="vanished">安裝最新版本的固件（v%L1.%L2.%L3）</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Load a specific firmware</source>
         <translation>加載特定固件</translation>
     </message>
@@ -9370,36 +9444,35 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation type="vanished">只需擦除內部文件系統</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+92" />
         <source>No OpenMV Cams found!</source>
         <translation>沒有找到OpenMV Cams！</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+56" />
         <source>Do you have an OpenMV Cam connected and is it bricked?</source>
         <translation>您是否有連線的OpenMV Cam變磚了？</translation>
     </message>
     <message>
-        <location line="+849" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
-Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
-        <translation>仅支持加载 *.dfu文件。
+Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!</source>
+        <translation type="vanished">仅支持加载 *.dfu文件。
 
  请选择一个bootloader.dfu文件，然后重试。 请注意，由于芯片的ROM启动程序中的错误，加载instinware.dfu或openMV.DFU（bootloader +固件）可能无法在STM32H7板上工作！</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+987" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>仅加载 *.bin和 *.img文件。</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Only loading *.bin and *.img files are supported for the IMX bootloader!</source>
         <translation>仅支持加载 *.bin和 *.img文件。</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+107" />
         <source>Only loading *.bin, *.dfu, and *.img files are supported for the Arduino bootloader!</source>
         <translation>仅加载 *.bin， *.dfu和 *.img文件。</translation>
     </message>
@@ -9415,7 +9488,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
     </message>
     <message>
         <location line="+24" />
-        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
+        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
         <translation>请注意，由于芯片的ROM启动程序中的错误，加载instinware.dfu或openMV.DFU（bootloader +固件）可能无法在STM32H7板上工作！
@@ -9425,9 +9498,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-976" />
-        <location line="+657" />
-        <location line="+1750" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1398" />
+        <location line="+252" />
+        <location line="+681" />
+        <location line="+1936" />
         <source>Please select the board type</source>
         <translation>請選擇主機板類型</translation>
     </message>
@@ -9436,30 +9510,30 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">擦除內部檔案系統？</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2295" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2500" />
         <source>No released firmware available for the attached board!</source>
         <translation>沒有可用於所連接板的已發布固件！</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+61" />
         <source>Please select a DFU Device</source>
         <translation>請選擇一個DFU設備</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-83" />
         <location line="+170" />
         <location line="+44" />
-        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>請將引導加載程序更新到最新版本並安裝 SoftDevice 以刷新 OpenMV 固件。 更多信息可以在 &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt; 上找到</translation>
+        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>請將引導加載程序更新到最新版本並安裝 SoftDevice 以刷新 OpenMV 固件。 更多信息可以在 &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt; 上找到</translation>
     </message>
     <message>
-        <location line="-1065" />
-        <location line="+3012" />
+        <location line="-1191" />
+        <location line="+3343" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>警告：升级到新的固件版本需要删除脂肪文件系统。</translation>
     </message>
     <message>
-        <location line="-2527" />
+        <location line="-2848" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
@@ -9468,7 +9542,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 %1</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+173" />
         <source>Just erase the internal FAT file system</source>
         <translation>只需删除内部脂肪文件系统</translation>
     </message>
@@ -9483,17 +9557,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>重置ROM文件系统</translation>
     </message>
     <message>
-        <location line="+219" />
-        <location line="+2206" />
+        <location line="+229" />
+        <location line="+2415" />
         <source>Upgrade options:</source>
         <translation>升级选项：</translation>
     </message>
     <message>
-        <location line="-2122" />
+        <location line="-2327" />
         <location line="+169" />
         <location line="+44" />
-        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>請將 REC 短接到 GND 並重置您的電路板。 更多信息可以在 &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt; 上找到</translation>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>請將 REC 短接到 GND 並重置您的電路板。 更多信息可以在 &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt; 上找到</translation>
     </message>
     <message>
         <location line="+25" />
@@ -9505,7 +9579,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 （如果這需要5秒鐘以上，請取消）。</translation>
     </message>
     <message>
-        <location line="+132" />
+        <location line="+143" />
         <source>Timeout error while getting firmware version!</source>
         <translation>獲取韌體版本時出現逾時錯誤！</translation>
     </message>
@@ -9521,8 +9595,8 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+191" />
-        <location line="+570" />
+        <location line="+199" />
+        <location line="+733" />
         <source>Timeout error while getting board architecture!</source>
         <translation>獲取主機板架構時出現逾時錯誤！</translation>
     </message>
@@ -9531,7 +9605,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">不支援的主機板架構！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-633" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>斷開您的OpenMV Cam，然後重新連線...</translation>
@@ -9564,12 +9638,12 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+38" />
-        <source>Unable to connect to your OpenMV Cam's normal bootloader!</source>
+        <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>無法連線到您的OpenMV Cam的正常引導程式！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+129" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+131" />
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
         <translation>OpenMV IDE 仍然可以嘗試使用 OpenMV Cam 的 DFU 引導加載程序修復您的 OpenMV Cam。
@@ -9578,9 +9652,9 @@ Continue?</source>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-288" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
         <location line="+46" />
-        <location line="+195" />
+        <location line="+191" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>正在擦除...</translation>
@@ -9599,7 +9673,7 @@ Continue?</source>
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-837" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-835" />
         <location line="+41" />
         <location line="+51" />
         <location line="+44" />
@@ -9616,7 +9690,7 @@ Continue?</source>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+221" />
+        <location line="+219" />
         <location line="+50" />
         <location line="+51" />
         <location line="+42" />
@@ -9680,11 +9754,11 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
         <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
-        <source>Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.</source>
+        <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>當您的OpenMV Cam的RGB LED開始閃爍藍色時，單擊“確定”，這表明自檢完成。</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
@@ -9702,7 +9776,7 @@ Continue?</source>
 
 If you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py.
 
-In this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).</source>
+In this case click OK when you see your OpenMV Cam&apos;s internal flash drive mount (a window may or may not pop open).</source>
         <translation>
 
 如果您在OpenMV Cam上覆蓋了main.py並且沒有擦除磁盤，則您的OpenMV Cam將只運行該main.py。
@@ -9725,8 +9799,8 @@ In this case click OK when you see your OpenMV Cam's internal flash drive mount 
         <translation>未找到 IMX 設置！</translation>
     </message>
     <message>
-        <source>Failed to eject "%L1"!</source>
-        <translation type="vanished">無法彈出"%L1"！</translation>
+        <source>Failed to eject &quot;%L1&quot;!</source>
+        <translation type="vanished">無法彈出&quot;%L1&quot;！</translation>
     </message>
     <message>
         <location line="+14" />
@@ -9739,7 +9813,7 @@ Hit cancel to skip to SBL reprogramming.</source>
     </message>
     <message>
         <location line="+42" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
         <translation>OpenMV IDE 仍然可以嘗試使用 OpenMV Cam 的 SBL 引導加載程序修復您的 OpenMV Cam。
@@ -9750,7 +9824,7 @@ Continue?</source>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
         <translation>斷開 OpenMV Cam 與計算機的連接，在 SBL 和 3.3V 引腳之間添加跳線，然後將 OpenMV Cam 重新連接到計算機。
 
 枚舉 OpenMV Cam 的 SBL Bootloader 後，單擊“確定”按鈕。</translation>
@@ -9802,19 +9876,19 @@ Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</sour
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-345" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-347" />
         <source>No DFU settings for the selected board type!</source>
         <translation>所選板類型沒有DFU設置！</translation>
     </message>
     <message>
         <location line="+55" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+104" />
         <source>No DFU settings for the selected device!</source>
         <translation>所選設備沒有DFU設置！</translation>
     </message>
     <message>
         <location line="+32" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+47" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
         <source>Erasing Disk</source>
         <translation>擦除磁盤</translation>
@@ -9843,8 +9917,8 @@ Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</sour
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-933" />
-        <location line="+934" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-931" />
+        <location line="+932" />
         <source>Flashing Firmware</source>
         <translation>刷寫固件</translation>
     </message>
@@ -9890,17 +9964,17 @@ Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</sour
     </message>
     <message>
         <location line="+14" />
-        <source>Your %1 doesn't have an internal FAT file system.</source>
+        <source>Your %1 doesn&apos;t have an internal FAT file system.</source>
         <translation>您的%1没有内部脂肪文件系统。</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
-        <source>Your %1 doesn't have an ROM file system.</source>
+        <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>您的%1没有ROM文件系统。</translation>
     </message>
     <message>
-        <source>Your Nano 33 BLE doesn't have an onboard data flash disk.</source>
+        <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
         <translation type="vanished">您的 Nano 33 BLE 沒有板載數據閃存盤。</translation>
     </message>
     <message>
@@ -9961,7 +10035,7 @@ Continue?</source>
     </message>
     <message>
         <location line="+65" />
-        <source>DFU update erases your OpenMV Cam's internal flash file system.
+        <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
         <translation>DFU更新會擦除您的OpenMV Cam的內部快閃記憶體檔案系統。
@@ -9972,7 +10046,7 @@ Backup your data before continuing!</source>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.</source>
         <translation>斷開OpenMV Cam與電腦的連線，在BOOT和RST引腳之間新增跳線，然後將OpenMV Cam重新連線到電腦。
 
 在您的OpenMV Cam的DFU引導載入程式完成列舉後，按一下確定按鈕。</translation>
@@ -10025,13 +10099,13 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
         <translation>DFU 引導加載程序重置失敗！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-271" />
         <source>None</source>
         <translation>無</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+16" />
+        <location line="+30" />
         <location line="+56" />
         <source>Unknown</source>
         <translation>未知</translation>
@@ -10047,12 +10121,12 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
         <translation>未注册</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+94" />
         <source>Timeout error while learning MTU!</source>
         <translation>學習MTU時出現逾時錯誤！</translation>
     </message>
     <message>
-        <location line="+167" />
+        <location line="+170" />
         <source>Board: %L1</source>
         <translation>板: %L1</translation>
     </message>
@@ -10077,13 +10151,13 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
         <translation>序列埠：%L1</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+85" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [過時 - 按一下此處升級]</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Your OpenMV Cam's firmware is out of date. Would you like to upgrade?</source>
+        <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>您的OpenMV Cam的固件已过期。你想升级吗？</translation>
     </message>
     <message>
@@ -10092,7 +10166,7 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
         <translation> - [最新]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-674" />
         <source>Failed to open or parse ELF: %1</source>
         <translation>无法打开或解析 ELF：%1</translation>
     </message>
@@ -10148,7 +10222,7 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
     </message>
     <message>
         <location line="+396" />
-        <location line="+172" />
+        <location line="+177" />
         <source>Code Profiler</source>
         <translation>代码分析器</translation>
     </message>
@@ -10202,7 +10276,7 @@ Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</sour
         <translation type="vanished">啟動</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+588" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+592" />
         <source>More Examples</source>
         <translation>更多例子</translation>
     </message>
@@ -10215,29 +10289,29 @@ In particular, checkout the Color-Tracking examples.</source>
 特別是，請查看顏色跟踪示例。</translation>
     </message>
     <message>
-        <location line="+28" />
-        <location line="+69" />
-        <location line="+9" />
+        <location line="+27" />
+        <location line="+70" />
+        <location line="+8" />
         <source>Firmware Update</source>
         <translation>韌體更新</translation>
     </message>
     <message>
         <location line="-75" />
-        <source>Update your OpenMV Cam's firmware to the latest version?</source>
+        <source>Update your OpenMV Cam&apos;s firmware to the latest version?</source>
         <translation>將您的OpenMV Cam的韌體更新到最新版本？</translation>
     </message>
     <message>
-        <location line="+67" />
-        <source>Your OpenMV Cam's firmware is up to date.</source>
+        <location line="+68" />
+        <source>Your OpenMV Cam&apos;s firmware is up to date.</source>
         <translation>您的OpenMV Cam的韌體是最新的。</translation>
     </message>
     <message>
-        <location line="+11" />
-        <source>Need to reset your OpenMV Cam's firmware to the release version?</source>
+        <location line="+10" />
+        <source>Need to reset your OpenMV Cam&apos;s firmware to the release version?</source>
         <translation>需要將您的OpenMV Cam的韌體重設為發行版本？</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+86" />
         <source>No board settings for the connected board found!</source>
         <translation>找不到连接董事会的董事会设置！</translation>
     </message>
@@ -10332,10 +10406,10 @@ In particular, checkout the Color-Tracking examples.</source>
     </message>
     <message>
         <location line="-223" />
-        <source>Module "%L1" on your OpenMV Cam is different than the copy on your computer.
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
 Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>OpenMV凸轮上的模块"%L1"与计算机上的副本不同。
+        <translation>OpenMV凸轮上的模块&quot;%L1&quot;与计算机上的副本不同。
 
 您是否希望OpenMV IDE更新OpenMV Cam上的模块？</translation>
     </message>
@@ -10346,15 +10420,15 @@ Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
     </message>
     <message>
         <location line="+91" />
-        <source>Module "%L1" may be required to run your script.
+        <source>Module &quot;%L1&quot; may be required to run your script.
 
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>模块"%L1"可能需要运行您的脚本。
+        <translation>模块&quot;%L1&quot;可能需要运行您的脚本。
 
 你想OpenMV IDE将它复制到你的OpenMV Cam吗？</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-366" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10367,18 +10441,18 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>文本文件 (*.txt);;所有的文件 (*)</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+228" />
         <source>Zoom: %1%</source>
         <translation>縮放：%1%</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4310" />
-        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4365" />
+        <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280" />
-        <location line="+236" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-265" />
+        <location line="+221" />
         <source>Model Zoo</source>
         <translation>模型动物园</translation>
     </message>
@@ -10414,7 +10488,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>尋找</translation>
     </message>
     <message>
-        <location line="+226" />
+        <location line="+239" />
         <source>Serial Terminal</source>
         <translation>串列終端</translation>
     </message>
@@ -10435,8 +10509,8 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>Run "/main.py"</source>
-        <translation>運行"/main.py"</translation>
+        <source>Run &quot;/main.py&quot;</source>
+        <translation>運行&quot;/main.py&quot;</translation>
     </message>
     <message>
         <location line="+0" />
@@ -10459,31 +10533,31 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>博薩克</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-360" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-150" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>獲取設備</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-293" />
         <location line="+79" />
         <source>Query failed!</source>
         <translation>查詢失敗！</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+44" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+119" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+120" />
+        <location line="+118" />
         <source>DFU Util</source>
         <translation>DFU實用程序</translation>
     </message>
@@ -10508,7 +10582,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>这可能需要一段时间，水上休息？</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-87" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
         <source>Dataset Split</source>
         <translation>數據集拆分</translation>
     </message>
@@ -10520,7 +10594,7 @@ OpenMV recommends leaving this at the default 80/20% split.</source>
 OpenMV建議將其保留為默認的80/20%分割。</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <location line="+16" />
         <source>Training Data
 Percentage
@@ -10542,7 +10616,7 @@ Percentage
     <message>
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+58" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
         <location line="+50" />
         <source>Uploading...</source>
@@ -10583,8 +10657,8 @@ Percentage
         <location line="+10" />
         <source>Nothing to upload
 
-Only jpg/png/bmp images with a numeric name (e.g. "00001.jpg")
-in class folders ("*.class") can be uploaded.</source>
+Only jpg/png/bmp images with a numeric name (e.g. &quot;00001.jpg&quot;)
+in class folders (&quot;*.class&quot;) can be uploaded.</source>
         <translation>沒有上載內容
 
 僅具有數字名稱的jpg/png/bmp圖像（例如“00001.jpg”）
@@ -10596,31 +10670,31 @@ in class folders ("*.class") can be uploaded.</source>
         <location line="+21" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+164" />
+        <location line="+155" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+23" />
         <location line="+9" />
         <location line="+9" />
         <source>Edge Impulse Projects</source>
         <translation>邊緣衝動項目</translation>
     </message>
     <message>
-        <location line="-276" />
+        <location line="-266" />
         <location line="+35" />
-        <location line="+71" />
-        <location line="+129" />
-        <location line="+42" />
+        <location line="+67" />
+        <location line="+124" />
+        <location line="+41" />
         <source>No request data received</source>
         <translation>未收到請求數據</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-246" />
         <source>An unkown error occured</source>
         <translation>發生未知錯誤</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+62" />
         <location line="+11" />
         <location line="+7" />
         <location line="+10" />
@@ -10637,7 +10711,7 @@ Open a data set to upload it.</source>
 打開一個數據集以上傳它。</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+33" />
         <source>Email Address</source>
         <translation>電子郵件地址</translation>
     </message>
@@ -10652,17 +10726,17 @@ Open a data set to upload it.</source>
         <translation>密碼</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+66" />
         <source>Please select a project</source>
         <translation>請選擇一個項目</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+60" />
         <source>No projects found</source>
         <translation>找不到項目</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+45" />
         <source>Upload Project</source>
         <translation>上傳專案</translation>
     </message>
@@ -10672,7 +10746,7 @@ Open a data set to upload it.</source>
         <translation>請輸入Edge Impluse項目API密鑰</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1017" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1015" />
         <location line="+144" />
         <location line="+36" />
         <location line="+41" />
@@ -10691,7 +10765,7 @@ Open a data set to upload it.</source>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+41" />
+        <location line="+39" />
         <location line="+135" />
         <location line="+45" />
         <location line="+50" />
@@ -10727,8 +10801,8 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1337" />
-        <location line="+923" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1335" />
+        <location line="+921" />
         <source>This feature is not supported on this machine!</source>
         <translation>本機不支持此功能！</translation>
     </message>
@@ -10760,15 +10834,15 @@ The camera must be power cycled after a system package update.</source>
 在系统软件包更新后，必须循环摄像机。</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-472" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-470" />
         <location line="+51" />
         <location line="+91" />
-        <location line="+346" />
+        <location line="+344" />
         <location line="+51" />
         <location line="+50" />
         <location line="+94" />
         <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>此命令需要一段時間才能執行。請耐心等待。</translation>
@@ -10789,7 +10863,7 @@ The camera must be power cycled after a system package update.</source>
         <translation>完成</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
         <source>PicoTool</source>
         <translation>小工具</translation>
     </message>
@@ -10921,12 +10995,12 @@ The camera must be power cycled after a system package update.</source>
     </message>
     <message>
         <location line="-77" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Transcoding File...</source>
         <translation>正在轉碼檔案...</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-594" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10987,29 +11061,29 @@ The camera must be power cycled after a system package update.</source>
         <translation>獲取輸入格式</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+37" />
         <location line="+111" />
-        <location line="+100" />
+        <location line="+98" />
         <location line="+15" />
-        <location line="+372" />
+        <location line="+371" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
         <location line="+16" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+14" />
+        <location line="+19" />
         <location line="+36" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+21" />
+        <location line="+23" />
         <location line="+7" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+20" />
+        <location line="+22" />
         <location line="+7" />
         <source>Convert Video</source>
         <translation>轉換視頻</translation>
@@ -11029,7 +11103,7 @@ The camera must be power cycled after a system package update.</source>
         <translation>该平台不支持 FFMPEG。</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+98" />
         <source>Unable to write to output video file!</source>
         <translation>无法写入输出视频文件！</translation>
     </message>
@@ -11040,79 +11114,79 @@ The camera must be power cycled after a system package update.</source>
     </message>
     <message>
         <location line="+163" />
-        <location line="+411" />
+        <location line="+415" />
         <source>Play Video</source>
         <translation>播放視頻</translation>
     </message>
     <message>
-        <location line="-410" />
+        <location line="-414" />
         <location line="+163" />
         <source>Failed to launch ffplay!</source>
         <translation>無法啟動ffplay！</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>Convert Video Source</source>
         <translation>轉換視頻來源</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+235" />
+        <location line="+240" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</source>
         <translation>視頻檔(*.mp4 *.*);; OpenMV ImageWriter檔案(*.bin);;</translation>
     </message>
     <message>
-        <location line="-230" />
+        <location line="-235" />
         <location line="+11" />
-        <location line="+117" />
+        <location line="+122" />
         <location line="+7" />
         <source>Convert Video Output</source>
         <translation>轉換視頻輸出</translation>
     </message>
     <message>
-        <location line="-130" />
-        <location line="+125" />
-        <location line="+208" />
+        <location line="-135" />
+        <location line="+130" />
+        <location line="+204" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
         <translation>视频文件 (*.mp4 *.*);;OpenMV ImageReader文件 (*.bin);;</translation>
     </message>
     <message>
-        <location line="-327" />
+        <location line="-328" />
         <source>Please select output format</source>
         <translation>請選擇輸出格式</translation>
     </message>
     <message>
         <location line="+15" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Rescale the video?</source>
         <translation>重新缩放视频？</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter a new width (the aspect ratio will be kept the same)</source>
         <translation>输入新宽度（纵横比将保持不变）</translation>
     </message>
     <message>
-        <location line="-320" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-321" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Skip frames?</source>
         <translation>跳幀？</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter how many frames to skip at a time</source>
         <translation>輸入一次跳過多少幀</translation>
     </message>
     <message>
-        <location line="-278" />
-        <location line="+91" />
-        <location line="+207" />
+        <location line="-274" />
+        <location line="+93" />
+        <location line="+203" />
         <source>Video conversion finished!</source>
         <translation>視頻轉換完成！</translation>
     </message>
@@ -11142,13 +11216,13 @@ The camera must be power cycled after a system package update.</source>
         <translation>玩</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+47" />
         <location line="+7" />
         <source>Save Video</source>
         <translation>儲存視頻</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
         <source>Busy</source>
         <translation>忙碌的</translation>
     </message>
@@ -11164,13 +11238,11 @@ The camera must be power cycled after a system package update.</source>
         <translation>隱藏細節</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-335" />
-        <location line="+102" />
         <source>No matching interface for the selected file name!</source>
-        <translation>所选文件名没有匹配接口！</translation>
+        <translation type="vanished">所选文件名没有匹配接口！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-745" />
         <source>Please select the target</source>
         <translation>请选择目标</translation>
     </message>
@@ -11193,70 +11265,70 @@ OpenMV IDE will just copy the model as is.</source>
 OpenMV IDE只会按原样复制模型。</translation>
     </message>
     <message>
-        <location line="+145" />
-        <location line="+36" />
+        <location line="+147" />
+        <location line="+35" />
         <location line="+6" />
         <location line="+8" />
-        <location line="+40" />
-        <location line="+17" />
-        <location line="+20" />
-        <location line="+6" />
-        <location line="+8" />
+        <location line="+42" />
+        <location line="+16" />
         <location line="+21" />
-        <location line="+19" />
-        <location line="+20" />
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
         <location line="+93" />
-        <location line="+9" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+13" />
-        <location line="+14" />
-        <location line="+45" />
-        <location line="+17" />
-        <location line="+28" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+40" />
+        <location line="+15" />
         <location line="+27" />
+        <location line="+24" />
         <location line="+53" />
-        <location line="+67" />
+        <location line="+63" />
         <location line="+6" />
         <location line="+21" />
         <source>Edit ROMFS</source>
         <translation>编辑romfs</translation>
     </message>
     <message>
-        <location line="-620" />
-        <location line="+91" />
+        <location line="-606" />
+        <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>一个具有相同名称的文件夹已经存在！</translation>
     </message>
     <message>
-        <location line="-85" />
-        <location line="+91" />
+        <location line="-87" />
+        <location line="+93" />
         <source>File already exists! Overwrite?</source>
         <translation>文件已经存在！ 覆盖？</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+91" />
+        <location line="-85" />
+        <location line="+93" />
         <source>Failed to remove file!</source>
         <translation>无法删除文件！</translation>
     </message>
     <message>
         <location line="-51" />
-        <location line="+72" />
+        <location line="+74" />
         <source>Failed to copy file!</source>
         <translation>无法复制文件！</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+17" />
         <source>Folder Name</source>
         <translation>文件夹名称</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Failed to create folder!</source>
         <translation>无法创建文件夹！</translation>
     </message>
@@ -11277,58 +11349,58 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>无法保存文件夹！</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+14" />
+        <location line="+6" />
+        <location line="+15" />
         <location line="+19" />
-        <location line="+240" />
+        <location line="+225" />
         <source>Extract File</source>
         <translation>提取文件</translation>
     </message>
     <message>
-        <location line="-246" />
+        <location line="-231" />
         <source>View/Edit</source>
         <translation>查看/编辑</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+237" />
+        <location line="+222" />
         <source>Add File</source>
         <translation>添加文件</translation>
     </message>
     <message>
-        <location line="-236" />
-        <location line="+238" />
+        <location line="-221" />
+        <location line="+223" />
         <source>New Folder</source>
         <translation>新文件夹</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+14" />
-        <location line="+322" />
-        <location line="+12" />
+        <location line="-135" />
+        <location line="+13" />
+        <location line="+303" />
+        <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>该板上不支持ROMF！</translation>
     </message>
     <message>
-        <location line="-290" />
-        <location line="+45" />
+        <location line="-275" />
+        <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>未能解开ROMF！</translation>
     </message>
     <message>
         <location line="-19" />
-        <location line="+28" />
+        <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>OpenMV romfs</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+172" />
+        <location line="-25" />
+        <location line="+165" />
         <source>ROMFS Images (*.img)</source>
         <translation>romfs图像（*.img）</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="-101" />
         <source>Commit</source>
         <translation>犯罪</translation>
     </message>
@@ -11343,17 +11415,17 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>保存romfs归档</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location line="+8" />
+        <location line="+105" />
+        <location line="+7" />
+        <location line="+11" />
         <location line="+12" />
-        <location line="+13" />
-        <location line="+12" />
+        <location line="+11" />
         <source>Reset ROMFS</source>
         <translation>重置romfs</translation>
     </message>
     <message>
-        <location line="-44" />
-        <source>Are you sure you want to reset your OpenMV Cam's ROM file system?</source>
+        <location line="-40" />
+        <source>Are you sure you want to reset your OpenMV Cam&apos;s ROM file system?</source>
         <translation>您确定要重置OpenMV Cam的ROM文件系统吗？</translation>
     </message>
     <message>
@@ -11383,12 +11455,12 @@ OpenMV IDE只会按原样复制模型。</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>&lt;a href="https://pypi.org/project/mpy-cross/"&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
+        <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
         <translation>&lt;a href =“ https://pypi.org/project/mpy-cross/”&gt; mpy cross Compilier CLI选项&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
         <source>Advanced</source>
         <translation>先进的</translation>
@@ -11401,7 +11473,7 @@ OpenMV IDE只会按原样复制模型。</translation>
     </message>
     <message>
         <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+90" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
         <source>Compiling</source>
         <translation>编译</translation>
@@ -11413,9 +11485,9 @@ OpenMV IDE只会按原样复制模型。</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-780" />
         <source>Success - Press Ok to close the window</source>
         <translation>成功 - 按确定关闭窗口</translation>
     </message>
@@ -11428,18 +11500,18 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>失败 - 按取消关闭窗口</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+126" />
+        <location line="+111" />
         <location line="+14" />
-        <location line="+173" />
+        <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>steedge编译器</translation>
     </message>
     <message>
-        <location line="-334" />
+        <location line="-300" />
         <source>Failed to copy JSON file!</source>
         <translation>无法复制JSON文件！</translation>
     </message>
@@ -11476,13 +11548,12 @@ OpenMV IDE只会按原样复制模型。</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+24" />
         <source>--verbosity 2</source>
         <translation>- 胜诉2</translation>
     </message>
     <message>
-        <location line="-22" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
+        <location line="+2" />
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
         <translation>&lt;a href =“%1”&gt; Stedgeai Core CLI选项&lt;/a&gt;</translation>
     </message>
     <message>
@@ -11492,16 +11563,15 @@ OpenMV IDE只会按原样复制模型。</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
         <translation>&lt;a href =“%1”&gt; stedgeai神经艺术CLI选项&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href =“%1”&gt; stedgeai重新定位CLI选项&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href =“%1”&gt; stedgeai重新定位CLI选项&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+75" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>无法打开JSON文件！</translation>
@@ -11512,7 +11582,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>Stedgeai</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+140" />
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
         <translation>该平台上不支持Stedgeai编译器。</translation>
     </message>
@@ -11540,8 +11610,8 @@ OpenMV IDE只会按原样复制模型。</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md"&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;</translation>
+        <source>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+67" />
@@ -11564,6 +11634,31 @@ OpenMV IDE只会按原样复制模型。</translation>
         <source>STM32 Programmer is not supported on this platform.</source>
         <translation>在此平台上不支持STM32程序员。</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <source>the detected board</source>
+        <translation>偵測到的板子</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>The selected file &quot;%L1&quot; does not match any firmware interface for %L2.</source>
+        <translation>所選檔案「%L1」與 %L2 的任何韌體介面都不符。</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%L1 accepts files named:</source>
+        <translation>%L1 接受名為：</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Rename your firmware file to one of the names above (or select the correct file) and try again.</source>
+        <translation>將您的韌體檔案重新命名為上述名稱之一（或選擇正確的檔案），然後重試。</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>This board does not define any loadable firmware interfaces in its settings.</source>
+        <translation>該板在其設定中未定義任何可載入韌體介面。</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
@@ -11573,91 +11668,39 @@ OpenMV IDE只会按原样复制模型。</translation>
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+28" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+235" />
         <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
         <location line="+15" />
         <location line="+22" />
-        <location line="+132" />
         <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+21" />
         <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+306" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+144" />
         <source>Project Location</source>
         <translation>項目地點</translation>
     </message>
     <message>
-        <location line="-895" />
-        <location line="+28" />
-        <location line="+21" />
+        <location line="-886" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
-        <location line="+15" />
         <location line="+22" />
-        <location line="+24" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+11" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
-        <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+28" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+20" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+81" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
@@ -11667,7 +11710,59 @@ OpenMV IDE只会按原样复制模型。</translation>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+94" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+15" />
+        <location line="+22" />
+        <location line="+18" />
+        <location line="+21" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+51" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
         <source>Location</source>
         <translation>位置</translation>
     </message>
@@ -11676,7 +11771,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation type="vanished">Qt測試</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-516" />
         <source>Google Test</source>
         <translation>谷歌測試</translation>
     </message>
@@ -11696,49 +11791,49 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>第二條軍規</translation>
     </message>
     <message>
-        <location line="-762" />
+        <location line="-371" />
         <location line="+25" />
         <location line="+26" />
-        <location line="+712" />
+        <location line="+321" />
         <source>Test framework:</source>
         <translation>測試框架：</translation>
     </message>
     <message>
-        <location line="-687" />
+        <location line="-296" />
         <source>GUI Application</source>
         <translation>圖形化應用程序</translation>
     </message>
     <message>
         <location line="-75" />
         <location line="+51" />
-        <location line="+715" />
+        <location line="+324" />
         <source>Test suite name:</source>
         <translation>測試套件名稱：</translation>
     </message>
     <message>
-        <location line="-790" />
-        <location line="+25" />
+        <location line="-374" />
         <location line="+24" />
         <location line="+27" />
         <location line="+21" />
-        <location line="+694" />
+        <location line="+22" />
+        <location line="+281" />
         <source>Test case name:</source>
         <translation>測試用例名稱：</translation>
     </message>
     <message>
-        <location line="-693" />
+        <location line="-302" />
         <source>Requires QApplication</source>
         <translation>需要 QApplication</translation>
     </message>
     <message>
-        <location line="-97" />
+        <location line="+22" />
         <source>Generate setup code</source>
         <translation>生成設置代碼</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+98" />
-        <location line="+692" />
+        <location line="-20" />
+        <location line="+21" />
+        <location line="+280" />
         <source>Generate initialization and cleanup code</source>
         <translation>產生初始化和清除代碼</translation>
     </message>
@@ -11747,17 +11842,17 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation type="vanished">啟用 C++11</translation>
     </message>
     <message>
-        <location line="-766" />
+        <location line="-324" />
         <source>Googletest source directory (optional):</source>
         <translation>Googletest源目錄（可選）：</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>Boost包含目錄（可選）：</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 包含目錄（可選）：</translation>
     </message>
@@ -11767,154 +11862,154 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>使用 Qt 庫</translation>
     </message>
     <message>
-        <location line="-50" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+45" />
-        <location line="+47" />
-        <location line="+84" />
+        <location line="+107" />
+        <location line="+46" />
+        <location line="+43" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
+        <location line="+105" />
+        <location line="+48" />
         <location line="+43" />
-        <location line="+49" />
-        <location line="+84" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+85" />
+        <location line="+153" />
+        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+314" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build system:</source>
         <translation>構建系統：</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>項目和測試信息</translation>
     </message>
     <message>
-        <location line="-120" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-93" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+26" />
-        <location line="+51" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+79" />
+        <location line="+116" />
         <location line="+18" />
         <location line="+4" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+41" />
+        <location line="+17" />
+        <location line="+33" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+70" />
-        <location line="+220" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+28" />
+        <location line="+142" />
         <source>Details</source>
         <translation>詳情</translation>
     </message>
     <message>
-        <location line="-869" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-887" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>套件選擇</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -11922,101 +12017,101 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>套件</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+18" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <source>Project Management</source>
         <translation>專案管理</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+37" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+41" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>摘要</translation>
@@ -12026,9 +12121,9 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation type="vanished">創建一個新的單元測試項目。單元測試允許您驗證代碼是否適合使用並且沒有回歸。</translation>
     </message>
     <message>
-        <location line="-466" />
-        <location line="+12" />
-        <location line="+456" />
+        <location line="-715" />
+        <location line="+380" />
+        <location line="+165" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>其他專案</translation>
@@ -12038,36 +12133,36 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation type="vanished">自動測試項目</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="-620" />
         <source>Fully qualified name, including namespaces</source>
         <translation>完全限定名稱，包括命名空間</translation>
     </message>
     <message>
-        <location line="-645" />
-        <location line="+36" />
-        <location line="+276" />
-        <location line="+80" />
-        <location line="+235" />
-        <location line="+19" />
+        <location line="+1" />
         <location line="+22" />
+        <location line="+19" />
+        <location line="+289" />
+        <location line="+145" />
+        <location line="+40" />
+        <location line="+119" />
         <source>Class name:</source>
         <translation>類別名稱：</translation>
     </message>
     <message>
-        <location line="-631" />
-        <location line="+592" />
-        <location line="+18" />
+        <location line="-633" />
+        <location line="+42" />
+        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;自定義&gt;</translation>
     </message>
     <message>
-        <location line="-646" />
-        <location line="+37" />
-        <location line="+282" />
-        <location line="+73" />
-        <location line="+237" />
-        <location line="+18" />
+        <location line="-474" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+294" />
+        <location line="+139" />
+        <location line="+39" />
+        <location line="+119" />
         <source>Base class:</source>
         <translation>基類：</translation>
     </message>
@@ -12076,7 +12171,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-632" />
         <source>Include QObject</source>
         <translation>包含QObject</translation>
     </message>
@@ -12114,70 +12209,70 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>添加 QML_ELEMENT</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+68" />
-        <location line="+262" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+315" />
+        <location line="+292" />
         <source>Header file:</source>
         <translation>頭文件：</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+288" />
-        <location line="+68" />
-        <location line="+220" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+215" />
         <location line="+1" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+80" />
+        <location line="+133" />
+        <location line="+39" />
+        <location line="+120" />
         <source>Source file:</source>
         <translation>源文件：</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+392" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+34" />
-        <location line="+19" />
-        <location line="+444" />
-        <location line="+19" />
-        <location line="+22" />
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>路徑：</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+596" />
-        <location line="+22" />
+        <location line="-739" />
+        <location line="+38" />
+        <location line="+429" />
+        <location line="+39" />
         <source>Define Class</source>
         <translation>定義類</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-502" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>為新類別建立一組標頭檔與源碼檔，讓您可以新增到 C++ 專案中。</translation>
     </message>
     <message>
-        <location line="-203" />
-        <location line="+130" />
-        <location line="+74" />
+        <location line="+1" />
+        <location line="+65" />
+        <location line="+9" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-73" />
         <source>C++ Class</source>
         <translation>C++ 類別</translation>
     </message>
@@ -12217,22 +12312,22 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>創建 Qt 項目模型。</translation>
     </message>
     <message>
-        <location line="-231" />
-        <location line="+39" />
-        <location line="+26" />
-        <location line="+65" />
-        <location line="+18" />
-        <location line="+84" />
+        <location line="+1" />
+        <location line="+66" />
+        <location line="+57" />
+        <location line="+62" />
+        <location line="+9" />
+        <location line="+59" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-252" />
         <source>Qt Item Model</source>
         <translation>Qt 項目模型</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+4" />
         <source>Qt for Python module:</source>
         <translation>Qt for Python 模塊：</translation>
     </message>
@@ -12257,8 +12352,8 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>導入QtQuick</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
         <location line="+6" />
@@ -12266,18 +12361,18 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>創建新的 Python 類文件。</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+71" />
+        <location line="+1" />
+        <location line="+158" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-157" />
         <source>Python Class</source>
         <translation>Python類</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+3" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>創建一個基於 CMake 的測試項目，可以為其輸入代碼片段。</translation>
     </message>
@@ -12332,7 +12427,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>代碼片段</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="+7" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>創建可添加到 C/C++ 項目的頭文件。</translation>
     </message>
@@ -12342,7 +12437,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>C/C++ 頭文件</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>創建可以添加到 C/C++ 項目的源文件。</translation>
     </message>
@@ -12352,7 +12447,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>C/C++ 源文件</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>選擇表單樣本</translation>
     </message>
@@ -12370,12 +12465,12 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation type="vanished">Qt 設計師表單</translation>
     </message>
     <message>
-        <location line="-15" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>使用桌面 OpenGL 著色語言 (GLSL)來建立一個片段著色器。片段著色器生成的三角形，點與線的最終像素顏色都是OpenGL渲染的。</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+1" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -12383,12 +12478,12 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-26" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>片段著色器 (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>使用桌面 OpenGL 著色語言 (GLSL) 創建頂點著色器。頂點著色器轉換使用 OpenGL 渲染的三角形、點和線的位置、法線和紋理坐標。</translation>
     </message>
@@ -12398,7 +12493,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>頂點著色器 (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>使用 OpenGL/ES 2.0 著色語言 (GLSL/ES) 來建立片段著色器。片段著色器生成的三角形，點與線的最終像素顏色都是 OpenGL 渲染的。</translation>
     </message>
@@ -12408,7 +12503,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>片段著色器 (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>使用 OpenGL/ES 2.0 著色語言 (GLSL/ES) 創建頂點著色器。頂點著色器轉換使用 OpenGL 渲染的三角形、點和線的位置、法線和紋理坐標。</translation>
     </message>
@@ -12418,7 +12513,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>頂點著色器 (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="+7" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>創建帶有樣板代碼的 Java 文件。</translation>
     </message>
@@ -12433,7 +12528,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>Java文件</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>無狀態函式庫</translation>
     </message>
@@ -12454,25 +12549,25 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>JS 檔</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+12" />
         <source>Model name:</source>
         <translation>型號名稱：</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
+        <location line="+1" />
+        <location line="+67" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>位置：</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
-        <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
-        <translation>文件系統中存在“%{JS: Util.toNativeSeparators(value('TargetPath'))}”。</translation>
+        <location line="-66" />
+        <location line="+67" />
+        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
+        <translation>文件系統中存在“%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}”。</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model Name and Location</source>
         <translation>型號名稱和位置</translation>
     </message>
@@ -12482,19 +12577,19 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>使用空圖表創建一個新的空模型。</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+53" />
-        <location line="+12" />
+        <location line="+1" />
+        <location line="+5" />
+        <location line="+62" />
         <source>Modeling</source>
         <translation>造型</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model</source>
         <translation>模型</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+3" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>使用臨時文件創建臨時模型。</translation>
     </message>
@@ -12504,23 +12599,23 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>划痕模型</translation>
     </message>
     <message>
-        <location line="-81" />
+        <location line="+7" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>使用 UTF-8 字符集創建一個空 Nim 文件。</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+14" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>尼姆</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>尼姆文件</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>使用 UTF-8 字符集創建一個空的 Nim 腳本文件。</translation>
     </message>
@@ -12530,7 +12625,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>尼姆腳本文件</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+7" />
         <source>Creates an empty Python script file using UTF-8 charset.</source>
         <translation>使用 UTF-8 字符集創建一個空的 Python 腳本文件。</translation>
     </message>
@@ -12540,7 +12635,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>Python文件</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>創建 Qt 資源文件 (.qrc)。</translation>
     </message>
@@ -12550,8 +12645,8 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>Qt 資源文件</translation>
     </message>
     <message>
-        <location line="-67" />
-        <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
+        <location line="+7" />
+        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>使用樣板代碼創建 QML 文件，從“import QtQuick”開始。</translation>
     </message>
     <message>
@@ -12560,21 +12655,21 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>QML 文件（Qt Quick 2）</translation>
     </message>
     <message>
-        <location line="-32" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>使用臨時文件創建臨時緩衝區。</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+57" />
-        <location line="+47" />
+        <location line="-66" />
+        <location line="+67" />
+        <location line="+45" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>一般</translation>
     </message>
     <message>
-        <location line="-634" />
+        <location line="-401" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>该向导使用Boost创建一个简单的单元测试项目。</translation>
     </message>
@@ -12599,21 +12694,21 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>使用Boost创建一个新的单元测试项目。 单元测试使您可以验证该代码适合使用，并且没有回归。</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+25" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Test Project</source>
         <translation>测试项目</translation>
     </message>
     <message>
-        <location line="-21" />
+        <location line="-93" />
         <source>Boost Test Project</source>
         <translation>提升测试项目</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>该向导使用Catch2创建一个简单的单元测试项目。</translation>
     </message>
@@ -12648,7 +12743,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>Catch2测试项目</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>该向导使用Google测试创建一个简单的单元测试项目。</translation>
     </message>
@@ -12678,7 +12773,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>Google测试项目</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>该向导使用QT测试创建一个简单的单元测试项目。</translation>
     </message>
@@ -12693,7 +12788,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>QT测试项目</translation>
     </message>
     <message>
-        <location line="-116" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>该向导使用QT快速测试创建一个简单的单元测试项目。</translation>
     </message>
@@ -12708,17 +12803,17 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>QT快速测试项目</translation>
     </message>
     <message>
-        <location line="+815" />
+        <location line="+10" />
         <source>Include QQuickItem</source>
         <translation>包括Qquickitem</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+67" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>创建一个基于CMAKE的测试项目，您可以在其中输入代码段进行编译并检查。</translation>
     </message>
     <message>
-        <location line="-121" />
+        <location line="+29" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>创建QT小部件设计器表单，您可以将其添加到QT小部件项目中。 如果您已经拥有用于UI业务逻辑的现有类，这将很有用。</translation>
     </message>
@@ -12728,7 +12823,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>QT小部件设计师表格</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="+64" />
         <source>Creates a markdown file.</source>
         <translation>创建一个Markdown文件。</translation>
     </message>
@@ -12738,12 +12833,12 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>标记文件</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="+67" />
         <source>Scratch Buffer</source>
         <translation>暫存緩衝區</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>狀態圖名稱：</translation>
     </message>
@@ -12763,7 +12858,7 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>州圖</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -12803,7 +12898,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>测试案例</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>創建一個空文件。</translation>
     </message>
@@ -12813,7 +12908,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>空的文件</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>创建一个可以添加到QT项目的翻译文件。</translation>
     </message>
@@ -12823,61 +12918,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QT翻译文件</translation>
     </message>
     <message>
-        <location line="-623" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>該嚮導創建一個簡單的基於 Qt 的控制台應用程序。</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+83" />
+        <location line="+195" />
         <source>Meson</source>
         <translation>介子</translation>
     </message>
     <message>
-        <location line="-442" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-326" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Define Build System</source>
         <translation>定義構建系統</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-328" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build System</source>
         <translation>建置系統</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-328" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation File</source>
         <translation>翻譯文件</translation>
     </message>
     <message>
-        <location line="-591" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-479" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation</source>
         <translation>翻譯</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-262" />
         <source>Define Python Interpreter</source>
         <translation>定义Python解释器</translation>
     </message>
@@ -12892,7 +12987,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>为Python应用程序创建QT，其中包括基于QT Widgets设计器的窗口小部件（UI文件）。 需要.ui才能转换。</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+38" />
         <source>Qt 6.4</source>
         <translation>QT 6.4</translation>
     </message>
@@ -12907,7 +13002,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>创建一个可以具有QML和C ++代码的QT快速应用程序。 您可以构建应用程序并将其部署到桌面，嵌入式和移动目标平台。</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="+42" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -12916,7 +13011,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  要开发完整的应用程序，请改用QT快速应用程序项目。</translation>
     </message>
     <message>
-        <location line="+173" />
+        <location line="+30" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -12933,31 +13028,31 @@ Preselects a desktop Qt for building the application if available.</source>
 它會預選一個可用的 Qt 桌面版本來建置此應用程式。</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+32" />
-        <location line="+299" />
-        <location line="+114" />
+        <location line="-337" />
+        <location line="+266" />
+        <location line="+28" />
+        <location line="+44" />
         <source>Application (Qt)</source>
         <translation>應用程序（Qt）</translation>
     </message>
     <message>
-        <location line="-412" />
+        <location line="-337" />
         <source>Qt Console Application</source>
         <translation>Qt4 主控台應用程式</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>該嚮導創建一個 C++ 庫項目。</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+84" />
+        <location line="+308" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>指定您要建立的源碼檔案的基本類別資訊。</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="-307" />
         <source>Shared Library</source>
         <translation>共享函式庫</translation>
     </message>
@@ -12973,17 +13068,17 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+35" />
+        <location line="+46" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>型態：</translation>
     </message>
     <message>
-        <source>%{JS: value('Type') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</source>
-        <translation type="vanished">%{JS: value('類型') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</translation>
+        <source>%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</source>
+        <translation type="vanished">%{JS: value(&apos;類型&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessible插件</translation>
     </message>
@@ -13049,14 +13144,14 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Qt模塊：</translation>
     </message>
     <message>
-        <location line="-519" />
-        <location line="+147" />
-        <location line="+70" />
+        <location line="+3" />
+        <location line="+116" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+59" />
-        <location line="+42" />
+        <location line="+68" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+170" />
         <source>Define Project Details</source>
         <translation>定義項目詳細信息</translation>
     </message>
@@ -13065,38 +13160,38 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">創建 C++ 庫。這可用於創建：&lt;ul&gt;&lt;li&gt;與&lt;tt&gt;QPluginLoader&lt;/tt&gt;和運行時（插件）一起使用的共享 C++ 庫&lt;/li&gt;&lt;li&gt;與另一個一起使用的共享或靜態 C++ 庫鏈接時的項目&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-513" />
-        <location line="+460" />
-        <location line="+62" />
-        <location line="+7" />
+        <location line="-427" />
+        <location line="+18" />
+        <location line="+186" />
+        <location line="+232" />
         <source>Library</source>
         <translation>函式庫</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-435" />
         <source>C++ Library</source>
         <translation>C++ 函式庫</translation>
     </message>
     <message>
-        <location line="-366" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>創建一個簡單的 Nim 應用程序。</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+229" />
+        <location line="+40" />
         <location line="+18" />
-        <location line="+157" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>非 Qt 專案</translation>
     </message>
     <message>
-        <location line="-403" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>尼姆應用</translation>
     </message>
     <message>
-        <location line="+369" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>二進位</translation>
     </message>
@@ -13111,13 +13206,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>作者：</translation>
     </message>
     <message>
-        <location line="-544" />
-        <location line="+545" />
+        <location line="+1" />
+        <location line="+402" />
         <source>Description:</source>
         <translation>描述：</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-401" />
         <source>0.1.0</source>
         <translation>0.1x {0.1.0?}</translation>
     </message>
@@ -13182,13 +13277,13 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>其他</translation>
     </message>
     <message>
-        <location line="-560" />
-        <location line="+561" />
+        <location line="+1" />
+        <location line="+386" />
         <source>License:</source>
         <translation>授權：</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-385" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -13229,22 +13324,22 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>定義項目配置</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="+1" />
+        <location line="+253" />
+        <location line="+1" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+202" />
         <source>Configuration</source>
         <translation>組態</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-343" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>使用 Nimble 創建 Nim 應用程序。</translation>
     </message>
@@ -13254,7 +13349,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>靈活應用</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>創建一個沒有依賴項的簡單 C 應用程序。</translation>
     </message>
@@ -13264,7 +13359,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>普通 C 應用程序</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>創建一個沒有依賴項的簡單 C++ 應用程序。</translation>
     </message>
@@ -13274,7 +13369,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>純 C++ 應用程序</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>該嚮導創建一個空的 .pro 文件。</translation>
     </message>
@@ -13293,43 +13388,43 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">PySide 版本：</translation>
     </message>
     <message>
-        <location line="-218" />
+        <location line="+13" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>創建一個 Qt for Python 應用程序，其中僅包含 QApplication 的主代碼。</translation>
     </message>
     <message>
-        <location line="-14" />
-        <location line="+15" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+18" />
+        <location line="+21" />
         <source>Application (Qt for Python)</source>
         <translation>應用程序（Qt for Python）</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-60" />
         <source>Empty Application</source>
         <translation>空申請</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: 值('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: 值(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</source>
-        <translation type="vanished">%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</translation>
+        <source>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</source>
+        <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-28" />
-        <location line="+37" />
+        <location line="+9" />
+        <location line="+39" />
         <source>Project file:</source>
         <translation>項目文件：</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>創建包含空窗口的 Qt for Python 應用程序。</translation>
     </message>
@@ -13339,15 +13434,15 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>空窗</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+15" />
+        <location line="-32" />
         <location line="+22" />
         <location line="+15" />
+        <location line="+24" />
         <source>PySide 6</source>
         <translation>派賽德 6</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-211" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -13356,19 +13451,19 @@ Preselects a desktop Qt for building the application if available.</source>
  预选桌面QT，用于构建应用程序（如果有）。</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>创建一个C ++库。 您可以创建：&lt;ul&gt; &lt;li&gt;共享的C ++库，可与&lt;tt&gt; qpluginloader &lt;/tt&gt;和Runtime（plugins）&lt;/li&gt; &lt;li&gt;共享或静态C ++库，供LinkTime在LinkTime上使用另一个项目 &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+15" />
+        <location line="+107" />
         <location line="+22" />
+        <location line="+39" />
         <source>PySide 2</source>
         <translation>Pyside 2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="-24" />
         <source>PySide 5.15</source>
         <translation>派賽德 5.15</translation>
     </message>
@@ -13402,50 +13497,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">創建一個 Qt for Python 應用程序，其中包括基於 Qt Designer 的小部件（ui 文件） - 需要 .ui 到 Python 的轉換</translation>
     </message>
     <message>
-        <location line="-55" />
+        <location line="+21" />
         <source>Window UI</source>
         <translation>窗口界面</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+311" />
+        <location line="+10" />
         <location line="+25" />
+        <location line="+23" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-335" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
         <location line="+23" />
+        <location line="+25" />
         <source>Minimum required Qt version:</source>
         <translation>所需的最低 Qt 版本：</translation>
     </message>
     <message>
-        <location line="-22" />
+        <location line="-47" />
         <source>MyItem</source>
         <translation>我的物品</translation>
     </message>
@@ -13493,9 +13588,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">創建一個結構與 Qt Design Studio（通過 .qmlproject）和 Qt Creator（通過 CMakeLists.txt）兼容的項目。它包含一個 .ui.qml 表單，您可以在 Qt Design Studio 中進行可視化編輯。</translation>
     </message>
     <message>
-        <location line="-324" />
-        <location line="+274" />
-        <location line="+55" />
+        <location line="+5" />
+        <location line="+30" />
+        <location line="+16" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>使用Qt虛擬鍵盤</translation>
     </message>
@@ -13508,15 +13603,15 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">創建一個包含空窗口的 Qt Quick 應用程序。您也可以選擇創建 Qt Design Studio 項目。</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-33" />
         <source>Qt Quick Application</source>
         <translation>Qt快速應用</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="+26" />
         <source>Creates a Qt Quick application that contains an empty window.
 
-Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
+Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
         <translation>創建一個包含空窗口的 Qt Quick 應用程序。
 
 如果您想使用 CMake 或低於 6 的 Qt 版本之外的其他構建系統，請使用此“兼容”版本。</translation>
@@ -13535,18 +13630,18 @@ Use this only if you are prototyping. You cannot create a full application with 
 僅當您進行原型設計時才使用此選項。您無法用它創建完整的應用程序。考慮改用 Qt Quick Application 項目。</translation>
     </message>
     <message>
-        <location line="+272" />
+        <location line="+14" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt 快速 UI 原型</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>該嚮導生成一個 Qt Widgets 應用程序項目。默認情況下，該應用程序派生自 QApplication，並包含一個空小部件。</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: 值('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: 值(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
         <location line="+15" />
@@ -13554,8 +13649,8 @@ Use this only if you are prototyping. You cannot create a full application with 
         <translation>生成表格</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), 'ui')}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), 'ui')}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13581,27 +13676,27 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Qt 小部件應用程序</translation>
     </message>
     <message>
-        <location line="-332" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>請立即配置&lt;b&gt;%{vcsName}&lt;/b&gt;。</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-93" />
+        <location line="+52" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository:</source>
         <translation>儲存庫：</translation>
     </message>
     <message>
         <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>存儲庫 URL 無效</translation>
@@ -13611,24 +13706,24 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{默認目錄}</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
         <source>Directory:</source>
         <translation>目錄：</translation>
     </message>
     <message>
-        <location line="-94" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
-        <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
-        <translation>文件系統中存在“%{JS: Util.toNativeSeparators('%{TargetPath}')}”。</translation>
+        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
+        <translation>文件系統中存在“%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}”。</translation>
     </message>
     <message>
-        <location line="-52" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>使用現有的目錄</translation>
     </message>
@@ -13704,13 +13799,13 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+3" />
-        <location line="+19" />
+        <location line="+60" />
         <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>指定存儲庫 URL、簽出目錄和路徑。</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>跑巴扎分店...</translation>
     </message>
@@ -13729,9 +13824,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>複製一個 Bazaar 分支，並試著載入裡面包含的專案。</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+1" />
+        <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <location line="+20" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
@@ -13739,12 +13834,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>匯入專案</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Bazaar 複製 (或分支)</translation>
     </message>
     <message>
-        <location line="-69" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>模組：</translation>
     </message>
@@ -13763,7 +13858,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+52" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+19" />
         <location line="+1" />
@@ -13771,7 +13866,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>取出</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>從 CVS 儲存庫中取出，並試著載入裡面包含的專案。</translation>
     </message>
@@ -13821,7 +13916,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>克隆</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>正在運行 Mercurial 克隆...</translation>
     </message>
@@ -13856,7 +13951,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Subversion 取出</translation>
     </message>
     <message>
-        <location line="-394" />
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>該嚮導創建一個自定義 Qt Creator 插件。</translation>
     </message>
@@ -13866,8 +13961,8 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>指定有關自定義 Qt Creator 插件的詳細信息。</translation>
     </message>
     <message>
-        <source>%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</source>
-        <translation type="vanished">%{JS: value('項目名稱').charAt(0).toUpperCase() + value('項目名稱').slice(1)}</translation>
+        <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
+        <translation type="vanished">%{JS: value(&apos;項目名稱&apos;).charAt(0).toUpperCase() + value(&apos;項目名稱&apos;).slice(1)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13905,8 +14000,8 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>在這裡輸入您的插件的簡短描述</translation>
     </message>
     <message>
-        <source>https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</source>
-        <translation type="vanished">https://www.%{JS:encodeURIComponent(value('VendorName').toLowerCase())}.com</translation>
+        <source>https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</source>
+        <translation type="vanished">https://www.%{JS:encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13931,12 +14026,12 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
         <source>S&amp;essions</source>
-        <translation>S＆Essions</translation>
+        <translation>S&amp;Essions</translation>
     </message>
     <message>
         <location line="+9" />
         <source>&amp;Manage...</source>
-        <translation>＆管理...</translation>
+        <translation>&amp;管理...</translation>
     </message>
     <message>
         <location line="+13" />
@@ -13998,7 +14093,7 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+42" />
-        <source>Could not save session to file "%1"</source>
+        <source>Could not save session to file &quot;%1&quot;</source>
         <translation>无法将会话保存到文件“%1”</translation>
     </message>
     <message>
@@ -14014,27 +14109,27 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+7" />
         <source>&amp;New...</source>
-        <translation>＆新的...</translation>
+        <translation>&amp;新的...</translation>
     </message>
     <message>
         <location line="+3" />
         <source>&amp;Open</source>
-        <translation>＆打开</translation>
+        <translation>&amp;打开</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Rename...</source>
-        <translation>＆重命名...</translation>
+        <translation>&amp;重命名...</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C&amp;lone...</source>
-        <translation>克隆...</translation>
+        <translation>克隆... (&amp;L)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Delete...</source>
-        <translation>＆删除...</translation>
+        <translation>&amp;删除...</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14065,22 +14160,22 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="-10" />
         <source>&amp;Create</source>
-        <translation>＆创造</translation>
+        <translation>&amp;创造</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Create and &amp;Open</source>
-        <translation>创建并开放</translation>
+        <translation>创建并开放 (&amp;O)</translation>
     </message>
     <message>
         <location line="+11" />
         <source>&amp;Clone</source>
-        <translation>＆克隆</translation>
+        <translation>&amp;克隆</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Clone and &amp;Open</source>
-        <translation>克隆和开放</translation>
+        <translation>克隆和开放 (&amp;O)</translation>
     </message>
     <message>
         <location line="+22" />
@@ -14090,12 +14185,12 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+1" />
         <source>&amp;Rename</source>
-        <translation>＆重命名</translation>
+        <translation>&amp;重命名</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Rename and &amp;Open</source>
-        <translation>重命名和开放</translation>
+        <translation>重命名和开放 (&amp;O)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
@@ -14109,37 +14204,37 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+72" />
-        <source>Could not create directory "%1"</source>
+        <source>Could not create directory &quot;%1&quot;</source>
         <translation>无法创建目录“%1”</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The program "%1" does not exist or is not executable.</source>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
         <translation>程序“%1”不存在或无法执行。</translation>
     </message>
     <message>
         <location line="+34" />
-        <source>Starting: "%1" %2</source>
+        <source>Starting: &quot;%1&quot; %2</source>
         <translation>开始：“%1”%2</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The process "%1" exited normally.</source>
+        <source>The process &quot;%1&quot; exited normally.</source>
         <translation>该过程“%1”正常退出。</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The process "%1" exited with code %2.</source>
+        <source>The process &quot;%1&quot; exited with code %2.</source>
         <translation>代码%2退出的过程“%1”。</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Could not start process "%1" %2.</source>
+        <source>Could not start process &quot;%1&quot; %2.</source>
         <translation>无法开始流程“%1”%2。</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The process "%1" crashed.</source>
+        <source>The process &quot;%1&quot; crashed.</source>
         <translation>该过程“%1”崩溃了。</translation>
     </message>
     <message>
@@ -14181,7 +14276,7 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files of all open projects. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
+        <source>Locates files of all open projects. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation>找到所有开放项目的文件。 附加“+&lt;数字&gt;”或“：&lt;数字&gt;”跳到给定的行号。 附加另一个“+&lt;数字&gt;”或“：&lt;数字&gt;”也跳到列号。</translation>
     </message>
     <message>
@@ -14237,7 +14332,7 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>Show &amp;App Output</source>
-        <translation>显示和应用输出</translation>
+        <translation>显示和应用输出 (&amp;A)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14358,12 +14453,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+105" />
-        <source>Build directory contains potentially problematic character "%1".</source>
+        <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
         <translation>构建目录包含可能有问题的字符“%1”。</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>This warning can be suppressed &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
+        <source>This warning can be suppressed &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
         <translation>此警告可以抑制&lt;a href =“虚拟”&gt;这里&lt;/a&gt;。</translation>
     </message>
     <message>
@@ -14420,7 +14515,7 @@ Excluding: %2
     </message>
     <message>
         <location line="+4" />
-        <source>Variables in the build configuration's environment</source>
+        <source>Variables in the build configuration&apos;s environment</source>
         <translation>构建配置环境中的变量</translation>
     </message>
     <message>
@@ -14462,12 +14557,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build configuration</source>
+        <source>Name of the project&apos;s active build configuration</source>
         <translation>项目的主动构建配置的名称</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build system</source>
+        <source>Name of the project&apos;s active build system</source>
         <translation>项目的主动构建系统的名称</translation>
     </message>
     <message>
@@ -14477,12 +14572,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Type of the project's active build configuration</source>
+        <source>Type of the project&apos;s active build configuration</source>
         <translation>项目的活动构建配置的类型</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>No build device is set for the kit "%1".</source>
+        <source>No build device is set for the kit &quot;%1&quot;.</source>
         <translation>没有为套件“%1”设置构建设备。</translation>
     </message>
     <message>
@@ -14492,12 +14587,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+7" />
-        <source>The build device "%1" cannot reach the project directory.</source>
+        <source>The build device &quot;%1&quot; cannot reach the project directory.</source>
         <translation>构建设备“%1”无法到达项目目录。</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The build device "%1" cannot reach the build directory.</source>
+        <source>The build device &quot;%1&quot; cannot reach the build directory.</source>
         <translation>构建设备“%1”无法到达构建目录。</translation>
     </message>
     <message numerus="yes">
@@ -14530,7 +14625,7 @@ Excluding: %2
     <message>
         <location line="+138" />
         <source>Compile</source>
-        <comment>Category for compiler issues listed under 'Issues'</comment>
+        <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>编译</translation>
     </message>
     <message>
@@ -14541,7 +14636,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Build System</source>
-        <comment>Category for build system issues listed under 'Issues'</comment>
+        <comment>Category for build system issues listed under &apos;Issues&apos;</comment>
         <translation>构建系统</translation>
     </message>
     <message>
@@ -14552,7 +14647,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Deployment</source>
-        <comment>Category for deployment issues listed under 'Issues'</comment>
+        <comment>Category for deployment issues listed under &apos;Issues&apos;</comment>
         <translation>部署</translation>
     </message>
     <message>
@@ -14563,7 +14658,7 @@ Excluding: %2
     <message>
         <location line="+4" />
         <source>Autotests</source>
-        <comment>Category for autotest issues listed under 'Issues'</comment>
+        <comment>Category for autotest issues listed under &apos;Issues&apos;</comment>
         <translation>自动</translation>
     </message>
     <message>
@@ -14580,7 +14675,7 @@ Excluding: %2
         <location line="+8" />
         <location line="+59" />
         <source>Clean</source>
-        <extracomment>Displayed name for a "cleaning" build step
+        <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
 Display name of the clean build step list. Used as part of the labels in the project window.</extracomment>
         <translation>干净的</translation>
@@ -14644,7 +14739,7 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location line="+98" />
-        <source>When executing step "%1"</source>
+        <source>When executing step &quot;%1&quot;</source>
         <translation>执行步骤“%1”时</translation>
     </message>
     <message>
@@ -14862,7 +14957,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+3" />
-        <source>The project file "%1" does not exist.</source>
+        <source>The project file &quot;%1&quot; does not exist.</source>
         <translation>项目文件“%1”不存在。</translation>
     </message>
     <message>
@@ -14890,7 +14985,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+38" />
         <source>Show Compile &amp;Output</source>
-        <translation>显示编译和输出</translation>
+        <translation>显示编译和输出 (&amp;O)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14960,12 +15055,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from the current document's project. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
+        <source>Locates files from the current document&apos;s project. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation>从当前文档的项目中找到文件。 附加“+&lt;数字&gt;”或“：&lt;数字&gt;”跳到给定的行号。 附加另一个“+&lt;数字&gt;”或“：&lt;数字&gt;”也跳到列号。</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
-        <source>Project "%1"</source>
+        <source>Project &quot;%1&quot;</source>
         <translation>项目“%1”</translation>
     </message>
     <message>
@@ -14975,7 +15070,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>Project "%1":</source>
+        <source>Project &quot;%1&quot;:</source>
         <translation>项目“%1”：</translation>
     </message>
     <message>
@@ -14997,7 +15092,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
-        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
+        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
         <translation>自定义输出解析器扫描命令行输出用于用户提供的错误模式&lt;br&gt;在问题中创建条目。&lt;br&gt;可以在这里配置解析器&lt;a href =“ href =“ dummy”&gt;在这里&lt;/a&gt;。</translation>
     </message>
     <message>
@@ -15020,25 +15115,25 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>&amp;Error message capture pattern:</source>
-        <translation>和错误消息捕获模式：</translation>
+        <translation>和错误消息捕获模式： (&amp;E)</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+33" />
         <source>&amp;File name:</source>
-        <translation>＆文件名：</translation>
+        <translation>&amp;文件名：</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Line number:</source>
-        <translation>＆行号：</translation>
+        <translation>&amp;行号：</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Message:</source>
-        <translation>＆信息：</translation>
+        <translation>&amp;信息：</translation>
     </message>
     <message>
         <location line="-15" />
@@ -15055,7 +15150,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-31" />
         <source>E&amp;rror message:</source>
-        <translation>错误信息：</translation>
+        <translation>错误信息： (&amp;R)</translation>
     </message>
     <message>
         <location line="+33" />
@@ -15140,7 +15235,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
-        <source>Custom output parsers defined here can be enabled individually in the project's build or run settings.</source>
+        <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>可以在项目的构建或运行设置中单独启用此处定义的自定义输出解析器。</translation>
     </message>
     <message>
@@ -15233,44 +15328,44 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
         <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>＆编译器路径：</translation>
+        <translation>&amp;编译器路径：</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Make path:</source>
-        <translation>＆make path：</translation>
+        <translation>&amp;make path：</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
         <source>&amp;ABI:</source>
-        <translation>＆abi：</translation>
+        <translation>&amp;abi：</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Predefined macros:</source>
-        <translation>预定义的宏：</translation>
+        <translation>预定义的宏： (&amp;P)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Header paths:</source>
-        <translation>＆标题路径：</translation>
+        <translation>&amp;标题路径：</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C++11 &amp;flags:</source>
-        <translation>C ++ 11和标志：</translation>
+        <translation>&amp;C ++ 11和标志：</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Qt mkspecs:</source>
-        <translation>＆QT Mkspecs：</translation>
+        <translation>&amp;QT Mkspecs：</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Error parser:</source>
-        <translation>＆错误解析器：</translation>
+        <translation>&amp;错误解析器：</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/dependenciespanel.cpp" line="+83" />
@@ -15425,18 +15520,18 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
-        <source>No device for path "%1"</source>
+        <source>No device for path &quot;%1&quot;</source>
         <translation>没有路径“%1”的设备</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
-        <source>No device found for path "%1"</source>
+        <source>No device found for path &quot;%1&quot;</source>
         <translation>找不到路径“%1”的设备</translation>
     </message>
     <message>
         <location line="-9" />
-        <source>No file access for device "%1"</source>
+        <source>No file access for device &quot;%1&quot;</source>
         <translation>设备“%1”无文件访问</translation>
     </message>
     <message>
@@ -15462,17 +15557,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+22" />
         <source>&amp;Update List</source>
-        <translation>＆更新列表</translation>
+        <translation>&amp;更新列表</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Kill Process</source>
-        <translation>＆杀死过程</translation>
+        <translation>&amp;杀死过程</translation>
     </message>
     <message>
         <location line="+8" />
         <source>&amp;Filter:</source>
-        <translation>＆筛选：</translation>
+        <translation>&amp;筛选：</translation>
     </message>
     <message>
         <location line="+64" />
@@ -15482,7 +15577,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-253" />
         <source>&amp;Device:</source>
-        <translation>＆设备：</translation>
+        <translation>&amp;设备：</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15492,7 +15587,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>&amp;Remove</source>
-        <translation>＆消除</translation>
+        <translation>&amp;消除</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15502,12 +15597,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>&amp;Add...</source>
-        <translation>＆添加...</translation>
+        <translation>&amp;添加...</translation>
     </message>
     <message>
         <location line="+4" />
         <source>&amp;Start Wizard to Add Device...</source>
-        <translation>并启动向导添加设备...</translation>
+        <translation>并启动向导添加设备... (&amp;S)</translation>
     </message>
     <message>
         <location line="+12" />
@@ -15518,7 +15613,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+34" />
         <source>&amp;Name:</source>
-        <translation>＆姓名：</translation>
+        <translation>&amp;姓名：</translation>
     </message>
     <message>
         <location line="+2" />
@@ -15532,7 +15627,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+87" />
-        <source>Yes (id is "%1")</source>
+        <source>Yes (id is &quot;%1&quot;)</source>
         <translation>是的（ID是“%1”）</translation>
     </message>
     <message>
@@ -15661,12 +15756,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>No device for given path: "%1".</source>
+        <source>No device for given path: &quot;%1&quot;.</source>
         <translation>没有给定路径的设备：“%1”。</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Device for path "%1" does not support killing processes.</source>
+        <source>Device for path &quot;%1&quot; does not support killing processes.</source>
         <translation>路径“%1”的设备不支持杀戮过程。</translation>
     </message>
     <message>
@@ -15750,7 +15845,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>在列显示正确和边距：</translation>
+        <translation>在列显示正确和边距： (&amp;M)</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15799,22 +15894,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-278" />
         <source>Ed&amp;it</source>
-        <translation>编辑</translation>
+        <translation>编辑 (&amp;I)</translation>
     </message>
     <message>
         <location line="+4" />
         <source>&amp;Add</source>
-        <translation>＆添加</translation>
+        <translation>&amp;添加</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&amp;Reset</source>
-        <translation>＆重置</translation>
+        <translation>&amp;重置</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&amp;Unset</source>
-        <translation>＆Unset</translation>
+        <translation>&amp;Unset</translation>
     </message>
     <message>
         <location line="+14" />
@@ -15829,7 +15924,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+9" />
         <source>Open &amp;Terminal</source>
-        <translation>开放和终端</translation>
+        <translation>开放和终端 (&amp;T)</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15838,33 +15933,33 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+123" />
-        <source>Unset &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
         <translation>Unset &lt;a href =“%1”&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
         <translation>set &lt;a href =“%1”&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;%2 &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
         <translation>附加&lt;b&gt;%2 &lt;/b&gt;到&lt;a href =“%1”&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
         <translation>prepend &lt;b&gt;%2 &lt;/b&gt; to &lt;a href =“%1”&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
         <translation>set &lt;a href =“%1”&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;%2 &lt;/b&gt; [禁用]</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Use &lt;b&gt;%1&lt;/b&gt;</source>
-        <extracomment>%1 is "System Environment" or some such.</extracomment>
+        <extracomment>%1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>使用&lt;b&gt;%1 &lt;/b&gt;</translation>
     </message>
     <message>
@@ -15875,7 +15970,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>Use &lt;b&gt;%1&lt;/b&gt; and</source>
-        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is "System Environment" or some such.</extracomment>
+        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>使用&lt;b&gt;%1 &lt;/b&gt;和</translation>
     </message>
     <message>
@@ -15973,57 +16068,57 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Field "%1" has no type.</source>
+        <source>Field &quot;%1&quot; has no type.</source>
         <translation>字段“%1”没有类型。</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Field "%1" has unsupported type "%2".</source>
+        <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
         <translation>字段“%1”具有不支持的“%2”。</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>When parsing Field "%1": %2</source>
+        <source>When parsing Field &quot;%1&quot;: %2</source>
         <translation>解析字段“%1”：%2</translation>
     </message>
     <message>
         <location line="+208" />
-        <source>Label ("%1") data is not an object.</source>
+        <source>Label (&quot;%1&quot;) data is not an object.</source>
         <translation>标签（“%1”）数据不是对象。</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Label ("%1") has no trText.</source>
+        <source>Label (&quot;%1&quot;) has no trText.</source>
         <translation>标签（“%1”）没有TRTEXT。</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>Spacer ("%1") data is not an object.</source>
+        <source>Spacer (&quot;%1&quot;) data is not an object.</source>
         <translation>垫片（“%1”）数据不是对象。</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Spacer ("%1") property "factor" is no integer value.</source>
+        <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
         <translation>垫片（“%1”）属性“因子”不是整数值。</translation>
     </message>
     <message>
         <location line="+35" />
-        <source>LineEdit ("%1") data is not an object.</source>
+        <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>landedit（“%1”）数据不是对象。</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>LineEdit ("%1") has an invalid regular expression "%2" in "validator".</source>
+        <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
         <translation>laneedit（“%1”）在“验证器”中具有无效的正则表达式“%2”。</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>LineEdit ("%1") has an invalid value "%2" in "completion".</source>
+        <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
         <translation>laneedit（“%1”）在“完成”中具有无效的“%2”。</translation>
     </message>
     <message>
         <location line="+166" />
-        <source>TextEdit ("%1") data is not an object.</source>
+        <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>textedit（“%1”）数据不是对象。</translation>
     </message>
     <message>
@@ -16033,17 +16128,17 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+26" />
-        <source>kind "%1" is not one of the supported "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any".</source>
+        <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
         <translation>KIND“%1”不是受支持的“现有主导”，“目录”，“文件”，“ SaveFile”，“ savefile”，“ castionCommand”，“命令”，“任何”。</translation>
     </message>
     <message>
         <location line="+80" />
-        <source>CheckBox ("%1") data is not an object.</source>
+        <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
         <translation>复选框（“%1”）数据不是对象。</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>CheckBox ("%1") values for checked and unchecked state are identical.</source>
+        <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
         <translation>检查和未检查状态的复选框（“%1”）值相同。</translation>
     </message>
     <message>
@@ -16053,32 +16148,32 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>No "key" found in List items.</source>
+        <source>No &quot;key&quot; found in List items.</source>
         <translation>在列表项目中未找到“钥匙”。</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>%1 ("%2") data is not an object.</source>
+        <source>%1 (&quot;%2&quot;) data is not an object.</source>
         <translation>%1（“%2”）数据不是对象。</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>%1 ("%2") "index" is not an integer value.</source>
+        <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
         <translation>%1（“%2”）“索引”不是整数值。</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>%1 ("%2") "disabledIndex" is not an integer value.</source>
+        <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
         <translation>%1（“%2”）“ disabledendex”不是整数值。</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>%1 ("%2") "items" missing.</source>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
         <translation>%1（“%2”）“项目”缺失。</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>%1 ("%2") "items" is not a JSON list.</source>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
         <translation>%1（“%2”）“项目”不是JSON列表。</translation>
     </message>
     <message>
@@ -16103,7 +16198,7 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+13" />
-        <source>No "%1" key found in feature list object.</source>
+        <source>No &quot;%1&quot; key found in feature list object.</source>
         <translation>在功能列表对象中找到没有“%1”密钥。</translation>
     </message>
     <message>
@@ -16118,7 +16213,7 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Error message from Version Control System: "%1".</source>
+        <source>Error message from Version Control System: &quot;%1&quot;.</source>
         <translation>版本控制系统中的错误消息：“%1”。</translation>
     </message>
     <message>
@@ -16130,8 +16225,8 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="-11" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
-        <source>Failed to add subproject "%1"
-to project "%2".</source>
+        <source>Failed to add subproject &quot;%1&quot;
+to project &quot;%2&quot;.</source>
         <translation>未能添加subproject“%1”
  投影“%2”。</translation>
     </message>
@@ -16139,7 +16234,7 @@ to project "%2".</source>
         <location line="+12" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
         <source>Failed to add one or more files to project
-"%1" (%2).</source>
+&quot;%1&quot; (%2).</source>
         <translation>未能添加一个或多个文件进行项目
  “%1”（%2）。</translation>
     </message>
@@ -16161,12 +16256,12 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+33" />
-        <source>Check whether a variable exists.&lt;br&gt;Returns "true" if it does and an empty string if not.</source>
+        <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
         <translation>检查是否存在变量。&lt;br&gt;返回“ true”（如果确实如此），如果不是，则返回一个空字符串。</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not determine target path. "TargetPath" was not set on any page.</source>
+        <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
         <translation>无法确定目标路径。 任何页面均未设置“目标路径”。</translation>
     </message>
     <message>
@@ -16176,12 +16271,12 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The wizard failed to generate files.&lt;br&gt;The error message was: "%1".</source>
+        <source>The wizard failed to generate files.&lt;br&gt;The error message was: &quot;%1&quot;.</source>
         <translation>向导无法生成文件。&lt;br&gt;错误消息是：“%1”。</translation>
     </message>
     <message>
         <location line="+63" />
-        <source>No 'key' in options object.</source>
+        <source>No &apos;key&apos; in options object.</source>
         <translation>选项对象中没有“密钥”。</translation>
     </message>
     <message>
@@ -16216,23 +16311,23 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+58" />
-        <source>"%1" does not exist in the file system.</source>
+        <source>&quot;%1&quot; does not exist in the file system.</source>
         <translation>文件系统中不存在“%1”。</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open "%1" as a project.</source>
+        <source>Failed to open &quot;%1&quot; as a project.</source>
         <translation>未能作为一个项目打开“%1”。</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+46" />
-        <source>Failed to open an editor for "%1".</source>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
         <translation>未能打开“%1”的编辑器。</translation>
     </message>
     <message>
         <location line="-27" />
-        <source>No file to open found in "%1".</source>
+        <source>No file to open found in &quot;%1&quot;.</source>
         <translation>在“%1”中没有打开的文件。</translation>
     </message>
     <message>
@@ -16242,7 +16337,7 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to open project in "%1".</source>
+        <source>Failed to open project in &quot;%1&quot;.</source>
         <translation>未能在“%1”中开放项目。</translation>
     </message>
     <message>
@@ -16263,29 +16358,29 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+7" />
-        <source>TypeId "%1" of generator is unknown. Supported typeIds are: "%2".</source>
+        <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>发电机的TypeID“%1”尚不清楚。 支持的类型为：“%2”。</translation>
     </message>
     <message>
         <location line="+56" />
         <location line="+241" />
-        <source>Path "%1" does not exist when checking JSON wizard search paths.</source>
+        <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
         <translation>检查JSON向导搜索路径时，路径“%1”不存在。</translation>
     </message>
     <message>
         <location line="-228" />
-        <source>Checking "%1" for %2.</source>
+        <source>Checking &quot;%1&quot; for %2.</source>
         <translation>检查%2的“%1”。</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+233" />
-        <source>* Failed to parse "%1":%2:%3: %4</source>
+        <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
         <translation>*无法解析“%1”：%2：%3：%4</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>* Did not find a JSON object in "%1".
+        <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
         <translation>*在“%1”中找不到JSON对象。</translation>
     </message>
@@ -16297,7 +16392,7 @@ to project "%2".</source>
     </message>
     <message>
         <location line="-224" />
-        <source>JsonWizard: "%1" not found.</source>
+        <source>JsonWizard: &quot;%1&quot; not found.</source>
         <translation>JSONWIZARD：未找到“%1”。</translation>
     </message>
     <message>
@@ -16312,17 +16407,17 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>TypeId "%1" of page is unknown. Supported typeIds are: "%2".</source>
+        <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>页面的类型“%1”是未知的。 支持的类型为：“%2”。</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Page with typeId "%1" has invalid "index".</source>
+        <source>Page with typeId &quot;%1&quot; has invalid &quot;index&quot;.</source>
         <translation>带有typeID“%1”的页面无效“索引”。</translation>
     </message>
     <message>
         <location line="+89" />
-        <source>* Did not find a JSON object in "%1".</source>
+        <source>* Did not find a JSON object in &quot;%1&quot;.</source>
         <translation>*在“%1”中找不到JSON对象。</translation>
     </message>
     <message>
@@ -16362,12 +16457,12 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+32" />
-        <source>"kind" value "%1" is not "class" (deprecated), "file" or "project".</source>
+        <source>&quot;kind&quot; value &quot;%1&quot; is not &quot;class&quot; (deprecated), &quot;file&quot; or &quot;project&quot;.</source>
         <translation>“类型”值“%1”不是“ class”（弃用），“文件”或“项目”。</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"kind" is "file" or "class" (deprecated) and "%1" is also set.</source>
+        <source>&quot;kind&quot; is &quot;file&quot; or &quot;class&quot; (deprecated) and &quot;%1&quot; is also set.</source>
         <translation>还设置了“ KIND”是“文件”或“ class”（已弃用）和“%1”。</translation>
     </message>
     <message>
@@ -16382,12 +16477,12 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Icon file "%1" not found.</source>
+        <source>Icon file &quot;%1&quot; not found.</source>
         <translation>未找到图标文件“%1”。</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Image file "%1" not found.</source>
+        <source>Image file &quot;%1&quot; not found.</source>
         <translation>图像文件“%1”找不到。</translation>
     </message>
     <message>
@@ -16407,12 +16502,12 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>When parsing "generators": %1</source>
+        <source>When parsing &quot;generators&quot;: %1</source>
         <translation>解析“发电机”：%1</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>When parsing "pages": %1</source>
+        <source>When parsing &quot;pages&quot;: %1</source>
         <translation>解析“页面”：%1</translation>
     </message>
     <message>
@@ -16427,7 +16522,7 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+57" />
-        <source>When processing "%1":&lt;br&gt;%2</source>
+        <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
         <translation>处理“%1”时：&lt;br&gt;%2</translation>
     </message>
     <message>
@@ -16454,42 +16549,42 @@ to project "%2".</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
-        <source>When parsing fields of page "%1": %2</source>
+        <source>When parsing fields of page &quot;%1&quot;: %2</source>
         <translation>页面“%1”的解析字段：%2</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "File" page needs to be unset or an empty object.</source>
+        <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
         <translation>“文件”页面的“数据”需要取消设置或空对象。</translation>
     </message>
     <message>
         <location line="+48" />
-        <source>Error parsing "%1" in "Kits" page: %2</source>
+        <source>Error parsing &quot;%1&quot; in &quot;Kits&quot; page: %2</source>
         <translation>错误解析“套件”中的“%1”页面：%2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>"data" must be a JSON object for "Kits" pages.</source>
+        <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
         <translation>“数据”必须是“套件”页面的JSON对象。</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>"Kits" page requires a "%1" set.</source>
+        <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
         <translation>“套件”页面需要“%1”集。</translation>
     </message>
     <message>
         <location line="+62" />
-        <source>"data" must be empty or a JSON object for "Project" pages.</source>
+        <source>&quot;data&quot; must be empty or a JSON object for &quot;Project&quot; pages.</source>
         <translation>“数据”必须为空或“项目”页面的JSON对象。</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Invalid regular expression "%1" in "%2". %3</source>
+        <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
         <translation>“%2”中的正则表达“%1”。 %3</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "Summary" page can be unset or needs to be an object.</source>
+        <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
         <translation>“摘要”页面的“数据”可以尚不设置或需要是对象。</translation>
     </message>
     <message>
@@ -16499,12 +16594,12 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Pattern "%1" is no valid regular expression.</source>
+        <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
         <translation>模式“%1”不是有效的正则表达式。</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>ScannerGenerator: Binary pattern "%1" not valid.</source>
+        <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
         <translation>ScannerGenerator：二进制模式“%1”无效。</translation>
     </message>
     <message>
@@ -16562,17 +16657,17 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+17" />
-        <source>Sys Root "%1" does not exist in the file system.</source>
+        <source>Sys Root &quot;%1&quot; does not exist in the file system.</source>
         <translation>文件系统中不存在SYS root“%1”。</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is not a directory.</source>
+        <source>Sys Root &quot;%1&quot; is not a directory.</source>
         <translation>系统根“%1”不是目录。</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is empty.</source>
+        <source>Sys Root &quot;%1&quot; is empty.</source>
         <translation>系统根“%1”是空的。</translation>
     </message>
     <message>
@@ -16819,7 +16914,7 @@ to project "%2".</source>
     <message>
         <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The name of the kit suitable for generating directory names. This value is used for the variable &lt;i&gt;%1&lt;/i&gt;, which for example determines the name of the shadow build directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;Head/&gt; &lt;body&gt; &lt;p&gt;套件的名称适用于生成目录名称。 此值用于变量&lt;i&gt;%1 &lt;/i&gt;，例如确定阴影构建目录的名称。&lt;/p&gt; &lt;/pody&gt; &lt;/hody&gt; &lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -16960,7 +17055,7 @@ to project "%2".</source>
     <message>
         <location line="+20" />
         <source>Overriding &lt;code&gt;MAKEFLAGS&lt;/code&gt; environment variable.</source>
-        <translation>覆盖&lt;代码&gt; makeflags &lt;/code&gt;环境变量。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2" />
@@ -17056,12 +17151,12 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href="projectmode"&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation>&lt;style type = text/css&gt; a：链接{颜色：rgb（128，128，255）;} &lt;/style&gt; project &lt;b&gt;%1 &lt;/b&gt;尚未配置&lt;br/&gt; &gt;您可以在&lt;a href =“ projectmode”&gt;项目模式&lt;/a&gt; &lt;br/&gt;中配置它</translation>
+        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href=&quot;projectmode&quot;&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
-        <source>Falling back to use the cached environment for "%1" after:</source>
+        <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
         <translation>倒退以使用缓存的环境以“%1”之后：</translation>
     </message>
     <message>
@@ -17084,7 +17179,7 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+796" />
-        <source>Failed to retrieve MSVC Environment from "%1":
+        <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
         <translation>无法从“%1”检索MSVC环境：
  %2</translation>
@@ -17133,7 +17228,7 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open file: "%1": %2</source>
+        <source>Could not open file: &quot;%1&quot;: %2</source>
         <translation>无法打开文件：“%1”：%2</translation>
     </message>
     <message>
@@ -17244,13 +17339,13 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+92" />
-        <source>Project "%1" was configured for kit "%2" with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
+        <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
         <translation>项目“%1”已配置为套件“%2”，其中ID%3不再存在。 您可以在%4模式下创建一个新套件或将消失的套件的步骤复制到另一个套件。</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+622" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+626" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
@@ -17259,79 +17354,79 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+265" />
-        <source>Could not find any qml_*.qm file at "%1"</source>
-        <translation>找不到任何QML _*。</translation>
+        <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+87" />
         <source>%1: Name.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1：名称。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to main file.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1：通往主文件的完整路径。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1：通往项目目录的完整路径。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: The name of the active kit.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1：活动套件的名称。</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Name of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1：活动构建配置的名称。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Type of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1：活动构建配置的类型。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Full build path of active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1：主动构建配置的完整构建路径。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Variables in the active build environment.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1：活动构建环境中的变量。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Name of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1：活动运行配置的名称。</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Executable of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1：可执行的活动运行配置。</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Variables in the environment of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1：活动运行配置环境中的变量。</translation>
     </message>
     <message>
         <location line="+12" />
         <source>%1: Working directory of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1：主动运行配置的工作目录。</translation>
     </message>
     <message>
@@ -17369,17 +17464,17 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+7" />
         <source>&amp;Build</source>
-        <translation>＆建造</translation>
+        <translation>&amp;建造</translation>
     </message>
     <message>
         <location line="+7" />
         <source>&amp;Debug</source>
-        <translation>＆调试</translation>
+        <translation>&amp;调试</translation>
     </message>
     <message>
         <location line="+6" />
         <source>&amp;Start Debugging</source>
-        <translation>并开始调试</translation>
+        <translation>并开始调试 (&amp;S)</translation>
     </message>
     <message>
         <location line="+82" />
@@ -17414,7 +17509,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+17" />
         <source>Recent P&amp;rojects</source>
-        <translation>最近的p＆rocts</translation>
+        <translation>最近的p&amp;rocts</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17424,8 +17519,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="-347" />
-        <source>Close Pro&amp;ject "%1"</source>
-        <translation>关闭项目“%1”</translation>
+        <source>Close Pro&amp;ject &quot;%1&quot;</source>
+        <translation>关闭项目“%1” (&amp;J)</translation>
     </message>
     <message>
         <location line="+10" />
@@ -17435,13 +17530,13 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <location line="+328" />
-        <source>Close All Files in Project "%1"</source>
+        <source>Close All Files in Project &quot;%1&quot;</source>
         <translation>关闭项目“%1”中的所有文件</translation>
     </message>
     <message>
         <location line="-316" />
         <source>Close Pro&amp;ject</source>
-        <translation>关闭项目</translation>
+        <translation>关闭项目 (&amp;J)</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17499,7 +17594,7 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Build Project "%1"</source>
+        <source>Build Project &quot;%1&quot;</source>
         <translation>构建项目“%1”</translation>
     </message>
     <message>
@@ -17509,18 +17604,18 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Build Project "%1" for All Configurations</source>
+        <source>Build Project &quot;%1&quot; for All Configurations</source>
         <translation>为所有配置构建项目“%1”</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Build for &amp;Run Configuration</source>
-        <translation>构建和运行配置</translation>
+        <translation>构建和运行配置 (&amp;R)</translation>
     </message>
     <message>
         <location line="+0" />
-        <source>Build for &amp;Run Configuration "%1"</source>
-        <translation>构建并运行配置“%1”</translation>
+        <source>Build for &amp;Run Configuration &quot;%1&quot;</source>
+        <translation>构建并运行配置“%1” (&amp;R)</translation>
     </message>
     <message>
         <location line="+13" />
@@ -17613,7 +17708,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+9" />
         <location line="+1621" />
-        <source>Close Project "%1"</source>
+        <source>Close Project &quot;%1&quot;</source>
         <translation>关闭项目“%1”</translation>
     </message>
     <message>
@@ -17623,7 +17718,7 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Close All Projects Except "%1"</source>
+        <source>Close All Projects Except &quot;%1&quot;</source>
         <translation>关闭除“%1”以外的所有项目</translation>
     </message>
     <message>
@@ -17659,7 +17754,7 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Set "%1" as Active Project</source>
+        <source>Set &quot;%1&quot; as Active Project</source>
         <translation>将“%1”设置为活动项目</translation>
     </message>
     <message>
@@ -17745,7 +17840,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+62" />
         <source>Sanitizer</source>
-        <comment>Category for sanitizer issues listed under 'Issues'</comment>
+        <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
         <translation>消毒剂</translation>
     </message>
     <message>
@@ -17786,7 +17881,7 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+48" />
-        <source>Failed opening project "%1": No plugin can open project type "%2".</source>
+        <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
         <translation>打开项目“%1”：没有插件可以打开项目类型“%2”。</translation>
     </message>
     <message>
@@ -17818,17 +17913,17 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+23" />
-        <source>Open Project in "%1"</source>
+        <source>Open Project in &quot;%1&quot;</source>
         <translation>在“%1”中开放项目</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Open Project "%1"</source>
+        <source>Open Project &quot;%1&quot;</source>
         <translation>打开项目“%1”</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>The file "%1" was renamed to "%2", but the following projects could not be automatically changed: %3</source>
+        <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
         <translation>文件“%1”被更名为“%2”，但以下项目无法自动更改：%3</translation>
     </message>
     <message>
@@ -17846,7 +17941,7 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+62" />
-        <source>Building "%1" is disabled: %2&lt;br&gt;</source>
+        <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
         <translation>建筑“%1”是禁用的：%2 &lt;br&gt;</translation>
     </message>
     <message>
@@ -17908,17 +18003,17 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>The project "%1" is not configured.</source>
+        <source>The project &quot;%1&quot; is not configured.</source>
         <translation>项目“%1”未配置。</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The project "%1" has no active kit.</source>
+        <source>The project &quot;%1&quot; has no active kit.</source>
         <translation>该项目“%1”没有主动套件。</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The kit "%1" for the project "%2" has no active run configuration.</source>
+        <source>The kit &quot;%1&quot; for the project &quot;%2&quot; has no active run configuration.</source>
         <translation>项目“%1”套件“%2”没有主动运行配置。</translation>
     </message>
     <message>
@@ -17928,7 +18023,7 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>Cannot run "%1".</source>
+        <source>Cannot run &quot;%1&quot;.</source>
         <translation>无法运行“%1”。</translation>
     </message>
     <message>
@@ -17955,7 +18050,7 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+41" />
-        <source>The following subprojects could not be added to project "%1":</source>
+        <source>The following subprojects could not be added to project &quot;%1&quot;:</source>
         <translation>无法将以下子标记添加到项目“%1”中：</translation>
     </message>
     <message>
@@ -18005,14 +18100,14 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>File "%1" was not removed, because the project has changed in the meantime.
+        <source>File &quot;%1&quot; was not removed, because the project has changed in the meantime.
 Please try again.</source>
         <translation>文件“%1”没有被删除，因为该项目在此期间发生了变化。
  请重试。</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Could not remove file "%1" from project "%2".</source>
+        <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
         <translation>无法从项目“%2”中删除文件“%1”。</translation>
     </message>
     <message>
@@ -18038,12 +18133,12 @@ Please try again.</source>
     </message>
     <message>
         <location line="-9" />
-        <source>Failed to copy file "%1" to "%2": %3.</source>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
         <translation>未能将文件“%1”复制为“%2”：%3。</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Failed to add new file "%1" to the project.</source>
+        <source>Failed to add new file &quot;%1&quot; to the project.</source>
         <translation>未能在项目中添加新文件“%1”。</translation>
     </message>
     <message>
@@ -18092,7 +18187,7 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+192" />
-        <source>Locates files from all project directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
+        <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation>从所有项目目录中找到文件。 附加“+&lt;数字&gt;”或“：&lt;数字&gt;”跳到给定的行号。 附加另一个“+&lt;数字&gt;”或“：&lt;数字&gt;”也跳到列号。</translation>
     </message>
     <message>
@@ -18150,12 +18245,12 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
         <source>s</source>
-        <extracomment>Suffix for "seconds"</extracomment>
+        <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>s</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The amount of seconds to wait between a "soft kill" and a "hard kill" of a running application.</source>
+        <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
         <translation>在运行应用程序的“软杀”和“硬杀”之间等待的秒数。</translation>
     </message>
     <message>
@@ -18220,7 +18315,7 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Some legacy build tools do not deal well with paths that contain "special" characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
+        <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
         <translation>某些旧版构建工具不能很好地处理包含“特殊”字符（例如空格）的路径，可能会导致虚假的构建错误。&lt;p&gt;如果您不使用此类工具，请取消选中此选项。</translation>
     </message>
     <message>
@@ -18280,12 +18375,12 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Show all kits in "Build &amp; Run" in "Projects" mode</source>
+        <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
         <translation>在“项目”模式中显示“ build＆run”中的所有套件</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Show also inactive kits in "Build &amp; Run" in "Projects" mode.</source>
+        <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
         <translation>在“项目”模式的“构建和运行”中也显示了不活动套件。</translation>
     </message>
     <message>
@@ -18325,7 +18420,7 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Default for "Run in terminal":</source>
+        <source>Default for &quot;Run in terminal&quot;:</source>
         <translation>“在终端运行”的默认值：</translation>
     </message>
     <message>
@@ -18406,7 +18501,7 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
-        <source>No kits are enabled for this project. Enable kits in the "Projects" mode.</source>
+        <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
         <translation>该项目没有启用套件。 在“项目”模式下启用套件。</translation>
     </message>
     <message>
@@ -18514,7 +18609,7 @@ What should %1 do now?</source>
         <translation>&lt;b&gt;警告：&lt;/b&gt;此文件在项目目录之外。</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-391" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-395" />
         <source>Simplify Tree</source>
         <translation>简化树</translation>
     </message>
@@ -18564,7 +18659,7 @@ What should %1 do now?</source>
         <translation>过滤树</translation>
     </message>
     <message>
-        <location line="+194" />
+        <location line="+198" />
         <source>Meta+X</source>
         <translation>元+x</translation>
     </message>
@@ -18600,18 +18695,18 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+50" />
-        <source>Open %1 "%2"</source>
+        <source>Open %1 &quot;%2&quot;</source>
         <translation>打开%1“%2”</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Open %1 "%2" (%3)</source>
+        <source>Open %1 &quot;%2&quot; (%3)</source>
         <translation>打开%1“%2”（%3）</translation>
     </message>
     <message>
         <location line="+20" />
         <source>session</source>
-        <comment>Appears in "Open session &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>会议</translation>
     </message>
     <message>
@@ -18638,7 +18733,7 @@ What should %1 do now?</source>
     <message>
         <location line="+125" />
         <source>project</source>
-        <comment>Appears in "Open project &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>项目</translation>
     </message>
     <message>
@@ -18673,7 +18768,7 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+118" />
-        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project's settings:</source>
+        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>该项目是为不再存在的套件配置的。 在“上下文”菜单中选择以下选项之一来恢复项目的设置：</translation>
     </message>
     <message>
@@ -18704,7 +18799,7 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+12" />
-        <source>Remove Vanished Target "%1"</source>
+        <source>Remove Vanished Target &quot;%1&quot;</source>
         <translation>删除消失的目标“%1”</translation>
     </message>
     <message>
@@ -18773,7 +18868,7 @@ What should %1 do now?</source>
     <message>
         <location line="+63" />
         <source>Add to &amp;version control:</source>
-        <translation>添加到版本控制：</translation>
+        <translation>添加到版本控制： (&amp;V)</translation>
     </message>
     <message>
         <location line="+88" />
@@ -18783,16 +18878,16 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Add to &amp;project:</source>
-        <translation>添加到项目：</translation>
+        <translation>添加到项目： (&amp;P)</translation>
     </message>
     <message>
         <location line="+74" />
-        <source>A version control system repository could not be created in "%1".</source>
+        <source>A version control system repository could not be created in &quot;%1&quot;.</source>
         <translation>版本控制系统存储库无法在“%1”中创建。</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to add "%1" to the version control system.</source>
+        <source>Failed to add &quot;%1&quot; to the version control system.</source>
         <translation>无法将“%1”添加到版本控制系统中。</translation>
     </message>
     <message>
@@ -18829,17 +18924,17 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>The run configuration's working directory.</source>
+        <source>The run configuration&apos;s working directory.</source>
         <translation>运行配置的工作目录。</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The run configuration's name.</source>
+        <source>The run configuration&apos;s name.</source>
         <translation>运行配置的名称。</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The run configuration's executable.</source>
+        <source>The run configuration&apos;s executable.</source>
         <translation>运行配置的可执行文件。</translation>
     </message>
     <message>
@@ -18856,7 +18951,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
-        <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
+        <extracomment>Shown in Run configuration, Add menu: &quot;name of runnable (on device name)&quot;</extracomment>
         <translation>%1（on%{设备：名称}）</translation>
     </message>
     <message>
@@ -18979,7 +19074,7 @@ What should %1 do now?</source>
     <message>
         <location line="+324" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;center&gt; &lt;i&gt;%1 &lt;/i&gt;仍在运行。&lt;center/&gt; &lt;center&gt;强迫它退出？&lt;/center&gt; &lt;/center&gt; &lt;/body&gt; &lt;/hod&gt; &lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2" />
@@ -18989,12 +19084,12 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Force &amp;Quit</source>
-        <translation>武力和退出</translation>
+        <translation>武力和退出 (&amp;Q)</translation>
     </message>
     <message>
         <location line="+0" />
         <source>&amp;Keep Running</source>
-        <translation>并继续运行</translation>
+        <translation>并继续运行 (&amp;K)</translation>
     </message>
     <message>
         <location line="+246" />
@@ -19058,7 +19153,7 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Either the invoked program "%1" is missing, or you may have insufficient permissions to invoke the program.</source>
+        <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
         <translation>丢失了调用程序“%1”，或者您可能没有足够的权限来调用该程序。</translation>
     </message>
     <message>
@@ -19257,7 +19352,7 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+172" />
-        <source>Unknown build system "%1"</source>
+        <source>Unknown build system &quot;%1&quot;</source>
         <translation>未知的构建系统“%1”</translation>
     </message>
     <message>
@@ -19283,7 +19378,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
         <source>&amp;Configure Project</source>
-        <translation>＆配置项目</translation>
+        <translation>&amp;配置项目</translation>
     </message>
     <message>
         <location line="+91" />
@@ -19318,7 +19413,7 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+71" />
-        <source>Enable Kit for Project "%1"</source>
+        <source>Enable Kit for Project &quot;%1&quot;</source>
         <translation>启用项目“%1”的套件</translation>
     </message>
     <message>
@@ -19328,7 +19423,7 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Disable Kit for Project "%1"</source>
+        <source>Disable Kit for Project &quot;%1&quot;</source>
         <translation>禁用项目“%1”的套件</translation>
     </message>
     <message>
@@ -19338,7 +19433,7 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Disable Kit "%1" in This Project?</source>
+        <source>Disable Kit &quot;%1&quot; in This Project?</source>
         <translation>在此项目中禁用套件“%1”？</translation>
     </message>
     <message>
@@ -19373,7 +19468,7 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Add a kit in the &lt;a href="buildandrun"&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
+        <source>Add a kit in the &lt;a href=&quot;buildandrun&quot;&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
         <translation>在&lt;a href =“ buildandrun”&gt;选项中添加一个套件&lt;/a&gt;或通过SDK的维护工具。</translation>
     </message>
     <message>
@@ -19470,7 +19565,7 @@ These files are preserved.</source>
         <translation>问题</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+53" />
         <source>Show Warnings</source>
         <translation>显示警告</translation>
     </message>
@@ -19552,7 +19647,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
         <source>&amp;Annotate</source>
-        <translation>＆注释</translation>
+        <translation>&amp;注释</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19638,17 +19733,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+24" />
-        <source>The installation of "%1" was canceled by timeout.</source>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>“%1”的安装被超时取消。</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
         <translation>用户取消了“%1”的安装。</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Installing "%1" failed with exit code %2.</source>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
         <translation>安装“%1”失败，出口代码%2。</translation>
     </message>
     <message>
@@ -19726,22 +19821,22 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" not found.</source>
+        <source>Python &quot;%1&quot; not found.</source>
         <translation>找不到python“%1”。</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" is not executable.</source>
+        <source>Python &quot;%1&quot; is not executable.</source>
         <translation>Python“%1”是不可执行的。</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Python "%1" does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
+        <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
         <translation>Python“%1”不包含可用的PIP。 需要PIP从Python软件包索引中安装Python软件包，例如Pyside和Python Language Server。 要使用任何此功能，请确保为该Python安装PIP。</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Python "%1" does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
+        <source>Python &quot;%1&quot; does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
         <translation>Python“%1”不包含可用的VENV。 VENV是将项目与全球安装的Python隔离开发环境的推荐方法。</translation>
     </message>
     <message>
@@ -19796,7 +19891,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
-        <source>No Python interpreter set for kit "%1".</source>
+        <source>No Python interpreter set for kit &quot;%1&quot;.</source>
         <translation>没有用于套件“%1”的Python解释器。</translation>
     </message>
     <message>
@@ -19816,7 +19911,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
         <source>Python:</source>
         <translation>Python：</translation>
     </message>
@@ -19826,7 +19921,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>运行%1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
         <location line="+283" />
         <source>Name:</source>
         <translation>姓名：</translation>
@@ -19844,42 +19939,42 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" does not exist.</source>
+        <source>&quot;%1&quot; does not exist.</source>
         <translation>“%1”不存在。</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" is not an executable file.</source>
+        <source>&quot;%1&quot; is not an executable file.</source>
         <translation>“%1”不是可执行文件。</translation>
     </message>
     <message>
         <location line="+16" />
         <location line="+186" />
         <source>&amp;Add</source>
-        <translation>＆添加</translation>
+        <translation>&amp;添加</translation>
     </message>
     <message>
         <location line="-184" />
         <location line="+185" />
         <source>&amp;Delete</source>
-        <translation>＆删除</translation>
+        <translation>&amp;删除</translation>
     </message>
     <message>
         <location line="-183" />
         <location line="+185" />
         <source>&amp;Make Default</source>
-        <translation>并默认</translation>
+        <translation>并默认 (&amp;M)</translation>
     </message>
     <message>
         <location line="-183" />
         <source>&amp;Generate Kit</source>
-        <translation>＆生成套件</translation>
+        <translation>&amp;生成套件</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+179" />
         <source>&amp;Clean Up</source>
-        <translation>＆清理</translation>
+        <translation>&amp;清理</translation>
     </message>
     <message>
         <location line="-178" />
@@ -19917,7 +20012,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>语言服务器配置</translation>
     </message>
     <message>
-        <location line="+476" />
+        <location line="+489" />
         <source>Python interpreter:</source>
         <translation>Python解释器：</translation>
     </message>
@@ -19949,7 +20044,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+11" />
-        <source>Found "%1" (%2)</source>
+        <source>Found &quot;%1&quot; (%2)</source>
         <translation>找到“%1”（%2）</translation>
     </message>
     <message>
@@ -19959,12 +20054,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
-        <source>"data" of a Python wizard page expects a map with "items" containing a list of objects.</source>
+        <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
         <translation>Python向导页面的“数据”期望包含对象列表的“项目”。</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>An item of Python wizard page data expects a "trKey" field containing the UI visible string for that Python version and a "value" field containing an object with a "PySideVersion" field used for import statements in the Python files.</source>
+        <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
         <translation>Python向导页面数据的项目期望一个“ trkey”字段，其中包含该python版本的UI可见字符串和一个“值”字段，其中包含带有“ Pyseterversion”字段的对象，用于python文件中的导入语句。</translation>
     </message>
     <message>
@@ -19990,17 +20085,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+126" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
         <source>Move tab left</source>
         <translation>向左移動選項卡</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Switch to next tab</source>
         <translation>切換到下一個選項卡</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+15" />
         <source>Move tab right</source>
         <translation>向右移動選項卡</translation>
     </message>
@@ -20162,7 +20257,7 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     <message>
         <location line="+72" />
         <source>&amp;Automatically Insert Matching Characters</source>
-        <translation>自动插入匹配字符</translation>
+        <translation>自动插入匹配字符 (&amp;A)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
@@ -20171,8 +20266,8 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     </message>
     <message>
         <location line="+2" />
-        <source>Automatically creates a Doxygen comment upon pressing enter after a '/**', '/*!', '//!' or '///'.</source>
-        <translation>在“/**”、“/*!”、“//!”後按 Enter 鍵時自動創建 Doxygen 註釋或者 '///'。</translation>
+        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
+        <translation>在“/**”、“/*!”、“//!”後按 Enter 鍵時自動創建 Doxygen 註釋或者 &apos;///&apos;。</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20182,7 +20277,7 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     <message>
         <location line="+2" />
         <source>Generates a &lt;i&gt;brief&lt;/i&gt; command with an initial description for the corresponding declaration.</source>
-        <translation>生成一個簡短的命令，其中包含相應聲明的初始描述。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3" />
@@ -20191,7 +20286,7 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     </message>
     <message>
         <location line="+2" />
-        <source>Adds leading asterisks when continuing C/C++ "/*", Qt "/*!" and Java "/**" style comments on new lines.</source>
+        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
         <translation>在繼續 C/C++“/*”、Qt“/*!”時添加前導星號以及新行上的 Java“/**” 樣式註釋。</translation>
     </message>
     <message>
@@ -20201,9 +20296,9 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     </message>
     <message>
         <location line="+1" />
-        <source>Doxygen allows "@" and "\" to start commands.
-By default, "@" is used if the surrounding comment starts with "/**" or "///", and "\" is used
-if the comment starts with "/*!" or "//!".</source>
+        <source>Doxygen allows &quot;@&quot; and &quot;\&quot; to start commands.
+By default, &quot;@&quot; is used if the surrounding comment starts with &quot;/**&quot; or &quot;///&quot;, and &quot;\&quot; is used
+if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>doxygen允许“@”和“ \”启动命令。
  默认情况下，如果周围的注释以“/**”或“ ///”开头，则使用“@”，并且使用“ \”
  如果评论以“/*！”开头 或者 ”//！”。</translation>
@@ -20381,8 +20476,8 @@ if the comment starts with "/*!" or "//!".</source>
     </message>
     <message>
         <location line="+36" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding. Editing not possible.</source>
-        <translation>&lt;b&gt;錯誤：&lt;/b&gt; 無法用 "%2"-編碼來解碼 "%1"。無法編輯。</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
+        <translation>&lt;b&gt;錯誤：&lt;/b&gt; 無法用 &quot;%2&quot;-編碼來解碼 &quot;%1&quot;。無法編輯。</translation>
     </message>
     <message>
         <location line="+2" />
@@ -20514,8 +20609,8 @@ Influences the indentation of continuation lines.
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;i&gt;Code indentation is configured in &lt;a href="C++"&gt;C++&lt;/a&gt; and &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;代碼縮排在&lt;a href="C++"&gt;C++&lt;/a&gt;和&lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt;設定中進行設定。&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;代碼縮排在&lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt;和&lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt;設定中進行設定。&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20745,13 +20840,7 @@ Specifies how backspace interacts with indentation.
 &lt;li&gt;&lt;i&gt;Always Delete:&lt;/i&gt; never write an UTF-8 BOM, possibly deleting a pre-existing one.&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;Note that UTF-8 BOMs are uncommon and treated incorrectly by some editors, so it usually makes little sense to add any.&lt;/p&gt;
 &lt;p&gt;This setting does &lt;b&gt;not&lt;/b&gt; influence the use of UTF-16 and UTF-32 BOMs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;頭/&gt;&lt;正文&gt;
-&lt;p&gt;文本編輯器應如何處理 UTF-8 字節順序標記。選項有：&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;i&gt;如果編碼為 UTF-8，則添加：&lt;/i&gt;以 UTF-8 編碼保存文件時，始終添加 BOM。請注意，如果編碼是&lt;i&gt;System&lt;/i&gt;，則此方法將不起作用，因為文本編輯器不知道它實際上是什麼。&lt;/li&gt;
-&lt;li&gt;&lt;i&gt;如果已存在則保留：&lt;/i&gt;如果加載時已有 BOM，則保存文件。&lt;/li&gt;
-&lt;li&gt;&lt;i&gt;始終刪除：&lt;/i&gt;從不寫入 UTF-8 BOM，可能會刪除預先存在的 BOM。&lt;/li&gt;&lt;/ul&gt;
-&lt;p&gt;請注意，UTF-8 BOM 並不常見，並且某些編輯器處理不當，因此添加任何 BOM 通常沒有什麼意義。&lt;/p&gt;
-&lt;p&gt;此設置&lt;b&gt;不會&lt;/b&gt;影響 UTF-16 和 UTF-32 BOM 的使用。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11" />
@@ -20901,8 +20990,8 @@ Specifies how backspace interacts with indentation.
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;i&gt;Set &lt;a href="font zoom"&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;將&lt;a href="font Zoom"&gt;字體行間距&lt;/a&gt;設置為 100% 以啟用文本換行選項。&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;將&lt;a href=&quot;font Zoom&quot;&gt;字體行間距&lt;/a&gt;設置為 100% 以啟用文本換行選項。&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -20982,7 +21071,7 @@ Specifies how backspace interacts with indentation.
     <message>
         <location line="+2" />
         <source>&amp;Highlight selection</source>
-        <translation>＆亮点选择</translation>
+        <translation>&amp;亮点选择</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21063,7 +21152,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+16" />
-        <source>Color Scheme for Theme "%1"</source>
+        <source>Color Scheme for Theme &quot;%1&quot;</source>
         <translation>主題“%1”的配色方案</translation>
     </message>
     <message>
@@ -21185,7 +21274,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="-12" />
-        <source>Cannot import code style from "%1".</source>
+        <source>Cannot import code style from &quot;%1&quot;.</source>
         <translation>無法從“%1”導入代碼樣式。</translation>
     </message>
     <message>
@@ -21215,8 +21304,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+1" />
-        <source>The color scheme "%1" was modified, do you want to save the changes?</source>
-        <translation>色彩機制 "%1" 已變更。您要儲存此變更嗎？</translation>
+        <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
+        <translation>色彩機制 &quot;%1&quot; 已變更。您要儲存此變更嗎？</translation>
     </message>
     <message>
         <location line="+7" />
@@ -21230,14 +21319,14 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+16" />
-        <source>File "%1":</source>
-        <translation>檔案"%1"：</translation>
+        <source>File &quot;%1&quot;:</source>
+        <translation>檔案&quot;%1&quot;：</translation>
     </message>
     <message>
         <location line="+6" />
         <source>File path: %1
 %2</source>
-        <translation>檔案路徑：'%1'
+        <translation>檔案路徑：&apos;%1&apos;
 %2</translation>
     </message>
     <message>
@@ -21285,8 +21374,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+27" />
-        <source>&lt;p align='center'&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href="copy"&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;palign='center'&gt;&lt;b&gt;內置配色方案需要&lt;a href="copy"&gt;複製&lt;/a&gt;&lt;br/&gt;才能更改&lt;/b&gt;&lt;/p&gt;</translation>
+        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8" />
@@ -21485,12 +21574,12 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+7" />
-        <source>Current document's font size in points.</source>
+        <source>Current document&apos;s font size in points.</source>
         <translation>目前文件的字型大小，以點為單位。</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Word under the current document's text cursor.</source>
+        <source>Word under the current document&apos;s text cursor.</source>
         <translation>當前文檔文本光標下的 Word。</translation>
     </message>
     <message>
@@ -22362,7 +22451,7 @@ Used to mark containing function of the symbol usage.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Class' data members.</source>
+        <source>Class&apos; data members.</source>
         <translation>類別的資料成員。</translation>
     </message>
     <message>
@@ -22995,152 +23084,152 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>不是一個色彩機制檔。</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>從 QObject 派生</translation>
     </message>
     <message>
         <location line="+1" />
         <source>derived from QWidget</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>源自 QWidget</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>模板</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with if</source>
-        <comment>group:'C++' trigger:'else'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
         <translation>與如果</translation>
     </message>
     <message>
         <location line="+1" />
         <source>range-based</source>
-        <comment>group:'C++' trigger:'for'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
         <translation>基於範圍的</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and else</source>
-        <comment>group:'C++' trigger:'if'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
         <translation>還有其他</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with closing brace comment</source>
-        <comment>group:'C++' trigger:'namespace'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
         <translation>帶右大括號註釋</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and catch</source>
-        <comment>group:'C++' trigger:'try'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
         <translation>並抓住</translation>
     </message>
     <message>
         <location line="+1" />
         <source>namespace</source>
-        <comment>group:'C++' trigger:'using'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
         <translation>名稱空間</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'struct'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
         <translation>模板</translation>
     </message>
     <message>
         <location line="+1" />
         <source>(type name READ name WRITE setName NOTIFY nameChanged FINAL)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation>（键入名称读取名称write setName通知namechanged final）</translation>
     </message>
     <message>
         <source>(type name READ name WRITE setName NOTIFY nameChanged)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation type="vanished">（類型名稱 READ 名稱 WRITE setName NOTIFY nameChanged）</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>有目標</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>有目標</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>有目標</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>有目標</translation>
     </message>
     <message>
         <location line="+3" />
         <source>QuickTest Test Case</source>
-        <comment>group:'QML' trigger:'TestCase'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>快速测试案例</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Function</source>
-        <comment>group:'C++' trigger:'TEST'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST&apos;</comment>
         <translation>gtest函数</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Fixture</source>
-        <comment>group:'C++' trigger:'TEST_F'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_F&apos;</comment>
         <translation>Gtest固定装置</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Parameterized</source>
-        <comment>group:'C++' trigger:'TEST_P'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_P&apos;</comment>
         <translation>GTEST参数化</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Case</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_CASE&apos;</comment>
         <translation>测试案例</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Suite</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_SUITE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_SUITE&apos;</comment>
         <translation>测试套件</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Test Case</source>
-        <comment>group:'C++' trigger:'TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_CASE&apos;</comment>
         <translation>捕获测试案例</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Scenario</source>
-        <comment>group:'C++' trigger:'SCENARIO'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;SCENARIO&apos;</comment>
         <translation>捕获场景</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="+3" />
         <source>example</source>
-        <comment>group:'Text' trigger:'global'</comment>
+        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
         <translation>例子</translation>
     </message>
     <message>
@@ -23199,7 +23288,7 @@ Will not be applied to whitespace in comments and strings.</source>
     </message>
     <message>
         <location line="+25" />
-        <source>Folder "%2":</source>
+        <source>Folder &quot;%2&quot;:</source>
         <translation>文件夾“%2”：</translation>
     </message>
     <message>
@@ -23253,7 +23342,7 @@ Excluding: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/formattexteditor.cpp" line="+71" />
-        <source>Cannot create temporary file "%1": %2.</source>
+        <source>Cannot create temporary file &quot;%1&quot;: %2.</source>
         <translation>無法創建臨時文件“%1”：%2。</translation>
     </message>
     <message>
@@ -23263,7 +23352,7 @@ Excluding: %3
     </message>
     <message>
         <location line="+21" />
-        <source>Cannot read file "%1": %2.</source>
+        <source>Cannot read file &quot;%1&quot;: %2.</source>
         <translation>無法讀取文件“%1”：%2。</translation>
     </message>
     <message>
@@ -23318,8 +23407,8 @@ Excluding: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出顯示定義由 &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/ a&gt; 引擎。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;突出顯示定義由 &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/ a&gt; 引擎。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23393,7 +23482,7 @@ Excluding: %3
         <translation>篩選樹狀圖</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+130" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+140" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
         <source>Sort Alphabetically</source>
         <translation>按字母排序</translation>
@@ -23415,7 +23504,7 @@ Excluding: %3
     </message>
     <message>
         <location line="+15" />
-        <source>Expected mangler ID "l" (lowercase), "u" (uppercase), or "c" (titlecase) after colon.</source>
+        <source>Expected mangler ID &quot;l&quot; (lowercase), &quot;u&quot; (uppercase), or &quot;c&quot; (titlecase) after colon.</source>
         <translation>冒號後面應有“l”（小寫）、“u”（大寫）或“c”（標題大寫）。</translation>
     </message>
     <message>
@@ -23468,7 +23557,7 @@ Excluding: %3
     </message>
     <message>
         <location line="+1" />
-        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark's note text.</source>
+        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark&apos;s note text.</source>
         <translation>找到书签。 按文件名，通过书签线上的文本或书签的注释文本过滤。</translation>
     </message>
     <message>
@@ -23484,12 +23573,12 @@ Excluding: %3
     <message>
         <location line="+1" />
         <source>&amp;Edit</source>
-        <translation>＆编辑</translation>
+        <translation>&amp;编辑</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Remove</source>
-        <translation>＆消除</translation>
+        <translation>&amp;消除</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23522,7 +23611,7 @@ Excluding: %3
     <message>
         <location line="-15" />
         <source>&amp;Bookmarks</source>
-        <translation>＆书签</translation>
+        <translation>&amp;书签</translation>
     </message>
     <message>
         <location line="+53" />
@@ -23639,7 +23728,7 @@ Excluding: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot create temporary directory "%1": %2</source>
+        <source>Cannot create temporary directory &quot;%1&quot;: %2</source>
         <translation>無法創建臨時目錄“%1”：%2</translation>
     </message>
     <message>
@@ -23649,13 +23738,13 @@ Excluding: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot change to working directory "%1": %2</source>
-        <translation>無法變更為工作目錄"%1"：%2</translation>
+        <source>Cannot change to working directory &quot;%1&quot;: %2</source>
+        <translation>無法變更為工作目錄&quot;%1&quot;：%2</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1": %2</source>
-        <translation>無法執行"%1"：%2</translation>
+        <source>Cannot execute &quot;%1&quot;: %2</source>
+        <translation>無法執行&quot;%1&quot;：%2</translation>
     </message>
     <message>
         <location line="+109" />
@@ -23664,12 +23753,12 @@ Excluding: %3
     </message>
     <message>
         <location line="+60" />
-        <source>Cannot set permissions on temporary directory "%1": %2</source>
+        <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
         <translation>无法在临时目录“%1”上设置权限：%2</translation>
     </message>
     <message>
-        <source>The process "%1" could not be started: %2</source>
-        <translation type="vanished">處理序"%1"無法啟動：%2</translation>
+        <source>The process &quot;%1&quot; could not be started: %2</source>
+        <translation type="vanished">處理序&quot;%1&quot;無法啟動：%2</translation>
     </message>
     <message>
         <source>Quoting error in command.</source>
@@ -23688,13 +23777,13 @@ Excluding: %3
         <translation type="vanished">終端機命令可能不是一個 shell 命令。</translation>
     </message>
     <message>
-        <source>Cannot start the terminal emulator "%1", change the setting in the Environment preferences. (%2)</source>
+        <source>Cannot start the terminal emulator &quot;%1&quot;, change the setting in the Environment preferences. (%2)</source>
         <translation type="vanished">無法啟動終端仿真器“%1”，請更改環境首選項中的設置。 (%2)</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Cannot create socket "%1": %2</source>
-        <translation>無法建立通訊端"%1"：%2</translation>
+        <source>Cannot create socket &quot;%1&quot;: %2</source>
+        <translation>無法建立通訊端&quot;%1&quot;：%2</translation>
     </message>
     <message>
         <location line="-171" />
@@ -23776,7 +23865,7 @@ Excluding: %3
     </message>
     <message>
         <location line="+69" />
-        <source>The default suffix if you do not explicitly specify a file extension is ".%1".</source>
+        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
         <translation>如果未顯式指定文件擴展名，則默認後綴為“.%1”。</translation>
     </message>
     <message>
@@ -23818,50 +23907,50 @@ Excluding: %3
     </message>
     <message>
         <location line="+176" />
-        <source>The path "%1" expanded to an empty string.</source>
-        <translation>路徑"%1"展開為空字串。</translation>
+        <source>The path &quot;%1&quot; expanded to an empty string.</source>
+        <translation>路徑&quot;%1&quot;展開為空字串。</translation>
     </message>
     <message>
         <location line="-72" />
         <location line="+10" />
         <location line="+20" />
-        <source>The path "%1" does not exist.</source>
-        <translation>路徑"%1"不存在。</translation>
+        <source>The path &quot;%1&quot; does not exist.</source>
+        <translation>路徑&quot;%1&quot;不存在。</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+36" />
-        <source>The path "%1" is not a directory.</source>
-        <translation>路徑"%1"不是一個目錄。</translation>
+        <source>The path &quot;%1&quot; is not a directory.</source>
+        <translation>路徑&quot;%1&quot;不是一個目錄。</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+10" />
-        <source>The path "%1" is not a file.</source>
+        <source>The path &quot;%1&quot; is not a file.</source>
         <translation>路徑“%1”不是文件。</translation>
     </message>
     <message>
         <location line="-4" />
-        <source>The directory "%1" does not exist.</source>
-        <translation>目錄"%1"不存在。</translation>
+        <source>The directory &quot;%1&quot; does not exist.</source>
+        <translation>目錄&quot;%1&quot;不存在。</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>The path "%1" is not an executable file.</source>
+        <source>The path &quot;%1&quot; is not an executable file.</source>
         <translation>路徑“%1”不是可執行文件。</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid path "%1".</source>
+        <source>Invalid path &quot;%1&quot;.</source>
         <translation>路徑“%1”無效。</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1".</source>
-        <translation>無法執行"%1"。</translation>
+        <source>Cannot execute &quot;%1&quot;.</source>
+        <translation>無法執行&quot;%1&quot;。</translation>
     </message>
     <message>
-        <source>Full path: "%1"</source>
+        <source>Full path: &quot;%1&quot;</source>
         <translation type="vanished">完整路徑：“%1”</translation>
     </message>
     <message>
@@ -23902,7 +23991,7 @@ Excluding: %3
     </message>
     <message>
         <location line="+121" />
-        <source>Directory "%1" will be created.</source>
+        <source>Directory &quot;%1&quot; will be created.</source>
         <translation>將創建目錄“%1”。</translation>
     </message>
     <message>
@@ -23922,13 +24011,13 @@ Excluding: %3
     </message>
     <message>
         <location line="+12" />
-        <source>Invalid character ".".</source>
-        <translation>無效字元"."。</translation>
+        <source>Invalid character &quot;.&quot;.</source>
+        <translation>無效字元&quot;.&quot;。</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Invalid character "%1" found.</source>
-        <translation>發現無效字元"%1"。</translation>
+        <source>Invalid character &quot;%1&quot; found.</source>
+        <translation>發現無效字元&quot;%1&quot;。</translation>
     </message>
     <message>
         <location line="-232" />
@@ -24083,7 +24172,7 @@ Excluding: %3
         <location line="-16" />
         <location line="+20" />
         <source>Running %1
-in "%2".
+in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
@@ -24164,7 +24253,7 @@ in "%2".
         <translation>詳情</translation>
     </message>
     <message>
-        <source>copyFile is not implemented for "%1"</source>
+        <source>copyFile is not implemented for &quot;%1&quot;</source>
         <translation type="vanished">未為“%1”實現 copyFile</translation>
     </message>
     <message>
@@ -24177,60 +24266,60 @@ in "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to create tar archive from source: %3</source>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
         <translation>嘗試從源創建 tar 存檔時，無法從“%1”遞歸複製到“%2”：%3</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to extract tar archive to target: %3</source>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
         <translation>嘗試將 tar 存檔提取到目標時，無法從“%1”遞歸複製到“%2”：%3</translation>
     </message>
     <message>
-        <source>fileContents is not implemented for "%1"</source>
+        <source>fileContents is not implemented for &quot;%1&quot;</source>
         <translation type="vanished">未針對“%1”實現 fileContents</translation>
     </message>
     <message>
-        <source>writeFileContents is not implemented for "%1"</source>
+        <source>writeFileContents is not implemented for &quot;%1&quot;</source>
         <translation type="vanished">未針對“%1”實現 writeFileContents</translation>
     </message>
     <message>
-        <source>createTempFile is not implemented for "%1"</source>
+        <source>createTempFile is not implemented for &quot;%1&quot;</source>
         <translation type="vanished">未為“%1”實現 createTempFile</translation>
     </message>
     <message>
         <location line="-139" />
         <location line="+409" />
-        <source>Path "%1" exists but is not a writable directory.</source>
+        <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
         <translation>路径“%1”存在，但不是一个可写的目录。</translation>
     </message>
     <message>
         <location line="-356" />
-        <source>copyFile is not implemented for "%1".</source>
+        <source>copyFile is not implemented for &quot;%1&quot;.</source>
         <translation>CopyFile未针对“%1”实施。</translation>
     </message>
     <message>
         <location line="+30" />
-        <source>Cannot copy from "%1", it is not a directory.</source>
+        <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
         <translation>不能从“%1”复制，而是目录。</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Cannot copy "%1" to "%2": %3</source>
+        <source>Cannot copy &quot;%1&quot; to &quot;%2&quot;: %3</source>
         <translation>不能将“%1”复制为“%2”：%3</translation>
     </message>
     <message>
         <location line="+103" />
-        <source>fileContents is not implemented for "%1".</source>
+        <source>fileContents is not implemented for &quot;%1&quot;.</source>
         <translation>未针对“%1”实施filecontents。</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for "%1".</source>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
         <translation>WriteFileContents未针对“%1”实施。</translation>
     </message>
     <message>
         <location line="+66" />
-        <source>createTempFile is not implemented for "%1".</source>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
         <translation>createTempfile未针对“%1”实施。</translation>
     </message>
     <message>
@@ -24240,7 +24329,7 @@ in "%2".
     </message>
     <message>
         <location line="+180" />
-        <source>Refusing to remove the standard directory "%1".</source>
+        <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
         <translation>拒绝删除标准目录“%1”。</translation>
     </message>
     <message>
@@ -24255,79 +24344,79 @@ in "%2".
     </message>
     <message>
         <location line="+37" />
-        <source>Failed to remove directory "%1".</source>
-        <translation>無法刪除目錄"%1"。</translation>
+        <source>Failed to remove directory &quot;%1&quot;.</source>
+        <translation>無法刪除目錄&quot;%1&quot;。</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Failed to remove file "%1".</source>
-        <translation>無法刪除檔案"%1"。</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>無法刪除檔案&quot;%1&quot;。</translation>
     </message>
     <message>
         <location line="+551" />
-        <source>Failed creating temporary file "%1" (too many tries).</source>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
         <translation>无法创建临时文件“%1”（尝试太多）。</translation>
     </message>
     <message>
-        <source>Failed to copy file "%1" to "%2".</source>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation type="vanished">無法將文件“%1”複製到“%2”。</translation>
     </message>
     <message>
-        <source>File "%1" does not exist</source>
+        <source>File &quot;%1&quot; does not exist</source>
         <translation type="vanished">文件“%1”不存在</translation>
     </message>
     <message>
-        <source>Could not open File "%1"</source>
+        <source>Could not open File &quot;%1&quot;</source>
         <translation type="vanished">無法打開文件“%1”</translation>
     </message>
     <message>
         <location line="-449" />
-        <source>Cannot read "%1": %2</source>
+        <source>Cannot read &quot;%1&quot;: %2</source>
         <translation>無法讀取“%1”：%2</translation>
     </message>
     <message>
-        <source>Could not open file "%1" for writing</source>
+        <source>Could not open file &quot;%1&quot; for writing</source>
         <translation type="vanished">無法打開文件“%1”進行寫入</translation>
     </message>
     <message>
-        <source>Could not write to file "%1" (only %2 of %3 bytes written)</source>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
         <translation type="vanished">無法寫入文件“%1”（僅寫入了 %2 個字節，共 %3 個字節）</translation>
     </message>
     <message>
-        <source>Could not create temporary file in "%1" (%2)</source>
+        <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
         <translation type="vanished">無法在“%1”(%2) 中創建臨時文件</translation>
     </message>
     <message>
         <location line="-87" />
         <location line="+406" />
-        <source>Failed to copy file "%1" to "%2": %3</source>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
         <translation>無法將文件“%1”複製到“%2”：%3</translation>
     </message>
     <message>
         <location line="-333" />
-        <source>File "%1" does not exist.</source>
+        <source>File &quot;%1&quot; does not exist.</source>
         <translation>文件“%1”不存在。</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File "%1".</source>
+        <source>Could not open File &quot;%1&quot;.</source>
         <translation>无法打开文件“%1”。</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Could not open file "%1" for writing.</source>
+        <source>Could not open file &quot;%1&quot; for writing.</source>
         <translation>无法打开文件“%1”。</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
-        <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %n byte(s) written).</source>
         <translation>
             <numerusform>无法写入文件“%1”（只有%n个字节的%2%编写）。</numerusform>
         </translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Could not create temporary file in "%1" (%2).</source>
+        <source>Could not create temporary file in &quot;%1&quot; (%2).</source>
         <translation>无法在“%1”（%2）中创建临时文件。</translation>
     </message>
     <message>
@@ -24337,21 +24426,21 @@ in "%2".
     </message>
     <message>
         <location line="+202" />
-        <source>Failed reading file "%1": %2</source>
+        <source>Failed reading file &quot;%1&quot;: %2</source>
         <translation>讀取文件“%1”失敗：%2</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Failed writing file "%1": %2</source>
+        <source>Failed writing file &quot;%1&quot;: %2</source>
         <translation>寫入文件“%1”失敗：%2</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Failed creating temporary file "%1": %2</source>
+        <source>Failed creating temporary file &quot;%1&quot;: %2</source>
         <translation>創建臨時文件“%1”失敗：%2</translation>
     </message>
     <message>
-        <source>Failed creating temporary file "%1" (too many tries)</source>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
         <translation type="vanished">創建臨時文件“%1”失敗（嘗試次數過多）</translation>
     </message>
     <message>
@@ -24371,18 +24460,18 @@ in "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/elfreader.cpp" line="+130" />
-        <source>"%1" is an invalid ELF object (%2)</source>
-        <translation>"%1"是一個無效的ELF物件(%2)</translation>
+        <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
+        <translation>&quot;%1&quot;是一個無效的ELF物件(%2)</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>"%1" is not an ELF object (file too small)</source>
-        <translation>"%1"不是ELF物件(檔案太小)</translation>
+        <source>&quot;%1&quot; is not an ELF object (file too small)</source>
+        <translation>&quot;%1&quot;不是ELF物件(檔案太小)</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>"%1" is not an ELF object</source>
-        <translation>"%1"不是ELF物件</translation>
+        <source>&quot;%1&quot; is not an ELF object</source>
+        <translation>&quot;%1&quot;不是ELF物件</translation>
     </message>
     <message>
         <location line="+8" />
@@ -24433,7 +24522,7 @@ To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-To disable a variable, prefix the line with "#".</source>
+To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="vanished">每行輸入一個環境變量。
 要設置或更改變量，請使用 VARIABLE=VALUE。
 要附加到變量，請使用 VARIABLE+=VALUE。
@@ -24480,13 +24569,13 @@ To disable a variable, prefix the line with "#".</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Invalid character "%1".</source>
-        <translation>無效的字元"%1"。</translation>
+        <source>Invalid character &quot;%1&quot;.</source>
+        <translation>無效的字元&quot;%1&quot;。</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid characters "%1".</source>
-        <translation>無效的字元"%1"。</translation>
+        <source>Invalid characters &quot;%1&quot;.</source>
+        <translation>無效的字元&quot;%1&quot;。</translation>
     </message>
     <message>
         <location line="+10" />
@@ -24527,12 +24616,12 @@ To disable a variable, prefix the line with "#".</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Could not set permissions on "%1"</source>
+        <source>Could not set permissions on &quot;%1&quot;</source>
         <translation>無法設置“%1”的權限</translation>
     </message>
     <message>
         <location line="+250" />
-        <source>No "localSource" device hook set.</source>
+        <source>No &quot;localSource&quot; device hook set.</source>
         <translation>沒有設置“localSource”設備掛鉤。</translation>
     </message>
     <message>
@@ -24615,20 +24704,20 @@ To disable a variable, prefix the line with "#".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Overwrite existing file "%1"?</source>
+        <source>Overwrite existing file &quot;%1&quot;?</source>
         <translation>覆蓋現有文件“%1”嗎？</translation>
     </message>
     <message>
         <location line="+21" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>無法將檔案"%1"複製到"%2"。</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>無法將檔案&quot;%1&quot;複製到&quot;%2&quot;。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
         <location line="+409" />
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
-        <source>Failed to create directory "%1".</source>
-        <translation>無法建立目錄"%1"。</translation>
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>無法建立目錄&quot;%1&quot;。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
@@ -24638,7 +24727,7 @@ To disable a variable, prefix the line with "#".</source>
     <message>
         <location filename="../../../src/libs/utils/infobar.cpp" line="+303" />
         <source>&amp;Show Details</source>
-        <translation>＆顯示詳細資料</translation>
+        <translation>&amp;顯示詳細資料</translation>
     </message>
     <message>
         <location line="+43" />
@@ -24695,7 +24784,7 @@ To disable a variable, prefix the line with "#".</source>
     </message>
     <message>
         <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
-        <source>Failed to start process launcher at "%1": %2</source>
+        <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
         <translation>無法在“%1”處啟動進程啟動器：%2</translation>
     </message>
     <message>
@@ -24812,12 +24901,12 @@ To disable a variable, prefix the line with "#".</source>
         <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
-To disable a variable, prefix this line with "#".
+To disable a variable, prefix this line with &quot;#&quot;.
 To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-Lines starting with "##" will be treated as comments.</source>
+Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>输入每行的一个环境变量。
  要设置或更改变量，请使用变量=值。
  要禁用变量，请以“＃”前缀此行。
@@ -24830,7 +24919,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+112" />
         <source>&amp;OK</source>
-        <translation>＆好的</translation>
+        <translation>&amp;好的</translation>
     </message>
     <message>
         <location line="+1" />
@@ -24844,17 +24933,17 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+29" />
-        <source>The program "%1" does not exist or is not executable.</source>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
         <translation>程序“%1”不存在或不可執行。</translation>
     </message>
     <message>
         <location line="+79" />
-        <source>The program "%1" could not be found.</source>
+        <source>The program &quot;%1&quot; could not be found.</source>
         <translation>找不到“%1”程序。</translation>
     </message>
     <message>
         <location line="+908" />
-        <source>Failed to create process interface for "%1".</source>
+        <source>Failed to create process interface for &quot;%1&quot;.</source>
         <translation>无法创建“%1”的过程接口。</translation>
     </message>
     <message>
@@ -24869,8 +24958,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The process "%1" is not responding.</source>
-        <translation>處理序"%1"沒有回應。</translation>
+        <source>The process &quot;%1&quot; is not responding.</source>
+        <translation>處理序&quot;%1&quot;沒有回應。</translation>
     </message>
     <message>
         <location line="+3" />
@@ -24879,32 +24968,32 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+233" />
-        <source>The command "%1" finished successfully.</source>
-        <translation>命令"%1"已成功完成。</translation>
+        <source>The command &quot;%1&quot; finished successfully.</source>
+        <translation>命令&quot;%1&quot;已成功完成。</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated with exit code %2.</source>
-        <translation>命令"%1"以退出代碼%2結束。</translation>
+        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
+        <translation>命令&quot;%1&quot;以退出代碼%2結束。</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated abnormally.</source>
-        <translation>命令"%1"異常終止。</translation>
+        <source>The command &quot;%1&quot; terminated abnormally.</source>
+        <translation>命令&quot;%1&quot;異常終止。</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" could not be started.</source>
-        <translation>命令"%1"無法啟動。</translation>
+        <source>The command &quot;%1&quot; could not be started.</source>
+        <translation>命令&quot;%1&quot;無法啟動。</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>The command "%1" was canceled after %2 ms.</source>
+        <source>The command &quot;%1&quot; was canceled after %2 ms.</source>
         <translation>命令“%1”在%2 ms之后取消。</translation>
     </message>
     <message>
-        <source>The command "%1" did not respond within the timeout limit (%2 s).</source>
-        <translation type="vanished">命令"%1"在逾時限制(%2秒)內沒有回應。</translation>
+        <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
+        <translation type="vanished">命令&quot;%1&quot;在逾時限制(%2秒)內沒有回應。</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
@@ -24943,7 +25032,7 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open "%1".</source>
+        <source>Could not open &quot;%1&quot;.</source>
         <translation>無法打開“%1”。</translation>
     </message>
     <message>
@@ -24965,12 +25054,12 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="-264" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;找不到有效的設置文件。&lt;/p&gt;&lt;p&gt;在目錄“%1”中找到的所有設置文件都不適合當前版本的 %2，例如，因為它們是由不兼容版本的 % 編寫的2，或者因為使用了不同的設置路徑。&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+265" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were either too new or too old to be read.&lt;/p&gt;</source>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;找不到有效的設置文件。&lt;/p&gt;&lt;p&gt;在目錄“%1”中找到的所有設置文件要么太新，要么太舊，無法讀取。&lt;/p&gt;</translation>
     </message>
     <message>
@@ -24980,17 +25069,17 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>&lt;p&gt;The versioned backup "%1" of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
+        <source>&lt;p&gt;The versioned backup &quot;%1&quot; of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
         <translation>&lt;p&gt;使用設置文件的版本化備份“%1”，因為非版本化文件是由不兼容的 %2 版本創建的。&lt;/p&gt;&lt;p&gt;自上次使用此版本以來所做的設置更改使用的 %2 將被忽略，現在所做的更改將&lt;b&gt;不會&lt;/b&gt;傳播到較新的版本。&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Settings File for "%1" from a Different Environment?</source>
+        <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
         <translation>來自不同環境的“%1”的設置文件？</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file "%2"?&lt;/p&gt;</source>
+        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file &quot;%2&quot;?&lt;/p&gt;</source>
         <translation>&lt;p&gt;找不到此 %1 實例創建的設置文件。&lt;/p&gt;&lt;p&gt;您之前是否在另一台計算機上處理過此項目或使用過不同的設置路徑？&lt;/p&gt;&lt;p&gt;您仍然這樣做嗎？想要加載設置文件“%2”？&lt;/p&gt;</translation>
     </message>
     <message>
@@ -25000,7 +25089,7 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" is not supported by %2. Do you want to try loading it anyway?</source>
+        <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
         <translation>%2 不支持“%1”。您仍然想嘗試加載它嗎？</translation>
     </message>
     <message>
@@ -25076,8 +25165,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+3" />
         <location line="+7" />
-        <source>Insert "%1"</source>
-        <translation>插入"%1"</translation>
+        <source>Insert &quot;%1&quot;</source>
+        <translation>插入&quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-3" />
@@ -25118,7 +25207,7 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+7" />
-        <source>Command "%1" was not found.</source>
+        <source>Command &quot;%1&quot; was not found.</source>
         <translation>找不到命令“%1”。</translation>
     </message>
     <message>
@@ -25144,7 +25233,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+28" />
         <location line="+45" />
-        <source>Failed to start terminal process: "%1".</source>
+        <source>Failed to start terminal process: &quot;%1&quot;.</source>
         <translation>无法启动终端过程：“%1”。</translation>
     </message>
     <message>
@@ -25196,9 +25285,9 @@ Lines starting with "##" will be treated as comments.</source>
 <context>
     <name>TextEditor::Internal::Snippets</name>
     <message>
-        <source />
+        <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
-        <translation />
+        <translation></translation>
     </message>
 </context>
 </TS>

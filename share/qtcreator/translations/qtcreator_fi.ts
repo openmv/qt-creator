@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+838" />
         <source>Copy</source>
         <translation>Kopioida</translation>
     </message>
@@ -30,82 +30,82 @@
         <translation>OpenMV-kameran asetukset</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Turn on WiFi Shield on startup</source>
         <translation>Ota WiFi Shield käyttöön käynnistyksen yhteydessä</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Client Mode (Normal)</source>
         <translation>Asiakastila (normaali)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Password</source>
         <translation>Salasana</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter your WiFi network password here</source>
         <translation>Kirjoita WiFi-verkkosi salasana tähän</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Type</source>
         <translation>Tyyppi</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Open (No password)</source>
         <translation>Avaa (ei salasanaa)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WPA (Modern WiFi Security)</source>
         <translation>WPA (Modern WiFi Security)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WEP (Hexadecimal password)</source>
         <translation>WEP (heksadesimaalinen salasana)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>SSID</source>
         <translation>SSID</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter or select your WiFi network here</source>
         <translation>Kirjoita tai valitse WiFi-verkkosi tähän</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Acess Point Mode</source>
         <translation>Tukiasematila</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
         <translation>Kirjoita WiFi-verkon nimi salasanan luomiseksi tähän</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
         <translation>Kirjoita luotavan Wi-Fi-verkon nimi tähän</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Board Name</source>
         <translation>Hallituksen nimi</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
         <translation>Kirjoita tähän nimi OpenMV-kamerallesi</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Duplicate REPL on the UART on startup</source>
         <translation>Kopioi REPL UART:iin käynnistyksen yhteydessä</translation>
     </message>
@@ -118,42 +118,42 @@
         <translation>000</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Max</source>
         <translation>Max</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Median</source>
         <translation>Mediaani</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mode</source>
         <translation>tila</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Min</source>
         <translation>Min</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mean</source>
         <translation>Tarkoittaa</translation>
     </message>
@@ -205,41 +205,41 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for '%1'...</source>
-        <translation>Ladataan uutta syntaksin määritelmää kohteelle '%1'...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation>Ladataan uutta syntaksin määritelmää kohteelle &apos;%1&apos;...</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for '%1' to version %2...</source>
-        <translation>Päivitetään syntaksin määritelmää '%1' versioon %2...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation>Päivitetään syntaksin määritelmää &apos;%1&apos; versioon %2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
         <source>Copy/Convert Python File</source>
         <translation>Kopioi/muunna Python -tiedosto</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+21" />
         <location line="+7" />
-        <location line="+94" />
+        <location line="+91" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+76" />
         <location line="+7" />
         <source>Unable to overwrite output file!</source>
         <translation>Ei voi korvata lähtötiedostoa!</translation>
     </message>
     <message>
-        <location line="-125" />
+        <location line="-124" />
         <source>Model Zoo</source>
         <translation>Eläintarha</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+77" />
         <source>Model conversion is unnecessary for this board, as it lacks an NPU accelerator.</source>
         <translation>Mallin muuntaminen on tarpeetonta tälle hallitukselle, koska siitä puuttuu NPU -kiihdytin.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <source>Convert Model</source>
         <translation>Muuntaa malli</translation>
     </message>
@@ -335,8 +335,8 @@
         <translation type="vanished">Työtilan johtaja</translation>
     </message>
     <message>
-        <source>&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;What is a Workspace?&lt;/a&gt;</source>
-        <translation type="vanished">&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;Mikä on työtila?&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;Mikä on työtila?&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Workspace</source>
@@ -639,7 +639,7 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Request Copilot suggestion at the current editor's cursor position.</source>
+        <source>Request Copilot suggestion at the current editor&apos;s cursor position.</source>
         <translation>Pyydä Copilot -ehdotusta nykyisen editorin kohdistimen sijainnissa.</translation>
     </message>
     <message>
@@ -728,7 +728,7 @@ The code has been copied to your clipboard.</source>
         <location line="+2" />
         <source>Select path to %2 in Copilot Neovim plugin. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to copilot.vim getting started, %2 is the filename of the copilot language server</extracomment>
-        <translation>Valitse Polku arvoon 2 Copilot Neovim -laajennuksessa. Katso asennusohjeet %1.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5" />
@@ -853,7 +853,7 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+31" />
         <source>Enabling %1 is subject to your agreement and abidance with your applicable %1 terms. It is your responsibility to know and accept the requirements and parameters of using tools like %1. This may include, but is not limited to, ensuring you have the rights to allow %1 access to your code, as well as understanding any implications of your use of %1 and suggestions produced (like copyright, accuracy, etc.).</source>
-        <translation>Mahdollistaa %1 sovelletaan sopimuksesi ja arvioitavasi sovellettavan %1 -ehdoesi kanssa. Sinun vastuullasi on tietää ja hyväksyä työkalujen käyttämisen vaatimukset ja parametrit, kuten %1. Tähän voi kuulua, mutta ei rajoittuen, sen varmistaminen, että sinulla on oikeudet sallia %yhden pääsyn koodiin, samoin kuin prosentin 1 käytön ja tuotettujen ehdotusten (kuten tekijänoikeuksien, tarkkuuden jne.) Vaikutukset.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16" />
@@ -861,9 +861,7 @@ The code has been copied to your clipboard.</source>
 
 Otherwise you need to specify the path to the %2 file from the Copilot neovim plugin.</source>
         <comment>Markdown text for the copilot instruction label</comment>
-        <translation>Copilot -laajennus vaatii Node.js ja Copilot Neovim -laajennus. Jos asennat Neovim -laajennuksen %1: ssä 1, laajennus löytää %3 -tiedoston automaattisesti.
-
- Muuten sinun on määritettävä polku 2 -tiedostoon Copilot Neovim -laajennuksesta.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14" />
@@ -893,8 +891,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>Editorin avaaminen kohteelle "%1" epäonnistui.</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>Editorin avaaminen kohteelle &quot;%1&quot; epäonnistui.</translation>
     </message>
     <message>
         <location line="+28" />
@@ -929,7 +927,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-2268" />
         <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+445" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
@@ -1027,8 +1025,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+74" />
-        <source>An item named "%1" already exists at this location. Do you want to overwrite it?</source>
-        <translation>Kohde nimeltä "%1" on jo olemassa tässä paikassa. Haluatko korvata sen?</translation>
+        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
+        <translation>Kohde nimeltä &quot;%1&quot; on jo olemassa tässä paikassa. Haluatko korvata sen?</translation>
     </message>
     <message>
         <location line="+230" />
@@ -1146,7 +1144,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="+12" />
         <source>Ad&amp;vanced</source>
-        <translation>Pitkälle kehittynyt</translation>
+        <translation>&amp;Pitkälle kehittynyt</translation>
     </message>
     <message>
         <location line="+38" />
@@ -1155,12 +1153,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+7" />
-        <source>X-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>Nykyisen editorin vasemman yläkulman X-koordinaatti suhteessa näyttöön.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Y-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>Nykyisen editorin vasemman yläkulman Y-koordinaatti suhteessa näyttöön.</translation>
     </message>
     <message>
@@ -1170,27 +1168,27 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <source>The text file "%1" has the size %2MB and might take more memory to open and process than available.
+        <source>The text file &quot;%1&quot; has the size %2MB and might take more memory to open and process than available.
 
 Continue?</source>
-        <translation>Tekstitiedoston "%1" koko on %2 Mt, ja sen avaaminen ja käsittely saattaa viedä enemmän muistia kuin käytettävissä.
+        <translation>Tekstitiedoston &quot;%1&quot; koko on %2 Mt, ja sen avaaminen ja käsittely saattaa viedä enemmän muistia kuin käytettävissä.
 
 Jatkaa?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>Could not open "%1": Cannot open files of type "%2".</source>
-        <translation>Ei voitu avata "%1": Ei voi avata tiedostoja "%2".</translation>
+        <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
+        <translation>Ei voitu avata &quot;%1&quot;: Ei voi avata tiedostoja &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not open "%1" for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>Ei voitu avata "%1" lukemista varten. Joko tiedostoa ei ole olemassa tai sinulla ei ole oikeuksia sen avaamiseen.</translation>
+        <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
+        <translation>Ei voitu avata &quot;%1&quot; lukemista varten. Joko tiedostoa ei ole olemassa tai sinulla ei ole oikeuksia sen avaamiseen.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Could not open "%1": Unknown error.</source>
-        <translation>Ei voitu avata "%1": Tuntematon virhe.</translation>
+        <source>Could not open &quot;%1&quot;: Unknown error.</source>
+        <translation>Ei voitu avata &quot;%1&quot;: Tuntematon virhe.</translation>
     </message>
     <message>
         <location line="+1130" />
@@ -1267,18 +1265,18 @@ Jatkaa?</translation>
     </message>
     <message>
         <location line="+308" />
-        <source>Close "%1"</source>
-        <translation>Sulje "%1"</translation>
+        <source>Close &quot;%1&quot;</source>
+        <translation>Sulje &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+27" />
-        <source>Unpin "%1"</source>
-        <translation>Irrota "%1"</translation>
+        <source>Unpin &quot;%1&quot;</source>
+        <translation>Irrota &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Pin "%1"</source>
-        <translation>Kiinnitä "%1"</translation>
+        <source>Pin &quot;%1&quot;</source>
+        <translation>Kiinnitä &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1403,7 +1401,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+2" />
-        <source>Don't Round</source>
+        <source>Don&apos;t Round</source>
         <translation>Älä pyöreä</translation>
     </message>
     <message>
@@ -1414,7 +1412,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+6" />
         <source>The following environment variables are set and can influence the UI scaling behavior of %1:</source>
-        <translation>Seuraavat ympäristömuuttujat asetetaan ja voivat vaikuttaa prosentin 1 käyttöliittymän skaalauskäyttäytymiseen:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7" />
@@ -1555,8 +1553,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+35" />
-        <source>Command line arguments used for "Run in terminal".</source>
-        <translation>Komentoriviargumentteja käytetään "Suorita terminaalissa".</translation>
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>Komentoriviargumentteja käytetään &quot;Suorita terminaalissa&quot;.</translation>
     </message>
     <message>
         <location line="-50" />
@@ -1580,8 +1578,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+105" />
-        <source>Command line arguments used for "%1".</source>
-        <translation>Komentoriviargumentteja käytetään kohteelle "%1".</translation>
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>Komentoriviargumentteja käytetään kohteelle &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+34" />
@@ -1637,8 +1635,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+147" />
-        <source>Maximum number of entries in "Recent Files":</source>
-        <translation>"Viimeaikaiset tiedostot" -kohdassa olevien merkintöjen enimmäismäärä:</translation>
+        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
+        <translation>&quot;Viimeaikaiset tiedostot&quot; -kohdassa olevien merkintöjen enimmäismäärä:</translation>
     </message>
     <message>
         <location line="+12" />
@@ -1698,7 +1696,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <translation>Lähtö</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1773" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1787" />
         <source>&amp;File</source>
         <translation>&amp;Tiedosto</translation>
     </message>
@@ -1723,7 +1721,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <translation>&amp;Auta</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+122" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+128" />
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2620" />
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
@@ -1735,7 +1733,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
-        <translation>Tallenna nimellä...</translation>
+        <translation>T&amp;allenna nimellä...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+3" />
@@ -1745,16 +1743,16 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+701" />
         <source>Save A&amp;ll</source>
-        <translation>Tallenna kaikki</translation>
+        <translation>Ta&amp;llenna kaikki</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-279" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>Poistutaanko %1?</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+106" />
         <source>&amp;View</source>
         <translation>&amp;Näytä</translation>
     </message>
@@ -1797,7 +1795,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     <message>
         <location line="+10" />
         <source>Recent &amp;Files</source>
-        <translation>Viimeaikaiset tiedostot</translation>
+        <translation>&amp;Viimeaikaiset tiedostot</translation>
     </message>
     <message>
         <location line="+20" />
@@ -1842,7 +1840,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     <message>
         <location line="+6" />
         <source>Cu&amp;t</source>
-        <translation>Leikata</translation>
+        <translation>Leika&amp;ta</translation>
     </message>
     <message>
         <location line="+8" />
@@ -1857,7 +1855,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     <message>
         <location line="+8" />
         <source>Select &amp;All</source>
-        <translation>Valitse kaikki</translation>
+        <translation>V&amp;alitse kaikki</translation>
     </message>
     <message>
         <location line="+8" />
@@ -1913,7 +1911,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     <message>
         <location line="+11" />
         <source>Pr&amp;eferences...</source>
-        <translation>Asetukset...</translation>
+        <translation>As&amp;etukset...</translation>
     </message>
     <message>
         <location line="+26" />
@@ -1947,8 +1945,8 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the "%2" action from the "%3" locator filter (%4).</source>
-        <translation>Tämä piilottaa valikkopalkin kokonaan. Voit näyttää sen uudelleen kirjoittamalla%1.</translation>
+        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the &quot;%2&quot; action from the &quot;%3&quot; locator filter (%4).</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21" />
@@ -2001,7 +1999,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <translation>Piilotettu</translation>
     </message>
     <message>
-        <location line="+460" />
+        <location line="+474" />
         <source>Version:</source>
         <translation>Versio:</translation>
     </message>
@@ -2021,7 +2019,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <translation>&lt;p&gt;Qt Creator -kehittäjät tavoitat Qt Creator -postituslistalla:&lt;/p&gt;%1&lt;p&gt;tai #qt-creator-kanavalla Libera.Chat IRC:ssä:&lt;/p&gt;%2&lt;p&gt;Virheenseurantamme sijaitsee osoitteessa %3.&lt;/p&gt;&lt;p&gt;Käytä %4, jos haluat suurempia tekstiä.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-803" />
+        <location line="-817" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -2054,7 +2052,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+240" />
+        <location line="+244" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>Avaa Asiakirjat</translation>
@@ -2076,8 +2074,8 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Close All Except "%1"</source>
-        <translation>Sulje kaikki paitsi "%1"</translation>
+        <source>Close All Except &quot;%1&quot;</source>
+        <translation>Sulje kaikki paitsi &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+1" />
@@ -2113,16 +2111,16 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+927" />
-        <location line="+13" />
-        <location line="+11" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location line="+16" />
+        <location line="+14" />
         <source>Save Log</source>
         <translation>Tallenna loki</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-617" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
         <source>Clear</source>
         <translation>Asia selvä</translation>
     </message>
@@ -2263,8 +2261,8 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location line="+51" />
-        <source>Failed to open preset file "%1" for reading.</source>
-        <translation>Esiasetettujen tiedostojen "%1" avaaminen lukemiseen.</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading.</source>
+        <translation>Esiasetettujen tiedostojen &quot;%1&quot; avaaminen lukemiseen.</translation>
     </message>
     <message>
         <location line="-172" />
@@ -2278,13 +2276,13 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>Failed to write logs to "%1".</source>
-        <translation>Lokien kirjoittaminen kohteeseen "%1" epäonnistui.</translation>
+        <source>Failed to write logs to &quot;%1&quot;.</source>
+        <translation>Lokien kirjoittaminen kohteeseen &quot;%1&quot; epäonnistui.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open file "%1" for writing logs.</source>
-        <translation>Tiedoston "%1" avaaminen lokien kirjoittamista varten epäonnistui.</translation>
+        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
+        <translation>Tiedoston &quot;%1&quot; avaaminen lokien kirjoittamista varten epäonnistui.</translation>
     </message>
     <message>
         <source>Save Enabled Categories As</source>
@@ -2292,8 +2290,8 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location line="+45" />
-        <source>Failed to write preset file "%1".</source>
-        <translation>Esiasetustiedoston "%1" kirjoittaminen epäonnistui.</translation>
+        <source>Failed to write preset file &quot;%1&quot;.</source>
+        <translation>Esiasetustiedoston &quot;%1&quot; kirjoittaminen epäonnistui.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -2301,13 +2299,13 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <translation>Lataa käytössä olevat luokat alkaen</translation>
     </message>
     <message>
-        <source>Failed to open preset file "%1" for reading</source>
-        <translation type="vanished">Esiasetustiedoston "%1" avaaminen lukemista varten epäonnistui</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading</source>
+        <translation type="vanished">Esiasetustiedoston &quot;%1&quot; avaaminen lukemista varten epäonnistui</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Failed to read preset file "%1": %2</source>
-        <translation>Esiasetustiedoston "%1" lukeminen epäonnistui: %2</translation>
+        <source>Failed to read preset file &quot;%1&quot;: %2</source>
+        <translation>Esiasetustiedoston &quot;%1&quot; lukeminen epäonnistui: %2</translation>
     </message>
     <message>
         <location line="+29" />
@@ -2466,17 +2464,17 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <translation>Prosessit</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-75" />
         <source>&amp;Diff</source>
         <translation>&amp;Erot</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Do &amp;Not Save</source>
-        <translation>Älä säästä</translation>
+        <translation>Ä&amp;lä säästä</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+72" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
         <translation>&amp;Ero &amp;&amp; Peruuta</translation>
     </message>
@@ -2570,13 +2568,13 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Use "Cmd", "Opt", "Ctrl", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>Käytä "Cmd", "Opt", "Ctrl" ja "Shift" muokkausnäppäimiä varten. Käytä "Escape", "Backspace", "Delete", "Insert", "Home" ja niin edelleen erikoisnäppäimiä varten. Yhdistä yksittäiset näppäimet "+" -merkillä ja yhdistä useita pikanäppäimiä pikanäppäinsarjaksi "," -merkillä. Jos käyttäjän on esimerkiksi pidettävä Ctrl- ja Shift-muokkausnäppäimiä painettuna Esc-näppäimellä, ja vapautettava sitten A-näppäin, kirjoita "Ctrl+Shift+Escape,A".</translation>
+        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Käytä &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot; ja &quot;Shift&quot; muokkausnäppäimiä varten. Käytä &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; ja niin edelleen erikoisnäppäimiä varten. Yhdistä yksittäiset näppäimet &quot;+&quot; -merkillä ja yhdistä useita pikanäppäimiä pikanäppäinsarjaksi &quot;,&quot; -merkillä. Jos käyttäjän on esimerkiksi pidettävä Ctrl- ja Shift-muokkausnäppäimiä painettuna Esc-näppäimellä, ja vapautettava sitten A-näppäin, kirjoita &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Use "Ctrl", "Alt", "Meta", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
-        <translation>Käytä "Ctrl", "Alt", "Meta" ja "Shift" muokkausnäppäimiä varten. Käytä "Escape", "Backspace", "Delete", "Insert", "Home" ja niin edelleen erikoisnäppäimiä varten. Yhdistä yksittäiset näppäimet "+" -merkillä ja yhdistä useita pikanäppäimiä pikanäppäinsarjaksi "," -merkillä. Jos käyttäjän on esimerkiksi pidettävä Ctrl- ja Shift-muokkausnäppäimiä painettuna Esc-näppäimellä, ja vapautettava sitten A-näppäin, kirjoita "Ctrl+Shift+Escape,A".</translation>
+        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
+        <translation>Käytä &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot; ja &quot;Shift&quot; muokkausnäppäimiä varten. Käytä &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; ja niin edelleen erikoisnäppäimiä varten. Yhdistä yksittäiset näppäimet &quot;+&quot; -merkillä ja yhdistä useita pikanäppäimiä pikanäppäinsarjaksi &quot;,&quot; -merkillä. Jos käyttäjän on esimerkiksi pidettävä Ctrl- ja Shift-muokkausnäppäimiä painettuna Esc-näppäimellä, ja vapautettava sitten A-näppäin, kirjoita &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -2585,8 +2583,8 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Key sequence has potential conflicts. &lt;a href="#conflicts"&gt;Show.&lt;/a&gt;</source>
-        <translation>Avainsarjassa on mahdollisia ristiriitoja. &lt;a href="#conflicts"&gt;Näytä.&lt;/a&gt;</translation>
+        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
+        <translation>Avainsarjassa on mahdollisia ristiriitoja. &lt;a href=&quot;#conflicts&quot;&gt;Näytä.&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+122" />
@@ -2611,17 +2609,17 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     <message>
         <location line="+7" />
         <source>Search f&amp;or:</source>
-        <translation>Etsiä:</translation>
+        <translation>&amp;Etsiä:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Whole words o&amp;nly</source>
-        <translation>Kokonaiset sanat vain</translation>
+        <translation>Koko&amp;naiset sanat vain</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Use re&amp;gular expressions</source>
-        <translation>Käytä säännöllisiä lausekkeita</translation>
+        <translation>&amp;Käytä säännöllisiä lausekkeita</translation>
     </message>
     <message>
         <location line="+3" />
@@ -2645,7 +2643,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-333" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-335" />
         <source>Open Advanced Find...</source>
         <translation>Avaa lisähaku...</translation>
     </message>
@@ -2667,12 +2665,11 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <translation>Kirjoita Etsi-merkkijono</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+E</source>
-        <translation>Ctrl+E</translation>
+        <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Find Next</source>
         <translation>Etsi Seuraava</translation>
     </message>
@@ -2692,24 +2689,24 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <translation>Korvaa &amp;&amp; Etsi edellinen</translation>
     </message>
     <message>
-        <location line="-246" />
-        <location line="+259" />
+        <location line="-248" />
+        <location line="+261" />
         <source>Replace All</source>
         <translation>Korvaa kaikki</translation>
     </message>
     <message>
-        <location line="-309" />
+        <location line="-311" />
         <source>Find Flags</source>
         <translation>Etsi lippuja</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+235" />
+        <location line="+237" />
         <source>Replace &amp;&amp; Find</source>
         <translation>Korvaa &amp;&amp; Etsi</translation>
     </message>
     <message>
-        <location line="-148" />
+        <location line="-150" />
         <location line="+13" />
         <source>Shift+Enter</source>
         <translation>Vaihto+Enter</translation>
@@ -2726,7 +2723,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <translation>Etsi/korvaa</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+59" />
         <source>Find Next (Selected)</source>
         <translation>Etsi seuraava (valittu)</translation>
     </message>
@@ -2785,7 +2782,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <translation>Korvata...</translation>
     </message>
     <message>
-        <location line="-520" />
+        <location line="-522" />
         <source>Find</source>
         <translation>löytö</translation>
     </message>
@@ -2824,7 +2821,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+705" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
         <source>Collapse All</source>
         <translation>Kutista kaikki</translation>
     </message>
@@ -2851,7 +2848,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+225" />
+        <location line="+227" />
         <source>Replace</source>
         <translation>Korvata</translation>
     </message>
@@ -2867,11 +2864,11 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Open file "%1" with:</source>
-        <translation>Avaa tiedosto "%1":</translation>
+        <source>Open file &quot;%1&quot; with:</source>
+        <translation>Avaa tiedosto &quot;%1&quot;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-455" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
         <source>Show Hidden Files</source>
         <translation>Näytä piilotetut tiedostot</translation>
     </message>
@@ -2897,15 +2894,15 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <translation>Uusi tiedosto</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="+156" />
         <location line="+78" />
         <source>New Folder</source>
         <translation>Uusi kansio</translation>
     </message>
     <message>
         <location line="-18" />
-        <source>Open "%1"</source>
-        <translation>Avaa "%1"</translation>
+        <source>Open &quot;%1&quot;</source>
+        <translation>Avaa &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -2965,7 +2962,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <translation>Poista...</translation>
     </message>
     <message>
-        <location line="-618" />
+        <location line="-622" />
         <source>Synchronize with Editor</source>
         <translation>Synkronoi editorin kanssa</translation>
     </message>
@@ -3000,8 +2997,8 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
         <translation>Yleinen hakemistosuodatin</translation>
     </message>
     <message>
-        <source>Matches all files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">Vastaa kaikkia mukautetun hakemistojoukon tiedostoja. Liitä "+&lt;numero&gt;" tai ":&lt;numero&gt;" hypätäksesi annettuun rivinumeroon. Lisää toinen "+&lt;numero&gt;" tai ":&lt;numero&gt;" hypätäksesi myös sarakkeen numeroon.</translation>
+        <source>Matches all files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">Vastaa kaikkia mukautetun hakemistojoukon tiedostoja. Liitä &quot;+&lt;numero&gt;&quot; tai &quot;:&lt;numero&gt;&quot; hypätäksesi annettuun rivinumeroon. Lisää toinen &quot;+&lt;numero&gt;&quot; tai &quot;:&lt;numero&gt;&quot; hypätäksesi myös sarakkeen numeroon.</translation>
     </message>
     <message>
         <location line="+273" />
@@ -3016,9 +3013,9 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     <message numerus="yes">
         <location line="-264" />
         <source>%1 filter update: %n files</source>
-        <translation>
-            <numerusform>%1 suodattimen päivitys: %n tiedostoa</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -3153,8 +3150,8 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-78" />
-        <source>Locates files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Etsi tiedostot mukautetusta hakemistojoukosta. Liitä "+&lt;numero&gt;" tai ": &lt;numero&gt;" hypätäksesi annetulle rivinumerolle. Liitä toinen "+&lt;numero&gt;" tai ": &lt;numero&gt;" hypätäksesi myös sarakkeen numeroon.</translation>
+        <source>Locates files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Etsi tiedostot mukautetusta hakemistojoukosta. Liitä &quot;+&lt;numero&gt;&quot; tai &quot;: &lt;numero&gt;&quot; hypätäksesi annetulle rivinumerolle. Liitä toinen &quot;+&lt;numero&gt;&quot; tai &quot;: &lt;numero&gt;&quot; hypätäksesi myös sarakkeen numeroon.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -3241,7 +3238,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;What to do with the executable's standard output.
+&lt;p&gt;What to do with the executable&apos;s standard output.
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
@@ -3275,7 +3272,7 @@ edellyttäen, että niitä ei ole muutettu ennen refaktorointia.</translation>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
-&lt;p &gt;What to do with the executable's standard error output.&lt;/p&gt;
+&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
 &lt;li&gt;Show in General Messages.&lt;/li&gt;
 &lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
@@ -3402,12 +3399,12 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
     </message>
     <message>
         <location line="+1" />
-        <source>Opens a file given by a relative path to the current document, or absolute path. "~" refers to your home directory. You have the option to create a file if it does not exist yet.</source>
-        <translation>Avaa nykyisen asiakirjan suhteellisen polun tai absoluuttisen polun antaman tiedoston. "~" viittaa kotihakemistoosi. Sinulla on mahdollisuus luoda tiedosto, jos sitä ei vielä ole olemassa.</translation>
+        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
+        <translation>Avaa nykyisen asiakirjan suhteellisen polun tai absoluuttisen polun antaman tiedoston. &quot;~&quot; viittaa kotihakemistoosi. Sinulla on mahdollisuus luoda tiedosto, jos sitä ei vielä ole olemassa.</translation>
     </message>
     <message>
-        <source>Create and Open "%1"</source>
-        <translation type="vanished">Luo ja avaa "%1"</translation>
+        <source>Create and Open &quot;%1&quot;</source>
+        <translation type="vanished">Luo ja avaa &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-46" />
@@ -3416,8 +3413,8 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
     </message>
     <message>
         <location line="-13" />
-        <source>Create "%1"?</source>
-        <translation>Luodaanko "%1"?</translation>
+        <source>Create &quot;%1&quot;?</source>
+        <translation>Luodaanko &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+6" />
@@ -3436,8 +3433,8 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
     </message>
     <message>
         <location line="+1" />
-        <source>Cannot create file "%1".</source>
-        <translation>Tiedostoa ei voi luoda "%1".</translation>
+        <source>Cannot create file &quot;%1&quot;.</source>
+        <translation>Tiedostoa ei voi luoda &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -3446,13 +3443,13 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
     </message>
     <message>
         <location line="+164" />
-        <source>Create and Open File "%1"</source>
-        <translation>Luo ja avaa tiedosto "%1"</translation>
+        <source>Create and Open File &quot;%1&quot;</source>
+        <translation>Luo ja avaa tiedosto &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Create Directory "%1"</source>
-        <translation>Luo hakemisto "%1"</translation>
+        <source>Create Directory &quot;%1&quot;</source>
+        <translation>Luo hakemisto &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+58" />
@@ -3470,7 +3467,7 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
         <translation>Saatavilla olevat suodattimet</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+557" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
         <source>Open as Centered Popup</source>
         <translation>Avaa keskitettynä ponnahdusikkunana</translation>
     </message>
@@ -3511,18 +3508,18 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
     </message>
     <message>
         <location line="+143" />
-        <source>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Avaa asiakirja&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Tiedosto &gt; Avaa tiedosto (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Tiedosto &gt; Esimerkit &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Tiedosto &gt; Viimeisimmät tiedostot&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Vedä ja pudota tiedostoja tähän&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Avaa asiakirja&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Tiedosto &gt; Avaa tiedosto (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Tiedosto &gt; Esimerkit &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Tiedosto &gt; Viimeisimmät tiedostot&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Vedä ja pudota tiedostoja tähän&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+37" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- kirjoita &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; siirtyäksesi luokan määritelmään&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- kirjoita &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; siirtyäksesi luokan määritelmään&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- kirjoita &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; siirtyäksesi funktion määritykseen&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- kirjoita &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; siirtyäksesi funktion määritykseen&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+121" />
@@ -3598,7 +3595,7 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
         <translation>Mukautettu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-113" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-116" />
         <source>Save Changes</source>
         <translation>Tallenna muutokset</translation>
     </message>
@@ -3732,14 +3729,14 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
         <translation>Asetukset</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+488" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
         <source>Options</source>
         <translation>Vaihtoehdot</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13" />
-        <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
+        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
         <translation>Luo qm-käännöstiedostoja, joita sovellus voi käyttää kääntäjän ts-tiedostoista</translation>
     </message>
     <message>
@@ -3748,14 +3745,14 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
         <translation>Julkaise käännökset (lrelease)</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+5" />
         <source>Linguist</source>
         <translation>Kielitieteilijä</translation>
     </message>
     <message>
-        <location line="-12" />
-        <source>Synchronizes translator's ts files with the program code</source>
+        <location line="-2" />
+        <source>Synchronizes translator&apos;s ts files with the program code</source>
         <translation>Synkronoi kääntäjän ts-tiedostot ohjelmakoodin kanssa</translation>
     </message>
     <message>
@@ -3775,13 +3772,13 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
     </message>
     <message>
         <location line="+1" />
-        <location line="+10" />
+        <location line="+15" />
         <location line="+5" />
         <source>Text</source>
         <translation>Teksti</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-17" />
         <source>Runs the current QML file with QML utility.</source>
         <translation>Suorittaa nykyisen QML-tiedoston QML-apuohjelmalla.</translation>
     </message>
@@ -3807,7 +3804,7 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
         <translation>Qt Quick 2 -esikatselu (qmlscene)</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+4" />
         <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Avaa nykyisen tiedoston vi</translation>
@@ -3825,8 +3822,8 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
     </message>
     <message>
         <location line="+1" />
-        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by "&gt;". For example "sess def" matches "File &gt; Sessions &gt; Default".</source>
-        <translation>Käynnistää toiminnon. Jos se on valikosta, se vastaa mitä tahansa valikkohierarkian osaa, erotettuna merkillä "&gt;". Esimerkiksi "sess def" vastaa "Tiedosto &gt; Istunnot &gt; Oletus".</translation>
+        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
+        <translation>Käynnistää toiminnon. Jos se on valikosta, se vastaa mitä tahansa valikkohierarkian osaa, erotettuna merkillä &quot;&gt;&quot;. Esimerkiksi &quot;sess def&quot; vastaa &quot;Tiedosto &gt; Istunnot &gt; Oletus&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
@@ -3916,7 +3913,7 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
     <message>
         <location line="+3" />
         <source>The path to the running %1 itself.</source>
-        <translation>Polku juoksuprosenttiin 1.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3" />
@@ -3970,9 +3967,9 @@ Voit tehdä tämän kirjoittamalla tämän pikanäppäimen ja välilyönnin Loca
     </message>
     <message>
         <location line="+12" />
-        <source>The settings file "%1" is not writable.
+        <source>The settings file &quot;%1&quot; is not writable.
 You will not be able to store any %2 settings.</source>
-        <translation>Asetustiedostoon "%1" ei voi kirjoittaa.
+        <translation>Asetustiedostoon &quot;%1&quot; ei voi kirjoittaa.
 Et voi tallentaa %2 asetuksia.</translation>
     </message>
     <message>
@@ -3987,9 +3984,9 @@ Et voi tallentaa %2 asetuksia.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Error reading settings file "%1": %2
+        <source>Error reading settings file &quot;%1&quot;: %2
 You will likely experience further problems using this instance of %3.</source>
-        <translation>Virhe luettaessa asetustiedostoa "%1": %2
+        <translation>Virhe luettaessa asetustiedostoa &quot;%1&quot;: %2
 Tulet todennäköisesti kohtaamaan lisää ongelmia tämän %3:n esiintymän käyttämisessä.</translation>
     </message>
     <message>
@@ -4059,8 +4056,8 @@ Tulet todennäköisesti kohtaamaan lisää ongelmia tämän %3:n esiintymän kä
     </message>
     <message>
         <location line="+1" />
-        <source>Select encoding for "%1".%2</source>
-        <translation>Valitse koodaus kohteelle "%1".%2</translation>
+        <source>Select encoding for &quot;%1&quot;.%2</source>
+        <translation>Valitse koodaus kohteelle &quot;%1&quot;.%2</translation>
     </message>
     <message>
         <location line="+49" />
@@ -4242,7 +4239,7 @@ Do you want to check them out now?</source>
 Haluatko tarkistaa ne nyt?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-943" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-948" />
         <source>Restart Required</source>
         <translation>Uudelleenkäynnistys vaaditaan</translation>
     </message>
@@ -4278,23 +4275,23 @@ Haluatko tarkistaa ne nyt?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
-        <source>Could not find executable for "%1" (expanded "%2")</source>
-        <translation>Ei löytynyt suoritettavaa tiedostoa "%1" (laajennettu "%2")</translation>
+        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
+        <translation>Ei löytynyt suoritettavaa tiedostoa &quot;%1&quot; (laajennettu &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>Starting external tool "%1"</source>
-        <translation>Käynnistetään ulkoinen työkalu "%1"</translation>
+        <source>Starting external tool &quot;%1&quot;</source>
+        <translation>Käynnistetään ulkoinen työkalu &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>"%1" finished</source>
-        <translation>"%1" valmis</translation>
+        <source>&quot;%1&quot; finished</source>
+        <translation>&quot;%1&quot; valmis</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" finished with error</source>
-        <translation>"%1" päättyi virheellä</translation>
+        <source>&quot;%1&quot; finished with error</source>
+        <translation>&quot;%1&quot; päättyi virheellä</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
@@ -4331,10 +4328,10 @@ Haluatko tarkistaa ne nyt?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>"%1" returned the following error:
+        <source>&quot;%1&quot; returned the following error:
 
 %2</source>
-        <translation>"%1" palautti seuraavan virheen:
+        <translation>&quot;%1&quot; palautti seuraavan virheen:
 
 %2</translation>
     </message>
@@ -4394,35 +4391,35 @@ Haluatko tarkistaa ne nyt?</translation>
     <message>
         <location line="+6" />
         <source>Open Command Prompt With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Avaa komentokehote sovelluksella</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open Terminal With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Avaa Terminal With</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file "%1".</source>
-        <translation>Tiedoston "%1" poistaminen epäonnistui.</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>Tiedoston &quot;%1&quot; poistaminen epäonnistui.</translation>
     </message>
     <message>
         <location line="+40" />
-        <source>Failed to rename the include guard in file "%1".</source>
-        <translation>Sisällytyssuojan uudelleennimeäminen tiedostossa "%1" epäonnistui.</translation>
+        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
+        <translation>Sisällytyssuojan uudelleennimeäminen tiedostossa &quot;%1&quot; epäonnistui.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
         <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>%n esiintymää korvattu.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+369" />
+        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+394" />
         <source>Case sensitive</source>
         <translation>Kirjainkoolla on merkitystä</translation>
     </message>
@@ -4469,12 +4466,12 @@ Haluatko tarkistaa ne nyt?</translation>
     <message>
         <location line="+5" />
         <source>Repla&amp;ce with:</source>
-        <translation>Korvata:</translation>
+        <translation>&amp;Korvata:</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Preser&amp;ve case</source>
-        <translation>Säilytyskotelo</translation>
+        <translation>&amp;Säilytyskotelo</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4494,9 +4491,9 @@ Haluatko tarkistaa ne nyt?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>The search resulted in more than %n items, do you still want to continue?</source>
-        <translation>
-            <numerusform>Haku johti yli %n kohteeseen. Haluatko silti jatkaa?</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4512,9 +4509,9 @@ Haluatko tarkistaa ne nyt?</translation>
     <message numerus="yes">
         <location line="+82" />
         <source>%n matches found.</source>
-        <translation>
-            <numerusform>%n osumaa löytyi.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4565,8 +4562,8 @@ Haluatko tarkistaa ne nyt?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
-        <source>Factory with id="%1" already registered. Deleting.</source>
-        <translation>Tehdas, jonka id="%1" on jo rekisteröity. Poistetaan.</translation>
+        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
+        <translation>Tehdas, jonka id=&quot;%1&quot; on jo rekisteröity. Poistetaan.</translation>
     </message>
     <message>
         <location line="+230" />
@@ -4580,18 +4577,18 @@ Haluatko tarkistaa ne nyt?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
-        <source>Error in "%1": %2</source>
-        <translation>Virhe kohteessa "%1": %2</translation>
+        <source>Error in &quot;%1&quot;: %2</source>
+        <translation>Virhe kohteessa &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>Cannot convert result of "%1" to string.</source>
-        <translation>Tulosta "%1" ei voi muuntaa merkkijonoksi.</translation>
+        <source>Cannot convert result of &quot;%1&quot; to string.</source>
+        <translation>Tulosta &quot;%1&quot; ei voi muuntaa merkkijonoksi.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal '}' characters must be escaped as "\}", '\' characters must be escaped as "\\", and "%{" must be escaped as "%\{".</source>
-        <translation>Arvioi yksinkertaisia JavaScript-käskyjä.&lt;br&gt;Kirjaimelliset '}'-merkit on vaihdettava muodossa "\}", "\"-merkit on vaihdettava muodossa "\\" ja "%{" on oltava koodinvaihtomerkkinä "%\{".</translation>
+        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
+        <translation>Arvioi yksinkertaisia JavaScript-käskyjä.&lt;br&gt;Kirjaimelliset &apos;}&apos;-merkit on vaihdettava muodossa &quot;\}&quot;, &quot;\&quot;-merkit on vaihdettava muodossa &quot;\\&quot; ja &quot;%{&quot; on oltava koodinvaihtomerkkinä &quot;%\{&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
@@ -4605,9 +4602,9 @@ Haluatko tarkistaa ne nyt?</translation>
     </message>
     <message>
         <location line="+68" />
-        <source>Previous command is still running ("%1").
+        <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
-        <translation>Edellinen komento on edelleen käynnissä ("%1").
+        <translation>Edellinen komento on edelleen käynnissä (&quot;%1&quot;).
 Haluatko tappaa sen?</translation>
     </message>
     <message>
@@ -4617,13 +4614,13 @@ Haluatko tappaa sen?</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>Could not find executable for "%1".</source>
-        <translation>Ei löytynyt suoritettavaa tiedostoa "%1".</translation>
+        <source>Could not find executable for &quot;%1&quot;.</source>
+        <translation>Ei löytynyt suoritettavaa tiedostoa &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Starting command "%1".</source>
-        <translation>Käynnistetään komento "%1".</translation>
+        <source>Starting command &quot;%1&quot;.</source>
+        <translation>Käynnistetään komento &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+21" />
@@ -4678,8 +4675,8 @@ Haluatko tappaa sen?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
-        <source>Locator: Error occurred when running "%1".</source>
-        <translation>Locator: Virhe suoritettaessa "%1".</translation>
+        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
+        <translation>Locator: Virhe suoritettaessa &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-71" />
@@ -4693,8 +4690,8 @@ Haluatko tappaa sen?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Locator query string with quotes escaped with backslash and spaces replaced with "*" wildcards.</source>
-        <translation>Paikannin kyselymerkkijono, jossa on lainausmerkkejä kenoviivalla ja välilyönnit korvattu jokerimerkeillä "*".</translation>
+        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
+        <translation>Paikannin kyselymerkkijono, jossa on lainausmerkkejä kenoviivalla ja välilyönnit korvattu jokerimerkeillä &quot;*&quot;.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -4708,8 +4705,8 @@ Haluatko tappaa sen?</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Etsi tiedostot globaalista tiedostojärjestelmän hakemistosta (valokeila, paikanna, kaikki). Liitä "+&lt;numero&gt;" tai ": &lt;numero&gt;" hypätäksesi annetulle rivinumerolle. Liitä toinen "+&lt;numero&gt;" tai ": &lt;numero&gt;" hypätäksesi myös sarakkeen numeroon.</translation>
+        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Etsi tiedostot globaalista tiedostojärjestelmän hakemistosta (valokeila, paikanna, kaikki). Liitä &quot;+&lt;numero&gt;&quot; tai &quot;: &lt;numero&gt;&quot; hypätäksesi annetulle rivinumerolle. Liitä toinen &quot;+&lt;numero&gt;&quot; tai &quot;: &lt;numero&gt;&quot; hypätäksesi myös sarakkeen numeroon.</translation>
     </message>
     <message>
         <location line="+113" />
@@ -4717,8 +4714,8 @@ Haluatko tappaa sen?</translation>
         <translation>Lajitella tulokset</translation>
     </message>
     <message>
-        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">Vastaa tiedostoja maailmanlaajuisesta tiedostojärjestelmähakemistosta (Spotlight, Locate, Everything). Liitä "+&lt;numero&gt;" tai ":&lt;numero&gt;" hypätäksesi annettuun rivinumeroon. Lisää toinen "+&lt;numero&gt;" tai ":&lt;numero&gt;" hypätäksesi myös sarakkeen numeroon.</translation>
+        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">Vastaa tiedostoja maailmanlaajuisesta tiedostojärjestelmähakemistosta (Spotlight, Locate, Everything). Liitä &quot;+&lt;numero&gt;&quot; tai &quot;:&lt;numero&gt;&quot; hypätäksesi annettuun rivinumeroon. Lisää toinen &quot;+&lt;numero&gt;&quot; tai &quot;:&lt;numero&gt;&quot; hypätäksesi myös sarakkeen numeroon.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -4727,9 +4724,9 @@ Haluatko tappaa sen?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110" />
-        <source>Add "%1" placeholder for the query string.
+        <source>Add &quot;%1&quot; placeholder for the query string.
 Double-click to edit item.</source>
-        <translation>Lisää kyselymerkkijonoon paikkamerkki "%1".
+        <translation>Lisää kyselymerkkijonoon paikkamerkki &quot;%1&quot;.
 Muokkaa kohdetta kaksoisnapsauttamalla.</translation>
     </message>
     <message>
@@ -4763,13 +4760,13 @@ Muokkaa kohdetta kaksoisnapsauttamalla.</translation>
         <translation>Lisää Magic Header</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME-maagiset tiedot tulkitaan Shared MIME-info Database -määrityksen mukaisesti osoitteessa &lt;a href="http://standards.freedesktop.org/shared-mime-info- spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME-maagiset tiedot tulkitaan Shared MIME-info Database -määrityksen mukaisesti osoitteessa &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info- spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;pää/&gt; &lt;body&gt; &lt;p&gt; mime-taikuustiedot tulkitaan jaetun Mime-INFO-tietokantamäärityksen määrittelemällä tavalla &lt;a href = "https://www.freedesktop.org/wiki/specifications/shared- mime-info-spec/"&gt; freedesktop.org &lt;/a&gt;.</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -4823,8 +4820,8 @@ Muokkaa kohdetta kaksoisnapsauttamalla.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Huomaa: laajat arvot voivat vaikuttaa tehokkuuteen tiedostoja avattaessa.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Huomaa: laajat arvot voivat vaikuttaa tehokkuuteen tiedostoja avattaessa.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4891,9 +4888,9 @@ Muokkaa kohdetta kaksoisnapsauttamalla.</translation>
     <message numerus="yes">
         <location line="+159" />
         <source>Elided %n characters due to Application Output settings</source>
-        <translation>
-            <numerusform>Poistettu %n merkkiä sovelluksen lähtöasetusten vuoksi</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4904,13 +4901,13 @@ Muokkaa kohdetta kaksoisnapsauttamalla.</translation>
 </translation>
     </message>
     <message>
-        <location line="+298" />
+        <location line="+308" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Tekstitiedostot (*.txt);;Kaikki tiedostot (*)</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+11" />
+        <location line="+14" />
         <source>Error: %L1!</source>
         <translation>Virhe: %L1!</translation>
     </message>
@@ -4941,23 +4938,23 @@ Muokkaa kohdetta kaksoisnapsauttamalla.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>There is no patch-command configured in the general "Environment" settings.</source>
-        <translation>Patch-komentoa ei ole määritetty yleisissä "Ympäristö"-asetuksissa.</translation>
+        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
+        <translation>Patch-komentoa ei ole määritetty yleisissä &quot;Ympäristö&quot;-asetuksissa.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The patch-command configured in the general "Environment" settings does not exist.</source>
-        <translation>Yleisissä "Ympäristö"-asetuksissa määritettyä patch-komentoa ei ole olemassa.</translation>
+        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
+        <translation>Yleisissä &quot;Ympäristö&quot;-asetuksissa määritettyä patch-komentoa ei ole olemassa.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Running in "%1": %2 %3.</source>
-        <translation>Käynnissä " %1": %2 %3.</translation>
+        <source>Running in &quot;%1&quot;: %2 %3.</source>
+        <translation>Käynnissä &quot; %1&quot;: %2 %3.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>A timeout occurred running "%1".</source>
-        <translation>Aikakatkaisu tapahtui "%1".</translation>
+        <source>A timeout occurred running &quot;%1&quot;.</source>
+        <translation>Aikakatkaisu tapahtui &quot;%1&quot;.</translation>
     </message>
     <message>
         <source>Running in %1: %2 %3</source>
@@ -4965,22 +4962,22 @@ Muokkaa kohdetta kaksoisnapsauttamalla.</translation>
     </message>
     <message>
         <location line="-11" />
-        <source>Unable to launch "%1": %2</source>
-        <translation>Ei voida käynnistää "%1": %2</translation>
+        <source>Unable to launch &quot;%1&quot;: %2</source>
+        <translation>Ei voida käynnistää &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>A timeout occurred running "%1"</source>
-        <translation type="vanished">Aikakatkaisu suorituksessa "%1"</translation>
+        <source>A timeout occurred running &quot;%1&quot;</source>
+        <translation type="vanished">Aikakatkaisu suorituksessa &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>"%1" crashed.</source>
-        <translation>"%1" kaatui.</translation>
+        <source>&quot;%1&quot; crashed.</source>
+        <translation>&quot;%1&quot; kaatui.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"%1" failed (exit code %2).</source>
-        <translation>"%1" epäonnistui (poistumiskoodi %2).</translation>
+        <source>&quot;%1&quot; failed (exit code %2).</source>
+        <translation>&quot;%1&quot; epäonnistui (poistumiskoodi %2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
@@ -5073,8 +5070,8 @@ Muokkaa kohdetta kaksoisnapsauttamalla.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>"%1" will be installed into "%2".</source>
-        <translation>"%1" asennetaan kansioon "%2".</translation>
+        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot; asennetaan kansioon &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+29" />
@@ -5083,8 +5080,8 @@ Muokkaa kohdetta kaksoisnapsauttamalla.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The file "%1" exists. Overwrite?</source>
-        <translation>Tiedosto "%1" on olemassa. Korvataanko?</translation>
+        <source>The file &quot;%1&quot; exists. Overwrite?</source>
+        <translation>Tiedosto &quot;%1&quot; on olemassa. Korvataanko?</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5098,8 +5095,8 @@ Muokkaa kohdetta kaksoisnapsauttamalla.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to write file "%1".</source>
-        <translation>Tiedoston "%1" kirjoittaminen epäonnistui.</translation>
+        <source>Failed to write file &quot;%1&quot;.</source>
+        <translation>Tiedoston &quot;%1&quot; kirjoittaminen epäonnistui.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -5318,8 +5315,8 @@ versionhallintaan (%2)
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
-        <source>Could not parse patch file "%1". The content is not of unified diff format.</source>
-        <translation>Korjaustiedostoa "%1" ei voitu jäsentää. Sisältö ei ole yhtenäistä diff-muotoa.</translation>
+        <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
+        <translation>Korjaustiedostoa &quot;%1&quot; ei voitu jäsentää. Sisältö ei ole yhtenäistä diff-muotoa.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
@@ -5398,23 +5395,23 @@ versionhallintaan (%2)
     </message>
     <message>
         <location line="+52" />
-        <source>Diff "%1"</source>
-        <translation>Ero "%1"</translation>
+        <source>Diff &quot;%1&quot;</source>
+        <translation>Ero &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+28" />
         <source>Select First File for Diff</source>
         <translation>Valitse ensimmäinen tiedosto erotusta varten</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+7" />
         <source>Select Second File for Diff</source>
         <translation>Valitse toinen tiedosto erotusta varten</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>Diff "%1", "%2"</source>
-        <translation>Ero "%1", "%2"</translation>
+        <location line="+10" />
+        <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
+        <translation>Ero &quot;%1&quot;, &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
@@ -5433,8 +5430,8 @@ versionhallintaan (%2)
     </message>
     <message>
         <location line="+31" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding.</source>
-        <translation>&lt;b&gt;Virhe:&lt;/b&gt; "%1" ei voitu purkaa "%2"-koodauksella.</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
+        <translation>&lt;b&gt;Virhe:&lt;/b&gt; &quot;%1&quot; ei voitu purkaa &quot;%2&quot;-koodauksella.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5477,9 +5474,9 @@ versionhallintaan (%2)
     <message numerus="yes">
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
         <source>Skipped %n lines...</source>
-        <translation>
-            <numerusform>Ohitettu %n riviä...</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -5594,8 +5591,8 @@ versionhallintaan (%2)
     </message>
     <message>
         <location line="+1" />
-        <source>%1 (current: "%2")</source>
-        <translation>%1 (nykyinen: "%2")</translation>
+        <source>%1 (current: &quot;%2&quot;)</source>
+        <translation>%1 (nykyinen: &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5634,7 +5631,7 @@ versionhallintaan (%2)
     </message>
     <message>
         <location line="+4" />
-        <source>Plugin's initialization function succeeded.</source>
+        <source>Plugin&apos;s initialization function succeeded.</source>
         <translation>Pluginin alustustoiminto onnistui.</translation>
     </message>
     <message>
@@ -5875,8 +5872,8 @@ Syy: %3</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The last time you started %1, it seems to have closed because of a problem with the "%2" plugin. Temporarily disable the plugin?</source>
-        <translation>Kun viimeksi käynnistit %1, se näyttää sulkeutuneen "%2"-laajennuksen ongelman vuoksi. Poistetaanko laajennus väliaikaisesti käytöstä?</translation>
+        <source>The last time you started %1, it seems to have closed because of a problem with the &quot;%2&quot; plugin. Temporarily disable the plugin?</source>
+        <translation>Kun viimeksi käynnistit %1, se näyttää sulkeutuneen &quot;%2&quot;-laajennuksen ongelman vuoksi. Poistetaanko laajennus väliaikaisesti käytöstä?</translation>
     </message>
     <message>
         <location line="+8" />
@@ -5892,26 +5889,26 @@ Syy: %3</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
-        <source>The plugin "%1" is specified twice for testing.</source>
-        <translation>Plugin "%1" on määritetty kahdesti testausta varten.</translation>
+        <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
+        <translation>Plugin &quot;%1&quot; on määritetty kahdesti testausta varten.</translation>
     </message>
     <message>
         <location line="+7" />
         <location line="+18" />
         <location line="+47" />
         <location line="+25" />
-        <source>The plugin "%1" does not exist.</source>
-        <translation>Lisäosaa "%1" ei ole olemassa.</translation>
+        <source>The plugin &quot;%1&quot; does not exist.</source>
+        <translation>Lisäosaa &quot;%1&quot; ei ole olemassa.</translation>
     </message>
     <message>
         <location line="-79" />
-        <source>The plugin "%1" is not tested.</source>
-        <translation>Lisäosaa "%1" ei ole testattu.</translation>
+        <source>The plugin &quot;%1&quot; is not tested.</source>
+        <translation>Lisäosaa &quot;%1&quot; ei ole testattu.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Cannot request scenario "%1" as it was already requested.</source>
-        <translation>Skenaariota "%1" ei voi pyytää, koska sitä on jo pyydetty.</translation>
+        <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
+        <translation>Skenaariota &quot;%1&quot; ei voi pyytää, koska sitä on jo pyydetty.</translation>
     </message>
     <message>
         <location line="+130" />
@@ -5930,8 +5927,8 @@ Syy: %3</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency '%1(%2)'</source>
-        <translation>Ei voitu ratkaista riippuvuutta '%1(%2)'</translation>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation>Ei voitu ratkaista riippuvuutta &apos;%1(%2)&apos;</translation>
     </message>
     <message>
         <location line="+61" />
@@ -5945,8 +5942,8 @@ Syy: %3</translation>
     </message>
     <message>
         <location line="-416" />
-        <source>"%1" is missing</source>
-        <translation>"%1" puuttuu</translation>
+        <source>&quot;%1&quot; is missing</source>
+        <translation>&quot;%1&quot; puuttuu</translation>
     </message>
     <message>
         <location line="-24" />
@@ -5955,28 +5952,28 @@ Syy: %3</translation>
     </message>
     <message>
         <location line="+29" />
-        <source>Value for key "%1" is not a string</source>
-        <translation>Avaimen "%1" arvo ei ole merkkijono</translation>
+        <source>Value for key &quot;%1&quot; is not a string</source>
+        <translation>Avaimen &quot;%1&quot; arvo ei ole merkkijono</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a bool</source>
-        <translation>Avaimen "%1" arvo ei ole bool</translation>
+        <source>Value for key &quot;%1&quot; is not a bool</source>
+        <translation>Avaimen &quot;%1&quot; arvo ei ole bool</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not an array of objects</source>
-        <translation>Avaimen "%1" arvo ei ole objektijoukko</translation>
+        <source>Value for key &quot;%1&quot; is not an array of objects</source>
+        <translation>Avaimen &quot;%1&quot; arvo ei ole objektijoukko</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a string and not an array of strings</source>
-        <translation>Avaimen "%1" arvo ei ole merkkijono eikä merkkijonojoukko</translation>
+        <source>Value for key &quot;%1&quot; is not a string and not an array of strings</source>
+        <translation>Avaimen &quot;%1&quot; arvo ei ole merkkijono eikä merkkijonojoukko</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Value "%2" for key "%1" has invalid format</source>
-        <translation>Arvon "%2" avaimelle "%1" on virheellinen muoto</translation>
+        <source>Value &quot;%2&quot; for key &quot;%1&quot; has invalid format</source>
+        <translation>Arvon &quot;%2&quot; avaimelle &quot;%1&quot; on virheellinen muoto</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5985,8 +5982,8 @@ Syy: %3</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected IID "%1", but found "%2"</source>
-        <translation>Odotti iid "%1", mutta löysi "%2"</translation>
+        <source>Expected IID &quot;%1&quot;, but found &quot;%2&quot;</source>
+        <translation>Odotti iid &quot;%1&quot;, mutta löysi &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+6" />
@@ -5995,8 +5992,8 @@ Syy: %3</translation>
     </message>
     <message>
         <location line="+108" />
-        <source>Invalid platform specification "%1": %2</source>
-        <translation>Virheellinen alustamääritys "%1": %2</translation>
+        <source>Invalid platform specification &quot;%1&quot;: %2</source>
+        <translation>Virheellinen alustamääritys &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+18" />
@@ -6009,8 +6006,8 @@ Syy: %3</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Dependency: "%1" must be "%2" or "%3" (is "%4").</source>
-        <translation>Riippuvuus: "%1" on oltava "%2" tai "%3" (on "%4").</translation>
+        <source>Dependency: &quot;%1&quot; must be &quot;%2&quot; or &quot;%3&quot; (is &quot;%4&quot;).</source>
+        <translation>Riippuvuus: &quot;%1&quot; on oltava &quot;%2&quot; tai &quot;%3&quot; (on &quot;%4&quot;).</translation>
     </message>
     <message>
         <location line="+25" />
@@ -6022,8 +6019,8 @@ Syy: %3</translation>
     </message>
     <message>
         <location line="-13" />
-        <source>Argument: "%1" is empty</source>
-        <translation>Argumentti: "%1" on tyhjä</translation>
+        <source>Argument: &quot;%1&quot; is empty</source>
+        <translation>Argumentti: &quot;%1&quot; on tyhjä</translation>
     </message>
     <message>
         <location line="+182" />
@@ -6180,13 +6177,13 @@ Haluatko korvata sen?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+161" />
-        <source>Exported "%1", %2x%3, %4 bytes</source>
-        <translation>Vietiin "%1", %2x%3, %4 tavua</translation>
+        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
+        <translation>Vietiin &quot;%1&quot;, %2x%3, %4 tavua</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Could not write file "%1".</source>
-        <translation>Tiedostoa "%1" ei voitu kirjoittaa.</translation>
+        <source>Could not write file &quot;%1&quot;.</source>
+        <translation>Tiedostoa &quot;%1&quot; ei voitu kirjoittaa.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6357,8 +6354,8 @@ Haluatko korvata sen?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>A comma-separated list of size specifications of the form "&lt;width&gt;x&lt;height&gt;".</source>
-        <translation>Pilkuilla eroteltu luettelo kokomäärityksistä muodossa "&lt;leveys&gt;x&lt;korkeus&gt;".</translation>
+        <source>A comma-separated list of size specifications of the form &quot;&lt;width&gt;x&lt;height&gt;&quot;.</source>
+        <translation>Pilkuilla eroteltu luettelo kokomäärityksistä muodossa &quot;&lt;leveys&gt;x&lt;korkeus&gt;&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6403,7 +6400,7 @@ Haluatko korvata ne?</translation>
         <translation>Virhe %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+60" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
         <source>Deprecated</source>
         <translation>Vanhentunut</translation>
     </message>
@@ -6428,7 +6425,7 @@ Haluatko korvata ne?</translation>
         <translation>Johdettu</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+212" />
         <source>Call Hierarchy</source>
         <translation>Soita hierarkialle</translation>
     </message>
@@ -6438,13 +6435,13 @@ Haluatko korvata ne?</translation>
         <translation>Lataa puhelu hierarkia symbolille kohdistimen asennossa.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+394" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
         <translation>%1 %2</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+230" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>alakertainen</translation>
@@ -6487,15 +6484,15 @@ Haluatko korvata ne?</translation>
     </message>
     <message>
         <location line="+1342" />
-        <source>Invalid parameter in "%1":
+        <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
-        <translation>Virheellinen parametri "%1":
+        <translation>Virheellinen parametri &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
         <location line="+219" />
-        <source>Language Server "%1" Initialization Error</source>
-        <translation>Kielipalvelin "%1" Alustusvirhe</translation>
+        <source>Language Server &quot;%1&quot; Initialization Error</source>
+        <translation>Kielipalvelin &quot;%1&quot; Alustusvirhe</translation>
     </message>
     <message>
         <location line="+13" />
@@ -6569,8 +6566,8 @@ Haluatko korvata ne?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientinterface.cpp" line="+77" />
-        <source>Cannot handle MIME type "%1" of message.</source>
-        <translation>MIME -tyyppiä ei voi käsitellä viestiä "%1".</translation>
+        <source>Cannot handle MIME type &quot;%1&quot; of message.</source>
+        <translation>MIME -tyyppiä ei voi käsitellä viestiä &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+70" />
@@ -6580,7 +6577,7 @@ Haluatko korvata ne?</translation>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+178" />
         <source>Unexpectedly finished. Restarting in %1 seconds.</source>
-        <translation>Valmistunut odottamatta. Käynnistäminen uudelleen %sekunnissa.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10" />
@@ -6588,7 +6585,7 @@ Haluatko korvata ne?</translation>
         <translation>Valmistunut odottamatta.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+217" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+82" />
         <source>Expand All</source>
         <translation>Laajentaa kaikki</translation>
@@ -6672,8 +6669,8 @@ Example: *.cpp%1*.h</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Language server-specific JSON to pass via "initializationOptions" field of "initialize" request.</source>
-        <translation>Kielen palvelinkohtainen JSON ohittaa "Alusta" -kentän "Alusta" -kenttä "alustetaan" -pyyntö.</translation>
+        <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
+        <translation>Kielen palvelinkohtainen JSON ohittaa &quot;Alusta&quot; -kentän &quot;Alusta&quot; -kenttä &quot;alustetaan&quot; -pyyntö.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6750,9 +6747,9 @@ See the documentation of the specific language server for valid settings.</sourc
     <message numerus="yes">
         <location line="+21" />
         <source>Re&amp;name %n files</source>
-        <translation>
-            <numerusform>Re &amp; Name %N -tiedostot</numerusform>
-            <numerusform>Re &amp; Name %N -tiedostot</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -6766,12 +6763,12 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+331" />
         <location line="+227" />
         <source>Find References with %1 for:</source>
-        <translation>Löydä viitteitä prosentilla 1:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-144" />
         <source>Renaming is not supported with %1</source>
-        <translation>Uudelleennimeämistä ei tueta prosentilla 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+168" />
@@ -6791,7 +6788,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+121" />
         <source>Restart %1</source>
-        <translation>Käynnistä %uudelleen 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5" />
@@ -6810,23 +6807,23 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+6" />
-        <source>Running "%1" to install %2.</source>
-        <translation>Asenna %2.</translation>
+        <source>Running &quot;%1&quot; to install %2.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>"%1" -asennus peruutettiin aikakatkaisulla.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>&quot;%1&quot; -asennus peruutettiin aikakatkaisulla.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>Käyttäjä peruutti "%1" -asennuksen.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>Käyttäjä peruutti &quot;%1&quot; -asennuksen.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>" %1" asentaminen epäonnistui poistumiskoodilla %2.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>&quot; %1&quot; asentaminen epäonnistui poistumiskoodilla %2.</translation>
     </message>
     <message>
         <location line="+56" />
@@ -6933,33 +6930,33 @@ See the documentation of the specific language server for valid settings.</sourc
     <name>QtC::LanguageServerProtocol</name>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
-        <source>Cannot decode content with "%1". Falling back to "%2".</source>
-        <translation>Sisältöä ei voi purkaa "%1". Putoaa takaisin "%2".</translation>
+        <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
+        <translation>Sisältöä ei voi purkaa &quot;%1&quot;. Putoaa takaisin &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Expected an integer in "%1", but got "%2".</source>
-        <translation>Odotettiin kokonaislukua "%1", mutta sai "%2".</translation>
+        <source>Expected an integer in &quot;%1&quot;, but got &quot;%2&quot;.</source>
+        <translation>Odotettiin kokonaislukua &quot;%1&quot;, mutta sai &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
-        <source>Could not parse JSON message: "%1".</source>
-        <translation>JSON -viestiä ei voinut jäsentää: "%1".</translation>
+        <source>Could not parse JSON message: &quot;%1&quot;.</source>
+        <translation>JSON -viestiä ei voinut jäsentää: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected a JSON object, but got a JSON "%1" value.</source>
-        <translation>Odotti JSON -objektia, mutta sai JSON "%1" -arvon.</translation>
+        <source>Expected a JSON object, but got a JSON &quot;%1&quot; value.</source>
+        <translation>Odotti JSON -objektia, mutta sai JSON &quot;%1&quot; -arvon.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
-        <source>No parameters in "%1".</source>
-        <translation>Ei parametreja "%1".</translation>
+        <source>No parameters in &quot;%1&quot;.</source>
+        <translation>Ei parametreja &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+213" />
-        <source>No ID set in "%1".</source>
-        <translation>Ei tunnusta "%1".</translation>
+        <source>No ID set in &quot;%1&quot;.</source>
+        <translation>Ei tunnusta &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
@@ -7047,7 +7044,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7059,60 +7056,60 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+156" />
         <location line="+823" />
         <source>Dataset Editor</source>
         <translation>Tietojoukkoeditori</translation>
     </message>
     <message>
-        <location line="-364" />
+        <location line="-366" />
         <source>Please enter a class name</source>
         <translation>Anna luokan nimi</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+604" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+412" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+70" />
+        <location line="+72" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-732" />
         <location line="+19" />
-        <location line="+115" />
-        <location line="+1483" />
+        <location line="+111" />
+        <location line="+1514" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+124" />
-        <location line="+180" />
-        <location line="+308" />
+        <location line="+139" />
+        <location line="+202" />
+        <location line="+306" />
         <location line="+13" />
-        <location line="+168" />
-        <location line="+145" />
+        <location line="+169" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
-        <location line="+254" />
+        <location line="+117" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+378" />
+        <location line="+273" />
         <location line="+86" />
-        <location line="+1017" />
-        <location line="+895" />
+        <location line="+1142" />
+        <location line="+1075" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+539" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
         <location line="+19" />
         <location line="+11" />
@@ -7120,8 +7117,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Virhe: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3475" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-309" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3541" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7131,30 +7128,30 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+9" />
         <location line="+25" />
         <location line="+9" />
-        <source>Failed to create "%L1"!</source>
-        <translation>"%L1":n luominen epäonnistui!</translation>
+        <source>Failed to create &quot;%L1&quot;!</source>
+        <translation>&quot;%L1&quot;:n luominen epäonnistui!</translation>
     </message>
     <message>
-        <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2513" />
-        <location line="+1446" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
+        <location line="+33" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
+        <location line="+1442" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Kuvatiedoston tallennus epäonnistui tuntemattomasta syystä!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581" />
-        <location line="+239" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
+        <location line="+224" />
         <source>Delete</source>
         <translation>Poistaa</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309" />
-        <source>Are you sure you want to permanetly delete "%L1"?</source>
-        <translation>Haluatko varmasti poistaa "%L1" pysyvästi?</translation>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
+        <translation>Haluatko varmasti poistaa &quot;%L1&quot; pysyvästi?</translation>
     </message>
     <message>
         <location line="-86" />
@@ -7179,10 +7176,10 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Tiedoston uudelleennimeäminen epäonnistui tuntemattomasta syystä!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5164" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5247" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>Tiedostoa "%1" ei voitu kopioida kohteeseen "%2".</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>Tiedostoa &quot;%1&quot; ei voitu kopioida kohteeseen &quot;%2&quot;.</translation>
     </message>
     <message>
         <source>Invalid argument (%1) for -override_read_timeout</source>
@@ -7206,19 +7203,19 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>-sarjanumerosuodattimen argumentti puuttuu</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+145" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2349" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2677" />
         <location line="+9" />
         <location line="+13" />
-        <location line="+59" />
+        <location line="+63" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+830" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
         <location line="+36" />
         <location line="+7" />
@@ -7227,13 +7224,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+7" />
         <source>
 
-Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>
 
 Sulje kaikki ohjelmat, jotka tarkastelevat/muokkaavat OpenMV IDE:n sovellustietoja ja käynnistä sitten OpenMV IDE uudelleen!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-65" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Muokkaa harmaasävykynnystä Threshold Editorilla</translation>
     </message>
@@ -7243,18 +7240,18 @@ Sulje kaikki ohjelmat, jotka tarkastelevat/muokkaavat OpenMV IDE:n sovellustieto
         <translation>Muokkaa LAB-kynnystä Threshold Editorilla</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+221" />
         <source>Missing argument for -form_key</source>
         <translation>-form_key-argumentti puuttuu</translation>
     </message>
     <message>
-        <location line="+1066" />
+        <location line="+1074" />
         <source>About OpenMV Viewer...</source>
         <translation>Tietoja OpenMV Viewerista...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;Tietoja %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tekijä: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU YLEINEN JULKINEN LISENSSI&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Tätä ohjelmaa jaetaan siinä toivossa, että siitä on hyötyä, mutta ILMAN TAKUUTA; ilman edes implisiittistä takuuta myyntikelpoisuudesta tai sopivuudesta tiettyyn tarkoitukseen. Katso lisätietoja &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License -lisenssistä&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Onko sinulla kysyttävää tai kommentteja?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ota meihin yhteyttä osoitteessa &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Tietoja %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tekijä: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU YLEINEN JULKINEN LISENSSI&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Tätä ohjelmaa jaetaan siinä toivossa, että siitä on hyötyä, mutta ILMAN TAKUUTA; ilman edes implisiittistä takuuta myyntikelpoisuudesta tai sopivuudesta tiettyyn tarkoitukseen. Katso lisätietoja &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License -lisenssistä&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Onko sinulla kysyttävää tai kommentteja?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ota meihin yhteyttä osoitteessa &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+17" />
@@ -7262,7 +7259,7 @@ Sulje kaikki ohjelmat, jotka tarkastelevat/muokkaavat OpenMV IDE:n sovellustieto
         <translation>OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1039" />
+        <location line="-1050" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -7275,7 +7272,7 @@ Sulje kaikki ohjelmat, jotka tarkastelevat/muokkaavat OpenMV IDE:n sovellustieto
         <translation type="vanished">-override_per_command_wait:n argumentti puuttuu</translation>
     </message>
     <message>
-        <location line="-460" />
+        <location line="-468" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>Virheellinen argumentti (%1) arvolle -auto_update</translation>
     </message>
@@ -7285,20 +7282,18 @@ Sulje kaikki ohjelmat, jotka tarkastelevat/muokkaavat OpenMV IDE:n sovellustieto
         <translation>-auto_update:n argumentti puuttuu</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+248" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
-        <translation>Virhe jäsenestämisessä &lt;Oser_resources&gt; /openmvide/firmware/settings.json - %l1!
-
- Tarkista JSON -tiedosto virheistä ja korjaa ne.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.\n\nOpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
         <translation type="vanished">Virheen lukeminen &lt;user_resources&gt; /openmvide/firmware/settings.json: %l1. \ N \ noPenmv IDE -versiot ennen v4.3.0: lla ei ole tätä tiedostoa ja olisivat poistaneet sen resurssien asentamisessa.</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+188" />
         <source>Form Key</source>
         <translation>Lomakkeen avain</translation>
     </message>
@@ -7308,7 +7303,7 @@ Check the json file for errors and fix them.</source>
         <translation>Anna lomakeavain</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+80" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7318,7 +7313,7 @@ Check the json file for errors and fix them.</source>
         <location line="-13" />
         <location line="+7" />
         <location line="+7" />
-        <source>Can't open the new file!</source>
+        <source>Can&apos;t open the new file!</source>
         <translation>Uutta tiedostoa ei voi avata!</translation>
     </message>
     <message>
@@ -7328,8 +7323,8 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Add some code to "%L1"</source>
-        <translation>Lisää koodi kohteeseen "%L1"</translation>
+        <source>Add some code to &quot;%L1&quot;</source>
+        <translation>Lisää koodi kohteeseen &quot;%L1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -7365,7 +7360,7 @@ Check the json file for errors and fix them.</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <source>Are you sure you want to erase your OpenMV Cam's onboard flash drive?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s onboard flash drive?</source>
         <translation type="vanished">Haluatko varmasti tyhjentää OpenMV Camin sisäisen flash-aseman?</translation>
     </message>
     <message>
@@ -7399,7 +7394,7 @@ Check the json file for errors and fix them.</source>
         <translation>Synkronoi kirjastot OpenMV Camin ja Dokumentit-kansion välillä automaattisesti.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+24" />
         <source>Filter examples by board and sensor type</source>
         <translation>Suodata esimerkkejä kortin ja anturityypin mukaan</translation>
     </message>
@@ -7429,40 +7424,40 @@ Check the json file for errors and fix them.</source>
         <translation>Nollaa OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Install the Latest Development Release</source>
         <translation>Asenna uusin kehitysjulkaisu</translation>
     </message>
     <message>
-        <location line="+77" />
-        <location line="+3764" />
+        <location line="+75" />
+        <location line="+3823" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Avaa Terminaali</translation>
     </message>
     <message>
-        <location line="-3818" />
+        <location line="-3877" />
         <source>Machine Vision</source>
         <translation>Konenäkö</translation>
     </message>
     <message>
-        <location line="+181" />
-        <location line="+3668" />
-        <location line="+76" />
+        <location line="+175" />
+        <location line="+3733" />
+        <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Kynnyseditori</translation>
     </message>
     <message>
-        <location line="-3739" />
-        <location line="+3817" />
+        <location line="-3803" />
+        <location line="+3880" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Keypoints Editor</translation>
     </message>
     <message>
-        <location line="-3810" />
-        <location line="+3976" />
-        <location line="+98" />
+        <location line="-3873" />
+        <location line="+4037" />
+        <location line="+97" />
         <location line="+24" />
         <location line="+11" />
         <location line="+18" />
@@ -7470,7 +7465,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag Generator</translation>
     </message>
     <message>
-        <location line="-4124" />
+        <location line="-4184" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5-perhe (30 tagia)</translation>
     </message>
@@ -7508,16 +7503,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+371" />
+        <location line="+367" />
         <location line="+14" />
         <location line="+33" />
-        <location line="+916" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
-        <source>Failed to open: "%L1"</source>
-        <translation>Avaaminen epäonnistui: "%L1"</translation>
+        <location line="+918" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-223" />
+        <source>Failed to open: &quot;%L1&quot;</source>
+        <translation>Avaaminen epäonnistui: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1358" />
+        <location line="-1356" />
         <source>DataMatrix Generator</source>
         <translation>DataMatrix-generaattori</translation>
     </message>
@@ -7543,29 +7538,29 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Mihin verkko tallennetaan OpenMV Camissa</translation>
     </message>
     <message>
-        <location line="+228" />
-        <location line="+2357" />
-        <location line="+1290" />
+        <location line="+225" />
+        <location line="+2424" />
+        <location line="+1288" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
-        <location line="+67" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382" />
-        <location line="+364" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899" />
-        <location line="+208" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-393" />
+        <location line="+375" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+900" />
+        <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Lisää tiedostopääte!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-269" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+112" />
-        <location line="+207" />
+        <location line="+119" />
+        <location line="+203" />
         <source>Unable to overwrite output file!</source>
         <translation>Tulostiedostoa ei voi korvata!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3860" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3922" />
         <source>Video Tools</source>
         <translation>Videotyökalut</translation>
     </message>
@@ -7581,23 +7576,23 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-437" />
-        <location line="+273" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-439" />
+        <location line="+275" />
         <source>Play RTSP Stream</source>
         <translation>Pelaa RTSP Streamia</translation>
     </message>
     <message>
         <location line="+16" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+15" />
         <location line="+6" />
-        <location line="+46" />
+        <location line="+48" />
         <location line="+19" />
         <source>New Dataset</source>
         <translation>Uusi tietojoukko</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-98" />
         <source>Dataset Editor - Choose a folder to build the dataset in</source>
         <translation>Tietojoukkoeditori – Valitse kansio, johon tietojoukko rakennetaan</translation>
     </message>
@@ -7608,17 +7603,17 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+15" />
-        <location line="+207" />
+        <location line="+205" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-209" />
         <location line="+34" />
         <location line="+48" />
         <location line="+33" />
-        <source>Failed to remove "%L1"!</source>
-        <translation>"%L1":n poistaminen epäonnistui!</translation>
+        <source>Failed to remove &quot;%L1&quot;!</source>
+        <translation>&quot;%L1&quot;:n poistaminen epäonnistui!</translation>
     </message>
     <message>
-        <location line="-128" />
-        <location line="+30" />
+        <location line="-125" />
+        <location line="+29" />
         <source>Open Dataset</source>
         <translation>Avaa tietojoukko</translation>
     </message>
@@ -7633,7 +7628,7 @@ Check the json file for errors and fix them.</source>
         <translation>Valittu kansio ei näytä olevan kelvollinen OpenMV Cam Image Dataset!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export</source>
         <translation>Viedä</translation>
     </message>
@@ -7643,7 +7638,7 @@ Check the json file for errors and fix them.</source>
         <translation>Vie tietojoukko zip-tiedostoon</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <location line="+7" />
         <location line="+42" />
         <location line="+21" />
@@ -7661,38 +7656,38 @@ Check the json file for errors and fix them.</source>
         <translation>Viedään...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-520" />
-        <location line="+237" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-522" />
+        <location line="+239" />
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1482" />
+        <location line="+1513" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+258" />
-        <location line="+533" />
-        <location line="+145" />
+        <location line="+273" />
+        <location line="+554" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location line="+433" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
-        <location line="+288" />
-        <location line="+143" />
-        <location line="+1023" />
+        <location line="+117" />
+        <location line="+428" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-131" />
+        <location line="+289" />
+        <location line="+165" />
+        <location line="+1148" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1339" />
         <location line="+85" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Cancel</source>
         <translation>Peruuttaa</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3673" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3737" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Lataa Edge Impulse Projectiin</translation>
     </message>
@@ -7771,8 +7766,8 @@ Check the json file for errors and fix them.</source>
         <translation>Tietoja OpenMV IDE:stä...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;Tietoja OpenMV IDE:stä %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tekijä: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU YLEINEN JULKINEN KÄYTTÖOIKEUS&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Tekijänoikeus (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Tätä ohjelmaa jaetaan siinä toivossa, että siitä on hyötyä, mutta ILMAN MITÄÄN TAKUUTA; ilman edes oletettua takuuta MYYNTIKELPOISUUDESTA tai SOVELTUVUUDESTA TIETTYYN TARKOITUKSEEN. Katso lisätietoja &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU:n yleisestä julkisesta lisenssistä&lt;/a&gt;.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Kysymyksiä tai kommentteja?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ota meihin yhteyttä osoitteessa &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Tietoja OpenMV IDE:stä %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tekijä: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU YLEINEN JULKINEN KÄYTTÖOIKEUS&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Tekijänoikeus (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Tätä ohjelmaa jaetaan siinä toivossa, että siitä on hyötyä, mutta ILMAN MITÄÄN TAKUUTA; ilman edes oletettua takuuta MYYNTIKELPOISUUDESTA tai SOVELTUVUUDESTA TIETTYYN TARKOITUKSEEN. Katso lisätietoja &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU:n yleisestä julkisesta lisenssistä&lt;/a&gt;.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Kysymyksiä tai kommentteja?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ota meihin yhteyttä osoitteessa &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
@@ -7793,11 +7788,11 @@ Check the json file for errors and fix them.</source>
         <translation>OpenMV-katseluohjelma</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+73" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
         <location line="+37" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-221" />
         <location line="+87" />
         <location line="+55" />
@@ -7833,11 +7828,11 @@ Check the json file for errors and fix them.</source>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-195" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-197" />
         <location line="+9" />
-        <location line="+89" />
-        <location line="+13" />
-        <location line="+42" />
+        <location line="+95" />
+        <location line="+11" />
+        <location line="+40" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
@@ -7867,53 +7862,61 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1064" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1189" />
         <location line="+6" />
         <location line="+28" />
         <location line="+52" />
         <location line="+8" />
         <location line="+35" />
-        <location line="+320" />
-        <location line="+62" />
-        <location line="+99" />
-        <location line="+49" />
-        <location line="+67" />
-        <location line="+12" />
-        <location line="+77" />
+        <location line="+329" />
+        <location line="+136" />
+        <location line="+28" />
+        <location line="+100" />
+        <location line="+56" />
+        <location line="+68" />
+        <location line="+13" />
+        <location line="+81" />
         <location line="+10" />
         <location line="+12" />
         <location line="+28" />
-        <location line="+36" />
-        <location line="+84" />
+        <location line="+34" />
+        <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+86" />
+        <location line="+97" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
-        <location line="+108" />
+        <location line="+116" />
         <location line="+83" />
-        <location line="+42" />
-        <location line="+38" />
-        <location line="+52" />
-        <location line="+38" />
+        <location line="+82" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+46" />
+        <location line="+54" />
+        <location line="+51" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
         <location line="+21" />
         <location line="+20" />
         <location line="+24" />
-        <location line="+121" />
-        <location line="+214" />
+        <location line="+135" />
+        <location line="+217" />
         <location line="+33" />
-        <location line="+248" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+658" />
+        <location line="+268" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+668" />
         <location line="+48" />
         <source>Connect</source>
         <translation>Kytkeä</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-42" />
         <source>No settings for the selected board type %L1!</source>
         <translation>Ei asetuksia valitulle korttityypille %L1!</translation>
     </message>
@@ -7924,12 +7927,12 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Only firmware recovery is supported using the Alif Semiconductor's SE Tools.</source>
+        <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>Ainoastaan ​​laiteohjelmiston palautusta tuetaan Alif Semiconductorin SE -työkaluilla.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
         <source>Disconnect</source>
@@ -7988,12 +7991,11 @@ Check the json file for errors and fix them.</source>
         <translation>Zoomaa sopivaksi</translation>
     </message>
     <message>
-        <location line="+30" />
         <source>JPG</source>
-        <translation>JPG</translation>
+        <translation type="vanished">JPG</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+31" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG pakkaa kehyspuskurin tehokkuuden parantamiseksi</translation>
     </message>
@@ -8012,7 +8014,7 @@ Check the json file for errors and fix them.</source>
         <translation>Poista Frame Buffer käytöstä parhaan suorituskyvyn saavuttamiseksi</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+52" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>Frame Buffer Disabled (kehyspuskuri ei käytössä) - ota käyttöön napsauttamalla Disable-painiketta uudelleen (oikea yläkulma)</translation>
     </message>
@@ -8081,17 +8083,15 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Res (w:%1, k:%2)</translation>
     </message>
     <message>
-        <location line="-1574" />
+        <location line="-1582" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>Virheen lukeminen &lt;user_resources&gt; /openmvide/firmware/settings.json: %l1. 
-
-OpenMV IDE -versiot ennen v4.3.0: lla ei ole tätä tiedostoa ja ne olisivat poistaneet sen resurssien asentamisessa.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2512" />
+        <location line="+346" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2858" />
         <source>Load Custom Firmware</source>
         <translation>Lataa mukautettu laiteohjelmisto</translation>
     </message>
@@ -8103,7 +8103,7 @@ OpenMV IDE -versiot ennen v4.3.0: lla ei ole tätä tiedostoa ja ne olisivat poi
     </message>
     <message>
         <location line="+1" />
-        <source>Are you sure you want to erase your OpenMV Cam's internal FAT file system?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s internal FAT file system?</source>
         <translation>Oletko varma, että haluat poistaa OpenMV Camin sisäisen rasvatiedostojärjestelmän?</translation>
     </message>
     <message>
@@ -8132,15 +8132,20 @@ OpenMV IDE -versiot ennen v4.3.0: lla ei ole tätä tiedostoa ja ne olisivat poi
         <translation>Nollaa ROMF: t OpenMV -nokkaan</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+84" />
+        <source>Force enter OpenMV Cam bootloader</source>
+        <translation>Pakota OpenMV Cam -käynnistyslataimeen</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>MicroPython Tools</source>
         <translation>Micropython -työkalut</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+6" />
         <location line="+7" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -8150,39 +8155,50 @@ OpenMV IDE -versiot ennen v4.3.0: lla ei ole tätä tiedostoa ja ne olisivat poi
         <translation>Kopioi/muunna Python -tiedosto</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Open Model Zoo</source>
         <translation>Avoin mallin eläintarha</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+87" />
         <source>Convert Model for NPU</source>
         <translation>Muunna malli NPU: lle</translation>
     </message>
     <message>
+        <location line="+6" />
+        <location line="+9" />
+        <location line="+12" />
         <location line="+7" />
-        <location line="+10" />
-        <location line="+13" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-176" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Muuntaa malli</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location line="+420" />
         <source>Show Code Profiler</source>
         <translation>Näytä Code Profiler</translation>
     </message>
     <message>
         <location line="+101" />
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Tietoja %L4 %L1:stä&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kirjoittaja: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;TEHDASVERSIO&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tarkoitettu vain lisensoiduille valmistajille.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU YLEINEN JULKINEN KÄYTTÖOIKEUS&lt;/b&gt;L&gt;&lt;2&gt;Copy/p&gt; %L3&lt;/p&gt;&lt;p&gt;Tätä ohjelmaa jaetaan siinä toivossa, että siitä on hyötyä, mutta ILMAN MITÄÄN TAKUUTA; ilman edes oletettua takuuta MYYNTIKELPOISUUDESTA tai SOVELTUVUUDESTA TIETTYYN TARKOITUKSEEN. Katso lisätietoja &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Kysymyksiä tai kommentteja?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ota yhteyttä osoitteessa &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+196" />
+        <location line="+26" />
+        <source>JPG Mode</source>
+        <translation>JPG-tila</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>RAW Mode</source>
+        <translation>RAW-tila</translation>
+    </message>
+    <message>
+        <location line="+113" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pikselit (%7) - Tarkennus (%8)</translation>
@@ -8220,7 +8236,7 @@ OpenMV IDE -versiot ennen v4.3.0: lla ei ole tätä tiedostoa ja ne olisivat poi
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2737" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
         <source>Board:</source>
         <translation>Hallitus:</translation>
     </message>
@@ -8264,9 +8280,9 @@ OpenMV IDE -versiot ennen v4.3.0: lla ei ole tätä tiedostoa ja ne olisivat poi
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-301" />
-        <location line="+303" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
+        <location line="+324" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
         <source>Drive:</source>
         <translation>Ajaa:</translation>
     </message>
@@ -8287,8 +8303,8 @@ OpenMV IDE -versiot ennen v4.3.0: lla ei ole tätä tiedostoa ja ne olisivat poi
         <translation>Voi olla erilainen kuin kameran FPS</translation>
     </message>
     <message>
-        <location line="+309" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2952" />
+        <location line="+307" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
         <source>Update Available</source>
         <translation>Päivitys saatavilla</translation>
     </message>
@@ -8303,7 +8319,7 @@ OpenMV IDE -versiot ennen v4.3.0: lla ei ole tätä tiedostoa ja ne olisivat poi
         <translation>ladata</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
         <translation>WiFi-ohjelmointi poissa käytöstä!</translation>
     </message>
@@ -8341,11 +8357,11 @@ OpenMV IDE -versiot ennen v4.3.0: lla ei ole tätä tiedostoa ja ne olisivat poi
         <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
-Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
 
 Blinking Green:
 
-Your OpenMV Cam's onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
 
 Blinking Blue:
 
@@ -8353,11 +8369,11 @@ Your OpenMV Cam is running the default main.py script onboard.
 
 If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
 
-If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+If the LED is blinking blue but OpenMV IDE can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
 
 Blinking White:
 
-Your OpenMV Cam's firmware is panicking because of a hardware failure. Please check that your OpenMV Cam's camera module is installed securely.
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
         <translation>Kiitos OpenMV Camin ja OpenMV IDE:n käytöstä!
@@ -8384,27 +8400,27 @@ OpenMV Camin laiteohjelmisto on paniikissa laitteistovian vuoksi. Tarkista, ett�
     </message>
     <message>
         <location line="+93" />
-        <location line="+1176" />
+        <location line="+1212" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Sarjaportti - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1144" />
+        <location line="-1180" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+791" />
-        <location line="+145" />
+        <location line="+827" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
+        <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>Yhdistetään... (30 sekunnin aikakatkaisu)</translation>
     </message>
     <message>
-        <location line="-1783" />
+        <location line="-1820" />
         <source>
 
 Try doing:
@@ -8457,12 +8473,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1233" />
+        <location line="+1270" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP-palvelinyhteys - %1</translation>
     </message>
     <message>
-        <location line="-1159" />
+        <location line="-1196" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Virheellinen porttiargumentti (%1) kohteelle -open_udp_server_terminal</translation>
     </message>
@@ -8493,12 +8509,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1279" />
+        <location line="+1317" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP-palvelinyhteys - %1</translation>
     </message>
     <message>
-        <location line="-1205" />
+        <location line="-1243" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Virheellinen porttiargumentti (%1) kohteelle -open_tcp_server_terminal</translation>
     </message>
@@ -8508,15 +8524,17 @@ sudo adduser %L1 dialout
         <translation>Puuttuvat argumentit kohteelle -open_tcp_server_terminal</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+58" />
         <location line="+18" />
+        <location line="+6" />
+        <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
         <location line="+9" />
         <location line="+45" />
-        <location line="+79" />
-        <location line="+8" />
+        <location line="+82" />
+        <location line="+27" />
         <location line="+6" />
         <location line="+6" />
         <location line="+6" />
@@ -8525,15 +8543,15 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2389" />
-        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location line="+10" />
         <location line="+8" />
-        <location line="+19" />
+        <location line="+22" />
         <source>Register OpenMV Cam</source>
         <translation>Rekisteröi OpenMV Cam</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="-278" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8553,13 +8571,24 @@ Suorita esimerkit-&gt;HelloWorld-&gt;helloworld.py testataksesi näön laatua ja
     </message>
     <message>
         <location line="+7" />
-        <location line="+17" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65" />
+        <location line="+29" />
+        <location line="+172" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-69" />
         <source>Registered</source>
         <translation>Rekisteröity</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-190" />
+        <source>Board type not available for this form key!</source>
+        <translation>Taulutyyppi ei ole käytettävissä tälle lomakeavaimelle!</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Registration limit reached for this board type!</source>
+        <translation>Rekisteröitymisraja tälle lautatyypille saavutettu!</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8575,27 +8604,27 @@ Suorita esimerkit-&gt;HelloWorld-&gt;helloworld.py testataksesi näön laatua ja
     </message>
     <message>
         <location line="+17" />
-        <location line="+182" />
+        <location line="+204" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>Tietokanta virhe!</translation>
     </message>
     <message>
-        <location line="-165" />
-        <location line="+178" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+17" />
+        <location line="-187" />
+        <location line="+200" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+18" />
         <source>GET Network error!</source>
         <translation>GET Verkkovirhe!</translation>
     </message>
     <message>
-        <location line="-169" />
-        <location line="+177" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+19" />
+        <location line="-191" />
+        <location line="+199" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+22" />
         <source>GET network error!</source>
         <translation>GET verkkovirhe!</translation>
     </message>
     <message>
-        <location line="-170" />
+        <location line="-192" />
         <location line="+10" />
         <location line="+10" />
         <source>Unregistered OpenMV Cam Detected</source>
@@ -8603,7 +8632,7 @@ Suorita esimerkit-&gt;HelloWorld-&gt;helloworld.py testataksesi näön laatua ja
     </message>
     <message>
         <location line="-19" />
-        <source>Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
         <translation>OpenMV-kameraasi ei ole rekisteröity. Sinun on rekisteröitävä OpenMV-kamerasi OpenMV:llä, jotta voit käyttää rajoittamatonta käyttöä OpenMV IDE:n kanssa ilman keskeytyksiä.
@@ -8630,8 +8659,8 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href="https://openmv.io/products/openmv-cam-board-key"&gt;here&lt;/a&gt;.</source>
-        <translation>Rekisteröi OpenMV-kamerasi antamalla taulun avain.&lt;br/&gt;&lt;br/&gt;Jos sinulla ei ole korttiavainta, voit ostaa sen OpenMV:ltä &lt;a href="https://openmv.io/products/openmv- cam-board-key"&gt;täällä&lt;/a&gt;.</translation>
+        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Rekisteröi OpenMV-kamerasi antamalla taulun avain.&lt;br/&gt;&lt;br/&gt;Jos sinulla ei ole korttiavainta, voit ostaa sen OpenMV:ltä &lt;a href=&quot;https://openmv.io/products/openmv- cam-board-key&quot;&gt;täällä&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+47" />
@@ -8639,12 +8668,12 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Rekisteröidään OpenMV-kameraa...</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+33" />
         <source>Thank you for registering your OpenMV Cam!</source>
         <translation>Kiitos, että rekisteröit OpenMV-kamerasi!</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+27" />
         <source>Invalid Board Key for Board Type!</source>
         <translation>Virheellinen korttiavain korttityypille!</translation>
     </message>
@@ -8669,10 +8698,10 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Virheellisesti muotoiltu Board Key!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+223" />
-        <location line="+482" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+225" />
+        <location line="+503" />
         <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-83" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-84" />
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
@@ -8681,7 +8710,7 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation type="vanished">Määritä asetukset</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+389" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+395" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>Tallenna komentosarja</translation>
@@ -8692,7 +8721,7 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Poistetaanko kommentit ja muunnetaan välilyönnit sarkaimeiksi?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
@@ -8709,8 +8738,8 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Kuvatiedostot (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Template</source>
@@ -8723,26 +8752,26 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
     </message>
     <message>
         <location line="+23" />
-        <location line="+67" />
+        <location line="+65" />
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>Valitse kelvollinen polku OpenMV Camissa!</translation>
     </message>
     <message>
-        <location line="-52" />
-        <location line="+67" />
-        <source>"%L1" is longer than a max length of %L2 characters!</source>
-        <translation>"%L1" on pidempi kuin %L2 merkin enimmäispituus!</translation>
+        <location line="-50" />
+        <location line="+65" />
+        <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
+        <translation>&quot;%L1&quot; on pidempi kuin %L2 merkin enimmäispituus!</translation>
     </message>
     <message>
-        <location line="-40" />
-        <location line="+7" />
+        <location line="-41" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Descriptor</source>
         <translation>Tallenna kuvaaja</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8750,7 +8779,7 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Keypoints-tiedostot (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1113" />
+        <location line="-1112" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8768,17 +8797,17 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
     <message>
         <location line="-19" />
         <location line="+13" />
-        <source>Cannot open the file "%L1"!</source>
-        <translation>Tiedostoa "%L1" ei voi avata!</translation>
+        <source>Cannot open the file &quot;%L1&quot;!</source>
+        <translation>Tiedostoa &quot;%L1&quot; ei voi avata!</translation>
     </message>
     <message>
         <location line="-13" />
         <location line="+13" />
-        <source>Cannot open the example file "%L1"!</source>
-        <translation>Esimerkkitiedostoa "%L1" ei voi avata!</translation>
+        <source>Cannot open the example file &quot;%L1&quot;!</source>
+        <translation>Esimerkkitiedostoa &quot;%L1&quot; ei voi avata!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-467" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-468" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>Valitse Drive</translation>
@@ -8789,8 +8818,8 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>OpenMV Cam -kameraasi ei löytynyt kelvollisia asemia!</translation>
     </message>
     <message>
-        <source>"%L1" is the only drive available so it must be your OpenMV Cam's drive.</source>
-        <translation type="vanished">"%L1" on ainoa käytettävissä oleva asema, joten sen on oltava OpenMV Cam -asemasi.</translation>
+        <source>&quot;%L1&quot; is the only drive available so it must be your OpenMV Cam&apos;s drive.</source>
+        <translation type="vanished">&quot;%L1&quot; on ainoa käytettävissä oleva asema, joten sen on oltava OpenMV Cam -asemasi.</translation>
     </message>
     <message>
         <location line="+27" />
@@ -8798,19 +8827,19 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Yhdistä asema OpenMV-kameraasi</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>Drive: %L1</source>
         <translation>Asema: %L1</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+42" />
         <source>Debug Protocol Settings</source>
         <translation>Protokollan asetusten virheenkorjaus</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Protocol Version %1 - System Info:</source>
-        <translation>Protokollaversio % 1 - Järjestelmätiedot:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25" />
@@ -8873,30 +8902,30 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Code Profiler Polling (ms)</translation>
     </message>
     <message>
-        <location line="+354" />
+        <location line="+391" />
         <location line="+26" />
         <location line="+7" />
-        <source>Failed to flush "%L1"!</source>
-        <translation>"%L1":n huuhtelu epäonnistui!</translation>
+        <source>Failed to flush &quot;%L1&quot;!</source>
+        <translation>&quot;%L1&quot;:n huuhtelu epäonnistui!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34" />
-        <location line="+13" />
+        <location line="+12" />
         <location line="+31" />
         <location line="+9" />
-        <location line="+87" />
+        <location line="+89" />
         <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -8906,7 +8935,7 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Uusi terminaali</translation>
     </message>
     <message>
-        <location line="-637" />
+        <location line="-641" />
         <source>Connect to serial port</source>
         <translation>Yhdistä sarjaporttiin</translation>
     </message>
@@ -8927,7 +8956,7 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2021" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2227" />
         <source>Please select a serial port</source>
         <translation>Valitse sarjaportti</translation>
     </message>
@@ -8937,7 +8966,7 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Anna siirtonopeus</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+96" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
         <source>Try doing:
 
@@ -8954,15 +8983,15 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
     </message>
     <message>
         <location line="+17" />
-        <location line="+138" />
+        <location line="+139" />
         <location line="+7" />
-        <location line="+236" />
+        <location line="+237" />
         <location line="+7" />
-        <source>Invalid string: "%L1"!</source>
-        <translation>Virheellinen merkkijono: "%L1"!</translation>
+        <source>Invalid string: &quot;%L1&quot;!</source>
+        <translation>Virheellinen merkkijono: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-381" />
         <source>No serial ports found!</source>
         <translation>Sarjaportteja ei löytynyt!</translation>
     </message>
@@ -8973,45 +9002,45 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+243" />
+        <location line="+244" />
         <source> Connect to a Server </source>
         <translation> Yhdistä palvelimeen </translation>
     </message>
     <message>
-        <location line="-242" />
-        <location line="+243" />
+        <location line="-243" />
+        <location line="+244" />
         <source> Start a Server </source>
         <translation> Käynnistä palvelin </translation>
     </message>
     <message>
         <location line="-234" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>Anna IP-osoite (tai verkkotunnuksen nimi) ja portti (esim. xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-222" />
         <source>UDP Client Connection - %1</source>
         <translation>UDP-asiakasyhteys - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>Anna portin numero (kirjoita 0 satunnaiselle vapaalle portille)</translation>
     </message>
     <message>
-        <location line="-137" />
+        <location line="-138" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>Yhdistätkö TCP-palvelimeen asiakkaana vai käynnistätkö TCP-palvelimen?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+36" />
         <source>TCP Client Connection - %1</source>
         <translation>TCP-asiakasyhteys - %1</translation>
     </message>
     <message>
-        <location line="+244" />
+        <location line="+243" />
         <source>Error: Option Index!</source>
         <translation>Virhe: Vaihtoehtoindeksi!</translation>
     </message>
@@ -9036,7 +9065,7 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation> Kuvatiedosto </translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>Valittu kynnysarvo päivitetään sulkemisen yhteydessä.</translation>
@@ -9052,8 +9081,8 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Kuvatiedosto</translation>
     </message>
     <message>
-        <location line="+71" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+70" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+704" />
         <source>What would you like to do?</source>
         <translation>Mitä haluaisit tehdä?</translation>
     </message>
@@ -9068,7 +9097,7 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation> Yhdistä tiedostot </translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9118,12 +9147,12 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Ensimmäisen avainpistetiedoston lataaminen epäonnistui tuntemattomasta syystä!</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>What tag images from the %L1 tag family do you want to generate?</source>
         <translation>Mitä tunnistekuvia %L1-tunnisteperheestä haluat luoda?</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Min (%1)</source>
         <translation>Min (%1)</translation>
     </message>
@@ -9140,9 +9169,9 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>AprilTag Generator - Where do you want to save %n tag image(s) to?</source>
-        <translation>
-            <numerusform>AprilTag Generator - Mihin haluat tallentaa %n tunnistekuvaa?</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -9166,7 +9195,7 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Sukupolvi valmis!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1510" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>Uusia OpenMV IDE -resursseja on saatavilla (esim. esimerkkejä, laiteohjelmistoa, dokumentaatiota jne.).</translation>
     </message>
@@ -9177,42 +9206,42 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+288" />
-        <location line="+143" />
+        <location line="+289" />
+        <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
         <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
         <location line="+46" />
-        <location line="+75" />
+        <location line="+73" />
         <location line="+46" />
-        <location line="+74" />
+        <location line="+72" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+400" />
         <location line="+50" />
-        <location line="+873" />
+        <location line="+871" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>Ladataan...</translation>
     </message>
     <message>
-        <location line="-417" />
+        <location line="-440" />
         <source>Installing...</source>
         <translation>Asennetaan...</translation>
     </message>
     <message>
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
-        <source>Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+        <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>Sulje kaikki ohjelmat, jotka tarkastelevat/muokkaavat OpenMV IDE:n sovellustietoja ja käynnistä sitten OpenMV IDE uudelleen!</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
         <translation>Asennus onnistui! Käynnistä OpenMV IDE uudelleen.</translation>
     </message>
@@ -9225,69 +9254,119 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+254" />
+        <location line="+273" />
         <location line="+88" />
-        <source>Cannot open the resources file "%L1"!</source>
-        <translation>Resurssitiedostoa "%L1" ei voi avata!</translation>
+        <source>Cannot open the resources file &quot;%L1&quot;!</source>
+        <translation>Resurssitiedostoa &quot;%L1&quot; ei voi avata!</translation>
     </message>
     <message>
-        <location line="-314" />
-        <location line="+254" />
+        <location line="-333" />
+        <location line="+273" />
         <location line="+95" />
-        <source>Network request failed "%L1"!</source>
-        <translation>Verkkopyyntö "%L1" epäonnistui!</translation>
+        <source>Network request failed &quot;%L1&quot;!</source>
+        <translation>Verkkopyyntö &quot;%L1&quot; epäonnistui!</translation>
     </message>
     <message>
-        <location line="-315" />
+        <location line="-335" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation>Laiteohjelmisto binaari ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+119" />
-        <location line="+588" />
-        <location line="+217" />
-        <location line="+2205" />
+        <location line="+12" />
+        <location line="+117" />
+        <location line="+720" />
+        <location line="+227" />
+        <location line="+2414" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Poista sisäinen rasvatiedostojärjestelmä</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+119" />
-        <location line="+589" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+117" />
+        <location line="+722" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
-        <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Jos otat tämän vaihtoehdon käyttöön, kaikki OpenMV Camin sisäisen rasvatiedostojärjestelmän tiedostot poistetaan. Tämä ei poista tiedostoja millään irrotettavalla SD -kortilla (jos asetettu).</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+708" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+839" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Nollaa ROMFS -tiedostojärjestelmä</translation>
     </message>
     <message>
-        <location line="-3203" />
-        <location line="+708" />
-        <location line="+215" />
-        <location line="+2205" />
+        <location line="-3552" />
+        <location line="+840" />
+        <location line="+225" />
+        <location line="+2412" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Jos otat tämän vaihtoehdon käyttöön, OpenMV -nokan ROM -tiedostojärjestelmä palautetaan takaisin oletusarvoon.</translation>
     </message>
     <message>
-        <location line="-3160" />
+        <location line="-3510" />
         <location line="+45" />
         <source>Bootloader</source>
         <translation>Käynnistyksenlataaja</translation>
     </message>
     <message>
-        <location line="+2991" />
+        <location line="+28" />
+        <source>Force bootloader</source>
+        <translation>Pakota käynnistyslatain</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Force enter the OpenMV Cam bootloader. May result in the OpenMV Cam bootloader not automatically exiting on older boards.</source>
+        <translation>Pakota OpenMV Cam -käynnistyslataimeen. Voi johtaa siihen, että OpenMV Cam -käynnistyslatain ei poistu automaattisesti vanhemmista levyistä.</translation>
+    </message>
+    <message>
+        <location line="+693" />
+        <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
+        <translation>Asenna uusin laiteohjelmistoversio (v%L1.%L2.%L3)</translation>
+    </message>
+    <message>
+        <location line="+1063" />
+        <location line="+192" />
+        <source>Failed to copy firmware files to temporary directory!</source>
+        <translation>Laiteohjelmistotiedostojen kopioiminen väliaikaiseen hakemistoon epäonnistui!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Original firmware folder does not exist!</source>
+        <translation>Alkuperäistä laiteohjelmistokansiota ei ole olemassa!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Failed to create temporary directory!</source>
+        <translation>Väliaikaisen hakemiston luominen epäonnistui!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <source>Only loading bootloader.bin files is supported with the ST Cube Programmer!</source>
+        <translation>ST Cube Programmer tukee vain bootloader.bin-tiedostojen lataamista!</translation>
+    </message>
+    <message>
+        <location line="+151" />
+        <source>Bootloader update complete!
+
+</source>
+        <translation>Käynnistyslataimen päivitys valmis!</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Connect your OpenMV Cam now.</source>
+        <translation>Liitä OpenMV Cam nyt.</translation>
+    </message>
+    <message>
+        <location line="+1377" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9296,8 +9375,8 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Tutustu erityisesti Esimerkkeihin Kuvankäsittely -&gt; Värien seuranta ja koneoppiminen -&gt; TensorFlow.</translation>
     </message>
     <message>
-        <location line="-3104" />
-        <location line="+4" />
+        <location line="-3455" />
+        <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
         <source>Firmware Path</source>
@@ -9312,26 +9391,26 @@ Tutustu erityisesti Esimerkkeihin Kuvankäsittely -&gt; Värien seuranta ja kone
         <translation type="vanished">Tyhjennä sisäinen tiedostojärjestelmä</translation>
     </message>
     <message>
-        <source>If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">Jos otat tämän vaihtoehdon käyttöön, kaikki OpenMV Camin sisäisen flash-aseman tiedostot poistetaan. Tämä ei poista tiedostoja millään irrotettavalla SD-kortilla (jos se on asetettu).</translation>
     </message>
     <message>
-        <source>Loading firmware via DFU always erases your OpenMV Cam's internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
+        <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">Laiteohjelmiston lataaminen DFU:n kautta tyhjentää aina OpenMV Camin sisäisen flash-aseman. Tämä ei poista tiedostoja millään irrotettavalla SD-kortilla (jos se on asetettu).</translation>
     </message>
     <message>
         <location line="+21" />
-        <location line="+130" />
+        <location line="+148" />
         <source>Run</source>
         <translation>Juosta</translation>
     </message>
     <message>
-        <location line="-86" />
-        <source>"%L1" is not a file!</source>
-        <translation>"%L1" ei ole tiedosto!</translation>
+        <location line="-105" />
+        <source>&quot;%L1&quot; is not a file!</source>
+        <translation>&quot;%L1&quot; ei ole tiedosto!</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+67" />
         <source>Update ROMFS file system</source>
         <translation>Päivitä ROMFS -tiedostojärjestelmä</translation>
     </message>
@@ -9341,7 +9420,7 @@ Tutustu erityisesti Esimerkkeihin Kuvankäsittely -&gt; Värien seuranta ja kone
         <translation>Jos otat käyttöön tämän vaihtoehdon, OpenMV -nokan ROM -tiedostojärjestelmä päivitetään uusimpaan kehitysjulkaisuun.</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+125" />
         <source>Extracting...</source>
         <translation>Puretaan...</translation>
     </message>
@@ -9361,17 +9440,16 @@ Tutustu erityisesti Esimerkkeihin Kuvankäsittely -&gt; Värien seuranta ja kone
         <translation>Tuntematon hallitus</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+344" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>DFU-tilassa oleva kortti havaittiin. Mitä haluaisit tehdä?</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Install the lastest release firmware (v%L1.%L2.%L3)</source>
-        <translation>Asenna viimeisin laiteohjelmistoversio (v%L1.%L2.%L3)</translation>
+        <translation type="vanished">Asenna viimeisin laiteohjelmistoversio (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Load a specific firmware</source>
         <translation>Lataa tietty laiteohjelmisto</translation>
     </message>
@@ -9380,36 +9458,35 @@ Tutustu erityisesti Esimerkkeihin Kuvankäsittely -&gt; Värien seuranta ja kone
         <translation type="vanished">Tyhjennä vain interal tiedostojärjestelmä</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+92" />
         <source>No OpenMV Cams found!</source>
         <translation>OpenMV-kameroita ei löytynyt!</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+56" />
         <source>Do you have an OpenMV Cam connected and is it bricked?</source>
         <translation>Onko sinulla OpenMV Cam kytkettynä ja onko se muurattu?</translation>
     </message>
     <message>
-        <location line="+849" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
-Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
-        <translation>Vain *.dfu -tiedostojen lataaminen tuetaan STM32 Recovery Bootaatin!
+Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!</source>
+        <translation type="vanished">Vain *.dfu -tiedostojen lataaminen tuetaan STM32 Recovery Bootaatin!
 
  Valitse bootloader.dfu -tiedosto ja yritä uudelleen. Huomaa, että Firmware.dfu- tai OpenMv.dfu (Bootloader + Firmware) lataaminen ei välttämättä toimi STM32H7 -levyillä sirun ROM -käynnistyslataimen virheen takia!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+987" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>Vain lataaminen *.bin- ja *.img -tiedostoja tuetaan sisäiselle käynnistyslataukselle!</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Only loading *.bin and *.img files are supported for the IMX bootloader!</source>
         <translation>Vain lataaminen *.bin- ja *.img -tiedostoja tuetaan IMX -käynnistyslataus!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+107" />
         <source>Only loading *.bin, *.dfu, and *.img files are supported for the Arduino bootloader!</source>
         <translation>Vain lataaminen *.bin-, *.dfu- ja *.img -tiedostoja tuetaan Arduino -käynnistyslatauksessa!</translation>
     </message>
@@ -9425,7 +9502,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
     </message>
     <message>
         <location line="+24" />
-        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
+        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
         <translation>Huomaa, että Firmware.dfu- tai OpenMv.dfu (Bootloader + Firmware) lataaminen ei välttämättä toimi STM32H7 -levyillä sirun ROM -käynnistyslataimen virheen takia!
@@ -9435,9 +9512,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-976" />
-        <location line="+657" />
-        <location line="+1750" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1398" />
+        <location line="+252" />
+        <location line="+681" />
+        <location line="+1936" />
         <source>Please select the board type</source>
         <translation>Valitse taulun tyyppi</translation>
     </message>
@@ -9446,30 +9524,30 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Poistetaanko sisäinen tiedostojärjestelmä?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2295" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2500" />
         <source>No released firmware available for the attached board!</source>
         <translation>Liitetylle levylle ei ole saatavilla julkaistua laiteohjelmistoa!</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+61" />
         <source>Please select a DFU Device</source>
         <translation>Valitse DFU-laite</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-83" />
         <location line="+170" />
         <location line="+44" />
-        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Päivitä käynnistyslatain uusimpaan versioon ja asenna SoftDevice OpenMV-laiteohjelmiston päivittämiseksi. Lisätietoja on osoitteessa &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Päivitä käynnistyslatain uusimpaan versioon ja asenna SoftDevice OpenMV-laiteohjelmiston päivittämiseksi. Lisätietoja on osoitteessa &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-1065" />
-        <location line="+3012" />
+        <location line="-1191" />
+        <location line="+3343" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>VAROITUS: Uuden laiteohjelmiston version päivittäminen edellyttää, että FAT -tiedostojärjestelmä poistetaan.</translation>
     </message>
     <message>
-        <location line="-2527" />
+        <location line="-2848" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
@@ -9478,7 +9556,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 %1</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+173" />
         <source>Just erase the internal FAT file system</source>
         <translation>Poista vain sisäinen rasvatiedostojärjestelmä</translation>
     </message>
@@ -9493,17 +9571,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Nollaa ROM -tiedostojärjestelmä</translation>
     </message>
     <message>
-        <location line="+219" />
-        <location line="+2206" />
+        <location line="+229" />
+        <location line="+2415" />
         <source>Upgrade options:</source>
         <translation>Päivitysvaihtoehdot:</translation>
     </message>
     <message>
-        <location line="-2122" />
+        <location line="-2327" />
         <location line="+169" />
         <location line="+44" />
-        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Lyhennä REC GND:hen ja nollaa kortti. Lisätietoja on osoitteessa &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Lyhennä REC GND:hen ja nollaa kortti. Lisätietoja on osoitteessa &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+25" />
@@ -9515,7 +9593,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (Paina Peruuta, jos tämä kestää yli 5 sekuntia).</translation>
     </message>
     <message>
-        <location line="+132" />
+        <location line="+143" />
         <source>Timeout error while getting firmware version!</source>
         <translation>Aikakatkaisuvirhe laiteohjelmistoversiota haettaessa!</translation>
     </message>
@@ -9531,8 +9609,8 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+191" />
-        <location line="+570" />
+        <location line="+199" />
+        <location line="+733" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Aikakatkaisuvirhe kortin arkkitehtuuria haettaessa!</translation>
     </message>
@@ -9541,7 +9619,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Ei tuettu levyarkkitehtuuri!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-633" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Irrota OpenMV Cam ja liitä se sitten uudelleen...</translation>
@@ -9574,12 +9652,12 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+38" />
-        <source>Unable to connect to your OpenMV Cam's normal bootloader!</source>
+        <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>Ei voi muodostaa yhteyttä OpenMV Camin normaaliin käynnistyslataukseen!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+129" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+131" />
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
         <translation>OpenMV IDE voi silti yrittää korjata OpenMV Camin käyttämällä OpenMV Camin DFU-käynnistyslatainta.
@@ -9588,9 +9666,9 @@ Jatkaa?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-288" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
         <location line="+46" />
-        <location line="+195" />
+        <location line="+191" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>Poistetaan...</translation>
@@ -9609,7 +9687,7 @@ Jatkaa?</translation>
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-837" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-835" />
         <location line="+41" />
         <location line="+51" />
         <location line="+44" />
@@ -9626,7 +9704,7 @@ Jatkaa?</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+221" />
+        <location line="+219" />
         <location line="+50" />
         <location line="+51" />
         <location line="+42" />
@@ -9690,11 +9768,11 @@ Jatkaa?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
         <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
-        <source>Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.</source>
+        <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>Napsauta OK, kun OpenMV Camin RGB-LED alkaa vilkkua sinisenä - mikä osoittaa, että itsetesti on valmis.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
@@ -9712,7 +9790,7 @@ Jatkaa?</translation>
 
 If you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py.
 
-In this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).</source>
+In this case click OK when you see your OpenMV Cam&apos;s internal flash drive mount (a window may or may not pop open).</source>
         <translation>
 
 Jos kirjoitit main.py:n päälle OpenMV-kamerallasi etkä tyhjentänyt levyä, OpenMV Cam suorittaa vain kyseisen main.py:n.
@@ -9735,8 +9813,8 @@ Napsauta tässä tapauksessa OK, kun näet OpenMV Camin sisäisen flash-asemakii
         <translation>IMX-asetuksia ei löytynyt!</translation>
     </message>
     <message>
-        <source>Failed to eject "%L1"!</source>
-        <translation type="vanished">"%L1":n poistaminen epäonnistui!</translation>
+        <source>Failed to eject &quot;%L1&quot;!</source>
+        <translation type="vanished">&quot;%L1&quot;:n poistaminen epäonnistui!</translation>
     </message>
     <message>
         <location line="+14" />
@@ -9749,7 +9827,7 @@ Paina Peruuta siirtyäksesi SBL-uudelleenohjelmointiin.</translation>
     </message>
     <message>
         <location line="+42" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
         <translation>OpenMV IDE voi silti yrittää korjata OpenMV Camin käyttämällä OpenMV Camin SBL Bootloaderia.
@@ -9760,7 +9838,7 @@ Jatkaa?</translation>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
         <translation>Irrota OpenMV Cam tietokoneesta, lisää hyppyjohdin SBL- ja 3,3 V-nastan väliin ja liitä sitten OpenMV Cam uudelleen tietokoneeseen.
 
 Napsauta OK-painiketta, kun OpenMV-kamerasi SBL-käynnistyslataaja on lueteltu.</translation>
@@ -9812,19 +9890,19 @@ Napsauta OK-painiketta, kun OpenMV-kamerasi SBL-käynnistyslataaja on lueteltu.<
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-345" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-347" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Ei DFU-asetuksia valitulle korttityypille!</translation>
     </message>
     <message>
         <location line="+55" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+104" />
         <source>No DFU settings for the selected device!</source>
         <translation>Ei DFU-asetuksia valitulle laitteelle!</translation>
     </message>
     <message>
         <location line="+32" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+47" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
         <source>Erasing Disk</source>
         <translation>Levyn tyhjentäminen</translation>
@@ -9853,8 +9931,8 @@ Napsauta OK-painiketta, kun OpenMV-kamerasi SBL-käynnistyslataaja on lueteltu.<
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-933" />
-        <location line="+934" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-931" />
+        <location line="+932" />
         <source>Flashing Firmware</source>
         <translation>Vilkkuva laiteohjelmisto</translation>
     </message>
@@ -9900,17 +9978,17 @@ Napsauta OK-painiketta, kun OpenMV-kamerasi SBL-käynnistyslataaja on lueteltu.<
     </message>
     <message>
         <location line="+14" />
-        <source>Your %1 doesn't have an internal FAT file system.</source>
+        <source>Your %1 doesn&apos;t have an internal FAT file system.</source>
         <translation>%1: lläsi ei ole sisäistä rasvatiedostojärjestelmää.</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
-        <source>Your %1 doesn't have an ROM file system.</source>
+        <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>%1: lläsi ei ole ROM -tiedostojärjestelmää.</translation>
     </message>
     <message>
-        <source>Your Nano 33 BLE doesn't have an onboard data flash disk.</source>
+        <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
         <translation type="vanished">Nano 33 BLE:ssäsi ei ole sisäänrakennettua data-flash-levyä.</translation>
     </message>
     <message>
@@ -9971,7 +10049,7 @@ Jatkaa?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>DFU update erases your OpenMV Cam's internal flash file system.
+        <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
         <translation>DFU-päivitys tyhjentää OpenMV Camin sisäisen flash-tiedostojärjestelmän.
@@ -9982,7 +10060,7 @@ Varmuuskopioi tietosi ennen kuin jatkat!</translation>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.</source>
         <translation>Irrota OpenMV Cam tietokoneesta, lisää hyppylanka BOOT- ja RST-nastan väliin ja liitä sitten OpenMV Cam uudelleen tietokoneeseen.
 
 Napsauta OK-painiketta, kun OpenMV-kamerasi DFU-käynnistyslataaja on lueteltu.</translation>
@@ -10035,13 +10113,13 @@ Napsauta OK-painiketta, kun OpenMV-kamerasi DFU-käynnistyslataaja on lueteltu.<
         <translation>DFU-käynnistyslataimen nollaus epäonnistui!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-271" />
         <source>None</source>
         <translation>Ei mitään</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+16" />
+        <location line="+30" />
         <location line="+56" />
         <source>Unknown</source>
         <translation>Tuntematon</translation>
@@ -10057,12 +10135,12 @@ Napsauta OK-painiketta, kun OpenMV-kamerasi DFU-käynnistyslataaja on lueteltu.<
         <translation>Rekisteröimätön</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+94" />
         <source>Timeout error while learning MTU!</source>
         <translation>Aikakatkaisuvirhe opittaessa MTU:ta!</translation>
     </message>
     <message>
-        <location line="+167" />
+        <location line="+170" />
         <source>Board: %L1</source>
         <translation>Hallitus: %L1</translation>
     </message>
@@ -10087,13 +10165,13 @@ Napsauta OK-painiketta, kun OpenMV-kamerasi DFU-käynnistyslataaja on lueteltu.<
         <translation>Sarjaportti: %L1</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+85" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ vanhentunut - päivitä napsauttamalla tätä ]</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Your OpenMV Cam's firmware is out of date. Would you like to upgrade?</source>
+        <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>OpenMV Camin laiteohjelmisto on vanhentunut. Haluatko päivittää?</translation>
     </message>
     <message>
@@ -10102,7 +10180,7 @@ Napsauta OK-painiketta, kun OpenMV-kamerasi DFU-käynnistyslataaja on lueteltu.<
         <translation> - [ Viimeisin ]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-674" />
         <source>Failed to open or parse ELF: %1</source>
         <translation>ELF:n avaaminen tai jäsentäminen epäonnistui: %1</translation>
     </message>
@@ -10158,7 +10236,7 @@ Napsauta OK-painiketta, kun OpenMV-kamerasi DFU-käynnistyslataaja on lueteltu.<
     </message>
     <message>
         <location line="+396" />
-        <location line="+172" />
+        <location line="+177" />
         <source>Code Profiler</source>
         <translation>Code Profiler</translation>
     </message>
@@ -10212,7 +10290,7 @@ Napsauta OK-painiketta, kun OpenMV-kamerasi DFU-käynnistyslataaja on lueteltu.<
         <translation type="vanished">alkaa</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+588" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+592" />
         <source>More Examples</source>
         <translation>Lisää esimerkkejä</translation>
     </message>
@@ -10225,29 +10303,29 @@ In particular, checkout the Color-Tracking examples.</source>
 Tutustu erityisesti Color-Tracking-esimerkkeihin.</translation>
     </message>
     <message>
-        <location line="+28" />
-        <location line="+69" />
-        <location line="+9" />
+        <location line="+27" />
+        <location line="+70" />
+        <location line="+8" />
         <source>Firmware Update</source>
         <translation>Laiteohjelmiston päivitys</translation>
     </message>
     <message>
         <location line="-75" />
-        <source>Update your OpenMV Cam's firmware to the latest version?</source>
+        <source>Update your OpenMV Cam&apos;s firmware to the latest version?</source>
         <translation>Päivitetäänkö OpenMV Camin laiteohjelmisto uusimpaan versioon?</translation>
     </message>
     <message>
-        <location line="+67" />
-        <source>Your OpenMV Cam's firmware is up to date.</source>
+        <location line="+68" />
+        <source>Your OpenMV Cam&apos;s firmware is up to date.</source>
         <translation>OpenMV Camin laiteohjelmisto on ajan tasalla.</translation>
     </message>
     <message>
-        <location line="+11" />
-        <source>Need to reset your OpenMV Cam's firmware to the release version?</source>
+        <location line="+10" />
+        <source>Need to reset your OpenMV Cam&apos;s firmware to the release version?</source>
         <translation>Haluatko nollata OpenMV Camin laiteohjelmiston julkaisuversioon?</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+86" />
         <source>No board settings for the connected board found!</source>
         <translation>Löydettyjen kytkettyjen korttien levyasetuksia!</translation>
     </message>
@@ -10342,10 +10420,10 @@ Tutustu erityisesti Color-Tracking-esimerkkeihin.</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>Module "%L1" on your OpenMV Cam is different than the copy on your computer.
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
 Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>OpenMV Camin moduuli "%L1" on erilainen kuin tietokoneesi kopio.
+        <translation>OpenMV Camin moduuli &quot;%L1&quot; on erilainen kuin tietokoneesi kopio.
 
 Haluatko OpenMV IDE:n päivittävän moduulin OpenMV Camissasi?</translation>
     </message>
@@ -10356,15 +10434,15 @@ Haluatko OpenMV IDE:n päivittävän moduulin OpenMV Camissasi?</translation>
     </message>
     <message>
         <location line="+91" />
-        <source>Module "%L1" may be required to run your script.
+        <source>Module &quot;%L1&quot; may be required to run your script.
 
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>Moduuli "%L1" saatetaan tarvita komentosarjan suorittamiseen.
+        <translation>Moduuli &quot;%L1&quot; saatetaan tarvita komentosarjan suorittamiseen.
 
 Haluatko OpenMV IDE:n kopioivan sen OpenMV Camiin?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-366" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10377,18 +10455,18 @@ Haluatko OpenMV IDE:n kopioivan sen OpenMV Camiin?</translation>
         <translation>Tekstitiedostot (*.txt);;Kaikki tiedostot (*)</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+228" />
         <source>Zoom: %1%</source>
         <translation>Zoomaus: %1%</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4310" />
-        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4365" />
+        <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280" />
-        <location line="+236" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-265" />
+        <location line="+221" />
         <source>Model Zoo</source>
         <translation>Eläintarha</translation>
     </message>
@@ -10424,7 +10502,7 @@ Haluatko OpenMV IDE:n kopioivan sen OpenMV Camiin?</translation>
         <translation>löytö</translation>
     </message>
     <message>
-        <location line="+226" />
+        <location line="+239" />
         <source>Serial Terminal</source>
         <translation>Sarjapääte</translation>
     </message>
@@ -10445,8 +10523,8 @@ Haluatko OpenMV IDE:n kopioivan sen OpenMV Camiin?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Run "/main.py"</source>
-        <translation>Suorita "/main.py"</translation>
+        <source>Run &quot;/main.py&quot;</source>
+        <translation>Suorita &quot;/main.py&quot;</translation>
     </message>
     <message>
         <location line="+0" />
@@ -10469,31 +10547,31 @@ Haluatko OpenMV IDE:n kopioivan sen OpenMV Camiin?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-360" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-150" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Hanki laitteita</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-293" />
         <location line="+79" />
         <source>Query failed!</source>
         <translation>Kysely epäonnistui!</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+44" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+119" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+120" />
+        <location line="+118" />
         <source>DFU Util</source>
         <translation>DFU käyttö</translation>
     </message>
@@ -10518,7 +10596,7 @@ Haluatko OpenMV IDE:n kopioivan sen OpenMV Camiin?</translation>
         <translation>Tämä voi viedä jonkin aikaa, vesitauko?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-87" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
         <source>Dataset Split</source>
         <translation>Tietojoukko jaettu</translation>
     </message>
@@ -10530,7 +10608,7 @@ OpenMV recommends leaving this at the default 80/20% split.</source>
 OpenMV suosittelee jättämään tämän oletusarvoon 80/20 %.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <location line="+16" />
         <source>Training Data
 Percentage
@@ -10552,7 +10630,7 @@ Prosenttiosuus
     <message>
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+58" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
         <location line="+50" />
         <source>Uploading...</source>
@@ -10593,12 +10671,12 @@ Prosenttiosuus
         <location line="+10" />
         <source>Nothing to upload
 
-Only jpg/png/bmp images with a numeric name (e.g. "00001.jpg")
-in class folders ("*.class") can be uploaded.</source>
+Only jpg/png/bmp images with a numeric name (e.g. &quot;00001.jpg&quot;)
+in class folders (&quot;*.class&quot;) can be uploaded.</source>
         <translation>Ei mitään ladattavaa
 
-Vain jpg/png/bmp-kuvat, joissa on numeerinen nimi (esim. "00001.jpg")
-luokan kansioihin ("*.class") voidaan ladata.</translation>
+Vain jpg/png/bmp-kuvat, joissa on numeerinen nimi (esim. &quot;00001.jpg&quot;)
+luokan kansioihin (&quot;*.class&quot;) voidaan ladata.</translation>
     </message>
     <message>
         <location line="+43" />
@@ -10606,31 +10684,31 @@ luokan kansioihin ("*.class") voidaan ladata.</translation>
         <location line="+21" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+164" />
+        <location line="+155" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+23" />
         <location line="+9" />
         <location line="+9" />
         <source>Edge Impulse Projects</source>
         <translation>Edge Impulse -projektit</translation>
     </message>
     <message>
-        <location line="-276" />
+        <location line="-266" />
         <location line="+35" />
-        <location line="+71" />
-        <location line="+129" />
-        <location line="+42" />
+        <location line="+67" />
+        <location line="+124" />
+        <location line="+41" />
         <source>No request data received</source>
         <translation>Pyyntötietoja ei ole vastaanotettu</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-246" />
         <source>An unkown error occured</source>
         <translation>Tapahtui tuntematon virhe</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+62" />
         <location line="+11" />
         <location line="+7" />
         <location line="+10" />
@@ -10647,7 +10725,7 @@ Open a data set to upload it.</source>
 Lataa tietojoukko avaamalla se.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+33" />
         <source>Email Address</source>
         <translation>Sähköpostiosoite</translation>
     </message>
@@ -10662,17 +10740,17 @@ Lataa tietojoukko avaamalla se.</translation>
         <translation>Salasana</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+66" />
         <source>Please select a project</source>
         <translation>Valitse projekti</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+60" />
         <source>No projects found</source>
         <translation>Projekteja ei löytynyt</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+45" />
         <source>Upload Project</source>
         <translation>Lataa projekti</translation>
     </message>
@@ -10682,7 +10760,7 @@ Lataa tietojoukko avaamalla se.</translation>
         <translation>Anna Edge Impluse Project API Key</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1017" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1015" />
         <location line="+144" />
         <location line="+36" />
         <location line="+41" />
@@ -10701,7 +10779,7 @@ Lataa tietojoukko avaamalla se.</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+41" />
+        <location line="+39" />
         <location line="+135" />
         <location line="+45" />
         <location line="+50" />
@@ -10737,8 +10815,8 @@ Lataa tietojoukko avaamalla se.</translation>
     </message>
     <message>
         <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1337" />
-        <location line="+923" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1335" />
+        <location line="+921" />
         <source>This feature is not supported on this machine!</source>
         <translation>Tätä ominaisuutta ei tueta tässä koneessa!</translation>
     </message>
@@ -10770,15 +10848,15 @@ The camera must be power cycled after a system package update.</source>
 Kameran on oltava virran pyöräily järjestelmäpaketin päivityksen jälkeen.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-472" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-470" />
         <location line="+51" />
         <location line="+91" />
-        <location line="+346" />
+        <location line="+344" />
         <location line="+51" />
         <location line="+50" />
         <location line="+94" />
         <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Tämän komennon suorittaminen kestää jonkin aikaa. Olkaa kärsivällisiä.</translation>
@@ -10799,7 +10877,7 @@ Kameran on oltava virran pyöräily järjestelmäpaketin päivityksen jälkeen.<
         <translation>Tehty</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
@@ -10931,12 +11009,12 @@ Kameran on oltava virran pyöräily järjestelmäpaketin päivityksen jälkeen.<
     </message>
     <message>
         <location line="-77" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Transcoding File...</source>
         <translation>Transkoodataan tiedostoa...</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-594" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10997,29 +11075,29 @@ Kameran on oltava virran pyöräily järjestelmäpaketin päivityksen jälkeen.<
         <translation>Hanki syöttömuotoja</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+37" />
         <location line="+111" />
-        <location line="+100" />
+        <location line="+98" />
         <location line="+15" />
-        <location line="+372" />
+        <location line="+371" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
         <location line="+16" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+14" />
+        <location line="+19" />
         <location line="+36" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+21" />
+        <location line="+23" />
         <location line="+7" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+20" />
+        <location line="+22" />
         <location line="+7" />
         <source>Convert Video</source>
         <translation>Muunna video</translation>
@@ -11039,7 +11117,7 @@ Kameran on oltava virran pyöräily järjestelmäpaketin päivityksen jälkeen.<
         <translation>FFMPEG:tä ei tueta tällä alustalla.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+98" />
         <source>Unable to write to output video file!</source>
         <translation>Ei voida kirjoittaa ulostulovideotiedostoon!</translation>
     </message>
@@ -11050,79 +11128,79 @@ Kameran on oltava virran pyöräily järjestelmäpaketin päivityksen jälkeen.<
     </message>
     <message>
         <location line="+163" />
-        <location line="+411" />
+        <location line="+415" />
         <source>Play Video</source>
         <translation>Toista video</translation>
     </message>
     <message>
-        <location line="-410" />
+        <location line="-414" />
         <location line="+163" />
         <source>Failed to launch ffplay!</source>
         <translation>ffplayn käynnistäminen epäonnistui!</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>Convert Video Source</source>
         <translation>Muunna videolähde</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+235" />
+        <location line="+240" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</source>
         <translation>Videotiedostot (*.mp4 *.*);;OpenMV ImageWriter -tiedostot (*.bin);;</translation>
     </message>
     <message>
-        <location line="-230" />
+        <location line="-235" />
         <location line="+11" />
-        <location line="+117" />
+        <location line="+122" />
         <location line="+7" />
         <source>Convert Video Output</source>
         <translation>Muunna videolähtö</translation>
     </message>
     <message>
-        <location line="-130" />
-        <location line="+125" />
-        <location line="+208" />
+        <location line="-135" />
+        <location line="+130" />
+        <location line="+204" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
         <translation>Videotiedostot (*.mp4 *.*);;OpenMV ImageReader -tiedostot (*.bin);;</translation>
     </message>
     <message>
-        <location line="-327" />
+        <location line="-328" />
         <source>Please select output format</source>
         <translation>Valitse tulostusmuoto</translation>
     </message>
     <message>
         <location line="+15" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Rescale the video?</source>
         <translation>Skaalaa video uudelleen?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter a new width (the aspect ratio will be kept the same)</source>
         <translation>Anna uusi leveys (kuvasuhde säilyy samana)</translation>
     </message>
     <message>
-        <location line="-320" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-321" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Skip frames?</source>
         <translation>Ohitetaanko kehyksiä?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter how many frames to skip at a time</source>
         <translation>Anna, kuinka monta kehystä ohitetaan kerralla</translation>
     </message>
     <message>
-        <location line="-278" />
-        <location line="+91" />
-        <location line="+207" />
+        <location line="-274" />
+        <location line="+93" />
+        <location line="+203" />
         <source>Video conversion finished!</source>
         <translation>Videomuunnos valmis!</translation>
     </message>
@@ -11152,13 +11230,13 @@ Kameran on oltava virran pyöräily järjestelmäpaketin päivityksen jälkeen.<
         <translation>pelata</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+47" />
         <location line="+7" />
         <source>Save Video</source>
         <translation>Tallenna video</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
         <source>Busy</source>
         <translation>Kiireinen</translation>
     </message>
@@ -11174,13 +11252,11 @@ Kameran on oltava virran pyöräily järjestelmäpaketin päivityksen jälkeen.<
         <translation>Piilota tiedot</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-335" />
-        <location line="+102" />
         <source>No matching interface for the selected file name!</source>
-        <translation>Ei vastaavaa käyttöliittymää valitulle tiedostonimille!</translation>
+        <translation type="vanished">Ei vastaavaa käyttöliittymää valitulle tiedostonimille!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-745" />
         <source>Please select the target</source>
         <translation>Valitse kohde</translation>
     </message>
@@ -11203,70 +11279,70 @@ OpenMV IDE will just copy the model as is.</source>
 OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
     </message>
     <message>
-        <location line="+145" />
-        <location line="+36" />
+        <location line="+147" />
+        <location line="+35" />
         <location line="+6" />
         <location line="+8" />
-        <location line="+40" />
-        <location line="+17" />
-        <location line="+20" />
-        <location line="+6" />
-        <location line="+8" />
+        <location line="+42" />
+        <location line="+16" />
         <location line="+21" />
-        <location line="+19" />
-        <location line="+20" />
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
         <location line="+93" />
-        <location line="+9" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+13" />
-        <location line="+14" />
-        <location line="+45" />
-        <location line="+17" />
-        <location line="+28" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+40" />
+        <location line="+15" />
         <location line="+27" />
+        <location line="+24" />
         <location line="+53" />
-        <location line="+67" />
+        <location line="+63" />
         <location line="+6" />
         <location line="+21" />
         <source>Edit ROMFS</source>
         <translation>Muokkaa ROMF: ää</translation>
     </message>
     <message>
-        <location line="-620" />
-        <location line="+91" />
+        <location line="-606" />
+        <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>Kansio, jolla on sama nimi, on jo olemassa!</translation>
     </message>
     <message>
-        <location line="-85" />
-        <location line="+91" />
+        <location line="-87" />
+        <location line="+93" />
         <source>File already exists! Overwrite?</source>
         <translation>Tiedosto on jo olemassa! Korvata?</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+91" />
+        <location line="-85" />
+        <location line="+93" />
         <source>Failed to remove file!</source>
         <translation>Tiedoston poistaminen epäonnistui!</translation>
     </message>
     <message>
         <location line="-51" />
-        <location line="+72" />
+        <location line="+74" />
         <source>Failed to copy file!</source>
         <translation>Tiedoston kopiointi epäonnistui!</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+17" />
         <source>Folder Name</source>
         <translation>Kansionimi</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Failed to create folder!</source>
         <translation>Kansion luominen epäonnistui!</translation>
     </message>
@@ -11287,58 +11363,58 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Kansiota ei voi tallentaa!</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+14" />
+        <location line="+6" />
+        <location line="+15" />
         <location line="+19" />
-        <location line="+240" />
+        <location line="+225" />
         <source>Extract File</source>
         <translation>Poimitiedosto</translation>
     </message>
     <message>
-        <location line="-246" />
+        <location line="-231" />
         <source>View/Edit</source>
         <translation>Näkymä/muokkaa</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+237" />
+        <location line="+222" />
         <source>Add File</source>
         <translation>Lisää tiedosto</translation>
     </message>
     <message>
-        <location line="-236" />
-        <location line="+238" />
+        <location line="-221" />
+        <location line="+223" />
         <source>New Folder</source>
         <translation>Uusi kansio</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+14" />
-        <location line="+322" />
-        <location line="+12" />
+        <location line="-135" />
+        <location line="+13" />
+        <location line="+303" />
+        <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS: ää ei tueta tässä hallituksessa!</translation>
     </message>
     <message>
-        <location line="-290" />
-        <location line="+45" />
+        <location line="-275" />
+        <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>ROMF: ien purkamista epäonnistui!</translation>
     </message>
     <message>
         <location line="-19" />
-        <location line="+28" />
+        <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>Openmv Romfs</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+172" />
+        <location line="-25" />
+        <location line="+165" />
         <source>ROMFS Images (*.img)</source>
         <translation>ROMFS -kuvat (*.img)</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="-101" />
         <source>Commit</source>
         <translation>Sitoutua</translation>
     </message>
@@ -11353,17 +11429,17 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Tallenna ROMFS tiedostoon</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location line="+8" />
+        <location line="+105" />
+        <location line="+7" />
+        <location line="+11" />
         <location line="+12" />
-        <location line="+13" />
-        <location line="+12" />
+        <location line="+11" />
         <source>Reset ROMFS</source>
         <translation>Nollaa ROMFS</translation>
     </message>
     <message>
-        <location line="-44" />
-        <source>Are you sure you want to reset your OpenMV Cam's ROM file system?</source>
+        <location line="-40" />
+        <source>Are you sure you want to reset your OpenMV Cam&apos;s ROM file system?</source>
         <translation>Oletko varma, että haluat nollata OpenMV Camin ROM -tiedostojärjestelmän?</translation>
     </message>
     <message>
@@ -11393,12 +11469,12 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>&lt;a href="https://pypi.org/project/mpy-cross/"&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://pypi.org/project/mpy-cross/"&gt; mpy cross colleger cli -vaihtoehdot &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://pypi.org/project/mpy-cross/&quot;&gt; mpy cross colleger cli -vaihtoehdot &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
         <source>Advanced</source>
         <translation>Edistynyt</translation>
@@ -11411,7 +11487,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
     </message>
     <message>
         <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+90" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
         <source>Compiling</source>
         <translation>Kokoelma</translation>
@@ -11423,9 +11499,9 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-780" />
         <source>Success - Press Ok to close the window</source>
         <translation>Menestys - Sulje ikkuna painamalla OK</translation>
     </message>
@@ -11438,18 +11514,18 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Vika - Sulje ikkuna painamalla Peruuta</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+126" />
+        <location line="+111" />
         <location line="+14" />
-        <location line="+173" />
+        <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>Varastaja</translation>
     </message>
     <message>
-        <location line="-334" />
+        <location line="-300" />
         <source>Failed to copy JSON file!</source>
         <translation>JSON -tiedoston kopiointi epäonnistui!</translation>
     </message>
@@ -11486,14 +11562,13 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+24" />
         <source>--verbosity 2</source>
         <translation>--verbositeetti 2</translation>
     </message>
     <message>
-        <location line="-22" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; stedgeai core cli -vaihtoehdot &lt;/a&gt;</translation>
+        <location line="+2" />
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; stedgeai core cli -vaihtoehdot &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -11502,16 +11577,15 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; stedgeai-neuraal-art cli -vaihtoehdot &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; stedgeai-neuraal-art cli -vaihtoehdot &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; stedgeai -siirtäminen CLI -vaihtoehdot &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href = &quot;%1&quot;&gt; stedgeai -siirtäminen CLI -vaihtoehdot &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+75" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>JSON -tiedoston avaaminen epäonnistui!</translation>
@@ -11522,7 +11596,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Stedgeai</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+140" />
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
         <translation>Stedgeai -kokousta ei tueta tällä alustalla.</translation>
     </message>
@@ -11550,8 +11624,8 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md"&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/options.md"&gt; Vela Compilier CLI -vaihtoehdot &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/options.md&quot;&gt; Vela Compilier CLI -vaihtoehdot &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+67" />
@@ -11574,6 +11648,31 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <source>STM32 Programmer is not supported on this platform.</source>
         <translation>STM32 -ohjelmoijaa ei tueta tällä alustalla.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <source>the detected board</source>
+        <translation>havaittu levy</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>The selected file &quot;%L1&quot; does not match any firmware interface for %L2.</source>
+        <translation>Valittu tiedosto &quot;%L1&quot; ei vastaa mitään laiteohjelmistoliitäntää tiedostolle %L2.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%L1 accepts files named:</source>
+        <translation>%L1 hyväksyy tiedostot, joiden nimi on:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Rename your firmware file to one of the names above (or select the correct file) and try again.</source>
+        <translation>Nimeä laiteohjelmistotiedosto uudelleen joksikin yllä olevista nimistä (tai valitse oikea tiedosto) ja yritä uudelleen.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>This board does not define any loadable firmware interfaces in its settings.</source>
+        <translation>Tämä kortti ei määritä asetuksissaan ladattavia laiteohjelmistoliitäntöjä.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
@@ -11583,91 +11682,39 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+28" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+235" />
         <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
         <location line="+15" />
         <location line="+22" />
-        <location line="+132" />
         <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+21" />
         <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+306" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+144" />
         <source>Project Location</source>
         <translation>Projektin sijainti</translation>
     </message>
     <message>
-        <location line="-895" />
-        <location line="+28" />
-        <location line="+21" />
+        <location line="-886" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
-        <location line="+15" />
         <location line="+22" />
-        <location line="+24" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+11" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
-        <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+28" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+20" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+81" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
@@ -11677,7 +11724,59 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+94" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+15" />
+        <location line="+22" />
+        <location line="+18" />
+        <location line="+21" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+51" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
         <source>Location</source>
         <translation>Sijainti</translation>
     </message>
@@ -11686,7 +11785,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation type="vanished">Qt testi</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-516" />
         <source>Google Test</source>
         <translation>Google-testi</translation>
     </message>
@@ -11706,49 +11805,49 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Catch2</translation>
     </message>
     <message>
-        <location line="-762" />
+        <location line="-371" />
         <location line="+25" />
         <location line="+26" />
-        <location line="+712" />
+        <location line="+321" />
         <source>Test framework:</source>
         <translation>Testikehys:</translation>
     </message>
     <message>
-        <location line="-687" />
+        <location line="-296" />
         <source>GUI Application</source>
         <translation>GUI-sovellus</translation>
     </message>
     <message>
         <location line="-75" />
         <location line="+51" />
-        <location line="+715" />
+        <location line="+324" />
         <source>Test suite name:</source>
         <translation>Testipaketin nimi:</translation>
     </message>
     <message>
-        <location line="-790" />
-        <location line="+25" />
+        <location line="-374" />
         <location line="+24" />
         <location line="+27" />
         <location line="+21" />
-        <location line="+694" />
+        <location line="+22" />
+        <location line="+281" />
         <source>Test case name:</source>
         <translation>Testitapauksen nimi:</translation>
     </message>
     <message>
-        <location line="-693" />
+        <location line="-302" />
         <source>Requires QApplication</source>
         <translation>Vaatii QApplication</translation>
     </message>
     <message>
-        <location line="-97" />
+        <location line="+22" />
         <source>Generate setup code</source>
         <translation>Luo asetuskoodi</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+98" />
-        <location line="+692" />
+        <location line="-20" />
+        <location line="+21" />
+        <location line="+280" />
         <source>Generate initialization and cleanup code</source>
         <translation>Luo alustus- ja puhdistuskoodi</translation>
     </message>
@@ -11757,17 +11856,17 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation type="vanished">Ota C++11 käyttöön</translation>
     </message>
     <message>
-        <location line="-766" />
+        <location line="-324" />
         <source>Googletest source directory (optional):</source>
         <translation>Googletestin lähdehakemisto (valinnainen):</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>Boost include -hakemisto (valinnainen):</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 sisältää hakemiston (valinnainen):</translation>
     </message>
@@ -11777,154 +11876,154 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Käytä Qt-kirjastoja</translation>
     </message>
     <message>
-        <location line="-50" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+45" />
-        <location line="+47" />
-        <location line="+84" />
+        <location line="+107" />
+        <location line="+46" />
+        <location line="+43" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
+        <location line="+105" />
+        <location line="+48" />
         <location line="+43" />
-        <location line="+49" />
-        <location line="+84" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+85" />
+        <location line="+153" />
+        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+314" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build system:</source>
         <translation>Rakenna järjestelmä:</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Projekti- ja testitiedot</translation>
     </message>
     <message>
-        <location line="-120" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-93" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+26" />
-        <location line="+51" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+79" />
+        <location line="+116" />
         <location line="+18" />
         <location line="+4" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+41" />
+        <location line="+17" />
+        <location line="+33" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+70" />
-        <location line="+220" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+28" />
+        <location line="+142" />
         <source>Details</source>
         <translation>Yksityiskohdat</translation>
     </message>
     <message>
-        <location line="-869" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-887" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Sarjan valinta</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -11932,101 +12031,101 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Sarjat</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+18" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <source>Project Management</source>
         <translation>Projektinhallinta</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+37" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+41" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Yhteenveto</translation>
@@ -12036,9 +12135,9 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation type="vanished">Luo uuden yksikkötestiprojektin. Yksikkötesteillä voit varmistaa, että koodi on käyttökelpoinen ja ettei siinä ole regressioita.</translation>
     </message>
     <message>
-        <location line="-466" />
-        <location line="+12" />
-        <location line="+456" />
+        <location line="-715" />
+        <location line="+380" />
+        <location line="+165" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Muu projekti</translation>
@@ -12048,36 +12147,36 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation type="vanished">Automaattinen testiprojekti</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="-620" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Täysin pätevä nimi, mukaan lukien nimitilat</translation>
     </message>
     <message>
-        <location line="-645" />
-        <location line="+36" />
-        <location line="+276" />
-        <location line="+80" />
-        <location line="+235" />
-        <location line="+19" />
+        <location line="+1" />
         <location line="+22" />
+        <location line="+19" />
+        <location line="+289" />
+        <location line="+145" />
+        <location line="+40" />
+        <location line="+119" />
         <source>Class name:</source>
         <translation>Luokan nimi:</translation>
     </message>
     <message>
-        <location line="-631" />
-        <location line="+592" />
-        <location line="+18" />
+        <location line="-633" />
+        <location line="+42" />
+        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Mukautettu&gt;</translation>
     </message>
     <message>
-        <location line="-646" />
-        <location line="+37" />
-        <location line="+282" />
-        <location line="+73" />
-        <location line="+237" />
-        <location line="+18" />
+        <location line="-474" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+294" />
+        <location line="+139" />
+        <location line="+39" />
+        <location line="+119" />
         <source>Base class:</source>
         <translation>Perusluokka:</translation>
     </message>
@@ -12086,7 +12185,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-632" />
         <source>Include QObject</source>
         <translation>Sisällytä QObject</translation>
     </message>
@@ -12124,70 +12223,70 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Lisää QML_ELEMENT</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+68" />
-        <location line="+262" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+315" />
+        <location line="+292" />
         <source>Header file:</source>
         <translation>Otsikkotiedosto:</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+288" />
-        <location line="+68" />
-        <location line="+220" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+215" />
         <location line="+1" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+80" />
+        <location line="+133" />
+        <location line="+39" />
+        <location line="+120" />
         <source>Source file:</source>
         <translation>Lähdetiedosto:</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+392" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+34" />
-        <location line="+19" />
-        <location line="+444" />
-        <location line="+19" />
-        <location line="+22" />
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Polku:</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+596" />
-        <location line="+22" />
+        <location line="-739" />
+        <location line="+38" />
+        <location line="+429" />
+        <location line="+39" />
         <source>Define Class</source>
         <translation>Määritä luokka</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-502" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Luo C++-otsikon ja lähdetiedoston uudelle luokalle, jonka voit lisätä C++-projektiin.</translation>
     </message>
     <message>
-        <location line="-203" />
-        <location line="+130" />
-        <location line="+74" />
+        <location line="+1" />
+        <location line="+65" />
+        <location line="+9" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-73" />
         <source>C++ Class</source>
         <translation>C++ luokka</translation>
     </message>
@@ -12227,22 +12326,22 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Luo Qt-tuotemallin.</translation>
     </message>
     <message>
-        <location line="-231" />
-        <location line="+39" />
-        <location line="+26" />
-        <location line="+65" />
-        <location line="+18" />
-        <location line="+84" />
+        <location line="+1" />
+        <location line="+66" />
+        <location line="+57" />
+        <location line="+62" />
+        <location line="+9" />
+        <location line="+59" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-252" />
         <source>Qt Item Model</source>
         <translation>Qt-tuotemalli</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+4" />
         <source>Qt for Python module:</source>
         <translation>Qt Python-moduulille:</translation>
     </message>
@@ -12267,8 +12366,8 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Tuo QtQuick</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
         <location line="+6" />
@@ -12276,18 +12375,18 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Luo uuden Python-luokkatiedoston.</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+71" />
+        <location line="+1" />
+        <location line="+158" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-157" />
         <source>Python Class</source>
         <translation>Python-luokka</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+3" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Luo CMake-pohjaisen testiprojektin, johon voidaan syöttää koodinpätkä.</translation>
     </message>
@@ -12342,7 +12441,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Koodinpätkä</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="+7" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Luo otsikkotiedoston, jonka voit lisätä C/C++-projektiin.</translation>
     </message>
@@ -12352,7 +12451,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>C/C++ otsikkotiedosto</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Luo lähdetiedoston, jonka voit lisätä C/C++-projektiin.</translation>
     </message>
@@ -12362,7 +12461,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>C/C++-lähdetiedosto</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>Valitse lomakemalli</translation>
     </message>
@@ -12380,12 +12479,12 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation type="vanished">Qt-suunnittelijalomake</translation>
     </message>
     <message>
-        <location line="-15" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Luo fragmenttivarjostimen Desktop OpenGL Shading Language (GLSL) -kielellä. Fragmenttien varjostimet luovat lopulliset pikselivärit kolmioihin, pisteisiin ja viivoille, jotka on renderöity OpenGL:llä.</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+1" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -12393,12 +12492,12 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-26" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragment Shader (työpöydän OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Luo vertex-varjostimen Desktop OpenGL -varjostuskielessä (GLSL). Vertex-varjostimet muuttavat OpenGL:llä renderöityjen kolmioiden, pisteiden ja viivojen sijainnit, normaalit ja pintakoordinaatit.</translation>
     </message>
@@ -12408,7 +12507,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Vertex Shader (työpöydän OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Luo fragmenttivarjostimen OpenGL/ES 2.0 -varjostuskielellä (GLSL/ES). Fragmenttien varjostimet luovat lopulliset pikselivärit kolmioihin, pisteisiin ja viivoille, jotka on renderöity OpenGL:llä.</translation>
     </message>
@@ -12418,7 +12517,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Fragment Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Luo vertex-varjostimen OpenGL/ES 2.0 -varjostuskielessä (GLSL/ES). Vertex-varjostimet muuttavat OpenGL:llä renderöityjen kolmioiden, pisteiden ja viivojen sijainnit, normaalit ja pintakoordinaatit.</translation>
     </message>
@@ -12428,7 +12527,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="+7" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Luo Java-tiedoston vakiokoodilla.</translation>
     </message>
@@ -12443,7 +12542,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Java-tiedosto</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>Valtioton kirjasto</translation>
     </message>
@@ -12464,25 +12563,25 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>JS tiedosto</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+12" />
         <source>Model name:</source>
         <translation>Mallinimi:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
+        <location line="+1" />
+        <location line="+67" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Sijainti:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
-        <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" on olemassa tiedostojärjestelmässä.</translation>
+        <location line="-66" />
+        <location line="+67" />
+        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; on olemassa tiedostojärjestelmässä.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model Name and Location</source>
         <translation>Mallin nimi ja sijainti</translation>
     </message>
@@ -12492,19 +12591,19 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Luo uuden tyhjän mallin tyhjällä kaaviolla.</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+53" />
-        <location line="+12" />
+        <location line="+1" />
+        <location line="+5" />
+        <location line="+62" />
         <source>Modeling</source>
         <translation>Mallintaminen</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model</source>
         <translation>Malli</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+3" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Luo raaputusmallin väliaikaisen tiedoston avulla.</translation>
     </message>
@@ -12514,23 +12613,23 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Scratch malli</translation>
     </message>
     <message>
-        <location line="-81" />
+        <location line="+7" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Luo tyhjän Nim-tiedoston UTF-8-merkkisarjalla.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+14" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>Nim-tiedosto</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Luo tyhjän Nim-skriptitiedoston UTF-8-merkkisarjalla.</translation>
     </message>
@@ -12540,7 +12639,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Nim-skriptitiedosto</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+7" />
         <source>Creates an empty Python script file using UTF-8 charset.</source>
         <translation>Luo tyhjän Python-skriptitiedoston UTF-8-merkkisarjalla.</translation>
     </message>
@@ -12550,7 +12649,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Python tiedosto</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Luo Qt-resurssitiedoston (.qrc).</translation>
     </message>
@@ -12560,9 +12659,9 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Qt-resurssitiedosto</translation>
     </message>
     <message>
-        <location line="-67" />
-        <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
-        <translation>Luo QML-tiedoston vakiokoodilla alkaen "import QtQuick".</translation>
+        <location line="+7" />
+        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
+        <translation>Luo QML-tiedoston vakiokoodilla alkaen &quot;import QtQuick&quot;.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -12570,21 +12669,21 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>QML-tiedosto (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="-32" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Luo raaputuspuskurin väliaikaisen tiedoston avulla.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+57" />
-        <location line="+47" />
+        <location line="-66" />
+        <location line="+67" />
+        <location line="+45" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Kenraali</translation>
     </message>
     <message>
-        <location line="-634" />
+        <location line="-401" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Tämä velho luo yksinkertaisen yksikkötestiprojektin Boostin avulla.</translation>
     </message>
@@ -12609,21 +12708,21 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Luo uuden yksikkötestiprojektin Boostin avulla. Yksikkötestit antavat sinun varmistaa, että koodi on käyttökelpoinen ja että regressioita ei ole.</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+25" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Test Project</source>
         <translation>Testiprojekti</translation>
     </message>
     <message>
-        <location line="-21" />
+        <location line="-93" />
         <source>Boost Test Project</source>
         <translation>Boost -testiprojekti</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Tämä velho luo yksinkertaisen yksikkötestiprojektin Catch2: n avulla.</translation>
     </message>
@@ -12658,7 +12757,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Catch2 -testiprojekti</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Tämä velho luo yksinkertaisen yksikkötestiprojektin Google -testillä.</translation>
     </message>
@@ -12688,7 +12787,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Google -testiprojekti</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Tämä velho luo yksinkertaisen yksikkötestiprojektin QT -testillä.</translation>
     </message>
@@ -12703,7 +12802,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>QT -testiprojekti</translation>
     </message>
     <message>
-        <location line="-116" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Tämä velho luo yksinkertaisen yksikkötestiprojektin QT Quick -testillä.</translation>
     </message>
@@ -12718,17 +12817,17 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>QT Quick Test Project</translation>
     </message>
     <message>
-        <location line="+815" />
+        <location line="+10" />
         <source>Include QQuickItem</source>
         <translation>Sisällytä Qquickitem</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+67" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>Luo CMAKE-pohjaisen testiprojektin, johon voit kirjoittaa koodinpätkän kääntääksesi ja tarkistaaksesi sen.</translation>
     </message>
     <message>
-        <location line="-121" />
+        <location line="+29" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>Luo QT -widget -suunnittelijalomakkeen, jonka voit lisätä QT -widget -projektiin. Tämä on hyödyllistä, jos sinulla on jo olemassa oleva luokka käyttöliittymän liiketoimintalogiikkaan.</translation>
     </message>
@@ -12738,7 +12837,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>QT -widget -suunnittelijalomake</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="+64" />
         <source>Creates a markdown file.</source>
         <translation>Luo merkinnän tiedoston.</translation>
     </message>
@@ -12748,12 +12847,12 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Merkkitiedosto</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="+67" />
         <source>Scratch Buffer</source>
         <translation>Scratch Buffer</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>Osavaltiokaavion nimi:</translation>
     </message>
@@ -12773,7 +12872,7 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Osavaltiokaavio</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -12813,7 +12912,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Testitapaus</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>Luo tyhjän tiedoston.</translation>
     </message>
@@ -12823,7 +12922,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Tyhjä tiedosto</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Luo käännöstiedoston, jonka voit lisätä QT -projektiin.</translation>
     </message>
@@ -12833,61 +12932,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QT -käännöstiedosto</translation>
     </message>
     <message>
-        <location line="-623" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Tämä ohjattu toiminto luo yksinkertaisen Qt-pohjaisen konsolisovelluksen.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+83" />
+        <location line="+195" />
         <source>Meson</source>
         <translation>Meson</translation>
     </message>
     <message>
-        <location line="-442" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-326" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Define Build System</source>
         <translation>Määritä rakennusjärjestelmä</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-328" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build System</source>
         <translation>Rakenna järjestelmä</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-328" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation File</source>
         <translation>Käännöstiedosto</translation>
     </message>
     <message>
-        <location line="-591" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-479" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation</source>
         <translation>Käännös</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-262" />
         <source>Define Python Interpreter</source>
         <translation>Määritä Python -tulkki</translation>
     </message>
@@ -12902,7 +13001,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Luo QT: n Python-sovellukselle, joka sisältää QT-widgets-suunnittelijapohjaisen widgetin (UI-tiedosto). Vaatii .ui python -muuntamiseen.</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+38" />
         <source>Qt 6.4</source>
         <translation>QT 6.4</translation>
     </message>
@@ -12917,7 +13016,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Luo QT -nopea sovellus, jolla voi olla sekä QML- että C ++ -koodia. Voit rakentaa sovelluksen ja ottaa sen käyttöön työpöydälle, sulautettuihin ja mobiilikohteisiin.</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="+42" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -12926,7 +13025,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  Kehittääksesi täydellisen sovelluksen, luo QT Quick Application Project sen sijaan.</translation>
     </message>
     <message>
-        <location line="+173" />
+        <location line="+30" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -12943,31 +13042,31 @@ Preselects a desktop Qt for building the application if available.</source>
 Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on käytettävissä.</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+32" />
-        <location line="+299" />
-        <location line="+114" />
+        <location line="-337" />
+        <location line="+266" />
+        <location line="+28" />
+        <location line="+44" />
         <source>Application (Qt)</source>
         <translation>Sovellus (Qt)</translation>
     </message>
     <message>
-        <location line="-412" />
+        <location line="-337" />
         <source>Qt Console Application</source>
         <translation>Qt-konsolisovellus</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Tämä ohjattu toiminto luo C++-kirjastoprojektin.</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+84" />
+        <location line="+308" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Määritä perustiedot luokista, joille haluat luoda luurankolähdekooditiedostoja.</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="-307" />
         <source>Shared Library</source>
         <translation>Jaettu kirjasto</translation>
     </message>
@@ -12983,17 +13082,17 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
     </message>
     <message>
         <location line="+1" />
-        <location line="+35" />
+        <location line="+46" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Tyyppi:</translation>
     </message>
     <message>
-        <source>%{JS: value('Type') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</source>
-        <translation type="vanished">%{JS: value('Tyyppi') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</translation>
+        <source>%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</source>
+        <translation type="vanished">%{JS: value(&apos;Tyyppi&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -13059,14 +13158,14 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Qt-moduuli:</translation>
     </message>
     <message>
-        <location line="-519" />
-        <location line="+147" />
-        <location line="+70" />
+        <location line="+3" />
+        <location line="+116" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+59" />
-        <location line="+42" />
+        <location line="+68" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+170" />
         <source>Define Project Details</source>
         <translation>Määritä projektin tiedot</translation>
     </message>
@@ -13075,38 +13174,38 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation type="vanished">Luo C++-kirjaston. Tätä voidaan käyttää luomaan:&lt;ul&gt;&lt;li&gt;jaettu C++-kirjasto käytettäväksi &lt;tt&gt;QPluginLoader&lt;/tt&gt;- ja runtime (Plugins) kanssa&lt;/li&gt;&lt;li&gt;jaettu tai staattinen C++-kirjasto käytettäväksi toisen kanssa projekti linktimessä&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-513" />
-        <location line="+460" />
-        <location line="+62" />
-        <location line="+7" />
+        <location line="-427" />
+        <location line="+18" />
+        <location line="+186" />
+        <location line="+232" />
         <source>Library</source>
         <translation>Kirjasto</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-435" />
         <source>C++ Library</source>
         <translation>C++-kirjasto</translation>
     </message>
     <message>
-        <location line="-366" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>Luo yksinkertaisen Nim-sovelluksen.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+229" />
+        <location line="+40" />
         <location line="+18" />
-        <location line="+157" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Ei-Qt-projekti</translation>
     </message>
     <message>
-        <location line="-403" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>Nim-sovellus</translation>
     </message>
     <message>
-        <location line="+369" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>Binääri</translation>
     </message>
@@ -13121,13 +13220,13 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Tekijä:</translation>
     </message>
     <message>
-        <location line="-544" />
-        <location line="+545" />
+        <location line="+1" />
+        <location line="+402" />
         <source>Description:</source>
         <translation>Kuvaus:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-401" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -13192,13 +13291,13 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Muut</translation>
     </message>
     <message>
-        <location line="-560" />
-        <location line="+561" />
+        <location line="+1" />
+        <location line="+386" />
         <source>License:</source>
         <translation>Lisenssi:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-385" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -13239,22 +13338,22 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Määritä projektin asetukset</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="+1" />
+        <location line="+253" />
+        <location line="+1" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+202" />
         <source>Configuration</source>
         <translation>Kokoonpano</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-343" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Luo Nim-sovelluksen Nimblen avulla.</translation>
     </message>
@@ -13264,7 +13363,7 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Ketterä sovellus</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Luo yksinkertaisen C-sovelluksen ilman riippuvuuksia.</translation>
     </message>
@@ -13274,7 +13373,7 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Tavallinen C-sovellus</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Luo yksinkertaisen C++-sovelluksen ilman riippuvuuksia.</translation>
     </message>
@@ -13284,7 +13383,7 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Tavallinen C++-sovellus</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Tämä ohjattu toiminto luo tyhjän .pro-tiedoston.</translation>
     </message>
@@ -13303,43 +13402,43 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation type="vanished">PySide-versio:</translation>
     </message>
     <message>
-        <location line="-218" />
+        <location line="+13" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Luo Python-sovelluksen Qt:n, joka sisältää vain Q-sovelluksen pääkoodin.</translation>
     </message>
     <message>
-        <location line="-14" />
-        <location line="+15" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+18" />
+        <location line="+21" />
         <source>Application (Qt for Python)</source>
         <translation>Sovellus (Qt Pythonille)</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-60" />
         <source>Empty Application</source>
         <translation>Tyhjä sovellus</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</source>
-        <translation type="vanished">%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</translation>
+        <source>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</source>
+        <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-28" />
-        <location line="+37" />
+        <location line="+9" />
+        <location line="+39" />
         <source>Project file:</source>
         <translation>Projektitiedosto:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Luo Qt for Python -sovelluksen, joka sisältää tyhjän ikkunan.</translation>
     </message>
@@ -13349,15 +13448,15 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Tyhjä ikkuna</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+15" />
+        <location line="-32" />
         <location line="+22" />
         <location line="+15" />
+        <location line="+24" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-211" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -13366,19 +13465,19 @@ Preselects a desktop Qt for building the application if available.</source>
  Esivalinnassa työpöytä QT sovelluksen rakentamiseksi, jos se on saatavana.</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Luo C ++ -kirjaston. Voit luoda: &lt;ul&gt; &lt;li&gt; Jaettu C ++ -kirjasto käytettäväksi &lt;tt&gt; qPluginloader &lt;/tt&gt; ja Runtime (plugins) &lt;/li&gt; &lt;li&gt; Jaettu tai staattinen C ++ -kirjasto käytettäväksi toisen projektin kanssa linktimellä &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+15" />
+        <location line="+107" />
         <location line="+22" />
+        <location line="+39" />
         <source>PySide 2</source>
         <translation>Pyside 2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="-24" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -13412,50 +13511,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Luo Qt for Python -sovelluksen, joka sisältää Qt Designer -pohjaisen widgetin (ui-tiedoston) - Edellyttää muunnoksen .ui:sta Pythoniksi</translation>
     </message>
     <message>
-        <location line="-55" />
+        <location line="+21" />
         <source>Window UI</source>
         <translation>Ikkunan käyttöliittymä</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+311" />
+        <location line="+10" />
         <location line="+25" />
+        <location line="+23" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-335" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
         <location line="+23" />
+        <location line="+25" />
         <source>Minimum required Qt version:</source>
         <translation>Minimi vaadittu Qt-versio:</translation>
     </message>
     <message>
-        <location line="-22" />
+        <location line="-47" />
         <source>MyItem</source>
         <translation>OmaTuote</translation>
     </message>
@@ -13503,9 +13602,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Luo projekti, jonka rakenne on yhteensopiva sekä Qt Design Studion (.qmlprojectin kautta) että Qt Creatorin kanssa (CMakeLists.txt:n kautta). Se sisältää .ui.qml-lomakkeen, jota voit muokata visuaalisesti Qt Design Studiossa.</translation>
     </message>
     <message>
-        <location line="-324" />
-        <location line="+274" />
-        <location line="+55" />
+        <location line="+5" />
+        <location line="+30" />
+        <location line="+16" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Käytä Qt virtuaalista näppäimistöä</translation>
     </message>
@@ -13518,18 +13617,18 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Luo Qt Quick -sovelluksen, joka sisältää tyhjän ikkunan. Vaihtoehtoisesti voit luoda Qt Design Studio -projektin.</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-33" />
         <source>Qt Quick Application</source>
         <translation>Qt nopea sovellus</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="+26" />
         <source>Creates a Qt Quick application that contains an empty window.
 
-Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
+Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
         <translation>Luo Qt Quick -sovelluksen, joka sisältää tyhjän ikkunan.
 
-Käytä tätä "compat"-versiota, jos haluat käyttää muita koontijärjestelmiä kuin CMake- tai Qt-versiota, joka on vanhempi kuin 6.</translation>
+Käytä tätä &quot;compat&quot;-versiota, jos haluat käyttää muita koontijärjestelmiä kuin CMake- tai Qt-versiota, joka on vanhempi kuin 6.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13545,18 +13644,18 @@ Use this only if you are prototyping. You cannot create a full application with 
 Käytä tätä vain, jos teet prototyyppiä. Et voi luoda täyttä sovellusta tällä. Harkitse Qt Quick Application -projektin käyttöä sen sijaan.</translation>
     </message>
     <message>
-        <location line="+272" />
+        <location line="+14" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt Quick UI Prototype</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Tämä ohjattu toiminto luo Qt Widgets -sovellusprojektin. Sovellus on oletusarvoisesti peräisin QApplicationista ja sisältää tyhjän widgetin.</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
         <location line="+15" />
@@ -13564,8 +13663,8 @@ Käytä tätä vain, jos teet prototyyppiä. Et voi luoda täyttä sovellusta t�
         <translation>Luo lomake</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), 'ui')}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), 'ui')}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13591,27 +13690,27 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Qt Widgets -sovellus</translation>
     </message>
     <message>
-        <location line="-332" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Määritä &lt;b&gt;%{vcsName}&lt;/b&gt; nyt.</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-93" />
+        <location line="+52" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository:</source>
         <translation>Arkisto:</translation>
     </message>
     <message>
         <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>Tietovaraston URL-osoite ei kelpaa</translation>
@@ -13621,24 +13720,24 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
         <source>Directory:</source>
         <translation>Hakemisto:</translation>
     </message>
     <message>
-        <location line="-94" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
-        <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" on olemassa tiedostojärjestelmässä.</translation>
+        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; on olemassa tiedostojärjestelmässä.</translation>
     </message>
     <message>
-        <location line="-52" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>Käytä olemassa olevaa hakemistoa</translation>
     </message>
@@ -13714,13 +13813,13 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
     </message>
     <message>
         <location line="+3" />
-        <location line="+19" />
+        <location line="+60" />
         <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Määritä arkiston URL-osoite, kassahakemisto ja polku.</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>Bazaarin toimipiste...</translation>
     </message>
@@ -13739,9 +13838,9 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Kloonaa Bazaar-haaran ja yrittää ladata sen sisältämän projektin.</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+1" />
+        <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <location line="+20" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
@@ -13749,12 +13848,12 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Tuo projekti</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Bazaar Clone (tai haara)</translation>
     </message>
     <message>
-        <location line="-69" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>Moduuli:</translation>
     </message>
@@ -13773,7 +13872,7 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+52" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+19" />
         <location line="+1" />
@@ -13781,7 +13880,7 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Tarkista</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Tarkistaa CVS-arkiston ja yrittää ladata sen sisältämän projektin.</translation>
     </message>
@@ -13831,7 +13930,7 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>Käynnissä Mercurial-klooni...</translation>
     </message>
@@ -13866,7 +13965,7 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Subversion Checkout</translation>
     </message>
     <message>
-        <location line="-394" />
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Tämä ohjattu toiminto luo mukautetun Qt Creator -laajennuksen.</translation>
     </message>
@@ -13876,8 +13975,8 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Määritä mukautetun Qt Creator -laajennuksen tiedot.</translation>
     </message>
     <message>
-        <source>%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</source>
-        <translation type="vanished">%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</translation>
+        <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
+        <translation type="vanished">%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13915,8 +14014,8 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
         <translation>Laita lyhyt kuvaus laajennuksestasi tähän</translation>
     </message>
     <message>
-        <source>https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</source>
-        <translation type="vanished">https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</translation>
+        <source>https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</source>
+        <translation type="vanished">https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13941,12 +14040,12 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
     <message>
         <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
         <source>S&amp;essions</source>
-        <translation>S &amp; Essions</translation>
+        <translation>S &amp;Essions</translation>
     </message>
     <message>
         <location line="+9" />
         <source>&amp;Manage...</source>
-        <translation>Ja hallitse ...</translation>
+        <translation>&amp;Ja hallitse ...</translation>
     </message>
     <message>
         <location line="+13" />
@@ -13988,7 +14087,7 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
     <message>
         <location line="+1" />
         <source>Could not restore session %1</source>
-        <translation>Istuntoa ei voitu palauttaa 1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+44" />
@@ -14008,8 +14107,8 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
     </message>
     <message>
         <location line="+42" />
-        <source>Could not save session to file "%1"</source>
-        <translation>Istuntoa ei voitu tallentaa "%1"</translation>
+        <source>Could not save session to file &quot;%1&quot;</source>
+        <translation>Istuntoa ei voitu tallentaa &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
@@ -14034,12 +14133,12 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
     <message>
         <location line="+2" />
         <source>&amp;Rename...</source>
-        <translation>&amp; Nimeä uudelleen ...</translation>
+        <translation>&amp;Nimeä uudelleen ...</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C&amp;lone...</source>
-        <translation>Klooni...</translation>
+        <translation>K&amp;looni...</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14080,7 +14179,7 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
     <message>
         <location line="+0" />
         <source>Create and &amp;Open</source>
-        <translation>Luo ja ja avoin</translation>
+        <translation>Lu&amp;o ja ja avoin</translation>
     </message>
     <message>
         <location line="+11" />
@@ -14090,7 +14189,7 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
     <message>
         <location line="+0" />
         <source>Clone and &amp;Open</source>
-        <translation>Klooni ja &amp; avoin</translation>
+        <translation>Klooni ja &amp;avoin</translation>
     </message>
     <message>
         <location line="+22" />
@@ -14100,12 +14199,12 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
     <message>
         <location line="+1" />
         <source>&amp;Rename</source>
-        <translation>&amp; Nimetä</translation>
+        <translation>&amp;Nimetä</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Rename and &amp;Open</source>
-        <translation>Nimeä ja jaa</translation>
+        <translation>&amp;Nimeä ja jaa</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
@@ -14119,38 +14218,38 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
     </message>
     <message>
         <location line="+72" />
-        <source>Could not create directory "%1"</source>
-        <translation>Hakemistoa ei voinut luoda "%1"</translation>
+        <source>Could not create directory &quot;%1&quot;</source>
+        <translation>Hakemistoa ei voinut luoda &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>Ohjelmaa "%1" ei ole tai ei ole suoritettavissa.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>Ohjelmaa &quot;%1&quot; ei ole tai ei ole suoritettavissa.</translation>
     </message>
     <message>
         <location line="+34" />
-        <source>Starting: "%1" %2</source>
-        <translation>Aloitus: " %1" %2</translation>
+        <source>Starting: &quot;%1&quot; %2</source>
+        <translation>Aloitus: &quot; %1&quot; %2</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The process "%1" exited normally.</source>
-        <translation>Prosessi "%1" poistui normaalisti.</translation>
+        <source>The process &quot;%1&quot; exited normally.</source>
+        <translation>Prosessi &quot;%1&quot; poistui normaalisti.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The process "%1" exited with code %2.</source>
-        <translation>Prosessi " %1" poistui koodista %2.</translation>
+        <source>The process &quot;%1&quot; exited with code %2.</source>
+        <translation>Prosessi &quot; %1&quot; poistui koodista %2.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Could not start process "%1" %2.</source>
-        <translation>Prosessia ei voinut aloittaa " %1" %2.</translation>
+        <source>Could not start process &quot;%1&quot; %2.</source>
+        <translation>Prosessia ei voinut aloittaa &quot; %1&quot; %2.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The process "%1" crashed.</source>
-        <translation>Prosessi "%1" kaatui.</translation>
+        <source>The process &quot;%1&quot; crashed.</source>
+        <translation>Prosessi &quot;%1&quot; kaatui.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
@@ -14191,8 +14290,8 @@ Esivalitsee työpöydän Qt:n sovelluksen rakentamista varten, jos sellainen on 
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files of all open projects. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Etsi kaikki avoimet projektit. Liitä "+&lt;numero&gt;" tai ": &lt;numero&gt;" hypätäksesi annetulle rivinumerolle. Liitä toinen "+&lt;numero&gt;" tai ": &lt;numero&gt;" hypätäksesi myös sarakkeen numeroon.</translation>
+        <source>Locates files of all open projects. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Etsi kaikki avoimet projektit. Liitä &quot;+&lt;numero&gt;&quot; tai &quot;: &lt;numero&gt;&quot; hypätäksesi annetulle rivinumerolle. Liitä toinen &quot;+&lt;numero&gt;&quot; tai &quot;: &lt;numero&gt;&quot; hypätäksesi myös sarakkeen numeroon.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
@@ -14247,7 +14346,7 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>Show &amp;App Output</source>
-        <translation>Näytä ja sovelluslähtö</translation>
+        <translation>Näytä j&amp;a sovelluslähtö</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14368,13 +14467,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+105" />
-        <source>Build directory contains potentially problematic character "%1".</source>
-        <translation>Rakenna hakemisto sisältää mahdollisesti ongelmallisen luonteen "%1".</translation>
+        <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
+        <translation>Rakenna hakemisto sisältää mahdollisesti ongelmallisen luonteen &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>This warning can be suppressed &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>Tämä varoitus voidaan tukahduttaa &lt;a href = "dummy"&gt; täällä &lt;/a&gt;.</translation>
+        <source>This warning can be suppressed &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Tämä varoitus voidaan tukahduttaa &lt;a href = &quot;dummy&quot;&gt; täällä &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -14430,7 +14529,7 @@ Excluding: %2
     </message>
     <message>
         <location line="+4" />
-        <source>Variables in the build configuration's environment</source>
+        <source>Variables in the build configuration&apos;s environment</source>
         <translation>Muuttujat rakennuskokoonpanon ympäristössä</translation>
     </message>
     <message>
@@ -14472,12 +14571,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build configuration</source>
+        <source>Name of the project&apos;s active build configuration</source>
         <translation>Projektin aktiivisen rakennusmäärityksen nimi</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build system</source>
+        <source>Name of the project&apos;s active build system</source>
         <translation>Projektin aktiivisen rakennusjärjestelmän nimi</translation>
     </message>
     <message>
@@ -14487,13 +14586,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Type of the project's active build configuration</source>
+        <source>Type of the project&apos;s active build configuration</source>
         <translation>Projektin aktiivisen rakennusmäärityksen tyyppi</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>No build device is set for the kit "%1".</source>
-        <translation>Pakkaukselle "%1" ei ole asetettu rakennuslaitetta.</translation>
+        <source>No build device is set for the kit &quot;%1&quot;.</source>
+        <translation>Pakkaukselle &quot;%1&quot; ei ole asetettu rakennuslaitetta.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -14502,13 +14601,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+7" />
-        <source>The build device "%1" cannot reach the project directory.</source>
-        <translation>Rakennuslaite "%1" ei pääse projektihakemistoon.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the project directory.</source>
+        <translation>Rakennuslaite &quot;%1&quot; ei pääse projektihakemistoon.</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The build device "%1" cannot reach the build directory.</source>
-        <translation>Rakennuslaite "%1" ei pääse rakennushakemistoon.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the build directory.</source>
+        <translation>Rakennuslaite &quot;%1&quot; ei pääse rakennushakemistoon.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
@@ -14541,7 +14640,7 @@ Excluding: %2
     <message>
         <location line="+138" />
         <source>Compile</source>
-        <comment>Category for compiler issues listed under 'Issues'</comment>
+        <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>Koota</translation>
     </message>
     <message>
@@ -14552,7 +14651,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Build System</source>
-        <comment>Category for build system issues listed under 'Issues'</comment>
+        <comment>Category for build system issues listed under &apos;Issues&apos;</comment>
         <translation>Rakennusjärjestelmä</translation>
     </message>
     <message>
@@ -14563,7 +14662,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Deployment</source>
-        <comment>Category for deployment issues listed under 'Issues'</comment>
+        <comment>Category for deployment issues listed under &apos;Issues&apos;</comment>
         <translation>Käyttöönotto</translation>
     </message>
     <message>
@@ -14574,7 +14673,7 @@ Excluding: %2
     <message>
         <location line="+4" />
         <source>Autotests</source>
-        <comment>Category for autotest issues listed under 'Issues'</comment>
+        <comment>Category for autotest issues listed under &apos;Issues&apos;</comment>
         <translation>Automaattiset</translation>
     </message>
     <message>
@@ -14591,7 +14690,7 @@ Excluding: %2
         <location line="+8" />
         <location line="+59" />
         <source>Clean</source>
-        <extracomment>Displayed name for a "cleaning" build step
+        <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
 Display name of the clean build step list. Used as part of the labels in the project window.</extracomment>
         <translation>Puhdas</translation>
@@ -14655,8 +14754,8 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location line="+98" />
-        <source>When executing step "%1"</source>
-        <translation>Suoritettaessa vaihe "%1"</translation>
+        <source>When executing step &quot;%1&quot;</source>
+        <translation>Suoritettaessa vaihe &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
@@ -14873,8 +14972,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+3" />
-        <source>The project file "%1" does not exist.</source>
-        <translation>Projektitiedostoa "%1" ei ole.</translation>
+        <source>The project file &quot;%1&quot; does not exist.</source>
+        <translation>Projektitiedostoa &quot;%1&quot; ei ole.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/codestylesettingspropertiespage.cpp" line="+60" />
@@ -14901,7 +15000,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+38" />
         <source>Show Compile &amp;Output</source>
-        <translation>Näytä käännös ja lähtö</translation>
+        <translation>&amp;Näytä käännös ja lähtö</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14971,13 +15070,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from the current document's project. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Etsii tiedostoja nykyisen asiakirjan projektista. Liitä "+&lt;numero&gt;" tai ": &lt;numero&gt;" hypätäksesi annetulle rivinumerolle. Liitä toinen "+&lt;numero&gt;" tai ": &lt;numero&gt;" hypätäksesi myös sarakkeen numeroon.</translation>
+        <source>Locates files from the current document&apos;s project. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Etsii tiedostoja nykyisen asiakirjan projektista. Liitä &quot;+&lt;numero&gt;&quot; tai &quot;: &lt;numero&gt;&quot; hypätäksesi annetulle rivinumerolle. Liitä toinen &quot;+&lt;numero&gt;&quot; tai &quot;: &lt;numero&gt;&quot; hypätäksesi myös sarakkeen numeroon.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
-        <source>Project "%1"</source>
-        <translation>Projekti "%1"</translation>
+        <source>Project &quot;%1&quot;</source>
+        <translation>Projekti &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14986,8 +15085,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>Project "%1":</source>
-        <translation>Projekti "%1":</translation>
+        <source>Project &quot;%1&quot;:</source>
+        <translation>Projekti &quot;%1&quot;:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
@@ -15008,8 +15107,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
-        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>Mukautetut tulosten jäsentäjät Skannaa komentorivin lähtö käyttäjän toimittamille virhekuvioille &lt;br&gt; Merkinnöiden luominen ongelmiin. &lt;br&gt; jäsentäjät voidaan määrittää &lt;a href = "dummy"&gt; täällä &lt;/a&gt;.</translation>
+        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Mukautetut tulosten jäsentäjät Skannaa komentorivin lähtö käyttäjän toimittamille virhekuvioille &lt;br&gt; Merkinnöiden luominen ongelmiin. &lt;br&gt; jäsentäjät voidaan määrittää &lt;a href = &quot;dummy&quot;&gt; täällä &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+82" />
@@ -15032,19 +15131,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>&amp;Error message capture pattern:</source>
-        <translation>&amp; Virhesanoman kaappausmalli:</translation>
+        <translation>&amp;Virhesanoman kaappausmalli:</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+33" />
         <source>&amp;File name:</source>
-        <translation>&amp; Tiedostonimi:</translation>
+        <translation>&amp;Tiedostonimi:</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Line number:</source>
-        <translation>&amp; Rivinumero:</translation>
+        <translation>&amp;Rivinumero:</translation>
     </message>
     <message>
         <location line="-32" />
@@ -15067,7 +15166,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-31" />
         <source>E&amp;rror message:</source>
-        <translation>E &amp; RROR -viesti:</translation>
+        <translation>E &amp;RROR -viesti:</translation>
     </message>
     <message>
         <location line="+33" />
@@ -15152,7 +15251,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
-        <source>Custom output parsers defined here can be enabled individually in the project's build or run settings.</source>
+        <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>Tässä määritellyt mukautetut tulosten jäsentäjät voidaan ottaa käyttöön erikseen projektin rakennus- tai ajo -asetuksissa.</translation>
     </message>
     <message>
@@ -15246,44 +15345,44 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
         <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>&amp; Kääntäjäpolku:</translation>
+        <translation>&amp;Kääntäjäpolku:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Make path:</source>
-        <translation>&amp; Tee polku:</translation>
+        <translation>&amp;Tee polku:</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
         <source>&amp;ABI:</source>
-        <translation>&amp; Abi:</translation>
+        <translation>&amp;Abi:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Predefined macros:</source>
-        <translation>Ennalta määritetty makro:</translation>
+        <translation>&amp;Ennalta määritetty makro:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Header paths:</source>
-        <translation>&amp; Otsikkopolkut:</translation>
+        <translation>&amp;Otsikkopolkut:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C++11 &amp;flags:</source>
-        <translation>C ++ 11 ja liput:</translation>
+        <translation>&amp;C ++ 11 ja liput:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Qt mkspecs:</source>
-        <translation>&amp; QT MKSPECS:</translation>
+        <translation>&amp;QT MKSPECS:</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Error parser:</source>
-        <translation>&amp; Virheen jäsentäjä:</translation>
+        <translation>&amp;Virheen jäsentäjä:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/dependenciespanel.cpp" line="+83" />
@@ -15366,7 +15465,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+8" />
         <source>Cannot interrupt process with pid %1: %2</source>
-        <translation>Ei voi keskeyttää prosessia PID %: n kanssa 1: %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+15" />
@@ -15438,19 +15537,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
-        <source>No device for path "%1"</source>
-        <translation>Ei laitetta polulle "%1"</translation>
+        <source>No device for path &quot;%1&quot;</source>
+        <translation>Ei laitetta polulle &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
-        <source>No device found for path "%1"</source>
-        <translation>Laitetta ei löydy polusta "%1"</translation>
+        <source>No device found for path &quot;%1&quot;</source>
+        <translation>Laitetta ei löydy polusta &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-9" />
-        <source>No file access for device "%1"</source>
-        <translation>Ei tiedoston käyttöä laitteelle "%1"</translation>
+        <source>No file access for device &quot;%1&quot;</source>
+        <translation>Ei tiedoston käyttöä laitteelle &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
@@ -15475,12 +15574,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+22" />
         <source>&amp;Update List</source>
-        <translation>&amp; Päivitysluettelo</translation>
+        <translation>&amp;Päivitysluettelo</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Kill Process</source>
-        <translation>&amp; Tappaa prosessi</translation>
+        <translation>&amp;Tappaa prosessi</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15520,7 +15619,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+4" />
         <source>&amp;Start Wizard to Add Device...</source>
-        <translation>&amp; Käynnistä velho lisätäksesi laitetta ...</translation>
+        <translation>&amp;Käynnistä velho lisätäksesi laitetta ...</translation>
     </message>
     <message>
         <location line="+12" />
@@ -15545,8 +15644,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+87" />
-        <source>Yes (id is "%1")</source>
-        <translation>Kyllä (tunnus on "%1")</translation>
+        <source>Yes (id is &quot;%1&quot;)</source>
+        <translation>Kyllä (tunnus on &quot;%1&quot;)</translation>
     </message>
     <message>
         <location line="+0" />
@@ -15675,13 +15774,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>No device for given path: "%1".</source>
-        <translation>Ei laitetta tietylle polulle: "%1".</translation>
+        <source>No device for given path: &quot;%1&quot;.</source>
+        <translation>Ei laitetta tietylle polulle: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Device for path "%1" does not support killing processes.</source>
-        <translation>Laite polulle "%1" ei tue tappamisprosesseja.</translation>
+        <source>Device for path &quot;%1&quot; does not support killing processes.</source>
+        <translation>Laite polulle &quot;%1&quot; ei tue tappamisprosesseja.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
@@ -15764,7 +15863,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Näytä oikea ja marginaali sarakkeessa:</translation>
+        <translation>Näytä oikea ja &amp;marginaali sarakkeessa:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15813,7 +15912,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-278" />
         <source>Ed&amp;it</source>
-        <translation>Muokata</translation>
+        <translation>&amp;Muokata</translation>
     </message>
     <message>
         <location line="+4" />
@@ -15823,12 +15922,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>&amp;Reset</source>
-        <translation>&amp; Nollaa</translation>
+        <translation>&amp;Nollaa</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&amp;Unset</source>
-        <translation>&amp; Irrottaa</translation>
+        <translation>&amp;Irrottaa</translation>
     </message>
     <message>
         <location line="+14" />
@@ -15843,7 +15942,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+9" />
         <source>Open &amp;Terminal</source>
-        <translation>Avoin ja päätelaite</translation>
+        <translation>Avoin ja pää&amp;telaite</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15852,33 +15951,33 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+123" />
-        <source>Unset &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Unset &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Unset &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation>Aseta &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; - &lt;b&gt;%2 &lt;/b&gt;</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
+        <translation>Aseta &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; - &lt;b&gt;%2 &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Liitä &lt;b&gt;%2 &lt;/b&gt; to &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Liitä &lt;b&gt;%2 &lt;/b&gt; to &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Prependen &lt;b&gt;%2 &lt;/b&gt; - &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Prependen &lt;b&gt;%2 &lt;/b&gt; - &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
-        <translation>Aseta &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; - &lt;b&gt;%2 &lt;/b&gt; [pois käytöstä]</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
+        <translation>Aseta &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; - &lt;b&gt;%2 &lt;/b&gt; [pois käytöstä]</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Use &lt;b&gt;%1&lt;/b&gt;</source>
-        <extracomment>%1 is "System Environment" or some such.</extracomment>
+        <extracomment>%1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Käytä &lt;b&gt;%1 &lt;/b&gt;</translation>
     </message>
     <message>
@@ -15889,7 +15988,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>Use &lt;b&gt;%1&lt;/b&gt; and</source>
-        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is "System Environment" or some such.</extracomment>
+        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Käytä &lt;b&gt;%1 &lt;/b&gt; ja</translation>
     </message>
     <message>
@@ -15987,58 +16086,58 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Field "%1" has no type.</source>
-        <translation>Kenttä "%1" ei ole tyyppiä.</translation>
+        <source>Field &quot;%1&quot; has no type.</source>
+        <translation>Kenttä &quot;%1&quot; ei ole tyyppiä.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Field "%1" has unsupported type "%2".</source>
-        <translation>Kenttä "%1" on tukenut tyyppi "%2".</translation>
+        <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
+        <translation>Kenttä &quot;%1&quot; on tukenut tyyppi &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>When parsing Field "%1": %2</source>
-        <translation>Kun jäsennetään kenttä " %1": %2</translation>
+        <source>When parsing Field &quot;%1&quot;: %2</source>
+        <translation>Kun jäsennetään kenttä &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+208" />
-        <source>Label ("%1") data is not an object.</source>
-        <translation>Label ("%1") tiedot eivät ole objekti.</translation>
+        <source>Label (&quot;%1&quot;) data is not an object.</source>
+        <translation>Label (&quot;%1&quot;) tiedot eivät ole objekti.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Label ("%1") has no trText.</source>
-        <translation>Label ("%1") ei ole trtekstiä.</translation>
+        <source>Label (&quot;%1&quot;) has no trText.</source>
+        <translation>Label (&quot;%1&quot;) ei ole trtekstiä.</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>Spacer ("%1") data is not an object.</source>
-        <translation>Välimerkki ("%1") tiedot eivät ole objekti.</translation>
+        <source>Spacer (&quot;%1&quot;) data is not an object.</source>
+        <translation>Välimerkki (&quot;%1&quot;) tiedot eivät ole objekti.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Spacer ("%1") property "factor" is no integer value.</source>
-        <translation>Välimerkki ("%1") ominaisuus "tekijä" ei ole kokonaislukuarvo.</translation>
+        <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
+        <translation>Välimerkki (&quot;%1&quot;) ominaisuus &quot;tekijä&quot; ei ole kokonaislukuarvo.</translation>
     </message>
     <message>
         <location line="+35" />
-        <source>LineEdit ("%1") data is not an object.</source>
-        <translation>MaineDit ("%1") tiedot eivät ole objekti.</translation>
+        <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>MaineDit (&quot;%1&quot;) tiedot eivät ole objekti.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>LineEdit ("%1") has an invalid regular expression "%2" in "validator".</source>
-        <translation>Mainedit ("%1") on virheellinen säännöllinen lauseke "%2" "validaattorissa".</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
+        <translation>Mainedit (&quot;%1&quot;) on virheellinen säännöllinen lauseke &quot;%2&quot; &quot;validaattorissa&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>LineEdit ("%1") has an invalid value "%2" in "completion".</source>
-        <translation>Mainedit ("%1") on virheellinen arvo "%2" "valmistumisessa".</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
+        <translation>Mainedit (&quot;%1&quot;) on virheellinen arvo &quot;%2&quot; &quot;valmistumisessa&quot;.</translation>
     </message>
     <message>
         <location line="+166" />
-        <source>TextEdit ("%1") data is not an object.</source>
-        <translation>TextEdit ("%1") tiedot eivät ole objekti.</translation>
+        <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>TextEdit (&quot;%1&quot;) tiedot eivät ole objekti.</translation>
     </message>
     <message>
         <location line="+83" />
@@ -16047,18 +16146,18 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+26" />
-        <source>kind "%1" is not one of the supported "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any".</source>
-        <translation>Kind "%1" ei ole yksi tuetuista "olemassa olevista directory", "hakemisto", "tiedosto", "SaveFile", "olemassa oleva Command", "komento", "mikä tahansa".</translation>
+        <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
+        <translation>Kind &quot;%1&quot; ei ole yksi tuetuista &quot;olemassa olevista directory&quot;, &quot;hakemisto&quot;, &quot;tiedosto&quot;, &quot;SaveFile&quot;, &quot;olemassa oleva Command&quot;, &quot;komento&quot;, &quot;mikä tahansa&quot;.</translation>
     </message>
     <message>
         <location line="+80" />
-        <source>CheckBox ("%1") data is not an object.</source>
-        <translation>Valintaruutu ("%1") tiedot eivät ole objekti.</translation>
+        <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
+        <translation>Valintaruutu (&quot;%1&quot;) tiedot eivät ole objekti.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>CheckBox ("%1") values for checked and unchecked state are identical.</source>
-        <translation>Valintaruutu ("%1") tarkistetun ja tarkistamattoman tilan arvot ovat identtiset.</translation>
+        <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
+        <translation>Valintaruutu (&quot;%1&quot;) tarkistetun ja tarkistamattoman tilan arvot ovat identtiset.</translation>
     </message>
     <message>
         <location line="+80" />
@@ -16067,33 +16166,33 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>No "key" found in List items.</source>
-        <translation>Ei "avainta", jota ei löydy luettelokohdista.</translation>
+        <source>No &quot;key&quot; found in List items.</source>
+        <translation>Ei &quot;avainta&quot;, jota ei löydy luettelokohdista.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>%1 ("%2") data is not an object.</source>
-        <translation>%1 ("%2") tiedot eivät ole objekti.</translation>
+        <source>%1 (&quot;%2&quot;) data is not an object.</source>
+        <translation>%1 (&quot;%2&quot;) tiedot eivät ole objekti.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>%1 ("%2") "index" is not an integer value.</source>
-        <translation>%1 ("%2") "indeksi" ei ole kokonaislukuarvo.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;indeksi&quot; ei ole kokonaislukuarvo.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>%1 ("%2") "disabledIndex" is not an integer value.</source>
-        <translation>%1 ("%2") "vammaisetIndex" ei ole kokonaislukuarvo.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;vammaisetIndex&quot; ei ole kokonaislukuarvo.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>%1 ("%2") "items" missing.</source>
-        <translation>%1 ("%2") "esineet" puuttuvat.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;esineet&quot; puuttuvat.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>%1 ("%2") "items" is not a JSON list.</source>
-        <translation>%1 ("%2") "kohteet" ei ole JSON -luettelo.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;kohteet&quot; ei ole JSON -luettelo.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
@@ -16117,8 +16216,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+13" />
-        <source>No "%1" key found in feature list object.</source>
-        <translation>Ei "%1" -näppäintä löydetty ominaisuusluettelosta.</translation>
+        <source>No &quot;%1&quot; key found in feature list object.</source>
+        <translation>Ei &quot;%1&quot; -näppäintä löydetty ominaisuusluettelosta.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -16132,8 +16231,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Error message from Version Control System: "%1".</source>
-        <translation>Versionhallintajärjestelmän virheviesti: "%1".</translation>
+        <source>Error message from Version Control System: &quot;%1&quot;.</source>
+        <translation>Versionhallintajärjestelmän virheviesti: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16144,18 +16243,18 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="-11" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
-        <source>Failed to add subproject "%1"
-to project "%2".</source>
-        <translation>Alasprojektin lisääminen "%1" epäonnistui
- projisoida "%2".</translation>
+        <source>Failed to add subproject &quot;%1&quot;
+to project &quot;%2&quot;.</source>
+        <translation>Alasprojektin lisääminen &quot;%1&quot; epäonnistui
+ projisoida &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
         <source>Failed to add one or more files to project
-"%1" (%2).</source>
+&quot;%1&quot; (%2).</source>
         <translation>Yhden tai useamman tiedoston lisääminen projektiin epäonnistui
- "%1" (%2).</translation>
+ &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
@@ -16175,13 +16274,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+33" />
-        <source>Check whether a variable exists.&lt;br&gt;Returns "true" if it does and an empty string if not.</source>
-        <translation>Tarkista, onko muuttuja olemassa. &lt;br&gt; palauttaa "true", jos se tekee, ja tyhjä merkkijono, jos ei.</translation>
+        <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
+        <translation>Tarkista, onko muuttuja olemassa. &lt;br&gt; palauttaa &quot;true&quot;, jos se tekee, ja tyhjä merkkijono, jos ei.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not determine target path. "TargetPath" was not set on any page.</source>
-        <translation>Kohdepolkua ei voinut määrittää. "TargetPath" ei asetettu mille tahansa sivulle.</translation>
+        <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
+        <translation>Kohdepolkua ei voinut määrittää. &quot;TargetPath&quot; ei asetettu mille tahansa sivulle.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -16190,13 +16289,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The wizard failed to generate files.&lt;br&gt;The error message was: "%1".</source>
-        <translation>Tiedostojen luominen ei onnistunut. &lt;br&gt; Virhesanoma oli: "%1".</translation>
+        <source>The wizard failed to generate files.&lt;br&gt;The error message was: &quot;%1&quot;.</source>
+        <translation>Tiedostojen luominen ei onnistunut. &lt;br&gt; Virhesanoma oli: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+63" />
-        <source>No 'key' in options object.</source>
-        <translation>Ei 'avainta' Options -objektissa.</translation>
+        <source>No &apos;key&apos; in options object.</source>
+        <translation>Ei &apos;avainta&apos; Options -objektissa.</translation>
     </message>
     <message>
         <location line="+88" />
@@ -16230,24 +16329,24 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+58" />
-        <source>"%1" does not exist in the file system.</source>
-        <translation>"%1" ei ole tiedostojärjestelmässä.</translation>
+        <source>&quot;%1&quot; does not exist in the file system.</source>
+        <translation>&quot;%1&quot; ei ole tiedostojärjestelmässä.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open "%1" as a project.</source>
-        <translation>Projektina "%1" epäonnistui.</translation>
+        <source>Failed to open &quot;%1&quot; as a project.</source>
+        <translation>Projektina &quot;%1&quot; epäonnistui.</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+46" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>Edistimen avaaminen "%1".</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>Edistimen avaaminen &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="-27" />
-        <source>No file to open found in "%1".</source>
-        <translation>Mitään tiedostoa avataan "%1".</translation>
+        <source>No file to open found in &quot;%1&quot;.</source>
+        <translation>Mitään tiedostoa avataan &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16256,8 +16355,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to open project in "%1".</source>
-        <translation>Projektin avaaminen "%1" epäonnistui.</translation>
+        <source>Failed to open project in &quot;%1&quot;.</source>
+        <translation>Projektin avaaminen &quot;%1&quot; epäonnistui.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16277,31 +16376,31 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+7" />
-        <source>TypeId "%1" of generator is unknown. Supported typeIds are: "%2".</source>
-        <translation>Tyyppiä "%1" generaattorista ei tunneta. Tuetut tyypit ovat: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>Tyyppiä &quot;%1&quot; generaattorista ei tunneta. Tuetut tyypit ovat: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+56" />
         <location line="+241" />
-        <source>Path "%1" does not exist when checking JSON wizard search paths.</source>
-        <translation>Polku "%1" ei ole olemassa tarkistaessa JSON -velhojen hakupolkuja.</translation>
+        <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
+        <translation>Polku &quot;%1&quot; ei ole olemassa tarkistaessa JSON -velhojen hakupolkuja.</translation>
     </message>
     <message>
         <location line="-228" />
-        <source>Checking "%1" for %2.</source>
-        <translation>Tarkista " %1" %2.</translation>
+        <source>Checking &quot;%1&quot; for %2.</source>
+        <translation>Tarkista &quot; %1&quot; %2.</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+233" />
-        <source>* Failed to parse "%1":%2:%3: %4</source>
-        <translation>* Jätetty "%1":%2:%3:%4</translation>
+        <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
+        <translation>* Jätetty &quot;%1&quot;:%2:%3:%4</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>* Did not find a JSON object in "%1".
+        <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* Ei löytänyt JSON -objektia "%1".</translation>
+        <translation>* Ei löytänyt JSON -objektia &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -16311,8 +16410,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="-224" />
-        <source>JsonWizard: "%1" not found.</source>
-        <translation>JSONWIZARD: "%1" ei löydy.</translation>
+        <source>JsonWizard: &quot;%1&quot; not found.</source>
+        <translation>JSONWIZARD: &quot;%1&quot; ei löydy.</translation>
     </message>
     <message>
         <location line="+96" />
@@ -16326,18 +16425,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>TypeId "%1" of page is unknown. Supported typeIds are: "%2".</source>
-        <translation>TypeD "%1" sivua ei tunneta. Tuetut tyypit ovat: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>TypeD &quot;%1&quot; sivua ei tunneta. Tuetut tyypit ovat: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Page with typeId "%1" has invalid "index".</source>
-        <translation>Sivulla TypeID "%1" on virheellinen "indeksi".</translation>
+        <source>Page with typeId &quot;%1&quot; has invalid &quot;index&quot;.</source>
+        <translation>Sivulla TypeID &quot;%1&quot; on virheellinen &quot;indeksi&quot;.</translation>
     </message>
     <message>
         <location line="+89" />
-        <source>* Did not find a JSON object in "%1".</source>
-        <translation>* Ei löytänyt JSON -objektia "%1".</translation>
+        <source>* Did not find a JSON object in &quot;%1&quot;.</source>
+        <translation>* Ei löytänyt JSON -objektia &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16376,13 +16475,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+32" />
-        <source>"kind" value "%1" is not "class" (deprecated), "file" or "project".</source>
-        <translation>"Kind" arvo "%1" ei ole "luokka" (vanhentunut), "tiedosto" tai "projekti".</translation>
+        <source>&quot;kind&quot; value &quot;%1&quot; is not &quot;class&quot; (deprecated), &quot;file&quot; or &quot;project&quot;.</source>
+        <translation>&quot;Kind&quot; arvo &quot;%1&quot; ei ole &quot;luokka&quot; (vanhentunut), &quot;tiedosto&quot; tai &quot;projekti&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"kind" is "file" or "class" (deprecated) and "%1" is also set.</source>
-        <translation>"Kind" on "tiedosto" tai "luokka" (vanhentunut) ja "%1".</translation>
+        <source>&quot;kind&quot; is &quot;file&quot; or &quot;class&quot; (deprecated) and &quot;%1&quot; is also set.</source>
+        <translation>&quot;Kind&quot; on &quot;tiedosto&quot; tai &quot;luokka&quot; (vanhentunut) ja &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -16396,13 +16495,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Icon file "%1" not found.</source>
-        <translation>Kuvaketiedosto "%1" ei löydy.</translation>
+        <source>Icon file &quot;%1&quot; not found.</source>
+        <translation>Kuvaketiedosto &quot;%1&quot; ei löydy.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Image file "%1" not found.</source>
-        <translation>Kuvatiedosto "%1" ei löydy.</translation>
+        <source>Image file &quot;%1&quot; not found.</source>
+        <translation>Kuvatiedosto &quot;%1&quot; ei löydy.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16421,13 +16520,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>When parsing "generators": %1</source>
-        <translation>Jäsentettäessä "generaattoreita": %1</translation>
+        <source>When parsing &quot;generators&quot;: %1</source>
+        <translation>Jäsentettäessä &quot;generaattoreita&quot;: %1</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>When parsing "pages": %1</source>
-        <translation>Kun jäsennetään "sivuja": %1</translation>
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation>Kun jäsennetään &quot;sivuja&quot;: %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
@@ -16441,8 +16540,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+57" />
-        <source>When processing "%1":&lt;br&gt;%2</source>
-        <translation>Kun käsittelet "%1": &lt;br&gt;%2</translation>
+        <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
+        <translation>Kun käsittelet &quot;%1&quot;: &lt;br&gt;%2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
@@ -16468,43 +16567,43 @@ to project "%2".</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
-        <source>When parsing fields of page "%1": %2</source>
-        <translation>Kun jäsennetään sivun kentät " %1": %2</translation>
+        <source>When parsing fields of page &quot;%1&quot;: %2</source>
+        <translation>Kun jäsennetään sivun kentät &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "File" page needs to be unset or an empty object.</source>
-        <translation>"Tiedoston" sivun "data" on oltava UNSET tai tyhjä objekti.</translation>
+        <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
+        <translation>&quot;Tiedoston&quot; sivun &quot;data&quot; on oltava UNSET tai tyhjä objekti.</translation>
     </message>
     <message>
         <location line="+48" />
-        <source>Error parsing "%1" in "Kits" page: %2</source>
-        <translation>Virhe " %1" "sarjojen" sivun jäsentäminen: %2</translation>
+        <source>Error parsing &quot;%1&quot; in &quot;Kits&quot; page: %2</source>
+        <translation>Virhe &quot; %1&quot; &quot;sarjojen&quot; sivun jäsentäminen: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>"data" must be a JSON object for "Kits" pages.</source>
-        <translation>"Tietojen" on oltava JSON -objekti "sarjojen" sivuille.</translation>
+        <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
+        <translation>&quot;Tietojen&quot; on oltava JSON -objekti &quot;sarjojen&quot; sivuille.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>"Kits" page requires a "%1" set.</source>
-        <translation>"Kits" -sivu vaatii "%1" -sarjan.</translation>
+        <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
+        <translation>&quot;Kits&quot; -sivu vaatii &quot;%1&quot; -sarjan.</translation>
     </message>
     <message>
         <location line="+62" />
-        <source>"data" must be empty or a JSON object for "Project" pages.</source>
-        <translation>"Tietojen" on oltava tyhjä tai JSON -objekti "projekti" -sivuille.</translation>
+        <source>&quot;data&quot; must be empty or a JSON object for &quot;Project&quot; pages.</source>
+        <translation>&quot;Tietojen&quot; on oltava tyhjä tai JSON -objekti &quot;projekti&quot; -sivuille.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Invalid regular expression "%1" in "%2". %3</source>
-        <translation>Virheellinen säännöllinen ilmaisu "%1" "%2". %3</translation>
+        <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
+        <translation>Virheellinen säännöllinen ilmaisu &quot;%1&quot; &quot;%2&quot;. %3</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "Summary" page can be unset or needs to be an object.</source>
-        <translation>"Tiedot" "yhteenveto" -sivulle voi olla tyhjennys tai sen on oltava objekti.</translation>
+        <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
+        <translation>&quot;Tiedot&quot; &quot;yhteenveto&quot; -sivulle voi olla tyhjennys tai sen on oltava objekti.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
@@ -16513,13 +16612,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Pattern "%1" is no valid regular expression.</source>
-        <translation>Kuvio "%1" ei ole kelvollinen säännöllinen lauseke.</translation>
+        <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
+        <translation>Kuvio &quot;%1&quot; ei ole kelvollinen säännöllinen lauseke.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>ScannerGenerator: Binary pattern "%1" not valid.</source>
-        <translation>Skannergeneraattori: Binaarikuvio "%1" ei ole kelvollinen.</translation>
+        <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
+        <translation>Skannergeneraattori: Binaarikuvio &quot;%1&quot; ei ole kelvollinen.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
@@ -16576,18 +16675,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+17" />
-        <source>Sys Root "%1" does not exist in the file system.</source>
-        <translation>SYS -juuri "%1" ei ole tiedostojärjestelmässä.</translation>
+        <source>Sys Root &quot;%1&quot; does not exist in the file system.</source>
+        <translation>SYS -juuri &quot;%1&quot; ei ole tiedostojärjestelmässä.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is not a directory.</source>
-        <translation>SYS -juuri "%1" ei ole hakemisto.</translation>
+        <source>Sys Root &quot;%1&quot; is not a directory.</source>
+        <translation>SYS -juuri &quot;%1&quot; ei ole hakemisto.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is empty.</source>
-        <translation>SYS -juuri "%1" on tyhjä.</translation>
+        <source>Sys Root &quot;%1&quot; is empty.</source>
+        <translation>SYS -juuri &quot;%1&quot; on tyhjä.</translation>
     </message>
     <message>
         <location line="+14" />
@@ -16833,7 +16932,7 @@ to project "%2".</source>
     <message>
         <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The name of the kit suitable for generating directory names. This value is used for the variable &lt;i&gt;%1&lt;/i&gt;, which for example determines the name of the shadow build directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;pää/&gt; &lt;body&gt; &lt;p&gt; Pakkauksen nimi, joka soveltuu hakemistojen nimien luomiseen. Tätä arvoa käytetään muuttujaan &lt;i&gt;%1 &lt;/i&gt;, joka esimerkiksi määrittelee varjojen rakennushakemiston nimen. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -16974,12 +17073,12 @@ to project "%2".</source>
     <message>
         <location line="+20" />
         <source>Overriding &lt;code&gt;MAKEFLAGS&lt;/code&gt; environment variable.</source>
-        <translation>Ympäristömuuttuja &lt;koodi&gt; MakeFlags &lt;/ Code&gt; Ympäristömuuttuja.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2" />
         <source>&lt;code&gt;MAKEFLAGS&lt;/code&gt; specifies a conflicting job count.</source>
-        <translation>&lt;Koodi&gt; MakeFlags &lt;/code&gt; Määrittää ristiriitaisen työpaikan määrän.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4" />
@@ -17070,13 +17169,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href="projectmode"&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation>&lt;tyylityyppi = text/css&gt; a: linkki {väri: rgb (128, 128, 255);} &lt;/style&gt; Projektia &lt;b&gt;%1 &lt;/b&gt; ei ole vielä määritetty &lt;br/&gt; &lt;br/ &gt; Voit määrittää sen &lt;a href = "ProjectMode"&gt; Projects -tilassa &lt;/a&gt; &lt;br/&gt;</translation>
+        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href=&quot;projectmode&quot;&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
+        <translation>&lt;tyylityyppi = text/css&gt; a: linkki {väri: rgb (128, 128, 255);} &lt;/style&gt; Projektia &lt;b&gt;%1 &lt;/b&gt; ei ole vielä määritetty &lt;br/&gt; &lt;br/ &gt; Voit määrittää sen &lt;a href = &quot;ProjectMode&quot;&gt; Projects -tilassa &lt;/a&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
-        <source>Falling back to use the cached environment for "%1" after:</source>
-        <translation>Pudota takaisin välimuisti ympäristön käyttämiseen "%1": n jälkeen:</translation>
+        <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
+        <translation>Pudota takaisin välimuisti ympäristön käyttämiseen &quot;%1&quot;: n jälkeen:</translation>
     </message>
     <message>
         <location line="+483" />
@@ -17098,9 +17197,9 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+796" />
-        <source>Failed to retrieve MSVC Environment from "%1":
+        <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
-        <translation>MSVC -ympäristön noutaminen "%1":
+        <translation>MSVC -ympäristön noutaminen &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
@@ -17147,8 +17246,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open file: "%1": %2</source>
-        <translation>Tiedostoa ei voinut avata: " %1": %2</translation>
+        <source>Could not open file: &quot;%1&quot;: %2</source>
+        <translation>Tiedostoa ei voinut avata: &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
@@ -17258,13 +17357,13 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+92" />
-        <source>Project "%1" was configured for kit "%2" with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
-        <translation>Projekti "%1" määritettiin KIT: lle "%2" ID%3: lla, jota ei enää ole. Voit luoda uuden pakkauksen tai kopioida kadonnut pakkauksen vaiheet toiseen pakkaukseen %4 -tilassa.</translation>
+        <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
+        <translation>Projekti &quot;%1&quot; määritettiin KIT: lle &quot;%2&quot; ID%3: lla, jota ei enää ole. Voit luoda uuden pakkauksen tai kopioida kadonnut pakkauksen vaiheet toiseen pakkaukseen %4 -tilassa.</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+622" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+626" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
@@ -17273,79 +17372,79 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+265" />
-        <source>Could not find any qml_*.qm file at "%1"</source>
-        <translation>Ei löytänyt QML _*. QM -tiedostoa "%1"</translation>
+        <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
+        <translation>Ei löytänyt QML _*. QM -tiedostoa &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+87" />
         <source>%1: Name.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Nimi.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to main file.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Täysi polku päätiedostoon.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Täysi polku projektihakemistoon.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: The name of the active kit.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Aktiivisen pakkauksen nimi.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Name of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Aktiivisen rakennuskokoonpanon nimi.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Type of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Aktiivisen rakennuskokoonpanon tyyppi.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Full build path of active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Aktiivisen rakennuskokoonpanon täydellinen rakennuspolku.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Variables in the active build environment.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Aktiivisen rakennusympäristön muuttujat.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Name of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Aktiivisen Run -kokoonpanon nimi.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Executable of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Aktiivisen RUN -kokoonpanon suoritettava.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Variables in the environment of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Aktiivisen RUN -kokoonpanon ympäristössä muuttujat.</translation>
     </message>
     <message>
         <location line="+12" />
         <source>%1: Working directory of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Aktiivisen RUN -kokoonpanon toimitushakemisto.</translation>
     </message>
     <message>
@@ -17388,12 +17487,12 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+7" />
         <source>&amp;Debug</source>
-        <translation>&amp; Debug</translation>
+        <translation>&amp;Debug</translation>
     </message>
     <message>
         <location line="+6" />
         <source>&amp;Start Debugging</source>
-        <translation>&amp; Aloita virheenkorjaus</translation>
+        <translation>&amp;Aloita virheenkorjaus</translation>
     </message>
     <message>
         <location line="+82" />
@@ -17428,7 +17527,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+17" />
         <source>Recent P&amp;rojects</source>
-        <translation>Viimeaikaiset P &amp; Rojects</translation>
+        <translation>Viimeaikaiset P &amp;Rojects</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17438,8 +17537,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="-347" />
-        <source>Close Pro&amp;ject "%1"</source>
-        <translation>Sulje projekti "%1"</translation>
+        <source>Close Pro&amp;ject &quot;%1&quot;</source>
+        <translation>Sul&amp;je projekti &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -17449,13 +17548,13 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <location line="+328" />
-        <source>Close All Files in Project "%1"</source>
-        <translation>Sulje kaikki projektin tiedostot "%1"</translation>
+        <source>Close All Files in Project &quot;%1&quot;</source>
+        <translation>Sulje kaikki projektin tiedostot &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-316" />
         <source>Close Pro&amp;ject</source>
-        <translation>Sulje</translation>
+        <translation>Sul&amp;je</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17513,8 +17612,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Build Project "%1"</source>
-        <translation>Rakenna projekti "%1"</translation>
+        <source>Build Project &quot;%1&quot;</source>
+        <translation>Rakenna projekti &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17523,18 +17622,18 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Build Project "%1" for All Configurations</source>
-        <translation>Rakenna projekti "%1" kaikille kokoonpanoille</translation>
+        <source>Build Project &quot;%1&quot; for All Configurations</source>
+        <translation>Rakenna projekti &quot;%1&quot; kaikille kokoonpanoille</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Build for &amp;Run Configuration</source>
-        <translation>Rakenna ja suorita kokoonpano</translation>
+        <translation>&amp;Rakenna ja suorita kokoonpano</translation>
     </message>
     <message>
         <location line="+0" />
-        <source>Build for &amp;Run Configuration "%1"</source>
-        <translation>Rakenna ja suorita kokoonpano "%1"</translation>
+        <source>Build for &amp;Run Configuration &quot;%1&quot;</source>
+        <translation>&amp;Rakenna ja suorita kokoonpano &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+13" />
@@ -17627,8 +17726,8 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+9" />
         <location line="+1621" />
-        <source>Close Project "%1"</source>
-        <translation>Sulje projekti "%1"</translation>
+        <source>Close Project &quot;%1&quot;</source>
+        <translation>Sulje projekti &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-1614" />
@@ -17637,8 +17736,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Close All Projects Except "%1"</source>
-        <translation>Sulje kaikki projektit paitsi "%1"</translation>
+        <source>Close All Projects Except &quot;%1&quot;</source>
+        <translation>Sulje kaikki projektit paitsi &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -17673,8 +17772,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Set "%1" as Active Project</source>
-        <translation>Aseta "%1" aktiivisena projektina</translation>
+        <source>Set &quot;%1&quot; as Active Project</source>
+        <translation>Aseta &quot;%1&quot; aktiivisena projektina</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17759,7 +17858,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+62" />
         <source>Sanitizer</source>
-        <comment>Category for sanitizer issues listed under 'Issues'</comment>
+        <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
         <translation>Puhdistaja</translation>
     </message>
     <message>
@@ -17800,8 +17899,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+48" />
-        <source>Failed opening project "%1": No plugin can open project type "%2".</source>
-        <translation>Epäonnistunut avausprojekti "%1": Yksikään laajennus ei voi avata projektityyppiä "%2".</translation>
+        <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
+        <translation>Epäonnistunut avausprojekti &quot;%1&quot;: Yksikään laajennus ei voi avata projektityyppiä &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+195" />
@@ -17832,18 +17931,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+23" />
-        <source>Open Project in "%1"</source>
-        <translation>Avoin projekti "%1"</translation>
+        <source>Open Project in &quot;%1&quot;</source>
+        <translation>Avoin projekti &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Open Project "%1"</source>
-        <translation>Avoin projekti "%1"</translation>
+        <source>Open Project &quot;%1&quot;</source>
+        <translation>Avoin projekti &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>The file "%1" was renamed to "%2", but the following projects could not be automatically changed: %3</source>
-        <translation>Tiedosto "%1" nimettiin uudelleen "%2", mutta seuraavia projekteja ei voitu muuttaa automaattisesti:%3</translation>
+        <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
+        <translation>Tiedosto &quot;%1&quot; nimettiin uudelleen &quot;%2&quot;, mutta seuraavia projekteja ei voitu muuttaa automaattisesti:%3</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17860,8 +17959,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+62" />
-        <source>Building "%1" is disabled: %2&lt;br&gt;</source>
-        <translation>Rakennus " %1" on vammainen: %2 &lt;br&gt;</translation>
+        <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
+        <translation>Rakennus &quot; %1&quot; on vammainen: %2 &lt;br&gt;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17922,18 +18021,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>The project "%1" is not configured.</source>
-        <translation>Projektia "%1" ei ole määritetty.</translation>
+        <source>The project &quot;%1&quot; is not configured.</source>
+        <translation>Projektia &quot;%1&quot; ei ole määritetty.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The project "%1" has no active kit.</source>
-        <translation>Projektissa "%1" ei ole aktiivista pakkausta.</translation>
+        <source>The project &quot;%1&quot; has no active kit.</source>
+        <translation>Projektissa &quot;%1&quot; ei ole aktiivista pakkausta.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The kit "%1" for the project "%2" has no active run configuration.</source>
-        <translation>Projektin "%2" pakkauksessa "%1" ei ole aktiivista RUN -kokoonpanoa.</translation>
+        <source>The kit &quot;%1&quot; for the project &quot;%2&quot; has no active run configuration.</source>
+        <translation>Projektin &quot;%2&quot; pakkauksessa &quot;%1&quot; ei ole aktiivista RUN -kokoonpanoa.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -17942,8 +18041,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>Cannot run "%1".</source>
-        <translation>Ei voi ajaa "%1".</translation>
+        <source>Cannot run &quot;%1&quot;.</source>
+        <translation>Ei voi ajaa &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17969,8 +18068,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+41" />
-        <source>The following subprojects could not be added to project "%1":</source>
-        <translation>Seuraavia alaryhmiä ei voitu lisätä projektiin "%1":</translation>
+        <source>The following subprojects could not be added to project &quot;%1&quot;:</source>
+        <translation>Seuraavia alaryhmiä ei voitu lisätä projektiin &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18019,15 +18118,15 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>File "%1" was not removed, because the project has changed in the meantime.
+        <source>File &quot;%1&quot; was not removed, because the project has changed in the meantime.
 Please try again.</source>
-        <translation>Tiedostoa "%1" ei poistettu, koska projekti on muuttunut sillä välin.
+        <translation>Tiedostoa &quot;%1&quot; ei poistettu, koska projekti on muuttunut sillä välin.
  Yritä uudelleen.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Could not remove file "%1" from project "%2".</source>
-        <translation>Tiedostoa "%1" ei voinut poistaa projektista "%2".</translation>
+        <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
+        <translation>Tiedostoa &quot;%1&quot; ei voinut poistaa projektista &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+36" />
@@ -18052,13 +18151,13 @@ Please try again.</source>
     </message>
     <message>
         <location line="-9" />
-        <source>Failed to copy file "%1" to "%2": %3.</source>
-        <translation>Tiedoston "%1" kopiointi "%2":%3.</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
+        <translation>Tiedoston &quot;%1&quot; kopiointi &quot;%2&quot;:%3.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Failed to add new file "%1" to the project.</source>
-        <translation>Uuden tiedoston "%1" lisääminen projektiin epäonnistui.</translation>
+        <source>Failed to add new file &quot;%1&quot; to the project.</source>
+        <translation>Uuden tiedoston &quot;%1&quot; lisääminen projektiin epäonnistui.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18078,7 +18177,7 @@ Please try again.</source>
     <message>
         <location line="+1" />
         <source>Could not delete file %1.</source>
-        <translation>Tiedostoa ei voitu poistaa 1.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37" />
@@ -18106,8 +18205,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+192" />
-        <source>Locates files from all project directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Etsi tiedostot kaikista projektihakemistoista. Liitä "+&lt;numero&gt;" tai ": &lt;numero&gt;" hypätäksesi annetulle rivinumerolle. Liitä toinen "+&lt;numero&gt;" tai ": &lt;numero&gt;" hypätäksesi myös sarakkeen numeroon.</translation>
+        <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Etsi tiedostot kaikista projektihakemistoista. Liitä &quot;+&lt;numero&gt;&quot; tai &quot;: &lt;numero&gt;&quot; hypätäksesi annetulle rivinumerolle. Liitä toinen &quot;+&lt;numero&gt;&quot; tai &quot;: &lt;numero&gt;&quot; hypätäksesi myös sarakkeen numeroon.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -18164,13 +18263,13 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
         <source>s</source>
-        <extracomment>Suffix for "seconds"</extracomment>
+        <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>s</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The amount of seconds to wait between a "soft kill" and a "hard kill" of a running application.</source>
-        <translation>Sekuntien määrä odottaa "pehmeän tappamisen" ja juoksevan sovelluksen "kovan tappamisen" välillä.</translation>
+        <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
+        <translation>Sekuntien määrä odottaa &quot;pehmeän tappamisen&quot; ja juoksevan sovelluksen &quot;kovan tappamisen&quot; välillä.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -18234,8 +18333,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Some legacy build tools do not deal well with paths that contain "special" characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
-        <translation>Jotkut vanhat rakennustyökalut eivät käsittele hyvin polkuja, jotka sisältävät "erityisiä" merkkejä, kuten välilyöntejä, mikä voi johtaa vääriin rakennusvirheisiin. &lt;p&gt; poista tämä vaihtoehto, jos et toimi tällaisten työkalujen kanssa.</translation>
+        <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
+        <translation>Jotkut vanhat rakennustyökalut eivät käsittele hyvin polkuja, jotka sisältävät &quot;erityisiä&quot; merkkejä, kuten välilyöntejä, mikä voi johtaa vääriin rakennusvirheisiin. &lt;p&gt; poista tämä vaihtoehto, jos et toimi tällaisten työkalujen kanssa.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18294,13 +18393,13 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Show all kits in "Build &amp; Run" in "Projects" mode</source>
-        <translation>Näytä kaikki "Build &amp; Run" -sarjat "Projects" -tilassa</translation>
+        <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
+        <translation>Näytä kaikki &quot;Build &amp; Run&quot; -sarjat &quot;Projects&quot; -tilassa</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Show also inactive kits in "Build &amp; Run" in "Projects" mode.</source>
-        <translation>Näytä myös passiiviset sarjat "Build &amp; Run" -tilassa "Projects" -tilassa.</translation>
+        <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
+        <translation>Näytä myös passiiviset sarjat &quot;Build &amp; Run&quot; -tilassa &quot;Projects&quot; -tilassa.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18339,8 +18438,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Default for "Run in terminal":</source>
-        <translation>"Suorita päätelaite":</translation>
+        <source>Default for &quot;Run in terminal&quot;:</source>
+        <translation>&quot;Suorita päätelaite&quot;:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18420,8 +18519,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
-        <source>No kits are enabled for this project. Enable kits in the "Projects" mode.</source>
-        <translation>Projektille ei ole otettuja sarjoja. Ota sarjat käyttöön "Projects" -tilassa.</translation>
+        <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
+        <translation>Projektille ei ole otettuja sarjoja. Ota sarjat käyttöön &quot;Projects&quot; -tilassa.</translation>
     </message>
     <message>
         <location line="+89" />
@@ -18444,8 +18543,7 @@ Rename %2 to %3 anyway?</source>
         <location line="+4" />
         <source>You just dragged some files from one project node to another.
 What should %1 do now?</source>
-        <translation>Vedät vain joitain tiedostoja projektisolmusta toiseen.
- Mitä %: n pitäisi tehdä nyt?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -18528,7 +18626,7 @@ What should %1 do now?</source>
         <translation>&lt;b&gt; Varoitus: &lt;/b&gt; Tämä tiedosto on projektihakemiston ulkopuolella.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-391" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-395" />
         <source>Simplify Tree</source>
         <translation>Yksinkertaista puuta</translation>
     </message>
@@ -18578,7 +18676,7 @@ What should %1 do now?</source>
         <translation>Suodatinpuu</translation>
     </message>
     <message>
-        <location line="+194" />
+        <location line="+198" />
         <source>Meta+X</source>
         <translation>Meta+x</translation>
     </message>
@@ -18614,18 +18712,18 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+50" />
-        <source>Open %1 "%2"</source>
-        <translation>Avoin %1 " %2"</translation>
+        <source>Open %1 &quot;%2&quot;</source>
+        <translation>Avoin %1 &quot; %2&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Open %1 "%2" (%3)</source>
-        <translation>Avoin%1 "%2" (%3)</translation>
+        <source>Open %1 &quot;%2&quot; (%3)</source>
+        <translation>Avoin%1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
         <location line="+20" />
         <source>session</source>
-        <comment>Appears in "Open session &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>istunto</translation>
     </message>
     <message>
@@ -18652,7 +18750,7 @@ What should %1 do now?</source>
     <message>
         <location line="+125" />
         <source>project</source>
-        <comment>Appears in "Open project &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>projekti</translation>
     </message>
     <message>
@@ -18687,7 +18785,7 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+118" />
-        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project's settings:</source>
+        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>Projekti on määritetty sarjoille, joita ei enää ole. Valitse yksi seuraavista vaihtoehdoista kontekstivalikosta projektin asetukset:</translation>
     </message>
     <message>
@@ -18718,8 +18816,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+12" />
-        <source>Remove Vanished Target "%1"</source>
-        <translation>Poista kadonnut tavoite "%1"</translation>
+        <source>Remove Vanished Target &quot;%1&quot;</source>
+        <translation>Poista kadonnut tavoite &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18787,7 +18885,7 @@ What should %1 do now?</source>
     <message>
         <location line="+63" />
         <source>Add to &amp;version control:</source>
-        <translation>Lisää ja version hallinta:</translation>
+        <translation>Lisää ja &amp;version hallinta:</translation>
     </message>
     <message>
         <location line="+88" />
@@ -18797,17 +18895,17 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Add to &amp;project:</source>
-        <translation>Lisää ja projekti:</translation>
+        <translation>Lisää ja &amp;projekti:</translation>
     </message>
     <message>
         <location line="+74" />
-        <source>A version control system repository could not be created in "%1".</source>
-        <translation>Versionhallintajärjestelmän arkistoa ei voitu luoda "%1".</translation>
+        <source>A version control system repository could not be created in &quot;%1&quot;.</source>
+        <translation>Versionhallintajärjestelmän arkistoa ei voitu luoda &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to add "%1" to the version control system.</source>
-        <translation>"%1" ei onnistunut lisäämään versionhallintajärjestelmään.</translation>
+        <source>Failed to add &quot;%1&quot; to the version control system.</source>
+        <translation>&quot;%1&quot; ei onnistunut lisäämään versionhallintajärjestelmään.</translation>
     </message>
     <message>
         <location line="+94" />
@@ -18843,17 +18941,17 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>The run configuration's working directory.</source>
+        <source>The run configuration&apos;s working directory.</source>
         <translation>Run Configurationin toimiva hakemisto.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The run configuration's name.</source>
+        <source>The run configuration&apos;s name.</source>
         <translation>Run Configuration -nimi.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The run configuration's executable.</source>
+        <source>The run configuration&apos;s executable.</source>
         <translation>Run Configurationin suoritettava.</translation>
     </message>
     <message>
@@ -18870,7 +18968,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
-        <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
+        <extracomment>Shown in Run configuration, Add menu: &quot;name of runnable (on device name)&quot;</extracomment>
         <translation>%1 ( %{laite: nimi})</translation>
     </message>
     <message>
@@ -18993,7 +19091,7 @@ What should %1 do now?</source>
     <message>
         <location line="+324" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;pää/&gt; &lt;body&gt; &lt;keskus&gt; &lt;i&gt;%1 &lt;/i&gt; on edelleen käynnissä. &lt;Keski/&gt; &lt;Senter&gt; pakottaa sen lopettamaan? &lt;/center&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2" />
@@ -19003,12 +19101,12 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Force &amp;Quit</source>
-        <translation>Voima ja lopettaa</translation>
+        <translation>&amp;Voima ja lopettaa</translation>
     </message>
     <message>
         <location line="+0" />
         <source>&amp;Keep Running</source>
-        <translation>&amp; Jatka juoksua</translation>
+        <translation>&amp;Jatka juoksua</translation>
     </message>
     <message>
         <location line="+246" />
@@ -19072,8 +19170,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Either the invoked program "%1" is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>Joko vedottu ohjelma "%1" puuttuu, tai sinulla ei voi olla riittävästi käyttöoikeuksia ohjelman vedolle.</translation>
+        <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>Joko vedottu ohjelma &quot;%1&quot; puuttuu, tai sinulla ei voi olla riittävästi käyttöoikeuksia ohjelman vedolle.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19209,11 +19307,9 @@ What should %1 do now?</source>
         <location line="+11" />
         <source>Not showing %n files that are outside of the base directory.
 These files are preserved.</source>
-        <translation>
-            <numerusform>Ei näy %N -tiedostoja, jotka ovat perushakemiston ulkopuolella.
- Nämä tiedostot säilyvät.</numerusform>
-            <numerusform>Ei näy %N -tiedostoja, jotka ovat perushakemiston ulkopuolella.
- Nämä tiedostot säilyvät.</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -19273,8 +19369,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+172" />
-        <source>Unknown build system "%1"</source>
-        <translation>Tuntematon rakennusjärjestelmä "%1"</translation>
+        <source>Unknown build system &quot;%1&quot;</source>
+        <translation>Tuntematon rakennusjärjestelmä &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
@@ -19299,7 +19395,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
         <source>&amp;Configure Project</source>
-        <translation>&amp; Määritä projekti</translation>
+        <translation>&amp;Määritä projekti</translation>
     </message>
     <message>
         <location line="+91" />
@@ -19334,8 +19430,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+71" />
-        <source>Enable Kit for Project "%1"</source>
-        <translation>Ota pakkaus projektille "%1"</translation>
+        <source>Enable Kit for Project &quot;%1&quot;</source>
+        <translation>Ota pakkaus projektille &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7" />
@@ -19344,8 +19440,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Disable Kit for Project "%1"</source>
-        <translation>Poista projekti "%1" käytöstä</translation>
+        <source>Disable Kit for Project &quot;%1&quot;</source>
+        <translation>Poista projekti &quot;%1&quot; käytöstä</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19354,8 +19450,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Disable Kit "%1" in This Project?</source>
-        <translation>Poista pakkaus "%1" tässä projektissa?</translation>
+        <source>Disable Kit &quot;%1&quot; in This Project?</source>
+        <translation>Poista pakkaus &quot;%1&quot; tässä projektissa?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19389,8 +19485,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Add a kit in the &lt;a href="buildandrun"&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
-        <translation>Lisää pakkaus &lt;a href = "buildandrun"&gt; -vaihtoehtoihin &lt;/a&gt; tai SDK: n huoltotyökalun kautta.</translation>
+        <source>Add a kit in the &lt;a href=&quot;buildandrun&quot;&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
+        <translation>Lisää pakkaus &lt;a href = &quot;buildandrun&quot;&gt; -vaihtoehtoihin &lt;/a&gt; tai SDK: n huoltotyökalun kautta.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19486,7 +19582,7 @@ These files are preserved.</source>
         <translation>Aiheet</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+53" />
         <source>Show Warnings</source>
         <translation>Näytä varoitukset</translation>
     </message>
@@ -19568,7 +19664,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
         <source>&amp;Annotate</source>
-        <translation>&amp; Merkitä</translation>
+        <translation>&amp;Merkitä</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19654,18 +19750,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+24" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>"%1" -asennus peruutettiin aikakatkaisulla.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>&quot;%1&quot; -asennus peruutettiin aikakatkaisulla.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>Käyttäjä peruutti "%1" -asennuksen.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>Käyttäjä peruutti &quot;%1&quot; -asennuksen.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>" %1" asentaminen epäonnistui poistumiskoodilla %2.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>&quot; %1&quot; asentaminen epäonnistui poistumiskoodilla %2.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
@@ -19742,23 +19838,23 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" not found.</source>
-        <translation>Python "%1" ei löydy.</translation>
+        <source>Python &quot;%1&quot; not found.</source>
+        <translation>Python &quot;%1&quot; ei löydy.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" is not executable.</source>
-        <translation>Python "%1" ei ole suoritettavissa.</translation>
+        <source>Python &quot;%1&quot; is not executable.</source>
+        <translation>Python &quot;%1&quot; ei ole suoritettavissa.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Python "%1" does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
-        <translation>Python "%1" ei sisällä käyttökelpoista PIP: tä. PIP: tä tarvitaan Python -pakettien asentamiseen Python -paketti -hakemistosta, kuten Pyside ja Python -kielen palvelin. Jotta minkä tahansa tämän toiminnon käyttäminen varmistaa, että PIP on asennettu kyseiselle pythonille.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
+        <translation>Python &quot;%1&quot; ei sisällä käyttökelpoista PIP: tä. PIP: tä tarvitaan Python -pakettien asentamiseen Python -paketti -hakemistosta, kuten Pyside ja Python -kielen palvelin. Jotta minkä tahansa tämän toiminnon käyttäminen varmistaa, että PIP on asennettu kyseiselle pythonille.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Python "%1" does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
-        <translation>Python "%1" ei sisällä käyttökelpoista Venv. Venv on suositeltava tapa eristää projektin kehitysympäristö maailmanlaajuisesti asennetusta Pythonista.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
+        <translation>Python &quot;%1&quot; ei sisällä käyttökelpoista Venv. Venv on suositeltava tapa eristää projektin kehitysympäristö maailmanlaajuisesti asennetusta Pythonista.</translation>
     </message>
     <message>
         <location line="+32" />
@@ -19812,8 +19908,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
-        <source>No Python interpreter set for kit "%1".</source>
-        <translation>Ei python -tulkkia sarjaa "%1".</translation>
+        <source>No Python interpreter set for kit &quot;%1&quot;.</source>
+        <translation>Ei python -tulkkia sarjaa &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
@@ -19832,7 +19928,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
         <source>Python:</source>
         <translation>Python:</translation>
     </message>
@@ -19842,7 +19938,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Suorita %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
         <location line="+283" />
         <source>Name:</source>
         <translation>Nimi:</translation>
@@ -19860,13 +19956,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" does not exist.</source>
-        <translation>"%1" ei ole.</translation>
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot; ei ole.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" is not an executable file.</source>
-        <translation>"%1" ei ole suoritettava tiedosto.</translation>
+        <source>&quot;%1&quot; is not an executable file.</source>
+        <translation>&quot;%1&quot; ei ole suoritettava tiedosto.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -19884,12 +19980,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <location line="-183" />
         <location line="+185" />
         <source>&amp;Make Default</source>
-        <translation>&amp; Tee oletusarvo</translation>
+        <translation>&amp;Tee oletusarvo</translation>
     </message>
     <message>
         <location line="-183" />
         <source>&amp;Generate Kit</source>
-        <translation>&amp; Luo pakkaus</translation>
+        <translation>&amp;Luo pakkaus</translation>
     </message>
     <message>
         <location line="+3" />
@@ -19933,7 +20029,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Kielen palvelimen kokoonpano</translation>
     </message>
     <message>
-        <location line="+476" />
+        <location line="+489" />
         <source>Python interpreter:</source>
         <translation>Python -tulkki:</translation>
     </message>
@@ -19965,8 +20061,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+11" />
-        <source>Found "%1" (%2)</source>
-        <translation>Löytyi "%1" (%2)</translation>
+        <source>Found &quot;%1&quot; (%2)</source>
+        <translation>Löytyi &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="+9" />
@@ -19975,13 +20071,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
-        <source>"data" of a Python wizard page expects a map with "items" containing a list of objects.</source>
-        <translation>Ohjattu Python -sivun "tiedot" odottaa kartan, jossa on "kohteet", jotka sisältävät luettelon objekteista.</translation>
+        <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
+        <translation>Ohjattu Python -sivun &quot;tiedot&quot; odottaa kartan, jossa on &quot;kohteet&quot;, jotka sisältävät luettelon objekteista.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>An item of Python wizard page data expects a "trKey" field containing the UI visible string for that Python version and a "value" field containing an object with a "PySideVersion" field used for import statements in the Python files.</source>
-        <translation>Ohjattu Python -sivutietojen kohde odottaa "Trkey" -kentän, joka sisältää käyttöliittymän näkyvän merkkijonon kyseiselle Python -versiolle, ja "arvo" -kenttä, joka sisältää objektin, jossa on "pysideversion" -kenttä, jota käytetään Python -tiedostojen tuontilausekkeisiin.</translation>
+        <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
+        <translation>Ohjattu Python -sivutietojen kohde odottaa &quot;Trkey&quot; -kentän, joka sisältää käyttöliittymän näkyvän merkkijonon kyseiselle Python -versiolle, ja &quot;arvo&quot; -kenttä, joka sisältää objektin, jossa on &quot;pysideversion&quot; -kenttä, jota käytetään Python -tiedostojen tuontilausekkeisiin.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -20006,17 +20102,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+126" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
         <source>Move tab left</source>
         <translation>Siirrä välilehteä vasemmalle</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Switch to next tab</source>
         <translation>Vaihda seuraavaan välilehteen</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+15" />
         <source>Move tab right</source>
         <translation>Siirrä välilehteä oikealle</translation>
     </message>
@@ -20178,7 +20274,7 @@ Lisäksi Shift+Enter lisää koodinvaihtomerkin kohdistimen kohtaan ja siirtää
     <message>
         <location line="+72" />
         <source>&amp;Automatically Insert Matching Characters</source>
-        <translation>Aseta vastaavat merkit automaattisesti</translation>
+        <translation>&amp;Aseta vastaavat merkit automaattisesti</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
@@ -20187,8 +20283,8 @@ Lisäksi Shift+Enter lisää koodinvaihtomerkin kohdistimen kohtaan ja siirtää
     </message>
     <message>
         <location line="+2" />
-        <source>Automatically creates a Doxygen comment upon pressing enter after a '/**', '/*!', '//!' or '///'.</source>
-        <translation>Luo automaattisesti Doxygen-kommentin, kun painat enteriä merkkien '/**', '/*!', '//!' jälkeen. tai '///'.</translation>
+        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
+        <translation>Luo automaattisesti Doxygen-kommentin, kun painat enteriä merkkien &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; jälkeen. tai &apos;///&apos;.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20207,8 +20303,8 @@ Lisäksi Shift+Enter lisää koodinvaihtomerkin kohdistimen kohtaan ja siirtää
     </message>
     <message>
         <location line="+2" />
-        <source>Adds leading asterisks when continuing C/C++ "/*", Qt "/*!" and Java "/**" style comments on new lines.</source>
-        <translation>Lisää alkutähdet, kun jatkat C/C++ "/*", Qt "/*!" ja Java "/**" -tyylisiä kommentteja uusille riveille.</translation>
+        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
+        <translation>Lisää alkutähdet, kun jatkat C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; ja Java &quot;/**&quot; -tyylisiä kommentteja uusille riveille.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20217,12 +20313,12 @@ Lisäksi Shift+Enter lisää koodinvaihtomerkin kohdistimen kohtaan ja siirtää
     </message>
     <message>
         <location line="+1" />
-        <source>Doxygen allows "@" and "\" to start commands.
-By default, "@" is used if the surrounding comment starts with "/**" or "///", and "\" is used
-if the comment starts with "/*!" or "//!".</source>
-        <translation>Doxygen antaa "@" ja "\" aloittaa komennot.
- Oletuksena "@" käytetään, jos ympäröivä kommentti alkaa "/**" tai "///" ja "\"
- Jos kommentti alkaa "/*!" tai "//!".</translation>
+        <source>Doxygen allows &quot;@&quot; and &quot;\&quot; to start commands.
+By default, &quot;@&quot; is used if the surrounding comment starts with &quot;/**&quot; or &quot;///&quot;, and &quot;\&quot; is used
+if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
+        <translation>Doxygen antaa &quot;@&quot; ja &quot;\&quot; aloittaa komennot.
+ Oletuksena &quot;@&quot; käytetään, jos ympäröivä kommentti alkaa &quot;/**&quot; tai &quot;///&quot; ja &quot;\&quot;
+ Jos kommentti alkaa &quot;/*!&quot; tai &quot;//!&quot;.</translation>
     </message>
     <message>
         <source>&amp;Automatically insert matching characters</source>
@@ -20397,8 +20493,8 @@ if the comment starts with "/*!" or "//!".</source>
     </message>
     <message>
         <location line="+36" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding. Editing not possible.</source>
-        <translation>&lt;b&gt;Virhe:&lt;/b&gt; "%1" ei voitu purkaa "%2"-koodauksella. Editointi ei ole mahdollista.</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
+        <translation>&lt;b&gt;Virhe:&lt;/b&gt; &quot;%1&quot; ei voitu purkaa &quot;%2&quot;-koodauksella. Editointi ei ole mahdollista.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -20530,8 +20626,8 @@ Vaikuttaa jatkorivien sisennykseen.
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;i&gt;Code indentation is configured in &lt;a href="C++"&gt;C++&lt;/a&gt; and &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;Koodin sisennys on määritetty &lt;a href="C++"&gt;C++&lt;/a&gt;- ja &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; -asetuksissa.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;Koodin sisennys on määritetty &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt;- ja &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; -asetuksissa.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20556,7 +20652,7 @@ Vaikuttaa jatkorivien sisennykseen.
     <message>
         <location line="+2" />
         <source>Ta&amp;b size:</source>
-        <translation>Välilehtien koko:</translation>
+        <translation>&amp;Välilehtien koko:</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20777,7 +20873,7 @@ Määrittää, kuinka askelpalautin toimii vuorovaikutuksessa sisennyksen kanssa
     <message>
         <location line="+2" />
         <source>Enable scroll &amp;wheel zooming</source>
-        <translation>Ota vieritys- ja pyöräzoomaus käyttöön</translation>
+        <translation>&amp;Ota vieritys- ja pyöräzoomaus käyttöön</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20883,7 +20979,7 @@ Määrittää, kuinka askelpalautin toimii vuorovaikutuksessa sisennyksen kanssa
     <message>
         <location line="-256" />
         <source>Display line &amp;numbers</source>
-        <translation>Näytä rivit &amp; numerot</translation>
+        <translation>Näytä rivit &amp;numerot</translation>
     </message>
     <message>
         <location line="+4" />
@@ -20913,12 +21009,12 @@ Määrittää, kuinka askelpalautin toimii vuorovaikutuksessa sisennyksen kanssa
     <message>
         <location line="-39" />
         <source>Enable text &amp;wrapping</source>
-        <translation>Ota teksti &amp; rivitys käyttöön</translation>
+        <translation>Ota teksti &amp;rivitys käyttöön</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;i&gt;Set &lt;a href="font zoom"&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;Aseta &lt;a href="font zoom"&gt;kirjasinten rivivälille&lt;/a&gt; 100 %, jotta tekstin rivitysvaihtoehto otetaan käyttöön.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;Aseta &lt;a href=&quot;font zoom&quot;&gt;kirjasinten rivivälille&lt;/a&gt; 100 %, jotta tekstin rivitysvaihtoehto otetaan käyttöön.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -20998,7 +21094,7 @@ Määrittää, kuinka askelpalautin toimii vuorovaikutuksessa sisennyksen kanssa
     <message>
         <location line="+2" />
         <source>&amp;Highlight selection</source>
-        <translation>&amp; Korosta valinta</translation>
+        <translation>&amp;Korosta valinta</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21079,8 +21175,8 @@ Alle 100 %:n arvo voi johtaa päällekkäisyyteen ja virheelliseen grafiikkaan.<
     </message>
     <message>
         <location line="+16" />
-        <source>Color Scheme for Theme "%1"</source>
-        <translation>Väriteema teemalle "%1"</translation>
+        <source>Color Scheme for Theme &quot;%1&quot;</source>
+        <translation>Väriteema teemalle &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+16" />
@@ -21201,8 +21297,8 @@ Alle 100 %:n arvo voi johtaa päällekkäisyyteen ja virheelliseen grafiikkaan.<
     </message>
     <message>
         <location line="-12" />
-        <source>Cannot import code style from "%1".</source>
-        <translation>Koodityyliä ei voi tuoda kohteesta "%1".</translation>
+        <source>Cannot import code style from &quot;%1&quot;.</source>
+        <translation>Koodityyliä ei voi tuoda kohteesta &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -21231,8 +21327,8 @@ Alle 100 %:n arvo voi johtaa päällekkäisyyteen ja virheelliseen grafiikkaan.<
     </message>
     <message>
         <location line="+1" />
-        <source>The color scheme "%1" was modified, do you want to save the changes?</source>
-        <translation>Värimaailmaa "%1" muutettiin, haluatko tallentaa muutokset?</translation>
+        <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
+        <translation>Värimaailmaa &quot;%1&quot; muutettiin, haluatko tallentaa muutokset?</translation>
     </message>
     <message>
         <location line="+7" />
@@ -21246,8 +21342,8 @@ Alle 100 %:n arvo voi johtaa päällekkäisyyteen ja virheelliseen grafiikkaan.<
     </message>
     <message>
         <location line="+16" />
-        <source>File "%1":</source>
-        <translation>Tiedosto "%1":</translation>
+        <source>File &quot;%1&quot;:</source>
+        <translation>Tiedosto &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -21301,8 +21397,8 @@ Alle 100 %:n arvo voi johtaa päällekkäisyyteen ja virheelliseen grafiikkaan.<
     </message>
     <message>
         <location line="+27" />
-        <source>&lt;p align='center'&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href="copy"&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;p align='center'&gt;&lt;b&gt;Sisäänrakennetut väriteemat on &lt;a href="copy"&gt;kopioitava&lt;/a&gt;&lt;br/&gt; ennen kuin niitä voidaan muuttaa&lt;/b&gt;&lt;/p&gt;</translation>
+        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Sisäänrakennetut väriteemat on &lt;a href=&quot;copy&quot;&gt;kopioitava&lt;/a&gt;&lt;br/&gt; ennen kuin niitä voidaan muuttaa&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -21501,12 +21597,12 @@ Alle 100 %:n arvo voi johtaa päällekkäisyyteen ja virheelliseen grafiikkaan.<
     </message>
     <message>
         <location line="+7" />
-        <source>Current document's font size in points.</source>
+        <source>Current document&apos;s font size in points.</source>
         <translation>Nykyisen asiakirjan kirjasinkoko pisteinä.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Word under the current document's text cursor.</source>
+        <source>Word under the current document&apos;s text cursor.</source>
         <translation>Word nykyisen asiakirjan tekstikohdistimen alla.</translation>
     </message>
     <message>
@@ -21540,7 +21636,7 @@ Alle 100 %:n arvo voi johtaa päällekkäisyyteen ja virheelliseen grafiikkaan.<
     <message>
         <location line="+3" />
         <source>Enable Text &amp;Wrapping</source>
-        <translation>Ota tekstin rivitys käyttöön</translation>
+        <translation>&amp;Ota tekstin rivitys käyttöön</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21785,7 +21881,7 @@ Alle 100 %:n arvo voi johtaa päällekkäisyyteen ja virheelliseen grafiikkaan.<
     <message>
         <location line="+4" />
         <source>Cut &amp;Line</source>
-        <translation>Leikkauslinja</translation>
+        <translation>&amp;Leikkauslinja</translation>
     </message>
     <message>
         <location line="+4" />
@@ -22378,7 +22474,7 @@ Käytetään merkitsemään symbolin käytön sisältävä toiminto.</translatio
     </message>
     <message>
         <location line="+1" />
-        <source>Class' data members.</source>
+        <source>Class&apos; data members.</source>
         <translation>Luokan datajäsenet.</translation>
     </message>
     <message>
@@ -23011,152 +23107,152 @@ Ei käytetä välilyönnissä kommenteissa ja merkkijonoissa.</translation>
         <translation>Ei värimallitiedosto.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>johdettu QObjectista</translation>
     </message>
     <message>
         <location line="+1" />
         <source>derived from QWidget</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>johdettu QWidgetistä</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>sapluuna</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with if</source>
-        <comment>group:'C++' trigger:'else'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
         <translation>jos kanssa</translation>
     </message>
     <message>
         <location line="+1" />
         <source>range-based</source>
-        <comment>group:'C++' trigger:'for'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
         <translation>aluepohjainen</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and else</source>
-        <comment>group:'C++' trigger:'if'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
         <translation>ja muuta</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with closing brace comment</source>
-        <comment>group:'C++' trigger:'namespace'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
         <translation>sulkevalla aaltosulkukommentilla</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and catch</source>
-        <comment>group:'C++' trigger:'try'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
         <translation>ja saalis</translation>
     </message>
     <message>
         <location line="+1" />
         <source>namespace</source>
-        <comment>group:'C++' trigger:'using'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
         <translation>nimiavaruus</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'struct'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
         <translation>sapluuna</translation>
     </message>
     <message>
         <location line="+1" />
         <source>(type name READ name WRITE setName NOTIFY nameChanged FINAL)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation>(Kirjoita nimi Lue nimi Kirjoita setName Ilmoita nimettömän finaalin)</translation>
     </message>
     <message>
         <source>(type name READ name WRITE setName NOTIFY nameChanged)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation type="vanished">(tyypin nimi READ name WRITE setName NOTIFY nameChanged)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>kohteiden kanssa</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>kohteen kanssa</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>kohteiden kanssa</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>kohteen kanssa</translation>
     </message>
     <message>
         <location line="+3" />
         <source>QuickTest Test Case</source>
-        <comment>group:'QML' trigger:'TestCase'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>QuickTest -kotelo</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Function</source>
-        <comment>group:'C++' trigger:'TEST'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST&apos;</comment>
         <translation>GTEST -toiminto</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Fixture</source>
-        <comment>group:'C++' trigger:'TEST_F'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_F&apos;</comment>
         <translation>Gtest -valaistus</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Parameterized</source>
-        <comment>group:'C++' trigger:'TEST_P'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_P&apos;</comment>
         <translation>GTEST -parametroitu</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Case</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_CASE&apos;</comment>
         <translation>Testitapaus</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Suite</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_SUITE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_SUITE&apos;</comment>
         <translation>Testisviitti</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Test Case</source>
-        <comment>group:'C++' trigger:'TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_CASE&apos;</comment>
         <translation>Saalistestitapaus</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Scenario</source>
-        <comment>group:'C++' trigger:'SCENARIO'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;SCENARIO&apos;</comment>
         <translation>Saalis skenaario</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="+3" />
         <source>example</source>
-        <comment>group:'Text' trigger:'global'</comment>
+        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
         <translation>esimerkki</translation>
     </message>
     <message>
@@ -23172,17 +23268,17 @@ Ei käytetä välilyönnissä kommenteissa ja merkkijonoissa.</translation>
     <message numerus="yes">
         <location line="+3" />
         <source>%n found.</source>
-        <translation>
-            <numerusform>%n löydetty.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+29" />
         <source>%n occurrences replaced.</source>
-        <translation>
-            <numerusform>%n esiintymää korvattu.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -23217,8 +23313,8 @@ Ei käytetä välilyönnissä kommenteissa ja merkkijonoissa.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Folder "%2":</source>
-        <translation>Kansio "%2":</translation>
+        <source>Folder &quot;%2&quot;:</source>
+        <translation>Kansio &quot;%2&quot;:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -23240,7 +23336,7 @@ Ei sisällä: %3
     <message>
         <location line="+20" />
         <source>Director&amp;y:</source>
-        <translation>Directory:</translation>
+        <translation>Director&amp;y:</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23271,8 +23367,8 @@ Ei sisällä: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/formattexteditor.cpp" line="+71" />
-        <source>Cannot create temporary file "%1": %2.</source>
-        <translation>Väliaikaista tiedostoa "%1" ei voi luoda: %2.</translation>
+        <source>Cannot create temporary file &quot;%1&quot;: %2.</source>
+        <translation>Väliaikaista tiedostoa &quot;%1&quot; ei voi luoda: %2.</translation>
     </message>
     <message>
         <source>TextEditor</source>
@@ -23281,8 +23377,8 @@ Ei sisällä: %3
     </message>
     <message>
         <location line="+21" />
-        <source>Cannot read file "%1": %2.</source>
-        <translation>Tiedostoa "%1" ei voi lukea: %2.</translation>
+        <source>Cannot read file &quot;%1&quot;: %2.</source>
+        <translation>Tiedostoa &quot;%1&quot; ei voi lukea: %2.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -23336,8 +23432,8 @@ Ei sisällä: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kohokohtien määritelmät tarjoaa &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/p&gt; a&gt; moottori.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4" />
@@ -23411,7 +23507,7 @@ Ei sisällä: %3
         <translation>Suodatinpuu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+130" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+140" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
         <source>Sort Alphabetically</source>
         <translation>Lajittele aakkosjärjestyksessä</translation>
@@ -23433,8 +23529,8 @@ Ei sisällä: %3
     </message>
     <message>
         <location line="+15" />
-        <source>Expected mangler ID "l" (lowercase), "u" (uppercase), or "c" (titlecase) after colon.</source>
-        <translation>Odotettu mangler-tunnus "l" (pienet kirjaimet), "u" (isot kirjaimet) tai "c" (otsikko) kaksoispisteen jälkeen.</translation>
+        <source>Expected mangler ID &quot;l&quot; (lowercase), &quot;u&quot; (uppercase), or &quot;c&quot; (titlecase) after colon.</source>
+        <translation>Odotettu mangler-tunnus &quot;l&quot; (pienet kirjaimet), &quot;u&quot; (isot kirjaimet) tai &quot;c&quot; (otsikko) kaksoispisteen jälkeen.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -23486,7 +23582,7 @@ Ei sisällä: %3
     </message>
     <message>
         <location line="+1" />
-        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark's note text.</source>
+        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark&apos;s note text.</source>
         <translation>Etsii kirjanmerkkejä. Suodata tiedostonimellä, kirjanmerkin rivin tai kirjanmerkin huomautustekstillä.</translation>
     </message>
     <message>
@@ -23540,7 +23636,7 @@ Ei sisällä: %3
     <message>
         <location line="-15" />
         <source>&amp;Bookmarks</source>
-        <translation>&amp; Kirjanmerkit</translation>
+        <translation>&amp;Kirjanmerkit</translation>
     </message>
     <message>
         <location line="+53" />
@@ -23657,8 +23753,8 @@ Ei sisällä: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot create temporary directory "%1": %2</source>
-        <translation>Väliaikaista hakemistoa "%1" ei voi luoda: %2</translation>
+        <source>Cannot create temporary directory &quot;%1&quot;: %2</source>
+        <translation>Väliaikaista hakemistoa &quot;%1&quot; ei voi luoda: %2</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23667,13 +23763,13 @@ Ei sisällä: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot change to working directory "%1": %2</source>
-        <translation>Ei voi vaihtaa työhakemistoon "%1": %2</translation>
+        <source>Cannot change to working directory &quot;%1&quot;: %2</source>
+        <translation>Ei voi vaihtaa työhakemistoon &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1": %2</source>
-        <translation>Ei voida suorittaa "%1": %2</translation>
+        <source>Cannot execute &quot;%1&quot;: %2</source>
+        <translation>Ei voida suorittaa &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+109" />
@@ -23682,12 +23778,12 @@ Ei sisällä: %3
     </message>
     <message>
         <location line="+60" />
-        <source>Cannot set permissions on temporary directory "%1": %2</source>
-        <translation>Väliaikaisessa hakemistossa ei voida asettaa käyttöoikeuksia " %1": %2</translation>
+        <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
+        <translation>Väliaikaisessa hakemistossa ei voida asettaa käyttöoikeuksia &quot; %1&quot;: %2</translation>
     </message>
     <message>
-        <source>The process "%1" could not be started: %2</source>
-        <translation type="vanished">Prosessia "%1" ei voitu käynnistää: %2</translation>
+        <source>The process &quot;%1&quot; could not be started: %2</source>
+        <translation type="vanished">Prosessia &quot;%1&quot; ei voitu käynnistää: %2</translation>
     </message>
     <message>
         <source>Quoting error in command.</source>
@@ -23706,13 +23802,13 @@ Ei sisällä: %3
         <translation type="vanished">Päätekomento ei saa olla komentotulkkikomento.</translation>
     </message>
     <message>
-        <source>Cannot start the terminal emulator "%1", change the setting in the Environment preferences. (%2)</source>
-        <translation type="vanished">Pääteemulaattoria "%1" ei voi käynnistää, muuta asetusta ympäristöasetuksissa. (%2)</translation>
+        <source>Cannot start the terminal emulator &quot;%1&quot;, change the setting in the Environment preferences. (%2)</source>
+        <translation type="vanished">Pääteemulaattoria &quot;%1&quot; ei voi käynnistää, muuta asetusta ympäristöasetuksissa. (%2)</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Cannot create socket "%1": %2</source>
-        <translation>Ei voida luoda kantaa "%1": %2</translation>
+        <source>Cannot create socket &quot;%1&quot;: %2</source>
+        <translation>Ei voida luoda kantaa &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="-171" />
@@ -23730,17 +23826,17 @@ Ei sisällä: %3
     <message numerus="yes">
         <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
-        <translation>
-            <numerusform>%1: peruutettu. %n esiintymää %2 tiedostosta.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+6" />
         <source>%1: %n occurrences found in %2 files.</source>
-        <translation>
-            <numerusform>%1: %n esiintymää %2 tiedostosta.</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -23751,7 +23847,7 @@ Ei sisällä: %3
     <message>
         <location line="+5" />
         <source>Excl&amp;usion pattern:</source>
-        <translation>Poissulkemiskuvio:</translation>
+        <translation>Poiss&amp;ulkemiskuvio:</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23796,8 +23892,8 @@ Ei sisällä: %3
     </message>
     <message>
         <location line="+69" />
-        <source>The default suffix if you do not explicitly specify a file extension is ".%1".</source>
-        <translation>Oletusliite, jos et nimenomaisesti määritä tiedostotunnistetta, on ".%1".</translation>
+        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
+        <translation>Oletusliite, jos et nimenomaisesti määritä tiedostotunnistetta, on &quot;.%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
@@ -23838,51 +23934,51 @@ Ei sisällä: %3
     </message>
     <message>
         <location line="+176" />
-        <source>The path "%1" expanded to an empty string.</source>
-        <translation>Polku "%1" laajennettiin tyhjäksi merkkijonoksi.</translation>
+        <source>The path &quot;%1&quot; expanded to an empty string.</source>
+        <translation>Polku &quot;%1&quot; laajennettiin tyhjäksi merkkijonoksi.</translation>
     </message>
     <message>
         <location line="-72" />
         <location line="+10" />
         <location line="+20" />
-        <source>The path "%1" does not exist.</source>
-        <translation>Polkua "%1" ei ole olemassa.</translation>
+        <source>The path &quot;%1&quot; does not exist.</source>
+        <translation>Polkua &quot;%1&quot; ei ole olemassa.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+36" />
-        <source>The path "%1" is not a directory.</source>
-        <translation>Polku "%1" ei ole hakemisto.</translation>
+        <source>The path &quot;%1&quot; is not a directory.</source>
+        <translation>Polku &quot;%1&quot; ei ole hakemisto.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+10" />
-        <source>The path "%1" is not a file.</source>
-        <translation>Polku "%1" ei ole tiedosto.</translation>
+        <source>The path &quot;%1&quot; is not a file.</source>
+        <translation>Polku &quot;%1&quot; ei ole tiedosto.</translation>
     </message>
     <message>
         <location line="-4" />
-        <source>The directory "%1" does not exist.</source>
-        <translation>Hakemistoa "%1" ei ole olemassa.</translation>
+        <source>The directory &quot;%1&quot; does not exist.</source>
+        <translation>Hakemistoa &quot;%1&quot; ei ole olemassa.</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>The path "%1" is not an executable file.</source>
-        <translation>Polku "%1" ei ole suoritettava tiedosto.</translation>
+        <source>The path &quot;%1&quot; is not an executable file.</source>
+        <translation>Polku &quot;%1&quot; ei ole suoritettava tiedosto.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid path "%1".</source>
-        <translation>Virheellinen polku "%1".</translation>
+        <source>Invalid path &quot;%1&quot;.</source>
+        <translation>Virheellinen polku &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1".</source>
-        <translation>Ei voida suorittaa "%1".</translation>
+        <source>Cannot execute &quot;%1&quot;.</source>
+        <translation>Ei voida suorittaa &quot;%1&quot;.</translation>
     </message>
     <message>
-        <source>Full path: "%1"</source>
-        <translation type="vanished">Koko polku: "%1"</translation>
+        <source>Full path: &quot;%1&quot;</source>
+        <translation type="vanished">Koko polku: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-58" />
@@ -23922,8 +24018,8 @@ Ei sisällä: %3
     </message>
     <message>
         <location line="+121" />
-        <source>Directory "%1" will be created.</source>
-        <translation>Hakemisto "%1" luodaan.</translation>
+        <source>Directory &quot;%1&quot; will be created.</source>
+        <translation>Hakemisto &quot;%1&quot; luodaan.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -23942,13 +24038,13 @@ Ei sisällä: %3
     </message>
     <message>
         <location line="+12" />
-        <source>Invalid character ".".</source>
-        <translation>Väärä merkki ".".</translation>
+        <source>Invalid character &quot;.&quot;.</source>
+        <translation>Väärä merkki &quot;.&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Invalid character "%1" found.</source>
-        <translation>Virheellinen merkki "%1" löytyi.</translation>
+        <source>Invalid character &quot;%1&quot; found.</source>
+        <translation>Virheellinen merkki &quot;%1&quot; löytyi.</translation>
     </message>
     <message>
         <location line="-232" />
@@ -24010,12 +24106,12 @@ Ei sisällä: %3
     <message>
         <location line="+7" />
         <source>C&amp;lose All</source>
-        <translation>Sulje kaikki</translation>
+        <translation>Su&amp;lje kaikki</translation>
     </message>
     <message>
         <location line="-3" />
         <source>Save &amp;as...</source>
-        <translation>Tallenna nimellä...</translation>
+        <translation>T&amp;allenna nimellä...</translation>
     </message>
     <message>
         <location line="+5" />
@@ -24103,12 +24199,12 @@ Ei sisällä: %3
         <location line="-16" />
         <location line="+20" />
         <source>Running %1
-in "%2".
+in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
         <translation>Käynnissä %1
-kohdassa "%2".
+kohdassa &quot;%2&quot;.
 
 </translation>
     </message>
@@ -24156,12 +24252,12 @@ kohdassa "%2".
     <message>
         <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
         <source>Do not &amp;ask again</source>
-        <translation>Älä kysy uudestaan</translation>
+        <translation>Älä kysy uudest&amp;aan</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Do not &amp;show again</source>
-        <translation>Älä näytä uudelleen</translation>
+        <translation>Ä&amp;lä näytä uudelleen</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
@@ -24184,8 +24280,8 @@ kohdassa "%2".
         <translation>Yksityiskohdat</translation>
     </message>
     <message>
-        <source>copyFile is not implemented for "%1"</source>
-        <translation type="vanished">copyFileä ei ole otettu käyttöön kohteelle "%1"</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">copyFileä ei ole otettu käyttöön kohteelle &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Cannot copy from %1, it is not a directory.</source>
@@ -24197,61 +24293,61 @@ kohdassa "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to create tar archive from source: %3</source>
-        <translation>Rekursiivinen kopiointi kohteesta "%1" kohteeseen "%2" epäonnistui, kun yritettiin luoda tar-arkisto lähteestä: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
+        <translation>Rekursiivinen kopiointi kohteesta &quot;%1&quot; kohteeseen &quot;%2&quot; epäonnistui, kun yritettiin luoda tar-arkisto lähteestä: %3</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to extract tar archive to target: %3</source>
-        <translation>Rekursiivinen kopiointi kohteesta "%1" kohteeseen "%2" epäonnistui, kun tar-arkistoa yritettiin purkaa kohteeseen: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
+        <translation>Rekursiivinen kopiointi kohteesta &quot;%1&quot; kohteeseen &quot;%2&quot; epäonnistui, kun tar-arkistoa yritettiin purkaa kohteeseen: %3</translation>
     </message>
     <message>
-        <source>fileContents is not implemented for "%1"</source>
-        <translation type="vanished">fileContents ei ole käytössä "%1"</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">fileContents ei ole käytössä &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>writeFileContents is not implemented for "%1"</source>
-        <translation type="vanished">writeFileContents ei ole käytössä "%1"</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">writeFileContents ei ole käytössä &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>createTempFile is not implemented for "%1"</source>
-        <translation type="vanished">createTempFileä ei ole otettu käyttöön kohteelle "%1"</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">createTempFileä ei ole otettu käyttöön kohteelle &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-139" />
         <location line="+409" />
-        <source>Path "%1" exists but is not a writable directory.</source>
-        <translation>Polku "%1" on olemassa, mutta se ei ole kirjoitettava hakemisto.</translation>
+        <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
+        <translation>Polku &quot;%1&quot; on olemassa, mutta se ei ole kirjoitettava hakemisto.</translation>
     </message>
     <message>
         <location line="-356" />
-        <source>copyFile is not implemented for "%1".</source>
-        <translation>CopyFileä ei toteuteta "%1".</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;.</source>
+        <translation>CopyFileä ei toteuteta &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+30" />
-        <source>Cannot copy from "%1", it is not a directory.</source>
-        <translation>"%1" ei voi kopioida, se ei ole hakemisto.</translation>
+        <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
+        <translation>&quot;%1&quot; ei voi kopioida, se ei ole hakemisto.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Cannot copy "%1" to "%2": %3</source>
-        <translation>"%1" ei voi kopioida "%2":%3</translation>
+        <source>Cannot copy &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>&quot;%1&quot; ei voi kopioida &quot;%2&quot;:%3</translation>
     </message>
     <message>
         <location line="+103" />
-        <source>fileContents is not implemented for "%1".</source>
-        <translation>Filecontentia ei toteuteta "%1".</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>Filecontentia ei toteuteta &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for "%1".</source>
-        <translation>WriteFileContentia ei toteuteta "%1".</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>WriteFileContentia ei toteuteta &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+66" />
-        <source>createTempFile is not implemented for "%1".</source>
-        <translation>CreateTempFileä ei toteuteta "%1".</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation>CreateTempFileä ei toteuteta &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24260,8 +24356,8 @@ kohdassa "%2".
     </message>
     <message>
         <location line="+180" />
-        <source>Refusing to remove the standard directory "%1".</source>
-        <translation>Kieltäytyminen poistamasta vakiohakemistoa "%1".</translation>
+        <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
+        <translation>Kieltäytyminen poistamasta vakiohakemistoa &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -24275,81 +24371,81 @@ kohdassa "%2".
     </message>
     <message>
         <location line="+37" />
-        <source>Failed to remove directory "%1".</source>
-        <translation>Hakemiston "%1" poistaminen epäonnistui.</translation>
+        <source>Failed to remove directory &quot;%1&quot;.</source>
+        <translation>Hakemiston &quot;%1&quot; poistaminen epäonnistui.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Failed to remove file "%1".</source>
-        <translation>Tiedoston "%1" poistaminen epäonnistui.</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>Tiedoston &quot;%1&quot; poistaminen epäonnistui.</translation>
     </message>
     <message>
         <location line="+551" />
-        <source>Failed creating temporary file "%1" (too many tries).</source>
-        <translation>Epäonnistunut väliaikaisen tiedoston luominen "%1" (liian monta yritystä).</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
+        <translation>Epäonnistunut väliaikaisen tiedoston luominen &quot;%1&quot; (liian monta yritystä).</translation>
     </message>
     <message>
-        <source>Failed to copy file "%1" to "%2".</source>
-        <translation type="vanished">Tiedoston "%1" kopioiminen kohteeseen "%2" epäonnistui.</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation type="vanished">Tiedoston &quot;%1&quot; kopioiminen kohteeseen &quot;%2&quot; epäonnistui.</translation>
     </message>
     <message>
-        <source>File "%1" does not exist</source>
-        <translation type="vanished">Tiedostoa "%1" ei ole olemassa</translation>
+        <source>File &quot;%1&quot; does not exist</source>
+        <translation type="vanished">Tiedostoa &quot;%1&quot; ei ole olemassa</translation>
     </message>
     <message>
-        <source>Could not open File "%1"</source>
-        <translation type="vanished">Tiedostoa "%1" ei voitu avata</translation>
+        <source>Could not open File &quot;%1&quot;</source>
+        <translation type="vanished">Tiedostoa &quot;%1&quot; ei voitu avata</translation>
     </message>
     <message>
         <location line="-449" />
-        <source>Cannot read "%1": %2</source>
-        <translation>Ei voida lukea "%1": %2</translation>
+        <source>Cannot read &quot;%1&quot;: %2</source>
+        <translation>Ei voida lukea &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>Could not open file "%1" for writing</source>
-        <translation type="vanished">Tiedostoa "%1" ei voitu avata kirjoittamista varten</translation>
+        <source>Could not open file &quot;%1&quot; for writing</source>
+        <translation type="vanished">Tiedostoa &quot;%1&quot; ei voitu avata kirjoittamista varten</translation>
     </message>
     <message>
-        <source>Could not write to file "%1" (only %2 of %3 bytes written)</source>
-        <translation type="vanished">Ei voitu kirjoittaa tiedostoon "%1" (vain %2 / %3 tavua kirjoitettu)</translation>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
+        <translation type="vanished">Ei voitu kirjoittaa tiedostoon &quot;%1&quot; (vain %2 / %3 tavua kirjoitettu)</translation>
     </message>
     <message>
-        <source>Could not create temporary file in "%1" (%2)</source>
-        <translation type="vanished">Ei voitu luoda väliaikaista tiedostoa kohteeseen "%1" (%2)</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
+        <translation type="vanished">Ei voitu luoda väliaikaista tiedostoa kohteeseen &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="-87" />
         <location line="+406" />
-        <source>Failed to copy file "%1" to "%2": %3</source>
-        <translation>Tiedoston "%1" kopiointi kohteeseen "%2" epäonnistui: %3</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Tiedoston &quot;%1&quot; kopiointi kohteeseen &quot;%2&quot; epäonnistui: %3</translation>
     </message>
     <message>
         <location line="-333" />
-        <source>File "%1" does not exist.</source>
-        <translation>Tiedostoa "%1" ei ole.</translation>
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>Tiedostoa &quot;%1&quot; ei ole.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File "%1".</source>
-        <translation>Tiedostoa ei voitu avata "%1".</translation>
+        <source>Could not open File &quot;%1&quot;.</source>
+        <translation>Tiedostoa ei voitu avata &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Could not open file "%1" for writing.</source>
-        <translation>Tiedostoa ei voitu avata "%1" kirjoittamiseen.</translation>
+        <source>Could not open file &quot;%1&quot; for writing.</source>
+        <translation>Tiedostoa ei voitu avata &quot;%1&quot; kirjoittamiseen.</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
-        <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %n byte(s) written).</source>
         <translation>
-            <numerusform>Ei voitu kirjoittaa tiedostoon " %1" (vain %2 %n tavuista (t) kirjoitettu).</numerusform>
-            <numerusform>Ei voitu kirjoittaa tiedostoon " %1" (vain %2 %n tavuista (t) kirjoitettu).</numerusform>
+            <numerusform>Ei voitu kirjoittaa tiedostoon &quot; %1&quot; (vain %2 %n tavuista (t) kirjoitettu).</numerusform>
+            <numerusform>Ei voitu kirjoittaa tiedostoon &quot; %1&quot; (vain %2 %n tavuista (t) kirjoitettu).</numerusform>
         </translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Could not create temporary file in "%1" (%2).</source>
-        <translation>Väliaikaista tiedostoa ei voinut luoda "%1" (%2).</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2).</source>
+        <translation>Väliaikaista tiedostoa ei voinut luoda &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location line="+138" />
@@ -24358,22 +24454,22 @@ kohdassa "%2".
     </message>
     <message>
         <location line="+202" />
-        <source>Failed reading file "%1": %2</source>
-        <translation>Tiedoston "%1" lukeminen epäonnistui: %2</translation>
+        <source>Failed reading file &quot;%1&quot;: %2</source>
+        <translation>Tiedoston &quot;%1&quot; lukeminen epäonnistui: %2</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Failed writing file "%1": %2</source>
-        <translation>Tiedoston "%1" kirjoitus epäonnistui: %2</translation>
+        <source>Failed writing file &quot;%1&quot;: %2</source>
+        <translation>Tiedoston &quot;%1&quot; kirjoitus epäonnistui: %2</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Failed creating temporary file "%1": %2</source>
-        <translation>Väliaikaisen tiedoston "%1" luominen epäonnistui: %2</translation>
+        <source>Failed creating temporary file &quot;%1&quot;: %2</source>
+        <translation>Väliaikaisen tiedoston &quot;%1&quot; luominen epäonnistui: %2</translation>
     </message>
     <message>
-        <source>Failed creating temporary file "%1" (too many tries)</source>
-        <translation type="vanished">Väliaikaisen tiedoston "%1" luominen epäonnistui (liian monta yritystä)</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
+        <translation type="vanished">Väliaikaisen tiedoston &quot;%1&quot; luominen epäonnistui (liian monta yritystä)</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
@@ -24392,18 +24488,18 @@ kohdassa "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/elfreader.cpp" line="+130" />
-        <source>"%1" is an invalid ELF object (%2)</source>
-        <translation>"%1" on virheellinen ELF-objekti (%2)</translation>
+        <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
+        <translation>&quot;%1&quot; on virheellinen ELF-objekti (%2)</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>"%1" is not an ELF object (file too small)</source>
-        <translation>"%1" ei ole ELF-objekti (tiedosto liian pieni)</translation>
+        <source>&quot;%1&quot; is not an ELF object (file too small)</source>
+        <translation>&quot;%1&quot; ei ole ELF-objekti (tiedosto liian pieni)</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>"%1" is not an ELF object</source>
-        <translation>"%1" ei ole ELF-objekti</translation>
+        <source>&quot;%1&quot; is not an ELF object</source>
+        <translation>&quot;%1&quot; ei ole ELF-objekti</translation>
     </message>
     <message>
         <location line="+8" />
@@ -24428,9 +24524,9 @@ kohdassa "%2".
     <message numerus="yes">
         <location line="+9" />
         <source>announced %n sections, each %1 bytes, exceed file size</source>
-        <translation>
-            <numerusform>ilmoitti %n osiota, jokainen %1 tavua, ylittää tiedostokoon</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -24455,14 +24551,14 @@ To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-To disable a variable, prefix the line with "#".</source>
+To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="vanished">Anna yksi ympäristömuuttuja riviä kohden.
 Jos haluat asettaa tai muuttaa muuttujan, käytä MUUTTUJA=ARVO.
 Jos haluat lisätä muuttujaan, käytä MUUTTUJA+=ARVO.
 Jos haluat lisätä muuttujan alkuun, käytä VARIABLE=+ARVO.
 Olemassa oleviin muuttujiin voidaan viitata arvossa ${OTHER}.
 Jos haluat tyhjentää muuttujan, laita sen nimi riville, jossa ei ole mitään muuta.
-Jos haluat poistaa muuttujan käytöstä, liitä rivin eteen "#".</translation>
+Jos haluat poistaa muuttujan käytöstä, liitä rivin eteen &quot;#&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
@@ -24502,13 +24598,13 @@ Jos haluat poistaa muuttujan käytöstä, liitä rivin eteen "#".</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Invalid character "%1".</source>
-        <translation>Virheellinen merkki "%1".</translation>
+        <source>Invalid character &quot;%1&quot;.</source>
+        <translation>Virheellinen merkki &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid characters "%1".</source>
-        <translation>Virheellisiä merkkejä "%1".</translation>
+        <source>Invalid characters &quot;%1&quot;.</source>
+        <translation>Virheellisiä merkkejä &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -24549,13 +24645,13 @@ Jos haluat poistaa muuttujan käytöstä, liitä rivin eteen "#".</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Could not set permissions on "%1"</source>
-        <translation>Ei voitu asettaa käyttöoikeuksia "%1"</translation>
+        <source>Could not set permissions on &quot;%1&quot;</source>
+        <translation>Ei voitu asettaa käyttöoikeuksia &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+250" />
-        <source>No "localSource" device hook set.</source>
-        <translation>Ei "localSource"-laitteen koukkua asetettu.</translation>
+        <source>No &quot;localSource&quot; device hook set.</source>
+        <translation>Ei &quot;localSource&quot;-laitteen koukkua asetettu.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
@@ -24637,20 +24733,20 @@ Jos haluat poistaa muuttujan käytöstä, liitä rivin eteen "#".</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Overwrite existing file "%1"?</source>
-        <translation>Korvataanko olemassa oleva tiedosto "%1"?</translation>
+        <source>Overwrite existing file &quot;%1&quot;?</source>
+        <translation>Korvataanko olemassa oleva tiedosto &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+21" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>Tiedostoa "%1" ei voitu kopioida kohteeseen "%2".</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>Tiedostoa &quot;%1&quot; ei voitu kopioida kohteeseen &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
         <location line="+409" />
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
-        <source>Failed to create directory "%1".</source>
-        <translation>Hakemiston "%1" luominen epäonnistui.</translation>
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>Hakemiston &quot;%1&quot; luominen epäonnistui.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
@@ -24711,15 +24807,15 @@ Jos haluat poistaa muuttujan käytöstä, liitä rivin eteen "#".</translation>
         <location line="+14" />
         <location line="+2" />
         <source>%n Items</source>
-        <translation>
-            <numerusform>%n kohdetta</numerusform>
-            <numerusform />
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
-        <source>Failed to start process launcher at "%1": %2</source>
-        <translation>Prosessin käynnistysohjelman käynnistäminen kohdassa "%1" epäonnistui: %2</translation>
+        <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
+        <translation>Prosessin käynnistysohjelman käynnistäminen kohdassa &quot;%1&quot; epäonnistui: %2</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24835,20 +24931,20 @@ Jos haluat poistaa muuttujan käytöstä, liitä rivin eteen "#".</translation>
         <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
-To disable a variable, prefix this line with "#".
+To disable a variable, prefix this line with &quot;#&quot;.
 To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-Lines starting with "##" will be treated as comments.</source>
+Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Kirjoita yksi ympäristömuuttuja riviä kohti.
  Aseta tai muuttaa muuttujaa, käytä muuttujaa = arvo.
- Muuttujan käytöstä poistamalla tämä rivi "#".
+ Muuttujan käytöstä poistamalla tämä rivi &quot;#&quot;.
  Jos haluat liittää muuttujaan, käytä muuttujaa+= arvo.
  Voit valmistautua muuttujaan käyttämällä muuttujaa =+arvo.
  Nykyisiin muuttujiin voidaan viitata arvoon $ {muun} kanssa.
  Muuttujan tyhjentämiseksi laita sen nimi riviin, jossa ei ole mitään muuta.
- Rivit alkavat "##" kohdellaan kommentteina.</translation>
+ Rivit alkavat &quot;##&quot; kohdellaan kommentteina.</translation>
     </message>
     <message>
         <location line="+112" />
@@ -24867,18 +24963,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+29" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>Ohjelmaa "%1" ei ole olemassa tai se ei ole suoritettavissa.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>Ohjelmaa &quot;%1&quot; ei ole olemassa tai se ei ole suoritettavissa.</translation>
     </message>
     <message>
         <location line="+79" />
-        <source>The program "%1" could not be found.</source>
-        <translation>Ohjelmaa "%1" ei löytynyt.</translation>
+        <source>The program &quot;%1&quot; could not be found.</source>
+        <translation>Ohjelmaa &quot;%1&quot; ei löytynyt.</translation>
     </message>
     <message>
         <location line="+908" />
-        <source>Failed to create process interface for "%1".</source>
-        <translation>Prosessirajapinnan luominen epäonnistui "%1".</translation>
+        <source>Failed to create process interface for &quot;%1&quot;.</source>
+        <translation>Prosessirajapinnan luominen epäonnistui &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+163" />
@@ -24892,8 +24988,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The process "%1" is not responding.</source>
-        <translation>Prosessi "%1" ei vastaa.</translation>
+        <source>The process &quot;%1&quot; is not responding.</source>
+        <translation>Prosessi &quot;%1&quot; ei vastaa.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -24902,32 +24998,32 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+233" />
-        <source>The command "%1" finished successfully.</source>
-        <translation>Komento "%1" päättyi onnistuneesti.</translation>
+        <source>The command &quot;%1&quot; finished successfully.</source>
+        <translation>Komento &quot;%1&quot; päättyi onnistuneesti.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated with exit code %2.</source>
-        <translation>Komento "%1" päättyi poistumiskoodiin %2.</translation>
+        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
+        <translation>Komento &quot;%1&quot; päättyi poistumiskoodiin %2.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated abnormally.</source>
-        <translation>Komento "%1" päättyi epänormaalisti.</translation>
+        <source>The command &quot;%1&quot; terminated abnormally.</source>
+        <translation>Komento &quot;%1&quot; päättyi epänormaalisti.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" could not be started.</source>
-        <translation>Komentoa "%1" ei voitu käynnistää.</translation>
+        <source>The command &quot;%1&quot; could not be started.</source>
+        <translation>Komentoa &quot;%1&quot; ei voitu käynnistää.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>The command "%1" was canceled after %2 ms.</source>
-        <translation>Komento " %1" peruutettiin %2 ms: n jälkeen.</translation>
+        <source>The command &quot;%1&quot; was canceled after %2 ms.</source>
+        <translation>Komento &quot; %1&quot; peruutettiin %2 ms: n jälkeen.</translation>
     </message>
     <message>
-        <source>The command "%1" did not respond within the timeout limit (%2 s).</source>
-        <translation type="vanished">Komento "%1" ei vastannut aikakatkaisun (%2 s) sisällä.</translation>
+        <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
+        <translation type="vanished">Komento &quot;%1&quot; ei vastannut aikakatkaisun (%2 s) sisällä.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
@@ -24966,8 +25062,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open "%1".</source>
-        <translation>Ei voitu avata "%1".</translation>
+        <source>Could not open &quot;%1&quot;.</source>
+        <translation>Ei voitu avata &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -24988,13 +25084,13 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="-264" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Yhtään kelvollista asetustiedostoa ei löytynyt.&lt;/p&gt;&lt;p&gt;Kaikki hakemistosta "%1" löytyneet asetustiedostot eivät sovellu nykyiselle versiolle %2, esimerkiksi koska ne on kirjoittanut tiedoston % yhteensopimaton versio 2 tai koska käytettiin eri asetuspolkua.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+265" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were either too new or too old to be read.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Kelvollista asetustiedostoa ei löytynyt.&lt;/p&gt;&lt;p&gt;Kaikki hakemistosta "%1" löydetyt asetustiedostot olivat joko liian uusia tai liian vanhoja luettavaksi.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Kelvollista asetustiedostoa ei löytynyt.&lt;/p&gt;&lt;p&gt;Kaikki hakemistosta &quot;%1&quot; löydetyt asetustiedostot olivat joko liian uusia tai liian vanhoja luettavaksi.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+11" />
@@ -25003,18 +25099,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>&lt;p&gt;The versioned backup "%1" of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Asetustiedoston versioitua varmuuskopiota "%1" käytetään, koska versioimattoman tiedoston on luonut yhteensopimaton versio %2.&lt;/p&gt;&lt;p&gt;Asetusmuutokset, jotka on tehty sen jälkeen, kun tämä versio %2 käytettiin ohitetaan, ja nyt tehtyjä muutoksia &lt;b&gt;ei&lt;/b&gt; siirretä uudempaan versioon.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;The versioned backup &quot;%1&quot; of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Asetustiedoston versioitua varmuuskopiota &quot;%1&quot; käytetään, koska versioimattoman tiedoston on luonut yhteensopimaton versio %2.&lt;/p&gt;&lt;p&gt;Asetusmuutokset, jotka on tehty sen jälkeen, kun tämä versio %2 käytettiin ohitetaan, ja nyt tehtyjä muutoksia &lt;b&gt;ei&lt;/b&gt; siirretä uudempaan versioon.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Settings File for "%1" from a Different Environment?</source>
-        <translation>Asetustiedosto "%1" eri ympäristöstä?</translation>
+        <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
+        <translation>Asetustiedosto &quot;%1&quot; eri ympäristöstä?</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file "%2"?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Tällä %1:n ilmentymällä luomaa asetustiedostoa ei löytynyt.&lt;/p&gt;&lt;p&gt;Oletko työskennellyt tämän projektin kanssa toisella koneella tai käyttämällä eri asetuspolkua aiemmin?&lt;/p&gt;&lt;p&gt;Oletko edelleen haluatko ladata asetustiedoston "%2"?&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file &quot;%2&quot;?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Tällä %1:n ilmentymällä luomaa asetustiedostoa ei löytynyt.&lt;/p&gt;&lt;p&gt;Oletko työskennellyt tämän projektin kanssa toisella koneella tai käyttämällä eri asetuspolkua aiemmin?&lt;/p&gt;&lt;p&gt;Oletko edelleen haluatko ladata asetustiedoston &quot;%2&quot;?&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+55" />
@@ -25023,8 +25119,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" is not supported by %2. Do you want to try loading it anyway?</source>
-        <translation>%2 ei tue "%1". Haluatko silti yrittää ladata sen?</translation>
+        <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
+        <translation>%2 ei tue &quot;%1&quot;. Haluatko silti yrittää ladata sen?</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/aspects.cpp" line="+92" />
@@ -25079,7 +25175,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellpadding=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Muuttuja&lt;/th&gt;&lt;th&gt;Laajenee&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td &gt;nykyisen tiedoston hakemisto&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;tiedoston nimi (koko polulla)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;% n&lt;/td&gt;&lt;td&gt;tiedoston nimi (ilman polkua)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
@@ -25099,8 +25195,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+3" />
         <location line="+7" />
-        <source>Insert "%1"</source>
-        <translation>Lisää "%1"</translation>
+        <source>Insert &quot;%1&quot;</source>
+        <translation>Lisää &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-3" />
@@ -25141,8 +25237,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+7" />
-        <source>Command "%1" was not found.</source>
-        <translation>Komentoa "%1" ei löytynyt.</translation>
+        <source>Command &quot;%1&quot; was not found.</source>
+        <translation>Komentoa &quot;%1&quot; ei löytynyt.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -25167,8 +25263,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+28" />
         <location line="+45" />
-        <source>Failed to start terminal process: "%1".</source>
-        <translation>Pääteprosessin aloittaminen epäonnistui: "%1".</translation>
+        <source>Failed to start terminal process: &quot;%1&quot;.</source>
+        <translation>Pääteprosessin aloittaminen epäonnistui: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
@@ -25220,9 +25316,9 @@ Lines starting with "##" will be treated as comments.</source>
     <name>TextEditor::Internal::Snippets</name>
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippetscollection.cpp" line="-255" />
-        <source />
+        <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
-        <translation />
+        <translation></translation>
     </message>
 </context>
 </TS>

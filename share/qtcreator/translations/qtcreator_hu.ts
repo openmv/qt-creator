@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+838" />
         <source>Copy</source>
         <translation>Másolat</translation>
     </message>
@@ -30,82 +30,82 @@
         <translation>OpenMV Cam beállítások</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Turn on WiFi Shield on startup</source>
         <translation>Indításkor kapcsolja be a WiFi Shield funkciót</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Client Mode (Normal)</source>
         <translation>Kliens mód (normál)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Password</source>
         <translation>Jelszó</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter your WiFi network password here</source>
         <translation>Kérjük, írja be ide a WiFi hálózat jelszavát</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Type</source>
         <translation>Típus</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Open (No password)</source>
         <translation>Nyitva (nincs jelszó)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WPA (Modern WiFi Security)</source>
         <translation>WPA (modern WiFi biztonság)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>WEP (Hexadecimal password)</source>
         <translation>WEP (hexadecimális jelszó)</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>SSID</source>
         <translation>SSID</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter or select your WiFi network here</source>
         <translation>Kérjük, adja meg vagy válassza ki itt a WiFi hálózatát</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Acess Point Mode</source>
         <translation>Hozzáférési pont mód</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
         <translation>Kérjük, adja meg a WiFi hálózat nevét a jelszó létrehozásához</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
         <translation>Kérjük, adja meg a létrehozandó Wi-Fi hálózat nevét</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Board Name</source>
         <translation>Tábla neve</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
         <translation>Kérjük, adja meg az OpenMV kamerájának nevét</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Duplicate REPL on the UART on startup</source>
         <translation>A REPL megkettőzése az UART-on indításkor</translation>
     </message>
@@ -118,42 +118,42 @@
         <translation>000</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Max</source>
         <translation>Max</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Median</source>
         <translation>Középső</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mode</source>
         <translation>Mód</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Min</source>
         <translation>Min</translation>
     </message>
     <message>
-        <location />
+        <location/>
         <source>Mean</source>
         <translation>Átlagos</translation>
     </message>
@@ -205,41 +205,41 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for '%1'...</source>
-        <translation>'%1' új szintaxisdefiníciójának letöltése...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation>&apos;%1&apos; új szintaxisdefiníciójának letöltése...</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for '%1' to version %2...</source>
-        <translation>'%1' szintaktikai definíciójának frissítése a %2 verzióra...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation>&apos;%1&apos; szintaktikai definíciójának frissítése a %2 verzióra...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+984" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
         <source>Copy/Convert Python File</source>
         <translation>Python fájl másolása/konvertálása</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+21" />
         <location line="+7" />
-        <location line="+94" />
+        <location line="+91" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+76" />
         <location line="+7" />
         <source>Unable to overwrite output file!</source>
         <translation>Nem lehet felülírni a kimeneti fájlt!</translation>
     </message>
     <message>
-        <location line="-125" />
+        <location line="-124" />
         <source>Model Zoo</source>
         <translation>Állatkert</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+77" />
         <source>Model conversion is unnecessary for this board, as it lacks an NPU accelerator.</source>
         <translation>A modellkonverzió felesleges ehhez a táblához, mivel hiányzik az NPU gyorsítója.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <source>Convert Model</source>
         <translation>Konvertál</translation>
     </message>
@@ -335,8 +335,8 @@
         <translation type="vanished">Munkaterület-kezelő</translation>
     </message>
     <message>
-        <source>&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;What is a Workspace?&lt;/a&gt;</source>
-        <translation type="vanished">&lt;a href="qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html"&gt;Mi az a munkaterület?&lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;What is a Workspace?&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href=&quot;qthelp://org.qt-project.qtcreator/doc/creator-project-managing-workspaces.html&quot;&gt;Mi az a munkaterület?&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Workspace</source>
@@ -639,7 +639,7 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Request Copilot suggestion at the current editor's cursor position.</source>
+        <source>Request Copilot suggestion at the current editor&apos;s cursor position.</source>
         <translation>Kérje meg a Copilot javaslatát az aktuális szerkesztő kurzor helyzetében.</translation>
     </message>
     <message>
@@ -893,8 +893,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>Nem sikerült megnyitni a(z) "%1" szerkesztőjét.</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>Nem sikerült megnyitni a(z) &quot;%1&quot; szerkesztőjét.</translation>
     </message>
     <message>
         <location line="+28" />
@@ -929,7 +929,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="-2268" />
         <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+445" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
@@ -1027,8 +1027,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+74" />
-        <source>An item named "%1" already exists at this location. Do you want to overwrite it?</source>
-        <translation>Egy "%1" nevű elem már létezik ezen a helyen. Felül akarja írni?</translation>
+        <source>An item named &quot;%1&quot; already exists at this location. Do you want to overwrite it?</source>
+        <translation>Egy &quot;%1&quot; nevű elem már létezik ezen a helyen. Felül akarja írni?</translation>
     </message>
     <message>
         <location line="+230" />
@@ -1146,7 +1146,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="+12" />
         <source>Ad&amp;vanced</source>
-        <translation>Fejlett</translation>
+        <translation>&amp;Fejlett</translation>
     </message>
     <message>
         <location line="+38" />
@@ -1155,12 +1155,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+7" />
-        <source>X-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>X-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>Az aktuális szerkesztő bal felső sarkának X-koordinátája a képernyőhöz viszonyítva.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Y-coordinate of the current editor's upper left corner, relative to screen.</source>
+        <source>Y-coordinate of the current editor&apos;s upper left corner, relative to screen.</source>
         <translation>Az aktuális szerkesztő bal felső sarkának Y-koordinátája a képernyőhöz viszonyítva.</translation>
     </message>
     <message>
@@ -1170,27 +1170,27 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <source>The text file "%1" has the size %2MB and might take more memory to open and process than available.
+        <source>The text file &quot;%1&quot; has the size %2MB and might take more memory to open and process than available.
 
 Continue?</source>
-        <translation>A "%1" szövegfájl mérete %2 MB, és több memóriát igényelhet a megnyitása és feldolgozása, mint amennyi rendelkezésre áll.
+        <translation>A &quot;%1&quot; szövegfájl mérete %2 MB, és több memóriát igényelhet a megnyitása és feldolgozása, mint amennyi rendelkezésre áll.
 
 Folytatni?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>Could not open "%1": Cannot open files of type "%2".</source>
-        <translation>Nem sikerült megnyitni: "%1": Nem lehet megnyitni a "%2" típusú fájlokat.</translation>
+        <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
+        <translation>Nem sikerült megnyitni: &quot;%1&quot;: Nem lehet megnyitni a &quot;%2&quot; típusú fájlokat.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not open "%1" for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>A(z) "%1" nem nyitható meg olvasásra. A fájl vagy nem létezik, vagy nincs jogosultsága a megnyitásához.</translation>
+        <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
+        <translation>A(z) &quot;%1&quot; nem nyitható meg olvasásra. A fájl vagy nem létezik, vagy nincs jogosultsága a megnyitásához.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Could not open "%1": Unknown error.</source>
-        <translation>"%1" nem nyitható meg: Ismeretlen hiba.</translation>
+        <source>Could not open &quot;%1&quot;: Unknown error.</source>
+        <translation>&quot;%1&quot; nem nyitható meg: Ismeretlen hiba.</translation>
     </message>
     <message>
         <location line="+1130" />
@@ -1267,18 +1267,18 @@ Folytatni?</translation>
     </message>
     <message>
         <location line="+308" />
-        <source>Close "%1"</source>
-        <translation>"%1" bezárása</translation>
+        <source>Close &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; bezárása</translation>
     </message>
     <message>
         <location line="+27" />
-        <source>Unpin "%1"</source>
-        <translation>"%1" rögzítésének feloldása</translation>
+        <source>Unpin &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; rögzítésének feloldása</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Pin "%1"</source>
-        <translation>"%1" rögzítése</translation>
+        <source>Pin &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; rögzítése</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1403,7 +1403,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+2" />
-        <source>Don't Round</source>
+        <source>Don&apos;t Round</source>
         <translation>Ne körbejárjon</translation>
     </message>
     <message>
@@ -1555,8 +1555,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+35" />
-        <source>Command line arguments used for "Run in terminal".</source>
-        <translation>Parancssori argumentumok a "Futtatás terminálban" esetén.</translation>
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>Parancssori argumentumok a &quot;Futtatás terminálban&quot; esetén.</translation>
     </message>
     <message>
         <location line="-50" />
@@ -1580,8 +1580,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+105" />
-        <source>Command line arguments used for "%1".</source>
-        <translation>A "%1" parancssori argumentumai használatosak.</translation>
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>A &quot;%1&quot; parancssori argumentumai használatosak.</translation>
     </message>
     <message>
         <location line="+34" />
@@ -1637,8 +1637,8 @@ If the system cursors for resizing views are not displayed properly, you can use
     </message>
     <message>
         <location line="+147" />
-        <source>Maximum number of entries in "Recent Files":</source>
-        <translation>A "Legutóbbi fájlok" bejegyzések maximális száma:</translation>
+        <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
+        <translation>A &quot;Legutóbbi fájlok&quot; bejegyzések maximális száma:</translation>
     </message>
     <message>
         <location line="+12" />
@@ -1698,7 +1698,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>Kimenet</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1773" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1787" />
         <source>&amp;File</source>
         <translation>&amp;Fájl</translation>
     </message>
@@ -1723,7 +1723,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>&amp;Segítség</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+122" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+128" />
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2620" />
         <location line="+1735" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
@@ -1748,13 +1748,13 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>Az &amp;összes elmentése</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-279" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>Kilép: %1?</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+106" />
         <source>&amp;View</source>
         <translation>&amp;Kilátás</translation>
     </message>
@@ -1797,7 +1797,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     <message>
         <location line="+10" />
         <source>Recent &amp;Files</source>
-        <translation>Legutóbbi fájlok</translation>
+        <translation>Legutóbbi &amp;fájlok</translation>
     </message>
     <message>
         <location line="+20" />
@@ -1857,7 +1857,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     <message>
         <location line="+8" />
         <source>Select &amp;All</source>
-        <translation>Mindet kiválaszt</translation>
+        <translation>Mindet kivál&amp;aszt</translation>
     </message>
     <message>
         <location line="+8" />
@@ -1913,7 +1913,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     <message>
         <location line="+11" />
         <source>Pr&amp;eferences...</source>
-        <translation>Preferenciák...</translation>
+        <translation>Pr&amp;eferenciák...</translation>
     </message>
     <message>
         <location line="+26" />
@@ -1947,8 +1947,8 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the "%2" action from the "%3" locator filter (%4).</source>
-        <translation>Ez teljesen elrejti a menüsorot. Megmutathatja újra a%1 beírásával.</translation>
+        <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the &quot;%2&quot; action from the &quot;%3&quot; locator filter (%4).</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21" />
@@ -2001,7 +2001,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>Rejtett</translation>
     </message>
     <message>
-        <location line="+460" />
+        <location line="+474" />
         <source>Version:</source>
         <translation>Verzió:</translation>
     </message>
@@ -2021,7 +2021,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>&lt;p&gt;A Qt Creator fejlesztőit a Qt Creator levelezőlistáján érheti el:&lt;/p&gt;%1&lt;p&gt;vagy a #qt-creator csatornán a Libera.Chat IRC-n:&lt;/p&gt;%2&lt;p&gt;A hibakövetőnk itt található: %3.&lt;/p&gt;&lt;p&gt;Kérjük, használja a %4-et a nagyobb szövegrészekhez.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-803" />
+        <location line="-817" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -2054,7 +2054,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+240" />
+        <location line="+244" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>Dokumentumok megnyitása</translation>
@@ -2076,8 +2076,8 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Close All Except "%1"</source>
-        <translation>Minden bezárása "%1" kivételével</translation>
+        <source>Close All Except &quot;%1&quot;</source>
+        <translation>Minden bezárása &quot;%1&quot; kivételével</translation>
     </message>
     <message>
         <location line="+1" />
@@ -2113,16 +2113,16 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+927" />
-        <location line="+13" />
-        <location line="+11" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location line="+16" />
+        <location line="+14" />
         <source>Save Log</source>
         <translation>Napló mentése</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-617" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
         <source>Clear</source>
         <translation>Kiürítés</translation>
     </message>
@@ -2263,8 +2263,8 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location line="+51" />
-        <source>Failed to open preset file "%1" for reading.</source>
-        <translation>Nem sikerült megnyitni a "%1" előre beállított fájlt az olvasáshoz.</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading.</source>
+        <translation>Nem sikerült megnyitni a &quot;%1&quot; előre beállított fájlt az olvasáshoz.</translation>
     </message>
     <message>
         <location line="-172" />
@@ -2278,13 +2278,13 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>Failed to write logs to "%1".</source>
-        <translation>Nem sikerült a naplók írása ide: "%1".</translation>
+        <source>Failed to write logs to &quot;%1&quot;.</source>
+        <translation>Nem sikerült a naplók írása ide: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open file "%1" for writing logs.</source>
-        <translation>Nem sikerült megnyitni a "%1" fájlt naplók írásához.</translation>
+        <source>Failed to open file &quot;%1&quot; for writing logs.</source>
+        <translation>Nem sikerült megnyitni a &quot;%1&quot; fájlt naplók írásához.</translation>
     </message>
     <message>
         <source>Save Enabled Categories As</source>
@@ -2292,8 +2292,8 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location line="+45" />
-        <source>Failed to write preset file "%1".</source>
-        <translation>Nem sikerült beírni a "%1" előre beállított fájlt.</translation>
+        <source>Failed to write preset file &quot;%1&quot;.</source>
+        <translation>Nem sikerült beírni a &quot;%1&quot; előre beállított fájlt.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -2301,13 +2301,13 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>Engedélyezett kategóriák betöltése innen</translation>
     </message>
     <message>
-        <source>Failed to open preset file "%1" for reading</source>
-        <translation type="vanished">Nem sikerült megnyitni a "%1" előre beállított fájlt olvasásra</translation>
+        <source>Failed to open preset file &quot;%1&quot; for reading</source>
+        <translation type="vanished">Nem sikerült megnyitni a &quot;%1&quot; előre beállított fájlt olvasásra</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Failed to read preset file "%1": %2</source>
-        <translation>Nem sikerült beolvasni a "%1" előre beállított fájlt: %2</translation>
+        <source>Failed to read preset file &quot;%1&quot;: %2</source>
+        <translation>Nem sikerült beolvasni a &quot;%1&quot; előre beállított fájlt: %2</translation>
     </message>
     <message>
         <location line="+29" />
@@ -2342,7 +2342,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     <message>
         <location line="+64" />
         <source>Out&amp;put</source>
-        <translation>Kimenet</translation>
+        <translation>&amp;Kimenet</translation>
     </message>
     <message>
         <location line="+406" />
@@ -2466,7 +2466,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>Folyamatok</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-75" />
         <source>&amp;Diff</source>
         <translation>&amp;Diff</translation>
     </message>
@@ -2476,7 +2476,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>&amp;Ne mentse</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+72" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
         <translation>&amp;Diff &amp;&amp; Mégse</translation>
     </message>
@@ -2570,12 +2570,12 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Use "Cmd", "Opt", "Ctrl", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
+        <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>A módosító billentyűkhöz használja a „Cmd”, „Opt”, „Ctrl” és „Shift” parancsot. Speciális billentyűkhöz használja az „Escape”, „Backspace”, „Delete”, „Insert”, „Home” és így tovább. Kombinálja az egyes billentyűket a „+” jellel, és kombináljon több billentyűparancsot egy parancsikonsorozathoz a „,” jellel. Például, ha a felhasználónak lenyomva kell tartania a Ctrl és a Shift módosító billentyűket, miközben lenyomja az Escape billentyűt, majd el kell engednie és meg kell nyomnia az A billentyűt, írja be a „Ctrl+Shift+Escape,A” parancsot.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Use "Ctrl", "Alt", "Meta", and "Shift" for modifier keys. Use "Escape", "Backspace", "Delete", "Insert", "Home", and so on, for special keys. Combine individual keys with "+", and combine multiple shortcuts to a shortcut sequence with ",". For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter "Ctrl+Shift+Escape,A".</source>
+        <source>Use &quot;Ctrl&quot;, &quot;Alt&quot;, &quot;Meta&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>A módosító billentyűkhöz használja a „Ctrl”, „Alt”, „Meta” és „Shift” gombot. Speciális billentyűkhöz használja az „Escape”, „Backspace”, „Delete”, „Insert”, „Home” és így tovább. Kombinálja az egyes billentyűket a „+” jellel, és kombináljon több billentyűparancsot egy parancsikonsorozathoz a „,” jellel. Például, ha a felhasználónak lenyomva kell tartania a Ctrl és a Shift módosító billentyűket, miközben lenyomja az Escape billentyűt, majd el kell engednie és meg kell nyomnia az A billentyűt, írja be a „Ctrl+Shift+Escape,A” parancsot.</translation>
     </message>
     <message>
@@ -2585,8 +2585,8 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Key sequence has potential conflicts. &lt;a href="#conflicts"&gt;Show.&lt;/a&gt;</source>
-        <translation>A kulcssorozat potenciális ütközéseket tartalmazhat. &lt;a href="#conflicts"&gt;Megjelenítés.&lt;/a&gt;</translation>
+        <source>Key sequence has potential conflicts. &lt;a href=&quot;#conflicts&quot;&gt;Show.&lt;/a&gt;</source>
+        <translation>A kulcssorozat potenciális ütközéseket tartalmazhat. &lt;a href=&quot;#conflicts&quot;&gt;Megjelenítés.&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+122" />
@@ -2606,27 +2606,27 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     <message>
         <location line="+4" />
         <source>Search &amp;&amp; &amp;Replace</source>
-        <translation>Keresés &amp;&amp; Csere</translation>
+        <translation>Ke&amp;resés &amp;&amp;Csere</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Search f&amp;or:</source>
-        <translation>Keresés erre:</translation>
+        <translation>&amp;Keresés erre:</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Whole words o&amp;nly</source>
-        <translation>Csak egész szó</translation>
+        <translation>&amp;Csak egész szó</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Use re&amp;gular expressions</source>
-        <translation>Használj szabályos kifejezéseket</translation>
+        <translation>&amp;Használj szabályos kifejezéseket</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Sco&amp;pe:</source>
-        <translation>Hatókör:</translation>
+        <translation>&amp;Hatókör:</translation>
     </message>
     <message>
         <location line="-9" />
@@ -2645,7 +2645,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-333" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-335" />
         <source>Open Advanced Find...</source>
         <translation>Speciális keresés megnyitása...</translation>
     </message>
@@ -2667,12 +2667,11 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>A keresett szó bevitele</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+E</source>
-        <translation>Ctrl+E</translation>
+        <translation type="vanished">Ctrl+E</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Find Next</source>
         <translation>Következő találat</translation>
     </message>
@@ -2692,24 +2691,24 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>Az előző megtalálása és kicserélése</translation>
     </message>
     <message>
-        <location line="-246" />
-        <location line="+259" />
+        <location line="-248" />
+        <location line="+261" />
         <source>Replace All</source>
         <translation>Az összes kicserélése</translation>
     </message>
     <message>
-        <location line="-309" />
+        <location line="-311" />
         <source>Find Flags</source>
         <translation>Keresse meg a zászlókat</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+235" />
+        <location line="+237" />
         <source>Replace &amp;&amp; Find</source>
         <translation>Csere &amp;&amp; Keresés</translation>
     </message>
     <message>
-        <location line="-148" />
+        <location line="-150" />
         <location line="+13" />
         <source>Shift+Enter</source>
         <translation>Shift+Enter</translation>
@@ -2726,7 +2725,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>Keresés/csere</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+59" />
         <source>Find Next (Selected)</source>
         <translation>Következő keresése (kijelölve)</translation>
     </message>
@@ -2785,7 +2784,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>Cseréld ki...</translation>
     </message>
     <message>
-        <location line="-520" />
+        <location line="-522" />
         <source>Find</source>
         <translation>Keresés</translation>
     </message>
@@ -2824,7 +2823,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+705" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
         <source>Collapse All</source>
         <translation>Mindet összecsuk</translation>
     </message>
@@ -2851,7 +2850,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+225" />
+        <location line="+227" />
         <source>Replace</source>
         <translation>Csere</translation>
     </message>
@@ -2867,11 +2866,11 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Open file "%1" with:</source>
-        <translation>Nyissa meg a "%1" fájlt ezzel:</translation>
+        <source>Open file &quot;%1&quot; with:</source>
+        <translation>Nyissa meg a &quot;%1&quot; fájlt ezzel:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-455" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
         <source>Show Hidden Files</source>
         <translation>Mutasd a rejtett fájlokat</translation>
     </message>
@@ -2897,15 +2896,15 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>Új fájl</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="+156" />
         <location line="+78" />
         <source>New Folder</source>
         <translation>Új dosszié</translation>
     </message>
     <message>
         <location line="-18" />
-        <source>Open "%1"</source>
-        <translation>"%1" megnyitása</translation>
+        <source>Open &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; megnyitása</translation>
     </message>
     <message>
         <location line="+20" />
@@ -2965,7 +2964,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>Eltávolítás...</translation>
     </message>
     <message>
-        <location line="-618" />
+        <location line="-622" />
         <source>Synchronize with Editor</source>
         <translation>Mit Editor synchronisieren</translation>
     </message>
@@ -3000,8 +2999,8 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
         <translation>Általános könyvtár szűrő</translation>
     </message>
     <message>
-        <source>Matches all files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">Megfelel egy egyéni könyvtárkészlet összes fájljának. A megadott sorszámra ugráshoz fűzze hozzá a „+&lt;szám&gt;” vagy a „:&lt;szám&gt;” elemet. Adjon hozzá egy másik "+&lt;szám&gt;" vagy ":&lt;szám&gt;" értéket, hogy az oszlopszámra is ugorjon.</translation>
+        <source>Matches all files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">Megfelel egy egyéni könyvtárkészlet összes fájljának. A megadott sorszámra ugráshoz fűzze hozzá a „+&lt;szám&gt;” vagy a „:&lt;szám&gt;” elemet. Adjon hozzá egy másik &quot;+&lt;szám&gt;&quot; vagy &quot;:&lt;szám&gt;&quot; értéket, hogy az oszlopszámra is ugorjon.</translation>
     </message>
     <message>
         <location line="+273" />
@@ -3152,8 +3151,8 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-78" />
-        <source>Locates files from a custom set of directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Megtalálja a fájlokat egy egyedi könyvtárakból. Függelje meg a "+&lt;szám&gt;" vagy ": &lt;szám&gt;" -ot az adott sorszámra ugráshoz. Függeljen egy másik "+&lt;szám&gt;" vagy ": &lt;szám&gt;" -ot az oszlopszámra is ugráshoz.</translation>
+        <source>Locates files from a custom set of directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Megtalálja a fájlokat egy egyedi könyvtárakból. Függelje meg a &quot;+&lt;szám&gt;&quot; vagy &quot;: &lt;szám&gt;&quot; -ot az adott sorszámra ugráshoz. Függeljen egy másik &quot;+&lt;szám&gt;&quot; vagy &quot;: &lt;szám&gt;&quot; -ot az oszlopszámra is ugráshoz.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -3240,7 +3239,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
-&lt;p&gt;What to do with the executable's standard output.
+&lt;p&gt;What to do with the executable&apos;s standard output.
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
@@ -3274,7 +3273,7 @@ feltéve, hogy a refaktorálás előtt módosítatlanok voltak.</translation>
     <message>
         <location line="+1" />
         <source>&lt;html&gt;&lt;head&gt;&lt;body&gt;
-&lt;p &gt;What to do with the executable's standard error output.&lt;/p&gt;
+&lt;p &gt;What to do with the executable&apos;s standard error output.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;
 &lt;li&gt;Show in General Messages.&lt;/li&gt;
 &lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
@@ -3401,12 +3400,12 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
     </message>
     <message>
         <location line="+1" />
-        <source>Opens a file given by a relative path to the current document, or absolute path. "~" refers to your home directory. You have the option to create a file if it does not exist yet.</source>
-        <translation>Megnyitja az aktuális dokumentum relatív elérési útja vagy abszolút elérési útja által megadott fájlt. A "~" a kezdőkönyvtárra utal. Lehetősége van fájl létrehozására, ha még nem létezik.</translation>
+        <source>Opens a file given by a relative path to the current document, or absolute path. &quot;~&quot; refers to your home directory. You have the option to create a file if it does not exist yet.</source>
+        <translation>Megnyitja az aktuális dokumentum relatív elérési útja vagy abszolút elérési útja által megadott fájlt. A &quot;~&quot; a kezdőkönyvtárra utal. Lehetősége van fájl létrehozására, ha még nem létezik.</translation>
     </message>
     <message>
-        <source>Create and Open "%1"</source>
-        <translation type="vanished">"%1" létrehozása és megnyitása</translation>
+        <source>Create and Open &quot;%1&quot;</source>
+        <translation type="vanished">&quot;%1&quot; létrehozása és megnyitása</translation>
     </message>
     <message>
         <location line="-46" />
@@ -3415,8 +3414,8 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
     </message>
     <message>
         <location line="-13" />
-        <source>Create "%1"?</source>
-        <translation>Létrehozza a következőt: "%1"?</translation>
+        <source>Create &quot;%1&quot;?</source>
+        <translation>Létrehozza a következőt: &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+6" />
@@ -3435,8 +3434,8 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
     </message>
     <message>
         <location line="+1" />
-        <source>Cannot create file "%1".</source>
-        <translation>Nem hozhat létre "%1" fájlt.</translation>
+        <source>Cannot create file &quot;%1&quot;.</source>
+        <translation>Nem hozhat létre &quot;%1&quot; fájlt.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -3445,13 +3444,13 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
     </message>
     <message>
         <location line="+164" />
-        <source>Create and Open File "%1"</source>
-        <translation>Létrehozni és megnyitni a "%1" fájlt</translation>
+        <source>Create and Open File &quot;%1&quot;</source>
+        <translation>Létrehozni és megnyitni a &quot;%1&quot; fájlt</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Create Directory "%1"</source>
-        <translation>Létrehozni a "%1" könyvtárat</translation>
+        <source>Create Directory &quot;%1&quot;</source>
+        <translation>Létrehozni a &quot;%1&quot; könyvtárat</translation>
     </message>
     <message>
         <location line="+58" />
@@ -3469,7 +3468,7 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
         <translation>Elérhető szűrők</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+557" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
         <source>Open as Centered Popup</source>
         <translation>Megnyitás középre állított előugró ablakként</translation>
     </message>
@@ -3510,18 +3509,18 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
     </message>
     <message>
         <location line="+143" />
-        <source>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;body style="color:#909090; font-size:14px"&gt;&lt;div align='center'&gt;&lt;div style="font-size:20px"&gt;Dokumentum megnyitása&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Fájl &gt; Fájl megnyitása (%1)&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Fájl &gt; Példák &lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Fájl &gt; Legutóbbi fájlok&lt;/div&gt;&lt;div style="margin-top: 5px"&gt;&amp;bull; Húzza ide a fájlokat&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Dokumentum megnyitása&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Fájl &gt; Fájl megnyitása (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Fájl &gt; Példák &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Fájl &gt; Legutóbbi fájlok&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Húzza ide a fájlokat&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+37" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- írja be a &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; parancsot az osztálydefinícióra ugráshoz&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a class definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- írja be a &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; parancsot az osztálydefinícióra ugráshoz&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>&lt;div style="margin-left: 1em"&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
-        <translation>&lt;div style="margin-left: 1em"&gt;- írja be a &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; parancsot a függvénydefinícióra ugráshoz&lt;/div&gt;</translation>
+        <source>&lt;div style=&quot;margin-left: 1em&quot;&gt;- type &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; to jump to a function definition&lt;/div&gt;</source>
+        <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- írja be a &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; parancsot a függvénydefinícióra ugráshoz&lt;/div&gt;</translation>
     </message>
     <message>
         <location line="+121" />
@@ -3597,7 +3596,7 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
         <translation>Egyedi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-113" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-116" />
         <source>Save Changes</source>
         <translation>Változtatások elmentése</translation>
     </message>
@@ -3731,14 +3730,14 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
         <translation>Beállítások</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+488" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
         <source>Options</source>
         <translation>Opciók</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+13" />
-        <source>Creates qm translation files that can be used by an application from the translator's ts files</source>
+        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
+        <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
         <translation>A fordító ts fájljaiból qm fordítási fájlokat hoz létre, amelyeket egy alkalmazás használhat</translation>
     </message>
     <message>
@@ -3747,14 +3746,14 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
         <translation>Fordítások kiadása (lrelease)</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+5" />
         <source>Linguist</source>
         <translation>Nyelvész</translation>
     </message>
     <message>
-        <location line="-12" />
-        <source>Synchronizes translator's ts files with the program code</source>
+        <location line="-2" />
+        <source>Synchronizes translator&apos;s ts files with the program code</source>
         <translation>Szinkronizálja a fordító ts fájljait a programkóddal</translation>
     </message>
     <message>
@@ -3774,13 +3773,13 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
     </message>
     <message>
         <location line="+1" />
-        <location line="+10" />
+        <location line="+15" />
         <location line="+5" />
         <source>Text</source>
         <translation>Szöveg</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-17" />
         <source>Runs the current QML file with QML utility.</source>
         <translation>Futtatja az aktuális QML fájlt a QML segédprogrammal.</translation>
     </message>
@@ -3806,7 +3805,7 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
         <translation>Qt Quick 2 előnézet (qmlscene)</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+4" />
         <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Megnyitja az aktuális fájlt a vi</translation>
@@ -3824,8 +3823,8 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
     </message>
     <message>
         <location line="+1" />
-        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by "&gt;". For example "sess def" matches "File &gt; Sessions &gt; Default".</source>
-        <translation>Műveletet indít el. Ha a menüből származik, akkor megfelel a menühierarchia bármely részének, elválasztva "&gt;". Például a „sess def” egyezik a „Fájl &gt; Munkamenetek &gt; Alapértelmezett” értékkel.</translation>
+        <source>Triggers an action. If it is from the menu it matches any part of a menu hierarchy, separated by &quot;&gt;&quot;. For example &quot;sess def&quot; matches &quot;File &gt; Sessions &gt; Default&quot;.</source>
+        <translation>Műveletet indít el. Ha a menüből származik, akkor megfelel a menühierarchia bármely részének, elválasztva &quot;&gt;&quot;. Például a „sess def” egyezik a „Fájl &gt; Munkamenetek &gt; Alapértelmezett” értékkel.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
@@ -3969,9 +3968,9 @@ Hogy ezt megtehesse, gépelje be ezt a gyorsbillentyűt és egy szóközt a Lok�
     </message>
     <message>
         <location line="+12" />
-        <source>The settings file "%1" is not writable.
+        <source>The settings file &quot;%1&quot; is not writable.
 You will not be able to store any %2 settings.</source>
-        <translation>A "%1" beállításfájl nem írható.
+        <translation>A &quot;%1&quot; beállításfájl nem írható.
 Nem fog tudni semmilyen %2 beállítást tárolni.</translation>
     </message>
     <message>
@@ -3986,9 +3985,9 @@ Nem fog tudni semmilyen %2 beállítást tárolni.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Error reading settings file "%1": %2
+        <source>Error reading settings file &quot;%1&quot;: %2
 You will likely experience further problems using this instance of %3.</source>
-        <translation>Hiba a "%1" beállítási fájl olvasásakor: %2
+        <translation>Hiba a &quot;%1&quot; beállítási fájl olvasásakor: %2
 Valószínűleg további problémákat tapasztalhat a %3 példányának használatakor.</translation>
     </message>
     <message>
@@ -4058,8 +4057,8 @@ Valószínűleg további problémákat tapasztalhat a %3 példányának használ
     </message>
     <message>
         <location line="+1" />
-        <source>Select encoding for "%1".%2</source>
-        <translation>Kódolás kiválasztása a következőre "%1".%2</translation>
+        <source>Select encoding for &quot;%1&quot;.%2</source>
+        <translation>Kódolás kiválasztása a következőre &quot;%1&quot;.%2</translation>
     </message>
     <message>
         <location line="+49" />
@@ -4241,7 +4240,7 @@ Do you want to check them out now?</source>
 Szeretnéd most megnézni őket?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-943" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-948" />
         <source>Restart Required</source>
         <translation>Újraindítás szükséges</translation>
     </message>
@@ -4277,23 +4276,23 @@ Szeretnéd most megnézni őket?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
-        <source>Could not find executable for "%1" (expanded "%2")</source>
-        <translation>Nem található végrehajtható fájl a következőhöz: "%1" (kibontva: "%2")</translation>
+        <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
+        <translation>Nem található végrehajtható fájl a következőhöz: &quot;%1&quot; (kibontva: &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>Starting external tool "%1"</source>
-        <translation>"%1" külső eszköz indítása</translation>
+        <source>Starting external tool &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; külső eszköz indítása</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>"%1" finished</source>
-        <translation>"%1" kész</translation>
+        <source>&quot;%1&quot; finished</source>
+        <translation>&quot;%1&quot; kész</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" finished with error</source>
-        <translation>"%1" hibával fejeződött be</translation>
+        <source>&quot;%1&quot; finished with error</source>
+        <translation>&quot;%1&quot; hibával fejeződött be</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
@@ -4330,10 +4329,10 @@ Szeretnéd most megnézni őket?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>"%1" returned the following error:
+        <source>&quot;%1&quot; returned the following error:
 
 %2</source>
-        <translation>"%1" a következő hibát adta vissza:
+        <translation>&quot;%1&quot; a következő hibát adta vissza:
 
 %2</translation>
     </message>
@@ -4393,24 +4392,24 @@ Szeretnéd most megnézni őket?</translation>
     <message>
         <location line="+6" />
         <source>Open Command Prompt With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Nyissa meg a Parancssort ezzel</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open Terminal With</source>
-        <comment>Opens a submenu for choosing an environment, such as "Run Environment"</comment>
+        <comment>Opens a submenu for choosing an environment, such as &quot;Run Environment&quot;</comment>
         <translation>Nyissa meg a terminált ezzel</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file "%1".</source>
-        <translation>Nem sikerült eltávolítani a(z) "%1" fájlt.</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>Nem sikerült eltávolítani a(z) &quot;%1&quot; fájlt.</translation>
     </message>
     <message>
         <location line="+40" />
-        <source>Failed to rename the include guard in file "%1".</source>
-        <translation>Nem sikerült átnevezni a(z) "%1" fájl beillesztési őrét.</translation>
+        <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
+        <translation>Nem sikerült átnevezni a(z) &quot;%1&quot; fájl beillesztési őrét.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
@@ -4420,7 +4419,7 @@ Szeretnéd most megnézni őket?</translation>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+369" />
+        <location filename="../../../src/plugins/coreplugin/find/ifindfilter.cpp" line="+394" />
         <source>Case sensitive</source>
         <translation>Kis-nagybetű érzékeny</translation>
     </message>
@@ -4467,12 +4466,12 @@ Szeretnéd most megnézni őket?</translation>
     <message>
         <location line="+5" />
         <source>Repla&amp;ce with:</source>
-        <translation>Cseréld ki:</translation>
+        <translation>&amp;Cseréld ki:</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Preser&amp;ve case</source>
-        <translation>Tartós tok</translation>
+        <translation>&amp;Tartós tok</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4561,8 +4560,8 @@ Szeretnéd most megnézni őket?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
-        <source>Factory with id="%1" already registered. Deleting.</source>
-        <translation>Gyári id="%1" már regisztrálva. Törlés.</translation>
+        <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
+        <translation>Gyári id=&quot;%1&quot; már regisztrálva. Törlés.</translation>
     </message>
     <message>
         <location line="+230" />
@@ -4576,18 +4575,18 @@ Szeretnéd most megnézni őket?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
-        <source>Error in "%1": %2</source>
-        <translation>Hiba a következőben: "%1": %2</translation>
+        <source>Error in &quot;%1&quot;: %2</source>
+        <translation>Hiba a következőben: &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>Cannot convert result of "%1" to string.</source>
-        <translation>A "%1" eredményét nem lehet karakterláncsá konvertálni.</translation>
+        <source>Cannot convert result of &quot;%1&quot; to string.</source>
+        <translation>A &quot;%1&quot; eredményét nem lehet karakterláncsá konvertálni.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal '}' characters must be escaped as "\}", '\' characters must be escaped as "\\", and "%{" must be escaped as "%\{".</source>
-        <translation>Értékelje az egyszerű JavaScript-utasításokat.&lt;br&gt;A szó szerinti '}' karaktereket "\}"-ként, a "\" karaktereket "\\"-ként, a "%{" karaktereket pedig "%\{"-ként kell megszabadítani.</translation>
+        <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
+        <translation>Értékelje az egyszerű JavaScript-utasításokat.&lt;br&gt;A szó szerinti &apos;}&apos; karaktereket &quot;\}&quot;-ként, a &quot;\&quot; karaktereket &quot;\\&quot;-ként, a &quot;%{&quot; karaktereket pedig &quot;%\{&quot;-ként kell megszabadítani.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
@@ -4601,9 +4600,9 @@ Szeretnéd most megnézni őket?</translation>
     </message>
     <message>
         <location line="+68" />
-        <source>Previous command is still running ("%1").
+        <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
-        <translation>Az előző parancs még fut ("%1").
+        <translation>Az előző parancs még fut (&quot;%1&quot;).
 Meg akarod ölni?</translation>
     </message>
     <message>
@@ -4613,13 +4612,13 @@ Meg akarod ölni?</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>Could not find executable for "%1".</source>
-        <translation>Nem található végrehajtható fájl a következőhöz: "%1".</translation>
+        <source>Could not find executable for &quot;%1&quot;.</source>
+        <translation>Nem található végrehajtható fájl a következőhöz: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Starting command "%1".</source>
-        <translation>"%1" parancs indítása.</translation>
+        <source>Starting command &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; parancs indítása.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/externaltoolsfilter.cpp" line="+21" />
@@ -4674,8 +4673,8 @@ Meg akarod ölni?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
-        <source>Locator: Error occurred when running "%1".</source>
-        <translation>Kereső: Hiba történt "%1" futtatásakor.</translation>
+        <source>Locator: Error occurred when running &quot;%1&quot;.</source>
+        <translation>Kereső: Hiba történt &quot;%1&quot; futtatásakor.</translation>
     </message>
     <message>
         <location line="-71" />
@@ -4689,7 +4688,7 @@ Meg akarod ölni?</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Locator query string with quotes escaped with backslash and spaces replaced with "*" wildcards.</source>
+        <source>Locator query string with quotes escaped with backslash and spaces replaced with &quot;*&quot; wildcards.</source>
         <translation>A kereső lekérdezési karakterlánca idézőjelekkel fordított perjellel és a szóközök helyett „*” helyettesítő karakterekkel.</translation>
     </message>
     <message>
@@ -4704,8 +4703,8 @@ Meg akarod ölni?</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Megkeresi a fájlokat egy globális fájlrendszer -indexből (reflektorfény, lokálás, mindent). Függelje meg a "+&lt;szám&gt;" vagy ": &lt;szám&gt;" -ot az adott sorszámra ugráshoz. Függeljen egy másik "+&lt;szám&gt;" vagy ": &lt;szám&gt;" -ot az oszlopszámra is ugráshoz.</translation>
+        <source>Locates files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Megkeresi a fájlokat egy globális fájlrendszer -indexből (reflektorfény, lokálás, mindent). Függelje meg a &quot;+&lt;szám&gt;&quot; vagy &quot;: &lt;szám&gt;&quot; -ot az adott sorszámra ugráshoz. Függeljen egy másik &quot;+&lt;szám&gt;&quot; vagy &quot;: &lt;szám&gt;&quot; -ot az oszlopszámra is ugráshoz.</translation>
     </message>
     <message>
         <location line="+113" />
@@ -4713,8 +4712,8 @@ Meg akarod ölni?</translation>
         <translation>Rendezési eredmények</translation>
     </message>
     <message>
-        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation type="vanished">Megfelel egy globális fájlrendszer-index fájljainak (Spotlight, Locate, Everything). A megadott sorszámra ugráshoz fűzze hozzá a „+&lt;szám&gt;” vagy a „:&lt;szám&gt;” elemet. Adjon hozzá egy másik "+&lt;szám&gt;" vagy ":&lt;szám&gt;" értéket, hogy az oszlopszámra is ugorjon.</translation>
+        <source>Matches files from a global file system index (Spotlight, Locate, Everything). Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation type="vanished">Megfelel egy globális fájlrendszer-index fájljainak (Spotlight, Locate, Everything). A megadott sorszámra ugráshoz fűzze hozzá a „+&lt;szám&gt;” vagy a „:&lt;szám&gt;” elemet. Adjon hozzá egy másik &quot;+&lt;szám&gt;&quot; vagy &quot;:&lt;szám&gt;&quot; értéket, hogy az oszlopszámra is ugorjon.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -4723,9 +4722,9 @@ Meg akarod ölni?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-110" />
-        <source>Add "%1" placeholder for the query string.
+        <source>Add &quot;%1&quot; placeholder for the query string.
 Double-click to edit item.</source>
-        <translation>"%1" helyőrző hozzáadása a lekérdezési karakterlánchoz.
+        <translation>&quot;%1&quot; helyőrző hozzáadása a lekérdezési karakterlánchoz.
 Kattintson duplán az elem szerkesztéséhez.</translation>
     </message>
     <message>
@@ -4759,13 +4758,13 @@ Kattintson duplán az elem szerkesztéséhez.</translation>
         <translation>Add Magic Header</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A MIME mágikus adatok értelmezése a Shared MIME-info Database specifikációja szerint történik a &lt;a href="http://standards.freedesktop.org/shared-mime-info- webhelyen. spec/shared-mime-info-spec-latest.html"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A MIME mágikus adatok értelmezése a Shared MIME-info Database specifikációja szerint történik a &lt;a href=&quot;http://standards.freedesktop.org/shared-mime-info- webhelyen. spec/shared-mime-info-spec-latest.html&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;fej/&gt; &lt;body&gt; &lt;p&gt; mime A mágikus adatokat úgy értelmezzük, hogy a megosztott MIME-Info adatbázis specifikációja meghatározza a &lt;a href = "https://www.freedesktop.org/wiki/specifications/shared- mime-info-spec/"&gt; freedesktop.org &lt;/a&gt;.</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -4819,8 +4818,8 @@ Kattintson duplán az elem szerkesztéséhez.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=" font-style:italic;"&gt;Megjegyzés: A széles tartományú értékek hatással lehetnek a fájlok megnyitásakor a teljesítményre.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Note: Wide range values might impact performance when opening files.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Megjegyzés: A széles tartományú értékek hatással lehetnek a fájlok megnyitásakor a teljesítményre.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -4899,13 +4898,13 @@ Kattintson duplán az elem szerkesztéséhez.</translation>
 </translation>
     </message>
     <message>
-        <location line="+298" />
+        <location line="+308" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Szöveges fájlok (*.txt);;Minden fájl (*)</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+11" />
+        <location line="+14" />
         <source>Error: %L1!</source>
         <translation>Hiba: %L1!</translation>
     </message>
@@ -4936,23 +4935,23 @@ Kattintson duplán az elem szerkesztéséhez.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>There is no patch-command configured in the general "Environment" settings.</source>
-        <translation>Az általános "Környezet" beállításokban nincs konfigurálva patch-command.</translation>
+        <source>There is no patch-command configured in the general &quot;Environment&quot; settings.</source>
+        <translation>Az általános &quot;Környezet&quot; beállításokban nincs konfigurálva patch-command.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The patch-command configured in the general "Environment" settings does not exist.</source>
+        <source>The patch-command configured in the general &quot;Environment&quot; settings does not exist.</source>
         <translation>Az általános „Környezet” beállításokban konfigurált patch-command nem létezik.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Running in "%1": %2 %3.</source>
-        <translation>Futás a " %1" -ben: %2 %3.</translation>
+        <source>Running in &quot;%1&quot;: %2 %3.</source>
+        <translation>Futás a &quot; %1&quot; -ben: %2 %3.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>A timeout occurred running "%1".</source>
-        <translation>A "%1" futó időtúllépés történt.</translation>
+        <source>A timeout occurred running &quot;%1&quot;.</source>
+        <translation>A &quot;%1&quot; futó időtúllépés történt.</translation>
     </message>
     <message>
         <source>Running in %1: %2 %3</source>
@@ -4960,22 +4959,22 @@ Kattintson duplán az elem szerkesztéséhez.</translation>
     </message>
     <message>
         <location line="-11" />
-        <source>Unable to launch "%1": %2</source>
-        <translation>Nem lehet elindítani a(z) "%1"-t: %2</translation>
+        <source>Unable to launch &quot;%1&quot;: %2</source>
+        <translation>Nem lehet elindítani a(z) &quot;%1&quot;-t: %2</translation>
     </message>
     <message>
-        <source>A timeout occurred running "%1"</source>
-        <translation type="vanished">Időtúllépés történt "%1" futtatásakor</translation>
+        <source>A timeout occurred running &quot;%1&quot;</source>
+        <translation type="vanished">Időtúllépés történt &quot;%1&quot; futtatásakor</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>"%1" crashed.</source>
-        <translation>"%1" összeomlott.</translation>
+        <source>&quot;%1&quot; crashed.</source>
+        <translation>&quot;%1&quot; összeomlott.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"%1" failed (exit code %2).</source>
-        <translation>"%1" nem sikerült (kilépési kód: %2).</translation>
+        <source>&quot;%1&quot; failed (exit code %2).</source>
+        <translation>&quot;%1&quot; nem sikerült (kilépési kód: %2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
@@ -5068,8 +5067,8 @@ Kattintson duplán az elem szerkesztéséhez.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>"%1" will be installed into "%2".</source>
-        <translation>"%1" telepítésre kerül a "%2" mappába.</translation>
+        <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot; telepítésre kerül a &quot;%2&quot; mappába.</translation>
     </message>
     <message>
         <location line="+29" />
@@ -5078,8 +5077,8 @@ Kattintson duplán az elem szerkesztéséhez.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The file "%1" exists. Overwrite?</source>
-        <translation>A "%1" fájl létezik. Átír?</translation>
+        <source>The file &quot;%1&quot; exists. Overwrite?</source>
+        <translation>A &quot;%1&quot; fájl létezik. Átír?</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5093,8 +5092,8 @@ Kattintson duplán az elem szerkesztéséhez.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to write file "%1".</source>
-        <translation>Nem sikerült írni a(z) "%1" fájlt.</translation>
+        <source>Failed to write file &quot;%1&quot;.</source>
+        <translation>Nem sikerült írni a(z) &quot;%1&quot; fájlt.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -5313,8 +5312,8 @@ verzióvezérléshez (%2)
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
-        <source>Could not parse patch file "%1". The content is not of unified diff format.</source>
-        <translation>Nem sikerült elemezni a "%1" javítófájlt. A tartalom nem egységes diff formátumú.</translation>
+        <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
+        <translation>Nem sikerült elemezni a &quot;%1&quot; javítófájlt. A tartalom nem egységes diff formátumú.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
@@ -5393,23 +5392,23 @@ verzióvezérléshez (%2)
     </message>
     <message>
         <location line="+52" />
-        <source>Diff "%1"</source>
-        <translation>Diff "%1"</translation>
+        <source>Diff &quot;%1&quot;</source>
+        <translation>Diff &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+28" />
         <source>Select First File for Diff</source>
         <translation>Válassza az Első fájl a különbséghez</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+7" />
         <source>Select Second File for Diff</source>
         <translation>Válassza ki a Második fájlt a különbséghez</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>Diff "%1", "%2"</source>
-        <translation>Diff "%1", "%2"</translation>
+        <location line="+10" />
+        <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
+        <translation>Diff &quot;%1&quot;, &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
@@ -5428,7 +5427,7 @@ verzióvezérléshez (%2)
     </message>
     <message>
         <location line="+31" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding.</source>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
         <translation>&lt;b&gt;Hiba:&lt;/b&gt; A „%1” nem dekódolható „%2” kódolással.</translation>
     </message>
     <message>
@@ -5588,8 +5587,8 @@ verzióvezérléshez (%2)
     </message>
     <message>
         <location line="+1" />
-        <source>%1 (current: "%2")</source>
-        <translation>%1 (jelenleg: "%2")</translation>
+        <source>%1 (current: &quot;%2&quot;)</source>
+        <translation>%1 (jelenleg: &quot;%2&quot;)</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5628,7 +5627,7 @@ verzióvezérléshez (%2)
     </message>
     <message>
         <location line="+4" />
-        <source>Plugin's initialization function succeeded.</source>
+        <source>Plugin&apos;s initialization function succeeded.</source>
         <translation>A beépülő modul inicializálási funkciója sikerült.</translation>
     </message>
     <message>
@@ -5869,8 +5868,8 @@ Ok: %3</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The last time you started %1, it seems to have closed because of a problem with the "%2" plugin. Temporarily disable the plugin?</source>
-        <translation>Amikor legutóbb elindította a(z) %1 programot, úgy tűnik, hogy bezárult a(z) "%2" beépülő modul problémája miatt. Ideiglenesen letiltja a bővítményt?</translation>
+        <source>The last time you started %1, it seems to have closed because of a problem with the &quot;%2&quot; plugin. Temporarily disable the plugin?</source>
+        <translation>Amikor legutóbb elindította a(z) %1 programot, úgy tűnik, hogy bezárult a(z) &quot;%2&quot; beépülő modul problémája miatt. Ideiglenesen letiltja a bővítményt?</translation>
     </message>
     <message>
         <location line="+8" />
@@ -5886,25 +5885,25 @@ Ok: %3</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
-        <source>The plugin "%1" is specified twice for testing.</source>
-        <translation>A "%1" beépülő modul kétszer van megadva tesztelésre.</translation>
+        <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
+        <translation>A &quot;%1&quot; beépülő modul kétszer van megadva tesztelésre.</translation>
     </message>
     <message>
         <location line="+7" />
         <location line="+18" />
         <location line="+47" />
         <location line="+25" />
-        <source>The plugin "%1" does not exist.</source>
-        <translation>A "%1" beépülő modul nem létezik.</translation>
+        <source>The plugin &quot;%1&quot; does not exist.</source>
+        <translation>A &quot;%1&quot; beépülő modul nem létezik.</translation>
     </message>
     <message>
         <location line="-79" />
-        <source>The plugin "%1" is not tested.</source>
-        <translation>A "%1" beépülő modul nincs tesztelve.</translation>
+        <source>The plugin &quot;%1&quot; is not tested.</source>
+        <translation>A &quot;%1&quot; beépülő modul nincs tesztelve.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Cannot request scenario "%1" as it was already requested.</source>
+        <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
         <translation>A „%1” forgatókönyv nem kérhető, mivel azt már kérték.</translation>
     </message>
     <message>
@@ -5924,8 +5923,8 @@ Ok: %3</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency '%1(%2)'</source>
-        <translation>Nem sikerült megoldani a függőséget '%1(%2)'</translation>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation>Nem sikerült megoldani a függőséget &apos;%1(%2)&apos;</translation>
     </message>
     <message>
         <location line="+61" />
@@ -5939,8 +5938,8 @@ Ok: %3</translation>
     </message>
     <message>
         <location line="-416" />
-        <source>"%1" is missing</source>
-        <translation>"%1" hiányzik</translation>
+        <source>&quot;%1&quot; is missing</source>
+        <translation>&quot;%1&quot; hiányzik</translation>
     </message>
     <message>
         <location line="-24" />
@@ -5949,28 +5948,28 @@ Ok: %3</translation>
     </message>
     <message>
         <location line="+29" />
-        <source>Value for key "%1" is not a string</source>
-        <translation>A "%1" kulcs értéke nem karakterlánc</translation>
+        <source>Value for key &quot;%1&quot; is not a string</source>
+        <translation>A &quot;%1&quot; kulcs értéke nem karakterlánc</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a bool</source>
-        <translation>A "%1" kulcs értéke nem bool</translation>
+        <source>Value for key &quot;%1&quot; is not a bool</source>
+        <translation>A &quot;%1&quot; kulcs értéke nem bool</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not an array of objects</source>
-        <translation>A "%1" kulcs értéke nem objektumok tömbje</translation>
+        <source>Value for key &quot;%1&quot; is not an array of objects</source>
+        <translation>A &quot;%1&quot; kulcs értéke nem objektumok tömbje</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Value for key "%1" is not a string and not an array of strings</source>
-        <translation>A "%1" kulcs értéke nem karakterlánc és nem karakterláncok tömbje</translation>
+        <source>Value for key &quot;%1&quot; is not a string and not an array of strings</source>
+        <translation>A &quot;%1&quot; kulcs értéke nem karakterlánc és nem karakterláncok tömbje</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Value "%2" for key "%1" has invalid format</source>
-        <translation>A "%1" kulcs "%2" értékének formátuma érvénytelen</translation>
+        <source>Value &quot;%2&quot; for key &quot;%1&quot; has invalid format</source>
+        <translation>A &quot;%1&quot; kulcs &quot;%2&quot; értékének formátuma érvénytelen</translation>
     </message>
     <message>
         <location line="+21" />
@@ -5979,8 +5978,8 @@ Ok: %3</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected IID "%1", but found "%2"</source>
-        <translation>Várt IID "%1", de "%2" -t talált</translation>
+        <source>Expected IID &quot;%1&quot;, but found &quot;%2&quot;</source>
+        <translation>Várt IID &quot;%1&quot;, de &quot;%2&quot; -t talált</translation>
     </message>
     <message>
         <location line="+6" />
@@ -5989,8 +5988,8 @@ Ok: %3</translation>
     </message>
     <message>
         <location line="+108" />
-        <source>Invalid platform specification "%1": %2</source>
-        <translation>Érvénytelen platformspecifikáció "%1": %2</translation>
+        <source>Invalid platform specification &quot;%1&quot;: %2</source>
+        <translation>Érvénytelen platformspecifikáció &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+18" />
@@ -6003,8 +6002,8 @@ Ok: %3</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Dependency: "%1" must be "%2" or "%3" (is "%4").</source>
-        <translation>Függőség: "%1" értéke "%2" vagy "%3" (ez "%4").</translation>
+        <source>Dependency: &quot;%1&quot; must be &quot;%2&quot; or &quot;%3&quot; (is &quot;%4&quot;).</source>
+        <translation>Függőség: &quot;%1&quot; értéke &quot;%2&quot; vagy &quot;%3&quot; (ez &quot;%4&quot;).</translation>
     </message>
     <message>
         <location line="+25" />
@@ -6016,8 +6015,8 @@ Ok: %3</translation>
     </message>
     <message>
         <location line="-13" />
-        <source>Argument: "%1" is empty</source>
-        <translation>Argumentum: "%1" üres</translation>
+        <source>Argument: &quot;%1&quot; is empty</source>
+        <translation>Argumentum: &quot;%1&quot; üres</translation>
     </message>
     <message>
         <location line="+182" />
@@ -6174,13 +6173,13 @@ Szeretné felülírni?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/imageviewer/imageview.cpp" line="+161" />
-        <source>Exported "%1", %2x%3, %4 bytes</source>
-        <translation>Exportált: "%1", %2x%3, %4 bájt</translation>
+        <source>Exported &quot;%1&quot;, %2x%3, %4 bytes</source>
+        <translation>Exportált: &quot;%1&quot;, %2x%3, %4 bájt</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Could not write file "%1".</source>
-        <translation>Nem sikerült írni a(z) "%1" fájlt.</translation>
+        <source>Could not write file &quot;%1&quot;.</source>
+        <translation>Nem sikerült írni a(z) &quot;%1&quot; fájlt.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6351,8 +6350,8 @@ Szeretné felülírni?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>A comma-separated list of size specifications of the form "&lt;width&gt;x&lt;height&gt;".</source>
-        <translation>A méretspecifikációk vesszővel elválasztott listája a következő formátumban: "&lt;szélesség&gt;x&lt;magasság&gt;".</translation>
+        <source>A comma-separated list of size specifications of the form &quot;&lt;width&gt;x&lt;height&gt;&quot;.</source>
+        <translation>A méretspecifikációk vesszővel elválasztott listája a következő formátumban: &quot;&lt;szélesség&gt;x&lt;magasság&gt;&quot;.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6397,7 +6396,7 @@ Szeretné felülírni őket?</translation>
         <translation>Hiba %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+60" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
         <source>Deprecated</source>
         <translation>Elavult</translation>
     </message>
@@ -6422,7 +6421,7 @@ Szeretné felülírni őket?</translation>
         <translation>Származtatott</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+212" />
         <source>Call Hierarchy</source>
         <translation>Hívja a hierarchiát</translation>
     </message>
@@ -6432,13 +6431,13 @@ Szeretné felülírni őket?</translation>
         <translation>Újratölti a kurzor helyzetben lévő szimbólum hívási hierarchiáját.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+394" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
         <translation>%1 a %2 -re</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+230" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>inicializált</translation>
@@ -6481,15 +6480,15 @@ Szeretné felülírni őket?</translation>
     </message>
     <message>
         <location line="+1342" />
-        <source>Invalid parameter in "%1":
+        <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
-        <translation>Érvénytelen paraméter a "%1" -ben:
+        <translation>Érvénytelen paraméter a &quot;%1&quot; -ben:
  %2</translation>
     </message>
     <message>
         <location line="+219" />
-        <source>Language Server "%1" Initialization Error</source>
-        <translation>Nyelvi kiszolgáló "%1" inicializálási hiba</translation>
+        <source>Language Server &quot;%1&quot; Initialization Error</source>
+        <translation>Nyelvi kiszolgáló &quot;%1&quot; inicializálási hiba</translation>
     </message>
     <message>
         <location line="+13" />
@@ -6563,8 +6562,8 @@ Szeretné felülírni őket?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientinterface.cpp" line="+77" />
-        <source>Cannot handle MIME type "%1" of message.</source>
-        <translation>Nem tudja kezelni az üzenet "%1" típusát.</translation>
+        <source>Cannot handle MIME type &quot;%1&quot; of message.</source>
+        <translation>Nem tudja kezelni az üzenet &quot;%1&quot; típusát.</translation>
     </message>
     <message>
         <location line="+70" />
@@ -6582,7 +6581,7 @@ Szeretné felülírni őket?</translation>
         <translation>Váratlanul befejeződött.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+217" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+82" />
         <source>Expand All</source>
         <translation>Bontsa ki az összeset</translation>
@@ -6615,7 +6614,7 @@ Szeretné felülírni őket?</translation>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+185" />
         <source>&amp;Add</source>
-        <translation>&amp; Add hozzá</translation>
+        <translation>&amp;Add hozzá</translation>
     </message>
     <message>
         <location line="+11" />
@@ -6666,8 +6665,8 @@ Example: *.cpp%1*.h</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Language server-specific JSON to pass via "initializationOptions" field of "initialize" request.</source>
-        <translation>Nyelvi kiszolgáló-specifikus JSON, amely átadja a "InitializationOptions" mezőt a "inicializálás" kérésen.</translation>
+        <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
+        <translation>Nyelvi kiszolgáló-specifikus JSON, amely átadja a &quot;InitializationOptions&quot; mezőt a &quot;inicializálás&quot; kérésen.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6745,7 +6744,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+21" />
         <source>Re&amp;name %n files</source>
         <translation>
-            <numerusform>Re &amp; név %n fájlok</numerusform>
+            <numerusform>Re &amp;név %n fájlok</numerusform>
         </translation>
     </message>
     <message>
@@ -6803,23 +6802,23 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+6" />
-        <source>Running "%1" to install %2.</source>
-        <translation>A " %1" futtatás a %2 telepítéséhez.</translation>
+        <source>Running &quot;%1&quot; to install %2.</source>
+        <translation>A &quot; %1&quot; futtatás a %2 telepítéséhez.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>A "%1" telepítését időtúllépéssel törölték.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>A &quot;%1&quot; telepítését időtúllépéssel törölték.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>A "%1" telepítését a felhasználó törölte.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>A &quot;%1&quot; telepítését a felhasználó törölte.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>A " %1" telepítése a %2 kilépési kóddal sikertelen.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>A &quot; %1&quot; telepítése a %2 kilépési kóddal sikertelen.</translation>
     </message>
     <message>
         <location line="+56" />
@@ -6926,33 +6925,33 @@ See the documentation of the specific language server for valid settings.</sourc
     <name>QtC::LanguageServerProtocol</name>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
-        <source>Cannot decode content with "%1". Falling back to "%2".</source>
-        <translation>Nem lehet dekódolni a tartalmat a "%1" -nel. Visszatérés a "%2" -re.</translation>
+        <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
+        <translation>Nem lehet dekódolni a tartalmat a &quot;%1&quot; -nel. Visszatérés a &quot;%2&quot; -re.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Expected an integer in "%1", but got "%2".</source>
-        <translation>Várt egy egész számot a "%1" -ben, de a "%2" -t kapta.</translation>
+        <source>Expected an integer in &quot;%1&quot;, but got &quot;%2&quot;.</source>
+        <translation>Várt egy egész számot a &quot;%1&quot; -ben, de a &quot;%2&quot; -t kapta.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
-        <source>Could not parse JSON message: "%1".</source>
-        <translation>Nem tudtam elemezni a JSON üzenetét: "%1".</translation>
+        <source>Could not parse JSON message: &quot;%1&quot;.</source>
+        <translation>Nem tudtam elemezni a JSON üzenetét: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Expected a JSON object, but got a JSON "%1" value.</source>
-        <translation>Várt egy JSON -objektumot, de kapott egy JSON "%1" értéket.</translation>
+        <source>Expected a JSON object, but got a JSON &quot;%1&quot; value.</source>
+        <translation>Várt egy JSON -objektumot, de kapott egy JSON &quot;%1&quot; értéket.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
-        <source>No parameters in "%1".</source>
-        <translation>Nincsenek paraméterek a "%1" -ben.</translation>
+        <source>No parameters in &quot;%1&quot;.</source>
+        <translation>Nincsenek paraméterek a &quot;%1&quot; -ben.</translation>
     </message>
     <message>
         <location line="+213" />
-        <source>No ID set in "%1".</source>
-        <translation>Nincs azonosítója a "%1" -ben.</translation>
+        <source>No ID set in &quot;%1&quot;.</source>
+        <translation>Nincs azonosítója a &quot;%1&quot; -ben.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
@@ -6962,7 +6961,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+15" />
         <source>Rename %1 to %2</source>
-        <translation>Átnevezze a %1 -re 2 -t</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17" />
@@ -7040,7 +7039,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7052,60 +7051,60 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+155" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+156" />
         <location line="+823" />
         <source>Dataset Editor</source>
         <translation>Adatkészlet-szerkesztő</translation>
     </message>
     <message>
-        <location line="-364" />
+        <location line="-366" />
         <source>Please enter a class name</source>
         <translation>Kérjük, adja meg az osztály nevét</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+601" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+604" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+359" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+412" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+70" />
+        <location line="+72" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-733" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-732" />
         <location line="+19" />
-        <location line="+115" />
-        <location line="+1483" />
+        <location line="+111" />
+        <location line="+1514" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+124" />
-        <location line="+180" />
-        <location line="+308" />
+        <location line="+139" />
+        <location line="+202" />
+        <location line="+306" />
         <location line="+13" />
-        <location line="+168" />
-        <location line="+145" />
+        <location line="+169" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+365" />
-        <location line="+254" />
+        <location line="+117" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+378" />
+        <location line="+273" />
         <location line="+86" />
-        <location line="+1017" />
-        <location line="+895" />
+        <location line="+1142" />
+        <location line="+1075" />
         <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+539" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+551" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+277" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
         <location line="+19" />
         <location line="+11" />
@@ -7113,8 +7112,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Hiba: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-307" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3475" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-309" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3541" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
         <location line="+34" />
         <location line="+48" />
@@ -7124,30 +7123,30 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+9" />
         <location line="+25" />
         <location line="+9" />
-        <source>Failed to create "%L1"!</source>
-        <translation>Nem sikerült létrehozni "%L1"!</translation>
+        <source>Failed to create &quot;%L1&quot;!</source>
+        <translation>Nem sikerült létrehozni &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2513" />
-        <location line="+1446" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+353" />
+        <location line="+33" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
+        <location line="+1442" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>A képfájl mentése ismeretlen okból nem sikerült!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+581" />
-        <location line="+239" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
+        <location line="+224" />
         <source>Delete</source>
         <translation>Törlés</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-309" />
-        <source>Are you sure you want to permanetly delete "%L1"?</source>
-        <translation>Biztosan végleg törli a következőt: "%L1"?</translation>
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
+        <translation>Biztosan végleg törli a következőt: &quot;%L1&quot;?</translation>
     </message>
     <message>
         <location line="-86" />
@@ -7172,10 +7171,10 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>A fájl átnevezése ismeretlen okból nem sikerült!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5164" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5247" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>A(z) "%1" fájl nem másolható ide: "%2".</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>A(z) &quot;%1&quot; fájl nem másolható ide: &quot;%2&quot;.</translation>
     </message>
     <message>
         <source>Invalid argument (%1) for -override_read_timeout</source>
@@ -7199,19 +7198,19 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Hiányzik a -serial_number_filter argumentuma</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+145" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
         <location line="+28" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2349" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2677" />
         <location line="+9" />
         <location line="+13" />
-        <location line="+59" />
+        <location line="+63" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+830" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
         <location line="+36" />
         <location line="+7" />
@@ -7220,13 +7219,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+7" />
         <source>
 
-Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>
 
 Kérjük, zárjon be minden olyan programot, amely az OpenMV IDE alkalmazásadatait nézi/szerkeszti, majd indítsa újra az OpenMV IDE-t!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-65" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Szürkeárnyalatos küszöb szerkesztése a Threshold Editor segítségével</translation>
     </message>
@@ -7236,18 +7235,18 @@ Kérjük, zárjon be minden olyan programot, amely az OpenMV IDE alkalmazásadat
         <translation>Szerkessze a LAB küszöbértéket a Threshold Editor segítségével</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+221" />
         <source>Missing argument for -form_key</source>
         <translation>A -form_key argumentum hiányzik</translation>
     </message>
     <message>
-        <location line="+1066" />
+        <location line="+1074" />
         <source>About OpenMV Viewer...</source>
         <translation>Az OpenMV Viewerről...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;Körülbelül %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Szerző: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU ÁLTALÁNOS NYILVÁNOS LICENC&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ezt a programot abban a reményben terjesztik, hogy hasznos lesz, de GARANCIA NÉLKÜL; még az ELADHATÓSÁG vagy az ADOTT CÉLRA VALÓ ALKALMASSÁG hallgatólagos garanciája nélkül is. További részletekért lásd a &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License dokumentumot&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Kérdése vagy megjegyzése van?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vegye fel velünk a kapcsolatot a &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io címen&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Körülbelül %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Szerző: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU ÁLTALÁNOS NYILVÁNOS LICENC&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ezt a programot abban a reményben terjesztik, hogy hasznos lesz, de GARANCIA NÉLKÜL; még az ELADHATÓSÁG vagy az ADOTT CÉLRA VALÓ ALKALMASSÁG hallgatólagos garanciája nélkül is. További részletekért lásd a &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License dokumentumot&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Kérdése vagy megjegyzése van?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vegye fel velünk a kapcsolatot a &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io címen&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+17" />
@@ -7255,7 +7254,7 @@ Kérjük, zárjon be minden olyan programot, amely az OpenMV IDE alkalmazásadat
         <translation>OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1039" />
+        <location line="-1050" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -7268,7 +7267,7 @@ Kérjük, zárjon be minden olyan programot, amely az OpenMV IDE alkalmazásadat
         <translation type="vanished">Hiányzó argumentum a -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="-460" />
+        <location line="-468" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>Érvénytelen argumentum (%1) a -auto_update esetén</translation>
     </message>
@@ -7278,7 +7277,7 @@ Kérjük, zárjon be minden olyan programot, amely az OpenMV IDE alkalmazásadat
         <translation>Hiányzó argumentum a -auto_update</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+248" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7291,7 +7290,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Hiba a &lt;user_resources&gt; /openmvide/firmware/settings.json: %l1. \ N \ nopenmv IDE verziók elolvasása</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+188" />
         <source>Form Key</source>
         <translation>Űrlapkulcs</translation>
     </message>
@@ -7301,7 +7300,7 @@ Check the json file for errors and fix them.</source>
         <translation>Kérjük, adja meg az űrlapkulcsot</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+80" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7311,7 +7310,7 @@ Check the json file for errors and fix them.</source>
         <location line="-13" />
         <location line="+7" />
         <location line="+7" />
-        <source>Can't open the new file!</source>
+        <source>Can&apos;t open the new file!</source>
         <translation>Nem lehet megnyitni az új fájlt!</translation>
     </message>
     <message>
@@ -7321,8 +7320,8 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+8" />
-        <source>Add some code to "%L1"</source>
-        <translation>Adjon hozzá néhány kódot a "%L1"-hez</translation>
+        <source>Add some code to &quot;%L1&quot;</source>
+        <translation>Adjon hozzá néhány kódot a &quot;%L1&quot;-hez</translation>
     </message>
     <message>
         <location line="+12" />
@@ -7358,7 +7357,7 @@ Check the json file for errors and fix them.</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <source>Are you sure you want to erase your OpenMV Cam's onboard flash drive?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s onboard flash drive?</source>
         <translation type="vanished">Biztosan törli az OpenMV Cam beépített flash meghajtóját?</translation>
     </message>
     <message>
@@ -7392,7 +7391,7 @@ Check the json file for errors and fix them.</source>
         <translation>Automatikusan szinkronizálja a könyvtárakat az OpenMV Cam és a Dokumentumok mappa között.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+24" />
         <source>Filter examples by board and sensor type</source>
         <translation>Példák szűrése tábla és érzékelőtípus szerint</translation>
     </message>
@@ -7422,40 +7421,40 @@ Check the json file for errors and fix them.</source>
         <translation>Reset OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Install the Latest Development Release</source>
         <translation>Telepítse a legújabb fejlesztési kiadást</translation>
     </message>
     <message>
-        <location line="+77" />
-        <location line="+3764" />
+        <location line="+75" />
+        <location line="+3823" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Nyissa meg a Terminált</translation>
     </message>
     <message>
-        <location line="-3818" />
+        <location line="-3877" />
         <source>Machine Vision</source>
         <translation>Gépi látás</translation>
     </message>
     <message>
-        <location line="+181" />
-        <location line="+3668" />
-        <location line="+76" />
+        <location line="+175" />
+        <location line="+3733" />
+        <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Küszöb szerkesztő</translation>
     </message>
     <message>
-        <location line="-3739" />
-        <location line="+3817" />
+        <location line="-3803" />
+        <location line="+3880" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Keypoints szerkesztő</translation>
     </message>
     <message>
-        <location line="-3810" />
-        <location line="+3976" />
-        <location line="+98" />
+        <location line="-3873" />
+        <location line="+4037" />
+        <location line="+97" />
         <location line="+24" />
         <location line="+11" />
         <location line="+18" />
@@ -7463,7 +7462,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag Generator</translation>
     </message>
     <message>
-        <location line="-4124" />
+        <location line="-4184" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 család (30 címke)</translation>
     </message>
@@ -7501,16 +7500,16 @@ Check the json file for errors and fix them.</source>
         <location line="+10" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+371" />
+        <location line="+367" />
         <location line="+14" />
         <location line="+33" />
-        <location line="+916" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-219" />
-        <source>Failed to open: "%L1"</source>
-        <translation>Nem sikerült megnyitni: "%L1"</translation>
+        <location line="+918" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-223" />
+        <source>Failed to open: &quot;%L1&quot;</source>
+        <translation>Nem sikerült megnyitni: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1358" />
+        <location line="-1356" />
         <source>DataMatrix Generator</source>
         <translation>DataMatrix generátor</translation>
     </message>
@@ -7536,29 +7535,29 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Hová mentheti a hálózatot az OpenMV kamerán</translation>
     </message>
     <message>
-        <location line="+228" />
-        <location line="+2357" />
-        <location line="+1290" />
+        <location line="+225" />
+        <location line="+2424" />
+        <location line="+1288" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
-        <location line="+67" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-382" />
-        <location line="+364" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+899" />
-        <location line="+208" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-393" />
+        <location line="+375" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+900" />
+        <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Kérjük, adjon hozzá egy fájl kiterjesztést!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-268" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-269" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+112" />
-        <location line="+207" />
+        <location line="+119" />
+        <location line="+203" />
         <source>Unable to overwrite output file!</source>
         <translation>Nem lehet felülírni a kimeneti fájlt!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3860" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3922" />
         <source>Video Tools</source>
         <translation>Videóeszközök</translation>
     </message>
@@ -7574,23 +7573,23 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-437" />
-        <location line="+273" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-439" />
+        <location line="+275" />
         <source>Play RTSP Stream</source>
         <translation>Játssz RTSP Streamet</translation>
     </message>
     <message>
         <location line="+16" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+15" />
         <location line="+6" />
-        <location line="+46" />
+        <location line="+48" />
         <location line="+19" />
         <source>New Dataset</source>
         <translation>Új adatkészlet</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-98" />
         <source>Dataset Editor - Choose a folder to build the dataset in</source>
         <translation>Adatkészlet-szerkesztő – Válasszon mappát az adatkészlet beépítéséhez</translation>
     </message>
@@ -7601,17 +7600,17 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+15" />
-        <location line="+207" />
+        <location line="+205" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="-209" />
         <location line="+34" />
         <location line="+48" />
         <location line="+33" />
-        <source>Failed to remove "%L1"!</source>
+        <source>Failed to remove &quot;%L1&quot;!</source>
         <translation>„%L1” eltávolítása nem sikerült!</translation>
     </message>
     <message>
-        <location line="-128" />
-        <location line="+30" />
+        <location line="-125" />
+        <location line="+29" />
         <source>Open Dataset</source>
         <translation>Nyissa meg az adatkészletet</translation>
     </message>
@@ -7626,7 +7625,7 @@ Check the json file for errors and fix them.</source>
         <translation>Úgy tűnik, hogy a kiválasztott mappa nem érvényes OpenMV Cam Image Dataset!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export</source>
         <translation>Export</translation>
     </message>
@@ -7636,7 +7635,7 @@ Check the json file for errors and fix them.</source>
         <translation>Adatkészlet exportálása ZIP-fájlba</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <location line="+7" />
         <location line="+42" />
         <location line="+21" />
@@ -7654,38 +7653,38 @@ Check the json file for errors and fix them.</source>
         <translation>Exportálás...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-520" />
-        <location line="+237" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-522" />
+        <location line="+239" />
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1482" />
+        <location line="+1513" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+258" />
-        <location line="+533" />
-        <location line="+145" />
+        <location line="+273" />
+        <location line="+554" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
-        <location line="+433" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-127" />
-        <location line="+288" />
-        <location line="+143" />
-        <location line="+1023" />
+        <location line="+117" />
+        <location line="+428" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-131" />
+        <location line="+289" />
+        <location line="+165" />
+        <location line="+1148" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1340" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1339" />
         <location line="+85" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Cancel</source>
         <translation>Megszünteti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3673" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3737" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Feltöltés az Edge Impulse Project-be</translation>
     </message>
@@ -7764,8 +7763,8 @@ Check the json file for errors and fix them.</source>
         <translation>Az OpenMV IDE-ről...</translation>
     </message>
     <message>
-        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="vanished">&lt;p&gt;&lt;b&gt;Az OpenMV IDE %L1-ről&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Szerző: Ibrahim Abdelkader és Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;A GNU ÁLTALÁNOS NYILVÁNOS ENGEDÉLYE&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Szerzői jog (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ezt a programot abban a reményben terjesztjük, hogy hasznos lesz, de MINDEN GARANCIA NÉLKÜL; még az ELADHATÓSÁGRA vagy A MEGHATÁROZOTT CÉLRA VALÓ ALKALMASSÁGRA vonatkozó vélelmezett garancia nélkül. További részletekért tekintse meg a &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU általános nyilvános licencet&lt;/a&gt;.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Kérdései vagy megjegyzései vannak?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vegye fel velünk a kapcsolatot az &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt; címen.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Az OpenMV IDE %L1-ről&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Szerző: Ibrahim Abdelkader és Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;A GNU ÁLTALÁNOS NYILVÁNOS ENGEDÉLYE&lt;/b&gt;&lt; /p&gt;&lt;p&gt;Szerzői jog (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ezt a programot abban a reményben terjesztjük, hogy hasznos lesz, de MINDEN GARANCIA NÉLKÜL; még az ELADHATÓSÁGRA vagy A MEGHATÁROZOTT CÉLRA VALÓ ALKALMASSÁGRA vonatkozó vélelmezett garancia nélkül. További részletekért tekintse meg a &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU általános nyilvános licencet&lt;/a&gt;.&lt;/p&gt;&lt;p &gt;&lt;b&gt;Kérdései vagy megjegyzései vannak?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vegye fel velünk a kapcsolatot az &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt; címen.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Credits&lt;/b&gt;&lt;/p&gt;</source>
@@ -7786,11 +7785,11 @@ Check the json file for errors and fix them.</source>
         <translation>OpenMV megjelenítő</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+73" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
         <location line="+37" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-221" />
         <location line="+87" />
         <location line="+55" />
@@ -7826,11 +7825,11 @@ Check the json file for errors and fix them.</source>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-195" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-197" />
         <location line="+9" />
-        <location line="+89" />
-        <location line="+13" />
-        <location line="+42" />
+        <location line="+95" />
+        <location line="+11" />
+        <location line="+40" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
@@ -7860,53 +7859,61 @@ Check the json file for errors and fix them.</source>
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1064" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1189" />
         <location line="+6" />
         <location line="+28" />
         <location line="+52" />
         <location line="+8" />
         <location line="+35" />
-        <location line="+320" />
-        <location line="+62" />
-        <location line="+99" />
-        <location line="+49" />
-        <location line="+67" />
-        <location line="+12" />
-        <location line="+77" />
+        <location line="+329" />
+        <location line="+136" />
+        <location line="+28" />
+        <location line="+100" />
+        <location line="+56" />
+        <location line="+68" />
+        <location line="+13" />
+        <location line="+81" />
         <location line="+10" />
         <location line="+12" />
         <location line="+28" />
-        <location line="+36" />
-        <location line="+84" />
+        <location line="+34" />
+        <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+86" />
+        <location line="+97" />
         <location line="+4" />
         <location line="+4" />
         <location line="+72" />
-        <location line="+108" />
+        <location line="+116" />
         <location line="+83" />
-        <location line="+42" />
-        <location line="+38" />
-        <location line="+52" />
-        <location line="+38" />
+        <location line="+82" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+46" />
+        <location line="+54" />
+        <location line="+51" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+24" />
         <location line="+21" />
         <location line="+20" />
         <location line="+24" />
-        <location line="+121" />
-        <location line="+214" />
+        <location line="+135" />
+        <location line="+217" />
         <location line="+33" />
-        <location line="+248" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+658" />
+        <location line="+268" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+668" />
         <location line="+48" />
         <source>Connect</source>
         <translation>Csatlakozás</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-42" />
         <source>No settings for the selected board type %L1!</source>
         <translation>Nincs beállítás a kiválasztott tábla típusához, a %L1 -hez!</translation>
     </message>
@@ -7917,12 +7924,12 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Only firmware recovery is supported using the Alif Semiconductor's SE Tools.</source>
+        <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>Csak a firmware helyreállítását támogatják az Alif Semiconductor SE eszközök segítségével.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+119" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
         <source>Disconnect</source>
@@ -7981,12 +7988,11 @@ Check the json file for errors and fix them.</source>
         <translation>Nagyítás, hogy illeszkedjen</translation>
     </message>
     <message>
-        <location line="+30" />
         <source>JPG</source>
-        <translation>JPG</translation>
+        <translation type="vanished">JPG</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+31" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG tömöríti a keretpuffert a nagyobb teljesítmény érdekében</translation>
     </message>
@@ -8005,7 +8011,7 @@ Check the json file for errors and fix them.</source>
         <translation>A maximális teljesítmény érdekében tiltsa le a Frame Buffert</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+52" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>Frame Buffer Disabled (Képkockapuffer letiltva) – kattintson újra a Letiltás gombra az engedélyezéshez (jobbra fent)</translation>
     </message>
@@ -8074,17 +8080,15 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Felbontás (sz:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1574" />
+        <location line="-1582" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>Hiba a &lt;user_resources&gt; /openmvide/firmware/settings.json: %l1. 
-
-Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és törölték volna az erőforrások telepítéséről.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+353" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2512" />
+        <location line="+346" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2858" />
         <source>Load Custom Firmware</source>
         <translation>Töltse be az egyéni firmware -t</translation>
     </message>
@@ -8096,7 +8100,7 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
     </message>
     <message>
         <location line="+1" />
-        <source>Are you sure you want to erase your OpenMV Cam's internal FAT file system?</source>
+        <source>Are you sure you want to erase your OpenMV Cam&apos;s internal FAT file system?</source>
         <translation>Biztosan szeretné törölni az OpenMV CAM belső zsírfájlrendszerét?</translation>
     </message>
     <message>
@@ -8125,15 +8129,20 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
         <translation>Állítsa vissza a ROMF -eket az OpenMV CAM -on</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+84" />
+        <source>Force enter OpenMV Cam bootloader</source>
+        <translation>Kényszerítsd be az OpenMV Cam rendszerbetöltőbe</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>MicroPython Tools</source>
         <translation>Mikropython eszközök</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+6" />
         <location line="+7" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -8143,39 +8152,50 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
         <translation>Python fájl másolása/konvertálása</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Open Model Zoo</source>
         <translation>Nyissa meg az állatkertet</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+87" />
         <source>Convert Model for NPU</source>
         <translation>Konvertálja az NPU modelljét</translation>
     </message>
     <message>
+        <location line="+6" />
+        <location line="+9" />
+        <location line="+12" />
         <location line="+7" />
-        <location line="+10" />
-        <location line="+13" />
-        <location line="+8" />
-        <location line="+31" />
+        <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-174" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-176" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Konvertál</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location line="+420" />
         <source>Show Code Profiler</source>
         <translation>Kódprofil megjelenítése</translation>
     </message>
     <message>
         <location line="+101" />
-        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;A %L4 %L1-ről&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Szerző: Ibrahim Abdelkader és Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GYÁRI VERZIÓ&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Csak engedéllyel rendelkező gyártóknak készült.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU ÁLTALÁNOS NYILVÁNOSSÁGI LICENC (GNU ÁLTALÁNOS NYILVÁNOSSÁGI LICENC)&lt;/bL&gt;&lt;2Copy/p&gt; %L3&lt;/p&gt;&lt;p&gt;Ezt a programot abban a reményben terjesztjük, hogy hasznos lesz, de MINDEN GARANCIA NÉLKÜL; még az ELADHATÓSÁGRA vagy A MEGHATÁROZOTT CÉLRA VALÓ ALKALMASSÁGRA vonatkozó hallgatólagos garancia nélkül. További részletekért tekintse meg a &lt;a href="https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT"&gt;GNU általános nyilvános licencét&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Kérdései vagy megjegyzései vannak?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vegye fel velünk a kapcsolatot a következő címen: &lt;a href="mailto:openmv@openmv.io"&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+196" />
+        <location line="+26" />
+        <source>JPG Mode</source>
+        <translation>JPG mód</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>RAW Mode</source>
+        <translation>RAW mód</translation>
+    </message>
+    <message>
+        <location line="+113" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Képpontok (%7) - Fókusz (%8)</translation>
@@ -8213,7 +8233,7 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2737" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
         <source>Board:</source>
         <translation>Tábla:</translation>
     </message>
@@ -8257,9 +8277,9 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-301" />
-        <location line="+303" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
+        <location line="+324" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
         <source>Drive:</source>
         <translation>Hajtás:</translation>
     </message>
@@ -8280,8 +8300,8 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
         <translation>Eltérhet a fényképezőgép FPS-étől</translation>
     </message>
     <message>
-        <location line="+309" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2952" />
+        <location line="+307" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
         <source>Update Available</source>
         <translation>Frissítés elérhető</translation>
     </message>
@@ -8296,7 +8316,7 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
         <translation>Letöltés</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
         <translation>WiFi programozás letiltva!</translation>
     </message>
@@ -8334,11 +8354,11 @@ Az OpenMV IDE verziói a v4.3.0 előtt nem rendelkeznek ezzel a fájlral, és t�
         <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
-Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
 
 Blinking Green:
 
-Your OpenMV Cam's onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.
 
 Blinking Blue:
 
@@ -8346,11 +8366,11 @@ Your OpenMV Cam is running the default main.py script onboard.
 
 If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
 
-If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+If the LED is blinking blue but OpenMV IDE can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
 
 Blinking White:
 
-Your OpenMV Cam's firmware is panicking because of a hardware failure. Please check that your OpenMV Cam's camera module is installed securely.
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
         <translation>Köszönjük, hogy az OpenMV kamerát és az OpenMV IDE-t használja!
@@ -8377,27 +8397,27 @@ Az OpenMV Cam firmware-je pánikba esik egy hardverhiba miatt. Ellenőrizze, hog
     </message>
     <message>
         <location line="+93" />
-        <location line="+1176" />
+        <location line="+1212" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Soros port - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1144" />
+        <location line="-1180" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+791" />
-        <location line="+145" />
+        <location line="+827" />
+        <location line="+146" />
         <location line="+114" />
-        <location line="+129" />
+        <location line="+130" />
         <location line="+114" />
-        <location line="+118" />
+        <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>Csatlakozás... (30 másodperces időtúllépés)</translation>
     </message>
     <message>
-        <location line="-1783" />
+        <location line="-1820" />
         <source>
 
 Try doing:
@@ -8450,12 +8470,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1233" />
+        <location line="+1270" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP-kiszolgáló kapcsolat - %1</translation>
     </message>
     <message>
-        <location line="-1159" />
+        <location line="-1196" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Érvénytelen portargumentum (%1) az -open_udp_server_terminalhoz</translation>
     </message>
@@ -8486,12 +8506,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1279" />
+        <location line="+1317" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP szerver kapcsolat - %1</translation>
     </message>
     <message>
-        <location line="-1205" />
+        <location line="-1243" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Érvénytelen portargumentum (%1) a -open_tcp_server_terminal számára</translation>
     </message>
@@ -8501,15 +8521,17 @@ sudo adduser %L1 dialout
         <translation>Hiányoznak az -open_tcp_server_terminal argumentumai</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+58" />
         <location line="+18" />
+        <location line="+6" />
+        <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
         <location line="+9" />
         <location line="+45" />
-        <location line="+79" />
-        <location line="+8" />
+        <location line="+82" />
+        <location line="+27" />
         <location line="+6" />
         <location line="+6" />
         <location line="+6" />
@@ -8518,15 +8540,15 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2389" />
-        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location line="+10" />
         <location line="+8" />
-        <location line="+19" />
+        <location line="+22" />
         <source>Register OpenMV Cam</source>
         <translation>Regisztrálja az OpenMV kamerát</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="-278" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8546,13 +8568,24 @@ Futtassa a Példák-&gt;HelloWorld-&gt;helloworld.py fájlt a látás minőség�
     </message>
     <message>
         <location line="+7" />
-        <location line="+17" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-65" />
+        <location line="+29" />
+        <location line="+172" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-69" />
         <source>Registered</source>
         <translation>Bejegyzett</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-190" />
+        <source>Board type not available for this form key!</source>
+        <translation>Ehhez az űrlapkulcshoz nem áll rendelkezésre táblatípus!</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Registration limit reached for this board type!</source>
+        <translation>Elérte a regisztrációs limitet ehhez a táblatípushoz!</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8568,27 +8601,27 @@ Futtassa a Példák-&gt;HelloWorld-&gt;helloworld.py fájlt a látás minőség�
     </message>
     <message>
         <location line="+17" />
-        <location line="+182" />
+        <location line="+204" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>Adatbázis hiba!</translation>
     </message>
     <message>
-        <location line="-165" />
-        <location line="+178" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+17" />
+        <location line="-187" />
+        <location line="+200" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+18" />
         <source>GET Network error!</source>
         <translation>GET Hálózati hiba!</translation>
     </message>
     <message>
-        <location line="-169" />
-        <location line="+177" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+19" />
+        <location line="-191" />
+        <location line="+199" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+22" />
         <source>GET network error!</source>
         <translation>GET hálózati hiba!</translation>
     </message>
     <message>
-        <location line="-170" />
+        <location line="-192" />
         <location line="+10" />
         <location line="+10" />
         <source>Unregistered OpenMV Cam Detected</source>
@@ -8596,7 +8629,7 @@ Futtassa a Példák-&gt;HelloWorld-&gt;helloworld.py fájlt a látás minőség�
     </message>
     <message>
         <location line="-19" />
-        <source>Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
         <translation>Az OpenMV Cam nincs regisztrálva. Regisztrálnia kell az OpenMV kamerát az OpenMV-nél, hogy megszakítás nélkül korlátlanul használhassa az OpenMV IDE-vel.
@@ -8623,8 +8656,8 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href="https://openmv.io/products/openmv-cam-board-key"&gt;here&lt;/a&gt;.</source>
-        <translation>Kérjük, adja meg a tábla kulcsát az OpenMV Cam regisztrálásához.&lt;br/&gt;&lt;br/&gt;Ha nincs kulcsa, vásárolhat egyet az OpenMV-től &lt;a href="https://openmv.io/products/openmv- cam-board-key"&gt;itt&lt;/a&gt;.</translation>
+        <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Kérjük, adja meg a tábla kulcsát az OpenMV Cam regisztrálásához.&lt;br/&gt;&lt;br/&gt;Ha nincs kulcsa, vásárolhat egyet az OpenMV-től &lt;a href=&quot;https://openmv.io/products/openmv- cam-board-key&quot;&gt;itt&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+47" />
@@ -8632,12 +8665,12 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>OpenMV Cam regisztrálása...</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+33" />
         <source>Thank you for registering your OpenMV Cam!</source>
         <translation>Köszönjük, hogy regisztrálta OpenMV kameráját!</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+27" />
         <source>Invalid Board Key for Board Type!</source>
         <translation>Érvénytelen táblakulcs a táblatípushoz!</translation>
     </message>
@@ -8662,10 +8695,10 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Érvénytelenül formázott táblakulcs!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+223" />
-        <location line="+482" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+225" />
+        <location line="+503" />
         <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-83" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-84" />
         <source>FPS: 0</source>
         <translation>FPS: 0</translation>
     </message>
@@ -8674,7 +8707,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation type="vanished">Beállítások konfigurálása</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+389" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+395" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>Szkript mentése</translation>
@@ -8685,7 +8718,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Törli a megjegyzéseket és konvertálja a szóközöket tabulátorokká?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+100" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
@@ -8702,8 +8735,8 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Képfájlok (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Template</source>
@@ -8716,26 +8749,26 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
     </message>
     <message>
         <location line="+23" />
-        <location line="+67" />
+        <location line="+65" />
         <source>Please select a valid path on the OpenMV Cam!</source>
         <translation>Kérjük, válasszon érvényes elérési utat az OpenMV kamerán!</translation>
     </message>
     <message>
-        <location line="-52" />
-        <location line="+67" />
-        <source>"%L1" is longer than a max length of %L2 characters!</source>
-        <translation>"%L1" hosszabb, mint a maximális %L2 karakter!</translation>
+        <location line="-50" />
+        <location line="+65" />
+        <source>&quot;%L1&quot; is longer than a max length of %L2 characters!</source>
+        <translation>&quot;%L1&quot; hosszabb, mint a maximális %L2 karakter!</translation>
     </message>
     <message>
-        <location line="-40" />
-        <location line="+7" />
+        <location line="-41" />
+        <location line="+8" />
         <location line="+17" />
         <location line="+15" />
         <source>Save Descriptor</source>
         <translation>Leíró mentése</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8743,7 +8776,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Keypoints fájlok (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1113" />
+        <location line="-1112" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8761,17 +8794,17 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
     <message>
         <location line="-19" />
         <location line="+13" />
-        <source>Cannot open the file "%L1"!</source>
-        <translation>A "%L1" fájl nem nyitható meg!</translation>
+        <source>Cannot open the file &quot;%L1&quot;!</source>
+        <translation>A &quot;%L1&quot; fájl nem nyitható meg!</translation>
     </message>
     <message>
         <location line="-13" />
         <location line="+13" />
-        <source>Cannot open the example file "%L1"!</source>
+        <source>Cannot open the example file &quot;%L1&quot;!</source>
         <translation>A „%L1” példafájl nem nyitható meg!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-467" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-468" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>Válassza a Drive lehetőséget</translation>
@@ -8782,7 +8815,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Nem található érvényes meghajtó az OpenMV kamerához!</translation>
     </message>
     <message>
-        <source>"%L1" is the only drive available so it must be your OpenMV Cam's drive.</source>
+        <source>&quot;%L1&quot; is the only drive available so it must be your OpenMV Cam&apos;s drive.</source>
         <translation type="vanished">A „%L1” az egyetlen elérhető meghajtó, tehát az OpenMV Cam meghajtójának kell lennie.</translation>
     </message>
     <message>
@@ -8791,19 +8824,19 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Kérjük, társítson egy meghajtót az OpenMV kamerához</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>Drive: %L1</source>
         <translation>Meghajtó: %L1</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+42" />
         <source>Debug Protocol Settings</source>
         <translation>Hibakeresési protokoll beállításai</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Protocol Version %1 - System Info:</source>
-        <translation>Protokoll verzió % 1 - Rendszerinformáció:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25" />
@@ -8866,30 +8899,30 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Kódprofil lekérdezése (ms)</translation>
     </message>
     <message>
-        <location line="+354" />
+        <location line="+391" />
         <location line="+26" />
         <location line="+7" />
-        <source>Failed to flush "%L1"!</source>
-        <translation>Nem sikerült kiüríteni "%L1"!</translation>
+        <source>Failed to flush &quot;%L1&quot;!</source>
+        <translation>Nem sikerült kiüríteni &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+34" />
-        <location line="+13" />
+        <location line="+12" />
         <location line="+31" />
         <location line="+9" />
-        <location line="+87" />
+        <location line="+89" />
         <location line="+6" />
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -8899,7 +8932,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Új terminál</translation>
     </message>
     <message>
-        <location line="-637" />
+        <location line="-641" />
         <source>Connect to serial port</source>
         <translation>Csatlakoztassa a soros porthoz</translation>
     </message>
@@ -8920,7 +8953,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2021" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2227" />
         <source>Please select a serial port</source>
         <translation>Kérjük, válasszon egy soros portot</translation>
     </message>
@@ -8930,7 +8963,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Adjon meg egy adatátviteli sebességet</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+96" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
         <source>Try doing:
 
@@ -8947,15 +8980,15 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
     </message>
     <message>
         <location line="+17" />
-        <location line="+138" />
+        <location line="+139" />
         <location line="+7" />
-        <location line="+236" />
+        <location line="+237" />
         <location line="+7" />
-        <source>Invalid string: "%L1"!</source>
-        <translation>Érvénytelen karakterlánc: "%L1"!</translation>
+        <source>Invalid string: &quot;%L1&quot;!</source>
+        <translation>Érvénytelen karakterlánc: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-381" />
         <source>No serial ports found!</source>
         <translation>Nem található soros port!</translation>
     </message>
@@ -8966,45 +8999,45 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+243" />
+        <location line="+244" />
         <source> Connect to a Server </source>
         <translation> Csatlakozás egy szerverhez </translation>
     </message>
     <message>
-        <location line="-242" />
-        <location line="+243" />
+        <location line="-243" />
+        <location line="+244" />
         <source> Start a Server </source>
         <translation> Indítson el egy szervert </translation>
     </message>
     <message>
         <location line="-234" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>Adjon meg egy IP-címet (vagy domain nevet) és portot (pl. xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-222" />
         <source>UDP Client Connection - %1</source>
         <translation>UDP-kliens kapcsolat - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+243" />
+        <location line="+244" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>Adjon meg egy portszámot (bármely véletlenszerű szabad porthoz írjon be 0-t)</translation>
     </message>
     <message>
-        <location line="-137" />
+        <location line="-138" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>Csatlakozzon egy TCP-kiszolgálóhoz kliensként, vagy indítson el egy TCP-kiszolgálót?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+36" />
         <source>TCP Client Connection - %1</source>
         <translation>TCP-kliens kapcsolat - %1</translation>
     </message>
     <message>
-        <location line="+244" />
+        <location line="+243" />
         <source>Error: Option Index!</source>
         <translation>Hiba: Opció Index!</translation>
     </message>
@@ -9029,7 +9062,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation> Képfájl </translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+19" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>A kiválasztott küszöbérték a bezáráskor frissül.</translation>
@@ -9045,8 +9078,8 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Képfájl</translation>
     </message>
     <message>
-        <location line="+71" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+70" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+704" />
         <source>What would you like to do?</source>
         <translation>Mit szeretnél csinálni?</translation>
     </message>
@@ -9061,7 +9094,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation> Fájlok egyesítése </translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9111,12 +9144,12 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Az első kulcspontok fájl betöltése ismeretlen okból nem sikerült!</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>What tag images from the %L1 tag family do you want to generate?</source>
         <translation>Milyen címkeképeket szeretne létrehozni a %L1 címkecsaládból?</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Min (%1)</source>
         <translation>Min (%1)</translation>
     </message>
@@ -9158,7 +9191,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>A generáció kész!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1510" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
         <translation>Új OpenMV IDE erőforrások állnak rendelkezésre (például példák, firmware, dokumentáció stb.).</translation>
     </message>
@@ -9169,42 +9202,42 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+288" />
-        <location line="+143" />
+        <location line="+289" />
+        <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
         <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+176" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
         <location line="+46" />
-        <location line="+75" />
+        <location line="+73" />
         <location line="+46" />
-        <location line="+74" />
+        <location line="+72" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+400" />
         <location line="+50" />
-        <location line="+873" />
+        <location line="+871" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>Letöltés...</translation>
     </message>
     <message>
-        <location line="-417" />
+        <location line="-440" />
         <source>Installing...</source>
         <translation>Telepítés...</translation>
     </message>
     <message>
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
-        <source>Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!</source>
+        <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
         <translation>Kérjük, zárjon be minden olyan programot, amely az OpenMV IDE alkalmazásadatait nézi/szerkeszti, majd indítsa újra az OpenMV IDE-t!</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
         <translation>Sikeres telepítés! Kérjük, indítsa újra az OpenMV IDE-t.</translation>
     </message>
@@ -9217,69 +9250,119 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+254" />
+        <location line="+273" />
         <location line="+88" />
-        <source>Cannot open the resources file "%L1"!</source>
+        <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>A „%L1” erőforrásfájl nem nyitható meg!</translation>
     </message>
     <message>
-        <location line="-314" />
-        <location line="+254" />
+        <location line="-333" />
+        <location line="+273" />
         <location line="+95" />
-        <source>Network request failed "%L1"!</source>
-        <translation>A hálózati kérés sikertelen volt "%L1"!</translation>
+        <source>Network request failed &quot;%L1&quot;!</source>
+        <translation>A hálózati kérés sikertelen volt &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-315" />
+        <location line="-335" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
         <translation>Firmware bináris ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+119" />
-        <location line="+588" />
-        <location line="+217" />
-        <location line="+2205" />
+        <location line="+12" />
+        <location line="+117" />
+        <location line="+720" />
+        <location line="+227" />
+        <location line="+2414" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Törölje a belső zsírfájlrendszert</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+119" />
-        <location line="+589" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+117" />
+        <location line="+722" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
-        <source>If you enable this option all files on your OpenMV Cam's internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Ha engedélyezi ezt az opciót, az OpenMV CAM belső zsírfájlrendszerének minden fájlja törlődik. Ez nem törli a fájlokat egyetlen cserélhető SD -kártyán (ha beillesztve).</translation>
     </message>
     <message>
-        <location line="-3204" />
-        <location line="+708" />
-        <location line="+216" />
-        <location line="+2205" />
+        <location line="-3553" />
+        <location line="+839" />
+        <location line="+226" />
+        <location line="+2413" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>A ROMFS fájlrendszer visszaállítása</translation>
     </message>
     <message>
-        <location line="-3203" />
-        <location line="+708" />
-        <location line="+215" />
-        <location line="+2205" />
+        <location line="-3552" />
+        <location line="+840" />
+        <location line="+225" />
+        <location line="+2412" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Ha engedélyezi ezt az opciót, az OpenMV CAM ROM fájlrendszere visszaállítja az alapértelmezett értéket.</translation>
     </message>
     <message>
-        <location line="-3160" />
+        <location line="-3510" />
         <location line="+45" />
         <source>Bootloader</source>
         <translation>Bootloader</translation>
     </message>
     <message>
-        <location line="+2991" />
+        <location line="+28" />
+        <source>Force bootloader</source>
+        <translation>Bootloader kényszerítése</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Force enter the OpenMV Cam bootloader. May result in the OpenMV Cam bootloader not automatically exiting on older boards.</source>
+        <translation>Kényszerítsd be az OpenMV Cam rendszerbetöltőt. Előfordulhat, hogy az OpenMV Cam rendszerbetöltő nem lép ki automatikusan a régebbi kártyákon.</translation>
+    </message>
+    <message>
+        <location line="+693" />
+        <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
+        <translation>Telepítse a legújabb verziójú firmware-t (v%L1.%L2.%L3)</translation>
+    </message>
+    <message>
+        <location line="+1063" />
+        <location line="+192" />
+        <source>Failed to copy firmware files to temporary directory!</source>
+        <translation>Nem sikerült átmásolni a firmware fájlokat az ideiglenes könyvtárba!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Original firmware folder does not exist!</source>
+        <translation>Az eredeti firmware mappa nem létezik!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <location line="+192" />
+        <source>Failed to create temporary directory!</source>
+        <translation>Nem sikerült létrehozni az ideiglenes könyvtárat!</translation>
+    </message>
+    <message>
+        <location line="-183" />
+        <source>Only loading bootloader.bin files is supported with the ST Cube Programmer!</source>
+        <translation>Az ST Cube Programmer csak a bootloader.bin fájlok betöltését támogatja!</translation>
+    </message>
+    <message>
+        <location line="+151" />
+        <source>Bootloader update complete!
+
+</source>
+        <translation>Bootloader frissítés kész!</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Connect your OpenMV Cam now.</source>
+        <translation>Csatlakoztassa OpenMV kameráját most.</translation>
+    </message>
+    <message>
+        <location line="+1377" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9288,8 +9371,8 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Különösen nézze meg a Képfeldolgozás -&gt; Színkövetés és gépi tanulás -&gt; TensorFlow példákat.</translation>
     </message>
     <message>
-        <location line="-3104" />
-        <location line="+4" />
+        <location line="-3455" />
+        <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
         <source>Firmware Path</source>
@@ -9304,26 +9387,26 @@ Különösen nézze meg a Képfeldolgozás -&gt; Színkövetés és gépi tanul�
         <translation type="vanished">Törölje a belső fájlrendszert</translation>
     </message>
     <message>
-        <source>If you enable this option all files on your OpenMV Cam's internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
+        <source>If you enable this option all files on your OpenMV Cam&apos;s internal flash drive will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">Ha engedélyezi ezt az opciót, az OpenMV Cam belső flash meghajtóján lévő összes fájl törlődik. Ez nem törli a fájlokat egyetlen cserélhető SD-kártyán sem (ha be van helyezve).</translation>
     </message>
     <message>
-        <source>Loading firmware via DFU always erases your OpenMV Cam's internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
+        <source>Loading firmware via DFU always erases your OpenMV Cam&apos;s internal flash drive. This does not erase files on any removable SD card (if inserted).</source>
         <translation type="vanished">A firmware DFU-n keresztüli betöltése mindig törli az OpenMV Cam belső flash meghajtóját. Ez nem törli a fájlokat egyetlen cserélhető SD-kártyán sem (ha be van helyezve).</translation>
     </message>
     <message>
         <location line="+21" />
-        <location line="+130" />
+        <location line="+148" />
         <source>Run</source>
         <translation>Futtatás</translation>
     </message>
     <message>
-        <location line="-86" />
-        <source>"%L1" is not a file!</source>
-        <translation>"%L1" nem fájl!</translation>
+        <location line="-105" />
+        <source>&quot;%L1&quot; is not a file!</source>
+        <translation>&quot;%L1&quot; nem fájl!</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+67" />
         <source>Update ROMFS file system</source>
         <translation>Frissítse a ROMFS fájlrendszert</translation>
     </message>
@@ -9333,7 +9416,7 @@ Különösen nézze meg a Képfeldolgozás -&gt; Színkövetés és gépi tanul�
         <translation>Ha engedélyezi ezt az opciót, az OpenMV CAM ROM fájlrendszerét frissítik a legújabb fejlesztési kiadásra.</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+125" />
         <source>Extracting...</source>
         <translation>Kibontás...</translation>
     </message>
@@ -9353,17 +9436,16 @@ Különösen nézze meg a Képfeldolgozás -&gt; Színkövetés és gépi tanul�
         <translation>Ismeretlen deszka</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+344" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>A rendszer DFU módban lévő kártyát észlelt. Mit szeretnél csinálni?</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Install the lastest release firmware (v%L1.%L2.%L3)</source>
-        <translation>Telepítse a legújabb kiadású firmware-t (v%L1.%L2.%L3)</translation>
+        <translation type="vanished">Telepítse a legújabb kiadású firmware-t (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Load a specific firmware</source>
         <translation>Töltsön be egy adott firmware-t</translation>
     </message>
@@ -9372,36 +9454,35 @@ Különösen nézze meg a Képfeldolgozás -&gt; Színkövetés és gépi tanul�
         <translation type="vanished">Csak törölje az interal fájlrendszert</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+92" />
         <source>No OpenMV Cams found!</source>
         <translation>Nem található OpenMV Cams!</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+56" />
         <source>Do you have an OpenMV Cam connected and is it bricked?</source>
         <translation>Van OpenMV Cam csatlakoztatva, és tégla van?</translation>
     </message>
     <message>
-        <location line="+849" />
         <source>Only loading *.dfu files is supported for the STM32 recovery bootloader!
 
-Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!</source>
-        <translation>Csak a *.dfu fájlok betöltése támogatott az STM32 helyreállítási bootloader számára!
+Please select a bootloader.dfu file and try again. Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!</source>
+        <translation type="vanished">Csak a *.dfu fájlok betöltése támogatott az STM32 helyreállítási bootloader számára!
 
  Kérjük, válassza ki a bootloader.dfu fájlt, és próbálja újra. Vegye figyelembe, hogy a firmware.dfu vagy az OpenMv.dfu (Bootloader + firmware) betöltése nem működik az STM32H7 táblákon, mivel a chip ROM bootloader -je hibája!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+987" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>Csak a *.bin és *.img fájlok betöltése támogatott a belső bootloader számára!</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Only loading *.bin and *.img files are supported for the IMX bootloader!</source>
         <translation>Csak a *.bin és *.img fájlok betöltése támogatott az IMX bootloader számára!</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+107" />
         <source>Only loading *.bin, *.dfu, and *.img files are supported for the Arduino bootloader!</source>
         <translation>Csak a *.bin, *.dfu és *.img fájlok betöltése támogatja az Arduino bootloader számára!</translation>
     </message>
@@ -9417,7 +9498,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
     </message>
     <message>
         <location line="+24" />
-        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!
+        <source>Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) may not work on STM32H7 boards due to a bug in the chip&apos;s ROM bootloader!
 
 OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</source>
         <translation>Vegye figyelembe, hogy a firmware.dfu vagy az OpenMv.dfu (Bootloader + firmware) betöltése nem működik az STM32H7 táblákon, mivel a chip ROM bootloader -je hibája!
@@ -9427,9 +9508,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-976" />
-        <location line="+657" />
-        <location line="+1750" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1398" />
+        <location line="+252" />
+        <location line="+681" />
+        <location line="+1936" />
         <source>Please select the board type</source>
         <translation>Kérjük, válassza ki a tábla típusát</translation>
     </message>
@@ -9438,30 +9520,30 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Törli a belső fájlrendszert?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2295" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2500" />
         <source>No released firmware available for the attached board!</source>
         <translation>A csatolt kártyához nem érhető el kiadott firmware!</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+61" />
         <source>Please select a DFU Device</source>
         <translation>Kérjük, válasszon DFU-eszközt</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-83" />
         <location line="+170" />
         <location line="+44" />
-        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Kérjük, frissítse a rendszertöltőt a legújabb verzióra, és telepítse a SoftDevice-t az OpenMV firmware frissítéséhez. További információ a &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt; oldalon található.</translation>
+        <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Kérjük, frissítse a rendszertöltőt a legújabb verzióra, és telepítse a SoftDevice-t az OpenMV firmware frissítéséhez. További információ a &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt; oldalon található.</translation>
     </message>
     <message>
-        <location line="-1065" />
-        <location line="+3012" />
+        <location line="-1191" />
+        <location line="+3343" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>FIGYELMEZTETÉS: Az új firmware verzióra történő frissítéshez a FAT fájlrendszer törlését igényli.</translation>
     </message>
     <message>
-        <location line="-2527" />
+        <location line="-2848" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
@@ -9470,7 +9552,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 %1</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+173" />
         <source>Just erase the internal FAT file system</source>
         <translation>Csak törölje a belső zsírfájlrendszert</translation>
     </message>
@@ -9485,17 +9567,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Állítsa vissza a ROM fájlrendszert</translation>
     </message>
     <message>
-        <location line="+219" />
-        <location line="+2206" />
+        <location line="+229" />
+        <location line="+2415" />
         <source>Upgrade options:</source>
         <translation>Frissítési lehetőségek:</translation>
     </message>
     <message>
-        <location line="-2122" />
+        <location line="-2327" />
         <location line="+169" />
         <location line="+44" />
-        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt;</source>
-        <translation>Kérjük, rövidítse le a REC-et a GND-re, és állítsa vissza a kártyát. További információ a &lt;a href="https://docs.arduino.cc"&gt;https://docs.arduino.cc&lt;/a&gt; oldalon található.</translation>
+        <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
+        <translation>Kérjük, rövidítse le a REC-et a GND-re, és állítsa vissza a kártyát. További információ a &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt; oldalon található.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -9507,7 +9589,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (Ha ez 5 másodpercnél tovább tart, nyomja meg a Mégse gombot.)</translation>
     </message>
     <message>
-        <location line="+132" />
+        <location line="+143" />
         <source>Timeout error while getting firmware version!</source>
         <translation>Időtúllépési hiba a firmware verzió lekérése közben!</translation>
     </message>
@@ -9523,8 +9605,8 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+191" />
-        <location line="+570" />
+        <location line="+199" />
+        <location line="+733" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Időtúllépési hiba a tábla architektúrája lekérésekor!</translation>
     </message>
@@ -9533,7 +9615,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Nem támogatott tábla architektúra!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-631" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-633" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Válassza le az OpenMV kamerát, majd csatlakoztassa újra...</translation>
@@ -9566,12 +9648,12 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+38" />
-        <source>Unable to connect to your OpenMV Cam's normal bootloader!</source>
+        <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>Nem lehet csatlakozni az OpenMV Cam normál rendszerbetöltőjéhez!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+129" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+131" />
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
         <translation>Az OpenMV IDE továbbra is megpróbálhatja megjavítani az OpenMV kamerát az OpenMV Cam DFU Bootloader segítségével.
@@ -9580,9 +9662,9 @@ Folytatni?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-288" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
         <location line="+46" />
-        <location line="+195" />
+        <location line="+191" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>Törlés...</translation>
@@ -9601,7 +9683,7 @@ Folytatni?</translation>
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-837" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-835" />
         <location line="+41" />
         <location line="+51" />
         <location line="+44" />
@@ -9618,7 +9700,7 @@ Folytatni?</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+221" />
+        <location line="+219" />
         <location line="+50" />
         <location line="+51" />
         <location line="+42" />
@@ -9682,11 +9764,11 @@ Folytatni?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
         <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
-        <source>Click OK when your OpenMV Cam's RGB LED starts blinking blue - which indicates the self-test is complete.</source>
+        <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>Kattintson az OK gombra, amikor az OpenMV Cam RGB LED-je kéken villogni kezd – ami azt jelzi, hogy az önteszt befejeződött.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
@@ -9704,7 +9786,7 @@ Folytatni?</translation>
 
 If you overwrote main.py on your OpenMV Cam and did not erase the disk then your OpenMV Cam will just run that main.py.
 
-In this case click OK when you see your OpenMV Cam's internal flash drive mount (a window may or may not pop open).</source>
+In this case click OK when you see your OpenMV Cam&apos;s internal flash drive mount (a window may or may not pop open).</source>
         <translation>
 
 Ha felülírta a main.py fájlt az OpenMV Cam-on, és nem törölte a lemezt, akkor az OpenMV Cam csak a main.py-t futtatja.
@@ -9727,8 +9809,8 @@ Ebben az esetben kattintson az OK gombra, amikor látja az OpenMV Cam belső fla
         <translation>Nem találhatók IMX beállítások!</translation>
     </message>
     <message>
-        <source>Failed to eject "%L1"!</source>
-        <translation type="vanished">Nem sikerült kivenni a következőt: "%L1"!</translation>
+        <source>Failed to eject &quot;%L1&quot;!</source>
+        <translation type="vanished">Nem sikerült kivenni a következőt: &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="+14" />
@@ -9741,7 +9823,7 @@ Nyomja meg a Mégse gombot az SBL újraprogramozáshoz való ugráshoz.</transla
     </message>
     <message>
         <location line="+42" />
-        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.
+        <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
         <translation>Az OpenMV IDE továbbra is megpróbálhatja megjavítani az OpenMV kamerát az OpenMV Cam SBL Bootloader segítségével.
@@ -9752,7 +9834,7 @@ Folytatni?</translation>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
         <translation>Válassza le az OpenMV kamerát a számítógépről, adjon hozzá egy áthidaló vezetéket az SBL és a 3,3 V érintkezők közé, majd csatlakoztassa újra az OpenMV kamerát a számítógéphez.
 
 Kattintson az OK gombra, miután az OpenMV Cam SBL Bootloaderje felsorolta.</translation>
@@ -9804,19 +9886,19 @@ Kattintson az OK gombra, miután az OpenMV Cam SBL Bootloaderje felsorolta.</tra
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-345" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-347" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Nincsenek DFU beállítások a kiválasztott kártyatípushoz!</translation>
     </message>
     <message>
         <location line="+55" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+98" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+104" />
         <source>No DFU settings for the selected device!</source>
         <translation>Nincsenek DFU beállítások a kiválasztott eszközön!</translation>
     </message>
     <message>
         <location line="+32" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+47" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
         <source>Erasing Disk</source>
         <translation>Lemez törlése</translation>
@@ -9845,8 +9927,8 @@ Kattintson az OK gombra, miután az OpenMV Cam SBL Bootloaderje felsorolta.</tra
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-933" />
-        <location line="+934" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-931" />
+        <location line="+932" />
         <source>Flashing Firmware</source>
         <translation>Villogó firmware</translation>
     </message>
@@ -9892,17 +9974,17 @@ Kattintson az OK gombra, miután az OpenMV Cam SBL Bootloaderje felsorolta.</tra
     </message>
     <message>
         <location line="+14" />
-        <source>Your %1 doesn't have an internal FAT file system.</source>
+        <source>Your %1 doesn&apos;t have an internal FAT file system.</source>
         <translation>A %1 -nek nincs belső zsírfájlrendszere.</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
-        <source>Your %1 doesn't have an ROM file system.</source>
+        <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>A %1 -nek nincs ROM fájlrendszere.</translation>
     </message>
     <message>
-        <source>Your Nano 33 BLE doesn't have an onboard data flash disk.</source>
+        <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
         <translation type="vanished">A Nano 33 BLE nem rendelkezik beépített adat flash lemezzel.</translation>
     </message>
     <message>
@@ -9963,7 +10045,7 @@ Folytassa?</translation>
     </message>
     <message>
         <location line="+65" />
-        <source>DFU update erases your OpenMV Cam's internal flash file system.
+        <source>DFU update erases your OpenMV Cam&apos;s internal flash file system.
 
 Backup your data before continuing!</source>
         <translation>A DFU frissítés törli az OpenMV Cam belső flash fájlrendszerét.
@@ -9974,7 +10056,7 @@ A folytatás előtt készítsen biztonsági másolatot adatairól!</translation>
         <location line="+7" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.
 
-Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated.</source>
+Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.</source>
         <translation>Válassza le az OpenMV kamerát a számítógépről, adjon hozzá egy áthidaló vezetéket a BOOT és RST érintkezők közé, majd csatlakoztassa újra az OpenMV kamerát a számítógéphez.
 
 Kattintson az OK gombra, miután az OpenMV Cam DFU Bootloaderje felsorolta.</translation>
@@ -10027,13 +10109,13 @@ Kattintson az OK gombra, miután az OpenMV Cam DFU Bootloaderje felsorolta.</tra
         <translation>A DFU rendszerbetöltő visszaállítása nem sikerült!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-254" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-271" />
         <source>None</source>
         <translation>Semmi</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+16" />
+        <location line="+30" />
         <location line="+56" />
         <source>Unknown</source>
         <translation>Ismeretlen</translation>
@@ -10049,12 +10131,12 @@ Kattintson az OK gombra, miután az OpenMV Cam DFU Bootloaderje felsorolta.</tra
         <translation>Nem regisztrált</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+94" />
         <source>Timeout error while learning MTU!</source>
         <translation>Időtúllépési hiba az MTU tanulása közben!</translation>
     </message>
     <message>
-        <location line="+167" />
+        <location line="+170" />
         <source>Board: %L1</source>
         <translation>Tábla: %L1</translation>
     </message>
@@ -10079,13 +10161,13 @@ Kattintson az OK gombra, miután az OpenMV Cam DFU Bootloaderje felsorolta.</tra
         <translation>Soros port: %L1</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+85" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ elavult -- kattintson ide a frissítéshez ]</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Your OpenMV Cam's firmware is out of date. Would you like to upgrade?</source>
+        <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>Az OpenMV Cam firmware-je elavult. Szeretne frissíteni?</translation>
     </message>
     <message>
@@ -10094,7 +10176,7 @@ Kattintson az OK gombra, miután az OpenMV Cam DFU Bootloaderje felsorolta.</tra
         <translation> - [ legújabb ]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-669" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-674" />
         <source>Failed to open or parse ELF: %1</source>
         <translation>Nem sikerült megnyitni vagy elemezni az ELF-et: %1</translation>
     </message>
@@ -10150,7 +10232,7 @@ Kattintson az OK gombra, miután az OpenMV Cam DFU Bootloaderje felsorolta.</tra
     </message>
     <message>
         <location line="+396" />
-        <location line="+172" />
+        <location line="+177" />
         <source>Code Profiler</source>
         <translation>Code Profiler</translation>
     </message>
@@ -10204,7 +10286,7 @@ Kattintson az OK gombra, miután az OpenMV Cam DFU Bootloaderje felsorolta.</tra
         <translation type="vanished">Rajt</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+588" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+592" />
         <source>More Examples</source>
         <translation>További példák</translation>
     </message>
@@ -10217,29 +10299,29 @@ In particular, checkout the Color-Tracking examples.</source>
 Különösen nézze meg a színkövetési példákat.</translation>
     </message>
     <message>
-        <location line="+28" />
-        <location line="+69" />
-        <location line="+9" />
+        <location line="+27" />
+        <location line="+70" />
+        <location line="+8" />
         <source>Firmware Update</source>
         <translation>Alapszoftver frissítés</translation>
     </message>
     <message>
         <location line="-75" />
-        <source>Update your OpenMV Cam's firmware to the latest version?</source>
+        <source>Update your OpenMV Cam&apos;s firmware to the latest version?</source>
         <translation>Frissíti OpenMV Cam firmware-jét a legújabb verzióra?</translation>
     </message>
     <message>
-        <location line="+67" />
-        <source>Your OpenMV Cam's firmware is up to date.</source>
+        <location line="+68" />
+        <source>Your OpenMV Cam&apos;s firmware is up to date.</source>
         <translation>Az OpenMV Cam firmware-je naprakész.</translation>
     </message>
     <message>
-        <location line="+11" />
-        <source>Need to reset your OpenMV Cam's firmware to the release version?</source>
+        <location line="+10" />
+        <source>Need to reset your OpenMV Cam&apos;s firmware to the release version?</source>
         <translation>Vissza kell állítania az OpenMV Cam firmware-jét a kiadási verzióra?</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+86" />
         <source>No board settings for the connected board found!</source>
         <translation>A csatlakoztatott tábla nem található táblák beállításai!</translation>
     </message>
@@ -10334,7 +10416,7 @@ Különösen nézze meg a színkövetési példákat.</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>Module "%L1" on your OpenMV Cam is different than the copy on your computer.
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
 Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
         <translation>Az OpenMV Cam „%L1” modulja eltér a számítógépén lévő másolattól.
@@ -10348,15 +10430,15 @@ Szeretné, hogy az OpenMV IDE frissítse a modult az OpenMV kamerán?</translati
     </message>
     <message>
         <location line="+91" />
-        <source>Module "%L1" may be required to run your script.
+        <source>Module &quot;%L1&quot; may be required to run your script.
 
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>A szkript futtatásához szükség lehet a "%L1" modulra.
+        <translation>A szkript futtatásához szükség lehet a &quot;%L1&quot; modulra.
 
 Szeretné, hogy az OpenMV IDE átmásolja az OpenMV kamerába?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-366" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10369,18 +10451,18 @@ Szeretné, hogy az OpenMV IDE átmásolja az OpenMV kamerába?</translation>
         <translation>Szöveges fájlok (*.txt);;Minden fájl (*)</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+228" />
         <source>Zoom: %1%</source>
         <translation>Nagyítás: %1%</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4310" />
-        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4365" />
+        <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-280" />
-        <location line="+236" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-265" />
+        <location line="+221" />
         <source>Model Zoo</source>
         <translation>Állatkert</translation>
     </message>
@@ -10416,7 +10498,7 @@ Szeretné, hogy az OpenMV IDE átmásolja az OpenMV kamerába?</translation>
         <translation>Keresés</translation>
     </message>
     <message>
-        <location line="+226" />
+        <location line="+239" />
         <source>Serial Terminal</source>
         <translation>Soros terminál</translation>
     </message>
@@ -10437,8 +10519,8 @@ Szeretné, hogy az OpenMV IDE átmásolja az OpenMV kamerába?</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Run "/main.py"</source>
-        <translation>Futtassa a "/main.py" fájlt</translation>
+        <source>Run &quot;/main.py&quot;</source>
+        <translation>Futtassa a &quot;/main.py&quot; fájlt</translation>
     </message>
     <message>
         <location line="+0" />
@@ -10461,31 +10543,31 @@ Szeretné, hogy az OpenMV IDE átmásolja az OpenMV kamerába?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-360" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-150" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Szerezzen be eszközöket</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-296" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-293" />
         <location line="+79" />
         <source>Query failed!</source>
         <translation>A lekérdezés sikertelen!</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+44" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+119" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+120" />
+        <location line="+118" />
         <source>DFU Util</source>
         <translation>DFU Util</translation>
     </message>
@@ -10510,7 +10592,7 @@ Szeretné, hogy az OpenMV IDE átmásolja az OpenMV kamerába?</translation>
         <translation>Ez eltarthat egy ideig, vízszünet?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-87" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
         <source>Dataset Split</source>
         <translation>Adatkészlet felosztása</translation>
     </message>
@@ -10522,7 +10604,7 @@ OpenMV recommends leaving this at the default 80/20% split.</source>
 Az OpenMV azt javasolja, hogy hagyja ezt az alapértelmezett 80/20%-os felosztáson.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <location line="+16" />
         <source>Training Data
 Percentage
@@ -10544,7 +10626,7 @@ Százalék
     <message>
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+58" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
         <location line="+50" />
         <source>Uploading...</source>
@@ -10585,12 +10667,12 @@ Százalék
         <location line="+10" />
         <source>Nothing to upload
 
-Only jpg/png/bmp images with a numeric name (e.g. "00001.jpg")
-in class folders ("*.class") can be uploaded.</source>
+Only jpg/png/bmp images with a numeric name (e.g. &quot;00001.jpg&quot;)
+in class folders (&quot;*.class&quot;) can be uploaded.</source>
         <translation>Nincs mit feltölteni
 
-Csak numerikus névvel rendelkező jpg/png/bmp képek (pl. "00001.jpg")
-osztály mappáiban ("*.class") tölthető fel.</translation>
+Csak numerikus névvel rendelkező jpg/png/bmp képek (pl. &quot;00001.jpg&quot;)
+osztály mappáiban (&quot;*.class&quot;) tölthető fel.</translation>
     </message>
     <message>
         <location line="+43" />
@@ -10598,31 +10680,31 @@ osztály mappáiban ("*.class") tölthető fel.</translation>
         <location line="+21" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+164" />
+        <location line="+155" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+23" />
         <location line="+9" />
         <location line="+9" />
         <source>Edge Impulse Projects</source>
         <translation>Edge Impulse projektek</translation>
     </message>
     <message>
-        <location line="-276" />
+        <location line="-266" />
         <location line="+35" />
-        <location line="+71" />
-        <location line="+129" />
-        <location line="+42" />
+        <location line="+67" />
+        <location line="+124" />
+        <location line="+41" />
         <source>No request data received</source>
         <translation>Nem érkezett kérelem adat</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-246" />
         <source>An unkown error occured</source>
         <translation>Ismeretlen hiba történt</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+62" />
         <location line="+11" />
         <location line="+7" />
         <location line="+10" />
@@ -10639,7 +10721,7 @@ Open a data set to upload it.</source>
 Nyisson meg egy adatkészletet a feltöltéshez.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+33" />
         <source>Email Address</source>
         <translation>Email cím</translation>
     </message>
@@ -10654,17 +10736,17 @@ Nyisson meg egy adatkészletet a feltöltéshez.</translation>
         <translation>Jelszó</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+66" />
         <source>Please select a project</source>
         <translation>Kérjük, válasszon projektet</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+60" />
         <source>No projects found</source>
         <translation>Nem található projekt</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+45" />
         <source>Upload Project</source>
         <translation>Projekt feltöltése</translation>
     </message>
@@ -10674,7 +10756,7 @@ Nyisson meg egy adatkészletet a feltöltéshez.</translation>
         <translation>Adjon meg egy Edge Impluse Project API kulcsot</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1017" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1015" />
         <location line="+144" />
         <location line="+36" />
         <location line="+41" />
@@ -10693,7 +10775,7 @@ Nyisson meg egy adatkészletet a feltöltéshez.</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+41" />
+        <location line="+39" />
         <location line="+135" />
         <location line="+45" />
         <location line="+50" />
@@ -10729,8 +10811,8 @@ Nyisson meg egy adatkészletet a feltöltéshez.</translation>
     </message>
     <message>
         <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1337" />
-        <location line="+923" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1335" />
+        <location line="+921" />
         <source>This feature is not supported on this machine!</source>
         <translation>Ez a funkció nem támogatott ezen a gépen!</translation>
     </message>
@@ -10762,15 +10844,15 @@ The camera must be power cycled after a system package update.</source>
 A kamerát a rendszercsomag frissítése után kell energiateredni.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-472" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-470" />
         <location line="+51" />
         <location line="+91" />
-        <location line="+346" />
+        <location line="+344" />
         <location line="+51" />
         <location line="+50" />
         <location line="+94" />
         <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+431" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Ennek a parancsnak a végrehajtása eltart egy ideig. Kérjük várjon.</translation>
@@ -10791,7 +10873,7 @@ A kamerát a rendszercsomag frissítése után kell energiateredni.</translation
         <translation>Kész</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+67" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
@@ -10923,12 +11005,12 @@ A kamerát a rendszercsomag frissítése után kell energiateredni.</translation
     </message>
     <message>
         <location line="-77" />
-        <location line="+608" />
+        <location line="+605" />
         <source>Transcoding File...</source>
         <translation>Fájl átkódolása...</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-594" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10989,29 +11071,29 @@ A kamerát a rendszercsomag frissítése után kell energiateredni.</translation
         <translation>Beviteli formátumok beszerzése</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+37" />
         <location line="+111" />
-        <location line="+100" />
+        <location line="+98" />
         <location line="+15" />
-        <location line="+372" />
+        <location line="+371" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
         <location line="+16" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+14" />
+        <location line="+19" />
         <location line="+36" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+21" />
+        <location line="+23" />
         <location line="+7" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+20" />
+        <location line="+22" />
         <location line="+7" />
         <source>Convert Video</source>
         <translation>Videó konvertálása</translation>
@@ -11031,7 +11113,7 @@ A kamerát a rendszercsomag frissítése után kell energiateredni.</translation
         <translation>Az FFMPEG nem támogatott ezen a platformon.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+98" />
         <source>Unable to write to output video file!</source>
         <translation>Nem lehet írni a kimeneti videofájlba!</translation>
     </message>
@@ -11042,79 +11124,79 @@ A kamerát a rendszercsomag frissítése után kell energiateredni.</translation
     </message>
     <message>
         <location line="+163" />
-        <location line="+411" />
+        <location line="+415" />
         <source>Play Video</source>
         <translation>Videó lejátszása</translation>
     </message>
     <message>
-        <location line="-410" />
+        <location line="-414" />
         <location line="+163" />
         <source>Failed to launch ffplay!</source>
         <translation>Nem sikerült elindítani az ffplayt!</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>Convert Video Source</source>
         <translation>Videoforrás konvertálása</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+235" />
+        <location line="+240" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageWriter Files (*.bin);;</source>
         <translation>Video fájlok (*.mp4 *.*);;OpenMV ImageWriter fájlok (*.bin);;</translation>
     </message>
     <message>
-        <location line="-230" />
+        <location line="-235" />
         <location line="+11" />
-        <location line="+117" />
+        <location line="+122" />
         <location line="+7" />
         <source>Convert Video Output</source>
         <translation>Videokimenet konvertálása</translation>
     </message>
     <message>
-        <location line="-130" />
-        <location line="+125" />
-        <location line="+208" />
+        <location line="-135" />
+        <location line="+130" />
+        <location line="+204" />
         <source>Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;</source>
         <translation>Video fájlok (*.mp4 *.*);;OpenMV ImageReader fájlok (*.bin);;</translation>
     </message>
     <message>
-        <location line="-327" />
+        <location line="-328" />
         <source>Please select output format</source>
         <translation>Kérjük, válassza ki a kimeneti formátumot</translation>
     </message>
     <message>
         <location line="+15" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Rescale the video?</source>
         <translation>Átméretezi a videót?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter a new width (the aspect ratio will be kept the same)</source>
         <translation>Adjon meg egy új szélességet (a képarány változatlan marad)</translation>
     </message>
     <message>
-        <location line="-320" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-321" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Skip frames?</source>
         <translation>Kihagyja a kereteket?</translation>
     </message>
     <message>
-        <location line="-318" />
-        <location line="+122" />
-        <location line="+208" />
+        <location line="-319" />
+        <location line="+127" />
+        <location line="+204" />
         <source>Enter how many frames to skip at a time</source>
         <translation>Adja meg, hogy hány képkockát kell egyszerre kihagyni</translation>
     </message>
     <message>
-        <location line="-278" />
-        <location line="+91" />
-        <location line="+207" />
+        <location line="-274" />
+        <location line="+93" />
+        <location line="+203" />
         <source>Video conversion finished!</source>
         <translation>A videó konvertálás befejeződött!</translation>
     </message>
@@ -11144,13 +11226,13 @@ A kamerát a rendszercsomag frissítése után kell energiateredni.</translation
         <translation>Játék</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+47" />
         <location line="+7" />
         <source>Save Video</source>
         <translation>Videó mentése</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
         <source>Busy</source>
         <translation>Elfoglalt</translation>
     </message>
@@ -11166,13 +11248,11 @@ A kamerát a rendszercsomag frissítése után kell energiateredni.</translation
         <translation>Rejtett részletek</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-335" />
-        <location line="+102" />
         <source>No matching interface for the selected file name!</source>
-        <translation>Nincs megfelelő interfész a kiválasztott fájlnévhez!</translation>
+        <translation type="vanished">Nincs megfelelő interfész a kiválasztott fájlnévhez!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-745" />
         <source>Please select the target</source>
         <translation>Kérjük, válassza ki a célt</translation>
     </message>
@@ -11195,70 +11275,70 @@ OpenMV IDE will just copy the model as is.</source>
 Az OpenMV IDE csak úgy másolja a modellt.</translation>
     </message>
     <message>
-        <location line="+145" />
-        <location line="+36" />
+        <location line="+147" />
+        <location line="+35" />
         <location line="+6" />
         <location line="+8" />
-        <location line="+40" />
-        <location line="+17" />
-        <location line="+20" />
-        <location line="+6" />
-        <location line="+8" />
+        <location line="+42" />
+        <location line="+16" />
         <location line="+21" />
-        <location line="+19" />
-        <location line="+20" />
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
         <location line="+93" />
-        <location line="+9" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+13" />
-        <location line="+14" />
-        <location line="+45" />
-        <location line="+17" />
-        <location line="+28" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+40" />
+        <location line="+15" />
         <location line="+27" />
+        <location line="+24" />
         <location line="+53" />
-        <location line="+67" />
+        <location line="+63" />
         <location line="+6" />
         <location line="+21" />
         <source>Edit ROMFS</source>
         <translation>Szerkesztse a ROMF -eket</translation>
     </message>
     <message>
-        <location line="-620" />
-        <location line="+91" />
+        <location line="-606" />
+        <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>Az azonos névvel rendelkező mappa már létezik!</translation>
     </message>
     <message>
-        <location line="-85" />
-        <location line="+91" />
+        <location line="-87" />
+        <location line="+93" />
         <source>File already exists! Overwrite?</source>
         <translation>A fájl már létezik! Átír?</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+91" />
+        <location line="-85" />
+        <location line="+93" />
         <source>Failed to remove file!</source>
         <translation>Nem sikerült eltávolítani a fájlt!</translation>
     </message>
     <message>
         <location line="-51" />
-        <location line="+72" />
+        <location line="+74" />
         <source>Failed to copy file!</source>
         <translation>Nem sikerült másolni a fájlt!</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+17" />
         <source>Folder Name</source>
         <translation>Mappanév</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Failed to create folder!</source>
         <translation>Nem sikerült létrehozni mappát!</translation>
     </message>
@@ -11279,58 +11359,58 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Nem lehet mappát menteni!</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+14" />
+        <location line="+6" />
+        <location line="+15" />
         <location line="+19" />
-        <location line="+240" />
+        <location line="+225" />
         <source>Extract File</source>
         <translation>Dosszié</translation>
     </message>
     <message>
-        <location line="-246" />
+        <location line="-231" />
         <source>View/Edit</source>
         <translation>Megtekintés/Szerkesztés</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+237" />
+        <location line="+222" />
         <source>Add File</source>
         <translation>Fájl hozzáadása</translation>
     </message>
     <message>
-        <location line="-236" />
-        <location line="+238" />
+        <location line="-221" />
+        <location line="+223" />
         <source>New Folder</source>
         <translation>Új mappa</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+14" />
-        <location line="+322" />
-        <location line="+12" />
+        <location line="-135" />
+        <location line="+13" />
+        <location line="+303" />
+        <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>A ROMFS nem támogatott ezen a táblán!</translation>
     </message>
     <message>
-        <location line="-290" />
-        <location line="+45" />
+        <location line="-275" />
+        <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Nem sikerült kicsomagolni a ROMF -eket!</translation>
     </message>
     <message>
         <location line="-19" />
-        <location line="+28" />
+        <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>OpenMV ROMFS</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+172" />
+        <location line="-25" />
+        <location line="+165" />
         <source>ROMFS Images (*.img)</source>
         <translation>ROMFS képek (*.Img)</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="-101" />
         <source>Commit</source>
         <translation>Elkövet</translation>
     </message>
@@ -11345,17 +11425,17 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Mentse el a ROMF -eket a fájlba</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location line="+8" />
+        <location line="+105" />
+        <location line="+7" />
+        <location line="+11" />
         <location line="+12" />
-        <location line="+13" />
-        <location line="+12" />
+        <location line="+11" />
         <source>Reset ROMFS</source>
         <translation>Állítsa vissza a ROMF -eket</translation>
     </message>
     <message>
-        <location line="-44" />
-        <source>Are you sure you want to reset your OpenMV Cam's ROM file system?</source>
+        <location line="-40" />
+        <source>Are you sure you want to reset your OpenMV Cam&apos;s ROM file system?</source>
         <translation>Biztosan szeretné visszaállítani az OpenMV CAM ROM fájlrendszerét?</translation>
     </message>
     <message>
@@ -11385,12 +11465,12 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>&lt;a href="https://pypi.org/project/mpy-cross/"&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://pypi.org/project/mpy-cross/"&gt; mpy cross compilier cli opciók &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://pypi.org/project/mpy-cross/&quot;&gt; mpy cross compilier cli opciók &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-266" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
         <source>Advanced</source>
         <translation>Fejlett</translation>
@@ -11403,7 +11483,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
     </message>
     <message>
         <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+90" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
         <source>Compiling</source>
         <translation>Összeállító</translation>
@@ -11415,9 +11495,9 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+210" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-781" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-780" />
         <source>Success - Press Ok to close the window</source>
         <translation>Siker - Nyomja meg az OK gombot az ablak bezárásához</translation>
     </message>
@@ -11430,18 +11510,18 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Hiba - Az ablak bezárásához nyomja meg a gombot</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-408" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+126" />
+        <location line="+111" />
         <location line="+14" />
-        <location line="+173" />
+        <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>Alsó fordító</translation>
     </message>
     <message>
-        <location line="-334" />
+        <location line="-300" />
         <source>Failed to copy JSON file!</source>
         <translation>Nem sikerült másolni a JSON fájlt!</translation>
     </message>
@@ -11478,14 +11558,13 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+24" />
         <source>--verbosity 2</source>
         <translation>-Verbosity 2</translation>
     </message>
     <message>
-        <location line="-22" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; Stedgeai Core CLI opciók &lt;/a&gt;</translation>
+        <location line="+2" />
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; Stedgeai Core CLI opciók &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -11494,16 +11573,15 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; stedgeai neurális-art cli opciók &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;%1&quot;&gt; stedgeai neurális-art cli opciók &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <source>&lt;a href="%1"&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "%1"&gt; stedgeai áthelyezés cli opciók &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
+        <translation type="vanished">&lt;a href = &quot;%1&quot;&gt; stedgeai áthelyezés cli opciók &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+75" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>Nem sikerült megnyitni a JSON fájlt!</translation>
@@ -11514,7 +11592,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Szellőztető</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+140" />
         <source>The STEdgeAI Compilier is not supported on this platform.</source>
         <translation>A STEDGEAI -fordító nem támogatott ezen a platformon.</translation>
     </message>
@@ -11542,8 +11620,8 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;a href="https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md"&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
-        <translation>&lt;a href = "https://gitlab.arm.com/articial-intelligence/ethos-u/ethos-u-vela/-/blob/main/options.md"&gt; Vela Compilier CLI opciók &lt;/a&gt;</translation>
+        <source>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Vela Compilier CLI Options&lt;/a&gt;</source>
+        <translation>&lt;a href = &quot;https://gitlab.arm.com/articial-intelligence/ethos-u/ethos-u-vela/-/blob/main/options.md&quot;&gt; Vela Compilier CLI opciók &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+67" />
@@ -11566,6 +11644,31 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <source>STM32 Programmer is not supported on this platform.</source>
         <translation>Az STM32 programozó nem támogatott ezen a platformon.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <source>the detected board</source>
+        <translation>az észlelt tábla</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>The selected file &quot;%L1&quot; does not match any firmware interface for %L2.</source>
+        <translation>A kiválasztott fájl &quot;%L1&quot; nem egyezik a %L2 egyetlen firmware interfészével sem.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%L1 accepts files named:</source>
+        <translation>%L1 elfogadja a következő fájlokat:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Rename your firmware file to one of the names above (or select the correct file) and try again.</source>
+        <translation>Nevezze át firmware-fájlját a fenti nevek egyikére (vagy válassza ki a megfelelő fájlt), és próbálkozzon újra.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>This board does not define any loadable firmware interfaces in its settings.</source>
+        <translation>Ez a kártya nem határoz meg betölthető firmware interfészt a beállításaiban.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
@@ -11575,91 +11678,39 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
     </message>
     <message>
         <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+28" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+235" />
         <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
         <location line="+15" />
         <location line="+22" />
-        <location line="+132" />
         <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+21" />
         <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+306" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+144" />
         <source>Project Location</source>
         <translation>Projekt helye</translation>
     </message>
     <message>
-        <location line="-895" />
-        <location line="+28" />
-        <location line="+21" />
+        <location line="-886" />
         <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+21" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+20" />
-        <location line="+21" />
-        <location line="+15" />
         <location line="+22" />
-        <location line="+24" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+11" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+11" />
-        <location line="+29" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+41" />
-        <location line="+28" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+20" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+81" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
@@ -11669,7 +11720,59 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+94" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+13" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+21" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+15" />
+        <location line="+22" />
+        <location line="+18" />
+        <location line="+21" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+28" />
+        <location line="+15" />
+        <location line="+51" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
         <source>Location</source>
         <translation>Hely</translation>
     </message>
@@ -11678,7 +11781,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">Qt teszt</translation>
     </message>
     <message>
-        <location line="-85" />
+        <location line="-516" />
         <source>Google Test</source>
         <translation>Google teszt</translation>
     </message>
@@ -11698,49 +11801,49 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Catch2</translation>
     </message>
     <message>
-        <location line="-762" />
+        <location line="-371" />
         <location line="+25" />
         <location line="+26" />
-        <location line="+712" />
+        <location line="+321" />
         <source>Test framework:</source>
         <translation>Teszt keretrendszer:</translation>
     </message>
     <message>
-        <location line="-687" />
+        <location line="-296" />
         <source>GUI Application</source>
         <translation>GUI alkalmazás</translation>
     </message>
     <message>
         <location line="-75" />
         <location line="+51" />
-        <location line="+715" />
+        <location line="+324" />
         <source>Test suite name:</source>
         <translation>Tesztkészlet neve:</translation>
     </message>
     <message>
-        <location line="-790" />
-        <location line="+25" />
+        <location line="-374" />
         <location line="+24" />
         <location line="+27" />
         <location line="+21" />
-        <location line="+694" />
+        <location line="+22" />
+        <location line="+281" />
         <source>Test case name:</source>
         <translation>Teszteset neve:</translation>
     </message>
     <message>
-        <location line="-693" />
+        <location line="-302" />
         <source>Requires QApplication</source>
         <translation>QApplication szükséges</translation>
     </message>
     <message>
-        <location line="-97" />
+        <location line="+22" />
         <source>Generate setup code</source>
         <translation>Beállítási kód generálása</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+98" />
-        <location line="+692" />
+        <location line="-20" />
+        <location line="+21" />
+        <location line="+280" />
         <source>Generate initialization and cleanup code</source>
         <translation>Inicializálási és tisztítási kód létrehozása</translation>
     </message>
@@ -11749,17 +11852,17 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">C++11 engedélyezése</translation>
     </message>
     <message>
-        <location line="-766" />
+        <location line="-324" />
         <source>Googletest source directory (optional):</source>
         <translation>Googleteszt forráskönyvtár (opcionális):</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>Boost include könyvtár (opcionális):</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
         <translation>A Catch2 tartalmazza a könyvtárat (opcionális):</translation>
     </message>
@@ -11769,154 +11872,154 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Használj Qt könyvtárakat</translation>
     </message>
     <message>
-        <location line="-50" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+45" />
-        <location line="+47" />
-        <location line="+84" />
+        <location line="+107" />
+        <location line="+46" />
+        <location line="+43" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
+        <location line="+105" />
+        <location line="+48" />
         <location line="+43" />
-        <location line="+49" />
-        <location line="+84" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-558" />
-        <location line="+25" />
+        <location line="-735" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+40" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+313" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+85" />
+        <location line="+153" />
+        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+17" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+314" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build system:</source>
         <translation>Rendszer felépítése:</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+25" />
+        <location line="-736" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Projekt- és tesztinformációk</translation>
     </message>
     <message>
-        <location line="-120" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-93" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+26" />
-        <location line="+51" />
+        <location line="+21" />
+        <location line="+25" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+79" />
+        <location line="+116" />
         <location line="+18" />
         <location line="+4" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+41" />
+        <location line="+17" />
+        <location line="+33" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+70" />
-        <location line="+220" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+28" />
+        <location line="+142" />
         <source>Details</source>
         <translation>Részletek</translation>
     </message>
     <message>
-        <location line="-869" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-887" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Kit kiválasztása</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+79" />
+        <location line="+237" />
+        <location line="+44" />
         <location line="+11" />
-        <location line="+21" />
-        <location line="+21" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
+        <location line="+28" />
+        <location line="+14" />
         <location line="+30" />
-        <location line="+295" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -11924,101 +12027,101 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Készletek</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+18" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <source>Project Management</source>
         <translation>Projektmenedzsment</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+21" />
-        <location line="+25" />
+        <location line="-889" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
-        <location line="+28" />
+        <location line="+21" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+37" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+24" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
         <location line="+15" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+132" />
-        <location line="+18" />
-        <location line="+14" />
-        <location line="+12" />
+        <location line="+21" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+44" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+9" />
+        <location line="+28" />
         <location line="+14" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+41" />
-        <location line="+19" />
-        <location line="+19" />
+        <location line="+30" />
+        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Összegzés</translation>
@@ -12028,9 +12131,9 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">Új egységteszt-projektet hoz létre. Az egységtesztek lehetővé teszik annak ellenőrzését, hogy a kód alkalmas-e a használatra, és nincs-e regresszió.</translation>
     </message>
     <message>
-        <location line="-466" />
-        <location line="+12" />
-        <location line="+456" />
+        <location line="-715" />
+        <location line="+380" />
+        <location line="+165" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Egyéb projekt</translation>
@@ -12040,36 +12143,36 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">Automatikus tesztprojekt</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="-620" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Teljesen minősített név, beleértve a névtereket</translation>
     </message>
     <message>
-        <location line="-645" />
-        <location line="+36" />
-        <location line="+276" />
-        <location line="+80" />
-        <location line="+235" />
-        <location line="+19" />
+        <location line="+1" />
         <location line="+22" />
+        <location line="+19" />
+        <location line="+289" />
+        <location line="+145" />
+        <location line="+40" />
+        <location line="+119" />
         <source>Class name:</source>
         <translation>Osztály név:</translation>
     </message>
     <message>
-        <location line="-631" />
-        <location line="+592" />
-        <location line="+18" />
+        <location line="-633" />
+        <location line="+42" />
+        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Egyéni&gt;</translation>
     </message>
     <message>
-        <location line="-646" />
-        <location line="+37" />
-        <location line="+282" />
-        <location line="+73" />
-        <location line="+237" />
-        <location line="+18" />
+        <location line="-474" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+294" />
+        <location line="+139" />
+        <location line="+39" />
+        <location line="+119" />
         <source>Base class:</source>
         <translation>Alap osztály:</translation>
     </message>
@@ -12078,7 +12181,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-632" />
         <source>Include QObject</source>
         <translation>Tartalmazza a QObject-et</translation>
     </message>
@@ -12116,70 +12219,70 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>QML_ELEMENT hozzáadása</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++hdr'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Osztály'), Util.preferredSuffix('text/x-c++hdr'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Osztály&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+68" />
-        <location line="+262" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+315" />
+        <location line="+292" />
         <source>Header file:</source>
         <translation>Fejállomány:</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-c++src'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Osztály'), Util.preferredSuffix('text/x-c++src'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Osztály&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+288" />
-        <location line="+68" />
-        <location line="+220" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+215" />
         <location line="+1" />
-        <location line="+19" />
-        <location line="+22" />
-        <location line="+19" />
+        <location line="+80" />
+        <location line="+133" />
+        <location line="+39" />
+        <location line="+120" />
         <source>Source file:</source>
         <translation>Forrás fájl:</translation>
     </message>
     <message>
-        <location line="-597" />
+        <location line="-625" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+216" />
+        <location line="+392" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+34" />
-        <location line="+19" />
-        <location line="+444" />
-        <location line="+19" />
-        <location line="+22" />
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Útvonal:</translation>
     </message>
     <message>
-        <location line="-673" />
-        <location line="+37" />
-        <location line="+596" />
-        <location line="+22" />
+        <location line="-739" />
+        <location line="+38" />
+        <location line="+429" />
+        <location line="+39" />
         <source>Define Class</source>
         <translation>Osztály meghatározása</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-502" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Létrehoz egy C++ fejlécet és egy forrásfájlt egy új osztályhoz, amelyet hozzáadhat egy C++ projekthez.</translation>
     </message>
     <message>
-        <location line="-203" />
-        <location line="+130" />
-        <location line="+74" />
+        <location line="+1" />
+        <location line="+65" />
+        <location line="+9" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-73" />
         <source>C++ Class</source>
         <translation>C++ osztály</translation>
     </message>
@@ -12219,22 +12322,22 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Létrehoz egy Qt-elemmodellt.</translation>
     </message>
     <message>
-        <location line="-231" />
-        <location line="+39" />
-        <location line="+26" />
-        <location line="+65" />
-        <location line="+18" />
-        <location line="+84" />
+        <location line="+1" />
+        <location line="+66" />
+        <location line="+57" />
+        <location line="+62" />
+        <location line="+9" />
+        <location line="+59" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-252" />
         <source>Qt Item Model</source>
         <translation>Qt cikkmodell</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+4" />
         <source>Qt for Python module:</source>
         <translation>Qt Python modulhoz:</translation>
     </message>
@@ -12259,8 +12362,8 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>QtQuick importálása</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Util.fileName(value('Osztály'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Util.fileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Util.fileName(value(&apos;Osztály&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
         <location line="+6" />
@@ -12268,18 +12371,18 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Új Python osztályfájlt hoz létre.</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+71" />
+        <location line="+1" />
+        <location line="+158" />
         <source>Python</source>
         <translation>Piton</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-157" />
         <source>Python Class</source>
         <translation>Python osztály</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+3" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Létrehoz egy CMake alapú tesztprojektet, amelyhez kódrészletet lehet megadni.</translation>
     </message>
@@ -12334,7 +12437,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Kódrészlet</translation>
     </message>
     <message>
-        <location line="-244" />
+        <location line="+7" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Létrehoz egy fejlécfájlt, amelyet hozzáadhat egy C/C++ projekthez.</translation>
     </message>
@@ -12344,7 +12447,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>C/C++ fejlécfájl</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Létrehoz egy forrásfájlt, amelyet hozzáadhat egy C/C++ projekthez.</translation>
     </message>
@@ -12354,7 +12457,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>C/C++ forrásfájl</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>Válasszon egy űrlapsablont</translation>
     </message>
@@ -12372,12 +12475,12 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation type="vanished">Qt Designer forma</translation>
     </message>
     <message>
-        <location line="-15" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Létrehoz egy töredék árnyékolót a Desktop OpenGL árnyékoló nyelvben (GLSL). A töredékes árnyékolók létrehozzák az OpenGL-lel renderelt háromszögek, pontok és vonalak végső pixelszíneit.</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+1" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -12385,12 +12488,12 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-26" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragment Shader (asztali OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the Desktop OpenGL Shading Language (GLSL). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Létrehoz egy vertex shadert a Desktop OpenGL árnyékoló nyelvben (GLSL). A Vertex shader átalakítja az OpenGL-lel renderelt háromszögek, pontok és vonalak pozícióit, normálisait és textúra koordinátáit.</translation>
     </message>
@@ -12400,7 +12503,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Vertex Shader (asztali OpenGL)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Fragment árnyékolót hoz létre az OpenGL/ES 2.0 árnyékolási nyelvben (GLSL/ES). A töredékes árnyékolók létrehozzák az OpenGL-lel renderelt háromszögek, pontok és vonalak végső pixelszíneit.</translation>
     </message>
@@ -12410,7 +12513,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Fragment Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-11" />
+        <location line="+7" />
         <source>Creates a vertex shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines rendered with OpenGL.</source>
         <translation>Létrehoz egy vertex shadert az OpenGL/ES 2.0 árnyékolási nyelven (GLSL/ES). A Vertex shader átalakítja az OpenGL-lel renderelt háromszögek, pontok és vonalak pozícióit, normálisait és textúra koordinátáit.</translation>
     </message>
@@ -12420,7 +12523,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="+7" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Java-fájlt hoz létre sablonkóddal.</translation>
     </message>
@@ -12435,7 +12538,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Java fájl</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>Hontalan könyvtár</translation>
     </message>
@@ -12456,25 +12559,25 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>JS fájl</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+12" />
         <source>Model name:</source>
         <translation>Modell név:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
+        <location line="+1" />
+        <location line="+67" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Hely:</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+65" />
-        <source>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators(value('TargetPath'))}" létezik a fájlrendszerben.</translation>
+        <location line="-66" />
+        <location line="+67" />
+        <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; létezik a fájlrendszerben.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model Name and Location</source>
         <translation>Modell neve és helye</translation>
     </message>
@@ -12484,19 +12587,19 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Új üres modellt hoz létre üres diagrammal.</translation>
     </message>
     <message>
-        <location line="-64" />
-        <location line="+53" />
-        <location line="+12" />
+        <location line="+1" />
+        <location line="+5" />
+        <location line="+62" />
         <source>Modeling</source>
         <translation>Modellezés</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-66" />
         <source>Model</source>
         <translation>Modell</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+3" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Egy ideiglenes fájl segítségével karcolásmodellt hoz létre.</translation>
     </message>
@@ -12506,23 +12609,23 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Scratch modell</translation>
     </message>
     <message>
-        <location line="-81" />
+        <location line="+7" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Üres Nim-fájlt hoz létre UTF-8 karakterkészlet használatával.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+14" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>Nim Fájl</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Üres Nim szkriptfájlt hoz létre UTF-8 karakterkészlet használatával.</translation>
     </message>
@@ -12532,7 +12635,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Nim Script fájl</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+7" />
         <source>Creates an empty Python script file using UTF-8 charset.</source>
         <translation>Üres Python-szkriptfájlt hoz létre UTF-8 karakterkészlet használatával.</translation>
     </message>
@@ -12542,7 +12645,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Python fájl</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Egy Qt forrásfájl létrehozása (.qrc).</translation>
     </message>
@@ -12552,8 +12655,8 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Qt erőforrás fájl</translation>
     </message>
     <message>
-        <location line="-67" />
-        <source>Creates a QML file with boilerplate code, starting with "import QtQuick".</source>
+        <location line="+7" />
+        <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Létrehoz egy QML-fájlt alapkóddal, az „import QtQuick” szóval kezdődik.</translation>
     </message>
     <message>
@@ -12562,21 +12665,21 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>QML fájl (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="-32" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Scratch puffert hoz létre egy ideiglenes fájl segítségével.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+57" />
-        <location line="+47" />
+        <location line="-66" />
+        <location line="+67" />
+        <location line="+45" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Általános</translation>
     </message>
     <message>
-        <location line="-634" />
+        <location line="-401" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Ez a varázsló létrehoz egy egyszerű egységteszt -projektet a Boost segítségével.</translation>
     </message>
@@ -12601,21 +12704,21 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Létrehoz egy új egység tesztprojektet a Boost segítségével. Az egységtesztek lehetővé teszik, hogy ellenőrizze, hogy a kód alkalmas -e a használatra, és hogy nincs -e regresszió.</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+25" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
         <location line="+22" />
+        <location line="+21" />
         <source>Test Project</source>
         <translation>Tesztprojekt</translation>
     </message>
     <message>
-        <location line="-21" />
+        <location line="-93" />
         <source>Boost Test Project</source>
         <translation>Boost tesztprojekt</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Ez a varázsló létrehoz egy egyszerű egységteszt -projektet a CATC2 használatával.</translation>
     </message>
@@ -12650,7 +12753,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>CACL2 tesztprojekt</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Ez a varázsló létrehoz egy egyszerű egységteszt -projektet a Google Test segítségével.</translation>
     </message>
@@ -12680,7 +12783,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Google Test projekt</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Ez a varázsló létrehoz egy egyszerű egységteszt -projektet QT teszttel.</translation>
     </message>
@@ -12695,7 +12798,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>QT tesztprojekt</translation>
     </message>
     <message>
-        <location line="-116" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Ez a varázsló létrehoz egy egyszerű egység tesztprojektet QT Quick Test segítségével.</translation>
     </message>
@@ -12710,17 +12813,17 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>QT gyors tesztprojekt</translation>
     </message>
     <message>
-        <location line="+815" />
+        <location line="+10" />
         <source>Include QQuickItem</source>
         <translation>Tartalmazza a QquickItem -t</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+67" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>Létrehoz egy CMake-alapú tesztprojektet, ahol beírhat egy kódrészletet, hogy összeállítsa és ellenőrizze.</translation>
     </message>
     <message>
-        <location line="-121" />
+        <location line="+29" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>Létrehoz egy QT kütyü -tervező űrlapot, amelyet hozzáadhat egy QT widget projekthez. Ez akkor hasznos, ha már létezett osztálya van az UI üzleti logikájához.</translation>
     </message>
@@ -12730,7 +12833,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>QT Widgets Designer forma</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="+64" />
         <source>Creates a markdown file.</source>
         <translation>Létrehoz egy markdown fájlt.</translation>
     </message>
@@ -12740,12 +12843,12 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Markdown fájl</translation>
     </message>
     <message>
-        <location line="-57" />
+        <location line="+67" />
         <source>Scratch Buffer</source>
         <translation>Scratch Buffer</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>Állami diagram neve:</translation>
     </message>
@@ -12765,7 +12868,7 @@ Az OpenMV IDE csak úgy másolja a modellt.</translation>
         <translation>Állami diagram</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -12805,7 +12908,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Vizsgálati eset</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>Üres fájlt hoz létre.</translation>
     </message>
@@ -12815,7 +12918,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Üres fájl</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Létrehoz egy fordítási fájlt, amelyet hozzáadhat egy QT projekthez.</translation>
     </message>
@@ -12825,61 +12928,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QT fordítási fájl</translation>
     </message>
     <message>
-        <location line="-623" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Ez a varázsló egy egyszerű Qt-alapú konzolalkalmazást hoz létre.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+210" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+92" />
-        <location line="+83" />
+        <location line="+195" />
         <source>Meson</source>
         <translation>Mezon</translation>
     </message>
     <message>
-        <location line="-442" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-326" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Define Build System</source>
         <translation>Define Build System</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+41" />
-        <location line="+210" />
+        <location line="-328" />
+        <location line="+21" />
+        <location line="+94" />
         <location line="+18" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+84" />
+        <location line="+104" />
+        <location line="+48" />
+        <location line="+44" />
         <source>Build System</source>
         <translation>Rendszer kiépítése</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-328" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation File</source>
         <translation>Fordítási fájl</translation>
     </message>
     <message>
-        <location line="-591" />
-        <location line="+147" />
-        <location line="+32" />
-        <location line="+343" />
-        <location line="+70" />
+        <location line="-479" />
+        <location line="+44" />
+        <location line="+250" />
+        <location line="+44" />
+        <location line="+142" />
         <source>Translation</source>
         <translation>Fordítás</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-262" />
         <source>Define Python Interpreter</source>
         <translation>Határozza meg a Python tolmácsot</translation>
     </message>
@@ -12894,7 +12997,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Létrehoz egy QT-t a Python alkalmazáshoz, amely tartalmaz egy QT Widgets Designer alapú widget (UI fájl). .UI -t igényel a python átalakításhoz.</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+38" />
         <source>Qt 6.4</source>
         <translation>QT 6.4</translation>
     </message>
@@ -12909,7 +13012,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Létrehoz egy QT gyors alkalmazást, amelynek lehet mind QML, mind C ++ kódja. Felépítheti az alkalmazást, és telepítheti azt asztali, beágyazott és mobil célplatformokra.</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="+42" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -12918,7 +13021,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  A teljes alkalmazás kidolgozásához hozzon létre egy QT Quick Application projektet.</translation>
     </message>
     <message>
-        <location line="+173" />
+        <location line="+30" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -12935,31 +13038,31 @@ Preselects a desktop Qt for building the application if available.</source>
 Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhető.</translation>
     </message>
     <message>
-        <location line="-444" />
-        <location line="+32" />
-        <location line="+299" />
-        <location line="+114" />
+        <location line="-337" />
+        <location line="+266" />
+        <location line="+28" />
+        <location line="+44" />
         <source>Application (Qt)</source>
         <translation>Alkalmazás (Qt)</translation>
     </message>
     <message>
-        <location line="-412" />
+        <location line="-337" />
         <source>Qt Console Application</source>
         <translation>Qt konzol alkalmazás</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Ez a varázsló C++ könyvtárprojektet hoz létre.</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+84" />
+        <location line="+308" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Határozza meg azokat az alapvető információkat azokról az osztályokról, amelyekre le szeretné generálni a csupasz forráskód fájlokat.</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="-307" />
         <source>Shared Library</source>
         <translation>Megosztott könyvtár</translation>
     </message>
@@ -12975,17 +13078,17 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
     </message>
     <message>
         <location line="+1" />
-        <location line="+35" />
+        <location line="+46" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Típus:</translation>
     </message>
     <message>
-        <source>%{JS: value('Type') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</source>
-        <translation type="vanished">%{JS: value('Típus') === 'qtplugin' ? value('BaseClassName').slice(1) : (value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1))}</translation>
+        <source>%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</source>
+        <translation type="vanished">%{JS: value(&apos;Típus&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -13051,14 +13154,14 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Qt modul:</translation>
     </message>
     <message>
-        <location line="-519" />
-        <location line="+147" />
-        <location line="+70" />
+        <location line="+3" />
+        <location line="+116" />
         <location line="+22" />
         <location line="+18" />
-        <location line="+164" />
-        <location line="+59" />
-        <location line="+42" />
+        <location line="+68" />
+        <location line="+26" />
+        <location line="+16" />
+        <location line="+170" />
         <source>Define Project Details</source>
         <translation>Határozza meg a projekt részleteit</translation>
     </message>
@@ -13067,38 +13170,38 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation type="vanished">Létrehoz egy C++ könyvtárat. Ezzel létrehozható:&lt;ul&gt;&lt;li&gt;egy megosztott C++ könyvtár a &lt;tt&gt;QPluginLoader&lt;/tt&gt; és futásidejű (Plugins) használatához&lt;/li&gt;&lt;li&gt;egy megosztott vagy statikus C++ könyvtár egy másikkal való használatra projekt linkidőben&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-513" />
-        <location line="+460" />
-        <location line="+62" />
-        <location line="+7" />
+        <location line="-427" />
+        <location line="+18" />
+        <location line="+186" />
+        <location line="+232" />
         <source>Library</source>
         <translation>Könyvtár</translation>
     </message>
     <message>
-        <location line="-6" />
+        <location line="-435" />
         <source>C++ Library</source>
         <translation>C++ könyvtár</translation>
     </message>
     <message>
-        <location line="-366" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>Egyszerű Nim alkalmazást hoz létre.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+229" />
+        <location line="+40" />
         <location line="+18" />
-        <location line="+157" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Nem Qt projekt</translation>
     </message>
     <message>
-        <location line="-403" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>Nim alkalmazás</translation>
     </message>
     <message>
-        <location line="+369" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>Binäris</translation>
     </message>
@@ -13113,13 +13216,13 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Szerző:</translation>
     </message>
     <message>
-        <location line="-544" />
-        <location line="+545" />
+        <location line="+1" />
+        <location line="+402" />
         <source>Description:</source>
         <translation>Leírás:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-401" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -13184,13 +13287,13 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Egyéb</translation>
     </message>
     <message>
-        <location line="-560" />
-        <location line="+561" />
+        <location line="+1" />
+        <location line="+386" />
         <source>License:</source>
         <translation>Licensz:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-385" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -13231,22 +13334,22 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Határozza meg a projekt konfigurációját</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="+1" />
+        <location line="+253" />
+        <location line="+1" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+202" />
         <source>Configuration</source>
         <translation>Konfiguráció</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-343" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Nim alkalmazást hoz létre a Nimble segítségével.</translation>
     </message>
@@ -13256,7 +13359,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Fürge alkalmazás</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Egyszerű C-alkalmazást hoz létre függőségek nélkül.</translation>
     </message>
@@ -13266,7 +13369,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Sima C alkalmazás</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Egyszerű C++ alkalmazást hoz létre függőségek nélkül.</translation>
     </message>
@@ -13276,7 +13379,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Sima C++ alkalmazás</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Ez a varázsló egy üres .pro fájlt hoz létre.</translation>
     </message>
@@ -13295,43 +13398,43 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation type="vanished">PySide verzió:</translation>
     </message>
     <message>
-        <location line="-218" />
+        <location line="+13" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Létrehoz egy Qt for Python alkalmazást, amely csak a QApplication fő kódját tartalmazza.</translation>
     </message>
     <message>
-        <location line="-14" />
-        <location line="+15" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+18" />
+        <location line="+21" />
         <source>Application (Qt for Python)</source>
         <translation>Alkalmazás (Qt Pythonhoz)</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-60" />
         <source>Empty Application</source>
         <translation>Üres alkalmazás</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseCB') ? value('BaseCB').slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseCB&apos;) ? value(&apos;BaseCB&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), Util.preferredSuffix('text/x-python'))}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Osztály'), Util.preferredSuffix('text/x-python'))}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Osztály&apos;), Util.preferredSuffix(&apos;text/x-python&apos;))}</translation>
     </message>
     <message>
-        <source>%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</source>
-        <translation type="vanished">%{JS: Util.fileName('%{ProjectName}', 'pyproject')}</translation>
+        <source>%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</source>
+        <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-28" />
-        <location line="+37" />
+        <location line="+9" />
+        <location line="+39" />
         <source>Project file:</source>
         <translation>Projekt fájl:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Létrehoz egy üres ablakot tartalmazó Qt-alkalmazást Pythonhoz.</translation>
     </message>
@@ -13341,15 +13444,15 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Üres ablak</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+15" />
+        <location line="-32" />
         <location line="+22" />
         <location line="+15" />
+        <location line="+24" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-211" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -13358,19 +13461,19 @@ Preselects a desktop Qt for building the application if available.</source>
  Előreválaszt egy asztali QT -t az alkalmazás felépítéséhez, ha rendelkezésre áll.</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Létrehoz egy C ++ könyvtárat. Létrehozhat: &lt;ul&gt; &lt;li&gt; Megosztott C ++ könyvtár &lt;tt&gt; qpluginloader &lt;/tt&gt; és futási idő (plugins) &lt;/li&gt; &lt;li&gt; megosztott vagy statikus C ++ könyvtár egy másik projekthez való felhasználáshoz a LinkTime -nál. &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-329" />
-        <location line="+15" />
+        <location line="+107" />
         <location line="+22" />
+        <location line="+39" />
         <source>PySide 2</source>
         <translation>Pyside 2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="-24" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -13404,50 +13507,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Létrehoz egy Qt for Python alkalmazást, amely tartalmaz egy Qt Designer-alapú widgetet (ui fájlt) – .ui-ból Python-ba konvertálás szükséges</translation>
     </message>
     <message>
-        <location line="-55" />
+        <location line="+21" />
         <source>Window UI</source>
         <translation>Ablak UI</translation>
     </message>
     <message>
-        <location line="-70" />
-        <location line="+311" />
+        <location line="+10" />
         <location line="+25" />
+        <location line="+23" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-335" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
+        <location line="+48" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-310" />
-        <location line="+311" />
+        <location line="-47" />
         <location line="+23" />
+        <location line="+25" />
         <source>Minimum required Qt version:</source>
         <translation>Minimálisan szükséges Qt verzió:</translation>
     </message>
     <message>
-        <location line="-22" />
+        <location line="-47" />
         <source>MyItem</source>
         <translation>Saját elem</translation>
     </message>
@@ -13495,9 +13598,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Hozzon létre egy olyan projektet, amely kompatibilis a Qt Design Studióval (.qmlprojecten keresztül) és a Qt Creatorral (a CMakeLists.txt fájlon keresztül). Tartalmaz egy .ui.qml űrlapot, amelyet vizuálisan szerkeszthet a Qt Design Studio programban.</translation>
     </message>
     <message>
-        <location line="-324" />
-        <location line="+274" />
-        <location line="+55" />
+        <location line="+5" />
+        <location line="+30" />
+        <location line="+16" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Használja a Qt virtuális billentyűzetet</translation>
     </message>
@@ -13510,15 +13613,15 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Létrehoz egy üres ablakot tartalmazó Qt Quick alkalmazást. Opcionálisan létrehozhat egy Qt Design Studio projektet.</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-33" />
         <source>Qt Quick Application</source>
         <translation>Qt Gyors alkalmazás</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="+26" />
         <source>Creates a Qt Quick application that contains an empty window.
 
-Use this "compat" version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
+Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
         <translation>Létrehoz egy üres ablakot tartalmazó Qt Quick alkalmazást.
 
 Használja ezt a „kompatibilis” verziót, ha a CMake vagy a 6-nál régebbi Qt verzióktól eltérő összeállítási rendszereket szeretne használni.</translation>
@@ -13537,18 +13640,18 @@ Use this only if you are prototyping. You cannot create a full application with 
 Ezt csak akkor használja, ha prototípust készít. Ezzel nem lehet teljes alkalmazást létrehozni. Fontolja meg egy Qt Quick Application projekt használatát.</translation>
     </message>
     <message>
-        <location line="+272" />
+        <location line="+14" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt Quick UI prototípus</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Ez a varázsló létrehoz egy Qt Widgets Application projektet. Az alkalmazás alapértelmezés szerint a QApplication-ből származik, és tartalmaz egy üres widgetet.</translation>
     </message>
     <message>
-        <source>%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</source>
-        <translation type="vanished">%{JS: value('BaseClass') ? value('BaseClass').slice(1) : 'MyClass'}</translation>
+        <source>%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</source>
+        <translation type="vanished">%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
         <location line="+15" />
@@ -13556,8 +13659,8 @@ Ezt csak akkor használja, ha prototípust készít. Ezzel nem lehet teljes alka
         <translation>Űrlap létrehozása</translation>
     </message>
     <message>
-        <source>%{JS: Cpp.classToFileName(value('Class'), 'ui')}</source>
-        <translation type="vanished">%{JS: Cpp.classToFileName(value('Class'), 'ui')}</translation>
+        <source>%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</source>
+        <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), &apos;ui&apos;)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13583,27 +13686,27 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Qt Widget alkalmazás</translation>
     </message>
     <message>
-        <location line="-332" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Kérjük, állítsa be most a(z) &lt;b&gt;%{vcsName}&lt;/b&gt; fájlt.</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-93" />
+        <location line="+52" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository:</source>
         <translation>Adattár:</translation>
     </message>
     <message>
         <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>A tárhely URL-címe érvénytelen</translation>
@@ -13613,24 +13716,24 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
         <source>Directory:</source>
         <translation>Könyvtár:</translation>
     </message>
     <message>
-        <location line="-94" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+34" />
         <location line="+19" />
-        <source>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" exists in the filesystem.</source>
-        <translation>"%{JS: Util.toNativeSeparators('%{TargetPath}')}" létezik a fájlrendszerben.</translation>
+        <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
+        <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; létezik a fájlrendszerben.</translation>
     </message>
     <message>
-        <location line="-52" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>Használja a meglévő könyvtárat</translation>
     </message>
@@ -13706,13 +13809,13 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
     </message>
     <message>
         <location line="+3" />
-        <location line="+19" />
+        <location line="+60" />
         <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Adja meg a lerakat URL-címét, a fizetési könyvtárat és az elérési utat.</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>Működő Bazár fiók...</translation>
     </message>
@@ -13731,9 +13834,9 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Klónoz egy bazári ágat, és megpróbálja betölteni a benne lévő projektet.</translation>
     </message>
     <message>
-        <location line="-56" />
+        <location line="+1" />
+        <location line="+18" />
         <location line="+23" />
-        <location line="+34" />
         <location line="+19" />
         <location line="+20" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
@@ -13741,12 +13844,12 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Projekt importálása</translation>
     </message>
     <message>
-        <location line="-38" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Bazár klón (vagy ág)</translation>
     </message>
     <message>
-        <location line="-69" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>Modul:</translation>
     </message>
@@ -13765,7 +13868,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+52" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+19" />
         <location line="+1" />
@@ -13773,7 +13876,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Megnézés</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Megvizsgál egy CVS-tárat, és megpróbálja betölteni a benne lévő projektet.</translation>
     </message>
@@ -13823,7 +13926,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>Mercurial klón futtatása...</translation>
     </message>
@@ -13858,7 +13961,7 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Subversion megnézés</translation>
     </message>
     <message>
-        <location line="-394" />
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Ez a varázsló egyéni Qt Creator beépülő modult hoz létre.</translation>
     </message>
@@ -13868,8 +13971,8 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Adja meg az egyéni Qt Creator beépülő modul részleteit.</translation>
     </message>
     <message>
-        <source>%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</source>
-        <translation type="vanished">%{JS: value('ProjectName').charAt(0).toUpperCase() + value('ProjectName').slice(1)}</translation>
+        <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
+        <translation type="vanished">%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</translation>
     </message>
     <message>
         <location line="+1" />
@@ -13907,8 +14010,8 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
         <translation>Ide írd be a bővítményed rövid leírását</translation>
     </message>
     <message>
-        <source>https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</source>
-        <translation type="vanished">https://www.%{JS: encodeURIComponent(value('VendorName').toLowerCase())}.com</translation>
+        <source>https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</source>
+        <translation type="vanished">https://www.%{JS: encodeURIComponent(value(&apos;VendorName&apos;).toLowerCase())}.com</translation>
     </message>
     <message>
         <location line="+2" />
@@ -13933,12 +14036,12 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
     <message>
         <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
         <source>S&amp;essions</source>
-        <translation>S &amp; essions</translation>
+        <translation>S &amp;essions</translation>
     </message>
     <message>
         <location line="+9" />
         <source>&amp;Manage...</source>
-        <translation>&amp; Kezelje ...</translation>
+        <translation>&amp;Kezelje ...</translation>
     </message>
     <message>
         <location line="+13" />
@@ -14000,8 +14103,8 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
     </message>
     <message>
         <location line="+42" />
-        <source>Could not save session to file "%1"</source>
-        <translation>Nem tudta menteni a munkamenetet a "%1" benyújtására</translation>
+        <source>Could not save session to file &quot;%1&quot;</source>
+        <translation>Nem tudta menteni a munkamenetet a &quot;%1&quot; benyújtására</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
@@ -14026,12 +14129,12 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
     <message>
         <location line="+2" />
         <source>&amp;Rename...</source>
-        <translation>&amp; Átnevezze ...</translation>
+        <translation>&amp;Átnevezze ...</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C&amp;lone...</source>
-        <translation>C &amp; Lone ...</translation>
+        <translation>C &amp;Lone ...</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14072,17 +14175,17 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
     <message>
         <location line="+0" />
         <source>Create and &amp;Open</source>
-        <translation>Létrehozni és megnyitni</translation>
+        <translation>Létreh&amp;ozni és megnyitni</translation>
     </message>
     <message>
         <location line="+11" />
         <source>&amp;Clone</source>
-        <translation>&amp; Klón</translation>
+        <translation>&amp;Klón</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Clone and &amp;Open</source>
-        <translation>Klón és és nyitva</translation>
+        <translation>&amp;Klón és és nyitva</translation>
     </message>
     <message>
         <location line="+22" />
@@ -14092,12 +14195,12 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
     <message>
         <location line="+1" />
         <source>&amp;Rename</source>
-        <translation>&amp; Átnevezés</translation>
+        <translation>&amp;Átnevezés</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Rename and &amp;Open</source>
-        <translation>Átnevezés és és nyitva</translation>
+        <translation>Á&amp;tnevezés és és nyitva</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
@@ -14111,38 +14214,38 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
     </message>
     <message>
         <location line="+72" />
-        <source>Could not create directory "%1"</source>
-        <translation>Nem tudott létrehozni a "%1" könyvtárat</translation>
+        <source>Could not create directory &quot;%1&quot;</source>
+        <translation>Nem tudott létrehozni a &quot;%1&quot; könyvtárat</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>A "%1" program nem létezik, vagy nem vezethető be.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>A &quot;%1&quot; program nem létezik, vagy nem vezethető be.</translation>
     </message>
     <message>
         <location line="+34" />
-        <source>Starting: "%1" %2</source>
-        <translation>Kezdet: " %1" %2</translation>
+        <source>Starting: &quot;%1&quot; %2</source>
+        <translation>Kezdet: &quot; %1&quot; %2</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The process "%1" exited normally.</source>
-        <translation>A "%1" folyamat normálisan kilépett.</translation>
+        <source>The process &quot;%1&quot; exited normally.</source>
+        <translation>A &quot;%1&quot; folyamat normálisan kilépett.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The process "%1" exited with code %2.</source>
-        <translation>A " %1" eljárás a %2 kóddal lépett ki.</translation>
+        <source>The process &quot;%1&quot; exited with code %2.</source>
+        <translation>A &quot; %1&quot; eljárás a %2 kóddal lépett ki.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Could not start process "%1" %2.</source>
-        <translation>Nem tudta elindítani a " %1" %2 -et.</translation>
+        <source>Could not start process &quot;%1&quot; %2.</source>
+        <translation>Nem tudta elindítani a &quot; %1&quot; %2 -et.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The process "%1" crashed.</source>
-        <translation>A "%1" folyamat összeomlott.</translation>
+        <source>The process &quot;%1&quot; crashed.</source>
+        <translation>A &quot;%1&quot; folyamat összeomlott.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
@@ -14183,8 +14286,8 @@ Előre kiválaszt egy asztali Qt-t az alkalmazás elkészítéséhez, ha elérhe
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files of all open projects. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Megtalálja az összes nyitott projekt fájljait. Függelje meg a "+&lt;szám&gt;" vagy ": &lt;szám&gt;" -ot az adott sorszámra ugráshoz. Függeljen egy másik "+&lt;szám&gt;" vagy ": &lt;szám&gt;" -ot az oszlopszámra is ugráshoz.</translation>
+        <source>Locates files of all open projects. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Megtalálja az összes nyitott projekt fájljait. Függelje meg a &quot;+&lt;szám&gt;&quot; vagy &quot;: &lt;szám&gt;&quot; -ot az adott sorszámra ugráshoz. Függeljen egy másik &quot;+&lt;szám&gt;&quot; vagy &quot;: &lt;szám&gt;&quot; -ot az oszlopszámra is ugráshoz.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
@@ -14239,7 +14342,7 @@ Excluding: %2
     <message>
         <location line="+7" />
         <source>Show &amp;App Output</source>
-        <translation>Mutasd és alkalmazás kimenete</translation>
+        <translation>Mut&amp;asd és alkalmazás kimenete</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14360,13 +14463,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+105" />
-        <source>Build directory contains potentially problematic character "%1".</source>
-        <translation>A Build Directory potenciálisan problémás "%1" karaktert tartalmaz.</translation>
+        <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
+        <translation>A Build Directory potenciálisan problémás &quot;%1&quot; karaktert tartalmaz.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>This warning can be suppressed &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>Ez a figyelmeztetés elnyomható &lt;a href = "dummy"&gt; itt &lt;/a&gt;.</translation>
+        <source>This warning can be suppressed &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Ez a figyelmeztetés elnyomható &lt;a href = &quot;dummy&quot;&gt; itt &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -14422,7 +14525,7 @@ Excluding: %2
     </message>
     <message>
         <location line="+4" />
-        <source>Variables in the build configuration's environment</source>
+        <source>Variables in the build configuration&apos;s environment</source>
         <translation>Változók az építési konfiguráció környezetében</translation>
     </message>
     <message>
@@ -14464,12 +14567,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build configuration</source>
+        <source>Name of the project&apos;s active build configuration</source>
         <translation>A projekt aktív összeállítási konfigurációjának neve</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Name of the project's active build system</source>
+        <source>Name of the project&apos;s active build system</source>
         <translation>A projekt aktív építési rendszerének neve</translation>
     </message>
     <message>
@@ -14479,13 +14582,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <source>Type of the project's active build configuration</source>
+        <source>Type of the project&apos;s active build configuration</source>
         <translation>A projekt aktív összeállítási konfigurációjának típusa</translation>
     </message>
     <message>
         <location line="+50" />
-        <source>No build device is set for the kit "%1".</source>
-        <translation>A "%1" készlethez nincs beállítási eszköz.</translation>
+        <source>No build device is set for the kit &quot;%1&quot;.</source>
+        <translation>A &quot;%1&quot; készlethez nincs beállítási eszköz.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -14494,13 +14597,13 @@ Excluding: %2
     </message>
     <message>
         <location line="+7" />
-        <source>The build device "%1" cannot reach the project directory.</source>
-        <translation>A "%1" beépítési eszköz nem érheti el a projektkönyvtárat.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the project directory.</source>
+        <translation>A &quot;%1&quot; beépítési eszköz nem érheti el a projektkönyvtárat.</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>The build device "%1" cannot reach the build directory.</source>
-        <translation>A "%1" beépítési eszköz nem éri el a Build könyvtárat.</translation>
+        <source>The build device &quot;%1&quot; cannot reach the build directory.</source>
+        <translation>A &quot;%1&quot; beépítési eszköz nem éri el a Build könyvtárat.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
@@ -14532,7 +14635,7 @@ Excluding: %2
     <message>
         <location line="+138" />
         <source>Compile</source>
-        <comment>Category for compiler issues listed under 'Issues'</comment>
+        <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>Összeállít</translation>
     </message>
     <message>
@@ -14543,7 +14646,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Build System</source>
-        <comment>Category for build system issues listed under 'Issues'</comment>
+        <comment>Category for build system issues listed under &apos;Issues&apos;</comment>
         <translation>Építő rendszer</translation>
     </message>
     <message>
@@ -14554,7 +14657,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>Deployment</source>
-        <comment>Category for deployment issues listed under 'Issues'</comment>
+        <comment>Category for deployment issues listed under &apos;Issues&apos;</comment>
         <translation>Beépítés</translation>
     </message>
     <message>
@@ -14565,7 +14668,7 @@ Excluding: %2
     <message>
         <location line="+4" />
         <source>Autotests</source>
-        <comment>Category for autotest issues listed under 'Issues'</comment>
+        <comment>Category for autotest issues listed under &apos;Issues&apos;</comment>
         <translation>Autotestek</translation>
     </message>
     <message>
@@ -14582,7 +14685,7 @@ Excluding: %2
         <location line="+8" />
         <location line="+59" />
         <source>Clean</source>
-        <extracomment>Displayed name for a "cleaning" build step
+        <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
 Display name of the clean build step list. Used as part of the labels in the project window.</extracomment>
         <translation>Tiszta</translation>
@@ -14646,8 +14749,8 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location line="+98" />
-        <source>When executing step "%1"</source>
-        <translation>A "%1" lépés végrehajtásakor</translation>
+        <source>When executing step &quot;%1&quot;</source>
+        <translation>A &quot;%1&quot; lépés végrehajtásakor</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
@@ -14678,7 +14781,7 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+2" />
         <source>Template used to construct the default build directory.&lt;br&gt;&lt;br&gt;The default value can be set using the environment variable &lt;tt&gt;%1&lt;/tt&gt;.</source>
-        <translation>Az alapértelmezett beépítési könyvtár felépítéséhez használt sablon.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10" />
@@ -14864,8 +14967,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+3" />
-        <source>The project file "%1" does not exist.</source>
-        <translation>A "%1" projektfájl nem létezik.</translation>
+        <source>The project file &quot;%1&quot; does not exist.</source>
+        <translation>A &quot;%1&quot; projektfájl nem létezik.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/codestylesettingspropertiespage.cpp" line="+60" />
@@ -14892,7 +14995,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+38" />
         <source>Show Compile &amp;Output</source>
-        <translation>A fordítás és a kimenet megjelenítése</translation>
+        <translation>A f&amp;ordítás és a kimenet megjelenítése</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14962,13 +15065,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+1" />
-        <source>Locates files from the current document's project. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Megtalálja a fájlokat az aktuális dokumentum projektjéből. Függelje meg a "+&lt;szám&gt;" vagy ": &lt;szám&gt;" -ot az adott sorszámra ugráshoz. Függeljen egy másik "+&lt;szám&gt;" vagy ": &lt;szám&gt;" -ot az oszlopszámra is ugráshoz.</translation>
+        <source>Locates files from the current document&apos;s project. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Megtalálja a fájlokat az aktuális dokumentum projektjéből. Függelje meg a &quot;+&lt;szám&gt;&quot; vagy &quot;: &lt;szám&gt;&quot; -ot az adott sorszámra ugráshoz. Függeljen egy másik &quot;+&lt;szám&gt;&quot; vagy &quot;: &lt;szám&gt;&quot; -ot az oszlopszámra is ugráshoz.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
-        <source>Project "%1"</source>
-        <translation>Projekt "%1"</translation>
+        <source>Project &quot;%1&quot;</source>
+        <translation>Projekt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14977,8 +15080,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>Project "%1":</source>
-        <translation>"%1" projekt:</translation>
+        <source>Project &quot;%1&quot;:</source>
+        <translation>&quot;%1&quot; projekt:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
@@ -14999,8 +15102,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
-        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href="dummy"&gt;here&lt;/a&gt;.</source>
-        <translation>Egyéni kimeneti elemzők szkennelése A parancssori kimenet a felhasználó által biztosított hibamintákhoz &lt;br&gt; A bejegyzések létrehozásához a problémákban. &lt;br&gt; Az elemzők konfigurálhatók &lt;a href = "dummy"&gt; itt &lt;/a&gt;.</translation>
+        <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
+        <translation>Egyéni kimeneti elemzők szkennelése A parancssori kimenet a felhasználó által biztosított hibamintákhoz &lt;br&gt; A bejegyzések létrehozásához a problémákban. &lt;br&gt; Az elemzők konfigurálhatók &lt;a href = &quot;dummy&quot;&gt; itt &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+82" />
@@ -15010,8 +15113,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+2" />
         <source>There are %n custom parsers active</source>
-        <translation>
-            <numerusform>A %N n egyedi elemzők aktívak</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -15022,19 +15125,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>&amp;Error message capture pattern:</source>
-        <translation>És a hibaüzenet rögzítési mintája:</translation>
+        <translation>És a hibaüz&amp;enet rögzítési mintája:</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+33" />
         <source>&amp;File name:</source>
-        <translation>&amp; Fájlnév:</translation>
+        <translation>&amp;Fájlnév:</translation>
     </message>
     <message>
         <location line="-32" />
         <location line="+33" />
         <source>&amp;Line number:</source>
-        <translation>És sorszám:</translation>
+        <translation>É&amp;s sorszám:</translation>
     </message>
     <message>
         <location line="-32" />
@@ -15057,7 +15160,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-31" />
         <source>E&amp;rror message:</source>
-        <translation>E &amp; RROR üzenet:</translation>
+        <translation>E &amp;RROR üzenet:</translation>
     </message>
     <message>
         <location line="+33" />
@@ -15142,7 +15245,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
-        <source>Custom output parsers defined here can be enabled individually in the project's build or run settings.</source>
+        <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>Az itt meghatározott egyedi kimeneti elemzők külön -külön engedélyezhetők a projekt felépítésében vagy futtatásában.</translation>
     </message>
     <message>
@@ -15195,8 +15298,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+44" />
         <source>%n entries</source>
-        <translation>
-            <numerusform>%N bejegyzések</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -15235,44 +15338,44 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
         <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>&amp; A fordító út:</translation>
+        <translation>&amp;A fordító út:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Make path:</source>
-        <translation>&amp; Make Path:</translation>
+        <translation>&amp;Make Path:</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
         <source>&amp;ABI:</source>
-        <translation>&amp; ABI:</translation>
+        <translation>&amp;ABI:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Predefined macros:</source>
-        <translation>Előre meghatározott makrók:</translation>
+        <translation>&amp;Előre meghatározott makrók:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Header paths:</source>
-        <translation>&amp; Header Paths:</translation>
+        <translation>&amp;Header Paths:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>C++11 &amp;flags:</source>
-        <translation>C ++ 11 és zászlók:</translation>
+        <translation>&amp;C ++ 11 és zászlók:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Qt mkspecs:</source>
-        <translation>&amp; QT MKSPECS:</translation>
+        <translation>&amp;QT MKSPECS:</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Error parser:</source>
-        <translation>&amp; ERROR PARSER:</translation>
+        <translation>&amp;ERROR PARSER:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/dependenciespanel.cpp" line="+83" />
@@ -15427,19 +15530,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
-        <source>No device for path "%1"</source>
-        <translation>Nincs eszköz a "%1" elérési úthoz</translation>
+        <source>No device for path &quot;%1&quot;</source>
+        <translation>Nincs eszköz a &quot;%1&quot; elérési úthoz</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
-        <source>No device found for path "%1"</source>
-        <translation>Nincs eszköz a "%1" elérési úthoz</translation>
+        <source>No device found for path &quot;%1&quot;</source>
+        <translation>Nincs eszköz a &quot;%1&quot; elérési úthoz</translation>
     </message>
     <message>
         <location line="-9" />
-        <source>No file access for device "%1"</source>
-        <translation>Nincs fájlhozzáférés a "%1" eszközhöz</translation>
+        <source>No file access for device &quot;%1&quot;</source>
+        <translation>Nincs fájlhozzáférés a &quot;%1&quot; eszközhöz</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
@@ -15464,12 +15567,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+22" />
         <source>&amp;Update List</source>
-        <translation>&amp; Frissítési lista</translation>
+        <translation>&amp;Frissítési lista</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Kill Process</source>
-        <translation>&amp; Kill Folyamat</translation>
+        <translation>&amp;Kill Folyamat</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15494,7 +15597,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>&amp;Remove</source>
-        <translation>&amp; Távolítsa el</translation>
+        <translation>&amp;Távolítsa el</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15504,12 +15607,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>&amp;Add...</source>
-        <translation>&amp; Add ...</translation>
+        <translation>&amp;Add ...</translation>
     </message>
     <message>
         <location line="+4" />
         <source>&amp;Start Wizard to Add Device...</source>
-        <translation>&amp; Indítsa el a varázslót az eszköz hozzáadásához ...</translation>
+        <translation>&amp;Indítsa el a varázslót az eszköz hozzáadásához ...</translation>
     </message>
     <message>
         <location line="+12" />
@@ -15534,8 +15637,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+87" />
-        <source>Yes (id is "%1")</source>
-        <translation>Igen (az azonosító "%1")</translation>
+        <source>Yes (id is &quot;%1&quot;)</source>
+        <translation>Igen (az azonosító &quot;%1&quot;)</translation>
     </message>
     <message>
         <location line="+0" />
@@ -15663,13 +15766,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+30" />
-        <source>No device for given path: "%1".</source>
-        <translation>Nincs eszköz a megadott elérési úthoz: "%1".</translation>
+        <source>No device for given path: &quot;%1&quot;.</source>
+        <translation>Nincs eszköz a megadott elérési úthoz: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Device for path "%1" does not support killing processes.</source>
-        <translation>A "%1" elérési úthoz nem támogatja a gyilkossági folyamatok.</translation>
+        <source>Device for path &quot;%1&quot; does not support killing processes.</source>
+        <translation>A &quot;%1&quot; elérési úthoz nem támogatja a gyilkossági folyamatok.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
@@ -15752,7 +15855,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Jobb és margó megjelenítése az oszlopon:</translation>
+        <translation>Jobb és &amp;margó megjelenítése az oszlopon:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15801,22 +15904,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-278" />
         <source>Ed&amp;it</source>
-        <translation>Ed &amp; it</translation>
+        <translation>Ed &amp;it</translation>
     </message>
     <message>
         <location line="+4" />
         <source>&amp;Add</source>
-        <translation>&amp; Add hozzá</translation>
+        <translation>&amp;Add hozzá</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&amp;Reset</source>
-        <translation>&amp; Visszaállítsa</translation>
+        <translation>&amp;Visszaállítsa</translation>
     </message>
     <message>
         <location line="+5" />
         <source>&amp;Unset</source>
-        <translation>&amp; SetSet</translation>
+        <translation>&amp;SetSet</translation>
     </message>
     <message>
         <location line="+14" />
@@ -15831,7 +15934,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+9" />
         <source>Open &amp;Terminal</source>
-        <translation>Nyitva és terminál</translation>
+        <translation>Nyi&amp;tva és terminál</translation>
     </message>
     <message>
         <location line="+1" />
@@ -15840,33 +15943,33 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+123" />
-        <source>Unset &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Unset &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Unset &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
-        <translation>Állítsa be a &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;%2 &lt;/b&gt;</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt;</source>
+        <translation>Állítsa be a &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;%2 &lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Függelék &lt;b&gt;%2 &lt;/b&gt; &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Függelék &lt;b&gt;%2 &lt;/b&gt; &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation>Előkészítés &lt;b&gt;%2 &lt;/b&gt; &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
+        <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
+        <translation>Előkészítés &lt;b&gt;%2 &lt;/b&gt; &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Set &lt;a href="%1"&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
-        <translation>Állítsa be &lt;a href = "%1"&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;%2 &lt;/b&gt; [letiltva]</translation>
+        <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
+        <translation>Állítsa be &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt; to &lt;b&gt;%2 &lt;/b&gt; [letiltva]</translation>
     </message>
     <message>
         <location line="+11" />
         <source>Use &lt;b&gt;%1&lt;/b&gt;</source>
-        <extracomment>%1 is "System Environment" or some such.</extracomment>
+        <extracomment>%1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Használja a &lt;b&gt;%1 &lt;/b&gt; használatát</translation>
     </message>
     <message>
@@ -15877,7 +15980,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+5" />
         <source>Use &lt;b&gt;%1&lt;/b&gt; and</source>
-        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is "System Environment" or some such.</extracomment>
+        <extracomment>Yup, word puzzle. The Set/Unset phrases above are appended to this. %1 is &quot;System Environment&quot; or some such.</extracomment>
         <translation>Használja a &lt;b&gt;%1 &lt;/b&gt; és</translation>
     </message>
     <message>
@@ -15975,58 +16078,58 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+5" />
-        <source>Field "%1" has no type.</source>
-        <translation>A "%1" mezőnek nincs típusa.</translation>
+        <source>Field &quot;%1&quot; has no type.</source>
+        <translation>A &quot;%1&quot; mezőnek nincs típusa.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Field "%1" has unsupported type "%2".</source>
-        <translation>A "%1" mező nem támogatott "%2" típusú.</translation>
+        <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
+        <translation>A &quot;%1&quot; mező nem támogatott &quot;%2&quot; típusú.</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>When parsing Field "%1": %2</source>
-        <translation>A " %1" mező elemzésekor: %2</translation>
+        <source>When parsing Field &quot;%1&quot;: %2</source>
+        <translation>A &quot; %1&quot; mező elemzésekor: %2</translation>
     </message>
     <message>
         <location line="+208" />
-        <source>Label ("%1") data is not an object.</source>
-        <translation>A címke ("%1") adatok nem objektum.</translation>
+        <source>Label (&quot;%1&quot;) data is not an object.</source>
+        <translation>A címke (&quot;%1&quot;) adatok nem objektum.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Label ("%1") has no trText.</source>
-        <translation>A címke ("%1") nincs TRTEXT.</translation>
+        <source>Label (&quot;%1&quot;) has no trText.</source>
+        <translation>A címke (&quot;%1&quot;) nincs TRTEXT.</translation>
     </message>
     <message>
         <location line="+28" />
-        <source>Spacer ("%1") data is not an object.</source>
-        <translation>A Spacer ("%1") adatok nem objektum.</translation>
+        <source>Spacer (&quot;%1&quot;) data is not an object.</source>
+        <translation>A Spacer (&quot;%1&quot;) adatok nem objektum.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Spacer ("%1") property "factor" is no integer value.</source>
-        <translation>A Spacer ("%1") tulajdonság "faktor" nem egész szám.</translation>
+        <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
+        <translation>A Spacer (&quot;%1&quot;) tulajdonság &quot;faktor&quot; nem egész szám.</translation>
     </message>
     <message>
         <location line="+35" />
-        <source>LineEdit ("%1") data is not an object.</source>
-        <translation>A lineedit ("%1") adatok nem objektum.</translation>
+        <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>A lineedit (&quot;%1&quot;) adatok nem objektum.</translation>
     </message>
     <message>
         <location line="+16" />
-        <source>LineEdit ("%1") has an invalid regular expression "%2" in "validator".</source>
-        <translation>A LineEdit ("%1") érvénytelen, "%2" kifejezéssel rendelkezik a "validator" -ban.</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
+        <translation>A LineEdit (&quot;%1&quot;) érvénytelen, &quot;%2&quot; kifejezéssel rendelkezik a &quot;validator&quot; -ban.</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>LineEdit ("%1") has an invalid value "%2" in "completion".</source>
-        <translation>A LineEdit ("%1") érvénytelen értéke "%2" a "befejezésben".</translation>
+        <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
+        <translation>A LineEdit (&quot;%1&quot;) érvénytelen értéke &quot;%2&quot; a &quot;befejezésben&quot;.</translation>
     </message>
     <message>
         <location line="+166" />
-        <source>TextEdit ("%1") data is not an object.</source>
-        <translation>A Textedit ("%1") adatok nem objektum.</translation>
+        <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
+        <translation>A Textedit (&quot;%1&quot;) adatok nem objektum.</translation>
     </message>
     <message>
         <location line="+83" />
@@ -16035,18 +16138,18 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+26" />
-        <source>kind "%1" is not one of the supported "existingDirectory", "directory", "file", "saveFile", "existingCommand", "command", "any".</source>
-        <translation>A "%1" nem a támogatott "Meglévő", "Directory", "File", "SaveFile", "MeglévőCommand", "Command", "bármelyik".</translation>
+        <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
+        <translation>A &quot;%1&quot; nem a támogatott &quot;Meglévő&quot;, &quot;Directory&quot;, &quot;File&quot;, &quot;SaveFile&quot;, &quot;MeglévőCommand&quot;, &quot;Command&quot;, &quot;bármelyik&quot;.</translation>
     </message>
     <message>
         <location line="+80" />
-        <source>CheckBox ("%1") data is not an object.</source>
-        <translation>A jelölőnégyzet ("%1") adatok nem objektum.</translation>
+        <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
+        <translation>A jelölőnégyzet (&quot;%1&quot;) adatok nem objektum.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>CheckBox ("%1") values for checked and unchecked state are identical.</source>
-        <translation>A jelölőnégyzet ("%1") értékek az ellenőrzött és a nem ellenőrzött állapothoz hasonlóak.</translation>
+        <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
+        <translation>A jelölőnégyzet (&quot;%1&quot;) értékek az ellenőrzött és a nem ellenőrzött állapothoz hasonlóak.</translation>
     </message>
     <message>
         <location line="+80" />
@@ -16055,33 +16158,33 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+10" />
-        <source>No "key" found in List items.</source>
-        <translation>Nem található "kulcs" a listaelemekben.</translation>
+        <source>No &quot;key&quot; found in List items.</source>
+        <translation>Nem található &quot;kulcs&quot; a listaelemekben.</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>%1 ("%2") data is not an object.</source>
-        <translation>A%1 ("%2") adatok nem objektum.</translation>
+        <source>%1 (&quot;%2&quot;) data is not an object.</source>
+        <translation>A%1 (&quot;%2&quot;) adatok nem objektum.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>%1 ("%2") "index" is not an integer value.</source>
-        <translation>%1 ("%2") "Index" nem egész érték.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;Index&quot; nem egész érték.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>%1 ("%2") "disabledIndex" is not an integer value.</source>
-        <translation>%1 ("%2") "DisabledIndex" nem egész érték.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;DisabledIndex&quot; nem egész érték.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>%1 ("%2") "items" missing.</source>
-        <translation>%1 ("%2") "tételek" hiányzik.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;tételek&quot; hiányzik.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>%1 ("%2") "items" is not a JSON list.</source>
-        <translation>%1 ("%2") "tételek" nem JSON -lista.</translation>
+        <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
+        <translation>%1 (&quot;%2&quot;) &quot;tételek&quot; nem JSON -lista.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
@@ -16105,8 +16208,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+13" />
-        <source>No "%1" key found in feature list object.</source>
-        <translation>Nincs "%1" kulcs található a Feature List objektumban.</translation>
+        <source>No &quot;%1&quot; key found in feature list object.</source>
+        <translation>Nincs &quot;%1&quot; kulcs található a Feature List objektumban.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -16120,8 +16223,8 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Error message from Version Control System: "%1".</source>
-        <translation>Hibaüzenet a verzióvezérlő rendszerből: "%1".</translation>
+        <source>Error message from Version Control System: &quot;%1&quot;.</source>
+        <translation>Hibaüzenet a verzióvezérlő rendszerből: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16132,18 +16235,18 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="-11" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
-        <source>Failed to add subproject "%1"
-to project "%2".</source>
-        <translation>Nem sikerült hozzáadni a "%1" alprojekciót
- a "%2" projekthez.</translation>
+        <source>Failed to add subproject &quot;%1&quot;
+to project &quot;%2&quot;.</source>
+        <translation>Nem sikerült hozzáadni a &quot;%1&quot; alprojekciót
+ a &quot;%2&quot; projekthez.</translation>
     </message>
     <message>
         <location line="+12" />
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
         <source>Failed to add one or more files to project
-"%1" (%2).</source>
+&quot;%1&quot; (%2).</source>
         <translation>Nem sikerült hozzáadni egy vagy több fájlt a projekthez
- "%1" (%2).</translation>
+ &quot;%1&quot; (%2).</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
@@ -16163,13 +16266,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+33" />
-        <source>Check whether a variable exists.&lt;br&gt;Returns "true" if it does and an empty string if not.</source>
+        <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
         <translation>Ellenőrizze, hogy létezik -e egy változó. &lt;br&gt; Ha nem, és egy üres karakterlánc, ha nem.</translation>
     </message>
     <message>
         <location line="+39" />
-        <source>Could not determine target path. "TargetPath" was not set on any page.</source>
-        <translation>Nem tudta meghatározni a célútot. A "TargetPath" nem állt be egyetlen oldalon sem.</translation>
+        <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
+        <translation>Nem tudta meghatározni a célútot. A &quot;TargetPath&quot; nem állt be egyetlen oldalon sem.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -16178,12 +16281,12 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The wizard failed to generate files.&lt;br&gt;The error message was: "%1".</source>
-        <translation>A varázsló nem tudott fájlokat generálni. &lt;br&gt; A hibaüzenet a következő volt: "%1".</translation>
+        <source>The wizard failed to generate files.&lt;br&gt;The error message was: &quot;%1&quot;.</source>
+        <translation>A varázsló nem tudott fájlokat generálni. &lt;br&gt; A hibaüzenet a következő volt: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+63" />
-        <source>No 'key' in options object.</source>
+        <source>No &apos;key&apos; in options object.</source>
         <translation>Nincs „kulcs” az Opciók objektumban.</translation>
     </message>
     <message>
@@ -16218,24 +16321,24 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+58" />
-        <source>"%1" does not exist in the file system.</source>
-        <translation>A "%1" nem létezik a fájlrendszerben.</translation>
+        <source>&quot;%1&quot; does not exist in the file system.</source>
+        <translation>A &quot;%1&quot; nem létezik a fájlrendszerben.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to open "%1" as a project.</source>
-        <translation>Nem sikerült megnyitni a "%1" -t projektként.</translation>
+        <source>Failed to open &quot;%1&quot; as a project.</source>
+        <translation>Nem sikerült megnyitni a &quot;%1&quot; -t projektként.</translation>
     </message>
     <message>
         <location line="+12" />
         <location line="+46" />
-        <source>Failed to open an editor for "%1".</source>
-        <translation>Nem sikerült megnyitni a "%1" szerkesztőt.</translation>
+        <source>Failed to open an editor for &quot;%1&quot;.</source>
+        <translation>Nem sikerült megnyitni a &quot;%1&quot; szerkesztőt.</translation>
     </message>
     <message>
         <location line="-27" />
-        <source>No file to open found in "%1".</source>
-        <translation>A "%1" -ben nem található fájl.</translation>
+        <source>No file to open found in &quot;%1&quot;.</source>
+        <translation>A &quot;%1&quot; -ben nem található fájl.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16244,8 +16347,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Failed to open project in "%1".</source>
-        <translation>Nem sikerült megnyitni a projektet a "%1" -ben.</translation>
+        <source>Failed to open project in &quot;%1&quot;.</source>
+        <translation>Nem sikerült megnyitni a projektet a &quot;%1&quot; -ben.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16265,31 +16368,31 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+7" />
-        <source>TypeId "%1" of generator is unknown. Supported typeIds are: "%2".</source>
-        <translation>A generátor "%1" typeId "%1" ismeretlen. A támogatott típusúak: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+56" />
         <location line="+241" />
-        <source>Path "%1" does not exist when checking JSON wizard search paths.</source>
-        <translation>A "%1" elérési út nem létezik a JSON varázsló keresési útvonalak ellenőrzése során.</translation>
+        <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
+        <translation>A &quot;%1&quot; elérési út nem létezik a JSON varázsló keresési útvonalak ellenőrzése során.</translation>
     </message>
     <message>
         <location line="-228" />
-        <source>Checking "%1" for %2.</source>
-        <translation>A " %1" ellenőrzése a %2 -re.</translation>
+        <source>Checking &quot;%1&quot; for %2.</source>
+        <translation>A &quot; %1&quot; ellenőrzése a %2 -re.</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+233" />
-        <source>* Failed to parse "%1":%2:%3: %4</source>
-        <translation>* Nem sikerült elemezni a "%1":%2:%3:%4</translation>
+        <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
+        <translation>* Nem sikerült elemezni a &quot;%1&quot;:%2:%3:%4</translation>
     </message>
     <message>
         <location line="-223" />
-        <source>* Did not find a JSON object in "%1".
+        <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* Nem talált JSON objektumot a "%1" -ben.</translation>
+        <translation>* Nem talált JSON objektumot a &quot;%1&quot; -ben.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -16299,8 +16402,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="-224" />
-        <source>JsonWizard: "%1" not found.</source>
-        <translation>JsonWizard: "%1" nem található.</translation>
+        <source>JsonWizard: &quot;%1&quot; not found.</source>
+        <translation>JsonWizard: &quot;%1&quot; nem található.</translation>
     </message>
     <message>
         <location line="+96" />
@@ -16314,18 +16417,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>TypeId "%1" of page is unknown. Supported typeIds are: "%2".</source>
-        <translation>Az oldal "%1" typeID -je ismeretlen. A támogatott típusúak: "%2".</translation>
+        <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
+        <translation>Az oldal &quot;%1&quot; typeID -je ismeretlen. A támogatott típusúak: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Page with typeId "%1" has invalid "index".</source>
-        <translation>A "%1" typeID -vel érvénytelen "index".</translation>
+        <source>Page with typeId &quot;%1&quot; has invalid &quot;index&quot;.</source>
+        <translation>A &quot;%1&quot; typeID -vel érvénytelen &quot;index&quot;.</translation>
     </message>
     <message>
         <location line="+89" />
-        <source>* Did not find a JSON object in "%1".</source>
-        <translation>* Nem talált JSON objektumot a "%1" -ben.</translation>
+        <source>* Did not find a JSON object in &quot;%1&quot;.</source>
+        <translation>* Nem talált JSON objektumot a &quot;%1&quot; -ben.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16364,13 +16467,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+32" />
-        <source>"kind" value "%1" is not "class" (deprecated), "file" or "project".</source>
-        <translation>"Kind" érték "%1" nem "osztály" (elavult), "fájl" vagy "projekt".</translation>
+        <source>&quot;kind&quot; value &quot;%1&quot; is not &quot;class&quot; (deprecated), &quot;file&quot; or &quot;project&quot;.</source>
+        <translation>&quot;Kind&quot; érték &quot;%1&quot; nem &quot;osztály&quot; (elavult), &quot;fájl&quot; vagy &quot;projekt&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>"kind" is "file" or "class" (deprecated) and "%1" is also set.</source>
-        <translation>A "fajta" "fájl" vagy "osztály" (elavult) és a "%1" szintén be van állítva.</translation>
+        <source>&quot;kind&quot; is &quot;file&quot; or &quot;class&quot; (deprecated) and &quot;%1&quot; is also set.</source>
+        <translation>A &quot;fajta&quot; &quot;fájl&quot; vagy &quot;osztály&quot; (elavult) és a &quot;%1&quot; szintén be van állítva.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -16384,13 +16487,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Icon file "%1" not found.</source>
-        <translation>A "%1" ikonfájl nem található.</translation>
+        <source>Icon file &quot;%1&quot; not found.</source>
+        <translation>A &quot;%1&quot; ikonfájl nem található.</translation>
     </message>
     <message>
         <location line="+20" />
-        <source>Image file "%1" not found.</source>
-        <translation>A "%1" képfájl nem található.</translation>
+        <source>Image file &quot;%1&quot; not found.</source>
+        <translation>A &quot;%1&quot; képfájl nem található.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16409,13 +16512,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+8" />
-        <source>When parsing "generators": %1</source>
-        <translation>A "generátorok" elemzésekor: %1</translation>
+        <source>When parsing &quot;generators&quot;: %1</source>
+        <translation>A &quot;generátorok&quot; elemzésekor: %1</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>When parsing "pages": %1</source>
-        <translation>Az "oldalak" elemzésekor: %1</translation>
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation>Az &quot;oldalak&quot; elemzésekor: %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
@@ -16429,8 +16532,8 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+57" />
-        <source>When processing "%1":&lt;br&gt;%2</source>
-        <translation>A "%1" feldolgozásakor: &lt;br&gt;%2</translation>
+        <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
+        <translation>A &quot;%1&quot; feldolgozásakor: &lt;br&gt;%2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
@@ -16456,43 +16559,43 @@ to project "%2".</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
-        <source>When parsing fields of page "%1": %2</source>
-        <translation>A " %1" oldal mezőinek elemzésekor: %2</translation>
+        <source>When parsing fields of page &quot;%1&quot;: %2</source>
+        <translation>A &quot; %1&quot; oldal mezőinek elemzésekor: %2</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "File" page needs to be unset or an empty object.</source>
-        <translation>A "Fájl" oldal "adatai" oldalnak setet vagy üres objektumnak kell lennie.</translation>
+        <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
+        <translation>A &quot;Fájl&quot; oldal &quot;adatai&quot; oldalnak setet vagy üres objektumnak kell lennie.</translation>
     </message>
     <message>
         <location line="+48" />
-        <source>Error parsing "%1" in "Kits" page: %2</source>
-        <translation>Hiba a " %1" a "Kits" -ben történő elemzése: %2</translation>
+        <source>Error parsing &quot;%1&quot; in &quot;Kits&quot; page: %2</source>
+        <translation>Hiba a &quot; %1&quot; a &quot;Kits&quot; -ben történő elemzése: %2</translation>
     </message>
     <message>
         <location line="+12" />
-        <source>"data" must be a JSON object for "Kits" pages.</source>
-        <translation>Az "Data" -nak JSON objektumnak kell lennie a "KITS" oldalakhoz.</translation>
+        <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
+        <translation>Az &quot;Data&quot; -nak JSON objektumnak kell lennie a &quot;KITS&quot; oldalakhoz.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>"Kits" page requires a "%1" set.</source>
-        <translation>A "KITS" oldal "%1" beállítást igényel.</translation>
+        <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
+        <translation>A &quot;KITS&quot; oldal &quot;%1&quot; beállítást igényel.</translation>
     </message>
     <message>
         <location line="+62" />
-        <source>"data" must be empty or a JSON object for "Project" pages.</source>
-        <translation>Az "Data" -nak üresnek kell lennie, vagy JSON objektumnak kell lennie a "projekt" oldalakhoz.</translation>
+        <source>&quot;data&quot; must be empty or a JSON object for &quot;Project&quot; pages.</source>
+        <translation>Az &quot;Data&quot; -nak üresnek kell lennie, vagy JSON objektumnak kell lennie a &quot;projekt&quot; oldalakhoz.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Invalid regular expression "%1" in "%2". %3</source>
-        <translation>Érvénytelen rendszeres kifejezés "%1" a "%2" -ben. %3</translation>
+        <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
+        <translation>Érvénytelen rendszeres kifejezés &quot;%1&quot; a &quot;%2&quot; -ben. %3</translation>
     </message>
     <message>
         <location line="+46" />
-        <source>"data" for a "Summary" page can be unset or needs to be an object.</source>
-        <translation>Az "Összegzés" oldal "adatai" lehetnek, vagy objektumnak kell lennie.</translation>
+        <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
+        <translation>Az &quot;Összegzés&quot; oldal &quot;adatai&quot; lehetnek, vagy objektumnak kell lennie.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
@@ -16501,13 +16604,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+11" />
-        <source>Pattern "%1" is no valid regular expression.</source>
-        <translation>A "%1" minta nem érvényes rendszeres kifejezés.</translation>
+        <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
+        <translation>A &quot;%1&quot; minta nem érvényes rendszeres kifejezés.</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>ScannerGenerator: Binary pattern "%1" not valid.</source>
-        <translation>ScannerGenerator: A "%1" bináris mintázat nem érvényes.</translation>
+        <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
+        <translation>ScannerGenerator: A &quot;%1&quot; bináris mintázat nem érvényes.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
@@ -16564,18 +16667,18 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+17" />
-        <source>Sys Root "%1" does not exist in the file system.</source>
-        <translation>A "%1" sys gyökér nem létezik a fájlrendszerben.</translation>
+        <source>Sys Root &quot;%1&quot; does not exist in the file system.</source>
+        <translation>A &quot;%1&quot; sys gyökér nem létezik a fájlrendszerben.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is not a directory.</source>
-        <translation>A Sys gyökér "%1" nem könyvtár.</translation>
+        <source>Sys Root &quot;%1&quot; is not a directory.</source>
+        <translation>A Sys gyökér &quot;%1&quot; nem könyvtár.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Sys Root "%1" is empty.</source>
-        <translation>A "%1" sys gyökér üres.</translation>
+        <source>Sys Root &quot;%1&quot; is empty.</source>
+        <translation>A &quot;%1&quot; sys gyökér üres.</translation>
     </message>
     <message>
         <location line="+14" />
@@ -16598,7 +16701,7 @@ to project "%2".</source>
     <message>
         <location line="-147" />
         <source>The compiler to use for building.&lt;br&gt;Make sure the compiler will produce binaries compatible with the target device, Qt version and other libraries used.</source>
-        <translation>Az épülethez használandó fordító.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+45" />
@@ -16821,7 +16924,7 @@ to project "%2".</source>
     <message>
         <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The name of the kit suitable for generating directory names. This value is used for the variable &lt;i&gt;%1&lt;/i&gt;, which for example determines the name of the shadow build directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;hew/&gt; &lt;body&gt; &lt;p&gt; A készlet neve, amely alkalmas könyvtárnevek generálására. Ezt az értéket a &lt;i&gt;%1 &lt;/i&gt; változóhoz használják, amely például meghatározza az Shadow Build könyvtár nevét. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9" />
@@ -17058,13 +17161,13 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href="projectmode"&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation>&lt;stílus type = text/css&gt; a: link {szín: rgb (128, 128, 255);} &lt;/style&gt; A projekt &lt;b&gt;%1 &lt;/b&gt; még nincs konfigurálva &lt;br/&gt; &lt;BR/ &gt; Konfigurálhatja a &lt;a href = "projekttermode"&gt; projekt módban &lt;/a&gt; &lt;br/&gt;</translation>
+        <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href=&quot;projectmode&quot;&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
+        <translation>&lt;stílus type = text/css&gt; a: link {szín: rgb (128, 128, 255);} &lt;/style&gt; A projekt &lt;b&gt;%1 &lt;/b&gt; még nincs konfigurálva &lt;br/&gt; &lt;BR/ &gt; Konfigurálhatja a &lt;a href = &quot;projekttermode&quot;&gt; projekt módban &lt;/a&gt; &lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
-        <source>Falling back to use the cached environment for "%1" after:</source>
-        <translation>Visszalépés a gyorsítótárazott környezet használatához: "%1" után:</translation>
+        <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
+        <translation>Visszalépés a gyorsítótárazott környezet használatához: &quot;%1&quot; után:</translation>
     </message>
     <message>
         <location line="+483" />
@@ -17086,9 +17189,9 @@ to project "%2".</source>
     </message>
     <message>
         <location line="+796" />
-        <source>Failed to retrieve MSVC Environment from "%1":
+        <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
-        <translation>Nem sikerült letölteni az MSVC környezetet a "%1" -ből:
+        <translation>Nem sikerült letölteni az MSVC környezetet a &quot;%1&quot; -ből:
  %2</translation>
     </message>
     <message>
@@ -17135,8 +17238,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open file: "%1": %2</source>
-        <translation>Nem tudtam megnyitni a fájlt: " %1": %2</translation>
+        <source>Could not open file: &quot;%1&quot;: %2</source>
+        <translation>Nem tudtam megnyitni a fájlt: &quot; %1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
@@ -17246,13 +17349,13 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+92" />
-        <source>Project "%1" was configured for kit "%2" with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
-        <translation>A "%1" projektet a "%2" készletre konfigurálták az ID%3 -mal, amely már nem létezik. Készíthet egy új készletet, vagy másolhatja a eltűnt készlet lépéseit egy másik készletbe %4 módban.</translation>
+        <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
+        <translation>A &quot;%1&quot; projektet a &quot;%2&quot; készletre konfigurálták az ID%3 -mal, amely már nem létezik. Készíthet egy új készletet, vagy másolhatja a eltűnt készlet lépéseit egy másik készletbe %4 módban.</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+622" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+626" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
@@ -17261,79 +17364,79 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+265" />
-        <source>Could not find any qml_*.qm file at "%1"</source>
-        <translation>Nem találtak qml _*. Qm fájl "%1" -en</translation>
+        <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
+        <translation>Nem találtak qml _*. Qm fájl &quot;%1&quot; -en</translation>
     </message>
     <message>
         <location line="+87" />
         <source>%1: Name.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Név.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to main file.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: A fő fájl teljes elérési útja.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Teljes út a projektkönyvtárhoz.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: The name of the active kit.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Az aktív készlet neve.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>%1: Name of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Az aktív összeállítási konfiguráció neve.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Type of the active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Az aktív összeállítási konfiguráció típusa.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Full build path of active build configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Az aktív összeállítási konfiguráció teljes összeállítási útja.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Variables in the active build environment.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Változók az aktív építési környezetben.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Name of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Az aktív futtatás konfigurációjának neve.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>%1: Executable of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Az aktív futtatás konfigurációjának végrehajthatósága.</translation>
     </message>
     <message>
         <location line="+10" />
         <source>%1: Variables in the environment of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Változók az aktív futási konfiguráció környezetében.</translation>
     </message>
     <message>
         <location line="+12" />
         <source>%1: Working directory of the active run configuration.</source>
-        <extracomment>%1 is something like "Active project"</extracomment>
+        <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Az aktív futtatás konfigurációjának munkakönyvtára.</translation>
     </message>
     <message>
@@ -17376,12 +17479,12 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+7" />
         <source>&amp;Debug</source>
-        <translation>&amp; Hibakeresés</translation>
+        <translation>&amp;Hibakeresés</translation>
     </message>
     <message>
         <location line="+6" />
         <source>&amp;Start Debugging</source>
-        <translation>&amp; Kezdje el a hibakeresést</translation>
+        <translation>&amp;Kezdje el a hibakeresést</translation>
     </message>
     <message>
         <location line="+82" />
@@ -17416,7 +17519,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+17" />
         <source>Recent P&amp;rojects</source>
-        <translation>Legutóbbi P &amp; Rojecs</translation>
+        <translation>Legutóbbi P &amp;Rojecs</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17426,8 +17529,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="-347" />
-        <source>Close Pro&amp;ject "%1"</source>
-        <translation>Zárja be a "%1" projektet</translation>
+        <source>Close Pro&amp;ject &quot;%1&quot;</source>
+        <translation>Zár&amp;ja be a &quot;%1&quot; projektet</translation>
     </message>
     <message>
         <location line="+10" />
@@ -17437,13 +17540,13 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <location line="+328" />
-        <source>Close All Files in Project "%1"</source>
-        <translation>Zárja be az összes fájlt a "%1" projektben</translation>
+        <source>Close All Files in Project &quot;%1&quot;</source>
+        <translation>Zárja be az összes fájlt a &quot;%1&quot; projektben</translation>
     </message>
     <message>
         <location line="-316" />
         <source>Close Pro&amp;ject</source>
-        <translation>Szoros projekt</translation>
+        <translation>Szoros pro&amp;jekt</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17501,8 +17604,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Build Project "%1"</source>
-        <translation>A "%1" című projekt felépítése</translation>
+        <source>Build Project &quot;%1&quot;</source>
+        <translation>A &quot;%1&quot; című projekt felépítése</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17511,18 +17614,18 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Build Project "%1" for All Configurations</source>
-        <translation>Építse a "%1" projektet az összes konfigurációhoz</translation>
+        <source>Build Project &quot;%1&quot; for All Configurations</source>
+        <translation>Építse a &quot;%1&quot; projektet az összes konfigurációhoz</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Build for &amp;Run Configuration</source>
-        <translation>Építsd meg a konfiguráció futtatását</translation>
+        <translation>Építsd meg a konfigu&amp;ráció futtatását</translation>
     </message>
     <message>
         <location line="+0" />
-        <source>Build for &amp;Run Configuration "%1"</source>
-        <translation>Építsd meg a "%1" konfiguráció futtatását</translation>
+        <source>Build for &amp;Run Configuration &quot;%1&quot;</source>
+        <translation>Építsd meg a &quot;%1&quot; konfigu&amp;ráció futtatását</translation>
     </message>
     <message>
         <location line="+13" />
@@ -17615,8 +17718,8 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+9" />
         <location line="+1621" />
-        <source>Close Project "%1"</source>
-        <translation>Zárja be a "%1" projektet</translation>
+        <source>Close Project &quot;%1&quot;</source>
+        <translation>Zárja be a &quot;%1&quot; projektet</translation>
     </message>
     <message>
         <location line="-1614" />
@@ -17625,8 +17728,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <source>Close All Projects Except "%1"</source>
-        <translation>Zárja be az összes projektet, a "%1" kivételével</translation>
+        <source>Close All Projects Except &quot;%1&quot;</source>
+        <translation>Zárja be az összes projektet, a &quot;%1&quot; kivételével</translation>
     </message>
     <message>
         <location line="+8" />
@@ -17661,8 +17764,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+1" />
-        <source>Set "%1" as Active Project</source>
-        <translation>Állítsa be a "%1" aktív projektet</translation>
+        <source>Set &quot;%1&quot; as Active Project</source>
+        <translation>Állítsa be a &quot;%1&quot; aktív projektet</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17747,7 +17850,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+62" />
         <source>Sanitizer</source>
-        <comment>Category for sanitizer issues listed under 'Issues'</comment>
+        <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
         <translation>Fertőtlenítő</translation>
     </message>
     <message>
@@ -17788,8 +17891,8 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+48" />
-        <source>Failed opening project "%1": No plugin can open project type "%2".</source>
-        <translation>A "%1" sikertelen megnyitó projekt: Egyetlen plugin sem nyithatja meg a "%2" projekt típusát.</translation>
+        <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
+        <translation>A &quot;%1&quot; sikertelen megnyitó projekt: Egyetlen plugin sem nyithatja meg a &quot;%2&quot; projekt típusát.</translation>
     </message>
     <message>
         <location line="+195" />
@@ -17820,18 +17923,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+23" />
-        <source>Open Project in "%1"</source>
-        <translation>Nyissa meg a projektet a "%1" -ben</translation>
+        <source>Open Project in &quot;%1&quot;</source>
+        <translation>Nyissa meg a projektet a &quot;%1&quot; -ben</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Open Project "%1"</source>
-        <translation>Nyissa meg a "%1" projektet</translation>
+        <source>Open Project &quot;%1&quot;</source>
+        <translation>Nyissa meg a &quot;%1&quot; projektet</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>The file "%1" was renamed to "%2", but the following projects could not be automatically changed: %3</source>
-        <translation>A "%1" fájlt "%2" -nek nevezték át, de a következő projektek nem válthatók automatikusan:%3</translation>
+        <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
+        <translation>A &quot;%1&quot; fájlt &quot;%2&quot; -nek nevezték át, de a következő projektek nem válthatók automatikusan:%3</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17848,8 +17951,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+62" />
-        <source>Building "%1" is disabled: %2&lt;br&gt;</source>
-        <translation>A " %1" építése le van tiltva: %2 &lt;br&gt;</translation>
+        <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
+        <translation>A &quot; %1&quot; építése le van tiltva: %2 &lt;br&gt;</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17910,18 +18013,18 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>The project "%1" is not configured.</source>
-        <translation>A "%1" projekt nincs konfigurálva.</translation>
+        <source>The project &quot;%1&quot; is not configured.</source>
+        <translation>A &quot;%1&quot; projekt nincs konfigurálva.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>The project "%1" has no active kit.</source>
-        <translation>A "%1" projektnek nincs aktív készlete.</translation>
+        <source>The project &quot;%1&quot; has no active kit.</source>
+        <translation>A &quot;%1&quot; projektnek nincs aktív készlete.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>The kit "%1" for the project "%2" has no active run configuration.</source>
-        <translation>A "%1" készlet a "%2" projekthez nem rendelkezik aktív futási konfigurációval.</translation>
+        <source>The kit &quot;%1&quot; for the project &quot;%2&quot; has no active run configuration.</source>
+        <translation>A &quot;%1&quot; készlet a &quot;%2&quot; projekthez nem rendelkezik aktív futási konfigurációval.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -17930,8 +18033,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>Cannot run "%1".</source>
-        <translation>Nem lehet futtatni a "%1" -t.</translation>
+        <source>Cannot run &quot;%1&quot;.</source>
+        <translation>Nem lehet futtatni a &quot;%1&quot; -t.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -17957,8 +18060,8 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+41" />
-        <source>The following subprojects could not be added to project "%1":</source>
-        <translation>A következő alprojekteket nem lehetett hozzáadni a "%1" projekthez:</translation>
+        <source>The following subprojects could not be added to project &quot;%1&quot;:</source>
+        <translation>A következő alprojekteket nem lehetett hozzáadni a &quot;%1&quot; projekthez:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18007,15 +18110,15 @@ Do you want to ignore them?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>File "%1" was not removed, because the project has changed in the meantime.
+        <source>File &quot;%1&quot; was not removed, because the project has changed in the meantime.
 Please try again.</source>
-        <translation>A "%1" fájlt nem távolították el, mert a projekt időközben megváltozott.
+        <translation>A &quot;%1&quot; fájlt nem távolították el, mert a projekt időközben megváltozott.
  Kérjük, próbálkozzon újra.</translation>
     </message>
     <message>
         <location line="+17" />
-        <source>Could not remove file "%1" from project "%2".</source>
-        <translation>Nem tudta eltávolítani a "%1" fájlt a "%2" projektből.</translation>
+        <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
+        <translation>Nem tudta eltávolítani a &quot;%1&quot; fájlt a &quot;%2&quot; projektből.</translation>
     </message>
     <message>
         <location line="+36" />
@@ -18040,13 +18143,13 @@ Please try again.</source>
     </message>
     <message>
         <location line="-9" />
-        <source>Failed to copy file "%1" to "%2": %3.</source>
-        <translation>Nem sikerült lemásolni a "%1" fájlt a "%2" -re:%3.</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
+        <translation>Nem sikerült lemásolni a &quot;%1&quot; fájlt a &quot;%2&quot; -re:%3.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Failed to add new file "%1" to the project.</source>
-        <translation>Nem sikerült új "%1" fájlt hozzáadni a projekthez.</translation>
+        <source>Failed to add new file &quot;%1&quot; to the project.</source>
+        <translation>Nem sikerült új &quot;%1&quot; fájlt hozzáadni a projekthez.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18073,9 +18176,7 @@ Please try again.</source>
         <source>The project file %1 cannot be automatically changed.
 
 Rename %2 to %3 anyway?</source>
-        <translation>A %1 projektfájlt nem lehet automatikusan megváltoztatni.
-
- Átnevezi a %2 -tól 3 -ig?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17" />
@@ -18094,8 +18195,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+192" />
-        <source>Locates files from all project directories. Append "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the given line number. Append another "+&lt;number&gt;" or ":&lt;number&gt;" to jump to the column number as well.</source>
-        <translation>Megtalálja a fájlokat az összes projektkönyvtárból. Függelje meg a "+&lt;szám&gt;" vagy ": &lt;szám&gt;" -ot az adott sorszámra ugráshoz. Függeljen egy másik "+&lt;szám&gt;" vagy ": &lt;szám&gt;" -ot az oszlopszámra is ugráshoz.</translation>
+        <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
+        <translation>Megtalálja a fájlokat az összes projektkönyvtárból. Függelje meg a &quot;+&lt;szám&gt;&quot; vagy &quot;: &lt;szám&gt;&quot; -ot az adott sorszámra ugráshoz. Függeljen egy másik &quot;+&lt;szám&gt;&quot; vagy &quot;: &lt;szám&gt;&quot; -ot az oszlopszámra is ugráshoz.</translation>
     </message>
     <message>
         <location line="+102" />
@@ -18152,13 +18253,13 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
         <source>s</source>
-        <extracomment>Suffix for "seconds"</extracomment>
+        <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>S</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The amount of seconds to wait between a "soft kill" and a "hard kill" of a running application.</source>
-        <translation>A futó alkalmazás "lágy ölése" és "kemény ölése" közötti másodpercig.</translation>
+        <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
+        <translation>A futó alkalmazás &quot;lágy ölése&quot; és &quot;kemény ölése&quot; közötti másodpercig.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -18222,8 +18323,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+2" />
-        <source>Some legacy build tools do not deal well with paths that contain "special" characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
-        <translation>Egyes örökölt szerszámok nem foglalkoznak jól az olyan útvonalakkal, amelyek "speciális" karaktereket, például tereket tartalmaznak, amelyek potenciálisan hamis építési hibákat eredményeznek.</translation>
+        <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4" />
@@ -18282,13 +18383,13 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+10" />
-        <source>Show all kits in "Build &amp; Run" in "Projects" mode</source>
-        <translation>Mutassa meg az összes készletet a "Build &amp; Run" -ban "Projects" módban</translation>
+        <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
+        <translation>Mutassa meg az összes készletet a &quot;Build &amp; Run&quot; -ban &quot;Projects&quot; módban</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Show also inactive kits in "Build &amp; Run" in "Projects" mode.</source>
-        <translation>Mutassa be az inaktív készleteket a "Build &amp; Run" "Projects" módban is.</translation>
+        <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
+        <translation>Mutassa be az inaktív készleteket a &quot;Build &amp; Run&quot; &quot;Projects&quot; módban is.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18327,8 +18428,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Default for "Run in terminal":</source>
-        <translation>Alapértelmezés a "Run in Terminal" esetében:</translation>
+        <source>Default for &quot;Run in terminal&quot;:</source>
+        <translation>Alapértelmezés a &quot;Run in Terminal&quot; esetében:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18408,8 +18509,8 @@ Rename %2 to %3 anyway?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
-        <source>No kits are enabled for this project. Enable kits in the "Projects" mode.</source>
-        <translation>A projekthez nem engedélyezve nem engedélyezve. Engedélyezze a készleteket a "Projects" módban.</translation>
+        <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
+        <translation>A projekthez nem engedélyezve nem engedélyezve. Engedélyezze a készleteket a &quot;Projects&quot; módban.</translation>
     </message>
     <message>
         <location line="+89" />
@@ -18516,7 +18617,7 @@ What should %1 do now?</source>
         <translation>&lt;B&gt; FIGYELMEZTETÉS: &lt;/b&gt; Ez a fájl a projektkönyvtáron kívül esik.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-391" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-395" />
         <source>Simplify Tree</source>
         <translation>Egyszerűsítse a fa</translation>
     </message>
@@ -18566,7 +18667,7 @@ What should %1 do now?</source>
         <translation>Szűrőfa</translation>
     </message>
     <message>
-        <location line="+194" />
+        <location line="+198" />
         <source>Meta+X</source>
         <translation>Meta+x</translation>
     </message>
@@ -18602,18 +18703,18 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+50" />
-        <source>Open %1 "%2"</source>
-        <translation>Nyissa meg a %1 " %2"</translation>
+        <source>Open %1 &quot;%2&quot;</source>
+        <translation>Nyissa meg a %1 &quot; %2&quot;</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Open %1 "%2" (%3)</source>
-        <translation>Nyissa meg a%1 "%2" (%3)</translation>
+        <source>Open %1 &quot;%2&quot; (%3)</source>
+        <translation>Nyissa meg a%1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
         <location line="+20" />
         <source>session</source>
-        <comment>Appears in "Open session &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>ülés</translation>
     </message>
     <message>
@@ -18640,7 +18741,7 @@ What should %1 do now?</source>
     <message>
         <location line="+125" />
         <source>project</source>
-        <comment>Appears in "Open project &lt;name&gt;"</comment>
+        <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>projekt</translation>
     </message>
     <message>
@@ -18675,7 +18776,7 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+118" />
-        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project's settings:</source>
+        <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>A projektet olyan készletekre konfigurálták, amelyek már nem léteznek. Válassza ki a következő beállítások egyikét a helyi menüben a projekt beállításainak visszaállításához:</translation>
     </message>
     <message>
@@ -18706,8 +18807,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+12" />
-        <source>Remove Vanished Target "%1"</source>
-        <translation>Távolítsa el az eltűnt célt "%1"</translation>
+        <source>Remove Vanished Target &quot;%1&quot;</source>
+        <translation>Távolítsa el az eltűnt célt &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18775,7 +18876,7 @@ What should %1 do now?</source>
     <message>
         <location line="+63" />
         <source>Add to &amp;version control:</source>
-        <translation>Hozzáadás és verzióvezérlés:</translation>
+        <translation>Hozzáadás és &amp;verzióvezérlés:</translation>
     </message>
     <message>
         <location line="+88" />
@@ -18785,17 +18886,17 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Add to &amp;project:</source>
-        <translation>Hozzáadás és projekt:</translation>
+        <translation>Hozzáadás és &amp;projekt:</translation>
     </message>
     <message>
         <location line="+74" />
-        <source>A version control system repository could not be created in "%1".</source>
-        <translation>A verzióvezérlő rendszer tárolóját nem lehet létrehozni a "%1" -ben.</translation>
+        <source>A version control system repository could not be created in &quot;%1&quot;.</source>
+        <translation>A verzióvezérlő rendszer tárolóját nem lehet létrehozni a &quot;%1&quot; -ben.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Failed to add "%1" to the version control system.</source>
-        <translation>Nem sikerült hozzáadni a "%1" -t a verzióvezérlő rendszerhez.</translation>
+        <source>Failed to add &quot;%1&quot; to the version control system.</source>
+        <translation>Nem sikerült hozzáadni a &quot;%1&quot; -t a verzióvezérlő rendszerhez.</translation>
     </message>
     <message>
         <location line="+94" />
@@ -18831,17 +18932,17 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+6" />
-        <source>The run configuration's working directory.</source>
+        <source>The run configuration&apos;s working directory.</source>
         <translation>A Run Configuration munkakönyvtára.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>The run configuration's name.</source>
+        <source>The run configuration&apos;s name.</source>
         <translation>A Futáskonfiguráció neve.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>The run configuration's executable.</source>
+        <source>The run configuration&apos;s executable.</source>
         <translation>A futáskonfiguráció futtatható.</translation>
     </message>
     <message>
@@ -18858,7 +18959,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>%1 (on %{Device:Name})</source>
-        <extracomment>Shown in Run configuration, Add menu: "name of runnable (on device name)"</extracomment>
+        <extracomment>Shown in Run configuration, Add menu: &quot;name of runnable (on device name)&quot;</extracomment>
         <translation>%1 (on %{eszköz: név})</translation>
     </message>
     <message>
@@ -18981,7 +19082,7 @@ What should %1 do now?</source>
     <message>
         <location line="+324" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt; &lt;hew/&gt; &lt;body&gt; &lt;center&gt; &lt;i&gt;%1 &lt;/i&gt; még mindig fut.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2" />
@@ -18991,12 +19092,12 @@ What should %1 do now?</source>
     <message>
         <location line="+1" />
         <source>Force &amp;Quit</source>
-        <translation>Erő és kilépés</translation>
+        <translation>&amp;Erő és kilépés</translation>
     </message>
     <message>
         <location line="+0" />
         <source>&amp;Keep Running</source>
-        <translation>&amp; Folytassa a futást</translation>
+        <translation>&amp;Folytassa a futást</translation>
     </message>
     <message>
         <location line="+246" />
@@ -19060,8 +19161,8 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Either the invoked program "%1" is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>Vagy hiányzik a "%1" meghívott program, vagy lehet, hogy nincs elegendő engedélye a program meghívásához.</translation>
+        <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>Vagy hiányzik a &quot;%1&quot; meghívott program, vagy lehet, hogy nincs elegendő engedélye a program meghívásához.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19197,9 +19298,8 @@ What should %1 do now?</source>
         <location line="+11" />
         <source>Not showing %n files that are outside of the base directory.
 These files are preserved.</source>
-        <translation>
-            <numerusform>Nem jelenik meg a %N fájlokat, amelyek az alapkönyvtáron kívül vannak.
- Ezek a fájlok megmaradnak.</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -19255,12 +19355,12 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Imports existing projects that do not use qmake, CMake, Qbs, Meson, or Autotools.&lt;p&gt;This creates a project file that allows you to use %1 as a code editor and as a launcher for debugging and analyzing tools. If you want to build the project, you might need to edit the generated project file.</source>
-        <translation>Importálja a meglévő projekteket, amelyek nem használják a QMake, a CMake, a QBS, a Meson vagy az Autotools -t. Ha meg akarja építeni a projektet, akkor lehet, hogy szerkesztenie kell a generált projektfájlt.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+172" />
-        <source>Unknown build system "%1"</source>
-        <translation>Ismeretlen Build System "%1"</translation>
+        <source>Unknown build system &quot;%1&quot;</source>
+        <translation>Ismeretlen Build System &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
@@ -19285,7 +19385,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
         <source>&amp;Configure Project</source>
-        <translation>&amp; A projekt konfigurálása</translation>
+        <translation>&amp;A projekt konfigurálása</translation>
     </message>
     <message>
         <location line="+91" />
@@ -19320,8 +19420,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+71" />
-        <source>Enable Kit for Project "%1"</source>
-        <translation>Engedélyezze a készletet a "%1" projekthez</translation>
+        <source>Enable Kit for Project &quot;%1&quot;</source>
+        <translation>Engedélyezze a készletet a &quot;%1&quot; projekthez</translation>
     </message>
     <message>
         <location line="+7" />
@@ -19330,8 +19430,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+9" />
-        <source>Disable Kit for Project "%1"</source>
-        <translation>Tiltsa le a készletet a "%1" projekthez</translation>
+        <source>Disable Kit for Project &quot;%1&quot;</source>
+        <translation>Tiltsa le a készletet a &quot;%1&quot; projekthez</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19340,8 +19440,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+3" />
-        <source>Disable Kit "%1" in This Project?</source>
-        <translation>Tiltsa le a "%1" készletet ebben a projektben?</translation>
+        <source>Disable Kit &quot;%1&quot; in This Project?</source>
+        <translation>Tiltsa le a &quot;%1&quot; készletet ebben a projektben?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19375,8 +19475,8 @@ These files are preserved.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Add a kit in the &lt;a href="buildandrun"&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
-        <translation>Adjon hozzá egy készletet a &lt;a href = "buildandrun"&gt; opciók &lt;/a&gt; -ba vagy az SDK karbantartási eszközén keresztül.</translation>
+        <source>Add a kit in the &lt;a href=&quot;buildandrun&quot;&gt;options&lt;/a&gt; or via the maintenance tool of the SDK.</source>
+        <translation>Adjon hozzá egy készletet a &lt;a href = &quot;buildandrun&quot;&gt; opciók &lt;/a&gt; -ba vagy az SDK karbantartási eszközén keresztül.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19472,7 +19572,7 @@ These files are preserved.</source>
         <translation>Kérdés</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+53" />
         <source>Show Warnings</source>
         <translation>Mutasson figyelmeztetéseket</translation>
     </message>
@@ -19554,7 +19654,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
         <source>&amp;Annotate</source>
-        <translation>&amp; Anotate</translation>
+        <translation>&amp;Anotate</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19640,18 +19740,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+24" />
-        <source>The installation of "%1" was canceled by timeout.</source>
-        <translation>A "%1" telepítését időtúllépéssel törölték.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>A &quot;%1&quot; telepítését időtúllépéssel törölték.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>The installation of "%1" was canceled by the user.</source>
-        <translation>A "%1" telepítését a felhasználó törölte.</translation>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation>A &quot;%1&quot; telepítését a felhasználó törölte.</translation>
     </message>
     <message>
         <location line="+9" />
-        <source>Installing "%1" failed with exit code %2.</source>
-        <translation>A " %1" telepítése a %2 kilépési kóddal sikertelen.</translation>
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>A &quot; %1&quot; telepítése a %2 kilépési kóddal sikertelen.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
@@ -19728,23 +19828,23 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" not found.</source>
-        <translation>A Python "%1" nem található.</translation>
+        <source>Python &quot;%1&quot; not found.</source>
+        <translation>A Python &quot;%1&quot; nem található.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Python "%1" is not executable.</source>
-        <translation>A Python "%1" nem végrehajtható.</translation>
+        <source>Python &quot;%1&quot; is not executable.</source>
+        <translation>A Python &quot;%1&quot; nem végrehajtható.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Python "%1" does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
-        <translation>A Python "%1" nem tartalmaz használható PIP -t. A PIP -re szükség van a Python csomagok telepítéséhez a Python csomag -indexből, mint például a Pyside és a Python nyelvi kiszolgáló. A funkciók bármelyikének felhasználása biztosítja, hogy a PIP telepítse a python -hoz.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
+        <translation>A Python &quot;%1&quot; nem tartalmaz használható PIP -t. A PIP -re szükség van a Python csomagok telepítéséhez a Python csomag -indexből, mint például a Pyside és a Python nyelvi kiszolgáló. A funkciók bármelyikének felhasználása biztosítja, hogy a PIP telepítse a python -hoz.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Python "%1" does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
-        <translation>A Python "%1" nem tartalmaz használható VENV -t. A VENV az ajánlott módszer a projekt fejlesztési környezetének elkülönítésére a globálisan telepített Python -tól.</translation>
+        <source>Python &quot;%1&quot; does not contain a usable venv. venv is the recommended way to isolate a development environment for a project from the globally installed Python.</source>
+        <translation>A Python &quot;%1&quot; nem tartalmaz használható VENV -t. A VENV az ajánlott módszer a projekt fejlesztési környezetének elkülönítésére a globálisan telepített Python -tól.</translation>
     </message>
     <message>
         <location line="+32" />
@@ -19798,8 +19898,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
-        <source>No Python interpreter set for kit "%1".</source>
-        <translation>Nincs Python tolmácskészlet a "%1" készlethez.</translation>
+        <source>No Python interpreter set for kit &quot;%1&quot;.</source>
+        <translation>Nincs Python tolmácskészlet a &quot;%1&quot; készlethez.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
@@ -19818,7 +19918,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+693" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
         <source>Python:</source>
         <translation>Piton:</translation>
     </message>
@@ -19828,7 +19928,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Run %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1157" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
         <location line="+283" />
         <source>Name:</source>
         <translation>Név:</translation>
@@ -19846,19 +19946,19 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" does not exist.</source>
-        <translation>A "%1" nem létezik.</translation>
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>A &quot;%1&quot; nem létezik.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>"%1" is not an executable file.</source>
-        <translation>A "%1" nem végrehajtható fájl.</translation>
+        <source>&quot;%1&quot; is not an executable file.</source>
+        <translation>A &quot;%1&quot; nem végrehajtható fájl.</translation>
     </message>
     <message>
         <location line="+16" />
         <location line="+186" />
         <source>&amp;Add</source>
-        <translation>&amp; Add hozzá</translation>
+        <translation>&amp;Add hozzá</translation>
     </message>
     <message>
         <location line="-184" />
@@ -19870,18 +19970,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <location line="-183" />
         <location line="+185" />
         <source>&amp;Make Default</source>
-        <translation>És végezze el az alapértelmezettet</translation>
+        <translation>És végezze el az alapértel&amp;mezettet</translation>
     </message>
     <message>
         <location line="-183" />
         <source>&amp;Generate Kit</source>
-        <translation>&amp; Generáljon készlet</translation>
+        <translation>&amp;Generáljon készlet</translation>
     </message>
     <message>
         <location line="+3" />
         <location line="+179" />
         <source>&amp;Clean Up</source>
-        <translation>&amp; Tisztítsa meg</translation>
+        <translation>&amp;Tisztítsa meg</translation>
     </message>
     <message>
         <location line="-178" />
@@ -19919,7 +20019,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Nyelvi kiszolgáló konfigurációja</translation>
     </message>
     <message>
-        <location line="+476" />
+        <location line="+489" />
         <source>Python interpreter:</source>
         <translation>Python tolmács:</translation>
     </message>
@@ -19951,8 +20051,8 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+11" />
-        <source>Found "%1" (%2)</source>
-        <translation>Talált "%1" (%2)</translation>
+        <source>Found &quot;%1&quot; (%2)</source>
+        <translation>Talált &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="+9" />
@@ -19961,13 +20061,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
-        <source>"data" of a Python wizard page expects a map with "items" containing a list of objects.</source>
-        <translation>A Python varázsló oldal "adatai" egy térképet tartalmazó térképet várnak el, amely az objektumok listáját tartalmazza.</translation>
+        <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
+        <translation>A Python varázsló oldal &quot;adatai&quot; egy térképet tartalmazó térképet várnak el, amely az objektumok listáját tartalmazza.</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>An item of Python wizard page data expects a "trKey" field containing the UI visible string for that Python version and a "value" field containing an object with a "PySideVersion" field used for import statements in the Python files.</source>
-        <translation>A Python varázsló oldaladatok egy eleme egy "Trey" mezőt vár, amely az UI látható karakterláncát tartalmazza az adott Python verzióhoz, és egy "érték" mezőt tartalmaz, amely egy objektumot tartalmaz, amelynek "pysideVersion" mezője van, amelyet a Python fájlok importálására használnak.</translation>
+        <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
+        <translation>A Python varázsló oldaladatok egy eleme egy &quot;Trey&quot; mezőt vár, amely az UI látható karakterláncát tartalmazza az adott Python verzióhoz, és egy &quot;érték&quot; mezőt tartalmaz, amely egy objektumot tartalmaz, amelynek &quot;pysideVersion&quot; mezője van, amelyet a Python fájlok importálására használnak.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -19992,17 +20092,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+126" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
         <source>Move tab left</source>
         <translation>Lap mozgatása balra</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Switch to next tab</source>
         <translation>Váltás a következő lapra</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+15" />
         <source>Move tab right</source>
         <translation>Lap mozgatása jobbra</translation>
     </message>
@@ -20164,7 +20264,7 @@ Ezenkívül a Shift+Enter egy escape karaktert szúr be a kurzor pozíciójába,
     <message>
         <location line="+72" />
         <source>&amp;Automatically Insert Matching Characters</source>
-        <translation>Automatikusan illessze be a megfelelő karaktereket</translation>
+        <translation>&amp;Automatikusan illessze be a megfelelő karaktereket</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
@@ -20173,8 +20273,8 @@ Ezenkívül a Shift+Enter egy escape karaktert szúr be a kurzor pozíciójába,
     </message>
     <message>
         <location line="+2" />
-        <source>Automatically creates a Doxygen comment upon pressing enter after a '/**', '/*!', '//!' or '///'.</source>
-        <translation>Automatikusan létrehoz egy Doxygen megjegyzést, ha a '/**', '/*!', '//!' után lenyomja az enter billentyűt. vagy „///”.</translation>
+        <source>Automatically creates a Doxygen comment upon pressing enter after a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; or &apos;///&apos;.</source>
+        <translation>Automatikusan létrehoz egy Doxygen megjegyzést, ha a &apos;/**&apos;, &apos;/*!&apos;, &apos;//!&apos; után lenyomja az enter billentyűt. vagy „///”.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20193,8 +20293,8 @@ Ezenkívül a Shift+Enter egy escape karaktert szúr be a kurzor pozíciójába,
     </message>
     <message>
         <location line="+2" />
-        <source>Adds leading asterisks when continuing C/C++ "/*", Qt "/*!" and Java "/**" style comments on new lines.</source>
-        <translation>Bevezető csillagokat ad hozzá a C/C++ "/*", Qt "/*!" és Java "/**" stílusú megjegyzések az új sorokhoz.</translation>
+        <source>Adds leading asterisks when continuing C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; and Java &quot;/**&quot; style comments on new lines.</source>
+        <translation>Bevezető csillagokat ad hozzá a C/C++ &quot;/*&quot;, Qt &quot;/*!&quot; és Java &quot;/**&quot; stílusú megjegyzések az új sorokhoz.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -20203,12 +20303,12 @@ Ezenkívül a Shift+Enter egy escape karaktert szúr be a kurzor pozíciójába,
     </message>
     <message>
         <location line="+1" />
-        <source>Doxygen allows "@" and "\" to start commands.
-By default, "@" is used if the surrounding comment starts with "/**" or "///", and "\" is used
-if the comment starts with "/*!" or "//!".</source>
-        <translation>A doxygen lehetővé teszi a "@" és a "\" parancsok elindítását.
- Alapértelmezés szerint a "@" használata, ha a környező megjegyzés a "/**" vagy a "///" -val kezdődik, és a "\" -et használják
- Ha a megjegyzés a "/*!" vagy "//!".</translation>
+        <source>Doxygen allows &quot;@&quot; and &quot;\&quot; to start commands.
+By default, &quot;@&quot; is used if the surrounding comment starts with &quot;/**&quot; or &quot;///&quot;, and &quot;\&quot; is used
+if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
+        <translation>A doxygen lehetővé teszi a &quot;@&quot; és a &quot;\&quot; parancsok elindítását.
+ Alapértelmezés szerint a &quot;@&quot; használata, ha a környező megjegyzés a &quot;/**&quot; vagy a &quot;///&quot; -val kezdődik, és a &quot;\&quot; -et használják
+ Ha a megjegyzés a &quot;/*!&quot; vagy &quot;//!&quot;.</translation>
     </message>
     <message>
         <source>&amp;Automatically insert matching characters</source>
@@ -20383,8 +20483,8 @@ if the comment starts with "/*!" or "//!".</source>
     </message>
     <message>
         <location line="+36" />
-        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode "%1" with "%2"-encoding. Editing not possible.</source>
-        <translation>&lt;b&gt;Fehler:&lt;/b&gt; Die Datei "%1" kann nicht mit dem Encoding "%2" dargestellt werden. Sie kann nicht editiert werden.</translation>
+        <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding. Editing not possible.</source>
+        <translation>&lt;b&gt;Fehler:&lt;/b&gt; Die Datei &quot;%1&quot; kann nicht mit dem Encoding &quot;%2&quot; dargestellt werden. Sie kann nicht editiert werden.</translation>
     </message>
     <message>
         <location line="+2" />
@@ -20516,8 +20616,8 @@ Befolyásolja a folytatásos vonalak behúzását.
     </message>
     <message>
         <location line="+3" />
-        <source>&lt;i&gt;Code indentation is configured in &lt;a href="C++"&gt;C++&lt;/a&gt; and &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;A kód behúzása a &lt;a href="C++"&gt;C++&lt;/a&gt; és a &lt;a href="QtQuick"&gt;Qt Quick&lt;/a&gt; beállításaiban konfigurálható.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;A kód behúzása a &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; és a &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; beállításaiban konfigurálható.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20763,7 +20863,7 @@ Meghatározza, hogy a backspace hogyan működik együtt a behúzással.
     <message>
         <location line="+2" />
         <source>Enable scroll &amp;wheel zooming</source>
-        <translation>Görgetés és görgős nagyítás engedélyezése</translation>
+        <translation>&amp;Görgetés és görgős nagyítás engedélyezése</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20903,8 +21003,8 @@ Meghatározza, hogy a backspace hogyan működik együtt a behúzással.
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;i&gt;Set &lt;a href="font zoom"&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;A szöveg tördelésének engedélyezéséhez állítsa a &lt;a href="font zoom"&gt;betűtípus-sortávolságot&lt;/a&gt; 100%-ra.&lt;/i&gt;</translation>
+        <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
+        <translation>&lt;i&gt;A szöveg tördelésének engedélyezéséhez állítsa a &lt;a href=&quot;font zoom&quot;&gt;betűtípus-sortávolságot&lt;/a&gt; 100%-ra.&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="+20" />
@@ -20949,7 +21049,7 @@ Meghatározza, hogy a backspace hogyan működik együtt a behúzással.
     <message>
         <location line="+4" />
         <source>Center &amp;cursor on scroll</source>
-        <translation>Középre vigye a kurzort a görgetésre</translation>
+        <translation>&amp;Középre vigye a kurzort a görgetésre</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20984,7 +21084,7 @@ Meghatározza, hogy a backspace hogyan működik együtt a behúzással.
     <message>
         <location line="+2" />
         <source>&amp;Highlight selection</source>
-        <translation>&amp; Kiemelje a kiválasztást</translation>
+        <translation>&amp;Kiemelje a kiválasztást</translation>
     </message>
     <message>
         <location line="+1" />
@@ -21065,8 +21165,8 @@ A 100%-nál kisebb érték átfedést és rosszul igazított grafikát eredmény
     </message>
     <message>
         <location line="+16" />
-        <source>Color Scheme for Theme "%1"</source>
-        <translation>Színséma a "%1" témához</translation>
+        <source>Color Scheme for Theme &quot;%1&quot;</source>
+        <translation>Színséma a &quot;%1&quot; témához</translation>
     </message>
     <message>
         <location line="+16" />
@@ -21187,8 +21287,8 @@ A 100%-nál kisebb érték átfedést és rosszul igazított grafikát eredmény
     </message>
     <message>
         <location line="-12" />
-        <source>Cannot import code style from "%1".</source>
-        <translation>A kódstílus nem importálható innen: "%1".</translation>
+        <source>Cannot import code style from &quot;%1&quot;.</source>
+        <translation>A kódstílus nem importálható innen: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -21217,8 +21317,8 @@ A 100%-nál kisebb érték átfedést és rosszul igazított grafikát eredmény
     </message>
     <message>
         <location line="+1" />
-        <source>The color scheme "%1" was modified, do you want to save the changes?</source>
-        <translation>A(z) "%1" színterv meg lett változtatva, szeretné menteni a változtatásokat?</translation>
+        <source>The color scheme &quot;%1&quot; was modified, do you want to save the changes?</source>
+        <translation>A(z) &quot;%1&quot; színterv meg lett változtatva, szeretné menteni a változtatásokat?</translation>
     </message>
     <message>
         <location line="+7" />
@@ -21232,8 +21332,8 @@ A 100%-nál kisebb érték átfedést és rosszul igazított grafikát eredmény
     </message>
     <message>
         <location line="+16" />
-        <source>File "%1":</source>
-        <translation>"%1" fájl:</translation>
+        <source>File &quot;%1&quot;:</source>
+        <translation>&quot;%1&quot; fájl:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -21287,8 +21387,8 @@ A 100%-nál kisebb érték átfedést és rosszul igazított grafikát eredmény
     </message>
     <message>
         <location line="+27" />
-        <source>&lt;p align='center'&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href="copy"&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;p align='center'&gt;&lt;b&gt;A beépített színsémákat &lt;a href="copy"&gt;másolni kell&lt;/a&gt;&lt;br/&gt;, mielőtt módosítani lehetne őket&lt;/b&gt;&lt;/p&gt;</translation>
+        <source>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;Builtin color schemes need to be &lt;a href=&quot;copy&quot;&gt;copied&lt;/a&gt;&lt;br/&gt; before they can be changed&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p align=&apos;center&apos;&gt;&lt;b&gt;A beépített színsémákat &lt;a href=&quot;copy&quot;&gt;másolni kell&lt;/a&gt;&lt;br/&gt;, mielőtt módosítani lehetne őket&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -21487,12 +21587,12 @@ A 100%-nál kisebb érték átfedést és rosszul igazított grafikát eredmény
     </message>
     <message>
         <location line="+7" />
-        <source>Current document's font size in points.</source>
+        <source>Current document&apos;s font size in points.</source>
         <translation>Az aktuális dokumentum betűmérete pontokban.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Word under the current document's text cursor.</source>
+        <source>Word under the current document&apos;s text cursor.</source>
         <translation>Word az aktuális dokumentum szövegkurzora alatt.</translation>
     </message>
     <message>
@@ -21890,7 +21990,7 @@ A 100%-nál kisebb érték átfedést és rosszul igazított grafikát eredmény
     <message>
         <location line="+4" />
         <source>Toggle &amp;Fold All</source>
-        <translation>Váltás &amp; Az összes összehajtása</translation>
+        <translation>Váltás &amp;Az összes összehajtása</translation>
     </message>
     <message>
         <location line="+11" />
@@ -22364,7 +22464,7 @@ A szimbólumhasználat funkciójának megjelölésére szolgál.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Class' data members.</source>
+        <source>Class&apos; data members.</source>
         <translation>Az osztály adattagjai.</translation>
     </message>
     <message>
@@ -22997,152 +23097,152 @@ Nem lesz alkalmazva a szóközökre a megjegyzésekben és a karakterláncokban.
         <translation>Ez nem egy színterv fájl.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+6" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>a QObject-ből származik</translation>
     </message>
     <message>
         <location line="+1" />
         <source>derived from QWidget</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>a QWidgetből származik</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'class'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>sablon</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with if</source>
-        <comment>group:'C++' trigger:'else'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;else&apos;</comment>
         <translation>ha</translation>
     </message>
     <message>
         <location line="+1" />
         <source>range-based</source>
-        <comment>group:'C++' trigger:'for'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;for&apos;</comment>
         <translation>tartomány alapú</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and else</source>
-        <comment>group:'C++' trigger:'if'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;if&apos;</comment>
         <translation>és más</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with closing brace comment</source>
-        <comment>group:'C++' trigger:'namespace'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;namespace&apos;</comment>
         <translation>záró kapcsos megjegyzéssel</translation>
     </message>
     <message>
         <location line="+1" />
         <source>and catch</source>
-        <comment>group:'C++' trigger:'try'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;try&apos;</comment>
         <translation>és elkapni</translation>
     </message>
     <message>
         <location line="+1" />
         <source>namespace</source>
-        <comment>group:'C++' trigger:'using'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;using&apos;</comment>
         <translation>névtér</translation>
     </message>
     <message>
         <location line="+1" />
         <source>template</source>
-        <comment>group:'C++' trigger:'struct'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;struct&apos;</comment>
         <translation>sablon</translation>
     </message>
     <message>
         <location line="+1" />
         <source>(type name READ name WRITE setName NOTIFY nameChanged FINAL)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation>(Írja be a nevét olvassa el a neve írása setName értesítése NameChanged Final)</translation>
     </message>
     <message>
         <source>(type name READ name WRITE setName NOTIFY nameChanged)</source>
-        <comment>group:'C++' trigger:'Q_PROPERTY'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;Q_PROPERTY&apos;</comment>
         <translation type="vanished">(típusnév READ name WRITE setName NOTIFY nameChanged)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>célokkal</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'NumberAnimation'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>céllal</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with targets</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>célokkal</translation>
     </message>
     <message>
         <location line="+1" />
         <source>with target</source>
-        <comment>group:'QML' trigger:'PropertyAction'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;PropertyAction&apos;</comment>
         <translation>céllal</translation>
     </message>
     <message>
         <location line="+3" />
         <source>QuickTest Test Case</source>
-        <comment>group:'QML' trigger:'TestCase'</comment>
+        <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>QuickTest teszt tok</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Function</source>
-        <comment>group:'C++' trigger:'TEST'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST&apos;</comment>
         <translation>Gtest funkció</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Fixture</source>
-        <comment>group:'C++' trigger:'TEST_F'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_F&apos;</comment>
         <translation>Gtest lámpatest</translation>
     </message>
     <message>
         <location line="+1" />
         <source>GTest Parameterized</source>
-        <comment>group:'C++' trigger:'TEST_P'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_P&apos;</comment>
         <translation>Gtest paraméterezve</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Case</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_CASE&apos;</comment>
         <translation>Vizsgálati eset</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Test Suite</source>
-        <comment>group:'C++' trigger:'BOOST_AUTO_TEST_SUITE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;BOOST_AUTO_TEST_SUITE&apos;</comment>
         <translation>Tesztcsomag</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Test Case</source>
-        <comment>group:'C++' trigger:'TEST_CASE'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;TEST_CASE&apos;</comment>
         <translation>Fogási teszt tok</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Catch Scenario</source>
-        <comment>group:'C++' trigger:'SCENARIO'</comment>
+        <comment>group:&apos;C++&apos; trigger:&apos;SCENARIO&apos;</comment>
         <translation>Elkapni a forgatókönyvet</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="+3" />
         <source>example</source>
-        <comment>group:'Text' trigger:'global'</comment>
+        <comment>group:&apos;Text&apos; trigger:&apos;global&apos;</comment>
         <translation>példa</translation>
     </message>
     <message>
@@ -23201,8 +23301,8 @@ Nem lesz alkalmazva a szóközökre a megjegyzésekben és a karakterláncokban.
     </message>
     <message>
         <location line="+25" />
-        <source>Folder "%2":</source>
-        <translation>"%2" mappa:</translation>
+        <source>Folder &quot;%2&quot;:</source>
+        <translation>&quot;%2&quot; mappa:</translation>
     </message>
     <message>
         <location line="+8" />
@@ -23224,7 +23324,7 @@ Kivéve: %3
     <message>
         <location line="+20" />
         <source>Director&amp;y:</source>
-        <translation>Könyvtár:</translation>
+        <translation>Kön&amp;yvtár:</translation>
     </message>
     <message>
         <location line="+4" />
@@ -23255,8 +23355,8 @@ Kivéve: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/formattexteditor.cpp" line="+71" />
-        <source>Cannot create temporary file "%1": %2.</source>
-        <translation>Nem sikerült létrehozni a "%1" ideiglenes fájlt: %2.</translation>
+        <source>Cannot create temporary file &quot;%1&quot;: %2.</source>
+        <translation>Nem sikerült létrehozni a &quot;%1&quot; ideiglenes fájlt: %2.</translation>
     </message>
     <message>
         <source>TextEditor</source>
@@ -23265,8 +23365,8 @@ Kivéve: %3
     </message>
     <message>
         <location line="+21" />
-        <source>Cannot read file "%1": %2.</source>
-        <translation>A(z) "%1" fájl nem olvasható: %2.</translation>
+        <source>Cannot read file &quot;%1&quot;: %2.</source>
+        <translation>A(z) &quot;%1&quot; fájl nem olvasható: %2.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -23320,8 +23420,8 @@ Kivéve: %3
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A kiemelések definícióit a &lt;a href="https://api.kde.org/frameworks/syntax-highlighting/html/index.html"&gt;KSyntaxHighlighting&lt;/p&gt; biztosítja a&gt; motor.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4" />
@@ -23395,7 +23495,7 @@ Kivéve: %3
         <translation>Szűrő fa</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+130" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+140" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
         <source>Sort Alphabetically</source>
         <translation>Rendezés ABC sorrendben</translation>
@@ -23417,7 +23517,7 @@ Kivéve: %3
     </message>
     <message>
         <location line="+15" />
-        <source>Expected mangler ID "l" (lowercase), "u" (uppercase), or "c" (titlecase) after colon.</source>
+        <source>Expected mangler ID &quot;l&quot; (lowercase), &quot;u&quot; (uppercase), or &quot;c&quot; (titlecase) after colon.</source>
         <translation>A kettőspont után az „l” (kisbetűs), „u” (nagybetűs) vagy „c” (címbetűs) mangler-azonosító várható.</translation>
     </message>
     <message>
@@ -23470,7 +23570,7 @@ Kivéve: %3
     </message>
     <message>
         <location line="+1" />
-        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark's note text.</source>
+        <source>Locates bookmarks. Filter by file name, by the text on the line of the bookmark, or by the bookmark&apos;s note text.</source>
         <translation>Megtalálja a könyvjelzőket. Szűrje be a fájlnév szerint, a könyvjelző sorában szereplő szöveg szerint, vagy a könyvjelző megjegyzés szövege.</translation>
     </message>
     <message>
@@ -23486,12 +23586,12 @@ Kivéve: %3
     <message>
         <location line="+1" />
         <source>&amp;Edit</source>
-        <translation>&amp; Szerkesztés</translation>
+        <translation>&amp;Szerkesztés</translation>
     </message>
     <message>
         <location line="+2" />
         <source>&amp;Remove</source>
-        <translation>&amp; Távolítsa el</translation>
+        <translation>&amp;Távolítsa el</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23524,7 +23624,7 @@ Kivéve: %3
     <message>
         <location line="-15" />
         <source>&amp;Bookmarks</source>
-        <translation>&amp; Könyvjelzők</translation>
+        <translation>&amp;Könyvjelzők</translation>
     </message>
     <message>
         <location line="+53" />
@@ -23641,8 +23741,8 @@ Kivéve: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot create temporary directory "%1": %2</source>
-        <translation>Nem sikerült létrehozni a "%1" ideiglenes könyvtárat: %2</translation>
+        <source>Cannot create temporary directory &quot;%1&quot;: %2</source>
+        <translation>Nem sikerült létrehozni a &quot;%1&quot; ideiglenes könyvtárat: %2</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23651,13 +23751,13 @@ Kivéve: %3
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot change to working directory "%1": %2</source>
-        <translation>Nem lehet átváltani "%1" munkakönyvtárra: %2</translation>
+        <source>Cannot change to working directory &quot;%1&quot;: %2</source>
+        <translation>Nem lehet átváltani &quot;%1&quot; munkakönyvtárra: %2</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1": %2</source>
-        <translation>A "%1" nem hajtható végre: %2</translation>
+        <source>Cannot execute &quot;%1&quot;: %2</source>
+        <translation>A &quot;%1&quot; nem hajtható végre: %2</translation>
     </message>
     <message>
         <location line="+109" />
@@ -23666,12 +23766,12 @@ Kivéve: %3
     </message>
     <message>
         <location line="+60" />
-        <source>Cannot set permissions on temporary directory "%1": %2</source>
-        <translation>Nem lehet engedélyeket beállítani a " %1": %2 ideiglenes könyvtárban</translation>
+        <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
+        <translation>Nem lehet engedélyeket beállítani a &quot; %1&quot;: %2 ideiglenes könyvtárban</translation>
     </message>
     <message>
-        <source>The process "%1" could not be started: %2</source>
-        <translation type="vanished">A "%1" folyamat nem indítható el: %2</translation>
+        <source>The process &quot;%1&quot; could not be started: %2</source>
+        <translation type="vanished">A &quot;%1&quot; folyamat nem indítható el: %2</translation>
     </message>
     <message>
         <source>Quoting error in command.</source>
@@ -23690,13 +23790,13 @@ Kivéve: %3
         <translation type="vanished">A terminálparancs nem lehet shell parancs.</translation>
     </message>
     <message>
-        <source>Cannot start the terminal emulator "%1", change the setting in the Environment preferences. (%2)</source>
-        <translation type="vanished">A "%1" terminálemulátor nem indítható el, módosítsa a beállítást a Környezeti beállításokban. (%2)</translation>
+        <source>Cannot start the terminal emulator &quot;%1&quot;, change the setting in the Environment preferences. (%2)</source>
+        <translation type="vanished">A &quot;%1&quot; terminálemulátor nem indítható el, módosítsa a beállítást a Környezeti beállításokban. (%2)</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Cannot create socket "%1": %2</source>
-        <translation>Nem sikerült létrehozni a "%1" socketet: %2</translation>
+        <source>Cannot create socket &quot;%1&quot;: %2</source>
+        <translation>Nem sikerült létrehozni a &quot;%1&quot; socketet: %2</translation>
     </message>
     <message>
         <location line="-171" />
@@ -23728,12 +23828,12 @@ Kivéve: %3
     <message>
         <location line="+280" />
         <source>Fi&amp;le pattern:</source>
-        <translation>Fájlminta:</translation>
+        <translation>Fáj&amp;lminta:</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Excl&amp;usion pattern:</source>
-        <translation>Kizárási minta:</translation>
+        <translation>&amp;Kizárási minta:</translation>
     </message>
     <message>
         <location line="+5" />
@@ -23778,8 +23878,8 @@ Kivéve: %3
     </message>
     <message>
         <location line="+69" />
-        <source>The default suffix if you do not explicitly specify a file extension is ".%1".</source>
-        <translation>Az alapértelmezett utótag, ha nem ad meg kifejezetten fájlkiterjesztést, a ".%1".</translation>
+        <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
+        <translation>Az alapértelmezett utótag, ha nem ad meg kifejezetten fájlkiterjesztést, a &quot;.%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
@@ -23820,51 +23920,51 @@ Kivéve: %3
     </message>
     <message>
         <location line="+176" />
-        <source>The path "%1" expanded to an empty string.</source>
-        <translation>A(z) "%1" elérési út üres karakterláncra bővült.</translation>
+        <source>The path &quot;%1&quot; expanded to an empty string.</source>
+        <translation>A(z) &quot;%1&quot; elérési út üres karakterláncra bővült.</translation>
     </message>
     <message>
         <location line="-72" />
         <location line="+10" />
         <location line="+20" />
-        <source>The path "%1" does not exist.</source>
-        <translation>A "%1" elérési út nem létezik.</translation>
+        <source>The path &quot;%1&quot; does not exist.</source>
+        <translation>A &quot;%1&quot; elérési út nem létezik.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+36" />
-        <source>The path "%1" is not a directory.</source>
-        <translation>A "%1" elérési út nem könyvtár.</translation>
+        <source>The path &quot;%1&quot; is not a directory.</source>
+        <translation>A &quot;%1&quot; elérési út nem könyvtár.</translation>
     </message>
     <message>
         <location line="-26" />
         <location line="+10" />
-        <source>The path "%1" is not a file.</source>
-        <translation>A "%1" elérési út nem fájl.</translation>
+        <source>The path &quot;%1&quot; is not a file.</source>
+        <translation>A &quot;%1&quot; elérési út nem fájl.</translation>
     </message>
     <message>
         <location line="-4" />
-        <source>The directory "%1" does not exist.</source>
-        <translation>A "%1" könyvtár nem létezik.</translation>
+        <source>The directory &quot;%1&quot; does not exist.</source>
+        <translation>A &quot;%1&quot; könyvtár nem létezik.</translation>
     </message>
     <message>
         <location line="+14" />
-        <source>The path "%1" is not an executable file.</source>
-        <translation>A "%1" elérési út nem végrehajtható fájl.</translation>
+        <source>The path &quot;%1&quot; is not an executable file.</source>
+        <translation>A &quot;%1&quot; elérési út nem végrehajtható fájl.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid path "%1".</source>
-        <translation>Érvénytelen elérési út: "%1".</translation>
+        <source>Invalid path &quot;%1&quot;.</source>
+        <translation>Érvénytelen elérési út: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Cannot execute "%1".</source>
-        <translation>A "%1" nem hajtható végre.</translation>
+        <source>Cannot execute &quot;%1&quot;.</source>
+        <translation>A &quot;%1&quot; nem hajtható végre.</translation>
     </message>
     <message>
-        <source>Full path: "%1"</source>
-        <translation type="vanished">Teljes elérési út: "%1"</translation>
+        <source>Full path: &quot;%1&quot;</source>
+        <translation type="vanished">Teljes elérési út: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-58" />
@@ -23904,8 +24004,8 @@ Kivéve: %3
     </message>
     <message>
         <location line="+121" />
-        <source>Directory "%1" will be created.</source>
-        <translation>A(z) "%1" könyvtár létrejön.</translation>
+        <source>Directory &quot;%1&quot; will be created.</source>
+        <translation>A(z) &quot;%1&quot; könyvtár létrejön.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -23924,13 +24024,13 @@ Kivéve: %3
     </message>
     <message>
         <location line="+12" />
-        <source>Invalid character ".".</source>
-        <translation>Érvénytelen karakter ".".</translation>
+        <source>Invalid character &quot;.&quot;.</source>
+        <translation>Érvénytelen karakter &quot;.&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Invalid character "%1" found.</source>
-        <translation>Érvénytelen "%1" karakter található.</translation>
+        <source>Invalid character &quot;%1&quot; found.</source>
+        <translation>Érvénytelen &quot;%1&quot; karakter található.</translation>
     </message>
     <message>
         <location line="-232" />
@@ -23997,7 +24097,7 @@ Kivéve: %3
     <message>
         <location line="-3" />
         <source>Save &amp;as...</source>
-        <translation>Mentés másként...</translation>
+        <translation>&amp;Mentés másként...</translation>
     </message>
     <message>
         <location line="+5" />
@@ -24085,12 +24185,12 @@ Kivéve: %3
         <location line="-16" />
         <location line="+20" />
         <source>Running %1
-in "%2".
+in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
         <translation>Futás %1
-itt: "%2".
+itt: &quot;%2&quot;.
 
 </translation>
     </message>
@@ -24138,12 +24238,12 @@ itt: "%2".
     <message>
         <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
         <source>Do not &amp;ask again</source>
-        <translation>Ne kérdezd meg többször</translation>
+        <translation>&amp;Ne kérdezd meg többször</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Do not &amp;show again</source>
-        <translation>Többet ne mutassa</translation>
+        <translation>Többet ne muta&amp;ssa</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
@@ -24166,8 +24266,8 @@ itt: "%2".
         <translation>Részletek</translation>
     </message>
     <message>
-        <source>copyFile is not implemented for "%1"</source>
-        <translation type="vanished">A copyFile nincs implementálva a következőhöz: "%1"</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">A copyFile nincs implementálva a következőhöz: &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Cannot copy from %1, it is not a directory.</source>
@@ -24179,61 +24279,61 @@ itt: "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to create tar archive from source: %3</source>
-        <translation>Nem sikerült rekurzív másolni "%1" helyről "%2" helyre, miközben megpróbálta létrehozni a tar archívumot a forrásból: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
+        <translation>Nem sikerült rekurzív másolni &quot;%1&quot; helyről &quot;%2&quot; helyre, miközben megpróbálta létrehozni a tar archívumot a forrásból: %3</translation>
     </message>
     <message>
         <location line="+8" />
-        <source>Failed to copy recursively from "%1" to "%2" while trying to extract tar archive to target: %3</source>
-        <translation>Nem sikerült rekurzív másolni "%1" helyről "%2" helyre, miközben megpróbálta kicsomagolni a tar archívumot a következő célba: %3</translation>
+        <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to extract tar archive to target: %3</source>
+        <translation>Nem sikerült rekurzív másolni &quot;%1&quot; helyről &quot;%2&quot; helyre, miközben megpróbálta kicsomagolni a tar archívumot a következő célba: %3</translation>
     </message>
     <message>
-        <source>fileContents is not implemented for "%1"</source>
-        <translation type="vanished">A fileContents nincs implementálva a következőhöz: "%1"</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">A fileContents nincs implementálva a következőhöz: &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>writeFileContents is not implemented for "%1"</source>
-        <translation type="vanished">A writeFileContents nincs implementálva a következőhöz: "%1"</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">A writeFileContents nincs implementálva a következőhöz: &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>createTempFile is not implemented for "%1"</source>
-        <translation type="vanished">A createTempFile nincs implementálva a következőhöz: "%1"</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;</source>
+        <translation type="vanished">A createTempFile nincs implementálva a következőhöz: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-139" />
         <location line="+409" />
-        <source>Path "%1" exists but is not a writable directory.</source>
-        <translation>A "%1" elérési út létezik, de nem írható könyvtár.</translation>
+        <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
+        <translation>A &quot;%1&quot; elérési út létezik, de nem írható könyvtár.</translation>
     </message>
     <message>
         <location line="-356" />
-        <source>copyFile is not implemented for "%1".</source>
-        <translation>A copyfile nem valósul meg a "%1" -re.</translation>
+        <source>copyFile is not implemented for &quot;%1&quot;.</source>
+        <translation>A copyfile nem valósul meg a &quot;%1&quot; -re.</translation>
     </message>
     <message>
         <location line="+30" />
-        <source>Cannot copy from "%1", it is not a directory.</source>
-        <translation>Nem lehet másolni a "%1" -ről, ez nem könyvtár.</translation>
+        <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
+        <translation>Nem lehet másolni a &quot;%1&quot; -ről, ez nem könyvtár.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>Cannot copy "%1" to "%2": %3</source>
-        <translation>Nem másolja a "%1" -re a "%2" -re:%3</translation>
+        <source>Cannot copy &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Nem másolja a &quot;%1&quot; -re a &quot;%2&quot; -re:%3</translation>
     </message>
     <message>
         <location line="+103" />
-        <source>fileContents is not implemented for "%1".</source>
-        <translation>A FileContents nem valósul meg a "%1" -re.</translation>
+        <source>fileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>A FileContents nem valósul meg a &quot;%1&quot; -re.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for "%1".</source>
-        <translation>A WriteFileContents nem valósul meg a "%1" -re.</translation>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation>A WriteFileContents nem valósul meg a &quot;%1&quot; -re.</translation>
     </message>
     <message>
         <location line="+66" />
-        <source>createTempFile is not implemented for "%1".</source>
-        <translation>A CreateTempFile nem valósul meg a "%1" -re.</translation>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation>A CreateTempFile nem valósul meg a &quot;%1&quot; -re.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24242,8 +24342,8 @@ itt: "%2".
     </message>
     <message>
         <location line="+180" />
-        <source>Refusing to remove the standard directory "%1".</source>
-        <translation>A "%1" standard könyvtár eltávolításának megtagadása.</translation>
+        <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
+        <translation>A &quot;%1&quot; standard könyvtár eltávolításának megtagadása.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -24257,80 +24357,80 @@ itt: "%2".
     </message>
     <message>
         <location line="+37" />
-        <source>Failed to remove directory "%1".</source>
-        <translation>Nem sikerült eltávolítani a "%1" könyvtárat.</translation>
+        <source>Failed to remove directory &quot;%1&quot;.</source>
+        <translation>Nem sikerült eltávolítani a &quot;%1&quot; könyvtárat.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Failed to remove file "%1".</source>
-        <translation>Nem sikerült eltávolítani a(z) "%1" fájlt.</translation>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation>Nem sikerült eltávolítani a(z) &quot;%1&quot; fájlt.</translation>
     </message>
     <message>
         <location line="+551" />
-        <source>Failed creating temporary file "%1" (too many tries).</source>
-        <translation>Sikertelen létrehozni az ideiglenes "%1" fájlt (túl sok próbálkozás).</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
+        <translation>Sikertelen létrehozni az ideiglenes &quot;%1&quot; fájlt (túl sok próbálkozás).</translation>
     </message>
     <message>
-        <source>Failed to copy file "%1" to "%2".</source>
-        <translation type="vanished">Nem sikerült a(z) "%1" fájl másolása ide: "%2".</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation type="vanished">Nem sikerült a(z) &quot;%1&quot; fájl másolása ide: &quot;%2&quot;.</translation>
     </message>
     <message>
-        <source>File "%1" does not exist</source>
-        <translation type="vanished">A "%1" fájl nem létezik</translation>
+        <source>File &quot;%1&quot; does not exist</source>
+        <translation type="vanished">A &quot;%1&quot; fájl nem létezik</translation>
     </message>
     <message>
-        <source>Could not open File "%1"</source>
-        <translation type="vanished">Nem sikerült megnyitni a "%1" fájlt</translation>
+        <source>Could not open File &quot;%1&quot;</source>
+        <translation type="vanished">Nem sikerült megnyitni a &quot;%1&quot; fájlt</translation>
     </message>
     <message>
         <location line="-449" />
-        <source>Cannot read "%1": %2</source>
-        <translation>Nem olvasható "%1": %2</translation>
+        <source>Cannot read &quot;%1&quot;: %2</source>
+        <translation>Nem olvasható &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>Could not open file "%1" for writing</source>
-        <translation type="vanished">Nem sikerült megnyitni a "%1" fájlt írásra</translation>
+        <source>Could not open file &quot;%1&quot; for writing</source>
+        <translation type="vanished">Nem sikerült megnyitni a &quot;%1&quot; fájlt írásra</translation>
     </message>
     <message>
-        <source>Could not write to file "%1" (only %2 of %3 bytes written)</source>
-        <translation type="vanished">Nem sikerült írni a(z) "%1" fájlba (a %3 bájtból csak %2 íródott)</translation>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %3 bytes written)</source>
+        <translation type="vanished">Nem sikerült írni a(z) &quot;%1&quot; fájlba (a %3 bájtból csak %2 íródott)</translation>
     </message>
     <message>
-        <source>Could not create temporary file in "%1" (%2)</source>
-        <translation type="vanished">Nem sikerült ideiglenes fájlt létrehozni itt: "%1" (%2)</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2)</source>
+        <translation type="vanished">Nem sikerült ideiglenes fájlt létrehozni itt: &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="-87" />
         <location line="+406" />
-        <source>Failed to copy file "%1" to "%2": %3</source>
-        <translation>Nem sikerült másolni a fájlt "%1" ide: "%2": %3</translation>
+        <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Nem sikerült másolni a fájlt &quot;%1&quot; ide: &quot;%2&quot;: %3</translation>
     </message>
     <message>
         <location line="-333" />
-        <source>File "%1" does not exist.</source>
-        <translation>A "%1" fájl nem létezik.</translation>
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>A &quot;%1&quot; fájl nem létezik.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File "%1".</source>
-        <translation>Nem tudta megnyitni a "%1" fájlt.</translation>
+        <source>Could not open File &quot;%1&quot;.</source>
+        <translation>Nem tudta megnyitni a &quot;%1&quot; fájlt.</translation>
     </message>
     <message>
         <location line="+24" />
-        <source>Could not open file "%1" for writing.</source>
-        <translation>Nem tudta megnyitni a "%1" fájlt az íráshoz.</translation>
+        <source>Could not open file &quot;%1&quot; for writing.</source>
+        <translation>Nem tudta megnyitni a &quot;%1&quot; fájlt az íráshoz.</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
-        <source>Could not write to file "%1" (only %2 of %n byte(s) written).</source>
-        <translation>
-            <numerusform>Nem tudott írni a " %1" fájlba (csak a %n bájt (ek) című) fájlba.</numerusform>
+        <source>Could not write to file &quot;%1&quot; (only %2 of %n byte(s) written).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location line="+13" />
-        <source>Could not create temporary file in "%1" (%2).</source>
-        <translation>Nem tudott létrehozni ideiglenes fájlt a "%1" -ben (%2).</translation>
+        <source>Could not create temporary file in &quot;%1&quot; (%2).</source>
+        <translation>Nem tudott létrehozni ideiglenes fájlt a &quot;%1&quot; -ben (%2).</translation>
     </message>
     <message>
         <location line="+138" />
@@ -24339,22 +24439,22 @@ itt: "%2".
     </message>
     <message>
         <location line="+202" />
-        <source>Failed reading file "%1": %2</source>
-        <translation>A(z) "%1" fájl olvasása sikertelen: %2</translation>
+        <source>Failed reading file &quot;%1&quot;: %2</source>
+        <translation>A(z) &quot;%1&quot; fájl olvasása sikertelen: %2</translation>
     </message>
     <message>
         <location line="+23" />
-        <source>Failed writing file "%1": %2</source>
-        <translation>Nem sikerült beírni a fájlt "%1": %2</translation>
+        <source>Failed writing file &quot;%1&quot;: %2</source>
+        <translation>Nem sikerült beírni a fájlt &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+25" />
-        <source>Failed creating temporary file "%1": %2</source>
-        <translation>Nem sikerült létrehozni az ideiglenes fájlt "%1": %2</translation>
+        <source>Failed creating temporary file &quot;%1&quot;: %2</source>
+        <translation>Nem sikerült létrehozni az ideiglenes fájlt &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <source>Failed creating temporary file "%1" (too many tries)</source>
-        <translation type="vanished">Sikertelen "%1" ideiglenes fájl létrehozása (túl sok próbálkozás)</translation>
+        <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
+        <translation type="vanished">Sikertelen &quot;%1&quot; ideiglenes fájl létrehozása (túl sok próbálkozás)</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
@@ -24373,18 +24473,18 @@ itt: "%2".
     </message>
     <message>
         <location filename="../../../src/libs/utils/elfreader.cpp" line="+130" />
-        <source>"%1" is an invalid ELF object (%2)</source>
-        <translation>"%1" egy érvénytelen ELF objektum (%2)</translation>
+        <source>&quot;%1&quot; is an invalid ELF object (%2)</source>
+        <translation>&quot;%1&quot; egy érvénytelen ELF objektum (%2)</translation>
     </message>
     <message>
         <location line="+18" />
-        <source>"%1" is not an ELF object (file too small)</source>
-        <translation>"%1" nem ELF objektum (a fájl túl kicsi)</translation>
+        <source>&quot;%1&quot; is not an ELF object (file too small)</source>
+        <translation>&quot;%1&quot; nem ELF objektum (a fájl túl kicsi)</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>"%1" is not an ELF object</source>
-        <translation>A "%1" nem ELF objektum</translation>
+        <source>&quot;%1&quot; is not an ELF object</source>
+        <translation>A &quot;%1&quot; nem ELF objektum</translation>
     </message>
     <message>
         <location line="+8" />
@@ -24435,14 +24535,14 @@ To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-To disable a variable, prefix the line with "#".</source>
+To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="vanished">Soronként egy környezeti változót adjon meg.
 Változó beállításához vagy módosításához használja a VARIABLE=VALUE parancsot.
 Változóhoz való hozzáfűzéshez használja a VARIABLE+=VALUE parancsot.
 Változó elé írásához használja a VARIABLE=+ÉRTÉK parancsot.
 Meglévő változókra lehet hivatkozni egy ÉRTÉKben a ${OTHER} értékkel.
 Egy változó törléséhez írja be a nevét egy olyan sorba, amelyen semmi más nem szerepel.
-Egy változó letiltásához írja be a sort a "#" előtaggal.</translation>
+Egy változó letiltásához írja be a sort a &quot;#&quot; előtaggal.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
@@ -24482,13 +24582,13 @@ Egy változó letiltásához írja be a sort a "#" előtaggal.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>Invalid character "%1".</source>
-        <translation>Érvénytelen karakter "%1".</translation>
+        <source>Invalid character &quot;%1&quot;.</source>
+        <translation>Érvénytelen karakter &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>Invalid characters "%1".</source>
-        <translation>Érvénytelen karakterek "%1".</translation>
+        <source>Invalid characters &quot;%1&quot;.</source>
+        <translation>Érvénytelen karakterek &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -24529,12 +24629,12 @@ Egy változó letiltásához írja be a sort a "#" előtaggal.</translation>
     </message>
     <message>
         <location line="+5" />
-        <source>Could not set permissions on "%1"</source>
-        <translation>Nem sikerült engedélyeket beállítani a következőhöz: "%1"</translation>
+        <source>Could not set permissions on &quot;%1&quot;</source>
+        <translation>Nem sikerült engedélyeket beállítani a következőhöz: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+250" />
-        <source>No "localSource" device hook set.</source>
+        <source>No &quot;localSource&quot; device hook set.</source>
         <translation>Nincs „localSource” eszköz akasztója beállítva.</translation>
     </message>
     <message>
@@ -24617,20 +24717,20 @@ Egy változó letiltásához írja be a sort a "#" előtaggal.</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Overwrite existing file "%1"?</source>
-        <translation>Felülírja a meglévő fájlt "%1"?</translation>
+        <source>Overwrite existing file &quot;%1&quot;?</source>
+        <translation>Felülírja a meglévő fájlt &quot;%1&quot;?</translation>
     </message>
     <message>
         <location line="+21" />
-        <source>Could not copy file "%1" to "%2".</source>
-        <translation>A(z) "%1" fájl nem másolható ide: "%2".</translation>
+        <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
+        <translation>A(z) &quot;%1&quot; fájl nem másolható ide: &quot;%2&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
         <location line="+409" />
         <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
-        <source>Failed to create directory "%1".</source>
-        <translation>Nem sikerült létrehozni a "%1" könyvtárat.</translation>
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>Nem sikerült létrehozni a &quot;%1&quot; könyvtárat.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
@@ -24697,8 +24797,8 @@ Egy változó letiltásához írja be a sort a "#" előtaggal.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
-        <source>Failed to start process launcher at "%1": %2</source>
-        <translation>Nem sikerült elindítani a folyamatindítót itt: "%1": %2</translation>
+        <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
+        <translation>Nem sikerült elindítani a folyamatindítót itt: &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+7" />
@@ -24814,20 +24914,20 @@ Egy változó letiltásához írja be a sort a "#" előtaggal.</translation>
         <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
-To disable a variable, prefix this line with "#".
+To disable a variable, prefix this line with &quot;#&quot;.
 To append to a variable, use VARIABLE+=VALUE.
 To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
-Lines starting with "##" will be treated as comments.</source>
+Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Írja be egy soronkénti egy környezeti változót.
  A változó beállításához vagy módosításához használja a változót = értéket.
- A változó letiltásához előtagolja ezt a sort a "#" -nel.
+ A változó letiltásához előtagolja ezt a sort a &quot;#&quot; -nel.
  A változóhoz való hozzáadáshoz használja a+= érték változót.
  A változóhoz való felkészüléshez használja a változót =+értéket.
  A meglévő változók hivatkozhatók egy $ {egyéb} értékkel.
  A változó törléséhez tegye a nevét egy sorra, amelyre semmi más nem.
- A "##" -nel kezdődő vonalakat megjegyzésként kezelik.</translation>
+ A &quot;##&quot; -nel kezdődő vonalakat megjegyzésként kezelik.</translation>
     </message>
     <message>
         <location line="+112" />
@@ -24846,18 +24946,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+29" />
-        <source>The program "%1" does not exist or is not executable.</source>
-        <translation>A "%1" program nem létezik, vagy nem futtatható.</translation>
+        <source>The program &quot;%1&quot; does not exist or is not executable.</source>
+        <translation>A &quot;%1&quot; program nem létezik, vagy nem futtatható.</translation>
     </message>
     <message>
         <location line="+79" />
-        <source>The program "%1" could not be found.</source>
-        <translation>A "%1" programot nem lehetett megtalálni.</translation>
+        <source>The program &quot;%1&quot; could not be found.</source>
+        <translation>A &quot;%1&quot; programot nem lehetett megtalálni.</translation>
     </message>
     <message>
         <location line="+908" />
-        <source>Failed to create process interface for "%1".</source>
-        <translation>Nem sikerült létrehozni a "%1" folyamat interfészét.</translation>
+        <source>Failed to create process interface for &quot;%1&quot;.</source>
+        <translation>Nem sikerült létrehozni a &quot;%1&quot; folyamat interfészét.</translation>
     </message>
     <message>
         <location line="+163" />
@@ -24871,8 +24971,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>The process "%1" is not responding.</source>
-        <translation>A "%1" folyamat nem válaszol.</translation>
+        <source>The process &quot;%1&quot; is not responding.</source>
+        <translation>A &quot;%1&quot; folyamat nem válaszol.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -24881,32 +24981,32 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+233" />
-        <source>The command "%1" finished successfully.</source>
-        <translation>A "%1" parancs sikeresen befejeződött.</translation>
+        <source>The command &quot;%1&quot; finished successfully.</source>
+        <translation>A &quot;%1&quot; parancs sikeresen befejeződött.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated with exit code %2.</source>
-        <translation>A "%1" parancs a következő kilépési kóddal fejeződött be: %2.</translation>
+        <source>The command &quot;%1&quot; terminated with exit code %2.</source>
+        <translation>A &quot;%1&quot; parancs a következő kilépési kóddal fejeződött be: %2.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" terminated abnormally.</source>
-        <translation>A "%1" parancs rendellenesen leállt.</translation>
+        <source>The command &quot;%1&quot; terminated abnormally.</source>
+        <translation>A &quot;%1&quot; parancs rendellenesen leállt.</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>The command "%1" could not be started.</source>
-        <translation>A "%1" parancs nem indítható el.</translation>
+        <source>The command &quot;%1&quot; could not be started.</source>
+        <translation>A &quot;%1&quot; parancs nem indítható el.</translation>
     </message>
     <message>
         <location line="+4" />
-        <source>The command "%1" was canceled after %2 ms.</source>
-        <translation>A " %1" parancsot %2 ms után törölték.</translation>
+        <source>The command &quot;%1&quot; was canceled after %2 ms.</source>
+        <translation>A &quot; %1&quot; parancsot %2 ms után törölték.</translation>
     </message>
     <message>
-        <source>The command "%1" did not respond within the timeout limit (%2 s).</source>
-        <translation type="vanished">A "%1" parancs nem válaszolt az időkorláton belül (%2 s).</translation>
+        <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
+        <translation type="vanished">A &quot;%1&quot; parancs nem válaszolt az időkorláton belül (%2 s).</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
@@ -24945,8 +25045,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>Could not open "%1".</source>
-        <translation>Nem sikerült megnyitni a következőt: "%1".</translation>
+        <source>Could not open &quot;%1&quot;.</source>
+        <translation>Nem sikerült megnyitni a következőt: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+23" />
@@ -24967,13 +25067,13 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="-264" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Nem található érvényes beállítási fájl.&lt;/p&gt;&lt;p&gt;A(z) "%1" könyvtárban található összes beállításfájl nem volt megfelelő a(z) %2 jelenlegi verziójához, például azért, mert a(z) % nem kompatibilis verziója írta őket 2, vagy mert más beállítási útvonalat használtak.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+265" />
-        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory "%1" were either too new or too old to be read.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Nem található érvényes beállítási fájl.&lt;/p&gt;&lt;p&gt;A(z) "%1" könyvtárban található összes beállításfájl túl új vagy túl régi volt az olvasáshoz.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Nem található érvényes beállítási fájl.&lt;/p&gt;&lt;p&gt;A(z) &quot;%1&quot; könyvtárban található összes beállításfájl túl új vagy túl régi volt az olvasáshoz.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+11" />
@@ -24982,18 +25082,18 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>&lt;p&gt;The versioned backup "%1" of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;A beállítási fájl "%1" verziószámú biztonsági másolata kerül felhasználásra, mert a nem verziószámú fájlt a(z) %2 nem kompatibilis verziója hozta létre.&lt;/p&gt;&lt;p&gt;A beállítások módosításai a(z) A rendszer figyelmen kívül hagyja a(z) %2 értéket, és a most végrehajtott módosítások &lt;b&gt;nem&lt;/b&gt; kerülnek át az újabb verzióra.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;The versioned backup &quot;%1&quot; of the settings file is used, because the non-versioned file was created by an incompatible version of %2.&lt;/p&gt;&lt;p&gt;Settings changes made since the last time this version of %2 was used are ignored, and changes made now will &lt;b&gt;not&lt;/b&gt; be propagated to the newer version.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;A beállítási fájl &quot;%1&quot; verziószámú biztonsági másolata kerül felhasználásra, mert a nem verziószámú fájlt a(z) %2 nem kompatibilis verziója hozta létre.&lt;/p&gt;&lt;p&gt;A beállítások módosításai a(z) A rendszer figyelmen kívül hagyja a(z) %2 értéket, és a most végrehajtott módosítások &lt;b&gt;nem&lt;/b&gt; kerülnek át az újabb verzióra.&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <source>Settings File for "%1" from a Different Environment?</source>
+        <source>Settings File for &quot;%1&quot; from a Different Environment?</source>
         <translation>„%1” beállítási fájlja egy másik környezetből?</translation>
     </message>
     <message>
         <location line="+2" />
-        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file "%2"?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Nem található a(z) %1 ezen példánya által létrehozott beállítási fájl.&lt;/p&gt;&lt;p&gt;Egy másik gépen dolgozott ezzel a projekttel, vagy más beállítási útvonalat használt korábban?&lt;/p&gt;&lt;p&gt;Még mindig szeretné betölteni a "%2" beállításfájlt?&lt;/p&gt;</translation>
+        <source>&lt;p&gt;No settings file created by this instance of %1 was found.&lt;/p&gt;&lt;p&gt;Did you work with this project on another machine or using a different settings path before?&lt;/p&gt;&lt;p&gt;Do you still want to load the settings file &quot;%2&quot;?&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Nem található a(z) %1 ezen példánya által létrehozott beállítási fájl.&lt;/p&gt;&lt;p&gt;Egy másik gépen dolgozott ezzel a projekttel, vagy más beállítási útvonalat használt korábban?&lt;/p&gt;&lt;p&gt;Még mindig szeretné betölteni a &quot;%2&quot; beállításfájlt?&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+55" />
@@ -25002,7 +25102,7 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+1" />
-        <source>"%1" is not supported by %2. Do you want to try loading it anyway?</source>
+        <source>&quot;%1&quot; is not supported by %2. Do you want to try loading it anyway?</source>
         <translation>A(z) %2 nem támogatja a „%1”-t. Megpróbálod mégis betölteni?</translation>
     </message>
     <message>
@@ -25058,7 +25158,7 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellpadding=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Változó&lt;/th&gt;&lt;th&gt;Bővül a következőre:&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td &gt;az aktuális fájl könyvtára&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;fájlnév (teljes elérési úttal)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;% n&lt;/td&gt;&lt;td&gt;fájlnév (útvonal nélkül)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
@@ -25078,8 +25178,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+3" />
         <location line="+7" />
-        <source>Insert "%1"</source>
-        <translation>"%1" beszúrása</translation>
+        <source>Insert &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; beszúrása</translation>
     </message>
     <message>
         <location line="-3" />
@@ -25120,8 +25220,8 @@ Lines starting with "##" will be treated as comments.</source>
     </message>
     <message>
         <location line="+7" />
-        <source>Command "%1" was not found.</source>
-        <translation>A "%1" parancs nem található.</translation>
+        <source>Command &quot;%1&quot; was not found.</source>
+        <translation>A &quot;%1&quot; parancs nem található.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -25146,8 +25246,8 @@ Lines starting with "##" will be treated as comments.</source>
     <message>
         <location line="+28" />
         <location line="+45" />
-        <source>Failed to start terminal process: "%1".</source>
-        <translation>Nem sikerült elindítani a terminál folyamatát: "%1".</translation>
+        <source>Failed to start terminal process: &quot;%1&quot;.</source>
+        <translation>Nem sikerült elindítani a terminál folyamatát: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
@@ -25198,9 +25298,9 @@ Lines starting with "##" will be treated as comments.</source>
 <context>
     <name>TextEditor::Internal::Snippets</name>
     <message>
-        <source />
+        <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
-        <translation />
+        <translation></translation>
     </message>
 </context>
 </TS>
