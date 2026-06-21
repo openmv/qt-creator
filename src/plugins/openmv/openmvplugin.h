@@ -484,6 +484,16 @@ private:
     bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder);
     QList<QPair<QString, QString> > querySerialPorts(const QStringList &portList);
 
+    // Release-notes (changelog) links. Web URLs target the rolling-latest "dev"
+    // docs channel (used by the update notifications, since the announced
+    // version is not installed yet). Local URLs point at the bundled docs that
+    // shipped with this IDE (used by the About dialog and Help menu), falling
+    // back to the per-product changelog index if the exact version page is
+    // missing. product is "ide" or "firmware".
+    static QUrl webChangelogUrl(const QString &product, int major, int minor, int patch);
+    static QUrl localChangelogUrl(const QString &product, const QString &version);
+    static void openUrlOrWarn(const QUrl &url);
+
     void openmvInternalBootloader(const QString &forceFirmwarePath,
                                   bool forceFlashFSErase,
                                   bool justEraseFlashFs,

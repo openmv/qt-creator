@@ -182,6 +182,41 @@ static bool copyOperator(const Utils::FilePath &src, const Utils::FilePath &dest
     return true;
 }
 
+QUrl OpenMVPlugin::webChangelogUrl(const QString &product, int major, int minor, int patch)
+{
+    // Rolling-latest "dev" docs channel always has every version's page,
+    // including a release that is newer than the bundled docs.
+    return QUrl(QString(QStringLiteral("https://docs.openmv.io/dev/changelog/%1/v%2.%3.%4.html"))
+                    .arg(product).arg(major).arg(minor).arg(patch));
+}
+
+QUrl OpenMVPlugin::localChangelogUrl(const QString &product, const QString &version)
+{
+    // Release notes for the currently-installed version come from the docs that
+    // shipped with this IDE (works offline). Fall back to the per-product
+    // changelog index if the exact version page is not in the bundle.
+    Utils::FilePath page = Core::ICore::allUsersResourcePath(
+        QString(QStringLiteral("html/changelog/%1/v%2.html")).arg(product, version));
+
+    if(!page.exists())
+    {
+        page = Core::ICore::allUsersResourcePath(
+            QString(QStringLiteral("html/changelog/%1/index.html")).arg(product));
+    }
+
+    return QUrl::fromLocalFile(page.toString());
+}
+
+void OpenMVPlugin::openUrlOrWarn(const QUrl &url)
+{
+    if(!QDesktopServices::openUrl(url))
+    {
+        QMessageBox::critical(Core::ICore::dialogParent(),
+                              QString(),
+                              Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
+    }
+}
+
 bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessage)
 {
     Q_UNUSED(errorMessage)
@@ -1692,6 +1727,21 @@ void OpenMVPlugin::extensionsInitialized()
             }
         });
 
+        QAction *ideReleaseNotesAction = new QAction(Tr::tr("OpenMV IDE Release Notes"), this);
+        Core::Command *ideReleaseNotesCommand = Core::ActionManager::registerAction(ideReleaseNotesAction, Utils::Id("OpenMV.ReleaseNotes.IDE"));
+        helpMenu->addAction(ideReleaseNotesCommand, Core::Constants::G_HELP_SUPPORT);
+        connect(ideReleaseNotesAction, &QAction::triggered, this, [] {
+            openUrlOrWarn(localChangelogUrl(QStringLiteral("ide"), QLatin1String(Core::Constants::IDE_VERSION_LONG)));
+        });
+
+        QAction *firmwareReleaseNotesAction = new QAction(Tr::tr("OpenMV Firmware Release Notes"), this);
+        Core::Command *firmwareReleaseNotesCommand = Core::ActionManager::registerAction(firmwareReleaseNotesAction, Utils::Id("OpenMV.ReleaseNotes.Firmware"));
+        helpMenu->addAction(firmwareReleaseNotesCommand, Core::Constants::G_HELP_SUPPORT);
+        connect(firmwareReleaseNotesAction, &QAction::triggered, this, [this] {
+            const QString fw = m_firmwareSettings.object().value(QStringLiteral("firmware_version")).toString();
+            openUrlOrWarn(localChangelogUrl(QStringLiteral("firmware"), fw));
+        });
+
         QAction *forumsAction = new QAction(Tr::tr("OpenMV Forums"), this);
         Core::Command *forumsCommand = Core::ActionManager::registerAction(forumsAction, Utils::Id("OpenMV.Forums"));
         helpMenu->addAction(forumsCommand, Core::Constants::G_HELP_SUPPORT);
@@ -1749,6 +1799,7 @@ void OpenMVPlugin::extensionsInitialized()
      Core::Command *aboutCommand = Core::ActionManager::registerAction(aboutAction, Utils::Id("OpenMV.About"));
     helpMenu->addAction(aboutCommand, Core::Constants::G_HELP_ABOUT);
     connect(aboutAction, &QAction::triggered, this, [this] {
+        const QString fw = m_firmwareSettings.object().value(QStringLiteral("firmware_version")).toString();
         QMessageBox::about(Core::ICore::dialogParent(), m_viewerMode ? Tr::tr("About OpenMV Viewer") : Tr::tr("About OpenMV IDE"), Tr::tr(
         "<p><b>About %L4 %L1</b></p>"
         "<p>By: Ibrahim Abdelkader & Kwabena W. Agyeman</p>"
@@ -1761,8 +1812,15 @@ void OpenMVPlugin::extensionsInitialized()
         "<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <a href=\"https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT\">GNU General Public License</a> for more details.</p>"
         "<p><b>Questions or Comments?</b></p>"
         "<p>Contact us at <a href=\"mailto:openmv@openmv.io\">openmv@openmv.io</a>.</p>"
-        ).arg(QLatin1String(Core::Constants::IDE_VERSION_LONG)).arg(QLatin1String(Core::Constants::IDE_YEAR)).arg(QLatin1String(Core::Constants::IDE_AUTHOR)).arg(m_viewerMode ? Tr::tr("OpenMV Viewer") : Tr::tr("OpenMV IDE")) + Tr::tr(
-        "<p><b>Partners</b></p>") +
+        ).arg(QLatin1String(Core::Constants::IDE_VERSION_LONG)).arg(QLatin1String(Core::Constants::IDE_YEAR)).arg(QLatin1String(Core::Constants::IDE_AUTHOR)).arg(m_viewerMode ? Tr::tr("OpenMV Viewer") : Tr::tr("OpenMV IDE")) +
+        Tr::tr("<p><b>Release Notes</b></p>") +
+        QString(QStringLiteral("<p><a href=\"%1\">%2</a></p>")).arg(
+            localChangelogUrl(QStringLiteral("ide"), QLatin1String(Core::Constants::IDE_VERSION_LONG)).toString(),
+            Tr::tr("OpenMV IDE %1").arg(QLatin1String(Core::Constants::IDE_VERSION_LONG))) +
+        QString(QStringLiteral("<p><a href=\"%1\">%2</a></p>")).arg(
+            localChangelogUrl(QStringLiteral("firmware"), fw).toString(),
+            Tr::tr("OpenMV Firmware %1").arg(fw)) +
+        Tr::tr("<p><b>Partners</b></p>") +
         QStringLiteral("<p><a href=\"https://www.arduino.cc/\"><img source=\":/openmv/images/arduino-partnership.png\"></a></p>") +
         QString(QStringLiteral("<p><a href=\"https://edgeimpulse.com/\"><img source=\":/openmv/images/edge-impulse-partnership-%1.png\"></a></p>")).arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light")) +
         QString(QStringLiteral("<p><a href=\"https://www.st.com/\"><img source=\":/openmv/images/st-logo-%1.png\"></a></p>")).arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light")) +
@@ -2637,9 +2695,14 @@ void OpenMVPlugin::extensionsInitialized()
                 || ((IDE_VERSION_MAJOR == major) && (IDE_VERSION_MINOR < minor))
                 || ((IDE_VERSION_MAJOR == major) && (IDE_VERSION_MINOR == minor) && (IDE_VERSION_RELEASE < patch)))
                 {
-                    QMessageBox box(QMessageBox::Information, Tr::tr("Update Available"), Tr::tr("A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.").arg(major).arg(minor).arg(patch), QMessageBox::Cancel, Core::ICore::dialogParent(),
+                    const QString updateMessage =
+                        Tr::tr("A new version of OpenMV IDE (%L1.%L2.%L3) is available for download. See the <a href=\"%L4\">release notes</a>.")
+                            .arg(major).arg(minor).arg(patch)
+                            .arg(webChangelogUrl(QStringLiteral("ide"), major, minor, patch).toString());
+                    QMessageBox box(QMessageBox::Information, Tr::tr("Update Available"), updateMessage, QMessageBox::Cancel, Core::ICore::dialogParent(),
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                    box.setTextFormat(Qt::RichText);
                     QPushButton *button = box.addButton(Tr::tr("Download"), QMessageBox::AcceptRole);
                     box.setDefaultButton(button);
                     box.setEscapeButton(QMessageBox::Cancel);
