@@ -1713,34 +1713,40 @@ void OpenMVPlugin::extensionsInitialized()
 
     if(!m_viewerMode)
     {
-        QAction *docsAction = new QAction(Tr::tr("OpenMV Docs"), this);
-        Core::Command *docsCommand = Core::ActionManager::registerAction(docsAction, Utils::Id("OpenMV.Docs"));
-        helpMenu->addAction(docsCommand, Core::Constants::G_HELP_SUPPORT);
-        connect(docsAction, &QAction::triggered, this, [] {
-            QUrl url = QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(QStringLiteral("html/index.html")).toString());
+        // Help -> OpenMV Docs -> the docs home page plus its 10 top-level
+        // sections (the toctree in openmv-doc's index.rst, incl. Changelog
+        // and License).
+        Core::ActionContainer *docsMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.DocsMenu"));
+        docsMenu->menu()->setTitle(Tr::tr("OpenMV Docs"));
+        docsMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
+        helpMenu->addMenu(docsMenu, Core::Constants::G_HELP_SUPPORT);
 
-            if(!QDesktopServices::openUrl(url))
-            {
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                                      QString(),
-                                      Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
-            }
-        });
+        typedef QPair<QString, QString> QStringPair;
+        QList<QStringPair> docsPages;
+        docsPages.append(QStringPair(Tr::tr("Home"),      QStringLiteral("html/index.html")));
+        docsPages.append(QStringPair(Tr::tr("Tutorial"),  QStringLiteral("html/openmvcam/tutorial/index.html")));
+        docsPages.append(QStringPair(Tr::tr("Libraries"), QStringLiteral("html/library/index.html")));
+        docsPages.append(QStringPair(Tr::tr("Boards"),    QStringLiteral("html/openmvcam/quickref.html")));
+        docsPages.append(QStringPair(Tr::tr("Shields"),   QStringLiteral("html/openmvcam/shields.html")));
+        docsPages.append(QStringPair(Tr::tr("Sensors"),   QStringLiteral("html/openmvcam/sensors.html")));
+        docsPages.append(QStringPair(Tr::tr("Language"),  QStringLiteral("html/reference/index.html")));
+        docsPages.append(QStringPair(Tr::tr("CPython"),   QStringLiteral("html/genrst/index.html")));
+        docsPages.append(QStringPair(Tr::tr("Internals"), QStringLiteral("html/develop/index.html")));
+        docsPages.append(QStringPair(Tr::tr("Changelog"), QStringLiteral("html/changelog/index.html")));
+        docsPages.append(QStringPair(Tr::tr("License"),   QStringLiteral("html/license.html")));
 
-        QAction *ideReleaseNotesAction = new QAction(Tr::tr("OpenMV IDE Release Notes"), this);
-        Core::Command *ideReleaseNotesCommand = Core::ActionManager::registerAction(ideReleaseNotesAction, Utils::Id("OpenMV.ReleaseNotes.IDE"));
-        helpMenu->addAction(ideReleaseNotesCommand, Core::Constants::G_HELP_SUPPORT);
-        connect(ideReleaseNotesAction, &QAction::triggered, this, [] {
-            openUrlOrWarn(localChangelogUrl(QStringLiteral("ide"), QLatin1String(Core::Constants::IDE_VERSION_LONG)));
-        });
-
-        QAction *firmwareReleaseNotesAction = new QAction(Tr::tr("OpenMV Firmware Release Notes"), this);
-        Core::Command *firmwareReleaseNotesCommand = Core::ActionManager::registerAction(firmwareReleaseNotesAction, Utils::Id("OpenMV.ReleaseNotes.Firmware"));
-        helpMenu->addAction(firmwareReleaseNotesCommand, Core::Constants::G_HELP_SUPPORT);
-        connect(firmwareReleaseNotesAction, &QAction::triggered, this, [this] {
-            const QString fw = m_firmwareSettings.object().value(QStringLiteral("firmware_version")).toString();
-            openUrlOrWarn(localChangelogUrl(QStringLiteral("firmware"), fw));
-        });
+        int docsPageIndex = 0;
+        for(const QStringPair &page : docsPages)
+        {
+            const QString path = page.second;
+            QAction *docsPageAction = new QAction(page.first, this);
+            Core::Command *docsPageCommand = Core::ActionManager::registerAction(docsPageAction,
+                Utils::Id(QString(QStringLiteral("OpenMV.Docs.%1")).arg(docsPageIndex++).toUtf8().constData()));
+            docsMenu->addAction(docsPageCommand);
+            connect(docsPageAction, &QAction::triggered, this, [path] {
+                openUrlOrWarn(QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(path).toString()));
+            });
+        }
 
         QAction *forumsAction = new QAction(Tr::tr("OpenMV Forums"), this);
         Core::Command *forumsCommand = Core::ActionManager::registerAction(forumsAction, Utils::Id("OpenMV.Forums"));
@@ -1756,39 +1762,6 @@ void OpenMVPlugin::extensionsInitialized()
             }
         });
 
-        Core::ActionContainer *pinoutMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.PinoutMenu"));
-        pinoutMenu->menu()->setTitle(Utils::HostOsInfo::isMacHost() ? Tr::tr("About OpenMV Cam") : Tr::tr("About OpenMV Cam..."));
-        pinoutMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
-        helpMenu->addMenu(pinoutMenu);
-
-        typedef QPair<QString, QString> QStringPair;
-        QList<QStringPair> cameras;
-        cameras.append(QStringPair(QStringLiteral("N6"), QStringLiteral("n6-pag7936")));
-        cameras.append(QStringPair(QStringLiteral("AE3"), QStringLiteral("ae3-pag7936")));
-        cameras.append(QStringPair(QStringLiteral("RT1062"), QStringLiteral("cam-rt1062-ov5640")));
-        cameras.append(QStringPair(QStringLiteral("H7 Plus"), QStringLiteral("cam-h7-plus-ov5640")));
-        cameras.append(QStringPair(QStringLiteral("H7"), QStringLiteral("cam-h7-ov7725")));
-        cameras.append(QStringPair(QStringLiteral("M7"), QStringLiteral("cam-m7-ov7725")));
-        cameras.append(QStringPair(QStringLiteral("M4"), QStringLiteral("cam-m4-ov7725")));
-        cameras.append(QStringPair(QStringLiteral("M4 Original"), QStringLiteral("cam-m4-ov2640")));
-
-        for(const QStringPair &cam : cameras)
-        {
-            QAction *pinout = new QAction(
-                 Utils::HostOsInfo::isMacHost() ? Tr::tr("About OpenMV Cam %1").arg(cam.first) : Tr::tr("About OpenMV Cam %1...").arg(cam.first), this);
-            Core::Command *pinoutCommand = Core::ActionManager::registerAction(pinout, Utils::Id(QString(QStringLiteral("OpenMV.Pinout.%1")).arg(cam.second).toUtf8().constData()));
-            pinoutMenu->addAction(pinoutCommand);
-            connect(pinout, &QAction::triggered, this, [cam] {
-                QUrl url = QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(QString(QStringLiteral("/html/_images/pinout-openmv-%1.png")).arg(cam.second)).toString());
-
-                if(!QDesktopServices::openUrl(url))
-                {
-                    QMessageBox::critical(Core::ICore::dialogParent(),
-                                          QString(),
-                                          Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
-                }
-            });
-        }
     }
 
     QAction *aboutAction = new QAction(QIcon::fromTheme(QStringLiteral("help-about")),
