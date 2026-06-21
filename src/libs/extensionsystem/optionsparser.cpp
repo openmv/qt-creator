@@ -55,6 +55,18 @@ bool OptionsParser::parse()
         if (checkForEndOfOptions())
             break;
         // OPENMV-DIFF //
+        // Accept GNU-style "--word" as an alias for "-word" (Qt Creator uses a
+        // single dash for every option). Bare "--" is consumed above as the
+        // end-of-options marker, so any token still starting with "--" is a
+        // "--word": canonicalize it to "-word" before matching so both the
+        // option lookups below AND the raw-argument scans plugins do themselves
+        // (e.g. arguments.contains("-update_resources")) see the single-dash
+        // form. Option values are fetched inside the checks via nextToken(),
+        // so a value that starts with "--" is left untouched.
+        if (m_currentArg.startsWith(QLatin1String("--")))
+            m_currentArg = m_currentArg.mid(1);
+        // OPENMV-DIFF //
+        // OPENMV-DIFF //
         // if (checkForLoadOption())
         //     continue;
         // if (checkForNoLoadOption())
