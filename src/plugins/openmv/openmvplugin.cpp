@@ -1773,6 +1773,7 @@ void OpenMVPlugin::extensionsInitialized()
     helpMenu->addAction(aboutCommand, Core::Constants::G_HELP_ABOUT);
     connect(aboutAction, &QAction::triggered, this, [this] {
         const QString fw = m_firmwareSettings.object().value(QStringLiteral("firmware_version")).toString();
+        const QString theme = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light");
         QMessageBox::about(Core::ICore::dialogParent(), m_viewerMode ? Tr::tr("About OpenMV Viewer") : Tr::tr("About OpenMV IDE"), Tr::tr(
         "<p><b>About %L4 %L1</b></p>"
         "<p>By: Ibrahim Abdelkader & Kwabena W. Agyeman</p>"
@@ -1785,20 +1786,27 @@ void OpenMVPlugin::extensionsInitialized()
         "<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <a href=\"https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT\">GNU General Public License</a> for more details.</p>"
         "<p><b>Questions or Comments?</b></p>"
         "<p>Contact us at <a href=\"mailto:openmv@openmv.io\">openmv@openmv.io</a>.</p>"
-        ).arg(QLatin1String(Core::Constants::IDE_VERSION_LONG)).arg(QLatin1String(Core::Constants::IDE_YEAR)).arg(QLatin1String(Core::Constants::IDE_AUTHOR)).arg(m_viewerMode ? Tr::tr("OpenMV Viewer") : Tr::tr("OpenMV IDE")) +
+        ).arg(QLatin1String(Core::Constants::IDE_VERSION_LONG)).arg(QString::number(QDate::currentDate().year())).arg(QLatin1String(Core::Constants::IDE_AUTHOR)).arg(m_viewerMode ? Tr::tr("OpenMV Viewer") : Tr::tr("OpenMV IDE")) +
         Tr::tr("<p><b>Release Notes</b></p>") +
-        QString(QStringLiteral("<p><a href=\"%1\">%2</a></p>")).arg(
+        QStringLiteral("<p>") +
+        QString(QStringLiteral("<a href=\"%1\">%2</a>")).arg(
             localChangelogUrl(QStringLiteral("ide"), QLatin1String(Core::Constants::IDE_VERSION_LONG)).toString(),
             Tr::tr("OpenMV IDE %1").arg(QLatin1String(Core::Constants::IDE_VERSION_LONG))) +
-        QString(QStringLiteral("<p><a href=\"%1\">%2</a></p>")).arg(
+        QStringLiteral(" &middot; ") +
+        QString(QStringLiteral("<a href=\"%1\">%2</a>")).arg(
             localChangelogUrl(QStringLiteral("firmware"), fw).toString(),
             Tr::tr("OpenMV Firmware %1").arg(fw)) +
+        QStringLiteral("</p>") +
         Tr::tr("<p><b>Partners</b></p>") +
-        QStringLiteral("<p><a href=\"https://www.arduino.cc/\"><img source=\":/openmv/images/arduino-partnership.png\"></a></p>") +
-        QString(QStringLiteral("<p><a href=\"https://edgeimpulse.com/\"><img source=\":/openmv/images/edge-impulse-partnership-%1.png\"></a></p>")).arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light")) +
-        QString(QStringLiteral("<p><a href=\"https://www.st.com/\"><img source=\":/openmv/images/st-logo-%1.png\"></a></p>")).arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light")) +
-        QString(QStringLiteral("<p><a href=\"https://www.alifsemi.com/\"><img source=\":/openmv/images/alif-logo-%1.png\"></a></p>")).arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light")) +
-        QString(QStringLiteral("<p><a href=\"https://www.nxp.com/\"><img source=\":/openmv/images/nxp-logo-%1.png\"></a></p>")).arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light"))
+        QStringLiteral("<table cellspacing=\"8\" cellpadding=\"4\"><tr>") +
+        QStringLiteral("<td><a href=\"https://www.arduino.cc/\"><img source=\":/openmv/images/arduino-partnership.png\"></a></td>") +
+        QString(QStringLiteral("<td><a href=\"https://edgeimpulse.com/\"><img source=\":/openmv/images/edge-impulse-partnership-%1.png\"></a></td>")).arg(theme) +
+        QStringLiteral("</tr><tr>") +
+        QString(QStringLiteral("<td><a href=\"https://www.st.com/\"><img source=\":/openmv/images/st-logo-%1.png\"></a></td>")).arg(theme) +
+        QString(QStringLiteral("<td><a href=\"https://www.alifsemi.com/\"><img source=\":/openmv/images/alif-logo-%1.png\"></a></td>")).arg(theme) +
+        QStringLiteral("</tr><tr>") +
+        QString(QStringLiteral("<td><a href=\"https://www.nxp.com/\"><img source=\":/openmv/images/nxp-logo-%1.png\"></a></td>")).arg(theme) +
+        QStringLiteral("</tr></table>")
         );
     });
 
