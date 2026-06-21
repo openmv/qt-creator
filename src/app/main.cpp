@@ -65,6 +65,9 @@ const char corePluginNameC[] = "Core";
 const char fixedOptionsC[]
     = " [OPTION]... [FILE]...\n"
       "Options:\n"
+      // OPENMV-DIFF //
+      "    Each option accepts a single dash (-option) or a double dash (--option).\n"
+      // OPENMV-DIFF //
       "    -help                         Display this help\n"
       "    -version                      Display program version\n"
       // OPENMV-DIFF //
