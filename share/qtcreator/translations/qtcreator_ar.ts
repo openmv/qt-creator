@@ -25227,7 +25227,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border = 1 cellspacing = 0 cellpadding = 3&gt; &lt;tr&gt; &lt;th&gt; متغير &lt;/ th&gt; &lt;th&gt; يتوسع إلى &lt;/th&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;%d &lt;/td&gt; &lt;td &gt; دليل الملف الحالي &lt;/ td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;%f &lt;/td&gt; &lt;td&gt; اسم الملف (بالمسار الكامل) &lt;/ td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;%n &lt;/td&gt; &lt;td&gt; اسم الملف (بدون مسار) &lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt; ٪%&lt;/td&gt; &lt;td&gt;%&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />

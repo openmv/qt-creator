@@ -15,7 +15,7 @@ from lxml import etree
 
 TRD = r'C:\github\openmv-ide\qt-creator\share\qtcreator\translations'
 
-PLACEHOLDER = re.compile(r'%(?:L?\d+|L?n|[sdSioxXfgeEcup])')
+PLACEHOLDER = re.compile(r'%(?:L?\d+|L?n|[bcdeEfgGiopsSuxX%])')
 ENTITY = re.compile(r'&(?:amp|nbsp|lt|gt|quot|apos|copy|reg|deg|times|mdash|ndash|hellip|#\d+|#x[0-9A-Fa-f]+);')
 HTML_NAMES = {
     'a', 'abbr', 'address', 'b', 'big', 'blockquote', 'body', 'br', 'center',
