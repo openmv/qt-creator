@@ -686,6 +686,7 @@ private:
     documentation_t;
 
     QSet<QString> m_knownModules;
+    QHash<QString, QString> m_docUrls; // fully-qualified name -> docs page (relative to html/), with #anchor
     QList<documentation_t> m_modules;
     QList<documentation_t> m_classes;
     QList<documentation_t> m_datas;
@@ -754,6 +755,9 @@ private:
                    QStringList &providerFunctions, QMap<QString, QStringList> &providerFunctionArgs,
                    QStringList &providerMethods, QMap<QString, QStringList> &providerMethodArgs);
     bool loadDocs(bool update_resoruces, bool update_editors);
+    void loadDocUrls();
+    QList<const documentation_t *> resolveDocSymbol(const QString &word, const QString &qualifier, const QChar &nextChar, bool isAttr) const;
+    bool openHelpForCursor(TextEditor::TextEditorWidget *widget);
 
     void parseImports(const QString &fileText, const QString &moduleFolder, const QStringList &builtInModules, importDataList_t &targetModules, QStringList &errorModules);
     bool importHelper(const QByteArray &text);

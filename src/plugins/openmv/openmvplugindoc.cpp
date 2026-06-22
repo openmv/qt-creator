@@ -871,6 +871,348 @@ void OpenMVPlugin::loadStubs(const Utils::FilePath &stubsPath,
     }
 }
 
+void OpenMVPlugin::loadDocUrls()
+{
+    // Map every documented symbol (fully-qualified name) to its docs page using
+    // the Sphinx inventory (objects.inv), so F1 can open the exact page+anchor.
+    m_docUrls.clear();
+
+    QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("html/objects.inv")).toString());
+
+    if(!file.open(QIODevice::ReadOnly))
+    {
+        return;
+    }
+
+    QByteArray data = file.readAll();
+    file.close();
+
+    // The first four lines are an uncompressed header; the rest is zlib data.
+    int idx = 0;
+
+    for(int i = 0; i < 4; i++)
+    {
+        idx = data.indexOf('\n', idx);
+
+        if(idx < 0)
+        {
+            return;
+        }
+
+        idx += 1;
+    }
+
+    QByteArray body = data.mid(idx);
+
+    // qUncompress wants a 4-byte big-endian expected-size prefix; it grows the
+    // buffer on demand, so a rough over-estimate is fine.
+    quint32 sz = quint32(body.size()) * 8;
+    QByteArray prefixed;
+    prefixed.append(char((sz >> 24) & 0xFF));
+    prefixed.append(char((sz >> 16) & 0xFF));
+    prefixed.append(char((sz >> 8) & 0xFF));
+    prefixed.append(char(sz & 0xFF));
+    prefixed.append(body);
+
+    QByteArray out = qUncompress(prefixed);
+
+    if(out.isEmpty())
+    {
+        return;
+    }
+
+    const QStringList lines = QString::fromUtf8(out).split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+
+    for(const QString &line : lines)
+    {
+        // <name> <domain:role> <priority> <uri> <dispname...>
+        const QStringList parts = line.split(QLatin1Char(' '), Qt::SkipEmptyParts);
+
+        if(parts.size() < 4)
+        {
+            continue;
+        }
+
+        const QString fqn = parts.at(0);
+        QString uri = parts.at(3);
+        uri.replace(QLatin1Char('$'), fqn); // Sphinx shorthand: trailing '$' means the anchor is the name
+        m_docUrls.insert(fqn, uri);
+    }
+}
+
+QList<const OpenMVPlugin::documentation_t *> OpenMVPlugin::resolveDocSymbol(
+    const QString &word, const QString &qualifierArg, const QChar &nextChar, bool isAttr) const
+{
+    // Shared by the hover tooltip (which shows every match) and F1 (which opens
+    // the first/most-likely one). Returns matches with the entries that best fit
+    // the qualifier first, then the rest in discovery order.
+    const bool isCall = (nextChar == QLatin1Char('('));
+
+    // The qualifier only applies to an attribute access ("qualifier.word"). For
+    // a bare word -- e.g. a builtin call like "print(...)" -- there is no
+    // qualifier, so ignore whatever token happened to precede it (the hover's
+    // heuristic can otherwise pick up an unrelated module name and filter the
+    // real match out).
+    const QString qualifier = isAttr ? qualifierArg : QString();
+
+    // Is this name a documented module? (Scan m_modules, matching the original
+    // hover -- m_knownModules is not populated in the stubs-based doc path.)
+    auto isModuleName = [this] (const QString &n) {
+        if(n.isEmpty())
+        {
+            return false;
+        }
+        for(const documentation_t &m : m_modules)
+        {
+            if(m.name == n)
+            {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    const bool qualifierIsModule = isModuleName(qualifier);
+    // A module followed by '.' is being dereferenced (e.g. time.clock()); its
+    // own name is not a same-named data attribute of another module, and a
+    // same-named int constant in some other module must not leak in either.
+    const bool wordIsModuleDeref = isModuleName(word) && (nextChar == QLatin1Char('.'));
+
+    QList<const documentation_t *> preferred;
+    QList<const documentation_t *> other;
+
+    auto add = [&preferred, &other] (const documentation_t *d, bool isPreferred) {
+        (isPreferred ? preferred : other).append(d);
+    };
+
+    // Bare module reference (sensor, time, ...).
+    for(const documentation_t &d : m_modules)
+    {
+        if(d.name == word)
+        {
+            add(&d, false);
+        }
+    }
+
+    // Module data (sensor.RGB565 -> module.name) and class constants
+    // (Pin.OUT_PP -> module.class.name).
+    if(!wordIsModuleDeref)
+    {
+        for(const documentation_t &d : m_datas)
+        {
+            if(d.name != word)
+            {
+                continue;
+            }
+
+            if(d.className.isEmpty())
+            {
+                // Module data (sensor.VGA): honour a known-module qualifier.
+                if((!qualifierIsModule) || (d.moduleName == qualifier))
+                {
+                    add(&d, d.moduleName == qualifier);
+                }
+            }
+            else if(isAttr)
+            {
+                // Class constant/attribute (Pin.OUT_PP, obj.time): only when the
+                // word is actually an attribute access, never for a bare module
+                // reference like "import time" matching some class's .time field.
+                add(&d, (d.className == qualifier) || (d.moduleName == qualifier));
+            }
+        }
+    }
+
+    // Functions and classes -- only resolve when actually called.
+    if(isCall)
+    {
+        for(const documentation_t &d : m_classes)
+        {
+            if((d.name == word) && ((!qualifierIsModule) || (d.moduleName == qualifier)))
+            {
+                add(&d, d.moduleName == qualifier);
+            }
+        }
+
+        for(const documentation_t &d : m_functions)
+        {
+            if((d.name == word) && ((!qualifierIsModule) || (d.moduleName == qualifier)))
+            {
+                add(&d, d.moduleName == qualifier);
+            }
+        }
+    }
+
+    // Methods -- only when called as an attribute (obj.method()). Prefer the
+    // class matching the qualifier (e.g. Wire.read -> the Wire class's read).
+    if(isCall && isAttr)
+    {
+        for(const documentation_t &d : m_methods)
+        {
+            if((d.name == word) && ((!qualifierIsModule) || (d.moduleName == qualifier)))
+            {
+                add(&d, (d.className == qualifier) || (d.moduleName == qualifier));
+            }
+        }
+    }
+
+    return preferred + other;
+}
+
+bool OpenMVPlugin::openHelpForCursor(TextEditor::TextEditorWidget *widget)
+{
+    if((!widget) || m_docUrls.isEmpty())
+    {
+        return false;
+    }
+
+    static const QRegularExpression identifierRegEx(QStringLiteral("^[A-Za-z_][A-Za-z0-9_]*$"));
+
+    QTextCursor cursor = widget->textCursor();
+    cursor.select(QTextCursor::WordUnderCursor);
+    const QString word = cursor.selectedText();
+
+    if(!identifierRegEx.match(word).hasMatch())
+    {
+        return false;
+    }
+
+    QTextDocument *document = widget->textDocument()->document();
+    const int wordStart = qMin(cursor.position(), cursor.anchor());
+    const int wordEnd = qMax(cursor.position(), cursor.anchor());
+    const QChar prevChar = (wordStart > 0) ? document->characterAt(wordStart - 1) : QChar();
+
+    // First significant character after the word, skipping spaces/tabs on the
+    // same line so "time=" and "time =" (and "snapshot ()") are treated alike.
+    int after = wordEnd;
+
+    while((document->characterAt(after) == QLatin1Char(' ')) || (document->characterAt(after) == QLatin1Char('\t')))
+    {
+        after++;
+    }
+
+    const QChar nextChar = document->characterAt(after);
+
+    // A word followed by '=' (but not '==') is a keyword-argument name or an
+    // assignment target -- skip_frames(time=2000) or "time = clock" -- so it is
+    // not a reference to the 'time' module either way.
+    if((nextChar == QLatin1Char('=')) && (document->characterAt(after + 1) != QLatin1Char('=')))
+    {
+        return false;
+    }
+
+    const bool isAttr = (prevChar == QLatin1Char('.'));
+
+    // The identifier before a '.' directly preceding the word -- the module in
+    // "sensor.snapshot" or the class/variable in "img.add".
+    QString qualifier;
+
+    if((wordStart >= 2) && (document->characterAt(wordStart - 1) == QLatin1Char('.')))
+    {
+        QTextCursor q(document);
+        q.setPosition(wordStart - 2);
+        q.select(QTextCursor::WordUnderCursor);
+        qualifier = q.selectedText();
+
+        if(!identifierRegEx.match(qualifier).hasMatch())
+        {
+            qualifier.clear();
+        }
+    }
+
+    // Skip identifiers inside comments or string literals (same scan as the
+    // hover): walk from the document start to the word and check the state.
+    {
+        QTextCursor pre(document);
+        pre.setPosition(wordStart);
+        pre.movePosition(QTextCursor::Start, QTextCursor::KeepAnchor);
+        const QString text = pre.selectedText().replace(QChar::ParagraphSeparator, QLatin1Char('\n'));
+
+        enum { IN_NONE, IN_COMMENT, IN_STRING_0, IN_STRING_1 } state = IN_NONE;
+
+        for(int i = 0; i < text.size(); i++)
+        {
+            const QChar ch = text.at(i);
+            const QChar prev = i ? text.at(i - 1) : QChar();
+
+            switch(state)
+            {
+                case IN_NONE:
+                    if((ch == QLatin1Char('#')) && (prev != QLatin1Char('\\'))) state = IN_COMMENT;
+                    else if((ch == QLatin1Char('\'')) && (prev != QLatin1Char('\\'))) state = IN_STRING_0;
+                    else if((ch == QLatin1Char('"')) && (prev != QLatin1Char('\\'))) state = IN_STRING_1;
+                    break;
+                case IN_COMMENT: if(ch == QLatin1Char('\n')) state = IN_NONE; break;
+                case IN_STRING_0: if((ch == QLatin1Char('\'')) && (prev != QLatin1Char('\\'))) state = IN_NONE; break;
+                case IN_STRING_1: if((ch == QLatin1Char('"')) && (prev != QLatin1Char('\\'))) state = IN_NONE; break;
+            }
+        }
+
+        if(state != IN_NONE)
+        {
+            return false;
+        }
+    }
+
+    // Use the same matcher as the hover, then open the first (most-likely)
+    // match that has a docs page. Build each entry's fully-qualified name:
+    // module -> "name", function/class/module-data -> "module.name",
+    // method/class-const -> "module.class.name".
+    for(const documentation_t *d : resolveDocSymbol(word, qualifier, nextChar, isAttr))
+    {
+        QString fqn;
+
+        if(d->moduleName.isEmpty())
+        {
+            fqn = d->name; // a module
+        }
+        else if(d->moduleName == QStringLiteral("builtins"))
+        {
+            // Builtins are documented without the "builtins." prefix
+            // (print, int, str.split, ...).
+            fqn = d->className.isEmpty()
+                ? d->name
+                : QString(d->className + QLatin1Char('.') + d->name);
+        }
+        else if(d->className.isEmpty())
+        {
+            fqn = d->moduleName + QLatin1Char('.') + d->name;
+        }
+        else
+        {
+            fqn = d->moduleName + QLatin1Char('.') + d->className + QLatin1Char('.') + d->name;
+        }
+
+        if(!m_docUrls.contains(fqn))
+        {
+            continue;
+        }
+
+        const QString uri = m_docUrls.value(fqn);
+        QString path = uri;
+        QString fragment;
+        const int hash = uri.indexOf(QLatin1Char('#'));
+
+        if(hash >= 0)
+        {
+            path = uri.left(hash);
+            fragment = uri.mid(hash + 1);
+        }
+
+        QUrl url = QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(QStringLiteral("html/") + path).toString());
+
+        if(!fragment.isEmpty())
+        {
+            url.setFragment(fragment);
+        }
+
+        openUrlOrWarn(url);
+        return true;
+    }
+
+    return false;
+}
+
 bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 {
     m_modules = QList<documentation_t>();
@@ -882,6 +1224,8 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
     m_argumentsByHierarchy = QMap<QStringList, QStringList>();
     m_returnTypesByHierarchy = QMap<QStringList, QString>();
     m_knownModules = QSet<QString>();
+
+    loadDocUrls();
 
     QStringList providerVariables;
     QStringList providerClasses;
@@ -1140,6 +1484,20 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
             if(textEditor && filePath.toString().endsWith(QStringLiteral(".py"), Qt::CaseInsensitive))
             {
                 textEditor->textDocument()->setCompletionAssistProvider(provider);
+
+                // F1 on an OpenMV symbol opens its docs page in the external
+                // browser (the in-IDE help viewer can't render the docs well,
+                // and the Help plugin is disabled so F1 is free). Falls through
+                // silently when the symbol is not a documented OpenMV API.
+                TextEditor::TextEditorWidget *editorWidget = textEditor->editorWidget();
+                QAction *helpAction = new QAction(editorWidget);
+                helpAction->setShortcut(QKeySequence(Qt::Key_F1));
+                helpAction->setShortcutContext(Qt::WidgetWithChildrenShortcut);
+                editorWidget->addAction(helpAction);
+                connect(helpAction, &QAction::triggered, this, [this, editorWidget] {
+                    openHelpForCursor(editorWidget);
+                });
+
                 connect(textEditor->editorWidget(), &TextEditor::TextEditorWidget::lateTooltipOverrideRequested, this,
                     [this] (TextEditor::TextEditorWidget *widget, const QPoint &globalPos, int position, bool *handled, const QString &originalToolTip) {
 
@@ -1227,84 +1585,26 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 
                             QTextCursor newCursor(cursor);
                             QString maybeModuleName;
-                            bool moduleFilter = false;
 
-                            // 1. Move the cursor to break selection, 2. Move the cursor to '.', 3. Move the cursor onto the word behind '.'.
+                            // Move back over "word ." to the qualifier before the '.'.
                             if(newCursor.movePosition(QTextCursor::PreviousWord, QTextCursor::MoveAnchor, 3))
                             {
                                 newCursor.select(QTextCursor::WordUnderCursor);
                                 maybeModuleName = newCursor.selectedText();
-
-                                if(!maybeModuleName.isEmpty())
-                                {
-                                    for(const documentation_t &d : m_modules)
-                                    {
-                                        if(d.name == maybeModuleName)
-                                        {
-                                            moduleFilter = true;
-                                            break;
-                                        }
-                                    }
-                                }
                             }
 
                             if(!text.isEmpty())
                             {
                                 QStringList list;
-                                bool moduleNameMatch = false;
-                                const QChar nextChar = widget->textDocument()->document()->characterAt(qMax(cursor.position(), cursor.anchor()));
+                                QTextDocument *doc = widget->textDocument()->document();
+                                const QChar nextChar = doc->characterAt(qMax(cursor.position(), cursor.anchor()));
+                                const int wStart = qMin(cursor.position(), cursor.anchor());
+                                const bool isAttr = (wStart > 0) && (doc->characterAt(wStart - 1) == QLatin1Char('.'));
 
-                                for(const documentation_t &d : m_modules)
+                                // Same matcher F1 uses; the hover shows every match.
+                                for(const documentation_t *d : resolveDocSymbol(text, maybeModuleName, nextChar, isAttr))
                                 {
-                                    if(d.name == text)
-                                    {
-                                        list.append(d.text);
-                                        moduleNameMatch = true;
-                                    }
-                                }
-
-                                // A known module name followed by '.' is that module being
-                                // dereferenced (e.g. time.clock()) - same-named data and
-                                // attribute entries from other modules do not apply.
-                                if(!(moduleNameMatch && (nextChar == QLatin1Char('.'))))
-                                {
-                                    for(const documentation_t &d : m_datas)
-                                    {
-                                        if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
-                                        {
-                                            list.append(d.text);
-                                        }
-                                    }
-                                }
-
-                                if(nextChar == QLatin1Char('('))
-                                {
-                                    for(const documentation_t &d : m_classes)
-                                    {
-                                        if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
-                                        {
-                                            list.append(d.text);
-                                        }
-                                    }
-
-                                    for(const documentation_t &d : m_functions)
-                                    {
-                                        if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
-                                        {
-                                            list.append(d.text);
-                                        }
-                                    }
-
-                                    if(qMin(cursor.position(), cursor.anchor()) && (widget->textDocument()->document()->characterAt(qMin(cursor.position(), cursor.anchor()) - 1) == QLatin1Char('.')))
-                                    {
-                                        for(const documentation_t &d : m_methods)
-                                        {
-                                            if((d.name == text) && ((!moduleFilter) || (d.moduleName == maybeModuleName)))
-                                            {
-                                                list.append(d.text);
-                                            }
-                                        }
-                                    }
+                                    list.append(d->text);
                                 }
 
                                 auto showOriginalToolTip = [globalPos, widget] (const QString &originalToolTip) {
