@@ -1121,72 +1121,86 @@ void OpenMVPlugin::extensionsInitialized()
     machineVisionToolsMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
     toolsMenu->addMenu(machineVisionToolsMenu);
 
-    QAction *openmvModelZooAction = new QAction(Tr::tr("Open Model Zoo"), this);
-    Core::Command *openmvModelZooCommand = Core::ActionManager::registerAction(openmvModelZooAction, Utils::Id("OpenMV.OpenModelZoo"));
-    machineVisionToolsMenu->addAction(openmvModelZooCommand);
-    connect(openmvModelZooAction, &QAction::triggered, this, [this] {
-        Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+    // Developer vision/ML tools (Model Zoo, NPU model conversion, Threshold and
+    // Keypoints editors) author vision apps -- not relevant to the viewer's
+    // trade-show/field audience -- so they're left out in viewer mode. The
+    // fiducial generators below (AprilTag/QR/DataMatrix/Barcode) are PC-side and
+    // harmless, so they stay.
+    if(!m_viewerMode)
+    {
+        QAction *openmvModelZooAction = new QAction(Tr::tr("Open Model Zoo"), this);
+        Core::Command *openmvModelZooCommand = Core::ActionManager::registerAction(openmvModelZooAction, Utils::Id("OpenMV.OpenModelZoo"));
+        machineVisionToolsMenu->addAction(openmvModelZooCommand);
+        connect(openmvModelZooAction, &QAction::triggered, this, [this] {
+            Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
 
-        QJsonObject boardSettings = getBoardSettings(Tr::tr("Model Zoo"), settings);
+            QJsonObject boardSettings = getBoardSettings(Tr::tr("Model Zoo"), settings);
 
-        if (boardSettings.isEmpty())
-        {
-            return;
-        }
-
-        if (boardSettings.contains(QStringLiteral("romfsConfig")))
-        {
-            QJsonObject romfsConfigSettings = getROMFSConfig(Tr::tr("Model Zoo"), boardSettings, settings);
-
-            if (romfsConfigSettings.isEmpty())
+            if (boardSettings.isEmpty())
             {
                 return;
             }
 
-            boardSettings[QStringLiteral("romfsConfig")] = romfsConfigSettings;
-        }
-
-        OpenMVModelZooBrowser *dialog = new OpenMVModelZooBrowser(boardSettings, settings, Core::ICore::dialogParent(), true);
-
-        if (dialog->exec() == QDialog::Accepted)
-        {
-            QString src = dialog->selectedModel();
-            QString convertedSrc = convertModel(boardSettings, src, settings);
-
-            if (convertedSrc.isEmpty())
+            if (boardSettings.contains(QStringLiteral("romfsConfig")))
             {
-                delete dialog;
-                return;
-            }
+                QJsonObject romfsConfigSettings = getROMFSConfig(Tr::tr("Model Zoo"), boardSettings, settings);
 
-            QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Model Zoo"),
-                m_portPath.isEmpty()
-                ? (settings->value(SETTINGS_GROUP "/" LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
-                : (settings->value(SETTINGS_GROUP "/" LAST_MODEL_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
-
-            if(!dst.isEmpty())
-            {
-                if((!QFile(dst).exists()) || QFile::remove(dst))
+                if (romfsConfigSettings.isEmpty())
                 {
-                    if(QFile::copy(convertedSrc, dst))
+                    return;
+                }
+
+                boardSettings[QStringLiteral("romfsConfig")] = romfsConfigSettings;
+            }
+
+            OpenMVModelZooBrowser *dialog = new OpenMVModelZooBrowser(boardSettings, settings, Core::ICore::dialogParent(), true);
+
+            if (dialog->exec() == QDialog::Accepted)
+            {
+                QString src = dialog->selectedModel();
+                QString convertedSrc = convertModel(boardSettings, src, settings);
+
+                if (convertedSrc.isEmpty())
+                {
+                    delete dialog;
+                    return;
+                }
+
+                QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Model Zoo"),
+                    m_portPath.isEmpty()
+                    ? (settings->value(SETTINGS_GROUP "/" LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
+                    : (settings->value(SETTINGS_GROUP "/" LAST_MODEL_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
+
+                if(!dst.isEmpty())
+                {
+                    if((!QFile(dst).exists()) || QFile::remove(dst))
                     {
-                        if (m_portPath.isEmpty())
-                            settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_NO_CAM_PATH, QFileInfo(dst).path());
-                        if (!m_portPath.isEmpty())
-                            settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_WITH_CAM_PATH, QFileInfo(dst).path());
-
-                        // Copy labels over too if they exist.
-                        QString labels = dialog->selectedModelLabels();
-
-                        if (!labels.isEmpty())
+                        if(QFile::copy(convertedSrc, dst))
                         {
-                            QFileInfo fileInfo(dst);
-                            QString path = fileInfo.absolutePath() + QDir::separator() + fileInfo.baseName() + ".txt";
+                            if (m_portPath.isEmpty())
+                                settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_NO_CAM_PATH, QFileInfo(dst).path());
+                            if (!m_portPath.isEmpty())
+                                settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_WITH_CAM_PATH, QFileInfo(dst).path());
 
-                            if ((!QFile(path).exists()) || QFile::remove(path))
+                            // Copy labels over too if they exist.
+                            QString labels = dialog->selectedModelLabels();
+
+                            if (!labels.isEmpty())
                             {
-                                QFile::copy(labels, path);
+                                QFileInfo fileInfo(dst);
+                                QString path = fileInfo.absolutePath() + QDir::separator() + fileInfo.baseName() + ".txt";
+
+                                if ((!QFile(path).exists()) || QFile::remove(path))
+                                {
+                                    QFile::copy(labels, path);
+                                }
                             }
+                        }
+                        else
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                Tr::tr("Model Zoo"),
+                                QObject::tr("Unable to overwrite output file!"));
                         }
                     }
                     else
@@ -1196,81 +1210,81 @@ void OpenMVPlugin::extensionsInitialized()
                             QObject::tr("Unable to overwrite output file!"));
                     }
                 }
-                else
+            }
+
+            delete dialog;
+        });
+
+        QAction *convertModelAction = new QAction(Tr::tr("Convert Model for NPU"), this);
+        Core::Command *convertModelCommand = Core::ActionManager::registerAction(convertModelAction, Utils::Id("OpenMV.ConvertModel"));
+        machineVisionToolsMenu->addAction(convertModelCommand);
+        connect(convertModelAction, &QAction::triggered, this, [this] {
+            Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+
+            QJsonObject boardSettings = getBoardSettings(Tr::tr("Convert Model"), settings);
+
+            if (boardSettings.isEmpty())
+            {
+                return;
+            }
+
+            if (boardSettings.contains(QStringLiteral("romfsConfig")))
+            {
+                QJsonObject romfsConfigSettings = getROMFSConfig(Tr::tr("Convert Model"), boardSettings, settings);
+
+                if (romfsConfigSettings.isEmpty())
                 {
-                    QMessageBox::critical(Core::ICore::dialogParent(),
-                        Tr::tr("Model Zoo"),
-                        QObject::tr("Unable to overwrite output file!"));
+                    return;
+                }
+
+                boardSettings[QStringLiteral("romfsConfig")] = romfsConfigSettings;
+
+                if (!romfsConfigSettings.contains(QStringLiteral("npuAcceleratorConfig")))
+                {
+                    QMessageBox::information(Core::ICore::dialogParent(),
+                        Tr::tr("Convert Model"),
+                        QObject::tr("Model conversion is unnecessary for this board, as it lacks an NPU accelerator."));
+
+                    return;
                 }
             }
-        }
 
-        delete dialog;
-    });
+            QString src = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Convert Model"),
+                                                       settings->value(SETTINGS_GROUP "/" LAST_MODEL_CONVERT_OPEN_PATH,
+                                                                      QDir::homePath()).toString());
 
-    QAction *convertModelAction = new QAction(Tr::tr("Convert Model for NPU"), this);
-    Core::Command *convertModelCommand = Core::ActionManager::registerAction(convertModelAction, Utils::Id("OpenMV.ConvertModel"));
-    machineVisionToolsMenu->addAction(convertModelCommand);
-    connect(convertModelAction, &QAction::triggered, this, [this] {
-        Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-
-        QJsonObject boardSettings = getBoardSettings(Tr::tr("Convert Model"), settings);
-
-        if (boardSettings.isEmpty())
-        {
-            return;
-        }
-
-        if (boardSettings.contains(QStringLiteral("romfsConfig")))
-        {
-            QJsonObject romfsConfigSettings = getROMFSConfig(Tr::tr("Convert Model"), boardSettings, settings);
-
-            if (romfsConfigSettings.isEmpty())
+            if (!src.isEmpty())
             {
-                return;
-            }
+                QString convertedSrc = convertModel(boardSettings, src, settings);
 
-            boardSettings[QStringLiteral("romfsConfig")] = romfsConfigSettings;
-
-            if (!romfsConfigSettings.contains(QStringLiteral("npuAcceleratorConfig")))
-            {
-                QMessageBox::information(Core::ICore::dialogParent(),
-                    Tr::tr("Convert Model"),
-                    QObject::tr("Model conversion is unnecessary for this board, as it lacks an NPU accelerator."));
-
-                return;
-            }
-        }
-
-        QString src = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Convert Model"),
-                                                   settings->value(SETTINGS_GROUP "/" LAST_MODEL_CONVERT_OPEN_PATH,
-                                                                  QDir::homePath()).toString());
-
-        if (!src.isEmpty())
-        {
-            QString convertedSrc = convertModel(boardSettings, src, settings);
-
-            if (convertedSrc.isEmpty())
-            {
-                return;
-            }
-
-            QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Convert Model"),
-                m_portPath.isEmpty()
-                ? (settings->value(SETTINGS_GROUP "/" LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
-                : (settings->value(SETTINGS_GROUP "/" LAST_MODEL_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
-
-            if(!dst.isEmpty())
-            {
-                if((!QFile(dst).exists()) || QFile::remove(dst))
+                if (convertedSrc.isEmpty())
                 {
-                    if(QFile::copy(convertedSrc, dst))
+                    return;
+                }
+
+                QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Convert Model"),
+                    m_portPath.isEmpty()
+                    ? (settings->value(SETTINGS_GROUP "/" LAST_MODEL_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
+                    : (settings->value(SETTINGS_GROUP "/" LAST_MODEL_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
+
+                if(!dst.isEmpty())
+                {
+                    if((!QFile(dst).exists()) || QFile::remove(dst))
                     {
-                        settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_CONVERT_OPEN_PATH, QFileInfo(src).path());
-                        if (m_portPath.isEmpty())
-                            settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_NO_CAM_PATH, QFileInfo(dst).path());
-                        if (!m_portPath.isEmpty())
-                            settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_WITH_CAM_PATH, QFileInfo(dst).path());
+                        if(QFile::copy(convertedSrc, dst))
+                        {
+                            settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_CONVERT_OPEN_PATH, QFileInfo(src).path());
+                            if (m_portPath.isEmpty())
+                                settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_NO_CAM_PATH, QFileInfo(dst).path());
+                            if (!m_portPath.isEmpty())
+                                settings->setValue(SETTINGS_GROUP "/" LAST_MODEL_WITH_CAM_PATH, QFileInfo(dst).path());
+                        }
+                        else
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                Tr::tr("Convert Model"),
+                                QObject::tr("Unable to overwrite output file!"));
+                        }
                     }
                     else
                     {
@@ -1279,30 +1293,25 @@ void OpenMVPlugin::extensionsInitialized()
                             QObject::tr("Unable to overwrite output file!"));
                     }
                 }
-                else
-                {
-                    QMessageBox::critical(Core::ICore::dialogParent(),
-                        Tr::tr("Convert Model"),
-                        QObject::tr("Unable to overwrite output file!"));
-                }
             }
-        }
 
-    });
+        });
 
-    machineVisionToolsMenu->addSeparator();
+        machineVisionToolsMenu->addSeparator();
 
-    QAction *thresholdEditorAction = new QAction(Tr::tr("Threshold Editor"), this);
-    Core::Command *thresholdEditorCommand = Core::ActionManager::registerAction(thresholdEditorAction, Utils::Id("OpenMV.ThresholdEditor"));
-    machineVisionToolsMenu->addAction(thresholdEditorCommand);
-    connect(thresholdEditorAction, &QAction::triggered, this, &OpenMVPlugin::openThresholdEditor);
+        QAction *thresholdEditorAction = new QAction(Tr::tr("Threshold Editor"), this);
+        Core::Command *thresholdEditorCommand = Core::ActionManager::registerAction(thresholdEditorAction, Utils::Id("OpenMV.ThresholdEditor"));
+        machineVisionToolsMenu->addAction(thresholdEditorCommand);
+        connect(thresholdEditorAction, &QAction::triggered, this, &OpenMVPlugin::openThresholdEditor);
 
-    QAction *keypointsEditorAction = new QAction(Tr::tr("Keypoints Editor"), this);
-    Core::Command *keypointsEditorCommand = Core::ActionManager::registerAction(keypointsEditorAction, Utils::Id("OpenMV.KeypointsEditor"));
-    machineVisionToolsMenu->addAction(keypointsEditorCommand);
-    connect(keypointsEditorAction, &QAction::triggered, this, &OpenMVPlugin::openKeypointsEditor);
+        QAction *keypointsEditorAction = new QAction(Tr::tr("Keypoints Editor"), this);
+        Core::Command *keypointsEditorCommand = Core::ActionManager::registerAction(keypointsEditorAction, Utils::Id("OpenMV.KeypointsEditor"));
+        machineVisionToolsMenu->addAction(keypointsEditorCommand);
+        connect(keypointsEditorAction, &QAction::triggered, this, &OpenMVPlugin::openKeypointsEditor);
 
-    machineVisionToolsMenu->addSeparator();
+        machineVisionToolsMenu->addSeparator();
+    }
+
     Core::ActionContainer *aprilTagGeneratorSubmenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.AprilTagGenerator"));
     aprilTagGeneratorSubmenu->menu()->setTitle(Tr::tr("AprilTag Generator"));
     machineVisionToolsMenu->addMenu(aprilTagGeneratorSubmenu);
