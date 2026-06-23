@@ -2206,7 +2206,9 @@ void ICorePrivate::registerDefaultActions()
         toggleMenubarAction.setText(Tr::tr("Show Menu Bar"));
         toggleMenubarAction.bindContextAction(&m_toggleMenubarAction);
         toggleMenubarAction.setCheckable(true);
-        toggleMenubarAction.setDefaultKeySequence(Tr::tr("Ctrl+Alt+M"));
+        // OPENMV-DIFF //
+        // toggleMenubarAction.setDefaultKeySequence(Tr::tr("Ctrl+Alt+M"));
+        // OPENMV-DIFF //
         toggleMenubarAction.addToContainer(Constants::M_VIEW, Constants::G_VIEW_VIEWS);
         toggleMenubarAction.addOnToggled(this, [](bool visible) {
             if (!visible) {
