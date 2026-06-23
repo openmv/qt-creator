@@ -45,6 +45,7 @@
 #define LAST_SAVE_IMAGE_PATH "LastSaveImagePath"
 #define HISTOGRAM_COLOR_SPACE_STATE "HistogramColorSpace"
 #define LAST_SAVE_LOG_PATH "LastSaveLogPath"
+#define LAST_RUN_SCRIPT_PATH "LastRunScriptPath"
 #define TEXT_WRAP_STATE "TextWrapState"
 
 namespace OpenMV {
@@ -561,16 +562,11 @@ void MyPlainTextEdit::save()
     }
 }
 
-void MyPlainTextEdit::execute(bool standAlone)
+void MyPlainTextEdit::execute()
 {
-    if(!standAlone)
-    {
-        emit execScript(QString::fromUtf8(Core::EditorManager::currentEditor()->document()->contents()).toUtf8());
-    }
-    else
-    {
-        emit execScript("execfile(\"/main.py\")\r\n");
-    }
+    // Runs the current editor script. Terminals without an editor (viewer mode /
+    // standalone) don't call this -- their run button opens a file from disk.
+    emit execScript(QString::fromUtf8(Core::EditorManager::currentEditor()->document()->contents()).toUtf8());
 }
 
 void MyPlainTextEdit::interrupt()
@@ -1048,11 +1044,22 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, Utils::QtcSettings *s
     m_wrapButton->setCheckable(true);
     styledBar2Layout->addWidget(m_wrapButton);
 
+    // Viewer mode and standalone terminals (launched via -open_*_terminal) both run
+    // without an editor window, so the run button opens a script file from disk and
+    // runs its contents on the cam instead of the current editor script. (To re-run
+    // the onboard main.py, use the soft-reset button -- a soft reset re-runs
+    // boot.py/main.py from whatever filesystem they live on; execfile("/main.py")
+    // would be wrong since main.py may be on flash or an SD card.)
+    const bool viewer_mode = QCoreApplication::arguments().contains(QLatin1String("-viewer_mode"));
+    const bool runFromDisk = viewer_mode || stand_alone;
+
     QToolButton *executeButton = new QToolButton;
     executeButton->setIcon(Utils::Icons::RUN_SMALL_TOOLBAR.icon());
-    executeButton->setToolTip(stand_alone ? Tr::tr("Run \"/main.py\"") : Tr::tr("Run current script in editor window"));
+    executeButton->setToolTip(runFromDisk
+        ? Tr::tr("Run a script file from disk")
+        : Tr::tr("Run current script in editor window"));
     styledBar2Layout->addWidget(executeButton);
-    if(!stand_alone) connect(Core::EditorManager::instance(), &Core::EditorManager::currentEditorChanged, executeButton, [executeButton] (Core::IEditor *editor) {
+    if(!runFromDisk) connect(Core::EditorManager::instance(), &Core::EditorManager::currentEditorChanged, executeButton, [executeButton] (Core::IEditor *editor) {
         executeButton->setEnabled(editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false);
     });
 
@@ -1081,7 +1088,35 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, Utils::QtcSettings *s
         m_edit->setWordWrapMode(checked ? QTextOption::WrapAtWordBoundaryOrAnywhere : QTextOption::NoWrap);
     });
     m_wrapButton->setChecked(m_settings->value(TEXT_WRAP_STATE).toBool());
-    connect(executeButton, &QToolButton::clicked, this, [this, stand_alone] { m_edit->execute(stand_alone); });
+    connect(executeButton, &QToolButton::clicked, this, [this, runFromDisk] {
+        if(runFromDisk)
+        {
+            QString path = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Run Script"),
+                m_settings->value(LAST_RUN_SCRIPT_PATH, QDir::homePath()).toString(),
+                Tr::tr("Python Files (*.py);;Text Files (*.txt);;All Files (*)"));
+
+            if(!path.isEmpty())
+            {
+                QFile file(path);
+
+                if(file.open(QIODevice::ReadOnly))
+                {
+                    emit execScript(file.readAll());
+                    file.close();
+                    m_settings->setValue(LAST_RUN_SCRIPT_PATH, path);
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(), Tr::tr("Run Script"),
+                        Tr::tr("Error: Cannot open \"%L1\"!").arg(path));
+                }
+            }
+        }
+        else
+        {
+            m_edit->execute();
+        }
+    });
     connect(interruptButton, &QToolButton::clicked, m_edit, &MyPlainTextEdit::interrupt);
     connect(reloadButton, &QToolButton::clicked, m_edit, &MyPlainTextEdit::reload);
 
