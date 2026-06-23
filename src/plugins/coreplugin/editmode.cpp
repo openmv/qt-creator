@@ -15,6 +15,9 @@
 #include "outputpane.h"
 #include "rightpane.h"
 
+// OPENMV-DIFF //
+#include <QCoreApplication>
+// OPENMV-DIFF //
 #include <QVBoxLayout>
 #include <QWidget>
 #include <QIcon>
@@ -53,6 +56,15 @@ EditMode::EditMode() :
     auto splitter = new MiniSplitter;
     splitter->setOrientation(Qt::Vertical);
     splitter->insertWidget(0, rightPaneSplitter);
+    // OPENMV-DIFF //
+    // In viewer mode the user can't edit the on-board script, so hide the
+    // whole editor area at creation, leaving just the output pane / serial
+    // terminal below it. Done here (not from the OpenMV plugin) because the
+    // edit mode is built by Core before the plugin's extensionsInitialized
+    // runs, so a later findChild() would be too early to catch it.
+    if (QCoreApplication::arguments().contains(QLatin1String("-viewer_mode")))
+        rightPaneSplitter->hide();
+    // OPENMV-DIFF //
     QWidget *outputPane = new OutputPanePlaceHolder(Constants::MODE_EDIT, splitter);
     outputPane->setObjectName(QLatin1String("EditModeOutputPanePlaceHolder"));
     splitter->insertWidget(1, outputPane);

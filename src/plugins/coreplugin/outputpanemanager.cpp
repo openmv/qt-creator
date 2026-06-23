@@ -61,6 +61,15 @@ public:
 static QVector<OutputPaneData> g_outputPanes;
 static bool g_managerConstructed = false; // For debugging reasons.
 
+// OPENMV-DIFF //
+// True when launched as the read-only telemetry viewer (-viewer_mode). Only
+// read at startup (manager construction / settings load), so not cached.
+static bool isViewerMode()
+{
+    return QCoreApplication::arguments().contains(QLatin1String("-viewer_mode"));
+}
+// OPENMV-DIFF //
+
 } // Internal
 
 // OutputPane
@@ -502,6 +511,18 @@ OutputPaneManager::OutputPaneManager(QWidget *parent) :
     minMaxButton->setDefaultAction(cmd->action());
 
     mpanes->addSeparator("Coreplugin.OutputPane.ActionsGroup");
+
+    // OPENMV-DIFF //
+    // In viewer mode (read-only telemetry viewer) there's nothing to maximize
+    // or close in the output pane, so hide the maximize and close buttons. Both
+    // are local QToolButtons that nothing re-shows, so hiding the widgets is
+    // durable (a standalone QToolButton tracks its action's enabled state but
+    // not its visibility, so hiding via the action wouldn't hide the button).
+    if (isViewerMode()) {
+        minMaxButton->hide();
+        closeButton->hide();
+    }
+    // OPENMV-DIFF //
 }
 
 void OutputPaneManager::initialize()
@@ -584,7 +605,16 @@ void OutputPaneManager::initialize()
             m_instance->buttonTriggered(i);
         });
 
-        const bool visible = outPane->priorityInStatusBar() >= 0;
+        // OPENMV-DIFF //
+        // const bool visible = outPane->priorityInStatusBar() >= 0;
+        // OPENMV-DIFF //
+        bool visible = outPane->priorityInStatusBar() >= 0;
+        // In viewer mode (read-only telemetry viewer) the output pane area only
+        // ever shows the Serial Terminal, which is forced visible on startup, so
+        // hide all of the status-bar pane toggle buttons.
+        if (isViewerMode())
+            visible = false;
+        // OPENMV-DIFF //
         data.button->setVisible(visible);
 
         connect(data.action, &QAction::triggered, m_instance, [i] {
@@ -686,7 +716,15 @@ void OutputPaneManager::readSettings()
         const int idx = Utils::indexOf(g_outputPanes, Utils::equal(&OutputPaneData::id, id));
         if (idx < 0) // happens for e.g. disabled plugins (with outputpanes) that were loaded before
             continue;
-        const bool visible = settings->value(outputPaneVisibleKeyC).toBool();
+        // OPENMV-DIFF //
+        // const bool visible = settings->value(outputPaneVisibleKeyC).toBool();
+        // OPENMV-DIFF //
+        bool visible = settings->value(outputPaneVisibleKeyC).toBool();
+        // Keep all status-bar pane toggle buttons hidden in viewer mode even if a
+        // prior session persisted them as visible.
+        if (isViewerMode())
+            visible = false;
+        // OPENMV-DIFF //
         g_outputPanes[idx].button->setVisible(visible);
     }
     settings->endArray();
@@ -702,8 +740,21 @@ void OutputPaneManager::readSettings()
     m_outputPaneVisibleOnStartup
         = settings->value("OutputPanePlaceHolder/Visible", true).toBool();
     // OPENMV-DIFF //
-    if (QTC_GUARD(currentIdx >= 0 && currentIdx < g_outputPanes.size()))
-        setCurrentIndex(currentIdx);
+    // if (QTC_GUARD(currentIdx >= 0 && currentIdx < g_outputPanes.size()))
+    //     setCurrentIndex(currentIdx);
+    // OPENMV-DIFF //    
+    int startupIdx = currentIdx;
+    // In viewer mode the pane toggle buttons are hidden, so always open on the
+    // Serial Terminal (GeneralMessages) and force the output pane visible.
+    if (isViewerMode()) {
+        const int gmIdx = Utils::indexOf(g_outputPanes,
+            [](const OutputPaneData &d) { return d.pane->id() == Id("GeneralMessages"); });
+        if (gmIdx >= 0)
+            startupIdx = gmIdx;
+        m_outputPaneVisibleOnStartup = true;
+    }
+    if (QTC_GUARD(startupIdx >= 0 && startupIdx < g_outputPanes.size()))
+        setCurrentIndex(startupIdx);
 }
 
 void OutputPaneManager::updateActions(IOutputPane *pane)
@@ -837,7 +888,14 @@ void OutputPaneManager::setCurrentIndex(int idx)
 
         OutputPaneData &data = g_outputPanes[idx];
         IOutputPane *pane = data.pane;
-        data.button->show();
+        // OPENMV-DIFF //
+        // data.button->show();
+        // OPENMV-DIFF //
+        // In viewer mode the status-bar pane toggle buttons stay hidden, so
+        // don't re-show the current pane's button when it becomes active.
+        if (!isViewerMode())
+            data.button->show();
+        // OPENMV-DIFF //
         if (OutputPanePlaceHolder::isCurrentVisible())
             pane->visibilityChanged(true);
 

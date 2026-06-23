@@ -51,6 +51,7 @@
 #include <coreplugin/fancytabwidget.h>
 #include <coreplugin/icore.h>
 #include <coreplugin/messagemanager.h>
+#include <coreplugin/statusbarmanager.h>
 #include <coreplugin/openmvpluginescapecodeparser.h>
 #include <coreplugin/outputwindow.h>
 #include <syntax-highlighting/src/lib/definition_p.h>

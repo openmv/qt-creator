@@ -2744,6 +2744,60 @@ void OpenMVPlugin::extensionsInitialized()
         // Hide TabbedEditor
         QMainWindow *mainWindow = qobject_cast<QMainWindow *>(Core::ICore::mainWindow());
         mainWindow->centralWidget()->layout()->itemAt(0)->widget()->setVisible(false);
+
+        // Hide the whole left sidebar (the corner-widget action bars) and put
+        // Connect/Disconnect in the bottom-left of the status bar instead, so
+        // the lone Connect button isn't orphaned on an otherwise empty strip.
+        // Deferred: Core's ModeManager re-shows the mode-selection strip from
+        // settings in its extensionsInitialized(), which runs AFTER this plugin's
+        // (extensionsInitialized is invoked in reverse dependency order), so a
+        // direct call here gets clobbered. A queued call lands after it.
+        QTimer::singleShot(0, this, [widget] { widget->setSelectionWidgetVisible(false); });
+
+        // Text-only (no icon): the connect/disconnect icons scale poorly at the
+        // small status-bar button size, so show the action's text label instead.
+        // The label still reflects state — Connect/Disconnect swap visibility
+        // below, and enabled/tooltip track the action via setDefaultAction.
+        QToolButton *connectButton = new QToolButton;
+        connectButton->setAutoRaise(true);
+        connectButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+        connectButton->setDefaultAction(m_connectCommand->action());
+        QToolButton *disconnectButton = new QToolButton;
+        disconnectButton->setAutoRaise(true);
+        disconnectButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+        disconnectButton->setDefaultAction(m_disconnectCommand->action());
+
+        // A standalone QToolButton tracks its action's enabled state but not its
+        // visibility, so sync the Connect/Disconnect show/hide manually (they swap).
+        auto syncConnect = [this, connectButton] { connectButton->setVisible(m_connectCommand->action()->isVisible()); };
+        auto syncDisconnect = [this, disconnectButton] { disconnectButton->setVisible(m_disconnectCommand->action()->isVisible()); };
+        connect(m_connectCommand->action(), &QAction::changed, connectButton, syncConnect);
+        connect(m_disconnectCommand->action(), &QAction::changed, disconnectButton, syncDisconnect);
+        syncConnect();
+        syncDisconnect();
+
+        // The Connect action's icon reflects the available transport (USB /
+        // network / both; the "wifi" ports are really any IP connection). Since we
+        // show text instead of the icon, mirror that in the label. The device poll
+        // updates m_boardPresent/m_availableWifiPorts then calls setIcon(), which
+        // emits the action's changed() signal, so we recompute the label off that
+        // same signal (connected after setDefaultAction's own sync, so our text wins).
+        auto syncConnectLabel = [this, connectButton] {
+            QString label;
+            if(!m_boardPresent)
+                label = m_availableWifiPorts.isEmpty() ? Tr::tr("Connect") : Tr::tr("Connect (Network available)");
+            else
+                label = m_availableWifiPorts.isEmpty() ? Tr::tr("Connect (USB available)") : Tr::tr("Connect (USB & Network available)");
+            connectButton->setText(label);
+        };
+        connect(m_connectCommand->action(), &QAction::changed, connectButton, syncConnectLabel);
+        syncConnectLabel();
+
+        // Use Second (not First): OpenMV hides the First/Third/RightCorner status
+        // bar containers; Second is the visible bottom-left area (where the now-
+        // hidden output-pane buttons lived).
+        Core::StatusBarManager::addStatusBarWidget(connectButton, Core::StatusBarManager::Second);
+        Core::StatusBarManager::addStatusBarWidget(disconnectButton, Core::StatusBarManager::Second);
     }
 }
 
