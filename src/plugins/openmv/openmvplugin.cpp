@@ -2811,6 +2811,14 @@ void OpenMVPlugin::extensionsInitialized()
         disconnectButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
         disconnectButton->setDefaultAction(m_disconnectCommand->action());
 
+        // Add to the status bar (which reparents) BEFORE any setVisible() below --
+        // otherwise the still-parentless buttons briefly show as transient top-level
+        // windows (a flash on startup). Use Second (not First): OpenMV hides the
+        // First/Third/RightCorner status bar containers; Second is the visible
+        // bottom-left area (where the now-hidden output-pane buttons lived).
+        Core::StatusBarManager::addStatusBarWidget(connectButton, Core::StatusBarManager::Second);
+        Core::StatusBarManager::addStatusBarWidget(disconnectButton, Core::StatusBarManager::Second);
+
         // A standalone QToolButton tracks its action's enabled state but not its
         // visibility, so sync the Connect/Disconnect show/hide manually (they swap).
         auto syncConnect = [this, connectButton] { connectButton->setVisible(m_connectCommand->action()->isVisible()); };
@@ -2837,12 +2845,6 @@ void OpenMVPlugin::extensionsInitialized()
         connect(m_connectCommand->action(), &QAction::changed, connectButton, syncConnectLabel);
         syncConnectLabel();
 
-        // Use Second (not First): OpenMV hides the First/Third/RightCorner status
-        // bar containers; Second is the visible bottom-left area (where the now-
-        // hidden output-pane buttons lived).
-        Core::StatusBarManager::addStatusBarWidget(connectButton, Core::StatusBarManager::Second);
-        Core::StatusBarManager::addStatusBarWidget(disconnectButton, Core::StatusBarManager::Second);
-
         // Same treatment for Run/Stop: surface those actions in the status bar to
         // the right of Connect/Disconnect (the sidebar that held them is hidden).
         // They swap visibility and are disabled when not connected, exactly as the
@@ -2857,15 +2859,16 @@ void OpenMVPlugin::extensionsInitialized()
         stopButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
         stopButton->setDefaultAction(m_stopCommand->action());
 
+        // Reparent before setVisible() (see Connect/Disconnect above).
+        Core::StatusBarManager::addStatusBarWidget(startButton, Core::StatusBarManager::Second);
+        Core::StatusBarManager::addStatusBarWidget(stopButton, Core::StatusBarManager::Second);
+
         auto syncStart = [this, startButton] { startButton->setVisible(m_startCommand->action()->isVisible()); };
         auto syncStop = [this, stopButton] { stopButton->setVisible(m_stopCommand->action()->isVisible()); };
         connect(m_startCommand->action(), &QAction::changed, startButton, syncStart);
         connect(m_stopCommand->action(), &QAction::changed, stopButton, syncStop);
         syncStart();
         syncStop();
-
-        Core::StatusBarManager::addStatusBarWidget(startButton, Core::StatusBarManager::Second);
-        Core::StatusBarManager::addStatusBarWidget(stopButton, Core::StatusBarManager::Second);
     }
 }
 
