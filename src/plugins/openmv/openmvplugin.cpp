@@ -962,8 +962,10 @@ void OpenMVPlugin::extensionsInitialized()
     Core::Command *stopOnConnectDiconnectionCommand = Core::ActionManager::registerAction(m_stopOnConnectDiconnectionAction, Utils::Id("OpenMV.StopOnConnectDisconnect"));
     toolsMenu->addAction(stopOnConnectDiconnectionCommand);
     m_stopOnConnectDiconnectionAction->setCheckable(true);
-    m_stopOnConnectDiconnectionAction->setChecked((!m_viewerMode) && (!m_disableStop));
-    m_stopOnConnectDiconnectionAction->setDisabled(m_viewerMode || m_disableStop);
+    // Default off in viewer mode (connecting to watch shouldn't kill the running
+    // app); still user-toggleable and persisted. m_disableStop forces it off.
+    m_stopOnConnectDiconnectionAction->setChecked((!m_disableStop) && (!m_viewerMode));
+    m_stopOnConnectDiconnectionAction->setDisabled(m_disableStop);
 
     m_enableSyncingImportsAction = new QAction(Tr::tr("Sync Imports between OpenMV Cam and Documents Folder"), this);
     m_enableSyncingImportsAction->setToolTip(Tr::tr("Syncs libraries between your OpenMV Cam and Documents Folder automatically."));
@@ -1877,8 +1879,8 @@ void OpenMVPlugin::extensionsInitialized()
         Core::ActionManager::registerAction(m_startAction = new QAction(QIcon(QStringLiteral(START_PATH)),
         Tr::tr("Start (run script)"), this), Utils::Id("OpenMV.Start"));
     m_startCommand->setDefaultKeySequence(QStringLiteral("Ctrl+R"));
-    m_startAction->setEnabled((!m_viewerMode) && false);
-    m_startAction->setVisible((!m_viewerMode) && true);
+    m_startAction->setEnabled(false);
+    m_startAction->setVisible(true);
     connect(m_startAction, &QAction::triggered, this, &OpenMVPlugin::startClicked);
     connect(Core::EditorManager::instance(), &Core::EditorManager::currentEditorChanged, [this] (Core::IEditor *editor) {
 
@@ -1887,10 +1889,10 @@ void OpenMVPlugin::extensionsInitialized()
             m_openDriveFolderAction->setEnabled(!m_portPath.isEmpty());
             m_configureSettingsAction->setEnabled(!m_portPath.isEmpty());
             m_saveAction->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
-            m_startAction->setEnabled((!m_viewerMode) && (!m_running) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
-            m_startAction->setVisible((!m_viewerMode) && (!m_running));
-            m_stopAction->setEnabled((!m_viewerMode) && m_running);
-            m_stopAction->setVisible((!m_viewerMode) && m_running);
+            m_startAction->setEnabled((!m_running) && (m_viewerMode || (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false)));
+            m_startAction->setVisible(!m_running);
+            m_stopAction->setEnabled(m_running);
+            m_stopAction->setVisible(m_running);
         }
     });
 
@@ -1898,8 +1900,8 @@ void OpenMVPlugin::extensionsInitialized()
         Core::ActionManager::registerAction(m_stopAction = new QAction(QIcon(QStringLiteral(STOP_PATH)),
         Tr::tr("Stop (halt script)"), this), Utils::Id("OpenMV.Stop"));
     m_stopCommand->setDefaultKeySequence(QStringLiteral("Ctrl+R"));
-    m_stopAction->setEnabled((!m_viewerMode) && false);
-    m_stopAction->setVisible((!m_viewerMode) && false);
+    m_stopAction->setEnabled(false);
+    m_stopAction->setVisible(false);
     connect(m_stopAction, &QAction::triggered, this, &OpenMVPlugin::stopClicked);
     connect(m_iodevice, &OpenMVPluginIO::scriptRunning, this, [this] (bool running) {
 
@@ -1909,10 +1911,10 @@ void OpenMVPlugin::extensionsInitialized()
             m_openDriveFolderAction->setEnabled(!m_portPath.isEmpty());
             m_configureSettingsAction->setEnabled(!m_portPath.isEmpty());
             m_saveAction->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
-            m_startAction->setEnabled((!m_viewerMode) && (!running) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
-            m_startAction->setVisible((!m_viewerMode) && (!running));
-            m_stopAction->setEnabled((!m_viewerMode) && running);
-            m_stopAction->setVisible((!m_viewerMode) && running);
+            m_startAction->setEnabled((!running) && (m_viewerMode || (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false)));
+            m_startAction->setVisible(!running);
+            m_stopAction->setEnabled(running);
+            m_stopAction->setVisible(running);
             m_running = running;
         }
     });
@@ -2414,8 +2416,13 @@ void OpenMVPlugin::extensionsInitialized()
         settings->value(SETTINGS_GROUP "/" EDITOR_MANAGER_STATE).toByteArray());
     m_autoReconnectAction->setChecked(
         m_autoConnect || settings->value(SETTINGS_GROUP "/" AUTO_RECONNECT_STATE, m_autoReconnectAction->isChecked()).toBool());
+    // Viewer mode persists this independently (its own key) so its default-off
+    // state isn't inherited from / leaked to the normal IDE.
     m_stopOnConnectDiconnectionAction->setChecked(
-        (!m_viewerMode) && (!m_disableStop) && settings->value(SETTINGS_GROUP "/" STOP_SCRIPT_CONNECT_DISCONNECT_STATE, m_stopOnConnectDiconnectionAction->isChecked()).toBool());
+        (!m_disableStop) && settings->value(QByteArray(m_viewerMode
+            ? (SETTINGS_GROUP "/" VIEWER_STOP_SCRIPT_CONNECT_DISCONNECT_STATE)
+            : (SETTINGS_GROUP "/" STOP_SCRIPT_CONNECT_DISCONNECT_STATE)),
+            m_stopOnConnectDiconnectionAction->isChecked()).toBool());
     m_enableSyncingImportsAction->setChecked(
         settings->value(SETTINGS_GROUP "/" ENABLE_SYNCING_IMPORTS_STATE,
                        m_enableSyncingImportsAction->isChecked()).toBool());
@@ -2546,7 +2553,9 @@ void OpenMVPlugin::extensionsInitialized()
             vsplitter->saveState());
         if(!m_autoConnect) settings->setValue(SETTINGS_GROUP "/" AUTO_RECONNECT_STATE,
             m_autoReconnectAction->isChecked());
-        if((!m_viewerMode) && (!m_disableStop)) settings->setValue(SETTINGS_GROUP "/" STOP_SCRIPT_CONNECT_DISCONNECT_STATE,
+        if(!m_disableStop) settings->setValue(QByteArray(m_viewerMode
+            ? (SETTINGS_GROUP "/" VIEWER_STOP_SCRIPT_CONNECT_DISCONNECT_STATE)
+            : (SETTINGS_GROUP "/" STOP_SCRIPT_CONNECT_DISCONNECT_STATE)),
             m_stopOnConnectDiconnectionAction->isChecked());
         settings->setValue(SETTINGS_GROUP "/" ENABLE_SYNCING_IMPORTS_STATE,
             m_enableSyncingImportsAction->isChecked());
@@ -2763,7 +2772,6 @@ void OpenMVPlugin::extensionsInitialized()
 
     if(m_viewerMode)
     {
-        m_stopOnConnectDiconnectionAction->setVisible(false);
         m_enableSyncingImportsAction->setVisible(false);
         m_enableFilteringExamplesAction->setVisible(false);
         m_saveAction->setVisible(false);
@@ -2834,6 +2842,30 @@ void OpenMVPlugin::extensionsInitialized()
         // hidden output-pane buttons lived).
         Core::StatusBarManager::addStatusBarWidget(connectButton, Core::StatusBarManager::Second);
         Core::StatusBarManager::addStatusBarWidget(disconnectButton, Core::StatusBarManager::Second);
+
+        // Same treatment for Run/Stop: surface those actions in the status bar to
+        // the right of Connect/Disconnect (the sidebar that held them is hidden).
+        // They swap visibility and are disabled when not connected, exactly as the
+        // sidebar buttons did. In viewer mode the Run action runs a script from disk
+        // (handled in startClicked), so nothing extra is needed here.
+        QToolButton *startButton = new QToolButton;
+        startButton->setAutoRaise(true);
+        startButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+        startButton->setDefaultAction(m_startCommand->action());
+        QToolButton *stopButton = new QToolButton;
+        stopButton->setAutoRaise(true);
+        stopButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+        stopButton->setDefaultAction(m_stopCommand->action());
+
+        auto syncStart = [this, startButton] { startButton->setVisible(m_startCommand->action()->isVisible()); };
+        auto syncStop = [this, stopButton] { stopButton->setVisible(m_stopCommand->action()->isVisible()); };
+        connect(m_startCommand->action(), &QAction::changed, startButton, syncStart);
+        connect(m_stopCommand->action(), &QAction::changed, stopButton, syncStop);
+        syncStart();
+        syncStop();
+
+        Core::StatusBarManager::addStatusBarWidget(startButton, Core::StatusBarManager::Second);
+        Core::StatusBarManager::addStatusBarWidget(stopButton, Core::StatusBarManager::Second);
     }
 }
 

@@ -3192,10 +3192,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         if(!m_autoReconnectAction->isChecked()) m_disconnectAction->setEnabled(true);
         m_disconnectAction->setVisible(true);
         Core::IEditor *editor = Core::EditorManager::currentEditor();
-        m_startAction->setEnabled((!m_viewerMode) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
-        m_startAction->setVisible((!m_viewerMode) && true);
-        m_stopAction->setEnabled((!m_viewerMode) && false);
-        m_stopAction->setVisible((!m_viewerMode) && false);
+        m_startAction->setEnabled(m_viewerMode || (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
+        m_startAction->setVisible(true);
+        m_stopAction->setEnabled(false);
+        m_stopAction->setVisible(false);
 
         m_boardLabel->setEnabled(true);
         m_boardLabel->setText(Tr::tr("Board: %L1").arg(boardTypeLabel));
@@ -3515,10 +3515,10 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             if(!m_autoReconnectAction->isChecked()) m_connectAction->setEnabled(true);
             m_disconnectAction->setVisible(false);
             if(!m_autoReconnectAction->isChecked()) m_disconnectAction->setEnabled(false);
-            m_startAction->setEnabled((!m_viewerMode) && false);
-            m_startAction->setVisible((!m_viewerMode) && true);
-            m_stopAction->setEnabled((!m_viewerMode) && false);
-            m_stopAction->setVisible((!m_viewerMode) && false);
+            m_startAction->setEnabled(false);
+            m_startAction->setVisible(true);
+            m_stopAction->setEnabled(false);
+            m_stopAction->setVisible(false);
 
             m_registerButton->setText(QString());
             m_registerButton->setVisible(false);
@@ -3700,7 +3700,39 @@ void OpenMVPlugin::startClicked()
 
         ///////////////////////////////////////////////////////////////////////
 
-        QByteArray contents = Core::EditorManager::currentEditor() ? Core::EditorManager::currentEditor()->document() ? Core::EditorManager::currentEditor()->document()->contents() : QByteArray() : QByteArray();
+        QByteArray contents;
+
+        if(m_viewerMode)
+        {
+            // No editor in viewer mode: run a script chosen from disk instead.
+            Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+            QString path = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Run Script"),
+                settings->value(SETTINGS_GROUP "/" LAST_VIEWER_RUN_SCRIPT_PATH, m_portPath.isEmpty() ? QDir::homePath() : m_portPath).toString(),
+                Tr::tr("Python Files (*.py);;Text Files (*.txt);;All Files (*)"));
+
+            QFile file(path);
+
+            if(path.isEmpty() || (!file.open(QIODevice::ReadOnly)))
+            {
+                if(!path.isEmpty())
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(), Tr::tr("Run Script"),
+                        Tr::tr("Error: Cannot open \"%L1\"!").arg(path));
+                }
+
+                m_working = false;
+                QTimer::singleShot(0, this, &OpenMVPlugin::workingDone);
+                return;
+            }
+
+            contents = file.readAll();
+            file.close();
+            settings->setValue(SETTINGS_GROUP "/" LAST_VIEWER_RUN_SCRIPT_PATH, path);
+        }
+        else
+        {
+            contents = Core::EditorManager::currentEditor() ? Core::EditorManager::currentEditor()->document() ? Core::EditorManager::currentEditor()->document()->contents() : QByteArray() : QByteArray();
+        }
 
         if(importHelper(contents))
         {
