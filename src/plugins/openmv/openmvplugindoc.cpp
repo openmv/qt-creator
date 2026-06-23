@@ -1718,7 +1718,10 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                     Utils::ToolTip::hide();
                 });
 
-                connect(textEditor->editorWidget(), &TextEditor::TextEditorWidget::contextMenuEventCB, this, [this, textEditor] (QMenu *menu, QString text) {
+                // The threshold context-menu actions edit the script in place, so
+                // they're authoring -- skip them in viewer mode (defensive; the
+                // editor is hidden there anyway).
+                if(!m_viewerMode) connect(textEditor->editorWidget(), &TextEditor::TextEditorWidget::contextMenuEventCB, this, [this, textEditor] (QMenu *menu, QString text) {
 
                     QRegularExpressionMatch grayscaleMatch = QRegularExpression(QStringLiteral("^\\s*\\(\\s*([+-]?\\d+)\\s*,\\s*([+-]?\\d+)\\s*\\)\\s*$")).match(text);
 

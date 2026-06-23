@@ -473,7 +473,9 @@ void EditorManagerPrivate::init()
     closeAll.setContext(editManagerContext);
     closeAll.setScriptable(true);
     closeAll.bindContextAction(&m_closeAllEditorsAction);
-    closeAll.setDefaultKeySequence(::Core::Tr::tr("Ctrl+Shift+W"));
+    // OPENMV-DIFF //
+    // closeAll.setDefaultKeySequence(::Core::Tr::tr("Ctrl+Shift+W"));
+    // OPENMV-DIFF //
     // OPENMV-DIFF //
     // closeAll.addToContainer(Constants::M_FILE, Constants::G_FILE_CLOSE);
     // OPENMV-DIFF //

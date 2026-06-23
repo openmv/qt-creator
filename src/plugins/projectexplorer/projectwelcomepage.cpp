@@ -200,16 +200,24 @@ void ProjectWelcomePage::createActions()
 
     for (int i = 1; i <= actionsCount; ++i) {
         auto act = new QAction(Tr::tr("Open Session #%1").arg(i), this);
-        Command *cmd = ActionManager::registerAction(act, sessionBase.withSuffix(i), welcomeContext);
-        cmd->setDefaultKeySequence(QKeySequence((useMacShortcuts ? Tr::tr("Ctrl+Meta+%1") : Tr::tr("Ctrl+Alt+%1")).arg(i)));
+        // OPENMV-DIFF //
+        // Command *cmd = ActionManager::registerAction(act, sessionBase.withSuffix(i), welcomeContext);
+        // cmd->setDefaultKeySequence(QKeySequence((useMacShortcuts ? Tr::tr("Ctrl+Meta+%1") : Tr::tr("Ctrl+Alt+%1")).arg(i)));
+        // OPENMV-DIFF //
+        ActionManager::registerAction(act, sessionBase.withSuffix(i), welcomeContext);
+        // OPENMV-DIFF //
         connect(act, &QAction::triggered, this, [this, i] {
             if (i <= m_sessionModel->rowCount())
                 openSessionAt(i - 1);
         });
 
         act = new QAction(Tr::tr("Open Recent Project #%1").arg(i), this);
-        cmd = ActionManager::registerAction(act, projectBase.withSuffix(i), welcomeContext);
-        cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+%1").arg(i)));
+        // OPENMV-DIFF //
+        // cmd = ActionManager::registerAction(act, projectBase.withSuffix(i), welcomeContext);
+        // cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+%1").arg(i)));
+        // OPENMV-DIFF //
+        ActionManager::registerAction(act, projectBase.withSuffix(i), welcomeContext);
+        // OPENMV-DIFF //
         connect(act, &QAction::triggered, this, [this, i] {
             if (i <= m_projectModel->rowCount(QModelIndex()))
                 openProjectAt(i - 1);

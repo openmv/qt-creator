@@ -889,6 +889,24 @@ void OpenMVPlugin::extensionsInitialized()
             const QList<QAction *> actions = editMenu->actions();
             for(QAction *action : actions) action->setVisible(action == optionsAction);
         });
+
+        // Filtering the menus doesn't disable the commands' keyboard shortcuts, so
+        // clear the authoring shortcuts too (Ctrl+N would open a file into the hidden
+        // editor, Ctrl+S save it, Ctrl+Z/X/V edit it, etc.). Copy/Select All/Find are
+        // left bound -- they're read-only and useful on the serial terminal.
+        const Utils::Id editingCommands[] = {
+            Core::Constants::NEW_FILE, Core::Constants::OPEN, Core::Constants::SAVE,
+            Core::Constants::SAVEAS, Core::Constants::PRINT, Core::Constants::CLOSE,
+            Core::Constants::CLOSEALL, Core::Constants::UNDO, Core::Constants::REDO,
+            Core::Constants::CUT, Core::Constants::PASTE, Core::Constants::GOTO,
+        };
+        for(const Utils::Id &id : editingCommands)
+        {
+            if(Core::Command *cmd = Core::ActionManager::command(id))
+            {
+                cmd->setKeySequences({});
+            }
+        }
     }
 
     Core::ActionContainer *toolsMenu = Core::ActionManager::actionContainer(Core::Constants::M_TOOLS);
