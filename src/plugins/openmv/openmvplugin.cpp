@@ -919,10 +919,16 @@ void OpenMVPlugin::extensionsInitialized()
     romFsSubmenu->menu()->setTitle(Tr::tr("ROM File System"));
     toolsMenu->addMenu(romFsSubmenu);
 
-    QAction *newRomfsAction = new QAction(Tr::tr("New ROMFS File"), this);
-    Core::Command *newRomfsCommand = Core::ActionManager::registerAction(newRomfsAction, Utils::Id("OpenMV.NewROMFS"));
-    romFsSubmenu->addAction(newRomfsCommand);
-    connect(newRomfsAction, &QAction::triggered, this,  [this] { OpenMVPlugin::editRomfsClicked(false, true); });
+    // New ROMFS authors a blank image from scratch -- not a recovery/provisioning
+    // step, so it's left out of the viewer. Open/Edit/Reset stay: each can still
+    // commit a provided or repaired image to the cam.
+    if(!m_viewerMode)
+    {
+        QAction *newRomfsAction = new QAction(Tr::tr("New ROMFS File"), this);
+        Core::Command *newRomfsCommand = Core::ActionManager::registerAction(newRomfsAction, Utils::Id("OpenMV.NewROMFS"));
+        romFsSubmenu->addAction(newRomfsCommand);
+        connect(newRomfsAction, &QAction::triggered, this,  [this] { OpenMVPlugin::editRomfsClicked(false, true); });
+    }
 
     QAction *openRomfsAction = new QAction(Tr::tr("Open ROMFS File"), this);
     Core::Command *openRomfsCommand = Core::ActionManager::registerAction(openRomfsAction, Utils::Id("OpenMV.OpenROMFS"));
@@ -1031,54 +1037,65 @@ void OpenMVPlugin::extensionsInitialized()
     toolsMenu->addAction(m_developmentReleaseCommand);
     m_developmentReleaseAction->setEnabled(false);
     connect(m_developmentReleaseAction, &QAction::triggered, this, &OpenMVPlugin::installTheLatestDevelopmentRelease);
-    toolsMenu->addSeparator();
+    // MicroPython Tools are PC-side scripting utilities, not part of the read-only
+    // viewer, so the whole submenu (and its divider) is left out in viewer mode.
+    if(!m_viewerMode)
+    {
+        toolsMenu->addSeparator();
 
-    Core::ActionContainer *microPythonToolsMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.MicroPythonMenu"));
-    microPythonToolsMenu->menu()->setTitle(Tr::tr("MicroPython Tools"));
-    toolsMenu->addMenu(microPythonToolsMenu);
+        Core::ActionContainer *microPythonToolsMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.MicroPythonMenu"));
+        microPythonToolsMenu->menu()->setTitle(Tr::tr("MicroPython Tools"));
+        toolsMenu->addMenu(microPythonToolsMenu);
 
-    QAction *copyScriptAction = new QAction(Tr::tr("Copy/Convert Python File"), this);
-    Core::Command *copyScriptCommand = Core::ActionManager::registerAction(copyScriptAction, Utils::Id("OpenMV.CopyScript"));
-    microPythonToolsMenu->addAction(copyScriptCommand);
-    connect(copyScriptAction, &QAction::triggered, this, [this] {
-        Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+        QAction *copyScriptAction = new QAction(Tr::tr("Copy/Convert Python File"), this);
+        Core::Command *copyScriptCommand = Core::ActionManager::registerAction(copyScriptAction, Utils::Id("OpenMV.CopyScript"));
+        microPythonToolsMenu->addAction(copyScriptCommand);
+        connect(copyScriptAction, &QAction::triggered, this, [this] {
+            Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
 
-        QJsonObject boardSettings = getBoardSettings(Tr::tr("Copy/Convert Python File"), settings);
+            QJsonObject boardSettings = getBoardSettings(Tr::tr("Copy/Convert Python File"), settings);
 
-        if (boardSettings.isEmpty())
-        {
-            return;
-        }
-
-        QString src = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Copy/Convert Python File"),
-                                                   settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_OPEN_PATH,
-                                                                  QDir::homePath()).toString());
-
-        if (!src.isEmpty())
-        {
-            QString convertedSrc = convertScript(boardSettings, src, settings);
-
-            if (convertedSrc.isEmpty())
+            if (boardSettings.isEmpty())
             {
                 return;
             }
 
-            QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Copy/Convert Python File"),
-                m_portPath.isEmpty()
-                ? (settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
-                : (settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
+            QString src = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Copy/Convert Python File"),
+                                                       settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_OPEN_PATH,
+                                                                      QDir::homePath()).toString());
 
-            if(!dst.isEmpty())
+            if (!src.isEmpty())
             {
-                if((!QFile(dst).exists()) || QFile::remove(dst))
+                QString convertedSrc = convertScript(boardSettings, src, settings);
+
+                if (convertedSrc.isEmpty())
                 {
-                    if(QFile::copy(convertedSrc, dst))
+                    return;
+                }
+
+                QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Copy/Convert Python File"),
+                    m_portPath.isEmpty()
+                    ? (settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
+                    : (settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
+
+                if(!dst.isEmpty())
+                {
+                    if((!QFile(dst).exists()) || QFile::remove(dst))
                     {
-                        settings->setValue(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_OPEN_PATH, QFileInfo(src).path());
-                        if (m_portPath.isEmpty())
-                            settings->setValue(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_NO_CAM_PATH, QFileInfo(dst).path());
-                        if (!m_portPath.isEmpty())
-                            settings->setValue(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_WITH_CAM_PATH, QFileInfo(dst).path());
+                        if(QFile::copy(convertedSrc, dst))
+                        {
+                            settings->setValue(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_OPEN_PATH, QFileInfo(src).path());
+                            if (m_portPath.isEmpty())
+                                settings->setValue(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_NO_CAM_PATH, QFileInfo(dst).path());
+                            if (!m_portPath.isEmpty())
+                                settings->setValue(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_WITH_CAM_PATH, QFileInfo(dst).path());
+                        }
+                        else
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                Tr::tr("Copy/Convert Python File"),
+                                QObject::tr("Unable to overwrite output file!"));
+                        }
                     }
                     else
                     {
@@ -1087,16 +1104,10 @@ void OpenMVPlugin::extensionsInitialized()
                             QObject::tr("Unable to overwrite output file!"));
                     }
                 }
-                else
-                {
-                    QMessageBox::critical(Core::ICore::dialogParent(),
-                        Tr::tr("Copy/Convert Python File"),
-                        QObject::tr("Unable to overwrite output file!"));
-                }
             }
-        }
 
-    });
+        });
+    }
 
     toolsMenu->addSeparator();
     m_openTerminalMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.OpenTermnial"));
@@ -2748,6 +2759,14 @@ void OpenMVPlugin::extensionsInitialized()
         m_enableFilteringExamplesAction->setVisible(false);
         m_saveAction->setVisible(false);
         datasetEditorMenu->menu()->menuAction()->setVisible(false);
+
+        // Hide the Diff submenu (contributed by the DiffEditor plugin) -- diffing
+        // files is an authoring feature. Deferred so it runs after that plugin has
+        // built the menu regardless of plugin init order.
+        QTimer::singleShot(0, this, [] {
+            if(Core::ActionContainer *diffMenu = Core::ActionManager::actionContainer(Utils::Id("Diff")))
+                diffMenu->menu()->menuAction()->setVisible(false);
+        });
 
         // Hide TabbedEditor
         QMainWindow *mainWindow = qobject_cast<QMainWindow *>(Core::ICore::mainWindow());
