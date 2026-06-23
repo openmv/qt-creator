@@ -915,36 +915,45 @@ void OpenMVPlugin::extensionsInitialized()
 
     toolsMenu->addSeparator();
 
-    Core::ActionContainer *romFsSubmenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.ROMFSMenu"));
-    romFsSubmenu->menu()->setTitle(Tr::tr("ROM File System"));
-    toolsMenu->addMenu(romFsSubmenu);
-
-    // New ROMFS authors a blank image from scratch -- not a recovery/provisioning
-    // step, so it's left out of the viewer. Open/Edit/Reset stay: each can still
-    // commit a provided or repaired image to the cam.
+    // ROM File System. In viewer mode the only supported operations are loading a
+    // provided image and resetting, so those two are promoted directly into the
+    // Tools menu (no submenu, no extra divider). The full editor submenu -- with
+    // New (author from scratch) and Edit ROMFS on Cam (suck it out and edit) -- is
+    // for the normal IDE; sucking a ROMFS off a camera isn't a maintenance task.
+    Core::ActionContainer *romFsMenu = toolsMenu;
     if(!m_viewerMode)
     {
+        Core::ActionContainer *romFsSubmenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.ROMFSMenu"));
+        romFsSubmenu->menu()->setTitle(Tr::tr("ROM File System"));
+        toolsMenu->addMenu(romFsSubmenu);
+        romFsMenu = romFsSubmenu;
+
         QAction *newRomfsAction = new QAction(Tr::tr("New ROMFS File"), this);
         Core::Command *newRomfsCommand = Core::ActionManager::registerAction(newRomfsAction, Utils::Id("OpenMV.NewROMFS"));
-        romFsSubmenu->addAction(newRomfsCommand);
+        romFsMenu->addAction(newRomfsCommand);
         connect(newRomfsAction, &QAction::triggered, this,  [this] { OpenMVPlugin::editRomfsClicked(false, true); });
     }
 
-    QAction *openRomfsAction = new QAction(Tr::tr("Open ROMFS File"), this);
+    // In viewer mode this is "Load ROMFS Image" and short-circuits to a load-only
+    // flow (see editRomfsClicked); in the IDE it's the full "Open ROMFS File" editor.
+    QAction *openRomfsAction = new QAction(m_viewerMode ? Tr::tr("Load ROMFS onto OpenMV Cam") : Tr::tr("Open ROMFS File"), this);
     Core::Command *openRomfsCommand = Core::ActionManager::registerAction(openRomfsAction, Utils::Id("OpenMV.OpenROMFS"));
-    romFsSubmenu->addAction(openRomfsCommand);
+    romFsMenu->addAction(openRomfsCommand);
     connect(openRomfsAction, &QAction::triggered, this,  [this] { OpenMVPlugin::editRomfsClicked(); });
 
-    romFsSubmenu->addSeparator();
+    if(!m_viewerMode)
+    {
+        romFsMenu->addSeparator();
 
-    QAction *editRomfsAction = new QAction(Tr::tr("Edit ROMFS on OpenMV Cam"), this);
-    Core::Command *editRomfsCommand = Core::ActionManager::registerAction(editRomfsAction, Utils::Id("OpenMV.EditROMFS"));
-    romFsSubmenu->addAction(editRomfsCommand);
-    connect(editRomfsAction, &QAction::triggered, this, [this] { OpenMVPlugin::editRomfsClicked(true); });
+        QAction *editRomfsAction = new QAction(Tr::tr("Edit ROMFS on OpenMV Cam"), this);
+        Core::Command *editRomfsCommand = Core::ActionManager::registerAction(editRomfsAction, Utils::Id("OpenMV.EditROMFS"));
+        romFsMenu->addAction(editRomfsCommand);
+        connect(editRomfsAction, &QAction::triggered, this, [this] { OpenMVPlugin::editRomfsClicked(true); });
+    }
 
     QAction *resetRomfsAction = new QAction(Tr::tr("Reset ROMFS on OpenMV Cam"), this);
     Core::Command *resetRomfsCommand = Core::ActionManager::registerAction(resetRomfsAction, Utils::Id("OpenMV.ResetROMFS"));
-    romFsSubmenu->addAction(resetRomfsCommand);
+    romFsMenu->addAction(resetRomfsCommand);
     connect(resetRomfsAction, &QAction::triggered, this, [this] { OpenMVPlugin::resetRomfsClicked(); });
 
     toolsMenu->addSeparator();

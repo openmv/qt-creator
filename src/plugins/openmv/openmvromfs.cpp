@@ -624,6 +624,35 @@ void OpenMVROMFSEditor::paintEvent(QPaintEvent *event)
     QTreeView::paintEvent(event);
 }
 
+// Pack a directory tree into a ROMFS writer straight from the filesystem. This
+// mirrors OpenMVROMFSEditor::createRomfs (opendir/recurse/closedir, mkfile) but
+// without the editor's async QFileSystemModel -- used by the viewer-mode load-only
+// path, which has no editor dialog to populate that model. The editor's proxy
+// applies no row filtering, so this packs the same set of files.
+static void packDirIntoRomfs(VfsRomWriter *writer, const QDir &dir)
+{
+    const QFileInfoList entries = dir.entryInfoList(QDir::AllEntries | QDir::NoDotAndDotDot, QDir::Name);
+
+    for (const QFileInfo &entry : entries)
+    {
+        if (entry.isDir())
+        {
+            writer->opendir(entry.fileName());
+            packDirIntoRomfs(writer, QDir(entry.filePath()));
+            writer->closedir();
+        }
+        else
+        {
+            QFile file(entry.filePath());
+
+            if (file.open(QIODevice::ReadOnly))
+            {
+                writer->mkfile(entry.fileName(), file.readAll());
+            }
+        }
+    }
+}
+
 void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 {
     if (m_working)
@@ -784,6 +813,44 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                 return;
             }
         }
+    }
+
+    if (m_viewerMode)
+    {
+        // Load-only: skip the editor dialog and the commit/save choice. Re-pack the
+        // unpacked image (re-aligned for the board, exactly as the IDE's commit
+        // does) and write it straight to the cam.
+        QFile romfsFile(QDir::tempPath() + QDir::separator() + QString(QStringLiteral("romfs%1.img").arg(romfsIndex)));
+
+        if (romfsFile.open(QIODevice::WriteOnly | QIODevice::Truncate))
+        {
+            VfsRomWriter writer(alignmentRules);
+            packDirIntoRomfs(&writer, QDir(tempDir.path()));
+            romfsFile.write(writer.finalize());
+            romfsFile.close();
+
+            QEventLoop loop;
+            connect(this, &OpenMVPlugin::workingDone, &loop, &QEventLoop::quit);
+
+            QString path = QFileInfo(romfsFile).filePath();
+
+            QTimer::singleShot(0, this, [this, path, boardSettings] {
+                connectClicked(true, path, false, false, false, true,
+                               boardSettings.value(QStringLiteral("boardDisplayName")).toString(),
+                               OPENMV_ROMFS_WRITE);
+            });
+
+            loop.exec();
+        }
+        else
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                Tr::tr("Load ROMFS onto OpenMV Cam"),
+                romfsFile.errorString());
+        }
+
+        if (wasConnected) connectClicked(false, QString(), false, false, false, true);
+        return;
     }
 
     QDialog *dialog = new QDialog(Core::ICore::dialogParent(),
