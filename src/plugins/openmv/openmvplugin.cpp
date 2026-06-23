@@ -873,14 +873,22 @@ void OpenMVPlugin::extensionsInitialized()
     }
     else
     {
-        qobject_cast<Utils::ProxyAction *>(Core::ActionManager::command(Core::Constants::NEW_FILE)->action())->getRealAction()->setVisible(false);
-        qobject_cast<Utils::ProxyAction *>(Core::ActionManager::command(Core::Constants::OPEN)->action())->getRealAction()->setVisible(false);
-        Core::ActionManager::actionContainer(Core::Constants::M_FILE_RECENTFILES)->menu()->menuAction()->setVisible(false);
-        qobject_cast<Utils::ProxyAction *>(Core::ActionManager::command(Core::Constants::SAVE)->action())->getRealAction()->setVisible(false);
-        qobject_cast<Utils::ProxyAction *>(Core::ActionManager::command(Core::Constants::SAVEAS)->action())->getRealAction()->setVisible(false);
-        qobject_cast<Utils::ProxyAction *>(Core::ActionManager::command(Core::Constants::CLOSE)->action())->getRealAction()->setVisible(false);
-        qobject_cast<Utils::ProxyAction *>(Core::ActionManager::command(Core::Constants::PRINT)->action())->getRealAction()->setVisible(false);
-        Core::ActionManager::actionContainer(Core::Constants::M_EDIT)->menu()->menuAction()->setVisible(false);
+        // Keep the File and Edit menus, but show only Exit and Preferences
+        // respectively. Re-applied on aboutToShow so items added by other plugins
+        // (or re-shown by editor-context changes) stay hidden.
+        QMenu *fileMenu = Core::ActionManager::actionContainer(Core::Constants::M_FILE)->menu();
+        QAction *exitAction = Core::ActionManager::command(Core::Constants::EXIT)->action();
+        connect(fileMenu, &QMenu::aboutToShow, this, [fileMenu, exitAction] {
+            const QList<QAction *> actions = fileMenu->actions();
+            for(QAction *action : actions) action->setVisible(action == exitAction);
+        });
+
+        QMenu *editMenu = Core::ActionManager::actionContainer(Core::Constants::M_EDIT)->menu();
+        QAction *optionsAction = Core::ActionManager::command(Core::Constants::OPTIONS)->action();
+        connect(editMenu, &QMenu::aboutToShow, this, [editMenu, optionsAction] {
+            const QList<QAction *> actions = editMenu->actions();
+            for(QAction *action : actions) action->setVisible(action == optionsAction);
+        });
     }
 
     Core::ActionContainer *toolsMenu = Core::ActionManager::actionContainer(Core::Constants::M_TOOLS);
