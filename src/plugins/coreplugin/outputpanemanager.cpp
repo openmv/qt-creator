@@ -719,9 +719,15 @@ void OutputPaneManager::readSettings()
         // OPENMV-DIFF //
         // const bool visible = settings->value(outputPaneVisibleKeyC).toBool();
         // OPENMV-DIFF //
-        bool visible = settings->value(outputPaneVisibleKeyC).toBool();
-        // Keep all status-bar pane toggle buttons hidden in viewer mode even if a
-        // prior session persisted them as visible.
+        // OpenMV removed every UI affordance for hiding the status-bar pane toggle
+        // buttons (the manage button and the per-button context menu are both
+        // OPENMV-DIFF'd out), so the persisted "visible" value is vestigial. Worse,
+        // viewer mode force-hides every button, which would otherwise be saved and
+        // bleed back into the normal IDE (hiding e.g. the Search Results toggle), and
+        // the IDE would then re-save the hidden state -- self-perpetuating. Derive
+        // visibility from the pane's status-bar priority (as initialize() does) rather
+        // than the stored value, and keep all buttons hidden in viewer mode.
+        bool visible = g_outputPanes[idx].pane->priorityInStatusBar() >= 0;
         if (isViewerMode())
             visible = false;
         // OPENMV-DIFF //
