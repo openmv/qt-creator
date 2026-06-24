@@ -194,6 +194,12 @@ QUrl OpenMVPlugin::webChangelogUrl(const QString &product, int major, int minor,
 
 QUrl OpenMVPlugin::localChangelogUrl(const QString &product, const QString &version)
 {
+    // The viewer build ships no offline docs (the html resource is stripped), so
+    // point its release-notes links at the rolling-latest web docs instead.
+    if(QCoreApplication::arguments().contains(QStringLiteral("-viewer_mode")))
+        return QUrl(QString(QStringLiteral("https://docs.openmv.io/dev/changelog/%1/v%2.html"))
+                        .arg(product, version));
+
     // Release notes for the currently-installed version come from the docs that
     // shipped with this IDE (works offline). Fall back to the per-product
     // changelog index if the exact version page is not in the bundle.
@@ -224,6 +230,19 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     Q_UNUSED(errorMessage)
 
     m_viewerMode = arguments.contains(QStringLiteral("-viewer_mode"));
+
+    // The viewer build ships none of these resource folders (stripped from its
+    // install), so don't try to extract them into the user resources on update --
+    // copyRecursively would fail on the missing source and abort startup. firmware
+    // stays (the viewer keeps firmware/ROMFS recovery).
+    if(m_viewerMode)
+    {
+        for(const QString &dir : {QStringLiteral("examples"), QStringLiteral("html"), QStringLiteral("models")})
+        {
+            m_resourceFoldersToCopy.removeAll(dir);
+            m_resourceFoldersToDelete.removeAll(dir);
+        }
+    }
 
     if(arguments.contains(QStringLiteral("-open_serial_terminal"))
     || arguments.contains(QStringLiteral("-open_udp_client_terminal"))

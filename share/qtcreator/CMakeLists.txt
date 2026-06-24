@@ -179,6 +179,31 @@ if(UNIX AND NOT APPLE)
 endif()
 # OPENMV-DIFF #
 
+# OPENMV-DIFF #
+# The viewer is a lean, read-only telemetry app, so strip the resources it never
+# uses -- authoring (examples), the Copilot assistant (copilot.vim + its node
+# runtime), offline docs (html), the model zoo (models), and the developer
+# compilers / language server (pylsp, mpy-cross, vela). Everything needed for
+# firmware and ROMFS recovery is kept. Filtering happens here, after the per-OS
+# lists are built, so one rule covers every platform's variant of a dropped tool.
+# Matching is by top-level folder name (e.g. "pylsp/windows" -> "pylsp").
+if(OPENMV_VIEWER_IDE)
+  set(viewer_excluded_dirs
+    examples copilot.vim html models node pylsp mpy-cross vela)
+  set(_viewer_filtered "")
+  foreach(dir ${resource_directories})
+    string(REGEX REPLACE "/.*" "" _top "${dir}")
+    if(NOT _top IN_LIST viewer_excluded_dirs)
+      list(APPEND _viewer_filtered "${dir}")
+    endif()
+  endforeach()
+  set(resource_directories ${_viewer_filtered})
+
+  # The downloaded resources (ST Edge-AI + the ARM GCC toolchain) are dev-only.
+  set(downloaded_resource_directories "")
+endif()
+# OPENMV-DIFF #
+
 # copy resource directories during build
 qtc_copy_to_builddir(copy_share_to_builddir
   DIRECTORIES ${resource_directories}
