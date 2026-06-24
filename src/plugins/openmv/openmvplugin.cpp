@@ -2439,8 +2439,15 @@ void OpenMVPlugin::extensionsInitialized()
     ///////////////////////////////////////////////////////////////////////////
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    Core::EditorManager::restoreState(
-        settings->value(SETTINGS_GROUP "/" EDITOR_MANAGER_STATE).toByteArray());
+    // Viewer mode starts with a clean editor. The editor is hidden, so restoring the
+    // previous session's open documents would silently feed a leftover script to the
+    // Run button / auto-run. The only script present should be one passed on the
+    // command line (auto-run runs it) or chosen from disk.
+    if(!m_viewerMode)
+    {
+        Core::EditorManager::restoreState(
+            settings->value(SETTINGS_GROUP "/" EDITOR_MANAGER_STATE).toByteArray());
+    }
     m_autoReconnectAction->setChecked(
         m_autoConnect || settings->value(SETTINGS_GROUP "/" AUTO_RECONNECT_STATE, m_autoReconnectAction->isChecked()).toBool());
     // Viewer mode persists this independently (its own key) so its default-off
@@ -2568,7 +2575,9 @@ void OpenMVPlugin::extensionsInitialized()
 
     connect(Core::ICore::instance(), &Core::ICore::saveSettingsRequested, this, [this, zoomButton, colorSpace, msplitter, hsplitter, vsplitter] {
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-        settings->setValue(SETTINGS_GROUP "/" EDITOR_MANAGER_STATE,
+        // Don't let viewer mode clobber the normal IDE's remembered open documents --
+        // it starts clean and never restores them anyway.
+        if(!m_viewerMode) settings->setValue(SETTINGS_GROUP "/" EDITOR_MANAGER_STATE,
             Core::EditorManager::saveState());
         if(!isNoShow()) settings->setValue(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_LOADED,
             !m_datasetEditor->rootPath().isEmpty());
@@ -2669,7 +2678,10 @@ void OpenMVPlugin::extensionsInitialized()
     }
 #endif
 
-    if(editor ? (editor->document() ? editor->document()->contents().isEmpty() : true) : true)
+    // Don't seed the default Hello World example in viewer mode -- the editor is
+    // hidden and must stay clean, or the Run button / auto-run would pick up Hello
+    // World instead of the command-line script (or the disk picker).
+    if((!m_viewerMode) && (editor ? (editor->document() ? editor->document()->contents().isEmpty() : true) : true))
     {
         QString filePath = Core::ICore::allUsersResourcePath(QStringLiteral("examples/00-HelloWorld/helloworld.py")).toString();
 
@@ -2901,6 +2913,36 @@ void OpenMVPlugin::extensionsInitialized()
 
 bool OpenMVPlugin::delayedInitialize()
 {
+    // -auto_run in viewer mode runs the open script -- a file passed on the command
+    // line that the IDE opens, after which auto-run runs the open document. The IDE
+    // only opens a file as a runnable script in its text editor when its MIME type is
+    // text (an image or binary opens in a non-text viewer with nothing to run). Detect
+    // a misconfiguration here -- at startup, before connecting -- rather than erroring
+    // on every connect. This runs in delayedInitialize() so the MIME database (only
+    // safe to query from this phase onward) is fully populated.
+    if(m_viewerMode && m_autoRun)
+    {
+        bool haveScriptFile = false;
+
+        for(const QString &fileArg : ExtensionSystem::PluginManager::arguments())
+        {
+            QFileInfo info(fileArg);
+
+            if(info.exists() && info.isFile() && info.isReadable()
+            && Utils::mimeTypeForFile(fileArg).inherits(QStringLiteral("text/plain")))
+            {
+                haveScriptFile = true;
+                break;
+            }
+        }
+
+        if(!haveScriptFile)
+        {
+            displayError(Tr::tr("-auto_run in viewer mode requires a readable text script file argument on the command line."));
+            exit(-1);
+        }
+    }
+
     QUdpSocket *socket = new QUdpSocket(this);
 
     connect(socket, &QUdpSocket::readyRead, this, [this, socket] {

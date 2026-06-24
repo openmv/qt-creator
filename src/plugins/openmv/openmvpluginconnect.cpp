@@ -3704,30 +3704,38 @@ void OpenMVPlugin::startClicked()
 
         if(m_viewerMode)
         {
-            // No editor in viewer mode: run a script chosen from disk instead.
-            Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-            QString path = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Run Script"),
-                settings->value(SETTINGS_GROUP "/" LAST_VIEWER_RUN_SCRIPT_PATH, m_portPath.isEmpty() ? QDir::homePath() : m_portPath).toString(),
-                Tr::tr("Python Files (*.py);;Text Files (*.txt);;All Files (*)"));
+            // In viewer mode the editor is hidden, but a document can still be open
+            // (e.g. a script passed on the command line, which the IDE opens and
+            // -auto_run then runs). Run that if present; otherwise pick one from disk.
+            Core::IEditor *editor = Core::EditorManager::currentEditor();
+            contents = (editor && editor->document()) ? editor->document()->contents() : QByteArray();
 
-            QFile file(path);
-
-            if(path.isEmpty() || (!file.open(QIODevice::ReadOnly)))
+            if(contents.isEmpty())
             {
-                if(!path.isEmpty())
+                Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+                QString path = QFileDialog::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Run Script"),
+                    settings->value(SETTINGS_GROUP "/" LAST_VIEWER_RUN_SCRIPT_PATH, m_portPath.isEmpty() ? QDir::homePath() : m_portPath).toString(),
+                    Tr::tr("Python Files (*.py);;Text Files (*.txt);;All Files (*)"));
+
+                QFile file(path);
+
+                if(path.isEmpty() || (!file.open(QIODevice::ReadOnly)))
                 {
-                    QMessageBox::critical(Core::ICore::dialogParent(), Tr::tr("Run Script"),
-                        Tr::tr("Error: Cannot open \"%L1\"!").arg(path));
+                    if(!path.isEmpty())
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(), Tr::tr("Run Script"),
+                            Tr::tr("Error: Cannot open \"%L1\"!").arg(path));
+                    }
+
+                    m_working = false;
+                    QTimer::singleShot(0, this, &OpenMVPlugin::workingDone);
+                    return;
                 }
 
-                m_working = false;
-                QTimer::singleShot(0, this, &OpenMVPlugin::workingDone);
-                return;
+                contents = file.readAll();
+                file.close();
+                settings->setValue(SETTINGS_GROUP "/" LAST_VIEWER_RUN_SCRIPT_PATH, path);
             }
-
-            contents = file.readAll();
-            file.close();
-            settings->setValue(SETTINGS_GROUP "/" LAST_VIEWER_RUN_SCRIPT_PATH, path);
         }
         else
         {

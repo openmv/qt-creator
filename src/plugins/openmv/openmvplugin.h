@@ -71,6 +71,7 @@
 #include <utils/elidinglabel.h>
 #include <utils/environment.h>
 #include <utils/hostosinfo.h>
+#include <utils/mimeutils.h>
 #include <utils/utilsicons.h>
 #include <utils/pathchooser.h>
 #include <utils/proxyaction.h>
