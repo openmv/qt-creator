@@ -128,6 +128,8 @@ public:
     // OPENMV-DIFF //
     static void disableShow(bool disable);
     static bool isShowDisabled();
+    static int serialTerminalTabSize();
+    static void setSerialTerminalTabSize(int tabSize);
     // OPENMV-DIFF //
 
 public slots:
@@ -146,6 +148,7 @@ signals:
     // OPENMV-DIFF //
     void showEventSignal();
     void hideEventSignal();
+    void serialTerminalTabSizeChanged(int tabSize);
     // OPENMV-DIFF //
 
 public:

@@ -28,6 +28,9 @@
 #include <QMessageBox>
 #include <QPushButton>
 #include <QSettings>
+// OPENMV-DIFF //
+#include <QSpinBox>
+// OPENMV-DIFF //
 #include <QStyleHints>
 #include <QTextCodec>
 
@@ -105,6 +108,9 @@ public:
     QPushButton *m_resetWarningsButton;
     QComboBox *m_toolbarStyleBox;
     QComboBox *m_policyComboBox = nullptr;
+    // OPENMV-DIFF //
+    QSpinBox *m_serialTerminalTabSize = nullptr;
+    // OPENMV-DIFF //
 };
 
 GeneralSettingsWidget::GeneralSettingsWidget()
@@ -198,6 +204,18 @@ GeneralSettingsWidget::GeneralSettingsWidget()
     // form.addRow({empty, generalSettings().showShortcutsInContextMenus});
     // form.addRow({empty, generalSettings().provideSplitterCursors});
     // OPENMV-DIFF //
+    // OPENMV-DIFF //
+    // Viewer mode hides the Text Editor settings page, which is where the serial
+    // terminal tab size normally lives. Surface that reader-side setting here, at the
+    // end of the settings cluster (before the Reset action). The leading br closes the
+    // row the DPI block leaves open via its trailing lone addItem, so this aligns.
+    if (QCoreApplication::arguments().contains("-viewer_mode")) {
+        m_serialTerminalTabSize = new QSpinBox;
+        m_serialTerminalTabSize->setRange(1, 20);
+        m_serialTerminalTabSize->setValue(ICore::serialTerminalTabSize());
+        form.addRow({br, Tr::tr("Serial Terminal Tab size:"), m_serialTerminalTabSize, st});
+    }
+    // OPENMV-DIFF //
     form.addRow({Row{m_resetWarningsButton, st}});
     // OPENMV-DIFF //
     // form.addRow({Tr::tr("Text codec for tools:"), m_codecBox, st});
@@ -281,6 +299,11 @@ void GeneralSettingsWidget::apply()
 {
     generalSettings().apply();
     generalSettings().writeSettings();
+
+    // OPENMV-DIFF //
+    if (m_serialTerminalTabSize)
+        ICore::setSerialTerminalTabSize(m_serialTerminalTabSize->value());
+    // OPENMV-DIFF //
 
     int currentIndex = m_languageBox->currentIndex();
     setLanguage(m_languageBox->itemData(currentIndex, Qt::UserRole).toString());

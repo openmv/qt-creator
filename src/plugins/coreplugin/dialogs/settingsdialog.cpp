@@ -63,9 +63,29 @@ bool optionsPageLessThan(const IOptionsPage *p1, const IOptionsPage *p2)
     return p1->id().alphabeticallyBefore(p2->id());
 }
 
+// OPENMV-DIFF //
+// Viewer mode hides developer-facing settings categories (code authoring, AI
+// assistant, language servers). The category ids are duplicated here because Core
+// cannot depend on those plugins' headers.
+static bool isViewerHiddenCategory(Utils::Id category)
+{
+    if (!QCoreApplication::arguments().contains("-viewer_mode"))
+        return false;
+    static const QSet<Utils::Id> hidden = {
+        Utils::Id("C.TextEditor"), // Text Editor
+        Utils::Id("P.Python"),     // Python
+        Utils::Id("ZY.Copilot"),   // Copilot
+    };
+    return hidden.contains(category);
+}
+// OPENMV-DIFF //
+
 static inline QList<IOptionsPage*> sortedOptionsPages()
 {
     QList<IOptionsPage*> rc = IOptionsPage::allOptionsPages();
+    // OPENMV-DIFF //
+    rc = Utils::filtered(rc, [](IOptionsPage *p) { return !isViewerHiddenCategory(p->category()); });
+    // OPENMV-DIFF //
     std::stable_sort(rc.begin(), rc.end(), optionsPageLessThan);
     return rc;
 }
@@ -490,7 +510,12 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     createGui();
     setWindowTitle(Tr::tr("Preferences"));
 
-    m_model.setPages(m_pages, IOptionsPageProvider::allOptionsPagesProviders());
+    // OPENMV-DIFF //
+    // m_model.setPages(m_pages, IOptionsPageProvider::allOptionsPagesProviders());
+    // OPENMV-DIFF //
+    m_model.setPages(m_pages, Utils::filtered(IOptionsPageProvider::allOptionsPagesProviders(),
+        [](IOptionsPageProvider *p) { return !isViewerHiddenCategory(p->category()); }));
+    // OPENMV-DIFF //
 
     m_proxyModel.setSortLocaleAware(true);
     m_proxyModel.setSourceModel(&m_model);

@@ -1288,6 +1288,26 @@ bool ICore::isShowDisabled()
     return d->m_disableShow;
 }
 
+// OPENMV-DIFF //
+// The serial terminal tab width is a reader-side display setting (it applies to the
+// OpenMV Cam's serial output, not to code authoring). Normal mode edits it through the
+// Text Editor settings; viewer mode hides that page and edits this Core key instead,
+// from Environment > Interface. Stored here so both the terminals and the output pane
+// (in the OpenMV plugin) can read it and follow live changes via the signal below.
+int ICore::serialTerminalTabSize()
+{
+    return Core::ICore::settings()->value("General/SerialTerminalTabSize", 8).toInt();
+}
+
+void ICore::setSerialTerminalTabSize(int tabSize)
+{
+    if (serialTerminalTabSize() == tabSize)
+        return;
+    Core::ICore::settings()->setValueWithDefault("General/SerialTerminalTabSize", tabSize, 8);
+    emit instance()->serialTerminalTabSizeChanged(tabSize);
+}
+// OPENMV-DIFF //
+
 /*!
     \internal
 */

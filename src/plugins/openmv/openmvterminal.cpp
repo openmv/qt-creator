@@ -36,6 +36,8 @@
 
 #include <utils/theme/theme.h>
 
+#include <QCoreApplication>
+
 #define TERMINAL_SETTINGS_GROUP "OpenMVTerminal"
 #define GEOMETRY "Geometry"
 #define HSPLITTER_STATE "HSplitterState"
@@ -53,7 +55,12 @@ namespace Internal {
 
 MyPlainTextEdit::MyPlainTextEdit(qreal fontPointSizeF, QWidget *parent) : QPlainTextEdit(parent)
 {
-    m_tabWidth = TextEditor::TextEditorSettings::codeStyle()->tabSettings().m_serialTerminalTabSize;
+    // In viewer mode the Text Editor settings page is hidden, so the serial terminal
+    // tab width comes from the Core setting (Environment > Interface) instead.
+    if(QCoreApplication::arguments().contains(QStringLiteral("-viewer_mode")))
+        m_tabWidth = Core::ICore::serialTerminalTabSize();
+    else
+        m_tabWidth = TextEditor::TextEditorSettings::codeStyle()->tabSettings().m_serialTerminalTabSize;
     m_textCursor = QTextCursor(document());
     m_stateMachine = ASCII;
     m_strip_newline = false;
@@ -63,9 +70,14 @@ MyPlainTextEdit::MyPlainTextEdit(qreal fontPointSizeF, QWidget *parent) : QPlain
     m_parser = new Core::OpenMVPluginEscapeCodeParser(this);
     m_lastChar = QChar();
 
-    connect(TextEditor::TextEditorSettings::codeStyle(), &TextEditor::ICodeStylePreferences::tabSettingsChanged, this, [this] (const TextEditor::TabSettings &settings) {
-        m_tabWidth = settings.m_serialTerminalTabSize;
-    });
+    if(QCoreApplication::arguments().contains(QStringLiteral("-viewer_mode")))
+        connect(Core::ICore::instance(), &Core::ICore::serialTerminalTabSizeChanged, this, [this] (int tabSize) {
+            m_tabWidth = tabSize;
+        });
+    else
+        connect(TextEditor::TextEditorSettings::codeStyle(), &TextEditor::ICodeStylePreferences::tabSettingsChanged, this, [this] (const TextEditor::TabSettings &settings) {
+            m_tabWidth = settings.m_serialTerminalTabSize;
+        });
 
     setReadOnly(true);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);

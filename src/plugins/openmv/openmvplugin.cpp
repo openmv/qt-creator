@@ -2486,10 +2486,22 @@ void OpenMVPlugin::extensionsInitialized()
     Core::MessageManager::outputWindow()->setWheelZoomEnabled(true);
     Core::MessageManager::outputWindow()->setFontZoom(
         settings->value(SETTINGS_GROUP "/" OUTPUT_WINDOW_FONT_ZOOM_STATE).toFloat());
-    Core::MessageManager::outputWindow()->setTabSettings(TextEditor::TextEditorSettings::codeStyle()->tabSettings().m_serialTerminalTabSize);
-    connect(TextEditor::TextEditorSettings::codeStyle(), &TextEditor::ICodeStylePreferences::tabSettingsChanged, this, [] (const TextEditor::TabSettings &settings) {
-        Core::MessageManager::outputWindow()->setTabSettings(settings.m_serialTerminalTabSize);
-    });
+    // In viewer mode the Text Editor settings page is hidden, so the serial terminal
+    // tab width comes from the Core setting (Environment > Interface) instead.
+    if(m_viewerMode)
+    {
+        Core::MessageManager::outputWindow()->setTabSettings(Core::ICore::serialTerminalTabSize());
+        connect(Core::ICore::instance(), &Core::ICore::serialTerminalTabSizeChanged, this, [] (int tabSize) {
+            Core::MessageManager::outputWindow()->setTabSettings(tabSize);
+        });
+    }
+    else
+    {
+        Core::MessageManager::outputWindow()->setTabSettings(TextEditor::TextEditorSettings::codeStyle()->tabSettings().m_serialTerminalTabSize);
+        connect(TextEditor::TextEditorSettings::codeStyle(), &TextEditor::ICodeStylePreferences::tabSettingsChanged, this, [] (const TextEditor::TabSettings &settings) {
+            Core::MessageManager::outputWindow()->setTabSettings(settings.m_serialTerminalTabSize);
+        });
+    }
     m_useGetState = settings->value(SETTINGS_GROUP "/" LAST_USE_GET_STATE, true).toBool();
     m_frameSizeDumpSpacing = settings->value(SETTINGS_GROUP "/" LAST_FRAME_DUMP_SPACING, FRAME_SIZE_DUMP_SPACING).toInt();
     m_getScriptRunningSpacing = settings->value(SETTINGS_GROUP "/" LAST_GET_SCRIPT_RUNNING_SPACING, GET_SCRIPT_RUNNING_SPACING).toInt();
