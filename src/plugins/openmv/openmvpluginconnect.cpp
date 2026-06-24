@@ -35,7 +35,15 @@
 #include "app/app_version.h"
 #include "tools/usbproblems.h"
 
+#include <utils/async.h>
+
+#include <QFuture>
+#include <QFutureWatcher>
+#include <QPromise>
+
 #include <QGuiApplication>
+
+#include <limits>
 
 namespace OpenMV {
 namespace Internal {
@@ -148,6 +156,362 @@ static bool extractFolderWrapper(QByteArray *data, const QString &path, const QS
     watcher.setFuture(QtConcurrent::run(extractFolder, data, path, folder));
     loop.exec();
     return watcher.result();
+}
+
+// --- Development resource cache helpers --------------------------------------
+// Dev examples/docs/firmware are published separately from the released resources
+// and cached next to them with a "-dev" suffix (examples-dev, html-dev, firmware-dev)
+// under allUsersResourcePath(). The IDE reads them when a development cam is attached.
+
+static const char DEV_MANIFEST_URL[] = "https://download.openmv.io/studio/manifest.json";
+static const char DEV_DOCS_RELEASE_API[] = "https://api.github.com/repos/openmv/openmv-doc/releases/tags/development";
+
+// Path to the bundled python interpreter -- used to unpack .tar.xz archives (via its
+// tarfile+lzma modules), which QZipReader cannot handle.
+static Utils::FilePath bundledPythonBinary()
+{
+    if(Utils::HostOsInfo::isWindowsHost())
+        return Core::ICore::resourcePath(QStringLiteral("python/win/python.exe"));
+    if(Utils::HostOsInfo::isMacHost())
+        return Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+    if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        return Core::ICore::resourcePath(QStringLiteral("python/linux-arm64/bin/python"));
+    if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
+        return Core::ICore::resourcePath(QStringLiteral("python/linux-arm/bin/python"));
+    return Core::ICore::resourcePath(QStringLiteral("python/linux-x86_64/bin/python"));
+}
+
+static QString sha256Hex(const QByteArray &data)
+{
+    return QString::fromLatin1(QCryptographicHash::hash(data, QCryptographicHash::Sha256).toHex());
+}
+
+// Unpack an in-memory .tar.xz into destDir using the bundled python's tarfile module.
+// `python` is resolved on the GUI thread and passed in (this runs on a worker thread).
+static bool extractTarXzToDir(const QByteArray &data, const QString &destDir, const QString &python)
+{
+    if(python.isEmpty() || (!QFileInfo::exists(python)))
+    {
+        return false;
+    }
+
+    const QString archivePath = QDir::tempPath() + QStringLiteral("/openmv-dev-") + sha256Hex(data).left(16) + QStringLiteral(".tar.xz");
+
+    {
+        QFile file(archivePath);
+
+        if((!file.open(QIODevice::WriteOnly)) || (file.write(data) != data.size()))
+        {
+            return false;
+        }
+
+        file.close();
+    }
+
+    QProcess process;
+    process.start(python, QStringList()
+        << QStringLiteral("-c")
+        << QStringLiteral("import sys,tarfile\nt=tarfile.open(sys.argv[1],'r:xz')\nt.extractall(sys.argv[2])\nt.close()")
+        << archivePath
+        << destDir);
+
+    bool ok = process.waitForStarted(30000) && process.waitForFinished(-1)
+        && (process.exitStatus() == QProcess::NormalExit) && (process.exitCode() == 0);
+
+    QFile::remove(archivePath);
+    return ok;
+}
+
+// Unpack an in-memory .zip into destDir via QZipReader.
+static bool extractZipToDir(const QByteArray &data, const QString &destDir)
+{
+    QByteArray copy = data;
+    QBuffer buffer(&copy);
+    QZipReader reader(&buffer);
+    return reader.extractAll(destDir);
+}
+
+// Install a downloaded dev archive as allUsersResourcePath()/<devDirName>. The studio
+// tarballs wrap their content in a single top-level dir (examples-dev/, firmware-dev/)
+// and the docs zip wraps it in html/, so unpack into a scratch dir and move whatever
+// single top-level directory it contains into place -- replacing any previous copy.
+static bool installDevArchive(const QByteArray &data, bool isTarXz, const QString &devDirName, const QString &base, const QString &python)
+{
+    const QString scratch = base + QStringLiteral("/.") + devDirName + QStringLiteral("-tmp");
+
+    QDir(scratch).removeRecursively();
+
+    if(!QDir().mkpath(scratch))
+    {
+        return false;
+    }
+
+    bool ok = isTarXz ? extractTarXzToDir(data, scratch, python) : extractZipToDir(data, scratch);
+
+    if(ok)
+    {
+        const QStringList dirs = QDir(scratch).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+
+        if(dirs.size() == 1)
+        {
+            const QString target = base + QStringLiteral("/") + devDirName;
+            QDir(target).removeRecursively();
+            ok = QDir().rename(scratch + QStringLiteral("/") + dirs.first(), target);
+        }
+        else
+        {
+            ok = false;
+        }
+    }
+
+    QDir(scratch).removeRecursively();
+    return ok;
+}
+
+// Blocking GET on the calling (worker) thread, reporting download progress and honouring
+// cancellation through `promise`. A local event loop pumps the reply's events.
+static QByteArray devDownloadSync(const QUrl &url, QPromise<DevSyncOutcome> &promise)
+{
+    QNetworkAccessManager manager;
+    QNetworkRequest request(url);
+    request.setRawHeader("Accept", "application/vnd.github+json");
+    QNetworkReply *reply = manager.get(request);
+
+    if(!reply)
+    {
+        return QByteArray();
+    }
+
+    QEventLoop loop;
+    QObject::connect(reply, &QNetworkReply::finished, &loop, &QEventLoop::quit);
+    QObject::connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
+    QObject::connect(reply, &QNetworkReply::downloadProgress, &loop, [reply, &promise] (qint64 received, qint64 total) {
+        if(promise.isCanceled())
+        {
+            reply->abort();
+        }
+        else if(total > 0)
+        {
+            promise.setProgressRange(0, static_cast<int>(total));
+            promise.setProgressValue(static_cast<int>(received));
+        }
+    });
+
+    loop.exec();
+
+    QByteArray result = (reply->error() == QNetworkReply::NoError) ? reply->readAll() : QByteArray();
+    reply->deleteLater();
+    return result;
+}
+
+// The installed version of a dev cache lives on disk next to it (e.g.
+// examples-dev.version beside examples-dev/), so the cache is self-describing and
+// can't drift from a separately-stored stamp. Both helpers run on the worker thread.
+static QString readDevCacheVersion(const QString &base, const QString &devDirName)
+{
+    QFile file(base + QStringLiteral("/") + devDirName + QStringLiteral(".version"));
+    return file.open(QIODevice::ReadOnly) ? QString::fromUtf8(file.readAll()).trimmed() : QString();
+}
+
+static void writeDevCacheVersion(const QString &base, const QString &devDirName, const QString &version)
+{
+    QFile file(base + QStringLiteral("/") + devDirName + QStringLiteral(".version"));
+
+    if(file.open(QIODevice::WriteOnly | QIODevice::Truncate))
+    {
+        file.write(version.toUtf8());
+    }
+}
+
+// Worker (runs on a thread-pool thread via Utils::asyncRun): download + extract the
+// requested dev resources off the GUI thread, reporting progress via `promise`. `base`
+// and `python` are resolved on the GUI thread and passed in so this never calls into
+// Core::ICore. It records each installed version on disk and returns which resources
+// it (re)installed (so the GUI thread can reload the example filters).
+static void devSyncWorker(QPromise<DevSyncOutcome> &promise, int parts,
+                          const QString &base, const QString &python)
+{
+    DevSyncOutcome out;
+    promise.setProgressRange(0, 0);
+
+    if((parts & OpenMVPlugin::DevExamples) && (!promise.isCanceled()))
+    {
+        promise.setProgressValueAndText(0, Tr::tr("Checking development examples..."));
+        QJsonObject dev = QJsonDocument::fromJson(devDownloadSync(QUrl(QLatin1String(DEV_MANIFEST_URL)), promise)).object()
+            .value(QStringLiteral("examples")).toObject().value(QStringLiteral("development")).toObject();
+        const QString version = dev.value(QStringLiteral("version")).toString();
+        const QString url = dev.value(QStringLiteral("url")).toString();
+        const QString sha = dev.value(QStringLiteral("sha256")).toString();
+
+        if((!url.isEmpty()) && ((!QFileInfo::exists(base + QStringLiteral("/examples-dev"))) || (version != readDevCacheVersion(base, QStringLiteral("examples-dev")))))
+        {
+            promise.setProgressValueAndText(0, Tr::tr("Downloading development examples..."));
+            QByteArray data = devDownloadSync(QUrl(url), promise);
+
+            if((!data.isEmpty()) && (sha.isEmpty() || (sha256Hex(data) == sha)) && installDevArchive(data, true, QStringLiteral("examples-dev"), base, python))
+            {
+                writeDevCacheVersion(base, QStringLiteral("examples-dev"), version);
+                out.examplesVersion = version;
+            }
+        }
+    }
+
+    if((parts & OpenMVPlugin::DevDocs) && (!promise.isCanceled()))
+    {
+        promise.setProgressValueAndText(0, Tr::tr("Checking development documentation..."));
+        QString url, stamp;
+
+        for(const QJsonValue &asset : QJsonDocument::fromJson(devDownloadSync(QUrl(QLatin1String(DEV_DOCS_RELEASE_API)), promise)).object().value(QStringLiteral("assets")).toArray())
+        {
+            const QJsonObject assetObject = asset.toObject();
+
+            if(assetObject.value(QStringLiteral("name")).toString() == QStringLiteral("openmv-doc-html.zip"))
+            {
+                url = assetObject.value(QStringLiteral("browser_download_url")).toString();
+                stamp = assetObject.value(QStringLiteral("updated_at")).toString();
+                break;
+            }
+        }
+
+        if((!url.isEmpty()) && ((!QFileInfo::exists(base + QStringLiteral("/html-dev"))) || (stamp != readDevCacheVersion(base, QStringLiteral("html-dev")))))
+        {
+            promise.setProgressValueAndText(0, Tr::tr("Downloading development documentation..."));
+            QByteArray data = devDownloadSync(QUrl(url), promise);
+
+            if((!data.isEmpty()) && installDevArchive(data, false, QStringLiteral("html-dev"), base, python))
+            {
+                writeDevCacheVersion(base, QStringLiteral("html-dev"), stamp);
+                out.docsStamp = stamp;
+            }
+        }
+    }
+
+    if((parts & OpenMVPlugin::DevFirmware) && (!promise.isCanceled()))
+    {
+        promise.setProgressValueAndText(0, Tr::tr("Checking development firmware..."));
+        QJsonObject dev = QJsonDocument::fromJson(devDownloadSync(QUrl(QLatin1String(DEV_MANIFEST_URL)), promise)).object()
+            .value(QStringLiteral("firmware")).toObject().value(QStringLiteral("development")).toObject();
+        const QString version = dev.value(QStringLiteral("version")).toString();
+        const QString url = dev.value(QStringLiteral("url")).toString();
+        const QString sha = dev.value(QStringLiteral("sha256")).toString();
+
+        if((!url.isEmpty()) && ((!QFileInfo::exists(base + QStringLiteral("/firmware-dev"))) || (version != readDevCacheVersion(base, QStringLiteral("firmware-dev")))))
+        {
+            promise.setProgressValueAndText(0, Tr::tr("Downloading the latest development firmware..."));
+            QByteArray data = devDownloadSync(QUrl(url), promise);
+
+            if((!data.isEmpty()) && (sha.isEmpty() || (sha256Hex(data) == sha)))
+            {
+                // Extraction gives no byte-level progress, so flip to an indeterminate
+                // bar with an "unpacking" message instead of a frozen 100% download bar.
+                // QFuture progress is monotonic, so the value must exceed the download's
+                // last byte count or the label change would be dropped; the (0, 0) range
+                // makes the bar indeterminate, so the number itself is never shown.
+                promise.setProgressRange(0, 0);
+                promise.setProgressValueAndText(std::numeric_limits<int>::max(), Tr::tr("Unpacking the latest development firmware..."));
+
+                if(installDevArchive(data, true, QStringLiteral("firmware-dev"), base, python))
+                {
+                    writeDevCacheVersion(base, QStringLiteral("firmware-dev"), version);
+                    out.firmwareVersion = version;
+                }
+            }
+        }
+    }
+
+    promise.addResult(out);
+}
+
+QString OpenMVPlugin::devResourceFolder(const QString &name) const
+{
+    if(m_developmentCam)
+    {
+        const QString dev = name + QStringLiteral("-dev");
+
+        if(Core::ICore::allUsersResourcePath(dev).exists())
+        {
+            return dev;
+        }
+    }
+
+    return name;
+}
+
+// Kick the worker off the GUI thread. The worker records installed versions on disk
+// itself, so nothing needs reading/writing here beyond the paths.
+static QFuture<DevSyncOutcome> launchDevSync(int parts)
+{
+    return Utils::asyncRun(devSyncWorker, parts,
+        Core::ICore::allUsersResourcePath().toString(),
+        bundledPythonBinary().toString());
+}
+
+void OpenMVPlugin::applyDevSyncOutcome(const DevSyncOutcome &out)
+{
+    // The worker already persisted the versions; the only GUI-thread follow-up is to
+    // reload the example filters when the examples were refreshed under a dev cam, so
+    // the Examples menu reflects them right away.
+    if((!out.examplesVersion.isEmpty()) && m_developmentCam)
+    {
+        loadExampleFilters(devResourceFolder(QStringLiteral("examples")));
+    }
+}
+
+void OpenMVPlugin::backgroundSyncDevResources(int parts)
+{
+    QFuture<DevSyncOutcome> future = launchDevSync(parts);
+
+    QFutureWatcher<DevSyncOutcome> *watcher = new QFutureWatcher<DevSyncOutcome>(this);
+    connect(watcher, &QFutureWatcher<DevSyncOutcome>::finished, this, [this, watcher] {
+        if((!watcher->future().isCanceled()) && watcher->future().resultCount())
+        {
+            applyDevSyncOutcome(watcher->result());
+        }
+        watcher->deleteLater();
+    });
+    watcher->setFuture(future);
+
+    // Runs silently: examples/docs are swapped in once ready (no status-bar UI). The
+    // user only waits when an action needs a resource (see syncDevFirmwareBlocking).
+}
+
+bool OpenMVPlugin::syncDevFirmwareBlocking()
+{
+    QFuture<DevSyncOutcome> future = launchDevSync(DevFirmware);
+
+    // Installing dev firmware needs it present now, so show the worker's progress in a
+    // modal dialog and wait.
+    QProgressDialog dialog(Tr::tr("Downloading the latest development firmware..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint);
+    dialog.setWindowModality(Qt::ApplicationModal);
+    dialog.setAttribute(Qt::WA_ShowWithoutActivating);
+    // The download hitting 100% would otherwise auto-close/reset the dialog before the
+    // worker switches it to the indeterminate "unpacking" phase, leaving it hidden.
+    dialog.setAutoClose(false);
+    dialog.setAutoReset(false);
+    QFutureWatcher<DevSyncOutcome> watcher;
+    QEventLoop loop;
+    connect(&watcher, &QFutureWatcher<DevSyncOutcome>::finished, &loop, &QEventLoop::quit);
+    connect(&watcher, &QFutureWatcher<DevSyncOutcome>::progressRangeChanged, &dialog, &QProgressDialog::setRange);
+    connect(&watcher, &QFutureWatcher<DevSyncOutcome>::progressValueChanged, &dialog, &QProgressDialog::setValue);
+    connect(&watcher, &QFutureWatcher<DevSyncOutcome>::progressTextChanged, &dialog, &QProgressDialog::setLabelText);
+    connect(&dialog, &QProgressDialog::canceled, &watcher, &QFutureWatcher<DevSyncOutcome>::cancel);
+    watcher.setFuture(future);
+
+    if(!future.isFinished())
+    {
+        dialog.show();
+        loop.exec();
+    }
+
+    dialog.close();
+
+    if((!future.isCanceled()) && future.resultCount())
+    {
+        applyDevSyncOutcome(future.result());
+    }
+
+    return Core::ICore::allUsersResourcePath(QStringLiteral("firmware-dev")).exists();
 }
 
 static bool extractAllWrapper(QByteArray *data, const QString &path)
@@ -604,6 +968,12 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
     QNetworkAccessManager *manager2 = new QNetworkAccessManager(this);
 
     connect(manager2, &QNetworkAccessManager::finished, this, [this, manager2, dialog] (QNetworkReply *reply2) {
+        // The download is finished, so dismiss this progress dialog now -- before the
+        // changelog dialog (and the connect/firmware flow it launches) open on top of it.
+        // Otherwise it lingers hidden behind them and only closes as the nested flow
+        // unwinds, which looks like a stray dialog flashing closed.
+        dialog->close();
+
         QByteArray data2 = reply2->error() == QNetworkReply::NoError ? reply2->readAll() : QByteArray();
 
         if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty()))
@@ -729,7 +1099,6 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
         }
 
         connect(reply2, &QNetworkReply::destroyed, manager2, &QNetworkAccessManager::deleteLater); reply2->deleteLater();
-        dialog->close();
         dialog->deleteLater();
     });
 
@@ -759,99 +1128,46 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
 
 bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder)
 {
-    QProgressDialog *dialog = new QProgressDialog(Tr::tr("Downloading..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
-        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
-        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
-    dialog->setWindowModality(Qt::ApplicationModal);
-    dialog->setAttribute(Qt::WA_ShowWithoutActivating);
-    dialog->setAutoClose(false);
+    const QString tempTarget = QDir::cleanPath(QDir::fromNativeSeparators(QDir::tempPath() + QDir::separator() + firmwareFileName));
+    QFile::remove(tempTarget);
 
-    QNetworkAccessManager *manager2 = new QNetworkAccessManager(this);
-
-    bool ok = true;
-    bool *okPtr = &ok;
-
-    connect(manager2, &QNetworkAccessManager::finished, this, [manager2, dialog, okPtr, path, firmwareFileName, originalFirmwareFolder] (QNetworkReply *reply2) {
-        QByteArray data2 = reply2->error() == QNetworkReply::NoError ? reply2->readAll() : QByteArray();
-
-        if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty()))
-        {
-            dialog->setLabelText(Tr::tr("Extracting..."));
-            dialog->setRange(0, 0);
-            dialog->setCancelButton(Q_NULLPTR);
-
-            if(!extractAllWrapper(&data2, QDir::tempPath()))
-            {
-                QMessageBox::critical(Core::ICore::dialogParent(),
-                    QString(),
-                    Tr::tr("Unable to extract firmware!"));
-
-                *okPtr = false;
-            }
-            else
-            {
-                *path = QDir::cleanPath(QDir::fromNativeSeparators(QDir::tempPath() + QDir::separator() + firmwareFileName));
-
-                if (firmwareFileName.endsWith(QStringLiteral("lst")))
-                {
-                    QFile(Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
-                        .pathAppended(originalFirmwareFolder)
-                        .pathAppended(firmwareFileName).toString())
-                    .copy(QDir::cleanPath(QDir::fromNativeSeparators(QDir::tempPath() + QDir::separator() + firmwareFileName)));
-                }
-            }
-        }
-        else if((reply2->error() != QNetworkReply::NoError) && (reply2->error() != QNetworkReply::OperationCanceledError))
-        {
-            QMessageBox::critical(Core::ICore::dialogParent(),
-                Tr::tr("Connect"),
-                Tr::tr("Error: %L1!").arg(reply2->errorString()));
-
-            *okPtr = false;
-        }
-        else if(reply2->error() != QNetworkReply::OperationCanceledError)
-        {
-            QMessageBox::critical(Core::ICore::dialogParent(),
-                Tr::tr("Connect"),
-                Tr::tr("Cannot open the resources file \"%L1\"!").arg(reply2->request().url().toString()));
-
-            *okPtr = false;
-        }
-
-        connect(reply2, &QNetworkReply::destroyed, manager2, &QNetworkAccessManager::deleteLater); reply2->deleteLater();
-        dialog->close();
-        dialog->deleteLater();
-    });
-
-    QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://github.com/openmv/openmv/releases/download/development/firmware_%1.zip").arg(arch)));
-    QNetworkReply *reply2 = manager2->get(request2);
-    QPointer<QProgressDialog> dlg = dialog;
-
-    if(reply2)
+    // .lst listings aren't part of the dev firmware bundle -- take them from the
+    // released firmware, exactly as before.
+    if(firmwareFileName.endsWith(QStringLiteral("lst")))
     {
-        connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
-        connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-        connect(reply2, &QNetworkReply::downloadProgress, dialog, [dlg] (qint64 bytesReceived, qint64 bytesTotal) {
-            if (!dlg) return;
-            dlg->setMaximum((bytesTotal > 0) ? bytesTotal : 0);
-            dlg->setValue(bytesReceived);
-        });
-
-        dialog->exec();
-
-        if(ok)
-        {
-            return true;
-        }
+        *path = tempTarget;
+        return QFile(Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
+            .pathAppended(originalFirmwareFolder)
+            .pathAppended(firmwareFileName).toString()).copy(tempTarget);
     }
-    else
+
+    // Everything else comes from the cached dev firmware. syncDevFirmwareBlocking()
+    // re-downloads the 54.7 MB bundle only when the dev version actually changed (with
+    // a modal progress dialog), so repeat installs of the same dev firmware don't fetch.
+    if(!syncDevFirmwareBlocking())
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
-            Tr::tr("Network request failed \"%L1\"!").arg(request2.url().toString()));
+            Tr::tr("Unable to download the latest development firmware!"));
+
+        return false;
     }
 
-    return false;
+    const Utils::FilePath cached = Core::ICore::allUsersResourcePath(QStringLiteral("firmware-dev")).pathAppended(arch).pathAppended(firmwareFileName);
+
+    if(!cached.exists())
+    {
+        QMessageBox::critical(Core::ICore::dialogParent(),
+            Tr::tr("Connect"),
+            Tr::tr("The development firmware for this board is not available!"));
+
+        return false;
+    }
+
+    // Copy into the temp file the caller flashes from (and may delete afterward),
+    // so the cache itself is never consumed.
+    *path = tempTarget;
+    return QFile(cached.toString()).copy(tempTarget);
 }
 
 QList<QPair<QString, QString> > OpenMVPlugin::querySerialPorts(const QStringList &portList)
@@ -3246,6 +3562,35 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_major = major2;
         m_minor = minor2;
         m_patch = patch2;
+
+        // A cam reporting a firmware version newer than the released firmware we ship
+        // is running a development build (master's version macro is always bumped past
+        // the last release tag). When it is, prefer the cached dev examples/docs.
+        m_developmentCam = false;
+        {
+            QRegularExpressionMatch rel = QRegularExpression(QStringLiteral("(\\d+)\\.(\\d+)\\.(\\d+)")).
+                match(m_firmwareSettings.object().value(QStringLiteral("firmware_version")).toString());
+
+            if(rel.hasMatch())
+            {
+                int rMaj = rel.captured(1).toInt(), rMin = rel.captured(2).toInt(), rPat = rel.captured(3).toInt();
+                m_developmentCam = (m_major > rMaj)
+                    || ((m_major == rMaj) && (m_minor > rMin))
+                    || ((m_major == rMaj) && (m_minor == rMin) && (m_patch > rPat));
+            }
+        }
+
+        if(m_developmentCam && (!m_viewerMode))
+        {
+            // A dev cam is attached. Load the dev example filters from whatever is
+            // already cached so the Examples menu reflects it immediately, then refresh
+            // the dev examples/docs in the background -- that reloads the filters again
+            // if a newer version lands. (The viewer hides those menus, so it never
+            // caches them.)
+            loadExampleFilters(devResourceFolder(QStringLiteral("examples")));
+            backgroundSyncDevResources(DevExamples | DevDocs);
+        }
+
         m_errorFilterString = QString();
 
         m_openDriveFolderAction->setEnabled(false);
@@ -3558,6 +3903,9 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             m_major = int();
             m_minor = int();
             m_patch = int();
+            // No cam attached -- fall back to the released examples/docs.
+            m_developmentCam = false;
+            loadExampleFilters(devResourceFolder(QStringLiteral("examples")));
             // LEAVE CACHED m_boardTypeFolder = QString();
             // LEAVE CACHED m_fullBoardType = QString();
             // LEAVE CACHED m_boardType = QString();

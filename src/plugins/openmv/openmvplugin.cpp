@@ -85,6 +85,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_major = int();
     m_minor = int();
     m_patch = int();
+    m_developmentCam = false;
     m_boardTypeFolder = QString();
     m_fullBoardType = QString();
     m_boardType = QString();
@@ -618,41 +619,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     ///////////////////////////////////////////////////////////////////////////
 
-    m_exampleFilters = QList<exampleFilter_t>();
-
-    QFile filters(Core::ICore::allUsersResourcePath(QStringLiteral("examples/index.csv")).toString());
-
-    if(filters.open(QIODevice::ReadOnly))
-    {
-        forever
-        {
-            QByteArray data = filters.readLine();
-
-            if((filters.error() == QFile::NoError) && (!data.isEmpty()))
-            {
-                if (QRegularExpression(QStringLiteral("^\\s*#")).match(QString::fromUtf8(data)).hasMatch()) continue;
-                QRegularExpressionMatch regexes = QRegularExpression(QStringLiteral("\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"")).match(QString::fromUtf8(data));
-
-                exampleFilter_t filter;
-                filter.path = QRegularExpression(regexes.captured(1));
-                filter.path.optimize();
-                filter.boardType = QRegularExpression(regexes.captured(2));
-                filter.boardType.optimize();
-                filter.boardType.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
-                filter.sensorType = QRegularExpression(regexes.captured(3));
-                filter.sensorType.optimize();
-                filter.sensorType.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
-                filter.flatten = regexes.captured(4);
-
-                m_exampleFilters.append(filter);
-            }
-            else
-            {
-                filters.close();
-                break;
-            }
-        }
-    }
+    loadExampleFilters(QStringLiteral("examples"));
 
     ///////////////////////////////////////////////////////////////////////////
 
@@ -871,7 +838,7 @@ void OpenMVPlugin::extensionsInitialized()
 
             if((!m_enableFilteringExamplesAction->isChecked()) || m_connected)
             {
-                QMultiMap<QString, QAction *> actions = aboutToShowExamplesRecursive(Core::ICore::allUsersResourcePath(QStringLiteral("examples")).toString(), examplesMenu->menu());
+                QMultiMap<QString, QAction *> actions = aboutToShowExamplesRecursive(Core::ICore::allUsersResourcePath(devResourceFolder(QStringLiteral("examples"))).toString(), examplesMenu->menu());
 
                 if(actions.isEmpty())
                 {
@@ -1821,8 +1788,12 @@ void OpenMVPlugin::extensionsInitialized()
             Core::Command *docsPageCommand = Core::ActionManager::registerAction(docsPageAction,
                 Utils::Id(QString(QStringLiteral("OpenMV.Docs.%1")).arg(docsPageIndex++).toUtf8().constData()));
             docsMenu->addAction(docsPageCommand);
-            connect(docsPageAction, &QAction::triggered, this, [path] {
-                openUrlOrWarn(QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(path).toString()));
+            connect(docsPageAction, &QAction::triggered, this, [this, path] {
+                // Resolve "html/..." against the dev docs (html-dev) when a dev cam
+                // is attached and that cache exists, otherwise the released html.
+                QString devPath = path;
+                devPath.replace(0, 4, devResourceFolder(QStringLiteral("html")));
+                openUrlOrWarn(QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(devPath).toString()));
             });
         }
 
@@ -2947,6 +2918,16 @@ void OpenMVPlugin::extensionsInitialized()
 
 bool OpenMVPlugin::delayedInitialize()
 {
+    // Keep the dev examples/docs caches current on launch -- but only once a dev cam
+    // has established them. Users who never touch dev firmware never download these,
+    // and the viewer never shows those menus, so it never caches them either.
+    if((!m_viewerMode)
+    && (Core::ICore::allUsersResourcePath(QStringLiteral("examples-dev")).exists()
+    || Core::ICore::allUsersResourcePath(QStringLiteral("html-dev")).exists()))
+    {
+        backgroundSyncDevResources(DevExamples | DevDocs);
+    }
+
     // -auto_run in viewer mode runs the open script -- a file passed on the command
     // line that the IDE opens, after which auto-run runs the open document. The IDE
     // only opens a file as a runnable script in its text editor when its MIME type is
@@ -4254,6 +4235,45 @@ void OpenMVPlugin::saveImage(const QPixmap &data)
         }
     }
 
+}
+
+void OpenMVPlugin::loadExampleFilters(const QString &examplesFolder)
+{
+    m_exampleFilters = QList<exampleFilter_t>();
+
+    QFile filters(Core::ICore::allUsersResourcePath(examplesFolder + QStringLiteral("/index.csv")).toString());
+
+    if(filters.open(QIODevice::ReadOnly))
+    {
+        forever
+        {
+            QByteArray data = filters.readLine();
+
+            if((filters.error() == QFile::NoError) && (!data.isEmpty()))
+            {
+                if (QRegularExpression(QStringLiteral("^\\s*#")).match(QString::fromUtf8(data)).hasMatch()) continue;
+                QRegularExpressionMatch regexes = QRegularExpression(QStringLiteral("\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"")).match(QString::fromUtf8(data));
+
+                exampleFilter_t filter;
+                filter.path = QRegularExpression(regexes.captured(1));
+                filter.path.optimize();
+                filter.boardType = QRegularExpression(regexes.captured(2));
+                filter.boardType.optimize();
+                filter.boardType.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
+                filter.sensorType = QRegularExpression(regexes.captured(3));
+                filter.sensorType.optimize();
+                filter.sensorType.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
+                filter.flatten = regexes.captured(4);
+
+                m_exampleFilters.append(filter);
+            }
+            else
+            {
+                filters.close();
+                break;
+            }
+        }
+    }
 }
 
 QMultiMap<QString, QAction *> OpenMVPlugin::aboutToShowExamplesRecursive(const QString &path, QMenu *parent, bool notExamples)

@@ -422,6 +422,15 @@ class ScanDriveThread: public QObject
     signals: void driveScanned(const QList<QPair<QString, QString> > &output);
 };
 
+// New version stamps from a development-resource sync (empty field = unchanged).
+// Produced by the worker thread, applied (settings + filter reload) on the GUI thread.
+struct DevSyncOutcome
+{
+    QString examplesVersion;
+    QString docsStamp;
+    QString firmwareVersion;
+};
+
 class OpenMVPlugin : public ExtensionSystem::IPlugin
 {
     Q_OBJECT
@@ -497,6 +506,38 @@ private:
     static QUrl webChangelogUrl(const QString &product, int major, int minor, int patch);
     static QUrl localChangelogUrl(const QString &product, const QString &version);
     static void openUrlOrWarn(const QUrl &url);
+
+    // --- Development resource cache ------------------------------------------
+    // Dev examples/docs/firmware are published separately from the released
+    // resources (examples + firmware via download.openmv.io/studio/manifest.json,
+    // docs via the openmv-doc "development" release). They are cached next to the
+    // released folders with a "-dev" suffix and used when a development cam is
+    // attached. See openmvpluginconnect.cpp.
+
+    // Returns "<name>-dev" when a development cam is attached and that cache exists,
+    // otherwise "<name>" -- so callers transparently read dev or released resources.
+    QString devResourceFolder(const QString &name) const;
+
+    // Load the example board/sensor filters from <examplesFolder>/index.csv (the
+    // released "examples" folder, or "examples-dev" for a development cam).
+    void loadExampleFilters(const QString &examplesFolder);
+
+public:
+    enum DevResourcePart { DevExamples = 1, DevDocs = 2, DevFirmware = 4 };
+private:
+
+    // Sync the requested dev caches on a worker thread (download + extract happen off
+    // the GUI thread), reporting to the Qt Creator progress popup. Non-blocking.
+    void backgroundSyncDevResources(int parts);
+
+    // Apply a finished sync's results on the GUI thread: persist the version stamps and
+    // reload the dev example filters if the examples were refreshed.
+    void applyDevSyncOutcome(const DevSyncOutcome &out);
+
+    // Sync the cached dev firmware (54.7 MB, only when the dev version changed) with a
+    // modal progress dialog and wait for it -- used right before flashing dev firmware
+    // so the user sees they must wait. Returns true when firmware-dev is ready.
+    bool syncDevFirmwareBlocking();
 
     void openmvInternalBootloader(const QString &forceFirmwarePath,
                                   bool forceFlashFSErase,
@@ -615,6 +656,10 @@ private:
     int m_major;
     int m_minor;
     int m_patch;
+    // True when the attached cam reports a firmware version newer than the released
+    // firmware we ship -- i.e. it is running a development build, so the IDE prefers
+    // the cached dev examples/docs that match it.
+    bool m_developmentCam;
     QString m_boardTypeFolder;
     QString m_fullBoardType;
     QString m_boardType;
