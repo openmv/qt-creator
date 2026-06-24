@@ -190,7 +190,7 @@ static inline int askMsgSendFailed()
                 QCoreApplication::translate("Application", "Unable to send command line arguments "
                                             "to the already running instance. It does not appear to "
                                             "be responding. Do you want to start a new instance of "
-                                            "%1?").arg(Core::Constants::IDE_DISPLAY_NAME),
+                                            "%1?").arg(QGuiApplication::applicationDisplayName()),
                 QMessageBox::Yes | QMessageBox::No | QMessageBox::Retry,
                 QMessageBox::Retry);
 }
@@ -719,7 +719,23 @@ int main(int argc, char **argv)
     QCoreApplication::setApplicationName(Core::Constants::IDE_CASED_ID);
     QCoreApplication::setApplicationVersion(QLatin1String(Core::Constants::IDE_VERSION_LONG));
     QCoreApplication::setOrganizationName(QLatin1String(Core::Constants::IDE_SETTINGSVARIANT_STR));
-    QGuiApplication::setApplicationDisplayName(Core::Constants::IDE_DISPLAY_NAME);
+    // OPENMV-DIFF //
+    // QGuiApplication::setApplicationDisplayName(Core::Constants::IDE_DISPLAY_NAME);
+    // OPENMV-DIFF //
+    // Viewer mode is a read-only telemetry viewer, not the IDE -- present it as
+    // "OpenMV Viewer" everywhere the app name is shown. This is the single runtime
+    // source of the name; user-facing strings read QGuiApplication::applicationDisplayName().
+    bool viewerMode = false;
+    for (int i = 1; i < argc; ++i) {
+        if (QLatin1String(argv[i]) == QLatin1String("-viewer_mode")) {
+            viewerMode = true;
+            break;
+        }
+    }
+    QGuiApplication::setApplicationDisplayName(viewerMode
+                                                  ? QLatin1String("OpenMV Viewer")
+                                                  : QLatin1String(Core::Constants::IDE_DISPLAY_NAME));
+    // OPENMV-DIFF //
 
     const QScopeGuard cleanup([] { Utils::Singleton::deleteAll(); });
 
@@ -758,7 +774,7 @@ int main(int argc, char **argv)
         if (!path.removeRecursively(&error))
         {
             QMessageBox::critical(Q_NULLPTR, QString(),
-                QLatin1String("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                QString(QLatin1String("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!")).arg(QGuiApplication::applicationDisplayName()));
             exit(-1);
         }
 

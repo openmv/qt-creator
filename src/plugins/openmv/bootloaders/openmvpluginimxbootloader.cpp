@@ -32,6 +32,8 @@
 #include "openmvtr.h"
 #include "openmvpluginconnect.h"
 
+#include <QGuiApplication>
+
 namespace OpenMV {
 namespace Internal {
 
@@ -214,8 +216,8 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
 
             if((!justEraseFlashFs) && forceFirmwarePath.isEmpty() && QMessageBox::question(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
-                Tr::tr("OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.\n\n"
-                   "Continue?"),
+                Tr::tr("%1 can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.\n\n"
+                   "Continue?").arg(QGuiApplication::applicationDisplayName()),
                 QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
             == QMessageBox::Ok)
             {

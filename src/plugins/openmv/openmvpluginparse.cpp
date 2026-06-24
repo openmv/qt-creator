@@ -32,6 +32,8 @@
 
 #include "openmvtr.h"
 
+#include <QGuiApplication>
+
 namespace OpenMV {
 namespace Internal {
 
@@ -440,7 +442,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
         {
             int answer = QMessageBox::question(Core::ICore::dialogParent(),
                 Tr::tr("Import Helper"),
-                Tr::tr("Module \"%L1\" on your OpenMV Cam is different than the copy on your computer.\n\nWould you like OpenMV IDE to update the module on your OpenMV Cam?").arg(targetModule.moduleName),
+                Tr::tr("Module \"%L1\" on your OpenMV Cam is different than the copy on your computer.\n\nWould you like %2 to update the module on your OpenMV Cam?").arg(targetModule.moduleName).arg(QGuiApplication::applicationDisplayName()),
                 QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes);
 
             if(answer == QMessageBox::Yes)
@@ -515,7 +517,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
             {
                 int answer = QMessageBox::question(Core::ICore::dialogParent(),
                     Tr::tr("Import Helper"),
-                    Tr::tr("Would you like OpenMV IDE to update the module on your computer?"),
+                    Tr::tr("Would you like %1 to update the module on your computer?").arg(QGuiApplication::applicationDisplayName()),
                     QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes);
 
                 if(answer == QMessageBox::Yes)
@@ -606,7 +608,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
         {
             int answer = QMessageBox::question(Core::ICore::dialogParent(),
                 Tr::tr("Import Helper"),
-                Tr::tr("Module \"%L1\" may be required to run your script.\n\nWould you like OpenMV IDE to copy it to your OpenMV Cam?").arg(errorModule),
+                Tr::tr("Module \"%L1\" may be required to run your script.\n\nWould you like %2 to copy it to your OpenMV Cam?").arg(errorModule).arg(QGuiApplication::applicationDisplayName()),
                 QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes);
 
             if(answer == QMessageBox::Yes)

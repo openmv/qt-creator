@@ -32,6 +32,8 @@
 #include "openmvtr.h"
 #include "openmvpluginconnect.h"
 
+#include <QGuiApplication>
+
 namespace OpenMV {
 namespace Internal {
 
@@ -204,9 +206,9 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
 
                         if(QMessageBox::question(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
-                            Tr::tr("OpenMV IDE needs to update your bootloader to support ROMFS.\n\n"
+                            Tr::tr("%1 needs to update your bootloader to support ROMFS.\n\n"
                                    "The internal FAT filesystem will be erased!\n\n"
-                                   "Continue?"),
+                                   "Continue?").arg(QGuiApplication::applicationDisplayName()),
                             QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
                         == QMessageBox::Ok)
                         {
@@ -241,8 +243,8 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                     {
                         if((!previousMappingSet) && (!justEraseFlashFs) && forceFirmwarePath.isEmpty() && QMessageBox::question(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
-                            Tr::tr("OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.\n\n"
-                               "Continue?"),
+                            Tr::tr("%1 can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.\n\n"
+                               "Continue?").arg(QGuiApplication::applicationDisplayName()),
                             QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
                         == QMessageBox::Ok)
                         {

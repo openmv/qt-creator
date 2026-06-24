@@ -34,6 +34,8 @@
 
 #include "openmvtr.h"
 
+#include <QGuiApplication>
+
 namespace OpenMV {
 namespace Internal {
 
@@ -393,7 +395,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             {
                 resourcesSettingsFile.close();
 
-                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                 exit(-1);
             }
 
@@ -401,7 +403,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         }
         else
         {
-            QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+            QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
             exit(-1);
         }
 
@@ -411,7 +413,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
         if(!removeRecursively(Core::ICore::allUsersResourcePath(), m_resourceFoldersToDelete, &error))
         {
-            QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+            QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
             ok = false;
         }
         else
@@ -422,7 +424,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             {
                 if(!oldUserResourcesPath.removeRecursively(&error))
                 {
-                    QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                    QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                     ok = false;
                 }
             }
@@ -433,7 +435,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
             // {
             //     if(!oldUserResourcesPath2.removeRecursively(&error))
             //     {
-            //         QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+            //         QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
             //         ok = false;
             //     }
             // }
@@ -450,7 +452,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                                                           copyOperator))
 
                     {
-                        QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                        QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                         ok = false;
                         break;
                     }
@@ -478,13 +480,13 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                 {
                     resourcesSettingsFile.close();
 
-                    QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                    QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                     exit(-1);
                 }
             }
             else
             {
-                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                 exit(-1);
             }
         }
@@ -542,8 +544,8 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     {
         QMessageBox::critical(Q_NULLPTR, QString(),
             Tr::tr("Error reading <user_resources>/openmvide/firmware/settings.json: %L1."
-                   "\n\nOpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.").
-                   arg(firmwareSettings.errorString()));
+                   "\n\n%2 versions before v4.3.0 do not have this file and would have deleted it on installing resources.").
+                   arg(firmwareSettings.errorString()).arg(QGuiApplication::applicationDisplayName()));
         exit(-1);
     }
 
@@ -977,7 +979,7 @@ void OpenMVPlugin::extensionsInitialized()
     toolsMenu->addSeparator();
 
     m_autoReconnectAction = new QAction(Tr::tr("Auto Reconnect to OpenMV Cam"), this);
-    m_autoReconnectAction->setToolTip(Tr::tr("When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected."));
+    m_autoReconnectAction->setToolTip(Tr::tr("When Auto Reconnect is enabled %1 will automatically reconnect to your OpenMV if detected.").arg(QGuiApplication::applicationDisplayName()));
     Core::Command *autoReconnectCommand = Core::ActionManager::registerAction(m_autoReconnectAction, Utils::Id("OpenMV.AutoReconnect"));
     toolsMenu->addAction(autoReconnectCommand);
     m_autoReconnectAction->setCheckable(true);
@@ -1823,15 +1825,15 @@ void OpenMVPlugin::extensionsInitialized()
 
     QAction *aboutAction = new QAction(QIcon::fromTheme(QStringLiteral("help-about")),
         Utils::HostOsInfo::isMacHost()
-            ? (m_viewerMode ? Tr::tr("About OpenMV Viewer") : Tr::tr("About OpenMV IDE"))
-            : (m_viewerMode ? Tr::tr("About OpenMV Viewer...") : Tr::tr("About OpenMV IDE...")), this);
+            ? Tr::tr("About %1").arg(QGuiApplication::applicationDisplayName())
+            : Tr::tr("About %1...").arg(QGuiApplication::applicationDisplayName()), this);
     aboutAction->setMenuRole(QAction::AboutRole);
      Core::Command *aboutCommand = Core::ActionManager::registerAction(aboutAction, Utils::Id("OpenMV.About"));
     helpMenu->addAction(aboutCommand, Core::Constants::G_HELP_ABOUT);
     connect(aboutAction, &QAction::triggered, this, [this] {
         const QString fw = m_firmwareSettings.object().value(QStringLiteral("firmware_version")).toString();
         const QString theme = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? QStringLiteral("dark") : QStringLiteral("light");
-        QMessageBox::about(Core::ICore::dialogParent(), m_viewerMode ? Tr::tr("About OpenMV Viewer") : Tr::tr("About OpenMV IDE"), Tr::tr(
+        QMessageBox::about(Core::ICore::dialogParent(), Tr::tr("About %1").arg(QGuiApplication::applicationDisplayName()), Tr::tr(
         "<p><b>About %L4 %L1</b></p>"
         "<p>By: Ibrahim Abdelkader & Kwabena W. Agyeman</p>"
 #ifdef OPENMV_FACTORY_IDE
@@ -1843,12 +1845,12 @@ void OpenMVPlugin::extensionsInitialized()
         "<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <a href=\"https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT\">GNU General Public License</a> for more details.</p>"
         "<p><b>Questions or Comments?</b></p>"
         "<p>Contact us at <a href=\"mailto:openmv@openmv.io\">openmv@openmv.io</a>.</p>"
-        ).arg(QLatin1String(Core::Constants::IDE_VERSION_LONG)).arg(QString::number(QDate::currentDate().year())).arg(QLatin1String(Core::Constants::IDE_AUTHOR)).arg(m_viewerMode ? Tr::tr("OpenMV Viewer") : Tr::tr("OpenMV IDE")) +
+        ).arg(QLatin1String(Core::Constants::IDE_VERSION_LONG)).arg(QString::number(QDate::currentDate().year())).arg(QLatin1String(Core::Constants::IDE_AUTHOR)).arg(QGuiApplication::applicationDisplayName()) +
         Tr::tr("<p><b>Release Notes</b></p>") +
         QStringLiteral("<p>") +
         QString(QStringLiteral("<a href=\"%1\">%2</a>")).arg(
             localChangelogUrl(QStringLiteral("ide"), QLatin1String(Core::Constants::IDE_VERSION_LONG)).toString(),
-            Tr::tr("OpenMV IDE %1").arg(QLatin1String(Core::Constants::IDE_VERSION_LONG))) +
+            Tr::tr("%1 %2").arg(QGuiApplication::applicationDisplayName(), QLatin1String(Core::Constants::IDE_VERSION_LONG))) +
         QStringLiteral(" &middot; ") +
         QString(QStringLiteral("<a href=\"%1\">%2</a>")).arg(
             localChangelogUrl(QStringLiteral("firmware"), fw).toString(),
@@ -2765,9 +2767,10 @@ void OpenMVPlugin::extensionsInitialized()
                 || ((IDE_VERSION_MAJOR == major) && (IDE_VERSION_MINOR == minor) && (IDE_VERSION_RELEASE < patch)))
                 {
                     const QString updateMessage =
-                        Tr::tr("A new version of OpenMV IDE (%L1.%L2.%L3) is available for download. See the <a href=\"%L4\">release notes</a>.")
+                        Tr::tr("A new version of %5 (%L1.%L2.%L3) is available for download. See the <a href=\"%L4\">release notes</a>.")
                             .arg(major).arg(minor).arg(patch)
-                            .arg(webChangelogUrl(QStringLiteral("ide"), major, minor, patch).toString());
+                            .arg(webChangelogUrl(QStringLiteral("ide"), major, minor, patch).toString())
+                            .arg(QGuiApplication::applicationDisplayName());
                     QMessageBox box(QMessageBox::Information, Tr::tr("Update Available"), updateMessage, QMessageBox::Cancel, Core::ICore::dialogParent(),
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -3145,7 +3148,7 @@ bool OpenMVPlugin::delayedInitialize()
         if(!isNoShow()) QMessageBox::warning(Core::ICore::dialogParent(),
             Tr::tr("WiFi Programming Disabled!"),
             Tr::tr("Another application is using the OpenMV Cam broadcast discovery port. "
-               "Please close that application and restart OpenMV IDE to enable WiFi programming."));
+               "Please close that application and restart %1 to enable WiFi programming.").arg(QGuiApplication::applicationDisplayName()));
     }
 
     if(!m_viewerMode)
@@ -3194,16 +3197,16 @@ void OpenMVPlugin::showLEDStatesDialog()
     if ((!QApplication::activeModalWidget()) && (!m_working)) {
         Utils::CheckableMessageBox::information(Core::ICore::dialogParent(),
                 Tr::tr("OpenMV Cam LED Colors"),
-                Tr::tr("Thanks for using the OpenMV Cam and OpenMV IDE!\n\n"
+                Tr::tr("Thanks for using the OpenMV Cam and %1!\n\n"
                    "Your OpenMV Cam's onboard LED blinks with diffent colors to indicate its state:\n\n"
                    "Blinking Green:\n\nYour OpenMV Cam's onboard bootloader is running. "
-                   "The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow OpenMV IDE to reprogram your OpenMV Cam.\n\n"
+                   "The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow %1 to reprogram your OpenMV Cam.\n\n"
                    "Blinking Blue:\n\nYour OpenMV Cam is running the default main.py script onboard.\n\n"
                    "If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.\n\n"
-                   "If the LED is blinking blue but OpenMV IDE can't connect to your OpenMV Cam "
+                   "If the LED is blinking blue but %1 can't connect to your OpenMV Cam "
                    "please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.\n\n"
                    "Blinking White:\n\nYour OpenMV Cam's firmware is panicking because of a hardware failure. "
-                   "Please check that your OpenMV Cam's camera module is installed securely.\n\n"),
+                   "Please check that your OpenMV Cam's camera module is installed securely.\n\n").arg(QGuiApplication::applicationDisplayName()),
                 Utils::CheckableDecider(DONT_SHOW_LED_STATES_AGAIN),
                 QMessageBox::Ok,
                 QMessageBox::Ok);
@@ -3905,8 +3908,8 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
 
     if(QMessageBox::warning(Core::ICore::dialogParent(),
         Tr::tr("Unregistered OpenMV Cam Detected"),
-        Tr::tr("Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.\n\n"
-           "Would you like to register your OpenMV Cam now?"),
+        Tr::tr("Your OpenMV Cam isn't registered. You need to register your OpenMV Cam with OpenMV for unlimited use with %1 without any interruptions.\n\n"
+           "Would you like to register your OpenMV Cam now?").arg(QGuiApplication::applicationDisplayName()),
         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
     == QMessageBox::Yes)
     {
@@ -3925,8 +3928,8 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
 
     if(QMessageBox::warning(Core::ICore::dialogParent(),
         Tr::tr("Unregistered OpenMV Cam Detected"),
-        Tr::tr("OpenMV IDE will display these three messages boxes each time you connect until you register your OpenMV Cam...\n\n"
-           "Would you like to register your OpenMV Cam now?"),
+        Tr::tr("%1 will display these three messages boxes each time you connect until you register your OpenMV Cam...\n\n"
+           "Would you like to register your OpenMV Cam now?").arg(QGuiApplication::applicationDisplayName()),
         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
     == QMessageBox::Yes)
     {

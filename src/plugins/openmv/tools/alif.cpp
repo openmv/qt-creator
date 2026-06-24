@@ -30,6 +30,7 @@
 
 #include <QtCore>
 #include <QtWidgets>
+#include <QGuiApplication>
 #include <QSerialPort>
 #include <QSerialPortInfo>
 
@@ -99,7 +100,7 @@ bool alifSyncTools()
         if(!Utils::FileUtils::copyRecursively(tools, Core::ICore::allUsersResourcePath(QStringLiteral("alif")), &error, copyOperator))
         {
             QMessageBox::critical(Q_NULLPTR, QString(),
-                                  Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                  Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
             return false;
         }
     }
@@ -135,14 +136,14 @@ bool alifSyncTools()
 
                     if(!Core::ICore::allUsersResourcePath(QStringLiteral("alif")).removeRecursively(&error))
                     {
-                        QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                        QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                         return false;
                     }
 
                     if(!Utils::FileUtils::copyRecursively(tools, Core::ICore::allUsersResourcePath(QStringLiteral("alif")), &error, copyOperator))
                     {
                         QMessageBox::critical(Q_NULLPTR, QString(),
-                                              Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                              Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                         return false;
                     }
                 }
@@ -150,7 +151,7 @@ bool alifSyncTools()
             else
             {
                 QMessageBox::critical(Q_NULLPTR, QString(),
-                                      Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                      Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                 return false;
             }
         }
@@ -160,14 +161,14 @@ bool alifSyncTools()
 
             if(!Core::ICore::allUsersResourcePath(QStringLiteral("alif")).removeRecursively(&error))
             {
-                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                 return false;
             }
 
             if(!Utils::FileUtils::copyRecursively(tools, Core::ICore::allUsersResourcePath(QStringLiteral("alif")), &error, copyOperator))
             {
                 QMessageBox::critical(Q_NULLPTR, QString(),
-                                      Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                      Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                 return false;
             }
         }
@@ -664,7 +665,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("Alif Tools"),
-            Tr::tr("Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+            Tr::tr("Please close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
 
         result = false;
         goto cleanup;

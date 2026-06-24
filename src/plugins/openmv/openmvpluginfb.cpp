@@ -38,6 +38,8 @@
 
 #include "openmvtr.h"
 
+#include <QGuiApplication>
+
 namespace OpenMV {
 namespace Internal {
 
@@ -179,7 +181,7 @@ void OpenMVPluginFB::fbBufferError()
     "<p align=\"center\" style=\"font-size:20px\">%2</p>"
     "</body></html>").
         arg(Utils::creatorTheme()->color(((QTime::currentTime().msec() / 500) % 2) ? Utils::Theme::TextColorError : Utils::Theme::TextColorDisabled).name(),
-            Tr::tr("Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!")));
+            Tr::tr("Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to %1!").arg(QGuiApplication::applicationDisplayName())));
     scene()->addItem(item);
 
     item->document()->setTextWidth(360);

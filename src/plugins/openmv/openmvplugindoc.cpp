@@ -32,6 +32,8 @@
 
 #include "openmvtr.h"
 
+#include <QGuiApplication>
+
 namespace OpenMV {
 namespace Internal {
 
@@ -1796,7 +1798,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 
             if(!headers.removeRecursively(&error))
             {
-                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                 return false;
             }
         }

@@ -37,6 +37,8 @@
 #include "tools/stedgeai.h"
 #include "tools/vela.h"
 #include "openmvromfs.h"
+
+#include <QGuiApplication>
 #include "openmvmodelzoo.h"
 
 namespace OpenMV {
@@ -117,7 +119,7 @@ QString convertModel(const QJsonObject &boardSettings,
                             QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Convert Model"),
                                 Tr::tr("The model has already been converted for the Ethos-U NPU."
-                                       "\n\nOpenMV IDE will just copy the model as is."));
+                                       "\n\n%1 will just copy the model as is.").arg(QGuiApplication::applicationDisplayName()));
                         }
                     }
                 }
@@ -144,7 +146,7 @@ QString convertModel(const QJsonObject &boardSettings,
                             QMessageBox::information(Core::ICore::dialogParent(),
                                 Tr::tr("Convert Model"),
                                 Tr::tr("The model has already been converted for the Neural-ART NPU."
-                                       "\n\nOpenMV IDE will just copy the model as is."));
+                                       "\n\n%1 will just copy the model as is.").arg(QGuiApplication::applicationDisplayName()));
                         }
                     }
                 }

@@ -35,6 +35,8 @@
 #include "app/app_version.h"
 #include "tools/usbproblems.h"
 
+#include <QGuiApplication>
+
 namespace OpenMV {
 namespace Internal {
 
@@ -225,8 +227,9 @@ void OpenMVPlugin::packageUpdate()
                 || ((old_major == new_major) && (old_minor == new_minor) && (old_patch < new_patch)))
                 {
                     const QString updateMessage =
-                        Tr::tr("New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.). See the <a href=\"%L1\">release notes</a>.")
-                            .arg(webChangelogUrl(QStringLiteral("ide"), new_major, new_minor, new_patch).toString());
+                        Tr::tr("New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the <a href=\"%L1\">release notes</a>.")
+                            .arg(webChangelogUrl(QStringLiteral("ide"), new_major, new_minor, new_patch).toString())
+                            .arg(QGuiApplication::applicationDisplayName());
                     QMessageBox box(QMessageBox::Information, Tr::tr("Update Available"), updateMessage, QMessageBox::Cancel, Core::ICore::dialogParent(),
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -278,7 +281,7 @@ void OpenMVPlugin::packageUpdate()
 
                                     if (resourcesSettingsFile.write(data) != data.size())
                                     {
-                                        QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                        QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                                         QApplication::quit();
                                         ok = false;
                                     }
@@ -287,7 +290,7 @@ void OpenMVPlugin::packageUpdate()
                                 }
                                 else
                                 {
-                                    QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                    QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                                     QApplication::quit();
                                     ok = false;
                                 }
@@ -300,7 +303,7 @@ void OpenMVPlugin::packageUpdate()
                                     {
                                         QMessageBox::critical(Core::ICore::dialogParent(),
                                             QString(),
-                                            error + Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                            error + Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
 
                                         QApplication::quit();
                                         ok = false;
@@ -311,7 +314,7 @@ void OpenMVPlugin::packageUpdate()
                                         {
                                             QMessageBox::critical(Core::ICore::dialogParent(),
                                                 QString(),
-                                                Tr::tr("Please close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                                Tr::tr("Please close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
 
                                             QApplication::quit();
                                             ok = false;
@@ -350,7 +353,7 @@ void OpenMVPlugin::packageUpdate()
                                                 {
                                                     QMessageBox::information(Core::ICore::dialogParent(),
                                                         QString(),
-                                                        Tr::tr("Installation Sucessful! Please restart OpenMV IDE."));
+                                                        Tr::tr("Installation Sucessful! Please restart %1.").arg(QGuiApplication::applicationDisplayName()));
 
                                                     Core::ICore::restart();
                                                 }
@@ -363,13 +366,13 @@ void OpenMVPlugin::packageUpdate()
                                             {
                                                 resourcesSettingsFile.close();
 
-                                                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                                QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                                                 QApplication::quit();
                                             }
                                         }
                                         else
                                         {
-                                            QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing OpenMV IDE's application data and then restart OpenMV IDE!"));
+                                            QMessageBox::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                                             QApplication::quit();
                                         }
                                     }
