@@ -3705,6 +3705,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         {
             m_versionButton->setText(m_versionButton->text().append(Tr::tr(" - [ out of date - click here to updgrade ]")));
 
+            // Recolor the out-of-date message red to make it obvious, reusing the same
+            // theme-aware color the register button uses for an unregistered camera.
+            m_versionButton->setProperty("statusColor",
+                Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ?
+                                            QStringLiteral("lightcoral") :
+                                            QStringLiteral("coral"));
+            m_versionButton->update();
+
             QTimer::singleShot(1, this, [this] {
                 if ((!m_autoConnect) && Utils::CheckableMessageBox::question(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
@@ -3720,6 +3728,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         else
         {
             m_versionButton->setText(m_versionButton->text().append(Tr::tr(" - [ latest ]")));
+
+            // Firmware is current, so leave the text at its default color.
+            m_versionButton->setProperty("statusColor", QVariant());
+            m_versionButton->update();
         }
 
         ///////////////////////////////////////////////////////////////////////
