@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Package>
-    <DisplayName>OpenMV IDE Application</DisplayName>
+    <DisplayName>{app_name} Application</DisplayName>
     <Description>The IDE of choice for OpenMV Cam Development.</Description>
     <Version>{version}</Version>
     <ReleaseDate>{date}</ReleaseDate>

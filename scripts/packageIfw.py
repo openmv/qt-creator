@@ -51,7 +51,7 @@ def ifw_template_dir():
 
 def main():
     try:
-        opts, args = getopt.gnu_getopt(sys.argv[1:], 'hv:d:i:a:', ['help', 'version-string=', 'display-version=', 'installer-path=', 'archive', 'debug'])
+        opts, args = getopt.gnu_getopt(sys.argv[1:], 'hv:d:i:a:', ['help', 'version-string=', 'display-version=', 'installer-path=', 'archive', 'debug', 'name=', 'app-id=', 'app-cased-id='])
     except:
         usage()
         sys.exit(2)
@@ -65,6 +65,11 @@ def main():
     ifw_location = ''
     archives = []
     debug = False
+    # Branding for the variant being packaged. Defaults match the full IDE so the
+    # normal build is unchanged; make.py passes the viewer values for --viewer.
+    app_name = 'OpenMV IDE'
+    app_id = 'openmvide'
+    app_cased_id = 'OpenMVIDE'
     for o, a in opts:
         if o in ['-h', '--help']:
             usage()
@@ -79,6 +84,12 @@ def main():
             archives.append(a)
         if o in ['--debug']:
             debug = True
+        if o in ['--name']:
+            app_name = a
+        if o in ['--app-id']:
+            app_id = a
+        if o in ['--app-cased-id']:
+            app_cased_id = a
 
     if (version == ''):
         raise Exception('Version not specified (--version-string)!')
@@ -117,6 +128,9 @@ def main():
         substs['display_version'] = display_version
         substs['date'] = datetime.date.today().isoformat()
         substs['archives'] = ','.join(archives)
+        substs['app_name'] = app_name
+        substs['app_id'] = app_id
+        substs['app_cased_id'] = app_cased_id
 
         template_dir = ifw_template_dir()
         out_config_dir = os.path.join(temp_dir,'config')
