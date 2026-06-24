@@ -36,4 +36,17 @@ set(IDE_DISPLAY_NAME "OpenMV IDE")
 set(IDE_ID "openmvide")
 set(IDE_CASED_ID "OpenMVIDE")
 set(IDE_BUNDLE_IDENTIFIER "io.openmv.${IDE_ID}")
+
+# The viewer variant: a separate, forced-viewer-mode build (configure with
+# -DOPENMV_VIEWER_IDE=ON). It keeps the "OpenMV" settings org but gets its own
+# display name, executable id, settings store (via IDE_CASED_ID), and bundle id,
+# so it installs and runs independently of the full IDE. The forced-viewer
+# behaviour itself comes from the OPENMV_VIEWER_IDE compile definition (added in
+# the top-level CMakeLists after project()).
+if(OPENMV_VIEWER_IDE)
+set(IDE_DISPLAY_NAME "OpenMV Viewer")
+set(IDE_ID "openmvviewer")
+set(IDE_CASED_ID "OpenMVViewer")
+set(IDE_BUNDLE_IDENTIFIER "io.openmv.${IDE_ID}")
+endif()
 # OPENMV-DIFF #

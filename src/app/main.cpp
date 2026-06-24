@@ -602,6 +602,17 @@ int main(int argc, char **argv)
     // We can't use the regular way of the plugin manager,
     // because settings can change the way plugin manager behaves
     Options options = parseCommandLine(argc, argv);
+
+    // OPENMV-DIFF //
+    // The viewer variant is a forced-viewer-mode build. Inject "-viewer_mode" into
+    // the application arguments so every existing runtime check (the OpenMV plugin's
+    // m_viewerMode, the settings-dialog category hiding, session restore, the serial
+    // terminal tab size) sees it -- exactly as if the user had passed the flag.
+#ifdef OPENMV_VIEWER_IDE
+    static char viewerModeArg[] = "-viewer_mode";
+    options.appArguments.push_back(viewerModeArg);
+#endif
+    // OPENMV-DIFF //
     applicationDirPath(argv[0]);
 
     const bool hasStyleOption = Utils::findOrDefault(options.appArguments, [](char *arg) {
@@ -725,9 +736,11 @@ int main(int argc, char **argv)
     // Viewer mode is a read-only telemetry viewer, not the IDE -- present it as
     // "OpenMV Viewer" everywhere the app name is shown. This is the single runtime
     // source of the name; user-facing strings read QGuiApplication::applicationDisplayName().
+    // Scan the (possibly viewer-injected) application arguments, not raw argv, so
+    // the forced-viewer build is detected here too.
     bool viewerMode = false;
-    for (int i = 1; i < argc; ++i) {
-        if (QLatin1String(argv[i]) == QLatin1String("-viewer_mode")) {
+    for (char *appArg : options.appArguments) {
+        if (QLatin1String(appArg) == QLatin1String("-viewer_mode")) {
             viewerMode = true;
             break;
         }

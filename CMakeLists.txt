@@ -29,6 +29,16 @@ mark_as_advanced(IDE_REVISION IDE_REVISION_STR IDE_REVISION_URL)
 
 project(QtCreator VERSION ${IDE_VERSION})
 
+# OPENMV-DIFF #
+# The viewer variant forces viewer mode at runtime. main.cpp picks up this
+# definition and injects "-viewer_mode" into the application arguments, so every
+# existing runtime viewer check (plugin, settings dialog, session, terminal) fires
+# without per-site changes. Branding for the variant lives in QtCreatorIDEBranding.
+if(OPENMV_VIEWER_IDE)
+    add_compile_definitions(OPENMV_VIEWER_IDE)
+endif()
+# OPENMV-DIFF #
+
 # Force C++ standard, do not fall back, do not use compiler extensions
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
