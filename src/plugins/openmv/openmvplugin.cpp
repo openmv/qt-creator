@@ -5764,6 +5764,9 @@ bool OpenMVPlugin::matchExample(const QString &filePath, QString *flattenRegex)
     // Don't include the filter list file...
     if (cleanFilePath.endsWith(QStringLiteral("index.csv"))) return false;
 
+    // ...nor the examples manifest.
+    if (cleanFilePath.endsWith(QStringLiteral("index.json"))) return false;
+
     // No Filtering if there are no filters...
     if ((!m_enableFilteringExamplesAction->isChecked()) || m_exampleFilters.isEmpty()) return true;
 
