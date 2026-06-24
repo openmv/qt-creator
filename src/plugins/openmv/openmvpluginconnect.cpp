@@ -88,6 +88,68 @@ static bool extractAll(QByteArray *data, const QString &path)
     return reader.extractAll(path);
 }
 
+// The viewer ships (and updates) only the firmware, so extract just that folder
+// from the full resources archive instead of everything (examples/html/models/...).
+static bool extractFolder(QByteArray *data, const QString &path, const QString &folder)
+{
+    QBuffer buffer(data);
+    QZipReader reader(&buffer);
+    const QString prefix = folder + QStringLiteral("/");
+
+    for(const QZipReader::FileInfo &info : reader.fileInfoList())
+    {
+        if((info.filePath != folder) && (!info.filePath.startsWith(prefix)))
+        {
+            continue;
+        }
+
+        const QString dest = path + QStringLiteral("/") + info.filePath;
+
+        if(info.isDir)
+        {
+            if(!QDir().mkpath(dest))
+            {
+                return false;
+            }
+        }
+        else if(info.isFile)
+        {
+            if(!QDir().mkpath(QFileInfo(dest).path()))
+            {
+                return false;
+            }
+
+            QFile file(dest);
+
+            if(!file.open(QIODevice::WriteOnly))
+            {
+                return false;
+            }
+
+            const QByteArray fileData = reader.fileData(info.filePath);
+
+            if(file.write(fileData) != fileData.size())
+            {
+                return false;
+            }
+
+            file.close();
+        }
+    }
+
+    return true;
+}
+
+static bool extractFolderWrapper(QByteArray *data, const QString &path, const QString &folder)
+{
+    QEventLoop loop;
+    QFutureWatcher<bool> watcher;
+    QObject::connect(&watcher, &QFutureWatcher<bool>::finished, &loop, &QEventLoop::quit);
+    watcher.setFuture(QtConcurrent::run(extractFolder, data, path, folder));
+    loop.exec();
+    return watcher.result();
+}
+
 static bool extractAllWrapper(QByteArray *data, const QString &path)
 {
     QEventLoop loop;
@@ -310,7 +372,9 @@ void OpenMVPlugin::packageUpdate()
                                     }
                                     else
                                     {
-                                        if(!extractAllWrapper(&data2, Core::ICore::allUsersResourcePath().toString()))
+                                        if(!(m_viewerMode
+                                            ? extractFolderWrapper(&data2, Core::ICore::allUsersResourcePath().toString(), QStringLiteral("firmware"))
+                                            : extractAllWrapper(&data2, Core::ICore::allUsersResourcePath().toString())))
                                         {
                                             QMessageBox::critical(Core::ICore::dialogParent(),
                                                 QString(),
