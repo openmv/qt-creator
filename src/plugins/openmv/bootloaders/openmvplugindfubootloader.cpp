@@ -75,6 +75,17 @@ QString OpenMVPlugin::dfuInterfaceErrorText(const QJsonObject &boardObject,
               + Tr::tr("This board does not define any loadable firmware interfaces in its settings.");
     }
 
+    // A bootloader image can only be written while the board is in bootloader recovery
+    // mode, so point the user at how to get there instead of leaving them stuck on the
+    // generic "rename your file" advice above.
+    if(selectedFileName.endsWith(QStringLiteral("bootloader.bin"), Qt::CaseInsensitive))
+    {
+        text += QStringLiteral("\n\n")
+              + Tr::tr("To flash a bootloader image your OpenMV Cam must be in bootloader recovery mode. "
+                       "Unplug the camera, connect BOOT0/SBL/RECOVERY to 3.3V with a jumper, and then plug "
+                       "the camera back in before trying again.");
+    }
+
     return text;
 }
 
