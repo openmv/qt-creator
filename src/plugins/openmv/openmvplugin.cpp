@@ -1064,6 +1064,128 @@ void OpenMVPlugin::extensionsInitialized()
         microPythonToolsMenu->menu()->setTitle(Tr::tr("MicroPython Tools"));
         toolsMenu->addMenu(microPythonToolsMenu);
 
+        // Same as "Copy/Convert Python File" below, but the source is the current
+        // editor buffer instead of a file picked from disk. Listed above it.
+        QAction *copyEditorScriptAction = new QAction(Tr::tr("Copy/Convert Current Script"), this);
+        Core::Command *copyEditorScriptCommand = Core::ActionManager::registerAction(copyEditorScriptAction, Utils::Id("OpenMV.CopyEditorScript"));
+        microPythonToolsMenu->addAction(copyEditorScriptCommand);
+        // Enable this only when there's a script in the editor to copy; the menu
+        // refreshes the state each time it is shown (so no error dialog is needed).
+        connect(microPythonToolsMenu->menu(), &QMenu::aboutToShow, this, [copyEditorScriptAction] {
+            Core::IEditor *editor = Core::EditorManager::currentEditor();
+            copyEditorScriptAction->setEnabled(editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false);
+        });
+        connect(copyEditorScriptAction, &QAction::triggered, this, [this] {
+            Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+
+            QJsonObject boardSettings = getBoardSettings(Tr::tr("Copy/Convert Current Script"), settings);
+
+            if (boardSettings.isEmpty())
+            {
+                return;
+            }
+
+            // The action is disabled unless the current editor holds a non-empty script
+            // (see the MicroPython Tools aboutToShow handler), so just bail quietly here.
+            Core::IEditor *editor = Core::EditorManager::currentEditor();
+
+            if (!(editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false))
+            {
+                return;
+            }
+
+            // convertScript() works on a file path, so stage the editor buffer to a temp
+            // .py. The QTemporaryFile stays in scope for the whole operation, so the file
+            // persists while mpy-cross (and the final copy, when "just copy" returns this
+            // same path) read it, then auto-removes at the end. baseName drives the default
+            // save name below; the temp file's unique name stays internal.
+            QString baseName = QFileInfo(editor->document()->displayName()).completeBaseName();
+            if (baseName.isEmpty()) baseName = QStringLiteral("untitled");
+
+            QTemporaryFile srcFile(QDir::tempPath() + QDir::separator() + baseName + QStringLiteral("_XXXXXX.py"));
+            if ((!srcFile.open())
+             || (srcFile.write(editor->document()->contents()) != editor->document()->contents().size()))
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    Tr::tr("Copy/Convert Current Script"),
+                    Tr::tr("Unable to stage the current script!"));
+                return;
+            }
+            srcFile.close(); // release the handle so mpy-cross / the copy can read it (file stays until scope end)
+            QString src = srcFile.fileName();
+
+            QString convertedSrc = convertScript(boardSettings, src, settings);
+
+            if (convertedSrc.isEmpty())
+            {
+                return;
+            }
+
+            for (;;)
+            {
+                QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Copy/Convert Current Script"),
+                    m_portPath.isEmpty()
+                    ? (settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + baseName + QChar('.') + QFileInfo(convertedSrc).suffix())
+                    : (settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + baseName + QChar('.') + QFileInfo(convertedSrc).suffix()));
+
+                if (dst.isEmpty())
+                {
+                    return;
+                }
+
+                // Only a *compiled* main/boot is a problem: main.py/boot.py auto-run fine,
+                // but the cam never auto-runs a .mpy, so main.mpy/boot.mpy silently won't run.
+                QString dstBase = QFileInfo(dst).completeBaseName();
+
+                if (((dstBase.compare(QStringLiteral("main"), Qt::CaseInsensitive) == 0)
+                  || (dstBase.compare(QStringLiteral("boot"), Qt::CaseInsensitive) == 0))
+                 && (QFileInfo(dst).suffix().compare(QStringLiteral("mpy"), Qt::CaseInsensitive) == 0))
+                {
+                    int answer = QMessageBox::question(Core::ICore::dialogParent(),
+                        Tr::tr("Copy/Convert Current Script"),
+                        Tr::tr("\"%L1\" won't auto-run: your OpenMV Cam only auto-runs main.py/boot.py "
+                               "source files, never a compiled .mpy.\n\n"
+                               "Would you like to choose a different name?").arg(QFileInfo(dst).fileName()),
+                        QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes);
+
+                    if (answer == QMessageBox::Yes)
+                    {
+                        continue; // re-open the save dialog so they can rename
+                    }
+                    else if (answer != QMessageBox::No)
+                    {
+                        return; // Cancel
+                    }
+                    // No -> save under the reserved name anyway
+                }
+
+                if ((!QFile(dst).exists()) || QFile::remove(dst))
+                {
+                    if (QFile::copy(convertedSrc, dst))
+                    {
+                        if (m_portPath.isEmpty())
+                            settings->setValue(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_NO_CAM_PATH, QFileInfo(dst).path());
+                        else
+                            settings->setValue(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_WITH_CAM_PATH, QFileInfo(dst).path());
+                    }
+                    else
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            Tr::tr("Copy/Convert Current Script"),
+                            QObject::tr("Unable to overwrite output file!"));
+                    }
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Copy/Convert Current Script"),
+                        QObject::tr("Unable to overwrite output file!"));
+                }
+
+                break;
+            }
+        });
+
         QAction *copyScriptAction = new QAction(Tr::tr("Copy/Convert Python File"), this);
         Core::Command *copyScriptCommand = Core::ActionManager::registerAction(copyScriptAction, Utils::Id("OpenMV.CopyScript"));
         microPythonToolsMenu->addAction(copyScriptCommand);
@@ -1090,13 +1212,44 @@ void OpenMVPlugin::extensionsInitialized()
                     return;
                 }
 
-                QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Copy/Convert Python File"),
-                    m_portPath.isEmpty()
-                    ? (settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
-                    : (settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
-
-                if(!dst.isEmpty())
+                for (;;)
                 {
+                    QString dst = QFileDialog::getSaveFileName(Core::ICore::dialogParent(), QObject::tr("Copy/Convert Python File"),
+                        m_portPath.isEmpty()
+                        ? (settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_NO_CAM_PATH, QString(QDir::homePath())).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix())
+                        : (settings->value(SETTINGS_GROUP "/" LAST_COPY_SCRIPT_WITH_CAM_PATH, QString(m_portPath)).toString() + QDir::separator() + QFileInfo(src).baseName() + QChar('.') + QFileInfo(convertedSrc).suffix()));
+
+                    if (dst.isEmpty())
+                    {
+                        return;
+                    }
+
+                    // Only a *compiled* main/boot is a problem: main.py/boot.py auto-run fine,
+                    // but the cam never auto-runs a .mpy, so main.mpy/boot.mpy silently won't run.
+                    QString dstBase = QFileInfo(dst).completeBaseName();
+
+                    if (((dstBase.compare(QStringLiteral("main"), Qt::CaseInsensitive) == 0)
+                      || (dstBase.compare(QStringLiteral("boot"), Qt::CaseInsensitive) == 0))
+                     && (QFileInfo(dst).suffix().compare(QStringLiteral("mpy"), Qt::CaseInsensitive) == 0))
+                    {
+                        int answer = QMessageBox::question(Core::ICore::dialogParent(),
+                            Tr::tr("Copy/Convert Python File"),
+                            Tr::tr("\"%L1\" won't auto-run: your OpenMV Cam only auto-runs main.py/boot.py "
+                                   "source files, never a compiled .mpy.\n\n"
+                                   "Would you like to choose a different name?").arg(QFileInfo(dst).fileName()),
+                            QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes);
+
+                        if (answer == QMessageBox::Yes)
+                        {
+                            continue; // re-open the save dialog so they can rename
+                        }
+                        else if (answer != QMessageBox::No)
+                        {
+                            return; // Cancel
+                        }
+                        // No -> save under the reserved name anyway
+                    }
+
                     if((!QFile(dst).exists()) || QFile::remove(dst))
                     {
                         if(QFile::copy(convertedSrc, dst))
@@ -1120,6 +1273,8 @@ void OpenMVPlugin::extensionsInitialized()
                             Tr::tr("Copy/Convert Python File"),
                             QObject::tr("Unable to overwrite output file!"));
                     }
+
+                    break;
                 }
             }
 
