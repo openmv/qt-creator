@@ -194,7 +194,18 @@ void OMVTransport::log(int seq,
 
     QString flags_str = _format_flags(uint8_t(flags));
 
+    // Emoji prefix by direction/flags, matching the openmv-python lib.
+    const QByteArray dir(direction);
+    const char *emoji;
+    if (dir == "Drop") emoji = "🎲";
+    else if (dir.startsWith("Rjct")) emoji = "🚫";
+    else if (flags & OMVPFlags::ACK) emoji = "✅";
+    else if (flags & OMVPFlags::NAK) emoji = "❌";
+    else if (dir == "Send") emoji = "➡️";
+    else emoji = "⬅️";
+
     omvDebug().noquote().nospace()
+        << emoji << " "
         << direction
         << ": seq=" << QStringLiteral("%1").arg(seq, 3, 10, QChar('0'))
         << ", chan=" << ch

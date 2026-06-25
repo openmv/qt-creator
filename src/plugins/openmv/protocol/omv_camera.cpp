@@ -233,10 +233,10 @@ void OMVCamera::handleEvent(uint8_t channel_id, uint16_t event)
             event_name = QStringLiteral("0x%1").arg(event, 4, 16, QChar('0')).toUpper();
         }
 
-        omvDebug().noquote() << "System Event: channel=system, event=" << event_name;
+        omvDebug().noquote() << "🔔 System Event: channel=system, event=" << event_name;
 
         if (event == static_cast<uint16_t>(OMVPEventType::SOFT_REBOOT)) {
-            omvDebug() << "Soft Reboot triggered";
+            omvDebug() << "🔥 Soft Reboot triggered";
             resyncPending = true;
             // Reset here to handle any in-flight packets.
             transport->reset_sequence();
@@ -265,12 +265,12 @@ void OMVCamera::handleEvent(uint8_t channel_id, uint16_t event)
         }
 
         omvDebug().noquote().nospace()
-            << "Channel Event: channel=" << ch.name
+            << "🔔 Channel Event: channel=" << ch.name
             << ", event=0x" << QString::number(event, 16).rightJustified(4, QChar('0')).toUpper()
             << event_type;
     } else {
         omvDebug().noquote().nospace()
-        << "Unknown Event: channel=" << channel_id
+        << "⚠️ Unknown Event: channel=" << channel_id
         << ", event=0x"
         << QString::number(event, 16).rightJustified(4, QChar('0')).toUpper();
     }
@@ -278,7 +278,7 @@ void OMVCamera::handleEvent(uint8_t channel_id, uint16_t event)
 
 void OMVCamera::resync(bool grace_timeout)
 {
-    omvDebug() << "Resynchronizing";
+    omvDebug() << "🔁 Resynchronizing";
 
     if (!serial || !serial->isOpen()) {
         throw OMVPTimeoutException(QStringLiteral("Serial not open for resync"));
@@ -316,11 +316,11 @@ void OMVCamera::resync(bool grace_timeout)
             }
         } catch (const OMVPException &e) {
             if (attempt < maxRetry - 1) {
-                omvDebug().noquote() << e.what() << "-"
+                omvDebug().noquote() << "⚠️" << e.what() << "-"
                 << "Sync attempt" << (attempt + 1) << "failed, retrying...";
                 continue;
             } else {
-                omvDebug() << "Failed to resync after maximum attempts";
+                omvDebug() << "❌ Failed to resync after maximum attempts";
                 delete transport;
                 transport = nullptr;
                 delete serial;
