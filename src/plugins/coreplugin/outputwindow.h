@@ -76,6 +76,11 @@ public:
     void save();
     void setTabSettings(int tabWidth);
     OpenMVPluginEscapeCodeParser *getParser() { return m_parser; }
+    // Serial-protocol debug verbosity for the Serial Terminal toolbar button:
+    // 0 = off, 1 = commands, 2 = + packets, 3 = + fragments. The openmv plugin
+    // connects to serialDebugLevelChanged() to drive the protocol's debug flags.
+    int serialDebugLevel() const { return m_serialDebugLevel; }
+    void setSerialDebugLevel(int level);
     // OPENMV-DIFF //
 
     void setOutputFileNameHint(const QString &fileName);
@@ -84,6 +89,7 @@ signals:
     void wheelZoom();
     // OPENMV-DIFF //
     void writeBytes(const QByteArray &data);
+    void serialDebugLevelChanged(int level);
     // OPENMV-DIFF //
 
 public slots:
@@ -120,6 +126,7 @@ private:
 
     Utils::AnsiEscapeCodeHandler m_handler;
     OpenMVPluginEscapeCodeParser *m_parser;
+    int m_serialDebugLevel = 0;
     // OPENMV-DIFF //
 
     Internal::OutputWindowPrivate *d = nullptr;

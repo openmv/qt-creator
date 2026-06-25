@@ -62,6 +62,16 @@ bool OMVTransport::isLoggingEnabled()
     return logging_enabled;
 }
 
+void OMVTransport::setFragmentLoggingEnabled(bool enabled)
+{
+    print_frags = enabled;
+}
+
+bool OMVTransport::isFragmentLoggingEnabled()
+{
+    return print_frags;
+}
+
 void OMVTransport::reset_sequence()
 {
     /*

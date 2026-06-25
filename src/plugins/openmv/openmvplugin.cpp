@@ -34,6 +34,9 @@
 
 #include "openmvtr.h"
 
+#include "protocol/omv_debug.h"
+#include "protocol/omv_transport.h"
+
 #include <QGuiApplication>
 
 namespace OpenMV {
@@ -2663,6 +2666,25 @@ void OpenMVPlugin::extensionsInitialized()
     });
 
     connect(Core::MessageManager::outputWindow(), &Core::OutputWindow::writeBytes, m_iodevice, &OpenMVPluginIO::mainTerminalInput);
+
+    // Route protocol debug lines into the Serial Terminal (same path as the camera's
+    // serial output) instead of the default Qt handler / system console. Called from
+    // the protocol/IO worker thread, so marshal to the GUI thread first.
+    omv::OMVDebug::setSink([this] (const QString &line) {
+        QMetaObject::invokeMethod(this, [line] {
+            Core::MessageManager::printData(line.toUtf8());
+        }, Qt::QueuedConnection);
+    });
+
+    // Serial Terminal debug-logging button -> protocol debug flags. Levels:
+    // 0 off, 1 commands (omvDebug), 2 + packets (transport log), 3 + fragments.
+    auto applySerialDebugLevel = [] (int level) {
+        omv::OMVDebug::setEnabled(level >= 1);
+        omv::OMVTransport::setLoggingEnabled(level >= 2);
+        omv::OMVTransport::setFragmentLoggingEnabled(level >= 3);
+    };
+    connect(Core::MessageManager::outputWindow(), &Core::OutputWindow::serialDebugLevelChanged, this, applySerialDebugLevel);
+    applySerialDebugLevel(Core::MessageManager::outputWindow()->serialDebugLevel());
     connect(Core::MessageManager::outputWindow()->getParser(), &Core::OpenMVPluginEscapeCodeParser::dataSetEditorSaveImage, datasetEditorSnapshotAction, &QAction::trigger);
     connect(Core::MessageManager::outputWindow()->getParser(), &Core::OpenMVPluginEscapeCodeParser::fbMessage, m_frameBuffer, &OpenMVPluginFB::fbMessage);
     connect(Core::MessageManager::outputWindow()->getParser(), &Core::OpenMVPluginEscapeCodeParser::fbBufferError, m_frameBuffer, &OpenMVPluginFB::fbBufferError);

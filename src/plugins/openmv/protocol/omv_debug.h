@@ -10,7 +10,9 @@
 #pragma once
 
 #include <QtCore/QDebug>
+#include <QtCore/QString>
 #include <QtCore/QAtomicInt>
+#include <functional>
 #include <optional>
 
 namespace omv {
@@ -22,11 +24,24 @@ public:
     static void setEnabled(bool on);
     static bool isEnabled();
 
+    // Where formatted log lines go. Set once by the host (the IDE routes them to
+    // the Serial Terminal). When unset, lines are dropped rather than printed to
+    // the default Qt message handler / system console.
+    static void setSink(std::function<void(const QString &)> sink);
+
     // Default ctor uses global flag.
     OMVDebug();
 
     // Optional per-call gating in addition to the global flag.
     explicit OMVDebug(bool enabled);
+
+    // Flushes the accumulated line to the sink.
+    ~OMVDebug();
+
+    // The QDebug writes into m_buffer, so the object must not be copied/moved
+    // (relies on C++17 guaranteed copy elision in the omvDebug() helpers).
+    OMVDebug(const OMVDebug &) = delete;
+    OMVDebug &operator=(const OMVDebug &) = delete;
 
     template <typename T>
     OMVDebug &operator<<(const T &value)
@@ -48,7 +63,9 @@ public:
 
 private:
     static QAtomicInt s_enabled;
+    static std::function<void(const QString &)> s_sink;
 
+    QString m_buffer;
     std::optional<QDebug> m_dbg;
 };
 

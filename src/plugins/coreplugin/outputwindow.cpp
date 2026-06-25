@@ -974,6 +974,14 @@ void OutputWindow::setTabSettings(int tabWidth)
 {
     d->tabWidth = tabWidth;
 }
+
+void OutputWindow::setSerialDebugLevel(int level)
+{
+    if (m_serialDebugLevel != level) {
+        m_serialDebugLevel = level;
+        emit serialDebugLevelChanged(level);
+    }
+}
 // OPENMV-DIFF //
 
 #ifdef WITH_TESTS

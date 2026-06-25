@@ -12,6 +12,7 @@
 namespace omv {
 
 QAtomicInt OMVDebug::s_enabled(0);
+std::function<void(const QString &)> OMVDebug::s_sink;
 
 void OMVDebug::setEnabled(bool on)
 {
@@ -23,14 +24,31 @@ bool OMVDebug::isEnabled()
     return s_enabled.loadRelaxed() != 0;
 }
 
+void OMVDebug::setSink(std::function<void(const QString &)> sink)
+{
+    s_sink = std::move(sink);
+}
+
 OMVDebug::OMVDebug()
-    : m_dbg(isEnabled() ? std::optional<QDebug>(QDebug(QtDebugMsg)) : std::nullopt)
+    : m_buffer()
+    , m_dbg(isEnabled() ? std::optional<QDebug>(std::in_place, &m_buffer) : std::nullopt)
 {
 }
 
 OMVDebug::OMVDebug(bool enabled)
-    : m_dbg((enabled && isEnabled()) ? std::optional<QDebug>(QDebug(QtDebugMsg)) : std::nullopt)
+    : m_buffer()
+    , m_dbg((enabled && isEnabled()) ? std::optional<QDebug>(std::in_place, &m_buffer) : std::nullopt)
 {
+}
+
+OMVDebug::~OMVDebug()
+{
+    if (m_dbg) {
+        m_dbg.reset(); // destroy the QDebug so it flushes into m_buffer
+        if (s_sink && !m_buffer.isEmpty()) {
+            s_sink(m_buffer + QLatin1Char('\n'));
+        }
+    }
 }
 
 OMVDebug &OMVDebug::operator<<(Manipulator manip)

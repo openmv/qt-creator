@@ -149,6 +149,10 @@ const Icon RELOAD({
         {":/utils/images/reload_gray.png", Theme::PanelTextColorMid}}, Icon::Tint);
 const Icon RELOAD_TOOLBAR({
         {":/utils/images/reload_gray.png", Theme::IconsBaseColor}});
+// OPENMV-DIFF: debug-logging toggle icon for the Serial Terminal toolbar
+const Icon DEBUG_TOOLBAR({
+        {":/utils/images/debug.png", Theme::IconsBaseColor}});
+// OPENMV-DIFF
 const Icon TOGGLE_LEFT_SIDEBAR({
         {":/utils/images/leftsidebaricon.png", Theme::PanelTextColorMid}}, Icon::MenuTintedStyle);
 const Icon TOGGLE_LEFT_SIDEBAR_TOOLBAR({

@@ -18,6 +18,8 @@
 #include <coreplugin/coreicons.h>
 #include <coreplugin/actionmanager/actionmanager.h>
 #include <coreplugin/actionmanager/command.h>
+#include <QActionGroup>
+#include <QMenu>
 // OPENMV-DIFF //
 
 namespace Core {
@@ -25,6 +27,9 @@ namespace Internal {
 
 const char wrapSettingsKey[] = "Core/MessageOutput/WrapText";
 const char zoomSettingsKey[] = "Core/MessageOutput/Zoom";
+// OPENMV-DIFF //
+const char serialDebugLevelKey[] = "Core/MessageOutput/SerialDebugLevel";
+// OPENMV-DIFF //
 
 MessageOutputWindow::MessageOutputWindow()
 {
@@ -74,6 +79,49 @@ MessageOutputWindow::MessageOutputWindow()
         ICore::settings()->setValue(wrapSettingsKey, checked);
     });
     m_wrapAction->setChecked(ICore::settings()->value(wrapSettingsKey).toBool());
+
+    // Serial-protocol debug logging. Off by default; the popup menu picks the
+    // verbosity. The openmv plugin connects to OutputWindow::serialDebugLevelChanged
+    // (and reads serialDebugLevel() at startup) to drive the protocol's debug flags --
+    // coreplugin stays agnostic of the protocol.
+    m_debugButton = new QToolButton(m_widget);
+    m_debugButton->setAutoRaise(true);
+    m_debugButton->setCheckable(true);
+    m_debugButton->setIcon(Utils::Icons::DEBUG_TOOLBAR.icon());
+    m_debugButton->setToolTip(Tr::tr("Serial Protocol Debug Logging"));
+    m_debugButton->setPopupMode(QToolButton::InstantPopup);
+    // Hide the menu-indicator arrow Qt draws in the corner for menu buttons; it
+    // clutters the small toolbar glyph (the menu still opens on click).
+    m_debugButton->setStyleSheet(QStringLiteral("QToolButton::menu-indicator { image: none; }"));
+
+    QMenu *debugMenu = new QMenu(m_debugButton);
+    QActionGroup *debugGroup = new QActionGroup(debugMenu);
+    const QStringList debugLevelNames = {
+        Tr::tr("Off"),
+        Tr::tr("Commands"),
+        Tr::tr("Commands + Packets"),
+        Tr::tr("Commands + Packets + Fragments"),
+    };
+    for (int i = 0; i < debugLevelNames.size(); ++i) {
+        QAction *levelAction = debugMenu->addAction(debugLevelNames.at(i));
+        levelAction->setCheckable(true);
+        levelAction->setData(i);
+        debugGroup->addAction(levelAction);
+    }
+    m_debugButton->setMenu(debugMenu);
+
+    int savedLevel = qBound(0, ICore::settings()->value(serialDebugLevelKey, 0).toInt(),
+                            debugLevelNames.size() - 1);
+    debugGroup->actions().at(savedLevel)->setChecked(true);
+    m_debugButton->setChecked(savedLevel > 0);
+    m_widget->setSerialDebugLevel(savedLevel);
+
+    connect(debugGroup, &QActionGroup::triggered, this, [this] (QAction *levelAction) {
+        const int level = levelAction->data().toInt();
+        ICore::settings()->setValue(serialDebugLevelKey, level);
+        m_debugButton->setChecked(level > 0);
+        m_widget->setSerialDebugLevel(level);
+    });
     // OPENMV-DIFF //
 }
 
@@ -151,7 +199,7 @@ void MessageOutputWindow::updateFilter()
 // OPENMV-DIFF //
 QList<QWidget*> MessageOutputWindow::toolBarWidgets() const
 {
-    return QList<QWidget*>() << m_saveButton << m_wrapButton;
+    return QList<QWidget*>() << m_saveButton << m_wrapButton << m_debugButton;
 }
 // OPENMV-DIFF //
 

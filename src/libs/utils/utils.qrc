@@ -46,6 +46,10 @@
         <file>images/ok@2x.png</file>
         <file>images/clean_pane_small.png</file>
         <file>images/clean_pane_small@2x.png</file>
+        <!-- OPENMV-DIFF: debug-logging toolbar icon for the Serial Terminal -->
+        <file>images/debug.png</file>
+        <file>images/debug@2x.png</file>
+        <!-- OPENMV-DIFF -->
         <file>images/compile_error_taskbar.png</file>
         <file>images/compile_error_taskbar@2x.png</file>
         <file>images/continue_1_small.png</file>

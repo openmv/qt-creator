@@ -45,6 +45,8 @@ public:
     */
     static void setLoggingEnabled(bool enabled);
     static bool isLoggingEnabled();
+    static void setFragmentLoggingEnabled(bool enabled);
+    static bool isFragmentLoggingEnabled();
 
     /*
         Reset sequence counter to 0

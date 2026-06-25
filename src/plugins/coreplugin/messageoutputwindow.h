@@ -45,6 +45,7 @@ public:
     QAction *m_saveAction;
     QToolButton *m_wrapButton;
     QAction *m_wrapAction;
+    QToolButton *m_debugButton;
     // OPENMV-DIFF //
 
 private:
