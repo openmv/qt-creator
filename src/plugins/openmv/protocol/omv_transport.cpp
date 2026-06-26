@@ -204,15 +204,16 @@ void OMVTransport::log(int seq,
     else if (dir == "Send") emoji = "➡️";
     else emoji = "⬅️";
 
+    // Fixed-width columns so the fields line up across rows for easy scanning.
     omvDebug().noquote().nospace()
         << emoji << " "
-        << direction
-        << ": seq=" << QStringLiteral("%1").arg(seq, 3, 10, QChar('0'))
-        << ", chan=" << ch
-        << ", opcode=" << opcode_str
-        << ", flags=" << flags_str
-        << ", length=" << length
-        << ", time=" << (QDateTime::currentMSecsSinceEpoch() % 10000) << "ms";
+        << QString::fromLatin1(direction).leftJustified(4)
+        << "  seq=" << QStringLiteral("%1").arg(seq, 3, 10, QChar('0'))
+        << " ch="   << QString::number(ch).rightJustified(2)
+        << "  "     << opcode_str.leftJustified(15)
+        << " flags=" << flags_str.leftJustified(7)
+        << " length=" << QString::number(length).rightJustified(5)
+        << " time="   << (QDateTime::currentMSecsSinceEpoch() % 10000) << "ms";
 }
 
 void OMVTransport::send_packet(uint8_t opcode,

@@ -72,7 +72,7 @@ public:
             bool isInverted);
 
     // OPENMV-DIFF //
-    void appendText(const QString &text);
+    void appendText(const QString &text, bool ensureLineStart = false);
     void save();
     void setTabSettings(int tabWidth);
     OpenMVPluginEscapeCodeParser *getParser() { return m_parser; }

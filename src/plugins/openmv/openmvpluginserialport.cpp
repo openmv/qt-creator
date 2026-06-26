@@ -552,13 +552,20 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
         if(dbgLog)
         {
             const char *name = v1CmdName(dbgOp);
+            // dbgOp < 0 means this write isn't a __USBDBG_CMD header -- it's the payload a
+            // two-phase command (e.g. SCRIPT_EXEC, TIME_INPUT) sends in a follow-up write --
+            // so show no name rather than a bogus 0xFF opcode.
+            const QString nameStr = name ? QString::fromLatin1(name)
+                : (dbgOp >= 0) ? QStringLiteral("0x%1").arg(dbgOp & 0xFF, 2, 16, QChar('0')).toUpper()
+                : QString();
+            // Fixed-width columns so fields line up across rows for easy scanning.
             omv::OMVDebug d;
-            d.noquote().nospace() << "➡️ Send: ";
-            if(name) d << name;
-            else d << QStringLiteral("0x%1").arg(dbgOp & 0xFF, 2, 16, QChar('0')).toUpper();
-            d << ", length=" << command.m_data.size()
-              << ", time=" << (QDateTime::currentMSecsSinceEpoch() % 10000) << "ms";
-            if(dbgLevel >= 3) d << ", bytes=" << QString::fromLatin1(command.m_data.left(64).toHex(' '));
+            d.noquote().nospace()
+                << "➡️ Send  " << nameStr.leftJustified(16)
+                << " length=" << QString::number(command.m_data.size()).rightJustified(7)
+                << " time="   << QStringLiteral("%1ms").arg(QDateTime::currentMSecsSinceEpoch() % 10000).leftJustified(6)
+                << " "        << QString().leftJustified(7); // stall column (Send never stalls)
+            if(dbgLevel >= 3) d << " bytes=" << QString::fromLatin1(command.m_data.left(64).toHex(' '));
         }
 
         write(command.m_data, command.m_startWait, command.m_endWait, write_timeout);
@@ -614,10 +621,11 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
                 {
                     omv::OMVDebug d;
                     d.noquote().nospace()
-                        << "⬅️ Recv: ok, length=" << response.size()
-                        << ", time=" << (QDateTime::currentMSecsSinceEpoch() % 10000) << "ms";
-                    if(readStallHappened) d << " [stall]";
-                    if(dbgLevel >= 3) d << ", bytes=" << QString::fromLatin1(response.left(64).toHex(' '));
+                        << "⬅️ Recv  " << QStringLiteral("ok").leftJustified(16)
+                        << " length=" << QString::number(response.size()).rightJustified(7)
+                        << " time="   << QStringLiteral("%1ms").arg(QDateTime::currentMSecsSinceEpoch() % 10000).leftJustified(6)
+                        << " "        << (readStallHappened ? QStringLiteral("[stall]") : QString()).leftJustified(7);
+                    if(dbgLevel >= 3) d << " bytes=" << QString::fromLatin1(response.left(64).toHex(' '));
                 }
 
                 emit commandResult(OpenMVPluginSerialPortCommandResult(true, response.left(command.m_responseLen)));
@@ -628,8 +636,11 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
                 {
                     omv::OMVDebug d;
                     d.noquote().nospace()
-                        << "⬅️ Recv: FAIL (timeout, got " << response.size() << "/" << responseLen << ")"
-                        << ", time=" << (QDateTime::currentMSecsSinceEpoch() % 10000) << "ms";
+                        << "⬅️ Recv  " << QStringLiteral("FAIL").leftJustified(16)
+                        << " length=" << QString::number(response.size()).rightJustified(7)
+                        << " time="   << QStringLiteral("%1ms").arg(QDateTime::currentMSecsSinceEpoch() % 10000).leftJustified(6)
+                        << " "        << QString().leftJustified(7) // stall column (timeout, not stall)
+                        << " (timeout, wanted " << responseLen << ")";
                 }
 
                 if(m_port)

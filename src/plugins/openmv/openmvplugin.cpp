@@ -2672,7 +2672,9 @@ void OpenMVPlugin::extensionsInitialized()
     // the protocol/IO worker thread, so marshal to the GUI thread first.
     omv::OMVDebug::setSink([this] (const QString &line) {
         QMetaObject::invokeMethod(this, [line] {
-            Core::MessageManager::printData(line.toUtf8());
+            // ensureLineStart=true: never glue a debug line onto a dangling partial
+            // line (e.g. the ">>> " prompt) left by the camera's serial output.
+            Core::MessageManager::outputWindow()->appendText(line, true);
         }, Qt::QueuedConnection);
     });
 

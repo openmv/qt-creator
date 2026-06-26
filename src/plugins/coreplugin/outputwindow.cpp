@@ -779,8 +779,28 @@ static void insertTextEmojiAware(QTextCursor &cursor, const QString &text, const
 }
 // OPENMV-DIFF //
 
-void OutputWindow::appendText(const QString &textIn)
+void OutputWindow::appendText(const QString &textIn, bool ensureLineStart)
 {
+    // OPENMV-DIFF //
+    // Protocol/debug lines share this stream with the camera's serial output. If the
+    // camera left a dangling partial line (e.g. the ">>> " REPL prompt with no trailing
+    // newline), force the incoming line onto a fresh line instead of appending to it.
+    // Keyed on the source (the debug sink passes ensureLineStart), never on content, so
+    // user scripts printing emojis mid-line are left alone.
+    //
+    // The terminal defers a trailing newline (d->enforceNewline) rather than emitting it
+    // immediately, so the cursor sits at the end of the previous line's text even when
+    // logically at a line start. Treat a pending deferred newline as line-start, and
+    // request the break via that same flag (not a raw '\n' insert) so we don't double up
+    // with the deferred newline and leave a blank line between rows.
+    if (ensureLineStart)
+    {
+        if (!d->cursor.atEnd())
+            d->cursor.movePosition(QTextCursor::End);
+        if (!d->enforceNewline && !d->cursor.atBlockStart())
+            d->enforceNewline = true;
+    }
+    // OPENMV-DIFF //
     for(const Utils::FormattedText &parsedText : m_handler.parseText(Utils::FormattedText(textIn)))
     {
         if(parsedText.text.isEmpty())
