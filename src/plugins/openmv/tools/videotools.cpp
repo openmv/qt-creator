@@ -607,10 +607,16 @@ static QString getInputFormats()
     }
     else
     {
-        QMessageBox box(QMessageBox::Warning, Tr::tr("Get Input Formats"), Tr::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+        const QString detail = command.isEmpty()
+            ? Tr::tr("FFmpeg is not supported on this platform.")
+            : (command.exists()
+                ? Tr::tr("Query failed!")
+                : Tr::tr("The FFmpeg executable was not found (the installation may be incomplete)."));
+
+        QMessageBox box(QMessageBox::Warning, Tr::tr("Get Formats"), detail, QMessageBox::Ok, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-        box.setDetailedText(command.toString() + QStringLiteral("\n\n") + process.stdOut());
+        box.setDetailedText(command.toUserOutput() + QStringLiteral("\n\n") + process.stdOut());
         box.setDefaultButton(QMessageBox::Ok);
         box.setEscapeButton(QMessageBox::Cancel);
         box.exec();
@@ -686,10 +692,16 @@ static QString getOutputFormats()
     }
     else
     {
-        QMessageBox box(QMessageBox::Warning, Tr::tr("Get Input Formats"), Tr::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+        const QString detail = command.isEmpty()
+            ? Tr::tr("FFmpeg is not supported on this platform.")
+            : (command.exists()
+                ? Tr::tr("Query failed!")
+                : Tr::tr("The FFmpeg executable was not found (the installation may be incomplete)."));
+
+        QMessageBox box(QMessageBox::Warning, Tr::tr("Get Formats"), detail, QMessageBox::Ok, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-        box.setDetailedText(command.toString() + QStringLiteral("\n\n") + process.stdOut());
+        box.setDetailedText(command.toUserOutput() + QStringLiteral("\n\n") + process.stdOut());
         box.setDefaultButton(QMessageBox::Ok);
         box.setEscapeButton(QMessageBox::Cancel);
         box.exec();
@@ -836,6 +848,16 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
         QMessageBox::critical(Core::ICore::dialogParent(),
                               Tr::tr("Convert Video"),
                               Tr::tr("FFMPEG is not supported on this platform."));
+
+        delete dialog;
+        return false;
+    }
+
+    if(!binary.exists())
+    {
+        QMessageBox::critical(Core::ICore::dialogParent(),
+                              Tr::tr("Convert Video"),
+                              Tr::tr("The FFmpeg executable was not found:\n\n%1\n\nYour OpenMV IDE installation may be incomplete.").arg(binary.toUserOutput()));
 
         delete dialog;
         return false;
