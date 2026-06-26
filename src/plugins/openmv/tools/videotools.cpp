@@ -552,13 +552,13 @@ static QString getInputFormats()
     if(Utils::HostOsInfo::isWindowsHost())
     {
         command = Core::ICore::resourcePath(QStringLiteral("ffmpeg/windows/bin/ffmpeg.exe"));
-        process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-muxers")));
+        process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-demuxers")));
         process.runBlocking(timeout, Utils::EventLoopMode::On);
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
         command = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac/ffmpeg"));
-        process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-muxers")));
+        process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-demuxers")));
         process.runBlocking(timeout, Utils::EventLoopMode::On);
     }
     else if(Utils::HostOsInfo::isLinuxHost())
@@ -566,25 +566,25 @@ static QString getInputFormats()
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
         {
             command = Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-x86/ffmpeg"));
-            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-muxers")));
+            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-demuxers")));
             process.runBlocking(timeout, Utils::EventLoopMode::On);
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
             command = Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-x86_64/bin/ffmpeg"));
-            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-muxers")));
+            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-demuxers")));
             process.runBlocking(timeout, Utils::EventLoopMode::On);
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
         {
             command = Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-armhf/ffmpeg"));
-            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-muxers")));
+            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-demuxers")));
             process.runBlocking(timeout, Utils::EventLoopMode::On);
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         {
             command = Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-arm64/bin/ffmpeg"));
-            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-muxers")));
+            process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-demuxers")));
             process.runBlocking(timeout, Utils::EventLoopMode::On);
         }
     }
@@ -595,7 +595,7 @@ static QString getInputFormats()
 
         for(const QString &string : in)
         {
-            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("\\s+E\\s+(\\w+)\\s+(.+)")).match(string);
+            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("\\s+D\\s+(\\w+)\\s+(.+)")).match(string);
 
             if(match.hasMatch())
             {
