@@ -1132,9 +1132,14 @@ static bool playVideoFile(const QString &path)
 
     if(!result)
     {
+        const bool unsupported = Utils::HostOsInfo::isLinuxHost()
+            && ((QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
+             || (QSysInfo::buildCpuArchitecture() == QStringLiteral("arm")));
+
         QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("Play Video"),
-            Tr::tr("Failed to launch ffplay!"));
+            unsupported ? Tr::tr("Video playback is not supported on this platform.")
+                        : Tr::tr("Failed to launch ffplay!"));
     }
 
     return result;
@@ -1295,9 +1300,14 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
 
     if(!result)
     {
+        const bool unsupported = Utils::HostOsInfo::isLinuxHost()
+            && ((QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
+             || (QSysInfo::buildCpuArchitecture() == QStringLiteral("arm")));
+
         QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("Play RTSP Stream"),
-            Tr::tr("Failed to launch ffplay!"));
+            unsupported ? Tr::tr("RTSP playback is not supported on this platform.")
+                        : Tr::tr("Failed to launch ffplay!"));
     }
 
     return result;
