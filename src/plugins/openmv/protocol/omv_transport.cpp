@@ -529,7 +529,19 @@ bool OMVTransport::_process(Packet &out_packet)
 
             state = OMVPState::SYNC;
 
-            if (length > max_payload) {
+            // Validate the header CRC FIRST. It covers seq/length/opcode, so until it
+            // passes none of those fields can be trusted. On a bad header CRC the seq
+            // field is garbage, so we do NOT adopt it -- instead we bump our own expected
+            // sequence by one to line up with the next valid packet the camera sends.
+            // (seq/length below run on a CRC-verified header.)
+            if (!_check_crc(crc,
+                            QByteArrayView(header_view.data(), OMVProto::HEADER_SIZE - 2),
+                            16)) {
+                sequence = uint8_t((sequence + 1) & 0xFF);
+                stats.checksum += 1;
+                log(seq, chan, opcode, flags, length, "Rjct5");
+                buf.consume(1);
+            } else if (length > max_payload) {
                 sequence = uint8_t((seq + 1) & 0xFF);
                 log(seq, chan, opcode, flags, length, "Rjct3");
                 buf.consume(1);
@@ -537,13 +549,6 @@ bool OMVTransport::_process(Packet &out_packet)
                 sequence = uint8_t((seq + 1) & 0xFF);
                 stats.sequence += 1;
                 log(seq, chan, opcode, flags, length, "Rjct4");
-                buf.consume(1);
-            } else if (!_check_crc(crc,
-                                   QByteArrayView(header_view.data(), OMVProto::HEADER_SIZE - 2),
-                                   16)) {
-                sequence = uint8_t((seq + 1) & 0xFF);
-                stats.checksum += 1;
-                log(seq, chan, opcode, flags, length, "Rjct5");
                 buf.consume(1);
             } else {
                 state = OMVPState::PAYLOAD;
@@ -588,6 +593,9 @@ bool OMVTransport::_process(Packet &out_packet)
                             (uint8_t(crc_ptr[3]) << 24));
 
                 if (!_check_crc(payload_crc, payload_view, 32)) {
+                    // Header CRC already passed, so seq is verified and == expected;
+                    // advance past this consumed-but-payload-corrupt packet so the next
+                    // packet doesn't read as a spurious sequence gap.
                     sequence = uint8_t((seq + 1) & 0xFF);
                     stats.checksum += 1;
                     log(seq, chan, opcode, flags, length, "Rjct6");
