@@ -372,6 +372,22 @@ QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout)
             continue;
         }
 
+        // Sequence-gap handling. A dropped packet (Windows drops them freely, especially
+        // mid-image) shows up as a forward jump in the sequence (a soft reboot as a
+        // reset). There is no replay buffer, so nothing retransmits the lost packet -- it
+        // is simply gone -- and we roll our expectation forward to whatever arrived rather
+        // than rejecting/resyncing. This is the same whether ACKs are on or off: ACK is
+        // not an ARQ here, it only makes the link half-duplex (the camera waits for our
+        // ACK below before sending the next packet) for flow control, so it never brings a
+        // lost packet back. A lost packet just yields a short frame that fails its size
+        // check upstream and the next frame proceeds; a single dropped/reset response is
+        // still delivered rather than waiting out the receive timeout (which is handled
+        // separately, below).
+        if (!_check_seq(packet.sequence, sequence, packet.opcode, packet.flags)) {
+            stats.sequence += 1;
+            log(packet.sequence, packet.channel, packet.opcode, packet.flags, packet.length, "Rjct4");
+        }
+
         // ACK the received packet
         if (packet.flags & OMVPFlags::ACK_REQ) {
             if (drop_rate > 0.0 && QRandomGenerator::global()->generateDouble() < drop_rate) {
@@ -394,8 +410,9 @@ QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout)
             continue;
         }
 
-        // Update sequence after each packet (including fragments)
-        sequence = uint8_t((sequence + 1) & 0xFF);
+        // Track the camera's actual sequence (rolling forward over any gap left by a
+        // dropped packet) rather than blindly incrementing our previous expectation.
+        sequence = uint8_t((packet.sequence + 1) & 0xFF);
 
         // Check if this is a fragmented packet
         if (packet.flags & OMVPFlags::FRAGMENT) {
@@ -545,12 +562,11 @@ bool OMVTransport::_process(Packet &out_packet)
                 sequence = uint8_t((seq + 1) & 0xFF);
                 log(seq, chan, opcode, flags, length, "Rjct3");
                 buf.consume(1);
-            } else if (!_check_seq(seq, sequence, opcode, flags)) {
-                sequence = uint8_t((seq + 1) & 0xFF);
-                stats.sequence += 1;
-                log(seq, chan, opcode, flags, length, "Rjct4");
-                buf.consume(1);
             } else {
+                // Sequence is NOT checked here -- _process only does framing + CRC. The
+                // sequence is judged in recv_packet against a fully validated packet, so a
+                // gap left by a dropped packet rolls the counter forward instead of
+                // discarding this (valid) packet along with the lost one.
                 state = OMVPState::PAYLOAD;
                 plength = OMVProto::HEADER_SIZE + length;
                 plength += (length ? OMVProto::CRC_SIZE : 0);
