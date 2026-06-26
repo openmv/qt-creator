@@ -712,6 +712,73 @@ QString OutputWindow::doNewlineEnforcement(const QString &out)
     return s;
 }
 
+// OPENMV-DIFF //
+// Some emoji (e.g. the Send arrow U+27A1, in the Dingbats block) are also covered
+// by monospace code fonts as a plain text glyph, so Qt's font fallback picks that
+// over the color emoji font and they render as mono symbols. Render emoji runs with
+// the platform emoji font explicitly so they always show as color glyphs.
+static QString emojiFontFamily()
+{
+#if defined(Q_OS_WIN)
+    return QStringLiteral("Segoe UI Emoji");
+#elif defined(Q_OS_MACOS)
+    return QStringLiteral("Apple Color Emoji");
+#else
+    return QStringLiteral("Noto Color Emoji");
+#endif
+}
+
+static bool isEmojiCodepoint(uint cp)
+{
+    return ((cp >= 0x1F000) && (cp <= 0x1FAFF))   // supplementary emoji blocks
+        || ((cp >= 0x2600) && (cp <= 0x27BF))     // misc symbols + dingbats (✅ ⚠ ➡)
+        || ((cp >= 0x2B00) && (cp <= 0x2BFF));    // misc symbols and arrows (⬅)
+}
+
+static uint codepointAt(const QString &text, int i, int &len)
+{
+    const QChar c = text.at(i);
+    if (c.isHighSurrogate() && ((i + 1) < text.size()) && text.at(i + 1).isLowSurrogate()) {
+        len = 2;
+        return QChar::surrogateToUcs4(c, text.at(i + 1));
+    }
+    len = 1;
+    return c.unicode();
+}
+
+static bool textHasEmoji(const QString &text)
+{
+    for (int i = 0, len = 0; i < text.size(); i += len)
+        if (isEmojiCodepoint(codepointAt(text, i, len)))
+            return true;
+    return false;
+}
+
+// Insert text splitting it into emoji / non-emoji runs, forcing the emoji font on
+// emoji runs. VS16 (U+FE0F) and ZWJ (U+200D) continue an emoji run.
+static void insertTextEmojiAware(QTextCursor &cursor, const QString &text, const QTextCharFormat &baseFormat)
+{
+    const int n = text.size();
+    int i = 0, len = 0;
+    while (i < n) {
+        const bool emoji = isEmojiCodepoint(codepointAt(text, i, len));
+        const int runStart = i;
+        i += len;
+        while (i < n) {
+            const uint cp = codepointAt(text, i, len);
+            bool e = isEmojiCodepoint(cp) || (emoji && ((cp == 0xFE0F) || (cp == 0x200D)));
+            if (e != emoji)
+                break;
+            i += len;
+        }
+        QTextCharFormat f = baseFormat;
+        if (emoji)
+            f.setFontFamilies(QStringList{emojiFontFamily()});
+        cursor.insertText(text.mid(runStart, i - runStart), f);
+    }
+}
+// OPENMV-DIFF //
+
 void OutputWindow::appendText(const QString &textIn)
 {
     for(const Utils::FormattedText &parsedText : m_handler.parseText(Utils::FormattedText(textIn)))
@@ -908,7 +975,14 @@ void OutputWindow::appendText(const QString &textIn)
         if (!d->cursor.atEnd())
             d->cursor.movePosition(QTextCursor::End);
         d->cursor.beginEditBlock();
-        d->cursor.insertText(doNewlineEnforcement(text), format);
+        // OPENMV-DIFF //
+        // d->cursor.insertText(doNewlineEnforcement(text), format);
+        const QString enforced = doNewlineEnforcement(text);
+        if (textHasEmoji(enforced))
+            insertTextEmojiAware(d->cursor, enforced, format);
+        else
+            d->cursor.insertText(enforced, format);
+        // OPENMV-DIFF //
 
         d->cursor.endEditBlock();
         if (atBottom)
