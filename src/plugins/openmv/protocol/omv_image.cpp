@@ -28,7 +28,7 @@ static QPixmap _convert_binary(const QByteArray &raw_data,
     const qsizetype expected = (((qsizetype(width) + 31) / 32) * 4) * qsizetype(height);
     if (raw_data.size() != expected) {
         omvDebug().noquote()
-        << "Binary data size mismatch: expected"
+        << "❌ Binary data size mismatch: expected"
         << expected << ", got" << raw_data.size();
         return QPixmap();
     }
@@ -41,7 +41,7 @@ static QPixmap _convert_binary(const QByteArray &raw_data,
                   QImage::Format_MonoLSB);
 
     if (binary.isNull()) {
-        omvDebug() << "Failed to wrap BINARY image data";
+        omvDebug() << "❌ Failed to wrap BINARY image data";
         return QPixmap();
     }
 
@@ -61,7 +61,7 @@ static QPixmap _convert_grayscale(const QByteArray &raw_data,
     const qsizetype expected = qsizetype(width) * qsizetype(height);
     if (raw_data.size() != expected) {
         omvDebug().noquote()
-        << "Grayscale data size mismatch: expected"
+        << "❌ Grayscale data size mismatch: expected"
         << expected << ", got" << raw_data.size();
         return QPixmap();
     }
@@ -74,7 +74,7 @@ static QPixmap _convert_grayscale(const QByteArray &raw_data,
                 QImage::Format_Grayscale8);
 
     if (gray.isNull()) {
-        omvDebug() << "Failed to wrap GRAY image data";
+        omvDebug() << "❌ Failed to wrap GRAY image data";
         return QPixmap();
     }
 
@@ -94,7 +94,7 @@ static QPixmap _convert_rgb565(const QByteArray &raw_data,
     const qsizetype expected = qsizetype(width) * qsizetype(height) * 2;
     if (raw_data.size() != expected) {
         omvDebug().noquote()
-        << "RGB565 data size mismatch: expected"
+        << "❌ RGB565 data size mismatch: expected"
         << expected << ", got" << raw_data.size();
         return QPixmap();
     }
@@ -107,7 +107,7 @@ static QPixmap _convert_rgb565(const QByteArray &raw_data,
                   QImage::Format_RGB16);
 
     if (rgb565.isNull()) {
-        omvDebug() << "Failed to wrap RGB565 image data";
+        omvDebug() << "❌ Failed to wrap RGB565 image data";
         return QPixmap();
     }
 
@@ -127,7 +127,7 @@ static QPixmap _convert_argb8(const QByteArray &raw_data,
     const qsizetype expected = qsizetype(width) * qsizetype(height) * 4;
     if (raw_data.size() != expected) {
         omvDebug().noquote()
-        << "ARGB8 data size mismatch: expected"
+        << "❌ ARGB8 data size mismatch: expected"
         << expected << ", got" << raw_data.size();
         return QPixmap();
     }
@@ -140,7 +140,7 @@ static QPixmap _convert_argb8(const QByteArray &raw_data,
                   QImage::Format_ARGB32);
 
     if (argb8.isNull()) {
-        omvDebug() << "Failed to wrap ARGB8 image data";
+        omvDebug() << "❌ Failed to wrap ARGB8 image data";
         return QPixmap();
     }
 
@@ -159,14 +159,14 @@ static QPixmap _convert_jpeg(const QByteArray &raw_data,
 
     QImage img;
     if (!img.loadFromData(raw_data, "JPG") && !img.loadFromData(raw_data, "JPEG")) {
-        omvDebug() << "JPEG decode error: QImage::loadFromData failed";
+        omvDebug() << "❌ JPEG decode error: QImage::loadFromData failed";
         return QPixmap();
     }
 
     if (width > 0 && height > 0) {
         if (img.width() != width || img.height() != height) {
             omvDebug().noquote()
-            << "JPEG decode size mismatch: expected"
+            << "❌ JPEG decode size mismatch: expected"
             << (width * height * 3)
             << "pixels worth of RGB,"
             << "got image"
@@ -190,14 +190,14 @@ static QPixmap _convert_png(const QByteArray &raw_data,
 
     QImage img;
     if (!img.loadFromData(raw_data, "PNG")) {
-        omvDebug() << "PNG decode error: QImage::loadFromData failed";
+        omvDebug() << "❌ PNG decode error: QImage::loadFromData failed";
         return QPixmap();
     }
 
     if (width > 0 && height > 0) {
         if (img.width() != width || img.height() != height) {
             omvDebug().noquote()
-            << "PNG decode size mismatch: expected"
+            << "❌ PNG decode size mismatch: expected"
             << (width * height * 3)
             << "pixels worth of RGB,"
             << "got image"
@@ -236,7 +236,7 @@ QPixmap convert_to_rgb888(const QByteArray &raw_data,
     } else {
         // Unknown format - return raw data and let caller handle it
         fmt = QStringLiteral("%1").arg(pixformat, 8, 16, QChar('0')).toUpper();
-        omvDebug().noquote().nospace() << "Unknown pixel format: 0x" << fmt;
+        omvDebug().noquote().nospace() << "❌ Unknown pixel format: 0x" << fmt;
         pm = QPixmap(); // null pixmap
     }
 

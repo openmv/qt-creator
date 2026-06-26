@@ -283,7 +283,7 @@ void OMVTransport::send_packet(uint8_t opcode,
         qint64 ret = serial->write(pbuf.constData() + written, packet_size - written);
 
         if (ret < 0) {
-            omvDebug() << "Write error:" << ret << serial->errorString();
+            omvDebug() << "❌ Write error:" << ret << serial->errorString();
             throw OMVPTimeoutException(QStringLiteral("Failed to write to serial port"));
         }
 
@@ -293,7 +293,7 @@ void OMVTransport::send_packet(uint8_t opcode,
             break;
         }
 
-        omvDebug() << "Written:" << written << "of" << packet_size;
+        omvDebug() << "✏️ Written:" << written << "of" << packet_size;
         serial->flush(); // ignore return
 
         QElapsedTimer elaspedTimer;
@@ -302,7 +302,7 @@ void OMVTransport::send_packet(uint8_t opcode,
         while (serial->bytesToWrite()) {
             serial->waitForBytesWritten(1);
             if(serial->bytesToWrite() && elaspedTimer.hasExpired(timeout * 1000.0)) {
-                omvDebug() << "Write error timeout!";
+                omvDebug() << "❌ Write error timeout!";
                 throw OMVPTimeoutException(QStringLiteral("Failed to write to serial port"));
             }
         }
@@ -648,7 +648,7 @@ void OMVTransport::_send_keep_alive()
     qint64 ret = serial->write(QByteArray(1, char(0x00)));
 
     if (ret < 0) {
-        omvDebug() << "Write error:" << ret << serial->errorString();
+        omvDebug() << "❌ Write error:" << ret << serial->errorString();
         throw OMVPTimeoutException(QStringLiteral("Failed to write to serial port"));
     }
 
@@ -656,7 +656,7 @@ void OMVTransport::_send_keep_alive()
         return;
     }
 
-    omvDebug() << "Written: 0 of 1";
+    omvDebug() << "✏️ Written: 0 of 1";
     serial->flush(); // ignore return
 
     QElapsedTimer elaspedTimer;
@@ -665,7 +665,7 @@ void OMVTransport::_send_keep_alive()
     while (serial->bytesToWrite()) {
         serial->waitForBytesWritten(1);
         if(serial->bytesToWrite() && elaspedTimer.hasExpired(timeout * 1000.0)) {
-            omvDebug() << "Write error timeout!";
+            omvDebug() << "❌ Write error timeout!";
             throw OMVPTimeoutException(QStringLiteral("Failed to write to serial port"));
         }
     }

@@ -162,7 +162,7 @@ QByteArray OMVCamera::sendCmdWaitResp(uint8_t opcode,
         Send a command and wait for response (ACK/NAK or data)
     */
     if (!isConnected()) {
-        omvDebug() << "Not connected";
+        omvDebug() << "🔌 Not connected";
         throw OMVPException(QStringLiteral("Not connected"));
     }
 
@@ -203,7 +203,7 @@ QByteArray OMVCamera::sendCmdWaitResp(uint8_t opcode,
 
         return QByteArray();
     } catch (const OMVPException &e) {
-        omvDebug() << "sendCmdWaitResp exception:" << e.what();
+        omvDebug() << "❌ sendCmdWaitResp exception:" << e.what();
         // Gracefully handle channel size requests during disconnect.
         if (opcode == OMVPOpcode::CHANNEL_SIZE) {
             return QByteArray(4, 0);
@@ -211,10 +211,10 @@ QByteArray OMVCamera::sendCmdWaitResp(uint8_t opcode,
         resync(false); // no grace timeout
         throw OMVPResyncException(QStringLiteral("Resync requested"));
     } catch (const std::exception &e) {
-        omvDebug() << "sendCmdWaitResp exception:" << e.what();
+        omvDebug() << "❌ sendCmdWaitResp exception:" << e.what();
         throw OMVPException(QString::fromUtf8(e.what()));
     } catch (...) {
-        omvDebug() << "sendCmdWaitResp unknown exception";
+        omvDebug() << "❌ sendCmdWaitResp unknown exception";
         throw OMVPException(QStringLiteral("Unknown error in sendCmdWaitResp"));
     }
 }
@@ -508,10 +508,10 @@ void OMVCamera::updateChannels()
         channelsByName.insert(it.value().name, it.key());
     }
 
-    omvDebug().nospace() << "Registered channels (" << channelsById.size() << "):";
+    omvDebug().nospace() << "📋 Registered channels (" << channelsById.size() << "):";
     for (auto it = channelsById.cbegin(); it != channelsById.cend(); ++it) {
         omvDebug().noquote().nospace()
-        << "  ID: " << it.key()
+        << "📡   ID: " << it.key()
         << ", Flags: 0x"
         << QString::number(it.value().flags, 16).rightJustified(2, QChar('0')).toUpper()
         << ", Name: " << it.value().name;
@@ -772,7 +772,7 @@ void OMVCamera::profilerReset()
             return;
         }
         channelIoctl(profile_id, static_cast<uint32_t>(OMVPChannelIOCTL::PROFILE_RESET));
-        omvDebug() << "Profiler reset";
+        omvDebug() << "📊 Profiler reset";
     });
 }
 
@@ -792,7 +792,7 @@ void OMVCamera::profilerMode(bool exclusive)
                      static_cast<uint32_t>(OMVPChannelIOCTL::PROFILE_MODE),
                      "I",
                      args);
-        omvDebug() << "Profile mode set to"
+        omvDebug() << "📊 Profile mode set to"
                    << (exclusive ? "exclusive" : "inclusive");
     });
 }
@@ -814,7 +814,7 @@ void OMVCamera::profilerEventType(uint32_t counter_num, uint32_t event_id)
                      "II",
                      args);
         omvDebug().noquote()
-            << "Event counter" << counter_num
+            << "🔢 Event counter" << counter_num
             << "set to event 0x"
             << QString::number(event_id, 16).rightJustified(4, QChar('0')).toUpper();
     });
@@ -852,7 +852,7 @@ QVariantList OMVCamera::readProfile()
         uint32_t record_count = shape[0];
         uint32_t record_size  = shape[1];
         uint32_t profile_size = record_count * record_size;
-        omvDebug().noquote().nospace() << "Profiler records: " << record_count
+        omvDebug().noquote().nospace() << "📊 Profiler records: " << record_count
                                        << ", record size: " << record_size
                                        << ", total size: " << profile_size;
         if (profile_size == 0) {
@@ -924,7 +924,7 @@ QVariantList OMVCamera::readProfile()
 
                 records.append(rec);
             }
-            omvDebug().noquote().nospace() << "Parsed profiler records: " << record_count;
+            omvDebug().noquote().nospace() << "📊 Parsed profiler records: " << record_count;
 
             channelUnlock(profile_id);
             return records;
@@ -978,14 +978,14 @@ bool OMVCamera::readFrame(OMVFrame &outFrame)
 
         try {
             uint32_t size = channelSizeRaw(stream_id);
-            omvDebug() << "Frame Size:" << size;
+            omvDebug() << "📷 Frame Size:" << size;
             if (size <= 20) {
                 channelUnlock(stream_id);
                 return false;
             }
 
             QByteArray data = channelReadRaw(stream_id, 0, size);
-            omvDebug() << "Frame Data Size:" << data.size();
+            omvDebug() << "📷 Frame Data Size:" << data.size();
             if (data.size() != size) {
                 channelUnlock(stream_id);
                 return false;
@@ -1033,7 +1033,7 @@ bool OMVCamera::readFrame(OMVFrame &outFrame)
             }
 
             if (streamingRes != oldStreamingRes) {
-                omvDebug() << fmt_str << "format detected, adjusting streaming resolution to"
+                omvDebug() << "🎨" << fmt_str << "format detected, adjusting streaming resolution to"
                            << streamingRes;
                 QList<uint32_t> args;
                 args << uint32_t(streamingRes.width()) << uint32_t(streamingRes.height());
@@ -1298,7 +1298,7 @@ QVariantMap OMVCamera::systemInfo()
 
         streamingRes = bestFitAspect(stream_buffer_size_kb * 1024, 2, QSize(640, 480));
         omvDebug().noquote().nospace()
-            << "Calculated max streaming resolution: "
+            << "📐 Calculated max streaming resolution: "
             << streamingRes.width() << "x" << streamingRes.height();
 
         sysinfo = m; // cache
@@ -1420,9 +1420,15 @@ void OMVCamera::printSystemInfo()
     /*
         Print formatted system information
     */
-    omvDebug() << "=== OpenMV System Information ===";
-    omvDebug().noquote() << systemInfoString();
-    omvDebug() << "=================================";
+    omvDebug() << "🖥️ === OpenMV System Information ===";
+    // Mark every line so each row is identifiable as debug output. systemInfoString()
+    // is also shown raw in the System Info dialog, so prefix here at the print site only
+    // -- never inside systemInfoString() itself.
+    const auto lines = systemInfoString().split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+    for (const QString &line : lines) {
+        omvDebug().noquote().nospace() << "🖥️ " << line;
+    }
+    omvDebug() << "🖥️ =================================";
 }
 
 QSize OMVCamera::bestFitAspect(uint32_t maxBytes, int bpp, QSize ratio)
