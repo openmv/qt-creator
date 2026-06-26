@@ -474,6 +474,10 @@ public:
     explicit OpenMVPluginSerialPort(const QJsonDocument &settings = QJsonDocument(),
                                     QObject *parent = Q_NULLPTR);
 
+    // Serial-terminal debug-logging level for the v1 protocol (0 off .. 3 fragments).
+    // Set on the GUI thread; read on the serial thread, so it's an atomic.
+    static void setDebugLevel(int level);
+
     void terminate();
 
 signals:

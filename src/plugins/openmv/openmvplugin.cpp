@@ -2679,9 +2679,12 @@ void OpenMVPlugin::extensionsInitialized()
     // Serial Terminal debug-logging button -> protocol debug flags. Levels:
     // 0 off, 1 commands (omvDebug), 2 + packets (transport log), 3 + fragments.
     auto applySerialDebugLevel = [] (int level) {
+        // v2 protocol flags
         omv::OMVDebug::setEnabled(level >= 1);
         omv::OMVTransport::setLoggingEnabled(level >= 2);
         omv::OMVTransport::setFragmentLoggingEnabled(level >= 3);
+        // v1 protocol (logs on the serial thread; shares the omvDebug sink)
+        OpenMVPluginSerialPort::setDebugLevel(level);
     };
     connect(Core::MessageManager::outputWindow(), &Core::OutputWindow::serialDebugLevelChanged, this, applySerialDebugLevel);
     applySerialDebugLevel(Core::MessageManager::outputWindow()->serialDebugLevel());

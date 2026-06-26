@@ -29,6 +29,10 @@
  */
 
 #include "openmvpluginserialport.h"
+#include "protocol/omv_debug.h"
+
+#include <QtCore/QAtomicInt>
+#include <QtCore/QDateTime>
 
 #ifdef Q_OS_WIN
 #include <windows.h>
@@ -56,6 +60,55 @@
 
 namespace OpenMV {
 namespace Internal {
+
+// Serial-terminal debug-logging verbosity for the v1 protocol, driven by the
+// Serial Terminal debug button (0 off, 1 commands, 2 + the chunk-dump packets
+// that make up frame/print reads, 3 + a capped hex preview of each payload).
+// Read on the serial thread, set on the GUI thread, hence atomic. All v1 logging
+// lives here (on the serial thread, where the actual I/O happens) so the lines
+// stay in wire order and interleave correctly with the v2 OMVCamera logs --
+// which also run on this thread -- instead of racing in from the GUI thread.
+static QAtomicInt s_debugLevel(0);
+
+void OpenMVPluginSerialPort::setDebugLevel(int level)
+{
+    s_debugLevel.storeRelaxed(level);
+}
+
+static const char *v1CmdName(int op)
+{
+    switch (op) {
+    case __USBDBG_FW_VERSION:      return "FW_VERSION";
+    case __USBDBG_FRAME_SIZE:      return "FRAME_SIZE";
+    case __USBDBG_FRAME_DUMP:      return "FRAME_DUMP";
+    case __USBDBG_ARCH_STR:        return "ARCH_STR";
+    case __USBDBG_LEARN_MTU:       return "LEARN_MTU";
+    case __USBDBG_SCRIPT_EXEC:     return "SCRIPT_EXEC";
+    case __USBDBG_SCRIPT_STOP:     return "SCRIPT_STOP";
+    case __USBDBG_SCRIPT_SAVE:     return "SCRIPT_SAVE";
+    case __USBDBG_SCRIPT_RUNNING:  return "SCRIPT_RUNNING";
+    case __USBDBG_TEMPLATE_SAVE:   return "TEMPLATE_SAVE";
+    case __USBDBG_DESCRIPTOR_SAVE: return "DESCRIPTOR_SAVE";
+    case __USBDBG_ATTR_READ:       return "ATTR_READ";
+    case __USBDBG_ATTR_READ_2:     return "ATTR_READ_2";
+    case __USBDBG_ATTR_WRITE:      return "ATTR_WRITE";
+    case __USBDBG_SYS_RESET:       return "SYS_RESET";
+    case __USBDBG_SYS_RESET_TO_BL: return "SYS_RESET_TO_BL";
+    case __USBDBG_FB_ENABLE:       return "FB_ENABLE";
+    case __USBDBG_TX_BUF_LEN:      return "TX_BUF_LEN";
+    case __USBDBG_TX_BUF:          return "TX_BUF";
+    case __USBDBG_SENSOR_ID:       return "SENSOR_ID";
+    case __USBDBG_TX_INPUT:        return "TX_INPUT";
+    case __USBDBG_TIME_INPUT:      return "TIME_INPUT";
+    case __USBDBG_GET_STATE:       return "GET_STATE";
+    case __USBDBG_PROFILE_SIZE:    return "PROFILE_SIZE";
+    case __USBDBG_PROFILE_DUMP:    return "PROFILE_DUMP";
+    case __USBDBG_SET_PROFILE_MODE:return "SET_PROFILE_MODE";
+    case __USBDBG_SET_EVT_CNTR:    return "SET_EVT_CNTR";
+    case __USBDBG_PROFILE_RESET:   return "PROFILE_RESET";
+    default:                       return nullptr;
+    }
+}
 
 void serializeByte(QByteArray &buffer, int value) // LittleEndian
 {
@@ -489,6 +542,25 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
         int override_write_timeout = obj.value(QStringLiteral("overrideWriteTimeout")).toInt(-1);
         if (override_write_timeout >= 0) write_timeout = override_write_timeout;
 
+        // v1 debug logging (all on this serial thread, so it stays in wire order).
+        const int dbgLevel = s_debugLevel.loadRelaxed();
+        const int dbgOp = ((command.m_data.size() >= 2) && (quint8(command.m_data.at(0)) == __USBDBG_CMD))
+                          ? quint8(command.m_data.at(1)) : -1;
+        const bool dbgChunk = (dbgOp == __USBDBG_FRAME_DUMP) || (dbgOp == __USBDBG_TX_BUF) || (dbgOp == __USBDBG_PROFILE_DUMP);
+        const bool dbgLog = (dbgLevel >= 1) && ((!dbgChunk) || (dbgLevel >= 2)); // chunk-dump packets are level 2+
+
+        if(dbgLog)
+        {
+            const char *name = v1CmdName(dbgOp);
+            omv::OMVDebug d;
+            d.noquote().nospace() << "➡️ Send: ";
+            if(name) d << name;
+            else d << QStringLiteral("0x%1").arg(dbgOp & 0xFF, 2, 16, QChar('0')).toUpper();
+            d << ", length=" << command.m_data.size()
+              << ", time=" << (QDateTime::currentMSecsSinceEpoch() % 10000) << "ms";
+            if(dbgLevel >= 3) d << ", bytes=" << QString::fromLatin1(command.m_data.left(64).toHex(' '));
+        }
+
         write(command.m_data, command.m_startWait, command.m_endWait, write_timeout);
 
         if((!m_port) || (!command.m_responseLen))
@@ -538,10 +610,28 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
 
             if((response.size() >= responseLen) || readStallHappened)
             {
+                if(dbgLog)
+                {
+                    omv::OMVDebug d;
+                    d.noquote().nospace()
+                        << "⬅️ Recv: ok, length=" << response.size()
+                        << ", time=" << (QDateTime::currentMSecsSinceEpoch() % 10000) << "ms";
+                    if(readStallHappened) d << " [stall]";
+                    if(dbgLevel >= 3) d << ", bytes=" << QString::fromLatin1(response.left(64).toHex(' '));
+                }
+
                 emit commandResult(OpenMVPluginSerialPortCommandResult(true, response.left(command.m_responseLen)));
             }
             else
             {
+                if(dbgLog)
+                {
+                    omv::OMVDebug d;
+                    d.noquote().nospace()
+                        << "⬅️ Recv: FAIL (timeout, got " << response.size() << "/" << responseLen << ")"
+                        << ", time=" << (QDateTime::currentMSecsSinceEpoch() % 10000) << "ms";
+                }
+
                 if(m_port)
                 {
                     delete m_port;
