@@ -199,6 +199,7 @@ void OMVTransport::log(int seq,
     const char *emoji;
     if (dir == "Drop") emoji = "🎲";
     else if (dir.startsWith("Rjct")) emoji = "🚫";
+    else if (dir == "Gap") emoji = "🕳️";
     else if (flags & OMVPFlags::ACK) emoji = "✅";
     else if (flags & OMVPFlags::NAK) emoji = "❌";
     else if (dir == "Send") emoji = "➡️";
@@ -385,7 +386,9 @@ QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout)
         // separately, below).
         if (!_check_seq(packet.sequence, sequence, packet.opcode, packet.flags)) {
             stats.sequence += 1;
-            log(packet.sequence, packet.channel, packet.opcode, packet.flags, packet.length, "Rjct4");
+            // "Gap", not a reject -- this packet IS accepted; the tag flags that one or
+            // more earlier packets went missing on the link (a hole in the sequence).
+            log(packet.sequence, packet.channel, packet.opcode, packet.flags, packet.length, "Gap");
         }
 
         // ACK the received packet
