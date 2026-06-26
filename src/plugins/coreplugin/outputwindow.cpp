@@ -695,7 +695,9 @@ void OutputWindow::setWordWrapEnabled(bool wrap)
 // OPENMV-DIFF //
 QString OutputWindow::doNewlineEnforcement(const QString &out)
 {
-    d->scrollToBottom = true;
+    // Do NOT re-pin d->scrollToBottom = true here. appendText() follows that
+    // sticky user-intent flag, so setting it true on every chunk yanked a
+    // scrolled-up user back to the tail under continuous output.
     QString s = out;
     if (d->enforceNewline) {
         s.prepend(QLatin1Char('\n'));
