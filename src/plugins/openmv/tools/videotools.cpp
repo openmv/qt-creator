@@ -1073,6 +1073,22 @@ static bool playVideoFile(const QString &path)
                             << QStringLiteral("-e")
                             << QFileInfo(file).filePath());
                     }
+
+                    // Fallbacks for desktops without one of the terminals above.
+                    // x-terminal-emulator is the Debian/Ubuntu/RPi generic that points
+                    // at the user's chosen terminal; the rest are common -e-style
+                    // terminals. Only reached if every terminal above was missing.
+                    for(const QString &term : {QStringLiteral("x-terminal-emulator"),
+                                               QStringLiteral("mate-terminal"),
+                                               QStringLiteral("alacritty"),
+                                               QStringLiteral("tilix"),
+                                               QStringLiteral("terminator")})
+                    {
+                        if(result) break;
+                        result = QProcess::startDetached(term, QStringList()
+                            << QStringLiteral("-e")
+                            << QFileInfo(file).filePath());
+                    }
                 }
             }
         }
@@ -1122,6 +1138,22 @@ static bool playVideoFile(const QString &path)
                     if(!result)
                     {
                         result = QProcess::startDetached(QStringLiteral("xfce4-terminal"), QStringList()
+                            << QStringLiteral("-e")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    // Fallbacks for desktops without one of the terminals above.
+                    // x-terminal-emulator is the Debian/Ubuntu/RPi generic that points
+                    // at the user's chosen terminal; the rest are common -e-style
+                    // terminals. Only reached if every terminal above was missing.
+                    for(const QString &term : {QStringLiteral("x-terminal-emulator"),
+                                               QStringLiteral("mate-terminal"),
+                                               QStringLiteral("alacritty"),
+                                               QStringLiteral("tilix"),
+                                               QStringLiteral("terminator")})
+                    {
+                        if(result) break;
+                        result = QProcess::startDetached(term, QStringList()
                             << QStringLiteral("-e")
                             << QFileInfo(file).filePath());
                     }
@@ -1241,6 +1273,22 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
                             << QStringLiteral("-e")
                             << QFileInfo(file).filePath());
                     }
+
+                    // Fallbacks for desktops without one of the terminals above.
+                    // x-terminal-emulator is the Debian/Ubuntu/RPi generic that points
+                    // at the user's chosen terminal; the rest are common -e-style
+                    // terminals. Only reached if every terminal above was missing.
+                    for(const QString &term : {QStringLiteral("x-terminal-emulator"),
+                                               QStringLiteral("mate-terminal"),
+                                               QStringLiteral("alacritty"),
+                                               QStringLiteral("tilix"),
+                                               QStringLiteral("terminator")})
+                    {
+                        if(result) break;
+                        result = QProcess::startDetached(term, QStringList()
+                            << QStringLiteral("-e")
+                            << QFileInfo(file).filePath());
+                    }
                 }
             }
         }
@@ -1290,6 +1338,22 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
                     if(!result)
                     {
                         result = QProcess::startDetached(QStringLiteral("xfce4-terminal"), QStringList()
+                            << QStringLiteral("-e")
+                            << QFileInfo(file).filePath());
+                    }
+
+                    // Fallbacks for desktops without one of the terminals above.
+                    // x-terminal-emulator is the Debian/Ubuntu/RPi generic that points
+                    // at the user's chosen terminal; the rest are common -e-style
+                    // terminals. Only reached if every terminal above was missing.
+                    for(const QString &term : {QStringLiteral("x-terminal-emulator"),
+                                               QStringLiteral("mate-terminal"),
+                                               QStringLiteral("alacritty"),
+                                               QStringLiteral("tilix"),
+                                               QStringLiteral("terminator")})
+                    {
+                        if(result) break;
+                        result = QProcess::startDetached(term, QStringList()
                             << QStringLiteral("-e")
                             << QFileInfo(file).filePath());
                     }
