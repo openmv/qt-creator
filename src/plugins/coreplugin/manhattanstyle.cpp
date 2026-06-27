@@ -171,6 +171,21 @@ QSize ManhattanStyle::sizeFromContents(ContentsType type, const QStyleOption *op
         if (panelWidget(widget))
             newSize += QSize(14, 0);
         break;
+    // OPENMV-DIFF //
+    case CT_Slider:
+        // With tick marks the base (Fusion) style reserves space on the tick side and shoves
+        // the handle toward the opposite edge, clipping it when the slider gets exactly its
+        // size hint. Reserve a few extra pixels along the thickness so the handle isn't cut off.
+        if (const auto *slider = qstyleoption_cast<const QStyleOptionSlider *>(option)) {
+            if (slider->tickPosition != QSlider::NoTicks) {
+                if (slider->orientation == Qt::Horizontal)
+                    newSize.rheight() += 3;
+                else
+                    newSize.rwidth() += 3;
+            }
+        }
+        break;
+    // OPENMV-DIFF //
     default:
         break;
     }

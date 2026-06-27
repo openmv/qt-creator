@@ -524,6 +524,30 @@ static bool writeFileDirectAndFlush(const QString &filePath, const QByteArray &d
     return true;
 }
 
+bool OpenMVPlugin::writeFileToDriveAndFlush(const QString &filePath, const QByteArray &data, QString *errOut)
+{
+    // Write + flush the file handle down to the device (same as Save Script -> main.py).
+    if(!writeFileDirectAndFlush(filePath, data, errOut))
+    {
+        return false;
+    }
+
+    // If the file lives on the OpenMV Cam's mounted drive, flush the whole volume too so
+    // the cam's filesystem actually sees the change (the OS otherwise caches the write).
+#if defined(Q_OS_WIN)
+    const Qt::CaseSensitivity cs = Qt::CaseInsensitive;
+#else
+    const Qt::CaseSensitivity cs = Qt::CaseSensitive;
+#endif
+    if((!m_portPath.isEmpty())
+    && QDir::cleanPath(filePath).startsWith(QDir::cleanPath(m_portPath), cs))
+    {
+        flushPortPath();
+    }
+
+    return true;
+}
+
 void OpenMVPlugin::saveScript()
 {
     if(!m_working)

@@ -42,6 +42,7 @@ add_qtc_plugin(OpenMV
     tools/mpy-cross.cpp tools/mpy-cross.h
     tools/picotool.cpp tools/picotool.h
     tools/romfs.cpp tools/romfs.h
+    tools/settingseditor.cpp tools/settingseditor.h
     tools/stcubeprogrammer.cpp tools/stcubeprogrammer.h
     tools/stedgeai.cpp tools/stedgeai.h
     tools/tag16h5.c tools/tag16h5.h

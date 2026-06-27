@@ -1057,12 +1057,34 @@ void OpenMVPlugin::extensionsInitialized()
     toolsMenu->addAction(m_developmentReleaseCommand);
     m_developmentReleaseAction->setEnabled(false);
     connect(m_developmentReleaseAction, &QAction::triggered, this, &OpenMVPlugin::installTheLatestDevelopmentRelease);
-    // MicroPython Tools are PC-side scripting utilities, not part of the read-only
-    // viewer, so the whole submenu (and its divider) is left out in viewer mode.
+
+    // Settings Editor: a JSON-driven config GUI. Self-contained and useful in viewer mode,
+    // so it lives in the MicroPython Tools section but OUTSIDE the viewer-mode guard below.
+    toolsMenu->addSeparator();
+    Core::ActionContainer *settingsEditorMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.SettingsEditorMenu"));
+    settingsEditorMenu->menu()->setTitle(Tr::tr("OpenMV Cam Settings Editor"));
+    settingsEditorMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
+    toolsMenu->addMenu(settingsEditorMenu);
+
+    QAction *createDefaultConfigActionItem = new QAction(Tr::tr("Create Default Config"), this);
+    Core::Command *createDefaultConfigCommand = Core::ActionManager::registerAction(createDefaultConfigActionItem, Utils::Id("OpenMV.CreateDefaultConfig"));
+    settingsEditorMenu->addAction(createDefaultConfigCommand);
+    connect(createDefaultConfigActionItem, &QAction::triggered, this, [this] {
+        createDefaultConfigAction(m_portPath, [this] (const QString &p, const QByteArray &d, QString *e) { return writeFileToDriveAndFlush(p, d, e); });
+    });
+
+    QAction *openConfigAction = new QAction(Tr::tr("Open Config File"), this);
+    Core::Command *openConfigCommand = Core::ActionManager::registerAction(openConfigAction, Utils::Id("OpenMV.OpenConfigFile"));
+    settingsEditorMenu->addAction(openConfigCommand);
+    connect(openConfigAction, &QAction::triggered, this, [this] {
+        settingsEditorAction(m_portPath, [this] (const QString &p, const QByteArray &d, QString *e) { return writeFileToDriveAndFlush(p, d, e); });
+    });
+
+    // MicroPython Tools are PC-side scripting utilities, not part of the read-only viewer,
+    // so the submenu is left out in viewer mode. It shares the section divider above with
+    // the Settings Editor (no separator between the two).
     if(!m_viewerMode)
     {
-        toolsMenu->addSeparator();
-
         Core::ActionContainer *microPythonToolsMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.MicroPythonMenu"));
         microPythonToolsMenu->menu()->setTitle(Tr::tr("MicroPython Tools"));
         toolsMenu->addMenu(microPythonToolsMenu);

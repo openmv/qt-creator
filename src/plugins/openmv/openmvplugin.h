@@ -110,6 +110,7 @@
 #include "tools/loaderdialog.h"
 #include "tools/myqserialportinfo.h"
 #include "tools/picotool.h"
+#include "tools/settingseditor.h"
 #include "tools/stcubeprogrammer.h"
 #include "tools/tag16h5.h"
 #include "tools/tag25h7.h"
@@ -829,6 +830,7 @@ private:
 
     QByteArray fixScriptForSensor(QByteArray data, bool notExamples = false, bool increaseResolution = false);
     void flushPortPath();
+    bool writeFileToDriveAndFlush(const QString &filePath, const QByteArray &data, QString *errOut);
 
     QString tempFileForPythonEditor(const QByteArray &data, const QString &titlePattern);
     QJsonObject getBoardSettings(const QString &title, Utils::QtcSettings *settings, bool autoConnectToBoard = false);
