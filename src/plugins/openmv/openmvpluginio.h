@@ -245,6 +245,7 @@ signals:
     void firmwareVersion(int major, int minor, int patch);
     void jpegPreferred(bool preferred);
     void frameBufferData(const QPixmap &data);
+    void cameraFrameRate(double fps); // on-camera FPS from the v5.0.0 stream header
     void frameBufferEmpty(bool ok);
     void archString(const QString &arch);
     void learnedMTU(bool ok);

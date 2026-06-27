@@ -134,9 +134,27 @@ void OpenMVPlugin::processEvents()
 
             if(m_timer.hasExpired(FPS_TIMER_EXPIRATION_TIME))
             {
-                m_fpsButton->setText(Tr::tr("FPS: 0"));
+                // No frames for a while (script stopped / camera silent) -> zero both rates.
+                m_fpsIde = 0.0;
+                m_fpsCamera = 0.0;
+                refreshFpsButton();
             }
         }
+    }
+}
+
+void OpenMVPlugin::refreshFpsButton()
+{
+    if(m_fpsCameraValid)
+    {
+        // On-camera FPS plus the IDE's own display FPS, both in the one label.
+        m_fpsButton->setText(Tr::tr("FPS: %L1 Cam - %L2 IDE").arg(m_fpsCamera, 0, 'f', 1).arg(m_fpsIde, 0, 'f', 1));
+        m_fpsButton->setToolTip(Tr::tr("On-camera FPS and IDE display FPS"));
+    }
+    else
+    {
+        m_fpsButton->setText(Tr::tr("FPS: %L1").arg(m_fpsIde, 5, 'f', 1));
+        m_fpsButton->setToolTip(Tr::tr("May be different from camera FPS"));
     }
 }
 
@@ -455,6 +473,7 @@ void OpenMVPlugin::setSpacing()
         m_readProfileTimer.restart();
         m_timer.restart();
         m_queue.clear();
+        m_cameraQueue.clear();
     }
 
     delete dialog;

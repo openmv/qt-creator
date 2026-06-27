@@ -28,6 +28,8 @@ struct OMVFrame {
     uint32_t depth  = 0;
     QPixmap  pixmap;
     int      raw_size = 0;
+    float    fps     = 0.0f; // on-camera FPS from the stream header (v5.0.0+)
+    bool     has_fps = false; // header carried the fps field (offset >= 24)
 };
 
 class OMVCamera

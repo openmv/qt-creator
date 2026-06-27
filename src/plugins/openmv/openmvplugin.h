@@ -469,6 +469,7 @@ public slots: // private
     void startClicked();
     void stopClicked();
     void processEvents();
+    void refreshFpsButton(); // renders m_fpsButton from m_fpsIde / m_fpsCamera / m_fpsCameraValid
     void errorFilter(const QByteArray &data);
     void configureSettings();
     void saveScript();
@@ -636,6 +637,7 @@ private:
 
     QElapsedTimer m_timer;
     QQueue<qint64> m_queue;
+    QQueue<double> m_cameraQueue; // sliding window of on-camera FPS samples (same depth as m_queue)
     QTimer *m_processEventsTimer;
     ScanDriveThread *m_scanDriveThread;
     HardwareMonitor *m_hardwareMonitor;
@@ -723,6 +725,9 @@ private:
     Utils::ElidingLabel *m_portLabel;
     Utils::ElidingToolButton *m_pathButton;
     Utils::ElidingToolButton *m_fpsButton;
+    double m_fpsIde = 0.0;          // last IDE-measured FPS (PC-side frame-arrival timing)
+    double m_fpsCamera = 0.0;       // last on-camera FPS from the v5.0.0 stream header
+    bool m_fpsCameraValid = false;  // camera reports FPS (v5.0.0) -> show both values
 
     ///////////////////////////////////////////////////////////////////////////
 

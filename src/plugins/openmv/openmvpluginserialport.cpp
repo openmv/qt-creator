@@ -1004,6 +1004,8 @@ void OpenMVPluginSerialPort_private::frameDump() {
         OMVFrame frame;
 
         if (m_camera->frameReady() && m_camera->readFrame(frame)) {
+            // Emit before the frame so the UI has the value cached when it renders.
+            if (frame.has_fps) emit cameraFrameRate(frame.fps);
             emit frameBufferData(false, frame.pixmap);
         } else {
             emit frameBufferData(false, QPixmap());
@@ -1460,6 +1462,9 @@ OpenMVPluginSerialPort::OpenMVPluginSerialPort(const QJsonDocument &settings,
 
     connect(m_port, &OpenMVPluginSerialPort_private::frameBufferData,
             this, &OpenMVPluginSerialPort::frameBufferData);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::cameraFrameRate,
+            this, &OpenMVPluginSerialPort::cameraFrameRate);
 
     connect(this, &OpenMVPluginSerialPort::getArchString,
             m_port, &OpenMVPluginSerialPort_private::getArchString);

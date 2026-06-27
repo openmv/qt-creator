@@ -3553,6 +3553,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         m_timer.restart();
         m_queue.clear();
+        m_cameraQueue.clear();
         m_connected = true;
         m_processEventsTimer->start(1);
         m_running = false;
@@ -3622,7 +3623,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_pathButton->setEnabled(true);
         m_pathButton->setText(Tr::tr("Drive:"));
         m_fpsButton->setEnabled(true);
-        m_fpsButton->setText(Tr::tr("FPS: 0"));
+        m_fpsIde = 0.0;
+        m_fpsCamera = 0.0;
+        m_fpsCameraValid = false; // re-armed when the first v5.0.0 frame reports its FPS
+        m_fpsButton->setMinimumWidth(m_fpsButton->fontMetrics().horizontalAdvance(QStringLiteral("FPS: 000.000")));
+        refreshFpsButton();
 
         m_frameBuffer->enableSaveTemplate(false);
         m_frameBuffer->enableSaveDescriptor(false);
@@ -3909,6 +3914,7 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
 
             m_timer.restart();
             m_queue.clear();
+            m_cameraQueue.clear();
             m_connected = false;
         m_processEventsTimer->stop();
             m_running = false;
@@ -3961,6 +3967,11 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             m_pathButton->setDisabled(true);
             m_pathButton->setText(Tr::tr("Drive:"));
             m_fpsButton->setDisabled(true);
+            m_fpsIde = 0.0;
+            m_fpsCamera = 0.0;
+            m_fpsCameraValid = false;
+            m_fpsButton->setMinimumWidth(m_fpsButton->fontMetrics().horizontalAdvance(QStringLiteral("FPS: 000.000")));
+            m_fpsButton->setToolTip(Tr::tr("May be different from camera FPS"));
             m_fpsButton->setText(Tr::tr("FPS:"));
 
             m_frameBuffer->enableSaveTemplate(false);
@@ -4177,10 +4188,13 @@ void OpenMVPlugin::startClicked()
 
             m_timer.restart();
             m_queue.clear();
+            m_cameraQueue.clear();
         }
         else
         {
-            m_fpsButton->setText(Tr::tr("FPS: 0"));
+            m_fpsIde = 0.0;
+            m_fpsCamera = 0.0;
+            refreshFpsButton();
         }
 
         ///////////////////////////////////////////////////////////////////////
@@ -4335,7 +4349,9 @@ void OpenMVPlugin::stopClicked()
 
         ///////////////////////////////////////////////////////////////////////
 
-        m_fpsButton->setText(Tr::tr("FPS: 0"));
+        m_fpsIde = 0.0;
+        m_fpsCamera = 0.0;
+        refreshFpsButton();
 
         ///////////////////////////////////////////////////////////////////////
 

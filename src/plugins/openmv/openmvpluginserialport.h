@@ -436,6 +436,7 @@ signals:
     void jpegPreferred(bool timeout, bool preferred);
     void frameReady(bool ready); // poll event
     void frameBufferData(bool timeout, const QPixmap &data);
+    void cameraFrameRate(double fps); // on-camera FPS from the v5.0.0 stream header
     void archString(bool timeout, const QString &arch);
     void scriptExecDone(bool timeout);
     void scriptStopDone(bool timeout);
@@ -542,6 +543,7 @@ signals:
     void jpegPreferred(bool timeout, bool preferred);
     void frameReady(bool ready); // poll event
     void frameBufferData(bool timeout, const QPixmap &data);
+    void cameraFrameRate(double fps); // on-camera FPS from the v5.0.0 stream header
     void archString(bool timeout, const QString &arch);
     void scriptExecDone(bool timeout);
     void scriptStopDone(bool timeout);

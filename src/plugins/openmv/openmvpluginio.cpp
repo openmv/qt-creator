@@ -398,6 +398,9 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
+    connect(m_port, &OpenMVPluginSerialPort::cameraFrameRate,
+            this, [this] (double fps) { emit cameraFrameRate(fps); });
+
     connect(m_port, &OpenMVPluginSerialPort::archString,
             this, [this] (bool timeout, const QString &arch) {
                 if (timeout) m_timeout = true;

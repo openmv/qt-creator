@@ -993,12 +993,22 @@ bool OMVCamera::readFrame(OMVFrame &outFrame)
 
             QDataStream ds(data);
             ds.setByteOrder(QDataStream::LittleEndian);
+            ds.setFloatingPointPrecision(QDataStream::SinglePrecision); // fps is a 32-bit float
             uint32_t width  = 0;
             uint32_t height = 0;
             uint32_t pixfmt = 0;
             uint32_t depth  = 0;
             uint32_t offset  = 0;
             ds >> width >> height >> pixfmt >> depth >> offset;
+
+            // v5.0.0 firmware grows the header by a 32-bit fps float at bytes 20..23, bumping
+            // the pixel-data offset to >= 24. Older headers stop at 20 (offset == 20, no fps).
+            float fps = 0.0f;
+            bool has_fps = false;
+            if (offset >= 24) {
+                ds >> fps;
+                has_fps = true;
+            }
 
             QByteArray raw_data = data.mid(offset);
 
@@ -1055,6 +1065,8 @@ bool OMVCamera::readFrame(OMVFrame &outFrame)
             outFrame.depth   = depth;
             outFrame.pixmap  = pm;
             outFrame.raw_size = raw_data.size();
+            outFrame.fps     = fps;
+            outFrame.has_fps = has_fps;
 
             channelUnlock(stream_id);
             return true;

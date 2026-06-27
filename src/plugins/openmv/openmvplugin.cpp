@@ -77,6 +77,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
 
     m_timer.start();
     m_queue = QQueue<qint64>();
+    m_cameraQueue = QQueue<double>();
 
     m_boardPresentStringListHistory = QList<bool>();
     m_boardPresentDFUDevicesHistory = QList<bool>();
@@ -2440,7 +2441,39 @@ void OpenMVPlugin::extensionsInitialized()
 
         average /= m_queue.size();
 
-        m_fpsButton->setText(Tr::tr("FPS: %L1").arg(average ? (1000 / double(average)) : 0, 5, 'f', 1));
+        m_fpsIde = average ? (1000.0 / double(average)) : 0.0;
+        refreshFpsButton();
+    });
+
+    // v5.0.0 cameras report their true FPS in each frame's stream header. Cache it (the frame
+    // handler above fires right after and renders both values). The seed is the camera's own
+    // number, not a PC-side time diff -- but it still zeroes on the same frame timeout below.
+    connect(m_iodevice, &OpenMVPluginIO::cameraFrameRate, this, [this] (double fps) {
+        if(!m_fpsCameraValid)
+        {
+            m_fpsCameraValid = true;
+            // Two values need more room than the single-value width reserved at creation.
+            m_fpsButton->setMinimumWidth(m_fpsButton->fontMetrics().horizontalAdvance(QStringLiteral("FPS: 000.0 Cam - 000.0 IDE")));
+        }
+
+        // Smooth the on-camera rate with the same sliding-window average as the IDE counter,
+        // seeded by the camera's reported FPS instead of a PC-side time diff.
+        m_cameraQueue.push_back(fps);
+
+        if(m_cameraQueue.size() > FPS_AVERAGE_BUFFER_DEPTH)
+        {
+            m_cameraQueue.pop_front();
+        }
+
+        double sum = 0.0;
+
+        for(int i = 0; i < m_cameraQueue.size(); i++)
+        {
+            sum += m_cameraQueue.at(i);
+        }
+
+        m_fpsCamera = m_cameraQueue.size() ? (sum / m_cameraQueue.size()) : 0.0;
+        refreshFpsButton();
     });
 
     ///////////////////////////////////////////////////////////////////////////
