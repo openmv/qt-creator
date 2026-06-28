@@ -2250,6 +2250,7 @@ void OpenMVPlugin::extensionsInitialized()
     // margin gives a gap from the button since the layout spacing is 0.
     m_jpgCompressMode->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
     m_jpgCompressMode->setContentsMargins(6, 0, 6, 0);
+    m_jpgCompressMode->setEnabled(false); // read-only status text -- greyed so it doesn't look clickable
     m_jpgCompressMode->setToolTip(m_jpgCompress->isChecked()
         ? Tr::tr("The Frame Buffer is streaming JPEG-compressed images")
         : Tr::tr("The Frame Buffer is streaming raw (uncompressed) images"));
