@@ -711,6 +711,7 @@ private:
     Core::Command *m_stopCommand; QAction *m_stopAction;
 
     QToolButton *m_jpgCompress;
+    QLabel *m_jpgCompressMode; // frame-buffer mode text shown to the right of m_jpgCompress
     QToolButton *m_disableFrameBuffer;
     OpenMVDatasetEditor *m_datasetEditor;
     OpenMVPluginFB *m_frameBuffer;

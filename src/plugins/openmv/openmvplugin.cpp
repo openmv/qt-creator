@@ -2214,7 +2214,7 @@ void OpenMVPlugin::extensionsInitialized()
     });
 
     m_jpgCompress = new QToolButton;
-    m_jpgCompress->setText(Tr::tr("JPG Mode"));
+    m_jpgCompress->setText(Tr::tr("JPG"));
     m_jpgCompress->setToolTip(Tr::tr("JPEG compress the Frame Buffer for higher performance"));
     m_jpgCompress->setCheckable(true);
     m_jpgCompress->setChecked(true);
@@ -2238,9 +2238,24 @@ void OpenMVPlugin::extensionsInitialized()
             }
         }
     });
-    // TEXT UPDATE
+    // The JPG button keeps a fixed label; this read-only label to its right reports which
+    // frame-buffer mode is actually active. Shown/hidden together with the button (V2 only).
+    m_jpgCompressMode = new QLabel(m_jpgCompress->isChecked() ? Tr::tr("JPEG Mode") : Tr::tr("RAW Mode"));
+    // The bar has no trailing stretch, so a default (growable) label would absorb the bar's
+    // slack and shove the buttons to the center. Maximum keeps it at its text width; the left
+    // margin gives a gap from the button since the layout spacing is 0.
+    m_jpgCompressMode->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
+    m_jpgCompressMode->setContentsMargins(6, 0, 6, 0);
+    m_jpgCompressMode->setToolTip(m_jpgCompress->isChecked()
+        ? Tr::tr("The Frame Buffer is streaming JPEG-compressed images")
+        : Tr::tr("The Frame Buffer is streaming raw (uncompressed) images"));
+    m_jpgCompressMode->setVisible(false);
+    styledBar0Layout->addWidget(m_jpgCompressMode);
     connect(m_jpgCompress, &QToolButton::toggled, this, [this] (bool checked) {
-        m_jpgCompress->setText(checked ? Tr::tr("JPG Mode") : Tr::tr("RAW Mode"));
+        m_jpgCompressMode->setText(checked ? Tr::tr("JPEG Mode") : Tr::tr("RAW Mode"));
+        m_jpgCompressMode->setToolTip(checked
+            ? Tr::tr("The Frame Buffer is streaming JPEG-compressed images")
+            : Tr::tr("The Frame Buffer is streaming raw (uncompressed) images"));
     });
 
     Utils::ElidingLabel *disableLabel = new Utils::ElidingLabel(Tr::tr("Frame Buffer Disabled - click the disable button again to enable (top right)"));

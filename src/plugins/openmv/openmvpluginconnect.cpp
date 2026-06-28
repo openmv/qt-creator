@@ -3503,6 +3503,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         }
 
         m_jpgCompress->setVisible(m_iodevice->v2ProtocolEnabled());
+        m_jpgCompressMode->setVisible(m_iodevice->v2ProtocolEnabled());
 
         if (!m_boardType.isEmpty() && m_iodevice->v2ProtocolEnabled())
         {
@@ -3894,6 +3895,7 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             }
 
             m_jpgCompress->setVisible(false);
+            m_jpgCompressMode->setVisible(false);
 
             if (!m_boardType.isEmpty() && v2ProtocolEnabled)
             {
