@@ -1131,19 +1131,9 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
     const QString tempTarget = QDir::cleanPath(QDir::fromNativeSeparators(QDir::tempPath() + QDir::separator() + firmwareFileName));
     QFile::remove(tempTarget);
 
-    // .lst listings aren't part of the dev firmware bundle -- take them from the
-    // released firmware, exactly as before.
-    if(firmwareFileName.endsWith(QStringLiteral("lst")))
-    {
-        *path = tempTarget;
-        return QFile(Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
-            .pathAppended(originalFirmwareFolder)
-            .pathAppended(firmwareFileName).toString()).copy(tempTarget);
-    }
-
-    // Everything else comes from the cached dev firmware. syncDevFirmwareBlocking()
-    // re-downloads the 54.7 MB bundle only when the dev version actually changed (with
-    // a modal progress dialog), so repeat installs of the same dev firmware don't fetch.
+    // Both the .lst and single-file paths flash from the cached dev firmware bundle.
+    // syncDevFirmwareBlocking() re-downloads the 54.7 MB bundle only when the dev version
+    // actually changed (with a modal progress dialog), so repeat installs don't re-fetch.
     if(!syncDevFirmwareBlocking())
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
@@ -1153,7 +1143,39 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
         return false;
     }
 
-    const Utils::FilePath cached = Core::ICore::allUsersResourcePath(QStringLiteral("firmware-dev")).pathAppended(arch).pathAppended(firmwareFileName);
+    const Utils::FilePath cachedDir = Core::ICore::allUsersResourcePath(QStringLiteral("firmware-dev")).pathAppended(arch);
+
+    // A .lst is flashed as the set of binaries it names, which the bootloader resolves relative
+    // to the .lst's own directory. The .lst itself isn't shipped in the dev bundle, so take it
+    // from the released firmware (as before) -- but stage the dev binaries it references into the
+    // same temp directory, or the bootloader finds the listing with none of its files (the old
+    // code extracted the whole dev zip here; this restores that for the cached bundle).
+    if(firmwareFileName.endsWith(QStringLiteral("lst")))
+    {
+        const QString tempDir = QFileInfo(tempTarget).path();
+
+        if(cachedDir.exists())
+        {
+            for(const QFileInfo &info : QDir(cachedDir.toString()).entryInfoList(QDir::Files))
+            {
+                const QString dst = tempDir + QDir::separator() + info.fileName();
+                QFile::remove(dst);
+
+                if(!QFile(info.absoluteFilePath()).copy(dst))
+                {
+                    return false;
+                }
+            }
+        }
+
+        QFile::remove(tempTarget); // in case a dev binary shared the .lst's name
+        *path = tempTarget;
+        return QFile(Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
+            .pathAppended(originalFirmwareFolder)
+            .pathAppended(firmwareFileName).toString()).copy(tempTarget);
+    }
+
+    const Utils::FilePath cached = cachedDir.pathAppended(firmwareFileName);
 
     if(!cached.exists())
     {
