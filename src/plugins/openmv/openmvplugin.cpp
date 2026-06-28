@@ -2166,7 +2166,11 @@ void OpenMVPlugin::extensionsInitialized()
     styledBar0Layout->setContentsMargins(0, 0, 0, 0);
     styledBar0Layout->setSpacing(0);
     styledBar0Layout->addSpacing(4);
-    styledBar0Layout->addWidget(new QLabel(Tr::tr("Frame Buffer")));
+    // Carries the resolution/ROI/focus readout (moved here from a separate bar); eliding so the
+    // long text shrinks gracefully instead of shoving the buttons.
+    Utils::ElidingLabel *frameBufferLabel = new Utils::ElidingLabel(Tr::tr("Frame Buffer"));
+    frameBufferLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
+    styledBar0Layout->addWidget(frameBufferLabel);
     styledBar0Layout->addSpacing(6);
     styledBar0->setLayout(styledBar0Layout);
 
@@ -2340,27 +2344,19 @@ void OpenMVPlugin::extensionsInitialized()
     colorSpace->setToolTip(Tr::tr("Use Grayscale/LAB for color tracking"));
     styledBar1Layout->addWidget(colorSpace);
 
-    Utils::ElidingLabel *resLabel = new Utils::ElidingLabel(Tr::tr("Res - No Image"));
-    resLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
-    resLabel->setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;padding:4px;")).
-                            arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
-                            arg(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal).name()));
-    resLabel->setAlignment(Qt::AlignCenter);
-
     m_histogram = new OpenMVPluginHistogram;
     QWidget *tempWidget1 = new QWidget;
     QVBoxLayout *tempLayout1 = new QVBoxLayout;
     tempLayout1->setContentsMargins(0, 0, 0, 0);
     tempLayout1->setSpacing(0);
     tempLayout1->addWidget(styledBar1);
-    tempLayout1->addWidget(resLabel);
     tempLayout1->addWidget(m_histogram);
     tempWidget1->setLayout(tempLayout1);
 
     connect(colorSpace, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), m_histogram, &OpenMVPluginHistogram::colorSpaceChanged);
     connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, m_histogram, &OpenMVPluginHistogram::pixmapUpdate);
     connect(m_histogram, &OpenMVPluginHistogram::focusMetric, m_frameBuffer, &OpenMVPluginFB::focusMetric);
-    connect(m_frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [resLabel] (const QSize &res, const QRect &roi, int focus) {
+    connect(m_frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [frameBufferLabel] (const QSize &res, const QRect &roi, int focus) {
         if(res.isValid())
         {
             if(roi.isValid())
@@ -2368,21 +2364,21 @@ void OpenMVPlugin::extensionsInitialized()
                 if((roi.width() > 1)
                 || (roi.height() > 1))
                 {
-                    resLabel->setText(Tr::tr("Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()).arg(roi.width()).arg(roi.height()).arg(roi.width() * roi.height()).arg(focus));
+                    frameBufferLabel->setText(Tr::tr("Frame Buffer - Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()).arg(roi.width()).arg(roi.height()).arg(roi.width() * roi.height()).arg(focus));
                 }
                 else
                 {
-                    resLabel->setText(Tr::tr("Res (w:%1, h:%2) - Point (x:%3, y:%4)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()));
+                    frameBufferLabel->setText(Tr::tr("Frame Buffer - Res (w:%1, h:%2) - Point (x:%3, y:%4)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()));
                 }
             }
             else
             {
-                resLabel->setText(Tr::tr("Res (w:%1, h:%2) - Focus (%3)").arg(res.width()).arg(res.height()).arg(focus));
+                frameBufferLabel->setText(Tr::tr("Frame Buffer - Res (w:%1, h:%2) - Focus (%3)").arg(res.width()).arg(res.height()).arg(focus));
             }
         }
         else
         {
-            resLabel->setText(Tr::tr("Res - No Image"));
+            frameBufferLabel->setText(Tr::tr("Frame Buffer"));
         }
     });
 
