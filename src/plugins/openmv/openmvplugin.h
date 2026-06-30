@@ -287,7 +287,10 @@
 
 #define MDNS_MULTICAST_ADDRESS      "224.0.0.251"
 #define MDNS_PORT                   5353
-#define MDNS_HOST_PREFIX            "openmv" // discover cams advertising openmv*.local
+// Cams in wifi-debug mode advertise "omv-<usb-serial>.local". The serial is the cam's exact USB
+// serial-number string (baked into the cam's boot.py by the IDE); we parse it back out to suppress
+// the cam's now-dead USB debug port and to locate its USB disk by serial.
+#define MDNS_HOST_PREFIX            "omv-"
 #define MDNS_HOST_SUFFIX            ".local"
 
 #define ERROR_FILTER_MAX_SIZE       1000 // in chars
@@ -371,6 +374,7 @@ public:
 
     QString addressAndPort;
     QString name;
+    QString serialNumber; // the cam's USB serial, parsed from the mDNS host "omv-<serial>.local"
     QTime time;
 
     bool operator ==(const wifiPort_t &port) const

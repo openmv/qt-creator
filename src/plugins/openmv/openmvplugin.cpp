@@ -3250,6 +3250,7 @@ bool OpenMVPlugin::delayedInitialize()
 
             connect(mdnsSocket, &QUdpSocket::readyRead, this, [this, mdnsSocket] {
                 const quint16 deviceDebugPort = OPENMVCAM_BROADCAST_PORT;   // 0xABD1, the wifi-debug port
+                const QString hostPrefix = QStringLiteral(MDNS_HOST_PREFIX);
                 const QString hostSuffix = QStringLiteral(MDNS_HOST_SUFFIX);
 
                 while(mdnsSocket->hasPendingDatagrams())
@@ -3261,14 +3262,15 @@ bool OpenMVPlugin::delayedInitialize()
                     {
                         const QString &host = record.first;
 
-                        if(!host.startsWith(QStringLiteral(MDNS_HOST_PREFIX), Qt::CaseInsensitive) ||
+                        if(!host.startsWith(hostPrefix, Qt::CaseInsensitive) ||
                            !host.endsWith(hostSuffix, Qt::CaseInsensitive))
                         {
                             continue;
                         }
 
                         wifiPort_t wifiPort;
-                        wifiPort.name = host.chopped(hostSuffix.size());    // drop ".local"
+                        wifiPort.name = host.chopped(hostSuffix.size());            // drop ".local" -> "omv-<serial>"
+                        wifiPort.serialNumber = wifiPort.name.mid(hostPrefix.size()); // strip "omv-" -> "<serial>"
                         wifiPort.addressAndPort = QStringLiteral("%1:%2").arg(record.second.toString()).arg(deviceDebugPort);
                         wifiPort.time = QTime::currentTime();
 

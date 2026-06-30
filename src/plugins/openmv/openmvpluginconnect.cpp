@@ -538,6 +538,39 @@ MyQSerialPortInfo createInfo(const QString &selectedPort)
     }
 }
 
+// A network (UDP) port name ("omv-<serial>:ip:port") isn't a serial device, so QSerialPortInfo
+// can't resolve it -- the same discriminator OMVPortFactory uses to choose the UDP transport.
+bool isNetworkPort(const QString &portName)
+{
+    return (!portName.isEmpty()) && QSerialPortInfo(portName).isNull();
+}
+
+// Find the USB serial port currently enumerating with this serial number (case-insensitive), or a
+// null info if none. Ties a wifi-discovered cam back to its USB presence: that USB port is hidden
+// from the connect list (its debug endpoint is dead), but the device is still physically here -- so
+// we can read its VID/PID for a real board name, and flashing over USB/DFU remains possible.
+MyQSerialPortInfo usbPortForSerial(const QString &serialNumber)
+{
+    if(serialNumber.isEmpty())
+    {
+        return MyQSerialPortInfo();
+    }
+
+    const QString target = serialNumber.toLower();
+
+    for(const QSerialPortInfo &raw_port : QSerialPortInfo::availablePorts())
+    {
+        MyQSerialPortInfo info(raw_port);
+
+        if(info.serialNumber().toLower() == target)
+        {
+            return info;
+        }
+    }
+
+    return MyQSerialPortInfo();
+}
+
 bool matchVidPid(const QJsonObject &object, const QString &serialNumberFilter, const MyQSerialPortInfo &port, bool enableSerialNumberInverseFilter = false)
 {
     if (port.isNull())
@@ -1198,6 +1231,42 @@ QList<QPair<QString, QString> > OpenMVPlugin::querySerialPorts(const QStringList
 
     for (const QString &port : portList)
     {
+        if(QSerialPortInfo(port).isNull())
+        {
+            // Network (wifi) port -- not a serial device, so don't open/probe it just to label the
+            // dialog entry (that would stall on the UDP link). If the cam is also on USB, name it
+            // from that (hidden) USB port's VID/PID so it reads like the real board; otherwise fall
+            // back to a generic name (board identity still resolves over the protocol on connect).
+            QString label = Tr::tr("Unknown Board (Wi-Fi)");
+
+            for(const wifiPort_t &wifiPort : qAsConst(m_availableWifiPorts))
+            {
+                if(QStringLiteral("%1:%2").arg(wifiPort.name, wifiPort.addressAndPort) != port)
+                {
+                    continue;
+                }
+
+                MyQSerialPortInfo usb = usbPortForSerial(wifiPort.serialNumber);
+
+                if(!usb.isNull())
+                {
+                    for(const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
+                    {
+                        if(matchVidPid(value.toObject(), QString(), usb))
+                        {
+                            label = Tr::tr("%1 (Wi-Fi)").arg(value.toObject().value(QStringLiteral("boardDisplayName")).toString());
+                            break;
+                        }
+                    }
+                }
+
+                break;
+            }
+
+            results.append(QPair<QString, QString>(port, label));
+            continue;
+        }
+
         MyQSerialPortInfo tempInfo = createInfo(port);
 
         bool found = false;
@@ -1364,12 +1433,33 @@ QPair<QStringList, QStringList> filterPorts(const QJsonDocument &settings,
 {
     QStringList stringList, dfuDevices;
 
+    // Serials of cams currently reachable over wifi. A cam in wifi-debug mode still enumerates its
+    // USB CDC port, but that debug endpoint is dead (the v2 protocol is single-interface), so we
+    // hide it here -- matched by serial number. Skipped for bootloader ops, where the USB port must
+    // stay available for flashing (and wifi ports aren't offered anyway).
+    QStringList wifiSerials;
+    if(!forceBootloader)
+    {
+        for(const wifiPort_t &port : availableWifiPorts)
+        {
+            if(!port.serialNumber.isEmpty())
+            {
+                wifiSerials.append(port.serialNumber.toLower());
+            }
+        }
+    }
+
     for(const QSerialPortInfo &raw_port : QSerialPortInfo::availablePorts())
     {
         MyQSerialPortInfo port(raw_port);
 
         if(validPort(settings, serialNumberFilter, port))
         {
+            if(wifiSerials.contains(port.serialNumber().toLower()))
+            {
+                continue; // this cam is in wifi-debug mode -- its USB debug port won't respond
+            }
+
             stringList.append(port.portName());
         }
     }
@@ -1377,14 +1467,6 @@ QPair<QStringList, QStringList> filterPorts(const QJsonDocument &settings,
     if(Utils::HostOsInfo::isMacHost())
     {
         stringList = stringList.filter(QStringLiteral("cu"), Qt::CaseInsensitive);
-    }
-
-    if(!forceBootloader)
-    {
-        for(wifiPort_t port : availableWifiPorts)
-        {
-            stringList.append(QStringLiteral("%1:%2").arg(port.name, port.addressAndPort));
-        }
     }
 
     dfuDevices = picotoolGetDevices() + imxGetAllDevices(settings) + alifGetDevices(settings);
@@ -1462,6 +1544,18 @@ QPair<QStringList, QStringList> filterPorts(const QJsonDocument &settings,
             {
                 it++;
             }
+        }
+    }
+
+    // Network (UDP) ports are discovered via mDNS, not enumerated as serial ports. Append them
+    // only after all the serial/bootloader filtering above so they are never run through the
+    // QSerialPortInfo loops -- which would erase each one as a "null" serial port. Each entry is
+    // "name:ip:port"; OMVPortFactory builds an OMVUDPPort from it (a name that isn't a serial port).
+    if(!forceBootloader)
+    {
+        for(const wifiPort_t &port : availableWifiPorts)
+        {
+            stringList.append(QStringLiteral("%1:%2").arg(port.name, port.addressAndPort));
         }
     }
 
@@ -2053,7 +2147,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if(ok)
             {
-                selectedPort = temp.split(QStringLiteral(":")).first();
+                // Map the selected pretty label back to its raw port string. Splitting on ":"
+                // breaks network ports whose raw form is "name:ip:port" -- that would drop the
+                // ip:port and OMVUDPPort::open() (which needs all three parts) would fail.
+                int selIndex = stringList2.indexOf(temp);
+                selectedPort = (selIndex >= 0) ? prettyNames.at(selIndex).first : temp.split(QStringLiteral(":")).first();
                 settings->setValue(SETTINGS_GROUP "/" LAST_SERIAL_PORT_STATE, selectedPort);
             }
         }
@@ -2322,7 +2420,15 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         // V2 Protocol ////////////////////////////////////////////////////////
 
-        if((!forceBootloaderBricked) && (!isOldVidPid))
+        if(isNetworkPort(selectedPort))
+        {
+            // A network link is always V2 -- skip the V1/V2 detection probe. It's pointless here
+            // (V1 was USB-only) and, on a lossy link, the probe's 5s no-resend read_timeout badly
+            // stalls the connect. There's nothing to wait for: forceV2Protocol() sets V2 mode and
+            // the queued port ops stay ordered, so the next V2 command runs after it regardless.
+            m_iodevice->forceV2Protocol();
+        }
+        else if((!forceBootloaderBricked) && (!isOldVidPid))
         {
             QEventLoop loop;
 
@@ -3582,10 +3688,29 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_running = false;
         m_portName = selectedPort;
         m_portPath = QString();
-        m_portDriveSerialNumber = serialPortDriveSerialNumber(selectedPort);
         m_major = major2;
         m_minor = minor2;
         m_patch = patch2;
+
+        // For a wifi link the "selected port" isn't a serial device, so we can't read the serial
+        // off it. Use the serial the cam advertised over mDNS instead -- that's the same USB serial
+        // the disk carries, so setPortPath() can still match the cam's USB drive (if attached).
+        if(isNetworkPort(selectedPort))
+        {
+            m_portDriveSerialNumber = QString();
+            for(const wifiPort_t &wifiPort : qAsConst(m_availableWifiPorts))
+            {
+                if(QStringLiteral("%1:%2").arg(wifiPort.name, wifiPort.addressAndPort) == selectedPort)
+                {
+                    m_portDriveSerialNumber = wifiPort.serialNumber;
+                    break;
+                }
+            }
+        }
+        else
+        {
+            m_portDriveSerialNumber = serialPortDriveSerialNumber(selectedPort);
+        }
 
         // A cam reporting a firmware version newer than the released firmware we ship
         // is running a development build (master's version macro is always bumped past
@@ -3621,8 +3746,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_configureSettingsAction->setEnabled(false);
         m_saveAction->setEnabled(false);
         m_resetAction->setEnabled(true);
-        m_enterBootloaderAction->setEnabled(true);
-        m_developmentReleaseAction->setEnabled(true);
+        // Entering the bootloader / installing dev firmware needs USB/DFU. A wifi link is fine *if*
+        // the cam is also plugged in over USB (matched by serial); on a purely-wireless cam there's
+        // no USB to reach, so gray these out until it's plugged back in. (m_resetAction is a protocol
+        // soft-reset, so it stays available. The "Load Custom Firmware" / "Erase" menu items are
+        // never toggled -- they run their own bootloader scan and fail gracefully if no cam is found.)
+        bool flashable = (!isNetworkPort(selectedPort)) || (!usbPortForSerial(m_portDriveSerialNumber).isNull());
+        m_enterBootloaderAction->setEnabled(flashable);
+        m_developmentReleaseAction->setEnabled(flashable);
         if(!m_autoReconnectAction->isChecked()) m_connectAction->setEnabled(false);
         m_connectAction->setVisible(false);
         if(!m_autoReconnectAction->isChecked()) m_disconnectAction->setEnabled(true);
