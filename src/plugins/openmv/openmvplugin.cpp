@@ -3165,6 +3165,25 @@ void OpenMVPlugin::extensionsInitialized()
     }
 }
 
+void OpenMVPlugin::updateConnectIcon()
+{
+    bool dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
+
+    if(!m_boardPresent) {
+        if(!m_availableWifiPorts.isEmpty()) {
+            m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_WIFI_DARK_PATH) : QStringLiteral(CONNECT_WIFI_LIGHT_PATH)));
+        } else {
+            m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_PATH)));
+        }
+    } else {
+        if(!m_availableWifiPorts.isEmpty()) {
+            m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_USB_WIFI_DARK_PATH) : QStringLiteral(CONNECT_USB_WIFI_LIGHT_PATH)));
+        } else {
+            m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_USB_DARK_PATH) : QStringLiteral(CONNECT_USB_LIGHT_PATH)));
+        }
+    }
+}
+
 bool OpenMVPlugin::delayedInitialize()
 {
     // Keep the dev examples/docs caches current on launch -- but only once a dev cam
@@ -3207,46 +3226,71 @@ bool OpenMVPlugin::delayedInitialize()
         }
     }
 
-    QUdpSocket *socket = new QUdpSocket(this);
+    // mDNS multicast listener: discover OpenMV cams advertising "openmv*.local" via an A record.
+    {
+        const quint16 mdnsPort = MDNS_PORT;
+        const QHostAddress mdnsGroup(QStringLiteral(MDNS_MULTICAST_ADDRESS));
 
-    connect(socket, &QUdpSocket::readyRead, this, [this, socket] {
-        while(socket->hasPendingDatagrams())
+        QUdpSocket *mdnsSocket = new QUdpSocket(this);
+
+        if(mdnsSocket->bind(QHostAddress::AnyIPv4, mdnsPort, QUdpSocket::ShareAddress | QUdpSocket::ReuseAddressHint))
         {
-            QByteArray datagram(socket->pendingDatagramSize(), 0);
-            QHostAddress address;
-            quint16 port;
-
-            if((socket->readDatagram(datagram.data(), datagram.size(), &address, &port) == datagram.size()) && datagram.endsWith('\0') && (port == OPENMVCAM_BROADCAST_PORT))
+            // Join the group on every up, multicast-capable, non-loopback interface.
+            for(const QNetworkInterface &iface : QNetworkInterface::allInterfaces())
             {
-                QRegularExpressionMatch match = QRegularExpression(QStringLiteral("^(\\d+\\.\\d+\\.\\d+\\.\\d+):(\\d+):(.+)$")).match(QString::fromUtf8(datagram).trimmed());
-
-                if(match.hasMatch())
+                const auto flags = iface.flags();
+                if(flags.testFlag(QNetworkInterface::IsUp) &&
+                   flags.testFlag(QNetworkInterface::IsRunning) &&
+                   flags.testFlag(QNetworkInterface::CanMulticast) &&
+                   !flags.testFlag(QNetworkInterface::IsLoopBack))
                 {
-                    QHostAddress hostAddress = QHostAddress(match.captured(1));
-                    bool hostPortOk;
-                    quint16 hostPort = match.captured(2).toUInt(&hostPortOk);
-                    QString hostName = match.captured(3).remove(QLatin1Char(':'));
+                    mdnsSocket->joinMulticastGroup(mdnsGroup, iface);
+                }
+            }
 
-                    if((address.toIPv4Address() == hostAddress.toIPv4Address()) && hostPortOk && (!hostName.isEmpty()))
+            connect(mdnsSocket, &QUdpSocket::readyRead, this, [this, mdnsSocket] {
+                const quint16 deviceDebugPort = OPENMVCAM_BROADCAST_PORT;   // 0xABD1, the wifi-debug port
+                const QString hostSuffix = QStringLiteral(MDNS_HOST_SUFFIX);
+
+                while(mdnsSocket->hasPendingDatagrams())
+                {
+                    QByteArray data(mdnsSocket->pendingDatagramSize(), 0);
+                    mdnsSocket->readDatagram(data.data(), data.size());
+
+                    for(const QPair<QString, QHostAddress> &record : parseMdnsARecords(data))
                     {
+                        const QString &host = record.first;
+
+                        if(!host.startsWith(QStringLiteral(MDNS_HOST_PREFIX), Qt::CaseInsensitive) ||
+                           !host.endsWith(hostSuffix, Qt::CaseInsensitive))
+                        {
+                            continue;
+                        }
+
                         wifiPort_t wifiPort;
-                        wifiPort.addressAndPort = QString(QStringLiteral("%1:%2")).arg(hostAddress.toString()).arg(hostPort);
-                        wifiPort.name = hostName;
+                        wifiPort.name = host.chopped(hostSuffix.size());    // drop ".local"
+                        wifiPort.addressAndPort = QStringLiteral("%1:%2").arg(record.second.toString()).arg(deviceDebugPort);
                         wifiPort.time = QTime::currentTime();
 
-                        if(!m_availableWifiPorts.contains(wifiPort))
+                        const int existing = m_availableWifiPorts.indexOf(wifiPort);
+                        if(existing < 0)
                         {
                             m_availableWifiPorts.append(wifiPort);
+                            updateConnectIcon();
                         }
                         else
                         {
-                            m_availableWifiPorts[m_availableWifiPorts.indexOf(wifiPort)].time = QTime::currentTime();
+                            m_availableWifiPorts[existing].time = wifiPort.time;
                         }
                     }
                 }
-            }
+            });
         }
-    });
+        else
+        {
+            delete mdnsSocket;
+        }
+    }
 
     m_hardwareMonitor = new HardwareMonitor(this);
     m_serialScanTimer = nullptr;
@@ -3299,21 +3343,7 @@ bool OpenMVPlugin::delayedInitialize()
             m_nonDFUBoardPresent = stringListHistoryCount >= 1;
             m_boardPresent = m_nonDFUBoardPresent || (dfuDevicesHistoryCount >= 3);
 
-            bool dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
-
-            if(!m_boardPresent) {
-                if(!m_availableWifiPorts.isEmpty()) {
-                    m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_WIFI_DARK_PATH) : QStringLiteral(CONNECT_WIFI_LIGHT_PATH)));
-                } else {
-                    m_connectCommand->action()->setIcon(QIcon(QStringLiteral(CONNECT_PATH)));
-                }
-            } else {
-                if(!m_availableWifiPorts.isEmpty()) {
-                    m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_USB_WIFI_DARK_PATH) : QStringLiteral(CONNECT_USB_WIFI_LIGHT_PATH)));
-                } else {
-                    m_connectCommand->action()->setIcon(QIcon(dark ? QStringLiteral(CONNECT_USB_DARK_PATH) : QStringLiteral(CONNECT_USB_LIGHT_PATH)));
-                }
-            }
+            updateConnectIcon();
 
             if(m_nonDFUBoardPresent && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected) && (!m_firmwareUpdateInProgress) && (!loaderDialogActive()))
             {
@@ -3388,16 +3418,6 @@ bool OpenMVPlugin::delayedInitialize()
         // Initial 10-second startup window (timers already running from blocks above)
         scanWindowTimer->start(10000);
 #endif
-    }
-
-    if(!socket->bind(OPENMVCAM_BROADCAST_PORT))
-    {
-        delete socket;
-
-        if(!isNoShow()) QMessageBox::warning(Core::ICore::dialogParent(),
-            Tr::tr("WiFi Programming Disabled!"),
-            Tr::tr("Another application is using the OpenMV Cam broadcast discovery port. "
-               "Please close that application and restart %1 to enable WiFi programming.").arg(QGuiApplication::applicationDisplayName()));
     }
 
     if(!m_viewerMode)

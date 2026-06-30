@@ -48,6 +48,109 @@
 namespace OpenMV {
 namespace Internal {
 
+// Parse the A records (hostname -> IPv4) out of an mDNS response datagram.
+//
+// mDNS reuses the classic DNS message format (RFC 1035), all big-endian -- so a big-endian
+// QDataStream reads the words/longs directly, no hand-rolled byte shifts. A message is:
+//
+//   Header (12 bytes): id(2), flags(2), then four 16-bit section counts:
+//       QDCOUNT questions, ANCOUNT answers, NSCOUNT authority, ARCOUNT additional.
+//   QDCOUNT question entries:                 NAME, QTYPE(2), QCLASS(2)
+//   (ANCOUNT+NSCOUNT+ARCOUNT) resource records: NAME, TYPE(2), CLASS(2), TTL(4), RDLENGTH(2), RDATA(RDLENGTH)
+//
+// A NAME is a sequence of labels, each a <len byte><len bytes of text>, ending at a zero length
+// byte (e.g. "openmv-cam" "local" 0  ->  "openmv-cam.local"). To save space a name can instead be
+// a compression pointer: if a length byte's top two bits are set ((len & 0xC0) == 0xC0), the low
+// 14 bits of that 2-byte field are an offset from the start of the message to continue the name
+// from. That is why reading a name needs random access -- we seek to the pointed-at offset, read
+// the rest of the name there, then resume right after the 2-byte pointer.
+//
+// We only care about A records (TYPE == 1, an IPv4 host address): their RDATA is the 4-byte IP.
+// Every other record type is skipped over using its RDLENGTH. The datagram is untrusted (it came
+// off the network), so bounds safety rides on QDataStream's status: any read past the end flips
+// status to non-Ok, which ends every loop -- a malformed packet just yields fewer records, never
+// an out-of-bounds read.
+QList<QPair<QString, QHostAddress> > OpenMVPlugin::parseMdnsARecords(const QByteArray &data)
+{
+    QList<QPair<QString, QHostAddress> > records;
+
+    QDataStream in(data);
+    in.setByteOrder(QDataStream::BigEndian);
+
+    // Header: id, flags, then the four section counts.
+    quint16 id, flags, questionCount, answerCount, authorityCount, additionalCount;
+    in >> id >> flags >> questionCount >> answerCount >> authorityCount >> additionalCount;
+
+    // Read a DNS name at the stream's current position, following compression pointers. A pointer
+    // jumps elsewhere in the packet; we resume right after it so the outer cursor stays correct.
+    auto readName = [&in]() -> QString {
+        QStringList labels;
+        qint64 resumePos = -1;
+
+        for(int jumps = 0; (in.status() == QDataStream::Ok) && (jumps < 16); )
+        {
+            quint8 len;
+            in >> len;
+
+            if(len == 0)                            // root label terminates the name
+            {
+                break;
+            }
+
+            if((len & 0xC0) == 0xC0)                // compression pointer: low 14 bits are the offset
+            {
+                in.device()->seek(in.device()->pos() - 1);
+                quint16 pointer;
+                in >> pointer;
+                if(resumePos < 0) resumePos = in.device()->pos();
+                in.device()->seek(pointer & 0x3FFF);
+                jumps++;
+                continue;
+            }
+
+            QByteArray label(len, '\0');            // label: <len byte><len bytes of text>
+            if(in.readRawData(label.data(), len) != len) break;
+            labels.append(QString::fromUtf8(label));
+        }
+
+        if(resumePos >= 0) in.device()->seek(resumePos);
+        return labels.join(QLatin1Char('.'));
+    };
+
+    for(int i = 0; (i < questionCount) && (in.status() == QDataStream::Ok); i++)
+    {
+        readName();                                 // don't need the question name, just step past it
+        in.skipRawData(4);                          // QTYPE + QCLASS
+    }
+
+    const int resourceCount = answerCount + authorityCount + additionalCount;   // an + ns + ar
+    const quint16 dnsTypeA = 1;
+
+    for(int i = 0; (i < resourceCount) && (in.status() == QDataStream::Ok); i++)
+    {
+        const QString name = readName();
+
+        quint16 type, klass, rdlength;
+        quint32 ttl;
+        in >> type >> klass >> ttl >> rdlength;
+
+        if(in.status() != QDataStream::Ok) break;
+
+        if((type == dnsTypeA) && (rdlength == 4))
+        {
+            quint32 ipv4;
+            in >> ipv4;                             // 4 bytes, network order -> QHostAddress
+            records.append(qMakePair(name, QHostAddress(ipv4)));
+        }
+        else
+        {
+            in.skipRawData(rdlength);
+        }
+    }
+
+    return records;
+}
+
 void OpenMVPlugin::processEvents()
 {
     // No device activity at all while an external tool's modal LoaderDialog

@@ -284,6 +284,12 @@
 
 #define FPS_AVERAGE_BUFFER_DEPTH    100 // in samples
 #define WIFI_PORT_RETIRE            20 // in seconds
+
+#define MDNS_MULTICAST_ADDRESS      "224.0.0.251"
+#define MDNS_PORT                   5353
+#define MDNS_HOST_PREFIX            "openmv" // discover cams advertising openmv*.local
+#define MDNS_HOST_SUFFIX            ".local"
+
 #define ERROR_FILTER_MAX_SIZE       1000 // in chars
 #define FPS_TIMER_EXPIRATION_TIME   2000 // in milliseconds
 #define RESET_TO_DFU_SEARCH_TIME    2000 // in milliseconds
@@ -496,6 +502,10 @@ signals:
 
 private:
 
+    void updateConnectIcon();
+    // Parse the A records (hostname -> IPv4) out of a DNS/mDNS response datagram. Defined in
+    // openmvpluginprotocol.cpp; used by the mDNS discovery listener.
+    static QList<QPair<QString, QHostAddress> > parseMdnsARecords(const QByteArray &data);
     bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder);
     QList<QPair<QString, QString> > querySerialPorts(const QStringList &portList);
 
