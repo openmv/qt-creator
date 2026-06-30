@@ -3724,8 +3724,29 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         // Check Version //////////////////////////////////////////////////////
 
-        QRegularExpressionMatch match = QRegularExpression(QStringLiteral("(\\d+)\\.(\\d+)\\.(\\d+)")).
-                match(m_firmwareSettings.object().value(QStringLiteral("firmware_version")).toString());
+        // The newest firmware we ship is the global "firmware_version", but a board may
+        // pin its own last-shipped firmware via a per-board "firmware_version" (for boards
+        // we no longer build newer firmware for -- e.g. the Arduino Nano boards capped at
+        // 4.7.0). When the connected board pins one, treat that as "latest" for it so it
+        // isn't flagged out of date for firmware we never released.
+        QString latestFirmware = m_firmwareSettings.object().value(QStringLiteral("firmware_version")).toString();
+
+        if(!m_boardTypeFolder.isEmpty())
+        {
+            for(const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
+            {
+                const QJsonObject board = value.toObject();
+
+                if((board.value(QStringLiteral("boardFirmwareFolder")).toString() == m_boardTypeFolder)
+                && board.contains(QStringLiteral("firmware_version")))
+                {
+                    latestFirmware = board.value(QStringLiteral("firmware_version")).toString();
+                    break;
+                }
+            }
+        }
+
+        QRegularExpressionMatch match = QRegularExpression(QStringLiteral("(\\d+)\\.(\\d+)\\.(\\d+)")).match(latestFirmware);
 
         if((major2 < match.captured(1).toInt())
         || ((major2 == match.captured(1).toInt()) && (minor2 < match.captured(2).toInt()))
