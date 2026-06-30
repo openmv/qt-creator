@@ -1644,6 +1644,16 @@ void OpenMVPluginIO::checkProtocolVerison(bool splitCommand)
     command();
 }
 
+void OpenMVPluginIO::forceV2Protocol()
+{
+    // For a network link the protocol is known to be V2, so skip checkProtocolVerison()'s
+    // detection probe entirely -- on a lossy link that probe's 5s no-resend read_timeout stalls
+    // the connect. This sets the same state the probe's response handler would (see above): the
+    // V2 flag here, and the port's V2 mode via enableV2Protocol(). No response to wait for.
+    m_v2ProtocolEnabled = true;
+    m_port->enableV2Protocol(true);
+}
+
 void OpenMVPluginIO::getFirmwareVersion()
 {
     if (m_v2ProtocolEnabled) {

@@ -181,6 +181,7 @@ public:
 public slots:
 
     void checkProtocolVerison(bool splitCommand);
+    void forceV2Protocol();   // skip the V1/V2 detection probe (network links are always V2)
     void getSystemInfoString();
     void getHostStatsString();
     void getDeviceStatsString();
