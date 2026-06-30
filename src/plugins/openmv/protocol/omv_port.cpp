@@ -14,8 +14,8 @@
 #define SERIAL_READ_TIMEOUT 3000
 #define SERIAL_READ_STALL_TIMEOUT 1000
 
-#define TCP_READ_TIMEOUT 5000
-#define TCP_READ_STALL_TIMEOUT 3000
+#define UDP_READ_TIMEOUT 5000
+#define UDP_READ_STALL_TIMEOUT 3000
 
 #define READ_BUFFER_SIZE (64 * 1024 * 1024)
 #define WRITE_BUFFER_SIZE (64 * 1024 * 1024)
@@ -139,109 +139,118 @@ bool OMVSerialPort::setRequestToSend(bool set)
     return m_serialPort->setRequestToSend(set);
 }
 
-OMVTCPPort::OMVTCPPort(const QString &name, QObject *parent) : OMVPort(name, parent)
+OMVUDPPort::OMVUDPPort(const QString &name, QObject *parent) : OMVPort(name, parent)
 {
-    m_tcpSocket = new QTcpSocket(this);
+    m_udpSocket = new QUdpSocket(this);
+    m_remotePort = 0;
 }
 
-int OMVTCPPort::readTimeoutMs()
+int OMVUDPPort::readTimeoutMs()
 {
-    return TCP_READ_TIMEOUT;
+    return UDP_READ_TIMEOUT;
 }
 
-int OMVTCPPort::readStallTimeoutMs()
+int OMVUDPPort::readStallTimeoutMs()
 {
-    return TCP_READ_STALL_TIMEOUT;
+    return UDP_READ_STALL_TIMEOUT;
 }
 
-void OMVTCPPort::setReadBufferSize(qint64 size)
+void OMVUDPPort::setReadBufferSize(qint64 size)
 {
-    m_tcpSocket->setReadBufferSize(size);
+    Q_UNUSED(size)
 }
 
-bool OMVTCPPort::setBaudRate(qint32 /*baudRate*/)
+bool OMVUDPPort::setBaudRate(qint32 /*baudRate*/)
 {
     return true;
 }
 
-bool OMVTCPPort::open(QIODevice::OpenMode mode)
+bool OMVUDPPort::open(QIODevice::OpenMode mode)
 {
+    Q_UNUSED(mode)
+
     QStringList list = m_portName.split(QLatin1Char(':'));
 
     if(list.size() != 3) {
         return false;
     }
 
-    QString hostName = list.at(1);
-    QString port = list.at(2);
-
+    m_remoteHost = QHostAddress(list.at(1));
     bool portNumberOkay;
-    quint16 portNumber = port.toUInt(&portNumberOkay);
+    m_remotePort = list.at(2).toUInt(&portNumberOkay);
 
     if(!portNumberOkay) {
         return false;
     }
 
-    m_tcpSocket->connectToHost(hostName, portNumber, mode);
-    return m_tcpSocket->waitForConnected(3000);
+    return m_udpSocket->bind(QHostAddress::AnyIPv4, 0);
 }
 
-bool OMVTCPPort::isOpen()
+bool OMVUDPPort::isOpen()
 {
-    return m_tcpSocket->isOpen();
+    return m_udpSocket->state() == QAbstractSocket::BoundState;
 }
 
-bool OMVTCPPort::flush()
-{
-    return m_tcpSocket->flush();
-}
-
-QString OMVTCPPort::errorString()
-{
-    return m_tcpSocket->errorString();
-}
-
-void OMVTCPPort::clearError()
-{
-    // No clearError function in QTcpSocket
-}
-
-QByteArray OMVTCPPort::readAll()
-{
-    return m_tcpSocket->readAll();
-}
-
-qint64 OMVTCPPort::write(const char *data, qint64 maxSize)
-{
-    return m_tcpSocket->write(data, maxSize);
-}
-
-qint64 OMVTCPPort::bytesAvailable()
-{
-    return m_tcpSocket->bytesAvailable();
-}
-
-qint64 OMVTCPPort::bytesToWrite()
-{
-    return m_tcpSocket->bytesToWrite();
-}
-
-bool OMVTCPPort::waitForReadyRead(int msecs)
-{
-    return m_tcpSocket->waitForReadyRead(msecs);
-}
-
-bool OMVTCPPort::waitForBytesWritten(int msecs)
-{
-    return m_tcpSocket->waitForBytesWritten(msecs);
-}
-
-bool OMVTCPPort::setDataTerminalReady(bool /*set*/)
+bool OMVUDPPort::flush()
 {
     return true;
 }
 
-bool OMVTCPPort::setRequestToSend(bool /*set*/)
+QString OMVUDPPort::errorString()
+{
+    return m_udpSocket->errorString();
+}
+
+void OMVUDPPort::clearError()
+{
+}
+
+QByteArray OMVUDPPort::readAll()
+{
+    QByteArray result;
+
+    while(m_udpSocket->hasPendingDatagrams())
+    {
+        QByteArray datagram(m_udpSocket->pendingDatagramSize(), 0);
+        m_udpSocket->readDatagram(datagram.data(), datagram.size());
+        result.append(datagram);
+    }
+
+    return result;
+}
+
+qint64 OMVUDPPort::write(const char *data, qint64 maxSize)
+{
+    return m_udpSocket->writeDatagram(data, maxSize, m_remoteHost, m_remotePort);
+}
+
+qint64 OMVUDPPort::bytesAvailable()
+{
+    return m_udpSocket->hasPendingDatagrams() ? m_udpSocket->pendingDatagramSize() : 0;
+}
+
+qint64 OMVUDPPort::bytesToWrite()
+{
+    return 0;
+}
+
+bool OMVUDPPort::waitForReadyRead(int msecs)
+{
+    return m_udpSocket->waitForReadyRead(msecs);
+}
+
+bool OMVUDPPort::waitForBytesWritten(int msecs)
+{
+    Q_UNUSED(msecs)
+    return true;
+}
+
+bool OMVUDPPort::setDataTerminalReady(bool /*set*/)
+{
+    return true;
+}
+
+bool OMVUDPPort::setRequestToSend(bool /*set*/)
 {
     return true;
 }

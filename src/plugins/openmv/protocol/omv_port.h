@@ -9,7 +9,7 @@
 #pragma once
 
 #include <QtCore/QIODevice>
-#include <QtNetwork/QTcpSocket>
+#include <QtNetwork/QUdpSocket>
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
 
@@ -17,7 +17,7 @@ namespace omv {
 
 typedef enum OMVPortType {
     OMVPortType_Serial,
-    OMVPortType_TCP
+    OMVPortType_UDP
 } OMVPortType_t;
 
 class OMVPort : public QObject
@@ -99,12 +99,15 @@ private:
     QSerialPort *m_serialPort;
 };
 
-class OMVTCPPort : public OMVPort
+class OMVUDPPort : public OMVPort
 {
     Q_OBJECT
 public:
-    explicit OMVTCPPort(const QString &name, QObject *parent = nullptr);
-    OMVPortType_t portType() override { return OMVPortType_TCP; }
+    explicit OMVUDPPort(const QString &name, QObject *parent = nullptr);
+    OMVPortType_t portType() override { return OMVPortType_UDP; }
+    // UDP is lossy/unordered -- force the protocol's ACK+retransmit layer on (see the
+    // OMVCamera construction seam, which enables ACK when reliableTransport() is false).
+    bool reliableTransport() override { return false; }
     int readTimeoutMs() override;
     int readStallTimeoutMs() override;
 
@@ -129,7 +132,9 @@ public:
     bool setDataTerminalReady(bool set) override;
     bool setRequestToSend(bool set) override;
 private:
-    QTcpSocket *m_tcpSocket;
+    QUdpSocket *m_udpSocket;
+    QHostAddress m_remoteHost;
+    quint16 m_remotePort;
 };
 
 class OMVPortFactory
@@ -139,7 +144,7 @@ public:
         if(!QSerialPortInfo(name).isNull()) {
             return new OMVSerialPort(name, parent);
         } else {
-            return new OMVTCPPort(name, parent);
+            return new OMVUDPPort(name, parent);
         }
     }
 };
