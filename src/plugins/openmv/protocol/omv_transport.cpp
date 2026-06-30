@@ -312,7 +312,7 @@ void OMVTransport::send_packet(uint8_t opcode,
     stats.sent += 1;
 }
 
-QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout)
+QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout, qint64 timeout_ms_override)
 {
     /*
         Receive and parse a packet from the camera with NAK handling
@@ -325,7 +325,8 @@ QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout)
     QElapsedTimer timer;
     timer.start();
 
-    const qint64 timeout_ms = short_timeout ? 1000.0 : qint64(timeout * 1000.0);
+    const qint64 timeout_ms = (timeout_ms_override >= 0) ? timeout_ms_override
+                            : (short_timeout ? 1000.0 : qint64(timeout * 1000.0));
 
     while (timer.elapsed() < timeout_ms) {
         serial->waitForReadyRead(1);
@@ -409,7 +410,14 @@ QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout)
                 ds >> evt;
             }
             event_callback(packet.channel, evt);
-            timer.restart();
+            // Only let events extend the deadline when we are explicitly polling for events.
+            // While waiting for a command's response, events are unrelated async traffic -- and a
+            // streaming camera emits them continuously (~60 Hz), so resetting the timer here would
+            // mask a lost request/response forever (the response never comes, but events keep the
+            // wait alive). Let the command time out so the upper layer can resend/resync.
+            if (poll_events) {
+                timer.restart();
+            }
             continue;
         }
 
