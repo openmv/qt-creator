@@ -142,6 +142,12 @@ private:
     QElapsedTimer lastframeReadyAndScriptRunning;
 
 private:
+    // Overall wall-clock bound for connect(): the handshake churns under heavy loss (each step can
+    // resync, and steps retry), so cap the whole thing. Active only during connect().
+    QElapsedTimer m_connectDeadline;
+    bool m_connectDeadlineActive = false;
+    void checkConnectDeadline(); // throws OMVPTimeoutException once the connect budget is spent
+
     // Helper: retry-on-resync (decorator equivalent)
     template <typename F>
     auto retryIfFailed(F f) -> decltype(f())

@@ -52,12 +52,29 @@ OMVCamera::~OMVCamera()
     disconnect();
 }
 
+// Overall connect budget. The handshake gives up (throws) once this is spent, so a bad link fails
+// cleanly instead of churning resyncs forever. Actual give-up is this plus one in-flight wait.
+static const qint64 kConnectDeadlineMs = 10000;
+
+void OMVCamera::checkConnectDeadline()
+{
+    if (m_connectDeadlineActive && m_connectDeadline.hasExpired(kConnectDeadlineMs)) {
+        throw OMVPTimeoutException(
+            QStringLiteral("Connect timed out after %1 seconds").arg(kConnectDeadlineMs / 1000));
+    }
+}
+
 void OMVCamera::connect()
 {
     /*
         Establish connection to the OpenMV camera
     */
     disconnect();
+
+    // Bound the whole handshake (checked in the resync/resend loops). OMVPTimeoutException is not
+    // caught by retryIfFailed, so it escapes straight out to the catch below.
+    m_connectDeadline.start();
+    m_connectDeadlineActive = true;
 
     try {
         // Perform resync (also creates transport)
@@ -77,7 +94,9 @@ void OMVCamera::connect()
 
         frameEvent = status.value(QStringLiteral("stream")).toBool();
         scriptState = status.value(QStringLiteral("stdin")).toBool();
+        m_connectDeadlineActive = false;
     } catch (...) {
+        m_connectDeadlineActive = false;
         disconnect();
         throw;
     }
@@ -286,6 +305,7 @@ void OMVCamera::resync(bool grace_timeout)
 
     // Perform resync sequence on timeout
     for (int attempt = 0; attempt < maxRetry; ++attempt) {
+        checkConnectDeadline(); // give up the whole connect if its budget is spent
         if (transport) {
             delete transport;
             transport = nullptr;
