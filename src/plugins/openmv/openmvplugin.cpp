@@ -2633,11 +2633,13 @@ void OpenMVPlugin::extensionsInitialized()
     Core::ICore::statusBar()->addPermanentWidget(new QLabel());
     connect(m_versionButton, &QToolButton::clicked, this, &OpenMVPlugin::updateCam);
 
-    m_portLabel = new Utils::ElidingLabel(Tr::tr("Serial Port:"));
-    m_portLabel->setToolTip(Tr::tr("Camera serial port"));
+    m_portLabel = new Utils::ElidingToolButton;
+    m_portLabel->setText(Tr::tr("Serial Port:"));
+    m_portLabel->setToolTip(Tr::tr("Camera serial port -- click to give this camera a friendly name"));
     m_portLabel->setDisabled(true);
     Core::ICore::statusBar()->addPermanentWidget(m_portLabel);
     Core::ICore::statusBar()->addPermanentWidget(new QLabel());
+    connect(m_portLabel, &QToolButton::clicked, this, &OpenMVPlugin::setPortAlias);
 
     m_pathButton = new Utils::ElidingToolButton;
     m_pathButton->setText(Tr::tr("Drive:"));

@@ -545,6 +545,39 @@ bool isNetworkPort(const QString &portName)
     return (!portName.isEmpty()) && QSerialPortInfo(portName).isNull();
 }
 
+// IDE-local per-camera friendly name, stored in OpenMV/CameraAliases/<key> (key = serial, or the
+// port name if the camera has no serial). Case-folded so it's stable; empty alias removes the entry.
+QString cameraAlias(const QString &key)
+{
+    if(key.isEmpty())
+    {
+        return QString();
+    }
+
+    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+    return settings->value(Utils::keyFromString(QStringLiteral(SETTINGS_GROUP "/" CAMERA_ALIAS_GROUP "/") + key.toLower())).toString();
+}
+
+void setCameraAlias(const QString &key, const QString &alias)
+{
+    if(key.isEmpty())
+    {
+        return;
+    }
+
+    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+    const Utils::Key settingsKey = Utils::keyFromString(QStringLiteral(SETTINGS_GROUP "/" CAMERA_ALIAS_GROUP "/") + key.toLower());
+
+    if(alias.isEmpty())
+    {
+        settings->remove(settingsKey);
+    }
+    else
+    {
+        settings->setValue(settingsKey, alias);
+    }
+}
+
 // Find the USB serial port currently enumerating with this serial number (case-insensitive), or a
 // null info if none. Ties a wifi-discovered cam back to its USB presence: that USB port is hidden
 // from the connect list (its debug endpoint is dead), but the device is still physically here -- so
@@ -1426,6 +1459,75 @@ QList<QPair<QString, QString> > OpenMVPlugin::querySerialPorts(const QStringList
     return results;
 }
 
+// The name to show for a port in the connect list: the user's IDE-local alias for that camera if set
+// (keyed by serial, or the port name if it has none), else the real port name. Only the *displayed*
+// name changes -- the raw port string is still what actually gets opened.
+QString OpenMVPlugin::portDisplayName(const QString &port)
+{
+    QString serial;
+
+    if(isNetworkPort(port))
+    {
+        for(const wifiPort_t &wifiPort : qAsConst(m_availableWifiPorts))
+        {
+            if(QStringLiteral("%1:%2").arg(wifiPort.name, wifiPort.addressAndPort) == port)
+            {
+                serial = wifiPort.serialNumber;
+                break;
+            }
+        }
+    }
+    else
+    {
+        serial = MyQSerialPortInfo(QSerialPortInfo(port)).serialNumber();
+    }
+
+    const QString alias = cameraAlias(serial.isEmpty() ? port : serial);
+    return alias.isEmpty() ? port : alias;
+}
+
+// Prompt for an IDE-local friendly name for the connected camera (keyed by serial, or port name if
+// it has no serial), then reflect it on the port button. Shown instead of the serial port name in
+// the connect list and the toolbar -- e.g. so a classroom of identical cams is tellable apart.
+void OpenMVPlugin::setPortAlias()
+{
+    if((!m_connected) || m_working)
+    {
+        return;
+    }
+
+    const QString key = m_portDriveSerialNumber.isEmpty() ? m_portName : m_portDriveSerialNumber;
+
+    QDialog dialog(Core::ICore::dialogParent(), Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                   (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+    dialog.setWindowTitle(Tr::tr("Name Camera"));
+
+    QVBoxLayout *root = new QVBoxLayout(&dialog);
+
+    QFormLayout *form = new QFormLayout;
+    form->addRow(Tr::tr("Serial port:"), new QLabel(m_portName, &dialog));
+
+    QLineEdit *aliasEdit = new QLineEdit(cameraAlias(key), &dialog);
+    aliasEdit->setClearButtonEnabled(true);
+    aliasEdit->setMinimumWidth(220);
+    form->addRow(Tr::tr("Name:"), aliasEdit);
+    root->addLayout(form);
+
+    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dialog);
+    root->addWidget(buttons);
+    connect(buttons, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
+
+    if(dialog.exec() != QDialog::Accepted)
+    {
+        return;
+    }
+
+    const QString alias = aliasEdit->text().trimmed();
+    setCameraAlias(key, alias);
+    m_portLabel->setText(Tr::tr("Serial Port: %L1").arg(alias.isEmpty() ? m_portName : alias));
+}
+
 QPair<QStringList, QStringList> filterPorts(const QJsonDocument &settings,
                                             const QString &serialNumberFilter,
                                             bool forceBootloader,
@@ -2135,7 +2237,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             for (const QPair<QString, QString> &pair : prettyNames)
             {
-                stringList2.append(QStringLiteral("%1: %2").arg(pair.first, pair.second));
+                // Show the camera's alias (if any) in place of the port name; the board name stays.
+                stringList2.append(QStringLiteral("%1: %2").arg(portDisplayName(pair.first), pair.second));
             }
 
             bool ok;
@@ -3773,7 +3876,11 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_versionButton->setEnabled(true);
         m_versionButton->setText(Tr::tr("Firmware Version: %L1.%L2.%L3").arg(major2).arg(minor2).arg(patch2));
         m_portLabel->setEnabled(true);
-        m_portLabel->setText(Tr::tr("Serial Port: %L1").arg(m_portName));
+        {
+            // Show the camera's IDE-local name if it has one, else the real serial port name.
+            const QString alias = cameraAlias(m_portDriveSerialNumber.isEmpty() ? m_portName : m_portDriveSerialNumber);
+            m_portLabel->setText(Tr::tr("Serial Port: %L1").arg(alias.isEmpty() ? m_portName : alias));
+        }
         m_pathButton->setEnabled(true);
         m_pathButton->setText(Tr::tr("Drive:"));
         m_fpsButton->setEnabled(true);

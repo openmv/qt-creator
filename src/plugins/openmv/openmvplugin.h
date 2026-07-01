@@ -171,6 +171,7 @@
 #define LAST_BOARD_TYPE_STATE_IMX "LastBoardTypeStateIMX"
 #define LAST_BOARD_TYPE_STATE_ALIF "LastBoardTypeStateAlif"
 #define LAST_SERIAL_PORT_STATE "LastSerialPortState"
+#define CAMERA_ALIAS_GROUP "CameraAliases" // IDE-local per-camera names: OpenMV/CameraAliases/<key> = alias
 #define LAST_DFU_PORT_STATE "LastDFUPortState"
 #define LAST_SAVE_IMAGE_PATH "LastSaveImagePath"
 #define LAST_SAVE_TEMPLATE_PATH "LastSaveTemplatePath"
@@ -385,6 +386,11 @@ public:
 
 bool validPort(const QJsonDocument &settings, const QString &serialNumberFilter, const MyQSerialPortInfo &port);
 
+// IDE-local friendly name for a camera, keyed by its serial number (or, lacking one, its port name)
+// so a user can rename any camera and see that name instead of the serial port. Empty alias clears it.
+QString cameraAlias(const QString &key);
+void setCameraAlias(const QString &key, const QString &alias);
+
 QPair<QStringList, QStringList> filterPorts(const QJsonDocument &settings,
                                             const QString &serialNumberFilter,
                                             bool forceBootloader,
@@ -488,6 +494,7 @@ public slots: // private
     QMultiMap<QString, QAction *> aboutToShowExamplesRecursive(const QString &path, QMenu *parent, bool notExamples = false);
     void updateCam(bool forceYes = false);
     void setPortPath(bool silent = false);
+    void setPortAlias();
     void setSpacing();
     void openTerminalAboutToShow();
     QList<int> openThresholdEditor(const QVariant parameters = QVariant());
@@ -511,6 +518,7 @@ private:
     static QList<QPair<QString, QHostAddress> > parseMdnsARecords(const QByteArray &data);
     bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder);
     QList<QPair<QString, QString> > querySerialPorts(const QStringList &portList);
+    QString portDisplayName(const QString &port);
 
     // Release-notes (changelog) links. Web URLs target the rolling-latest "dev"
     // docs channel (used by the update notifications, since the announced
@@ -736,7 +744,7 @@ private:
     QLabel *m_registerButtonSpacer;
     Utils::ElidingLabel *m_sensorLabel;
     Utils::ElidingToolButton *m_versionButton;
-    Utils::ElidingLabel *m_portLabel;
+    Utils::ElidingToolButton *m_portLabel;
     Utils::ElidingToolButton *m_pathButton;
     Utils::ElidingToolButton *m_fpsButton;
     double m_fpsIde = 0.0;          // last IDE-measured FPS (PC-side frame-arrival timing)
