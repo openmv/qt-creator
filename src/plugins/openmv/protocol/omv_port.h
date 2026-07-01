@@ -11,6 +11,7 @@
 #include <QtCore/QIODevice>
 #include <QtNetwork/QHostAddress>
 #include <QtNetwork/QTcpSocket>
+#include <QtNetwork/QUdpSocket>
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
 
@@ -134,7 +135,9 @@ public:
     bool setDataTerminalReady(bool set) override;
     bool setRequestToSend(bool set) override;
 private:
-    QTcpSocket *m_tcpSocket;
+    QTcpSocket *m_tcpSocket;   // control plane (all traffic except frame-read responses)
+    QUdpSocket *m_udpSocket;   // data plane: inbound camera frame-read datagrams
+    QByteArray m_tcpBuf;       // holds a partial trailing TCP packet between reads (packet framing)
 };
 
 class OMVPortFactory

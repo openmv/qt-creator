@@ -9,6 +9,7 @@
 
 #include <QSerialPort>
 
+#include "omv_constants.h"
 #include "omv_port.h"
 
 #define SERIAL_READ_TIMEOUT 3000
@@ -141,12 +142,44 @@ bool OMVSerialPort::setRequestToSend(bool set)
 }
 
 // ---------------------------------------------------------------------------
-// OMVNetworkPort -- hybrid TCP-control / UDP-frame port (Phase 1: TCP control only)
+// OMVNetworkPort -- hybrid port: TCP control plane + UDP frame-data plane
 // ---------------------------------------------------------------------------
+
+// Length of the leading run of *whole* packets in buf (v2 wire layout:
+// SYNC(2) SEQ(1) CHAN(1) FLAGS(1) OPCODE(1) LEN(2) HCRC(2) [payload] [PCRC(4)]). The remainder is a
+// partial trailing packet to hold until more arrives, so a UDP frame datagram is never appended into
+// the middle of a half-received TCP control packet. Assumes buf starts on a packet boundary -- true
+// for an in-order TCP stream we always frame exactly; if a desync ever slips through, hand everything
+// up and let the transport's own sync-scanning parser resynchronize.
+static qsizetype omvWholePacketPrefix(const QByteArray &buf)
+{
+    const quint8 syncLo = quint8(OMVProto::SYNC_WORD & 0xFF);   // 0xAA -- SYNC_WORD little-endian
+    const quint8 syncHi = quint8(OMVProto::SYNC_WORD >> 8);     // 0xD5
+    const qsizetype n = buf.size();
+    qsizetype off = 0;
+
+    while (n - off >= OMVProto::HEADER_SIZE) {
+        if (quint8(buf[off]) != syncLo || quint8(buf[off + 1]) != syncHi) {
+            return n;
+        }
+
+        const int len = quint8(buf[off + 6]) | (quint8(buf[off + 7]) << 8);   // LEN field @ header offset 6
+        const qsizetype pkt = OMVProto::HEADER_SIZE + len + (len ? OMVProto::CRC_SIZE : 0);
+
+        if (n - off < pkt) {
+            break;   // partial trailing packet -- hold it until the rest arrives
+        }
+
+        off += pkt;
+    }
+
+    return off;
+}
 
 OMVNetworkPort::OMVNetworkPort(const QString &name, QObject *parent) : OMVPort(name, parent)
 {
     m_tcpSocket = new QTcpSocket(this);
+    m_udpSocket = new QUdpSocket(this);
 }
 
 int OMVNetworkPort::readTimeoutMs()
@@ -196,6 +229,13 @@ bool OMVNetworkPort::open(QIODevice::OpenMode mode)
     // Small control packets must go out immediately; the protocol runs synchronously with no event
     // loop, so Nagle + delayed-ACK would otherwise stall the handshake.
     m_tcpSocket->setSocketOption(QAbstractSocket::LowDelayOption, 1);
+
+    // Data plane: receive frame datagrams on the SAME local port our TCP connection uses, so the
+    // camera reuses the TCP peer address as the UDP frame destination -- no separate handshake (TCP
+    // and UDP port spaces are independent). This bind essentially always succeeds (the OS just handed
+    // that port to our TCP socket); if it somehow can't, control is unaffected and frames are lost.
+    m_udpSocket->bind(QHostAddress::AnyIPv4, m_tcpSocket->localPort());
+
     return true;
 }
 
@@ -220,7 +260,22 @@ void OMVNetworkPort::clearError()
 
 QByteArray OMVNetworkPort::readAll()
 {
-    return m_tcpSocket->readAll();
+    // Control plane: drain the TCP stream but hand upstream only whole packets, holding any partial
+    // trailing packet, so a UDP frame datagram is never spliced into a half-received control packet.
+    m_tcpBuf.append(m_tcpSocket->readAll());
+    const qsizetype whole = omvWholePacketPrefix(m_tcpBuf);
+    QByteArray out = m_tcpBuf.left(whole);
+    m_tcpBuf.remove(0, whole);
+
+    // Data plane: each UDP datagram is exactly one whole frame-read packet (the camera flushes one
+    // packet per datagram) -- append them as-is.
+    while (m_udpSocket->hasPendingDatagrams()) {
+        QByteArray datagram(int(m_udpSocket->pendingDatagramSize()), 0);
+        m_udpSocket->readDatagram(datagram.data(), datagram.size());
+        out.append(datagram);
+    }
+
+    return out;
 }
 
 qint64 OMVNetworkPort::write(const char *data, qint64 maxSize)
@@ -236,7 +291,15 @@ qint64 OMVNetworkPort::write(const char *data, qint64 maxSize)
 
 qint64 OMVNetworkPort::bytesAvailable()
 {
-    return m_tcpSocket->bytesAvailable();
+    // New parseable bytes on either plane. The held partial-packet tail is deliberately excluded --
+    // it can't be parsed yet, and counting it would spin the read loop returning nothing.
+    qint64 n = m_tcpSocket->bytesAvailable();
+
+    if (m_udpSocket->hasPendingDatagrams()) {
+        n += m_udpSocket->pendingDatagramSize();
+    }
+
+    return n;
 }
 
 qint64 OMVNetworkPort::bytesToWrite()
@@ -246,7 +309,14 @@ qint64 OMVNetworkPort::bytesToWrite()
 
 bool OMVNetworkPort::waitForReadyRead(int msecs)
 {
-    return m_tcpSocket->waitForReadyRead(msecs);
+    // Wake on either plane. The read loop polls with a ~1ms timeout and gates on bytesAvailable(), so
+    // waiting on TCP here and rechecking UDP after picks up frame datagrams within one poll tick.
+    if (m_udpSocket->hasPendingDatagrams()) {
+        return true;
+    }
+
+    bool ready = m_tcpSocket->waitForReadyRead(msecs);
+    return ready || m_udpSocket->hasPendingDatagrams();
 }
 
 bool OMVNetworkPort::waitForBytesWritten(int msecs)
