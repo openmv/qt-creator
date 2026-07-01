@@ -421,9 +421,19 @@ QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout, qint64 
             continue;
         }
 
-        // Track the camera's actual sequence (rolling forward over any gap left by a
-        // dropped packet) rather than blindly incrementing our previous expectation.
-        sequence = uint8_t((packet.sequence + 1) & 0xFF);
+        // Track the camera's sequence. A data packet consumes seq N, so we expect N+1 next (rolling
+        // forward over any gap left by a dropped packet). A NAK is different: it's the camera
+        // *rejecting* our packet, and it carries the camera's own expected sequence (it does not
+        // advance on a rejection). So align exactly to it -- do NOT add one. Adding one lands our
+        // re-send one past what the camera wants, it NAKs again, and every NAK nudges us one further
+        // out of step: the "NAK storm" that stalls connect under heavy loss (stale retransmits keep
+        // arriving, each NAK drifting us again). NAKs only happen under loss, so reliable links -- who
+        // never see one -- are unaffected.
+        if (packet.flags & OMVPFlags::NAK) {
+            sequence = packet.sequence;
+        } else {
+            sequence = uint8_t((packet.sequence + 1) & 0xFF);
+        }
 
         // Check if this is a fragmented packet
         if (packet.flags & OMVPFlags::FRAGMENT) {
