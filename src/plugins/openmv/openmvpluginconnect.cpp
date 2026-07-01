@@ -1649,10 +1649,10 @@ QPair<QStringList, QStringList> filterPorts(const QJsonDocument &settings,
         }
     }
 
-    // Network (UDP) ports are discovered via mDNS, not enumerated as serial ports. Append them
+    // Network ports are discovered via mDNS, not enumerated as serial ports. Append them
     // only after all the serial/bootloader filtering above so they are never run through the
     // QSerialPortInfo loops -- which would erase each one as a "null" serial port. Each entry is
-    // "name:ip:port"; OMVPortFactory builds an OMVUDPPort from it (a name that isn't a serial port).
+    // "name:ip:port"; OMVPortFactory builds an OMVNetworkPort from it (a name that isn't a serial port).
     if(!forceBootloader)
     {
         for(const wifiPort_t &port : availableWifiPorts)
@@ -2252,7 +2252,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             {
                 // Map the selected pretty label back to its raw port string. Splitting on ":"
                 // breaks network ports whose raw form is "name:ip:port" -- that would drop the
-                // ip:port and OMVUDPPort::open() (which needs all three parts) would fail.
+                // ip:port and OMVNetworkPort::open() (which needs all three parts) would fail.
                 int selIndex = stringList2.indexOf(temp);
                 selectedPort = (selIndex >= 0) ? prettyNames.at(selIndex).first : temp.split(QStringLiteral(":")).first();
                 settings->setValue(SETTINGS_GROUP "/" LAST_SERIAL_PORT_STATE, selectedPort);

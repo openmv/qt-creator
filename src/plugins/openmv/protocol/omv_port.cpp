@@ -14,8 +14,9 @@
 #define SERIAL_READ_TIMEOUT 3000
 #define SERIAL_READ_STALL_TIMEOUT 1000
 
-#define UDP_READ_TIMEOUT 5000
-#define UDP_READ_STALL_TIMEOUT 3000
+#define TCP_READ_TIMEOUT 5000
+#define TCP_READ_STALL_TIMEOUT 3000
+#define TCP_CONNECT_TIMEOUT 3000
 
 #define READ_BUFFER_SIZE (64 * 1024 * 1024)
 #define WRITE_BUFFER_SIZE (64 * 1024 * 1024)
@@ -139,33 +140,36 @@ bool OMVSerialPort::setRequestToSend(bool set)
     return m_serialPort->setRequestToSend(set);
 }
 
-OMVUDPPort::OMVUDPPort(const QString &name, QObject *parent) : OMVPort(name, parent)
+// ---------------------------------------------------------------------------
+// OMVNetworkPort -- hybrid TCP-control / UDP-frame port (Phase 1: TCP control only)
+// ---------------------------------------------------------------------------
+
+OMVNetworkPort::OMVNetworkPort(const QString &name, QObject *parent) : OMVPort(name, parent)
 {
-    m_udpSocket = new QUdpSocket(this);
-    m_remotePort = 0;
+    m_tcpSocket = new QTcpSocket(this);
 }
 
-int OMVUDPPort::readTimeoutMs()
+int OMVNetworkPort::readTimeoutMs()
 {
-    return UDP_READ_TIMEOUT;
+    return TCP_READ_TIMEOUT;
 }
 
-int OMVUDPPort::readStallTimeoutMs()
+int OMVNetworkPort::readStallTimeoutMs()
 {
-    return UDP_READ_STALL_TIMEOUT;
+    return TCP_READ_STALL_TIMEOUT;
 }
 
-void OMVUDPPort::setReadBufferSize(qint64 size)
+void OMVNetworkPort::setReadBufferSize(qint64 size)
 {
-    Q_UNUSED(size)
+    m_tcpSocket->setReadBufferSize(size);
 }
 
-bool OMVUDPPort::setBaudRate(qint32 /*baudRate*/)
+bool OMVNetworkPort::setBaudRate(qint32 /*baudRate*/)
 {
     return true;
 }
 
-bool OMVUDPPort::open(QIODevice::OpenMode mode)
+bool OMVNetworkPort::open(QIODevice::OpenMode mode)
 {
     Q_UNUSED(mode)
 
@@ -175,82 +179,87 @@ bool OMVUDPPort::open(QIODevice::OpenMode mode)
         return false;
     }
 
-    m_remoteHost = QHostAddress(list.at(1));
+    QHostAddress host(list.at(1));
     bool portNumberOkay;
-    m_remotePort = list.at(2).toUInt(&portNumberOkay);
+    quint16 port = list.at(2).toUShort(&portNumberOkay);
 
     if(!portNumberOkay) {
         return false;
     }
 
-    return m_udpSocket->bind(QHostAddress::AnyIPv4, 0);
-}
+    m_tcpSocket->connectToHost(host, port);
 
-bool OMVUDPPort::isOpen()
-{
-    return m_udpSocket->state() == QAbstractSocket::BoundState;
-}
-
-bool OMVUDPPort::flush()
-{
-    return true;
-}
-
-QString OMVUDPPort::errorString()
-{
-    return m_udpSocket->errorString();
-}
-
-void OMVUDPPort::clearError()
-{
-}
-
-QByteArray OMVUDPPort::readAll()
-{
-    QByteArray result;
-
-    while(m_udpSocket->hasPendingDatagrams())
-    {
-        QByteArray datagram(m_udpSocket->pendingDatagramSize(), 0);
-        m_udpSocket->readDatagram(datagram.data(), datagram.size());
-        result.append(datagram);
+    if(!m_tcpSocket->waitForConnected(TCP_CONNECT_TIMEOUT)) {
+        return false;
     }
 
-    return result;
-}
-
-qint64 OMVUDPPort::write(const char *data, qint64 maxSize)
-{
-    return m_udpSocket->writeDatagram(data, maxSize, m_remoteHost, m_remotePort);
-}
-
-qint64 OMVUDPPort::bytesAvailable()
-{
-    return m_udpSocket->hasPendingDatagrams() ? m_udpSocket->pendingDatagramSize() : 0;
-}
-
-qint64 OMVUDPPort::bytesToWrite()
-{
-    return 0;
-}
-
-bool OMVUDPPort::waitForReadyRead(int msecs)
-{
-    return m_udpSocket->waitForReadyRead(msecs);
-}
-
-bool OMVUDPPort::waitForBytesWritten(int msecs)
-{
-    Q_UNUSED(msecs)
+    // Small control packets must go out immediately; the protocol runs synchronously with no event
+    // loop, so Nagle + delayed-ACK would otherwise stall the handshake.
+    m_tcpSocket->setSocketOption(QAbstractSocket::LowDelayOption, 1);
     return true;
 }
 
-bool OMVUDPPort::setDataTerminalReady(bool /*set*/)
+bool OMVNetworkPort::isOpen()
+{
+    return m_tcpSocket->state() == QAbstractSocket::ConnectedState;
+}
+
+bool OMVNetworkPort::flush()
+{
+    return m_tcpSocket->flush();
+}
+
+QString OMVNetworkPort::errorString()
+{
+    return m_tcpSocket->errorString();
+}
+
+void OMVNetworkPort::clearError()
+{
+}
+
+QByteArray OMVNetworkPort::readAll()
+{
+    return m_tcpSocket->readAll();
+}
+
+qint64 OMVNetworkPort::write(const char *data, qint64 maxSize)
+{
+    // QTcpSocket::write() only buffers -- the bytes are not handed to the OS until the event loop
+    // runs or we flush. The protocol code sends and then blocks in recv without returning to the
+    // event loop, so flush here or the send never leaves and the handshake deadlocks. The IDE only
+    // ever writes small control packets (it receives frames), so this flush always completes.
+    qint64 ret = m_tcpSocket->write(data, maxSize);
+    m_tcpSocket->flush();
+    return ret;
+}
+
+qint64 OMVNetworkPort::bytesAvailable()
+{
+    return m_tcpSocket->bytesAvailable();
+}
+
+qint64 OMVNetworkPort::bytesToWrite()
+{
+    return m_tcpSocket->bytesToWrite();
+}
+
+bool OMVNetworkPort::waitForReadyRead(int msecs)
+{
+    return m_tcpSocket->waitForReadyRead(msecs);
+}
+
+bool OMVNetworkPort::waitForBytesWritten(int msecs)
+{
+    return m_tcpSocket->waitForBytesWritten(msecs);
+}
+
+bool OMVNetworkPort::setDataTerminalReady(bool /*set*/)
 {
     return true;
 }
 
-bool OMVUDPPort::setRequestToSend(bool /*set*/)
+bool OMVNetworkPort::setRequestToSend(bool /*set*/)
 {
     return true;
 }

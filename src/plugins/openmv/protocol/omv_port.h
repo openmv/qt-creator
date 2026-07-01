@@ -9,7 +9,8 @@
 #pragma once
 
 #include <QtCore/QIODevice>
-#include <QtNetwork/QUdpSocket>
+#include <QtNetwork/QHostAddress>
+#include <QtNetwork/QTcpSocket>
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
 
@@ -17,7 +18,7 @@ namespace omv {
 
 typedef enum OMVPortType {
     OMVPortType_Serial,
-    OMVPortType_UDP
+    OMVPortType_Network
 } OMVPortType_t;
 
 class OMVPort : public QObject
@@ -99,15 +100,16 @@ private:
     QSerialPort *m_serialPort;
 };
 
-class OMVUDPPort : public OMVPort
+// Hybrid network port. All protocol control traffic rides a reliable TCP connection; bulk camera
+// frame data is received over a UDP socket (wired in Phase 2). reliableTransport() is inherited from
+// OMVPort (true), so the OMVCamera construction seam keeps ACK off and leaves the hand-rolled
+// retransmit/resync machinery inert -- kernel TCP handles reliability.
+class OMVNetworkPort : public OMVPort
 {
     Q_OBJECT
 public:
-    explicit OMVUDPPort(const QString &name, QObject *parent = nullptr);
-    OMVPortType_t portType() override { return OMVPortType_UDP; }
-    // UDP is lossy/unordered -- force the protocol's ACK+retransmit layer on (see the
-    // OMVCamera construction seam, which enables ACK when reliableTransport() is false).
-    bool reliableTransport() override { return false; }
+    explicit OMVNetworkPort(const QString &name, QObject *parent = nullptr);
+    OMVPortType_t portType() override { return OMVPortType_Network; }
     int readTimeoutMs() override;
     int readStallTimeoutMs() override;
 
@@ -132,9 +134,7 @@ public:
     bool setDataTerminalReady(bool set) override;
     bool setRequestToSend(bool set) override;
 private:
-    QUdpSocket *m_udpSocket;
-    QHostAddress m_remoteHost;
-    quint16 m_remotePort;
+    QTcpSocket *m_tcpSocket;
 };
 
 class OMVPortFactory
@@ -144,7 +144,9 @@ public:
         if(!QSerialPortInfo(name).isNull()) {
             return new OMVSerialPort(name, parent);
         } else {
-            return new OMVUDPPort(name, parent);
+            // A name that isn't a serial port is a network entry ("name:ip:port") discovered via
+            // mDNS -- build the hybrid TCP-control / UDP-frame port.
+            return new OMVNetworkPort(name, parent);
         }
     }
 };
