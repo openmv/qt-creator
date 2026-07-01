@@ -2586,7 +2586,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if((!major2) && (!minor2) && (!patch2))
             {
-                if(m_reconnects < RECONNECTS_MAX)
+                // Auto-retry is for transient USB failures (e.g. the cam still finishing a reset). A
+                // network timeout means the link is bad, so don't burn more 10s attempts -- try once,
+                // then go straight to the dialog.
+                if((!isNetworkPort(selectedPort)) && (m_reconnects < RECONNECTS_MAX))
                 {
                     m_reconnects += 1;
                     QThread::msleep(10);
@@ -2599,9 +2602,12 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     Tr::tr("Connect"),
                     Tr::tr("Timeout error while getting firmware version!"));
 
-                QMessageBox::warning(Core::ICore::dialogParent(),
-                    Tr::tr("Connect"),
-                    Tr::tr("Do not try to connect while the green light on your OpenMV Cam is on!"));
+                if(!isNetworkPort(selectedPort)) // the green light is a USB-boot thing, not a network link
+                {
+                    QMessageBox::warning(Core::ICore::dialogParent(),
+                        Tr::tr("Connect"),
+                        Tr::tr("Do not try to connect while the green light on your OpenMV Cam is on!"));
+                }
 
                 if(QMessageBox::question(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
