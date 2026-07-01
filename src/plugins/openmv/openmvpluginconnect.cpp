@@ -3743,7 +3743,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_errorFilterString = QString();
 
         m_openDriveFolderAction->setEnabled(false);
-        m_configureSettingsAction->setEnabled(false);
+        m_editWifiDebugAction->setEnabled(false);
         m_saveAction->setEnabled(false);
         m_resetAction->setEnabled(true);
         // Entering the bootloader / installing dev firmware needs USB/DFU. A wifi link is fine *if*
@@ -4115,7 +4115,7 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             m_availableDrives.clear();
 
             m_openDriveFolderAction->setEnabled(false);
-            m_configureSettingsAction->setEnabled(false);
+            m_editWifiDebugAction->setEnabled(false);
             m_saveAction->setEnabled(false);
             m_resetAction->setEnabled(false);
             m_enterBootloaderAction->setEnabled(false);

@@ -343,7 +343,7 @@ void OpenMVPlugin::setPortPath(bool silent)
 
         Core::IEditor *editor = Core::EditorManager::currentEditor();
         m_openDriveFolderAction->setEnabled(!m_portPath.isEmpty());
-        m_configureSettingsAction->setEnabled(!m_portPath.isEmpty());
+        m_editWifiDebugAction->setEnabled(!m_portPath.isEmpty());
         m_saveAction->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
 
         m_frameBuffer->enableSaveTemplate(!m_portPath.isEmpty());

@@ -1027,13 +1027,19 @@ void OpenMVPlugin::extensionsInitialized()
     m_openDriveFolderAction->setEnabled(false);
     connect(m_openDriveFolderAction, &QAction::triggered, this, [this] {Core::FileUtils::showInGraphicalShell(Core::ICore::mainWindow(), Utils::FilePath::fromString(m_portPath).pathAppended(Utils::HostOsInfo::isWindowsHost() ? QStringLiteral("") : QStringLiteral(".openmv_disk"))); });
 
-    m_configureSettingsAction = new QAction(Tr::tr("Configure OpenMV Cam settings file"), this);
-    m_configureSettingsCommand = Core::ActionManager::registerAction(m_configureSettingsAction, Utils::Id("OpenMV.Settings"));
-    toolsMenu->addAction(m_configureSettingsCommand);
-    m_configureSettingsAction->setEnabled(false);
-    connect(m_configureSettingsAction, &QAction::triggered, this, &OpenMVPlugin::configureSettings);
-    // DISABLED
-    m_configureSettingsAction->setVisible(false);
+    // WiFi Debugging: create or edit the on-cam boot.py that brings the network up on boot and bridges
+    // the debug protocol over UDP. Writes to the cam's USB drive, so it's gated like the other drive
+    // actions (enabled once a drive is found). It's created and added unconditionally (the gating
+    // references it), then hidden in viewer mode -- writing boot.py isn't a read-only viewer op.
+    m_editWifiDebugAction = new QAction(Tr::tr("Edit boot.py for WiFi Debugging"), this);
+    m_editWifiDebugCommand = Core::ActionManager::registerAction(m_editWifiDebugAction, Utils::Id("OpenMV.EditWiFiDebugBootPy"));
+    toolsMenu->addAction(m_editWifiDebugCommand);
+    m_editWifiDebugAction->setEnabled(false);
+    m_editWifiDebugAction->setVisible(!m_viewerMode);
+    connect(m_editWifiDebugAction, &QAction::triggered, this, [this] {
+        editWifiDebugBootPy(m_portPath, m_portDriveSerialNumber,
+            [this] (const QString &p, const QByteArray &d, QString *e) { return writeFileToDriveAndFlush(p, d, e); });
+    });
 
     m_saveAction = new QAction(Tr::tr("Save open script to OpenMV Cam (as main.py)"), this);
     m_saveCommand = Core::ActionManager::registerAction(m_saveAction, Utils::Id("OpenMV.Save"));
@@ -2087,7 +2093,7 @@ void OpenMVPlugin::extensionsInitialized()
         if(m_connected)
         {
             m_openDriveFolderAction->setEnabled(!m_portPath.isEmpty());
-            m_configureSettingsAction->setEnabled(!m_portPath.isEmpty());
+            m_editWifiDebugAction->setEnabled(!m_portPath.isEmpty());
             m_saveAction->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
             m_startAction->setEnabled((!m_running) && (m_viewerMode || (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false)));
             m_startAction->setVisible(!m_running);
@@ -2109,7 +2115,7 @@ void OpenMVPlugin::extensionsInitialized()
         {
             Core::IEditor *editor = Core::EditorManager::currentEditor();
             m_openDriveFolderAction->setEnabled(!m_portPath.isEmpty());
-            m_configureSettingsAction->setEnabled(!m_portPath.isEmpty());
+            m_editWifiDebugAction->setEnabled(!m_portPath.isEmpty());
             m_saveAction->setEnabled((!m_portPath.isEmpty()) && (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false));
             m_startAction->setEnabled((!running) && (m_viewerMode || (editor ? (editor->document() ? (!editor->document()->contents().isEmpty()) : false) : false)));
             m_startAction->setVisible(!running);
@@ -4450,21 +4456,6 @@ void OpenMVPlugin::errorFilter(const QByteArray &data)
     }
 
     m_errorFilterString = m_errorFilterString.right(ERROR_FILTER_MAX_SIZE);
-}
-
-void OpenMVPlugin::configureSettings()
-{
-    if(!m_working)
-    {
-        if(OpenMVCameraSettings(QDir::cleanPath(QDir::fromNativeSeparators(m_portPath)) + QStringLiteral("/openmv.config")).exec() == QDialog::Accepted)
-        {
-            flushPortPath();
-        }
-    }
-    else
-    {
-        deferNormal([this] { configureSettings(); });
-    }
 }
 
 void OpenMVPlugin::saveImage(const QPixmap &data)

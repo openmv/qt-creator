@@ -1,4 +1,4 @@
-/* Copyright (C) 2023-2024 OpenMV, LLC.
+/* Copyright (C) 2023-2026 OpenMV, LLC.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -28,44 +28,29 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef OPENMVCAMERASETTINGS_H
-#define OPENMVCAMERASETTINGS_H
+#ifndef WIFISCAN_H
+#define WIFISCAN_H
 
-#include <QtCore>
-#include <QtGui>
-#include <QtWidgets>
-#include <QtNetwork>
-
-#include <utils/hostosinfo.h>
-
-namespace Ui
-{
-    class OpenMVCameraSettings;
-}
+#include <QStringList>
 
 namespace OpenMV {
 namespace Internal {
 
-class OpenMVCameraSettings : public QDialog
-{
-    Q_OBJECT
+// Best-effort scan for nearby WiFi SSIDs, sorted and de-duplicated (empty list on failure or if
+// the host has no WiFi). Uses a native OS API where we have one (Windows WLAN) and falls back to a
+// command-line tool otherwise. Intended to populate an editable SSID picker -- the user can always
+// type a network this misses (hidden SSIDs, out-of-range, no WiFi adapter).
+QStringList scanWifiNetworks();
 
-public:
+// The SSID the host is currently connected to, or empty if not connected / unsupported. Windows only.
+QString connectedWifiSsid();
 
-    explicit OpenMVCameraSettings(const QString &fileName, QWidget *parent = Q_NULLPTR);
-    ~OpenMVCameraSettings();
-
-public slots:
-
-    void accept();
-
-private:
-
-    QSettings *m_settings;
-    Ui::OpenMVCameraSettings *m_ui;
-};
+// The saved password for this SSID from the host's WiFi credential store, or empty if unavailable.
+// Windows only (netsh, for the current user's own profiles -- no elevation); always empty elsewhere,
+// since macOS/Linux would trigger a Keychain/polkit auth prompt.
+QString savedWifiPassword(const QString &ssid);
 
 } // namespace Internal
 } // namespace OpenMV
 
-#endif // OPENMVCAMERASETTINGS_H
+#endif // WIFISCAN_H

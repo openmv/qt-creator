@@ -22,7 +22,6 @@ add_qtc_plugin(OpenMV
     openmvpluginfb.cpp openmvpluginfb.h
     openmvprofile.cpp openmvprofile.h
     openmvterminal.cpp openmvterminal.h
-    openmvcamerasettings.cpp openmvcamerasettings.h
     openmvdataseteditor.cpp openmvdataseteditor.h
     elfio/elfio/elfio.hpp
     histogram/openmvpluginhistogram.cpp histogram/openmvpluginhistogram.h
@@ -43,6 +42,8 @@ add_qtc_plugin(OpenMV
     tools/picotool.cpp tools/picotool.h
     tools/romfs.cpp tools/romfs.h
     tools/settingseditor.cpp tools/settingseditor.h
+    tools/wifidebug.cpp tools/wifidebug.h
+    tools/wifiscan.cpp tools/wifiscan.h
     tools/stcubeprogrammer.cpp tools/stcubeprogrammer.h
     tools/stedgeai.cpp tools/stedgeai.h
     tools/tag16h5.c tools/tag16h5.h
@@ -58,7 +59,6 @@ add_qtc_plugin(OpenMV
     qcustomplot/qcustomplot.cpp qcustomplot/qcustomplot.h
     qzip/qzip.cpp qzip/qzipreader.h qzip/qzipwriter.h
     openmv.qrc
-    openmvcamerasettings.ui
     histogram/openmvpluginhistogram.ui
 )
 

@@ -89,7 +89,6 @@
     #include <unistd.h>
 #endif
 
-#include "openmvcamerasettings.h"
 #include "openmvdataseteditor.h"
 #include "openmvmodelzoo.h"
 #include "openmvpluginserialport.h"
@@ -111,6 +110,7 @@
 #include "tools/myqserialportinfo.h"
 #include "tools/picotool.h"
 #include "tools/settingseditor.h"
+#include "tools/wifidebug.h"
 #include "tools/stcubeprogrammer.h"
 #include "tools/tag16h5.h"
 #include "tools/tag25h7.h"
@@ -481,7 +481,6 @@ public slots: // private
     void processEvents();
     void refreshFpsButton(); // renders m_fpsButton from m_fpsIde / m_fpsCamera / m_fpsCameraValid
     void errorFilter(const QByteArray &data);
-    void configureSettings();
     void saveScript();
     void saveImage(const QPixmap &data);
     void saveTemplate(const QRect &rect);
@@ -713,7 +712,7 @@ private:
     QAction *m_enableFilteringExamplesAction;
 
     Core::Command *m_openDriveFolderCommand; QAction *m_openDriveFolderAction;
-    Core::Command *m_configureSettingsCommand; QAction *m_configureSettingsAction;
+    Core::Command *m_editWifiDebugCommand; QAction *m_editWifiDebugAction;
     Core::Command *m_saveCommand; QAction *m_saveAction;
     Core::Command *m_resetCommand; QAction *m_resetAction;
     Core::Command *m_developmentReleaseCommand; QAction *m_developmentReleaseAction;
