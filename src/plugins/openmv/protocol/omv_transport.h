@@ -79,6 +79,17 @@ public:
     QVariant recv_packet(bool poll_events = false, bool short_timeout = false,
                          qint64 timeout_ms_override = -1);
 
+    /*
+        Adaptive receive window for fragmented (frame) reads, learned from the observed
+        inter-fragment gaps of this connection (TCP-RTO-style: smoothed mean + 4x deviation +
+        margin, clamped). recv_packet's timeout restarts on every fragment, so this bounds the
+        *gap*, not the whole read: fragments normally arrive back-to-back, so a gap several
+        deviations past the mean means the tail was dropped and waiting longer is pure dead air.
+        Timing out early is cheap (a resync + one discarded frame); waiting is not. Returns -1
+        (use the default timeout) until enough fragments have been observed.
+    */
+    qint64 fragment_read_timeout_ms() const;
+
     typedef struct _stats {
         uint32_t sent;
         uint32_t received;
@@ -164,6 +175,14 @@ private:
 
     // Packet simulation
     double drop_rate;
+
+    // Inter-fragment gap estimator (Jacobson/Karels, like TCP's RTO): smoothed mean + mean
+    // deviation of the time between received fragments, sampled per FRAG packet. Feeds
+    // fragment_read_timeout_ms(). Bursty delivery (Windows scheduling) fattens the deviation
+    // term, so the window widens itself under jitter instead of firing spuriously.
+    double frag_gap_srtt = 0.0;   // smoothed gap (ms)
+    double frag_gap_var = 0.0;    // smoothed |deviation| (ms)
+    int frag_gap_samples = 0;
 
     // Packet buffers for send/recv
     OMVRingBuffer buf;

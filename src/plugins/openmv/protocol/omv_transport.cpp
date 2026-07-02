@@ -96,6 +96,20 @@ void OMVTransport::update_caps(bool crc, bool seq, bool ack, qsizetype max_paylo
     pbuf.fill(char(0));
 }
 
+qint64 OMVTransport::fragment_read_timeout_ms() const
+{
+    // Need a settled estimate before shrinking the window below the default; one whole frame
+    // provides ~27 samples, so this activates after the first successful frame read.
+    if (frag_gap_samples < 8) {
+        return -1;
+    }
+
+    const double kMarginMs = 50.0;   // absorbs one-off scheduler hiccups beyond the deviation term
+    const double kFloorMs = 100.0;   // never tighter than this
+    const double window = frag_gap_srtt + 4.0 * frag_gap_var + kMarginMs;
+    return qint64(qBound(kFloorMs, window, timeout * 1000.0));
+}
+
 uint32_t OMVTransport::_crc(QByteArrayView data, int crc_size) const
 {
     /*
@@ -455,6 +469,22 @@ QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout, qint64 
                     buf.consume(1);
                 }
                 continue;
+            }
+
+            // Sample the inter-fragment gap (timer restarted at the previous fragment; for the
+            // first fragment this is the request->first-data latency, which the window must also
+            // cover). Jacobson/Karels EWMA, same gains as TCP RTO.
+            {
+                const double sample = double(timer.elapsed());
+                if (!frag_gap_samples) {
+                    frag_gap_srtt = sample;
+                    frag_gap_var = sample / 2.0;
+                } else {
+                    const double err = sample - frag_gap_srtt;
+                    frag_gap_srtt += 0.125 * err;
+                    frag_gap_var += 0.25 * (qAbs(err) - frag_gap_var);
+                }
+                frag_gap_samples++;
             }
 
             timer.restart();
