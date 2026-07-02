@@ -1065,27 +1065,37 @@ void OpenMVPlugin::extensionsInitialized()
     m_developmentReleaseAction->setEnabled(false);
     connect(m_developmentReleaseAction, &QAction::triggered, this, &OpenMVPlugin::installTheLatestDevelopmentRelease);
 
-    // Settings Editor: a JSON-driven config GUI. Self-contained and useful in viewer mode,
-    // so it lives in the MicroPython Tools section but OUTSIDE the viewer-mode guard below.
+    // Settings Editor: a JSON-driven config GUI. Useful in viewer mode too, but there only for
+    // opening/editing an existing config -- authoring a new one ("Create Default Config") is a
+    // developer tool. So viewer mode gets a single self-describing action instead of the submenu.
     toolsMenu->addSeparator();
-    Core::ActionContainer *settingsEditorMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.SettingsEditorMenu"));
-    settingsEditorMenu->menu()->setTitle(Tr::tr("OpenMV Cam Settings Editor"));
-    settingsEditorMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
-    toolsMenu->addMenu(settingsEditorMenu);
+    if (m_viewerMode) {
+        QAction *openConfigAction = new QAction(Tr::tr("Open OpenMV Cam Settings Config File"), this);
+        Core::Command *openConfigCommand = Core::ActionManager::registerAction(openConfigAction, Utils::Id("OpenMV.OpenConfigFile"));
+        toolsMenu->addAction(openConfigCommand);
+        connect(openConfigAction, &QAction::triggered, this, [this] {
+            settingsEditorAction(m_portPath, [this] (const QString &p, const QByteArray &d, QString *e) { return writeFileToDriveAndFlush(p, d, e); });
+        });
+    } else {
+        Core::ActionContainer *settingsEditorMenu = Core::ActionManager::createMenu(Utils::Id("OpenMV.SettingsEditorMenu"));
+        settingsEditorMenu->menu()->setTitle(Tr::tr("OpenMV Cam Settings Editor"));
+        settingsEditorMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
+        toolsMenu->addMenu(settingsEditorMenu);
 
-    QAction *createDefaultConfigActionItem = new QAction(Tr::tr("Create Default Config"), this);
-    Core::Command *createDefaultConfigCommand = Core::ActionManager::registerAction(createDefaultConfigActionItem, Utils::Id("OpenMV.CreateDefaultConfig"));
-    settingsEditorMenu->addAction(createDefaultConfigCommand);
-    connect(createDefaultConfigActionItem, &QAction::triggered, this, [this] {
-        createDefaultConfigAction(m_portPath, [this] (const QString &p, const QByteArray &d, QString *e) { return writeFileToDriveAndFlush(p, d, e); });
-    });
+        QAction *createDefaultConfigActionItem = new QAction(Tr::tr("Create Default Config"), this);
+        Core::Command *createDefaultConfigCommand = Core::ActionManager::registerAction(createDefaultConfigActionItem, Utils::Id("OpenMV.CreateDefaultConfig"));
+        settingsEditorMenu->addAction(createDefaultConfigCommand);
+        connect(createDefaultConfigActionItem, &QAction::triggered, this, [this] {
+            createDefaultConfigAction(m_portPath, [this] (const QString &p, const QByteArray &d, QString *e) { return writeFileToDriveAndFlush(p, d, e); });
+        });
 
-    QAction *openConfigAction = new QAction(Tr::tr("Open Config File"), this);
-    Core::Command *openConfigCommand = Core::ActionManager::registerAction(openConfigAction, Utils::Id("OpenMV.OpenConfigFile"));
-    settingsEditorMenu->addAction(openConfigCommand);
-    connect(openConfigAction, &QAction::triggered, this, [this] {
-        settingsEditorAction(m_portPath, [this] (const QString &p, const QByteArray &d, QString *e) { return writeFileToDriveAndFlush(p, d, e); });
-    });
+        QAction *openConfigAction = new QAction(Tr::tr("Open Config File"), this);
+        Core::Command *openConfigCommand = Core::ActionManager::registerAction(openConfigAction, Utils::Id("OpenMV.OpenConfigFile"));
+        settingsEditorMenu->addAction(openConfigCommand);
+        connect(openConfigAction, &QAction::triggered, this, [this] {
+            settingsEditorAction(m_portPath, [this] (const QString &p, const QByteArray &d, QString *e) { return writeFileToDriveAndFlush(p, d, e); });
+        });
+    }
 
     // MicroPython Tools are PC-side scripting utilities, not part of the read-only viewer,
     // so the submenu is left out in viewer mode. It shares the section divider above with
