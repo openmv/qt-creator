@@ -312,6 +312,11 @@ void OpenMVPluginSerialPort_private::open(const QString &portName) {
         int override_max_payload = obj.value(QStringLiteral("overrideMaxPayload")).toInt(-1);
         if (override_max_payload >= 0) max_payload = override_max_payload;
 
+        // Cap to what this transport carries in one packet without lower-layer fragmentation (see
+        // OMVPort::maxPayload()): serial is the full buffer, UDP is one Ethernet-sized datagram. The
+        // device further caps to its own payload budget during caps negotiation.
+        max_payload = qMin(max_payload, m_port->maxPayload());
+
         double drop_rate = 0.0;
         double override_drop_rate = obj.value(QStringLiteral("overrideDropRate")).toDouble(-1.0);
         if (override_drop_rate >= 0.0) drop_rate = override_drop_rate;

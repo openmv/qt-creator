@@ -37,6 +37,13 @@ public:
     virtual bool reliableTransport() { return true; }
     virtual bool fullDuplexTransport() { return true; }
 
+    // Largest protocol payload (bytes) this transport should put in a single packet. A byte-stream
+    // transport (serial) can use the full protocol buffer; a UDP datagram must fit inside one link
+    // frame (Ethernet/WiFi MTU) or a single lost IP fragment drops the whole datagram and multiplies
+    // loss. The on-wire packet adds the header + CRC on top of this; the construction seam caps the
+    // negotiated max_payload to it. Default is the protocol max (serial/unknown).
+    virtual int maxPayload() { return 4096; }
+
     virtual void setReadBufferSize(qint64 size) = 0;
     virtual bool setBaudRate(qint32 baudRate) = 0;
 
@@ -111,6 +118,10 @@ class OMVNetworkPort : public OMVPort
 public:
     explicit OMVNetworkPort(const QString &name, QObject *parent = nullptr);
     OMVPortType_t portType() override { return OMVPortType_Network; }
+    // Keep each frame packet within one un-fragmented UDP datagram. 1400 sits safely under the 1472
+    // theoretical max (1500 MTU - 20 IPv4 - 8 UDP), leaving headroom for VPN/PPPoE/tunnel overhead;
+    // the on-wire packet is this + header + CRC (~1414 bytes).
+    int maxPayload() override { return 1400; }
     int readTimeoutMs() override;
     int readStallTimeoutMs() override;
 
