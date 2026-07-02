@@ -104,8 +104,16 @@ qint64 OMVTransport::fragment_read_timeout_ms() const
         return -1;
     }
 
+    // The floor is a SAFETY bound, not a tuning knob: the timer restarts per fragment, so a
+    // timeout must mean "the pipe is empty" -- nothing further is in flight. If the window is
+    // inside the link's burst-delay range (Windows batches UDP delivery in tens-of-ms bursts),
+    // a false trigger fires with datagrams still arriving, and those stale packets poison the
+    // resync handshake (recv_packet returns the first completed packet as "the response" and
+    // merges orphaned fragments into it) -> garbage caps -> wedged connection. 25ms was tried
+    // and disconnected under load; 100ms holds. Don't lower without first making resync drain
+    // stale input.
     const double kMarginMs = 50.0;   // absorbs one-off scheduler hiccups beyond the deviation term
-    const double kFloorMs = 100.0;   // never tighter than this
+    const double kFloorMs = 100.0;   // must exceed the link's worst-case delivery-burst gap
     const double window = frag_gap_srtt + 4.0 * frag_gap_var + kMarginMs;
     return qint64(qBound(kFloorMs, window, timeout * 1000.0));
 }
