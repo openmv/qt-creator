@@ -201,14 +201,18 @@ QByteArray OMVCamera::sendCmdWaitResp(uint8_t opcode,
     try {
         transport->send_packet(opcode, channel, 0, data);
 
-        // Frame reads (stream channel) arrive as UDP fragments that can drop; once the transport
-        // has learned this link's inter-fragment gap, bound the wait with that adaptive window so
-        // a lost tail costs ~100ms instead of the full command timeout. Recovery is unchanged: a
-        // timeout still resyncs (below) and retries. Control reads (TCP, reliable) keep the
-        // default timeout. Plain map lookup -- getChannelId() could recurse via updateChannels().
+        // Bulk-channel reads (stream frames, profiler dumps) are served zero-copy on the device
+        // (readp) and travel as UDP fragments that can drop. readp-ness isn't on the wire, but
+        // every readp channel is necessarily a LOCK channel (a raw pointer into a live buffer
+        // needs a locked snapshot), while the copying reads (stdout ringbuf) are not -- so LOCK
+        // identifies the UDP-routed reads. Once the transport has learned this link's
+        // inter-fragment gap, bound the wait with that adaptive window so a lost tail costs
+        // ~100ms instead of the full command timeout. Recovery is unchanged: a timeout still
+        // resyncs (below) and retries. Control reads (TCP, reliable) keep the default timeout.
+        // Plain map lookup -- getChannelId() could recurse via updateChannels().
         qint64 timeout_override = -1;
         if (opcode == OMVPOpcode::CHANNEL_READ &&
-            channel == channelsByName.value(QStringLiteral("stream"), 0)) {
+            (channelsById.value(channel).flags & OMVPChannelFlags::LOCK)) {
             timeout_override = transport->fragment_read_timeout_ms();
         }
 

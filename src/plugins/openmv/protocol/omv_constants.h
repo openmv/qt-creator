@@ -35,6 +35,19 @@ enum : uint8_t {
 };
 }
 
+namespace OMVPChannelFlags {
+enum : uint8_t {
+    /* OpenMV Protocol Channel Flags (omv_protocol_channel_flags_t, reported by CHANNEL_LIST) */
+    READ     = (1 << 0),
+    WRITE    = (1 << 1),
+    EXEC     = (1 << 2),
+    LOCK     = (1 << 3),
+    STREAM   = (1 << 4),
+    DYNAMIC  = (1 << 5),
+    PHYSICAL = (1 << 6),
+};
+}
+
 namespace OMVProto {
 enum : uint16_t {
     /* OpenMV Protocol Constants */
