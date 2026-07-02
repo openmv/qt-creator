@@ -172,6 +172,11 @@ private:
     void handleEvent(uint8_t channel_id, uint16_t event);
     void resync(bool grace_timeout = true);
 
+    // Bodies of readFrame()/readProfile(); the public wrappers absorb a second consecutive
+    // lost read (OMVPResyncException) because bulk reads over lossy UDP are best-effort.
+    bool readFrameInner(OMVFrame &outFrame);
+    QVariantList readProfileInner();
+
     QByteArray sendCmdWaitResp(uint8_t opcode,
                                uint8_t channel = 0,
                                const QByteArray &data = QByteArray());

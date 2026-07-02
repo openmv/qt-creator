@@ -862,6 +862,18 @@ QVariantList OMVCamera::readProfile()
     /*
         Read profiler data from the profile channel
     */
+    // Best-effort like readFrame: profiler dumps also ride lossy UDP, so don't let a second
+    // consecutive lost read escape as an exception (the resync already repaired the link) --
+    // return no records this poll instead. See readFrame for the full rationale.
+    try {
+        return readProfileInner();
+    } catch (const OMVPResyncException &) {
+        return QVariantList();
+    }
+}
+
+QVariantList OMVCamera::readProfileInner()
+{
     return retryIfFailed([this]() -> QVariantList {
         QVariantList records;
 
@@ -1000,6 +1012,21 @@ bool OMVCamera::readFrame(OMVFrame &outFrame)
     /*
         Read stream buffer data with header at the beginning and convert to RGB888
     */
+    // Frame reads are best-effort: their data travels over lossy UDP, so under sustained loss
+    // both retryIfFailed attempts can lose their read and the second OMVPResyncException would
+    // escape -- where callers treat any exception as a dead connection and tear the camera
+    // down. By the time that exception reaches here the resync has already repaired the link
+    // (sequence counters realigned, channels unlocked), so a missing frame is not an error:
+    // report "no frame this poll" and let the next poll proceed.
+    try {
+        return readFrameInner(outFrame);
+    } catch (const OMVPResyncException &) {
+        return false;
+    }
+}
+
+bool OMVCamera::readFrameInner(OMVFrame &outFrame)
+{
     return retryIfFailed([this, &outFrame]() -> bool {
         uint8_t stream_id = getChannelId(QStringLiteral("stream"));
         if (!stream_id) {
