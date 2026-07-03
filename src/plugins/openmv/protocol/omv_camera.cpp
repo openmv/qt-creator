@@ -542,7 +542,14 @@ void OMVCamera::updateChannels()
     channelsByName.clear();
 
     for (auto it = channelsById.cbegin(); it != channelsById.cend(); ++it) {
-        channelsByName.insert(it.value().name, it.key());
+        const QString &name = it.value().name;
+        // On a name collision, prefer a dynamically-registered channel over a built-in one. The WiFi
+        // debug agent registers its own dynamic "stdin" shadow so Run/Stop target its persistent-exec
+        // channel instead of the C stdin channel, whose exec path soft-resets the cam every run.
+        if (channelsByName.contains(name) && !(it.value().flags & OMVPChannelFlags::DYNAMIC)) {
+            continue;
+        }
+        channelsByName.insert(name, it.key());
     }
 
     omvDebug().nospace() << "📋 Registered channels (" << channelsById.size() << "):";
