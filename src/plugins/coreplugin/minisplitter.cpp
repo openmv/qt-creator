@@ -9,6 +9,10 @@
 #include <utils/theme/theme.h>
 
 #include <QApplication>
+// OPENMV-DIFF //
+#include <QMouseEvent>
+#include <QPointer>
+// OPENMV-DIFF //
 #include <QPaintEvent>
 #include <QPainter>
 #include <QSplitterHandle>
@@ -104,15 +108,38 @@ public:
         // region belonged to nobody who repainted it).
         // OPENMV-DIFF //
     }
+
+    // OPENMV-DIFF //
+    // Sibling coupling: while this handle is dragged with Ctrl (Cmd on macOS) held, the sibling is
+    // moved to the same on-screen position along its axis. Register both handles as each other's
+    // sibling (see Core::coupleSplitterDividers) for the bidirectional effect.
+    void setSibling(MiniSplitterHandle *sibling) { m_sibling = sibling; }
+    MiniSplitterHandle *sibling() const { return m_sibling; }
+    // OPENMV-DIFF //
+
 protected:
     bool event(QEvent *event) override;
     void resizeEvent(QResizeEvent *event) override;
     void paintEvent(QPaintEvent *event) override;
+    // OPENMV-DIFF //
+    void mousePressEvent(QMouseEvent *event) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
+    // OPENMV-DIFF //
 
 private:
+    // OPENMV-DIFF //
+    // Move this handle so its start lines up with a global-screen coordinate along this splitter's
+    // axis, and whether it's safe/sensible to move it from a sibling's drag right now.
+    void moveToGlobal(int globalAxisPos);
+    bool couplingAllowed() const;
+    // OPENMV-DIFF //
     bool m_lightColored;
     // OPENMV-DIFF //
     bool m_hovering = false;
+    QPointer<MiniSplitterHandle> m_sibling;
+    // Offset of the press point within the handle along the splitter axis -- mirrors
+    // QSplitterHandle's private mouseOffset so we can compute the same target position it moves to.
+    int m_grabOffset = 0;
     // OPENMV-DIFF //
 };
 
@@ -202,6 +229,94 @@ void MiniSplitterHandle::paintEvent(QPaintEvent *event)
     painter.fillRect(contentsRect(), color);
     // OPENMV-DIFF //
 }
+
+// OPENMV-DIFF //
+void MiniSplitterHandle::mousePressEvent(QMouseEvent *event)
+{
+    QSplitterHandle::mousePressEvent(event);
+
+    // Record where within the handle the drag grabbed, along the splitter axis -- this mirrors
+    // QSplitterHandle's private mouseOffset so mouseMoveEvent can compute the exact position the base
+    // class moves this handle to, without reading back the handle geometry (which lags a frame).
+    m_grabOffset = (orientation() == Qt::Horizontal) ? int(event->position().x())
+                                                     : int(event->position().y());
+}
+
+void MiniSplitterHandle::mouseMoveEvent(QMouseEvent *event)
+{
+    QSplitterHandle::mouseMoveEvent(event); // move this handle normally
+
+    // Ctrl (Cmd on macOS -> Qt::ControlModifier) couples the sibling: move it to the same on-screen
+    // position this handle is being dragged to. Compute that target from the event the same way the
+    // base class does (mouse minus grab offset) rather than reading this handle's geometry -- the
+    // geometry updates a frame late, which left the two dividers slightly out of line.
+    if ((event->modifiers() & Qt::ControlModifier) && m_sibling)
+    {
+        const QPointF g = event->globalPosition();
+        const int globalAxisPos =
+            ((orientation() == Qt::Horizontal) ? int(g.x()) : int(g.y())) - m_grabOffset;
+        m_sibling->moveToGlobal(globalAxisPos);
+    }
+}
+
+void MiniSplitterHandle::moveToGlobal(int globalAxisPos)
+{
+    if (!couplingAllowed())
+        return;
+
+    QSplitter *s = splitter();
+    const QPoint global = (orientation() == Qt::Horizontal) ? QPoint(globalAxisPos, 0)
+                                                            : QPoint(0, globalAxisPos);
+    const QPoint local = s->mapFromGlobal(global);
+    const int pos = (orientation() == Qt::Horizontal) ? local.x() : local.y();
+    moveSplitter(closestLegalPosition(pos));
+}
+
+bool MiniSplitterHandle::couplingAllowed() const
+{
+    if (!isVisible())
+        return false;
+
+    QSplitter *s = splitter();
+    if (!s)
+        return false;
+
+    // Handle i sits between widget i-1 and widget i; find our own index.
+    int idx = -1;
+    for (int i = 1; i < s->count(); ++i) {
+        if (s->handle(i) == static_cast<const QSplitterHandle *>(this)) {
+            idx = i;
+            break;
+        }
+    }
+    if (idx < 0)
+        return false;
+
+    const QWidget *a = s->widget(idx - 1);
+    const QWidget *b = s->widget(idx);
+    if (!a || !b || !a->isVisible() || !b->isVisible())
+        return false;
+
+    // Don't move the divider when either side is collapsed to nothing.
+    const QList<int> sizes = s->sizes();
+    return (sizes.value(idx - 1) > 0) && (sizes.value(idx) > 0);
+}
+
+void Core::coupleSplitterDividers(QSplitter *first, QSplitter *second)
+{
+    if (!first || !second)
+        return;
+
+    // Wire each splitter's first divider as the other's sibling (both directions). dynamic_cast so
+    // it is a safe no-op on any splitter whose handles are not MiniSplitterHandles.
+    auto *firstHandle = dynamic_cast<MiniSplitterHandle *>(first->handle(1));
+    auto *secondHandle = dynamic_cast<MiniSplitterHandle *>(second->handle(1));
+    if (firstHandle && secondHandle) {
+        firstHandle->setSibling(secondHandle);
+        secondHandle->setSibling(firstHandle);
+    }
+}
+// OPENMV-DIFF //
 
 /*!
     \class Core::MiniSplitter

@@ -2780,6 +2780,16 @@ void OpenMVPlugin::extensionsInitialized()
     connect(Core::MessageManager::outputWindow()->getParser(), &Core::OpenMVPluginEscapeCodeParser::fbBufferError, m_frameBuffer, &OpenMVPluginFB::fbBufferError);
 
     connect(Core::ICore::instance(), &Core::ICore::showEventSignal, this, [this, widget, settings, msplitter, hsplitter, vsplitter] {
+        // Couple the frame-buffer/histogram divider with the editor/serial-terminal divider so Ctrl
+        // (Cmd on macOS) + dragging either one moves both to the same height. Done here (on show),
+        // not at construction, because the Edit mode's output pane is only realized in the widget
+        // tree by now, so findChild can locate it. coupleSplitterDividers() is idempotent.
+        if (QWidget *outputPane = Core::ICore::mainWindow()->findChild<QWidget *>(QStringLiteral("EditModeOutputPanePlaceHolder")))
+        {
+            if (QSplitter *editSplitter = qobject_cast<QSplitter *>(outputPane->parentWidget()))
+                Core::coupleSplitterDividers(vsplitter, editSplitter);
+        }
+
         const bool haveH = settings->contains(SETTINGS_GROUP "/" HSPLITTER_STATE);
         const bool haveV = settings->contains(SETTINGS_GROUP "/" VSPLITTER_STATE);
         if(settings->contains(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_PATH) && settings->value(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_LOADED).toBool()) m_datasetEditor->setRootPath(settings->value(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_PATH).toString());
