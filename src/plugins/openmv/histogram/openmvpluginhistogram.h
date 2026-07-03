@@ -92,6 +92,11 @@ private:
     QCPGraph *m_channel1;
     QCPGraph *m_channel2;
 
+    // Per-graph exponentially-averaged plot data (display only; the stats readouts stay raw).
+    // Camera noise makes bin counts flicker frame to frame, so without this the curve's peaks
+    // visibly snap around between near-equal bumps.
+    QMap<QCPGraph *, QVector<double>> m_smoothedYs;
+
     Ui::OpenMVPluginHistogram *m_ui;
 };
 

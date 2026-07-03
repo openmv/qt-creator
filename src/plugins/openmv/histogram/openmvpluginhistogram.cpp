@@ -166,6 +166,79 @@ static inline int getValue(int value, int channel)
     }
 }
 
+// Feed the graph a spline-smoothed version of the histogram bins so the plot draws as a smooth
+// curve instead of a jagged point-to-point line (QCustomPlot has no native spline line style;
+// smoothing the data gets the same look and the area fill follows for free). Monotone cubic
+// interpolation (Fritsch-Carlson) rather than Catmull-Rom: it cannot overshoot the data, so
+// peaks round off smoothly AT the bin height (no ringing above 1.0 that would clamp into a flat
+// top) and valleys never dip below the axis. Subdivision adapts to the bin count so every
+// channel gets ~512 plotted points (coarse 32-bin RGB channels smooth the most; 256-bin
+// channels are already near pixel resolution).
+static void addSmoothedData(QCPGraph *graph, const QVector<double> &xs, const QVector<double> &ys)
+{
+    const int n = xs.size();
+
+    if (n < 3) {
+        for (int i = 0; i < n; i++) {
+            graph->addData(xs.at(i), ys.at(i));
+        }
+        return;
+    }
+
+    // Segment secants, then per-point tangents: zero at local extrema (this is what prevents
+    // overshoot), averaged secants elsewhere, with the Fritsch-Carlson limiter keeping the
+    // curve monotone within each segment.
+    QVector<double> d(n - 1);
+    for (int i = 0; i < n - 1; i++) {
+        const double h = xs.at(i + 1) - xs.at(i);
+        d[i] = h ? ((ys.at(i + 1) - ys.at(i)) / h) : 0.0;
+    }
+
+    QVector<double> m(n);
+    m[0] = d.first();
+    m[n - 1] = d.last();
+    for (int i = 1; i < n - 1; i++) {
+        m[i] = ((d.at(i - 1) * d.at(i)) <= 0.0) ? 0.0 : ((d.at(i - 1) + d.at(i)) / 2.0);
+    }
+    for (int i = 0; i < n - 1; i++) {
+        if (d.at(i) == 0.0) {
+            m[i] = 0.0;
+            m[i + 1] = 0.0;
+        } else {
+            const double a = m.at(i) / d.at(i);
+            const double b = m.at(i + 1) / d.at(i);
+            const double s = (a * a) + (b * b);
+            if (s > 9.0) {
+                const double tau = 3.0 / sqrt(s);
+                m[i] = tau * a * d.at(i);
+                m[i + 1] = tau * b * d.at(i);
+            }
+        }
+    }
+
+    const int subdiv = qBound(2, 512 / n, 16);
+    graph->addData(xs.first(), ys.first());
+
+    for (int i = 0; i < n - 1; i++) {
+        const double h = xs.at(i + 1) - xs.at(i);
+
+        for (int s = 1; s <= subdiv; s++) {
+            const double t = s / double(subdiv);
+            const double t2 = t * t;
+            const double t3 = t2 * t;
+            // Cubic Hermite basis
+            const double h00 = (2.0 * t3) - (3.0 * t2) + 1.0;
+            const double h10 = t3 - (2.0 * t2) + t;
+            const double h01 = (-2.0 * t3) + (3.0 * t2);
+            const double h11 = t3 - t2;
+            const double x = xs.at(i) + (t * h);
+            const double y = (h00 * ys.at(i)) + (h10 * h * m.at(i))
+                             + (h01 * ys.at(i + 1)) + (h11 * h * m.at(i + 1));
+            graph->addData(x, y);
+        }
+    }
+}
+
 void OpenMVPluginHistogram::updatePlot(QCPGraph *graph, int channel)
 {
     QImage image = m_pixmap.toImage();
@@ -405,10 +478,39 @@ void OpenMVPluginHistogram::updatePlot(QCPGraph *graph, int channel)
 
     graph->clearData();
 
+    QVector<double> xs(vector.size());
+    QVector<double> ys(vector.size());
+
+    // Leave ~8% air above the tallest (mode) peak: y is normalized so the mode bin is the
+    // maximum, and with the axis range pinned at [0, 1] that peak would kiss the plot ceiling
+    // and read as clipped flat even though the spline rounds it.
+    const double kHeadroom = 0.92;
+
     for(int i = 0; i < vector.size(); i++)
     {
-        graph->addData(getValue(i, channel), mode_count ? (vector[i] / double(mode_count)) : 0);
+        xs[i] = getValue(i, channel);
+        ys[i] = mode_count ? (kHeadroom * vector[i] / double(mode_count)) : 0;
     }
+
+    // Temporal smoothing (display only): camera noise flickers the bin counts every frame, and
+    // mode-relative normalization rescales the whole curve whenever two near-equal bins swap
+    // being the tallest -- so peaks visibly snap around. Blend each frame into an exponential
+    // average so competing peaks crossfade instead. Alpha trades responsiveness for calm
+    // (0.3 = a ~3-4 frame tail). A size mismatch means the color space changed; start fresh.
+    const double kAlpha = 0.3;
+    QVector<double> &prev = m_smoothedYs[graph];
+
+    if(prev.size() == ys.size())
+    {
+        for(int i = 0; i < ys.size(); i++)
+        {
+            ys[i] = (kAlpha * ys[i]) + ((1.0 - kAlpha) * prev[i]);
+        }
+    }
+
+    prev = ys;
+
+    addSmoothedData(graph, xs, ys);
 }
 
 OpenMVPluginHistogram::OpenMVPluginHistogram(QWidget *parent) : QWidget(parent), m_colorSpace(RGB_COLOR_SPACE), m_pixmap(QPixmap()), m_ui(new Ui::OpenMVPluginHistogram)
