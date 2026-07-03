@@ -33,6 +33,7 @@
 
 #include "openmvtr.h"
 
+#include <utils/elidinglabel.h>
 #include <utils/theme/theme.h>
 
 #define RGB_COLOR_SPACE_R 0
@@ -516,6 +517,20 @@ void OpenMVPluginHistogram::updatePlot(QCPGraph *graph, int channel)
 OpenMVPluginHistogram::OpenMVPluginHistogram(QWidget *parent) : QWidget(parent), m_colorSpace(RGB_COLOR_SPACE), m_pixmap(QPixmap()), m_ui(new Ui::OpenMVPluginHistogram)
 {
     m_ui->setupUi(this);
+
+    // Let the histogram pane compress. The stat labels are Utils::ElidingLabel in the .ui, but
+    // our ElidingLabel keeps QLabel's Preferred policy (see the OPENMV-DIFF in elidinglabel.cpp),
+    // so the grid would still refuse to shrink below the full text width -- Ignored lets the
+    // columns compress and the text elide. Likewise the plots: QCustomPlot's minimumSizeHint
+    // (axis rect + margins) floors the pane height/width unless the policy ignores it.
+    const QList<Utils::ElidingLabel *> statLabels = findChildren<Utils::ElidingLabel *>();
+    for (Utils::ElidingLabel *label : statLabels) {
+        label->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
+    }
+
+    for (QCustomPlot *plot : {m_ui->C0Plot, m_ui->C1Plot, m_ui->C2Plot}) {
+        plot->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
+    }
 
     m_ui->C0Plot->installEventFilter(this);
     m_ui->C0Plot->setAutoAddPlottableToLegend(false);

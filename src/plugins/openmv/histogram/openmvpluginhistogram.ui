@@ -40,112 +40,112 @@
        <number>0</number>
       </property>
       <item row="1" column="1">
-       <widget class="QLabel" name="C0MinValue">
+       <widget class="Utils::ElidingLabel" name="C0MinValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QLabel" name="C0MaxLabel">
+       <widget class="Utils::ElidingLabel" name="C0MaxLabel">
         <property name="text">
          <string>Max</string>
         </property>
        </widget>
       </item>
       <item row="0" column="2">
-       <widget class="QLabel" name="C0MedianLabel">
+       <widget class="Utils::ElidingLabel" name="C0MedianLabel">
         <property name="text">
          <string>Median</string>
         </property>
        </widget>
       </item>
       <item row="1" column="3">
-       <widget class="QLabel" name="C0MaxValue">
+       <widget class="Utils::ElidingLabel" name="C0MaxValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="0" column="3">
-       <widget class="QLabel" name="C0MedianValue">
+       <widget class="Utils::ElidingLabel" name="C0MedianValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="0" column="4">
-       <widget class="QLabel" name="C0ModeLabel">
+       <widget class="Utils::ElidingLabel" name="C0ModeLabel">
         <property name="text">
          <string>Mode</string>
         </property>
        </widget>
       </item>
       <item row="0" column="5">
-       <widget class="QLabel" name="C0ModeValue">
+       <widget class="Utils::ElidingLabel" name="C0ModeValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="1" column="5">
-       <widget class="QLabel" name="C0LQValue">
+       <widget class="Utils::ElidingLabel" name="C0LQValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="1" column="4">
-       <widget class="QLabel" name="C0LQLabel">
+       <widget class="Utils::ElidingLabel" name="C0LQLabel">
         <property name="text">
          <string>LQ</string>
         </property>
        </widget>
       </item>
       <item row="1" column="6">
-       <widget class="QLabel" name="C0UQLabel">
+       <widget class="Utils::ElidingLabel" name="C0UQLabel">
         <property name="text">
          <string>UQ</string>
         </property>
        </widget>
       </item>
       <item row="0" column="6">
-       <widget class="QLabel" name="C0StDevLabel">
+       <widget class="Utils::ElidingLabel" name="C0StDevLabel">
         <property name="text">
          <string>StDev</string>
         </property>
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QLabel" name="C0MinLabel">
+       <widget class="Utils::ElidingLabel" name="C0MinLabel">
         <property name="text">
          <string>Min</string>
         </property>
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLabel" name="C0MeanValue">
+       <widget class="Utils::ElidingLabel" name="C0MeanValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="0" column="0">
-       <widget class="QLabel" name="C0MeanLabel">
+       <widget class="Utils::ElidingLabel" name="C0MeanLabel">
         <property name="text">
          <string>Mean</string>
         </property>
        </widget>
       </item>
       <item row="0" column="7">
-       <widget class="QLabel" name="C0StDevValue">
+       <widget class="Utils::ElidingLabel" name="C0StDevValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="1" column="7">
-       <widget class="QLabel" name="C0UQValue">
+       <widget class="Utils::ElidingLabel" name="C0UQValue">
         <property name="text">
          <string>000</string>
         </property>
@@ -173,112 +173,112 @@
        <number>0</number>
       </property>
       <item row="1" column="1">
-       <widget class="QLabel" name="C1MinValue">
+       <widget class="Utils::ElidingLabel" name="C1MinValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QLabel" name="C1MaxLabel">
+       <widget class="Utils::ElidingLabel" name="C1MaxLabel">
         <property name="text">
          <string>Max</string>
         </property>
        </widget>
       </item>
       <item row="0" column="2">
-       <widget class="QLabel" name="C1MedianLabel">
+       <widget class="Utils::ElidingLabel" name="C1MedianLabel">
         <property name="text">
          <string>Median</string>
         </property>
        </widget>
       </item>
       <item row="1" column="3">
-       <widget class="QLabel" name="C1MaxValue">
+       <widget class="Utils::ElidingLabel" name="C1MaxValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="0" column="3">
-       <widget class="QLabel" name="C1MedianValue">
+       <widget class="Utils::ElidingLabel" name="C1MedianValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="0" column="4">
-       <widget class="QLabel" name="C1ModeLabel">
+       <widget class="Utils::ElidingLabel" name="C1ModeLabel">
         <property name="text">
          <string>Mode</string>
         </property>
        </widget>
       </item>
       <item row="0" column="5">
-       <widget class="QLabel" name="C1ModeValue">
+       <widget class="Utils::ElidingLabel" name="C1ModeValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="1" column="5">
-       <widget class="QLabel" name="C1LQValue">
+       <widget class="Utils::ElidingLabel" name="C1LQValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="1" column="4">
-       <widget class="QLabel" name="C1LQLabel">
+       <widget class="Utils::ElidingLabel" name="C1LQLabel">
         <property name="text">
          <string>LQ</string>
         </property>
        </widget>
       </item>
       <item row="1" column="6">
-       <widget class="QLabel" name="C1UQLabel">
+       <widget class="Utils::ElidingLabel" name="C1UQLabel">
         <property name="text">
          <string>UQ</string>
         </property>
        </widget>
       </item>
       <item row="0" column="6">
-       <widget class="QLabel" name="C1StDevLabel">
+       <widget class="Utils::ElidingLabel" name="C1StDevLabel">
         <property name="text">
          <string>StDev</string>
         </property>
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QLabel" name="C1MinLabel">
+       <widget class="Utils::ElidingLabel" name="C1MinLabel">
         <property name="text">
          <string>Min</string>
         </property>
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLabel" name="C1MeanValue">
+       <widget class="Utils::ElidingLabel" name="C1MeanValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="0" column="0">
-       <widget class="QLabel" name="C1MeanLabel">
+       <widget class="Utils::ElidingLabel" name="C1MeanLabel">
         <property name="text">
          <string>Mean</string>
         </property>
        </widget>
       </item>
       <item row="0" column="7">
-       <widget class="QLabel" name="C1StDevValue">
+       <widget class="Utils::ElidingLabel" name="C1StDevValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="1" column="7">
-       <widget class="QLabel" name="C1UQValue">
+       <widget class="Utils::ElidingLabel" name="C1UQValue">
         <property name="text">
          <string>000</string>
         </property>
@@ -306,112 +306,112 @@
        <number>0</number>
       </property>
       <item row="1" column="1">
-       <widget class="QLabel" name="C2MinValue">
+       <widget class="Utils::ElidingLabel" name="C2MinValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QLabel" name="C2MaxLabel">
+       <widget class="Utils::ElidingLabel" name="C2MaxLabel">
         <property name="text">
          <string>Max</string>
         </property>
        </widget>
       </item>
       <item row="0" column="2">
-       <widget class="QLabel" name="C2MedianLabel">
+       <widget class="Utils::ElidingLabel" name="C2MedianLabel">
         <property name="text">
          <string>Median</string>
         </property>
        </widget>
       </item>
       <item row="1" column="3">
-       <widget class="QLabel" name="C2MaxValue">
+       <widget class="Utils::ElidingLabel" name="C2MaxValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="0" column="3">
-       <widget class="QLabel" name="C2MedianValue">
+       <widget class="Utils::ElidingLabel" name="C2MedianValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="0" column="4">
-       <widget class="QLabel" name="C2ModeLabel">
+       <widget class="Utils::ElidingLabel" name="C2ModeLabel">
         <property name="text">
          <string>Mode</string>
         </property>
        </widget>
       </item>
       <item row="0" column="5">
-       <widget class="QLabel" name="C2ModeValue">
+       <widget class="Utils::ElidingLabel" name="C2ModeValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="1" column="5">
-       <widget class="QLabel" name="C2LQValue">
+       <widget class="Utils::ElidingLabel" name="C2LQValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="1" column="4">
-       <widget class="QLabel" name="C2LQLabel">
+       <widget class="Utils::ElidingLabel" name="C2LQLabel">
         <property name="text">
          <string>LQ</string>
         </property>
        </widget>
       </item>
       <item row="1" column="6">
-       <widget class="QLabel" name="C2UQLabel">
+       <widget class="Utils::ElidingLabel" name="C2UQLabel">
         <property name="text">
          <string>UQ</string>
         </property>
        </widget>
       </item>
       <item row="0" column="6">
-       <widget class="QLabel" name="C2StDevLabel">
+       <widget class="Utils::ElidingLabel" name="C2StDevLabel">
         <property name="text">
          <string>StDev</string>
         </property>
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QLabel" name="C2MinLabel">
+       <widget class="Utils::ElidingLabel" name="C2MinLabel">
         <property name="text">
          <string>Min</string>
         </property>
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLabel" name="C2MeanValue">
+       <widget class="Utils::ElidingLabel" name="C2MeanValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="0" column="0">
-       <widget class="QLabel" name="C2MeanLabel">
+       <widget class="Utils::ElidingLabel" name="C2MeanLabel">
         <property name="text">
          <string>Mean</string>
         </property>
        </widget>
       </item>
       <item row="0" column="7">
-       <widget class="QLabel" name="C2StDevValue">
+       <widget class="Utils::ElidingLabel" name="C2StDevValue">
         <property name="text">
          <string>000</string>
         </property>
        </widget>
       </item>
       <item row="1" column="7">
-       <widget class="QLabel" name="C2UQValue">
+       <widget class="Utils::ElidingLabel" name="C2UQValue">
         <property name="text">
          <string>000</string>
         </property>
@@ -428,6 +428,11 @@
    <extends>QWidget</extends>
    <header>openmv/qcustomplot/qcustomplot.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Utils::ElidingLabel</class>
+   <extends>QLabel</extends>
+   <header location="global">utils/elidinglabel.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
