@@ -480,7 +480,11 @@ public slots: // private
                         bool waitForCamera = false,
                         QString previousMapping = QString(),
                         OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE,
-                        bool forceBootloaderEntry = false);
+                        bool forceBootloaderEntry = false,
+                        // "Load Custom Firmware" with a local .zip unpacks it and passes the bundle
+                        // dir here; getTheLatestDevelopmentFirmware() flashes from it instead of
+                        // downloading. Empty => normal dev download.
+                        QString customFirmwareBundleDir = QString());
     void disconnectClicked(bool reset = false, bool enterBootloader = false);
     void startClicked();
     void stopClicked();
@@ -516,7 +520,7 @@ private:
     // Parse the A records (hostname -> IPv4) out of a DNS/mDNS response datagram. Defined in
     // openmvpluginprotocol.cpp; used by the mDNS discovery listener.
     static QList<QPair<QString, QHostAddress> > parseMdnsARecords(const QByteArray &data);
-    bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder);
+    bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder, const QString &customBundleDir = QString());
     QList<QPair<QString, QString> > querySerialPorts(const QStringList &portList);
     QString portDisplayName(const QString &port);
 

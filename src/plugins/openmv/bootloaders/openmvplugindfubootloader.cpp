@@ -484,7 +484,11 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
                     if (installTheLatestDevelopmentFirmware)
                     {
-                        path = QFileInfo(firmwarePath).path() + QDir::separator() + QFileInfo(path).fileName();
+                        // Prefer the romfs staged next to the firmware (dev bundle or custom .zip);
+                        // if it isn't there (e.g. a custom zip that shipped no romfs) fall back to
+                        // the released image, so a requested reset still writes something.
+                        const QString devPath = QFileInfo(firmwarePath).path() + QDir::separator() + QFileInfo(path).fileName();
+                        if (QFileInfo::exists(devPath)) path = devPath;
                     }
 
                     downloadFirmware(Tr::tr("Flashing Firmware"), command, process,

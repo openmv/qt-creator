@@ -35,6 +35,8 @@
 #include "app/app_version.h"
 #include "tools/usbproblems.h"
 
+#include <QDirIterator>
+
 #include <utils/async.h>
 
 #include <QFuture>
@@ -943,7 +945,7 @@ void OpenMVPlugin::bootloaderClicked()
     Utils::PathChooser *pathChooser = new Utils::PathChooser();
     pathChooser->setExpectedKind(Utils::PathChooser::File);
     pathChooser->setPromptDialogTitle(Tr::tr("Firmware Path"));
-    pathChooser->setPromptDialogFilter(Tr::tr("Firmware Binary (*.bin *.dfu *.img)"));
+    pathChooser->setPromptDialogFilter(Tr::tr("Firmware Binary (*.bin *.dfu *.img *.zip)"));
     pathChooser->setFilePath(Utils::FilePath::fromVariant(
         settings->value(SETTINGS_GROUP "/" LAST_FIRMWARE_PATH, QDir::homePath())));
     pathChooser->setHistoryCompleter(LAST_FIRMWARE_HISTORY, false);
@@ -1004,8 +1006,44 @@ void OpenMVPlugin::bootloaderClicked()
             settings->setValue(SETTINGS_GROUP "/" LAST_DFU_RESET_ROM_FS_STATE, resetROMFS);
             delete dialog;
 
-            connectClicked(true, forceFirmwarePath, flashFSErase,
-                           false, false, false, QString(), resetROMFS ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE);
+            if(forceFirmwarePath.endsWith(QStringLiteral(".zip"), Qt::CaseInsensitive))
+            {
+                // A firmware .zip is the build output for one board -- the firmware image(s) sit flat
+                // at the zip root (firmware.bin, romfs0.img, ...), i.e. the contents of one arch dir
+                // of the dev bundle. Unpack it flat and install via the dev-firmware code path, which
+                // picks the image for the connected board and injects the AE3 .lst. Pass the unpacked
+                // bundle dir as customFirmwareBundleDir so it flashes from the zip instead of
+                // downloading.
+                QFile zipFile(forceFirmwarePath);
+                QByteArray zipData = zipFile.open(QIODevice::ReadOnly) ? zipFile.readAll() : QByteArray();
+                const QString bundleDir = QDir::tempPath() + QStringLiteral("/openmv-custom-fw");
+                QDir(bundleDir).removeRecursively();
+
+                if((!zipData.isEmpty()) && QDir().mkpath(bundleDir) && extractZipToDir(zipData, bundleDir))
+                {
+                    // If the zip ships a romfs image it must be applied -- force the reset regardless
+                    // of the checkbox (the user may forget it). Otherwise honor the checkbox, which
+                    // then falls back to the released romfs.
+                    QDirIterator romfsIt(bundleDir, QStringList{QStringLiteral("romfs*.img")},
+                                         QDir::Files, QDirIterator::Subdirectories);
+                    const bool zipHasRomfs = romfsIt.hasNext();
+
+                    connectClicked(true, QString(), flashFSErase, false, true, false, QString(),
+                                   (zipHasRomfs || resetROMFS) ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE,
+                                   false, bundleDir);
+                }
+                else
+                {
+                    QMessageBox::critical(Core::ICore::dialogParent(),
+                        Tr::tr("Bootloader"),
+                        Tr::tr("Unable to unpack the firmware zip \"%L1\"!").arg(forceFirmwarePath));
+                }
+            }
+            else
+            {
+                connectClicked(true, forceFirmwarePath, flashFSErase,
+                               false, false, false, QString(), resetROMFS ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE);
+            }
         }
         else
         {
@@ -1192,15 +1230,21 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
     }
 }
 
-bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder)
+bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder, const QString &customBundleDir)
 {
     const QString tempTarget = QDir::cleanPath(QDir::fromNativeSeparators(QDir::tempPath() + QDir::separator() + firmwareFileName));
     QFile::remove(tempTarget);
 
+    // "Load Custom Firmware" with a local .zip unpacks it and passes the bundle dir as customBundleDir.
+    // When set, flash from it and skip the network sync. The .lst branch below still pulls the listing
+    // from the released firmware resources, so the IDE-injected AE3 .lst keeps working -- only its
+    // binaries come from the zip.
+    const bool useCustom = !customBundleDir.isEmpty();
+
     // Both the .lst and single-file paths flash from the cached dev firmware bundle.
     // syncDevFirmwareBlocking() re-downloads the 54.7 MB bundle only when the dev version
     // actually changed (with a modal progress dialog), so repeat installs don't re-fetch.
-    if(!syncDevFirmwareBlocking())
+    if((!useCustom) && (!syncDevFirmwareBlocking()))
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
@@ -1209,7 +1253,30 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
         return false;
     }
 
-    const Utils::FilePath cachedDir = Core::ICore::allUsersResourcePath(QStringLiteral("firmware-dev")).pathAppended(arch);
+    Utils::FilePath cachedDir;
+
+    if(useCustom)
+    {
+        // A custom .zip is the build output for one board. Tolerate both a flat zip (images at the
+        // root, e.g. firmware.bin/romfs0.img) and a dev-bundle-style layout (images under <arch>/),
+        // either of which may be wrapped in one top-level directory. Resolve the directory that
+        // actually holds this board's images.
+        const Utils::FilePath root = Utils::FilePath::fromString(customBundleDir);
+        const QStringList subs = QDir(root.toString()).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+
+        if(root.pathAppended(arch).exists())
+            cachedDir = root.pathAppended(arch);                                    // <root>/<arch>
+        else if((subs.size() == 1) && root.pathAppended(subs.first()).pathAppended(arch).exists())
+            cachedDir = root.pathAppended(subs.first()).pathAppended(arch);         // <root>/<wrapper>/<arch>
+        else if(subs.size() == 1)
+            cachedDir = root.pathAppended(subs.first());                            // <root>/<wrapper> (flat inside)
+        else
+            cachedDir = root;                                                       // flat at the root
+    }
+    else
+    {
+        cachedDir = Core::ICore::allUsersResourcePath(QStringLiteral("firmware-dev")).pathAppended(arch);
+    }
 
     // A .lst is flashed as the set of binaries it names, which the bootloader resolves relative
     // to the .lst's own directory. The .lst itself isn't shipped in the dev bundle, so take it
@@ -1239,6 +1306,21 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
         return QFile(Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
             .pathAppended(originalFirmwareFolder)
             .pathAppended(firmwareFileName).toString()).copy(tempTarget);
+    }
+
+    // For a custom local bundle, stage its romfs image(s) next to the firmware so the bootloader's
+    // romfs-reset step -- which, for a dev/custom install, looks for romfsN.img in the firmware's
+    // own directory -- finds them. (The .lst path above already stages everything; this covers the
+    // common single-firmware.bin boards, whose zip carries romfs0.img alongside firmware.bin.)
+    if(useCustom)
+    {
+        const QString tempDir = QFileInfo(tempTarget).path();
+        for(const QFileInfo &info : QDir(cachedDir.toString()).entryInfoList(QStringList{QStringLiteral("*.img")}, QDir::Files))
+        {
+            const QString dst = tempDir + QDir::separator() + info.fileName();
+            QFile::remove(dst);
+            QFile(info.absoluteFilePath()).copy(dst);
+        }
     }
 
     const Utils::FilePath cached = cachedDir.pathAppended(firmwareFileName);
@@ -1672,7 +1754,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                   bool waitForCamera,
                                   QString previousMapping,
                                   OpenMVROMFSAccess romfsAccess,
-                                  bool forceBootloaderEntry)
+                                  bool forceBootloaderEntry,
+                                  QString customFirmwareBundleDir)
 {
     // Latch the operation before any early return so the flag is already set
     // while the internal pre-disconnect / disconnectDone trampoline runs,
@@ -1692,9 +1775,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         if(m_connected)
         {
             m_connect_disconnect = connect(this, &OpenMVPlugin::disconnectDone, this,
-                [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess, forceBootloaderEntry] {
-                QTimer::singleShot(0, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess, forceBootloaderEntry] {
-                    connectClicked(forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess, forceBootloaderEntry);
+                [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess, forceBootloaderEntry, customFirmwareBundleDir] {
+                QTimer::singleShot(0, this, [this, forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess, forceBootloaderEntry, customFirmwareBundleDir] {
+                    connectClicked(forceBootloader, forceFirmwarePath, forceFlashFSErase, justEraseFlashFs, installTheLatestDevelopmentFirmware, waitForCamera, previousMapping, romfsAccess, forceBootloaderEntry, customFirmwareBundleDir);
                 });
             });
 
@@ -2706,7 +2789,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                     if(installTheLatestDevelopmentFirmware)
                     {
-                        if(!getTheLatestDevelopmentFirmware(QStringLiteral(OLD_API_BOARD), &firmwarePath, QStringLiteral("firmware"), OLD_API_BOARD))
+                        if(!getTheLatestDevelopmentFirmware(QStringLiteral(OLD_API_BOARD), &firmwarePath, QStringLiteral("firmware"), OLD_API_BOARD, customFirmwareBundleDir))
                         {
                             CLOSE_CONNECT_END();
                         }
@@ -2832,7 +2915,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                             if(installTheLatestDevelopmentFirmware)
                             {
-                                if(!getTheLatestDevelopmentFirmware(mappings.value(temp), &firmwarePath, defaultFirmwareNameMapping.value(temp), originalFirmwareFolder))
+                                if(!getTheLatestDevelopmentFirmware(mappings.value(temp), &firmwarePath, defaultFirmwareNameMapping.value(temp), originalFirmwareFolder, customFirmwareBundleDir))
                                 {
                                     CLOSE_CONNECT_END();
                                 }
@@ -4054,7 +4137,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                          installTheLatestDevelopmentFirmware,
                          waitForCamera,
                          previousMapping,
-                         romfsAccess] {
+                         romfsAccess,
+                         forceBootloaderEntry,
+                         customFirmwareBundleDir] {
             connectClicked(forceBootloader,
                            forceFirmwarePath,
                            forceFlashFSErase,
@@ -4062,7 +4147,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                            installTheLatestDevelopmentFirmware,
                            waitForCamera,
                            previousMapping,
-                           romfsAccess);
+                           romfsAccess,
+                           forceBootloaderEntry,
+                           customFirmwareBundleDir);
         });
     }
 }
