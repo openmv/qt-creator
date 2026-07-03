@@ -70,15 +70,16 @@ static const char *kConfigEnd   = "# <<< OPENMV WIFI DEBUG CONFIG <<<";
 static const char *kUserLine     = "# ===== OPENMV WIFI DEBUG: YOUR CODE BELOW (preserved across edits) =====";
 
 // The auto-generated agent body (everything between the config block and the user line). It reads
-// the config dict above, brings up the link, advertises "omv-<serial>.local", and bridges a UDP
-// socket to the on-cam protocol engine so the IDE can debug over the network.
+// the config dict above, brings up the link, advertises "omv-<serial>.local", and bridges the
+// hybrid transport (TCP control + UDP frames) to the on-cam protocol engine so the IDE can debug
+// over the network. This is the device mirror of the IDE's OMVNetworkPort and the C simulator.
 //
-// NOTE (first draft): this wires the transport + discovery so the existing (stdin-based) IDE can
-// connect over wifi. A "Run" still triggers the C soft reset (which drops wifi briefly); boot.py
-// re-runs and re-establishes everything, and the IDE re-discovers via mDNS. Eliminating that reset
-// (run scripts in-place from a Python control channel) is the next iteration.
+// Scripts run in boot.py's own foreground loop via a dynamic "stdin" shadow channel, NOT through the
+// firmware's stdin-exec path (which soft-resets the cam after every run -- over the network that
+// would tear down WiFi and drop the IDE). boot.py never returns, so that reset path never runs, and
+// Stop is delivered as an ordinary KeyboardInterrupt so the VM stays alive between runs.
 static const char *kAgentBody = R"PY(
-import json, network, socket, struct, time, machine
+import json, network, socket, struct, time, machine, errno, micropython, sys, gc
 
 try:
     import protocol
@@ -87,14 +88,38 @@ except ImportError:
 
 _cfg = json.loads(_WIFI_DEBUG_CONFIG)
 
-_DEBUG_PORT = 0xABD1            # UDP port the IDE connects to (fixed; matches the IDE)
-_MDNS_GROUP = "224.0.0.251"
+_DEBUG_PORT = 0xABD1            # port the IDE connects to (fixed; matches the IDE). TCP (control)
+_MDNS_GROUP = "224.0.0.251"    # and UDP (frame data) both bind it -- independent port spaces.
 _MDNS_PORT  = 5353
 _HOSTNAME   = ("omv-" + _cfg.get("serial", "000000000000"))[:32]
 
+# Protocol wire header byte offsets: SYNC[2] SEQ[1] CHAN[1] FLAGS[1] OPCODE[1] LEN[2] HCRC[2].
+_OP_CHANNEL_READ = 0x26
+_FLAG_EVENT      = 0x20
+# Channels whose CHANNEL_READ responses are the bulk, readp-backed (zero-copy) sources -- camera
+# frames and profiler dumps. Only their read responses go over UDP (fire-and-forget, high
+# throughput; a dropped frame just skips). Everything else -- control, stdin, and the copying
+# stdout reads -- stays on the reliable TCP connection.
+_BULK_CHANNELS   = (3, 4)      # stream, profile
+
+# Socket errnos that mean "would block / try again" rather than a dead link. EWOULDBLOCK aliases
+# EAGAIN on these builds; the WINC1500's offloaded stack reports a full transmit buffer as ENOBUFS.
+_RETRY_ERRNOS = (errno.EAGAIN, getattr(errno, "ENOBUFS", errno.EAGAIN))
+
+# stdin channel ioctl commands (mirror omv_channel_ioctl_stdin_t) -- the IDE's Run/Stop/Reset.
+_STDIN_STOP  = 0x01
+_STDIN_EXEC  = 0x02
+_STDIN_RESET = 0x03
+
 
 def _nic():
-    return network.LAN() if _cfg.get("interface") == "ethernet" else network.WLAN(network.STA_IF)
+    if _cfg.get("interface") == "ethernet":
+        # Not every cam has an Ethernet interface (e.g. the Alif build has no network.LAN). Fail
+        # with a clear message instead of a raw AttributeError; the caller's guard keeps USB alive.
+        if not hasattr(network, "LAN"):
+            raise OSError("this camera has no Ethernet interface")
+        return network.LAN()
+    return network.WLAN(network.STA_IF)
 
 
 def _bring_up():
@@ -110,11 +135,24 @@ def _bring_up():
     if _cfg.get("interface") != "ethernet":
         wifi = _cfg.get("wifi", {})
         sec = wifi.get("security", "auto")
+        # Map the config's security name to the driver's security constant. The CYW43 radios name
+        # these network.WLAN.SEC_* while the WINC1500 names them network.WLAN.OPEN / WPA_PSK. "open"
+        # MUST resolve to the open constant -- otherwise the WINC falls back to its WPA/WPA2 default
+        # and can't join a passwordless network -- so try both names (and test "is None", since the
+        # open constant can be 0). Any mode a radio doesn't define (WEP/WPA3 on the WINC) stays None
+        # and lets connect() pick, rather than raising AttributeError and aborting boot.
         if sec == "auto":
+            sec_const = None
+        elif sec == "open":
+            sec_const = getattr(network.WLAN, "SEC_OPEN", None)
+            if sec_const is None:
+                sec_const = getattr(network.WLAN, "OPEN", None)   # WINC1500 naming
+        else:
+            sec_const = getattr(network.WLAN, "SEC_" + sec.upper(), None)
+        if sec_const is None:
             nic.connect(wifi.get("ssid", ""), wifi.get("password", ""))
         else:
-            nic.connect(wifi.get("ssid", ""), wifi.get("password", ""),
-                        security=getattr(network.WLAN, "SEC_" + sec.upper()))
+            nic.connect(wifi.get("ssid", ""), wifi.get("password", ""), security=sec_const)
 
     ip = _cfg.get("ip", {})
     if ip.get("mode") == "static":
@@ -144,62 +182,328 @@ def _mdns_packet(name, ip):
     return pkt
 
 
-class _UDPTransport:
-    # Backs protocol channel 0 (PHYSICAL): IDE datagrams in, our replies out.
+class _NetworkTransport:
+    # Backs protocol channel 0 (PHYSICAL). All control rides an accepted TCP connection; bulk-read
+    # responses (frames, profiler) go out over UDP to the IDE's frame endpoint, which IS the TCP
+    # peer address -- the IDE binds its frame socket to its TCP local port, so no separate handshake
+    # is needed. One port serves both planes (TCP and UDP port spaces are independent).
+    @staticmethod
+    def _bound_socket(socktype, port, backlog=0):
+        # A non-blocking socket bound to port, preferring SO_REUSEADDR (helps rebind after a reset
+        # on lwIP). Some offloaded stacks -- the WINC1500 -- CLOSE the socket when handed an
+        # unsupported option, so if setsockopt raises we start over without it rather than binding a
+        # dead socket. backlog > 0 makes it a TCP listener.
+        for with_reuse in (True, False):
+            s = socket.socket(socket.AF_INET, socktype)
+            s.setblocking(False)
+            if with_reuse:
+                try:
+                    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                except OSError:
+                    continue       # option closed the socket -> retry once without it
+            s.bind(("0.0.0.0", port))
+            if backlog:
+                s.listen(backlog)
+            return s
+
     def __init__(self, port):
-        self._sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self._sock.setblocking(False)
-        self._sock.bind(("0.0.0.0", port))
-        self._peer = None
+        self._lsock = self._bound_socket(socket.SOCK_STREAM, port, backlog=1)
+        self._usock = self._bound_socket(socket.SOCK_DGRAM, port)
+        self._conn = None
+        self._peer = None      # IDE UDP frame endpoint == its TCP peer address
         self._rx = bytearray()
+        self._tx = bytearray()
 
-    def _pump(self):
-        try:
-            while True:
-                data, addr = self._sock.recvfrom(1500)
-                if not data:
-                    break
-                self._peer = addr
-                self._rx += data
-        except OSError:
-            pass
+    def _drop(self):
+        if self._conn is not None:
+            try:
+                self._conn.close()
+            except Exception:
+                pass
+        self._conn = None
+        self._peer = None
+        del self._rx[:]
+        del self._tx[:]
 
+    # is_active() runs the accept: the C protocol engine polls the transport only while it reports
+    # active, so a first connection must be taken here (size()/read() are never reached otherwise).
     def is_active(self):
-        return True
+        if self._conn is None:
+            try:
+                conn, addr = self._lsock.accept()
+                conn.setblocking(False)
+                try:
+                    conn.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+                except Exception:
+                    pass
+                self._conn = conn
+                self._peer = addr
+            except OSError:
+                pass           # no pending connection yet
+        return self._conn is not None
+
+    def _recv(self):
+        while self._conn is not None:
+            try:
+                data = self._conn.recv(1500)
+            except OSError as e:
+                if e.args[0] != errno.EAGAIN:
+                    self._drop()   # real error (reset/broken pipe) -> tear down for reconnect
+                break              # EAGAIN just means nothing more is pending right now
+            if not data:           # b"" -> peer closed the connection
+                self._drop()
+                break
+            self._rx += data
 
     def size(self):
-        self._pump()
+        self._recv()
         return len(self._rx)
 
     def read(self, offset, size):
-        self._pump()
         chunk = bytes(self._rx[:size])
         del self._rx[:size]
         return chunk
 
     def write(self, offset, data):
-        if self._peer is not None:
-            try:
-                self._sock.sendto(bytes(data), self._peer)
-            except OSError:
-                return 0
+        # send_packet() writes header/payload/crc as separate calls then flush()es once; coalesce
+        # here and route the whole packet on flush().
+        self._tx += bytes(data)
         return len(data)
+
+    def flush(self):
+        # send_packet() writes header/payload/crc as separate writes then flush()es once. Peek the
+        # coalesced packet's header and route it: a bulk (readp-channel) frame/profiler read
+        # response goes out as one UDP datagram (fire-and-forget); everything else -- control,
+        # stdin echo, stdout, events -- must arrive intact, so it rides the TCP connection.
+        if not self._tx:
+            return 0
+        buf = bytes(self._tx)
+        self._tx = bytearray()
+
+        bulk = (len(buf) >= 6 and buf[5] == _OP_CHANNEL_READ
+                and buf[3] in _BULK_CHANNELS and not (buf[4] & _FLAG_EVENT))
+        if bulk and self._peer is not None:
+            try:
+                self._usock.sendto(buf, self._peer)
+            except OSError:
+                pass           # datagram dropped: a lost frame just skips (best-effort by design)
+            return 0
+
+        if self._conn is None:
+            return 0           # no control link yet -> drop it (nothing sends before the IDE connects)
+
+        # Reliable control: the whole packet must reach the IDE or the byte stream desyncs, so a full
+        # send buffer is backpressure to retry, not an error. lwIP signals that with EAGAIN; the
+        # WINC1500 signals it with ENOBUFS or by returning 0 bytes sent. Only a genuine socket error,
+        # or the buffer staying wedged for 2s (peer gone), tears the link down.
+        mv = memoryview(buf)
+        sent = 0
+        deadline = time.ticks_add(time.ticks_ms(), 2000)
+        while sent < len(buf):
+            try:
+                n = self._conn.send(mv[sent:])
+            except OSError as e:
+                if e.args[0] not in _RETRY_ERRNOS:
+                    self._drop()   # reset/broken pipe -> tear down; the IDE reconnects
+                    return -1
+                n = 0              # backpressure -> fall through to the wait below
+            if n:
+                sent += n
+                continue
+            if time.ticks_diff(deadline, time.ticks_ms()) <= 0:
+                self._drop()       # send buffer wedged full for 2s -> treat the peer as gone
+                return -1
+            time.sleep_ms(1)       # let the send buffer drain, then retry
+        return 0
+
+
+def _raise_kbd(_):
+    # Delivered into the foreground via micropython.schedule() from the Stop ioctl (which runs in the
+    # background protocol poll). It's a plain KeyboardInterrupt -- an ordinary Python exception that
+    # _run_one catches -- so the VM unwinds cleanly and stays runnable. No vm_abort, no abnormal exit.
+    raise KeyboardInterrupt
+
+
+class _ScriptChannel:
+    # A dynamically-registered shadow of the built-in C "stdin" channel. The IDE resolves the
+    # Run/Stop channel by name and prefers this dynamic one, so scripts are driven through here and
+    # never touch the C stdin channel's resetting exec path.
+    def __init__(self):
+        self._buf = bytearray()
+        self._pending = None     # script text handed to the foreground loop
+        self._running = False    # reported to the IDE as scriptState (poll bit + events)
+        self.handle = None       # ProtocolChannel handle (set after register) for send_event()
+
+    def write(self, offset, data):
+        if offset == 0:
+            del self._buf[:]
+        self._buf += bytes(data)
+        return len(data)
+
+    def poll(self):
+        return self._running
+
+    def ioctl(self, cmd, length, arg):
+        if cmd == _STDIN_EXEC:
+            if not self._buf:
+                return -1
+            self._pending = bytes(self._buf)      # the foreground loop picks this up and runs it
+        elif cmd == _STDIN_STOP:
+            if self._running:
+                micropython.schedule(_raise_kbd, 0)
+        elif cmd == _STDIN_RESET:
+            del self._buf[:]
+        return 0
+
+    def _set_running(self, running):
+        self._running = running
+        if self.handle is not None:
+            try:
+                self.handle.send_event(1 if running else 0)   # drives the IDE's scriptState
+            except Exception:
+                pass
+
+
+def _run_one(ch, script):
+    # Run one script to completion in the foreground. print()/tracebacks reach the IDE via the C
+    # stdout channel and frames via the stream channel -- both serviced by the background protocol
+    # poll, which keeps running between this script's bytecodes.
+    ch._set_running(True)
+    try:
+        # Fresh namespace each run so globals don't leak between runs (hardware state persists).
+        exec(compile(script, "<script>", "exec"), {"__name__": "__main__"})
+    except KeyboardInterrupt:
+        pass                          # Stop pressed in the IDE
+    except Exception as e:
+        sys.print_exception(e)        # show the traceback in the IDE terminal
+    finally:
+        ch._set_running(False)
+        gc.collect()
+
+
+def _serve_scripts(ch):
+    # Own the foreground forever. Returning would let the firmware main loop take over and soft-reset
+    # the cam on the next run. main.py is run once here at power-up (the firmware would normally do
+    # that) before serving IDE Run/Stop.
+    try:
+        with open("main.py") as f:
+            main_py = f.read()
+    except OSError:
+        main_py = None
+    if main_py:
+        _run_one(ch, main_py)
+
+    while True:
+        script = ch._pending
+        if script is None:
+            time.sleep_ms(20)         # idle: let the background poll service frames/stdout/control
+            continue
+        ch._pending = None
+        _run_one(ch, script)
+
+
+class _SafeIface:
+    # Wraps the live WLAN/LAN so a debug script's own network setup can't tear down the link carrying
+    # the session. Config calls are ignored; queries report the live state so setup code proceeds.
+    def __init__(self, real):
+        self._real = real
+
+    def active(self, *a):
+        return True
+
+    def connect(self, *a, **k):
+        pass
+
+    def disconnect(self, *a):
+        pass
+
+    def isconnected(self, *a):
+        return True
+
+    def ifconfig(self, *a):
+        return self._real.ifconfig()          # report the live config; ignore any set
+
+    def config(self, *a, **k):
+        if len(a) == 1 and not k:
+            return self._real.config(a[0])     # allow reads like config("mac")
+        return None                            # ignore sets (e.g. pm=PM_NONE)
+
+    def __getattr__(self, name):
+        return getattr(self._real, name)       # status(), scan(), PM_NONE, ... pass through
+
+
+class _IfaceFactory:
+    # Callable stand-in for network.WLAN / network.LAN that also exposes the class constants (SEC_*,
+    # PM_NONE, ...) so scripts referencing e.g. network.WLAN.SEC_WPA_WPA2 keep working.
+    def __init__(self, real_cls):
+        self._cls = real_cls
+
+    def __call__(self, *a, **k):
+        return _SafeIface(self._cls(*a, **k))
+
+    def __getattr__(self, name):
+        return getattr(self._cls, name)
+
+
+class _SafeNetwork:
+    # Drop-in for the `network` module seen by user scripts: interface constructors return guarded
+    # wrappers and hostname() ignores sets, while everything else (STA_IF, SEC_*, ...) passes through.
+    def __init__(self, real):
+        self._real = real
+        if hasattr(real, "WLAN"):
+            self.WLAN = _IfaceFactory(real.WLAN)
+        if hasattr(real, "LAN"):
+            self.LAN = _IfaceFactory(real.LAN)
+
+    def hostname(self, *a):
+        return self._real.hostname() if not a else None   # ignore sets (would move mDNS)
+
+    def __getattr__(self, name):
+        return getattr(self._real, name)
 
 
 def _start_wifi_debug():
     if _cfg.get("interface") == "disabled":
-        return   # WiFi debugging turned off -- the cam stays on USB debugging
+        return   # WiFi debugging turned off -- leave the USB debug transport in place
+    if protocol is None:
+        return   # no protocol module on this build -> nothing to bridge
+
     nic = _bring_up()
     ip = nic.ifconfig()[0]
 
-    if protocol is not None:
-        protocol.init(poll_ms=5)   # registers the C stdin/stdout/stream channels, no transport
-        transport = _UDPTransport(_DEBUG_PORT)
-        protocol.register(name="wifi", backend=transport, flags=protocol.CHANNEL_FLAG_PHYSICAL)
+    # The C firmware already initialised the protocol engine before boot.py ran: it registered the
+    # USB transport on channel 0 plus the stdin/stdout/stream/profile channels and started the
+    # protocol poll timer. We deliberately do NOT call protocol.init() again -- re-init re-inserts
+    # the same static soft-timer entry into the timer heap (melding the node with itself) and
+    # corrupts it. Registering a PHYSICAL transport instead drops it into channel 0, replacing the
+    # USB transport while keeping the data channels and the running poll timer intact. The IDE
+    # negotiates the protocol capabilities (CRC/seq/ACK/max-payload) over the link via
+    # GET_CAPS/SET_CAPS, so inheriting the firmware's defaults here is correct. Bring the link up
+    # FIRST and register LAST, so a failure above leaves USB debugging in place as a fallback.
+    # The built-in C stdin channel's EXEC/STOP ioctls schedule a vm_abort that would unwind boot.py
+    # and hand control back to the firmware main loop, which soft-resets the cam. Disable the
+    # interrupt char so those ioctls no-op (our own Stop uses a scheduled KeyboardInterrupt instead);
+    # this also makes an older IDE that still targets the C stdin degrade to "no run", not a reset.
+    micropython.kbd_intr(-1)
+
+    transport = _NetworkTransport(_DEBUG_PORT)
+    protocol.register(name="network", backend=transport, flags=protocol.CHANNEL_FLAG_PHYSICAL)
+
+    # Shadow "stdin": the IDE prefers this dynamically-registered channel over the built-in one, so
+    # Run/Stop come here instead of the C stdin channel (whose exec path resets the cam). Scripts run
+    # in our foreground loop (_serve_scripts) below.
+    script_ch = _ScriptChannel()
+    script_ch.handle = protocol.register(name="stdin", backend=script_ch,
+                                         flags=protocol.CHANNEL_FLAG_WRITE)
 
     # Re-announce our A record periodically (under the IDE's ~20s retire window) so a late-starting
-    # IDE finds us and the entry stays fresh.
+    # IDE finds us and the entry stays fresh. Bind the source to our interface IP so the multicast
+    # egresses the active network interface rather than lwIP's default one.
     ann = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+        ann.bind((ip, 0))
+    except OSError:
+        pass
     pkt = _mdns_packet(_HOSTNAME, ip)
 
     def _announce(_t):
@@ -211,8 +515,26 @@ def _start_wifi_debug():
     _announce(None)
     machine.Timer(-1, period=5000, callback=_announce)
 
+    # Shield the debug link: a user script's own WiFi setup (active/connect/ifconfig/hostname) must
+    # not reconfigure or tear down the interface the debug session rides on. Swap in a guarded
+    # `network` so those calls no-op while queries report the live state; sockets are untouched. Our
+    # agent keeps its real `network` (captured at import), so this only affects code that imports it
+    # later -- i.e. user scripts.
+    try:
+        sys.modules["network"] = _SafeNetwork(network)
+    except Exception:
+        pass
 
-_start_wifi_debug()
+    _serve_scripts(script_ch)   # owns the foreground forever -- never returns (see the function)
+
+
+try:
+    _start_wifi_debug()
+except Exception as _e:
+    # A setup failure must never brick the cam. Because the USB debug transport is only replaced on
+    # success (after the link is up, just before returning), any error here leaves USB debugging
+    # working -- so the IDE can still connect over the cable to fix the configuration.
+    print("OpenMV WiFi debug: setup failed:", _e)
 )PY";
 
 // ---------------------------------------------------------------------------
