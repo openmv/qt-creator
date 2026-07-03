@@ -8,6 +8,9 @@
 #include "../documentmanager.h"
 #include "../icore.h"
 #include "../actionmanager/actionmanager.h"
+// OPENMV-DIFF //
+#include "../actionmanager/actioncontainer.h"
+// OPENMV-DIFF //
 #include "../actionmanager/command.h"
 #include "../actionmanager/commandsfile.h"
 
@@ -28,8 +31,15 @@
 #include <QKeySequence>
 #include <QLabel>
 #include <QLineEdit>
+// OPENMV-DIFF //
+#include <QMenu>
+#include <QMenuBar>
+// OPENMV-DIFF //
 #include <QPointer>
 #include <QPushButton>
+// OPENMV-DIFF //
+#include <QSet>
+// OPENMV-DIFF //
 #include <QTimer>
 #include <QTreeWidgetItem>
 
@@ -653,10 +663,68 @@ void ShortcutSettingsWidget::clear()
     m_scitems.clear();
 }
 
+// OPENMV-DIFF //
+// Recursively collect the leaf QActions reachable from a menu/menu-bar action, gathering only the
+// ones the user can actually see. aboutToShow() is emitted on each submenu first so any dynamic
+// hiding (e.g. OpenMV strips the File/Edit menus to a single item on aboutToShow) is applied before
+// visibility is read -- otherwise the snapshot would be stale. Mirrors ActionsFilter's menu walk.
+static void collectVisibleActions(QAction *action, QSet<QAction *> &out)
+{
+    if (!action || action->isSeparator() || !action->isVisible())
+        return;
+    if (QMenu *menu = action->menu()) {
+        emit menu->aboutToShow();
+        const QList<QAction *> actions = menu->actions();
+        for (QAction *child : actions)
+            collectVisibleActions(child, out);
+    } else {
+        out.insert(action);
+    }
+}
+
+// Build the set of actions the user can actually reach in the GUI: everything under the visible
+// menu bar, the editor's right-click context menu, and the few commands viewer mode moves into the
+// status bar (which have no menu entry there). The shortcut list is filtered to this set so it never
+// exposes the hundreds of actions OpenMV hides/disables, and it stays in sync automatically -- the
+// live menus are the source of truth, so there is no allow/deny list to maintain and viewer mode is
+// handled for free. The context-menu and status-bar ids are referenced as string literals to avoid
+// a coreplugin -> plugin dependency.
+static QSet<QAction *> visibleCommandActions()
+{
+    QSet<QAction *> out;
+
+    const auto walkContainer = [&out](const Id &containerId, bool isMenuBar) {
+        ActionContainer *container = ActionManager::actionContainer(containerId);
+        if (!container)
+            return;
+        const QList<QAction *> actions = isMenuBar
+            ? (container->menuBar() ? container->menuBar()->actions() : QList<QAction *>())
+            : (container->menu() ? container->menu()->actions() : QList<QAction *>());
+        for (QAction *action : actions)
+            collectVisibleActions(action, out);
+    };
+
+    walkContainer(Constants::MENU_BAR, true);
+    walkContainer(Id("TextEditor.StandardContextMenu"), false);
+
+    for (const char *id : {"OpenMV.Connect", "OpenMV.Disconnect", "OpenMV.Start", "OpenMV.Stop"}) {
+        if (Command *c = ActionManager::command(Id(id)))
+            if (c->action())
+                out.insert(c->action());
+    }
+
+    return out;
+}
+// OPENMV-DIFF //
+
 void ShortcutSettingsWidget::initialize()
 {
     clear();
     QMap<QString, QTreeWidgetItem *> sections;
+
+    // OPENMV-DIFF //
+    const QSet<QAction *> visibleActions = visibleCommandActions();
+    // OPENMV-DIFF //
 
     const QList<Command *> commands = ActionManager::commands();
     for (Command *c : commands) {
@@ -664,6 +732,10 @@ void ShortcutSettingsWidget::initialize()
             continue;
         if (c->action() && c->action()->isSeparator())
             continue;
+        // OPENMV-DIFF //
+        if (!visibleActions.contains(c->action()))
+            continue;
+        // OPENMV-DIFF //
 
         QTreeWidgetItem *item = nullptr;
         auto s = new ShortcutItem;
@@ -765,7 +837,10 @@ public:
 
 ShortcutSettings::ShortcutSettings()
     // OPENMV-DIFF //
-    : Core::IOptionsPage(false)
+    // Was hidden from the preferences dialog; now shown, but the widget filters the list down to the
+    // actions that are actually reachable in the GUI (see visibleCommandActions()).
+    // : Core::IOptionsPage(false)
+    : Core::IOptionsPage(true)
     // OPENMV-DIFF //
 {
     setId(Constants::SETTINGS_ID_SHORTCUTS);
