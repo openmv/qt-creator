@@ -1963,27 +1963,30 @@ void OpenMVPlugin::extensionsInitialized()
         docsMenu->setOnAllDisabledBehavior(Core::ActionContainer::Show);
         helpMenu->addMenu(docsMenu, Core::Constants::G_HELP_SUPPORT);
 
-        typedef QPair<QString, QString> QStringPair;
-        QList<QStringPair> docsPages;
-        docsPages.append(QStringPair(Tr::tr("Home"),      QStringLiteral("html/index.html")));
-        docsPages.append(QStringPair(Tr::tr("Tutorial"),  QStringLiteral("html/openmvcam/tutorial/index.html")));
-        docsPages.append(QStringPair(Tr::tr("Libraries"), QStringLiteral("html/library/index.html")));
-        docsPages.append(QStringPair(Tr::tr("Boards"),    QStringLiteral("html/openmvcam/quickref.html")));
-        docsPages.append(QStringPair(Tr::tr("Shields"),   QStringLiteral("html/openmvcam/shields.html")));
-        docsPages.append(QStringPair(Tr::tr("Sensors"),   QStringLiteral("html/openmvcam/sensors.html")));
-        docsPages.append(QStringPair(Tr::tr("Language"),  QStringLiteral("html/reference/index.html")));
-        docsPages.append(QStringPair(Tr::tr("CPython"),   QStringLiteral("html/genrst/index.html")));
-        docsPages.append(QStringPair(Tr::tr("Internals"), QStringLiteral("html/develop/index.html")));
-        docsPages.append(QStringPair(Tr::tr("Changelog"), QStringLiteral("html/changelog/index.html")));
-        docsPages.append(QStringPair(Tr::tr("License"),   QStringLiteral("html/license.html")));
+        // id is the English page name (kept ASCII/stable) so the command reads e.g. "OpenMV.Docs.Home"
+        // -- that is what shows up in the keyboard shortcut editor; title is the translated menu text.
+        struct DocsPage { const char *id; QString title; QString path; };
+        const QList<DocsPage> docsPages = {
+            {"Home",      Tr::tr("Home"),      QStringLiteral("html/index.html")},
+            {"Tutorial",  Tr::tr("Tutorial"),  QStringLiteral("html/openmvcam/tutorial/index.html")},
+            {"Libraries", Tr::tr("Libraries"), QStringLiteral("html/library/index.html")},
+            {"Boards",    Tr::tr("Boards"),    QStringLiteral("html/openmvcam/quickref.html")},
+            {"Shields",   Tr::tr("Shields"),   QStringLiteral("html/openmvcam/shields.html")},
+            {"Sensors",   Tr::tr("Sensors"),   QStringLiteral("html/openmvcam/sensors.html")},
+            {"Language",  Tr::tr("Language"),  QStringLiteral("html/reference/index.html")},
+            {"CPython",   Tr::tr("CPython"),   QStringLiteral("html/genrst/index.html")},
+            {"Internals", Tr::tr("Internals"), QStringLiteral("html/develop/index.html")},
+            {"Changelog", Tr::tr("Changelog"), QStringLiteral("html/changelog/index.html")},
+            {"License",   Tr::tr("License"),   QStringLiteral("html/license.html")},
+        };
 
-        int docsPageIndex = 0;
-        for(const QStringPair &page : docsPages)
+        for(const DocsPage &page : docsPages)
         {
-            const QString path = page.second;
-            QAction *docsPageAction = new QAction(page.first, this);
+            const QString path = page.path;
+            QAction *docsPageAction = new QAction(page.title, this);
+            const QByteArray commandId = QByteArrayLiteral("OpenMV.Docs.") + page.id;
             Core::Command *docsPageCommand = Core::ActionManager::registerAction(docsPageAction,
-                Utils::Id(QString(QStringLiteral("OpenMV.Docs.%1")).arg(docsPageIndex++).toUtf8().constData()));
+                Utils::Id(commandId.constData()));
             docsMenu->addAction(docsPageCommand);
             connect(docsPageAction, &QAction::triggered, this, [this, path] {
                 // Resolve "html/..." against the dev docs (html-dev) when a dev cam
