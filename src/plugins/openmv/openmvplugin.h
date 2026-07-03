@@ -521,6 +521,12 @@ private:
     // openmvpluginprotocol.cpp; used by the mDNS discovery listener.
     static QList<QPair<QString, QHostAddress> > parseMdnsARecords(const QByteArray &data);
     bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder, const QString &customBundleDir = QString());
+    // In viewer mode (a simple end-user tool) the OpenMV-Cam-specific post-flash instructions
+    // (self-test, blinking blue LED, main.py, internal flash-drive mount) mean nothing, so collapse a
+    // firmware/erase completion message to a plain "wait for the device to restart". Returns the
+    // detailed text unchanged when not in viewer mode. viewerAction, when set, is a physical step the
+    // user must still perform (e.g. removing a jumper wire) that is kept in the viewer message.
+    QString viewerModeFirmwareText(const QString &detailed, const QString &viewerAction = QString()) const;
     QList<QPair<QString, QString> > querySerialPorts(const QStringList &portList);
     QString portDisplayName(const QString &port);
 

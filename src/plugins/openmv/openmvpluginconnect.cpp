@@ -1340,6 +1340,18 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
     return QFile(cached.toString()).copy(tempTarget);
 }
 
+QString OpenMVPlugin::viewerModeFirmwareText(const QString &detailed, const QString &viewerAction) const
+{
+    if(!m_viewerMode)
+    {
+        return detailed;
+    }
+
+    return Tr::tr("Update complete!\n\n")
+        + (viewerAction.isEmpty() ? QString() : (viewerAction + QStringLiteral("\n\n")))
+        + Tr::tr("Please wait for the device to finish restarting. This can take a little while.");
+}
+
 QList<QPair<QString, QString> > OpenMVPlugin::querySerialPorts(const QStringList &portList)
 {
     QList<QPair<QString, QString> > results;
