@@ -3313,7 +3313,10 @@ bool OpenMVPlugin::delayedInitialize()
                         }
                         else
                         {
-                            m_availableWifiPorts[existing].time = wifiPort.time;
+                            // Same camera re-announcing -- refresh the whole entry, not just the
+                            // timestamp, so an address change (LAN <-> WiFi switch) takes effect on
+                            // the first announcement from the new interface.
+                            m_availableWifiPorts[existing] = wifiPort;
                         }
                     }
                 }

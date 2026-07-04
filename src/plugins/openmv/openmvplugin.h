@@ -380,7 +380,11 @@ public:
 
     bool operator ==(const wifiPort_t &port) const
     {
-        return (addressAndPort == port.addressAndPort) && (name == port.name);
+        // The host name is the camera's identity (it embeds the USB serial). The address is NOT
+        // part of it: a cam switched between interfaces (LAN <-> WiFi) re-announces from a new IP,
+        // and matching on the address too would list the same camera twice until the stale entry
+        // retires.
+        return name == port.name;
     }
 };
 
