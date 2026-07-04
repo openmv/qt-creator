@@ -26,7 +26,10 @@
    </item>
    <item>
     <widget class="QWidget" name="C0Stats" native="true">
-     <layout class="QGridLayout" name="C0StatsLayout">
+     <layout class="QHBoxLayout" name="C0StatsOuterLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
       <property name="leftMargin">
        <number>6</number>
       </property>
@@ -39,6 +42,30 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
+      <item>
+       <widget class="QLabel" name="C0ChannelLabel">
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="text">
+         <string>R</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="C0StatsLayout">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
       <item row="1" column="1">
        <widget class="Utils::ElidingLabel" name="C0MinValue">
         <property name="text">
@@ -151,6 +178,8 @@
         </property>
        </widget>
       </item>
+       </layout>
+      </item>
      </layout>
     </widget>
    </item>
@@ -159,7 +188,10 @@
    </item>
    <item>
     <widget class="QWidget" name="C1Stats" native="true">
-     <layout class="QGridLayout" name="C1StatsLayout">
+     <layout class="QHBoxLayout" name="C1StatsOuterLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
       <property name="leftMargin">
        <number>6</number>
       </property>
@@ -172,6 +204,30 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
+      <item>
+       <widget class="QLabel" name="C1ChannelLabel">
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="text">
+         <string>G</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="C1StatsLayout">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
       <item row="1" column="1">
        <widget class="Utils::ElidingLabel" name="C1MinValue">
         <property name="text">
@@ -284,6 +340,8 @@
         </property>
        </widget>
       </item>
+       </layout>
+      </item>
      </layout>
     </widget>
    </item>
@@ -292,7 +350,10 @@
    </item>
    <item>
     <widget class="QWidget" name="C2Stats" native="true">
-     <layout class="QGridLayout" name="C2StatsLayout">
+     <layout class="QHBoxLayout" name="C2StatsOuterLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
       <property name="leftMargin">
        <number>6</number>
       </property>
@@ -305,6 +366,30 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
+      <item>
+       <widget class="QLabel" name="C2ChannelLabel">
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="text">
+         <string>B</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="C2StatsLayout">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
       <item row="1" column="1">
        <widget class="Utils::ElidingLabel" name="C2MinValue">
         <property name="text">
@@ -416,6 +501,8 @@
          <string>000</string>
         </property>
        </widget>
+      </item>
+       </layout>
       </item>
      </layout>
     </widget>

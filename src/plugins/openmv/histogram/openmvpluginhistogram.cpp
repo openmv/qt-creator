@@ -528,6 +528,12 @@ OpenMVPluginHistogram::OpenMVPluginHistogram(QWidget *parent) : QWidget(parent),
         label->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
     }
 
+    // Keep the channel labels (R/G/B, ...) at their minimum width so they hug the left of each stats
+    // row instead of centering in a wide column.
+    m_ui->C0ChannelLabel->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+    m_ui->C1ChannelLabel->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+    m_ui->C2ChannelLabel->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+
     for (QCustomPlot *plot : {m_ui->C0Plot, m_ui->C1Plot, m_ui->C2Plot}) {
         plot->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
     }
@@ -730,7 +736,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_channel0->setPen(QPen(QBrush(QColor(255, 0, 0)), 0, Qt::SolidLine));
             m_channel0->setBrush(QBrush(QColor(255, 200, 200), Qt::SolidPattern));
             m_ui->C0Plot->rescaleAxes();
-            m_ui->C0Plot->yAxis->setLabel(Tr::tr("R"));
+            m_ui->C0ChannelLabel->setText(Tr::tr("R"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
             m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -746,7 +752,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_channel1->setPen(QPen(QBrush(QColor(0, 255, 0)), 0, Qt::SolidLine));
             m_channel1->setBrush(QBrush(QColor(200, 255, 200), Qt::SolidPattern));
             m_ui->C1Plot->rescaleAxes();
-            m_ui->C1Plot->yAxis->setLabel(Tr::tr("G"));
+            m_ui->C1ChannelLabel->setText(Tr::tr("G"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
             m_ui->C1Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -762,7 +768,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_channel2->setPen(QPen(QBrush(QColor(0, 0, 255)), 0, Qt::SolidLine));
             m_channel2->setBrush(QBrush(QColor(200, 200, 255), Qt::SolidPattern));
             m_ui->C2Plot->rescaleAxes();
-            m_ui->C2Plot->yAxis->setLabel(Tr::tr("B"));
+            m_ui->C2ChannelLabel->setText(Tr::tr("B"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
             m_ui->C2Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -787,7 +793,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_channel0->setPen(QPen(QBrush(QColor(143, 143, 143)), 0, Qt::SolidLine));
             m_channel0->setBrush(QBrush(QColor(200, 200, 200), Qt::SolidPattern));
             m_ui->C0Plot->rescaleAxes();
-            m_ui->C0Plot->yAxis->setLabel(Tr::tr("Y"));
+            m_ui->C0ChannelLabel->setText(Tr::tr("Y"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
             m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -812,7 +818,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_channel0->setPen(QPen(QBrush(QColor(143, 143, 143)), 0, Qt::SolidLine));
             m_channel0->setBrush(QBrush(QColor(200, 200, 200), Qt::SolidPattern));
             m_ui->C0Plot->rescaleAxes();
-            m_ui->C0Plot->yAxis->setLabel(Tr::tr("L"));
+            m_ui->C0ChannelLabel->setText(Tr::tr("L"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
             m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -828,7 +834,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_channel1->setPen(QPen(QBrush(QColor(204, 255, 0)), 0, Qt::SolidLine));
             m_channel1->setBrush(QBrush(QColor(244, 255, 200), Qt::SolidPattern));
             m_ui->C1Plot->rescaleAxes();
-            m_ui->C1Plot->yAxis->setLabel(Tr::tr("A"));
+            m_ui->C1ChannelLabel->setText(Tr::tr("A"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
             m_ui->C1Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -844,7 +850,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_channel2->setPen(QPen(QBrush(QColor(0, 102, 255)), 0, Qt::SolidLine));
             m_channel2->setBrush(QBrush(QColor(200, 222, 255), Qt::SolidPattern));
             m_ui->C2Plot->rescaleAxes();
-            m_ui->C2Plot->yAxis->setLabel(Tr::tr("B"));
+            m_ui->C2ChannelLabel->setText(Tr::tr("B"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
             m_ui->C2Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -869,7 +875,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_channel0->setPen(QPen(QBrush(QColor(143, 143, 143)), 0, Qt::SolidLine));
             m_channel0->setBrush(QBrush(QColor(200, 200, 200), Qt::SolidPattern));
             m_ui->C0Plot->rescaleAxes();
-            m_ui->C0Plot->yAxis->setLabel(Tr::tr("Y"));
+            m_ui->C0ChannelLabel->setText(Tr::tr("Y"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
             m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -885,7 +891,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_channel1->setPen(QPen(QBrush(QColor(0, 255, 102)), 0, Qt::SolidLine));
             m_channel1->setBrush(QBrush(QColor(200, 255, 222), Qt::SolidPattern));
             m_ui->C1Plot->rescaleAxes();
-            m_ui->C1Plot->yAxis->setLabel(Tr::tr("U"));
+            m_ui->C1ChannelLabel->setText(Tr::tr("U"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
             m_ui->C1Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -901,7 +907,7 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_channel2->setPen(QPen(QBrush(QColor(204, 0, 255)), 0, Qt::SolidLine));
             m_channel2->setBrush(QBrush(QColor(244, 200, 255), Qt::SolidPattern));
             m_ui->C2Plot->rescaleAxes();
-            m_ui->C2Plot->yAxis->setLabel(Tr::tr("V"));
+            m_ui->C2ChannelLabel->setText(Tr::tr("V"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
             m_ui->C2Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -975,7 +981,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_channel0->setPen(QPen(QBrush(QColor(255, 0, 0)), 0, Qt::SolidLine));
             m_channel0->setBrush(QBrush(QColor(255, 200, 200), Qt::SolidPattern));
             m_ui->C0Plot->rescaleAxes();
-            m_ui->C0Plot->yAxis->setLabel(Tr::tr("R"));
+            m_ui->C0ChannelLabel->setText(Tr::tr("R"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
             m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -991,7 +997,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_channel1->setPen(QPen(QBrush(QColor(0, 255, 0)), 0, Qt::SolidLine));
             m_channel1->setBrush(QBrush(QColor(200, 255, 200), Qt::SolidPattern));
             m_ui->C1Plot->rescaleAxes();
-            m_ui->C1Plot->yAxis->setLabel(Tr::tr("G"));
+            m_ui->C1ChannelLabel->setText(Tr::tr("G"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
             m_ui->C1Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -1007,7 +1013,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_channel2->setPen(QPen(QBrush(QColor(0, 0, 255)), 0, Qt::SolidLine));
             m_channel2->setBrush(QBrush(QColor(200, 200, 255), Qt::SolidPattern));
             m_ui->C2Plot->rescaleAxes();
-            m_ui->C2Plot->yAxis->setLabel(Tr::tr("B"));
+            m_ui->C2ChannelLabel->setText(Tr::tr("B"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
             m_ui->C2Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -1027,7 +1033,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_channel0->setPen(QPen(QBrush(QColor(143, 143, 143)), 0, Qt::SolidLine));
             m_channel0->setBrush(QBrush(QColor(200, 200, 200), Qt::SolidPattern));
             m_ui->C0Plot->rescaleAxes();
-            m_ui->C0Plot->yAxis->setLabel(Tr::tr("Y"));
+            m_ui->C0ChannelLabel->setText(Tr::tr("Y"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
             m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -1047,7 +1053,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_channel0->setPen(QPen(QBrush(QColor(143, 143, 143)), 0, Qt::SolidLine));
             m_channel0->setBrush(QBrush(QColor(200, 200, 200), Qt::SolidPattern));
             m_ui->C0Plot->rescaleAxes();
-            m_ui->C0Plot->yAxis->setLabel(Tr::tr("L"));
+            m_ui->C0ChannelLabel->setText(Tr::tr("L"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
             m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -1063,7 +1069,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_channel1->setPen(QPen(QBrush(QColor(204, 255, 0)), 0, Qt::SolidLine));
             m_channel1->setBrush(QBrush(QColor(244, 255, 200), Qt::SolidPattern));
             m_ui->C1Plot->rescaleAxes();
-            m_ui->C1Plot->yAxis->setLabel(Tr::tr("A"));
+            m_ui->C1ChannelLabel->setText(Tr::tr("A"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
             m_ui->C1Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -1079,7 +1085,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_channel2->setPen(QPen(QBrush(QColor(0, 102, 255)), 0, Qt::SolidLine));
             m_channel2->setBrush(QBrush(QColor(200, 222, 255), Qt::SolidPattern));
             m_ui->C2Plot->rescaleAxes();
-            m_ui->C2Plot->yAxis->setLabel(Tr::tr("B"));
+            m_ui->C2ChannelLabel->setText(Tr::tr("B"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
             m_ui->C2Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -1099,7 +1105,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_channel0->setPen(QPen(QBrush(QColor(143, 143, 143)), 0, Qt::SolidLine));
             m_channel0->setBrush(QBrush(QColor(200, 200, 200), Qt::SolidPattern));
             m_ui->C0Plot->rescaleAxes();
-            m_ui->C0Plot->yAxis->setLabel(Tr::tr("Y"));
+            m_ui->C0ChannelLabel->setText(Tr::tr("Y"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
             m_ui->C0Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -1115,7 +1121,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_channel1->setPen(QPen(QBrush(QColor(0, 255, 102)), 0, Qt::SolidLine));
             m_channel1->setBrush(QBrush(QColor(200, 255, 222), Qt::SolidPattern));
             m_ui->C1Plot->rescaleAxes();
-            m_ui->C1Plot->yAxis->setLabel(Tr::tr("U"));
+            m_ui->C1ChannelLabel->setText(Tr::tr("U"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
             m_ui->C1Plot->replot(QCustomPlot::rpQueuedReplot);
 
@@ -1131,7 +1137,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_channel2->setPen(QPen(QBrush(QColor(204, 0, 255)), 0, Qt::SolidLine));
             m_channel2->setBrush(QBrush(QColor(244, 200, 255), Qt::SolidPattern));
             m_ui->C2Plot->rescaleAxes();
-            m_ui->C2Plot->yAxis->setLabel(Tr::tr("V"));
+            m_ui->C2ChannelLabel->setText(Tr::tr("V"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
             m_ui->C2Plot->replot(QCustomPlot::rpQueuedReplot);
 
