@@ -10,6 +10,7 @@
 #include "../actionmanager/actionmanager.h"
 // OPENMV-DIFF //
 #include "../actionmanager/actioncontainer.h"
+#include "../fancyactionbar.h"
 // OPENMV-DIFF //
 #include "../actionmanager/command.h"
 #include "../actionmanager/commandsfile.h"
@@ -39,6 +40,7 @@
 #include <QPushButton>
 // OPENMV-DIFF //
 #include <QSet>
+#include <QToolButton>
 // OPENMV-DIFF //
 #include <QTimer>
 #include <QTreeWidgetItem>
@@ -456,6 +458,24 @@ ShortcutSettingsWidget::ShortcutSettingsWidget()
     m_shortcutBox->setEnabled(false);
     m_shortcutLayout = new QGridLayout(m_shortcutBox);
     m_shortcutBox->setLayout(m_shortcutLayout);
+    // OPENMV-DIFF //
+    // Reserve exactly the height of a one-shortcut box up front. Selecting a command rebuilds this
+    // box; without the reservation it grew from empty, shrinking the command list that shares the
+    // column above and scrolling the list on every selection. Measure that height from a throwaway
+    // box laid out like a populated one (a key-sequence row plus the Add-button row) so the reserved
+    // space is snug -- only commands with several shortcuts exceed it and grow the box further.
+    {
+        QGroupBox probe(Tr::tr("Shortcut"));
+        auto *probeLayout = new QGridLayout(&probe);
+        probeLayout->addWidget(new QLabel(Tr::tr("Key sequence:")), 0, 0);
+        probeLayout->addWidget(new FancyLineEdit, 0, 1);
+        probeLayout->addWidget(new QPushButton(Tr::tr("Record")), 0, 2);
+        probeLayout->addWidget(new QLabel, 1, 0, 1, 2);
+        probeLayout->addWidget(new QPushButton(Tr::tr("Add")), 1, 2);
+        probeLayout->activate();
+        m_shortcutBox->setMinimumHeight(probe.sizeHint().height());
+    }
+    // OPENMV-DIFF //
     layout()->addWidget(m_shortcutBox);
 
     initialize();
@@ -683,12 +703,13 @@ static void collectVisibleActions(QAction *action, QSet<QAction *> &out)
 }
 
 // Build the set of actions the user can actually reach in the GUI: everything under the visible
-// menu bar, the editor's right-click context menu, and the few commands viewer mode moves into the
-// status bar (which have no menu entry there). The shortcut list is filtered to this set so it never
-// exposes the hundreds of actions OpenMV hides/disables, and it stays in sync automatically -- the
-// live menus are the source of truth, so there is no allow/deny list to maintain and viewer mode is
-// handled for free. The context-menu and status-bar ids are referenced as string literals to avoid
-// a coreplugin -> plugin dependency.
+// menu bar and the editor's right-click context menu, plus keyboard-first commands that have no menu
+// entry -- the corner action-bar buttons (the connect/disconnect/run/stop bar and the file/edit
+// bars), the tab bar's switch/move-tab commands (the whole TabbedEditor.* group), and the
+// image-viewer view actions. Filtering the shortcut list to this set keeps it from exposing the
+// hundreds of actions OpenMV hides/disables; the menu part stays in sync with the live menus
+// automatically (viewer mode handled for free). The few ids named directly are string literals to
+// avoid a coreplugin -> plugin dependency.
 static QSet<QAction *> visibleCommandActions()
 {
     QSet<QAction *> out;
@@ -707,7 +728,29 @@ static QSet<QAction *> visibleCommandActions()
     walkContainer(Constants::MENU_BAR, true);
     walkContainer(Id("TextEditor.StandardContextMenu"), false);
 
-    for (const char *id : {"OpenMV.Connect", "OpenMV.Disconnect", "OpenMV.Start", "OpenMV.Stop"}) {
+    // Corner action bars (file/edit buttons and the OpenMV connect/disconnect/run/stop bar): grab
+    // every action they host so those keyboard-first commands appear without hardcoding ids. Each
+    // entry is a FancyToolButton whose defaultAction() is the command's action.
+    const QList<FancyActionBar *> actionBars = ICore::mainWindow()->findChildren<FancyActionBar *>();
+    for (const FancyActionBar *bar : actionBars) {
+        QLayout *layout = bar->actionsLayout();
+        for (int i = 0, count = layout ? layout->count() : 0; i < count; ++i) {
+            if (auto *button = qobject_cast<QToolButton *>(layout->itemAt(i)->widget()))
+                if (QAction *action = button->defaultAction())
+                    out.insert(action);
+        }
+    }
+
+    // The tab bar's switch/move-tab commands live on the tab bar with no menu entry; take the whole
+    // TabbedEditor.* group by id prefix so any future tab commands are picked up automatically.
+    const QList<Command *> commands = ActionManager::commands();
+    for (Command *c : commands) {
+        if (c->action() && c->id().toString().startsWith(QLatin1String("TabbedEditor.")))
+            out.insert(c->action());
+    }
+
+    // The image viewer's view actions live on its editor toolbar (no menu entry).
+    for (const char *id : {"ImageViewer.FitToScreen", "ImageViewer.Background", "ImageViewer.Outline"}) {
         if (Command *c = ActionManager::command(Id(id)))
             if (c->action())
                 out.insert(c->action());
@@ -735,6 +778,10 @@ void ShortcutSettingsWidget::initialize()
         // OPENMV-DIFF //
         if (!visibleActions.contains(c->action()))
             continue;
+        // ProjectExplorer's run/build actions leak in via the mode-selector action bar, but the
+        // project system is hidden in this product -- drop that whole section.
+        if (c->id().toString().startsWith(QLatin1String("ProjectExplorer.")))
+            continue;
         // OPENMV-DIFF //
 
         QTreeWidgetItem *item = nullptr;
@@ -749,7 +796,12 @@ void ShortcutSettingsWidget::initialize()
         const QString section = identifier.left(pos);
         const QString subId = identifier.mid(pos + 1);
         if (!sections.contains(section)) {
-            QTreeWidgetItem *categoryItem = new QTreeWidgetItem(commandList(), QStringList(section));
+            // OPENMV-DIFF //
+            // Show the "QtCreator" command group under the friendlier "Core" heading.
+            const QString sectionTitle = (section == QLatin1String("QtCreator"))
+                                             ? QStringLiteral("Core") : section;
+            // OPENMV-DIFF //
+            QTreeWidgetItem *categoryItem = new QTreeWidgetItem(commandList(), QStringList(sectionTitle));
             QFont f = categoryItem->font(0);
             f.setBold(true);
             categoryItem->setFont(0, f);
