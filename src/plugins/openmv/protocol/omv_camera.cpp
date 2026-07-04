@@ -694,6 +694,10 @@ void OMVCamera::stop()
         Stop running script
     */
     retryIfFailedVoid([this]() {
+        // The cached channel map can go stale across a lossy reconnect, leaving "stdin" resolved
+        // to the built-in channel instead of a debug agent's dynamic shadow -- Stop then no-ops
+        // with a clean ACK. Stop is user-paced, so refresh the map before resolving.
+        updateChannels();
         uint8_t stdin_id = getChannelId(QStringLiteral("stdin"));
         if (stdin_id) {
             channelIoctl(stdin_id, static_cast<uint32_t>(OMVPChannelIOCTL::STDIN_STOP));
@@ -710,6 +714,9 @@ void OMVCamera::exec(const QString &script)
         Write and execute a script
     */
     retryIfFailedVoid([this, script]() {
+        // Same map-refresh rationale as stop(): a stale "stdin" resolution sends the script to the
+        // neutered built-in channel, where EXEC is ACK'd but nothing runs.
+        updateChannels();
         uint8_t stdin_id = getChannelId(QStringLiteral("stdin"));
         if (!stdin_id) {
             return;
