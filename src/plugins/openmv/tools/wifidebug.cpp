@@ -333,13 +333,6 @@ class _NetworkTransport:
         return 0
 
 
-def _raise_kbd(_):
-    # Delivered into the foreground via micropython.schedule() from the Stop ioctl (which runs in the
-    # background protocol poll). It's a plain KeyboardInterrupt -- an ordinary Python exception that
-    # _run_one catches -- so the VM unwinds cleanly and stays runnable. No vm_abort, no abnormal exit.
-    raise KeyboardInterrupt
-
-
 class _ScriptChannel:
     # A dynamically-registered shadow of the built-in C "stdin" channel. The IDE resolves the
     # Run/Stop channel by name and prefers this dynamic one, so scripts are driven through here and
@@ -368,7 +361,11 @@ class _ScriptChannel:
                 self._pending = bytes(self._buf)  # the foreground loop picks this up and runs it
         elif cmd == _STDIN_STOP:
             if self._running:
-                micropython.schedule(_raise_kbd, 0)
+                # Deliver a KeyboardInterrupt to the foreground script. The scheduled callback is a
+                # C function: it sets the VM's pending exception and runs no Python bytecode after,
+                # so it survives the protected scheduler call and fires in the script's own frame,
+                # where _run_one catches it. (A Python callback that raises dies in the scheduler.)
+                micropython.schedule(micropython.keyboard_interrupt, 0)
         elif cmd == _STDIN_RESET:
             self._buf = bytearray()
         return r
@@ -489,8 +486,11 @@ def _start_wifi_debug():
     nic = _bring_up()
     ip = nic.ifconfig()[0]
 
-    # Don't call protocol.init(): the firmware already ran it at boot and inserted the static poll
-    # soft-timer, so re-init re-inserts the same node and corrupts the timer heap (unreliable boot).
+    # Re-initialize the protocol with a faster poll for the network link. Requires re-init support
+    # in omv_protocol_init() (deinit-first) -- on older firmware this corrupts the poll soft-timer
+    # heap. Drops the USB transport from channel 0 (replaced by our network transport below) and
+    # re-registers the stdin/stdout/stream channels.
+    protocol.init(crc=True, seq=True, ack=True, events=True, poll_ms=10)
     micropython.kbd_intr(-1)   # keep the C stdin EXEC/STOP ioctls from soft-resetting the cam
 
     transport = _NetworkTransport(_DEBUG_PORT)
