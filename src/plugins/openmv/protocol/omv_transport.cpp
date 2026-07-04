@@ -361,8 +361,11 @@ QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout, qint64 
         Packet packet;
         if (!_process(packet)) {
             // Anytime we don't receive a valid packet send a keep alive byte to prevent stalls.
+            // This is a Windows serial-driver workaround only: the read won't return until a write
+            // happens. A reliable/network (TCP) transport has no such quirk, and the 0x00 byte would
+            // corrupt the protocol stream, so only send it on non-reliable (serial) ports.
             #ifdef Q_OS_WIN
-            if (_keep_alive_timer.hasExpired(10)) {
+            if ((!serial->reliableTransport()) && _keep_alive_timer.hasExpired(10)) {
                 _send_keep_alive();
                 _keep_alive_timer.restart();
             }
