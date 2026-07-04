@@ -79,7 +79,7 @@ static const char *kUserLine     = "# ===== OPENMV WIFI DEBUG: YOUR CODE BELOW (
 // would tear down WiFi and drop the IDE). boot.py never returns, so that reset path never runs, and
 // Stop is delivered as an ordinary KeyboardInterrupt so the VM stays alive between runs.
 static const char *kAgentBody = R"PY(
-import json, network, socket, struct, time, machine, errno, micropython, sys, gc, select
+import json, network, socket, struct, time, machine, errno, micropython, sys, gc
 
 try:
     import protocol
@@ -213,14 +213,9 @@ class _NetworkTransport:
         self._peer = None      # IDE UDP frame endpoint == its TCP peer address
         self._rx = bytearray()
         self._tx = bytearray()
-        self._poll = select.poll()   # used to tell a dead _conn (peer close/reset) from a merely-idle one
 
     def _drop(self):
         if self._conn is not None:
-            try:
-                self._poll.unregister(self._conn)
-            except Exception:
-                pass
             try:
                 self._conn.close()
             except Exception:
@@ -245,7 +240,6 @@ class _NetworkTransport:
                     pass
                 self._conn = conn
                 self._peer = addr
-                self._poll.register(self._conn, select.POLLIN)
             except OSError:
                 pass           # no pending connection yet
         # Stay active while received data remains to be drained: the C engine only calls
@@ -262,12 +256,10 @@ class _NetworkTransport:
                     self._drop()   # real error (reset/broken pipe) -> tear down for reconnect
                 break              # EAGAIN just means nothing more is pending right now
             if not data:
-                # recv() returns b"" for BOTH "nothing pending" and a peer close on this stack. Poll
-                # to tell them apart: an idle connected socket isn't readable, but a closed/reset one
-                # polls readable (EOF) or HUP/ERR. Only tear the socket down when it's actually dead --
-                # closing it on a plain idle read is what broke the first connection.
-                if self._poll.poll(0):
-                    self._drop()
+                # Nonblocking recv() contract (verified on-device): idle raises EAGAIN, so b"" means
+                # exactly one thing -- the peer closed or reset the connection. Tear it down so a
+                # new connection can be accepted.
+                self._drop()
                 break
             self._rx += data
 
