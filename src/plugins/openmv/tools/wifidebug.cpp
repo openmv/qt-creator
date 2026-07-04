@@ -229,7 +229,7 @@ class _NetworkTransport:
         self._peer = None
         # Keep _rx: bytes received before the close are valid protocol data. The IDE sends
         # SYS_RESET and closes immediately, so the command and the EOF arrive within the same
-        # 50ms poll tick -- clearing _rx here would discard the reset before the engine reads it.
+        # poll tick -- clearing _rx here would discard the reset before the engine reads it.
         self._tx = bytearray()
 
     # is_active() runs the accept: the C protocol engine polls the transport only while it reports
@@ -387,8 +387,8 @@ def _run_one(ch, script):
     try:
         # Fresh namespace each run so globals don't leak between runs (hardware state persists).
         exec(compile(script, "<script>", "exec"), {"__name__": "__main__"})
-    except KeyboardInterrupt:
-        pass                          # Stop pressed in the IDE
+    except KeyboardInterrupt as e:
+        sys.print_exception(e)        # Stop pressed in the IDE -- print it like the USB path does
     except Exception as e:
         sys.print_exception(e)        # show the traceback in the IDE terminal
     finally:
@@ -490,7 +490,7 @@ def _start_wifi_debug():
     # in omv_protocol_init() (deinit-first) -- on older firmware this corrupts the poll soft-timer
     # heap. Drops the USB transport from channel 0 (replaced by our network transport below) and
     # re-registers the stdin/stdout/stream channels.
-    protocol.init(crc=True, seq=True, ack=True, events=True, poll_ms=10)
+    protocol.init(crc=True, seq=True, ack=False, events=True, poll_ms=10)
     micropython.kbd_intr(-1)   # keep the C stdin EXEC/STOP ioctls from soft-resetting the cam
 
     transport = _NetworkTransport(_DEBUG_PORT)
