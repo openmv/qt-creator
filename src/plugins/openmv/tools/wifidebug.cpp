@@ -79,7 +79,7 @@ static const char *kUserLine     = "# ===== OPENMV WIFI DEBUG: YOUR CODE BELOW (
 // would tear down WiFi and drop the IDE). boot.py never returns, so that reset path never runs, and
 // Stop is delivered as an ordinary KeyboardInterrupt so the VM stays alive between runs.
 static const char *kAgentBody = R"PY(
-import json, network, socket, struct, time, machine, errno, micropython, sys, gc
+import json, network, socket, struct, time, machine, errno, micropython, sys, gc, select
 
 try:
     import protocol
@@ -213,17 +213,24 @@ class _NetworkTransport:
         self._peer = None      # IDE UDP frame endpoint == its TCP peer address
         self._rx = bytearray()
         self._tx = bytearray()
+        self._poll = select.poll()   # used to tell a dead _conn (peer close/reset) from a merely-idle one
 
     def _drop(self):
         if self._conn is not None:
+            try:
+                self._poll.unregister(self._conn)
+            except Exception:
+                pass
             try:
                 self._conn.close()
             except Exception:
                 pass
         self._conn = None
         self._peer = None
-        del self._rx[:]
-        del self._tx[:]
+        # Keep _rx: bytes received before the close are valid protocol data. The IDE sends
+        # SYS_RESET and closes immediately, so the command and the EOF arrive within the same
+        # 50ms poll tick -- clearing _rx here would discard the reset before the engine reads it.
+        self._tx = bytearray()
 
     # is_active() runs the accept: the C protocol engine polls the transport only while it reports
     # active, so a first connection must be taken here (size()/read() are never reached otherwise).
@@ -238,9 +245,13 @@ class _NetworkTransport:
                     pass
                 self._conn = conn
                 self._peer = addr
+                self._poll.register(self._conn, select.POLLIN)
             except OSError:
                 pass           # no pending connection yet
-        return self._conn is not None
+        # Stay active while received data remains to be drained: the C engine only calls
+        # size()/read() on an active transport, and a command that arrived just before a
+        # disconnect (SYS_RESET) must still be delivered and processed.
+        return self._conn is not None or len(self._rx) > 0
 
     def _recv(self):
         while self._conn is not None:
@@ -250,8 +261,13 @@ class _NetworkTransport:
                 if e.args[0] != errno.EAGAIN:
                     self._drop()   # real error (reset/broken pipe) -> tear down for reconnect
                 break              # EAGAIN just means nothing more is pending right now
-            if not data:           # b"" -> peer closed the connection
-                self._drop()
+            if not data:
+                # recv() returns b"" for BOTH "nothing pending" and a peer close on this stack. Poll
+                # to tell them apart: an idle connected socket isn't readable, but a closed/reset one
+                # polls readable (EOF) or HUP/ERR. Only tear the socket down when it's actually dead --
+                # closing it on a plain idle read is what broke the first connection.
+                if self._poll.poll(0):
+                    self._drop()
                 break
             self._rx += data
 
@@ -261,7 +277,7 @@ class _NetworkTransport:
 
     def read(self, offset, size):
         chunk = bytes(self._rx[:size])
-        del self._rx[:size]
+        self._rx = self._rx[size:]
         return chunk
 
     def write(self, offset, data):
@@ -336,7 +352,7 @@ class _ScriptChannel:
 
     def write(self, offset, data):
         if offset == 0:
-            del self._buf[:]
+            self._buf = bytearray()
         self._buf += bytes(data)
         return len(data)
 
@@ -344,16 +360,18 @@ class _ScriptChannel:
         return self._running
 
     def ioctl(self, cmd, length, arg):
+        r = 0
         if cmd == _STDIN_EXEC:
             if not self._buf:
-                return -1
-            self._pending = bytes(self._buf)      # the foreground loop picks this up and runs it
+                r = -1
+            else:
+                self._pending = bytes(self._buf)  # the foreground loop picks this up and runs it
         elif cmd == _STDIN_STOP:
             if self._running:
                 micropython.schedule(_raise_kbd, 0)
         elif cmd == _STDIN_RESET:
-            del self._buf[:]
-        return 0
+            self._buf = bytearray()
+        return r
 
     def _set_running(self, running):
         self._running = running
@@ -471,20 +489,9 @@ def _start_wifi_debug():
     nic = _bring_up()
     ip = nic.ifconfig()[0]
 
-    # The C firmware already initialised the protocol engine before boot.py ran: it registered the
-    # USB transport on channel 0 plus the stdin/stdout/stream/profile channels and started the
-    # protocol poll timer. We deliberately do NOT call protocol.init() again -- re-init re-inserts
-    # the same static soft-timer entry into the timer heap (melding the node with itself) and
-    # corrupts it. Registering a PHYSICAL transport instead drops it into channel 0, replacing the
-    # USB transport while keeping the data channels and the running poll timer intact. The IDE
-    # negotiates the protocol capabilities (CRC/seq/ACK/max-payload) over the link via
-    # GET_CAPS/SET_CAPS, so inheriting the firmware's defaults here is correct. Bring the link up
-    # FIRST and register LAST, so a failure above leaves USB debugging in place as a fallback.
-    # The built-in C stdin channel's EXEC/STOP ioctls schedule a vm_abort that would unwind boot.py
-    # and hand control back to the firmware main loop, which soft-resets the cam. Disable the
-    # interrupt char so those ioctls no-op (our own Stop uses a scheduled KeyboardInterrupt instead);
-    # this also makes an older IDE that still targets the C stdin degrade to "no run", not a reset.
-    micropython.kbd_intr(-1)
+    # Don't call protocol.init(): the firmware already ran it at boot and inserted the static poll
+    # soft-timer, so re-init re-inserts the same node and corrupts the timer heap (unreliable boot).
+    micropython.kbd_intr(-1)   # keep the C stdin EXEC/STOP ioctls from soft-resetting the cam
 
     transport = _NetworkTransport(_DEBUG_PORT)
     protocol.register(name="network", backend=transport, flags=protocol.CHANNEL_FLAG_PHYSICAL)
