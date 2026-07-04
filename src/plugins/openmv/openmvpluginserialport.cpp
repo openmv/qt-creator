@@ -300,7 +300,9 @@ void OpenMVPluginSerialPort_private::open(const QString &portName) {
         int override_events = obj.value(QStringLiteral("overrideEvents")).toInt(-1);
         if (override_events >= 0) events = bool(override_events);
 
-        double timeout = 2.0;
+        // Per-port command timeout: serial links respond within their read timeout; a weak WiFi
+        // link routinely delays responses past a fixed 2s under hiccups.
+        double timeout = m_port ? (m_port->readTimeoutMs() / 1000.0) : 2.0;
         double override_timeout = obj.value(QStringLiteral("overrideTimeout")).toDouble(-1.0);
         if (override_timeout >= 0.0) timeout = override_timeout;
 

@@ -347,8 +347,13 @@ QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout, qint64 
     QElapsedTimer timer;
     timer.start();
 
+    // The short timeout serves the chatty polling commands (stdout CHANNEL_SIZE): fail fast so a
+    // lost response doesn't stall the poll loop. "Fast" is per-port -- 1s was fine on serial but
+    // sat inside a weak WiFi link's ordinary hiccup range, so merely-delayed responses turned
+    // into timeouts (and stale-response sequence chases behind them).
     const qint64 timeout_ms = (timeout_ms_override >= 0) ? timeout_ms_override
-                            : (short_timeout ? 1000.0 : qint64(timeout * 1000.0));
+                            : (short_timeout ? qint64(serial->readStallTimeoutMs())
+                                             : qint64(timeout * 1000.0));
 
     while (timer.elapsed() < timeout_ms) {
         serial->waitForReadyRead(1);
@@ -446,19 +451,15 @@ QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout, qint64 
             continue;
         }
 
-        // Track the camera's sequence. A data packet consumes seq N, so we expect N+1 next (rolling
-        // forward over any gap left by a dropped packet). A NAK is different: it's the camera
-        // *rejecting* our packet, and it carries the camera's own expected sequence (it does not
-        // advance on a rejection). So align exactly to it -- do NOT add one. Adding one lands our
-        // re-send one past what the camera wants, it NAKs again, and every NAK nudges us one further
-        // out of step: the "NAK storm" that stalls connect under heavy loss (stale retransmits keep
-        // arriving, each NAK drifting us again). NAKs only happen under loss, so reliable links -- who
-        // never see one -- are unaffected.
-        if (packet.flags & OMVPFlags::NAK) {
-            sequence = packet.sequence;
-        } else {
-            sequence = uint8_t((packet.sequence + 1) & 0xFF);
-        }
+        // Track the camera's sequence. Every non-event packet the camera sends -- response, ACK,
+        // and NAK alike -- is built with its current sequence counter and increments it right
+        // after sending (omv_protocol_send_packet), so whatever arrives, the camera's next
+        // expectation is one past the sequence in the packet. That includes NAKs: a NAK carrying
+        // seq N means "I expected N when your packet arrived" and the camera is now at N+1.
+        // Aligning exactly to N (the old behavior) left us permanently one behind: every retry
+        // NAK'd, each NAK advanced the camera again, and the off-by-one chase never converged --
+        // a single delayed response on WiFi cost a ~40-round NAK storm ended only by a resync.
+        sequence = uint8_t((packet.sequence + 1) & 0xFF);
 
         // Check if this is a fragmented packet
         if (packet.flags & OMVPFlags::FRAGMENT) {

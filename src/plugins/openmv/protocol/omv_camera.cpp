@@ -328,10 +328,13 @@ void OMVCamera::resync(bool grace_timeout)
             transport = nullptr;
         }
 
-        const double graceTimeoutSec = 1.0;
+        // Per-port: fast enough for serial, tolerant of the multi-hundred-ms hiccups a weak WiFi
+        // link shows (a 1s attempt window made resync itself fail under the same hiccup that
+        // triggered it).
+        const double graceTimeoutSec = serial->readStallTimeoutMs() / 1000.0;
         const double attemptTimeoutSec = grace_timeout
             ? (attempt ? graceTimeoutSec : qMax(timeoutSec, graceTimeoutSec))
-            : 1.0;
+            : graceTimeoutSec;
         // Use the protocol defaults for the initial connection
         transport = new OMVTransport(serial,
                                      /*crc*/ true,
