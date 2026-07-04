@@ -1345,6 +1345,16 @@ void OpenMVPluginSerialPort_private::profileReset() {
 
 void OpenMVPluginSerialPort_private::close() {
     if (!m_camera || !m_camera->isConnected()) {
+        if (m_camera) {
+            delete m_camera;
+            m_camera = Q_NULLPTR;
+        }
+
+        if (m_port) {
+            delete m_port;
+            m_port = Q_NULLPTR;
+        }
+
         emit closeResponse(true);
         return;
     }
@@ -1366,9 +1376,17 @@ void OpenMVPluginSerialPort_private::close() {
 
         emit closeResponse(false);
     } catch (...) {
+        if (m_camera) {
+            delete m_camera;
+            m_camera = Q_NULLPTR;
+        }
+
+        if (m_port) {
+            delete m_port;
+            m_port = Q_NULLPTR;
+        }
+
         emit closeResponse(true);
-        delete m_camera;
-        m_camera = Q_NULLPTR;
     }
 }
 
