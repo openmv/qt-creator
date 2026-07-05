@@ -525,9 +525,10 @@ def _start_wifi_debug():
     script_ch.handle = protocol.register(name="stdin", backend=script_ch,
                                          flags=protocol.CHANNEL_FLAG_WRITE)
 
-    # Re-announce our A record periodically (under the IDE's ~20s retire window) so a late-starting
-    # IDE finds us and the entry stays fresh. Bind the source to our interface IP so the multicast
-    # egresses the active network interface rather than lwIP's default one.
+    # Re-announce our A record periodically (well under the IDE's retire window) so a late-starting
+    # IDE finds us and the entry stays fresh. 2s keeps the retire window short (fast removal of a
+    # cam that left) while tolerating several lost multicasts on a weak link. Bind the source to our
+    # interface IP so the multicast egresses the active network interface, not lwIP's default one.
     ann = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
         ann.bind((ip, 0))
@@ -542,7 +543,7 @@ def _start_wifi_debug():
             pass
 
     _announce(None)
-    machine.Timer(-1, period=5000, callback=_announce)
+    machine.Timer(-1, period=2000, callback=_announce)
 
     # Shield the debug link: a user script's own WiFi setup (active/connect/ifconfig/hostname) must
     # not reconfigure or tear down the interface the debug session rides on. Swap in a guarded

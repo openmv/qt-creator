@@ -284,7 +284,7 @@
 #define READ_PROFILE_SPACING        500 // in ms
 
 #define FPS_AVERAGE_BUFFER_DEPTH    100 // in samples
-#define WIFI_PORT_RETIRE            20 // in seconds
+#define WIFI_PORT_RETIRE            8 // in seconds (cams announce every 2s -> ~4 missed = retired)
 
 #define MDNS_MULTICAST_ADDRESS      "224.0.0.251"
 #define MDNS_PORT                   5353
