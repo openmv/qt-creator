@@ -96,6 +96,8 @@ _HOSTNAME   = ("omv-" + _cfg.get("serial", "000000000000"))[:32]
 # Protocol wire header byte offsets: SYNC[2] SEQ[1] CHAN[1] FLAGS[1] OPCODE[1] LEN[2] HCRC[2].
 _OP_CHANNEL_READ = 0x26
 _FLAG_EVENT      = 0x20
+_CH_STDOUT       = 2
+_STDOUT_EVT_MS   = 50          # min interval between forwarded stdout NOTIFY events
 # Channels whose CHANNEL_READ responses are the bulk, readp-backed (zero-copy) sources -- camera
 # frames and profiler dumps. Only their read responses go over UDP (fire-and-forget, high
 # throughput; a dropped frame just skips). Everything else -- control, stdin, and the copying
@@ -213,6 +215,7 @@ class _NetworkTransport:
         self._peer = None      # IDE UDP frame endpoint == its TCP peer address
         self._rx = bytearray()
         self._tx = bytearray()
+        self._stdout_evt_ms = 0   # last forwarded stdout NOTIFY (throttle, see flush)
 
     def _drop(self):
         if self._conn is not None:
@@ -297,6 +300,17 @@ class _NetworkTransport:
                 pass           # datagram dropped: a lost frame just skips (best-effort by design)
             return 0
 
+        # Throttle stdout NOTIFY events. A fast-printing script re-arms the stdout channel's
+        # notify on every ringbuffer threshold crossing -- hundreds of events per second -- and
+        # the flood queues seconds of latency onto the control connection (commands, frame locks,
+        # even resync handshakes crawl behind it). The events are edge triggers and the IDE polls
+        # stdout size every ~50ms regardless, so forward one per interval and drop the rest.
+        if (len(buf) >= 6 and (buf[4] & _FLAG_EVENT) and buf[3] == _CH_STDOUT):
+            now = time.ticks_ms()
+            if time.ticks_diff(now, self._stdout_evt_ms) < _STDOUT_EVT_MS:
+                return 0
+            self._stdout_evt_ms = now
+
         if self._conn is None:
             return 0           # no control link yet -> drop it (nothing sends before the IDE connects)
 
@@ -351,7 +365,13 @@ class _ScriptChannel:
                 r = -1
             else:
                 self._pending = bytes(self._buf)  # the foreground loop picks this up and runs it
+                if self._running:
+                    # Run-while-running replaces the current script (matching the USB path): kill
+                    # the running one; the loop then picks up _pending. Without this, the upload
+                    # sat latent in _pending and surprise-ran after the NEXT Stop.
+                    micropython.schedule(micropython.keyboard_interrupt, 0)
         elif cmd == _STDIN_STOP:
+            self._pending = None   # a stop also cancels anything queued to run next
             if self._running:
                 # Deliver a KeyboardInterrupt to the foreground script. The scheduled callback is a
                 # C function: it sets the VM's pending exception and runs no Python bytecode after,
@@ -401,12 +421,18 @@ def _serve_scripts(ch):
         _run_one(ch, main_py)
 
     while True:
-        script = ch._pending
-        if script is None:
-            time.sleep_ms(20)         # idle: let the background poll service frames/stdout/control
-            continue
-        ch._pending = None
-        _run_one(ch, script)
+        try:
+            script = ch._pending
+            if script is None:
+                time.sleep_ms(20)     # idle: let the background poll service frames/stdout/control
+                continue
+            ch._pending = None
+            _run_one(ch, script)
+        except KeyboardInterrupt:
+            # A Stop that landed between scripts (the script ended in the delivery window, or a
+            # replace-EXEC's interrupt outlived its target). KeyboardInterrupt is a BaseException,
+            # so without this it would unwind past boot.py's `except Exception` and kill the agent.
+            pass
 
 
 class _SafeIface:

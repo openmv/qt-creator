@@ -222,6 +222,7 @@ void OMVTransport::log(int seq,
     if (dir == "Drop") emoji = "🎲";
     else if (dir.startsWith("Rjct")) emoji = "🚫";
     else if (dir == "Gap") emoji = "🕳️";
+    else if (dir == "Stale") emoji = "⌛";
     else if (flags & OMVPFlags::ACK) emoji = "✅";
     else if (flags & OMVPFlags::NAK) emoji = "❌";
     else if (dir == "Send") emoji = "➡️";
@@ -334,7 +335,8 @@ void OMVTransport::send_packet(uint8_t opcode,
     stats.sent += 1;
 }
 
-QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout, qint64 timeout_ms_override)
+QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout, qint64 timeout_ms_override,
+                                   int expected_opcode, int expected_channel)
 {
     /*
         Receive and parse a packet from the camera with NAK handling
@@ -460,6 +462,19 @@ QVariant OMVTransport::recv_packet(bool poll_events, bool short_timeout, qint64 
         // NAK'd, each NAK advanced the camera again, and the off-by-one chase never converged --
         // a single delayed response on WiFi cost a ~40-round NAK storm ended only by a resync.
         sequence = uint8_t((packet.sequence + 1) & 0xFF);
+
+        // Response matching. Only accept a packet as THE response when it matches the command
+        // being waited on. Under hiccup-induced delays a previous command's late response (or its
+        // NAK) arrives first and used to be consumed as the current command's response -- e.g. a
+        // stale stdout CHANNEL_SIZE (4-byte payload) parsed as the CHANNEL_POLL bitmask,
+        // misreporting the script state, or a stale response parsed as the CHANNEL_LIST,
+        // poisoning the channel-name map. Stale packets still update the sequence tracking above
+        // (they are genuine camera traffic, delivered in order); they just aren't the answer.
+        if ((expected_opcode >= 0) &&
+            ((packet.opcode != expected_opcode) || (packet.channel != expected_channel))) {
+            log(packet.sequence, packet.channel, packet.opcode, packet.flags, packet.length, "Stale");
+            continue;
+        }
 
         // Check if this is a fragmented packet
         if (packet.flags & OMVPFlags::FRAGMENT) {

@@ -217,7 +217,7 @@ QByteArray OMVCamera::sendCmdWaitResp(uint8_t opcode,
         }
 
         QVariant resp = transport->recv_packet(false, opcode == OMVPOpcode::CHANNEL_SIZE,
-                                               timeout_override);
+                                               timeout_override, int(opcode), int(channel));
 
         if ((opcode == OMVPOpcode::CHANNEL_LOCK || opcode == OMVPOpcode::CHANNEL_UNLOCK) &&
             resp.canConvert<bool>()) {
@@ -349,7 +349,11 @@ void OMVCamera::resync(bool grace_timeout)
         try {
             transport->reset_sequence();
             transport->send_packet(OMVPOpcode::PROTO_SYNC, 0, 0);
-            QVariant ok = transport->recv_packet();
+            // Match the SYNC ACK specifically: during a resync the pipe still carries the dying
+            // session's stragglers (frame fragments, stale responses), and accepting the first
+            // completed packet as the handshake reply poisoned the negotiated caps.
+            QVariant ok = transport->recv_packet(false, false, -1,
+                                                 int(OMVPOpcode::PROTO_SYNC), 0);
             if (ok.isValid()) {
                 transport->reset_sequence();
                 break;

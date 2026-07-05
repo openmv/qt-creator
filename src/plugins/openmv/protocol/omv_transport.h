@@ -77,7 +77,8 @@ public:
             QVariant(QByteArray)  -> bytes payload
     */
     QVariant recv_packet(bool poll_events = false, bool short_timeout = false,
-                         qint64 timeout_ms_override = -1);
+                         qint64 timeout_ms_override = -1,
+                         int expected_opcode = -1, int expected_channel = -1);
 
     /*
         Adaptive receive window for fragmented (frame) reads, learned from the observed
