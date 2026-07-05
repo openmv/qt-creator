@@ -72,17 +72,17 @@
     <message>
         <location/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation>R</translation>
     </message>
     <message>
         <location/>
         <source>G</source>
-        <translation type="unfinished"></translation>
+        <translation>G</translation>
     </message>
     <message>
         <location/>
         <source>B</source>
-        <translation type="unfinished"></translation>
+        <translation>B</translation>
     </message>
 </context>
 <context>
@@ -2984,7 +2984,7 @@ If the system cursors for resizing views are not displayed properly, you can use
     <message>
         <location line="+21" />
         <source>Serial Terminal Tab size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Serial Terminal Tab size:</translation>
     </message>
     <message>
         <location line="+51" />
@@ -4074,27 +4074,27 @@ Double-click to edit item.</source>
     <message>
         <location line="+20" />
         <source>Serial Protocol Debug Logging</source>
-        <translation type="unfinished"></translation>
+        <translation>Serial Protocol Debug Logging</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Off</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Commands</source>
-        <translation type="unfinished"></translation>
+        <translation>Commands</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Commands + Packets</source>
-        <translation type="unfinished"></translation>
+        <translation>Commands + Packets</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Commands + Packets + Fragments</source>
-        <translation type="unfinished"></translation>
+        <translation>Commands + Packets + Fragments</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="-129" />
@@ -6865,7 +6865,7 @@ See the documentation of the specific language server for valid settings.</trans
         <location line="+33" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+331" />
         <source>Load ROMFS onto OpenMV Cam</source>
-        <translation type="unfinished"></translation>
+        <translation>Load ROMFS onto OpenMV Cam</translation>
     </message>
     <message>
         <location line="+22" />
@@ -6920,7 +6920,7 @@ See the documentation of the specific language server for valid settings.</trans
     <message>
         <location line="+6" />
         <source>Force enter OpenMV Cam bootloader</source>
-        <translation type="unfinished"></translation>
+        <translation>Force enter OpenMV Cam bootloader</translation>
     </message>
     <message>
         <location line="+6" />
@@ -6930,7 +6930,7 @@ See the documentation of the specific language server for valid settings.</trans
     <message>
         <location line="+11" />
         <source>Open OpenMV Cam Settings Config File</source>
-        <translation type="unfinished"></translation>
+        <translation>Open OpenMV Cam Settings Config File</translation>
     </message>
     <message>
         <location line="+8" />
@@ -6941,19 +6941,19 @@ See the documentation of the specific language server for valid settings.</trans
         <location line="+12" />
         <location line="+51" />
         <source>OpenMV Cam Settings Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenMV Cam Settings Editor</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-14" />
         <source>Create Default Config</source>
-        <translation type="unfinished"></translation>
+        <translation>Create Default Config</translation>
     </message>
     <message>
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-21" />
         <source>Open Config File</source>
-        <translation type="unfinished"></translation>
+        <translation>Open Config File</translation>
     </message>
     <message>
         <location line="+19" />
@@ -6964,12 +6964,12 @@ See the documentation of the specific language server for valid settings.</trans
         <location line="+29" />
         <location line="+7" />
         <source>Copy/Convert Current Script</source>
-        <translation type="unfinished"></translation>
+        <translation>Copy/Convert Current Script</translation>
     </message>
     <message>
         <location line="-70" />
         <source>Unable to stage the current script!</source>
-        <translation type="unfinished"></translation>
+        <translation>Unable to stage the current script!</translation>
     </message>
     <message>
         <location line="+35" />
@@ -6977,7 +6977,9 @@ See the documentation of the specific language server for valid settings.</trans
         <source>&quot;%L1&quot; won&apos;t auto-run: your OpenMV Cam only auto-runs main.py/boot.py source files, never a compiled .mpy.
 
 Would you like to choose a different name?</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%L1&quot; won&apos;t auto-run: your OpenMV Cam only auto-runs main.py/boot.py source files, never a compiled .mpy.
+
+Would you like to choose a different name?</translation>
     </message>
     <message>
         <location line="+50" />
@@ -7519,95 +7521,99 @@ Would you like to choose a different name?</source>
         <source>
 
 Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
-        <translation type="unfinished"></translation>
+        <translation>
+
+Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</translation>
     </message>
     <message>
         <location line="+57" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 %2 versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation type="unfinished"></translation>
+        <translation>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
+
+%2 versions before v4.3.0 do not have this file and would have deleted it on installing resources.</translation>
     </message>
     <message>
         <location line="+1404" />
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Tutorial</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutorial</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Libraries</source>
-        <translation type="unfinished"></translation>
+        <translation>Libraries</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Boards</source>
-        <translation type="unfinished"></translation>
+        <translation>Boards</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Shields</source>
-        <translation type="unfinished"></translation>
+        <translation>Shields</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Sensors</source>
-        <translation type="unfinished"></translation>
+        <translation>Sensors</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Language</translation>
     </message>
     <message>
         <location line="+1" />
         <source>CPython</source>
-        <translation type="unfinished"></translation>
+        <translation>CPython</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Internals</source>
-        <translation type="unfinished"></translation>
+        <translation>Internals</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Changelog</source>
-        <translation type="unfinished"></translation>
+        <translation>Changelog</translation>
     </message>
     <message>
         <location line="+1" />
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>License</translation>
     </message>
     <message>
         <location line="+38" />
         <location line="+8" />
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>About %1</translation>
     </message>
     <message>
         <location line="-7" />
         <source>About %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>About %1...</translation>
     </message>
     <message>
         <location line="+20" />
         <source>&lt;p&gt;&lt;b&gt;Release Notes&lt;/b&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&lt;b&gt;Release Notes&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location line="+4" />
         <source>%1 %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2</translation>
     </message>
     <message>
         <location line="+4" />
         <source>OpenMV Firmware %1</source>
-        <translation type="unfinished"></translation>
+        <translation>OpenMV Firmware %1</translation>
     </message>
     <message>
         <location line="+170" />
@@ -7617,25 +7623,25 @@ Please close any programs that are viewing/editing %1&apos;s application data an
     <message>
         <location line="+23" />
         <source>JPG</source>
-        <translation type="unfinished"></translation>
+        <translation>JPG</translation>
     </message>
     <message>
         <location line="+26" />
         <location line="+13" />
         <source>JPEG Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>JPEG Mode</translation>
     </message>
     <message>
         <location line="-5" />
         <location line="+7" />
         <source>The Frame Buffer is streaming JPEG-compressed images</source>
-        <translation type="unfinished"></translation>
+        <translation>The Frame Buffer is streaming JPEG-compressed images</translation>
     </message>
     <message>
         <location line="-6" />
         <location line="+7" />
         <source>The Frame Buffer is streaming raw (uncompressed) images</source>
-        <translation type="unfinished"></translation>
+        <translation>The Frame Buffer is streaming raw (uncompressed) images</translation>
     </message>
     <message>
         <location line="+3" />
@@ -7754,12 +7760,12 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     <message>
         <location line="+8" />
         <source>When Auto Reconnect is enabled %1 will automatically reconnect to your OpenMV if detected.</source>
-        <translation type="unfinished"></translation>
+        <translation>When Auto Reconnect is enabled %1 will automatically reconnect to your OpenMV if detected.</translation>
     </message>
     <message>
         <location line="+62" />
         <source>Edit boot.py for WiFi Debugging</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit boot.py for WiFi Debugging</translation>
     </message>
     <message>
         <location line="+76" />
@@ -7818,7 +7824,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <location line="+760" />
         <location line="+13" />
         <source>RAW Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>RAW Mode</translation>
     </message>
     <message>
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
@@ -8123,12 +8129,12 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
     <message>
         <location line="-190" />
         <source>Board type not available for this form key!</source>
-        <translation type="unfinished"></translation>
+        <translation>Board type not available for this form key!</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Registration limit reached for this board type!</source>
-        <translation type="unfinished"></translation>
+        <translation>Registration limit reached for this board type!</translation>
     </message>
     <message>
         <location line="+6" />
@@ -8296,49 +8302,49 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="-2348" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+98" />
         <source>Frame Buffer - Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
-        <translation type="unfinished"></translation>
+        <translation>Frame Buffer - Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4" />
         <source>Frame Buffer - Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
-        <translation type="unfinished"></translation>
+        <translation>Frame Buffer - Res (w:%1, h:%2) - Point (x:%3, y:%4)</translation>
     </message>
     <message>
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <source>Frame Buffer - Res (w:%1, h:%2) - Focus (%3)</source>
-        <translation type="unfinished"></translation>
+        <translation>Frame Buffer - Res (w:%1, h:%2) - Focus (%3)</translation>
     </message>
     <message>
         <location line="+255" />
         <source>Camera serial port -- click to give this camera a friendly name</source>
-        <translation type="unfinished"></translation>
+        <translation>Camera serial port -- click to give this camera a friendly name</translation>
     </message>
     <message>
         <location line="+389" />
         <source>A new version of %5 (%L1.%L2.%L3) is available for download. See the &lt;a href=&quot;%L4&quot;&gt;release notes&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>A new version of %5 (%L1.%L2.%L3) is available for download. See the &lt;a href=&quot;%L4&quot;&gt;release notes&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+124" />
         <source>Connect (Network available)</source>
-        <translation type="unfinished"></translation>
+        <translation>Connect (Network available)</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Connect (USB available)</source>
-        <translation type="unfinished"></translation>
+        <translation>Connect (USB available)</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Connect (USB &amp; Network available)</source>
-        <translation type="unfinished"></translation>
+        <translation>Connect (USB &amp; Network available)</translation>
     </message>
     <message>
         <location line="+89" />
         <source>-auto_run in viewer mode requires a readable text script file argument on the command line.</source>
-        <translation type="unfinished"></translation>
+        <translation>-auto_run in viewer mode requires a readable text script file argument on the command line.</translation>
     </message>
     <message>
         <location line="+250" />
@@ -8363,21 +8369,45 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Thanks for using the OpenMV Cam and %1!
+
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
+
+Blinking Green:
+
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow %1 to reprogram your OpenMV Cam.
+
+Blinking Blue:
+
+Your OpenMV Cam is running the default main.py script onboard.
+
+If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
+
+If the LED is blinking blue but %1 can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+
+Blinking White:
+
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
+
+</translation>
     </message>
     <message>
         <location line="+711" />
         <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with %1 without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
-        <translation type="unfinished"></translation>
+        <translation>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with %1 without any interruptions.
+
+Would you like to register your OpenMV Cam now?</translation>
     </message>
     <message>
         <location line="+20" />
         <source>%1 will display these three messages boxes each time you connect until you register your OpenMV Cam...
 
 Would you like to register your OpenMV Cam now?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 will display these three messages boxes each time you connect until you register your OpenMV Cam...
+
+Would you like to register your OpenMV Cam now?</translation>
     </message>
     <message>
         <location line="+479" />
@@ -8402,12 +8432,12 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-541" />
         <source>FPS: %L1 Cam - %L2 IDE</source>
-        <translation type="unfinished"></translation>
+        <translation>FPS: %L1 Cam - %L2 IDE</translation>
     </message>
     <message>
         <location line="+1" />
         <source>On-camera FPS and IDE display FPS</source>
-        <translation type="unfinished"></translation>
+        <translation>On-camera FPS and IDE display FPS</translation>
     </message>
     <message>
         <location line="+47" />
@@ -8897,24 +8927,24 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+1960" />
         <location line="+192" />
         <source>Failed to copy firmware files to temporary directory!</source>
-        <translation type="unfinished"></translation>
+        <translation>Failed to copy firmware files to temporary directory!</translation>
     </message>
     <message>
         <location line="-183" />
         <location line="+192" />
         <source>Original firmware folder does not exist!</source>
-        <translation type="unfinished"></translation>
+        <translation>Original firmware folder does not exist!</translation>
     </message>
     <message>
         <location line="-183" />
         <location line="+192" />
         <source>Failed to create temporary directory!</source>
-        <translation type="unfinished"></translation>
+        <translation>Failed to create temporary directory!</translation>
     </message>
     <message>
         <location line="-183" />
         <source>Only loading bootloader.bin files is supported with the ST Cube Programmer!</source>
-        <translation type="unfinished"></translation>
+        <translation>Only loading bootloader.bin files is supported with the ST Cube Programmer!</translation>
     </message>
     <message>
         <location line="-2142" />
@@ -8948,12 +8978,12 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="+2" />
         <source>Force bootloader</source>
-        <translation type="unfinished"></translation>
+        <translation>Force bootloader</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Force enter the OpenMV Cam bootloader. May result in the OpenMV Cam bootloader not automatically exiting on older boards.</source>
-        <translation type="unfinished"></translation>
+        <translation>Force enter the OpenMV Cam bootloader. May result in the OpenMV Cam bootloader not automatically exiting on older boards.</translation>
     </message>
     <message>
         <location line="+27" />
@@ -9023,12 +9053,14 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
         <source>Bootloader update complete!
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Bootloader update complete!
+
+</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Connect your OpenMV Cam now.</source>
-        <translation type="unfinished"></translation>
+        <translation>Connect your OpenMV Cam now.</translation>
     </message>
     <message>
         <location line="+55" />
@@ -9060,19 +9092,19 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</tra
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+84" />
         <location line="+16" />
         <source>Run Script</source>
-        <translation type="unfinished"></translation>
+        <translation>Run Script</translation>
     </message>
     <message>
         <location line="-8" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-14" />
         <source>Python Files (*.py);;Text Files (*.txt);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Python Files (*.py);;Text Files (*.txt);;All Files (*)</translation>
     </message>
     <message>
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+15" />
         <source>Error: Cannot open &quot;%L1&quot;!</source>
-        <translation type="unfinished"></translation>
+        <translation>Error: Cannot open &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="+224" />
@@ -9113,116 +9145,118 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
     <message>
         <location line="-2169" />
         <source>Checking development examples...</source>
-        <translation type="unfinished"></translation>
+        <translation>Checking development examples...</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Downloading development examples...</source>
-        <translation type="unfinished"></translation>
+        <translation>Downloading development examples...</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Checking development documentation...</source>
-        <translation type="unfinished"></translation>
+        <translation>Checking development documentation...</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Downloading development documentation...</source>
-        <translation type="unfinished"></translation>
+        <translation>Downloading development documentation...</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Checking development firmware...</source>
-        <translation type="unfinished"></translation>
+        <translation>Checking development firmware...</translation>
     </message>
     <message>
         <location line="+9" />
         <location line="+84" />
         <source>Downloading the latest development firmware...</source>
-        <translation type="unfinished"></translation>
+        <translation>Downloading the latest development firmware...</translation>
     </message>
     <message>
         <location line="-73" />
         <source>Unpacking the latest development firmware...</source>
-        <translation type="unfinished"></translation>
+        <translation>Unpacking the latest development firmware...</translation>
     </message>
     <message>
         <location line="+311" />
         <source>New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the &lt;a href=&quot;%L1&quot;&gt;release notes&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the &lt;a href=&quot;%L1&quot;&gt;release notes&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+89" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
         <source>Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
-        <translation type="unfinished"></translation>
+        <translation>Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</translation>
     </message>
     <message>
         <location line="+39" />
         <source>Installation Sucessful! Please restart %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Installation Sucessful! Please restart %1.</translation>
     </message>
     <message>
         <location line="+96" />
         <source>Firmware Binary (*.bin *.dfu *.img *.zip)</source>
-        <translation type="unfinished"></translation>
+        <translation>Firmware Binary (*.bin *.dfu *.img *.zip)</translation>
     </message>
     <message>
         <location line="+91" />
         <source>Unable to unpack the firmware zip &quot;%L1&quot;!</source>
-        <translation type="unfinished"></translation>
+        <translation>Unable to unpack the firmware zip &quot;%L1&quot;!</translation>
     </message>
     <message>
         <location line="+212" />
         <source>Unable to download the latest development firmware!</source>
-        <translation type="unfinished"></translation>
+        <translation>Unable to download the latest development firmware!</translation>
     </message>
     <message>
         <location line="+81" />
         <source>The development firmware for this board is not available!</source>
-        <translation type="unfinished"></translation>
+        <translation>The development firmware for this board is not available!</translation>
     </message>
     <message>
         <location line="+18" />
         <source>Update complete!
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Update complete!
+
+</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Please wait for the device to finish restarting. This can take a little while.</source>
-        <translation type="unfinished"></translation>
+        <translation>Please wait for the device to finish restarting. This can take a little while.</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Unknown Board (Wi-Fi)</source>
-        <translation type="unfinished"></translation>
+        <translation>Unknown Board (Wi-Fi)</translation>
     </message>
     <message>
         <location line="+17" />
         <source>%1 (Wi-Fi)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (Wi-Fi)</translation>
     </message>
     <message>
         <location line="+213" />
         <source>Name Camera</source>
-        <translation type="unfinished"></translation>
+        <translation>Name Camera</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Serial port:</source>
-        <translation type="unfinished"></translation>
+        <translation>Serial port:</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Name:</source>
-        <translation type="unfinished">Name:</translation>
+        <translation>Name:</translation>
     </message>
     <message>
         <location line="+373" />
         <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
-        <translation type="unfinished"></translation>
+        <translation>Install the latest release firmware (v%L1.%L2.%L3)</translation>
     </message>
     <message>
         <location line="+2" />
@@ -9460,12 +9494,14 @@ Hit cancel to skip to SBL reprogramming.</source>
         <source>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
+
+Continue?</translation>
     </message>
     <message>
         <location line="+73" />
         <source>If you are forcing SBL mode, disconnect the device from your computer and remove the SBL wire jumper, then reconnect it.</source>
-        <translation type="unfinished"></translation>
+        <translation>If you are forcing SBL mode, disconnect the device from your computer and remove the SBL wire jumper, then reconnect it.</translation>
     </message>
     <message>
         <location line="-66" />
@@ -9477,7 +9513,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     <message>
         <location line="+14" />
         <source>Disconnect the device from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect it.</source>
-        <translation type="unfinished"></translation>
+        <translation>Disconnect the device from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect it.</translation>
     </message>
     <message>
         <location line="+47" />
@@ -9672,14 +9708,20 @@ Continue?</translation>
 The internal FAT filesystem will be erased!
 
 Continue?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 needs to update your bootloader to support ROMFS.
+
+The internal FAT filesystem will be erased!
+
+Continue?</translation>
     </message>
     <message>
         <location line="+37" />
         <source>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
+
+Continue?</translation>
     </message>
     <message>
         <location line="+350" />
@@ -9735,7 +9777,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
     <message>
         <location line="+2" />
         <source>Disconnect the device from your computer, remove the jumper wire between the BOOT and RST pins, and then reconnect it.</source>
-        <translation type="unfinished"></translation>
+        <translation>Disconnect the device from your computer, remove the jumper wire between the BOOT and RST pins, and then reconnect it.</translation>
     </message>
     <message>
         <location line="+13" />
@@ -9967,7 +10009,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
     <message>
         <location line="+69" />
         <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to %1!</source>
-        <translation type="unfinished"></translation>
+        <translation>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to %1!</translation>
     </message>
     <message>
         <location line="+83" />
@@ -10042,19 +10084,23 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
 Would you like %2 to update the module on your OpenMV Cam?</source>
-        <translation type="unfinished"></translation>
+        <translation>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
+
+Would you like %2 to update the module on your OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+75" />
         <source>Would you like %1 to update the module on your computer?</source>
-        <translation type="unfinished"></translation>
+        <translation>Would you like %1 to update the module on your computer?</translation>
     </message>
     <message>
         <location line="+91" />
         <source>Module &quot;%L1&quot; may be required to run your script.
 
 Would you like %2 to copy it to your OpenMV Cam?</source>
-        <translation type="unfinished"></translation>
+        <translation>Module &quot;%L1&quot; may be required to run your script.
+
+Would you like %2 to copy it to your OpenMV Cam?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-584" />
@@ -10140,7 +10186,7 @@ Would you like %2 to copy it to your OpenMV Cam?</source>
     <message>
         <location line="+16" />
         <source>Run a script file from disk</source>
-        <translation type="unfinished"></translation>
+        <translation>Run a script file from disk</translation>
     </message>
     <message>
         <location line="+1" />
@@ -10672,19 +10718,19 @@ The camera must be power cycled after a system package update.</translation>
         <location line="+97" />
         <location line="+85" />
         <source>FFmpeg is not supported on this platform.</source>
-        <translation type="unfinished"></translation>
+        <translation>FFmpeg is not supported on this platform.</translation>
     </message>
     <message>
         <location line="-82" />
         <location line="+85" />
         <source>The FFmpeg executable was not found (the installation may be incomplete).</source>
-        <translation type="unfinished"></translation>
+        <translation>The FFmpeg executable was not found (the installation may be incomplete).</translation>
     </message>
     <message>
         <location line="-83" />
         <location line="+85" />
         <source>Get Formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Get Formats</translation>
     </message>
     <message>
         <location line="+37" />
@@ -10732,7 +10778,11 @@ The camera must be power cycled after a system package update.</translation>
 %1
 
 Your OpenMV IDE installation may be incomplete.</source>
-        <translation type="unfinished"></translation>
+        <translation>The FFmpeg executable was not found:
+
+%1
+
+Your OpenMV IDE installation may be incomplete.</translation>
     </message>
     <message>
         <location line="+98" />
@@ -10753,7 +10803,7 @@ Your OpenMV IDE installation may be incomplete.</source>
     <message>
         <location line="-452" />
         <source>Video playback is not supported on this platform.</source>
-        <translation type="unfinished"></translation>
+        <translation>Video playback is not supported on this platform.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -10764,7 +10814,7 @@ Your OpenMV IDE installation may be incomplete.</source>
     <message>
         <location line="-1" />
         <source>RTSP playback is not supported on this platform.</source>
-        <translation type="unfinished"></translation>
+        <translation>RTSP playback is not supported on this platform.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -10909,14 +10959,18 @@ OpenMV IDE will just copy the model as is.</translation>
         <source>The model has already been converted for the Ethos-U NPU.
 
 %1 will just copy the model as is.</source>
-        <translation type="unfinished"></translation>
+        <translation>The model has already been converted for the Ethos-U NPU.
+
+%1 will just copy the model as is.</translation>
     </message>
     <message>
         <location line="+27" />
         <source>The model has already been converted for the Neural-ART NPU.
 
 %1 will just copy the model as is.</source>
-        <translation type="unfinished"></translation>
+        <translation>The model has already been converted for the Neural-ART NPU.
+
+%1 will just copy the model as is.</translation>
     </message>
     <message>
         <location line="+147" />
@@ -11291,42 +11345,42 @@ OpenMV IDE will just copy the model as is.</translation>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-542" />
         <source>the detected board</source>
-        <translation type="unfinished"></translation>
+        <translation>the detected board</translation>
     </message>
     <message>
         <location line="+15" />
         <source>The selected file &quot;%L1&quot; does not match any firmware interface for %L2.</source>
-        <translation type="unfinished"></translation>
+        <translation>The selected file &quot;%L1&quot; does not match any firmware interface for %L2.</translation>
     </message>
     <message>
         <location line="+6" />
         <source>%L1 accepts files named:</source>
-        <translation type="unfinished"></translation>
+        <translation>%L1 accepts files named:</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Rename your firmware file to one of the names above (or select the correct file) and try again.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rename your firmware file to one of the names above (or select the correct file) and try again.</translation>
     </message>
     <message>
         <location line="+6" />
         <source>This board does not define any loadable firmware interfaces in its settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>This board does not define any loadable firmware interfaces in its settings.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>To flash a bootloader image your OpenMV Cam must be in bootloader recovery mode. Unplug the camera, connect BOOT0/SBL/RECOVERY to 3.3V with a jumper, and then plug the camera back in before trying again.</source>
-        <translation type="unfinished"></translation>
+        <translation>To flash a bootloader image your OpenMV Cam must be in bootloader recovery mode. Unplug the camera, connect BOOT0/SBL/RECOVERY to 3.3V with a jumper, and then plug the camera back in before trying again.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+68" />
         <source>Unknown control: %L1</source>
-        <translation type="unfinished"></translation>
+        <translation>Unknown control: %L1</translation>
     </message>
     <message>
         <location line="+1" />
         <source>(missing type)</source>
-        <translation type="unfinished"></translation>
+        <translation>(missing type)</translation>
     </message>
     <message>
         <location line="+174" />
@@ -11334,13 +11388,13 @@ OpenMV IDE will just copy the model as is.</translation>
         <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+783" />
         <location line="+5" />
         <source>Show text</source>
-        <translation type="unfinished"></translation>
+        <translation>Show text</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+0" />
         <source>Hide text</source>
-        <translation type="unfinished"></translation>
+        <translation>Hide text</translation>
     </message>
     <message>
         <location line="+59" />
@@ -11349,7 +11403,11 @@ OpenMV IDE will just copy the model as is.</translation>
 %L1
 
 Fix or clear them before saving.</source>
-        <translation type="unfinished"></translation>
+        <translation>These fields have invalid or incomplete input:
+
+%L1
+
+Fix or clear them before saving.</translation>
     </message>
     <message>
         <location line="+24" />
@@ -11358,24 +11416,30 @@ Fix or clear them before saving.</source>
 %L1
 
 %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>Unable to open:
+
+%L1
+
+%L2</translation>
     </message>
     <message>
         <location line="+12" />
         <source>Not a valid JSON config file:
 
 %L1</source>
-        <translation type="unfinished"></translation>
+        <translation>Not a valid JSON config file:
+
+%L1</translation>
     </message>
     <message>
         <location line="+1" />
         <source>the top level must be a JSON object.</source>
-        <translation type="unfinished"></translation>
+        <translation>the top level must be a JSON object.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>This JSON file has no &quot;controls&quot; array to build a GUI from.</source>
-        <translation type="unfinished"></translation>
+        <translation>This JSON file has no &quot;controls&quot; array to build a GUI from.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -11384,13 +11448,17 @@ Fix or clear them before saving.</source>
 %L1
 
 %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>Unable to save:
+
+%L1
+
+%L2</translation>
     </message>
     <message>
         <location line="+15" />
         <location line="+21" />
         <source>JSON Files (*.json)</source>
-        <translation type="unfinished"></translation>
+        <translation>JSON Files (*.json)</translation>
     </message>
     <message>
         <location line="+15" />
@@ -11399,159 +11467,165 @@ Fix or clear them before saving.</source>
 %L1
 
 %L2</source>
-        <translation type="unfinished"></translation>
+        <translation>Unable to create:
+
+%L1
+
+%L2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="-90" />
         <source>Edit WiFi Debugging</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit WiFi Debugging</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Set Up WiFi Debugging</source>
-        <translation type="unfinished"></translation>
+        <translation>Set Up WiFi Debugging</translation>
     </message>
     <message>
         <location line="+24" />
         <source>Please enter or select a WiFi network name (SSID).</source>
-        <translation type="unfinished"></translation>
+        <translation>Please enter or select a WiFi network name (SSID).</translation>
     </message>
     <message>
         <location line="+14" />
         <source>Editing this camera&apos;s WiFi debugging setup -- this updates the boot.py already on the camera, keeping any code you added to it. It brings the network up on power-up and advertises the camera to the IDE, so you can connect without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</source>
-        <translation type="unfinished"></translation>
+        <translation>Editing this camera&apos;s WiFi debugging setup -- this updates the boot.py already on the camera, keeping any code you added to it. It brings the network up on power-up and advertises the camera to the IDE, so you can connect without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Set up this camera for debugging over the network. This writes a boot.py to the camera that brings up its WiFi or Ethernet on power-up and advertises it to the IDE, so you can connect to it without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</source>
-        <translation type="unfinished"></translation>
+        <translation>Set up this camera for debugging over the network. This writes a boot.py to the camera that brings up its WiFi or Ethernet on power-up and advertises it to the IDE, so you can connect to it without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Connection</source>
-        <translation type="unfinished"></translation>
+        <translation>Connection</translation>
     </message>
     <message>
         <location line="+2" />
         <source>WiFi</source>
-        <translation type="unfinished"></translation>
+        <translation>WiFi</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Ethernet</source>
-        <translation type="unfinished"></translation>
+        <translation>Ethernet</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Disabled (USB debugging)</source>
-        <translation type="unfinished"></translation>
+        <translation>Disabled (USB debugging)</translation>
     </message>
     <message>
         <location line="+8" />
         <source>WiFi Network</source>
-        <translation type="unfinished"></translation>
+        <translation>WiFi Network</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Scan</source>
-        <translation type="unfinished"></translation>
+        <translation>Scan</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Network (SSID):</source>
-        <translation type="unfinished"></translation>
+        <translation>Network (SSID):</translation>
     </message>
     <message>
         <location line="+15" />
         <source>Password:</source>
-        <translation type="unfinished">Password:</translation>
+        <translation>Password:</translation>
     </message>
     <message>
         <location line="+5" />
         <source>Automatic</source>
-        <translation type="unfinished">Automatic</translation>
+        <translation>Automatic</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Open (no password)</source>
-        <translation type="unfinished"></translation>
+        <translation>Open (no password)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>WPA / WPA2</source>
-        <translation type="unfinished"></translation>
+        <translation>WPA / WPA2</translation>
     </message>
     <message>
         <location line="+1" />
         <source>WPA3</source>
-        <translation type="unfinished"></translation>
+        <translation>WPA3</translation>
     </message>
     <message>
         <location line="+1" />
         <source>WPA2 / WPA3</source>
-        <translation type="unfinished"></translation>
+        <translation>WPA2 / WPA3</translation>
     </message>
     <message>
         <location line="+1" />
         <source>WEP (legacy)</source>
-        <translation type="unfinished"></translation>
+        <translation>WEP (legacy)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Security:</source>
-        <translation type="unfinished"></translation>
+        <translation>Security:</translation>
     </message>
     <message>
         <location line="+5" />
         <source>IP Address</source>
-        <translation type="unfinished"></translation>
+        <translation>IP Address</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Automatic (DHCP)</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatic (DHCP)</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Static</source>
-        <translation type="unfinished"></translation>
+        <translation>Static</translation>
     </message>
     <message>
         <location line="+13" />
         <source>Address:</source>
-        <translation type="unfinished"></translation>
+        <translation>Address:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Netmask:</source>
-        <translation type="unfinished"></translation>
+        <translation>Netmask:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Gateway:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gateway:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>DNS:</source>
-        <translation type="unfinished"></translation>
+        <translation>DNS:</translation>
     </message>
     <message>
         <location line="+93" />
         <source>No WiFi networks were found (this PC may have no WiFi adapter). You can type the network name in by hand.</source>
-        <translation type="unfinished"></translation>
+        <translation>No WiFi networks were found (this PC may have no WiFi adapter). You can type the network name in by hand.</translation>
     </message>
     <message>
         <location line="+72" />
         <source>Edit boot.py</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit boot.py</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Failed to write boot.py to the camera:
 
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Failed to write boot.py to the camera:
+
+%1</translation>
     </message>
 </context>
 <context>
