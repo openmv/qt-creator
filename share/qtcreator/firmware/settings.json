@@ -1,5 +1,5 @@
 {
-    "firmware_version": "4.8.1",
+    "firmware_version": "5.0.0",
     "boards" : [
         {
             "hidden" : true,
