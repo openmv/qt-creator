@@ -78,6 +78,13 @@ static const char *kUserLine     = "# ===== OPENMV WIFI DEBUG: YOUR CODE BELOW (
 // firmware's stdin-exec path (which soft-resets the cam after every run -- over the network that
 // would tear down WiFi and drop the IDE). boot.py never returns, so that reset path never runs, and
 // Stop is delivered as an ordinary KeyboardInterrupt so the VM stays alive between runs.
+//
+// TODO (perf): the transport allocates on the hot path -- write() coalesces into a fresh bytearray,
+// flush() snapshots it with bytes(), and read() reslices _rx -- producing hundreds of KB of garbage
+// per frame. When the GC runs to reclaim it, the cam visibly hiccups (frames stall). Rework the
+// send/recv path to a preallocated buffer + memoryview and avoid per-fragment allocation so the GC
+// runs far less often. (A first attempt at this was reverted when it destabilized under load; redo
+// it carefully against the current, more robust transport.)
 static const char *kAgentBody = R"PY(
 import json, network, socket, struct, time, machine, errno, micropython, sys, gc
 

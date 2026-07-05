@@ -1040,6 +1040,10 @@ void OpenMVPlugin::extensionsInitialized()
         editWifiDebugBootPy(m_portPath, m_portDriveSerialNumber,
             [this] (const QString &p, const QByteArray &d, QString *e) { return writeFileToDriveAndFlush(p, d, e); });
     });
+    // DISABLED: waiting on firmware that depends on upstream MicroPython features -- a
+    // micropython.keyboard_interrupt() binding (for Stop) and re-init support in
+    // omv_protocol_init(). Re-enable once released firmware carries them.
+    m_editWifiDebugAction->setVisible(false);
 
     m_saveAction = new QAction(Tr::tr("Save open script to OpenMV Cam (as main.py)"), this);
     m_saveCommand = Core::ActionManager::registerAction(m_saveAction, Utils::Id("OpenMV.Save"));
