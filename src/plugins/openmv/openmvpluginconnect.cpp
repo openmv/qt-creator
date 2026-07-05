@@ -4087,7 +4087,16 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         QRegularExpressionMatch match = QRegularExpression(QStringLiteral("(\\d+)\\.(\\d+)\\.(\\d+)")).match(latestFirmware);
 
-        if((major2 < match.captured(1).toInt())
+        if(m_viewerMode)
+        {
+            // The viewer ships inside a customer's product to show off what they built on OpenMV.
+            // Whatever firmware the product runs is theirs by design -- "out of date" doesn't apply,
+            // and we must not push an upgrade that could overwrite their product firmware. Leave the
+            // version text plain and don't pop the upgrade dialog.
+            m_versionButton->setProperty("statusColor", QVariant());
+            m_versionButton->update();
+        }
+        else if((major2 < match.captured(1).toInt())
         || ((major2 == match.captured(1).toInt()) && (minor2 < match.captured(2).toInt()))
         || ((major2 == match.captured(1).toInt()) && (minor2 == match.captured(2).toInt()) && (patch2 < match.captured(3).toInt())))
         {
@@ -4747,11 +4756,14 @@ void OpenMVPlugin::stopClicked()
 
         ///////////////////////////////////////////////////////////////////////
 
-        if(Core::EditorManager::currentEditor()
+        // The "more examples" nag is developer onboarding -- irrelevant to a viewer running a
+        // customer's product.
+        if((!m_viewerMode)
+            && (Core::EditorManager::currentEditor()
             ? Core::EditorManager::currentEditor()->document()
                 ? Core::EditorManager::currentEditor()->document()->displayName() == QStringLiteral("helloworld_1.py")
                 : false
-            : false)
+            : false))
         {
             QTimer::singleShot(2000, this, &OpenMVPlugin::showExamplesDialog);
         }
