@@ -6,20 +6,22 @@
 #
 # This example shows off drawing ellipses on the OpenMV Cam.
 
-import sensor
+import csi
 import time
 from random import randint
 
-sensor.reset()
-sensor.set_pixformat(sensor.RGB565)  # or GRAYSCALE...
-sensor.set_framesize(sensor.QVGA)  # or QQVGA...
-sensor.skip_frames(time=2000)
+csi0 = csi.CSI()
+csi0.reset()
+csi0.pixformat(csi.RGB565)  # or GRAYSCALE...
+csi0.framesize(csi.QVGA)  # or QQVGA...
+csi0.snapshot(time=2000)
+
 clock = time.clock()
 
 while True:
     clock.tick()
 
-    img = sensor.snapshot()
+    img = csi0.snapshot()
 
     for i in range(10):
         x = randint(0, 2 * img.width()) - img.width() // 2
@@ -32,11 +34,6 @@ while True:
         g = randint(0, 127) + 128
         b = randint(0, 127) + 128
 
-        # If the first argument is a scaler then this method expects
-        # to see x, y, radius x, and radius y.
-        # Otherwise, it expects a (x,y,rx,ry) tuple.
-        img.draw_ellipse(
-            x, y, rx, ry, rot, color=(r, g, b), thickness=2, fill=False
-        )
+        img.draw_ellipse((x, y, rx, ry, rot), color=(r, g, b), thickness=2, fill=False)
 
     print(clock.fps())

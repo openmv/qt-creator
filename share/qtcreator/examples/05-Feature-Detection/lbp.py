@@ -11,18 +11,16 @@
 # a lot of work to be made into somethin useful. This script will remain to show
 # that the functionality exists, but, in its current state is inadequate.
 
-import sensor
+import csi
 import time
 import image
 
-# Reset sensor
-sensor.reset()
-
-# Sensor settings
-sensor.set_contrast(1)
-sensor.set_gainceiling(16)
-sensor.set_framesize(sensor.HQVGA)
-sensor.set_pixformat(sensor.GRAYSCALE)
+csi0 = csi.CSI()
+csi0.reset()
+csi0.contrast(1)
+csi0.gainceiling(16)
+csi0.framesize(csi.HQVGA)
+csi0.pixformat(csi.GRAYSCALE)
 
 # Load Haar Cascade
 # By default this will use all stages, lower satges is faster but less accurate.
@@ -32,8 +30,8 @@ print(face_cascade)
 # Skip a few frames to allow the sensor settle down
 # Note: This takes more time when exec from the IDE.
 for i in range(0, 30):
-    img = sensor.snapshot()
-    img.draw_string(0, 0, "Please wait...")
+    img = csi0.snapshot()
+    img.draw_string((0, 0), "Please wait...")
 
 d0 = None
 # d0 = image.load_descriptor("desc.lbp")
@@ -41,18 +39,18 @@ clock = time.clock()
 
 while True:
     clock.tick()
-    img = sensor.snapshot()
+    img = csi0.snapshot()
 
-    objects = img.find_features(face_cascade, threshold=0.5, scale_factor=1.25)
+    objects = img.find_features(face_cascade, threshold=0.5, scale=1.25)
     if objects:
         face = objects[0]
-        d1 = img.find_lbp(face)
+        d1 = img.find_lbp(roi=face)
         if d0 is None:
             d0 = d1
         else:
             dist = image.match_descriptor(d0, d1)
-            img.draw_string(0, 10, "Match %d%%" % (dist))
+            img.draw_string((0, 10), "Match %d%%" % (dist))
 
         img.draw_rectangle(face)
     # Draw FPS
-    img.draw_string(0, 0, "FPS:%.2f" % (clock.fps()))
+    img.draw_string((0, 0), "FPS:%.2f" % (clock.fps()))

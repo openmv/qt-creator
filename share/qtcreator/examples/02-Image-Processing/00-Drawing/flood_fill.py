@@ -6,13 +6,15 @@
 #
 # This example shows off flood filling areas in the image.
 
-import sensor
+import csi
 import time
 
-sensor.reset()
-sensor.set_pixformat(sensor.RGB565)  # or GRAYSCALE...
-sensor.set_framesize(sensor.QVGA)  # or QQVGA...
-sensor.skip_frames(time=2000)
+csi0 = csi.CSI()
+csi0.reset()
+csi0.pixformat(csi.RGB565)  # or GRAYSCALE...
+csi0.framesize(csi.QVGA)  # or QQVGA...
+csi0.snapshot(time=2000)
+
 clock = time.clock()
 
 while True:
@@ -31,13 +33,10 @@ while True:
     # You can invert what gets filled with "invert" and clear
     # everything but the filled area with "clear_background".
 
-    x = sensor.width() // 2
-    y = sensor.height() // 2
-    img = sensor.snapshot().flood_fill(
-        x,
-        y,
+    img = csi0.snapshot().flood_fill(
+        (csi0.width() // 2, csi0.height() // 2),
         seed_threshold=0.05,
-        floating_thresholds=0.05,
+        floating_threshold=0.05,
         color=(255, 0, 0),
         invert=False,
         clear_background=False,

@@ -6,20 +6,22 @@
 #
 # This example shows off drawing arrows on the OpenMV Cam.
 
-import sensor
+import csi
 import time
 from random import randint
 
-sensor.reset()
-sensor.set_pixformat(sensor.RGB565)  # or GRAYSCALE...
-sensor.set_framesize(sensor.QVGA)  # or QQVGA...
-sensor.skip_frames(time=2000)
+csi0 = csi.CSI()
+csi0.reset()
+csi0.pixformat(csi.RGB565)  # or GRAYSCALE...
+csi0.framesize(csi.QVGA)  # or QQVGA...
+csi0.snapshot(time=2000)
+
 clock = time.clock()
 
 while True:
     clock.tick()
 
-    img = sensor.snapshot()
+    img = csi0.snapshot()
 
     for i in range(10):
         x0 = randint(0, 2 * img.width()) - img.width() // 2
@@ -31,8 +33,6 @@ while True:
         g = randint(0, 127) + 128
         b = randint(0, 127) + 128
 
-        # If the first argument is a scaler then this method expects
-        # to see x0, y0, x1, and y1. Otherwise, it expects a (x0,y0,x1,y1) tuple.
-        img.draw_arrow(x0, y0, x1, y1, color=(r, g, b), size=30, thickness=2)
+        img.draw_arrow((x0, y0, x1, y1), color=(r, g, b), size=30, thickness=2)
 
     print(clock.fps())
