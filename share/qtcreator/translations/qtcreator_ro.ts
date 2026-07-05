@@ -25,89 +25,72 @@
 <context>
     <name>OpenMVCameraSettings</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvcamerasettings.ui" />
         <source>OpenMV Cam Settings</source>
-        <translation>Setări Cam OpenMV</translation>
+        <translation type="vanished">Setări Cam OpenMV</translation>
     </message>
     <message>
-        <location/>
         <source>Turn on WiFi Shield on startup</source>
-        <translation>Activați WiFi Shield la pornire</translation>
+        <translation type="vanished">Activați WiFi Shield la pornire</translation>
     </message>
     <message>
-        <location/>
         <source>Client Mode (Normal)</source>
-        <translation>Mod client (normal)</translation>
+        <translation type="vanished">Mod client (normal)</translation>
     </message>
     <message>
-        <location/>
         <source>Password</source>
-        <translation>Parolă</translation>
+        <translation type="vanished">Parolă</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter your WiFi network password here</source>
-        <translation>Vă rugăm să introduceți aici parola rețelei WiFi</translation>
+        <translation type="vanished">Vă rugăm să introduceți aici parola rețelei WiFi</translation>
     </message>
     <message>
-        <location/>
         <source>Type</source>
-        <translation>Tip</translation>
+        <translation type="vanished">Tip</translation>
     </message>
     <message>
-        <location/>
         <source>Open (No password)</source>
-        <translation>Deschide (Fără parolă)</translation>
+        <translation type="vanished">Deschide (Fără parolă)</translation>
     </message>
     <message>
-        <location/>
         <source>WPA (Modern WiFi Security)</source>
-        <translation>WPA (Securitate WiFi modernă)</translation>
+        <translation type="vanished">WPA (Securitate WiFi modernă)</translation>
     </message>
     <message>
-        <location/>
         <source>WEP (Hexadecimal password)</source>
-        <translation>WEP (parolă hexazecimală)</translation>
+        <translation type="vanished">WEP (parolă hexazecimală)</translation>
     </message>
     <message>
-        <location/>
         <source>SSID</source>
-        <translation>SSID</translation>
+        <translation type="vanished">SSID</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter or select your WiFi network here</source>
-        <translation>Vă rugăm să introduceți sau să selectați rețeaua dvs. WiFi aici</translation>
+        <translation type="vanished">Vă rugăm să introduceți sau să selectați rețeaua dvs. WiFi aici</translation>
     </message>
     <message>
-        <location/>
         <source>Acess Point Mode</source>
-        <translation>Mod punct de acces</translation>
+        <translation type="vanished">Mod punct de acces</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
-        <translation>Vă rugăm să introduceți numele rețelei WiFi pentru a crea parola aici</translation>
+        <translation type="vanished">Vă rugăm să introduceți numele rețelei WiFi pentru a crea parola aici</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
-        <translation>Vă rugăm să introduceți numele rețelei WiFI pentru a crea aici</translation>
+        <translation type="vanished">Vă rugăm să introduceți numele rețelei WiFI pentru a crea aici</translation>
     </message>
     <message>
-        <location/>
         <source>Board Name</source>
-        <translation>Numele consiliului</translation>
+        <translation type="vanished">Numele consiliului</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
-        <translation>Introduceți aici un nume pentru Cam-ul dvs. OpenMV</translation>
+        <translation type="vanished">Introduceți aici un nume pentru Cam-ul dvs. OpenMV</translation>
     </message>
     <message>
-        <location/>
         <source>Duplicate REPL on the UART on startup</source>
-        <translation>Duplicați REPL pe UART la pornire</translation>
+        <translation type="vanished">Duplicați REPL pe UART la pornire</translation>
     </message>
 </context>
 <context>
@@ -156,6 +139,21 @@
         <location/>
         <source>Mean</source>
         <translation>Medie</translation>
+    </message>
+    <message>
+        <location/>
+        <source>R</source>
+        <translation>R</translation>
+    </message>
+    <message>
+        <location/>
+        <source>G</source>
+        <translation>G</translation>
+    </message>
+    <message>
+        <location/>
+        <source>B</source>
+        <translation>B</translation>
     </message>
 </context>
 <context>
@@ -214,14 +212,16 @@
         <translation>Se actualizează definiția sintaxei pentru „%1” la versiunea %2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1263" />
         <source>Copy/Convert Python File</source>
         <translation>Copiați/Convertiți fișierul Python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="-42" />
         <location line="+7" />
-        <location line="+91" />
+        <location line="+85" />
+        <location line="+7" />
+        <location line="+101" />
         <location line="+7" />
         <location line="+76" />
         <location line="+7" />
@@ -821,24 +821,24 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Editor binar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+44" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+47" />
         <source>Target</source>
         <translation>Ţintă</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+96" />
+        <location line="+108" />
         <source>Label</source>
         <translation>Eticheta</translation>
     </message>
     <message>
-        <location line="-95" />
-        <location line="+95" />
+        <location line="-107" />
+        <location line="+107" />
         <source>Command</source>
         <translation>Comanda</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-105" />
         <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+863" />
         <source>Reset All</source>
         <translation>Resetați toate</translation>
@@ -851,7 +851,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location line="+2" />
         <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+481" />
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+144" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+150" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+191" />
         <location line="+8" />
         <source>Reset</source>
@@ -1245,7 +1245,8 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
     </message>
     <message>
         <location line="+56" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+516" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+474" />
+        <location line="+72" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+52" />
         <source>Add</source>
         <translation>Adăuga</translation>
@@ -1613,7 +1614,7 @@ Doriți să le suprascrieți?</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+1" />
         <location line="+299" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+2077" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+2079" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+438" />
         <source>Make Writable</source>
         <translation>Faceți inscriptibil</translation>
@@ -1751,9 +1752,9 @@ Vrei să le verifici acum?</translation>
     </message>
     <message>
         <location line="+71" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1709" />
-        <location line="+1735" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1980" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1711" />
+        <location line="+1737" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+2000" />
         <source>&amp;Save</source>
         <translation>&amp;Salva</translation>
     </message>
@@ -1785,7 +1786,7 @@ Vrei să le verifici acum?</translation>
     <message>
         <location line="+15" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+5" />
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+58" />
+        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+63" />
         <source>Save</source>
         <translation>Salva</translation>
     </message>
@@ -1800,7 +1801,7 @@ Vrei să le verifici acum?</translation>
         <translation>Salvați selectat</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+484" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+504" />
         <source>Sort categories</source>
         <translation>Sortați categoriile</translation>
     </message>
@@ -1810,7 +1811,7 @@ Vrei să le verifici acum?</translation>
         <translation>Preferințe</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-374" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-392" />
         <source>Invalid key sequence.</source>
         <translation>Secvență de taste nevalidă.</translation>
     </message>
@@ -1831,16 +1832,18 @@ Vrei să le verifici acum?</translation>
     </message>
     <message>
         <location line="+1" />
+        <location line="+277" />
         <source>Record</source>
         <translation>Înregistra</translation>
     </message>
     <message>
-        <location line="+122" />
+        <location line="-155" />
+        <location line="+153" />
         <source>Key sequence:</source>
         <translation>Secvență de taste:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-149" />
         <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>Folosiți „Cmd”, „Opt”, „Ctrl” și „Shift” pentru tastele modificatoare. Folosiți „Escape”, „Backspace”, „Delete”, „Insert”, „Home” și așa mai departe, pentru tastele speciale. Combinați tastele individuale cu „+” și combinați mai multe comenzi rapide într-o secvență de comenzi rapide cu &quot;,&quot;. De exemplu, dacă utilizatorul trebuie să țină apăsate tastele modificatoare Ctrl și Shift în timp ce apăsă Escape, apoi eliberați și apăsați A, introduceți „Ctrl+Shift+Escape,A”.</translation>
     </message>
@@ -1867,11 +1870,12 @@ Vrei să le verifici acum?</translation>
     <message>
         <location line="+1" />
         <location line="+15" />
+        <location line="+11" />
         <source>Shortcut</source>
         <translation>Comandă rapidă</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="+159" />
         <source>Import Keyboard Mapping Scheme</source>
         <translation>Importați schema de mapare a tastaturii</translation>
     </message>
@@ -1887,7 +1891,7 @@ Vrei să le verifici acum?</translation>
         <translation>Exportați schema de mapare a tastaturii</translation>
     </message>
     <message>
-        <location line="+135" />
+        <location line="+232" />
         <source>Keyboard</source>
         <translation>Tastatura</translation>
     </message>
@@ -1956,7 +1960,7 @@ Vrei să le verifici acum?</translation>
         <translation>Salvați A&amp;ll</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+30" />
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+33" />
         <source>Edit</source>
         <translation>Edita</translation>
     </message>
@@ -1971,7 +1975,7 @@ Vrei să le verifici acum?</translation>
         <translation>Nu este selectat niciun document.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2299" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2301" />
         <source>Copy Full Path</source>
         <translation>Copiați calea completă</translation>
     </message>
@@ -1987,25 +1991,25 @@ Vrei să le verifici acum?</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+1735" />
+        <location line="+1737" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+5" />
         <source>Save &amp;As...</source>
         <translation>Salvați &amp;ca...</translation>
     </message>
     <message>
-        <location line="-1734" />
+        <location line="-1736" />
         <location line="+46" />
-        <location line="+1689" />
+        <location line="+1691" />
         <location line="+534" />
         <source>Revert to Saved</source>
         <translation>Reveniți la Salvat</translation>
     </message>
     <message>
-        <location line="-2268" />
+        <location line="-2270" />
         <location line="+95" />
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+421" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
         <location line="+1" />
         <source>Close</source>
@@ -2019,19 +2023,19 @@ Vrei să le verifici acum?</translation>
     </message>
     <message>
         <location line="-99" />
-        <location line="+111" />
+        <location line="+113" />
         <location line="+1645" />
         <source>Close Others</source>
         <translation>Închide Alții</translation>
     </message>
     <message>
-        <location line="-1755" />
-        <location line="+122" />
+        <location line="-1757" />
+        <location line="+124" />
         <source>Close All Except Visible</source>
         <translation>Închideți toate, cu excepția celor vizibile</translation>
     </message>
     <message>
-        <location line="-117" />
+        <location line="-119" />
         <source>Properties...</source>
         <translation>Proprietăți...</translation>
     </message>
@@ -2056,12 +2060,11 @@ Vrei să le verifici acum?</translation>
         <translation>Ctrl+F4</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Ctrl+Shift+W</source>
-        <translation>Ctrl+Shift+W</translation>
+        <translation type="vanished">Ctrl+Shift+W</translation>
     </message>
     <message>
-        <location line="+99" />
+        <location line="+112" />
         <source>Previous Open Document in History</source>
         <translation>Documentul deschis anterior în istorie</translation>
     </message>
@@ -2965,7 +2968,7 @@ Continua?</translation>
         <translation>Elimina...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-83" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-86" />
         <source>Show keyboard shortcuts in context menus (default: %1)</source>
         <translation>Afișați comenzile rapide de la tastatură în meniurile contextuale (implicit: %1)</translation>
     </message>
@@ -2992,7 +2995,7 @@ If the system cursors for resizing views are not displayed properly, you can use
 Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișate corect, puteți utiliza cursoarele furnizate de %1.</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+74" />
         <source>Reset Do Not Ask/Show Again Dialogs</source>
         <translation>Resetați casetele de dialog Nu întrebați/Afișați din nou</translation>
     </message>
@@ -3053,7 +3056,12 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>Mediul influențează comportamentul de scalare a UI.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+21" />
+        <source>Serial Terminal Tab size:</source>
+        <translation>Dimensiune tab Terminal serial:</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>User Interface</source>
         <translation>Interfata utilizator</translation>
     </message>
@@ -3063,7 +3071,7 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>&lt;Limba de sistem&gt;</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+97" />
         <source>The language change will take effect after restart.</source>
         <translation>Schimbarea limbii va intra în vigoare după repornire.</translation>
     </message>
@@ -3098,7 +3106,7 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>Nu se poate crea directorul %1.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1409" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1429" />
         <source>Configure...</source>
         <comment>msgShowOptionsDialog</comment>
         <translation>Configurați...</translation>
@@ -3131,7 +3139,7 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>Reporniți acum</translation>
     </message>
     <message>
-        <location line="+358" />
+        <location line="+378" />
         <source>Based on Qt %1 (%2, %3)</source>
         <translation>Bazat pe Qt %1 (%2, %3)</translation>
     </message>
@@ -3401,12 +3409,11 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>Afișați bara de meniu</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Ctrl+Alt+M</source>
-        <translation>Ctrl+Alt+M</translation>
+        <translation type="vanished">Ctrl+Alt+M</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+25" />
         <source>Hide Menu Bar</source>
         <translation>Ascunde bara de meniu</translation>
     </message>
@@ -4038,7 +4045,7 @@ Faceți dublu clic pentru a edita elementul.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1030" />
         <location line="+16" />
         <location line="+14" />
         <source>Save Log</source>
@@ -4047,7 +4054,7 @@ Faceți dublu clic pentru a edita elementul.</translation>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-726" />
         <source>Clear</source>
         <translation>Clar</translation>
     </message>
@@ -4186,6 +4193,31 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <location line="+30" />
         <source>Wrap Text</source>
         <translation>Încheiere text</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Serial Protocol Debug Logging</source>
+        <translation>Jurnalizare depanare protocol serial</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Off</source>
+        <translation>Dezactivat</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands</source>
+        <translation>Comenzi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands + Packets</source>
+        <translation>Comenzi + Pachete</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands + Packets + Fragments</source>
+        <translation>Comenzi + Pachete + Fragmente</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="-129" />
@@ -4416,7 +4448,7 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <translation>&amp;Ieșire și ieșire</translation>
     </message>
     <message>
-        <location line="+406" />
+        <location line="+461" />
         <source>Reset to Default</source>
         <translation>Resetați la valoarea implicită</translation>
     </message>
@@ -4452,7 +4484,7 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <translation>[Aruncarea cantității excesive de rezultate în așteptare.]</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+404" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Fișiere text (*.txt);;Toate fișierele (*)</translation>
     </message>
@@ -5275,7 +5307,7 @@ la controlul versiunii (%2)</translation>
 <context>
     <name>QtC::ExtensionSystem</name>
     <message>
-        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
+        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+133" />
         <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>Pluginul „%1” este specificat de două ori pentru testare.</translation>
     </message>
@@ -6671,7 +6703,7 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+29" />
         <location line="+27" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+206" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+208" />
         <location line="+37" />
         <location line="+164" />
         <location line="+65" />
@@ -6685,7 +6717,7 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+7" />
         <location line="+36" />
         <location line="+26" />
-        <location line="+16" />
+        <location line="+17" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
         <location line="+54" />
         <location line="+32" />
@@ -6695,7 +6727,7 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+235" />
         <location line="+9" />
         <location line="+95" />
         <location line="+11" />
@@ -6703,21 +6735,21 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+65" />
+        <location line="+69" />
         <location line="+26" />
         <location line="+18" />
         <location line="+23" />
         <location line="+18" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+78" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+80" />
         <location line="+73" />
         <location line="+9" />
         <location line="+52" />
         <location line="+4" />
         <location line="+7" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location line="+26" />
-        <location line="+26" />
+        <location line="+27" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+105" />
         <location line="+35" />
         <location line="+14" />
@@ -6728,14 +6760,14 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+9" />
         <location line="+16" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+574" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+650" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+587" />
+        <location line="+1098" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1195" />
         <location line="+6" />
-        <location line="+28" />
-        <location line="+52" />
-        <location line="+8" />
-        <location line="+35" />
-        <location line="+329" />
+        <location line="+27" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+477" />
         <location line="+136" />
         <location line="+28" />
         <location line="+100" />
@@ -6745,17 +6777,17 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+81" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+28" />
-        <location line="+34" />
+        <location line="+29" />
+        <location line="+38" />
         <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+97" />
-        <location line="+4" />
-        <location line="+4" />
+        <location line="+108" />
+        <location line="+6" />
+        <location line="+5" />
         <location line="+72" />
         <location line="+116" />
         <location line="+83" />
@@ -6776,19 +6808,19 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+135" />
         <location line="+217" />
         <location line="+33" />
-        <location line="+268" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+838" />
+        <location line="+370" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+839" />
         <location line="+48" />
         <source>Connect</source>
         <translation>Conectați-vă</translation>
     </message>
     <message>
         <location line="-80" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2050" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-232" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2171" />
         <location line="+252" />
-        <location line="+681" />
-        <location line="+1936" />
+        <location line="+700" />
+        <location line="+2104" />
         <source>Please select the board type</source>
         <translation>Vă rugăm să selectați tipul de panou</translation>
     </message>
@@ -6810,7 +6842,7 @@ Consultați documentația serverului de limbă specifică pentru setările valid
     <message>
         <location line="+25" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+155" />
-        <location line="+50" />
+        <location line="+51" />
         <source>Firmware update complete!
 
 </source>
@@ -6819,12 +6851,12 @@ Consultați documentația serverului de limbă specifică pentru setările valid
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-12" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-13" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-12" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-39" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-48" />
-        <location line="+51" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-49" />
+        <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-12" />
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>Faceți clic pe butonul Ok după ce OpenMV Cam a enumerat și a terminat de rulat autotestul încorporat (led-ul albastru clipește - acest lucru durează ceva timp).</translation>
@@ -6835,13 +6867,13 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-143" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-170" />
-        <location line="+130" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-174" />
+        <location line="+134" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-50" />
-        <location line="+24" />
-        <location line="+27" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
         <location line="+25" />
+        <location line="+27" />
+        <location line="+26" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-36" />
         <location line="+37" />
         <source>
@@ -6860,7 +6892,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-348" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-352" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Nu există setări DFU pentru tipul de placă selectat!</translation>
     </message>
@@ -6924,8 +6956,8 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+33" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+20" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-55" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-56" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+17" />
         <source>Onboard Data Flash Erased!
 
@@ -6936,8 +6968,8 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
@@ -6948,8 +6980,8 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>Faceți clic pe OK când LED-ul RGB al OpenMV Cam începe să clipească în albastru - ceea ce indică finalizarea autotestului.</translation>
@@ -6969,17 +7001,17 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-327" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1436" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1514" />
+        <location line="+1795" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+139" />
         <location line="+202" />
-        <location line="+306" />
+        <location line="+330" />
         <location line="+13" />
         <location line="+169" />
         <location line="+146" />
@@ -6987,15 +7019,14 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3735" />
-        <location line="+273" />
-        <location line="+86" />
-        <location line="+1142" />
-        <location line="+1075" />
-        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4119" />
+        <location line="+315" />
+        <location line="+1388" />
+        <location line="+1089" />
+        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+109" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+699" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
         <location line="+11" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
@@ -7023,7 +7054,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-8" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+29" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+33" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+10" />
@@ -7037,7 +7068,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="-48" />
         <location line="+29" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+108" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+109" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-59" />
         <location line="+26" />
         <location line="+41" />
@@ -7046,7 +7077,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location line="-13" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-15" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-16" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-22" />
         <location line="+41" />
         <source>DFU firmware update complete!
@@ -7061,7 +7092,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-136" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-138" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Deconectați-vă OpenMV Cam și apoi reconectați-o...</translation>
     </message>
@@ -7084,52 +7115,72 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3385" />
-        <location line="+1513" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3690" />
+        <location line="+1794" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+273" />
-        <location line="+554" />
+        <location line="+578" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
         <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2717" />
-        <location line="+289" />
-        <location line="+165" />
-        <location line="+1148" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3187" />
+        <location line="+252" />
+        <location line="+327" />
+        <location line="+1479" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-324" />
         <location line="+85" />
-        <location line="+605" />
+        <location line="+627" />
         <source>Cancel</source>
         <translation>Anula</translation>
     </message>
     <message>
-        <location line="-353" />
         <source>OpenMV IDE needs to update your bootloader to support ROMFS.
 
 The internal FAT filesystem will be erased!
 
 Continue?</source>
-        <translation>OpenMV IDE trebuie să vă actualizeze bootloader-ul pentru a suporta ROMFS. 
+        <translation type="vanished">OpenMV IDE trebuie să vă actualizeze bootloader-ul pentru a suporta ROMFS. 
 
 Sistemul de fișiere FAT intern va fi șters! 
 
 Continua?</translation>
     </message>
     <message>
-        <location line="+37" />
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
-        <translation>OpenMV IDE poate încerca în continuare să repare OpenMV Cam folosind încărcătorul DFU al OpenMV Cam. 
+        <translation type="vanished">OpenMV IDE poate încerca în continuare să repare OpenMV Cam folosind încărcătorul DFU al OpenMV Cam. 
 
 Continua?</translation>
+    </message>
+    <message>
+        <location line="-353" />
+        <source>%1 needs to update your bootloader to support ROMFS.
+
+The internal FAT filesystem will be erased!
+
+Continue?</source>
+        <translation>%1 trebuie să actualizeze bootloaderul pentru a accepta ROMFS.
+
+Sistemul de fișiere FAT intern va fi șters!
+
+Continuați?</translation>
+    </message>
+    <message>
+        <location line="+37" />
+        <source>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
+
+Continue?</source>
+        <translation>%1 poate încă încerca să repare camera OpenMV folosind bootloaderul DFU al camerei OpenMV.
+
+Continuați?</translation>
     </message>
     <message>
         <location line="+108" />
@@ -7148,8 +7199,8 @@ Continua?</translation>
     </message>
     <message>
         <location line="+24" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+82" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+83" />
+        <location line="+53" />
         <source>Firmware Upgrade complete!
 
 </source>
@@ -7216,7 +7267,12 @@ Faceți clic pe butonul Ok după ce încărcătorul DFU al OpenMV Cam a fost enu
         <translation>Deconectați-vă OpenMV Cam de la computer, scoateți cablul jumper dintre pinii BOOT și RST, apoi reconectați OpenMV Cam la computer.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+2" />
+        <source>Disconnect the device from your computer, remove the jumper wire between the BOOT and RST pins, and then reconnect it.</source>
+        <translation>Deconectați dispozitivul de la computer, îndepărtați firul jumper dintre pinii BOOT și RST, apoi reconectați-l.</translation>
+    </message>
+    <message>
+        <location line="+13" />
         <source>DFU bootloader reset failed!</source>
         <translation>Resetarea bootloader-ului DFU a eșuat!</translation>
     </message>
@@ -7261,7 +7317,7 @@ Faceți clic pe butonul Ok după ce încărcătorul DFU al OpenMV Cam a fost enu
         <translation>Actualizarea firmware-ului BOSSAC a eșuat!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-542" />
         <source>the detected board</source>
         <translation>placa detectată</translation>
     </message>
@@ -7286,7 +7342,12 @@ Faceți clic pe butonul Ok după ce încărcătorul DFU al OpenMV Cam a fost enu
         <translation>Această placă nu definește nicio interfață firmware încărcabilă în setările sale.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-157" />
+        <location line="+9" />
+        <source>To flash a bootloader image your OpenMV Cam must be in bootloader recovery mode. Unplug the camera, connect BOOT0/SBL/RECOVERY to 3.3V with a jumper, and then plug the camera back in before trying again.</source>
+        <translation>Pentru a scrie o imagine de bootloader, camera OpenMV trebuie să fie în modul de recuperare a bootloaderului. Deconectați camera, conectați BOOT0/SBL/RECOVERY la 3.3V cu un jumper, apoi reconectați camera înainte de a încerca din nou.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-159" />
         <source>No IMX settings for the selected board type %L1!</source>
         <translation>Nu există setări IMX pentru tipul de placă selectat %L1!</translation>
     </message>
@@ -7309,15 +7370,28 @@ Hit cancel to skip to SBL reprogramming.</source>
     </message>
     <message>
         <location line="+4" />
+        <source>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
+
+Continue?</source>
+        <translation>%1 poate încă încerca să repare camera OpenMV folosind bootloaderul SBL al camerei OpenMV.
+
+Continuați?</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>If you are forcing SBL mode, disconnect the device from your computer and remove the SBL wire jumper, then reconnect it.</source>
+        <translation>Dacă forțați modul SBL, deconectați dispozitivul de la computer și îndepărtați firul jumper SBL, apoi reconectați-l.</translation>
+    </message>
+    <message>
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
-        <translation>OpenMV IDE poate încerca în continuare să vă repare OpenMV Cam folosind încărcătorul SBL al OpenMV Cam. 
+        <translation type="vanished">OpenMV IDE poate încerca în continuare să vă repare OpenMV Cam folosind încărcătorul SBL al OpenMV Cam. 
 
 Continua?</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-66" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
 Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
@@ -7333,7 +7407,12 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <translation>Deconectați-vă OpenMV Cam de la computer, scoateți cablul jumper dintre pinii SBL și 3,3 V, apoi reconectați OpenMV Cam la computer.</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+4" />
+        <source>Disconnect the device from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect it.</source>
+        <translation>Deconectați dispozitivul de la computer, îndepărtați firul jumper dintre pinii SBL și 3.3V, apoi reconectați-l.</translation>
+    </message>
+    <message>
+        <location line="+47" />
         <source>If you are forcing SBL mode, disconnect your OpenMV Cam from your computer and remove the SBL wire jumper. Then reconnect your OpenMV Cam to your computer.
 
 </source>
@@ -7362,7 +7441,7 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <translation>Actualizarea firmware-ului PicoTool a eșuat!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.cpp" line="+548" />
+        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.cpp" line="+671" />
         <location line="+34" />
         <source>Value %L1</source>
         <translation>Valoarea %L1</translation>
@@ -7420,9 +7499,8 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <translation>V</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvcamerasettings.cpp" line="+81" />
         <source>Please enter your WiFi network here</source>
-        <translation>Vă rugăm să introduceți rețeaua WiFi aici</translation>
+        <translation type="vanished">Vă rugăm să introduceți rețeaua WiFi aici</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-367" />
@@ -7441,8 +7519,8 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3987" />
-        <location line="+823" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4292" />
+        <location line="+878" />
         <source>Dataset Editor</source>
         <translation>Editor de set de date</translation>
     </message>
@@ -7453,8 +7531,8 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
     </message>
     <message>
         <location line="+58" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-780" />
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-835" />
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
         <location line="+48" />
         <location line="+9" />
@@ -7468,23 +7546,23 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
     </message>
     <message>
         <location line="+33" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
-        <location line="+1442" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2844" />
+        <location line="+1481" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Nu s-a salvat fișierul imagine dintr-un motiv necunoscut!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
-        <location line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+589" />
+        <location line="+291" />
         <source>Delete</source>
         <translation>Şterge</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-361" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Sigur doriți să ștergeți definitiv „%L1”?</translation>
     </message>
@@ -7512,12 +7590,12 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4347" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4654" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+67" />
-        <location line="+221" />
+        <location line="+288" />
         <source>Model Zoo</source>
         <translation>Grădina Zoologică Model</translation>
     </message>
@@ -7528,7 +7606,7 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
     </message>
     <message>
         <location line="+42" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-148" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-152" />
         <source>Copy</source>
         <translation>Copie</translation>
     </message>
@@ -7538,13 +7616,13 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <translation>Bine</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-972" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1244" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-308" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Nu s-a putut copia fișierul „%1” în „%2”.</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+94" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>Argument lipsă pentru -serial_number_filter</translation>
     </message>
@@ -7559,32 +7637,13 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <translation>Argumentul lipsește pentru -auto_update</translation>
     </message>
     <message>
-        <location line="+109" />
-        <location line="+8" />
-        <location line="+10" />
-        <location line="+11" />
-        <location line="+28" />
-        <location line="+28" />
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1562" />
-        <location line="+9" />
-        <location line="+13" />
-        <location line="+63" />
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
-        <location line="+36" />
-        <location line="+7" />
-        <location line="+8" />
-        <location line="+10" />
-        <location line="+7" />
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
-        <translation>Închideți toate programele care vizualizează/editează datele aplicației OpenMV IDE și apoi reporniți OpenMV IDE!</translation>
+        <translation type="vanished">Închideți toate programele care vizualizează/editează datele aplicației OpenMV IDE și apoi reporniți OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+248" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7593,16 +7652,15 @@ Check the json file for errors and fix them.</source>
 Verificați fișierul json pentru erori și remediați-le.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>Eroare la citirea &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1. 
+        <translation type="vanished">Eroare la citirea &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1. 
 
 Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters la instalarea resurselor.</translation>
     </message>
     <message>
-        <location line="+164" />
+        <location line="+139" />
         <source>Missing argument for -form_key</source>
         <translation>Argument lipsă pentru -form_key</translation>
     </message>
@@ -7661,8 +7719,8 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Conectați-vă mai întâi la placa dvs. pentru a vedea exemple</translation>
     </message>
     <message>
-        <location line="+22" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+68" />
+        <location line="+48" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1605" />
         <source>Load Custom Firmware</source>
         <translation>Încărcați firmware personalizat</translation>
     </message>
@@ -7688,27 +7746,27 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Sigur doriți să ștergeți sistemul intern de fișiere FAT al OpenMV Cam?</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+16" />
         <source>ROM File System</source>
         <translation>Sistem de fișiere ROM</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>New ROMFS File</source>
         <translation>Fișier ROMFS nou</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+8" />
         <source>Open ROMFS File</source>
         <translation>Deschideți fișierul ROMFS</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Edit ROMFS on OpenMV Cam</source>
         <translation>Editați ROMFS pe OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Reset ROMFS on OpenMV Cam</source>
         <translation>Resetați ROMFS pe OpenMV Cam</translation>
     </message>
@@ -7718,12 +7776,11 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Reconectare automată la OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected.</source>
-        <translation>Când Reconectarea automată este activată, OpenMV IDE se va reconecta automat la OpenMV dacă este detectat.</translation>
+        <translation type="vanished">Când Reconectarea automată este activată, OpenMV IDE se va reconecta automat la OpenMV dacă este detectat.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Stop Script on Connect/Disconnect</source>
         <translation>Opriți Scriptul la Conectare/Deconectare</translation>
     </message>
@@ -7733,7 +7790,7 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Opriți scriptul pe Conectare sau Deconectare (rețineți că IDE-ul se deconectează la închidere dacă este conectat).</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Sync Imports between OpenMV Cam and Documents Folder</source>
         <translation>Sincronizați importurile între OpenMV Cam și folderul Documents</translation>
     </message>
@@ -7758,12 +7815,11 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Deschideți folderul OpenMV Cam Drive</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Configure OpenMV Cam settings file</source>
-        <translation>Configurați fișierul de setări OpenMV Cam</translation>
+        <translation type="vanished">Configurați fișierul de setări OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+24" />
         <source>Save open script to OpenMV Cam (as main.py)</source>
         <translation>Salvați scriptul deschis în OpenMV Cam (ca main.py)</translation>
     </message>
@@ -7783,15 +7839,16 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Instalați cea mai recentă versiune de dezvoltare</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+44" />
         <source>MicroPython Tools</source>
         <translation>Instrumente MicroPython</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+125" />
         <location line="+6" />
         <location line="+7" />
-        <location line="+33" />
+        <location line="+34" />
+        <location line="+30" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -7801,19 +7858,19 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Copiați/Convertiți fișierul Python</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+3823" />
+        <location line="+14" />
+        <location line="+4137" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Deschideți terminalul</translation>
     </message>
     <message>
-        <location line="-3877" />
+        <location line="-4191" />
         <source>Machine Vision</source>
         <translation>Viziune artificială</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+11" />
         <source>Open Model Zoo</source>
         <translation>Deschide Model Zoo</translation>
     </message>
@@ -7829,28 +7886,28 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-687" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Convertiți modelul</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+3733" />
+        <location line="+4040" />
         <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Editor de prag</translation>
     </message>
     <message>
-        <location line="-3803" />
-        <location line="+3880" />
+        <location line="-4110" />
+        <location line="+4187" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Editor de puncte cheie</translation>
     </message>
     <message>
-        <location line="-3873" />
-        <location line="+4037" />
+        <location line="-4178" />
+        <location line="+4342" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7859,7 +7916,7 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>AprilTag Generator</translation>
     </message>
     <message>
-        <location line="-4184" />
+        <location line="-4489" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Familie TAG16H5 (30 de etichete)</translation>
     </message>
@@ -7894,19 +7951,124 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Generator de coduri QRC</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1338" />
+        <location line="+1348" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+367" />
-        <location line="+14" />
-        <location line="+33" />
-        <location line="+918" />
+        <location line="+409" />
+        <location line="+1051" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+149" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Deschiderea eșuată: „%L1”</translation>
     </message>
     <message>
-        <location line="-1356" />
+        <location line="-2643" />
+        <location line="+8" />
+        <location line="+10" />
+        <location line="+11" />
+        <location line="+28" />
+        <location line="+28" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-161" />
+        <location line="+9" />
+        <location line="+13" />
+        <location line="+65" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1801" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
+        <location line="+36" />
+        <location line="+7" />
+        <location line="+8" />
+        <location line="+10" />
+        <location line="+7" />
+        <source>
+
+Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
+        <translation>
+
+Închideți orice programe care vizualizează/editează datele aplicației %1 și apoi reporniți %1!</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
+
+%2 versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
+        <translation>Eroare la citirea &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
+
+Versiunile %2 anterioare v4.3.0 nu au acest fișier și l-ar fi șters la instalarea resurselor.</translation>
+    </message>
+    <message>
+        <location line="+379" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+554" />
+        <source>Load ROMFS onto OpenMV Cam</source>
+        <translation>Încărcare ROMFS pe camera OpenMV</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>When Auto Reconnect is enabled %1 will automatically reconnect to your OpenMV if detected.</source>
+        <translation>Când Reconectarea automată este activată, %1 se va reconecta automat la OpenMV dacă este detectat.</translation>
+    </message>
+    <message>
+        <location line="+62" />
+        <source>Edit boot.py for WiFi Debugging</source>
+        <translation>Editare boot.py pentru depanare Wi-Fi</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Open OpenMV Cam Settings Config File</source>
+        <translation>Deschidere fișier de configurare a setărilor camerei OpenMV</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+188" />
+        <location line="+346" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+51" />
+        <source>OpenMV Cam Settings Editor</source>
+        <translation>Editor de setări cameră OpenMV</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-14" />
+        <source>Create Default Config</source>
+        <translation>Creare configurație implicită</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-21" />
+        <source>Open Config File</source>
+        <translation>Deschidere fișier de configurare</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <location line="+12" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+19" />
+        <location line="+29" />
+        <location line="+7" />
+        <source>Copy/Convert Current Script</source>
+        <translation>Copiere/Conversie script curent</translation>
+    </message>
+    <message>
+        <location line="-70" />
+        <source>Unable to stage the current script!</source>
+        <translation>Nu se poate pregăti scriptul curent!</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <location line="+91" />
+        <source>&quot;%L1&quot; won&apos;t auto-run: your OpenMV Cam only auto-runs main.py/boot.py source files, never a compiled .mpy.
+
+Would you like to choose a different name?</source>
+        <translation>&quot;%L1&quot; nu va rula automat: camera OpenMV rulează automat doar fișierele sursă main.py/boot.py, niciodată un fișier .mpy compilat.
+
+Doriți să alegeți un alt nume?</translation>
+    </message>
+    <message>
+        <location line="+298" />
         <source>DataMatrix Generator</source>
         <translation>DataMatrix Generator</translation>
     </message>
@@ -7932,8 +8094,8 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+374" />
-        <location line="+275" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+447" />
+        <location line="+276" />
         <source>Play RTSP Stream</source>
         <translation>Redați fluxul RTSP</translation>
     </message>
@@ -8008,19 +8170,19 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
     </message>
     <message>
         <location line="+6" />
-        <location line="+2424" />
-        <location line="+1288" />
+        <location line="+2690" />
+        <location line="+1327" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-245" />
-        <location line="+375" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-240" />
+        <location line="+374" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-115" />
         <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Vă rugăm să adăugați o extensie de fișier!</translation>
     </message>
     <message>
-        <location line="-3692" />
+        <location line="-3997" />
         <source>Exporting...</source>
         <translation>Exportator...</translation>
     </message>
@@ -8062,79 +8224,122 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Afișați Code Profiler</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+34" />
         <source>OpenMV Docs</source>
         <translation>OpenMV Docs</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+8" />
+        <source>Home</source>
+        <translation>Acasă</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Tutorial</source>
+        <translation>Tutorial</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Libraries</source>
+        <translation>Biblioteci</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Boards</source>
+        <translation>Plăci</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Shields</source>
+        <translation>Shield-uri</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Sensors</source>
+        <translation>Senzori</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Language</source>
+        <translation>Limbă</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>CPython</source>
+        <translation>CPython</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Internals</source>
+        <translation>Componente interne</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Changelog</source>
+        <translation>Jurnal de modificări</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>License</source>
+        <translation>Licență</translation>
+    </message>
+    <message>
+        <location line="+20" />
         <source>OpenMV Forums</source>
         <translation>Forumuri OpenMV</translation>
     </message>
     <message>
-        <location line="+15" />
         <source>About OpenMV Cam</source>
-        <translation>Despre OpenMV Cam</translation>
+        <translation type="vanished">Despre OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>About OpenMV Cam...</source>
-        <translation>Despre OpenMV Cam...</translation>
+        <translation type="vanished">Despre OpenMV Cam...</translation>
     </message>
     <message>
-        <location line="+18" />
         <source>About OpenMV Cam %1</source>
-        <translation>Despre OpenMV Cam %1</translation>
+        <translation type="vanished">Despre OpenMV Cam %1</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>About OpenMV Cam %1...</source>
-        <translation>Despre OpenMV Cam %1...</translation>
+        <translation type="vanished">Despre OpenMV Cam %1...</translation>
     </message>
     <message>
-        <location line="+18" />
-        <location line="+6" />
         <source>About OpenMV Viewer</source>
-        <translation>Despre OpenMV Viewer</translation>
+        <translation type="vanished">Despre OpenMV Viewer</translation>
     </message>
     <message>
-        <location line="-6" />
-        <location line="+6" />
         <source>About OpenMV IDE</source>
-        <translation>Despre OpenMV IDE</translation>
+        <translation type="vanished">Despre OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-5" />
         <source>About OpenMV Viewer...</source>
-        <translation>Despre OpenMV Viewer...</translation>
+        <translation type="vanished">Despre OpenMV Viewer...</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>About OpenMV IDE...</source>
-        <translation>Despre OpenMV IDE...</translation>
+        <translation type="vanished">Despre OpenMV IDE...</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+26" />
         <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&lt;b&gt;Despre %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;De: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;VERSIUNE DE FABRICĂ&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Destinată exclusiv producătorilor licențiați.&lt;/p&gt;&lt;p&gt;&lt;b&gt;LICENȚA PUBLICĂ GENERALĂ GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Acest program este distribuit în speranța că va fi util, dar FĂRĂ NICIO GARANȚIE; fără nici măcar garanția implicită de VANDABILITATE sau POTRIVIRE PENTRU UN ANUMIT SCOP. Consultați &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;Licența Publică Generală GNU&lt;/a&gt; pentru mai multe detalii.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Întrebări sau comentarii?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contactați-ne la &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>OpenMV Viewer</source>
-        <translation>OpenMV Viewer</translation>
+        <translation type="vanished">OpenMV Viewer</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>OpenMV IDE</source>
-        <translation>OpenMV IDE</translation>
+        <translation type="vanished">OpenMV IDE</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location line="+23" />
         <source>&lt;p&gt;&lt;b&gt;Partners&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Parteneri&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+31" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
@@ -8152,14 +8357,16 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Opriți (opriți scriptul)</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-58" />
+        <location line="+70" />
+        <location line="+211" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
+        <location line="+166" />
         <source>Frame Buffer</source>
         <translation>Frame Buffer</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
+        <location line="-204" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
         <source>Record</source>
         <translation>Înregistra</translation>
     </message>
@@ -8204,23 +8411,22 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Dezactivați Frame Buffer-ul pentru performanță maximă</translation>
     </message>
     <message>
-        <location line="+23" />
-        <location line="+26" />
         <source>JPG Mode</source>
-        <translation>Modul JPG</translation>
+        <translation type="vanished">Modul JPG</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="+24" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG comprimă Frame Buffer-ul pentru performanțe mai mari</translation>
     </message>
     <message>
         <location line="+25" />
+        <location line="+13" />
         <source>RAW Mode</source>
         <translation>Modul RAW</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+6" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>Frame Buffer Disabled - faceți clic din nou pe butonul de dezactivare pentru a activa (dreapta sus)</translation>
     </message>
@@ -8267,38 +8473,28 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Utilizați tonuri de gri/LAB pentru urmărirea culorilor</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+42" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+3" />
-        <location line="+44" />
         <source>Res - No Image</source>
-        <translation>Res - Fără imagine</translation>
+        <translation type="vanished">Res - Fără imagine</translation>
     </message>
     <message>
-        <location line="-14" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-14" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
-        <translation>Rez. (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixeli (%7) - Focalizare (%8)</translation>
+        <translation type="vanished">Rez. (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixeli (%7) - Focalizare (%8)</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4" />
         <source>Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
-        <translation>Res (w:%1, h:%2) - Punct (x:%3, y:%4)</translation>
+        <translation type="vanished">Res (w:%1, h:%2) - Punct (x:%3, y:%4)</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <source>Res (w:%1, h:%2) - Focus (%3)</source>
-        <translation>Rez. (w:%1, h:%2) - Focalizare (%3)</translation>
+        <translation type="vanished">Rez. (w:%1, h:%2) - Focalizare (%3)</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-729" />
         <source>FPS: %L1</source>
         <translation>FPS: %L1</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+165" />
         <source>Close</source>
         <translation>Aproape</translation>
     </message>
@@ -8319,7 +8515,7 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3486" />
         <source>Board:</source>
         <translation>Bord:</translation>
     </message>
@@ -8351,21 +8547,20 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Versiunea firmware-ului camerei</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2" />
         <source>Serial Port:</source>
         <translation>Port serial:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Camera serial port</source>
-        <translation>Port serial al camerei</translation>
+        <translation type="vanished">Port serial al camerei</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
-        <location line="+324" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
+        <location line="+8" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-377" />
+        <location line="+379" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+83" />
         <source>Drive:</source>
         <translation>Conduce:</translation>
     </message>
@@ -8376,43 +8571,42 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+7" />
         <source>FPS:</source>
         <translation>FPS:</translation>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-82" />
         <source>May be different from camera FPS</source>
         <translation>Poate fi diferit de FPS-ul camerei</translation>
     </message>
     <message>
-        <location line="+307" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
+        <location line="+377" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3644" />
         <source>Update Available</source>
         <translation>Actualizare disponibilă</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.</source>
-        <translation>O nouă versiune de OpenMV IDE (%L1.%L2.%L3) este disponibilă pentru descărcare.</translation>
+        <translation type="vanished">O nouă versiune de OpenMV IDE (%L1.%L2.%L3) este disponibilă pentru descărcare.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Download</source>
         <translation>Descărcați</translation>
     </message>
     <message>
-        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
-        <translation>Programarea WiFi este dezactivată!</translation>
+        <translation type="vanished">Programarea WiFi este dezactivată!</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Another application is using the OpenMV Cam broadcast discovery port. Please close that application and restart OpenMV IDE to enable WiFi programming.</source>
-        <translation>O altă aplicație utilizează portul de descoperire a difuzării OpenMV Cam. Închideți acea aplicație și reporniți OpenMV IDE pentru a activa programarea WiFi.</translation>
+        <translation type="vanished">O altă aplicație utilizează portul de descoperire a difuzării OpenMV Cam. Închideți acea aplicație și reporniți OpenMV IDE pentru a activa programarea WiFi.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+416" />
         <source>Documents Folder Error</source>
         <translation>Eroare folder documente</translation>
     </message>
@@ -8437,7 +8631,6 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Culori LED OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -8459,7 +8652,7 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>Vă mulțumim pentru utilizarea OpenMV Cam și OpenMV IDE! 
+        <translation type="vanished">Vă mulțumim pentru utilizarea OpenMV Cam și OpenMV IDE! 
 
 LED-ul de la bord al camerei dvs. OpenMV clipește cu culori diferite pentru a indica starea acestuia: 
 
@@ -8480,18 +8673,18 @@ Alb intermitent:
 Firmware-ul OpenMV Cam intră în panică din cauza unei defecțiuni hardware. Vă rugăm să verificați dacă modulul camerei OpenMV Cam este instalat în siguranță.</translation>
     </message>
     <message>
-        <location line="+93" />
-        <location line="+1212" />
+        <location line="+94" />
+        <location line="+1236" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Port serial - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1180" />
+        <location line="-1204" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+827" />
+        <location line="+851" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
@@ -8501,7 +8694,7 @@ Firmware-ul OpenMV Cam intră în panică din cauza unei defecțiuni hardware. V
         <translation>Se conectează... (30 de secunde expiră)</translation>
     </message>
     <message>
-        <location line="-1820" />
+        <location line="-1844" />
         <source>
 
 Try doing:
@@ -8552,12 +8745,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1270" />
+        <location line="+1294" />
         <source>UDP Server Connection - %1</source>
         <translation>Conexiune la server UDP - %1</translation>
     </message>
     <message>
-        <location line="-1196" />
+        <location line="-1220" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Argument de port nevalid (%1) pentru -open_udp_server_terminal</translation>
     </message>
@@ -8588,12 +8781,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1317" />
+        <location line="+1341" />
         <source>TCP Server Connection - %1</source>
         <translation>Conexiune la server TCP - %1</translation>
     </message>
     <message>
-        <location line="-1243" />
+        <location line="-1267" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Argument de port nevalid (%1) pentru -open_tcp_server_terminal</translation>
     </message>
@@ -8622,7 +8815,7 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2935" />
         <location line="+10" />
         <location line="+8" />
         <location line="+22" />
@@ -8710,16 +8903,15 @@ Rulați Examples-&gt;HelloWorld-&gt;helloworld.py pentru a testa calitatea veder
         <translation>Cam OpenMV neînregistrată a fost detectată</translation>
     </message>
     <message>
-        <location line="-19" />
         <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
-        <translation>Camera dvs. OpenMV nu este înregistrată. Trebuie să vă înregistrați OpenMV Cam cu OpenMV pentru utilizare nelimitată cu OpenMV IDE fără întreruperi. 
+        <translation type="vanished">Camera dvs. OpenMV nu este înregistrată. Trebuie să vă înregistrați OpenMV Cam cu OpenMV pentru utilizare nelimitată cu OpenMV IDE fără întreruperi. 
 
 Doriți să vă înregistrați Cam OpenMV acum?</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-9" />
         <source>Unregistered OpenMV Cams hurt the open-source OpenMV ecosystem by undercutting offical OpenMV Cam sales which help fund OpenMV Cam software development.
 
 Would you like to register your OpenMV Cam now?</source>
@@ -8728,13 +8920,172 @@ Would you like to register your OpenMV Cam now?</source>
 Doriți să vă înregistrați Cam OpenMV acum?</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>OpenMV IDE will display these three messages boxes each time you connect until you register your OpenMV Cam...
 
 Would you like to register your OpenMV Cam now?</source>
-        <translation>OpenMV IDE va afișa aceste trei casete de mesaje de fiecare dată când vă conectați până când vă înregistrați camera OpenMV... 
+        <translation type="vanished">OpenMV IDE va afișa aceste trei casete de mesaje de fiecare dată când vă conectați până când vă înregistrați camera OpenMV... 
 
 Doriți să vă înregistrați Cam OpenMV acum?</translation>
+    </message>
+    <message>
+        <location line="-2208" />
+        <location line="+8" />
+        <source>About %1</source>
+        <translation>Despre %1</translation>
+    </message>
+    <message>
+        <location line="-7" />
+        <source>About %1...</source>
+        <translation>Despre %1...</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>&lt;p&gt;&lt;b&gt;Release Notes&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Note de lansare&lt;/b&gt;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>%1 %2</source>
+        <translation>%1 %2</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>OpenMV Firmware %1</source>
+        <translation>Firmware OpenMV %1</translation>
+    </message>
+    <message>
+        <location line="+193" />
+        <source>JPG</source>
+        <translation>JPG</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <location line="+13" />
+        <source>JPEG Mode</source>
+        <translation>Mod JPEG</translation>
+    </message>
+    <message>
+        <location line="-5" />
+        <location line="+7" />
+        <source>The Frame Buffer is streaming JPEG-compressed images</source>
+        <translation>Bufferul de cadre transmite imagini comprimate JPEG</translation>
+    </message>
+    <message>
+        <location line="-6" />
+        <location line="+7" />
+        <source>The Frame Buffer is streaming raw (uncompressed) images</source>
+        <translation>Bufferul de cadre transmite imagini brute (necomprimate)</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+25" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
+        <translation>Buffer de cadre - Rez (l:%1, î:%2) - ROI (x:%3, y:%4, l:%5, î:%6) - Pixeli (%7) - Focus (%8)</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
+        <translation>Buffer de cadre - Rez (l:%1, î:%2) - Punct (x:%3, y:%4)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - Focus (%3)</source>
+        <translation>Buffer de cadre - Rez (l:%1, î:%2) - Focus (%3)</translation>
+    </message>
+    <message>
+        <location line="+255" />
+        <source>Camera serial port -- click to give this camera a friendly name</source>
+        <translation>Portul serial al camerei -- faceți clic pentru a da un nume prietenos acestei camere</translation>
+    </message>
+    <message>
+        <location line="+389" />
+        <source>A new version of %5 (%L1.%L2.%L3) is available for download. See the &lt;a href=&quot;%L4&quot;&gt;release notes&lt;/a&gt;.</source>
+        <translation>O nouă versiune de %5 (%L1.%L2.%L3) este disponibilă pentru descărcare. Consultați &lt;a href=&quot;%L4&quot;&gt;notele de lansare&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+124" />
+        <source>Connect (Network available)</source>
+        <translation>Conectare (Rețea disponibilă)</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Connect (USB available)</source>
+        <translation>Conectare (USB disponibil)</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Connect (USB &amp; Network available)</source>
+        <translation>Conectare (USB și rețea disponibile)</translation>
+    </message>
+    <message>
+        <location line="+89" />
+        <source>-auto_run in viewer mode requires a readable text script file argument on the command line.</source>
+        <translation>-auto_run în modul de vizualizare necesită un argument fișier script text lizibil în linia de comandă.</translation>
+    </message>
+    <message>
+        <location line="+250" />
+        <source>Thanks for using the OpenMV Cam and %1!
+
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
+
+Blinking Green:
+
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow %1 to reprogram your OpenMV Cam.
+
+Blinking Blue:
+
+Your OpenMV Cam is running the default main.py script onboard.
+
+If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
+
+If the LED is blinking blue but %1 can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+
+Blinking White:
+
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
+
+</source>
+        <translation>Vă mulțumim că folosiți camera OpenMV și %1!
+
+LED-ul integrat al camerei OpenMV clipește în culori diferite pentru a indica starea sa:
+
+Verde intermitent:
+
+Bootloaderul integrat al camerei OpenMV rulează. Bootloaderul integrat rulează câteva secunde când camera OpenMV este alimentată prin USB pentru a permite %1 să reprogrameze camera OpenMV.
+
+Albastru intermitent:
+
+Camera OpenMV rulează scriptul implicit main.py integrat.
+
+Dacă aveți un card SD instalat sau ați suprascris scriptul main.py de pe camera OpenMV, atunci va rula în schimb codul pe care l-ați încărcat.
+
+Dacă LED-ul clipește albastru dar %1 nu se poate conecta la camera OpenMV, asigurați-vă că vă conectați camera OpenMV la PC cu un cablu USB care furnizează atât date, cât și alimentare.
+
+Alb intermitent:
+
+Firmware-ul camerei OpenMV intră în panică din cauza unei defecțiuni hardware. Verificați dacă modulul de cameră al camerei OpenMV este instalat corect.
+
+</translation>
+    </message>
+    <message>
+        <location line="+711" />
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with %1 without any interruptions.
+
+Would you like to register your OpenMV Cam now?</source>
+        <translation>Camera OpenMV nu este înregistrată. Trebuie să înregistrați camera OpenMV la OpenMV pentru utilizare nelimitată cu %1 fără nicio întrerupere.
+
+Doriți să înregistrați camera OpenMV acum?</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>%1 will display these three messages boxes each time you connect until you register your OpenMV Cam...
+
+Would you like to register your OpenMV Cam now?</source>
+        <translation>%1 va afișa aceste trei casete de mesaje de fiecare dată când vă conectați, până când vă înregistrați camera OpenMV...
+
+Doriți să înregistrați camera OpenMV acum?</translation>
     </message>
     <message>
         <location line="+19" />
@@ -8777,10 +9128,10 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
         <translation>Cheie de bord formatată nevalid!</translation>
     </message>
     <message>
-        <location line="+99" />
+        <location line="+84" />
         <location line="+7" />
         <location line="+18" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-109" />
         <location line="+7" />
         <location line="+18" />
         <source>Save Image</source>
@@ -8788,7 +9139,7 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
     </message>
     <message>
         <location line="-23" />
-        <location line="+1101" />
+        <location line="+1140" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Fișiere imagine (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
@@ -8869,7 +9220,7 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1344" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1362" />
         <source>Please select a serial port</source>
         <translation>Vă rugăm să selectați un port serial</translation>
     </message>
@@ -8880,7 +9231,7 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
     </message>
     <message>
         <location line="+96" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+249" />
         <source>Try doing:
 
 </source>
@@ -8993,7 +9344,7 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+555" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+68" />
         <source>What would you like to do?</source>
         <translation>Ce ai vrea sa faci?</translation>
     </message>
@@ -9018,7 +9369,7 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
         <location line="-70" />
         <location line="+80" />
         <location line="+21" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+428" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+535" />
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>Fișiere puncte cheie (*.lbp *.orb)</translation>
     </message>
@@ -9115,19 +9466,17 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
         <translation>Generație completă!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
-        <translation>Sunt disponibile noi resurse OpenMV IDE (de exemplu, exemple, firmware, documentație etc.).</translation>
+        <translation type="vanished">Sunt disponibile noi resurse OpenMV IDE (de exemplu, exemple, firmware, documentație etc.).</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1859" />
         <source>Install</source>
         <translation>Instala</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+289" />
-        <location line="+165" />
+        <location line="+327" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
@@ -9150,23 +9499,20 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
         <translation>Se descarcă...</translation>
     </message>
     <message>
-        <location line="-440" />
+        <location line="-313" />
         <source>Installing...</source>
         <translation>Se instalează...</translation>
     </message>
     <message>
-        <location line="+59" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
         <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
-        <translation>Închideți toate programele care vizualizează/editează datele aplicației OpenMV IDE și apoi reporniți OpenMV IDE!</translation>
+        <translation type="vanished">Închideți toate programele care vizualizează/editează datele aplicației OpenMV IDE și apoi reporniți OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
-        <translation>Instalare reușită! Vă rugăm să reporniți OpenMV IDE.</translation>
+        <translation type="vanished">Instalare reușită! Vă rugăm să reporniți OpenMV IDE.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+128" />
         <location line="+6" />
         <location line="+28" />
         <source>Package Update</source>
@@ -9174,20 +9520,18 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+273" />
-        <location line="+88" />
+        <location line="+315" />
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>Nu se poate deschide fișierul de resurse „%L1”!</translation>
     </message>
     <message>
-        <location line="-333" />
-        <location line="+273" />
-        <location line="+95" />
+        <location line="-287" />
+        <location line="+314" />
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>Solicitarea rețelei a eșuat „%L1”!</translation>
     </message>
     <message>
-        <location line="-336" />
+        <location line="-282" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9195,67 +9539,67 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
         <translation>Calea firmware-ului</translation>
     </message>
     <message>
-        <location line="-4" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
-        <translation>Firmware Binary (*.bin *.dfu *.img)</translation>
+        <translation type="vanished">Firmware Binary (*.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+117" />
-        <location line="+720" />
+        <location line="+8" />
+        <location line="+159" />
+        <location line="+875" />
         <location line="+227" />
-        <location line="+2414" />
+        <location line="+2601" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Ștergeți sistemul intern de fișiere FAT</translation>
     </message>
     <message>
-        <location line="-3553" />
-        <location line="+117" />
-        <location line="+722" />
+        <location line="-3937" />
+        <location line="+159" />
+        <location line="+877" />
         <location line="+226" />
-        <location line="+2413" />
+        <location line="+2600" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Dacă activați această opțiune, toate fișierele din sistemul intern de fișiere FAT al OpenMV Cam vor fi șterse. Aceasta nu șterge fișierele de pe niciun card SD amovibil (dacă este introdus).</translation>
     </message>
     <message>
-        <location line="-3553" />
-        <location line="+839" />
+        <location line="-3937" />
+        <location line="+1036" />
         <location line="+226" />
-        <location line="+2413" />
+        <location line="+2600" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Resetați sistemul de fișiere ROMFS</translation>
     </message>
     <message>
-        <location line="-3552" />
-        <location line="+840" />
+        <location line="-3936" />
+        <location line="+1037" />
         <location line="+225" />
-        <location line="+2412" />
+        <location line="+2599" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Dacă activați această opțiune, sistemul de fișiere ROM de pe Cam-ul dvs. OpenMV va fi resetat la valoarea implicită.</translation>
     </message>
     <message>
-        <location line="-3552" />
-        <location line="+148" />
+        <location line="-3936" />
+        <location line="+190" />
         <source>Run</source>
         <translation>Fugi</translation>
     </message>
     <message>
-        <location line="-106" />
-        <location line="+45" />
+        <location line="-125" />
+        <location line="+13" />
+        <location line="+51" />
         <source>Bootloader</source>
         <translation>Bootloader</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="-50" />
         <source>&quot;%L1&quot; is not a file!</source>
         <translation>„%L1” nu este un fișier!</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+73" />
         <source>Update ROMFS file system</source>
         <translation>Actualizați sistemul de fișiere ROMFS</translation>
     </message>
@@ -9276,22 +9620,116 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+3343" />
+        <location line="+3685" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Avertisment: Upgrade-ul la noua versiune de firmware necesită ștergerea sistemului de fișiere FAT.</translation>
     </message>
     <message>
-        <location line="-3249" />
         <source>Extracting...</source>
-        <translation>Se extrage...</translation>
+        <translation type="vanished">Se extrage...</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Unable to extract firmware!</source>
-        <translation>Nu se poate extrage firmware-ul!</translation>
+        <translation type="vanished">Nu se poate extrage firmware-ul!</translation>
     </message>
     <message>
-        <location line="+148" />
+        <location line="-4503" />
+        <source>Checking development examples...</source>
+        <translation>Se verifică exemplele de dezvoltare...</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Downloading development examples...</source>
+        <translation>Se descarcă exemplele de dezvoltare...</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Checking development documentation...</source>
+        <translation>Se verifică documentația de dezvoltare...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Downloading development documentation...</source>
+        <translation>Se descarcă documentația de dezvoltare...</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Checking development firmware...</source>
+        <translation>Se verifică firmware-ul de dezvoltare...</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location line="+84" />
+        <source>Downloading the latest development firmware...</source>
+        <translation>Se descarcă cel mai recent firmware de dezvoltare...</translation>
+    </message>
+    <message>
+        <location line="-73" />
+        <source>Unpacking the latest development firmware...</source>
+        <translation>Se dezarhivează cel mai recent firmware de dezvoltare...</translation>
+    </message>
+    <message>
+        <location line="+311" />
+        <source>New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the &lt;a href=&quot;%L1&quot;&gt;release notes&lt;/a&gt;.</source>
+        <translation>Sunt disponibile noi resurse %2 (de ex. exemple, firmware, documentație etc.). Consultați &lt;a href=&quot;%L1&quot;&gt;notele de lansare&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+89" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
+        <source>Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
+        <translation>Închideți orice programe care vizualizează/editează datele aplicației %1 și apoi reporniți %1!</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>Installation Sucessful! Please restart %1.</source>
+        <translation>Instalare reușită! Reporniți %1.</translation>
+    </message>
+    <message>
+        <location line="+96" />
+        <source>Firmware Binary (*.bin *.dfu *.img *.zip)</source>
+        <translation>Binar firmware (*.bin *.dfu *.img *.zip)</translation>
+    </message>
+    <message>
+        <location line="+91" />
+        <source>Unable to unpack the firmware zip &quot;%L1&quot;!</source>
+        <translation>Nu se poate dezarhiva fișierul zip al firmware-ului &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="+212" />
+        <source>Unable to download the latest development firmware!</source>
+        <translation>Nu se poate descărca cel mai recent firmware de dezvoltare!</translation>
+    </message>
+    <message>
+        <location line="+81" />
+        <source>The development firmware for this board is not available!</source>
+        <translation>Firmware-ul de dezvoltare pentru această placă nu este disponibil!</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Update complete!
+
+</source>
+        <translation>Actualizare finalizată!
+
+</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Please wait for the device to finish restarting. This can take a little while.</source>
+        <translation>Așteptați ca dispozitivul să termine repornirea. Aceasta poate dura puțin.</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Unknown Board (Wi-Fi)</source>
+        <translation>Placă necunoscută (Wi-Fi)</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>%1 (Wi-Fi)</source>
+        <translation>%1 (Wi-Fi)</translation>
+    </message>
+    <message>
+        <location line="+85" />
         <location line="+5" />
         <location line="+48" />
         <location line="+5" />
@@ -9301,7 +9739,22 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
         <translation>Consiliu necunoscut</translation>
     </message>
     <message>
-        <location line="+177" />
+        <location line="+60" />
+        <source>Name Camera</source>
+        <translation>Denumire cameră</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Serial port:</source>
+        <translation>Port serial:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Name:</source>
+        <translation>Nume:</translation>
+    </message>
+    <message>
+        <location line="+202" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
@@ -9351,31 +9804,31 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
     </message>
     <message>
         <location line="+84" />
-        <location line="+2415" />
+        <location line="+2602" />
         <source>Upgrade options:</source>
         <translation>Opțiuni de upgrade:</translation>
     </message>
     <message>
-        <location line="-2337" />
-        <location line="+170" />
+        <location line="-2524" />
+        <location line="+175" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Actualizați bootloader-ul la cea mai recentă versiune și instalați SoftDevice pentru a flash-ul firmware-ului OpenMV. Mai multe informații pot fi găsite pe &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-204" />
-        <location line="+169" />
+        <location line="-209" />
+        <location line="+174" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Vă rugăm să scurtați REC la GND și să vă resetați placa. Mai multe informații pot fi găsite pe &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-201" />
+        <location line="-206" />
         <source>No released firmware available for the attached board!</source>
         <translation>Nu este disponibil niciun firmware lansat pentru placa atașată!</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+66" />
         <source>Please select a DFU Device</source>
         <translation>Vă rugăm să selectați un dispozitiv DFU</translation>
     </message>
@@ -9389,17 +9842,17 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
 (Apăsați pe Anulare dacă durează mai mult de 5 secunde).</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+154" />
         <source>Timeout error while getting firmware version!</source>
         <translation>Eroare de timeout la obținerea versiunii firmware!</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Do not try to connect while the green light on your OpenMV Cam is on!</source>
         <translation>Nu încercați să vă conectați în timp ce lumina verde de pe OpenMV Cam este aprinsă!</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Try to connect again?</source>
         <translation>Încercați să vă conectați din nou?</translation>
     </message>
@@ -9507,7 +9960,7 @@ OpenMV recomandă doar încărcarea bootloader.dfu pentru a repara bootloader-ul
         <translation>Eroare de timeout la învățarea MTU!</translation>
     </message>
     <message>
-        <location line="+170" />
+        <location line="+226" />
         <source>Board: %L1</source>
         <translation>Placă: %L1</translation>
     </message>
@@ -9527,25 +9980,22 @@ OpenMV recomandă doar încărcarea bootloader.dfu pentru a repara bootloader-ul
         <translation>Versiunea firmware: %L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-2356" />
+        <location line="+2361" />
         <source>Serial Port: %L1</source>
         <translation>Port serial: %L1</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+503" />
-        <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-512" />
         <source>FPS: 0</source>
-        <translation>FPS: 0</translation>
+        <translation type="vanished">FPS: 0</translation>
     </message>
     <message>
-        <location line="-577" />
+        <location line="+120" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation>- [ învechit - faceți clic aici pentru a face upgrade ]</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+13" />
         <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>Firmware-ul OpenMV Cam este învechit. Doriți să faceți upgrade?</translation>
     </message>
@@ -9555,7 +10005,27 @@ OpenMV recomandă doar încărcarea bootloader.dfu pentru a repara bootloader-ul
         <translation>- [ cele mai recente ]</translation>
     </message>
     <message>
-        <location line="+592" />
+        <location line="+424" />
+        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+191" />
+        <location line="+16" />
+        <source>Run Script</source>
+        <translation>Rulare script</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-14" />
+        <source>Python Files (*.py);;Text Files (*.txt);;All Files (*)</source>
+        <translation>Fișiere Python (*.py);;Fișiere text (*.txt);;Toate fișierele (*)</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+15" />
+        <source>Error: Cannot open &quot;%L1&quot;!</source>
+        <translation>Eroare: Nu se poate deschide &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="+223" />
         <source>More Examples</source>
         <translation>Mai multe exemple</translation>
     </message>
@@ -9618,9 +10088,13 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>Înregistrare video</translation>
     </message>
     <message>
-        <location line="+69" />
         <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!</source>
-        <translation>Avertisment: JPEG/PNG prea mare pentru a fi salvate pe camera OpenMV actuală și a trimite la OpenMV IDE!</translation>
+        <translation type="vanished">Avertisment: JPEG/PNG prea mare pentru a fi salvate pe camera OpenMV actuală și a trimite la OpenMV IDE!</translation>
+    </message>
+    <message>
+        <location line="+69" />
+        <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to %1!</source>
+        <translation>Avertisment: JPEG/PNG prea mare pentru a fi stocat în buffer pe camera OpenMV curentă și trimis către %1!</translation>
     </message>
     <message>
         <location line="+83" />
@@ -9694,27 +10168,57 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <location line="-223" />
         <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
-Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>Modulul „%L1” de pe OpenMV Cam este diferit de copia de pe computer. 
+Would you like %2 to update the module on your OpenMV Cam?</source>
+        <translation>Modulul &quot;%L1&quot; de pe camera OpenMV este diferit de copia de pe computer.
 
-Doriți ca OpenMV IDE să actualizeze modulul de pe camera dvs. OpenMV?</translation>
+Doriți ca %2 să actualizeze modulul de pe camera OpenMV?</translation>
     </message>
     <message>
         <location line="+75" />
-        <source>Would you like OpenMV IDE to update the module on your computer?</source>
-        <translation>Doriți ca OpenMV IDE să actualizeze modulul pe computerul dvs.?</translation>
+        <source>Would you like %1 to update the module on your computer?</source>
+        <translation>Doriți ca %1 să actualizeze modulul de pe computer?</translation>
     </message>
     <message>
         <location line="+91" />
         <source>Module &quot;%L1&quot; may be required to run your script.
 
+Would you like %2 to copy it to your OpenMV Cam?</source>
+        <translation>Modulul &quot;%L1&quot; poate fi necesar pentru a rula scriptul.
+
+Doriți ca %2 să îl copieze pe camera OpenMV?</translation>
+    </message>
+    <message>
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
+
+Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
+        <translation type="vanished">Modulul „%L1” de pe OpenMV Cam este diferit de copia de pe computer. 
+
+Doriți ca OpenMV IDE să actualizeze modulul de pe camera dvs. OpenMV?</translation>
+    </message>
+    <message>
+        <source>Would you like OpenMV IDE to update the module on your computer?</source>
+        <translation type="vanished">Doriți ca OpenMV IDE să actualizeze modulul pe computerul dvs.?</translation>
+    </message>
+    <message>
+        <source>Module &quot;%L1&quot; may be required to run your script.
+
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>Modulul „%L1” poate fi necesar pentru a rula scriptul. 
+        <translation type="vanished">Modulul „%L1” poate fi necesar pentru a rula scriptul. 
 
 Doriți ca OpenMV IDE să-l copieze pe Cam OpenMV?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+44" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-541" />
+        <source>FPS: %L1 Cam - %L2 IDE</source>
+        <translation>FPS: %L1 Cameră - %L2 IDE</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>On-camera FPS and IDE display FPS</source>
+        <translation>FPS pe cameră și FPS afișat în IDE</translation>
+    </message>
+    <message>
+        <location line="+47" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>Selectați Drive</translation>
@@ -9805,7 +10309,7 @@ Doriți ca OpenMV IDE să-l copieze pe Cam OpenMV?</translation>
         <translation>Sondajul codului de profil (ms)</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+138" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>Salvați Scriptul</translation>
@@ -9962,27 +10466,43 @@ Doriți ca OpenMV IDE să-l copieze pe Cam OpenMV?</translation>
         <translation>Funcții: %1, Total apeluri: %2, Total μs: %3, Total cicluri: %4</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-789" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-856" />
         <source>Please select the target</source>
         <translation>Vă rugăm să selectați ținta</translation>
+    </message>
+    <message>
+        <source>The model has already been converted for the Ethos-U NPU.
+
+OpenMV IDE will just copy the model as is.</source>
+        <translation type="vanished">Modelul a fost deja convertit pentru Ethos-U NPU. 
+
+OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
+    </message>
+    <message>
+        <source>The model has already been converted for the Neural-ART NPU.
+
+OpenMV IDE will just copy the model as is.</source>
+        <translation type="vanished">Modelul a fost deja convertit pentru NPU Neural-ART. 
+
+OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
     </message>
     <message>
         <location line="+59" />
         <source>The model has already been converted for the Ethos-U NPU.
 
-OpenMV IDE will just copy the model as is.</source>
-        <translation>Modelul a fost deja convertit pentru Ethos-U NPU. 
+%1 will just copy the model as is.</source>
+        <translation>Modelul a fost deja convertit pentru NPU-ul Ethos-U.
 
-OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
+%1 va copia doar modelul ca atare.</translation>
     </message>
     <message>
         <location line="+27" />
         <source>The model has already been converted for the Neural-ART NPU.
 
-OpenMV IDE will just copy the model as is.</source>
-        <translation>Modelul a fost deja convertit pentru NPU Neural-ART. 
+%1 will just copy the model as is.</source>
+        <translation>Modelul a fost deja convertit pentru NPU-ul Neural-ART.
 
-OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
+%1 va copia doar modelul ca atare.</translation>
     </message>
     <message>
         <location line="+147" />
@@ -10002,7 +10522,7 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+93" />
+        <location line="+122" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
@@ -10010,7 +10530,7 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
         <location line="+40" />
         <location line="+15" />
         <location line="+27" />
-        <location line="+24" />
+        <location line="+62" />
         <location line="+53" />
         <location line="+63" />
         <location line="+6" />
@@ -10019,7 +10539,7 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
         <translation>Editați ROMFS</translation>
     </message>
     <message>
-        <location line="-606" />
+        <location line="-673" />
         <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>Un folder cu același nume există deja!</translation>
@@ -10072,37 +10592,37 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+225" />
+        <location line="+292" />
         <source>Extract File</source>
         <translation>Extrage fișierul</translation>
     </message>
     <message>
-        <location line="-231" />
+        <location line="-298" />
         <source>View/Edit</source>
         <translation>Vizualizați/Editați</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+222" />
+        <location line="+289" />
         <source>Add File</source>
         <translation>Adăugați fișier</translation>
     </message>
     <message>
-        <location line="-221" />
-        <location line="+223" />
+        <location line="-288" />
+        <location line="+290" />
         <source>New Folder</source>
         <translation>Dosar nou</translation>
     </message>
     <message>
-        <location line="-135" />
+        <location line="-173" />
         <location line="+13" />
-        <location line="+303" />
+        <location line="+341" />
         <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS nu este acceptat pe această placă!</translation>
     </message>
     <message>
-        <location line="-275" />
+        <location line="-313" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Nu s-a despachetat ROMFS!</translation>
@@ -10115,7 +10635,7 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
     </message>
     <message>
         <location line="-25" />
-        <location line="+165" />
+        <location line="+203" />
         <source>ROMFS Images (*.img)</source>
         <translation>Imagini ROMFS (*.img)</translation>
     </message>
@@ -10149,7 +10669,7 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
         <translation>Sigur doriți să resetați sistemul de fișiere ROM al OpenMV Cam?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-584" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10162,7 +10682,7 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
         <translation>Fișiere text (*.txt);;Toate fișierele (*)</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+223" />
         <source>Zoom: %1%</source>
         <translation>Zoom: %1%</translation>
     </message>
@@ -10182,7 +10702,7 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
         <translation>Găsi</translation>
     </message>
     <message>
-        <location line="+239" />
+        <location line="+235" />
         <source>Serial Terminal</source>
         <translation>Terminal serial</translation>
     </message>
@@ -10193,6 +10713,7 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
     </message>
     <message>
         <location line="+5" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-379" />
         <source>Save</source>
         <translation>Salva</translation>
     </message>
@@ -10202,12 +10723,16 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
         <translation>Încheiere text</translation>
     </message>
     <message>
-        <location line="+6" />
-        <source>Run &quot;/main.py&quot;</source>
-        <translation>Rulați „/main.py”</translation>
+        <location line="+16" />
+        <source>Run a script file from disk</source>
+        <translation>Rulați un fișier script de pe disc</translation>
     </message>
     <message>
-        <location line="+0" />
+        <source>Run &quot;/main.py&quot;</source>
+        <translation type="vanished">Rulați „/main.py”</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Run current script in editor window</source>
         <translation>Rulați scriptul curent în fereastra editorului</translation>
     </message>
@@ -10285,8 +10810,8 @@ Camera trebuie oprită după o actualizare a pachetului de sistem.</translation>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1031" />
-        <location line="+79" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1124" />
+        <location line="+85" />
         <source>Query failed!</source>
         <translation>Interogarea a eșuat!</translation>
     </message>
@@ -10626,7 +11151,7 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <location line="+25" />
         <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+171" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+184" />
         <source>Success - Press Ok to close the window</source>
         <translation>Succes - Apăsați Ok pentru a închide fereastra</translation>
     </message>
@@ -10870,7 +11395,7 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>Compilatorul Vela nu este acceptat pe această platformă.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-652" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-674" />
         <source>Reading File...</source>
         <translation>Se citește fișierul...</translation>
     </message>
@@ -10902,12 +11427,12 @@ Deschideți un set de date pentru a-l încărca.</translation>
     </message>
     <message>
         <location line="-77" />
-        <location line="+605" />
+        <location line="+627" />
         <source>Transcoding File...</source>
         <translation>Se transcodează fișierul...</translation>
     </message>
     <message>
-        <location line="-594" />
+        <location line="-616" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10962,17 +11487,34 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>Versiune OpenMV ImageWriter File neacceptată!</translation>
     </message>
     <message>
-        <location line="+96" />
-        <location line="+79" />
         <source>Get Input Formats</source>
-        <translation>Obțineți formate de intrare</translation>
+        <translation type="vanished">Obțineți formate de intrare</translation>
+    </message>
+    <message>
+        <location line="+97" />
+        <location line="+85" />
+        <source>FFmpeg is not supported on this platform.</source>
+        <translation>FFmpeg nu este acceptat pe această platformă.</translation>
+    </message>
+    <message>
+        <location line="-82" />
+        <location line="+85" />
+        <source>The FFmpeg executable was not found (the installation may be incomplete).</source>
+        <translation>Executabilul FFmpeg nu a fost găsit (este posibil ca instalarea să fie incompletă).</translation>
+    </message>
+    <message>
+        <location line="-83" />
+        <location line="+85" />
+        <source>Get Formats</source>
+        <translation>Obținere formate</translation>
     </message>
     <message>
         <location line="+37" />
         <location line="+111" />
+        <location line="+10" />
         <location line="+98" />
         <location line="+15" />
-        <location line="+371" />
+        <location line="+445" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
@@ -10996,7 +11538,7 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>Convertiți videoclipul</translation>
     </message>
     <message>
-        <location line="-989" />
+        <location line="-1073" />
         <source>Converting</source>
         <translation>Conversia</translation>
     </message>
@@ -11004,6 +11546,19 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <location line="+112" />
         <source>FFMPEG is not supported on this platform.</source>
         <translation>FFMPEG nu este acceptat pe această platformă.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>The FFmpeg executable was not found:
+
+%1
+
+Your OpenMV IDE installation may be incomplete.</source>
+        <translation>Executabilul FFmpeg nu a fost găsit:
+
+%1
+
+Este posibil ca instalarea OpenMV IDE să fie incompletă.</translation>
     </message>
     <message>
         <location line="+98" />
@@ -11016,19 +11571,29 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>Nu se poate deschide fișierul video de ieșire!</translation>
     </message>
     <message>
-        <location line="+163" />
-        <location line="+415" />
+        <location line="+199" />
+        <location line="+453" />
         <source>Play Video</source>
         <translation>Redați videoclipul</translation>
     </message>
     <message>
-        <location line="-414" />
-        <location line="+163" />
+        <location line="-452" />
+        <source>Video playback is not supported on this platform.</source>
+        <translation>Redarea video nu este acceptată pe această platformă.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location line="+200" />
         <source>Failed to launch ffplay!</source>
         <translation>Lansarea ffplay a eșuat!</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1" />
+        <source>RTSP playback is not supported on this platform.</source>
+        <translation>Redarea RTSP nu este acceptată pe această platformă.</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Convert Video Source</source>
         <translation>Convertiți sursa video</translation>
     </message>
@@ -11132,6 +11697,261 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <location line="+7" />
         <source>Save Video</source>
         <translation>Salvați videoclipul</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+68" />
+        <source>Unknown control: %L1</source>
+        <translation>Control necunoscut: %L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>(missing type)</source>
+        <translation>(tip lipsă)</translation>
+    </message>
+    <message>
+        <location line="+174" />
+        <location line="+5" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+783" />
+        <location line="+5" />
+        <source>Show text</source>
+        <translation>Afișare text</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+0" />
+        <source>Hide text</source>
+        <translation>Ascundere text</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>These fields have invalid or incomplete input:
+
+%L1
+
+Fix or clear them before saving.</source>
+        <translation>Aceste câmpuri au date incorecte sau incomplete:
+
+%L1
+
+Corectați-le sau ștergeți-le înainte de salvare.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Unable to open:
+
+%L1
+
+%L2</source>
+        <translation>Nu se poate deschide:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Not a valid JSON config file:
+
+%L1</source>
+        <translation>Nu este un fișier de configurare JSON valid:
+
+%L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>the top level must be a JSON object.</source>
+        <translation>nivelul superior trebuie să fie un obiect JSON.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>This JSON file has no &quot;controls&quot; array to build a GUI from.</source>
+        <translation>Acest fișier JSON nu are un tablou &quot;controls&quot; din care să se construiască o interfață grafică.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Unable to save:
+
+%L1
+
+%L2</source>
+        <translation>Nu se poate salva:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <location line="+21" />
+        <source>JSON Files (*.json)</source>
+        <translation>Fișiere JSON (*.json)</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Unable to create:
+
+%L1
+
+%L2</source>
+        <translation>Nu se poate crea:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="-90" />
+        <source>Edit WiFi Debugging</source>
+        <translation>Editare depanare Wi-Fi</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Set Up WiFi Debugging</source>
+        <translation>Configurare depanare Wi-Fi</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Please enter or select a WiFi network name (SSID).</source>
+        <translation>Introduceți sau selectați un nume de rețea Wi-Fi (SSID).</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Editing this camera&apos;s WiFi debugging setup -- this updates the boot.py already on the camera, keeping any code you added to it. It brings the network up on power-up and advertises the camera to the IDE, so you can connect without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</source>
+        <translation>Editarea configurării depanării Wi-Fi a acestei camere -- aceasta actualizează fișierul boot.py deja aflat pe cameră, păstrând orice cod pe care l-ați adăugat. Pornește rețeaua la alimentare și anunță camera către IDE, astfel încât să vă puteți conecta fără un cablu USB. Cât timp depanarea Wi-Fi este activă, depanarea USB este dezactivată -- alegeți &quot;Dezactivat&quot; mai jos pentru a o opri și a reveni la USB.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Set up this camera for debugging over the network. This writes a boot.py to the camera that brings up its WiFi or Ethernet on power-up and advertises it to the IDE, so you can connect to it without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</source>
+        <translation>Configurați această cameră pentru depanare prin rețea. Aceasta scrie un fișier boot.py pe cameră care pornește Wi-Fi sau Ethernet la alimentare și o anunță către IDE, astfel încât să vă puteți conecta la ea fără un cablu USB. Cât timp depanarea Wi-Fi este activă, depanarea USB este dezactivată -- alegeți &quot;Dezactivat&quot; mai jos pentru a o opri și a reveni la USB.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Connection</source>
+        <translation>Conexiune</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>WiFi</source>
+        <translation>Wi-Fi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ethernet</source>
+        <translation>Ethernet</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Disabled (USB debugging)</source>
+        <translation>Dezactivat (depanare USB)</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>WiFi Network</source>
+        <translation>Rețea Wi-Fi</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Scan</source>
+        <translation>Scanare</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Network (SSID):</source>
+        <translation>Rețea (SSID):</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Password:</source>
+        <translation>Parolă:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Automatic</source>
+        <translation>Automat</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Open (no password)</source>
+        <translation>Deschis (fără parolă)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA / WPA2</source>
+        <translation>WPA / WPA2</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA3</source>
+        <translation>WPA3</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA2 / WPA3</source>
+        <translation>WPA2 / WPA3</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WEP (legacy)</source>
+        <translation>WEP (moștenit)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Security:</source>
+        <translation>Securitate:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>IP Address</source>
+        <translation>Adresă IP</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Automatic (DHCP)</source>
+        <translation>Automat (DHCP)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Static</source>
+        <translation>Static</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Address:</source>
+        <translation>Adresă:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Netmask:</source>
+        <translation>Mască de rețea:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Gateway:</source>
+        <translation>Gateway:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>DNS:</source>
+        <translation>DNS:</translation>
+    </message>
+    <message>
+        <location line="+93" />
+        <source>No WiFi networks were found (this PC may have no WiFi adapter). You can type the network name in by hand.</source>
+        <translation>Nu au fost găsite rețele Wi-Fi (este posibil ca acest PC să nu aibă un adaptor Wi-Fi). Puteți introduce numele rețelei manual.</translation>
+    </message>
+    <message>
+        <location line="+72" />
+        <source>Edit boot.py</source>
+        <translation>Editare boot.py</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Failed to write boot.py to the camera:
+
+%1</source>
+        <translation>Nu s-a putut scrie boot.py pe cameră:
+
+%1</translation>
     </message>
 </context>
 <context>
@@ -13145,7 +13965,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <location line="+1" />
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-227" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+485" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+493" />
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+217" />
         <source>Clone</source>
         <translation>Clonează</translation>
@@ -13390,7 +14210,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
  %1</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+315" />
         <source>Error while restoring session</source>
         <translation>Eroare la restabilirea sesiunii</translation>
     </message>
@@ -13406,17 +14226,17 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
     </message>
     <message>
         <location line="+47" />
-        <location line="+42" />
+        <location line="+49" />
         <source>Error while saving session</source>
         <translation>Eroare la salvarea sesiunii</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-48" />
         <source>Could not save session %1</source>
         <translation>Nu s-a putut salva sesiunea %1</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+49" />
         <source>Could not save session to file &quot;%1&quot;</source>
         <translation>Nu s-a putut salva sesiunea în fișierul „%1”</translation>
     </message>
@@ -16705,7 +17525,7 @@ Please close all running instances of your application before starting a build.<
         <location line="+8" />
         <source>%1: Full path to Project Directory.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1: Calea completă către directorul proiectului.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -18001,32 +18821,29 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Alt+X</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-612" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-620" />
         <source>Open Session #%1</source>
         <translation>Deschideți Sesiunea #%1</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Ctrl+Meta+%1</source>
-        <translation>Ctrl+Meta+%1</translation>
+        <translation type="vanished">Ctrl+Meta+%1</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Ctrl+Alt+%1</source>
-        <translation>Ctrl+Alt+%1</translation>
+        <translation type="vanished">Ctrl+Alt+%1</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Open Recent Project #%1</source>
         <translation>Deschideți proiectul recent #%1</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Ctrl+Shift+%1</source>
-        <translation>Ctrl+Shift+%1</translation>
+        <translation type="vanished">Ctrl+Shift+%1</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+56" />
         <source>Open %1 &quot;%2&quot;</source>
         <translation>Deschide %1 „%2”</translation>
     </message>
@@ -24327,7 +25144,7 @@ in &quot;%2&quot;.
     <message>
         <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variabilă&lt;/th&gt;&lt;th&gt;Se extinde în&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directorul fișierului curent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;numele fișierului (cu calea completă)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;numele fișierului (fără cale)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />

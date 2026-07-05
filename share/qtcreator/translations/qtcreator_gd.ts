@@ -25,89 +25,72 @@
 <context>
     <name>OpenMVCameraSettings</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvcamerasettings.ui" />
         <source>OpenMV Cam Settings</source>
-        <translation>Roghainnean OpenMV Cam</translation>
+        <translation type="vanished">Roghainnean OpenMV Cam</translation>
     </message>
     <message>
-        <location/>
         <source>Turn on WiFi Shield on startup</source>
-        <translation>Tionndaidh air WiFi Shield nuair a thòisicheas tu</translation>
+        <translation type="vanished">Tionndaidh air WiFi Shield nuair a thòisicheas tu</translation>
     </message>
     <message>
-        <location/>
         <source>Client Mode (Normal)</source>
-        <translation>Modh teachdaiche (àbhaisteach)</translation>
+        <translation type="vanished">Modh teachdaiche (àbhaisteach)</translation>
     </message>
     <message>
-        <location/>
         <source>Password</source>
-        <translation>Facal-faire</translation>
+        <translation type="vanished">Facal-faire</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter your WiFi network password here</source>
-        <translation>Feuch an cuir thu a-steach am facal-faire lìonra WiFi agad an seo</translation>
+        <translation type="vanished">Feuch an cuir thu a-steach am facal-faire lìonra WiFi agad an seo</translation>
     </message>
     <message>
-        <location/>
         <source>Type</source>
-        <translation>Seòrsa</translation>
+        <translation type="vanished">Seòrsa</translation>
     </message>
     <message>
-        <location/>
         <source>Open (No password)</source>
-        <translation>Fosgail (Gun fhacal-faire)</translation>
+        <translation type="vanished">Fosgail (Gun fhacal-faire)</translation>
     </message>
     <message>
-        <location/>
         <source>WPA (Modern WiFi Security)</source>
-        <translation>WPA (Tèarainteachd WiFi an latha an-diugh)</translation>
+        <translation type="vanished">WPA (Tèarainteachd WiFi an latha an-diugh)</translation>
     </message>
     <message>
-        <location/>
         <source>WEP (Hexadecimal password)</source>
-        <translation>WEP (facal-faire hexadecimal)</translation>
+        <translation type="vanished">WEP (facal-faire hexadecimal)</translation>
     </message>
     <message>
-        <location/>
         <source>SSID</source>
-        <translation>SSID</translation>
+        <translation type="vanished">SSID</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter or select your WiFi network here</source>
-        <translation>Feuch an cuir thu a-steach no tagh an lìonra WiFi agad an seo</translation>
+        <translation type="vanished">Feuch an cuir thu a-steach no tagh an lìonra WiFi agad an seo</translation>
     </message>
     <message>
-        <location/>
         <source>Acess Point Mode</source>
-        <translation>Modh puing inntrigidh</translation>
+        <translation type="vanished">Modh puing inntrigidh</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
-        <translation>Feuch an cuir thu a-steach ainm an lìonra WiFi gus facal-faire a chruthachadh an seo</translation>
+        <translation type="vanished">Feuch an cuir thu a-steach ainm an lìonra WiFi gus facal-faire a chruthachadh an seo</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
-        <translation>Feuch an cuir thu a-steach ainm an lìonra WiFI a chruthaicheas tu an seo</translation>
+        <translation type="vanished">Feuch an cuir thu a-steach ainm an lìonra WiFI a chruthaicheas tu an seo</translation>
     </message>
     <message>
-        <location/>
         <source>Board Name</source>
-        <translation>Ainm a&apos; Bhùird</translation>
+        <translation type="vanished">Ainm a&apos; Bhùird</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
-        <translation>Feuch an cuir thu a-steach ainm airson do OpenMV Cam an seo</translation>
+        <translation type="vanished">Feuch an cuir thu a-steach ainm airson do OpenMV Cam an seo</translation>
     </message>
     <message>
-        <location/>
         <source>Duplicate REPL on the UART on startup</source>
-        <translation>Dèan dùblachadh REPL air an UART nuair a thòisicheas tu</translation>
+        <translation type="vanished">Dèan dùblachadh REPL air an UART nuair a thòisicheas tu</translation>
     </message>
 </context>
 <context>
@@ -156,6 +139,21 @@
         <location/>
         <source>Mean</source>
         <translation>Ciall</translation>
+    </message>
+    <message>
+        <location/>
+        <source>R</source>
+        <translation>R</translation>
+    </message>
+    <message>
+        <location/>
+        <source>G</source>
+        <translation>G</translation>
+    </message>
+    <message>
+        <location/>
+        <source>B</source>
+        <translation>B</translation>
     </message>
 </context>
 <context>
@@ -214,14 +212,16 @@
         <translation>Ag ùrachadh mìneachadh co-chàradh airson &apos;%1&apos; gu tionndadh %2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1263" />
         <source>Copy/Convert Python File</source>
         <translation>Dèan lethbhreac / tionndaidh faidhle python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="-42" />
         <location line="+7" />
-        <location line="+91" />
+        <location line="+85" />
+        <location line="+7" />
+        <location line="+101" />
         <location line="+7" />
         <location line="+76" />
         <location line="+7" />
@@ -853,7 +853,7 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+31" />
         <source>Enabling %1 is subject to your agreement and abidance with your applicable %1 terms. It is your responsibility to know and accept the requirements and parameters of using tools like %1. This may include, but is not limited to, ensuring you have the rights to allow %1 access to your code, as well as understanding any implications of your use of %1 and suggestions produced (like copyright, accuracy, etc.).</source>
-        <translation type="unfinished"></translation>
+        <translation>Tha cur an comas %1 an urra ri d&apos; aonta agus do ghèilleadh ris na cumhaichean %1 iomchaidh agad. &apos;S e do dhleastanas a th&apos; ann eòlas a bhith agad air na riatanasan agus na paramadairean airson innealan mar %1 a chleachdadh, agus gabhail riutha. Faodaidh seo a bhith a&apos; gabhail a-steach, ach gun a bhith cuingealaichte ri, dèanamh cinnteach gu bheil na còraichean agad gus cead a thoirt do %1 faighinn gu do chòd, a bharrachd air tuigse air buaidhean sam bith de do chleachdadh de %1 agus na molaidhean a thig às (leithid còir-lethbhreac, cruinneas, msaa.).</translation>
     </message>
     <message>
         <location line="+16" />
@@ -921,17 +921,17 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+370" />
         <location line="+46" />
-        <location line="+1689" />
+        <location line="+1691" />
         <location line="+534" />
         <source>Revert to Saved</source>
         <translation>Till air ais gu Saved</translation>
     </message>
     <message>
-        <location line="-2268" />
+        <location line="-2270" />
         <location line="+95" />
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+421" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
         <location line="+1" />
         <source>Close</source>
@@ -945,13 +945,13 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="-99" />
-        <location line="+111" />
+        <location line="+113" />
         <location line="+1645" />
         <source>Close Others</source>
         <translation>Dùin feadhainn eile</translation>
     </message>
     <message>
-        <location line="-1708" />
+        <location line="-1710" />
         <source>Revert File to Saved</source>
         <translation>Thoir air ais am faidhle gu Sàbhailte</translation>
     </message>
@@ -961,7 +961,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location line="+189" />
+        <location line="+191" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+101" />
         <location line="+67" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="-9" />
@@ -1073,8 +1073,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Rach air adhart</translation>
     </message>
     <message>
-        <location line="-236" />
-        <location line="+122" />
+        <location line="-238" />
+        <location line="+124" />
         <source>Close All Except Visible</source>
         <translation>Dùin a h-uile càil ach a tha ri fhaicinn</translation>
     </message>
@@ -1084,7 +1084,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Rach gu Deasachadh mu dheireadh</translation>
     </message>
     <message>
-        <location line="-266" />
+        <location line="-268" />
         <source>Copy Full Path</source>
         <translation>Dèan lethbhreac den t-slighe slàn</translation>
     </message>
@@ -1118,12 +1118,11 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Ctrl+F4</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Ctrl+Shift+W</source>
-        <translation>Ctrl + shift + w</translation>
+        <translation type="vanished">Ctrl + shift + w</translation>
     </message>
     <message>
-        <location line="+145" />
+        <location line="+158" />
         <source>Reopen Last Closed Document</source>
         <translation>Reopen sgrìobhainn dùinte mu dheireadh</translation>
     </message>
@@ -1296,7 +1295,7 @@ Lean air adhart?</translation>
         <translation>Sàbhail File Mar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+30" />
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+33" />
         <source>Edit</source>
         <translation>Deasaich</translation>
     </message>
@@ -1321,7 +1320,7 @@ Lean air adhart?</translation>
         <translation>Tha am faidhle air a sgrìobhadh</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+139" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+145" />
         <source>Reset Do Not Ask/Show Again Dialogs</source>
         <translation>Ath-shuidheachadh Na faighnich / Seall a-rithist còmhraidhean</translation>
     </message>
@@ -1350,12 +1349,12 @@ Lean air adhart?</translation>
         <translation type="vanished">Thig na roghainnean DPI àrd gu buil às deidh ath-thòiseachadh.</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+62" />
         <source>User Interface</source>
         <translation>Eadar-aghaidh cleachdaiche</translation>
     </message>
     <message>
-        <location line="-144" />
+        <location line="-159" />
         <source>Show keyboard shortcuts in context menus (default: %1)</source>
         <translation>Seall ath-ghoiridean meur-chlàir ann an clàr-taice co-theacs (bunaiteach: %1)</translation>
     </message>
@@ -1382,7 +1381,7 @@ If the system cursors for resizing views are not displayed properly, you can use
  Ma tha cur nan luchd-rèiteachaidh airson a bhith air an taisbeanadh gu ceart, faodaidh tu na cursors a chleachdadh le%1.</translation>
     </message>
     <message>
-        <location line="+93" />
+        <location line="+96" />
         <source>Round Up for .5 and Above</source>
         <translation>Cruinn suas airson .5 agus gu h-àrd</translation>
     </message>
@@ -1422,12 +1421,17 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>Buaidh na h-àrainneachd giùlan UI.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+21" />
+        <source>Serial Terminal Tab size:</source>
+        <translation>Meud nan tab aig an tèirmineal sreathach:</translation>
+    </message>
+    <message>
+        <location line="+51" />
         <source>&lt;System Language&gt;</source>
         <translation>&lt;Cànan an t-siostaim&gt;</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+97" />
         <source>The language change will take effect after restart.</source>
         <translation>Thig an t-atharrachadh cànain gu buil às deidh ath-thòiseachadh.</translation>
     </message>
@@ -1698,7 +1702,7 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Toradh</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1787" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1807" />
         <source>&amp;File</source>
         <translation>&amp;Faidhle</translation>
     </message>
@@ -1724,15 +1728,15 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+128" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2620" />
-        <location line="+1735" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2622" />
+        <location line="+1737" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
         <source>&amp;Save</source>
         <translation>&amp;Sàbhail</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1734" />
-        <location line="+1735" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1736" />
+        <location line="+1737" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
         <translation>Sàbhail &amp;Mar...</translation>
@@ -1936,19 +1940,18 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Seall bàr clàr-taice</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Ctrl+Alt+M</source>
-        <translation>Ctrl + alt + m</translation>
+        <translation type="vanished">Ctrl + alt + m</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+25" />
         <source>Hide Menu Bar</source>
         <translation>Falaich bàr clàr-taice</translation>
     </message>
     <message>
         <location line="+1" />
         <source>This will hide the menu bar completely. You can show it again by typing %1.&lt;br&gt;&lt;br&gt;Or, trigger the &quot;%2&quot; action from the &quot;%3&quot; locator filter (%4).</source>
-        <translation type="unfinished"></translation>
+        <translation>Falaichidh seo bàr a&apos; chlàir-taice gu tur. &apos;S urrainn dhut a shealltainn a-rithist le bhith a&apos; clò-sgrìobhadh %1.&lt;br&gt;&lt;br&gt;No, brosnaich an gnìomh &quot;%2&quot; bhon chriathrag lorgaire &quot;%3&quot; (%4).</translation>
     </message>
     <message>
         <location line="+21" />
@@ -2021,7 +2024,7 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>&lt;p&gt;Faodar luchd-leasachaidh Qt Creator a ruighinn air liosta puist Qt Creator:&lt;/p&gt;%1&lt;p&gt;no an t-seanail #qt-creator air Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;An rianaire bug againn suidhichte aig %3.&lt;/p&gt;&lt;p&gt;Cleachd %4 airson pìosan teacsa nas motha.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-817" />
+        <location line="-819" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -2048,7 +2051,7 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Làn-sgrìn</translation>
     </message>
     <message>
-        <location line="+126" />
+        <location line="+128" />
         <source>About &amp;Plugins...</source>
         <translation>Mu &amp;plugins...</translation>
     </message>
@@ -2113,7 +2116,7 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1030" />
         <location line="+16" />
         <location line="+14" />
         <source>Save Log</source>
@@ -2122,7 +2125,7 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-726" />
         <source>Clear</source>
         <translation>Soilleir</translation>
     </message>
@@ -2345,7 +2348,7 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Toradh &amp;chur</translation>
     </message>
     <message>
-        <location line="+406" />
+        <location line="+461" />
         <source>Reset to Default</source>
         <translation>Ath-shuidheachadh gu bunaiteach</translation>
     </message>
@@ -2507,8 +2510,8 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-288" />
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+58" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-290" />
+        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+63" />
         <source>Save</source>
         <translation>Sàbhail</translation>
     </message>
@@ -2518,7 +2521,7 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Sàbhail Taghte</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+180" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+192" />
         <source>Click and type the new key sequence.</source>
         <translation>Cliog agus sgrìobh an t-sreath iuchair ùr.</translation>
     </message>
@@ -2529,16 +2532,17 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+1" />
+        <location line="+277" />
         <source>Record</source>
         <translation>Clàr</translation>
     </message>
     <message>
-        <location line="+589" />
+        <location line="+427" />
         <source>Keyboard</source>
         <translation>Meur-chlàr</translation>
     </message>
     <message>
-        <location line="-630" />
+        <location line="-745" />
         <source>Invalid key sequence.</source>
         <translation>Sreath iuchrach mì-dhligheach.</translation>
     </message>
@@ -2548,7 +2552,7 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Chan obraich prìomh shreath san deasaiche.</translation>
     </message>
     <message>
-        <location line="+451" />
+        <location line="+469" />
         <source>Import Keyboard Mapping Scheme</source>
         <translation>Sgeama Mapaidh Meur-chlàr Import</translation>
     </message>
@@ -2564,12 +2568,13 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
         <translation>Sgeama Mapaidh Meur-chlàr Export</translation>
     </message>
     <message>
-        <location line="-332" />
+        <location line="-350" />
+        <location line="+153" />
         <source>Key sequence:</source>
         <translation>Prìomh shreath:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-149" />
         <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>Cleachd &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, agus &quot;Shift&quot; airson iuchraichean mion-atharrachaidh. Cleachd &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Sguab às&quot;, &quot;Cuir a-steach&quot;, &quot;Home&quot;, agus mar sin air adhart, airson iuchraichean sònraichte. Cuir còmhla iuchraichean fa leth le &quot;+&quot;, agus cuir còmhla iomadh ath-ghoirid gu sreath ath-ghoirid le &quot;,&quot;. Mar eisimpleir, ma dh&apos;fheumas an neach-cleachdaidh na h-iuchraichean mion-atharrachaidh Ctrl agus Shift a chumail fhad &apos;sa tha iad a&apos; putadh air Escape, agus an uairsin a leigeil ma sgaoil agus brùth A, cuir a-steach &quot;Ctrl + Shift + Escape, A&quot;.</translation>
     </message>
@@ -2757,7 +2762,7 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     </message>
     <message>
         <location line="+13" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-675" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-730" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-89" />
         <source>Case Sensitive</source>
         <translation>Mothachail air cùis</translation>
@@ -3015,11 +3020,11 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
     <message numerus="yes">
         <location line="-264" />
         <source>%1 filter update: %n files</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Ùrachadh criathraig %1: %n faidhle</numerusform>
+            <numerusform>Ùrachadh criathraig %1: %n faidhle</numerusform>
+            <numerusform>Ùrachadh criathraig %1: %n faidhle</numerusform>
+            <numerusform>Ùrachadh criathraig %1: %n faidhle</numerusform>
         </translation>
     </message>
     <message>
@@ -3245,7 +3250,10 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
 &lt;p&gt;What to do with the executable&apos;s standard output.
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+&lt;p&gt;Dè nì thu le às-chur àbhaisteach an fhaidhle so-ghnìomhaichte.
+&lt;ul&gt;&lt;li&gt;Leig seachad: Na dèan dad leis.&lt;/li&gt;&lt;li&gt;Seall ann an Teachdaireachdan Coitcheann.&lt;/li&gt;&lt;li&gt;Cuir an àite an taghaidh: Cuir e an àite an taghaidh làithreach san sgrìobhainn làithreach.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
     </message>
     <message>
         <location line="+7" />
@@ -3278,7 +3286,12 @@ fhad &apos;s nach robh iad air an atharrachadh ron ath-leasachadh.</translation>
 &lt;li&gt;Show in General Messages.&lt;/li&gt;
 &lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;body&gt;
+&lt;p &gt;Dè nì thu le às-chur mearachd àbhaisteach an fhaidhle so-ghnìomhaichte.&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Leig seachad: Na dèan dad leis.&lt;/li&gt;
+&lt;li&gt;Seall ann an Teachdaireachdan Coitcheann.&lt;/li&gt;
+&lt;li&gt;Cuir an àite an taghaidh: Cuir e an àite an taghaidh làithreach san sgrìobhainn làithreach.&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -3529,7 +3542,8 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-485" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+161" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+107" />
+        <location line="+72" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-1" />
         <source>Add</source>
         <translation>Cuir ris</translation>
@@ -3606,30 +3620,31 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
         <translation>Sàbhail a h-uile faidhle gu fèin-ghluasadach mus tèid a thogail</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-87" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-105" />
         <source>Keyboard Shortcuts</source>
         <translation>Ath-ghoiridean meur-chlàr</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+46" />
-        <location line="+95" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+49" />
+        <location line="+107" />
         <source>Command</source>
         <translation>àithne</translation>
     </message>
     <message>
-        <location line="-96" />
-        <location line="+96" />
+        <location line="-108" />
+        <location line="+108" />
         <source>Label</source>
         <translation>Label</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+1" />
         <location line="+15" />
+        <location line="+11" />
         <source>Shortcut</source>
         <translation>Ath-ghoirid</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-80" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-92" />
         <source>Command Mappings</source>
         <translation>Mapaichean àithne</translation>
     </message>
@@ -3668,7 +3683,7 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     <message>
         <location line="-5" />
         <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+6" />
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-278" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-295" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-1" />
         <location line="+8" />
         <source>Reset</source>
@@ -3715,7 +3730,7 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
         <translation>Deasaiche Binary</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+484" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+504" />
         <source>Sort categories</source>
         <translation>Deasaichean seòrsa</translation>
     </message>
@@ -4235,7 +4250,7 @@ Do you want to check them out now?</source>
 A bheil thu airson sùil a thoirt orra a-nis?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-948" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-968" />
         <source>Restart Required</source>
         <translation>Ath-thòiseachadh a dhìth</translation>
     </message>
@@ -4409,11 +4424,11 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
         <source>%n occurrences replaced.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n tachartas air an cur nan àite.</numerusform>
+            <numerusform>%n tachartas air an cur nan àite.</numerusform>
+            <numerusform>%n tachartas air an cur nan àite.</numerusform>
+            <numerusform>%n tachartas air an cur nan àite.</numerusform>
         </translation>
     </message>
     <message>
@@ -4489,11 +4504,11 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>The search resulted in more than %n items, do you still want to continue?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Lorg an sireadh barrachd air %n nì, a bheil thu fhathast airson leantainn air adhart?</numerusform>
+            <numerusform>Lorg an sireadh barrachd air %n nì, a bheil thu fhathast airson leantainn air adhart?</numerusform>
+            <numerusform>Lorg an sireadh barrachd air %n nì, a bheil thu fhathast airson leantainn air adhart?</numerusform>
+            <numerusform>Lorg an sireadh barrachd air %n nì, a bheil thu fhathast airson leantainn air adhart?</numerusform>
         </translation>
     </message>
     <message>
@@ -4509,11 +4524,11 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
     <message numerus="yes">
         <location line="+82" />
         <source>%n matches found.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n maids air an lorg.</numerusform>
+            <numerusform>%n maids air an lorg.</numerusform>
+            <numerusform>%n maids air an lorg.</numerusform>
+            <numerusform>%n maids air an lorg.</numerusform>
         </translation>
     </message>
     <message>
@@ -4553,7 +4568,7 @@ A bheil thu airson sùil a thoirt orra a-nis?</translation>
         <translation type="vanished">%1 %2%3</translation>
     </message>
     <message>
-        <location line="+804" />
+        <location line="+824" />
         <source>Based on Qt %1 (%2, %3)</source>
         <translation>Stèidhichte air Qt %1 (%2, %3)</translation>
     </message>
@@ -4757,6 +4772,31 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
         <translation>Teacsa còmhdaich</translation>
     </message>
     <message>
+        <location line="+20" />
+        <source>Serial Protocol Debug Logging</source>
+        <translation>Logadh Dì-bhugachaidh Pròtacail Shreathaich</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Off</source>
+        <translation>Dheth</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands</source>
+        <translation>Àitheantan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands + Packets</source>
+        <translation>Àitheantan + Pacaidean</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands + Packets + Fragments</source>
+        <translation>Àitheantan + Pacaidean + Criomagan</translation>
+    </message>
+    <message>
         <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="-129" />
         <source>Add Magic Header</source>
         <translation>Cuir a-steach Magic Header</translation>
@@ -4768,7 +4808,7 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     <message>
         <location line="+4" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tha dàta draoidheachd MIME air a mhìneachadh mar a tha air a shònrachadh le sònrachadh Shared MIME-info Database bho &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+9" />
@@ -4890,11 +4930,11 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
     <message numerus="yes">
         <location line="+159" />
         <source>Elided %n characters due to Application Output settings</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Chaidh %n caractar fhàgail às air sgàth roghainnean Às-chur na h-Aplacaid</numerusform>
+            <numerusform>Chaidh %n caractar fhàgail às air sgàth roghainnean Às-chur na h-Aplacaid</numerusform>
+            <numerusform>Chaidh %n caractar fhàgail às air sgàth roghainnean Às-chur na h-Aplacaid</numerusform>
+            <numerusform>Chaidh %n caractar fhàgail às air sgàth roghainnean Às-chur na h-Aplacaid</numerusform>
         </translation>
     </message>
     <message>
@@ -4905,7 +4945,7 @@ Dèan briogadh dùbailte gus an nì a dheasachadh.</translation>
 </translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+404" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Faidhlichean teacsa (*.txt);;A h-uile faidhle (*)</translation>
     </message>
@@ -5478,11 +5518,11 @@ gu smachd an tionndaidh (%2)
     <message numerus="yes">
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
         <source>Skipped %n lines...</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Air %n loidhne a leum...</numerusform>
+            <numerusform>Air %n loidhne a leum...</numerusform>
+            <numerusform>Air %n loidhne a leum...</numerusform>
+            <numerusform>Air %n loidhne a leum...</numerusform>
         </translation>
     </message>
     <message>
@@ -5861,7 +5901,7 @@ Adhbhar: %3</translation>
     <message>
         <location line="+2" />
         <source>If you temporarily disable %1, the following plugins that depend on it are also disabled: %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ma chuireas tu %1 à comas rè ùine, thèid na plugins a leanas a tha an eisimeil air a chur à comas cuideachd: %2.</translation>
     </message>
     <message>
         <source>If you temporarily disable %1, the following plugins that depend on it are also disabled: %2.
@@ -5894,7 +5934,7 @@ Reason: %3</source>
 Adhbhar: %3</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
+        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+133" />
         <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>Tha plugan &quot;%1&quot; air a shònrachadh dà uair airson deuchainn.</translation>
     </message>
@@ -6753,11 +6793,11 @@ See the documentation of the specific language server for valid settings.</sourc
     <message numerus="yes">
         <location line="+21" />
         <source>Re&amp;name %n files</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Ath-&amp;ainmich %n faidhle</numerusform>
+            <numerusform>Ath-&amp;ainmich %n faidhle</numerusform>
+            <numerusform>Ath-&amp;ainmich %n faidhle</numerusform>
+            <numerusform>Ath-&amp;ainmich %n faidhle</numerusform>
         </translation>
     </message>
     <message>
@@ -6954,7 +6994,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+3" />
         <source>Expected a JSON object, but got a JSON &quot;%1&quot; value.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bha dùil ri oibseact JSON, ach fhuaireadh luach JSON &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
@@ -6985,7 +7025,7 @@ See the documentation of the specific language server for valid settings.</sourc
 <context>
     <name>QtC::OpenMV</name>
     <message>
-        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.cpp" line="+548" />
+        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.cpp" line="+671" />
         <location line="+34" />
         <source>Value %L1</source>
         <translation>Luach %L1</translation>
@@ -7043,9 +7083,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>V</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvcamerasettings.cpp" line="+81" />
         <source>Please enter your WiFi network here</source>
-        <translation>Feuch an cuir thu a-steach an lìonra WiFi agad an seo</translation>
+        <translation type="vanished">Feuch an cuir thu a-steach an lìonra WiFi agad an seo</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+145" />
@@ -7064,8 +7103,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+156" />
-        <location line="+823" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+158" />
+        <location line="+878" />
         <source>Dataset Editor</source>
         <translation>Deasaiche stòr-dàta</translation>
     </message>
@@ -7077,9 +7116,9 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+604" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+606" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+412" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+423" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
@@ -7089,17 +7128,17 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-732" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-787" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1514" />
+        <location line="+1795" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+139" />
         <location line="+202" />
-        <location line="+306" />
+        <location line="+330" />
         <location line="+13" />
         <location line="+169" />
         <location line="+146" />
@@ -7107,15 +7146,14 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+378" />
-        <location line="+273" />
-        <location line="+86" />
-        <location line="+1142" />
-        <location line="+1075" />
-        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+881" />
+        <location line="+315" />
+        <location line="+1388" />
+        <location line="+1089" />
+        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+109" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+699" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
         <location line="+11" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
@@ -7126,8 +7164,8 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-309" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3541" />
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3846" />
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
         <location line="+48" />
         <location line="+9" />
@@ -7141,23 +7179,23 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+33" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
-        <location line="+1442" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2844" />
+        <location line="+1481" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Cha b&apos; urrainn dhuinn am faidhle dealbh a shàbhaladh airson adhbhar neo-aithnichte!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
-        <location line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+589" />
+        <location line="+291" />
         <source>Delete</source>
         <translation>Sguab às</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-361" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>A bheil thu cinnteach gu bheil thu airson &quot;%L1&quot; a sguabadh às gu buan?</translation>
     </message>
@@ -7184,8 +7222,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Cha b&apos; urrainn dhuinn am faidhle ath-ainmeachadh airson adhbhar neo-aithnichte!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5247" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5826" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+62" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Cha b&apos; urrainn dhuinn lethbhreac a dhèanamh dhen fhaidhle &quot;%1&quot; gu &quot;%2&quot;.</translation>
     </message>
@@ -7206,39 +7244,20 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation type="vanished">Argamaid a dhìth airson -override_read_stall_timeout</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+94" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>Argamaid a dhìth airson -serial_number_filter</translation>
     </message>
     <message>
-        <location line="+145" />
-        <location line="+8" />
-        <location line="+10" />
-        <location line="+11" />
-        <location line="+28" />
-        <location line="+28" />
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2677" />
-        <location line="+9" />
-        <location line="+13" />
-        <location line="+63" />
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
-        <location line="+36" />
-        <location line="+7" />
-        <location line="+8" />
-        <location line="+10" />
-        <location line="+7" />
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
-        <translation>
+        <translation type="vanished">
 
 Feuch an dùin thu prògraman sam bith a tha a’ coimhead / a’ deasachadh dàta tagraidh OpenMV IDE agus an uairsin ath-thòiseachadh OpenMV IDE!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1733" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Deasaich stairsneach Sgèile Liath le Deasaiche Threshold</translation>
     </message>
@@ -7248,26 +7267,24 @@ Feuch an dùin thu prògraman sam bith a tha a’ coimhead / a’ deasachadh dà
         <translation>Deasaich stairsneach LAB le Deasaiche Threshold</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+221" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+423" />
         <source>Missing argument for -form_key</source>
         <translation>Argamaid a dhìth airson -form_key</translation>
     </message>
     <message>
-        <location line="+1074" />
         <source>About OpenMV Viewer...</source>
-        <translation>Mu dheidhinn OpenMV Viewer...</translation>
+        <translation type="vanished">Mu dheidhinn OpenMV Viewer...</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Mu %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Le: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;CEADACHD POBLACH COITCHEANN GNU&lt;/b&gt; /p&gt;&lt;p&gt;Dlighe-sgrìobhaidh (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Tha am prògram seo ga sgaoileadh an dòchas gum bi e feumail, ach GUN BARANTAS sam bith; às aonais eadhon am barantas so-thuigsinn a thaobh MARSANTACHD no IONNSACHADH AIRSON AIRSON PUINGEAN SÒNRAICHTE. Faic an &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; airson barrachd fiosrachaidh.&lt;/p&gt;&lt;p &lt;b&gt;Ceistean no Beachdan?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cuir fios thugainn aig &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>OpenMV IDE</source>
-        <translation>FosgailMV IDE</translation>
+        <translation type="vanished">FosgailMV IDE</translation>
     </message>
     <message>
-        <location line="-1050" />
+        <location line="+41" />
         <source>untitled_$.py</source>
         <translation>gun tiotal_$.py</translation>
     </message>
@@ -7280,7 +7297,7 @@ Feuch an dùin thu prògraman sam bith a tha a’ coimhead / a’ deasachadh dà
         <translation type="vanished">Argamaid a dhìth airson -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="-468" />
+        <location line="-434" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>Argamaid mì-dhligheach (%1) airson -auto_update</translation>
     </message>
@@ -7294,14 +7311,16 @@ Feuch an dùin thu prògraman sam bith a tha a’ coimhead / a’ deasachadh dà
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mearachd ann am parsadh &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
+
+Sgrùd am faidhle json airson mhearachdan agus càraich iad.</translation>
     </message>
     <message>
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.\n\nOpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
         <translation type="vanished">Mearachd a &apos;leughadh &lt;cleachdaiche_respources&gt; /opemvide/firdower/FECETS:% l1 Chan eil an faidhle seo aig v4.3.0 L1.0 Chan eil e air a dhubhadh às le bhith a&apos; stàladh ghoireasan.</translation>
     </message>
     <message>
-        <location line="+188" />
+        <location line="+154" />
         <source>Form Key</source>
         <translation>Foirm iuchair</translation>
     </message>
@@ -7354,7 +7373,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Ruith Bootloader (Luchdaich Firmware)</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+50" />
         <source>Ctrl+Shift+L</source>
         <translation>Ctrl+Shift+L</translation>
     </message>
@@ -7372,17 +7391,16 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">A bheil thu cinnteach gu bheil thu airson an draibhear flash air bòrd OpenMV agad a sguabadh às?</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+55" />
         <source>Auto Reconnect to OpenMV Cam</source>
         <translation>Dèan ath-cheangal gu fèin-ghluasadach gu OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected.</source>
-        <translation>Nuair a bhios Auto Reconnect air a chomasachadh, nì OpenMV IDE ath-cheangal gu fèin-ghluasadach ris an OpenMV agad ma lorgar e.</translation>
+        <translation type="vanished">Nuair a bhios Auto Reconnect air a chomasachadh, nì OpenMV IDE ath-cheangal gu fèin-ghluasadach ris an OpenMV agad ma lorgar e.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Stop Script on Connect/Disconnect</source>
         <translation>Cuir stad air an sgriobt air Connect / Disconnect</translation>
     </message>
@@ -7392,7 +7410,7 @@ Check the json file for errors and fix them.</source>
         <translation>Cuir stad air an sgriobt air Connect or Disconnect (thoir an aire gu bheil an IDE a’ dì-cheangal dlùth ma tha e ceangailte).</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Sync Imports between OpenMV Cam and Documents Folder</source>
         <translation>Ionnsachadh sioncranachaidh eadar OpenMV Cam agus Pasgan Sgrìobhainnean</translation>
     </message>
@@ -7417,12 +7435,11 @@ Check the json file for errors and fix them.</source>
         <translation>Fosgail pasgan OpenMV Cam Drive</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Configure OpenMV Cam settings file</source>
-        <translation>Dèan rèiteachadh air faidhle roghainnean OpenMV Cam</translation>
+        <translation type="vanished">Dèan rèiteachadh air faidhle roghainnean OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+24" />
         <source>Save open script to OpenMV Cam (as main.py)</source>
         <translation>Sàbhail sgriobt fosgailte gu OpenMV Cam (mar main.py)</translation>
     </message>
@@ -7437,34 +7454,34 @@ Check the json file for errors and fix them.</source>
         <translation>Stàlaich an sgaoileadh leasachaidh as ùire</translation>
     </message>
     <message>
-        <location line="+75" />
-        <location line="+3823" />
+        <location line="+267" />
+        <location line="+4137" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Terminal fosgailte</translation>
     </message>
     <message>
-        <location line="-3877" />
+        <location line="-4191" />
         <source>Machine Vision</source>
         <translation>Sealladh inneal</translation>
     </message>
     <message>
-        <location line="+175" />
-        <location line="+3733" />
+        <location line="+182" />
+        <location line="+4040" />
         <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Deasaiche Treas</translation>
     </message>
     <message>
-        <location line="-3803" />
-        <location line="+3880" />
+        <location line="-4110" />
+        <location line="+4187" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Deasaiche prìomh fhaclan</translation>
     </message>
     <message>
-        <location line="-3873" />
-        <location line="+4037" />
+        <location line="-4178" />
+        <location line="+4342" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7473,7 +7490,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag Gineadair</translation>
     </message>
     <message>
-        <location line="-4184" />
+        <location line="-4489" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Teaghlach TAG16H5 (30 taga)</translation>
     </message>
@@ -7508,19 +7525,18 @@ Check the json file for errors and fix them.</source>
         <translation>Gineadair còd QRC</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1338" />
+        <location line="+1348" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+367" />
-        <location line="+14" />
-        <location line="+33" />
-        <location line="+918" />
+        <location line="+409" />
+        <location line="+1051" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-223" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Dh&apos;fhàillig fosgladh: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1356" />
+        <location line="-1484" />
         <source>DataMatrix Generator</source>
         <translation>Gineadair DataMatrix</translation>
     </message>
@@ -7547,13 +7563,13 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+225" />
-        <location line="+2424" />
-        <location line="+1288" />
+        <location line="+2690" />
+        <location line="+1327" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-393" />
-        <location line="+375" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+900" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-392" />
+        <location line="+374" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+996" />
         <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Feuch an cuir thu leudachan faidhle ris!</translation>
@@ -7568,7 +7584,7 @@ Check the json file for errors and fix them.</source>
         <translation>Cha ghabh ath-sgrìobhadh a dhèanamh air an fhaidhle toraidh!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3922" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4227" />
         <source>Video Tools</source>
         <translation>Innealan bhidio</translation>
     </message>
@@ -7584,8 +7600,8 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-439" />
-        <location line="+275" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-440" />
+        <location line="+276" />
         <source>Play RTSP Stream</source>
         <translation>Cluich RTSP Stream</translation>
     </message>
@@ -7668,34 +7684,34 @@ Check the json file for errors and fix them.</source>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+177" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1513" />
+        <location line="+1794" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+273" />
-        <location line="+554" />
+        <location line="+578" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
         <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-131" />
-        <location line="+289" />
-        <location line="+165" />
-        <location line="+1148" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3187" />
+        <location line="+252" />
+        <location line="+327" />
+        <location line="+1479" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1339" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1435" />
         <location line="+85" />
-        <location line="+605" />
+        <location line="+627" />
         <source>Cancel</source>
         <translation>Sguir dheth</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3737" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4042" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Luchdaich sìos gu Edge Impulse Project</translation>
     </message>
@@ -7727,51 +7743,42 @@ Check the json file for errors and fix them.</source>
         <translation>Dùin an stòr-dàta</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+38" />
         <source>OpenMV Docs</source>
         <translation>Fosgail MV Docs</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+38" />
         <source>OpenMV Forums</source>
         <translation>Fòraman OpenMV</translation>
     </message>
     <message>
-        <location line="+15" />
         <source>About OpenMV Cam</source>
-        <translation>Mu dheidhinn OpenMV Cam</translation>
+        <translation type="vanished">Mu dheidhinn OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>About OpenMV Cam...</source>
-        <translation>Mu dheidhinn OpenMV Cam...</translation>
+        <translation type="vanished">Mu dheidhinn OpenMV Cam...</translation>
     </message>
     <message>
-        <location line="+18" />
         <source>About OpenMV Cam %1</source>
-        <translation>Mu OpenMV Cam %1</translation>
+        <translation type="vanished">Mu OpenMV Cam %1</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>About OpenMV Cam %1...</source>
-        <translation>Mu OpenMV Cam %1...</translation>
+        <translation type="vanished">Mu OpenMV Cam %1...</translation>
     </message>
     <message>
-        <location line="+18" />
-        <location line="+6" />
         <source>About OpenMV IDE</source>
-        <translation>Mu OpenMV IDE</translation>
+        <translation type="vanished">Mu OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-6" />
-        <location line="+6" />
         <source>About OpenMV Viewer</source>
-        <translation>Mu dheidhinn OpenMV Viewer</translation>
+        <translation type="vanished">Mu dheidhinn OpenMV Viewer</translation>
     </message>
     <message>
-        <location line="-5" />
         <source>About OpenMV IDE...</source>
-        <translation>Mu dheidhinn OpenMV IDE...</translation>
+        <translation type="vanished">Mu dheidhinn OpenMV IDE...</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
@@ -7786,14 +7793,13 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">&lt;p&gt;OpenMV IDE Eadar-theangachadh Beurla le Kwabena W. Agyeman.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+49" />
         <source>&lt;p&gt;&lt;b&gt;Partners&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Com-pàirtichean&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>OpenMV Viewer</source>
-        <translation>Sealladair OpenMV</translation>
+        <translation type="vanished">Sealladair OpenMV</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
@@ -7826,7 +7832,7 @@ Check the json file for errors and fix them.</source>
         <location line="+7" />
         <location line="+36" />
         <location line="+26" />
-        <location line="+16" />
+        <location line="+17" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
         <location line="+54" />
         <location line="+32" />
@@ -7844,7 +7850,7 @@ Check the json file for errors and fix them.</source>
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+65" />
+        <location line="+69" />
         <location line="+26" />
         <location line="+18" />
         <location line="+23" />
@@ -7856,9 +7862,9 @@ Check the json file for errors and fix them.</source>
         <location line="+4" />
         <location line="+7" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location line="+26" />
-        <location line="+26" />
+        <location line="+27" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-145" />
         <location line="+35" />
         <location line="+14" />
@@ -7869,14 +7875,14 @@ Check the json file for errors and fix them.</source>
         <location line="+9" />
         <location line="+16" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1189" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+17" />
+        <location line="+1098" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1349" />
         <location line="+6" />
-        <location line="+28" />
-        <location line="+52" />
-        <location line="+8" />
-        <location line="+35" />
-        <location line="+329" />
+        <location line="+27" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+477" />
         <location line="+136" />
         <location line="+28" />
         <location line="+100" />
@@ -7886,17 +7892,17 @@ Check the json file for errors and fix them.</source>
         <location line="+81" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+28" />
-        <location line="+34" />
+        <location line="+29" />
+        <location line="+38" />
         <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+97" />
-        <location line="+4" />
-        <location line="+4" />
+        <location line="+108" />
+        <location line="+6" />
+        <location line="+5" />
         <location line="+72" />
         <location line="+116" />
         <location line="+83" />
@@ -7917,8 +7923,8 @@ Check the json file for errors and fix them.</source>
         <location line="+135" />
         <location line="+217" />
         <location line="+33" />
-        <location line="+268" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+668" />
+        <location line="+370" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+777" />
         <location line="+48" />
         <source>Connect</source>
         <translation>Ceangail</translation>
@@ -7926,7 +7932,7 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="-42" />
         <source>No settings for the selected board type %L1!</source>
-        <translation type="unfinished"></translation>
+        <translation>Chan eil roghainnean ann airson an t-seòrsa bùird %L1 a thagh thu!</translation>
     </message>
     <message>
         <location line="+9" />
@@ -7939,7 +7945,7 @@ Check the json file for errors and fix them.</source>
         <translation>Chan eil ach ath-bheothachadh firmware a &apos;faighinn taic a bhith a&apos; cleachdadh innealan se semicontion an alIf.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1084" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
@@ -7957,14 +7963,16 @@ Check the json file for errors and fix them.</source>
         <translation>Stad (sgriobt stad)</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-58" />
+        <location line="+70" />
+        <location line="+211" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
+        <location line="+166" />
         <source>Frame Buffer</source>
         <translation>Bufair frèam</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
+        <location line="-204" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
         <source>Record</source>
         <translation>Clàr</translation>
     </message>
@@ -7999,11 +8007,12 @@ Check the json file for errors and fix them.</source>
         <translation>Sùm gus a bhith iomchaidh</translation>
     </message>
     <message>
+        <location line="+30" />
         <source>JPG</source>
-        <translation type="vanished">JPG</translation>
+        <translation>JPG</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+1" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>Bidh JPEG a’ teannachadh am Frame Buffer airson coileanadh nas àirde</translation>
     </message>
@@ -8022,7 +8031,25 @@ Check the json file for errors and fix them.</source>
         <translation>Cuir à comas am Frame Buffer airson an coileanadh as àirde</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+49" />
+        <location line="+13" />
+        <source>JPEG Mode</source>
+        <translation>Modh JPEG</translation>
+    </message>
+    <message>
+        <location line="-5" />
+        <location line="+7" />
+        <source>The Frame Buffer is streaming JPEG-compressed images</source>
+        <translation>Tha am Bufair Frèam a&apos; sruthadh ìomhaighean teann-dhùmhlaichte JPEG</translation>
+    </message>
+    <message>
+        <location line="-6" />
+        <location line="+7" />
+        <source>The Frame Buffer is streaming raw (uncompressed) images</source>
+        <translation>Tha am Bufair Frèam a&apos; sruthadh ìomhaighean amh (neo-dhùmhlaichte)</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>Frame Buffer Disabled - cliog air a’ phutan cuir à comas a-rithist gus a chomasachadh (gu h-àrd air an làimh dheis)</translation>
     </message>
@@ -8069,37 +8096,24 @@ Check the json file for errors and fix them.</source>
         <translation>Cleachd Sgèile Liath / LAB airson lorg dath</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+42" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+3" />
-        <location line="+44" />
         <source>Res - No Image</source>
-        <translation>Res - Gun dealbh</translation>
+        <translation type="vanished">Res - Gun dealbh</translation>
     </message>
     <message>
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)</source>
         <translation type="vanished">Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - piogsail (%7)</translation>
     </message>
     <message>
-        <location line="-10" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-10" />
         <source>Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
-        <translation>Res (w:%1, h:%2) - Puing (x:%3, y:%4)</translation>
+        <translation type="vanished">Res (w:%1, h:%2) - Puing (x:%3, y:%4)</translation>
     </message>
     <message>
         <source>Res (w:%1, h:%2)</source>
         <translation type="vanished">A ath (w:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1582" />
-        <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
-
-OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+346" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2858" />
+        <location line="-1460" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3176" />
         <source>Load Custom Firmware</source>
         <translation>Luchdaich firmware gnàthaichte</translation>
     </message>
@@ -8115,34 +8129,78 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>A bheil thu cinnteach gu bheil thu airson gun cuir thu às don t-siostam faidhle geir a-staigh agad?</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+16" />
         <source>ROM File System</source>
         <translation>Siostam faidhle rom</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>New ROMFS File</source>
         <translation>Faidhle Romfs ùr</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+8" />
         <source>Open ROMFS File</source>
         <translation>Faidhle ROMFS fosgailte</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+0" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+554" />
+        <source>Load ROMFS onto OpenMV Cam</source>
+        <translation>Luchdaich ROMFS air an OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>Edit ROMFS on OpenMV Cam</source>
         <translation>Deasaich Romfs air OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Reset ROMFS on OpenMV Cam</source>
         <translation>Ath-shuidheachadh romfs air cam fosgailte</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+8" />
+        <source>When Auto Reconnect is enabled %1 will automatically reconnect to your OpenMV if detected.</source>
+        <translation>Nuair a tha Ath-cheangal Fèin-obrachail an comas, ath-cheanglaidh %1 gu fèin-obrachail ris an OpenMV agad ma gheibhear lorg air.</translation>
+    </message>
+    <message>
+        <location line="+62" />
+        <source>Edit boot.py for WiFi Debugging</source>
+        <translation>Deasaich boot.py airson Dì-bhugachadh WiFi</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>Force enter OpenMV Cam bootloader</source>
         <translation>Feachd a-steach OpenMV Cam bootloader</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Open OpenMV Cam Settings Config File</source>
+        <translation>Fosgail Faidhle Rèiteachaidh Roghainnean OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+188" />
+        <location line="+346" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+51" />
+        <source>OpenMV Cam Settings Editor</source>
+        <translation>Deasaiche Roghainnean OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-14" />
+        <source>Create Default Config</source>
+        <translation>Cruthaich Rèiteachadh Bunaiteach</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-21" />
+        <source>Open Config File</source>
+        <translation>Fosgail Faidhle Rèiteachaidh</translation>
     </message>
     <message>
         <location line="+14" />
@@ -8150,10 +8208,37 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>Innealan micropython</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
+        <location line="+12" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+19" />
+        <location line="+29" />
+        <location line="+7" />
+        <source>Copy/Convert Current Script</source>
+        <translation>Dèan lethbhreac/Iompaich an Sgriobt Làithreach</translation>
+    </message>
+    <message>
+        <location line="-70" />
+        <source>Unable to stage the current script!</source>
+        <translation>Cha ghabh an sgriobt làithreach ullachadh!</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <location line="+91" />
+        <source>&quot;%L1&quot; won&apos;t auto-run: your OpenMV Cam only auto-runs main.py/boot.py source files, never a compiled .mpy.
+
+Would you like to choose a different name?</source>
+        <translation>Cha ruith &quot;%L1&quot; gu fèin-obrachail: chan eil an OpenMV Cam agad a&apos; ruith gu fèin-obrachail ach faidhlichean bun-tùs main.py/boot.py, chan e .mpy cnuasaichte a-riamh.
+
+Am bu toigh leat ainm eile a thaghadh?</translation>
+    </message>
+    <message>
+        <location line="-48" />
         <location line="+6" />
         <location line="+7" />
-        <location line="+33" />
+        <location line="+34" />
+        <location line="+30" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -8163,7 +8248,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>Dèan lethbhreac / tionndaidh faidhle python</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+30" />
         <source>Open Model Zoo</source>
         <translation>Zoo Fun Modail</translation>
     </message>
@@ -8179,51 +8264,112 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-176" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-730" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Modail tionndaidh</translation>
     </message>
     <message>
-        <location line="+420" />
+        <location line="+422" />
         <source>Show Code Profiler</source>
         <translation>Seall Còd Profiler</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+42" />
+        <source>Home</source>
+        <translation>Dhachaigh</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Tutorial</source>
+        <translation>Oideachadh</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Libraries</source>
+        <translation>Leabharlannan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Boards</source>
+        <translation>Bùird</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Shields</source>
+        <translation>Sgiathan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Sensors</source>
+        <translation>Mothaichearan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Language</source>
+        <translation>Cànan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>CPython</source>
+        <translation>CPython</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Internals</source>
+        <translation>Taobh a-staigh</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Changelog</source>
+        <translation>Loga atharraichean</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>License</source>
+        <translation>Ceadachas</translation>
+    </message>
+    <message>
+        <location line="+38" />
+        <location line="+8" />
+        <source>About %1</source>
+        <translation>Mu %1</translation>
+    </message>
+    <message>
+        <location line="-7" />
+        <source>About %1...</source>
+        <translation>Mu dhèidhinn %1...</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&lt;b&gt;Mu dhèidhinn %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Le: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;DREACH FACTAIRIDH&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Airson luchd-saothrachaidh ceadaichte a-mhàin.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Còraichean-lethbhreac (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Tha am prògram seo air a sgaoileadh an dòchas gum bi e feumail, ach GUN BHARANTAS SAM BITH; gun eadhon am barantas fillte de SHO-MHARSANTACHD no FREAGARRACHD AIRSON ADHBHAR SÒNRAICHTE. Faic an &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; airson barrachd fiosrachaidh.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Ceistean no Beachdan?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cuir fios thugainn aig &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+196" />
-        <location line="+26" />
         <source>JPG Mode</source>
-        <translation>Modh JPG</translation>
+        <translation type="vanished">Modh JPG</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location line="+240" />
+        <location line="+13" />
         <source>RAW Mode</source>
         <translation>Modh RAW</translation>
     </message>
     <message>
-        <location line="+113" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
-        <translation>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - piogsail (%7) - Fòcas (%8)</translation>
+        <translation type="vanished">Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - piogsail (%7) - Fòcas (%8)</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+9" />
         <source>Res (w:%1, h:%2) - Focus (%3)</source>
-        <translation>Ath (w:%1, h:%2) - Fòcas (%3)</translation>
+        <translation type="vanished">Ath (w:%1, h:%2) - Fòcas (%3)</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-729" />
         <source>FPS: %L1</source>
         <translation>FPS: %L1</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+250" />
         <source>Close</source>
         <translation>Dùin</translation>
     </message>
@@ -8244,7 +8390,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3418" />
         <source>Board:</source>
         <translation>Bòrd:</translation>
     </message>
@@ -8276,21 +8422,20 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>Firmware airson camara tionndadh</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2" />
         <source>Serial Port:</source>
         <translation>Port sreathach:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Camera serial port</source>
-        <translation>Port sreathach camara</translation>
+        <translation type="vanished">Port sreathach camara</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
-        <location line="+324" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
+        <location line="+8" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-377" />
+        <location line="+379" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+83" />
         <source>Drive:</source>
         <translation>Drive:</translation>
     </message>
@@ -8301,43 +8446,42 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+7" />
         <source>FPS:</source>
         <translation>FPS:</translation>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-82" />
         <source>May be different from camera FPS</source>
         <translation>Faodaidh e a bhith eadar-dhealaichte bho FPS camara</translation>
     </message>
     <message>
-        <location line="+307" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
+        <location line="+377" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3644" />
         <source>Update Available</source>
         <translation>Ùrachadh ri fhaighinn</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.</source>
-        <translation>Tha tionndadh ùr de OpenMV IDE (%L1.%L2.%L3) ri fhaighinn airson a luchdachadh a-nuas.</translation>
+        <translation type="vanished">Tha tionndadh ùr de OpenMV IDE (%L1.%L2.%L3) ri fhaighinn airson a luchdachadh a-nuas.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Download</source>
         <translation>Luchdaich sìos</translation>
     </message>
     <message>
-        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
-        <translation>Prògramadh WiFi ciorramach!</translation>
+        <translation type="vanished">Prògramadh WiFi ciorramach!</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Another application is using the OpenMV Cam broadcast discovery port. Please close that application and restart OpenMV IDE to enable WiFi programming.</source>
-        <translation>Tha tagradh eile a’ cleachdadh port lorg craolaidh OpenMV Cam. Feuch an dùin thu an aplacaid sin agus ath-thòisich OpenMV IDE gus prògramadh WiFi a chomasachadh.</translation>
+        <translation type="vanished">Tha tagradh eile a’ cleachdadh port lorg craolaidh OpenMV Cam. Feuch an dùin thu an aplacaid sin agus ath-thòisich OpenMV IDE gus prògramadh WiFi a chomasachadh.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+416" />
         <source>Documents Folder Error</source>
         <translation>Mearachd pasgan sgrìobhainnean</translation>
     </message>
@@ -8362,7 +8506,6 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>Dathan LED OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -8384,7 +8527,7 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>Tapadh leibh airson an OpenMV Cam agus OpenMV IDE a chleachdadh!
+        <translation type="vanished">Tapadh leibh airson an OpenMV Cam agus OpenMV IDE a chleachdadh!
 
 Bidh an LED air bòrd OpenMV agad a’ brùthadh le dathan eadar-dhealaichte gus a staid a nochdadh:
 
@@ -8407,18 +8550,18 @@ Tha am bathar-bog OpenMV Cam agad a’ clisgeadh air sgàth fàilligeadh bathar-
 </translation>
     </message>
     <message>
-        <location line="+93" />
-        <location line="+1212" />
+        <location line="+94" />
+        <location line="+1236" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Port sreathach - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1180" />
+        <location line="-1204" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+827" />
+        <location line="+851" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
@@ -8428,7 +8571,7 @@ Tha am bathar-bog OpenMV Cam agad a’ clisgeadh air sgàth fàilligeadh bathar-
         <translation>A&apos; ceangal... (ùine-ama 30 diog)</translation>
     </message>
     <message>
-        <location line="-1820" />
+        <location line="-1844" />
         <source>
 
 Try doing:
@@ -8481,12 +8624,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1270" />
+        <location line="+1294" />
         <source>UDP Server Connection - %1</source>
         <translation>Ceangal frithealaiche UDP - %1</translation>
     </message>
     <message>
-        <location line="-1196" />
+        <location line="-1220" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Argamaid puirt mì-dhligheach (%1) airson -open_udp_server_terminal</translation>
     </message>
@@ -8517,12 +8660,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1317" />
+        <location line="+1341" />
         <source>TCP Server Connection - %1</source>
         <translation>Ceangal frithealaiche TCP - %1</translation>
     </message>
     <message>
-        <location line="-1243" />
+        <location line="-1267" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Argamaid puirt mì-dhligheach (%1) airson -open_tcp_server_terminal</translation>
     </message>
@@ -8551,7 +8694,7 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2935" />
         <location line="+10" />
         <location line="+8" />
         <location line="+22" />
@@ -8639,16 +8782,15 @@ Feuch an ruith thu eisimpleirean-&gt; HelloWorld-&gt; helloworld.py gus càileac
         <translation>Cam OpenMV neo-chlàraichte air a lorg</translation>
     </message>
     <message>
-        <location line="-19" />
         <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
-        <translation>Chan eil an OpenMV Cam agad clàraichte. Feumaidh tu do OpenMV Cam a chlàradh le OpenMV airson a chleachdadh gun chrìoch le OpenMV IDE gun bhriseadh sam bith.
+        <translation type="vanished">Chan eil an OpenMV Cam agad clàraichte. Feumaidh tu do OpenMV Cam a chlàradh le OpenMV airson a chleachdadh gun chrìoch le OpenMV IDE gun bhriseadh sam bith.
 
 Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-9" />
         <source>Unregistered OpenMV Cams hurt the open-source OpenMV ecosystem by undercutting offical OpenMV Cam sales which help fund OpenMV Cam software development.
 
 Would you like to register your OpenMV Cam now?</source>
@@ -8657,16 +8799,15 @@ Would you like to register your OpenMV Cam now?</source>
 Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>OpenMV IDE will display these three messages boxes each time you connect until you register your OpenMV Cam...
 
 Would you like to register your OpenMV Cam now?</source>
-        <translation>Seallaidh OpenMV IDE na trì bogsaichean teachdaireachd sin gach uair a cheanglas tu gus an clàraich thu do OpenMV Cam ...
+        <translation type="vanished">Seallaidh OpenMV IDE na trì bogsaichean teachdaireachd sin gach uair a cheanglas tu gus an clàraich thu do OpenMV Cam ...
 
 Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+29" />
         <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Cuir a-steach iuchair bùird gus an OpenMV Cam agad a chlàradh.&lt;br/&gt;&lt;br/&gt;Mura h-eil iuchair bùird agad faodaidh tu fear a cheannach o OpenMV &lt;a href=&quot;https://openmv.io/products/openmv- cam-board-key&quot;&gt;an seo&lt;/a&gt;.</translation>
     </message>
@@ -8706,19 +8847,15 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Iuchair Bùird ann an cruth neo-dhligheach!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+225" />
-        <location line="+503" />
-        <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-84" />
         <source>FPS: 0</source>
-        <translation>FPS: 0</translation>
+        <translation type="vanished">FPS: 0</translation>
     </message>
     <message>
         <source>Configure Settings</source>
         <translation type="vanished">Dèan rèiteachadh air na roghainnean</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+395" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+418" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>Sàbhail Sgriobt</translation>
@@ -8729,10 +8866,10 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Strì beachdan agus atharraich àiteachan gu tabaichean?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+84" />
         <location line="+7" />
         <location line="+18" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-75" />
         <location line="+7" />
         <location line="+18" />
         <source>Save Image</source>
@@ -8740,7 +8877,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
         <location line="-23" />
-        <location line="+1101" />
+        <location line="+1140" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Faidhlichean Ìomhaigh (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
@@ -8795,7 +8932,169 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Fosgail File</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-4317" />
+        <location line="+8" />
+        <location line="+10" />
+        <location line="+11" />
+        <location line="+28" />
+        <location line="+28" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2925" />
+        <location line="+9" />
+        <location line="+13" />
+        <location line="+65" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+45" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-784" />
+        <location line="+36" />
+        <location line="+7" />
+        <location line="+8" />
+        <location line="+10" />
+        <location line="+7" />
+        <source>
+
+Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
+        <translation>
+
+Dùin sibh prògram sam bith a tha a&apos; sealltainn/a&apos; deasachadh dàta aplacaid %1 agus an uair sin ath-thòisich %1!</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
+
+%2 versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
+        <translation>Mearachd a&apos; leughadh &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
+
+Chan eil am faidhle seo aig dreachan %2 ro v4.3.0 agus bhiodh iad air a sguabadh às nuair a chuir iad a-steach goireasan.</translation>
+    </message>
+    <message>
+        <location line="+1473" />
+        <source>&lt;p&gt;&lt;b&gt;Release Notes&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Nòtaichean Sgaoilidh&lt;/b&gt;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>%1 %2</source>
+        <translation>%1 %2</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>OpenMV Firmware %1</source>
+        <translation>Bathar-an-sàs OpenMV %1</translation>
+    </message>
+    <message>
+        <location line="+340" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+98" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
+        <translation>Bufair Frèam - Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Piogsailean (%7) - Fòcas (%8)</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
+        <translation>Bufair Frèam - Res (w:%1, h:%2) - Puing (x:%3, y:%4)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - Focus (%3)</source>
+        <translation>Bufair Frèam - Res (w:%1, h:%2) - Fòcas (%3)</translation>
+    </message>
+    <message>
+        <location line="+255" />
+        <source>Camera serial port -- click to give this camera a friendly name</source>
+        <translation>Port sreathach a&apos; chamara -- briog gus ainm càirdeil a thoirt don chamara seo</translation>
+    </message>
+    <message>
+        <location line="+389" />
+        <source>A new version of %5 (%L1.%L2.%L3) is available for download. See the &lt;a href=&quot;%L4&quot;&gt;release notes&lt;/a&gt;.</source>
+        <translation>Tha dreach ùr de %5 (%L1.%L2.%L3) ri fhaighinn airson a luchdadh a-nuas. Faic na &lt;a href=&quot;%L4&quot;&gt;nòtaichean sgaoilidh&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+124" />
+        <source>Connect (Network available)</source>
+        <translation>Ceangail (Lìonra ri làimh)</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Connect (USB available)</source>
+        <translation>Ceangail (USB ri làimh)</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Connect (USB &amp; Network available)</source>
+        <translation>Ceangail (USB &amp; Lìonra ri làimh)</translation>
+    </message>
+    <message>
+        <location line="+89" />
+        <source>-auto_run in viewer mode requires a readable text script file argument on the command line.</source>
+        <translation>Feumaidh -auto_run ann am modh seallaidh argamaid faidhle sgriobt teacsa a ghabhas leughadh air an loidhne-àithne.</translation>
+    </message>
+    <message>
+        <location line="+250" />
+        <source>Thanks for using the OpenMV Cam and %1!
+
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
+
+Blinking Green:
+
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow %1 to reprogram your OpenMV Cam.
+
+Blinking Blue:
+
+Your OpenMV Cam is running the default main.py script onboard.
+
+If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
+
+If the LED is blinking blue but %1 can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+
+Blinking White:
+
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
+
+</source>
+        <translation>Tapadh leat airson an OpenMV Cam agus %1 a chleachdadh!
+
+Bidh an LED air bòrd an OpenMV Cam agad a&apos; priobadh le dathan eadar-dhealaichte gus a staid a chomharrachadh:
+
+Uaine a&apos; priobadh:
+
+Tha am bootloader air bòrd an OpenMV Cam agad a&apos; ruith. Bidh am bootloader air bòrd a&apos; ruith airson beagan diogan nuair a tha an OpenMV Cam agad air a chumhachdachadh tro USB gus leigeil le %1 an OpenMV Cam agad ath-phrògramachadh.
+
+Gorm a&apos; priobadh:
+
+Tha an OpenMV Cam agad a&apos; ruith an sgriobt main.py bunaiteach air bòrd.
+
+Ma tha cairt SD agad air a stàladh no ma sgrìobh thu thairis air an sgriobt main.py air an OpenMV Cam agad, ruithidh e ge b&apos; e dè an còd a luchdaich thu air na àite.
+
+Ma tha an LED a&apos; priobadh gorm ach nach urrainn do %1 ceangal ris an OpenMV Cam agad, dèan cinnteach gu bheil thu a&apos; ceangal an OpenMV Cam agad ris a&apos; PC agad le càball USB a bheir seachad an dà chuid dàta agus cumhachd.
+
+Geal a&apos; priobadh:
+
+Tha am bathar-an-sàs air an OpenMV Cam agad ann an clisgeadh air sgàth fàilligeadh bathar-cruaidh. Dèan cinnteach gu bheil modal camara an OpenMV Cam agad air a stàladh gu tèarainte.
+
+</translation>
+    </message>
+    <message>
+        <location line="+711" />
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with %1 without any interruptions.
+
+Would you like to register your OpenMV Cam now?</source>
+        <translation>Chan eil an OpenMV Cam agad clàraichte. Feumaidh tu an OpenMV Cam agad a chlàradh le OpenMV airson cleachdadh gun chrìoch le %1 gun bhriseadh sam bith.
+
+Am bu toigh leat an OpenMV Cam agad a chlàradh a-nis?</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>%1 will display these three messages boxes each time you connect until you register your OpenMV Cam...
+
+Would you like to register your OpenMV Cam now?</source>
+        <translation>Seallaidh %1 na trì bogsaichean teachdaireachd seo gach turas a cheanglas tu gus an clàraich thu an OpenMV Cam agad...
+
+Am bu toigh leat an OpenMV Cam agad a chlàradh a-nis?</translation>
+    </message>
+    <message>
+        <location line="+479" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8815,7 +9114,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Chan urrainn dhuinn am faidhle eisimpleir &quot;%L1&quot; fhosgladh!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-468" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-493" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>Tagh Drive</translation>
@@ -8830,7 +9129,17 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation type="vanished">&apos;S e &quot;%L1&quot; an aon dhràibhear a tha ri làimh agus mar sin feumaidh gur e an draibhear OpenMV Cam agad a tha ann.</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="-49" />
+        <source>FPS: %L1 Cam - %L2 IDE</source>
+        <translation>FPS: %L1 Cam - %L2 IDE</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>On-camera FPS and IDE display FPS</source>
+        <translation>FPS air a&apos; chamara agus FPS taisbeanaidh an IDE</translation>
+    </message>
+    <message>
+        <location line="+75" />
         <source>Please associate a drive with your OpenMV Cam</source>
         <translation>Feuch an ceangail thu draibhear leis an OpenMV Cam agad</translation>
     </message>
@@ -8847,7 +9156,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     <message>
         <location line="+14" />
         <source>Protocol Version %1 - System Info:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dreach Pròtacail %1 - Fiosrachadh Siostaim:</translation>
     </message>
     <message>
         <location line="+25" />
@@ -8910,7 +9219,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Cunntas pròifil còd (ms)</translation>
     </message>
     <message>
-        <location line="+391" />
+        <location line="+416" />
         <location line="+26" />
         <location line="+7" />
         <source>Failed to flush &quot;%L1&quot;!</source>
@@ -8964,7 +9273,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2227" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1470" />
         <source>Please select a serial port</source>
         <translation>Feuch an tagh thu port sreathach</translation>
     </message>
@@ -8975,7 +9284,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
         <location line="+96" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+249" />
         <source>Try doing:
 
 </source>
@@ -9090,7 +9399,7 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+704" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+771" />
         <source>What would you like to do?</source>
         <translation>Dè bu toil leat a dhèanamh?</translation>
     </message>
@@ -9177,11 +9486,11 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>AprilTag Generator - Where do you want to save %n tag image(s) to?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Gineadair AprilTag - Càite a bheil thu airson %n ìomhaigh taga a shàbhaladh?</numerusform>
+            <numerusform>Gineadair AprilTag - Càite a bheil thu airson %n ìomhaigh taga a shàbhaladh?</numerusform>
+            <numerusform>Gineadair AprilTag - Càite a bheil thu airson %n ìomhaigh taga a shàbhaladh?</numerusform>
+            <numerusform>Gineadair AprilTag - Càite a bheil thu airson %n ìomhaigh taga a shàbhaladh?</numerusform>
         </translation>
     </message>
     <message>
@@ -9205,20 +9514,18 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Ginealach coileanta!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
-        <translation>Tha goireasan ùra OpenMV IDE rim faighinn (me eisimpleirean, firmware, sgrìobhainnean, msaa).</translation>
+        <translation type="vanished">Tha goireasan ùra OpenMV IDE rim faighinn (me eisimpleirean, firmware, sgrìobhainnean, msaa).</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1859" />
         <source>Install</source>
         <translation>Stàladh</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+289" />
-        <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
+        <location line="+327" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
@@ -9240,23 +9547,20 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>A&apos; luchdachadh sìos...</translation>
     </message>
     <message>
-        <location line="-440" />
+        <location line="-313" />
         <source>Installing...</source>
         <translation>A&apos; stàladh...</translation>
     </message>
     <message>
-        <location line="+59" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
         <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
-        <translation>Feuch an dùin thu prògraman sam bith a tha a’ coimhead / a’ deasachadh dàta tagraidh OpenMV IDE agus an uairsin ath-thòiseachadh OpenMV IDE!</translation>
+        <translation type="vanished">Feuch an dùin thu prògraman sam bith a tha a’ coimhead / a’ deasachadh dàta tagraidh OpenMV IDE agus an uairsin ath-thòiseachadh OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
-        <translation>Stàladh soirbheachail! Feuch an ath-thòisich thu OpenMV IDE.</translation>
+        <translation type="vanished">Stàladh soirbheachail! Feuch an ath-thòisich thu OpenMV IDE.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+128" />
         <location line="+6" />
         <location line="+28" />
         <source>Package Update</source>
@@ -9264,64 +9568,62 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+273" />
-        <location line="+88" />
+        <location line="+315" />
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>Chan urrainn dhuinn am faidhle ghoireasan &quot;%L1&quot; fhosgladh!</translation>
     </message>
     <message>
-        <location line="-333" />
-        <location line="+273" />
-        <location line="+95" />
+        <location line="-287" />
+        <location line="+314" />
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>Dh&apos;fhàillig iarrtas lìonraidh &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-335" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
-        <translation>Binary binary (* .bin * .fu * .img)</translation>
+        <translation type="vanished">Binary binary (* .bin * .fu * .img)</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+117" />
-        <location line="+720" />
+        <location line="-269" />
+        <location line="+159" />
+        <location line="+875" />
         <location line="+227" />
-        <location line="+2414" />
+        <location line="+2601" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Cuir às do shiostam faidhle geir taobh a-staigh</translation>
     </message>
     <message>
-        <location line="-3553" />
-        <location line="+117" />
-        <location line="+722" />
+        <location line="-3937" />
+        <location line="+159" />
+        <location line="+877" />
         <location line="+226" />
-        <location line="+2413" />
+        <location line="+2600" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Ma bheir thu an roghainn seo an roghainn seo bidh a h-uile faidhle air an t-siostam faidhle geir a-staigh aig an t-siostam faidhle a-staigh agad air an toirt às. Chan eil seo a &apos;cur às do fhaidhlichean air cairt SD sam bith a ghabhas toirt air falbh (ma thèid a chuir a-steach).</translation>
     </message>
     <message>
-        <location line="-3553" />
-        <location line="+839" />
+        <location line="-3937" />
+        <location line="+1036" />
         <location line="+226" />
-        <location line="+2413" />
+        <location line="+2600" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Ath-shuidheachadh siostam faidhle romfs</translation>
     </message>
     <message>
-        <location line="-3552" />
-        <location line="+840" />
+        <location line="-3936" />
+        <location line="+1037" />
         <location line="+225" />
-        <location line="+2412" />
+        <location line="+2599" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Ma bheir thu an roghainn seo an roghainn seo thèid an siostam faidhle rom air an cam fosgailte agad ath-shuidheachadh air ais gu bunaiteach.</translation>
     </message>
     <message>
-        <location line="-3510" />
-        <location line="+45" />
+        <location line="-3871" />
+        <location line="+13" />
+        <location line="+51" />
         <source>Bootloader</source>
         <translation>Bootloader</translation>
     </message>
@@ -9336,12 +9638,12 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Feachd a-steach don bootloader OpenMV Cam. Dh’ fhaodadh nach fàg an luchd-luaidh OpenMV Cam gu fèin-ghluasadach air bùird nas sine.</translation>
     </message>
     <message>
-        <location line="+693" />
+        <location line="+848" />
         <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
         <translation>Stàlaich am bathar-bog fuasglaidh as ùire (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1063" />
+        <location line="+1082" />
         <location line="+192" />
         <source>Failed to copy firmware files to temporary directory!</source>
         <translation>Dh&apos;fhàillig lethbhreac a dhèanamh de na faidhlichean firmware dhan eòlaire sealach!</translation>
@@ -9376,7 +9678,27 @@ Am bu toil leat do OpenMV Cam a chlàradh a-nis?</translation>
         <translation>Ceangail do OpenMV Cam a-nis.</translation>
     </message>
     <message>
-        <location line="+1377" />
+        <location line="+1310" />
+        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+84" />
+        <location line="+16" />
+        <source>Run Script</source>
+        <translation>Ruith an Sgriobt</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-14" />
+        <source>Python Files (*.py);;Text Files (*.txt);;All Files (*)</source>
+        <translation>Faidhlichean Python (*.py);;Faidhlichean Teacsa (*.txt);;A h-uile Faidhle (*)</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+15" />
+        <source>Error: Cannot open &quot;%L1&quot;!</source>
+        <translation>Mearachd: Chan urrainn &quot;%L1&quot; fhosgladh!</translation>
+    </message>
+    <message>
+        <location line="+224" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9385,7 +9707,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Gu sònraichte, thoir sùil air Pròiseas Ìomhaighean -&gt; Sgrùdadh Dhathan agus Ionnsachadh Innealan -&gt; eisimpleirean TensorFlow.</translation>
     </message>
     <message>
-        <location line="-3455" />
+        <location line="-3839" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9410,17 +9732,17 @@ Gu sònraichte, thoir sùil air Pròiseas Ìomhaighean -&gt; Sgrùdadh Dhathan a
     </message>
     <message>
         <location line="+21" />
-        <location line="+148" />
+        <location line="+190" />
         <source>Run</source>
         <translation>Ruith</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="-111" />
         <source>&quot;%L1&quot; is not a file!</source>
         <translation>Chan e faidhle a tha ann an &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+73" />
         <source>Update ROMFS file system</source>
         <translation>Ùraich siostam faidhle romfs</translation>
     </message>
@@ -9430,17 +9752,15 @@ Gu sònraichte, thoir sùil air Pròiseas Ìomhaighean -&gt; Sgrùdadh Dhathan a
         <translation>Ma tha thu a &apos;toirt cothrom don roghainn seo thèid siostam faidhle an Ròm air an cam fosgailte agad ùrachadh chun an naidheachd leasachaidh as ùire.</translation>
     </message>
     <message>
-        <location line="+125" />
         <source>Extracting...</source>
-        <translation>A&apos; toirt a-mach...</translation>
+        <translation type="vanished">A&apos; toirt a-mach...</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Unable to extract firmware!</source>
-        <translation>Cha b&apos; urrainn dhuinn firmware a thoirt a-mach!</translation>
+        <translation type="vanished">Cha b&apos; urrainn dhuinn firmware a thoirt a-mach!</translation>
     </message>
     <message>
-        <location line="+148" />
+        <location line="+341" />
         <location line="+5" />
         <location line="+48" />
         <location line="+5" />
@@ -9450,7 +9770,7 @@ Gu sònraichte, thoir sùil air Pròiseas Ìomhaighean -&gt; Sgrùdadh Dhathan a
         <translation>Bòrd neo-aithnichte</translation>
     </message>
     <message>
-        <location line="+344" />
+        <location line="+439" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Chaidh bòrd ann am modh DFU a lorg. Dè bu toil leat a dhèanamh?</translation>
     </message>
@@ -9486,7 +9806,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
  Tagh faidhle bootloader.dfu agus feuch ris a-rithist. Thoir fa-near nach luchdaich thu am firmware.fu no fosgailte (Bootloader + firmware) bùird stm32h7 mar thoradh air bùird air Bog ann an rom bootloader rom an t-sianail!</translation>
     </message>
     <message>
-        <location line="+987" />
+        <location line="+1006" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>A-mhàin a &apos;luchdachadh * .bin agus * .img faidhlichean a&apos; faighinn taic don chorpoader a-staigh!</translation>
     </message>
@@ -9521,11 +9841,11 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1398" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-232" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1417" />
         <location line="+252" />
-        <location line="+681" />
-        <location line="+1936" />
+        <location line="+700" />
+        <location line="+2104" />
         <source>Please select the board type</source>
         <translation>Feuch an tagh thu an seòrsa bùird</translation>
     </message>
@@ -9534,30 +9854,141 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Sguab às an siostam faidhle a-staigh?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2500" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2687" />
         <source>No released firmware available for the attached board!</source>
         <translation>Chan eil firmware a chaidh a leigeil ma sgaoil ri fhaighinn airson a’ bhòrd ceangailte!</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+66" />
         <source>Please select a DFU Device</source>
         <translation>Feuch an tagh thu inneal DFU</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+170" />
+        <location line="-88" />
+        <location line="+175" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Feuch an ùraich thu an bootloader chun dreach as ùire agus stàlaich an SoftDevice gus am firmware OpenMV a ghlasadh. Gheibhear barrachd fiosrachaidh air &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-1191" />
-        <location line="+3343" />
+        <location line="-2169" />
+        <source>Checking development examples...</source>
+        <translation>A&apos; sgrùdadh eisimpleirean leasachaidh...</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Downloading development examples...</source>
+        <translation>A&apos; luchdadh a-nuas eisimpleirean leasachaidh...</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Checking development documentation...</source>
+        <translation>A&apos; sgrùdadh sgrìobhainnean leasachaidh...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Downloading development documentation...</source>
+        <translation>A&apos; luchdadh a-nuas sgrìobhainnean leasachaidh...</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Checking development firmware...</source>
+        <translation>A&apos; sgrùdadh bathar-an-sàs leasachaidh...</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location line="+84" />
+        <source>Downloading the latest development firmware...</source>
+        <translation>A&apos; luchdadh a-nuas am bathar-an-sàs leasachaidh as ùire...</translation>
+    </message>
+    <message>
+        <location line="-73" />
+        <source>Unpacking the latest development firmware...</source>
+        <translation>A&apos; neo-phacadh am bathar-an-sàs leasachaidh as ùire...</translation>
+    </message>
+    <message>
+        <location line="+311" />
+        <source>New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the &lt;a href=&quot;%L1&quot;&gt;release notes&lt;/a&gt;.</source>
+        <translation>Tha goireasan %2 ùra ri làimh (m.e. eisimpleirean, bathar-an-sàs, sgrìobhainnean, msaa.). Faic na &lt;a href=&quot;%L1&quot;&gt;nòtaichean sgaoilidh&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+89" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
+        <source>Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
+        <translation>Dùin sibh prògram sam bith a tha a&apos; sealltainn/a&apos; deasachadh dàta aplacaid %1 agus an uair sin ath-thòisich %1!</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>Installation Sucessful! Please restart %1.</source>
+        <translation>Chaidh an stàladh gu math! Ath-thòisich %1.</translation>
+    </message>
+    <message>
+        <location line="+96" />
+        <source>Firmware Binary (*.bin *.dfu *.img *.zip)</source>
+        <translation>Bìnearaidh Bathar-an-sàs (*.bin *.dfu *.img *.zip)</translation>
+    </message>
+    <message>
+        <location line="+91" />
+        <source>Unable to unpack the firmware zip &quot;%L1&quot;!</source>
+        <translation>Cha ghabh an zip bathar-an-sàs &quot;%L1&quot; a neo-phacadh!</translation>
+    </message>
+    <message>
+        <location line="+120" />
+        <location line="+3685" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Rabhadh: Feumaidh ùrachadh chun dreach firmware ùr an t-siostam faidhle geir a chuir às a-mach.</translation>
     </message>
     <message>
-        <location line="-2848" />
+        <location line="-3593" />
+        <source>Unable to download the latest development firmware!</source>
+        <translation>Cha ghabh am bathar-an-sàs leasachaidh as ùire a luchdadh a-nuas!</translation>
+    </message>
+    <message>
+        <location line="+81" />
+        <source>The development firmware for this board is not available!</source>
+        <translation>Chan eil am bathar-an-sàs leasachaidh airson a&apos; bhùird seo ri làimh!</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Update complete!
+
+</source>
+        <translation>Chaidh an t-ùrachadh a chrìochnachadh!
+
+</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Please wait for the device to finish restarting. This can take a little while.</source>
+        <translation>Fuirich gus an crìochnaich an t-inneal ag ath-thòiseachadh. Faodaidh seo greis a thoirt.</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Unknown Board (Wi-Fi)</source>
+        <translation>Bòrd Neo-aithnichte (Wi-Fi)</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>%1 (Wi-Fi)</source>
+        <translation>%1 (Wi-Fi)</translation>
+    </message>
+    <message>
+        <location line="+213" />
+        <source>Name Camera</source>
+        <translation>Ainmich an Camara</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Serial port:</source>
+        <translation>Port sreathach:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Name:</source>
+        <translation>Ainm:</translation>
+    </message>
+    <message>
+        <location line="+202" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
@@ -9582,13 +10013,13 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+229" />
-        <location line="+2415" />
+        <location line="+2602" />
         <source>Upgrade options:</source>
         <translation>Roghainnean ùrachadh:</translation>
     </message>
     <message>
-        <location line="-2327" />
-        <location line="+169" />
+        <location line="-2514" />
+        <location line="+174" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Feuch an cuir thu goirid REC gu GND agus ath-shuidhich am bòrd agad. Gheibhear barrachd fiosrachaidh air &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
@@ -9603,17 +10034,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (Buail cuir dheth ma bheir seo barrachd air 5 diogan).</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+154" />
         <source>Timeout error while getting firmware version!</source>
         <translation>Mearachd ùine fhad ‘s a bha thu a’ faighinn dreach firmware!</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Do not try to connect while the green light on your OpenMV Cam is on!</source>
         <translation>Na feuch ri ceangal fhad ‘s a tha an solas uaine air do OpenMV Cam air!</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Try to connect again?</source>
         <translation>Feuch ri ceangal a-rithist?</translation>
     </message>
@@ -9629,7 +10060,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Ailtireachd bùird gun taic!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-633" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-634" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Cuir dheth an OpenMV Cam agad agus an uairsin ath-cheangail e ...</translation>
@@ -9666,16 +10097,15 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <translation>Cha ghabh ceangal a dhèanamh ris an luchd-luachaidh àbhaisteach aig OpenMV Cam agad!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+131" />
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
-        <translation>Faodaidh OpenMV IDE fhathast feuchainn ris an OpenMV Cam agad a chàradh a’ cleachdadh an Bootloader DFU aig OpenMV Cam agad.
+        <translation type="vanished">Faodaidh OpenMV IDE fhathast feuchainn ris an OpenMV Cam agad a chàradh a’ cleachdadh an Bootloader DFU aig OpenMV Cam agad.
 
 Lean air adhart?</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+239" />
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
         <location line="+46" />
         <location line="+191" />
@@ -9688,7 +10118,7 @@ Lean air adhart?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-191" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-195" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
@@ -9736,8 +10166,8 @@ Lean air adhart?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+20" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+44" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+45" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+17" />
         <source>Onboard Data Flash Erased!
 
@@ -9748,8 +10178,8 @@ Lean air adhart?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-53" />
+        <location line="+53" />
         <source>Firmware Upgrade complete!
 
 </source>
@@ -9761,8 +10191,8 @@ Lean air adhart?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
@@ -9775,8 +10205,8 @@ Lean air adhart?</translation>
         <location line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>Cliog air OK nuair a thòisicheas an RGB LED OpenMV Cam agad a’ priobadh gorm - a tha a’ nochdadh gu bheil am fèin-dheuchainn deiseil.</translation>
@@ -9788,12 +10218,12 @@ Lean air adhart?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+130" />
+        <location line="+134" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-75" />
-        <location line="+24" />
-        <location line="+27" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-77" />
         <location line="+25" />
+        <location line="+27" />
+        <location line="+26" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <location line="+37" />
         <source>
@@ -9813,7 +10243,7 @@ Anns a’ chùis seo cliog air OK nuair a chì thu an draibhear flash a-staigh a
         <translation>Tha am faidhle firmware falamh!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-160" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-162" />
         <source>No IMX settings for the selected board type %L1!</source>
         <translation>Chan eil suidheachadh IMX ann airson an t-seòrsa bùird a thagh thu %L1!</translation>
     </message>
@@ -9823,11 +10253,25 @@ Anns a’ chùis seo cliog air OK nuair a chì thu an draibhear flash a-staigh a
         <translation>Cha deach roghainnean IMX a lorg!</translation>
     </message>
     <message>
+        <location line="+56" />
+        <source>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
+
+Continue?</source>
+        <translation>Faodaidh %1 fhathast feuchainn ris an OpenMV Cam agad a chàradh a&apos; cleachdadh Bootloader SBL an OpenMV Cam agad.
+
+Lean air adhart?</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>If you are forcing SBL mode, disconnect the device from your computer and remove the SBL wire jumper, then reconnect it.</source>
+        <translation>Ma tha thu a&apos; co-èigneachadh modh SBL, dì-cheangail an t-inneal bhon choimpiutair agad agus thoir air falbh an leum uèir SBL, agus an uair sin ath-cheangail e.</translation>
+    </message>
+    <message>
         <source>Failed to eject &quot;%L1&quot;!</source>
         <translation type="vanished">Cha b&apos; urrainn dhuinn &quot;%L1&quot; a chur a-mach!</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-115" />
         <source>
 
 Hit cancel to skip to SBL reprogramming.</source>
@@ -9836,16 +10280,15 @@ Hit cancel to skip to SBL reprogramming.</source>
 Buail Sguir dheth gus leum gu ath-chlàradh SBL.</translation>
     </message>
     <message>
-        <location line="+42" />
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
-        <translation>Faodaidh OpenMV IDE fhathast feuchainn ris an OpenMV Cam agad a chàradh a’ cleachdadh an Bootloader SBL aig OpenMV Cam agad.
+        <translation type="vanished">Faodaidh OpenMV IDE fhathast feuchainn ris an OpenMV Cam agad a chàradh a’ cleachdadh an Bootloader SBL aig OpenMV Cam agad.
 
 Lean air adhart?</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+49" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
 Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
@@ -9854,7 +10297,12 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
 Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+14" />
+        <source>Disconnect the device from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect it.</source>
+        <translation>Dì-cheangail an t-inneal bhon choimpiutair agad, thoir air falbh an uèir leum eadar na prìnichean SBL agus 3.3V, agus an uair sin ath-cheangail e.</translation>
+    </message>
+    <message>
+        <location line="+47" />
         <source>If you are forcing SBL mode, disconnect your OpenMV Cam from your computer and remove the SBL wire jumper. Then reconnect your OpenMV Cam to your computer.
 
 </source>
@@ -9862,8 +10310,8 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-2" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+50" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
+        <location line="+51" />
         <source>Firmware update complete!
 
 </source>
@@ -9872,7 +10320,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
 </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-49" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-50" />
         <source>Disconnect your OpenMV Cam from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
 </source>
@@ -9888,7 +10336,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-42" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+1" />
-        <location line="+51" />
+        <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-1" />
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>Cliog air a’ phutan Ok às deidh don OpenMV Cam agad àireamhachadh agus crìoch a chuir air a bhith a’ ruith an deuchainn fèin-thogte aige (priobadh air a stiùireadh le gorm - bheir seo greiseag).</translation>
@@ -9900,7 +10348,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-347" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-351" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Chan eil suidheachadh DFU ann airson an seòrsa bùird taghte!</translation>
     </message>
@@ -9936,7 +10384,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+29" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+33" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
@@ -9950,7 +10398,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
         <location line="-48" />
         <location line="+29" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+13" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-59" />
         <location line="+26" />
         <location line="+41" />
@@ -9959,7 +10407,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
     </message>
     <message>
         <location line="-13" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-15" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-16" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-22" />
         <location line="+41" />
         <source>DFU firmware update complete!
@@ -10040,20 +10488,41 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
         <translation>Dh&apos;fhàillig ùrachadh firmware PicoTool!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-521" />
         <source>OpenMV IDE needs to update your bootloader to support ROMFS.
 
 The internal FAT filesystem will be erased!
 
 Continue?</source>
-        <translation>Feumaidh e OpenMV id ide an bootloader agad ùrachadh gus taic a thoirt do romfs. 
+        <translation type="vanished">Feumaidh e OpenMV id ide an bootloader agad ùrachadh gus taic a thoirt do romfs. 
 
 Thèid an-shiostam a-staigh geir a-staigh a dhubhadh às! 
 
 Lean air adhart?</translation>
     </message>
     <message>
-        <location line="+387" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-521" />
+        <source>%1 needs to update your bootloader to support ROMFS.
+
+The internal FAT filesystem will be erased!
+
+Continue?</source>
+        <translation>Feumaidh %1 am bootloader agad ùrachadh gus taic a chumail ri ROMFS.
+
+Thèid an siostam-fhaidhlichean FAT a-staigh a sguabadh às!
+
+Lean air adhart?</translation>
+    </message>
+    <message>
+        <location line="+37" />
+        <source>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
+
+Continue?</source>
+        <translation>Faodaidh %1 fhathast feuchainn ris an OpenMV Cam agad a chàradh a&apos; cleachdadh Bootloader DFU an OpenMV Cam agad.
+
+Lean air adhart?</translation>
+    </message>
+    <message>
+        <location line="+350" />
         <source>Invalid flash sector configuration settings!</source>
         <translation>Roghainnean rèiteachaidh roinn Flash mì-dhligheach!</translation>
     </message>
@@ -10118,7 +10587,12 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
 </translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+2" />
+        <source>Disconnect the device from your computer, remove the jumper wire between the BOOT and RST pins, and then reconnect it.</source>
+        <translation>Dì-cheangail an t-inneal bhon choimpiutair agad, thoir air falbh an uèir leum eadar na prìnichean BOOT agus RST, agus an uair sin ath-cheangail e.</translation>
+    </message>
+    <message>
+        <location line="+13" />
         <source>DFU bootloader reset failed!</source>
         <translation>Dh&apos;fhàillig ath-shuidheachadh bootloader DFU!</translation>
     </message>
@@ -10150,7 +10624,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
         <translation>Mearachd ùine fhad ‘s a tha thu ag ionnsachadh MTU!</translation>
     </message>
     <message>
-        <location line="+170" />
+        <location line="+226" />
         <source>Board: %L1</source>
         <translation>Bòrd: %L1</translation>
     </message>
@@ -10170,17 +10644,18 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
         <translation>Tionndadh Firmware: %L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-2356" />
+        <location line="+2361" />
         <source>Serial Port: %L1</source>
         <translation>Port sreathach: %L1</translation>
     </message>
     <message>
-        <location line="+85" />
+        <location line="+120" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ sean - cliog an seo gus ùrachadh ]</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+13" />
         <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>Tha am firmware OpenMV Cam agad sean. Am bu toil leat àrdachadh?</translation>
     </message>
@@ -10202,7 +10677,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
     <message>
         <location line="+176" />
         <source>Event %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tachartas %1</translation>
     </message>
     <message>
         <location line="+4" />
@@ -10288,19 +10763,19 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
     <message>
         <location line="+165" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
-        <translation type="unfinished"></translation>
+        <translation>Foincseanan: %1, Gairmean Iomlan: %2, μs Iomlan: %3, Cuairtean Iomlan: %4, Tachartasan Iomlan: %5</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4</source>
-        <translation type="unfinished"></translation>
+        <translation>Foincseanan: %1, Gairmean Iomlan: %2, μs Iomlan: %3, Cuairtean Iomlan: %4</translation>
     </message>
     <message>
         <source>Start</source>
         <translation type="vanished">Tòisich</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+592" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+658" />
         <source>More Examples</source>
         <translation>Tuilleadh Eisimpleirean</translation>
     </message>
@@ -10356,9 +10831,13 @@ Gu sònraichte, thoir sùil air na h-eisimpleirean Tracadh Dhathan.</translation
         <translation>Clàr bhidio</translation>
     </message>
     <message>
-        <location line="+69" />
         <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!</source>
-        <translation>Rabhadh: JPEG/PNG ro mhòr airson bufair air an OpenMV Cam gnàthach agus a chuir gu OpenMV IDE!</translation>
+        <translation type="vanished">Rabhadh: JPEG/PNG ro mhòr airson bufair air an OpenMV Cam gnàthach agus a chuir gu OpenMV IDE!</translation>
+    </message>
+    <message>
+        <location line="+69" />
+        <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to %1!</source>
+        <translation>Rabhadh: Tha an JPEG/PNG ro mhòr airson a bhufaireadh air an OpenMV Cam làithreach agus a chur gu %1!</translation>
     </message>
     <message>
         <location line="+83" />
@@ -10432,27 +10911,47 @@ Gu sònraichte, thoir sùil air na h-eisimpleirean Tracadh Dhathan.</translation
         <location line="-223" />
         <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
-Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>Tha modal &quot;%L1&quot; air an OpenMV Cam agad eadar-dhealaichte seach an lethbhreac air a&apos; choimpiutair agad.
+Would you like %2 to update the module on your OpenMV Cam?</source>
+        <translation>Tha am modal &quot;%L1&quot; air an OpenMV Cam agad eadar-dhealaichte bhon lethbhreac air a&apos; choimpiutair agad.
 
-Am bu toil leat OpenMV IDE am modal ùrachadh air an OpenMV Cam agad?</translation>
+Am bu toigh leat gun ùraich %2 am modal air an OpenMV Cam agad?</translation>
     </message>
     <message>
         <location line="+75" />
-        <source>Would you like OpenMV IDE to update the module on your computer?</source>
-        <translation>Am bu toil leat OpenMV IDE am modal air a’ choimpiutair agad ùrachadh?</translation>
+        <source>Would you like %1 to update the module on your computer?</source>
+        <translation>Am bu toigh leat gun ùraich %1 am modal air a&apos; choimpiutair agad?</translation>
     </message>
     <message>
         <location line="+91" />
         <source>Module &quot;%L1&quot; may be required to run your script.
 
+Would you like %2 to copy it to your OpenMV Cam?</source>
+        <translation>Dh&apos;fhaodadh gum bi feum air a&apos; mhodal &quot;%L1&quot; gus an sgriobt agad a ruith.
+
+Am bu toigh leat gun dèan %2 lethbhreac dheth don OpenMV Cam agad?</translation>
+    </message>
+    <message>
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
+
+Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
+        <translation type="vanished">Tha modal &quot;%L1&quot; air an OpenMV Cam agad eadar-dhealaichte seach an lethbhreac air a&apos; choimpiutair agad.
+
+Am bu toil leat OpenMV IDE am modal ùrachadh air an OpenMV Cam agad?</translation>
+    </message>
+    <message>
+        <source>Would you like OpenMV IDE to update the module on your computer?</source>
+        <translation type="vanished">Am bu toil leat OpenMV IDE am modal air a’ choimpiutair agad ùrachadh?</translation>
+    </message>
+    <message>
+        <source>Module &quot;%L1&quot; may be required to run your script.
+
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>Dh’fhaoidte gu bheil feum air modal “%L1” gus an sgriobt agad a ruith.
+        <translation type="vanished">Dh’fhaoidte gu bheil feum air modal “%L1” gus an sgriobt agad a ruith.
 
 Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-584" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10465,18 +10964,18 @@ Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
         <translation>Faidhlichean teacsa (*.txt);;A h-uile faidhle (*)</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+223" />
         <source>Zoom: %1%</source>
         <translation>Meudachadh: %1%</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4365" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4672" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-265" />
-        <location line="+221" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-332" />
+        <location line="+288" />
         <source>Model Zoo</source>
         <translation>Modail Zoo</translation>
     </message>
@@ -10512,7 +11011,7 @@ Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
         <translation>Lorg</translation>
     </message>
     <message>
-        <location line="+239" />
+        <location line="+235" />
         <source>Serial Terminal</source>
         <translation>Terminal sreathach</translation>
     </message>
@@ -10523,6 +11022,7 @@ Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
     </message>
     <message>
         <location line="+5" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-379" />
         <source>Save</source>
         <translation>Sàbhail</translation>
     </message>
@@ -10532,12 +11032,16 @@ Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
         <translation>Teacsa còmhdaich</translation>
     </message>
     <message>
-        <location line="+6" />
-        <source>Run &quot;/main.py&quot;</source>
-        <translation>Ruith &quot;/main.py&quot;</translation>
+        <location line="+16" />
+        <source>Run a script file from disk</source>
+        <translation>Ruith faidhle sgriobt bhon diosg</translation>
     </message>
     <message>
-        <location line="+0" />
+        <source>Run &quot;/main.py&quot;</source>
+        <translation type="vanished">Ruith &quot;/main.py&quot;</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Run current script in editor window</source>
         <translation>Ruith an sgriobt làithreach ann an uinneag an neach-deasachaidh</translation>
     </message>
@@ -10565,8 +11069,8 @@ Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-293" />
-        <location line="+79" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-312" />
+        <location line="+85" />
         <source>Query failed!</source>
         <translation>Dh&apos;fhàillig a&apos; cheist!</translation>
     </message>
@@ -10669,7 +11173,13 @@ Ceudad
 
 %L3 New Images Added
 %L4 Marked as Duplicates</source>
-        <translation type="unfinished"></translation>
+        <translation>Staitistig Luchdaidh:
+
+%L1 Faidhle air an luchdadh suas
+%L2 Freagairtean bho Edge Impulse
+
+%L3 Ìomhaighean Ùra air an cur ris
+%L4 Air an comharrachadh mar Dhùblaidhean</translation>
     </message>
     <message>
         <location line="+10" />
@@ -10873,7 +11383,7 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
     <message>
         <location line="+6" />
         <source>Show Octave %L1</source>
-        <translation type="unfinished"></translation>
+        <translation>Seall Octave %L1</translation>
     </message>
     <message>
         <location line="+19" />
@@ -10981,7 +11491,7 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
         <translation>Dèan lethbhreac den stairsnich gu h-àrd mus dùin thu.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-476" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-485" />
         <source>Reading File...</source>
         <translation>Leughadh an fhaidhle...</translation>
     </message>
@@ -11013,12 +11523,12 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
     </message>
     <message>
         <location line="-77" />
-        <location line="+605" />
+        <location line="+627" />
         <source>Transcoding File...</source>
         <translation>Ag iompachadh faidhle...</translation>
     </message>
     <message>
-        <location line="-594" />
+        <location line="-616" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -11073,17 +11583,16 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
         <translation>Tionndadh faidhle OpenMV ImageWriter gun taic!</translation>
     </message>
     <message>
-        <location line="+96" />
-        <location line="+79" />
         <source>Get Input Formats</source>
-        <translation>Luchdaich a-nuas cruthan-clò a-steach</translation>
+        <translation type="vanished">Luchdaich a-nuas cruthan-clò a-steach</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+224" />
         <location line="+111" />
+        <location line="+10" />
         <location line="+98" />
         <location line="+15" />
-        <location line="+371" />
+        <location line="+445" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
@@ -11111,7 +11620,25 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
         <translation type="vanished">Cha b’ urrainn dhuinn ffmpeg a chuir air bhog!</translation>
     </message>
     <message>
-        <location line="-989" />
+        <location line="-1200" />
+        <location line="+85" />
+        <source>FFmpeg is not supported on this platform.</source>
+        <translation>Chan eil taic ri FFmpeg air an àrd-ùrlar seo.</translation>
+    </message>
+    <message>
+        <location line="-82" />
+        <location line="+85" />
+        <source>The FFmpeg executable was not found (the installation may be incomplete).</source>
+        <translation>Cha deach am faidhle so-ghnìomhaichte FFmpeg a lorg (dh&apos;fhaodadh gu bheil an stàladh neo-choileanta).</translation>
+    </message>
+    <message>
+        <location line="-83" />
+        <location line="+85" />
+        <source>Get Formats</source>
+        <translation>Faigh Fòrmatan</translation>
+    </message>
+    <message>
+        <location line="+37" />
         <source>Converting</source>
         <translation>Ag iompachadh</translation>
     </message>
@@ -11119,6 +11646,19 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
         <location line="+112" />
         <source>FFMPEG is not supported on this platform.</source>
         <translation>Chan eil taic ri FFMPEG air an àrd-ùrlar seo.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>The FFmpeg executable was not found:
+
+%1
+
+Your OpenMV IDE installation may be incomplete.</source>
+        <translation>Cha deach am faidhle so-ghnìomhaichte FFmpeg a lorg:
+
+%1
+
+Dh&apos;fhaodadh gu bheil stàladh OpenMV IDE agad neo-choileanta.</translation>
     </message>
     <message>
         <location line="+98" />
@@ -11131,19 +11671,29 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
         <translation>Cha ghabh am faidhle bhidio toraidh fhosgladh!</translation>
     </message>
     <message>
-        <location line="+163" />
-        <location line="+415" />
+        <location line="+199" />
+        <location line="+453" />
         <source>Play Video</source>
         <translation>Cluich Video</translation>
     </message>
     <message>
-        <location line="-414" />
-        <location line="+163" />
+        <location line="-452" />
+        <source>Video playback is not supported on this platform.</source>
+        <translation>Chan eil taic ri cluich video air an àrd-ùrlar seo.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location line="+200" />
         <source>Failed to launch ffplay!</source>
         <translation>Cha b’ urrainn dhuinn ffplay a chuir air bhog!</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1" />
+        <source>RTSP playback is not supported on this platform.</source>
+        <translation>Chan eil taic ri cluich RTSP air an àrd-ùrlar seo.</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Convert Video Source</source>
         <translation>Tionndadh Video Source</translation>
     </message>
@@ -11260,27 +11810,43 @@ Feumaidh an camara a bhith nan cumhachd air a rothaireachd às deidh ùrachadh p
         <translation type="vanished">Gun eadar-aghaidh maidsidh airson ainm faidhle taghte!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-745" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-812" />
         <source>Please select the target</source>
         <translation>Tagh an targaid</translation>
+    </message>
+    <message>
+        <source>The model has already been converted for the Ethos-U NPU.
+
+OpenMV IDE will just copy the model as is.</source>
+        <translation type="vanished">Chaidh am modail a thionndadh mu thràth airson feallsanachd-u npu. 
+
+Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a tha.</translation>
+    </message>
+    <message>
+        <source>The model has already been converted for the Neural-ART NPU.
+
+OpenMV IDE will just copy the model as is.</source>
+        <translation type="vanished">Chaidh am modail a thionndadh mu thràth airson an NPU NPU. 
+
+Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a tha.</translation>
     </message>
     <message>
         <location line="+59" />
         <source>The model has already been converted for the Ethos-U NPU.
 
-OpenMV IDE will just copy the model as is.</source>
-        <translation>Chaidh am modail a thionndadh mu thràth airson feallsanachd-u npu. 
+%1 will just copy the model as is.</source>
+        <translation>Chaidh am modail iompachadh airson an Ethos-U NPU mar-thà.
 
-Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a tha.</translation>
+Cha dèan %1 ach lethbhreac den mhodail mar a tha e.</translation>
     </message>
     <message>
         <location line="+27" />
         <source>The model has already been converted for the Neural-ART NPU.
 
-OpenMV IDE will just copy the model as is.</source>
-        <translation>Chaidh am modail a thionndadh mu thràth airson an NPU NPU. 
+%1 will just copy the model as is.</source>
+        <translation>Chaidh am modail iompachadh airson an Neural-ART NPU mar-thà.
 
-Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a tha.</translation>
+Cha dèan %1 ach lethbhreac den mhodail mar a tha e.</translation>
     </message>
     <message>
         <location line="+147" />
@@ -11300,7 +11866,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a th
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+93" />
+        <location line="+122" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
@@ -11308,7 +11874,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a th
         <location line="+40" />
         <location line="+15" />
         <location line="+27" />
-        <location line="+24" />
+        <location line="+62" />
         <location line="+53" />
         <location line="+63" />
         <location line="+6" />
@@ -11317,7 +11883,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a th
         <translation>Deasaich romfs</translation>
     </message>
     <message>
-        <location line="-606" />
+        <location line="-673" />
         <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>Tha pasgan leis an aon ainm ann mu thràth!</translation>
@@ -11370,37 +11936,37 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a th
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+225" />
+        <location line="+292" />
         <source>Extract File</source>
         <translation>Faidhle a-mach</translation>
     </message>
     <message>
-        <location line="-231" />
+        <location line="-298" />
         <source>View/Edit</source>
         <translation>Faic / Deasaich</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+222" />
+        <location line="+289" />
         <source>Add File</source>
         <translation>Cuir faidhle</translation>
     </message>
     <message>
-        <location line="-221" />
-        <location line="+223" />
+        <location line="-288" />
+        <location line="+290" />
         <source>New Folder</source>
         <translation>Pasgan ùr</translation>
     </message>
     <message>
-        <location line="-135" />
+        <location line="-173" />
         <location line="+13" />
-        <location line="+303" />
+        <location line="+341" />
         <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>Chan eil taic aig romfs air a &apos;bhòrd seo!</translation>
     </message>
     <message>
-        <location line="-275" />
+        <location line="-313" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Dh&apos;fhàillig unfack Unfacks a lìonadh!</translation>
@@ -11413,7 +11979,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a th
     </message>
     <message>
         <location line="-25" />
-        <location line="+165" />
+        <location line="+203" />
         <source>ROMFS Images (*.img)</source>
         <translation>Ìomhaighean romfs (* .img)</translation>
     </message>
@@ -11505,7 +12071,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a th
         <location line="+25" />
         <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-780" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-854" />
         <source>Success - Press Ok to close the window</source>
         <translation>Soirbheachas - Brùth air OK gus an uinneag a dhùnadh</translation>
     </message>
@@ -11653,7 +12219,7 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a th
         <translation>Chan eil taic ri Stm32 pròiseact a &apos;faighinn taic air an àrd-ùrlar seo.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-542" />
         <source>the detected board</source>
         <translation>am bòrd a chaidh a lorg</translation>
     </message>
@@ -11676,6 +12242,266 @@ Bidh Openmv new new dìreach lethbhreac a dhèanamh air a &apos;mhodail mar a th
         <location line="+6" />
         <source>This board does not define any loadable firmware interfaces in its settings.</source>
         <translation>Chan eil am bòrd seo a’ mìneachadh eadar-aghaidh firmware luchdaichte sam bith anns na roghainnean aige.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>To flash a bootloader image your OpenMV Cam must be in bootloader recovery mode. Unplug the camera, connect BOOT0/SBL/RECOVERY to 3.3V with a jumper, and then plug the camera back in before trying again.</source>
+        <translation>Gus ìomhaigh bootloader a lasadh feumaidh an OpenMV Cam agad a bhith ann am modh aisig bootloader. Thoir a-mach am plog aig a&apos; chamara, ceangail BOOT0/SBL/RECOVERY ri 3.3V le leum, agus an uair sin cuir am plog aig a&apos; chamara air ais a-steach mus feuch thu a-rithist.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+68" />
+        <source>Unknown control: %L1</source>
+        <translation>Smachd neo-aithnichte: %L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>(missing type)</source>
+        <translation>(seòrsa a dhìth)</translation>
+    </message>
+    <message>
+        <location line="+174" />
+        <location line="+5" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+783" />
+        <location line="+5" />
+        <source>Show text</source>
+        <translation>Seall teacsa</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+0" />
+        <source>Hide text</source>
+        <translation>Falaich teacsa</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>These fields have invalid or incomplete input:
+
+%L1
+
+Fix or clear them before saving.</source>
+        <translation>Tha ion-chur mì-dhligheach no neo-choileanta aig na raointean seo:
+
+%L1
+
+Càraich no falamhaich iad mus sàbhail thu.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Unable to open:
+
+%L1
+
+%L2</source>
+        <translation>Cha ghabh fosgladh:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Not a valid JSON config file:
+
+%L1</source>
+        <translation>Chan e faidhle rèiteachaidh JSON dligheach a th&apos; ann:
+
+%L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>the top level must be a JSON object.</source>
+        <translation>feumaidh an ìre as àirde a bhith na oibseact JSON.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>This JSON file has no &quot;controls&quot; array to build a GUI from.</source>
+        <translation>Chan eil eagrachadh &quot;controls&quot; aig an fhaidhle JSON seo gus GUI a thogail.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Unable to save:
+
+%L1
+
+%L2</source>
+        <translation>Cha ghabh sàbhaladh:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <location line="+21" />
+        <source>JSON Files (*.json)</source>
+        <translation>Faidhlichean JSON (*.json)</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Unable to create:
+
+%L1
+
+%L2</source>
+        <translation>Cha ghabh cruthachadh:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="-90" />
+        <source>Edit WiFi Debugging</source>
+        <translation>Deasaich Dì-bhugachadh WiFi</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Set Up WiFi Debugging</source>
+        <translation>Suidhich Dì-bhugachadh WiFi</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Please enter or select a WiFi network name (SSID).</source>
+        <translation>Cuir a-steach no tagh ainm lìonra WiFi (SSID).</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Editing this camera&apos;s WiFi debugging setup -- this updates the boot.py already on the camera, keeping any code you added to it. It brings the network up on power-up and advertises the camera to the IDE, so you can connect without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</source>
+        <translation>A&apos; deasachadh suidheachadh dì-bhugachadh WiFi a&apos; chamara seo -- ùraichidh seo am boot.py a tha air a&apos; chamara mar-thà, a&apos; cumail còd sam bith a chuir thu ris. Bidh e a&apos; togail an lìonra aig àm cumhachdachaidh agus a&apos; sanasachd a&apos; chamara don IDE, gus an ceangail thu gun càball USB. Fhad &apos;s a tha Dì-bhugachadh WiFi gnìomhach, tha dì-bhugachadh USB à comas -- tagh &quot;À comas&quot; gu h-ìosal gus a chur dheth agus tilleadh gu USB.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Set up this camera for debugging over the network. This writes a boot.py to the camera that brings up its WiFi or Ethernet on power-up and advertises it to the IDE, so you can connect to it without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</source>
+        <translation>Suidhich an camara seo airson dì-bhugachadh thairis air an lìonra. Sgrìobhaidh seo boot.py don chamara a thogas an WiFi no Ethernet aige aig àm cumhachdachaidh agus a shanasaicheas e don IDE, gus an ceangail thu ris gun càball USB. Fhad &apos;s a tha Dì-bhugachadh WiFi gnìomhach, tha dì-bhugachadh USB à comas -- tagh &quot;À comas&quot; gu h-ìosal gus a chur dheth agus tilleadh gu USB.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Connection</source>
+        <translation>Ceangal</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>WiFi</source>
+        <translation>WiFi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ethernet</source>
+        <translation>Ethernet</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Disabled (USB debugging)</source>
+        <translation>À comas (dì-bhugachadh USB)</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>WiFi Network</source>
+        <translation>Lìonra WiFi</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Scan</source>
+        <translation>Sgan</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Network (SSID):</source>
+        <translation>Lìonra (SSID):</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Password:</source>
+        <translation>Facal-faire:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Automatic</source>
+        <translation>Fèin-obrachail</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Open (no password)</source>
+        <translation>Fosgailte (gun fhacal-faire)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA / WPA2</source>
+        <translation>WPA / WPA2</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA3</source>
+        <translation>WPA3</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA2 / WPA3</source>
+        <translation>WPA2 / WPA3</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WEP (legacy)</source>
+        <translation>WEP (dìleab)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Security:</source>
+        <translation>Tèarainteachd:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>IP Address</source>
+        <translation>Seòladh IP</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Automatic (DHCP)</source>
+        <translation>Fèin-obrachail (DHCP)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Static</source>
+        <translation>Stadaigeach</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Address:</source>
+        <translation>Seòladh:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Netmask:</source>
+        <translation>Netmask:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Gateway:</source>
+        <translation>Geata:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>DNS:</source>
+        <translation>DNS:</translation>
+    </message>
+    <message>
+        <location line="+93" />
+        <source>No WiFi networks were found (this PC may have no WiFi adapter). You can type the network name in by hand.</source>
+        <translation>Cha deach lìonraidhean WiFi sam bith a lorg (dh&apos;fhaodadh nach eil freagarraiche WiFi aig a&apos; PC seo). &apos;S urrainn dhut ainm an lìonra a chur a-steach le làimh.</translation>
+    </message>
+    <message>
+        <location line="+72" />
+        <source>Edit boot.py</source>
+        <translation>Deasaich boot.py</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Failed to write boot.py to the camera:
+
+%1</source>
+        <translation>Cha deach le sgrìobhadh boot.py don chamara:
+
+%1</translation>
     </message>
 </context>
 <context>
@@ -13471,7 +14297,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Cruthaichidh seo leabharlann C++. &apos;S urrainn dhut a chruthachadh:&lt;ul&gt;&lt;li&gt;leabharlann C++ cho-roinnte airson a chleachdadh le &lt;tt&gt;QPluginLoader&lt;/tt&gt; agus àm-ruith (Plugins)&lt;/li&gt;&lt;li&gt;leabharlann C++ cho-roinnte no stadaigeach airson a chleachdadh le pròiseact eile aig àm-ceangail&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
         <location line="+107" />
@@ -13831,7 +14657,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <location line="+1" />
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-227" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+485" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+493" />
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+217" />
         <source>Clone</source>
         <translation>Clone</translation>
@@ -14084,7 +14910,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
  %1</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+315" />
         <source>Error while restoring session</source>
         <translation>Mearachd fhad &apos;s a tha e ag ath-nuadhachadh seisean</translation>
     </message>
@@ -14100,17 +14926,17 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     </message>
     <message>
         <location line="+47" />
-        <location line="+42" />
+        <location line="+49" />
         <source>Error while saving session</source>
         <translation>Mearachd fhad &apos;s a tha thu a&apos; sàbhaladh seisean</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-48" />
         <source>Could not save session %1</source>
         <translation>Cha b &apos;urrainn dhuinn seisean%1 a shàbhaladh</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+49" />
         <source>Could not save session to file &quot;%1&quot;</source>
         <translation>Cha b &apos;urrainn dhuinn seisean a shàbhaladh gus freagairt &quot;%1&quot;</translation>
     </message>
@@ -14616,11 +15442,11 @@ Excluding: %2
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
         <source>Finished %1 of %n steps</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Chrìochnaich %1 de %n ceum</numerusform>
+            <numerusform>Chrìochnaich %1 de %n ceum</numerusform>
+            <numerusform>Chrìochnaich %1 de %n ceum</numerusform>
+            <numerusform>Chrìochnaich %1 de %n ceum</numerusform>
         </translation>
     </message>
     <message>
@@ -14744,7 +15570,7 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+8" />
         <source>Skipping disabled step %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>A&apos; leum thairis air a&apos; cheum %1 a tha à comas.</translation>
     </message>
     <message>
         <location line="+24" />
@@ -15114,7 +15940,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
         <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bidh parsairean às-chur gnàthaichte a&apos; sganadh às-chur na loidhne-àithne airson pàtrain mhearachd a thug an cleachdaiche seachad&lt;br&gt;gus innteartan a chruthachadh ann an Issues.&lt;br&gt;Faodar na parsairean a rèiteachadh &lt;a href=&quot;dummy&quot;&gt;an seo&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+82" />
@@ -15124,11 +15950,11 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+2" />
         <source>There are %n custom parsers active</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Tha %n parsair gnàthaichte gnìomhach</numerusform>
+            <numerusform>Tha %n parsair gnàthaichte gnìomhach</numerusform>
+            <numerusform>Tha %n parsair gnàthaichte gnìomhach</numerusform>
+            <numerusform>Tha %n parsair gnàthaichte gnìomhach</numerusform>
         </translation>
     </message>
     <message>
@@ -15312,11 +16138,11 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+44" />
         <source>%n entries</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n innteart</numerusform>
+            <numerusform>%n innteart</numerusform>
+            <numerusform>%n innteart</numerusform>
+            <numerusform>%n innteart</numerusform>
         </translation>
     </message>
     <message>
@@ -15696,11 +16522,11 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+41" />
         <source>Found %n free ports.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Lorgadh %n port saor.</numerusform>
+            <numerusform>Lorgadh %n port saor.</numerusform>
+            <numerusform>Lorgadh %n port saor.</numerusform>
+            <numerusform>Lorgadh %n port saor.</numerusform>
         </translation>
     </message>
     <message>
@@ -15974,17 +16800,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>Append &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Cuir &lt;b&gt;%2&lt;/b&gt; ri deireadh &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Prepend &lt;b&gt;%2&lt;/b&gt; to &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Cuir &lt;b&gt;%2&lt;/b&gt; ri toiseach &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Set &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; to &lt;b&gt;%2&lt;/b&gt; [disabled]</source>
-        <translation type="unfinished"></translation>
+        <translation>Suidhich &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt; gu &lt;b&gt;%2&lt;/b&gt; [à comas]</translation>
     </message>
     <message>
         <location line="+11" />
@@ -16194,7 +17020,7 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+6" />
         <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (&quot;%2&quot;) chan e luach shlànaigheir a th&apos; ann an &quot;disabledIndex&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -16204,7 +17030,7 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+4" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (&quot;%2&quot;) chan e liosta JSON a th&apos; ann an &quot;items&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
@@ -16944,7 +17770,7 @@ to project &quot;%2&quot;.</source>
     <message>
         <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The name of the kit suitable for generating directory names. This value is used for the variable &lt;i&gt;%1&lt;/i&gt;, which for example determines the name of the shadow build directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ainm a&apos; phasgain a tha freagarrach airson ainmean eòlaire a ghineadh. Tha an luach seo air a chleachdadh airson an caochladair &lt;i&gt;%1&lt;/i&gt;, a shocraicheas mar eisimpleir ainm an eòlaire togail sgàile.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+9" />
@@ -17182,7 +18008,7 @@ to project &quot;%2&quot;.</source>
     <message>
         <location line="+3" />
         <source>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;The project &lt;b&gt;%1&lt;/b&gt; is not yet configured&lt;br/&gt;&lt;br/&gt;You can configure it in the &lt;a href=&quot;projectmode&quot;&gt;Projects mode&lt;/a&gt;&lt;br/&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;Cha deach am pròiseact &lt;b&gt;%1&lt;/b&gt; a rèiteachadh fhathast&lt;br/&gt;&lt;br/&gt;Faodaidh tu a rèiteachadh anns a&apos; &lt;a href=&quot;projectmode&quot;&gt;mhodh Pròiseactan&lt;/a&gt;&lt;br/&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
@@ -17860,7 +18686,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+1" />
         <source>The project %1 is currently being built.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tha am pròiseact %1 ga thogail an-dràsta.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18346,7 +19172,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+2" />
         <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
-        <translation type="unfinished"></translation>
+        <translation>Chan eil cuid de sheann innealan togail a&apos; dèiligeadh gu math ri slighean anns a bheil caractaran &quot;sònraichte&quot; leithid beàrnan, a dh&apos;fhaodadh mearachdan togail meallta a thoirt gu buil.&lt;p&gt;Dì-thagh an roghainn seo mura h-obraich thu le innealan mar sin.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18699,32 +19525,29 @@ What should %1 do now?</source>
         <translation>Alt + X.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-612" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-620" />
         <source>Open Session #%1</source>
         <translation>Seisean Fosgailte #%1</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Ctrl+Meta+%1</source>
-        <translation>CTRL + Meta +%1</translation>
+        <translation type="vanished">CTRL + Meta +%1</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Ctrl+Alt+%1</source>
-        <translation>Ctrl + Alt +%1</translation>
+        <translation type="vanished">Ctrl + Alt +%1</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Open Recent Project #%1</source>
         <translation>Fosgail Pròiseact o chionn ghoirid #%1</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Ctrl+Shift+%1</source>
-        <translation>CTRL + Shift +%1</translation>
+        <translation type="vanished">CTRL + Shift +%1</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+56" />
         <source>Open %1 &quot;%2&quot;</source>
         <translation>Fosgailte%1 &quot;%2&quot;</translation>
     </message>
@@ -19099,12 +19922,12 @@ What should %1 do now?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-14" />
         <source>Unexpected run control state %1 when worker %2 started.</source>
-        <translation type="unfinished"></translation>
+        <translation>Staid smachd ruith gun dùil %1 nuair a thòisich an t-obraiche %2.</translation>
     </message>
     <message>
         <location line="+324" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;Tha &lt;i&gt;%1&lt;/i&gt; fhathast a&apos; ruith.&lt;center/&gt;&lt;center&gt;Thoir air fàgail?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -19320,11 +20143,15 @@ What should %1 do now?</source>
         <location line="+11" />
         <source>Not showing %n files that are outside of the base directory.
 These files are preserved.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Gun a bhith a&apos; sealltainn %n faidhle a tha taobh a-muigh an eòlaire bhunaiteach.
+Tha na faidhlichean seo air an gleidheadh.</numerusform>
+            <numerusform>Gun a bhith a&apos; sealltainn %n faidhle a tha taobh a-muigh an eòlaire bhunaiteach.
+Tha na faidhlichean seo air an gleidheadh.</numerusform>
+            <numerusform>Gun a bhith a&apos; sealltainn %n faidhle a tha taobh a-muigh an eòlaire bhunaiteach.
+Tha na faidhlichean seo air an gleidheadh.</numerusform>
+            <numerusform>Gun a bhith a&apos; sealltainn %n faidhle a tha taobh a-muigh an eòlaire bhunaiteach.
+Tha na faidhlichean seo air an gleidheadh.</numerusform>
         </translation>
     </message>
     <message>
@@ -19380,7 +20207,7 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Imports existing projects that do not use qmake, CMake, Qbs, Meson, or Autotools.&lt;p&gt;This creates a project file that allows you to use %1 as a code editor and as a launcher for debugging and analyzing tools. If you want to build the project, you might need to edit the generated project file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ion-phortaich pròiseactan a tha ann nach cleachd qmake, CMake, Qbs, Meson, no Autotools.&lt;p&gt;Cruthaichidh seo faidhle pròiseict a leigeas leat %1 a chleachdadh mar dheasaiche còd agus mar lòinsear airson innealan dì-bhugachaidh agus sgrùdaidh. Ma tha thu airson am pròiseact a thogail, dh&apos;fhaodadh gum feum thu am faidhle pròiseict a chaidh a ghineadh a dheasachadh.</translation>
     </message>
     <message>
         <location line="+172" />
@@ -20608,7 +21435,31 @@ Influences the indentation of continuation lines.
 &lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+A&apos; toirt buaidh air eag nan loidhnichean leantainn.
+
+&lt;ul&gt;
+&lt;li&gt;Chan ann idir: Na co-thaobhaich idir. Cha tèid loidhnichean a chur an eag ach chun an doimhne eag loidsigeach làithreach.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;Le beàrnan: Cleachd beàrnan an-còmhnaidh airson co-thaobhadh, ge b&apos; e dè na roghainnean eag eile.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)            c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;Le eag àbhaisteach: Cleachd tabaichean agus/no beàrnan airson co-thaobhadh, mar a chaidh a rèiteachadh gu h-àrd.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)(tab)(tab)  c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+31" />
@@ -20728,7 +21579,20 @@ Specifies how backspace interacts with indentation.
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+A&apos; sònrachadh mar a bhios backspace ag eadar-obrachadh ri eag.
+
+&lt;ul&gt;
+&lt;li&gt;Chan eil gin: Chan eil eadar-obrachadh sam bith ann. Giùlan backspace àbhaisteach.
+&lt;/li&gt;
+
+&lt;li&gt;A&apos; leantainn nan eagan roimhe: Ann am beàrn-thoisich bheir e an cùrsair air ais chun an ìre eag as fhaisge a chaidh a chleachdadh sna loidhnichean roimhe.
+&lt;/li&gt;
+
+&lt;li&gt;A&apos; toirt air falbh eag: Ma tha am caractar air cùl a&apos; chùrsair na bheàrn, giùlainidh e mar backtab.
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
     </message>
     <message>
         <location line="+17" />
@@ -20835,7 +21699,13 @@ Specifies how backspace interacts with indentation.
 &lt;li&gt;&lt;i&gt;Always Delete:&lt;/i&gt; never write an UTF-8 BOM, possibly deleting a pre-existing one.&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;Note that UTF-8 BOMs are uncommon and treated incorrectly by some editors, so it usually makes little sense to add any.&lt;/p&gt;
 &lt;p&gt;This setting does &lt;b&gt;not&lt;/b&gt; influence the use of UTF-16 and UTF-32 BOMs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+&lt;p&gt;Mar a bu chòir do dheasaichean teacsa dèiligeadh ri Comharran Òrdugh nam Bytes UTF-8. &apos;S iad na roghainnean:&lt;/p&gt;
+&lt;ul &gt;&lt;li&gt;&lt;i&gt;Cuir ris ma tha an còdachadh UTF-8:&lt;/i&gt; cuir BOM ris an-còmhnaidh nuair a shàbhalas tu faidhle ann an còdachadh UTF-8. Thoir an aire nach obraich seo ma tha an còdachadh &lt;i&gt;Siostam&lt;/i&gt;, seach nach eil fios aig an deasaiche teacsa dè th&apos; ann dha-rìribh.&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;Cùm ma tha e ann mar-thà: &lt;/i&gt;sàbhail am faidhle le BOM ma bha fear aige mar-thà nuair a chaidh a luchdadh.&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;Sguab às an-còmhnaidh:&lt;/i&gt; na sgrìobh BOM UTF-8 a-riamh, is dòcha a&apos; sguabadh às fear a tha ann mar-thà.&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Thoir an aire gu bheil BOMan UTF-8 neo-chumanta agus air an làimhseachadh gu ceàrr le cuid de dheasaichean, agus mar sin cha bhi mòran ciall ann a bhith a&apos; cur gin ris mar as trice.&lt;/p&gt;
+&lt;p&gt;Chan eil an roghainn seo a&apos; toirt buaidh &lt;b&gt;idir&lt;/b&gt; air cleachdadh BOMan UTF-16 agus UTF-32.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+11" />
@@ -23240,21 +24110,21 @@ Cha tèid a chuir an sàs ann an àite geal ann am beachdan agus sreathan.</tran
     <message numerus="yes">
         <location line="+3" />
         <source>%n found.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n air an lorg.</numerusform>
+            <numerusform>%n air an lorg.</numerusform>
+            <numerusform>%n air an lorg.</numerusform>
+            <numerusform>%n air an lorg.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+29" />
         <source>%n occurrences replaced.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n tachartas air an cur nan àite.</numerusform>
+            <numerusform>%n tachartas air an cur nan àite.</numerusform>
+            <numerusform>%n tachartas air an cur nan àite.</numerusform>
+            <numerusform>%n tachartas air an cur nan àite.</numerusform>
         </translation>
     </message>
     <message>
@@ -23802,21 +24672,21 @@ Criathrag: %2
     <message numerus="yes">
         <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%1: air a sgur. %n tachartas air an lorg ann an %2 faidhle.</numerusform>
+            <numerusform>%1: air a sgur. %n tachartas air an lorg ann an %2 faidhle.</numerusform>
+            <numerusform>%1: air a sgur. %n tachartas air an lorg ann an %2 faidhle.</numerusform>
+            <numerusform>%1: air a sgur. %n tachartas air an lorg ann an %2 faidhle.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+6" />
         <source>%1: %n occurrences found in %2 files.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%1: %n tachartas air an lorg ann an %2 faidhle.</numerusform>
+            <numerusform>%1: %n tachartas air an lorg ann an %2 faidhle.</numerusform>
+            <numerusform>%1: %n tachartas air an lorg ann an %2 faidhle.</numerusform>
+            <numerusform>%1: %n tachartas air an lorg ann an %2 faidhle.</numerusform>
         </translation>
     </message>
     <message>
@@ -24417,11 +25287,11 @@ ann an &quot;%2&quot;.
     <message numerus="yes">
         <location line="+5" />
         <source>Could not write to file &quot;%1&quot; (only %2 of %n byte(s) written).</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Cha b&apos; urrainn sgrìobhadh don fhaidhle &quot;%1&quot; (cha deach ach %2 de %n byte a sgrìobhadh).</numerusform>
+            <numerusform>Cha b&apos; urrainn sgrìobhadh don fhaidhle &quot;%1&quot; (cha deach ach %2 de %n byte a sgrìobhadh).</numerusform>
+            <numerusform>Cha b&apos; urrainn sgrìobhadh don fhaidhle &quot;%1&quot; (cha deach ach %2 de %n byte a sgrìobhadh).</numerusform>
+            <numerusform>Cha b&apos; urrainn sgrìobhadh don fhaidhle &quot;%1&quot; (cha deach ach %2 de %n byte a sgrìobhadh).</numerusform>
         </translation>
     </message>
     <message>
@@ -24506,11 +25376,11 @@ ann an &quot;%2&quot;.
     <message numerus="yes">
         <location line="+9" />
         <source>announced %n sections, each %1 bytes, exceed file size</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>chaidh %n earrann ainmeachadh, gach fear %1 byte, nas motha na meud an fhaidhle</numerusform>
+            <numerusform>chaidh %n earrann ainmeachadh, gach fear %1 byte, nas motha na meud an fhaidhle</numerusform>
+            <numerusform>chaidh %n earrann ainmeachadh, gach fear %1 byte, nas motha na meud an fhaidhle</numerusform>
+            <numerusform>chaidh %n earrann ainmeachadh, gach fear %1 byte, nas motha na meud an fhaidhle</numerusform>
         </translation>
     </message>
     <message>
@@ -24791,11 +25661,11 @@ Gus caochladair a dhì-cheadachadh, cuir &quot;#&quot; air an loidhne.</translat
         <location line="+14" />
         <location line="+2" />
         <source>%n Items</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n nì</numerusform>
+            <numerusform>%n nì</numerusform>
+            <numerusform>%n nì</numerusform>
+            <numerusform>%n nì</numerusform>
         </translation>
     </message>
     <message>
@@ -25161,7 +26031,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Caochladair&lt;/th&gt;&lt;th&gt;A&apos; leudachadh gu&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;eòlaire an fhaidhle làithreach&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;ainm an fhaidhle (le slighe shlàn)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;ainm an fhaidhle (gun slighe)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />

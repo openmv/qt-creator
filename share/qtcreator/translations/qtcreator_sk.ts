@@ -25,89 +25,72 @@
 <context>
     <name>OpenMVCameraSettings</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvcamerasettings.ui" />
         <source>OpenMV Cam Settings</source>
-        <translation>Nastavenia kamery OpenMV</translation>
+        <translation type="vanished">Nastavenia kamery OpenMV</translation>
     </message>
     <message>
-        <location/>
         <source>Turn on WiFi Shield on startup</source>
-        <translation>Pri spustení zapnite WiFi Shield</translation>
+        <translation type="vanished">Pri spustení zapnite WiFi Shield</translation>
     </message>
     <message>
-        <location/>
         <source>Client Mode (Normal)</source>
-        <translation>Klientsky režim (normálny)</translation>
+        <translation type="vanished">Klientsky režim (normálny)</translation>
     </message>
     <message>
-        <location/>
         <source>Password</source>
-        <translation>heslo</translation>
+        <translation type="vanished">heslo</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter your WiFi network password here</source>
-        <translation>Tu zadajte heslo svojej siete WiFi</translation>
+        <translation type="vanished">Tu zadajte heslo svojej siete WiFi</translation>
     </message>
     <message>
-        <location/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation type="vanished">Typ</translation>
     </message>
     <message>
-        <location/>
         <source>Open (No password)</source>
-        <translation>Otvoriť (bez hesla)</translation>
+        <translation type="vanished">Otvoriť (bez hesla)</translation>
     </message>
     <message>
-        <location/>
         <source>WPA (Modern WiFi Security)</source>
-        <translation>WPA (moderné zabezpečenie WiFi)</translation>
+        <translation type="vanished">WPA (moderné zabezpečenie WiFi)</translation>
     </message>
     <message>
-        <location/>
         <source>WEP (Hexadecimal password)</source>
-        <translation>WEP (hexadecimálne heslo)</translation>
+        <translation type="vanished">WEP (hexadecimálne heslo)</translation>
     </message>
     <message>
-        <location/>
         <source>SSID</source>
-        <translation>SSID</translation>
+        <translation type="vanished">SSID</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter or select your WiFi network here</source>
-        <translation>Tu zadajte alebo vyberte svoju sieť WiFi</translation>
+        <translation type="vanished">Tu zadajte alebo vyberte svoju sieť WiFi</translation>
     </message>
     <message>
-        <location/>
         <source>Acess Point Mode</source>
-        <translation>Režim prístupového bodu</translation>
+        <translation type="vanished">Režim prístupového bodu</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
-        <translation>Tu zadajte názov siete WiFi na vytvorenie hesla</translation>
+        <translation type="vanished">Tu zadajte názov siete WiFi na vytvorenie hesla</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
-        <translation>Tu zadajte názov siete WiFi, ktorú chcete vytvoriť</translation>
+        <translation type="vanished">Tu zadajte názov siete WiFi, ktorú chcete vytvoriť</translation>
     </message>
     <message>
-        <location/>
         <source>Board Name</source>
-        <translation>Názov rady</translation>
+        <translation type="vanished">Názov rady</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
-        <translation>Tu zadajte názov vašej kamery OpenMV</translation>
+        <translation type="vanished">Tu zadajte názov vašej kamery OpenMV</translation>
     </message>
     <message>
-        <location/>
         <source>Duplicate REPL on the UART on startup</source>
-        <translation>Duplikujte REPL na UART pri spustení</translation>
+        <translation type="vanished">Duplikujte REPL na UART pri spustení</translation>
     </message>
 </context>
 <context>
@@ -156,6 +139,21 @@
         <location/>
         <source>Mean</source>
         <translation>Priemerná</translation>
+    </message>
+    <message>
+        <location/>
+        <source>R</source>
+        <translation>R</translation>
+    </message>
+    <message>
+        <location/>
+        <source>G</source>
+        <translation>G</translation>
+    </message>
+    <message>
+        <location/>
+        <source>B</source>
+        <translation>B</translation>
     </message>
 </context>
 <context>
@@ -214,14 +212,16 @@
         <translation>Aktualizuje sa definícia syntaxe pre &apos;%1&apos; na verziu %2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1263" />
         <source>Copy/Convert Python File</source>
         <translation>Skopírovať/konvertovať súbor Python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="-42" />
         <location line="+7" />
-        <location line="+91" />
+        <location line="+85" />
+        <location line="+7" />
+        <location line="+101" />
         <location line="+7" />
         <location line="+76" />
         <location line="+7" />
@@ -710,7 +710,7 @@ The code has been copied to your clipboard.</source>
         <location line="+2" />
         <source>Select path to node.js executable. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to nodejs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte cestu k spustiteľnému súboru node.js. Pokyny na inštaláciu nájdete v %1.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -728,7 +728,7 @@ The code has been copied to your clipboard.</source>
         <location line="+2" />
         <source>Select path to %2 in Copilot Neovim plugin. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to copilot.vim getting started, %2 is the filename of the copilot language server</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte cestu k %2 v pluginu Copilot Neovim. Pokyny na inštaláciu nájdete v %1.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -921,17 +921,17 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+370" />
         <location line="+46" />
-        <location line="+1689" />
+        <location line="+1691" />
         <location line="+534" />
         <source>Revert to Saved</source>
         <translation>Vrátiť sa na Uložené</translation>
     </message>
     <message>
-        <location line="-2268" />
+        <location line="-2270" />
         <location line="+95" />
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+421" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
         <location line="+1" />
         <source>Close</source>
@@ -945,13 +945,13 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="-99" />
-        <location line="+111" />
+        <location line="+113" />
         <location line="+1645" />
         <source>Close Others</source>
         <translation>Zavrieť Ostatné</translation>
     </message>
     <message>
-        <location line="-1708" />
+        <location line="-1710" />
         <source>Revert File to Saved</source>
         <translation>Vrátiť súbor na uložený</translation>
     </message>
@@ -961,7 +961,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location line="+189" />
+        <location line="+191" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+101" />
         <location line="+67" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="-9" />
@@ -1073,8 +1073,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Choď dopredu</translation>
     </message>
     <message>
-        <location line="-236" />
-        <location line="+122" />
+        <location line="-238" />
+        <location line="+124" />
         <source>Close All Except Visible</source>
         <translation>Zavrieť všetko okrem viditeľného</translation>
     </message>
@@ -1084,7 +1084,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Prejdite na položku Posledná úprava</translation>
     </message>
     <message>
-        <location line="-266" />
+        <location line="-268" />
         <source>Copy Full Path</source>
         <translation>Kopírovať celú cestu</translation>
     </message>
@@ -1118,12 +1118,11 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Ctrl+F4</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Ctrl+Shift+W</source>
-        <translation>Ctrl+Shift+W</translation>
+        <translation type="vanished">Ctrl+Shift+W</translation>
     </message>
     <message>
-        <location line="+145" />
+        <location line="+158" />
         <source>Reopen Last Closed Document</source>
         <translation>Znovu otvoriť posledný uzavretý dokument</translation>
     </message>
@@ -1296,7 +1295,7 @@ Continue?</source>
         <translation>Uložiť súbor ako</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+30" />
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+33" />
         <source>Edit</source>
         <translation>Upraviť</translation>
     </message>
@@ -1321,7 +1320,7 @@ Continue?</source>
         <translation>Súbor je zapisovateľný</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+139" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+145" />
         <source>Reset Do Not Ask/Show Again Dialogs</source>
         <translation>Obnoviť dialógové okná Nepýtať sa/Zobrazovať znova</translation>
     </message>
@@ -1350,12 +1349,12 @@ Continue?</source>
         <translation type="vanished">Nastavenia vysokého DPI sa prejavia po reštarte.</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+62" />
         <source>User Interface</source>
         <translation>Používateľské rozhranie</translation>
     </message>
     <message>
-        <location line="-144" />
+        <location line="-159" />
         <source>Show keyboard shortcuts in context menus (default: %1)</source>
         <translation>Zobraziť klávesové skratky v kontextových ponukách (predvolené: %1)</translation>
     </message>
@@ -1382,7 +1381,7 @@ If the system cursors for resizing views are not displayed properly, you can use
  Ak sa systémové kurzory na zmenu veľkosti zobrazení nezobrazujú správne, môžete použiť kurzory poskytované %1.</translation>
     </message>
     <message>
-        <location line="+93" />
+        <location line="+96" />
         <source>Round Up for .5 and Above</source>
         <translation>Zaokrúhliť na viac ako 0,5 a viac</translation>
     </message>
@@ -1422,12 +1421,17 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>Prostredie ovplyvňuje správanie škálovania používateľského rozhrania.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+21" />
+        <source>Serial Terminal Tab size:</source>
+        <translation>Veľkosť tabulátora sériového terminálu:</translation>
+    </message>
+    <message>
+        <location line="+51" />
         <source>&lt;System Language&gt;</source>
         <translation>&lt;Jazyk systému&gt;</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+97" />
         <source>The language change will take effect after restart.</source>
         <translation>Zmena jazyka sa prejaví po reštarte.</translation>
     </message>
@@ -1698,7 +1702,7 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
         <translation>Výkon</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1787" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1807" />
         <source>&amp;File</source>
         <translation>&amp;Súbor</translation>
     </message>
@@ -1724,15 +1728,15 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+128" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2620" />
-        <location line="+1735" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2622" />
+        <location line="+1737" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
         <source>&amp;Save</source>
         <translation>&amp;Uložiť</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1734" />
-        <location line="+1735" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1736" />
+        <location line="+1737" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
         <translation>Uložiť &amp;ako...</translation>
@@ -1936,12 +1940,11 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
         <translation>Zobraziť lištu ponuky</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Ctrl+Alt+M</source>
-        <translation>Ctrl+alt+m</translation>
+        <translation type="vanished">Ctrl+alt+m</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+25" />
         <source>Hide Menu Bar</source>
         <translation>Skryť lišta ponuky</translation>
     </message>
@@ -2021,7 +2024,7 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
         <translation>&lt;p&gt;Vývojárov Qt Creator je možné kontaktovať v zozname adries Qt Creator:&lt;/p&gt;%1&lt;p&gt;alebo na kanáli #qt-creator na Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;Náš nástroj na sledovanie chýb sa nachádza na %3.&lt;/p&gt;&lt;p&gt;Pre väčšie kusy textu použite %4.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-817" />
+        <location line="-819" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -2048,7 +2051,7 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
         <translation>Celá obrazovka</translation>
     </message>
     <message>
-        <location line="+126" />
+        <location line="+128" />
         <source>About &amp;Plugins...</source>
         <translation>O &amp;doplnkoch...</translation>
     </message>
@@ -2113,7 +2116,7 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1030" />
         <location line="+16" />
         <location line="+14" />
         <source>Save Log</source>
@@ -2122,7 +2125,7 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-726" />
         <source>Clear</source>
         <translation>jasný</translation>
     </message>
@@ -2345,7 +2348,7 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
         <translation>&amp;Výkon</translation>
     </message>
     <message>
-        <location line="+406" />
+        <location line="+461" />
         <source>Reset to Default</source>
         <translation>Reset na predvolene</translation>
     </message>
@@ -2507,8 +2510,8 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-288" />
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+58" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-290" />
+        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+63" />
         <source>Save</source>
         <translation>Uložiť</translation>
     </message>
@@ -2518,7 +2521,7 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
         <translation>Uložiť vybraté</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+180" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+192" />
         <source>Click and type the new key sequence.</source>
         <translation>Kliknite a zadajte novú postupnosť kláves.</translation>
     </message>
@@ -2529,16 +2532,17 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
     </message>
     <message>
         <location line="+1" />
+        <location line="+277" />
         <source>Record</source>
         <translation>Záznam</translation>
     </message>
     <message>
-        <location line="+589" />
+        <location line="+427" />
         <source>Keyboard</source>
         <translation>Klávesnica</translation>
     </message>
     <message>
-        <location line="-630" />
+        <location line="-745" />
         <source>Invalid key sequence.</source>
         <translation>Neplatná postupnosť kľúčov.</translation>
     </message>
@@ -2548,7 +2552,7 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
         <translation>Sekvencia kláves nebude v editore fungovať.</translation>
     </message>
     <message>
-        <location line="+451" />
+        <location line="+469" />
         <source>Import Keyboard Mapping Scheme</source>
         <translation>Importovať schému mapovania klávesnice</translation>
     </message>
@@ -2564,12 +2568,13 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
         <translation>Exportovať schému mapovania klávesnice</translation>
     </message>
     <message>
-        <location line="-332" />
+        <location line="-350" />
+        <location line="+153" />
         <source>Key sequence:</source>
         <translation>Poradie kláves:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-149" />
         <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>Na modifikačné klávesy použite &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot; a &quot;Shift&quot;. Pre špeciálne klávesy použite &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; atď. Skombinujte jednotlivé klávesy s „+“ a skombinujte viacero skratiek do sekvencie skratiek s „,“. Napríklad, ak používateľ musí podržať modifikačné klávesy Ctrl a Shift a súčasne stlačiť kláves Escape, potom uvoľniť a stlačiť A, zadajte „Ctrl+Shift+Escape,A“.</translation>
     </message>
@@ -2757,7 +2762,7 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
     </message>
     <message>
         <location line="+13" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-675" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-730" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-89" />
         <source>Case Sensitive</source>
         <translation>Rozlišovať malé a veľké písmená</translation>
@@ -3015,10 +3020,10 @@ za predpokladu, že boli pred refaktorizáciou neupravené.</translation>
     <message numerus="yes">
         <location line="-264" />
         <source>%1 filter update: %n files</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Aktualizácia filtra %1: %n súborov</numerusform>
+            <numerusform>Aktualizácia filtra %1: %n súborov</numerusform>
+            <numerusform>Aktualizácia filtra %1: %n súborov</numerusform>
         </translation>
     </message>
     <message>
@@ -3536,7 +3541,8 @@ Ak to chcete urobiť, zadajte túto skratku a medzeru do vstupného poľa Lokát
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-485" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+161" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+107" />
+        <location line="+72" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-1" />
         <source>Add</source>
         <translation>Pridať</translation>
@@ -3613,30 +3619,31 @@ Ak to chcete urobiť, zadajte túto skratku a medzeru do vstupného poľa Lokát
         <translation>Automaticky uložiť všetky súbory pred vytvorením</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-87" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-105" />
         <source>Keyboard Shortcuts</source>
         <translation>Klávesové skratky</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+46" />
-        <location line="+95" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+49" />
+        <location line="+107" />
         <source>Command</source>
         <translation>Príkaz</translation>
     </message>
     <message>
-        <location line="-96" />
-        <location line="+96" />
+        <location line="-108" />
+        <location line="+108" />
         <source>Label</source>
         <translation>Označenie</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+1" />
         <location line="+15" />
+        <location line="+11" />
         <source>Shortcut</source>
         <translation>Skratka</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-80" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-92" />
         <source>Command Mappings</source>
         <translation>Mapovanie príkazov</translation>
     </message>
@@ -3675,7 +3682,7 @@ Ak to chcete urobiť, zadajte túto skratku a medzeru do vstupného poľa Lokát
     <message>
         <location line="-5" />
         <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+6" />
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-278" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-295" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-1" />
         <location line="+8" />
         <source>Reset</source>
@@ -3722,7 +3729,7 @@ Ak to chcete urobiť, zadajte túto skratku a medzeru do vstupného poľa Lokát
         <translation>Binárny editor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+484" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+504" />
         <source>Sort categories</source>
         <translation>Kategórie</translation>
     </message>
@@ -4242,7 +4249,7 @@ Do you want to check them out now?</source>
 Chcete si ich teraz pozrieť?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-948" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-968" />
         <source>Restart Required</source>
         <translation>Vyžaduje sa reštart</translation>
     </message>
@@ -4416,10 +4423,10 @@ Chcete si ich teraz pozrieť?</translation>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
         <source>%n occurrences replaced.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Nahradených %n výskytov.</numerusform>
+            <numerusform>Nahradených %n výskytov.</numerusform>
+            <numerusform>Nahradených %n výskytov.</numerusform>
         </translation>
     </message>
     <message>
@@ -4495,10 +4502,10 @@ Chcete si ich teraz pozrieť?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>The search resulted in more than %n items, do you still want to continue?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Vyhľadávanie vrátilo viac ako %n položiek, chcete napriek tomu pokračovať?</numerusform>
+            <numerusform>Vyhľadávanie vrátilo viac ako %n položiek, chcete napriek tomu pokračovať?</numerusform>
+            <numerusform>Vyhľadávanie vrátilo viac ako %n položiek, chcete napriek tomu pokračovať?</numerusform>
         </translation>
     </message>
     <message>
@@ -4514,10 +4521,10 @@ Chcete si ich teraz pozrieť?</translation>
     <message numerus="yes">
         <location line="+82" />
         <source>%n matches found.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Nájdených %n zhôd.</numerusform>
+            <numerusform>Nájdených %n zhôd.</numerusform>
+            <numerusform>Nájdených %n zhôd.</numerusform>
         </translation>
     </message>
     <message>
@@ -4557,7 +4564,7 @@ Chcete si ich teraz pozrieť?</translation>
         <translation type="vanished">%1 %2%3</translation>
     </message>
     <message>
-        <location line="+804" />
+        <location line="+824" />
         <source>Based on Qt %1 (%2, %3)</source>
         <translation>Na základe Qt %1 (%2, %3)</translation>
     </message>
@@ -4761,6 +4768,31 @@ Položku upravíte dvojitým kliknutím.</translation>
         <translation>Zabaliť</translation>
     </message>
     <message>
+        <location line="+20" />
+        <source>Serial Protocol Debug Logging</source>
+        <translation>Ladiace protokolovanie sériového protokolu</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Off</source>
+        <translation>Vypnuté</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands</source>
+        <translation>Príkazy</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands + Packets</source>
+        <translation>Príkazy + Pakety</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands + Packets + Fragments</source>
+        <translation>Príkazy + Pakety + Fragmenty</translation>
+    </message>
+    <message>
         <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="-129" />
         <source>Add Magic Header</source>
         <translation>Pridajte magickú hlavičku</translation>
@@ -4772,7 +4804,7 @@ Položku upravíte dvojitým kliknutím.</translation>
     <message>
         <location line="+4" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;MIME magic data is interpreted as defined by the Shared MIME-info Database specification from &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Údaje MIME magic sa interpretujú podľa špecifikácie Shared MIME-info Database od &lt;a href=&quot;https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/&quot;&gt;freedesktop.org&lt;/a&gt;.&lt;hr/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+9" />
@@ -4894,10 +4926,10 @@ Položku upravíte dvojitým kliknutím.</translation>
     <message numerus="yes">
         <location line="+159" />
         <source>Elided %n characters due to Application Output settings</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Vynechaných %n znakov kvôli nastaveniam výstupu aplikácie</numerusform>
+            <numerusform>Vynechaných %n znakov kvôli nastaveniam výstupu aplikácie</numerusform>
+            <numerusform>Vynechaných %n znakov kvôli nastaveniam výstupu aplikácie</numerusform>
         </translation>
     </message>
     <message>
@@ -4908,7 +4940,7 @@ Položku upravíte dvojitým kliknutím.</translation>
 </translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+404" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Textové súbory (*.txt);;Všetky súbory (*)</translation>
     </message>
@@ -5481,10 +5513,10 @@ na správu verzií (%2)
     <message numerus="yes">
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
         <source>Skipped %n lines...</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Preskočených %n riadkov...</numerusform>
+            <numerusform>Preskočených %n riadkov...</numerusform>
+            <numerusform>Preskočených %n riadkov...</numerusform>
         </translation>
     </message>
     <message>
@@ -5896,7 +5928,7 @@ Reason: %3</source>
 Dôvod: %3</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
+        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+133" />
         <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>Doplnok &quot;%1&quot; je na testovanie špecifikovaný dvakrát.</translation>
     </message>
@@ -6755,10 +6787,10 @@ See the documentation of the specific language server for valid settings.</sourc
     <message numerus="yes">
         <location line="+21" />
         <source>Re&amp;name %n files</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Preme&amp;novať %n súborov</numerusform>
+            <numerusform>Preme&amp;novať %n súborov</numerusform>
+            <numerusform>Preme&amp;novať %n súborov</numerusform>
         </translation>
     </message>
     <message>
@@ -6986,7 +7018,7 @@ See the documentation of the specific language server for valid settings.</sourc
 <context>
     <name>QtC::OpenMV</name>
     <message>
-        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.cpp" line="+548" />
+        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.cpp" line="+671" />
         <location line="+34" />
         <source>Value %L1</source>
         <translation>Hodnota %L1</translation>
@@ -7044,9 +7076,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>V</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvcamerasettings.cpp" line="+81" />
         <source>Please enter your WiFi network here</source>
-        <translation>Tu zadajte svoju WiFi sieť</translation>
+        <translation type="vanished">Tu zadajte svoju WiFi sieť</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+145" />
@@ -7065,8 +7096,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+156" />
-        <location line="+823" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+158" />
+        <location line="+878" />
         <source>Dataset Editor</source>
         <translation>Editor množiny údajov</translation>
     </message>
@@ -7078,9 +7109,9 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+604" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+606" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+412" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+423" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
@@ -7090,17 +7121,17 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-732" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-787" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1514" />
+        <location line="+1795" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+139" />
         <location line="+202" />
-        <location line="+306" />
+        <location line="+330" />
         <location line="+13" />
         <location line="+169" />
         <location line="+146" />
@@ -7108,15 +7139,14 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+378" />
-        <location line="+273" />
-        <location line="+86" />
-        <location line="+1142" />
-        <location line="+1075" />
-        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+881" />
+        <location line="+315" />
+        <location line="+1388" />
+        <location line="+1089" />
+        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+109" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+699" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
         <location line="+11" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
@@ -7127,8 +7157,8 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-309" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3541" />
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3846" />
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
         <location line="+48" />
         <location line="+9" />
@@ -7142,23 +7172,23 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+33" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
-        <location line="+1442" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2844" />
+        <location line="+1481" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Súbor obrázka sa z neznámeho dôvodu nepodarilo uložiť!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
-        <location line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+589" />
+        <location line="+291" />
         <source>Delete</source>
         <translation>Odstrániť</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-361" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Naozaj chcete natrvalo odstrániť &quot;%L1&quot;?</translation>
     </message>
@@ -7185,8 +7215,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Z neznámeho dôvodu sa nepodarilo premenovať súbor!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5247" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5826" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+62" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Nepodarilo sa skopírovať súbor &quot;%1&quot; do &quot;%2&quot;.</translation>
     </message>
@@ -7207,39 +7237,20 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation type="vanished">Chýba argument pre -override_read_stall_timeout</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+94" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>Chýba argument pre -filter_sériového_čísla</translation>
     </message>
     <message>
-        <location line="+145" />
-        <location line="+8" />
-        <location line="+10" />
-        <location line="+11" />
-        <location line="+28" />
-        <location line="+28" />
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2677" />
-        <location line="+9" />
-        <location line="+13" />
-        <location line="+63" />
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
-        <location line="+36" />
-        <location line="+7" />
-        <location line="+8" />
-        <location line="+10" />
-        <location line="+7" />
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
-        <translation>
+        <translation type="vanished">
 
 Zatvorte všetky programy, ktoré prezerajú/upravujú dáta aplikácií OpenMV IDE a potom reštartujte OpenMV IDE!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1733" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Upravte prah odtieňov sivej pomocou editora prahov</translation>
     </message>
@@ -7249,26 +7260,24 @@ Zatvorte všetky programy, ktoré prezerajú/upravujú dáta aplikácií OpenMV 
         <translation>Upravte prah LAB pomocou editora prahov</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+221" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+423" />
         <source>Missing argument for -form_key</source>
         <translation>Chýba argument pre -form_key</translation>
     </message>
     <message>
-        <location line="+1074" />
         <source>About OpenMV Viewer...</source>
-        <translation>O prehliadači OpenMV...</translation>
+        <translation type="vanished">O prehliadači OpenMV...</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;O %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Autor: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU VŠEOBECNÁ VEREJNÁ LICENCIA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Tento program je distribuovaný v nádeji, že bude užitočný, ale BEZ AKEJKOĽVEK ZÁRUKY; dokonca aj bez implicitnej záruky PREDAJNOSTI alebo VHODNOSTI NA KONKRÉTNY ÚČEL. Viac informácií nájdete v &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Otázky alebo pripomienky?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kontaktujte nás na &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>OpenMV IDE</source>
-        <translation>OpenMV IDE</translation>
+        <translation type="vanished">OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1050" />
+        <location line="+41" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -7281,7 +7290,7 @@ Zatvorte všetky programy, ktoré prezerajú/upravujú dáta aplikácií OpenMV 
         <translation type="vanished">Chýbajúci argument pre -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="-468" />
+        <location line="-434" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>Neplatný argument (%1) pre -auto_update</translation>
     </message>
@@ -7304,7 +7313,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Čítanie chýb &lt;ser_resources&gt; /openmVide/firmware/settings.json: %L1. \ N \ nopenMV IDE pred verziami pred V4.3.0 tento súbor nemá a vymaže by ho pri inštalácii zdrojov.</translation>
     </message>
     <message>
-        <location line="+188" />
+        <location line="+154" />
         <source>Form Key</source>
         <translation>Kľúč formulára</translation>
     </message>
@@ -7357,7 +7366,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Spustiť bootloader (načítať firmvér)</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+50" />
         <source>Ctrl+Shift+L</source>
         <translation>Ctrl+Shift+L</translation>
     </message>
@@ -7375,17 +7384,16 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Ste si istý, že chcete vymazať integrovaný flash disk vašej OpenMV Cam?</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+55" />
         <source>Auto Reconnect to OpenMV Cam</source>
         <translation>Automatické opätovné pripojenie k OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected.</source>
-        <translation>Keď je zapnuté automatické opätovné pripojenie, OpenMV IDE sa automaticky znova pripojí k vášmu OpenMV, ak sa zistí.</translation>
+        <translation type="vanished">Keď je zapnuté automatické opätovné pripojenie, OpenMV IDE sa automaticky znova pripojí k vášmu OpenMV, ak sa zistí.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Stop Script on Connect/Disconnect</source>
         <translation>Zastaviť skript pri pripojení/odpojení</translation>
     </message>
@@ -7395,7 +7403,7 @@ Check the json file for errors and fix them.</source>
         <translation>Zastavte skript na Pripojiť alebo Odpojiť (všimnite si, že IDE sa pri zatvorení odpojí, ak je pripojené).</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Sync Imports between OpenMV Cam and Documents Folder</source>
         <translation>Synchronizácia importov medzi OpenMV Cam a priečinkom Dokumenty</translation>
     </message>
@@ -7420,12 +7428,11 @@ Check the json file for errors and fix them.</source>
         <translation>Otvorte priečinok OpenMV Cam Drive</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Configure OpenMV Cam settings file</source>
-        <translation>Nakonfigurujte súbor nastavení kamery OpenMV</translation>
+        <translation type="vanished">Nakonfigurujte súbor nastavení kamery OpenMV</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+24" />
         <source>Save open script to OpenMV Cam (as main.py)</source>
         <translation>Uložiť otvorený skript do OpenMV Cam (ako main.py)</translation>
     </message>
@@ -7440,34 +7447,34 @@ Check the json file for errors and fix them.</source>
         <translation>Nainštalujte najnovšiu verziu vývoja</translation>
     </message>
     <message>
-        <location line="+75" />
-        <location line="+3823" />
+        <location line="+267" />
+        <location line="+4137" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Otvorte terminál</translation>
     </message>
     <message>
-        <location line="-3877" />
+        <location line="-4191" />
         <source>Machine Vision</source>
         <translation>Strojové videnie</translation>
     </message>
     <message>
-        <location line="+175" />
-        <location line="+3733" />
+        <location line="+182" />
+        <location line="+4040" />
         <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Editor prahov</translation>
     </message>
     <message>
-        <location line="-3803" />
-        <location line="+3880" />
+        <location line="-4110" />
+        <location line="+4187" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Editor kľúčových bodov</translation>
     </message>
     <message>
-        <location line="-3873" />
-        <location line="+4037" />
+        <location line="-4178" />
+        <location line="+4342" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7476,7 +7483,7 @@ Check the json file for errors and fix them.</source>
         <translation>Generátor AprilTag</translation>
     </message>
     <message>
-        <location line="-4184" />
+        <location line="-4489" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Rodina TAG16H5 (30 značiek)</translation>
     </message>
@@ -7511,19 +7518,18 @@ Check the json file for errors and fix them.</source>
         <translation>Generátor QRCode</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1338" />
+        <location line="+1348" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+367" />
-        <location line="+14" />
-        <location line="+33" />
-        <location line="+918" />
+        <location line="+409" />
+        <location line="+1051" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-223" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Nepodarilo sa otvoriť: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1356" />
+        <location line="-1484" />
         <source>DataMatrix Generator</source>
         <translation>Generátor DataMatrix</translation>
     </message>
@@ -7550,13 +7556,13 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+225" />
-        <location line="+2424" />
-        <location line="+1288" />
+        <location line="+2690" />
+        <location line="+1327" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-393" />
-        <location line="+375" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+900" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-392" />
+        <location line="+374" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+996" />
         <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Pridajte príponu súboru!</translation>
@@ -7571,7 +7577,7 @@ Check the json file for errors and fix them.</source>
         <translation>Nie je možné prepísať výstupný súbor!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3922" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4227" />
         <source>Video Tools</source>
         <translation>Video nástroje</translation>
     </message>
@@ -7587,8 +7593,8 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-439" />
-        <location line="+275" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-440" />
+        <location line="+276" />
         <source>Play RTSP Stream</source>
         <translation>Prehrajte stream RTSP</translation>
     </message>
@@ -7671,34 +7677,34 @@ Check the json file for errors and fix them.</source>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+177" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1513" />
+        <location line="+1794" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+273" />
-        <location line="+554" />
+        <location line="+578" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
         <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-131" />
-        <location line="+289" />
-        <location line="+165" />
-        <location line="+1148" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3187" />
+        <location line="+252" />
+        <location line="+327" />
+        <location line="+1479" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1339" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1435" />
         <location line="+85" />
-        <location line="+605" />
+        <location line="+627" />
         <source>Cancel</source>
         <translation>Zrušiť</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3737" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4042" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Nahrajte do projektu Edge Impulse Project</translation>
     </message>
@@ -7730,51 +7736,42 @@ Check the json file for errors and fix them.</source>
         <translation>Zatvorte množinu údajov</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+38" />
         <source>OpenMV Docs</source>
         <translation>Dokumenty OpenMV</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+38" />
         <source>OpenMV Forums</source>
         <translation>Fóra OpenMV</translation>
     </message>
     <message>
-        <location line="+15" />
         <source>About OpenMV Cam</source>
-        <translation>O OpenMV Cam</translation>
+        <translation type="vanished">O OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>About OpenMV Cam...</source>
-        <translation>O OpenMV Cam...</translation>
+        <translation type="vanished">O OpenMV Cam...</translation>
     </message>
     <message>
-        <location line="+18" />
         <source>About OpenMV Cam %1</source>
-        <translation>O OpenMV Cam %1</translation>
+        <translation type="vanished">O OpenMV Cam %1</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>About OpenMV Cam %1...</source>
-        <translation>O OpenMV Cam %1...</translation>
+        <translation type="vanished">O OpenMV Cam %1...</translation>
     </message>
     <message>
-        <location line="+18" />
-        <location line="+6" />
         <source>About OpenMV IDE</source>
-        <translation>O OpenMV IDE</translation>
+        <translation type="vanished">O OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-6" />
-        <location line="+6" />
         <source>About OpenMV Viewer</source>
-        <translation>O prehliadači OpenMV</translation>
+        <translation type="vanished">O prehliadači OpenMV</translation>
     </message>
     <message>
-        <location line="-5" />
         <source>About OpenMV IDE...</source>
-        <translation>O OpenMV IDE...</translation>
+        <translation type="vanished">O OpenMV IDE...</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
@@ -7789,14 +7786,13 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">&lt;p&gt;OpenMV IDE anglický preklad od Kwabena W. Agyemana.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+49" />
         <source>&lt;p&gt;&lt;b&gt;Partners&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Partneri&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>OpenMV Viewer</source>
-        <translation>Prehliadač OpenMV</translation>
+        <translation type="vanished">Prehliadač OpenMV</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
@@ -7829,7 +7825,7 @@ Check the json file for errors and fix them.</source>
         <location line="+7" />
         <location line="+36" />
         <location line="+26" />
-        <location line="+16" />
+        <location line="+17" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
         <location line="+54" />
         <location line="+32" />
@@ -7847,7 +7843,7 @@ Check the json file for errors and fix them.</source>
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+65" />
+        <location line="+69" />
         <location line="+26" />
         <location line="+18" />
         <location line="+23" />
@@ -7859,9 +7855,9 @@ Check the json file for errors and fix them.</source>
         <location line="+4" />
         <location line="+7" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location line="+26" />
-        <location line="+26" />
+        <location line="+27" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-145" />
         <location line="+35" />
         <location line="+14" />
@@ -7872,14 +7868,14 @@ Check the json file for errors and fix them.</source>
         <location line="+9" />
         <location line="+16" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1189" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+17" />
+        <location line="+1098" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1349" />
         <location line="+6" />
-        <location line="+28" />
-        <location line="+52" />
-        <location line="+8" />
-        <location line="+35" />
-        <location line="+329" />
+        <location line="+27" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+477" />
         <location line="+136" />
         <location line="+28" />
         <location line="+100" />
@@ -7889,17 +7885,17 @@ Check the json file for errors and fix them.</source>
         <location line="+81" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+28" />
-        <location line="+34" />
+        <location line="+29" />
+        <location line="+38" />
         <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+97" />
-        <location line="+4" />
-        <location line="+4" />
+        <location line="+108" />
+        <location line="+6" />
+        <location line="+5" />
         <location line="+72" />
         <location line="+116" />
         <location line="+83" />
@@ -7920,8 +7916,8 @@ Check the json file for errors and fix them.</source>
         <location line="+135" />
         <location line="+217" />
         <location line="+33" />
-        <location line="+268" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+668" />
+        <location line="+370" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+777" />
         <location line="+48" />
         <source>Connect</source>
         <translation>Pripojte sa</translation>
@@ -7942,7 +7938,7 @@ Check the json file for errors and fix them.</source>
         <translation>Podporuje sa iba obnovenie firmvéru pomocou nástrojov SE Alif Semiconductor SE.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1084" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
@@ -7960,14 +7956,16 @@ Check the json file for errors and fix them.</source>
         <translation>Zastaviť (zastaviť skript)</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-58" />
+        <location line="+70" />
+        <location line="+211" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
+        <location line="+166" />
         <source>Frame Buffer</source>
         <translation>Frame Buffer</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
+        <location line="-204" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
         <source>Record</source>
         <translation>Záznam</translation>
     </message>
@@ -8002,11 +8000,12 @@ Check the json file for errors and fix them.</source>
         <translation>Priblížiť</translation>
     </message>
     <message>
+        <location line="+30" />
         <source>JPG</source>
-        <translation type="vanished">JPG</translation>
+        <translation>JPG</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+1" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG komprimuje Frame Buffer pre vyšší výkon</translation>
     </message>
@@ -8025,7 +8024,25 @@ Check the json file for errors and fix them.</source>
         <translation>Pre maximálny výkon vypnite Frame Buffer</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+49" />
+        <location line="+13" />
+        <source>JPEG Mode</source>
+        <translation>Režim JPEG</translation>
+    </message>
+    <message>
+        <location line="-5" />
+        <location line="+7" />
+        <source>The Frame Buffer is streaming JPEG-compressed images</source>
+        <translation>Vyrovnávacia pamäť snímky streamuje obrázky komprimované ako JPEG</translation>
+    </message>
+    <message>
+        <location line="-6" />
+        <location line="+7" />
+        <source>The Frame Buffer is streaming raw (uncompressed) images</source>
+        <translation>Vyrovnávacia pamäť snímky streamuje surové (nekomprimované) obrázky</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>Frame Buffer zakázaný – opätovným kliknutím na tlačidlo zakázania povolíte (vpravo hore)</translation>
     </message>
@@ -8072,39 +8089,32 @@ Check the json file for errors and fix them.</source>
         <translation>Na sledovanie farieb použite odtiene sivej/LAB</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+42" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+3" />
-        <location line="+44" />
         <source>Res - No Image</source>
-        <translation>Res - Žiadny obrázok</translation>
+        <translation type="vanished">Res - Žiadny obrázok</translation>
     </message>
     <message>
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)</source>
         <translation type="vanished">Rozlíšenie (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixely (%7)</translation>
     </message>
     <message>
-        <location line="-10" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-10" />
         <source>Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
-        <translation>Rozlíšenie (w:%1, h:%2) - bod (x:%3, y:%4)</translation>
+        <translation type="vanished">Rozlíšenie (w:%1, h:%2) - bod (x:%3, y:%4)</translation>
     </message>
     <message>
         <source>Res (w:%1, h:%2)</source>
         <translation type="vanished">Rozlíšenie (w:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1582" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>Čítanie chýb &lt;ser_resources&gt; /openmVide/firmware/settings.json: %L1. 
+        <translation type="vanished">Čítanie chýb &lt;ser_resources&gt; /openmVide/firmware/settings.json: %L1. 
 
 Verzie OpenMV IDE pred V4.3.0 tento súbor nemajú a odstránili by ho pri inštalácii zdrojov.</translation>
     </message>
     <message>
-        <location line="+346" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2858" />
+        <location line="-1460" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3176" />
         <source>Load Custom Firmware</source>
         <translation>Načítať vlastný firmvér</translation>
     </message>
@@ -8120,34 +8130,78 @@ Verzie OpenMV IDE pred V4.3.0 tento súbor nemajú a odstránili by ho pri inšt
         <translation>Ste si istí, že chcete vymazať systém interného tukového súboru OpenMV CAM?</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+16" />
         <source>ROM File System</source>
         <translation>Súborový systém ROM</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>New ROMFS File</source>
         <translation>Nový súbor ROMFS</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+8" />
         <source>Open ROMFS File</source>
         <translation>Otvorte súbor ROMFS</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+0" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+554" />
+        <source>Load ROMFS onto OpenMV Cam</source>
+        <translation>Načítať ROMFS do OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>Edit ROMFS on OpenMV Cam</source>
         <translation>Upraviť Romfs na vačke OpenMV</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Reset ROMFS on OpenMV Cam</source>
         <translation>Reset ROMFS na vačke OpenMV</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+8" />
+        <source>When Auto Reconnect is enabled %1 will automatically reconnect to your OpenMV if detected.</source>
+        <translation>Keď je povolené automatické opätovné pripojenie, %1 sa automaticky znova pripojí k vašej OpenMV, ak sa zistí.</translation>
+    </message>
+    <message>
+        <location line="+62" />
+        <source>Edit boot.py for WiFi Debugging</source>
+        <translation>Upraviť boot.py pre ladenie cez WiFi</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>Force enter OpenMV Cam bootloader</source>
         <translation>Vynútiť vstup do zavádzača OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Open OpenMV Cam Settings Config File</source>
+        <translation>Otvoriť konfiguračný súbor nastavení OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+188" />
+        <location line="+346" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+51" />
+        <source>OpenMV Cam Settings Editor</source>
+        <translation>Editor nastavení OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-14" />
+        <source>Create Default Config</source>
+        <translation>Vytvoriť predvolenú konfiguráciu</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-21" />
+        <source>Open Config File</source>
+        <translation>Otvoriť konfiguračný súbor</translation>
     </message>
     <message>
         <location line="+14" />
@@ -8155,10 +8209,37 @@ Verzie OpenMV IDE pred V4.3.0 tento súbor nemajú a odstránili by ho pri inšt
         <translation>Mikropythónové nástroje</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
+        <location line="+12" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+19" />
+        <location line="+29" />
+        <location line="+7" />
+        <source>Copy/Convert Current Script</source>
+        <translation>Kopírovať/Konvertovať aktuálny skript</translation>
+    </message>
+    <message>
+        <location line="-70" />
+        <source>Unable to stage the current script!</source>
+        <translation>Nedá sa pripraviť aktuálny skript!</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <location line="+91" />
+        <source>&quot;%L1&quot; won&apos;t auto-run: your OpenMV Cam only auto-runs main.py/boot.py source files, never a compiled .mpy.
+
+Would you like to choose a different name?</source>
+        <translation>&quot;%L1&quot; sa nespustí automaticky: vaša OpenMV Cam automaticky spúšťa len zdrojové súbory main.py/boot.py, nikdy skompilovaný .mpy.
+
+Chcete zvoliť iný názov?</translation>
+    </message>
+    <message>
+        <location line="-48" />
         <location line="+6" />
         <location line="+7" />
-        <location line="+33" />
+        <location line="+34" />
+        <location line="+30" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -8168,7 +8249,7 @@ Verzie OpenMV IDE pred V4.3.0 tento súbor nemajú a odstránili by ho pri inšt
         <translation>Skopírovať/konvertovať súbor Python</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+30" />
         <source>Open Model Zoo</source>
         <translation>Otvorená modelová zoologická záhrada</translation>
     </message>
@@ -8184,51 +8265,112 @@ Verzie OpenMV IDE pred V4.3.0 tento súbor nemajú a odstránili by ho pri inšt
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-176" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-730" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Previesť model</translation>
     </message>
     <message>
-        <location line="+420" />
+        <location line="+422" />
         <source>Show Code Profiler</source>
         <translation>Zobraziť nástroj na profilovanie kódu</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+42" />
+        <source>Home</source>
+        <translation>Domov</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Tutorial</source>
+        <translation>Návod</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Libraries</source>
+        <translation>Knižnice</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Boards</source>
+        <translation>Dosky</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Shields</source>
+        <translation>Rozširujúce moduly</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Sensors</source>
+        <translation>Snímače</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Language</source>
+        <translation>Jazyk</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>CPython</source>
+        <translation>CPython</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Internals</source>
+        <translation>Vnútro</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Changelog</source>
+        <translation>Zoznam zmien</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>License</source>
+        <translation>Licencia</translation>
+    </message>
+    <message>
+        <location line="+38" />
+        <location line="+8" />
+        <source>About %1</source>
+        <translation>O programe %1</translation>
+    </message>
+    <message>
+        <location line="-7" />
+        <source>About %1...</source>
+        <translation>O aplikácii %1...</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&lt;b&gt;O aplikácii %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Autori: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;TOVÁRENSKÁ VERZIA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Určené len pre licencovaných výrobcov.&lt;/p&gt;&lt;p&gt;&lt;b&gt;VŠEOBECNÁ VEREJNÁ LICENCIA GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Tento program je šírený v nádeji, že bude užitočný, ale BEZ AKEJKOĽVEK ZÁRUKY; dokonca bez implicitnej záruky OBCHODOVATEĽNOSTI alebo VHODNOSTI NA KONKRÉTNY ÚČEL. Ďalšie podrobnosti nájdete v &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;Všeobecnej verejnej licencii GNU&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Otázky alebo pripomienky?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kontaktujte nás na &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+196" />
-        <location line="+26" />
         <source>JPG Mode</source>
-        <translation>Režim JPG</translation>
+        <translation type="vanished">Režim JPG</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location line="+240" />
+        <location line="+13" />
         <source>RAW Mode</source>
         <translation>Režim RAW</translation>
     </message>
     <message>
-        <location line="+113" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
-        <translation>Res (w:%1, h:%2) - návratnosť investícií (x:%3, y:%4, w:%5, h:%6) - pixely (%7) - zaostrenie (%8)</translation>
+        <translation type="vanished">Res (w:%1, h:%2) - návratnosť investícií (x:%3, y:%4, w:%5, h:%6) - pixely (%7) - zaostrenie (%8)</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+9" />
         <source>Res (w:%1, h:%2) - Focus (%3)</source>
-        <translation>Res (š:%1, h:%2) – zameranie (%3)</translation>
+        <translation type="vanished">Res (š:%1, h:%2) – zameranie (%3)</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-729" />
         <source>FPS: %L1</source>
         <translation>FPS: %L1</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+250" />
         <source>Close</source>
         <translation>Zavrieť</translation>
     </message>
@@ -8249,7 +8391,7 @@ Verzie OpenMV IDE pred V4.3.0 tento súbor nemajú a odstránili by ho pri inšt
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3418" />
         <source>Board:</source>
         <translation>Rada:</translation>
     </message>
@@ -8281,21 +8423,20 @@ Verzie OpenMV IDE pred V4.3.0 tento súbor nemajú a odstránili by ho pri inšt
         <translation>Verzia firmvéru fotoaparátu</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2" />
         <source>Serial Port:</source>
         <translation>Sériový port:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Camera serial port</source>
-        <translation>Sériový port fotoaparátu</translation>
+        <translation type="vanished">Sériový port fotoaparátu</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
-        <location line="+324" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
+        <location line="+8" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-377" />
+        <location line="+379" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+83" />
         <source>Drive:</source>
         <translation>Drive:</translation>
     </message>
@@ -8306,43 +8447,42 @@ Verzie OpenMV IDE pred V4.3.0 tento súbor nemajú a odstránili by ho pri inšt
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+7" />
         <source>FPS:</source>
         <translation>FPS:</translation>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-82" />
         <source>May be different from camera FPS</source>
         <translation>Môže sa líšiť od FPS fotoaparátu</translation>
     </message>
     <message>
-        <location line="+307" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
+        <location line="+377" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3644" />
         <source>Update Available</source>
         <translation>Aktualizácia je dostupná</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.</source>
-        <translation>Nová verzia OpenMV IDE (%L1.%L2.%L3) je k dispozícii na stiahnutie.</translation>
+        <translation type="vanished">Nová verzia OpenMV IDE (%L1.%L2.%L3) je k dispozícii na stiahnutie.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Download</source>
         <translation>Stiahnuť ▼</translation>
     </message>
     <message>
-        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
-        <translation>Programovanie WiFi vypnuté!</translation>
+        <translation type="vanished">Programovanie WiFi vypnuté!</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Another application is using the OpenMV Cam broadcast discovery port. Please close that application and restart OpenMV IDE to enable WiFi programming.</source>
-        <translation>Ďalšia aplikácia používa port na zisťovanie vysielania OpenMV Cam. Zatvorte túto aplikáciu a reštartujte OpenMV IDE, aby ste umožnili programovanie WiFi.</translation>
+        <translation type="vanished">Ďalšia aplikácia používa port na zisťovanie vysielania OpenMV Cam. Zatvorte túto aplikáciu a reštartujte OpenMV IDE, aby ste umožnili programovanie WiFi.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+416" />
         <source>Documents Folder Error</source>
         <translation>Chyba priečinka dokumentov</translation>
     </message>
@@ -8367,7 +8507,6 @@ Verzie OpenMV IDE pred V4.3.0 tento súbor nemajú a odstránili by ho pri inšt
         <translation>OpenMV Cam LED farby</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -8389,7 +8528,7 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>Ďakujeme, že používate OpenMV Cam a OpenMV IDE!
+        <translation type="vanished">Ďakujeme, že používate OpenMV Cam a OpenMV IDE!
 
 Zabudovaná LEDka vašej OpenMV Cam bliká rôznymi farbami, čím indikuje jej stav:
 
@@ -8412,18 +8551,18 @@ Firmvér vašej kamery OpenMV je v panike z dôvodu zlyhania hardvéru. Skontrol
 </translation>
     </message>
     <message>
-        <location line="+93" />
-        <location line="+1212" />
+        <location line="+94" />
+        <location line="+1236" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Sériový port – %L1 – %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1180" />
+        <location line="-1204" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+827" />
+        <location line="+851" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
@@ -8433,7 +8572,7 @@ Firmvér vašej kamery OpenMV je v panike z dôvodu zlyhania hardvéru. Skontrol
         <translation>Pripája sa... (časový limit 30 sekúnd)</translation>
     </message>
     <message>
-        <location line="-1820" />
+        <location line="-1844" />
         <source>
 
 Try doing:
@@ -8486,12 +8625,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1270" />
+        <location line="+1294" />
         <source>UDP Server Connection - %1</source>
         <translation>Pripojenie k serveru UDP - %1</translation>
     </message>
     <message>
-        <location line="-1196" />
+        <location line="-1220" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Neplatný argument portu (%1) pre -open_udp_server_terminal</translation>
     </message>
@@ -8522,12 +8661,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1317" />
+        <location line="+1341" />
         <source>TCP Server Connection - %1</source>
         <translation>Pripojenie k serveru TCP - %1</translation>
     </message>
     <message>
-        <location line="-1243" />
+        <location line="-1267" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Neplatný argument portu (%1) pre -open_tcp_server_terminal</translation>
     </message>
@@ -8556,7 +8695,7 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2935" />
         <location line="+10" />
         <location line="+8" />
         <location line="+22" />
@@ -8644,16 +8783,15 @@ Spustite Príklady-&gt;HelloWorld-&gt;helloworld.py, aby ste otestovali kvalitu 
         <translation>Zistila sa neregistrovaná kamera OpenMV</translation>
     </message>
     <message>
-        <location line="-19" />
         <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
-        <translation>Vaša kamera OpenMV Cam nie je zaregistrovaná. Pre neobmedzené používanie s OpenMV IDE bez prerušenia musíte zaregistrovať svoju kameru OpenMV Cam v OpenMV.
+        <translation type="vanished">Vaša kamera OpenMV Cam nie je zaregistrovaná. Pre neobmedzené používanie s OpenMV IDE bez prerušenia musíte zaregistrovať svoju kameru OpenMV Cam v OpenMV.
 
 Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-9" />
         <source>Unregistered OpenMV Cams hurt the open-source OpenMV ecosystem by undercutting offical OpenMV Cam sales which help fund OpenMV Cam software development.
 
 Would you like to register your OpenMV Cam now?</source>
@@ -8662,16 +8800,15 @@ Would you like to register your OpenMV Cam now?</source>
 Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>OpenMV IDE will display these three messages boxes each time you connect until you register your OpenMV Cam...
 
 Would you like to register your OpenMV Cam now?</source>
-        <translation>OpenMV IDE zobrazí tieto tri správy vždy, keď sa pripojíte, kým nezaregistrujete svoju OpenMV Cam...
+        <translation type="vanished">OpenMV IDE zobrazí tieto tri správy vždy, keď sa pripojíte, kým nezaregistrujete svoju OpenMV Cam...
 
 Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+29" />
         <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Ak chcete zaregistrovať svoju kameru OpenMV Cam, zadajte kľúč dosky.&lt;br/&gt;&lt;br/&gt;Ak kľúč nemáte, môžete si ho zakúpiť od spoločnosti OpenMV &lt;a href=&quot;https://openmv.io/products/openmv- cam-board-key&quot;&gt;tu&lt;/a&gt;.</translation>
     </message>
@@ -8711,19 +8848,15 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
         <translation>Nesprávne naformátovaný kľúč dosky!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+225" />
-        <location line="+503" />
-        <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-84" />
         <source>FPS: 0</source>
-        <translation>FPS: 0</translation>
+        <translation type="vanished">FPS: 0</translation>
     </message>
     <message>
         <source>Configure Settings</source>
         <translation type="vanished">Konfigurovať nastavenia</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+395" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+418" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>Uložiť skript</translation>
@@ -8734,10 +8867,10 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
         <translation>Odobrať komentáre a previesť medzery na tabulátory?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+84" />
         <location line="+7" />
         <location line="+18" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-75" />
         <location line="+7" />
         <location line="+18" />
         <source>Save Image</source>
@@ -8745,7 +8878,7 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
     </message>
     <message>
         <location line="-23" />
-        <location line="+1101" />
+        <location line="+1140" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Súbory obrázkov (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
@@ -8800,7 +8933,169 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
         <translation>Otvorený súbor</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-4317" />
+        <location line="+8" />
+        <location line="+10" />
+        <location line="+11" />
+        <location line="+28" />
+        <location line="+28" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2925" />
+        <location line="+9" />
+        <location line="+13" />
+        <location line="+65" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+45" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-784" />
+        <location line="+36" />
+        <location line="+7" />
+        <location line="+8" />
+        <location line="+10" />
+        <location line="+7" />
+        <source>
+
+Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
+        <translation>
+
+Zatvorte všetky programy, ktoré zobrazujú alebo upravujú údaje aplikácie %1, a potom reštartujte %1!</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
+
+%2 versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
+        <translation>Chyba pri čítaní &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
+
+Verzie %2 pred v4.3.0 tento súbor nemajú a pri inštalácii zdrojov by ho odstránili.</translation>
+    </message>
+    <message>
+        <location line="+1473" />
+        <source>&lt;p&gt;&lt;b&gt;Release Notes&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Poznámky k vydaniu&lt;/b&gt;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>%1 %2</source>
+        <translation>%1 %2</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>OpenMV Firmware %1</source>
+        <translation>Firmvér OpenMV %1</translation>
+    </message>
+    <message>
+        <location line="+340" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+98" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
+        <translation>Vyrovnávacia pamäť snímky - Rozlíšenie (š:%1, v:%2) - ROI (x:%3, y:%4, š:%5, v:%6) - Pixely (%7) - Zaostrenie (%8)</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
+        <translation>Vyrovnávacia pamäť snímky - Rozlíšenie (š:%1, v:%2) - Bod (x:%3, y:%4)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - Focus (%3)</source>
+        <translation>Vyrovnávacia pamäť snímky - Rozlíšenie (š:%1, v:%2) - Zaostrenie (%3)</translation>
+    </message>
+    <message>
+        <location line="+255" />
+        <source>Camera serial port -- click to give this camera a friendly name</source>
+        <translation>Sériový port kamery -- kliknutím dáte tejto kamere zrozumiteľný názov</translation>
+    </message>
+    <message>
+        <location line="+389" />
+        <source>A new version of %5 (%L1.%L2.%L3) is available for download. See the &lt;a href=&quot;%L4&quot;&gt;release notes&lt;/a&gt;.</source>
+        <translation>Na stiahnutie je dostupná nová verzia %5 (%L1.%L2.%L3). Pozrite si &lt;a href=&quot;%L4&quot;&gt;poznámky k vydaniu&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+124" />
+        <source>Connect (Network available)</source>
+        <translation>Pripojiť (Sieť dostupná)</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Connect (USB available)</source>
+        <translation>Pripojiť (USB dostupné)</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Connect (USB &amp; Network available)</source>
+        <translation>Pripojiť (USB a sieť dostupné)</translation>
+    </message>
+    <message>
+        <location line="+89" />
+        <source>-auto_run in viewer mode requires a readable text script file argument on the command line.</source>
+        <translation>-auto_run v režime prehliadača vyžaduje na príkazovom riadku argument s čitateľným textovým súborom skriptu.</translation>
+    </message>
+    <message>
+        <location line="+250" />
+        <source>Thanks for using the OpenMV Cam and %1!
+
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
+
+Blinking Green:
+
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow %1 to reprogram your OpenMV Cam.
+
+Blinking Blue:
+
+Your OpenMV Cam is running the default main.py script onboard.
+
+If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
+
+If the LED is blinking blue but %1 can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+
+Blinking White:
+
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
+
+</source>
+        <translation>Ďakujeme, že používate OpenMV Cam a %1!
+
+Zabudovaná LED vašej OpenMV Cam bliká rôznymi farbami, aby indikovala svoj stav:
+
+Bliká zeleno:
+
+Zabudovaný bootloader vašej OpenMV Cam beží. Zabudovaný bootloader beží niekoľko sekúnd, keď je vaša OpenMV Cam napájaná cez USB, aby umožnil %1 preprogramovať vašu OpenMV Cam.
+
+Bliká modro:
+
+Vaša OpenMV Cam spúšťa zabudovaný predvolený skript main.py.
+
+Ak máte nainštalovanú SD kartu alebo ste prepísali skript main.py vo vašej OpenMV Cam, spustí sa namiesto toho akýkoľvek kód, ktorý ste do nej načítali.
+
+Ak LED bliká modro, ale %1 sa nemôže pripojiť k vašej OpenMV Cam, uistite sa, že pripájate svoju OpenMV Cam k počítaču pomocou USB kábla, ktorý poskytuje dáta aj napájanie.
+
+Bliká bielo:
+
+Firmvér vašej OpenMV Cam paniká kvôli hardvérovej poruche. Skontrolujte, či je modul kamery vašej OpenMV Cam nainštalovaný pevne.
+
+</translation>
+    </message>
+    <message>
+        <location line="+711" />
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with %1 without any interruptions.
+
+Would you like to register your OpenMV Cam now?</source>
+        <translation>Vaša OpenMV Cam nie je zaregistrovaná. Musíte zaregistrovať svoju OpenMV Cam v OpenMV pre neobmedzené používanie s %1 bez akýchkoľvek prerušení.
+
+Chcete svoju OpenMV Cam zaregistrovať teraz?</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>%1 will display these three messages boxes each time you connect until you register your OpenMV Cam...
+
+Would you like to register your OpenMV Cam now?</source>
+        <translation>%1 zobrazí tieto tri dialógové okná pri každom pripojení, kým nezaregistrujete svoju OpenMV Cam...
+
+Chcete svoju OpenMV Cam zaregistrovať teraz?</translation>
+    </message>
+    <message>
+        <location line="+479" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8820,7 +9115,7 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
         <translation>Nie je možné otvoriť vzorový súbor &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-468" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-493" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>Vyberte položku Disk</translation>
@@ -8835,7 +9130,17 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
         <translation type="vanished">&quot;%L1&quot; je jediný dostupný disk, takže to musí byť disk vašej OpenMV Cam.</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="-49" />
+        <source>FPS: %L1 Cam - %L2 IDE</source>
+        <translation>FPS: %L1 kamera - %L2 IDE</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>On-camera FPS and IDE display FPS</source>
+        <translation>FPS v kamere a FPS zobrazenia v IDE</translation>
+    </message>
+    <message>
+        <location line="+75" />
         <source>Please associate a drive with your OpenMV Cam</source>
         <translation>Priraďte disk k vašej kamere OpenMV Cam</translation>
     </message>
@@ -8915,7 +9220,7 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
         <translation>Dotazovanie nástroja na profilovanie kódu (ms)</translation>
     </message>
     <message>
-        <location line="+391" />
+        <location line="+416" />
         <location line="+26" />
         <location line="+7" />
         <source>Failed to flush &quot;%L1&quot;!</source>
@@ -8969,7 +9274,7 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2227" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1470" />
         <source>Please select a serial port</source>
         <translation>Vyberte sériový port</translation>
     </message>
@@ -8980,7 +9285,7 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
     </message>
     <message>
         <location line="+96" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+249" />
         <source>Try doing:
 
 </source>
@@ -9095,7 +9400,7 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+704" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+771" />
         <source>What would you like to do?</source>
         <translation>Čo by si chcel robiť?</translation>
     </message>
@@ -9182,10 +9487,10 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
     <message numerus="yes">
         <location line="+18" />
         <source>AprilTag Generator - Where do you want to save %n tag image(s) to?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Generátor AprilTag - Kam chcete uložiť %n obrázkov značiek?</numerusform>
+            <numerusform>Generátor AprilTag - Kam chcete uložiť %n obrázkov značiek?</numerusform>
+            <numerusform>Generátor AprilTag - Kam chcete uložiť %n obrázkov značiek?</numerusform>
         </translation>
     </message>
     <message>
@@ -9209,20 +9514,18 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
         <translation>Generácia dokončená!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
-        <translation>K dispozícii sú nové zdroje OpenMV IDE (napríklad príklady, firmvér, dokumentácia atď.).</translation>
+        <translation type="vanished">K dispozícii sú nové zdroje OpenMV IDE (napríklad príklady, firmvér, dokumentácia atď.).</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1859" />
         <source>Install</source>
         <translation>Inštalácia</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+289" />
-        <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
+        <location line="+327" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
@@ -9244,23 +9547,20 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
         <translation>Sťahuje sa...</translation>
     </message>
     <message>
-        <location line="-440" />
+        <location line="-313" />
         <source>Installing...</source>
         <translation>Inštaluje sa...</translation>
     </message>
     <message>
-        <location line="+59" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
         <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
-        <translation>Zatvorte všetky programy, ktoré prezerajú/upravujú dáta aplikácií OpenMV IDE a potom reštartujte OpenMV IDE!</translation>
+        <translation type="vanished">Zatvorte všetky programy, ktoré prezerajú/upravujú dáta aplikácií OpenMV IDE a potom reštartujte OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
-        <translation>Inštalácia úspešná! Reštartujte OpenMV IDE.</translation>
+        <translation type="vanished">Inštalácia úspešná! Reštartujte OpenMV IDE.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+128" />
         <location line="+6" />
         <location line="+28" />
         <source>Package Update</source>
@@ -9268,64 +9568,62 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+273" />
-        <location line="+88" />
+        <location line="+315" />
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>Nedá sa otvoriť zdrojový súbor &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-333" />
-        <location line="+273" />
-        <location line="+95" />
+        <location line="-287" />
+        <location line="+314" />
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>Sieťová požiadavka zlyhala &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-335" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
-        <translation>Firmvér binárny ( *.bin *.dfu *.img)</translation>
+        <translation type="vanished">Firmvér binárny ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+117" />
-        <location line="+720" />
+        <location line="-269" />
+        <location line="+159" />
+        <location line="+875" />
         <location line="+227" />
-        <location line="+2414" />
+        <location line="+2601" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Vymazať interný systém tukových súborov</translation>
     </message>
     <message>
-        <location line="-3553" />
-        <location line="+117" />
-        <location line="+722" />
+        <location line="-3937" />
+        <location line="+159" />
+        <location line="+877" />
         <location line="+226" />
-        <location line="+2413" />
+        <location line="+2600" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Ak povolíte túto možnosť, všetky súbory vo vašom internom tukovom súborovom systéme OpenMV sa odstránia. Tým sa nevymaže súbory na žiadnej vymeniteľnej karte SD (ak sú vložené).</translation>
     </message>
     <message>
-        <location line="-3553" />
-        <location line="+839" />
+        <location line="-3937" />
+        <location line="+1036" />
         <location line="+226" />
-        <location line="+2413" />
+        <location line="+2600" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Resetovať systém súborov ROMFS</translation>
     </message>
     <message>
-        <location line="-3552" />
-        <location line="+840" />
+        <location line="-3936" />
+        <location line="+1037" />
         <location line="+225" />
-        <location line="+2412" />
+        <location line="+2599" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Ak povolíte túto možnosť, systém súborov ROM na vašej kameri OpenMV sa resetuje späť na predvolené.</translation>
     </message>
     <message>
-        <location line="-3510" />
-        <location line="+45" />
+        <location line="-3871" />
+        <location line="+13" />
+        <location line="+51" />
         <source>Bootloader</source>
         <translation>Bootloader</translation>
     </message>
@@ -9340,12 +9638,12 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
         <translation>Vynútiť vstup do zavádzača OpenMV Cam. Môže to viesť k tomu, že bootloader OpenMV Cam sa na starších doskách automaticky neukončí.</translation>
     </message>
     <message>
-        <location line="+693" />
+        <location line="+848" />
         <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
         <translation>Nainštalujte najnovší firmvér (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1063" />
+        <location line="+1082" />
         <location line="+192" />
         <source>Failed to copy firmware files to temporary directory!</source>
         <translation>Nepodarilo sa skopírovať súbory firmvéru do dočasného adresára!</translation>
@@ -9380,7 +9678,27 @@ Chceli by ste teraz zaregistrovať svoju kameru OpenMV?</translation>
         <translation>Teraz pripojte svoju OpenMV Cam.</translation>
     </message>
     <message>
-        <location line="+1377" />
+        <location line="+1310" />
+        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+84" />
+        <location line="+16" />
+        <source>Run Script</source>
+        <translation>Spustiť skript</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-14" />
+        <source>Python Files (*.py);;Text Files (*.txt);;All Files (*)</source>
+        <translation>Súbory Python (*.py);;Textové súbory (*.txt);;Všetky súbory (*)</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+15" />
+        <source>Error: Cannot open &quot;%L1&quot;!</source>
+        <translation>Chyba: Nedá sa otvoriť &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="+224" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9389,7 +9707,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Pozrite si najmä príklady Spracovanie obrazu -&gt; Sledovanie farieb a strojové učenie -&gt; TensorFlow.</translation>
     </message>
     <message>
-        <location line="-3455" />
+        <location line="-3839" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9414,17 +9732,17 @@ Pozrite si najmä príklady Spracovanie obrazu -&gt; Sledovanie farieb a strojov
     </message>
     <message>
         <location line="+21" />
-        <location line="+148" />
+        <location line="+190" />
         <source>Run</source>
         <translation>Bežať</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="-111" />
         <source>&quot;%L1&quot; is not a file!</source>
         <translation>&quot;%L1&quot; nie je súbor!</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+73" />
         <source>Update ROMFS file system</source>
         <translation>Aktualizácia súborových systémov ROMFS</translation>
     </message>
@@ -9434,17 +9752,15 @@ Pozrite si najmä príklady Spracovanie obrazu -&gt; Sledovanie farieb a strojov
         <translation>Ak povolíte túto možnosť, systém súborov ROM na vašej Cam OpenMV bude aktualizovaný na najnovšie vývojové vydanie.</translation>
     </message>
     <message>
-        <location line="+125" />
         <source>Extracting...</source>
-        <translation>Extrahuje sa...</translation>
+        <translation type="vanished">Extrahuje sa...</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Unable to extract firmware!</source>
-        <translation>Firmvér sa nepodarilo extrahovať!</translation>
+        <translation type="vanished">Firmvér sa nepodarilo extrahovať!</translation>
     </message>
     <message>
-        <location line="+148" />
+        <location line="+341" />
         <location line="+5" />
         <location line="+48" />
         <location line="+5" />
@@ -9454,7 +9770,7 @@ Pozrite si najmä príklady Spracovanie obrazu -&gt; Sledovanie farieb a strojov
         <translation>Neznáma doska</translation>
     </message>
     <message>
-        <location line="+344" />
+        <location line="+439" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Bola zistená doska v režime DFU. Čo by si chcel robiť?</translation>
     </message>
@@ -9490,7 +9806,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
  Vyberte súbor bootloader.dfu a skúste to znova. Všimnite si, že načítanie firmware.dfu alebo OpenMV.DFU (Firmware zavádzača +) nemusí fungovať na doskách STM32H7 kvôli chybe v bootloader ROM spoločnosti ChIP!</translation>
     </message>
     <message>
-        <location line="+987" />
+        <location line="+1006" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>Pre interný bootloader sú podporované iba načítať *.bin a *.img súbory!</translation>
     </message>
@@ -9525,11 +9841,11 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1398" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-232" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1417" />
         <location line="+252" />
-        <location line="+681" />
-        <location line="+1936" />
+        <location line="+700" />
+        <location line="+2104" />
         <source>Please select the board type</source>
         <translation>Vyberte typ dosky</translation>
     </message>
@@ -9538,30 +9854,141 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Vymazať interný súborový systém?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2500" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2687" />
         <source>No released firmware available for the attached board!</source>
         <translation>Pre pripojenú dosku nie je k dispozícii žiadny vydaný firmvér!</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+66" />
         <source>Please select a DFU Device</source>
         <translation>Vyberte zariadenie DFU</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+170" />
+        <location line="-88" />
+        <location line="+175" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Aktualizujte bootloader na najnovšiu verziu a nainštalujte SoftDevice na flashovanie firmvéru OpenMV. Viac informácií nájdete na &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-1191" />
-        <location line="+3343" />
+        <location line="-2169" />
+        <source>Checking development examples...</source>
+        <translation>Kontrola vývojových príkladov...</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Downloading development examples...</source>
+        <translation>Sťahovanie vývojových príkladov...</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Checking development documentation...</source>
+        <translation>Kontrola vývojovej dokumentácie...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Downloading development documentation...</source>
+        <translation>Sťahovanie vývojovej dokumentácie...</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Checking development firmware...</source>
+        <translation>Kontrola vývojového firmvéru...</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location line="+84" />
+        <source>Downloading the latest development firmware...</source>
+        <translation>Sťahovanie najnovšieho vývojového firmvéru...</translation>
+    </message>
+    <message>
+        <location line="-73" />
+        <source>Unpacking the latest development firmware...</source>
+        <translation>Rozbaľovanie najnovšieho vývojového firmvéru...</translation>
+    </message>
+    <message>
+        <location line="+311" />
+        <source>New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the &lt;a href=&quot;%L1&quot;&gt;release notes&lt;/a&gt;.</source>
+        <translation>Sú dostupné nové zdroje %2 (napr. príklady, firmvér, dokumentácia atď.). Pozrite si &lt;a href=&quot;%L1&quot;&gt;poznámky k vydaniu&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+89" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
+        <source>Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
+        <translation>Zatvorte všetky programy, ktoré zobrazujú alebo upravujú údaje aplikácie %1, a potom reštartujte %1!</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>Installation Sucessful! Please restart %1.</source>
+        <translation>Inštalácia úspešná! Reštartujte %1.</translation>
+    </message>
+    <message>
+        <location line="+96" />
+        <source>Firmware Binary (*.bin *.dfu *.img *.zip)</source>
+        <translation>Binárny súbor firmvéru (*.bin *.dfu *.img *.zip)</translation>
+    </message>
+    <message>
+        <location line="+91" />
+        <source>Unable to unpack the firmware zip &quot;%L1&quot;!</source>
+        <translation>Nedá sa rozbaliť zip firmvéru &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="+120" />
+        <location line="+3685" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>VAROVANIE: Inovácia na novú verziu firmvéru vyžaduje, aby bol vymazaný systém tukových súborov.</translation>
     </message>
     <message>
-        <location line="-2848" />
+        <location line="-3593" />
+        <source>Unable to download the latest development firmware!</source>
+        <translation>Nedá sa stiahnuť najnovší vývojový firmvér!</translation>
+    </message>
+    <message>
+        <location line="+81" />
+        <source>The development firmware for this board is not available!</source>
+        <translation>Vývojový firmvér pre túto dosku nie je dostupný!</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Update complete!
+
+</source>
+        <translation>Aktualizácia dokončená!
+
+</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Please wait for the device to finish restarting. This can take a little while.</source>
+        <translation>Počkajte, kým sa zariadenie dokončí reštartovať. Môže to chvíľu trvať.</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Unknown Board (Wi-Fi)</source>
+        <translation>Neznáma doska (Wi-Fi)</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>%1 (Wi-Fi)</source>
+        <translation>%1 (Wi-Fi)</translation>
+    </message>
+    <message>
+        <location line="+213" />
+        <source>Name Camera</source>
+        <translation>Pomenovať kameru</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Serial port:</source>
+        <translation>Sériový port:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Name:</source>
+        <translation>Názov:</translation>
+    </message>
+    <message>
+        <location line="+202" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
@@ -9586,13 +10013,13 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+229" />
-        <location line="+2415" />
+        <location line="+2602" />
         <source>Upgrade options:</source>
         <translation>Možnosti aktualizácie:</translation>
     </message>
     <message>
-        <location line="-2327" />
-        <location line="+169" />
+        <location line="-2514" />
+        <location line="+174" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Skratujte REC na GND a resetujte dosku. Viac informácií nájdete na &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
@@ -9607,17 +10034,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 (Ak to trvá dlhšie ako 5 sekúnd, stlačte tlačidlo Zrušiť).</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+154" />
         <source>Timeout error while getting firmware version!</source>
         <translation>Chyba časového limitu pri získavaní verzie firmvéru!</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Do not try to connect while the green light on your OpenMV Cam is on!</source>
         <translation>Nepokúšajte sa pripojiť, kým na vašej OpenMV Cam svieti zelené svetlo!</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Try to connect again?</source>
         <translation>Skúsiť sa znova pripojiť?</translation>
     </message>
@@ -9633,7 +10060,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Nepodporovaná architektúra dosky!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-633" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-634" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Odpojte OpenMV Cam a potom ju znova pripojte...</translation>
@@ -9670,16 +10097,15 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <translation>Nedá sa pripojiť k bežnému bootloaderu vašej OpenMV Cam!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+131" />
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
-        <translation>OpenMV IDE sa stále môže pokúsiť opraviť vašu OpenMV Cam pomocou DFU bootloader vašej OpenMV Cam.
+        <translation type="vanished">OpenMV IDE sa stále môže pokúsiť opraviť vašu OpenMV Cam pomocou DFU bootloader vašej OpenMV Cam.
 
 Ďalej?</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+239" />
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
         <location line="+46" />
         <location line="+191" />
@@ -9692,7 +10118,7 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-191" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-195" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
@@ -9740,8 +10166,8 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+20" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+44" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+45" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+17" />
         <source>Onboard Data Flash Erased!
 
@@ -9752,8 +10178,8 @@ Continue?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-53" />
+        <location line="+53" />
         <source>Firmware Upgrade complete!
 
 </source>
@@ -9765,8 +10191,8 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
@@ -9779,8 +10205,8 @@ Continue?</source>
         <location line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>Kliknite na tlačidlo OK, keď LED dióda RGB vašej kamery OpenMV Cam začne blikať na modro - čo znamená, že autotest je dokončený.</translation>
@@ -9792,12 +10218,12 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+130" />
+        <location line="+134" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-75" />
-        <location line="+24" />
-        <location line="+27" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-77" />
         <location line="+25" />
+        <location line="+27" />
+        <location line="+26" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <location line="+37" />
         <source>
@@ -9817,7 +10243,7 @@ V tomto prípade kliknite na tlačidlo OK, keď uvidíte pripojenie interného f
         <translation>Súbor firmvéru je prázdny!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-160" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-162" />
         <source>No IMX settings for the selected board type %L1!</source>
         <translation>Žiadne nastavenia IMX pre zvolený typ dosky %L1!</translation>
     </message>
@@ -9827,11 +10253,25 @@ V tomto prípade kliknite na tlačidlo OK, keď uvidíte pripojenie interného f
         <translation>Nenašli sa žiadne nastavenia IMX!</translation>
     </message>
     <message>
+        <location line="+56" />
+        <source>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
+
+Continue?</source>
+        <translation>%1 sa stále môže pokúsiť opraviť vašu OpenMV Cam pomocou SBL Bootloadera vašej OpenMV Cam.
+
+Pokračovať?</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>If you are forcing SBL mode, disconnect the device from your computer and remove the SBL wire jumper, then reconnect it.</source>
+        <translation>Ak vynucujete režim SBL, odpojte zariadenie od počítača a odstráňte prepojovací vodič SBL, potom ho znova pripojte.</translation>
+    </message>
+    <message>
         <source>Failed to eject &quot;%L1&quot;!</source>
         <translation type="vanished">Nepodarilo sa vysunúť &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-115" />
         <source>
 
 Hit cancel to skip to SBL reprogramming.</source>
@@ -9840,16 +10280,15 @@ Hit cancel to skip to SBL reprogramming.</source>
 Stlačením tlačidla Zrušiť preskočíte na preprogramovanie SBL.</translation>
     </message>
     <message>
-        <location line="+42" />
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
-        <translation>OpenMV IDE sa stále môže pokúsiť opraviť vašu OpenMV Cam pomocou vášho OpenMV Cam&apos;s SBL Bootloader.
+        <translation type="vanished">OpenMV IDE sa stále môže pokúsiť opraviť vašu OpenMV Cam pomocou vášho OpenMV Cam&apos;s SBL Bootloader.
 
 Ďalej?</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+49" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
 Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
@@ -9858,7 +10297,12 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
 Po sčítaní SBL bootloadera vašej OpenMV Cam kliknite na tlačidlo OK.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+14" />
+        <source>Disconnect the device from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect it.</source>
+        <translation>Odpojte zariadenie od počítača, odstráňte prepojovací vodič medzi pinmi SBL a 3.3V a potom ho znova pripojte.</translation>
+    </message>
+    <message>
+        <location line="+47" />
         <source>If you are forcing SBL mode, disconnect your OpenMV Cam from your computer and remove the SBL wire jumper. Then reconnect your OpenMV Cam to your computer.
 
 </source>
@@ -9866,8 +10310,8 @@ Po sčítaní SBL bootloadera vašej OpenMV Cam kliknite na tlačidlo OK.</trans
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-2" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+50" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
+        <location line="+51" />
         <source>Firmware update complete!
 
 </source>
@@ -9876,7 +10320,7 @@ Po sčítaní SBL bootloadera vašej OpenMV Cam kliknite na tlačidlo OK.</trans
 </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-49" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-50" />
         <source>Disconnect your OpenMV Cam from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
 </source>
@@ -9892,7 +10336,7 @@ Po sčítaní SBL bootloadera vašej OpenMV Cam kliknite na tlačidlo OK.</trans
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-42" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+1" />
-        <location line="+51" />
+        <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-1" />
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>Kliknite na tlačidlo OK po tom, čo vaša kamera OpenMV Cam spočítala a dokončila spustenie vstavaného automatického testu (bliká modrá kontrolka – chvíľu to trvá).</translation>
@@ -9904,7 +10348,7 @@ Po sčítaní SBL bootloadera vašej OpenMV Cam kliknite na tlačidlo OK.</trans
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-347" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-351" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Žiadne nastavenia DFU pre vybraný typ dosky!</translation>
     </message>
@@ -9940,7 +10384,7 @@ Po sčítaní SBL bootloadera vašej OpenMV Cam kliknite na tlačidlo OK.</trans
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+29" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+33" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
@@ -9954,7 +10398,7 @@ Po sčítaní SBL bootloadera vašej OpenMV Cam kliknite na tlačidlo OK.</trans
         <location line="-48" />
         <location line="+29" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+13" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-59" />
         <location line="+26" />
         <location line="+41" />
@@ -9963,7 +10407,7 @@ Po sčítaní SBL bootloadera vašej OpenMV Cam kliknite na tlačidlo OK.</trans
     </message>
     <message>
         <location line="-13" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-15" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-16" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-22" />
         <location line="+41" />
         <source>DFU firmware update complete!
@@ -10044,20 +10488,41 @@ Po sčítaní SBL bootloadera vašej OpenMV Cam kliknite na tlačidlo OK.</trans
         <translation>Aktualizácia firmvéru PicoTool zlyhala!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-521" />
         <source>OpenMV IDE needs to update your bootloader to support ROMFS.
 
 The internal FAT filesystem will be erased!
 
 Continue?</source>
-        <translation>OpenMV IDE musí aktualizovať váš bootloader na podporu ROMFS. 
+        <translation type="vanished">OpenMV IDE musí aktualizovať váš bootloader na podporu ROMFS. 
 
 Interný súborový systém bude vymazaný! 
 
 Pokračovať?</translation>
     </message>
     <message>
-        <location line="+387" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-521" />
+        <source>%1 needs to update your bootloader to support ROMFS.
+
+The internal FAT filesystem will be erased!
+
+Continue?</source>
+        <translation>%1 potrebuje aktualizovať váš bootloader, aby podporoval ROMFS.
+
+Interný súborový systém FAT bude vymazaný!
+
+Pokračovať?</translation>
+    </message>
+    <message>
+        <location line="+37" />
+        <source>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
+
+Continue?</source>
+        <translation>%1 sa stále môže pokúsiť opraviť vašu OpenMV Cam pomocou DFU Bootloadera vašej OpenMV Cam.
+
+Pokračovať?</translation>
+    </message>
+    <message>
+        <location line="+350" />
         <source>Invalid flash sector configuration settings!</source>
         <translation>Neplatné nastavenia konfigurácie sektora Flash!</translation>
     </message>
@@ -10122,7 +10587,12 @@ Kliknite na tlačidlo OK po sčítaní bootloadera DFU vašej OpenMV Cam.</trans
 </translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+2" />
+        <source>Disconnect the device from your computer, remove the jumper wire between the BOOT and RST pins, and then reconnect it.</source>
+        <translation>Odpojte zariadenie od počítača, odstráňte prepojovací vodič medzi pinmi BOOT a RST a potom ho znova pripojte.</translation>
+    </message>
+    <message>
+        <location line="+13" />
         <source>DFU bootloader reset failed!</source>
         <translation>Reset zavádzača DFU zlyhal!</translation>
     </message>
@@ -10154,7 +10624,7 @@ Kliknite na tlačidlo OK po sčítaní bootloadera DFU vašej OpenMV Cam.</trans
         <translation>Chyba časového limitu pri učení MTU!</translation>
     </message>
     <message>
-        <location line="+170" />
+        <location line="+226" />
         <source>Board: %L1</source>
         <translation>Doska: %L1</translation>
     </message>
@@ -10174,17 +10644,18 @@ Kliknite na tlačidlo OK po sčítaní bootloadera DFU vašej OpenMV Cam.</trans
         <translation>Verzia firmvéru: %L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-2356" />
+        <location line="+2361" />
         <source>Serial Port: %L1</source>
         <translation>Sériový port: %L1</translation>
     </message>
     <message>
-        <location line="+85" />
+        <location line="+120" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ neaktuálne - kliknutím sem aktualizujte ]</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+13" />
         <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>Firmvér vašej kamery OpenMV Cam je zastaraný. Chcete inovovať?</translation>
     </message>
@@ -10304,7 +10775,7 @@ Kliknite na tlačidlo OK po sčítaní bootloadera DFU vašej OpenMV Cam.</trans
         <translation type="vanished">Štart</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+592" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+658" />
         <source>More Examples</source>
         <translation>Ďalšie príklady</translation>
     </message>
@@ -10360,9 +10831,13 @@ Pozrite si najmä príklady sledovania farieb.</translation>
         <translation>Video záznam</translation>
     </message>
     <message>
-        <location line="+69" />
         <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!</source>
-        <translation>Upozornenie: JPEG/PNG je príliš veľký na to, aby sa dal uložiť do vyrovnávacej pamäte na aktuálnej kamere OpenMV Cam a odoslať do OpenMV IDE!</translation>
+        <translation type="vanished">Upozornenie: JPEG/PNG je príliš veľký na to, aby sa dal uložiť do vyrovnávacej pamäte na aktuálnej kamere OpenMV Cam a odoslať do OpenMV IDE!</translation>
+    </message>
+    <message>
+        <location line="+69" />
+        <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to %1!</source>
+        <translation>Upozornenie: JPEG/PNG je príliš veľký na uloženie do vyrovnávacej pamäte v aktuálnej OpenMV Cam a odoslanie do %1!</translation>
     </message>
     <message>
         <location line="+83" />
@@ -10436,27 +10911,47 @@ Pozrite si najmä príklady sledovania farieb.</translation>
         <location line="-223" />
         <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
-Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>Modul &quot;%L1&quot; na vašej OpenMV Cam sa líši od kópie vo vašom počítači.
+Would you like %2 to update the module on your OpenMV Cam?</source>
+        <translation>Modul &quot;%L1&quot; vo vašej OpenMV Cam sa líši od kópie vo vašom počítači.
 
-Chcete, aby OpenMV IDE aktualizovalo modul na vašej OpenMV Cam?</translation>
+Chcete, aby %2 aktualizoval modul vo vašej OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+75" />
-        <source>Would you like OpenMV IDE to update the module on your computer?</source>
-        <translation>Chcete, aby OpenMV IDE aktualizovalo modul vo vašom počítači?</translation>
+        <source>Would you like %1 to update the module on your computer?</source>
+        <translation>Chcete, aby %1 aktualizoval modul vo vašom počítači?</translation>
     </message>
     <message>
         <location line="+91" />
         <source>Module &quot;%L1&quot; may be required to run your script.
 
-Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
+Would you like %2 to copy it to your OpenMV Cam?</source>
         <translation>Na spustenie vášho skriptu môže byť potrebný modul &quot;%L1&quot;.
+
+Chcete, aby ho %2 skopíroval do vašej OpenMV Cam?</translation>
+    </message>
+    <message>
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
+
+Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
+        <translation type="vanished">Modul &quot;%L1&quot; na vašej OpenMV Cam sa líši od kópie vo vašom počítači.
+
+Chcete, aby OpenMV IDE aktualizovalo modul na vašej OpenMV Cam?</translation>
+    </message>
+    <message>
+        <source>Would you like OpenMV IDE to update the module on your computer?</source>
+        <translation type="vanished">Chcete, aby OpenMV IDE aktualizovalo modul vo vašom počítači?</translation>
+    </message>
+    <message>
+        <source>Module &quot;%L1&quot; may be required to run your script.
+
+Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
+        <translation type="vanished">Na spustenie vášho skriptu môže byť potrebný modul &quot;%L1&quot;.
 
 Chcete, aby to OpenMV IDE skopírovalo do vašej kamery OpenMV?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-584" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10469,18 +10964,18 @@ Chcete, aby to OpenMV IDE skopírovalo do vašej kamery OpenMV?</translation>
         <translation>Textové súbory (*.txt);;Všetky súbory (*)</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+223" />
         <source>Zoom: %1%</source>
         <translation>Lupa: %1%</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4365" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4672" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-265" />
-        <location line="+221" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-332" />
+        <location line="+288" />
         <source>Model Zoo</source>
         <translation>Zoologická záhrada</translation>
     </message>
@@ -10516,7 +11011,7 @@ Chcete, aby to OpenMV IDE skopírovalo do vašej kamery OpenMV?</translation>
         <translation>Nájsť</translation>
     </message>
     <message>
-        <location line="+239" />
+        <location line="+235" />
         <source>Serial Terminal</source>
         <translation>Sériový terminál</translation>
     </message>
@@ -10527,6 +11022,7 @@ Chcete, aby to OpenMV IDE skopírovalo do vašej kamery OpenMV?</translation>
     </message>
     <message>
         <location line="+5" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-379" />
         <source>Save</source>
         <translation>Uložiť</translation>
     </message>
@@ -10536,12 +11032,16 @@ Chcete, aby to OpenMV IDE skopírovalo do vašej kamery OpenMV?</translation>
         <translation>Zabaliť</translation>
     </message>
     <message>
-        <location line="+6" />
-        <source>Run &quot;/main.py&quot;</source>
-        <translation>Spustite &quot;/main.py&quot;</translation>
+        <location line="+16" />
+        <source>Run a script file from disk</source>
+        <translation>Spustiť súbor skriptu z disku</translation>
     </message>
     <message>
-        <location line="+0" />
+        <source>Run &quot;/main.py&quot;</source>
+        <translation type="vanished">Spustite &quot;/main.py&quot;</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Run current script in editor window</source>
         <translation>Spustite aktuálny skript v okne editora</translation>
     </message>
@@ -10569,8 +11069,8 @@ Chcete, aby to OpenMV IDE skopírovalo do vašej kamery OpenMV?</translation>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-293" />
-        <location line="+79" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-312" />
+        <location line="+85" />
         <source>Query failed!</source>
         <translation>Dopyt zlyhal!</translation>
     </message>
@@ -10991,7 +11491,7 @@ Po aktualizácii systémového balíka musí byť fotoaparát napájaný cyklova
         <translation>Pred zatvorením skopírujte vyššie uvedený prah.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-476" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-485" />
         <source>Reading File...</source>
         <translation>Číta sa súbor...</translation>
     </message>
@@ -11023,12 +11523,12 @@ Po aktualizácii systémového balíka musí byť fotoaparát napájaný cyklova
     </message>
     <message>
         <location line="-77" />
-        <location line="+605" />
+        <location line="+627" />
         <source>Transcoding File...</source>
         <translation>Prekódovanie súboru...</translation>
     </message>
     <message>
-        <location line="-594" />
+        <location line="-616" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -11083,17 +11583,16 @@ Po aktualizácii systémového balíka musí byť fotoaparát napájaný cyklova
         <translation>Nepodporovaná verzia súboru OpenMV ImageWriter!</translation>
     </message>
     <message>
-        <location line="+96" />
-        <location line="+79" />
         <source>Get Input Formats</source>
-        <translation>Získajte vstupné formáty</translation>
+        <translation type="vanished">Získajte vstupné formáty</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+224" />
         <location line="+111" />
+        <location line="+10" />
         <location line="+98" />
         <location line="+15" />
-        <location line="+371" />
+        <location line="+445" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
@@ -11121,7 +11620,25 @@ Po aktualizácii systémového balíka musí byť fotoaparát napájaný cyklova
         <translation type="vanished">Nepodarilo sa spustiť ffmpeg!</translation>
     </message>
     <message>
-        <location line="-989" />
+        <location line="-1200" />
+        <location line="+85" />
+        <source>FFmpeg is not supported on this platform.</source>
+        <translation>FFmpeg nie je na tejto platforme podporovaný.</translation>
+    </message>
+    <message>
+        <location line="-82" />
+        <location line="+85" />
+        <source>The FFmpeg executable was not found (the installation may be incomplete).</source>
+        <translation>Spustiteľný súbor FFmpeg sa nenašiel (inštalácia môže byť neúplná).</translation>
+    </message>
+    <message>
+        <location line="-83" />
+        <location line="+85" />
+        <source>Get Formats</source>
+        <translation>Získať formáty</translation>
+    </message>
+    <message>
+        <location line="+37" />
         <source>Converting</source>
         <translation>Konverzia</translation>
     </message>
@@ -11129,6 +11646,19 @@ Po aktualizácii systémového balíka musí byť fotoaparát napájaný cyklova
         <location line="+112" />
         <source>FFMPEG is not supported on this platform.</source>
         <translation>FFMPEG nie je na tejto platforme podporovaný.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>The FFmpeg executable was not found:
+
+%1
+
+Your OpenMV IDE installation may be incomplete.</source>
+        <translation>Spustiteľný súbor FFmpeg sa nenašiel:
+
+%1
+
+Vaša inštalácia OpenMV IDE môže byť neúplná.</translation>
     </message>
     <message>
         <location line="+98" />
@@ -11141,19 +11671,29 @@ Po aktualizácii systémového balíka musí byť fotoaparát napájaný cyklova
         <translation>Nie je možné otvoriť výstupný video súbor!</translation>
     </message>
     <message>
-        <location line="+163" />
-        <location line="+415" />
+        <location line="+199" />
+        <location line="+453" />
         <source>Play Video</source>
         <translation>Prehrať video</translation>
     </message>
     <message>
-        <location line="-414" />
-        <location line="+163" />
+        <location line="-452" />
+        <source>Video playback is not supported on this platform.</source>
+        <translation>Prehrávanie videa nie je na tejto platforme podporované.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location line="+200" />
         <source>Failed to launch ffplay!</source>
         <translation>Nepodarilo sa spustiť ffplay!</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1" />
+        <source>RTSP playback is not supported on this platform.</source>
+        <translation>Prehrávanie RTSP nie je na tejto platforme podporované.</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Convert Video Source</source>
         <translation>Konvertovať zdroj videa</translation>
     </message>
@@ -11270,27 +11810,43 @@ Po aktualizácii systémového balíka musí byť fotoaparát napájaný cyklova
         <translation type="vanished">Žiadne zodpovedajúce rozhranie pre vybratý názov súboru!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-745" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-812" />
         <source>Please select the target</source>
         <translation>Vyberte cieľ</translation>
+    </message>
+    <message>
+        <source>The model has already been converted for the Ethos-U NPU.
+
+OpenMV IDE will just copy the model as is.</source>
+        <translation type="vanished">Model už bol prevedený pre étos-u NPU. 
+
+OpenMV IDE iba skopíruje model tak, ako je.</translation>
+    </message>
+    <message>
+        <source>The model has already been converted for the Neural-ART NPU.
+
+OpenMV IDE will just copy the model as is.</source>
+        <translation type="vanished">Model už bol prevedený pre NPU nervového umenia. 
+
+OpenMV IDE iba skopíruje model tak, ako je.</translation>
     </message>
     <message>
         <location line="+59" />
         <source>The model has already been converted for the Ethos-U NPU.
 
-OpenMV IDE will just copy the model as is.</source>
-        <translation>Model už bol prevedený pre étos-u NPU. 
+%1 will just copy the model as is.</source>
+        <translation>Model už bol skonvertovaný pre Ethos-U NPU.
 
-OpenMV IDE iba skopíruje model tak, ako je.</translation>
+%1 iba skopíruje model tak, ako je.</translation>
     </message>
     <message>
         <location line="+27" />
         <source>The model has already been converted for the Neural-ART NPU.
 
-OpenMV IDE will just copy the model as is.</source>
-        <translation>Model už bol prevedený pre NPU nervového umenia. 
+%1 will just copy the model as is.</source>
+        <translation>Model už bol skonvertovaný pre Neural-ART NPU.
 
-OpenMV IDE iba skopíruje model tak, ako je.</translation>
+%1 iba skopíruje model tak, ako je.</translation>
     </message>
     <message>
         <location line="+147" />
@@ -11310,7 +11866,7 @@ OpenMV IDE iba skopíruje model tak, ako je.</translation>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+93" />
+        <location line="+122" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
@@ -11318,7 +11874,7 @@ OpenMV IDE iba skopíruje model tak, ako je.</translation>
         <location line="+40" />
         <location line="+15" />
         <location line="+27" />
-        <location line="+24" />
+        <location line="+62" />
         <location line="+53" />
         <location line="+63" />
         <location line="+6" />
@@ -11327,7 +11883,7 @@ OpenMV IDE iba skopíruje model tak, ako je.</translation>
         <translation>Upravovať</translation>
     </message>
     <message>
-        <location line="-606" />
+        <location line="-673" />
         <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>Priečinok s rovnakým názvom už existuje!</translation>
@@ -11380,37 +11936,37 @@ OpenMV IDE iba skopíruje model tak, ako je.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+225" />
+        <location line="+292" />
         <source>Extract File</source>
         <translation>Extrahovať súbor</translation>
     </message>
     <message>
-        <location line="-231" />
+        <location line="-298" />
         <source>View/Edit</source>
         <translation>Pozrieť/upraviť</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+222" />
+        <location line="+289" />
         <source>Add File</source>
         <translation>Pridať súbor</translation>
     </message>
     <message>
-        <location line="-221" />
-        <location line="+223" />
+        <location line="-288" />
+        <location line="+290" />
         <source>New Folder</source>
         <translation>Nový priečinok</translation>
     </message>
     <message>
-        <location line="-135" />
+        <location line="-173" />
         <location line="+13" />
-        <location line="+303" />
+        <location line="+341" />
         <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>Romfs nie je na tejto tabuli podporovaný!</translation>
     </message>
     <message>
-        <location line="-275" />
+        <location line="-313" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Nepodarilo sa rozbaliť Romfs!</translation>
@@ -11423,7 +11979,7 @@ OpenMV IDE iba skopíruje model tak, ako je.</translation>
     </message>
     <message>
         <location line="-25" />
-        <location line="+165" />
+        <location line="+203" />
         <source>ROMFS Images (*.img)</source>
         <translation>Obrázky ROMFS (*.img)</translation>
     </message>
@@ -11515,7 +12071,7 @@ OpenMV IDE iba skopíruje model tak, ako je.</translation>
         <location line="+25" />
         <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-780" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-854" />
         <source>Success - Press Ok to close the window</source>
         <translation>Úspech - Stlačením OK zatvorte okno</translation>
     </message>
@@ -11582,7 +12138,7 @@ OpenMV IDE iba skopíruje model tak, ako je.</translation>
     <message>
         <location line="+2" />
         <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Core CLI Options&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&quot;%1&quot;&gt;Možnosti CLI STEdgeAI Core&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -11592,7 +12148,7 @@ OpenMV IDE iba skopíruje model tak, ako je.</translation>
     <message>
         <location line="+2" />
         <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Neural-ART CLI Options&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&quot;%1&quot;&gt;Možnosti CLI STEdgeAI Neural-ART&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;a href=&quot;%1&quot;&gt;STEdgeAI Relocation CLI Options&lt;/a&gt;</source>
@@ -11663,7 +12219,7 @@ OpenMV IDE iba skopíruje model tak, ako je.</translation>
         <translation>Programátor STM32 nie je na tejto platforme podporovaný.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-542" />
         <source>the detected board</source>
         <translation>zistená doska</translation>
     </message>
@@ -11686,6 +12242,266 @@ OpenMV IDE iba skopíruje model tak, ako je.</translation>
         <location line="+6" />
         <source>This board does not define any loadable firmware interfaces in its settings.</source>
         <translation>Táto doska nedefinuje vo svojich nastaveniach žiadne rozhrania s nahrávateľným firmvérom.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>To flash a bootloader image your OpenMV Cam must be in bootloader recovery mode. Unplug the camera, connect BOOT0/SBL/RECOVERY to 3.3V with a jumper, and then plug the camera back in before trying again.</source>
+        <translation>Na naprogramovanie obrazu bootloadera musí byť vaša OpenMV Cam v obnovovacom režime bootloadera. Odpojte kameru, prepojte BOOT0/SBL/RECOVERY na 3.3V pomocou prepojky a potom kameru znova pripojte, kým to skúsite znova.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+68" />
+        <source>Unknown control: %L1</source>
+        <translation>Neznámy ovládací prvok: %L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>(missing type)</source>
+        <translation>(chýbajúci typ)</translation>
+    </message>
+    <message>
+        <location line="+174" />
+        <location line="+5" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+783" />
+        <location line="+5" />
+        <source>Show text</source>
+        <translation>Zobraziť text</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+0" />
+        <source>Hide text</source>
+        <translation>Skryť text</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>These fields have invalid or incomplete input:
+
+%L1
+
+Fix or clear them before saving.</source>
+        <translation>Tieto polia majú neplatný alebo neúplný vstup:
+
+%L1
+
+Pred uložením ich opravte alebo vymažte.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Unable to open:
+
+%L1
+
+%L2</source>
+        <translation>Nedá sa otvoriť:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Not a valid JSON config file:
+
+%L1</source>
+        <translation>Neplatný konfiguračný súbor JSON:
+
+%L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>the top level must be a JSON object.</source>
+        <translation>najvyššia úroveň musí byť objekt JSON.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>This JSON file has no &quot;controls&quot; array to build a GUI from.</source>
+        <translation>Tento súbor JSON nemá pole &quot;controls&quot;, z ktorého by sa dalo zostaviť GUI.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Unable to save:
+
+%L1
+
+%L2</source>
+        <translation>Nedá sa uložiť:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <location line="+21" />
+        <source>JSON Files (*.json)</source>
+        <translation>Súbory JSON (*.json)</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Unable to create:
+
+%L1
+
+%L2</source>
+        <translation>Nedá sa vytvoriť:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="-90" />
+        <source>Edit WiFi Debugging</source>
+        <translation>Upraviť ladenie cez WiFi</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Set Up WiFi Debugging</source>
+        <translation>Nastaviť ladenie cez WiFi</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Please enter or select a WiFi network name (SSID).</source>
+        <translation>Zadajte alebo vyberte názov siete WiFi (SSID).</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Editing this camera&apos;s WiFi debugging setup -- this updates the boot.py already on the camera, keeping any code you added to it. It brings the network up on power-up and advertises the camera to the IDE, so you can connect without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</source>
+        <translation>Úprava nastavenia ladenia cez WiFi pre túto kameru -- aktualizuje sa boot.py, ktorý už je v kamere, pričom sa zachová akýkoľvek kód, ktorý ste doň pridali. Pri zapnutí spustí sieť a oznámi kameru do IDE, takže sa môžete pripojiť bez USB kábla. Kým je ladenie cez WiFi aktívne, ladenie cez USB je zakázané -- výberom položky &quot;Zakázané&quot; nižšie ho vypnete a vrátite sa k USB.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Set up this camera for debugging over the network. This writes a boot.py to the camera that brings up its WiFi or Ethernet on power-up and advertises it to the IDE, so you can connect to it without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</source>
+        <translation>Nastavte túto kameru na ladenie cez sieť. Do kamery sa zapíše boot.py, ktorý pri zapnutí spustí jej WiFi alebo Ethernet a oznámi ju do IDE, takže sa k nej môžete pripojiť bez USB kábla. Kým je ladenie cez WiFi aktívne, ladenie cez USB je zakázané -- výberom položky &quot;Zakázané&quot; nižšie ho vypnete a vrátite sa k USB.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Connection</source>
+        <translation>Pripojenie</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>WiFi</source>
+        <translation>WiFi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ethernet</source>
+        <translation>Ethernet</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Disabled (USB debugging)</source>
+        <translation>Zakázané (ladenie cez USB)</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>WiFi Network</source>
+        <translation>Sieť WiFi</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Scan</source>
+        <translation>Skenovať</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Network (SSID):</source>
+        <translation>Sieť (SSID):</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Password:</source>
+        <translation>Heslo:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Automatic</source>
+        <translation>Automaticky</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Open (no password)</source>
+        <translation>Otvorená (bez hesla)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA / WPA2</source>
+        <translation>WPA / WPA2</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA3</source>
+        <translation>WPA3</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA2 / WPA3</source>
+        <translation>WPA2 / WPA3</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WEP (legacy)</source>
+        <translation>WEP (zastarané)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Security:</source>
+        <translation>Zabezpečenie:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>IP Address</source>
+        <translation>IP adresa</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Automatic (DHCP)</source>
+        <translation>Automaticky (DHCP)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Static</source>
+        <translation>Statická</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Address:</source>
+        <translation>Adresa:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Netmask:</source>
+        <translation>Maska siete:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Gateway:</source>
+        <translation>Brána:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>DNS:</source>
+        <translation>DNS:</translation>
+    </message>
+    <message>
+        <location line="+93" />
+        <source>No WiFi networks were found (this PC may have no WiFi adapter). You can type the network name in by hand.</source>
+        <translation>Nenašli sa žiadne siete WiFi (tento počítač nemusí mať WiFi adaptér). Názov siete môžete zadať ručne.</translation>
+    </message>
+    <message>
+        <location line="+72" />
+        <source>Edit boot.py</source>
+        <translation>Upraviť boot.py</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Failed to write boot.py to the camera:
+
+%1</source>
+        <translation>Nepodarilo sa zapísať boot.py do kamery:
+
+%1</translation>
     </message>
 </context>
 <context>
@@ -13841,7 +14657,7 @@ Vopred vyberie plochu Qt na zostavenie aplikácie, ak je k dispozícii.</transla
         <location line="+1" />
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-227" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+485" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+493" />
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+217" />
         <source>Clone</source>
         <translation>Klonovať</translation>
@@ -14094,7 +14910,7 @@ Vopred vyberie plochu Qt na zostavenie aplikácie, ak je k dispozícii.</transla
  %1</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+315" />
         <source>Error while restoring session</source>
         <translation>Chyba pri obnove relácie</translation>
     </message>
@@ -14110,17 +14926,17 @@ Vopred vyberie plochu Qt na zostavenie aplikácie, ak je k dispozícii.</transla
     </message>
     <message>
         <location line="+47" />
-        <location line="+42" />
+        <location line="+49" />
         <source>Error while saving session</source>
         <translation>Chyba pri ukladaní relácie</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-48" />
         <source>Could not save session %1</source>
         <translation>Nemohol ušetriť reláciu %1</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+49" />
         <source>Could not save session to file &quot;%1&quot;</source>
         <translation>Nedokážem uložiť reláciu do súboru „%1“</translation>
     </message>
@@ -14487,7 +15303,7 @@ Excluding: %2
     <message>
         <location line="+5" />
         <source>This warning can be suppressed &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toto upozornenie možno potlačiť &lt;a href=&quot;dummy&quot;&gt;tu&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+25" />
@@ -14626,10 +15442,10 @@ Excluding: %2
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
         <source>Finished %1 of %n steps</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Dokončených %1 z %n krokov</numerusform>
+            <numerusform>Dokončených %1 z %n krokov</numerusform>
+            <numerusform>Dokončených %1 z %n krokov</numerusform>
         </translation>
     </message>
     <message>
@@ -15133,10 +15949,10 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+2" />
         <source>There are %n custom parsers active</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Aktívnych je %n vlastných parserov</numerusform>
+            <numerusform>Aktívnych je %n vlastných parserov</numerusform>
+            <numerusform>Aktívnych je %n vlastných parserov</numerusform>
         </translation>
     </message>
     <message>
@@ -15320,10 +16136,10 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+44" />
         <source>%n entries</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n záznamov</numerusform>
+            <numerusform>%n záznamov</numerusform>
+            <numerusform>%n záznamov</numerusform>
         </translation>
     </message>
     <message>
@@ -15703,10 +16519,10 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message numerus="yes">
         <location line="+41" />
         <source>Found %n free ports.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Nájdených %n voľných portov.</numerusform>
+            <numerusform>Nájdených %n voľných portov.</numerusform>
+            <numerusform>Nájdených %n voľných portov.</numerusform>
         </translation>
     </message>
     <message>
@@ -16135,7 +16951,7 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+10" />
         <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vlastnosť &quot;factor&quot; medzery (&quot;%1&quot;) nie je celočíselná hodnota.</translation>
     </message>
     <message>
         <location line="+35" />
@@ -16950,7 +17766,7 @@ to project &quot;%2&quot;.</source>
     <message>
         <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The name of the kit suitable for generating directory names. This value is used for the variable &lt;i&gt;%1&lt;/i&gt;, which for example determines the name of the shadow build directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Názov sady vhodný na generovanie názvov adresárov. Táto hodnota sa používa pre premennú &lt;i&gt;%1&lt;/i&gt;, ktorá napríklad určuje názov adresára tieňového zostavenia.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+9" />
@@ -18030,7 +18846,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+2" />
         <source>Do you want to cancel the build process and close %1 anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Chcete zrušiť proces zostavovania a napriek tomu zatvoriť %1?</translation>
     </message>
     <message>
         <location line="+164" />
@@ -18705,32 +19521,29 @@ What should %1 do now?</source>
         <translation>Alt+x</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-612" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-620" />
         <source>Open Session #%1</source>
         <translation>Otvorená relácia #%1</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Ctrl+Meta+%1</source>
-        <translation>Ctrl+meta+%1</translation>
+        <translation type="vanished">Ctrl+meta+%1</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Ctrl+Alt+%1</source>
-        <translation>Ctrl+ALT+%1</translation>
+        <translation type="vanished">Ctrl+ALT+%1</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Open Recent Project #%1</source>
         <translation>Otvorte nedávny projekt #%1</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Ctrl+Shift+%1</source>
-        <translation>Ctrl+Shift+%1</translation>
+        <translation type="vanished">Ctrl+Shift+%1</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+56" />
         <source>Open %1 &quot;%2&quot;</source>
         <translation>Open %1 &quot; %2&quot;</translation>
     </message>
@@ -19110,7 +19923,7 @@ What should %1 do now?</source>
     <message>
         <location line="+324" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; stále beží.&lt;center/&gt;&lt;center&gt;Vynútiť ukončenie?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -19326,10 +20139,13 @@ What should %1 do now?</source>
         <location line="+11" />
         <source>Not showing %n files that are outside of the base directory.
 These files are preserved.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Nezobrazuje sa %n súborov, ktoré sú mimo základného adresára.
+Tieto súbory sú zachované.</numerusform>
+            <numerusform>Nezobrazuje sa %n súborov, ktoré sú mimo základného adresára.
+Tieto súbory sú zachované.</numerusform>
+            <numerusform>Nezobrazuje sa %n súborov, ktoré sú mimo základného adresára.
+Tieto súbory sú zachované.</numerusform>
         </translation>
     </message>
     <message>
@@ -19385,7 +20201,7 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Imports existing projects that do not use qmake, CMake, Qbs, Meson, or Autotools.&lt;p&gt;This creates a project file that allows you to use %1 as a code editor and as a launcher for debugging and analyzing tools. If you want to build the project, you might need to edit the generated project file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Importuje existujúce projekty, ktoré nepoužívajú qmake, CMake, Qbs, Meson ani Autotools.&lt;p&gt;Vytvorí sa projektový súbor, ktorý vám umožní používať %1 ako editor kódu a ako spúšťač nástrojov na ladenie a analýzu. Ak chcete projekt zostaviť, možno budete musieť upraviť vygenerovaný projektový súbor.</translation>
     </message>
     <message>
         <location line="+172" />
@@ -20613,7 +21429,31 @@ Influences the indentation of continuation lines.
 &lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+Ovplyvňuje odsadenie pokračovacích riadkov.
+
+&lt;ul&gt;
+&lt;li&gt;Vôbec nie: Nezarovnávať vôbec. Riadky budú odsadené iba na aktuálnu logickú hĺbku odsadenia.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;Medzerami: Na zarovnanie vždy použiť medzery, bez ohľadu na ostatné nastavenia odsadenia.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)            c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;Bežným odsadením: Na zarovnanie použiť tabulátory a/alebo medzery podľa vyššie uvedeného nastavenia.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)(tab)(tab)  c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+31" />
@@ -21513,7 +22353,7 @@ Hodnota menšia ako 100 % môže mať za následok prekrývajúcu sa a nesprávn
     <message>
         <location line="+2" />
         <source>Line %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Riadok %1</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23264,19 +24104,19 @@ Nepoužije sa na medzery v komentároch a reťazcoch.</translation>
     <message numerus="yes">
         <location line="+3" />
         <source>%n found.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n nájdených.</numerusform>
+            <numerusform>%n nájdených.</numerusform>
+            <numerusform>%n nájdených.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+29" />
         <source>%n occurrences replaced.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Nahradených %n výskytov.</numerusform>
+            <numerusform>Nahradených %n výskytov.</numerusform>
+            <numerusform>Nahradených %n výskytov.</numerusform>
         </translation>
     </message>
     <message>
@@ -23824,19 +24664,19 @@ Vrátane: %3
     <message numerus="yes">
         <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%1: zrušené. Nájdených %n výskytov v %2 súboroch.</numerusform>
+            <numerusform>%1: zrušené. Nájdených %n výskytov v %2 súboroch.</numerusform>
+            <numerusform>%1: zrušené. Nájdených %n výskytov v %2 súboroch.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+6" />
         <source>%1: %n occurrences found in %2 files.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%1: nájdených %n výskytov v %2 súboroch.</numerusform>
+            <numerusform>%1: nájdených %n výskytov v %2 súboroch.</numerusform>
+            <numerusform>%1: nájdených %n výskytov v %2 súboroch.</numerusform>
         </translation>
     </message>
     <message>
@@ -24437,10 +25277,10 @@ v &quot;%2&quot;.
     <message numerus="yes">
         <location line="+5" />
         <source>Could not write to file &quot;%1&quot; (only %2 of %n byte(s) written).</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Nepodarilo sa zapísať do súboru &quot;%1&quot; (zapísaných len %2 z %n bajtov).</numerusform>
+            <numerusform>Nepodarilo sa zapísať do súboru &quot;%1&quot; (zapísaných len %2 z %n bajtov).</numerusform>
+            <numerusform>Nepodarilo sa zapísať do súboru &quot;%1&quot; (zapísaných len %2 z %n bajtov).</numerusform>
         </translation>
     </message>
     <message>
@@ -24525,10 +25365,10 @@ v &quot;%2&quot;.
     <message numerus="yes">
         <location line="+9" />
         <source>announced %n sections, each %1 bytes, exceed file size</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>ohlásených %n sekcií, každá po %1 bajtoch, presahuje veľkosť súboru</numerusform>
+            <numerusform>ohlásených %n sekcií, každá po %1 bajtoch, presahuje veľkosť súboru</numerusform>
+            <numerusform>ohlásených %n sekcií, každá po %1 bajtoch, presahuje veľkosť súboru</numerusform>
         </translation>
     </message>
     <message>
@@ -24809,10 +25649,10 @@ Ak chcete premennú zakázať, pred riadok uveďte znak „#“.</translation>
         <location line="+14" />
         <location line="+2" />
         <source>%n Items</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n položiek</numerusform>
+            <numerusform>%n položiek</numerusform>
+            <numerusform>%n položiek</numerusform>
         </translation>
     </message>
     <message>
@@ -25178,7 +26018,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Premenná&lt;/th&gt;&lt;th&gt;Rozvinie sa na&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;adresár aktuálneho súboru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;názov súboru (s úplnou cestou)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;názov súboru (bez cesty)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />

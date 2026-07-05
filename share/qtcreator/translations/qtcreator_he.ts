@@ -14,100 +14,83 @@
     <message>
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+838" />
         <source>Copy</source>
-        <translation type="unfinished">עותק</translation>
+        <translation>העתק</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Select All</source>
-        <translation type="unfinished">בחר הכל</translation>
+        <translation>בחר הכול</translation>
     </message>
 </context>
 <context>
     <name>OpenMVCameraSettings</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvcamerasettings.ui" />
         <source>OpenMV Cam Settings</source>
-        <translation>פתח את הגדרות מצלמת ה-MV</translation>
+        <translation type="vanished">פתח את הגדרות מצלמת ה-MV</translation>
     </message>
     <message>
-        <location/>
         <source>Turn on WiFi Shield on startup</source>
-        <translation>הפעל את WiFi Shield בעת האתחול</translation>
+        <translation type="vanished">הפעל את WiFi Shield בעת האתחול</translation>
     </message>
     <message>
-        <location/>
         <source>Client Mode (Normal)</source>
-        <translation>מצב לקוח (רגיל)</translation>
+        <translation type="vanished">מצב לקוח (רגיל)</translation>
     </message>
     <message>
-        <location/>
         <source>Password</source>
-        <translation>סיסמה</translation>
+        <translation type="vanished">סיסמה</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter your WiFi network password here</source>
-        <translation>אנא הזן את סיסמת רשת ה-WiFi שלך כאן</translation>
+        <translation type="vanished">אנא הזן את סיסמת רשת ה-WiFi שלך כאן</translation>
     </message>
     <message>
-        <location/>
         <source>Type</source>
-        <translation>סוּג</translation>
+        <translation type="vanished">סוּג</translation>
     </message>
     <message>
-        <location/>
         <source>Open (No password)</source>
-        <translation>פתח (ללא סיסמה)</translation>
+        <translation type="vanished">פתח (ללא סיסמה)</translation>
     </message>
     <message>
-        <location/>
         <source>WPA (Modern WiFi Security)</source>
-        <translation>WPA (אבטחת WiFi מודרנית)</translation>
+        <translation type="vanished">WPA (אבטחת WiFi מודרנית)</translation>
     </message>
     <message>
-        <location/>
         <source>WEP (Hexadecimal password)</source>
-        <translation>WEP (סיסמה הקסדצימלית)</translation>
+        <translation type="vanished">WEP (סיסמה הקסדצימלית)</translation>
     </message>
     <message>
-        <location/>
         <source>SSID</source>
-        <translation>SSID</translation>
+        <translation type="vanished">SSID</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter or select your WiFi network here</source>
-        <translation>אנא הכנס או בחר את רשת ה-WiFi שלך כאן</translation>
+        <translation type="vanished">אנא הכנס או בחר את רשת ה-WiFi שלך כאן</translation>
     </message>
     <message>
-        <location/>
         <source>Acess Point Mode</source>
-        <translation>מצב נקודת גישה</translation>
+        <translation type="vanished">מצב נקודת גישה</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
-        <translation>אנא הזן את שם רשת ה-WiFi כדי ליצור סיסמה כאן</translation>
+        <translation type="vanished">אנא הזן את שם רשת ה-WiFi כדי ליצור סיסמה כאן</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
-        <translation>אנא הזן את שם רשת ה-WiFi כדי ליצור כאן</translation>
+        <translation type="vanished">אנא הזן את שם רשת ה-WiFi כדי ליצור כאן</translation>
     </message>
     <message>
-        <location/>
         <source>Board Name</source>
-        <translation>שם לוח</translation>
+        <translation type="vanished">שם לוח</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
-        <translation>אנא הזן שם עבור מצלמת OpenMV שלך כאן</translation>
+        <translation type="vanished">אנא הזן שם עבור מצלמת OpenMV שלך כאן</translation>
     </message>
     <message>
-        <location/>
         <source>Duplicate REPL on the UART on startup</source>
-        <translation>שכפל REPL ב-UART בעת ההפעלה</translation>
+        <translation type="vanished">שכפל REPL ב-UART בעת ההפעלה</translation>
     </message>
 </context>
 <context>
@@ -156,6 +139,21 @@
         <location/>
         <source>Mean</source>
         <translation>מתכוון</translation>
+    </message>
+    <message>
+        <location/>
+        <source>R</source>
+        <translation>R</translation>
+    </message>
+    <message>
+        <location/>
+        <source>G</source>
+        <translation>G</translation>
+    </message>
+    <message>
+        <location/>
+        <source>B</source>
+        <translation>B</translation>
     </message>
 </context>
 <context>
@@ -214,19 +212,21 @@
         <translation>מעדכן את הגדרת התחביר עבור &apos;%1&apos; לגרסה%2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1263" />
         <source>Copy/Convert Python File</source>
         <translation>העתק/המר קובץ Python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="-42" />
         <location line="+7" />
-        <location line="+91" />
+        <location line="+85" />
+        <location line="+7" />
+        <location line="+101" />
         <location line="+7" />
         <location line="+76" />
         <location line="+7" />
         <source>Unable to overwrite output file!</source>
-        <translation type="unfinished">אין אפשרות לדרוס את קובץ הפלט!</translation>
+        <translation>לא ניתן לדרוס את קובץ הפלט!</translation>
     </message>
     <message>
         <location line="-124" />
@@ -578,7 +578,8 @@
         <location line="+26" />
         <source>A browser window will open. Enter the code %1 when asked.
 The code has been copied to your clipboard.</source>
-        <translation type="unfinished"></translation>
+        <translation>חלון דפדפן ייפתח. הזן את הקוד %1 כאשר תתבקש.
+הקוד הועתק ללוח שלך.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -619,17 +620,17 @@ The code has been copied to your clipboard.</source>
     <message>
         <location line="+3" />
         <source>Apply (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>החל (%1)</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Apply Word (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>החל מילה (%1)</translation>
     </message>
     <message>
         <location line="+13" />
         <source>%1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 מתוך %2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+65" />
@@ -709,13 +710,13 @@ The code has been copied to your clipboard.</source>
         <location line="+2" />
         <source>Select path to node.js executable. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to nodejs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>בחר נתיב אל קובץ ההפעלה של node.js. ראה את %1 להוראות התקנה.</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Path to %1:</source>
         <extracomment>%1 is the filename of the copilot language server</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>נתיב אל %1:</translation>
     </message>
     <message>
         <location line="+3" />
@@ -727,7 +728,7 @@ The code has been copied to your clipboard.</source>
         <location line="+2" />
         <source>Select path to %2 in Copilot Neovim plugin. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to copilot.vim getting started, %2 is the filename of the copilot language server</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>בחר נתיב אל %2 בתוסף Copilot Neovim. ראה את %1 להוראות התקנה.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -920,17 +921,17 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+370" />
         <location line="+46" />
-        <location line="+1689" />
+        <location line="+1691" />
         <location line="+534" />
         <source>Revert to Saved</source>
         <translation>חזור לשמור</translation>
     </message>
     <message>
-        <location line="-2268" />
+        <location line="-2270" />
         <location line="+95" />
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+421" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
         <location line="+1" />
         <source>Close</source>
@@ -944,13 +945,13 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="-99" />
-        <location line="+111" />
+        <location line="+113" />
         <location line="+1645" />
         <source>Close Others</source>
         <translation>סגור אחרים</translation>
     </message>
     <message>
-        <location line="-1708" />
+        <location line="-1710" />
         <source>Revert File to Saved</source>
         <translation>החזר את הקובץ לשמירה</translation>
     </message>
@@ -960,7 +961,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location line="+189" />
+        <location line="+191" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+101" />
         <location line="+67" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="-9" />
@@ -1072,8 +1073,8 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>לך קדימה</translation>
     </message>
     <message>
-        <location line="-236" />
-        <location line="+122" />
+        <location line="-238" />
+        <location line="+124" />
         <source>Close All Except Visible</source>
         <translation>סגור הכל מלבד גלוי</translation>
     </message>
@@ -1083,7 +1084,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>עבור אל עריכה אחרונה</translation>
     </message>
     <message>
-        <location line="-266" />
+        <location line="-268" />
         <source>Copy Full Path</source>
         <translation>העתק את הנתיב המלא</translation>
     </message>
@@ -1117,12 +1118,11 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Ctrl+F4</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Ctrl+Shift+W</source>
-        <translation>Ctrl+Shift+W</translation>
+        <translation type="vanished">Ctrl+Shift+W</translation>
     </message>
     <message>
-        <location line="+145" />
+        <location line="+158" />
         <source>Reopen Last Closed Document</source>
         <translation>פתח מחדש את המסמך האחרון שנסגר</translation>
     </message>
@@ -1295,7 +1295,7 @@ Continue?</source>
         <translation>שמור קובץ בשם</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+30" />
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+33" />
         <source>Edit</source>
         <translation>לַעֲרוֹך</translation>
     </message>
@@ -1320,7 +1320,7 @@ Continue?</source>
         <translation>הקובץ ניתן לכתיבה</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+139" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+145" />
         <source>Reset Do Not Ask/Show Again Dialogs</source>
         <translation>אפס את תיבות הדו-שיח אל תשאל/הצג שוב</translation>
     </message>
@@ -1349,12 +1349,12 @@ Continue?</source>
         <translation type="vanished">הגדרות ה-DPI הגבוהות ייכנסו לתוקף לאחר הפעלה מחדש.</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+62" />
         <source>User Interface</source>
         <translation>ממשק משתמש</translation>
     </message>
     <message>
-        <location line="-144" />
+        <location line="-159" />
         <source>Show keyboard shortcuts in context menus (default: %1)</source>
         <translation>הצג מקשי קיצור בתפריטי הקשר (ברירת מחדל: %1)</translation>
     </message>
@@ -1381,7 +1381,7 @@ If the system cursors for resizing views are not displayed properly, you can use
 אם סמני המערכת לשינוי גודל תצוגות אינם מוצגים כראוי, תוכל להשתמש בסמנים המסופקים על ידי %1.</translation>
     </message>
     <message>
-        <location line="+93" />
+        <location line="+96" />
         <source>Round Up for .5 and Above</source>
         <translation>סיבוב למעלה עבור 0.5 ומעלה</translation>
     </message>
@@ -1421,12 +1421,17 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>הסביבה משפיעה על התנהגות קנה המידה של ממשק המשתמש.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+21" />
+        <source>Serial Terminal Tab size:</source>
+        <translation>גודל טאב במסוף הטורי:</translation>
+    </message>
+    <message>
+        <location line="+51" />
         <source>&lt;System Language&gt;</source>
         <translation>&lt;שפת מערכת&gt;</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+97" />
         <source>The language change will take effect after restart.</source>
         <translation>שינוי השפה ייכנס לתוקף לאחר הפעלה מחדש.</translation>
     </message>
@@ -1697,7 +1702,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>תְפוּקָה</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1787" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1807" />
         <source>&amp;File</source>
         <translation>&amp;קוֹבֶץ</translation>
     </message>
@@ -1723,15 +1728,15 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+128" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2620" />
-        <location line="+1735" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2622" />
+        <location line="+1737" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
         <source>&amp;Save</source>
         <translation>&amp;להציל</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1734" />
-        <location line="+1735" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1736" />
+        <location line="+1737" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
         <translation>שמור כ... (&amp;A)</translation>
@@ -1935,12 +1940,11 @@ provided they were unmodified before the refactoring.</source>
         <translation>הצג את שורת התפריטים</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Ctrl+Alt+M</source>
-        <translation>Ctrl+Alt+M</translation>
+        <translation type="vanished">Ctrl+Alt+M</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+25" />
         <source>Hide Menu Bar</source>
         <translation>הסתר את שורת התפריטים</translation>
     </message>
@@ -2020,7 +2024,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>&lt;p&gt;ניתן להגיע למפתחי Qt Creator ברשימת התפוצה של Qt Creator:&lt;/p&gt;%1&lt;p&gt;או בערוץ #qt-creator ב-Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;עוקב הבאגים שלנו נמצא ב-%3.&lt;/p&gt;&lt;p&gt;אנא השתמש ב-%4 לנתחי טקסט גדולים יותר.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-817" />
+        <location line="-819" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
@@ -2047,7 +2051,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>מסך מלא</translation>
     </message>
     <message>
-        <location line="+126" />
+        <location line="+128" />
         <source>About &amp;Plugins...</source>
         <translation>אודות &amp;תוספים...</translation>
     </message>
@@ -2112,7 +2116,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1030" />
         <location line="+16" />
         <location line="+14" />
         <source>Save Log</source>
@@ -2121,7 +2125,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-726" />
         <source>Clear</source>
         <translation>ברור</translation>
     </message>
@@ -2178,7 +2182,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+2" />
         <source>Warning</source>
-        <translation type="unfinished">אַזהָרָה</translation>
+        <translation>אזהרה</translation>
     </message>
     <message>
         <location line="+2" />
@@ -2233,17 +2237,17 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+65" />
         <source>Uncheck All %1</source>
-        <translation type="unfinished"></translation>
+        <translation>בטל סימון של כל %1</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Check All %1</source>
-        <translation type="unfinished"></translation>
+        <translation>סמן את כל %1</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Reset All %1</source>
-        <translation type="unfinished"></translation>
+        <translation>אפס את כל %1</translation>
     </message>
     <message>
         <location line="+31" />
@@ -2263,7 +2267,7 @@ provided they were unmodified before the refactoring.</source>
     <message>
         <location line="+51" />
         <source>Failed to open preset file &quot;%1&quot; for reading.</source>
-        <translation type="unfinished"></translation>
+        <translation>פתיחת קובץ ההגדרות המוגדרות מראש &quot;%1&quot; לקריאה נכשלה.</translation>
     </message>
     <message>
         <location line="-172" />
@@ -2344,7 +2348,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>תְפוּקָה (&amp;P)</translation>
     </message>
     <message>
-        <location line="+406" />
+        <location line="+461" />
         <source>Reset to Default</source>
         <translation>אפס לברירת מחדל</translation>
     </message>
@@ -2506,8 +2510,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-288" />
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+58" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-290" />
+        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+63" />
         <source>Save</source>
         <translation>להציל</translation>
     </message>
@@ -2517,7 +2521,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>שמור את הבחירה</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+180" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+192" />
         <source>Click and type the new key sequence.</source>
         <translation>לחץ והקלד את רצף המקשים החדש.</translation>
     </message>
@@ -2528,16 +2532,17 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
+        <location line="+277" />
         <source>Record</source>
         <translation>תקליט</translation>
     </message>
     <message>
-        <location line="+589" />
+        <location line="+427" />
         <source>Keyboard</source>
         <translation>מקלדת</translation>
     </message>
     <message>
-        <location line="-630" />
+        <location line="-745" />
         <source>Invalid key sequence.</source>
         <translation>רצף מפתחות לא חוקי.</translation>
     </message>
@@ -2547,7 +2552,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>רצף המקשים לא יעבוד בעורך.</translation>
     </message>
     <message>
-        <location line="+451" />
+        <location line="+469" />
         <source>Import Keyboard Mapping Scheme</source>
         <translation>ייבוא תכנית מיפוי מקלדת</translation>
     </message>
@@ -2563,12 +2568,13 @@ provided they were unmodified before the refactoring.</source>
         <translation>ייצוא תכנית מיפוי מקלדת</translation>
     </message>
     <message>
-        <location line="-332" />
+        <location line="-350" />
+        <location line="+153" />
         <source>Key sequence:</source>
         <translation>רצף מפתחות:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-149" />
         <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>השתמש ב-&quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot; ו-&quot;Shift&quot; עבור מקשי שינוי. השתמש ב-&quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; וכן הלאה, עבור מקשים מיוחדים. שלב מקשים בודדים עם &quot;+&quot;, ושלב קיצורי דרך מרובים לרצף קיצורי דרך עם &quot;,&quot;. לדוגמה, אם המשתמש חייב להחזיק את מקשי השינוי Ctrl ו-Shift תוך כדי לחיצה על Escape, ולאחר מכן שחרר והקש A, הזן &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
@@ -2756,7 +2762,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+13" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-675" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-730" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-89" />
         <source>Case Sensitive</source>
         <translation>רגיש רישיות</translation>
@@ -3014,9 +3020,9 @@ provided they were unmodified before the refactoring.</source>
     <message numerus="yes">
         <location line="-264" />
         <source>%1 filter update: %n files</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>עדכון מסנן %1: %n קבצים</numerusform>
+            <numerusform>עדכון מסנן %1: %n קבצים</numerusform>
         </translation>
     </message>
     <message>
@@ -3095,7 +3101,7 @@ provided they were unmodified before the refactoring.</source>
         <location line="+1" />
         <source>Executable:</source>
         <comment>adjective</comment>
-        <translation type="unfinished">בר הפעלה:</translation>
+        <translation>קובץ הפעלה:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -3328,7 +3334,7 @@ provided they were unmodified before the refactoring.</source>
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+223" />
         <source>Executable:</source>
         <comment>noun</comment>
-        <translation type="unfinished">בר הפעלה:</translation>
+        <translation>קובץ הפעלה:</translation>
     </message>
     <message>
         <source>Executable:</source>
@@ -3435,7 +3441,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+1" />
         <source>Cannot create file &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן ליצור את הקובץ &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -3445,12 +3451,12 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+164" />
         <source>Create and Open File &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>צור ופתח קובץ &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Create Directory &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>צור ספרייה &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+58" />
@@ -3534,7 +3540,8 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-485" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+161" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+107" />
+        <location line="+72" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-1" />
         <source>Add</source>
         <translation>לְהוֹסִיף</translation>
@@ -3611,30 +3618,31 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>שמור אוטומטית את כל הקבצים לפני הבנייה</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-87" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-105" />
         <source>Keyboard Shortcuts</source>
         <translation>קיצורי דרך במקלדת</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+46" />
-        <location line="+95" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+49" />
+        <location line="+107" />
         <source>Command</source>
         <translation>פקודה</translation>
     </message>
     <message>
-        <location line="-96" />
-        <location line="+96" />
+        <location line="-108" />
+        <location line="+108" />
         <source>Label</source>
         <translation>תווית</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+1" />
         <location line="+15" />
+        <location line="+11" />
         <source>Shortcut</source>
         <translation>קיצור</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-80" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-92" />
         <source>Command Mappings</source>
         <translation>מיפוי פקודות</translation>
     </message>
@@ -3673,7 +3681,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="-5" />
         <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+6" />
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-278" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-295" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-1" />
         <location line="+8" />
         <source>Reset</source>
@@ -3720,7 +3728,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>עורך בינארי</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+484" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+504" />
         <source>Sort categories</source>
         <translation>מיין קטגוריות</translation>
     </message>
@@ -4240,7 +4248,7 @@ Do you want to check them out now?</source>
 האם אתה רוצה לבדוק אותם עכשיו?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-948" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-968" />
         <source>Restart Required</source>
         <translation>אתחול נדרש</translation>
     </message>
@@ -4414,9 +4422,9 @@ Do you want to check them out now?</source>
     <message numerus="yes">
         <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
         <source>%n occurrences replaced.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n מופעים הוחלפו.</numerusform>
+            <numerusform>%n מופעים הוחלפו.</numerusform>
         </translation>
     </message>
     <message>
@@ -4492,9 +4500,9 @@ Do you want to check them out now?</source>
     <message numerus="yes">
         <location line="+18" />
         <source>The search resulted in more than %n items, do you still want to continue?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>החיפוש הניב יותר מ-%n פריטים, האם עדיין ברצונך להמשיך?</numerusform>
+            <numerusform>החיפוש הניב יותר מ-%n פריטים, האם עדיין ברצונך להמשיך?</numerusform>
         </translation>
     </message>
     <message>
@@ -4510,9 +4518,9 @@ Do you want to check them out now?</source>
     <message numerus="yes">
         <location line="+82" />
         <source>%n matches found.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n התאמות נמצאו.</numerusform>
+            <numerusform>%n התאמות נמצאו.</numerusform>
         </translation>
     </message>
     <message>
@@ -4552,7 +4560,7 @@ Do you want to check them out now?</source>
         <translation type="vanished">%1 %2%3</translation>
     </message>
     <message>
-        <location line="+804" />
+        <location line="+824" />
         <source>Based on Qt %1 (%2, %3)</source>
         <translation>מבוסס על Qt %1 (%2, %3)</translation>
     </message>
@@ -4756,6 +4764,31 @@ Double-click to edit item.</source>
         <translation>גלישת טקסט</translation>
     </message>
     <message>
+        <location line="+20" />
+        <source>Serial Protocol Debug Logging</source>
+        <translation>רישום ניפוי שגיאות של פרוטוקול טורי</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Off</source>
+        <translation>כבוי</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands</source>
+        <translation>פקודות</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands + Packets</source>
+        <translation>פקודות + מנות</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands + Packets + Fragments</source>
+        <translation>פקודות + מנות + פרגמנטים</translation>
+    </message>
+    <message>
         <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="-129" />
         <source>Add Magic Header</source>
         <translation>הוסף כותרת קסם</translation>
@@ -4889,9 +4922,9 @@ Double-click to edit item.</source>
     <message numerus="yes">
         <location line="+159" />
         <source>Elided %n characters due to Application Output settings</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>הושמטו %n תווים עקב הגדרות פלט היישום</numerusform>
+            <numerusform>הושמטו %n תווים עקב הגדרות פלט היישום</numerusform>
         </translation>
     </message>
     <message>
@@ -4902,7 +4935,7 @@ Double-click to edit item.</source>
 </translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+404" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>קבצי טקסט (*.txt);;כל הקבצים (*)</translation>
     </message>
@@ -4950,7 +4983,7 @@ Double-click to edit item.</source>
     <message>
         <location line="+23" />
         <source>Running in &quot;%1&quot;: %2 %3.</source>
-        <translation type="unfinished"></translation>
+        <translation>מריץ ב-&quot;%1&quot;: %2 %3.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -5475,9 +5508,9 @@ to version control (%2)
     <message numerus="yes">
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
         <source>Skipped %n lines...</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>דילג על %n שורות...</numerusform>
+            <numerusform>דילג על %n שורות...</numerusform>
         </translation>
     </message>
     <message>
@@ -5598,7 +5631,7 @@ to version control (%2)
     <message>
         <location line="+21" />
         <source>Plugin Details of %1</source>
-        <translation type="unfinished">פרטי הפלאגין של %1</translation>
+        <translation>פרטי התוסף של %1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/extensionsystem/pluginerrorview.cpp" line="+47" />
@@ -5654,7 +5687,7 @@ to version control (%2)
         <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+103" />
         <source>%1 (deprecated)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 (מיושן)</translation>
     </message>
     <message>
         <location line="+3" />
@@ -5889,7 +5922,7 @@ Reason: %3</source>
 סיבה: %3</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
+        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+133" />
         <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>הפלאגין &quot;%1&quot; צוין פעמיים לבדיקה.</translation>
     </message>
@@ -6062,7 +6095,7 @@ Reason: %3</source>
     <message>
         <location line="+2" />
         <source>Details</source>
-        <translation type="unfinished">פרטים</translation>
+        <translation>פרטים</translation>
     </message>
     <message>
         <location line="+28" />
@@ -6398,7 +6431,7 @@ Would you like to overwrite them?</source>
     <message>
         <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+257" />
         <source>Error %1</source>
-        <translation type="unfinished"></translation>
+        <translation>שגיאה %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
@@ -6439,7 +6472,7 @@ Would you like to overwrite them?</source>
         <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 עבור %2</translation>
     </message>
     <message>
         <location line="+230" />
@@ -6493,7 +6526,7 @@ Would you like to overwrite them?</source>
     <message>
         <location line="+219" />
         <source>Language Server &quot;%1&quot; Initialization Error</source>
-        <translation type="unfinished"></translation>
+        <translation>שגיאת אתחול של שרת השפה &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+13" />
@@ -6573,7 +6606,7 @@ Would you like to overwrite them?</source>
     <message>
         <location line="+70" />
         <source>Cannot send data to unstarted server %1</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן לשלוח נתונים לשרת שלא הופעל %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+178" />
@@ -6589,12 +6622,12 @@ Would you like to overwrite them?</source>
         <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
         <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+82" />
         <source>Expand All</source>
-        <translation type="unfinished">הרחב הכל</translation>
+        <translation>הרחב הכול</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Collapse All</source>
-        <translation type="unfinished">למוטט הכל</translation>
+        <translation>כווץ הכול</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+57" />
@@ -6624,12 +6657,12 @@ Would you like to overwrite them?</source>
     <message>
         <location line="+11" />
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;לִמְחוֹק</translation>
+        <translation>מחק (&amp;D)</translation>
     </message>
     <message>
         <location line="+106" />
         <source>General</source>
-        <translation type="unfinished">כללי</translation>
+        <translation>כללי</translation>
     </message>
     <message>
         <location line="+513" />
@@ -6676,12 +6709,12 @@ Example: *.cpp%1*.h</source>
     <message>
         <location line="+6" />
         <source>Name:</source>
-        <translation type="unfinished">שֵׁם:</translation>
+        <translation>שם:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Language:</source>
-        <translation type="unfinished">שפה:</translation>
+        <translation>שפה:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -6706,17 +6739,17 @@ Example: *.cpp%1*.h</source>
     <message>
         <location line="+11" />
         <source>Filter</source>
-        <translation type="unfinished">לְסַנֵן</translation>
+        <translation>סינון</translation>
     </message>
     <message>
         <location line="+53" />
         <source>Executable:</source>
-        <translation type="unfinished">בר הפעלה:</translation>
+        <translation>קובץ הפעלה:</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Arguments:</source>
-        <translation type="unfinished">טיעונים:</translation>
+        <translation>ארגומנטים:</translation>
     </message>
     <message>
         <location line="+93" />
@@ -6764,7 +6797,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+331" />
         <location line="+227" />
         <source>Find References with %1 for:</source>
-        <translation type="unfinished"></translation>
+        <translation>מצא הפניות עם %1 עבור:</translation>
     </message>
     <message>
         <location line="-144" />
@@ -6789,7 +6822,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+121" />
         <source>Restart %1</source>
-        <translation type="unfinished"></translation>
+        <translation>הפעל מחדש את %1</translation>
     </message>
     <message>
         <location line="+5" />
@@ -6809,7 +6842,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+6" />
         <source>Running &quot;%1&quot; to install %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>מריץ את &quot;%1&quot; כדי להתקין את %2.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -6839,7 +6872,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+4" />
         <source>Install</source>
-        <translation type="unfinished">להתקין</translation>
+        <translation>התקן</translation>
     </message>
     <message>
         <location line="+0" />
@@ -6924,7 +6957,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+5" />
         <source>Clear</source>
-        <translation type="unfinished">ברור</translation>
+        <translation>נקה</translation>
     </message>
 </context>
 <context>
@@ -6932,7 +6965,7 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
         <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן לפענח תוכן עם &quot;%1&quot;. חוזר אל &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+15" />
@@ -6967,18 +7000,18 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location line="+15" />
         <source>Rename %1 to %2</source>
-        <translation type="unfinished"></translation>
+        <translation>שנה שם של %1 ל-%2</translation>
     </message>
     <message>
         <location line="+17" />
         <source>Delete %1</source>
-        <translation type="unfinished"></translation>
+        <translation>מחק את %1</translation>
     </message>
 </context>
 <context>
     <name>QtC::OpenMV</name>
     <message>
-        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.cpp" line="+548" />
+        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.cpp" line="+671" />
         <location line="+34" />
         <source>Value %L1</source>
         <translation>ערך %L1</translation>
@@ -7036,9 +7069,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>V</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvcamerasettings.cpp" line="+81" />
         <source>Please enter your WiFi network here</source>
-        <translation>אנא הזן את רשת ה-WiFi שלך כאן</translation>
+        <translation type="vanished">אנא הזן את רשת ה-WiFi שלך כאן</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+145" />
@@ -7057,8 +7089,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+156" />
-        <location line="+823" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+158" />
+        <location line="+878" />
         <source>Dataset Editor</source>
         <translation>עורך מערכי נתונים</translation>
     </message>
@@ -7070,9 +7102,9 @@ See the documentation of the specific language server for valid settings.</sourc
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+287" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+604" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+606" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+412" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+423" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
@@ -7082,17 +7114,17 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-732" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-787" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1514" />
+        <location line="+1795" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+139" />
         <location line="+202" />
-        <location line="+306" />
+        <location line="+330" />
         <location line="+13" />
         <location line="+169" />
         <location line="+146" />
@@ -7100,15 +7132,14 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+378" />
-        <location line="+273" />
-        <location line="+86" />
-        <location line="+1142" />
-        <location line="+1075" />
-        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+881" />
+        <location line="+315" />
+        <location line="+1388" />
+        <location line="+1089" />
+        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+109" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+699" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
         <location line="+11" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
@@ -7119,8 +7150,8 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-309" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3541" />
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3846" />
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
         <location line="+48" />
         <location line="+9" />
@@ -7134,23 +7165,23 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+33" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
-        <location line="+1442" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2844" />
+        <location line="+1481" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>שמירת קובץ התמונה נכשלה מסיבה לא ידועה!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
-        <location line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+589" />
+        <location line="+291" />
         <source>Delete</source>
         <translation>לִמְחוֹק</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-361" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>האם אתה בטוח שברצונך למחוק לצמיתות את &quot;%L1&quot;?</translation>
     </message>
@@ -7177,8 +7208,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>שינוי שם הקובץ נכשל מסיבה לא ידועה!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5247" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+61" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5826" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+62" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>לא ניתן היה להעתיק את הקובץ &quot;%1&quot; ל&quot;%2&quot;.</translation>
     </message>
@@ -7199,39 +7230,20 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation type="vanished">ארגומנט חסר עבור -override_read_stall_timeout</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+94" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>ארגומנט חסר עבור -סידורי_מספר_מסנן</translation>
     </message>
     <message>
-        <location line="+145" />
-        <location line="+8" />
-        <location line="+10" />
-        <location line="+11" />
-        <location line="+28" />
-        <location line="+28" />
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2677" />
-        <location line="+9" />
-        <location line="+13" />
-        <location line="+63" />
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
-        <location line="+36" />
-        <location line="+7" />
-        <location line="+8" />
-        <location line="+10" />
-        <location line="+7" />
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
-        <translation>
+        <translation type="vanished">
 
 אנא סגור את כל התוכנות שמציגות/עורכות את נתוני היישום של OpenMV IDE ולאחר מכן הפעל מחדש את OpenMV IDE!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1733" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>ערוך את סף גווני האפור עם עורך הסף</translation>
     </message>
@@ -7241,26 +7253,24 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>ערוך את סף LAB עם Threshold Editor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+221" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+423" />
         <source>Missing argument for -form_key</source>
         <translation>חסר ארגומנט עבור -form_key</translation>
     </message>
     <message>
-        <location line="+1074" />
         <source>About OpenMV Viewer...</source>
-        <translation>אודות OpenMV Viewer...</translation>
+        <translation type="vanished">אודות OpenMV Viewer...</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;אודות %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;מאת: איברהים עבד אלקאדר וקוואבנה ו. אגיימן&lt;/p&gt;&lt;p&gt;&lt;b&gt;גנו רישיון ציבורי כללי&lt;/b&gt;&lt;/p&gt;&lt;p&gt;זכויות יוצרים (C) %L2 %L3&lt;/p&gt;&lt;p&gt;תוכנית זו מופצת בתקווה שהיא תהיה שימושית, אך ללא כל אחריות; אפילו ללא אחריות משתמעת לסחירות או התאמה למטרה מסוימת. עיין ברישיון הציבורי הכללי &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU&lt;/a&gt; לקבלת פרטים נוספים.&lt;/p&gt;&lt;p&gt;&lt;b&gt;שאלות או הערות?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;צרו איתנו קשר בכתובת &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>OpenMV IDE</source>
-        <translation>OpenMV IDE</translation>
+        <translation type="vanished">OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-1050" />
+        <location line="+41" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -7273,7 +7283,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation type="vanished">חסר ארגומנט עבור -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="-468" />
+        <location line="-434" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>ארגומנט לא חוקי %1) עבור -auto_update</translation>
     </message>
@@ -7283,7 +7293,34 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>חסר ארגומנט עבור -auto_update</translation>
     </message>
     <message>
-        <location line="+248" />
+        <location line="+109" />
+        <location line="+8" />
+        <location line="+10" />
+        <location line="+11" />
+        <location line="+28" />
+        <location line="+28" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2895" />
+        <location line="+9" />
+        <location line="+13" />
+        <location line="+65" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+45" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
+        <location line="+36" />
+        <location line="+7" />
+        <location line="+8" />
+        <location line="+10" />
+        <location line="+7" />
+        <source>
+
+Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
+        <translation>
+
+אנא סגור את כל התוכניות שצופות/עורכות את נתוני היישום של %1 ולאחר מכן הפעל מחדש את %1!</translation>
+    </message>
+    <message>
+        <location line="+48" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7292,7 +7329,16 @@ Check the json file for errors and fix them.</source>
 בדוק את קובץ ה-json עבור שגיאות ותקן אותן.</translation>
     </message>
     <message>
-        <location line="+188" />
+        <location line="+9" />
+        <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
+
+%2 versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
+        <translation>שגיאה בקריאת &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
+
+גרסאות %2 לפני v4.3.0 אינן כוללות קובץ זה והיו מוחקות אותו בעת התקנת המשאבים.</translation>
+    </message>
+    <message>
+        <location line="+145" />
         <source>Form Key</source>
         <translation>מפתח טופס</translation>
     </message>
@@ -7345,7 +7391,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">הפעל את תוכנת האתחול (טען קושחה)</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+50" />
         <source>Ctrl+Shift+L</source>
         <translation>Ctrl+Shift+L</translation>
     </message>
@@ -7363,17 +7409,16 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">האם אתה בטוח שברצונך למחוק את כונן ההבזק המשולב של OpenMV Cam שלך?</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+55" />
         <source>Auto Reconnect to OpenMV Cam</source>
         <translation>התחבר אוטומטית למצלמת OpenMV</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected.</source>
-        <translation>כאשר Auto Reconnect מופעל OpenMV IDE יתחבר אוטומטית מחדש ל-OpenMV שלך אם יזוהה.</translation>
+        <translation type="vanished">כאשר Auto Reconnect מופעל OpenMV IDE יתחבר אוטומטית מחדש ל-OpenMV שלך אם יזוהה.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Stop Script on Connect/Disconnect</source>
         <translation>עצור סקריפט בהתחבר/נתק</translation>
     </message>
@@ -7383,7 +7428,7 @@ Check the json file for errors and fix them.</source>
         <translation>עצור את הסקריפט ב-Connect או Disconnect (שים לב שה-IDE מתנתק בסגירה אם הוא מחובר).</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Sync Imports between OpenMV Cam and Documents Folder</source>
         <translation>סנכרן ייבוא בין מצלמת OpenMV לתיקיית מסמכים</translation>
     </message>
@@ -7408,12 +7453,11 @@ Check the json file for errors and fix them.</source>
         <translation>פתח את תיקיית OpenMV Cam Drive</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Configure OpenMV Cam settings file</source>
-        <translation>הגדר את קובץ ההגדרות של OpenMV Cam</translation>
+        <translation type="vanished">הגדר את קובץ ההגדרות של OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+24" />
         <source>Save open script to OpenMV Cam (as main.py)</source>
         <translation>שמור סקריפט פתוח ב-OpenMV Cam (כמו main.py)</translation>
     </message>
@@ -7428,34 +7472,34 @@ Check the json file for errors and fix them.</source>
         <translation>התקן את מהדורת הפיתוח האחרונה</translation>
     </message>
     <message>
-        <location line="+75" />
-        <location line="+3823" />
+        <location line="+267" />
+        <location line="+4137" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>פתח את המסוף</translation>
     </message>
     <message>
-        <location line="-3877" />
+        <location line="-4191" />
         <source>Machine Vision</source>
         <translation>Machine Vision</translation>
     </message>
     <message>
-        <location line="+175" />
-        <location line="+3733" />
+        <location line="+182" />
+        <location line="+4040" />
         <location line="+75" />
         <source>Threshold Editor</source>
         <translation>עורך סף</translation>
     </message>
     <message>
-        <location line="-3803" />
-        <location line="+3880" />
+        <location line="-4110" />
+        <location line="+4187" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>עורך נקודות מפתח</translation>
     </message>
     <message>
-        <location line="-3873" />
-        <location line="+4037" />
+        <location line="-4178" />
+        <location line="+4342" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7464,7 +7508,7 @@ Check the json file for errors and fix them.</source>
         <translation>Generator AprilTag</translation>
     </message>
     <message>
-        <location line="-4184" />
+        <location line="-4489" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 משפחת (30 תגים)</translation>
     </message>
@@ -7499,19 +7543,18 @@ Check the json file for errors and fix them.</source>
         <translation>מחולל QRCode</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1338" />
+        <location line="+1348" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+367" />
-        <location line="+14" />
-        <location line="+33" />
-        <location line="+918" />
+        <location line="+409" />
+        <location line="+1051" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-223" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>הפתיחה נכשלה: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1356" />
+        <location line="-1484" />
         <source>DataMatrix Generator</source>
         <translation>מחולל DataMatrix</translation>
     </message>
@@ -7538,13 +7581,13 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+225" />
-        <location line="+2424" />
-        <location line="+1288" />
+        <location line="+2690" />
+        <location line="+1327" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-393" />
-        <location line="+375" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+900" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-392" />
+        <location line="+374" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+996" />
         <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>נא להוסיף סיומת קובץ!</translation>
@@ -7559,7 +7602,7 @@ Check the json file for errors and fix them.</source>
         <translation>אין אפשרות לדרוס את קובץ הפלט!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3922" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4227" />
         <source>Video Tools</source>
         <translation>כלי וידאו</translation>
     </message>
@@ -7575,8 +7618,8 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-439" />
-        <location line="+275" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-440" />
+        <location line="+276" />
         <source>Play RTSP Stream</source>
         <translation>הפעל RTSP Stream</translation>
     </message>
@@ -7659,34 +7702,34 @@ Check the json file for errors and fix them.</source>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+175" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+177" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1513" />
+        <location line="+1794" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+273" />
-        <location line="+554" />
+        <location line="+578" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
         <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-131" />
-        <location line="+289" />
-        <location line="+165" />
-        <location line="+1148" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-385" />
+        <location line="+252" />
+        <location line="+327" />
+        <location line="+1479" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1339" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1435" />
         <location line="+85" />
-        <location line="+605" />
+        <location line="+627" />
         <source>Cancel</source>
         <translation>לְבַטֵל</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3737" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4042" />
         <source>Upload to Edge Impulse Project</source>
         <translation>העלה ל-Edge Impulse Project</translation>
     </message>
@@ -7718,51 +7761,42 @@ Check the json file for errors and fix them.</source>
         <translation>סגור מערך נתונים</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+38" />
         <source>OpenMV Docs</source>
         <translation>OpenMV Docs</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+38" />
         <source>OpenMV Forums</source>
         <translation>פורומים של OpenMV</translation>
     </message>
     <message>
-        <location line="+15" />
         <source>About OpenMV Cam</source>
-        <translation>על OpenMV Cam</translation>
+        <translation type="vanished">על OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>About OpenMV Cam...</source>
-        <translation>על OpenMV Cam...</translation>
+        <translation type="vanished">על OpenMV Cam...</translation>
     </message>
     <message>
-        <location line="+18" />
         <source>About OpenMV Cam %1</source>
-        <translation>אודות OpenMV Cam%1</translation>
+        <translation type="vanished">אודות OpenMV Cam%1</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>About OpenMV Cam %1...</source>
-        <translation>אודות מצלמת OpenMV%1...</translation>
+        <translation type="vanished">אודות מצלמת OpenMV%1...</translation>
     </message>
     <message>
-        <location line="+18" />
-        <location line="+6" />
         <source>About OpenMV IDE</source>
-        <translation>על OpenMV IDE</translation>
+        <translation type="vanished">על OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-6" />
-        <location line="+6" />
         <source>About OpenMV Viewer</source>
-        <translation>אודות OpenMV Viewer</translation>
+        <translation type="vanished">אודות OpenMV Viewer</translation>
     </message>
     <message>
-        <location line="-5" />
         <source>About OpenMV IDE...</source>
-        <translation>על OpenMV IDE...</translation>
+        <translation type="vanished">על OpenMV IDE...</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;About OpenMV IDE %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
@@ -7777,14 +7811,13 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">&lt;p&gt;OpenMV IDE תרגום לאנגלית מאת Kwabena W. Agyeman.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+49" />
         <source>&lt;p&gt;&lt;b&gt;Partners&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;שותפים&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>OpenMV Viewer</source>
-        <translation>מציג OpenMV</translation>
+        <translation type="vanished">מציג OpenMV</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
@@ -7817,7 +7850,7 @@ Check the json file for errors and fix them.</source>
         <location line="+7" />
         <location line="+36" />
         <location line="+26" />
-        <location line="+16" />
+        <location line="+17" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
         <location line="+54" />
         <location line="+32" />
@@ -7835,7 +7868,7 @@ Check the json file for errors and fix them.</source>
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+65" />
+        <location line="+69" />
         <location line="+26" />
         <location line="+18" />
         <location line="+23" />
@@ -7847,9 +7880,9 @@ Check the json file for errors and fix them.</source>
         <location line="+4" />
         <location line="+7" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location line="+26" />
-        <location line="+26" />
+        <location line="+27" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-145" />
         <location line="+35" />
         <location line="+14" />
@@ -7860,14 +7893,14 @@ Check the json file for errors and fix them.</source>
         <location line="+9" />
         <location line="+16" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1189" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+17" />
+        <location line="+1098" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1349" />
         <location line="+6" />
-        <location line="+28" />
-        <location line="+52" />
-        <location line="+8" />
-        <location line="+35" />
-        <location line="+329" />
+        <location line="+27" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+477" />
         <location line="+136" />
         <location line="+28" />
         <location line="+100" />
@@ -7877,17 +7910,17 @@ Check the json file for errors and fix them.</source>
         <location line="+81" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+28" />
-        <location line="+34" />
+        <location line="+29" />
+        <location line="+38" />
         <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+97" />
-        <location line="+4" />
-        <location line="+4" />
+        <location line="+108" />
+        <location line="+6" />
+        <location line="+5" />
         <location line="+72" />
         <location line="+116" />
         <location line="+83" />
@@ -7908,7 +7941,7 @@ Check the json file for errors and fix them.</source>
         <location line="+135" />
         <location line="+217" />
         <location line="+33" />
-        <location line="+268" />
+        <location line="+370" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+668" />
         <location line="+48" />
         <source>Connect</source>
@@ -7930,7 +7963,7 @@ Check the json file for errors and fix them.</source>
         <translation>רק שחזור קושחה נתמך באמצעות כלי SE של Alif Semiconductor.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+14" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1084" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
@@ -7948,14 +7981,16 @@ Check the json file for errors and fix them.</source>
         <translation>עצור (עצירת סקריפט)</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-58" />
+        <location line="+70" />
+        <location line="+211" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
+        <location line="+166" />
         <source>Frame Buffer</source>
         <translation>מאגר מסגרת</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
+        <location line="-204" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
         <source>Record</source>
         <translation>תקליט</translation>
     </message>
@@ -7990,11 +8025,12 @@ Check the json file for errors and fix them.</source>
         <translation>זום כדי להתאים</translation>
     </message>
     <message>
+        <location line="+30" />
         <source>JPG</source>
-        <translation type="vanished">JPG</translation>
+        <translation>JPG</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+1" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG דחוס את מאגר המסגרת לביצועים גבוהים יותר</translation>
     </message>
@@ -8013,7 +8049,25 @@ Check the json file for errors and fix them.</source>
         <translation>השבת את מאגר המסגרת לביצועים מקסימליים</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+49" />
+        <location line="+13" />
+        <source>JPEG Mode</source>
+        <translation>מצב JPEG</translation>
+    </message>
+    <message>
+        <location line="-5" />
+        <location line="+7" />
+        <source>The Frame Buffer is streaming JPEG-compressed images</source>
+        <translation>מאגר הפריימים משדר תמונות דחוסות ב-JPEG</translation>
+    </message>
+    <message>
+        <location line="-6" />
+        <location line="+7" />
+        <source>The Frame Buffer is streaming raw (uncompressed) images</source>
+        <translation>מאגר הפריימים משדר תמונות גולמיות (לא דחוסות)</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>מאגר מסגרת מושבת - לחץ שוב על כפתור השבת כדי להפעיל (מימין למעלה)</translation>
     </message>
@@ -8060,39 +8114,32 @@ Check the json file for errors and fix them.</source>
         <translation>השתמש בגווני אפור/LAB למעקב אחר צבעים</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+42" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+3" />
-        <location line="+44" />
         <source>Res - No Image</source>
-        <translation>Res - ללא תמונה</translation>
+        <translation type="vanished">Res - ללא תמונה</translation>
     </message>
     <message>
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7)</source>
         <translation type="vanished">Res (w:%1, h:%2) - החזר ROI (x:%3, y:%4, w:%5, h:%6) - פיקסלים (%7)</translation>
     </message>
     <message>
-        <location line="-10" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-10" />
         <source>Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
-        <translation>Res (w:%1, h:%2) - נקודה (x:%3, y:%4)</translation>
+        <translation type="vanished">Res (w:%1, h:%2) - נקודה (x:%3, y:%4)</translation>
     </message>
     <message>
         <source>Res (w:%1, h:%2)</source>
         <translation type="vanished">Res (w:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1582" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>שגיאה בקריאת &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1. 
+        <translation type="vanished">שגיאה בקריאת &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1. 
 
 בגירסאות OpenMV IDE לפני גרסה 4.3.0 אין קובץ זה והיו מוחקים אותו בעת התקנת משאבים.</translation>
     </message>
     <message>
-        <location line="+346" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2858" />
+        <location line="-1460" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3176" />
         <source>Load Custom Firmware</source>
         <translation>טען קושחה מותאמת אישית</translation>
     </message>
@@ -8108,34 +8155,78 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>האם אתה בטוח שברצונך למחוק את מערכת קבצי ה-FAT הפנימית של OpenMV Cam שלך?</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+16" />
         <source>ROM File System</source>
         <translation>מערכת קבצים ROM</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>New ROMFS File</source>
         <translation>קובץ ROMFS חדש</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+8" />
         <source>Open ROMFS File</source>
         <translation>פתח את קובץ ROMFS</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+0" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+554" />
+        <source>Load ROMFS onto OpenMV Cam</source>
+        <translation>טען ROMFS על מצלמת OpenMV</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>Edit ROMFS on OpenMV Cam</source>
         <translation>ערוך ROMFS ב-OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Reset ROMFS on OpenMV Cam</source>
         <translation>אפס את ROMFS ב-OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+8" />
+        <source>When Auto Reconnect is enabled %1 will automatically reconnect to your OpenMV if detected.</source>
+        <translation>כאשר חיבור מחדש אוטומטי מופעל, %1 יתחבר מחדש אוטומטית ל-OpenMV שלך אם יזוהה.</translation>
+    </message>
+    <message>
+        <location line="+62" />
+        <source>Edit boot.py for WiFi Debugging</source>
+        <translation>ערוך את boot.py עבור ניפוי שגיאות WiFi</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>Force enter OpenMV Cam bootloader</source>
         <translation>הכריח להזין את תוכנת האתחול של OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Open OpenMV Cam Settings Config File</source>
+        <translation>פתח קובץ תצורת הגדרות של מצלמת OpenMV</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+188" />
+        <location line="+346" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+51" />
+        <source>OpenMV Cam Settings Editor</source>
+        <translation>עורך הגדרות של מצלמת OpenMV</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-14" />
+        <source>Create Default Config</source>
+        <translation>צור תצורת ברירת מחדל</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-21" />
+        <source>Open Config File</source>
+        <translation>פתח קובץ תצורה</translation>
     </message>
     <message>
         <location line="+14" />
@@ -8143,10 +8234,37 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>כלי מיקרופייטון</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
+        <location line="+12" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+19" />
+        <location line="+29" />
+        <location line="+7" />
+        <source>Copy/Convert Current Script</source>
+        <translation>העתק/המר סקריפט נוכחי</translation>
+    </message>
+    <message>
+        <location line="-70" />
+        <source>Unable to stage the current script!</source>
+        <translation>לא ניתן להכין את הסקריפט הנוכחי!</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <location line="+91" />
+        <source>&quot;%L1&quot; won&apos;t auto-run: your OpenMV Cam only auto-runs main.py/boot.py source files, never a compiled .mpy.
+
+Would you like to choose a different name?</source>
+        <translation>&quot;%L1&quot; לא יופעל אוטומטית: מצלמת OpenMV מפעילה אוטומטית רק קבצי מקור main.py/boot.py, לעולם לא קובץ .mpy מהודר.
+
+האם ברצונך לבחור שם אחר?</translation>
+    </message>
+    <message>
+        <location line="-48" />
         <location line="+6" />
         <location line="+7" />
-        <location line="+33" />
+        <location line="+34" />
+        <location line="+30" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -8156,7 +8274,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>העתק/המר קובץ Python</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+30" />
         <source>Open Model Zoo</source>
         <translation>פתח את גן החיות של דגם</translation>
     </message>
@@ -8172,51 +8290,112 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-176" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-730" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>המרת דגם</translation>
     </message>
     <message>
-        <location line="+420" />
+        <location line="+422" />
         <source>Show Code Profiler</source>
         <translation>הצג פרופילי קוד</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+42" />
+        <source>Home</source>
+        <translation>דף הבית</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Tutorial</source>
+        <translation>מדריך</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Libraries</source>
+        <translation>ספריות</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Boards</source>
+        <translation>לוחות</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Shields</source>
+        <translation>מגנים</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Sensors</source>
+        <translation>חיישנים</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Language</source>
+        <translation>שפה</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>CPython</source>
+        <translation>CPython</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Internals</source>
+        <translation>פנימיים</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Changelog</source>
+        <translation>יומן שינויים</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>License</source>
+        <translation>רישיון</translation>
+    </message>
+    <message>
+        <location line="+38" />
+        <location line="+8" />
+        <source>About %1</source>
+        <translation>אודות %1</translation>
+    </message>
+    <message>
+        <location line="-7" />
+        <source>About %1...</source>
+        <translation>אודות %1...</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&lt;b&gt;אודות %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;מאת: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;גרסת מפעל&lt;/b&gt;&lt;/p&gt;&lt;p&gt;מיועד ליצרנים מורשים בלבד.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;זכויות יוצרים (C) %L2 %L3&lt;/p&gt;&lt;p&gt;תוכנית זו מופצת בתקווה שתהיה שימושית, אך ללא כל אחריות; אף ללא האחריות המשתמעת של סחירות או התאמה למטרה מסוימת. ראה את &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; לפרטים נוספים.&lt;/p&gt;&lt;p&gt;&lt;b&gt;שאלות או הערות?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;צור איתנו קשר בכתובת &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+196" />
-        <location line="+26" />
         <source>JPG Mode</source>
-        <translation>מצב JPG</translation>
+        <translation type="vanished">מצב JPG</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location line="+240" />
+        <location line="+13" />
         <source>RAW Mode</source>
         <translation>מצב RAW</translation>
     </message>
     <message>
-        <location line="+113" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-4" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
-        <translation>Res (w:%1, h:%2) - החזר השקעה (x:%3, y:%4, w:%5, h:%6) - פיקסלים (%7) - פוקוס (%8)</translation>
+        <translation type="vanished">Res (w:%1, h:%2) - החזר השקעה (x:%3, y:%4, w:%5, h:%6) - פיקסלים (%7) - פוקוס (%8)</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+9" />
         <source>Res (w:%1, h:%2) - Focus (%3)</source>
-        <translation>Res (w:%1, h:%2) - פוקוס (%3)</translation>
+        <translation type="vanished">Res (w:%1, h:%2) - פוקוס (%3)</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-729" />
         <source>FPS: %L1</source>
         <translation>FPS: %L1</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+250" />
         <source>Close</source>
         <translation>סגור</translation>
     </message>
@@ -8237,7 +8416,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3418" />
         <source>Board:</source>
         <translation>גלשן:</translation>
     </message>
@@ -8269,21 +8448,20 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>גרסת קושחת המצלמה</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2" />
         <source>Serial Port:</source>
         <translation>יציאה טורית:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Camera serial port</source>
-        <translation>יציאה טורית למצלמה</translation>
+        <translation type="vanished">יציאה טורית למצלמה</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
-        <location line="+324" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
+        <location line="+8" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-377" />
+        <location line="+379" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+83" />
         <source>Drive:</source>
         <translation>נהיגה:</translation>
     </message>
@@ -8294,43 +8472,42 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+7" />
         <source>FPS:</source>
         <translation>FPS:</translation>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-82" />
         <source>May be different from camera FPS</source>
         <translation>עשוי להיות שונה מ-FPS של המצלמה</translation>
     </message>
     <message>
-        <location line="+307" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
+        <location line="+377" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3644" />
         <source>Update Available</source>
         <translation>עדכון זמין</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.</source>
-        <translation>גרסה חדשה של OpenMV IDE (%L1.%L2.%L3) זמינה להורדה.</translation>
+        <translation type="vanished">גרסה חדשה של OpenMV IDE (%L1.%L2.%L3) זמינה להורדה.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Download</source>
         <translation>הורד</translation>
     </message>
     <message>
-        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
-        <translation>תכנות WiFi מושבת!</translation>
+        <translation type="vanished">תכנות WiFi מושבת!</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Another application is using the OpenMV Cam broadcast discovery port. Please close that application and restart OpenMV IDE to enable WiFi programming.</source>
-        <translation>יישום אחר משתמש ביציאת גילוי השידור של OpenMV Cam. אנא סגור את היישום הזה והפעל מחדש את OpenMV IDE כדי לאפשר תכנות WiFi.</translation>
+        <translation type="vanished">יישום אחר משתמש ביציאת גילוי השידור של OpenMV Cam. אנא סגור את היישום הזה והפעל מחדש את OpenMV IDE כדי לאפשר תכנות WiFi.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+416" />
         <source>Documents Folder Error</source>
         <translation>שגיאת תיקיית מסמכים</translation>
     </message>
@@ -8355,7 +8532,6 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
         <translation>OpenMV Cam LED צבעי</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -8377,7 +8553,7 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>תודה על השימוש ב-OpenMV Cam וב-OpenMV IDE!
+        <translation type="vanished">תודה על השימוש ב-OpenMV Cam וב-OpenMV IDE!
 
 נורית ה-LED המשולבת של מצלמת OpenMV שלך מהבהבת בצבעים שונים כדי לציין את מצבה:
 
@@ -8400,18 +8576,18 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
 </translation>
     </message>
     <message>
-        <location line="+93" />
-        <location line="+1212" />
+        <location line="+94" />
+        <location line="+1236" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>יציאה טורית - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1180" />
+        <location line="-1204" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+827" />
+        <location line="+851" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
@@ -8421,7 +8597,7 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
         <translation>מתחבר... (פסק זמן של 30 שניות)</translation>
     </message>
     <message>
-        <location line="-1820" />
+        <location line="-1844" />
         <source>
 
 Try doing:
@@ -8474,12 +8650,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1270" />
+        <location line="+1294" />
         <source>UDP Server Connection - %1</source>
         <translation>חיבור שרת UDP - %1</translation>
     </message>
     <message>
-        <location line="-1196" />
+        <location line="-1220" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>ארגומנט יציאה לא חוקי (%1) עבור -open_udp_server_terminal</translation>
     </message>
@@ -8510,12 +8686,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1317" />
+        <location line="+1341" />
         <source>TCP Server Connection - %1</source>
         <translation>חיבור שרת TCP - %1</translation>
     </message>
     <message>
-        <location line="-1243" />
+        <location line="-1267" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>ארגומנט יציאה לא חוקי (%1) עבור -open_tcp_server_terminal</translation>
     </message>
@@ -8544,7 +8720,7 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2935" />
         <location line="+10" />
         <location line="+8" />
         <location line="+22" />
@@ -8632,16 +8808,15 @@ Please run Examples-&gt;HelloWorld-&gt;helloworld.py to test the vision quality 
         <translation>זוהתה מצלמת OpenMV לא רשומה</translation>
     </message>
     <message>
-        <location line="-19" />
         <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
-        <translation>מצלמת ה-OpenMV שלך לא רשומה. אתה צריך לרשום את ה-OpenMV Cam שלך עם OpenMV לשימוש בלתי מוגבל עם OpenMV IDE ללא כל הפרעות.
+        <translation type="vanished">מצלמת ה-OpenMV שלך לא רשומה. אתה צריך לרשום את ה-OpenMV Cam שלך עם OpenMV לשימוש בלתי מוגבל עם OpenMV IDE ללא כל הפרעות.
 
 האם תרצה לרשום את ה-OpenMV Cam שלך עכשיו?</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-9" />
         <source>Unregistered OpenMV Cams hurt the open-source OpenMV ecosystem by undercutting offical OpenMV Cam sales which help fund OpenMV Cam software development.
 
 Would you like to register your OpenMV Cam now?</source>
@@ -8650,16 +8825,15 @@ Would you like to register your OpenMV Cam now?</source>
 האם תרצה לרשום את ה-OpenMV Cam שלך עכשיו?</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>OpenMV IDE will display these three messages boxes each time you connect until you register your OpenMV Cam...
 
 Would you like to register your OpenMV Cam now?</source>
-        <translation>OpenMV IDE יציג את שלוש תיבות ההודעות הללו בכל פעם שתתחבר עד שתרשם את ה-OpenMV Cam...
+        <translation type="vanished">OpenMV IDE יציג את שלוש תיבות ההודעות הללו בכל פעם שתתחבר עד שתרשם את ה-OpenMV Cam...
 
 האם תרצה לרשום את ה-OpenMV Cam שלך עכשיו?</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+29" />
         <source>Please enter a board key to register your OpenMV Cam.&lt;br/&gt;&lt;br/&gt;If you do not have a board key you may purchase one from OpenMV &lt;a href=&quot;https://openmv.io/products/openmv-cam-board-key&quot;&gt;here&lt;/a&gt;.</source>
         <translation>אנא הזן מפתח לוח כדי לרשום את מצלמת ה-OpenMV שלך.&lt;br/&gt;&lt;br/&gt;אם אין לך מפתח לוח, תוכל לרכוש מפתח מ-OpenMV &lt;a href=&quot;https://openmv.io/products/openmv- cam-board-key&quot;&gt;כאן&lt;/a&gt;.</translation>
     </message>
@@ -8699,19 +8873,15 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>מפתח לוח בפורמט לא חוקי!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+225" />
-        <location line="+503" />
-        <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-84" />
         <source>FPS: 0</source>
-        <translation>FPS: 0</translation>
+        <translation type="vanished">FPS: 0</translation>
     </message>
     <message>
         <source>Configure Settings</source>
         <translation type="vanished">הגדר הגדרות</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+395" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+418" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>שמור סקריפט</translation>
@@ -8722,10 +8892,10 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>להסיר הערות ולהמיר רווחים לטאבים?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+99" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+84" />
         <location line="+7" />
         <location line="+18" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-75" />
         <location line="+7" />
         <location line="+18" />
         <source>Save Image</source>
@@ -8733,7 +8903,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-23" />
-        <location line="+1101" />
+        <location line="+1140" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>קבצי תמונה (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
@@ -8788,7 +8958,133 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>קובץ פתוח</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-2696" />
+        <source>&lt;p&gt;&lt;b&gt;Release Notes&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;הערות גרסה&lt;/b&gt;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>%1 %2</source>
+        <translation>%1 %2</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>OpenMV Firmware %1</source>
+        <translation>קושחת OpenMV %1</translation>
+    </message>
+    <message>
+        <location line="+340" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+98" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
+        <translation>מאגר פריימים - רזולוציה (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - פיקסלים (%7) - מיקוד (%8)</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
+        <translation>מאגר פריימים - רזולוציה (w:%1, h:%2) - נקודה (x:%3, y:%4)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - Focus (%3)</source>
+        <translation>מאגר פריימים - רזולוציה (w:%1, h:%2) - מיקוד (%3)</translation>
+    </message>
+    <message>
+        <location line="+255" />
+        <source>Camera serial port -- click to give this camera a friendly name</source>
+        <translation>יציאה טורית של המצלמה -- לחץ כדי לתת למצלמה זו שם ידידותי</translation>
+    </message>
+    <message>
+        <location line="+389" />
+        <source>A new version of %5 (%L1.%L2.%L3) is available for download. See the &lt;a href=&quot;%L4&quot;&gt;release notes&lt;/a&gt;.</source>
+        <translation>גרסה חדשה של %5 (%L1.%L2.%L3) זמינה להורדה. ראה את &lt;a href=&quot;%L4&quot;&gt;הערות הגרסה&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+124" />
+        <source>Connect (Network available)</source>
+        <translation>התחבר (רשת זמינה)</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Connect (USB available)</source>
+        <translation>התחבר (USB זמין)</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Connect (USB &amp; Network available)</source>
+        <translation>התחבר (USB ורשת זמינים)</translation>
+    </message>
+    <message>
+        <location line="+89" />
+        <source>-auto_run in viewer mode requires a readable text script file argument on the command line.</source>
+        <translation>-auto_run במצב מציג דורש ארגומנט של קובץ סקריפט טקסט קריא בשורת הפקודה.</translation>
+    </message>
+    <message>
+        <location line="+250" />
+        <source>Thanks for using the OpenMV Cam and %1!
+
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
+
+Blinking Green:
+
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow %1 to reprogram your OpenMV Cam.
+
+Blinking Blue:
+
+Your OpenMV Cam is running the default main.py script onboard.
+
+If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
+
+If the LED is blinking blue but %1 can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+
+Blinking White:
+
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
+
+</source>
+        <translation>תודה שהשתמשת במצלמת OpenMV וב-%1!
+
+נורית ה-LED המובנית של מצלמת OpenMV שלך מהבהבת בצבעים שונים כדי לציין את מצבה:
+
+מהבהב ירוק:
+
+מטען האתחול המובנה של מצלמת OpenMV שלך פועל. מטען האתחול המובנה פועל למשך מספר שניות כאשר מצלמת OpenMV שלך מקבלת מתח דרך USB כדי לאפשר ל-%1 לתכנת מחדש את מצלמת OpenMV שלך.
+
+מהבהב כחול:
+
+מצלמת OpenMV שלך מריצה את סקריפט ברירת המחדל main.py המובנה.
+
+אם התקנת כרטיס SD או דרסת את סקריפט main.py במצלמת OpenMV שלך אז היא תריץ במקום זאת את הקוד שטענת עליה.
+
+אם ה-LED מהבהב כחול אך %1 אינו יכול להתחבר למצלמת OpenMV שלך אנא ודא שאתה מחבר את מצלמת OpenMV שלך למחשב באמצעות כבל USB שמספק גם נתונים וגם מתח.
+
+מהבהב לבן:
+
+הקושחה של מצלמת OpenMV שלך נכנסת לפאניקה בגלל כשל חומרה. אנא בדוק שמודול המצלמה של מצלמת OpenMV שלך מותקן בצורה מאובטחת.
+
+</translation>
+    </message>
+    <message>
+        <location line="+711" />
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with %1 without any interruptions.
+
+Would you like to register your OpenMV Cam now?</source>
+        <translation>מצלמת OpenMV שלך אינה רשומה. עליך לרשום את מצלמת OpenMV שלך ב-OpenMV לשימוש בלתי מוגבל עם %1 ללא הפרעות.
+
+האם ברצונך לרשום את מצלמת OpenMV שלך כעת?</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>%1 will display these three messages boxes each time you connect until you register your OpenMV Cam...
+
+Would you like to register your OpenMV Cam now?</source>
+        <translation>%1 יציג את שלוש תיבות ההודעות הללו בכל פעם שתתחבר עד שתרשום את מצלמת OpenMV שלך...
+
+האם ברצונך לרשום את מצלמת OpenMV שלך כעת?</translation>
+    </message>
+    <message>
+        <location line="+479" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8808,7 +9104,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>לא ניתן לפתוח את הקובץ לדוגמה &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-468" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-493" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>בחר כונן</translation>
@@ -8823,7 +9119,17 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">&quot;%L1&quot; הוא הכונן היחיד הזמין ולכן הוא חייב להיות הכונן של OpenMV Cam שלך.</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="-49" />
+        <source>FPS: %L1 Cam - %L2 IDE</source>
+        <translation>FPS: %L1 מצלמה - %L2 IDE</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>On-camera FPS and IDE display FPS</source>
+        <translation>FPS במצלמה ו-FPS בתצוגת ה-IDE</translation>
+    </message>
+    <message>
+        <location line="+75" />
         <source>Please associate a drive with your OpenMV Cam</source>
         <translation>נא לשייך כונן למצלמת ה-OpenMV שלך</translation>
     </message>
@@ -8840,7 +9146,7 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="+14" />
         <source>Protocol Version %1 - System Info:</source>
-        <translation type="unfinished"></translation>
+        <translation>גרסת פרוטוקול %1 - מידע מערכת:</translation>
     </message>
     <message>
         <location line="+25" />
@@ -8903,7 +9209,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>סקר פרופילי קוד (מיליש)</translation>
     </message>
     <message>
-        <location line="+391" />
+        <location line="+416" />
         <location line="+26" />
         <location line="+7" />
         <source>Failed to flush &quot;%L1&quot;!</source>
@@ -8957,7 +9263,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2227" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1362" />
         <source>Please select a serial port</source>
         <translation>אנא בחר יציאה טורית</translation>
     </message>
@@ -8968,7 +9274,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+96" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+249" />
         <source>Try doing:
 
 </source>
@@ -9083,7 +9389,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+704" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+771" />
         <source>What would you like to do?</source>
         <translation>מה תרצה לעשות?</translation>
     </message>
@@ -9170,9 +9476,9 @@ Would you like to register your OpenMV Cam now?</source>
     <message numerus="yes">
         <location line="+18" />
         <source>AprilTag Generator - Where do you want to save %n tag image(s) to?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>מחולל AprilTag - היכן ברצונך לשמור %n תמונות תגית?</numerusform>
+            <numerusform>מחולל AprilTag - היכן ברצונך לשמור %n תמונות תגית?</numerusform>
         </translation>
     </message>
     <message>
@@ -9196,19 +9502,17 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>הדור הושלם!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
-        <translation>משאבי OpenMV IDE חדשים זמינים (למשל דוגמאות, קושחה, תיעוד וכו&apos;).</translation>
+        <translation type="vanished">משאבי OpenMV IDE חדשים זמינים (למשל דוגמאות, קושחה, תיעוד וכו&apos;).</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1859" />
         <source>Install</source>
         <translation>להתקין</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+289" />
-        <location line="+165" />
+        <location line="+327" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
@@ -9231,23 +9535,20 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>מוריד...</translation>
     </message>
     <message>
-        <location line="-440" />
+        <location line="-313" />
         <source>Installing...</source>
         <translation>מתקין...</translation>
     </message>
     <message>
-        <location line="+59" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
         <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
-        <translation>אנא סגור את כל התוכנות שמציגות/עורכות את נתוני היישום של OpenMV IDE ולאחר מכן הפעל מחדש את OpenMV IDE!</translation>
+        <translation type="vanished">אנא סגור את כל התוכנות שמציגות/עורכות את נתוני היישום של OpenMV IDE ולאחר מכן הפעל מחדש את OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
-        <translation>ההתקנה הצליחה! אנא הפעל מחדש את OpenMV IDE.</translation>
+        <translation type="vanished">ההתקנה הצליחה! אנא הפעל מחדש את OpenMV IDE.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+128" />
         <location line="+6" />
         <location line="+28" />
         <source>Package Update</source>
@@ -9255,64 +9556,62 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-27" />
-        <location line="+273" />
-        <location line="+88" />
+        <location line="+315" />
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>לא ניתן לפתוח את קובץ המשאבים &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-333" />
-        <location line="+273" />
-        <location line="+95" />
+        <location line="-287" />
+        <location line="+314" />
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>בקשת הרשת נכשלה &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-335" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
-        <translation>קושחה בינארית (*.bin *.dfu *.img)</translation>
+        <translation type="vanished">קושחה בינארית (*.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+117" />
-        <location line="+720" />
+        <location line="-269" />
+        <location line="+159" />
+        <location line="+875" />
         <location line="+227" />
-        <location line="+2414" />
+        <location line="+2601" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>מחק מערכת קבצי FAT פנימית</translation>
     </message>
     <message>
-        <location line="-3553" />
-        <location line="+117" />
-        <location line="+722" />
+        <location line="-3937" />
+        <location line="+159" />
+        <location line="+877" />
         <location line="+226" />
-        <location line="+2413" />
+        <location line="+2600" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>אם תפעיל אפשרות זו, כל הקבצים במערכת קבצי ה-FAT הפנימית של OpenMV Cam שלך יימחקו. פעולה זו אינה מוחקת קבצים בכל כרטיס SD נשלף (אם הוכנס).</translation>
     </message>
     <message>
-        <location line="-3553" />
-        <location line="+839" />
+        <location line="-3937" />
+        <location line="+1036" />
         <location line="+226" />
-        <location line="+2413" />
+        <location line="+2600" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>אפס את מערכת הקבצים ROMFS</translation>
     </message>
     <message>
-        <location line="-3552" />
-        <location line="+840" />
+        <location line="-3936" />
+        <location line="+1037" />
         <location line="+225" />
-        <location line="+2412" />
+        <location line="+2599" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>אם תפעיל אפשרות זו, מערכת הקבצים של ה-ROM במצלמת ה-OpenMV שלך תאופס בחזרה לברירת המחדל.</translation>
     </message>
     <message>
-        <location line="-3510" />
-        <location line="+45" />
+        <location line="-3871" />
+        <location line="+13" />
+        <location line="+51" />
         <source>Bootloader</source>
         <translation>טוען אתחול</translation>
     </message>
@@ -9327,12 +9626,12 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>הכריח להזין את טוען האתחול של OpenMV Cam. עלול לגרום לכך שמטען האתחול של OpenMV Cam לא ייצא אוטומטית בלוחות ישנים יותר.</translation>
     </message>
     <message>
-        <location line="+693" />
+        <location line="+848" />
         <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
         <translation>התקן את קושחת המהדורה האחרונה (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1063" />
+        <location line="+1082" />
         <location line="+192" />
         <source>Failed to copy firmware files to temporary directory!</source>
         <translation>כשל בהעתקת קבצי קושחה לספרייה זמנית!</translation>
@@ -9367,7 +9666,27 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>חבר את מצלמת ה-OpenMV שלך עכשיו.</translation>
     </message>
     <message>
-        <location line="+1377" />
+        <location line="+1310" />
+        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+84" />
+        <location line="+16" />
+        <source>Run Script</source>
+        <translation>הרץ סקריפט</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-14" />
+        <source>Python Files (*.py);;Text Files (*.txt);;All Files (*)</source>
+        <translation>קבצי Python (*.py);;קבצי טקסט (*.txt);;כל הקבצים (*)</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+15" />
+        <source>Error: Cannot open &quot;%L1&quot;!</source>
+        <translation>שגיאה: לא ניתן לפתוח את &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="+224" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9376,7 +9695,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 בפרט, בדוק את דוגמאות עיבוד תמונה -&gt; מעקב אחר צבעים ולמידת מכונה -&gt; TensorFlow.</translation>
     </message>
     <message>
-        <location line="-3455" />
+        <location line="-3839" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9401,17 +9720,17 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
     </message>
     <message>
         <location line="+21" />
-        <location line="+148" />
+        <location line="+190" />
         <source>Run</source>
         <translation>לָרוּץ</translation>
     </message>
     <message>
-        <location line="-105" />
+        <location line="-111" />
         <source>&quot;%L1&quot; is not a file!</source>
         <translation>&quot;%L1&quot; אינו קובץ!</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+73" />
         <source>Update ROMFS file system</source>
         <translation>עדכן את מערכת הקבצים ROMFS</translation>
     </message>
@@ -9421,17 +9740,15 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>אם תפעיל אפשרות זו, מערכת הקבצים של ה-ROM במצלמת ה-OpenMV שלך תתעדכן למהדורת הפיתוח האחרונה.</translation>
     </message>
     <message>
-        <location line="+125" />
         <source>Extracting...</source>
-        <translation>מחלץ...</translation>
+        <translation type="vanished">מחלץ...</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Unable to extract firmware!</source>
-        <translation>לא מצליח לחלץ קושחה!</translation>
+        <translation type="vanished">לא מצליח לחלץ קושחה!</translation>
     </message>
     <message>
-        <location line="+148" />
+        <location line="+341" />
         <location line="+5" />
         <location line="+48" />
         <location line="+5" />
@@ -9441,7 +9758,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>לוח לא ידוע</translation>
     </message>
     <message>
-        <location line="+344" />
+        <location line="+439" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>זוהה לוח במצב DFU. מה תרצה לעשות?</translation>
     </message>
@@ -9469,7 +9786,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>האם יש לך מצלמת OpenMV מחוברת והאם היא מגוונת?</translation>
     </message>
     <message>
-        <location line="+987" />
+        <location line="+1006" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>רק טעינת קבצי *.bin ו-*.img נתמכת עבור טוען האתחול הפנימי!</translation>
     </message>
@@ -9504,11 +9821,11 @@ OpenMV ממליצה לטעון רק את bootloader.dfu כדי לתקן את ט�
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-56" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1398" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-232" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1417" />
         <location line="+252" />
-        <location line="+681" />
-        <location line="+1936" />
+        <location line="+700" />
+        <location line="+2104" />
         <source>Please select the board type</source>
         <translation>אנא בחר את סוג הלוח</translation>
     </message>
@@ -9517,30 +9834,141 @@ OpenMV ממליצה לטעון רק את bootloader.dfu כדי לתקן את ט�
         <translation type="vanished">למחוק את מערכת הקבצים הפנימית?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2500" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2687" />
         <source>No released firmware available for the attached board!</source>
         <translation>אין קושחה שפורסמה זמינה עבור הלוח המצורף!</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+66" />
         <source>Please select a DFU Device</source>
         <translation>אנא בחר התקן DFU</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+170" />
+        <location line="-88" />
+        <location line="+175" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>אנא עדכן את טוען האתחול לגרסה העדכנית ביותר והתקן את ה-SoftDevice כדי להבהב את הקושחה של OpenMV. מידע נוסף ניתן למצוא בכתובת &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-1191" />
-        <location line="+3343" />
+        <location line="-2169" />
+        <source>Checking development examples...</source>
+        <translation>בודק דוגמאות פיתוח...</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Downloading development examples...</source>
+        <translation>מוריד דוגמאות פיתוח...</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Checking development documentation...</source>
+        <translation>בודק תיעוד פיתוח...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Downloading development documentation...</source>
+        <translation>מוריד תיעוד פיתוח...</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Checking development firmware...</source>
+        <translation>בודק קושחת פיתוח...</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location line="+84" />
+        <source>Downloading the latest development firmware...</source>
+        <translation>מוריד את קושחת הפיתוח האחרונה...</translation>
+    </message>
+    <message>
+        <location line="-73" />
+        <source>Unpacking the latest development firmware...</source>
+        <translation>מחלץ את קושחת הפיתוח האחרונה...</translation>
+    </message>
+    <message>
+        <location line="+311" />
+        <source>New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the &lt;a href=&quot;%L1&quot;&gt;release notes&lt;/a&gt;.</source>
+        <translation>משאבי %2 חדשים זמינים (למשל דוגמאות, קושחה, תיעוד וכו&apos;). ראה את &lt;a href=&quot;%L1&quot;&gt;הערות הגרסה&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+89" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
+        <source>Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
+        <translation>אנא סגור את כל התוכניות שצופות/עורכות את נתוני היישום של %1 ולאחר מכן הפעל מחדש את %1!</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>Installation Sucessful! Please restart %1.</source>
+        <translation>ההתקנה הצליחה! אנא הפעל מחדש את %1.</translation>
+    </message>
+    <message>
+        <location line="+96" />
+        <source>Firmware Binary (*.bin *.dfu *.img *.zip)</source>
+        <translation>קובץ קושחה בינארי (*.bin *.dfu *.img *.zip)</translation>
+    </message>
+    <message>
+        <location line="+91" />
+        <source>Unable to unpack the firmware zip &quot;%L1&quot;!</source>
+        <translation>לא ניתן לחלץ את קובץ ה-zip של הקושחה &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="+120" />
+        <location line="+3685" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>אזהרה: שדרוג לגרסת הקושחה החדשה מחייב את מחיקת מערכת הקבצים FAT.</translation>
     </message>
     <message>
-        <location line="-2848" />
+        <location line="-3593" />
+        <source>Unable to download the latest development firmware!</source>
+        <translation>לא ניתן להוריד את קושחת הפיתוח האחרונה!</translation>
+    </message>
+    <message>
+        <location line="+81" />
+        <source>The development firmware for this board is not available!</source>
+        <translation>קושחת הפיתוח עבור לוח זה אינה זמינה!</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Update complete!
+
+</source>
+        <translation>העדכון הושלם!
+
+</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Please wait for the device to finish restarting. This can take a little while.</source>
+        <translation>אנא המתן שההתקן יסיים את ההפעלה מחדש. הדבר עשוי לקחת זמן מה.</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Unknown Board (Wi-Fi)</source>
+        <translation>לוח לא ידוע (Wi-Fi)</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>%1 (Wi-Fi)</source>
+        <translation>%1 (Wi-Fi)</translation>
+    </message>
+    <message>
+        <location line="+213" />
+        <source>Name Camera</source>
+        <translation>תן שם למצלמה</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Serial port:</source>
+        <translation>יציאה טורית:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Name:</source>
+        <translation>שם:</translation>
+    </message>
+    <message>
+        <location line="+202" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
@@ -9565,13 +9993,13 @@ OpenMV ממליצה לטעון רק את bootloader.dfu כדי לתקן את ט�
     </message>
     <message>
         <location line="+229" />
-        <location line="+2415" />
+        <location line="+2602" />
         <source>Upgrade options:</source>
         <translation>אפשרויות שדרוג:</translation>
     </message>
     <message>
-        <location line="-2327" />
-        <location line="+169" />
+        <location line="-2514" />
+        <location line="+174" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>אנא קצר את REC ל-GND ואפס את הלוח שלך. מידע נוסף ניתן למצוא בכתובת &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
@@ -9586,17 +10014,17 @@ OpenMV ממליצה לטעון רק את bootloader.dfu כדי לתקן את ט�
 (לחץ על ביטול אם זה לוקח יותר מ-5 שניות).</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+154" />
         <source>Timeout error while getting firmware version!</source>
         <translation>שגיאת פסק זמן בזמן קבלת גרסת קושחה!</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Do not try to connect while the green light on your OpenMV Cam is on!</source>
         <translation>אל תנסה להתחבר בזמן שהאור הירוק במצלמת ה-OpenMV שלך דולקת!</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Try to connect again?</source>
         <translation>לנסות להתחבר שוב?</translation>
     </message>
@@ -9612,7 +10040,7 @@ OpenMV ממליצה לטעון רק את bootloader.dfu כדי לתקן את ט�
         <translation type="vanished">ארכיטקטורת לוח לא נתמכת!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-633" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-634" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+97" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>נתק את מצלמת ה-OpenMV שלך ואז חבר אותה מחדש...</translation>
@@ -9649,16 +10077,15 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <translation>לא ניתן להתחבר למטען האתחול הרגיל של OpenMV Cam שלך!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+131" />
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
-        <translation>OpenMV IDE עדיין יכול לנסות לתקן את מצלמת ה-OpenMV שלך באמצעות טוען האתחול DFU של מצלמת OpenMV.
+        <translation type="vanished">OpenMV IDE עדיין יכול לנסות לתקן את מצלמת ה-OpenMV שלך באמצעות טוען האתחול DFU של מצלמת OpenMV.
 
 לְהַמשִׁיך?</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+239" />
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
         <location line="+46" />
         <location line="+191" />
@@ -9671,7 +10098,7 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-191" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-195" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
@@ -9719,8 +10146,8 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+20" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+44" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+45" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+17" />
         <source>Onboard Data Flash Erased!
 
@@ -9731,8 +10158,8 @@ Continue?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-53" />
+        <location line="+53" />
         <source>Firmware Upgrade complete!
 
 </source>
@@ -9744,8 +10171,8 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
@@ -9758,8 +10185,8 @@ Continue?</source>
         <location line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>לחץ על אישור כאשר נורית ה-RGB של OpenMV Cam שלך מתחילה להבהב בכחול - מה שמציין שהבדיקה העצמית הושלמה.</translation>
@@ -9771,12 +10198,12 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+130" />
+        <location line="+134" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-75" />
-        <location line="+24" />
-        <location line="+27" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-77" />
         <location line="+25" />
+        <location line="+27" />
+        <location line="+26" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <location line="+37" />
         <source>
@@ -9796,7 +10223,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <translation>קובץ הקושחה ריק!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-160" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-162" />
         <source>No IMX settings for the selected board type %L1!</source>
         <translation>אין הגדרות IMX עבור סוג הלוח שנבחר %L1!</translation>
     </message>
@@ -9806,11 +10233,25 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <translation>לא נמצאו הגדרות IMX!</translation>
     </message>
     <message>
+        <location line="+56" />
+        <source>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
+
+Continue?</source>
+        <translation>%1 עדיין יכול לנסות לתקן את מצלמת OpenMV שלך באמצעות מטען האתחול SBL של מצלמת OpenMV.
+
+להמשיך?</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>If you are forcing SBL mode, disconnect the device from your computer and remove the SBL wire jumper, then reconnect it.</source>
+        <translation>אם אתה מאלץ מצב SBL, נתק את ההתקן מהמחשב שלך והסר את גשר חוט ה-SBL, ולאחר מכן חבר אותו מחדש.</translation>
+    </message>
+    <message>
         <source>Failed to eject &quot;%L1&quot;!</source>
         <translation type="vanished">הוצאת &quot;%L1&quot; נכשלה!</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-115" />
         <source>
 
 Hit cancel to skip to SBL reprogramming.</source>
@@ -9819,16 +10260,15 @@ Hit cancel to skip to SBL reprogramming.</source>
 לחץ על ביטול כדי לדלג לתכנות מחדש של SBL.</translation>
     </message>
     <message>
-        <location line="+42" />
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
-        <translation>OpenMV IDE עדיין יכול לנסות לתקן את מצלמת ה-OpenMV שלך באמצעות ה-SBL Bootloader של OpenMV Cam.
+        <translation type="vanished">OpenMV IDE עדיין יכול לנסות לתקן את מצלמת ה-OpenMV שלך באמצעות ה-SBL Bootloader של OpenMV Cam.
 
 לְהַמשִׁיך?</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+49" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
 Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
@@ -9837,7 +10277,12 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
 לחץ על הלחצן אישור לאחר ש-SBL Bootloader של OpenMV Cam שלך מונה.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+14" />
+        <source>Disconnect the device from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect it.</source>
+        <translation>נתק את ההתקן מהמחשב שלך, הסר את חוט הגשר בין פיני SBL ל-3.3V, ולאחר מכן חבר אותו מחדש.</translation>
+    </message>
+    <message>
+        <location line="+47" />
         <source>If you are forcing SBL mode, disconnect your OpenMV Cam from your computer and remove the SBL wire jumper. Then reconnect your OpenMV Cam to your computer.
 
 </source>
@@ -9845,8 +10290,8 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-2" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+50" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
+        <location line="+51" />
         <source>Firmware update complete!
 
 </source>
@@ -9855,7 +10300,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
 </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-49" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-50" />
         <source>Disconnect your OpenMV Cam from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
 </source>
@@ -9871,7 +10316,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-42" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+1" />
-        <location line="+51" />
+        <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-1" />
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>לחץ על כפתור OK לאחר ש-OpenMV Cam שלך מונה וסיים להפעיל את הבדיקה העצמית המובנית שלה (נורית כחולה מהבהבת - זה לוקח זמן).</translation>
@@ -9883,7 +10328,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-347" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-351" />
         <source>No DFU settings for the selected board type!</source>
         <translation>אין הגדרות DFU עבור סוג הלוח שנבחר!</translation>
     </message>
@@ -9919,7 +10364,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+29" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+33" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
@@ -9933,7 +10378,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <location line="-48" />
         <location line="+29" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+13" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-59" />
         <location line="+26" />
         <location line="+41" />
@@ -9942,7 +10387,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location line="-13" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-15" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-16" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-22" />
         <location line="+41" />
         <source>DFU firmware update complete!
@@ -9972,13 +10417,13 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     <message>
         <location line="+14" />
         <source>Your %1 doesn&apos;t have an internal FAT file system.</source>
-        <translation type="unfinished"></translation>
+        <translation>ל-%1 שלך אין מערכת קבצים פנימית FAT.</translation>
     </message>
     <message>
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
         <source>Your %1 doesn&apos;t have an ROM file system.</source>
-        <translation type="unfinished"></translation>
+        <translation>ל-%1 שלך אין מערכת קבצים ROM.</translation>
     </message>
     <message>
         <source>Your Nano 33 BLE doesn&apos;t have an onboard data flash disk.</source>
@@ -10023,20 +10468,41 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <translation>עדכון הקושחה של PicoTool נכשל!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-521" />
         <source>OpenMV IDE needs to update your bootloader to support ROMFS.
 
 The internal FAT filesystem will be erased!
 
 Continue?</source>
-        <translation>OpenMV IDE צריך לעדכן את טוען האתחול שלך כדי לתמוך ב-ROMFS. 
+        <translation type="vanished">OpenMV IDE צריך לעדכן את טוען האתחול שלך כדי לתמוך ב-ROMFS. 
 
 מערכת הקבצים הפנימית של FAT תימחק! 
 
 לְהַמשִׁיך?</translation>
     </message>
     <message>
-        <location line="+387" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-521" />
+        <source>%1 needs to update your bootloader to support ROMFS.
+
+The internal FAT filesystem will be erased!
+
+Continue?</source>
+        <translation>%1 צריך לעדכן את מטען האתחול שלך כדי לתמוך ב-ROMFS.
+
+מערכת הקבצים הפנימית FAT תימחק!
+
+להמשיך?</translation>
+    </message>
+    <message>
+        <location line="+37" />
+        <source>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
+
+Continue?</source>
+        <translation>%1 עדיין יכול לנסות לתקן את מצלמת OpenMV שלך באמצעות מטען האתחול DFU של מצלמת OpenMV.
+
+להמשיך?</translation>
+    </message>
+    <message>
+        <location line="+350" />
         <source>Invalid flash sector configuration settings!</source>
         <translation>הגדרות תצורת סקטור פלאש לא חוקיות!</translation>
     </message>
@@ -10101,7 +10567,12 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
 </translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+2" />
+        <source>Disconnect the device from your computer, remove the jumper wire between the BOOT and RST pins, and then reconnect it.</source>
+        <translation>נתק את ההתקן מהמחשב שלך, הסר את חוט הגשר בין פיני BOOT ל-RST, ולאחר מכן חבר אותו מחדש.</translation>
+    </message>
+    <message>
+        <location line="+13" />
         <source>DFU bootloader reset failed!</source>
         <translation>איפוס טוען האתחול של DFU נכשל!</translation>
     </message>
@@ -10133,7 +10604,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation>שגיאת פסק זמן בזמן לימוד MTU!</translation>
     </message>
     <message>
-        <location line="+170" />
+        <location line="+226" />
         <source>Board: %L1</source>
         <translation>לוח: %L1</translation>
     </message>
@@ -10153,17 +10624,18 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation>גרסת קושחה: %L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-2356" />
+        <location line="+2361" />
         <source>Serial Port: %L1</source>
         <translation>יציאה טורית: %L1</translation>
     </message>
     <message>
-        <location line="+85" />
+        <location line="+120" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ לא מעודכן - לחץ כאן כדי לשדרג ]</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+13" />
         <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>הקושחה של OpenMV Cam שלך לא מעודכנת. האם תרצה לשדרג?</translation>
     </message>
@@ -10190,7 +10662,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
     <message>
         <location line="+4" />
         <source>Function</source>
-        <translation type="unfinished">פוּנקצִיָה</translation>
+        <translation>פונקציה</translation>
     </message>
     <message>
         <location line="+1" />
@@ -10283,7 +10755,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation type="vanished">הַתחָלָה</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+592" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+658" />
         <source>More Examples</source>
         <translation>דוגמאות נוספות</translation>
     </message>
@@ -10339,9 +10811,13 @@ In particular, checkout the Color-Tracking examples.</source>
         <translation>הקלטת וידאו</translation>
     </message>
     <message>
-        <location line="+69" />
         <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!</source>
-        <translation>אזהרה: JPEG/PNG גדול מדי כדי לאחסן במצלמת OpenMV הנוכחית ולשלוח ל-OpenMV IDE!</translation>
+        <translation type="vanished">אזהרה: JPEG/PNG גדול מדי כדי לאחסן במצלמת OpenMV הנוכחית ולשלוח ל-OpenMV IDE!</translation>
+    </message>
+    <message>
+        <location line="+69" />
+        <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to %1!</source>
+        <translation>אזהרה: JPEG/PNG גדול מדי מכדי לאגור במצלמת OpenMV הנוכחית ולשלוח אל %1!</translation>
     </message>
     <message>
         <location line="+83" />
@@ -10415,27 +10891,47 @@ In particular, checkout the Color-Tracking examples.</source>
         <location line="-223" />
         <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
-Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>המודול &quot;%L1&quot; במצלמת ה-OpenMV שלך שונה מהעותק במחשב שלך.
+Would you like %2 to update the module on your OpenMV Cam?</source>
+        <translation>המודול &quot;%L1&quot; במצלמת OpenMV שלך שונה מהעותק שבמחשב שלך.
 
-האם תרצה ש-OpenMV IDE יעדכן את המודול במצלמת ה-OpenMV שלך?</translation>
+האם ברצונך ש-%2 יעדכן את המודול במצלמת OpenMV שלך?</translation>
     </message>
     <message>
         <location line="+75" />
-        <source>Would you like OpenMV IDE to update the module on your computer?</source>
-        <translation>האם תרצה ש-OpenMV IDE יעדכן את המודול במחשב שלך?</translation>
+        <source>Would you like %1 to update the module on your computer?</source>
+        <translation>האם ברצונך ש-%1 יעדכן את המודול במחשב שלך?</translation>
     </message>
     <message>
         <location line="+91" />
         <source>Module &quot;%L1&quot; may be required to run your script.
 
+Would you like %2 to copy it to your OpenMV Cam?</source>
+        <translation>ייתכן שהמודול &quot;%L1&quot; נדרש להרצת הסקריפט שלך.
+
+האם ברצונך ש-%2 יעתיק אותו למצלמת OpenMV שלך?</translation>
+    </message>
+    <message>
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
+
+Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
+        <translation type="vanished">המודול &quot;%L1&quot; במצלמת ה-OpenMV שלך שונה מהעותק במחשב שלך.
+
+האם תרצה ש-OpenMV IDE יעדכן את המודול במצלמת ה-OpenMV שלך?</translation>
+    </message>
+    <message>
+        <source>Would you like OpenMV IDE to update the module on your computer?</source>
+        <translation type="vanished">האם תרצה ש-OpenMV IDE יעדכן את המודול במחשב שלך?</translation>
+    </message>
+    <message>
+        <source>Module &quot;%L1&quot; may be required to run your script.
+
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>ייתכן שיידרש מודול &quot;%L1&quot; כדי להפעיל את הסקריפט שלך.
+        <translation type="vanished">ייתכן שיידרש מודול &quot;%L1&quot; כדי להפעיל את הסקריפט שלך.
 
 האם תרצה ש-OpenMV IDE יעתיק אותו למצלמת ה-OpenMV שלך?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-584" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10448,18 +10944,18 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>קבצי טקסט (*.txt);;כל הקבצים (*)</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+223" />
         <source>Zoom: %1%</source>
         <translation>זום: %1%</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4365" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4672" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-265" />
-        <location line="+221" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-332" />
+        <location line="+288" />
         <source>Model Zoo</source>
         <translation>דגם גן חיות</translation>
     </message>
@@ -10495,7 +10991,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>למצוא</translation>
     </message>
     <message>
-        <location line="+239" />
+        <location line="+235" />
         <source>Serial Terminal</source>
         <translation>מסוף טורי</translation>
     </message>
@@ -10506,6 +11002,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     </message>
     <message>
         <location line="+5" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-379" />
         <source>Save</source>
         <translation>להציל</translation>
     </message>
@@ -10515,12 +11012,16 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>גלישת טקסט</translation>
     </message>
     <message>
-        <location line="+6" />
-        <source>Run &quot;/main.py&quot;</source>
-        <translation>הפעל את &quot;/main.py&quot;</translation>
+        <location line="+16" />
+        <source>Run a script file from disk</source>
+        <translation>הרץ קובץ סקריפט מהדיסק</translation>
     </message>
     <message>
-        <location line="+0" />
+        <source>Run &quot;/main.py&quot;</source>
+        <translation type="vanished">הפעל את &quot;/main.py&quot;</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Run current script in editor window</source>
         <translation>הפעל את הסקריפט הנוכחי בחלון העורך</translation>
     </message>
@@ -10548,8 +11049,8 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-293" />
-        <location line="+79" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-312" />
+        <location line="+85" />
         <source>Query failed!</source>
         <translation>השאילתה נכשלה!</translation>
     </message>
@@ -10966,7 +11467,7 @@ The camera must be power cycled after a system package update.</source>
         <translation>העתק את הסף למעלה לפני הסגירה.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-476" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-485" />
         <source>Reading File...</source>
         <translation>קורא קובץ...</translation>
     </message>
@@ -10998,12 +11499,12 @@ The camera must be power cycled after a system package update.</source>
     </message>
     <message>
         <location line="-77" />
-        <location line="+605" />
+        <location line="+627" />
         <source>Transcoding File...</source>
         <translation>ממיר קובץ...</translation>
     </message>
     <message>
-        <location line="-594" />
+        <location line="-616" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -11058,17 +11559,16 @@ The camera must be power cycled after a system package update.</source>
         <translation>גרסת קובץ OpenMV ImageWriter לא נתמכת!</translation>
     </message>
     <message>
-        <location line="+96" />
-        <location line="+79" />
         <source>Get Input Formats</source>
-        <translation>קבל פורמטי קלט</translation>
+        <translation type="vanished">קבל פורמטי קלט</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+224" />
         <location line="+111" />
+        <location line="+10" />
         <location line="+98" />
         <location line="+15" />
-        <location line="+371" />
+        <location line="+445" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
@@ -11096,7 +11596,25 @@ The camera must be power cycled after a system package update.</source>
         <translation type="vanished">הפעלת ffmpeg נכשלה!</translation>
     </message>
     <message>
-        <location line="-989" />
+        <location line="-1200" />
+        <location line="+85" />
+        <source>FFmpeg is not supported on this platform.</source>
+        <translation>FFmpeg אינו נתמך בפלטפורמה זו.</translation>
+    </message>
+    <message>
+        <location line="-82" />
+        <location line="+85" />
+        <source>The FFmpeg executable was not found (the installation may be incomplete).</source>
+        <translation>קובץ ההפעלה של FFmpeg לא נמצא (ייתכן שההתקנה אינה שלמה).</translation>
+    </message>
+    <message>
+        <location line="-83" />
+        <location line="+85" />
+        <source>Get Formats</source>
+        <translation>קבל פורמטים</translation>
+    </message>
+    <message>
+        <location line="+37" />
         <source>Converting</source>
         <translation>המרה</translation>
     </message>
@@ -11104,6 +11622,19 @@ The camera must be power cycled after a system package update.</source>
         <location line="+112" />
         <source>FFMPEG is not supported on this platform.</source>
         <translation>FFMPEG אינו נתמך בפלטפורמה זו.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>The FFmpeg executable was not found:
+
+%1
+
+Your OpenMV IDE installation may be incomplete.</source>
+        <translation>קובץ ההפעלה של FFmpeg לא נמצא:
+
+%1
+
+ייתכן שההתקנה של OpenMV IDE שלך אינה שלמה.</translation>
     </message>
     <message>
         <location line="+98" />
@@ -11116,19 +11647,29 @@ The camera must be power cycled after a system package update.</source>
         <translation>לא ניתן לפתוח קובץ וידאו פלט!</translation>
     </message>
     <message>
-        <location line="+163" />
-        <location line="+415" />
+        <location line="+199" />
+        <location line="+453" />
         <source>Play Video</source>
         <translation>הפעל וידאו</translation>
     </message>
     <message>
-        <location line="-414" />
-        <location line="+163" />
+        <location line="-452" />
+        <source>Video playback is not supported on this platform.</source>
+        <translation>הפעלת וידאו אינה נתמכת בפלטפורמה זו.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location line="+200" />
         <source>Failed to launch ffplay!</source>
         <translation>הפעלת ffplay נכשלה!</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1" />
+        <source>RTSP playback is not supported on this platform.</source>
+        <translation>הפעלת RTSP אינה נתמכת בפלטפורמה זו.</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Convert Video Source</source>
         <translation>המרת מקור וידאו</translation>
     </message>
@@ -11241,27 +11782,43 @@ The camera must be power cycled after a system package update.</source>
         <translation>הסתר פרטים</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-745" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-812" />
         <source>Please select the target</source>
         <translation>אנא בחר את היעד</translation>
+    </message>
+    <message>
+        <source>The model has already been converted for the Ethos-U NPU.
+
+OpenMV IDE will just copy the model as is.</source>
+        <translation type="vanished">הדגם כבר הומר עבור ה-Ethos-U NPU. 
+
+OpenMV IDE פשוט יעתיק את המודל כפי שהוא.</translation>
+    </message>
+    <message>
+        <source>The model has already been converted for the Neural-ART NPU.
+
+OpenMV IDE will just copy the model as is.</source>
+        <translation type="vanished">הדגם כבר הומר עבור ה-NPU Neural-ART. 
+
+OpenMV IDE פשוט יעתיק את המודל כפי שהוא.</translation>
     </message>
     <message>
         <location line="+59" />
         <source>The model has already been converted for the Ethos-U NPU.
 
-OpenMV IDE will just copy the model as is.</source>
-        <translation>הדגם כבר הומר עבור ה-Ethos-U NPU. 
+%1 will just copy the model as is.</source>
+        <translation>המודל כבר הומר עבור ה-NPU מסוג Ethos-U.
 
-OpenMV IDE פשוט יעתיק את המודל כפי שהוא.</translation>
+%1 פשוט יעתיק את המודל כפי שהוא.</translation>
     </message>
     <message>
         <location line="+27" />
         <source>The model has already been converted for the Neural-ART NPU.
 
-OpenMV IDE will just copy the model as is.</source>
-        <translation>הדגם כבר הומר עבור ה-NPU Neural-ART. 
+%1 will just copy the model as is.</source>
+        <translation>המודל כבר הומר עבור ה-NPU מסוג Neural-ART.
 
-OpenMV IDE פשוט יעתיק את המודל כפי שהוא.</translation>
+%1 פשוט יעתיק את המודל כפי שהוא.</translation>
     </message>
     <message>
         <location line="+147" />
@@ -11281,7 +11838,7 @@ OpenMV IDE פשוט יעתיק את המודל כפי שהוא.</translation>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+93" />
+        <location line="+122" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
@@ -11289,7 +11846,7 @@ OpenMV IDE פשוט יעתיק את המודל כפי שהוא.</translation>
         <location line="+40" />
         <location line="+15" />
         <location line="+27" />
-        <location line="+24" />
+        <location line="+62" />
         <location line="+53" />
         <location line="+63" />
         <location line="+6" />
@@ -11298,7 +11855,7 @@ OpenMV IDE פשוט יעתיק את המודל כפי שהוא.</translation>
         <translation>ערוך ROMFS</translation>
     </message>
     <message>
-        <location line="-606" />
+        <location line="-673" />
         <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>כבר קיימת תיקייה עם אותו שם!</translation>
@@ -11351,37 +11908,37 @@ OpenMV IDE פשוט יעתיק את המודל כפי שהוא.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+225" />
+        <location line="+292" />
         <source>Extract File</source>
         <translation>חלץ קובץ</translation>
     </message>
     <message>
-        <location line="-231" />
+        <location line="-298" />
         <source>View/Edit</source>
         <translation>הצג/ערוך</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+222" />
+        <location line="+289" />
         <source>Add File</source>
         <translation>הוסף קובץ</translation>
     </message>
     <message>
-        <location line="-221" />
-        <location line="+223" />
+        <location line="-288" />
+        <location line="+290" />
         <source>New Folder</source>
-        <translation type="unfinished">תיקייה חדשה</translation>
+        <translation>תיקייה חדשה</translation>
     </message>
     <message>
-        <location line="-135" />
+        <location line="-173" />
         <location line="+13" />
-        <location line="+303" />
+        <location line="+341" />
         <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS אינו נתמך בלוח זה!</translation>
     </message>
     <message>
-        <location line="-275" />
+        <location line="-313" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>נכשל פריקת ROMFS!</translation>
@@ -11394,7 +11951,7 @@ OpenMV IDE פשוט יעתיק את המודל כפי שהוא.</translation>
     </message>
     <message>
         <location line="-25" />
-        <location line="+165" />
+        <location line="+203" />
         <source>ROMFS Images (*.img)</source>
         <translation>תמונות ROMFS (*.img)</translation>
     </message>
@@ -11486,7 +12043,7 @@ OpenMV IDE פשוט יעתיק את המודל כפי שהוא.</translation>
         <location line="+25" />
         <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-780" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-854" />
         <source>Success - Press Ok to close the window</source>
         <translation>הצלחה - לחץ על אישור כדי לסגור את החלון</translation>
     </message>
@@ -11630,7 +12187,7 @@ OpenMV IDE פשוט יעתיק את המודל כפי שהוא.</translation>
         <translation>מתכנת STM32 אינו נתמך בפלטפורמה זו.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-542" />
         <source>the detected board</source>
         <translation>הלוח שזוהה</translation>
     </message>
@@ -11653,6 +12210,266 @@ OpenMV IDE פשוט יעתיק את המודל כפי שהוא.</translation>
         <location line="+6" />
         <source>This board does not define any loadable firmware interfaces in its settings.</source>
         <translation>לוח זה אינו מגדיר ממשקי קושחה הניתנים לטעינה בהגדרות שלו.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>To flash a bootloader image your OpenMV Cam must be in bootloader recovery mode. Unplug the camera, connect BOOT0/SBL/RECOVERY to 3.3V with a jumper, and then plug the camera back in before trying again.</source>
+        <translation>כדי לצרוב תמונת מטען אתחול, מצלמת OpenMV שלך חייבת להיות במצב שחזור מטען אתחול. נתק את המצלמה, חבר את BOOT0/SBL/RECOVERY ל-3.3V באמצעות גשר, ולאחר מכן חבר את המצלמה בחזרה לפני שתנסה שוב.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+68" />
+        <source>Unknown control: %L1</source>
+        <translation>פקד לא ידוע: %L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>(missing type)</source>
+        <translation>(סוג חסר)</translation>
+    </message>
+    <message>
+        <location line="+174" />
+        <location line="+5" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+783" />
+        <location line="+5" />
+        <source>Show text</source>
+        <translation>הצג טקסט</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+0" />
+        <source>Hide text</source>
+        <translation>הסתר טקסט</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>These fields have invalid or incomplete input:
+
+%L1
+
+Fix or clear them before saving.</source>
+        <translation>בשדות הבאים יש קלט לא תקין או לא שלם:
+
+%L1
+
+תקן או נקה אותם לפני השמירה.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Unable to open:
+
+%L1
+
+%L2</source>
+        <translation>לא ניתן לפתוח:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Not a valid JSON config file:
+
+%L1</source>
+        <translation>קובץ תצורת JSON לא תקין:
+
+%L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>the top level must be a JSON object.</source>
+        <translation>הרמה העליונה חייבת להיות אובייקט JSON.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>This JSON file has no &quot;controls&quot; array to build a GUI from.</source>
+        <translation>לקובץ JSON זה אין מערך &quot;controls&quot; לבניית ממשק משתמש גרפי ממנו.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Unable to save:
+
+%L1
+
+%L2</source>
+        <translation>לא ניתן לשמור:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <location line="+21" />
+        <source>JSON Files (*.json)</source>
+        <translation>קבצי JSON (*.json)</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Unable to create:
+
+%L1
+
+%L2</source>
+        <translation>לא ניתן ליצור:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="-90" />
+        <source>Edit WiFi Debugging</source>
+        <translation>ערוך ניפוי שגיאות WiFi</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Set Up WiFi Debugging</source>
+        <translation>הגדר ניפוי שגיאות WiFi</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Please enter or select a WiFi network name (SSID).</source>
+        <translation>אנא הזן או בחר שם רשת WiFi (SSID).</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Editing this camera&apos;s WiFi debugging setup -- this updates the boot.py already on the camera, keeping any code you added to it. It brings the network up on power-up and advertises the camera to the IDE, so you can connect without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</source>
+        <translation>עריכת הגדרות ניפוי השגיאות של WiFi עבור מצלמה זו -- פעולה זו מעדכנת את boot.py שכבר קיים במצלמה, ושומרת על כל קוד שהוספת אליו. היא מעלה את הרשת בעת ההפעלה ומפרסמת את המצלמה ל-IDE, כך שתוכל להתחבר ללא כבל USB. בזמן שניפוי שגיאות WiFi פעיל, ניפוי שגיאות USB מושבת -- בחר &quot;מושבת&quot; למטה כדי לכבות אותו ולחזור ל-USB.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Set up this camera for debugging over the network. This writes a boot.py to the camera that brings up its WiFi or Ethernet on power-up and advertises it to the IDE, so you can connect to it without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</source>
+        <translation>הגדר מצלמה זו לניפוי שגיאות דרך הרשת. פעולה זו כותבת boot.py למצלמה שמעלה את ה-WiFi או ה-Ethernet שלה בעת ההפעלה ומפרסמת אותה ל-IDE, כך שתוכל להתחבר אליה ללא כבל USB. בזמן שניפוי שגיאות WiFi פעיל, ניפוי שגיאות USB מושבת -- בחר &quot;מושבת&quot; למטה כדי לכבות אותו ולחזור ל-USB.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Connection</source>
+        <translation>חיבור</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>WiFi</source>
+        <translation>WiFi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ethernet</source>
+        <translation>Ethernet</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Disabled (USB debugging)</source>
+        <translation>מושבת (ניפוי שגיאות USB)</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>WiFi Network</source>
+        <translation>רשת WiFi</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Scan</source>
+        <translation>סרוק</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Network (SSID):</source>
+        <translation>רשת (SSID):</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Password:</source>
+        <translation>סיסמה:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Automatic</source>
+        <translation>אוטומטי</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Open (no password)</source>
+        <translation>פתוח (ללא סיסמה)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA / WPA2</source>
+        <translation>WPA / WPA2</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA3</source>
+        <translation>WPA3</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA2 / WPA3</source>
+        <translation>WPA2 / WPA3</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WEP (legacy)</source>
+        <translation>WEP (מדור קודם)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Security:</source>
+        <translation>אבטחה:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>IP Address</source>
+        <translation>כתובת IP</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Automatic (DHCP)</source>
+        <translation>אוטומטי (DHCP)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Static</source>
+        <translation>סטטי</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Address:</source>
+        <translation>כתובת:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Netmask:</source>
+        <translation>מסכת רשת:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Gateway:</source>
+        <translation>שער:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>DNS:</source>
+        <translation>DNS:</translation>
+    </message>
+    <message>
+        <location line="+93" />
+        <source>No WiFi networks were found (this PC may have no WiFi adapter). You can type the network name in by hand.</source>
+        <translation>לא נמצאו רשתות WiFi (ייתכן שאין למחשב זה מתאם WiFi). באפשרותך להקליד את שם הרשת ידנית.</translation>
+    </message>
+    <message>
+        <location line="+72" />
+        <source>Edit boot.py</source>
+        <translation>ערוך את boot.py</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Failed to write boot.py to the camera:
+
+%1</source>
+        <translation>כתיבת boot.py למצלמה נכשלה:
+
+%1</translation>
     </message>
 </context>
 <context>
@@ -13808,7 +14625,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <location line="+1" />
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-227" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+485" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+493" />
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+217" />
         <source>Clone</source>
         <translation>שיבוט</translation>
@@ -14051,7 +14868,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+3" />
         <source>Delete session %1?</source>
-        <translation type="unfinished"></translation>
+        <translation>למחוק את ההפעלה %1?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14061,14 +14878,14 @@ Preselects a desktop Qt for building the application if available.</source>
 %1</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+315" />
         <source>Error while restoring session</source>
         <translation>שגיאה במהלך שחזור ההפעלה</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Could not restore session %1</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן היה לשחזר את ההפעלה %1</translation>
     </message>
     <message>
         <location line="+44" />
@@ -14077,19 +14894,19 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+47" />
-        <location line="+42" />
+        <location line="+49" />
         <source>Error while saving session</source>
         <translation>שגיאה בעת שמירת ההפעלה</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-48" />
         <source>Could not save session %1</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן היה לשמור את ההפעלה %1</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+49" />
         <source>Could not save session to file &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן היה לשמור את ההפעלה לקובץ &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
@@ -14144,7 +14961,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+3" />
         <source>Last Modified</source>
-        <translation type="unfinished">שונה לאחרונה</translation>
+        <translation>שונה לאחרונה</translation>
     </message>
     <message>
         <location line="+131" />
@@ -14155,7 +14972,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="-10" />
         <source>&amp;Create</source>
-        <translation type="unfinished">&amp;לִיצוֹר</translation>
+        <translation>צור (&amp;C)</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14165,7 +14982,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+11" />
         <source>&amp;Clone</source>
-        <translation type="unfinished">&amp;שיבוט</translation>
+        <translation>שכפל (&amp;C)</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14180,7 +14997,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+1" />
         <source>&amp;Rename</source>
-        <translation type="unfinished">&amp;שנה שם</translation>
+        <translation>שנה שם (&amp;R)</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14200,22 +15017,22 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+72" />
         <source>Could not create directory &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן היה ליצור את הספרייה &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+5" />
         <source>The program &quot;%1&quot; does not exist or is not executable.</source>
-        <translation type="unfinished">התוכנית &quot;%1&quot; אינה קיימת או שאינה ניתנת להפעלה.</translation>
+        <translation>התוכנית &quot;%1&quot; אינה קיימת או שאינה ניתנת להפעלה.</translation>
     </message>
     <message>
         <location line="+34" />
         <source>Starting: &quot;%1&quot; %2</source>
-        <translation type="unfinished"></translation>
+        <translation>מתחיל: &quot;%1&quot; %2</translation>
     </message>
     <message>
         <location line="+11" />
         <source>The process &quot;%1&quot; exited normally.</source>
-        <translation type="unfinished"></translation>
+        <translation>התהליך &quot;%1&quot; הסתיים כרגיל.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -14225,12 +15042,12 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+4" />
         <source>Could not start process &quot;%1&quot; %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן היה להפעיל את התהליך &quot;%1&quot; %2.</translation>
     </message>
     <message>
         <location line="+7" />
         <source>The process &quot;%1&quot; crashed.</source>
-        <translation type="unfinished"></translation>
+        <translation>התהליך &quot;%1&quot; קרס.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
@@ -14242,12 +15059,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-291" />
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-56" />
         <source>Name</source>
-        <translation type="unfinished">שֵׁם</translation>
+        <translation>שם</translation>
     </message>
     <message>
         <location line="+0" />
         <source>Source</source>
-        <translation type="unfinished">מָקוֹר</translation>
+        <translation>מקור</translation>
     </message>
     <message>
         <location line="+45" />
@@ -14262,7 +15079,7 @@ Preselects a desktop Qt for building the application if available.</source>
     <message>
         <location line="+9" />
         <source>Create</source>
-        <translation type="unfinished">לִיצוֹר</translation>
+        <translation>צור</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+23" />
@@ -14302,17 +15119,17 @@ Excluding: %2
     <message>
         <location line="+1" />
         <source>Attach debugger to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>צרף מנפה שגיאות אל %1</translation>
     </message>
     <message>
         <location line="+70" />
         <source>Stop</source>
-        <translation type="unfinished">תפסיק</translation>
+        <translation>עצור</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Close Tab</source>
-        <translation type="unfinished">סגור כרטיסייה</translation>
+        <translation>סגור טאב</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14337,7 +15154,7 @@ Excluding: %2
     <message>
         <location line="+1" />
         <source>A</source>
-        <translation type="unfinished">א</translation>
+        <translation>A</translation>
     </message>
     <message>
         <location line="+3" />
@@ -14375,7 +15192,7 @@ Excluding: %2
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+604" />
         <source>Invalid</source>
-        <translation type="unfinished">לא חוקי</translation>
+        <translation>לא חוקי</translation>
     </message>
     <message>
         <location line="+109" />
@@ -14396,12 +15213,12 @@ Excluding: %2
     <message>
         <location line="+4" />
         <source>Always</source>
-        <translation type="unfinished">תמיד</translation>
+        <translation>תמיד</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Never</source>
-        <translation type="unfinished">לעולם לא</translation>
+        <translation>אף פעם</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14527,7 +15344,7 @@ Excluding: %2
         <location line="+281" />
         <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-3" />
         <source>System Environment</source>
-        <translation type="unfinished">סביבת מערכת</translation>
+        <translation>סביבת המערכת</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14573,7 +15390,7 @@ Excluding: %2
     <message>
         <location line="+50" />
         <source>No build device is set for the kit &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>לא הוגדר התקן בנייה עבור הערכה &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -14588,7 +15405,7 @@ Excluding: %2
     <message>
         <location line="+11" />
         <source>The build device &quot;%1&quot; cannot reach the build directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>התקן הבנייה &quot;%1&quot; אינו יכול להגיע לספריית הבנייה.</translation>
     </message>
     <message numerus="yes">
         <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
@@ -14611,7 +15428,7 @@ Excluding: %2
     <message>
         <location line="+26" />
         <source>The project %1 is not configured, skipping it.</source>
-        <translation type="unfinished"></translation>
+        <translation>הפרויקט %1 אינו מוגדר, מדלג עליו.</translation>
     </message>
     <message>
         <location line="+11" />
@@ -14633,7 +15450,7 @@ Excluding: %2
         <location line="+5" />
         <source>Build System</source>
         <comment>Category for build system issues listed under &apos;Issues&apos;</comment>
-        <translation type="unfinished">בניית מערכת</translation>
+        <translation>מערכת בנייה</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14714,36 +15531,36 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location line="+83" />
         <source>Running steps for project %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>מריץ שלבים עבור פרויקט %1...</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Skipping disabled step %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>מדלג על השלב המושבת %1.</translation>
     </message>
     <message>
         <location line="+24" />
         <location line="+104" />
         <source>Error while building/deploying project %1 (kit: %2)</source>
-        <translation type="unfinished"></translation>
+        <translation>שגיאה בעת בניית/פריסת פרויקט %1 (ערכה: %2)</translation>
     </message>
     <message>
         <location line="-100" />
         <source>The kit %1 has configuration issues which might be the root cause for this problem.</source>
-        <translation type="unfinished"></translation>
+        <translation>לערכה %1 יש בעיות תצורה שעשויות להיות הגורם השורשי לבעיה זו.</translation>
     </message>
     <message>
         <location line="+4" />
         <location line="+98" />
         <source>When executing step &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>בעת ביצוע השלב &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+118" />
         <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+525" />
         <source>Enable</source>
-        <translation type="unfinished">לְאַפשֵׁר</translation>
+        <translation>הפעל</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14752,7 +15569,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <location line="+289" />
         <location line="+6" />
         <source>Disable</source>
-        <translation type="unfinished">השבת</translation>
+        <translation>השבת</translation>
     </message>
     <message>
         <location line="+0" />
@@ -14801,7 +15618,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+47" />
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+34" />
         <source>Add</source>
-        <translation type="unfinished">לְהוֹסִיף</translation>
+        <translation>הוסף</translation>
     </message>
     <message>
         <location line="+7" />
@@ -14813,7 +15630,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <location line="+11" />
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+25" />
         <source>Remove</source>
-        <translation type="unfinished">לְהַסִיר</translation>
+        <translation>הסר</translation>
     </message>
     <message>
         <location line="+5" />
@@ -14824,7 +15641,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <location line="+216" />
         <location line="+103" />
         <source>Rename...</source>
-        <translation type="unfinished">שנה שם...</translation>
+        <translation>שנה שם...</translation>
     </message>
     <message>
         <location line="-153" />
@@ -14873,7 +15690,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+2" />
         <source>Remove Build Configuration %1?</source>
-        <translation type="unfinished"></translation>
+        <translation>להסיר את תצורת הבנייה %1?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -14898,12 +15715,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="-58" />
         <source>Move Up</source>
-        <translation type="unfinished">לזוז למעלה</translation>
+        <translation>הזז למעלה</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Move Down</source>
-        <translation type="unfinished">לרדת</translation>
+        <translation>הזז למטה</translation>
     </message>
     <message>
         <location line="+7" />
@@ -14914,12 +15731,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+97" />
         <source>%1 Steps</source>
         <extracomment>%1 is the name returned by BuildStepList::displayName</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>שלבי %1</translation>
     </message>
     <message>
         <location line="+19" />
         <source>No %1 Steps</source>
-        <translation type="unfinished"></translation>
+        <translation>אין שלבי %1</translation>
     </message>
     <message>
         <location line="+2" />
@@ -14954,12 +15771,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>The project file &quot;%1&quot; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>קובץ הפרויקט &quot;%1&quot; אינו קיים.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/codestylesettingspropertiespage.cpp" line="+60" />
         <source>Language:</source>
-        <translation type="unfinished">שפה:</translation>
+        <translation>שפה:</translation>
     </message>
     <message>
         <location line="+13" />
@@ -15057,7 +15874,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
         <source>Project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>פרויקט &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+2" />
@@ -15067,7 +15884,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+30" />
         <source>Project &quot;%1&quot;:</source>
-        <translation type="unfinished"></translation>
+        <translation>פרויקט &quot;%1&quot;:</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
@@ -15079,7 +15896,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="-16" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1718" />
         <source>Run %1</source>
-        <translation type="unfinished"></translation>
+        <translation>הרץ את %1</translation>
     </message>
     <message>
         <location line="+7" />
@@ -15183,7 +16000,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="-24" />
         <location line="+29" />
         <source>File name:</source>
-        <translation type="unfinished">שם קובץ:</translation>
+        <translation>שם קובץ:</translation>
     </message>
     <message>
         <location line="-28" />
@@ -15202,13 +16019,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+743" />
         <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+47" />
         <source>Error</source>
-        <translation type="unfinished">שְׁגִיאָה</translation>
+        <translation>שגיאה</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+1" />
         <source>Warning</source>
-        <translation type="unfinished">אַזהָרָה</translation>
+        <translation>אזהרה</translation>
     </message>
     <message>
         <location line="+253" />
@@ -15240,7 +16057,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-1" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-290" />
         <source>Add...</source>
-        <translation type="unfinished">לְהוֹסִיף...</translation>
+        <translation>הוסף...</translation>
     </message>
     <message>
         <location line="+15" />
@@ -15251,7 +16068,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+55" />
         <location line="+511" />
         <source>Custom</source>
-        <translation type="unfinished">המותאם אישית</translation>
+        <translation>מותאם אישית</translation>
     </message>
     <message>
         <location line="-235" />
@@ -15477,7 +16294,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+8" />
         <source>Cannot start %1. Check src\tools\win64interrupt\win64interrupt.c for more information.</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן להפעיל את %1. בדוק את src\tools\win64interrupt\win64interrupt.c למידע נוסף.</translation>
     </message>
     <message>
         <location line="+8" />
@@ -15519,23 +16336,23 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
         <source>No device for path &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>אין התקן עבור הנתיב &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
         <source>No device found for path &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>לא נמצא התקן עבור הנתיב &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-9" />
         <source>No file access for device &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>אין גישה לקבצים עבור ההתקן &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
         <source>%1 (default for %2)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (ברירת מחדל עבור %2)</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceprocessesdialog.cpp" line="+103" />
@@ -15550,7 +16367,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+4" />
         <source>Filter</source>
-        <translation type="unfinished">לְסַנֵן</translation>
+        <translation>סינון</translation>
     </message>
     <message>
         <location line="+22" />
@@ -15647,7 +16464,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicetestdialog.cpp" line="+87" />
         <source>Close</source>
-        <translation type="unfinished">סגור</translation>
+        <translation>סגור</translation>
     </message>
     <message>
         <location line="+3" />
@@ -15746,7 +16563,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+1" />
         <source>Unknown</source>
-        <translation type="unfinished">לא ידוע</translation>
+        <translation>לא ידוע</translation>
     </message>
     <message>
         <location line="+113" />
@@ -15756,7 +16573,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+30" />
         <source>No device for given path: &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>אין התקן עבור הנתיב הנתון: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+7" />
@@ -15844,17 +16661,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation type="unfinished">הצג &amp;שוליים ימניים בעמודה:</translation>
+        <translation>הצג שוליים ימניים בעמודה (&amp;M):</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Use context-specific margin</source>
-        <translation type="unfinished">השתמש בשוליים ספציפיים להקשר</translation>
+        <translation>השתמש בשוליים ספציפיים להקשר</translation>
     </message>
     <message>
         <location line="+1" />
         <source>If available, use a different margin. For example, the ColumnLimit from the ClangFormat plugin.</source>
-        <translation type="unfinished">אם זמין, השתמש בשוליים אחרים. לדוגמה, ColumnLimit מהפלאגין ClangFormat.</translation>
+        <translation>אם זמין, השתמש בשוליים אחרים. לדוגמה, ה-ColumnLimit מתוסף ClangFormat.</translation>
     </message>
     <message>
         <location line="+98" />
@@ -15867,7 +16684,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <location line="+49" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2916" />
         <source>Environment</source>
-        <translation type="unfinished">סביבה</translation>
+        <translation>סביבה</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+43" />
@@ -15882,13 +16699,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+2" />
         <source>Edit...</source>
-        <translation type="unfinished">לַעֲרוֹך...</translation>
+        <translation>ערוך...</translation>
     </message>
     <message>
         <location line="+22" />
         <location line="+412" />
         <source>Choose Directory</source>
-        <translation type="unfinished">בחר מדריך</translation>
+        <translation>בחר תיקייה</translation>
     </message>
     <message>
         <location line="-278" />
@@ -16001,7 +16818,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-877" />
         <source>%1 (%2, %3 %4 at %5)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (%2, %3 %4 ב-%5)</translation>
     </message>
     <message>
         <location line="+1259" />
@@ -16043,7 +16860,7 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+12" />
         <source>Import</source>
-        <translation type="unfinished">יְבוּא</translation>
+        <translation>ייבא</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonfieldpage.cpp" line="+107" />
@@ -16068,7 +16885,7 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+5" />
         <source>Field &quot;%1&quot; has no type.</source>
-        <translation type="unfinished"></translation>
+        <translation>לשדה &quot;%1&quot; אין סוג.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -16128,7 +16945,7 @@ fails because Clang does not understand the target architecture.</source>
     <message>
         <location line="+26" />
         <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>הסוג &quot;%1&quot; אינו אחד מהנתמכים &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</translation>
     </message>
     <message>
         <location line="+80" />
@@ -16226,7 +17043,8 @@ fails because Clang does not understand the target architecture.</source>
         <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
         <source>Failed to add subproject &quot;%1&quot;
 to project &quot;%2&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>הוספת תת-הפרויקט &quot;%1&quot;
+לפרויקט &quot;%2&quot; נכשלה.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -16321,12 +17139,12 @@ to project &quot;%2&quot;.</source>
         <location line="+12" />
         <location line="+46" />
         <source>Failed to open an editor for &quot;%1&quot;.</source>
-        <translation type="unfinished">פתיחת עורך עבור &quot;%1&quot; נכשלה.</translation>
+        <translation>פתיחת עורך עבור &quot;%1&quot; נכשלה.</translation>
     </message>
     <message>
         <location line="-27" />
         <source>No file to open found in &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>לא נמצא קובץ לפתיחה ב-&quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -16368,7 +17186,7 @@ to project &quot;%2&quot;.</source>
     <message>
         <location line="-228" />
         <source>Checking &quot;%1&quot; for %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>בודק את &quot;%1&quot; עבור %2.</translation>
     </message>
     <message>
         <location line="+24" />
@@ -16421,7 +17239,7 @@ to project &quot;%2&quot;.</source>
     <message>
         <location line="+12" />
         <source>* Version %1 not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>* גרסה %1 אינה נתמכת.</translation>
     </message>
     <message>
         <location line="+9" />
@@ -16476,12 +17294,12 @@ to project &quot;%2&quot;.</source>
     <message>
         <location line="+10" />
         <source>Icon file &quot;%1&quot; not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>קובץ הסמל &quot;%1&quot; לא נמצא.</translation>
     </message>
     <message>
         <location line="+20" />
         <source>Image file &quot;%1&quot; not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>קובץ התמונה &quot;%1&quot; לא נמצא.</translation>
     </message>
     <message>
         <location line="+16" />
@@ -16526,23 +17344,24 @@ to project &quot;%2&quot;.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
         <source>%1 [folder]</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 [תיקייה]</translation>
     </message>
     <message>
         <location line="+3" />
         <source>%1 [symbolic link]</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 [קישור סמלי]</translation>
     </message>
     <message>
         <location line="+3" />
         <source>%1 [read only]</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 [קריאה בלבד]</translation>
     </message>
     <message>
         <location line="+6" />
         <source>The directory %1 contains files which cannot be overwritten:
 %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>הספרייה %1 מכילה קבצים שלא ניתן לדרוס:
+%2.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardpagefactory_p.cpp" line="+72" />
@@ -16843,13 +17662,13 @@ to project &quot;%2&quot;.</source>
         <location line="+110" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+34" />
         <source>Change...</source>
-        <translation type="unfinished">שינוי...</translation>
+        <translation>שנה...</translation>
     </message>
     <message>
         <location line="+19" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+153" />
         <source>No changes to apply.</source>
-        <translation type="unfinished">אין שינויים להחיל.</translation>
+        <translation>אין שינויים להחלה.</translation>
     </message>
     <message>
         <location line="+39" />
@@ -16879,7 +17698,7 @@ to project &quot;%2&quot;.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="-52" />
         <source>Desktop (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>שולחן עבודה (%1)</translation>
     </message>
     <message>
         <location line="+131" />
@@ -16901,7 +17720,7 @@ to project &quot;%2&quot;.</source>
         <location filename="../../../src/plugins/projectexplorer/kitmanagerconfigwidget.cpp" line="+50" />
         <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+47" />
         <source>Name:</source>
-        <translation type="unfinished">שֵׁם:</translation>
+        <translation>שם:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -16957,7 +17776,7 @@ to project &quot;%2&quot;.</source>
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-427" />
         <source>%1 (default)</source>
         <extracomment>Mark up a kit as the default one.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 (ברירת מחדל)</translation>
     </message>
     <message>
         <location line="+428" />
@@ -17022,7 +17841,7 @@ to project &quot;%2&quot;.</source>
     <message>
         <location line="+1" />
         <source>Override %1:</source>
-        <translation type="unfinished"></translation>
+        <translation>עקוף %1:</translation>
     </message>
     <message>
         <location line="+46" />
@@ -17084,7 +17903,7 @@ to project &quot;%2&quot;.</source>
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
         <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+130" />
         <source>Run</source>
-        <translation type="unfinished">לָרוּץ</translation>
+        <translation>הפעל</translation>
     </message>
     <message>
         <location line="+783" />
@@ -17154,7 +17973,7 @@ to project &quot;%2&quot;.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
         <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
-        <translation type="unfinished"></translation>
+        <translation>חוזר לשימוש בסביבה השמורה במטמון עבור &quot;%1&quot; לאחר:</translation>
     </message>
     <message>
         <location line="+483" />
@@ -17178,7 +17997,8 @@ to project &quot;%2&quot;.</source>
         <location line="+796" />
         <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
-        <translation type="unfinished"></translation>
+        <translation>אחזור סביבת MSVC מ-&quot;%1&quot; נכשל:
+%2</translation>
     </message>
     <message>
         <location line="+83" />
@@ -17215,7 +18035,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+2" />
         <source>Choose File</source>
-        <translation type="unfinished">בחר קובץ</translation>
+        <translation>בחר קובץ</translation>
     </message>
     <message>
         <location line="+5" />
@@ -17225,7 +18045,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+1" />
         <source>Could not open file: &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן היה לפתוח את הקובץ: &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+23" />
@@ -17261,14 +18081,14 @@ Please close all running instances of your application before starting a build.<
         <location line="+6" />
         <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+192" />
         <source>Arguments:</source>
-        <translation type="unfinished">טיעונים:</translation>
+        <translation>ארגומנטים:</translation>
     </message>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-594" />
         <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+5" />
         <source>Working directory:</source>
-        <translation type="unfinished">ספריית עבודה:</translation>
+        <translation>תיקיית עבודה:</translation>
     </message>
     <message>
         <location line="+17" />
@@ -17346,7 +18166,7 @@ Please close all running instances of your application before starting a build.<
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
         <source>Projects</source>
-        <translation type="unfinished">פרויקטים</translation>
+        <translation>פרויקטים</translation>
     </message>
     <message>
         <location line="+265" />
@@ -17428,7 +18248,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+137" />
         <source>Documentation Comments</source>
-        <translation type="unfinished">הערות תיעוד</translation>
+        <translation>הערות תיעוד</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectconfigurationmodel.cpp" line="+101" />
@@ -17495,7 +18315,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+8" />
         <source>Open File</source>
-        <translation type="unfinished">קובץ פתוח</translation>
+        <translation>פתח קובץ</translation>
     </message>
     <message>
         <location line="+49" />
@@ -17516,7 +18336,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="-347" />
         <source>Close Pro&amp;ject &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>סגור פ&amp;רויקט &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
@@ -17527,7 +18347,7 @@ Please close all running instances of your application before starting a build.<
         <location line="+0" />
         <location line="+328" />
         <source>Close All Files in Project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>סגור את כל הקבצים בפרויקט &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-316" />
@@ -17591,7 +18411,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <source>Build Project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>בנה פרויקט &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -17601,7 +18421,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+1" />
         <source>Build Project &quot;%1&quot; for All Configurations</source>
-        <translation type="unfinished"></translation>
+        <translation>בנה פרויקט &quot;%1&quot; עבור כל התצורות</translation>
     </message>
     <message>
         <location line="+20" />
@@ -17611,7 +18431,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <source>Build for &amp;Run Configuration &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>בנה עבור תצורת ה&amp;רצה &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+13" />
@@ -17674,7 +18494,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+18" />
         <source>Add New...</source>
-        <translation type="unfinished">הוסף חדש...</translation>
+        <translation>הוסף חדש...</translation>
     </message>
     <message>
         <location line="+8" />
@@ -17705,7 +18525,7 @@ Please close all running instances of your application before starting a build.<
         <location line="+9" />
         <location line="+1621" />
         <source>Close Project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>סגור פרויקט &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-1614" />
@@ -17715,17 +18535,17 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+0" />
         <source>Close All Projects Except &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>סגור את כל הפרויקטים מלבד &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
         <source>Properties...</source>
-        <translation type="unfinished">נכסים...</translation>
+        <translation>מאפיינים...</translation>
     </message>
     <message>
         <location line="+6" />
         <source>Remove...</source>
-        <translation type="unfinished">לְהַסִיר...</translation>
+        <translation>הסר...</translation>
     </message>
     <message>
         <location line="+7" />
@@ -17751,7 +18571,7 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+1" />
         <source>Set &quot;%1&quot; as Active Project</source>
-        <translation type="unfinished"></translation>
+        <translation>הגדר את &quot;%1&quot; כפרויקט פעיל</translation>
     </message>
     <message>
         <location line="+11" />
@@ -17761,12 +18581,12 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+6" />
         <source>Collapse All</source>
-        <translation type="unfinished">למוטט הכל</translation>
+        <translation>כווץ הכול</translation>
     </message>
     <message>
         <location line="+4" />
         <source>Expand All</source>
-        <translation type="unfinished">הרחב הכל</translation>
+        <translation>הרחב הכול</translation>
     </message>
     <message>
         <location line="+24" />
@@ -17821,12 +18641,12 @@ Please close all running instances of your application before starting a build.<
     <message>
         <location line="+2" />
         <source>Unload Project %1?</source>
-        <translation type="unfinished"></translation>
+        <translation>לפרוק את הפרויקט %1?</translation>
     </message>
     <message>
         <location line="+1" />
         <source>The project %1 is currently being built.</source>
-        <translation type="unfinished"></translation>
+        <translation>הפרויקט %1 נמצא כעת בבנייה.</translation>
     </message>
     <message>
         <location line="+1" />
@@ -17863,7 +18683,7 @@ Please close all running instances of your application before starting a build.<
         <location line="+65" />
         <source>New Project</source>
         <comment>Title of dialog</comment>
-        <translation type="unfinished">פרוייקט חדש</translation>
+        <translation>פרויקט חדש</translation>
     </message>
     <message>
         <location line="+130" />
@@ -17910,17 +18730,17 @@ Do you want to ignore them?</source>
     <message>
         <location line="+23" />
         <source>Open Project in &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>פתח פרויקט ב-&quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+9" />
         <source>Open Project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>פתח פרויקט &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+19" />
         <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>הקובץ &quot;%1&quot; שונה שמו ל-&quot;%2&quot;, אך לא ניתן היה לשנות אוטומטית את הפרויקטים הבאים: %3</translation>
     </message>
     <message>
         <location line="+6" />
@@ -17954,7 +18774,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+3" />
         <source>The project %1 is not configured.</source>
-        <translation type="unfinished"></translation>
+        <translation>הפרויקט %1 אינו מוגדר.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -17980,7 +18800,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+2" />
         <source>Close %1?</source>
-        <translation type="unfinished"></translation>
+        <translation>לסגור את %1?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -17990,7 +18810,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+2" />
         <source>Do you want to cancel the build process and close %1 anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>האם ברצונך לבטל את תהליך הבנייה ולסגור את %1 בכל זאת?</translation>
     </message>
     <message>
         <location line="+164" />
@@ -18000,7 +18820,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+3" />
         <source>The project &quot;%1&quot; is not configured.</source>
-        <translation type="unfinished"></translation>
+        <translation>הפרויקט &quot;%1&quot; אינו מוגדר.</translation>
     </message>
     <message>
         <location line="+6" />
@@ -18020,7 +18840,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+6" />
         <source>Cannot run &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן להריץ את &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18036,7 +18856,7 @@ Do you want to ignore them?</source>
         <location line="+31" />
         <source>New File</source>
         <comment>Title of dialog</comment>
-        <translation type="unfinished">קובץ חדש</translation>
+        <translation>קובץ חדש</translation>
     </message>
     <message>
         <location line="+29" />
@@ -18047,7 +18867,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+41" />
         <source>The following subprojects could not be added to project &quot;%1&quot;:</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן היה להוסיף את תת-הפרויקטים הבאים לפרויקט &quot;%1&quot;:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18062,7 +18882,7 @@ Do you want to ignore them?</source>
     <message>
         <location line="+33" />
         <source>Could not add following files to project %1:</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן היה להוסיף את הקבצים הבאים לפרויקט %1:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -18098,7 +18918,8 @@ Do you want to ignore them?</source>
         <location line="+1" />
         <source>File &quot;%1&quot; was not removed, because the project has changed in the meantime.
 Please try again.</source>
-        <translation type="unfinished"></translation>
+        <translation>הקובץ &quot;%1&quot; לא הוסר, מכיוון שהפרויקט השתנה בינתיים.
+אנא נסה שוב.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18134,7 +18955,7 @@ Please try again.</source>
     <message>
         <location line="+10" />
         <source>Failed to add new file &quot;%1&quot; to the project.</source>
-        <translation type="unfinished"></translation>
+        <translation>הוספת הקובץ החדש &quot;%1&quot; לפרויקט נכשלה.</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18144,7 +18965,7 @@ Please try again.</source>
     <message>
         <location line="+1" />
         <source>Delete %1 from file system?</source>
-        <translation type="unfinished"></translation>
+        <translation>למחוק את %1 ממערכת הקבצים?</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18154,14 +18975,16 @@ Please try again.</source>
     <message>
         <location line="+1" />
         <source>Could not delete file %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן היה למחוק את הקובץ %1.</translation>
     </message>
     <message>
         <location line="+37" />
         <source>The project file %1 cannot be automatically changed.
 
 Rename %2 to %3 anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן לשנות אוטומטית את קובץ הפרויקט %1.
+
+לשנות את שם %2 ל-%3 בכל זאת?</translation>
     </message>
     <message>
         <location line="+17" />
@@ -18171,7 +18994,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+15" />
         <source>The file %1 could not be renamed %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן היה לשנות את שם הקובץ %1 ל-%2.</translation>
     </message>
     <message>
         <location line="+5" />
@@ -18329,7 +19152,7 @@ Rename %2 to %3 anyway?</source>
     <message>
         <location line="+6" />
         <source>All</source>
-        <translation type="unfinished">את כל</translation>
+        <translation>הכול</translation>
     </message>
     <message>
         <location line="+1" />
@@ -18518,7 +19341,8 @@ Rename %2 to %3 anyway?</source>
         <location line="+4" />
         <source>You just dragged some files from one project node to another.
 What should %1 do now?</source>
-        <translation type="unfinished"></translation>
+        <translation>בדיוק גררת מספר קבצים מצומת פרויקט אחד לאחר.
+מה על %1 לעשות כעת?</translation>
     </message>
     <message>
         <location line="+9" />
@@ -18643,7 +19467,7 @@ What should %1 do now?</source>
     <message>
         <location line="+26" />
         <source>Synchronize with Editor</source>
-        <translation type="unfinished">סנכרן עם Editor</translation>
+        <translation>סנכרן עם העורך</translation>
     </message>
     <message>
         <location line="+140" />
@@ -18661,39 +19485,36 @@ What should %1 do now?</source>
         <translation>Alt+X</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-612" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-620" />
         <source>Open Session #%1</source>
-        <translation type="unfinished"></translation>
+        <translation>פתח הפעלה #%1</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Ctrl+Meta+%1</source>
-        <translation>Ctrl+Meta+%1</translation>
+        <translation type="vanished">Ctrl+Meta+%1</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Ctrl+Alt+%1</source>
-        <translation>Ctrl+Alt+%1</translation>
+        <translation type="vanished">Ctrl+Alt+%1</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Open Recent Project #%1</source>
-        <translation type="unfinished"></translation>
+        <translation>פתח פרויקט אחרון #%1</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Ctrl+Shift+%1</source>
-        <translation>Ctrl+Shift+%1</translation>
+        <translation type="vanished">Ctrl+Shift+%1</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+56" />
         <source>Open %1 &quot;%2&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>פתח %1 &quot;%2&quot;</translation>
     </message>
     <message>
         <location line="+2" />
         <source>Open %1 &quot;%2&quot; (%3)</source>
-        <translation type="unfinished"></translation>
+        <translation>פתח %1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
         <location line="+20" />
@@ -18704,23 +19525,23 @@ What should %1 do now?</source>
     <message>
         <location line="+130" />
         <source>%1 (last session)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (הפעלה אחרונה)</translation>
     </message>
     <message>
         <location line="+2" />
         <source>%1 (current session)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 (הפעלה נוכחית)</translation>
     </message>
     <message>
         <location line="+70" />
         <source>Rename</source>
-        <translation type="unfinished">שנה שם</translation>
+        <translation>שנה שם</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+175" />
         <source>Delete</source>
-        <translation type="unfinished">לִמְחוֹק</translation>
+        <translation>מחק</translation>
     </message>
     <message>
         <location line="+125" />
@@ -18746,17 +19567,17 @@ What should %1 do now?</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-384" />
         <source>Use Regular Expressions</source>
-        <translation type="unfinished">השתמש בביטויים רגולריים</translation>
+        <translation>השתמש בביטויים רגולריים</translation>
     </message>
     <message>
         <location line="+7" />
         <source>Case Sensitive</source>
-        <translation type="unfinished">רגיש רישיות</translation>
+        <translation>תלוי רישיות</translation>
     </message>
     <message>
         <location line="+10" />
         <source>Show Non-matching Lines</source>
-        <translation type="unfinished">הצג קווים שאינם תואמים</translation>
+        <translation>הצג שורות שאינן תואמות</translation>
     </message>
     <message>
         <location line="+118" />
@@ -18777,7 +19598,7 @@ What should %1 do now?</source>
         <location line="+10" />
         <source>%1 (%2)</source>
         <extracomment>vanished target display role: vanished target name (device type name)</extracomment>
-        <translation type="unfinished">%1 (%2)</translation>
+        <translation>%1 (%2)</translation>
     </message>
     <message>
         <location line="+15" />
@@ -18792,7 +19613,7 @@ What should %1 do now?</source>
     <message>
         <location line="+12" />
         <source>Remove Vanished Target &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>הסר יעד שנעלם &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+4" />
@@ -18896,7 +19717,7 @@ What should %1 do now?</source>
         <location filename="../../../src/plugins/projectexplorer/removetaskhandler.cpp" line="+23" />
         <source>Remove</source>
         <comment>Name of the action triggering the removetaskhandler</comment>
-        <translation type="unfinished">לְהַסִיר</translation>
+        <translation>הסר</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19001,7 +19822,7 @@ What should %1 do now?</source>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-15" />
         <source>Executable:</source>
-        <translation type="unfinished">בר הפעלה:</translation>
+        <translation>קובץ הפעלה:</translation>
     </message>
     <message>
         <location line="+95" />
@@ -19121,12 +19942,12 @@ What should %1 do now?</source>
     <message>
         <location line="+47" />
         <source>Starting %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>מתחיל את %1...</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Environment:</source>
-        <translation type="unfinished">סביבה:</translation>
+        <translation>סביבה:</translation>
     </message>
     <message>
         <location line="+11" />
@@ -19217,7 +20038,7 @@ What should %1 do now?</source>
     <message>
         <location line="+3" />
         <source>Remove Deploy Configuration %1?</source>
-        <translation type="unfinished"></translation>
+        <translation>להסיר את תצורת הפריסה %1?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19347,7 +20168,7 @@ These files are preserved.</source>
     <message>
         <location line="+172" />
         <source>Unknown build system &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>מערכת בנייה לא ידועה &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
@@ -19408,7 +20229,7 @@ These files are preserved.</source>
     <message>
         <location line="+71" />
         <source>Enable Kit for Project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>אפשר ערכה עבור פרויקט &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7" />
@@ -19418,7 +20239,7 @@ These files are preserved.</source>
     <message>
         <location line="+9" />
         <source>Disable Kit for Project &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>השבת ערכה עבור פרויקט &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+8" />
@@ -19428,7 +20249,7 @@ These files are preserved.</source>
     <message>
         <location line="+3" />
         <source>Disable Kit &quot;%1&quot; in This Project?</source>
-        <translation type="unfinished"></translation>
+        <translation>להשבית את הערכה &quot;%1&quot; בפרויקט זה?</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19516,7 +20337,7 @@ These files are preserved.</source>
     <message>
         <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+110" />
         <source>Cannot open task file %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן לפתוח את קובץ המשימות %1: %2</translation>
     </message>
     <message>
         <location line="+43" />
@@ -19526,7 +20347,7 @@ These files are preserved.</source>
     <message>
         <location line="+49" />
         <source>File Error</source>
-        <translation type="unfinished">שגיאת קובץ</translation>
+        <translation>שגיאת קובץ</translation>
     </message>
     <message>
         <location line="+27" />
@@ -19605,7 +20426,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+39" />
         <source>Type</source>
-        <translation type="unfinished">סוּג</translation>
+        <translation>סוג</translation>
     </message>
     <message>
         <location line="+76" />
@@ -19656,7 +20477,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+8" />
         <source>Cancel</source>
-        <translation type="unfinished">לְבַטֵל</translation>
+        <translation>ביטול</translation>
     </message>
     <message>
         <location line="+20" />
@@ -19794,14 +20615,14 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+60" />
         <source>None</source>
-        <translation type="unfinished">אף אחד</translation>
+        <translation>ללא</translation>
     </message>
     <message>
         <location line="+33" />
         <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+353" />
         <location line="+215" />
         <source>Python</source>
-        <translation type="unfinished">פִּיתוֹן</translation>
+        <translation>Python</translation>
     </message>
     <message>
         <location line="+1" />
@@ -19816,7 +20637,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+3" />
         <source>Python &quot;%1&quot; not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Python &quot;%1&quot; לא נמצא.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -19846,7 +20667,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+229" />
         <source>Python Language Server (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>שרת שפת Python (%1)</translation>
     </message>
     <message>
         <location line="+303" />
@@ -19856,7 +20677,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+4" />
         <source>Install</source>
-        <translation type="unfinished">להתקין</translation>
+        <translation>התקן</translation>
     </message>
     <message>
         <location line="+11" />
@@ -19876,7 +20697,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+4" />
         <source>Never</source>
-        <translation type="unfinished">לעולם לא</translation>
+        <translation>אף פעם</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+84" />
@@ -19912,13 +20733,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+20" />
         <source>Run %1</source>
-        <translation type="unfinished"></translation>
+        <translation>הרץ את %1</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
         <location line="+283" />
         <source>Name:</source>
-        <translation type="unfinished">שֵׁם:</translation>
+        <translation>שם:</translation>
     </message>
     <message>
         <location line="-282" />
@@ -19951,7 +20772,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <location line="-184" />
         <location line="+185" />
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;לִמְחוֹק</translation>
+        <translation>מחק (&amp;D)</translation>
     </message>
     <message>
         <location line="-183" />
@@ -20023,7 +20844,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+2" />
         <source>Create</source>
-        <translation type="unfinished">לִיצוֹר</translation>
+        <translation>צור</translation>
     </message>
     <message>
         <location line="+34" />
@@ -20039,7 +20860,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+11" />
         <source>Found &quot;%1&quot; (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>נמצא &quot;%1&quot; (%2)</translation>
     </message>
     <message>
         <location line="+9" />
@@ -20059,7 +20880,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     <message>
         <location line="+15" />
         <source>PySide version:</source>
-        <translation type="unfinished">גרסת PySide:</translation>
+        <translation>גרסת PySide:</translation>
     </message>
 </context>
 <context>
@@ -21295,7 +22116,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+2" />
         <source>%1 [customizable]</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 [ניתן להתאמה]</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+89" />
@@ -21494,7 +22315,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     <message>
         <location line="+2" />
         <source>Line %1</source>
-        <translation type="unfinished"></translation>
+        <translation>שורה %1</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23245,17 +24066,17 @@ Will not be applied to whitespace in comments and strings.</source>
     <message numerus="yes">
         <location line="+3" />
         <source>%n found.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n נמצאו.</numerusform>
+            <numerusform>%n נמצאו.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+29" />
         <source>%n occurrences replaced.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n מופעים הוחלפו.</numerusform>
+            <numerusform>%n מופעים הוחלפו.</numerusform>
         </translation>
     </message>
     <message>
@@ -23266,7 +24087,7 @@ Will not be applied to whitespace in comments and strings.</source>
     <message>
         <location filename="../../../src/plugins/texteditor/codeassist/functionhintproposalwidget.cpp" line="+371" />
         <source>%1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 מתוך %2</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+52" />
@@ -23555,7 +24376,7 @@ Excluding: %3
         <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+202" />
         <location line="+827" />
         <source>Bookmarks</source>
-        <translation type="unfinished">סימניות</translation>
+        <translation>סימניות</translation>
     </message>
     <message>
         <location line="+1" />
@@ -23565,17 +24386,17 @@ Excluding: %3
     <message>
         <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-788" />
         <source>Move Up</source>
-        <translation type="unfinished">לזוז למעלה</translation>
+        <translation>הזז למעלה</translation>
     </message>
     <message>
         <location line="+1" />
         <source>Move Down</source>
-        <translation type="unfinished">לרדת</translation>
+        <translation>הזז למטה</translation>
     </message>
     <message>
         <location line="+1" />
         <source>&amp;Edit</source>
-        <translation type="unfinished">&amp;לַעֲרוֹך</translation>
+        <translation>עריכה (&amp;E)</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23803,17 +24624,17 @@ Excluding: %3
     <message numerus="yes">
         <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%1: בוטל. %n מופעים נמצאו ב-%2 קבצים.</numerusform>
+            <numerusform>%1: בוטל. %n מופעים נמצאו ב-%2 קבצים.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+6" />
         <source>%1: %n occurrences found in %2 files.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%1: %n מופעים נמצאו ב-%2 קבצים.</numerusform>
+            <numerusform>%1: %n מופעים נמצאו ב-%2 קבצים.</numerusform>
         </translation>
     </message>
     <message>
@@ -24203,7 +25024,7 @@ in &quot;%2&quot;.
     <message>
         <location line="+1" />
         <source>Default</source>
-        <translation type="unfinished">בְּרִירַת מֶחדָל</translation>
+        <translation>ברירת מחדל</translation>
     </message>
     <message>
         <source>Leave at Default</source>
@@ -24299,7 +25120,7 @@ in &quot;%2&quot;.
     <message>
         <location line="-356" />
         <source>copyFile is not implemented for &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>copyFile אינו ממומש עבור &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+30" />
@@ -24309,7 +25130,7 @@ in &quot;%2&quot;.
     <message>
         <location line="+4" />
         <source>Cannot copy &quot;%1&quot; to &quot;%2&quot;: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן להעתיק את &quot;%1&quot; אל &quot;%2&quot;: %3</translation>
     </message>
     <message>
         <location line="+103" />
@@ -24334,7 +25155,7 @@ in &quot;%2&quot;.
     <message>
         <location line="+180" />
         <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>מסרב להסיר את הספרייה הסטנדרטית &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
@@ -24399,17 +25220,17 @@ in &quot;%2&quot;.
     <message>
         <location line="-333" />
         <source>File &quot;%1&quot; does not exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>הקובץ &quot;%1&quot; אינו קיים.</translation>
     </message>
     <message>
         <location line="+3" />
         <source>Could not open File &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן היה לפתוח את הקובץ &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+24" />
         <source>Could not open file &quot;%1&quot; for writing.</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן היה לפתוח את הקובץ &quot;%1&quot; לכתיבה.</translation>
     </message>
     <message numerus="yes">
         <location line="+5" />
@@ -24501,9 +25322,9 @@ in &quot;%2&quot;.
     <message numerus="yes">
         <location line="+9" />
         <source>announced %n sections, each %1 bytes, exceed file size</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n מקטעים שהוכרזו, כל אחד %1 בתים, חורגים מגודל הקובץ</numerusform>
+            <numerusform>%n מקטעים שהוכרזו, כל אחד %1 בתים, חורגים מגודל הקובץ</numerusform>
         </translation>
     </message>
     <message>
@@ -24701,7 +25522,7 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <location line="+15" />
         <location line="+8" />
         <source>Cannot create temporary file %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>לא ניתן ליצור קובץ זמני %1: %2</translation>
     </message>
     <message>
         <location line="+40" />
@@ -24784,9 +25605,9 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <location line="+14" />
         <location line="+2" />
         <source>%n Items</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n פריטים</numerusform>
+            <numerusform>%n פריטים</numerusform>
         </translation>
     </message>
     <message>
@@ -24946,12 +25767,12 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location line="+79" />
         <source>The program &quot;%1&quot; could not be found.</source>
-        <translation type="unfinished"></translation>
+        <translation>התוכנית &quot;%1&quot; לא נמצאה.</translation>
     </message>
     <message>
         <location line="+908" />
         <source>Failed to create process interface for &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>יצירת ממשק התהליך עבור &quot;%1&quot; נכשלה.</translation>
     </message>
     <message>
         <location line="+163" />
@@ -25152,7 +25973,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;משתנה&lt;/th&gt;&lt;th&gt;מתרחב אל&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;ספריית הקובץ הנוכחי&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;שם הקובץ (עם נתיב מלא)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;שם הקובץ (ללא נתיב)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
@@ -25215,7 +26036,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     <message>
         <location line="+7" />
         <source>Command &quot;%1&quot; was not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>הפקודה &quot;%1&quot; לא נמצאה.</translation>
     </message>
     <message>
         <location line="+10" />
@@ -25241,7 +26062,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <location line="+28" />
         <location line="+45" />
         <source>Failed to start terminal process: &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>הפעלת תהליך הטרמינל נכשלה: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />

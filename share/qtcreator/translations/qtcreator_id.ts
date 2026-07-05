@@ -25,89 +25,72 @@
 <context>
     <name>OpenMVCameraSettings</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvcamerasettings.ui" />
         <source>OpenMV Cam Settings</source>
-        <translation>Pengaturan Kamera OpenMV</translation>
+        <translation type="vanished">Pengaturan Kamera OpenMV</translation>
     </message>
     <message>
-        <location/>
         <source>Turn on WiFi Shield on startup</source>
-        <translation>Aktifkan WiFi Shield saat startup</translation>
+        <translation type="vanished">Aktifkan WiFi Shield saat startup</translation>
     </message>
     <message>
-        <location/>
         <source>Client Mode (Normal)</source>
-        <translation>Mode Klien (Normal)</translation>
+        <translation type="vanished">Mode Klien (Normal)</translation>
     </message>
     <message>
-        <location/>
         <source>Password</source>
-        <translation>Kata sandi</translation>
+        <translation type="vanished">Kata sandi</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter your WiFi network password here</source>
-        <translation>Silakan masukkan kata sandi jaringan WiFi Anda di sini</translation>
+        <translation type="vanished">Silakan masukkan kata sandi jaringan WiFi Anda di sini</translation>
     </message>
     <message>
-        <location/>
         <source>Type</source>
-        <translation>Jenis</translation>
+        <translation type="vanished">Jenis</translation>
     </message>
     <message>
-        <location/>
         <source>Open (No password)</source>
-        <translation>Buka (Tanpa kata sandi)</translation>
+        <translation type="vanished">Buka (Tanpa kata sandi)</translation>
     </message>
     <message>
-        <location/>
         <source>WPA (Modern WiFi Security)</source>
-        <translation>WPA (Keamanan WiFi Modern)</translation>
+        <translation type="vanished">WPA (Keamanan WiFi Modern)</translation>
     </message>
     <message>
-        <location/>
         <source>WEP (Hexadecimal password)</source>
-        <translation>WEP (Kata sandi heksadesimal)</translation>
+        <translation type="vanished">WEP (Kata sandi heksadesimal)</translation>
     </message>
     <message>
-        <location/>
         <source>SSID</source>
-        <translation>SSID</translation>
+        <translation type="vanished">SSID</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter or select your WiFi network here</source>
-        <translation>Silakan masuk atau pilih jaringan WiFi Anda di sini</translation>
+        <translation type="vanished">Silakan masuk atau pilih jaringan WiFi Anda di sini</translation>
     </message>
     <message>
-        <location/>
         <source>Acess Point Mode</source>
-        <translation>Mode Titik Akses</translation>
+        <translation type="vanished">Mode Titik Akses</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter the name of the WiFi network to create password here</source>
-        <translation>Silakan masukkan nama jaringan WiFi untuk membuat kata sandi di sini</translation>
+        <translation type="vanished">Silakan masukkan nama jaringan WiFi untuk membuat kata sandi di sini</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter the name of the WiFI network to create here</source>
-        <translation>Silakan masukkan nama jaringan WiFI yang ingin dibuat di sini</translation>
+        <translation type="vanished">Silakan masukkan nama jaringan WiFI yang ingin dibuat di sini</translation>
     </message>
     <message>
-        <location/>
         <source>Board Name</source>
-        <translation>Nama Papan</translation>
+        <translation type="vanished">Nama Papan</translation>
     </message>
     <message>
-        <location/>
         <source>Please enter a name for your OpenMV Cam here</source>
-        <translation>Silakan masukkan nama untuk OpenMV Cam Anda di sini</translation>
+        <translation type="vanished">Silakan masukkan nama untuk OpenMV Cam Anda di sini</translation>
     </message>
     <message>
-        <location/>
         <source>Duplicate REPL on the UART on startup</source>
-        <translation>Duplikat REPL pada UART saat startup</translation>
+        <translation type="vanished">Duplikat REPL pada UART saat startup</translation>
     </message>
 </context>
 <context>
@@ -156,6 +139,21 @@
         <location/>
         <source>Mean</source>
         <translation>Berarti</translation>
+    </message>
+    <message>
+        <location/>
+        <source>R</source>
+        <translation>R</translation>
+    </message>
+    <message>
+        <location/>
+        <source>G</source>
+        <translation>G</translation>
+    </message>
+    <message>
+        <location/>
+        <source>B</source>
+        <translation>B</translation>
     </message>
 </context>
 <context>
@@ -214,14 +212,16 @@
         <translation>Memperbarui definisi sintaksis untuk &apos;%1&apos; ke versi %2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1023" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1263" />
         <source>Copy/Convert Python File</source>
         <translation>Salin/Konversi File Python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="-42" />
         <location line="+7" />
-        <location line="+91" />
+        <location line="+85" />
+        <location line="+7" />
+        <location line="+101" />
         <location line="+7" />
         <location line="+76" />
         <location line="+7" />
@@ -821,24 +821,24 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
         <translation>Editor Biner</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+44" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+47" />
         <source>Target</source>
         <translation>Target</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+96" />
+        <location line="+108" />
         <source>Label</source>
         <translation>Label</translation>
     </message>
     <message>
-        <location line="-95" />
-        <location line="+95" />
+        <location line="-107" />
+        <location line="+107" />
         <source>Command</source>
         <translation>Memerintah</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-105" />
         <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+863" />
         <source>Reset All</source>
         <translation>Atur Ulang Semua</translation>
@@ -851,7 +851,7 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
     <message>
         <location line="+2" />
         <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+481" />
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+144" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+150" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+191" />
         <location line="+8" />
         <source>Reset</source>
@@ -1245,7 +1245,8 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
     </message>
     <message>
         <location line="+56" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+516" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+474" />
+        <location line="+72" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+52" />
         <source>Add</source>
         <translation>Menambahkan</translation>
@@ -1286,7 +1287,10 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
 &lt;p&gt;What to do with the executable&apos;s standard output.
 &lt;ul&gt;&lt;li&gt;Ignore: Do nothing with it.&lt;/li&gt;&lt;li&gt;Show in General Messages.&lt;/li&gt;&lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+&lt;p&gt;Apa yang harus dilakukan dengan keluaran standar dari berkas eksekusi.
+&lt;ul&gt;&lt;li&gt;Abaikan: Tidak melakukan apa pun dengannya.&lt;/li&gt;&lt;li&gt;Tampilkan di Pesan Umum.&lt;/li&gt;&lt;li&gt;Ganti pilihan: Ganti pilihan saat ini di dokumen saat ini dengannya.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
     </message>
     <message>
         <location line="+7" />
@@ -1319,7 +1323,12 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
 &lt;li&gt;Show in General Messages.&lt;/li&gt;
 &lt;li&gt;Replace selection: Replace the current selection in the current document with it.&lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;body&gt;
+&lt;p &gt;Apa yang harus dilakukan dengan keluaran galat standar dari berkas eksekusi.&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Abaikan: Tidak melakukan apa pun dengannya.&lt;/li&gt;
+&lt;li&gt;Tampilkan di Pesan Umum.&lt;/li&gt;
+&lt;li&gt;Ganti pilihan: Ganti pilihan saat ini di dokumen saat ini dengannya.&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+12" />
@@ -1606,7 +1615,7 @@ Apakah Anda ingin menimpanya?</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+1" />
         <location line="+299" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+2077" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+2079" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+438" />
         <source>Make Writable</source>
         <translation>Jadikan Dapat Ditulis</translation>
@@ -1744,9 +1753,9 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
     </message>
     <message>
         <location line="+71" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1709" />
-        <location line="+1735" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1980" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1711" />
+        <location line="+1737" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+2000" />
         <source>&amp;Save</source>
         <translation>&amp;Menyimpan</translation>
     </message>
@@ -1778,7 +1787,7 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
     <message>
         <location line="+15" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+5" />
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+58" />
+        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+63" />
         <source>Save</source>
         <translation>Menyimpan</translation>
     </message>
@@ -1793,7 +1802,7 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Simpan yang Dipilih</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+484" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+504" />
         <source>Sort categories</source>
         <translation>Urutkan kategori</translation>
     </message>
@@ -1803,7 +1812,7 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Preferensi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-374" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-392" />
         <source>Invalid key sequence.</source>
         <translation>Urutan kunci tidak valid.</translation>
     </message>
@@ -1824,16 +1833,18 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
     </message>
     <message>
         <location line="+1" />
+        <location line="+277" />
         <source>Record</source>
         <translation>Catatan</translation>
     </message>
     <message>
-        <location line="+122" />
+        <location line="-155" />
+        <location line="+153" />
         <source>Key sequence:</source>
         <translation>Urutan kunci:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-149" />
         <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>Gunakan &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, dan &quot;Shift&quot; untuk tombol pengubah. Gunakan &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, dan seterusnya, untuk kunci khusus. Gabungkan tombol individual dengan &quot;+&quot;, dan gabungkan beberapa pintasan ke urutan pintasan dengan &quot;,&quot;. Misalnya, jika pengguna harus menahan tombol pengubah Ctrl dan Shift sambil menekan Escape, lalu lepaskan dan tekan A, masukkan &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
@@ -1860,11 +1871,12 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
     <message>
         <location line="+1" />
         <location line="+15" />
+        <location line="+11" />
         <source>Shortcut</source>
         <translation>Jalan pintas</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="+159" />
         <source>Import Keyboard Mapping Scheme</source>
         <translation>Impor Skema Pemetaan Keyboard</translation>
     </message>
@@ -1880,7 +1892,7 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Ekspor Skema Pemetaan Keyboard</translation>
     </message>
     <message>
-        <location line="+135" />
+        <location line="+232" />
         <source>Keyboard</source>
         <translation>papan ketik</translation>
     </message>
@@ -1949,7 +1961,7 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Simpan A&amp;ll</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+30" />
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+33" />
         <source>Edit</source>
         <translation>Sunting</translation>
     </message>
@@ -1964,7 +1976,7 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Tidak ada dokumen yang dipilih.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2299" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2301" />
         <source>Copy Full Path</source>
         <translation>Salin Jalur Lengkap</translation>
     </message>
@@ -1980,25 +1992,25 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+1735" />
+        <location line="+1737" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+5" />
         <source>Save &amp;As...</source>
         <translation>Simpan &amp;Sebagai...</translation>
     </message>
     <message>
-        <location line="-1734" />
+        <location line="-1736" />
         <location line="+46" />
-        <location line="+1689" />
+        <location line="+1691" />
         <location line="+534" />
         <source>Revert to Saved</source>
         <translation>Kembalikan ke Tersimpan</translation>
     </message>
     <message>
-        <location line="-2268" />
+        <location line="-2270" />
         <location line="+95" />
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+412" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+421" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
         <location line="+1" />
         <source>Close</source>
@@ -2012,19 +2024,19 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
     </message>
     <message>
         <location line="-99" />
-        <location line="+111" />
+        <location line="+113" />
         <location line="+1645" />
         <source>Close Others</source>
         <translation>Tutup Lainnya</translation>
     </message>
     <message>
-        <location line="-1755" />
-        <location line="+122" />
+        <location line="-1757" />
+        <location line="+124" />
         <source>Close All Except Visible</source>
         <translation>Tutup Semua Kecuali Terlihat</translation>
     </message>
     <message>
-        <location line="-117" />
+        <location line="-119" />
         <source>Properties...</source>
         <translation>Properti...</translation>
     </message>
@@ -2049,12 +2061,11 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Ctrl+F4</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Ctrl+Shift+W</source>
-        <translation>Ctrl+Shift+W</translation>
+        <translation type="vanished">Ctrl+Shift+W</translation>
     </message>
     <message>
-        <location line="+99" />
+        <location line="+112" />
         <source>Previous Open Document in History</source>
         <translation>Dokumen Terbuka Sebelumnya dalam Sejarah</translation>
     </message>
@@ -2952,7 +2963,7 @@ Melanjutkan?</translation>
         <translation>Menghapus...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-83" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-86" />
         <source>Show keyboard shortcuts in context menus (default: %1)</source>
         <translation>Tampilkan pintasan keyboard di menu konteks (default: %1)</translation>
     </message>
@@ -2979,7 +2990,7 @@ If the system cursors for resizing views are not displayed properly, you can use
 Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar, Anda dapat menggunakan kursor yang disediakan oleh %1.</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+74" />
         <source>Reset Do Not Ask/Show Again Dialogs</source>
         <translation>Atur Ulang Dialog Jangan Tanya/Tampilkan Lagi</translation>
     </message>
@@ -3040,7 +3051,12 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>Lingkungan memengaruhi perilaku penskalaan UI.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+21" />
+        <source>Serial Terminal Tab size:</source>
+        <translation>Ukuran tab Terminal Serial:</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>User Interface</source>
         <translation>Antarmuka Pengguna</translation>
     </message>
@@ -3050,7 +3066,7 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>&lt;Bahasa Sistem&gt;</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+97" />
         <source>The language change will take effect after restart.</source>
         <translation>Perubahan bahasa akan berlaku setelah restart.</translation>
     </message>
@@ -3085,7 +3101,7 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>Tidak dapat membuat direktori %1.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1409" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1429" />
         <source>Configure...</source>
         <comment>msgShowOptionsDialog</comment>
         <translation>Konfigurasikan...</translation>
@@ -3118,7 +3134,7 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>Mulai Ulang Sekarang</translation>
     </message>
     <message>
-        <location line="+358" />
+        <location line="+378" />
         <source>Based on Qt %1 (%2, %3)</source>
         <translation>Berdasarkan Qt %1 (%2, %3)</translation>
     </message>
@@ -3388,12 +3404,11 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>Tampilkan Bilah Menu</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Ctrl+Alt+M</source>
-        <translation>Ctrl+Alt+M</translation>
+        <translation type="vanished">Ctrl+Alt+M</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+25" />
         <source>Hide Menu Bar</source>
         <translation>Sembunyikan Bilah Menu</translation>
     </message>
@@ -4023,7 +4038,7 @@ Klik dua kali untuk mengedit item.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+934" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1030" />
         <location line="+16" />
         <location line="+14" />
         <source>Save Log</source>
@@ -4032,7 +4047,7 @@ Klik dua kali untuk mengedit item.</translation>
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-630" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-726" />
         <source>Clear</source>
         <translation>Jernih</translation>
     </message>
@@ -4171,6 +4186,31 @@ Klik dua kali untuk mengedit item.</translation>
         <location line="+30" />
         <source>Wrap Text</source>
         <translation>Bungkus Teks</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Serial Protocol Debug Logging</source>
+        <translation>Pencatatan Debug Protokol Serial</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Off</source>
+        <translation>Nonaktif</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands</source>
+        <translation>Perintah</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands + Packets</source>
+        <translation>Perintah + Paket</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Commands + Packets + Fragments</source>
+        <translation>Perintah + Paket + Fragmen</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="-129" />
@@ -4401,7 +4441,7 @@ Klik dua kali untuk mengedit item.</translation>
         <translation>&amp;Keluaran</translation>
     </message>
     <message>
-        <location line="+406" />
+        <location line="+461" />
         <source>Reset to Default</source>
         <translation>Atur Ulang ke Default</translation>
     </message>
@@ -4435,7 +4475,7 @@ Klik dua kali untuk mengedit item.</translation>
         <translation>[Membuang keluaran tertunda dalam jumlah berlebihan.]</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+404" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>File Teks (*.txt);;Semua file (*)</translation>
     </message>
@@ -5256,7 +5296,7 @@ ke kontrol versi (%2)</translation>
 <context>
     <name>QtC::ExtensionSystem</name>
     <message>
-        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+121" />
+        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+133" />
         <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>Plugin &quot;%1&quot; ditentukan dua kali untuk pengujian.</translation>
     </message>
@@ -5534,7 +5574,7 @@ Alasan: %3</translation>
     <message>
         <location line="+1" />
         <source>The last time you started %1, it seems to have closed because of a problem with the &quot;%2&quot; plugin. Temporarily disable the plugin?</source>
-        <translation type="unfinished"></translation>
+        <translation>Terakhir kali Anda menjalankan %1, tampaknya ia tertutup karena masalah dengan plugin &quot;%2&quot;. Nonaktifkan plugin untuk sementara?</translation>
     </message>
     <message>
         <location line="+8" />
@@ -6650,7 +6690,7 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+29" />
         <location line="+27" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+206" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+208" />
         <location line="+37" />
         <location line="+164" />
         <location line="+65" />
@@ -6664,7 +6704,7 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+7" />
         <location line="+36" />
         <location line="+26" />
-        <location line="+16" />
+        <location line="+17" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
         <location line="+54" />
         <location line="+32" />
@@ -6674,7 +6714,7 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+224" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+235" />
         <location line="+9" />
         <location line="+95" />
         <location line="+11" />
@@ -6682,21 +6722,21 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+65" />
+        <location line="+69" />
         <location line="+26" />
         <location line="+18" />
         <location line="+23" />
         <location line="+18" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+78" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+80" />
         <location line="+73" />
         <location line="+9" />
         <location line="+52" />
         <location line="+4" />
         <location line="+7" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+25" />
         <location line="+26" />
-        <location line="+26" />
+        <location line="+27" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+105" />
         <location line="+35" />
         <location line="+14" />
@@ -6707,14 +6747,14 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+9" />
         <location line="+16" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+574" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+650" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+587" />
+        <location line="+1098" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1195" />
         <location line="+6" />
-        <location line="+28" />
-        <location line="+52" />
-        <location line="+8" />
-        <location line="+35" />
-        <location line="+329" />
+        <location line="+27" />
+        <location line="+22" />
+        <location line="+81" />
+        <location line="+477" />
         <location line="+136" />
         <location line="+28" />
         <location line="+100" />
@@ -6724,17 +6764,17 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+81" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+28" />
-        <location line="+34" />
+        <location line="+29" />
+        <location line="+38" />
         <location line="+86" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
         <location line="+65" />
         <location line="+6" />
-        <location line="+97" />
-        <location line="+4" />
-        <location line="+4" />
+        <location line="+108" />
+        <location line="+6" />
+        <location line="+5" />
         <location line="+72" />
         <location line="+116" />
         <location line="+83" />
@@ -6755,19 +6795,19 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+135" />
         <location line="+217" />
         <location line="+33" />
-        <location line="+268" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+838" />
+        <location line="+370" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+839" />
         <location line="+48" />
         <source>Connect</source>
         <translation>Menghubungkan</translation>
     </message>
     <message>
         <location line="-80" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-230" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2050" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-232" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2171" />
         <location line="+252" />
-        <location line="+681" />
-        <location line="+1936" />
+        <location line="+700" />
+        <location line="+2104" />
         <source>Please select the board type</source>
         <translation>Silakan pilih jenis papan</translation>
     </message>
@@ -6789,7 +6829,7 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
     <message>
         <location line="+25" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+155" />
-        <location line="+50" />
+        <location line="+51" />
         <source>Firmware update complete!
 
 </source>
@@ -6798,12 +6838,12 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-12" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-13" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-12" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-39" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-48" />
-        <location line="+51" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-49" />
+        <location line="+52" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-12" />
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>Klik tombol Ok setelah OpenMV Cam Anda menghitung dan selesai menjalankan tes mandiri bawaannya (led biru berkedip - ini memerlukan waktu beberapa saat).</translation>
@@ -6814,13 +6854,13 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-143" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-170" />
-        <location line="+130" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-174" />
+        <location line="+134" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-50" />
-        <location line="+24" />
-        <location line="+27" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
         <location line="+25" />
+        <location line="+27" />
+        <location line="+26" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-36" />
         <location line="+37" />
         <source>
@@ -6839,7 +6879,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-348" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-352" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Tidak ada pengaturan DFU untuk jenis papan yang dipilih!</translation>
     </message>
@@ -6903,8 +6943,8 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+33" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+20" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-55" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-56" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+17" />
         <source>Onboard Data Flash Erased!
 
@@ -6915,8 +6955,8 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
         <location line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
@@ -6927,8 +6967,8 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
         <location line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
+        <location line="+53" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>Klik OK ketika LED RGB OpenMV Cam Anda mulai berkedip biru - yang menunjukkan swa-uji telah selesai.</translation>
@@ -6948,17 +6988,17 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-327" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1436" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1514" />
+        <location line="+1795" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+139" />
         <location line="+202" />
-        <location line="+306" />
+        <location line="+330" />
         <location line="+13" />
         <location line="+169" />
         <location line="+146" />
@@ -6966,15 +7006,14 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3735" />
-        <location line="+273" />
-        <location line="+86" />
-        <location line="+1142" />
-        <location line="+1075" />
-        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+107" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4119" />
+        <location line="+315" />
+        <location line="+1388" />
+        <location line="+1089" />
+        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+109" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+553" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+548" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+699" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
         <location line="+11" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
@@ -7002,7 +7041,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-8" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+29" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+33" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+10" />
@@ -7016,7 +7055,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
         <location line="-48" />
         <location line="+29" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+108" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+109" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-59" />
         <location line="+26" />
         <location line="+41" />
@@ -7025,7 +7064,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
     </message>
     <message>
         <location line="-13" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-15" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-16" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-22" />
         <location line="+41" />
         <source>DFU firmware update complete!
@@ -7040,7 +7079,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-136" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-138" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Putuskan sambungan OpenMV Cam Anda lalu sambungkan kembali...</translation>
     </message>
@@ -7063,52 +7102,72 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3385" />
-        <location line="+1513" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3690" />
+        <location line="+1794" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+273" />
-        <location line="+554" />
+        <location line="+578" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
         <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2717" />
-        <location line="+289" />
-        <location line="+165" />
-        <location line="+1148" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3187" />
+        <location line="+252" />
+        <location line="+327" />
+        <location line="+1479" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-324" />
         <location line="+85" />
-        <location line="+605" />
+        <location line="+627" />
         <source>Cancel</source>
         <translation>Membatalkan</translation>
     </message>
     <message>
-        <location line="-353" />
         <source>OpenMV IDE needs to update your bootloader to support ROMFS.
 
 The internal FAT filesystem will be erased!
 
 Continue?</source>
-        <translation>OpenMV IDE perlu memperbarui bootloader Anda untuk mendukung ROMFS. 
+        <translation type="vanished">OpenMV IDE perlu memperbarui bootloader Anda untuk mendukung ROMFS. 
 
 Sistem file FAT internal akan terhapus! 
 
 Melanjutkan?</translation>
     </message>
     <message>
-        <location line="+37" />
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
 
 Continue?</source>
-        <translation>OpenMV IDE masih dapat mencoba memperbaiki OpenMV Cam Anda menggunakan DFU Bootloader OpenMV Cam Anda. 
+        <translation type="vanished">OpenMV IDE masih dapat mencoba memperbaiki OpenMV Cam Anda menggunakan DFU Bootloader OpenMV Cam Anda. 
 
 Melanjutkan?</translation>
+    </message>
+    <message>
+        <location line="-353" />
+        <source>%1 needs to update your bootloader to support ROMFS.
+
+The internal FAT filesystem will be erased!
+
+Continue?</source>
+        <translation>%1 perlu memperbarui bootloader Anda untuk mendukung ROMFS.
+
+Sistem berkas FAT internal akan dihapus!
+
+Lanjutkan?</translation>
+    </message>
+    <message>
+        <location line="+37" />
+        <source>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s DFU Bootloader.
+
+Continue?</source>
+        <translation>%1 masih dapat mencoba memperbaiki OpenMV Cam Anda menggunakan DFU Bootloader OpenMV Cam Anda.
+
+Lanjutkan?</translation>
     </message>
     <message>
         <location line="+108" />
@@ -7127,8 +7186,8 @@ Melanjutkan?</translation>
     </message>
     <message>
         <location line="+24" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+82" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+83" />
+        <location line="+53" />
         <source>Firmware Upgrade complete!
 
 </source>
@@ -7195,7 +7254,12 @@ Klik tombol Ok setelah DFU Bootloader OpenMV Cam Anda dihitung.</translation>
         <translation>Putuskan sambungan OpenMV Cam dari komputer Anda, lepaskan kabel jumper antara pin BOOT dan RST, lalu sambungkan kembali OpenMV Cam ke komputer Anda.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+2" />
+        <source>Disconnect the device from your computer, remove the jumper wire between the BOOT and RST pins, and then reconnect it.</source>
+        <translation>Putuskan perangkat dari komputer Anda, lepaskan kabel jumper antara pin BOOT dan RST, lalu hubungkan kembali.</translation>
+    </message>
+    <message>
+        <location line="+13" />
         <source>DFU bootloader reset failed!</source>
         <translation>Reset bootloader DFU gagal!</translation>
     </message>
@@ -7240,7 +7304,7 @@ Klik tombol Ok setelah DFU Bootloader OpenMV Cam Anda dihitung.</translation>
         <translation>Pembaruan firmware BOSSAC gagal!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-527" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-542" />
         <source>the detected board</source>
         <translation>papan yang terdeteksi</translation>
     </message>
@@ -7265,7 +7329,12 @@ Klik tombol Ok setelah DFU Bootloader OpenMV Cam Anda dihitung.</translation>
         <translation>Board ini tidak menentukan antarmuka firmware yang dapat dimuat dalam pengaturannya.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-157" />
+        <location line="+9" />
+        <source>To flash a bootloader image your OpenMV Cam must be in bootloader recovery mode. Unplug the camera, connect BOOT0/SBL/RECOVERY to 3.3V with a jumper, and then plug the camera back in before trying again.</source>
+        <translation>Untuk mem-flash citra bootloader, OpenMV Cam Anda harus berada dalam mode pemulihan bootloader. Cabut kamera, hubungkan BOOT0/SBL/RECOVERY ke 3.3V dengan jumper, lalu pasang kembali kamera sebelum mencoba lagi.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-159" />
         <source>No IMX settings for the selected board type %L1!</source>
         <translation>Tidak ada pengaturan IMX untuk jenis papan yang dipilih %L1!</translation>
     </message>
@@ -7288,15 +7357,28 @@ Hit cancel to skip to SBL reprogramming.</source>
     </message>
     <message>
         <location line="+4" />
+        <source>%1 can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
+
+Continue?</source>
+        <translation>%1 masih dapat mencoba memperbaiki OpenMV Cam Anda menggunakan SBL Bootloader OpenMV Cam Anda.
+
+Lanjutkan?</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>If you are forcing SBL mode, disconnect the device from your computer and remove the SBL wire jumper, then reconnect it.</source>
+        <translation>Jika Anda memaksa mode SBL, putuskan perangkat dari komputer Anda dan lepaskan kabel jumper SBL, lalu hubungkan kembali.</translation>
+    </message>
+    <message>
         <source>OpenMV IDE can still try to repair your OpenMV Cam using your OpenMV Cam&apos;s SBL Bootloader.
 
 Continue?</source>
-        <translation>OpenMV IDE masih dapat mencoba memperbaiki OpenMV Cam Anda menggunakan SBL Bootloader OpenMV Cam Anda. 
+        <translation type="vanished">OpenMV IDE masih dapat mencoba memperbaiki OpenMV Cam Anda menggunakan SBL Bootloader OpenMV Cam Anda. 
 
 Melanjutkan?</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-66" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
 Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
@@ -7312,7 +7394,12 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <translation>Putuskan sambungan OpenMV Cam dari komputer Anda, lepaskan kabel jumper antara pin SBL dan 3.3V, lalu sambungkan kembali OpenMV Cam ke komputer Anda.</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+4" />
+        <source>Disconnect the device from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect it.</source>
+        <translation>Putuskan perangkat dari komputer Anda, lepaskan kabel jumper antara pin SBL dan 3.3V, lalu hubungkan kembali.</translation>
+    </message>
+    <message>
+        <location line="+47" />
         <source>If you are forcing SBL mode, disconnect your OpenMV Cam from your computer and remove the SBL wire jumper. Then reconnect your OpenMV Cam to your computer.
 
 </source>
@@ -7341,7 +7428,7 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <translation>Pembaruan firmware PicoTool gagal!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.cpp" line="+548" />
+        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.cpp" line="+671" />
         <location line="+34" />
         <source>Value %L1</source>
         <translation>Nilai %L1</translation>
@@ -7399,9 +7486,8 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <translation>V</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvcamerasettings.cpp" line="+81" />
         <source>Please enter your WiFi network here</source>
-        <translation>Silakan masukkan jaringan WiFi Anda di sini</translation>
+        <translation type="vanished">Silakan masukkan jaringan WiFi Anda di sini</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-367" />
@@ -7420,8 +7506,8 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3987" />
-        <location line="+823" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4292" />
+        <location line="+878" />
         <source>Dataset Editor</source>
         <translation>Editor Kumpulan Data</translation>
     </message>
@@ -7432,8 +7518,8 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
     </message>
     <message>
         <location line="+58" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-780" />
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+467" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-835" />
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
         <location line="+48" />
         <location line="+9" />
@@ -7447,23 +7533,23 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
     </message>
     <message>
         <location line="+33" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2578" />
-        <location line="+1442" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+364" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2844" />
+        <location line="+1481" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Gagal menyimpan file gambar karena alasan yang tidak diketahui!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+587" />
-        <location line="+224" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+589" />
+        <location line="+291" />
         <source>Delete</source>
         <translation>Menghapus</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-294" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-361" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Apakah Anda yakin ingin menghapus &quot;%L1&quot; secara permanen?</translation>
     </message>
@@ -7491,12 +7577,12 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4347" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4654" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+67" />
-        <location line="+221" />
+        <location line="+288" />
         <source>Model Zoo</source>
         <translation>Kebun Binatang Model</translation>
     </message>
@@ -7507,7 +7593,7 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
     </message>
     <message>
         <location line="+42" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-148" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-152" />
         <source>Copy</source>
         <translation>Menyalin</translation>
     </message>
@@ -7517,13 +7603,13 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <translation>OKE</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-972" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1244" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-308" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Tidak dapat menyalin file &quot;%1&quot; ke &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+94" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>Argumen untuk -serial_number_filter tidak ada</translation>
     </message>
@@ -7538,32 +7624,13 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <translation>Argumen untuk -auto_update tidak ada</translation>
     </message>
     <message>
-        <location line="+109" />
-        <location line="+8" />
-        <location line="+10" />
-        <location line="+11" />
-        <location line="+28" />
-        <location line="+28" />
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1562" />
-        <location line="+9" />
-        <location line="+13" />
-        <location line="+63" />
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1496" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
-        <location line="+36" />
-        <location line="+7" />
-        <location line="+8" />
-        <location line="+10" />
-        <location line="+7" />
         <source>
 
 Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
-        <translation>Silakan tutup semua program yang melihat/mengedit data aplikasi OpenMV IDE dan kemudian restart OpenMV IDE!</translation>
+        <translation type="vanished">Silakan tutup semua program yang melihat/mengedit data aplikasi OpenMV IDE dan kemudian restart OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+248" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7572,16 +7639,15 @@ Check the json file for errors and fix them.</source>
 Periksa kesalahan pada file json dan perbaiki.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 OpenMV IDE versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
-        <translation>Kesalahan membaca &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1. 
+        <translation type="vanished">Kesalahan membaca &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1. 
 
 Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya saat menginstal sumber daya.</translation>
     </message>
     <message>
-        <location line="+164" />
+        <location line="+139" />
         <source>Missing argument for -form_key</source>
         <translation>Argumen untuk -form_key tidak ada</translation>
     </message>
@@ -7640,8 +7706,8 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Hubungkan ke papan Anda terlebih dahulu untuk melihat contoh</translation>
     </message>
     <message>
-        <location line="+22" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+68" />
+        <location line="+48" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1605" />
         <source>Load Custom Firmware</source>
         <translation>Muat Firmware Khusus</translation>
     </message>
@@ -7667,27 +7733,27 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Apakah Anda yakin ingin menghapus sistem file FAT internal OpenMV Cam Anda?</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+16" />
         <source>ROM File System</source>
         <translation>Sistem File ROM</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>New ROMFS File</source>
         <translation>File ROMFS baru</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+8" />
         <source>Open ROMFS File</source>
         <translation>Buka File ROMFS</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Edit ROMFS on OpenMV Cam</source>
         <translation>Edit ROMFS di OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Reset ROMFS on OpenMV Cam</source>
         <translation>Setel ulang ROMFS di OpenMV Cam</translation>
     </message>
@@ -7697,12 +7763,11 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Sambungkan Ulang Otomatis ke OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>When Auto Reconnect is enabled OpenMV IDE will automatically reconnect to your OpenMV if detected.</source>
-        <translation>Ketika Sambungan Ulang Otomatis diaktifkan, OpenMV IDE akan secara otomatis menyambung kembali ke OpenMV Anda jika terdeteksi.</translation>
+        <translation type="vanished">Ketika Sambungan Ulang Otomatis diaktifkan, OpenMV IDE akan secara otomatis menyambung kembali ke OpenMV Anda jika terdeteksi.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Stop Script on Connect/Disconnect</source>
         <translation>Hentikan Skrip saat Sambungkan/Putuskan Sambungan</translation>
     </message>
@@ -7712,7 +7777,7 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Hentikan skrip pada Connect atau Disconnect (perhatikan bahwa IDE terputus saat ditutup jika terhubung).</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Sync Imports between OpenMV Cam and Documents Folder</source>
         <translation>Sinkronisasi Impor antara OpenMV Cam dan Folder Dokumen</translation>
     </message>
@@ -7737,12 +7802,11 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Buka folder OpenMV Cam Drive</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Configure OpenMV Cam settings file</source>
-        <translation>Konfigurasikan file pengaturan OpenMV Cam</translation>
+        <translation type="vanished">Konfigurasikan file pengaturan OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+24" />
         <source>Save open script to OpenMV Cam (as main.py)</source>
         <translation>Simpan skrip terbuka ke OpenMV Cam (sebagai main.py)</translation>
     </message>
@@ -7762,15 +7826,16 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Instal Rilis Pengembangan Terbaru</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+44" />
         <source>MicroPython Tools</source>
         <translation>Alat MikroPython</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+125" />
         <location line="+6" />
         <location line="+7" />
-        <location line="+33" />
+        <location line="+34" />
+        <location line="+30" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
         <location line="+9" />
@@ -7780,19 +7845,19 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Salin/Konversi File Python</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+3823" />
+        <location line="+14" />
+        <location line="+4137" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Buka Terminal</translation>
     </message>
     <message>
-        <location line="-3877" />
+        <location line="-4191" />
         <source>Machine Vision</source>
         <translation>Visi Mesin</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+11" />
         <source>Open Model Zoo</source>
         <translation>Buka Kebun Binatang Model</translation>
     </message>
@@ -7808,28 +7873,28 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-687" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Konversi Model</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+3733" />
+        <location line="+4040" />
         <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Editor Ambang Batas</translation>
     </message>
     <message>
-        <location line="-3803" />
-        <location line="+3880" />
+        <location line="-4110" />
+        <location line="+4187" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Editor Poin Utama</translation>
     </message>
     <message>
-        <location line="-3873" />
-        <location line="+4037" />
+        <location line="-4178" />
+        <location line="+4342" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7838,7 +7903,7 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Pembuat Tag April</translation>
     </message>
     <message>
-        <location line="-4184" />
+        <location line="-4489" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Keluarga TAG16H5 (30 Tag)</translation>
     </message>
@@ -7873,19 +7938,124 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Pembuat Kode QR</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1338" />
+        <location line="+1348" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+367" />
-        <location line="+14" />
-        <location line="+33" />
-        <location line="+918" />
+        <location line="+409" />
+        <location line="+1051" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+149" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Gagal membuka: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1356" />
+        <location line="-2643" />
+        <location line="+8" />
+        <location line="+10" />
+        <location line="+11" />
+        <location line="+28" />
+        <location line="+28" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-161" />
+        <location line="+9" />
+        <location line="+13" />
+        <location line="+65" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1801" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
+        <location line="+36" />
+        <location line="+7" />
+        <location line="+8" />
+        <location line="+10" />
+        <location line="+7" />
+        <source>
+
+Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
+        <translation>
+
+Harap tutup semua program yang sedang melihat/mengedit data aplikasi %1 lalu mulai ulang %1!</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
+
+%2 versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
+        <translation>Galat saat membaca &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
+
+%2 versi sebelum v4.3.0 tidak memiliki berkas ini dan akan menghapusnya saat memasang sumber daya.</translation>
+    </message>
+    <message>
+        <location line="+379" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+554" />
+        <source>Load ROMFS onto OpenMV Cam</source>
+        <translation>Muat ROMFS ke OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>When Auto Reconnect is enabled %1 will automatically reconnect to your OpenMV if detected.</source>
+        <translation>Saat Sambung Ulang Otomatis diaktifkan, %1 akan secara otomatis tersambung kembali ke OpenMV Anda jika terdeteksi.</translation>
+    </message>
+    <message>
+        <location line="+62" />
+        <source>Edit boot.py for WiFi Debugging</source>
+        <translation>Edit boot.py untuk Debugging WiFi</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Open OpenMV Cam Settings Config File</source>
+        <translation>Buka Berkas Konfigurasi Pengaturan OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+188" />
+        <location line="+346" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+51" />
+        <source>OpenMV Cam Settings Editor</source>
+        <translation>Editor Pengaturan OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-14" />
+        <source>Create Default Config</source>
+        <translation>Buat Konfigurasi Bawaan</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-21" />
+        <source>Open Config File</source>
+        <translation>Buka Berkas Konfigurasi</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <location line="+12" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+19" />
+        <location line="+29" />
+        <location line="+7" />
+        <source>Copy/Convert Current Script</source>
+        <translation>Salin/Konversi Skrip Saat Ini</translation>
+    </message>
+    <message>
+        <location line="-70" />
+        <source>Unable to stage the current script!</source>
+        <translation>Tidak dapat menyiapkan skrip saat ini!</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <location line="+91" />
+        <source>&quot;%L1&quot; won&apos;t auto-run: your OpenMV Cam only auto-runs main.py/boot.py source files, never a compiled .mpy.
+
+Would you like to choose a different name?</source>
+        <translation>&quot;%L1&quot; tidak akan berjalan otomatis: OpenMV Cam Anda hanya menjalankan otomatis berkas sumber main.py/boot.py, tidak pernah .mpy yang telah dikompilasi.
+
+Apakah Anda ingin memilih nama lain?</translation>
+    </message>
+    <message>
+        <location line="+298" />
         <source>DataMatrix Generator</source>
         <translation>Pembuat Matriks Data</translation>
     </message>
@@ -7911,8 +8081,8 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+374" />
-        <location line="+275" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+447" />
+        <location line="+276" />
         <source>Play RTSP Stream</source>
         <translation>Mainkan Aliran RTSP</translation>
     </message>
@@ -7987,19 +8157,19 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
     </message>
     <message>
         <location line="+6" />
-        <location line="+2424" />
-        <location line="+1288" />
+        <location line="+2690" />
+        <location line="+1327" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-245" />
-        <location line="+375" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-240" />
+        <location line="+374" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-115" />
         <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Silakan tambahkan ekstensi file!</translation>
     </message>
     <message>
-        <location line="-3692" />
+        <location line="-3997" />
         <source>Exporting...</source>
         <translation>Mengekspor...</translation>
     </message>
@@ -8041,79 +8211,122 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Tampilkan Profiler Kode</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+34" />
         <source>OpenMV Docs</source>
         <translation>Dokumen OpenMV</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+8" />
+        <source>Home</source>
+        <translation>Beranda</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Tutorial</source>
+        <translation>Tutorial</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Libraries</source>
+        <translation>Pustaka</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Boards</source>
+        <translation>Papan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Shields</source>
+        <translation>Shield</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Sensors</source>
+        <translation>Sensor</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Language</source>
+        <translation>Bahasa</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>CPython</source>
+        <translation>CPython</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Internals</source>
+        <translation>Internal</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Changelog</source>
+        <translation>Catatan Perubahan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>License</source>
+        <translation>Lisensi</translation>
+    </message>
+    <message>
+        <location line="+20" />
         <source>OpenMV Forums</source>
         <translation>Forum OpenMV</translation>
     </message>
     <message>
-        <location line="+15" />
         <source>About OpenMV Cam</source>
-        <translation>Tentang Kamera OpenMV</translation>
+        <translation type="vanished">Tentang Kamera OpenMV</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>About OpenMV Cam...</source>
-        <translation>Tentang Kamera OpenMV...</translation>
+        <translation type="vanished">Tentang Kamera OpenMV...</translation>
     </message>
     <message>
-        <location line="+18" />
         <source>About OpenMV Cam %1</source>
-        <translation>Tentang Kamera OpenMV %1</translation>
+        <translation type="vanished">Tentang Kamera OpenMV %1</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>About OpenMV Cam %1...</source>
-        <translation>Tentang Kamera OpenMV %1...</translation>
+        <translation type="vanished">Tentang Kamera OpenMV %1...</translation>
     </message>
     <message>
-        <location line="+18" />
-        <location line="+6" />
         <source>About OpenMV Viewer</source>
-        <translation>Tentang Penampil OpenMV</translation>
+        <translation type="vanished">Tentang Penampil OpenMV</translation>
     </message>
     <message>
-        <location line="-6" />
-        <location line="+6" />
         <source>About OpenMV IDE</source>
-        <translation>Tentang OpenMV IDE</translation>
+        <translation type="vanished">Tentang OpenMV IDE</translation>
     </message>
     <message>
-        <location line="-5" />
         <source>About OpenMV Viewer...</source>
-        <translation>Tentang Penampil OpenMV...</translation>
+        <translation type="vanished">Tentang Penampil OpenMV...</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>About OpenMV IDE...</source>
-        <translation>Tentang OpenMV IDE...</translation>
+        <translation type="vanished">Tentang OpenMV IDE...</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+26" />
         <source>&lt;p&gt;&lt;b&gt;About %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;By: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FACTORY VERSION&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Meant for licensed manufacturers only.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Copyright (C) %L2 %L3&lt;/p&gt;&lt;p&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Questions or Comments?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Contact us at &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Tentang %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Oleh: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;VERSI PABRIK&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ditujukan hanya untuk produsen berlisensi.&lt;/p&gt;&lt;p&gt;&lt;b&gt;LISENSI PUBLIK UMUM GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hak Cipta (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Program ini didistribusikan dengan harapan dapat bermanfaat, namun TANPA JAMINAN APAPUN; bahkan tanpa jaminan tersirat mengenai KELAYAKAN UNTUK DIPERDAGANGKAN atau KESESUAIAN UNTUK TUJUAN TERTENTU. Lihat &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;Lisensi Publik Umum GNU&lt;/a&gt; untuk detail selengkapnya.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Pertanyaan atau Komentar?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hubungi kami di &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>OpenMV Viewer</source>
-        <translation>Penampil OpenMV</translation>
+        <translation type="vanished">Penampil OpenMV</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>OpenMV IDE</source>
-        <translation>IDE OpenMV</translation>
+        <translation type="vanished">IDE OpenMV</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location line="+23" />
         <source>&lt;p&gt;&lt;b&gt;Partners&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Mitra&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+31" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
         <location line="+26" />
         <location line="+7" />
@@ -8131,14 +8344,16 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Berhenti (menghentikan skrip)</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-58" />
+        <location line="+70" />
+        <location line="+211" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
+        <location line="+166" />
         <source>Frame Buffer</source>
         <translation>Penyangga Bingkai</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
+        <location line="-204" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
         <source>Record</source>
         <translation>Catatan</translation>
     </message>
@@ -8183,23 +8398,22 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Nonaktifkan Frame Buffer untuk performa maksimal</translation>
     </message>
     <message>
-        <location line="+23" />
-        <location line="+26" />
         <source>JPG Mode</source>
-        <translation>Modus JPG</translation>
+        <translation type="vanished">Modus JPG</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="+24" />
         <source>JPEG compress the Frame Buffer for higher performance</source>
         <translation>JPEG mengompresi Frame Buffer untuk kinerja yang lebih tinggi</translation>
     </message>
     <message>
         <location line="+25" />
+        <location line="+13" />
         <source>RAW Mode</source>
         <translation>Modus mentah</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+6" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
         <translation>Frame Buffer Disabled - klik tombol nonaktifkan lagi untuk mengaktifkan (kanan atas)</translation>
     </message>
@@ -8246,38 +8460,28 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Gunakan Grayscale/LAB untuk pelacakan warna</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+42" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+3" />
-        <location line="+44" />
         <source>Res - No Image</source>
-        <translation>Res - Tidak Ada Gambar</translation>
+        <translation type="vanished">Res - Tidak Ada Gambar</translation>
     </message>
     <message>
-        <location line="-14" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-14" />
         <source>Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
-        <translation>Resolusi (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Piksel (%7) - Fokus (%8)</translation>
+        <translation type="vanished">Resolusi (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Piksel (%7) - Fokus (%8)</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4" />
         <source>Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
-        <translation>Res (w:%1, h:%2) - Poin (x:%3, y:%4)</translation>
+        <translation type="vanished">Res (w:%1, h:%2) - Poin (x:%3, y:%4)</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <source>Res (w:%1, h:%2) - Focus (%3)</source>
-        <translation>Resolusi (w:%1, h:%2) - Fokus (%3)</translation>
+        <translation type="vanished">Resolusi (w:%1, h:%2) - Fokus (%3)</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-729" />
         <source>FPS: %L1</source>
         <translation>FPS: %L1</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+165" />
         <source>Close</source>
         <translation>Menutup</translation>
     </message>
@@ -8298,7 +8502,7 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3087" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3486" />
         <source>Board:</source>
         <translation>Papan:</translation>
     </message>
@@ -8330,21 +8534,20 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Versi firmware kamera</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2" />
         <source>Serial Port:</source>
         <translation>Pelabuhan Seri:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Camera serial port</source>
-        <translation>Port serial kamera</translation>
+        <translation type="vanished">Port serial kamera</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-322" />
-        <location line="+324" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-621" />
+        <location line="+8" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-377" />
+        <location line="+379" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+83" />
         <source>Drive:</source>
         <translation>Menyetir:</translation>
     </message>
@@ -8355,43 +8558,42 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+7" />
         <source>FPS:</source>
         <translation>FPS:</translation>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-82" />
         <source>May be different from camera FPS</source>
         <translation>Mungkin berbeda dengan FPS kamera</translation>
     </message>
     <message>
-        <location line="+307" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3306" />
+        <location line="+377" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3644" />
         <source>Update Available</source>
         <translation>Pembaruan Tersedia</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>A new version of OpenMV IDE (%L1.%L2.%L3) is available for download.</source>
-        <translation>Versi baru OpenMV IDE (%L1.%L2.%L3) tersedia untuk diunduh.</translation>
+        <translation type="vanished">Versi baru OpenMV IDE (%L1.%L2.%L3) tersedia untuk diunduh.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Download</source>
         <translation>Unduh</translation>
     </message>
     <message>
-        <location line="+253" />
         <source>WiFi Programming Disabled!</source>
-        <translation>Pemrograman WiFi Dinonaktifkan!</translation>
+        <translation type="vanished">Pemrograman WiFi Dinonaktifkan!</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Another application is using the OpenMV Cam broadcast discovery port. Please close that application and restart OpenMV IDE to enable WiFi programming.</source>
-        <translation>Aplikasi lain menggunakan port penemuan siaran OpenMV Cam. Silakan tutup aplikasi itu dan mulai ulang OpenMV IDE untuk mengaktifkan pemrograman WiFi.</translation>
+        <translation type="vanished">Aplikasi lain menggunakan port penemuan siaran OpenMV Cam. Silakan tutup aplikasi itu dan mulai ulang OpenMV IDE untuk mengaktifkan pemrograman WiFi.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+416" />
         <source>Documents Folder Error</source>
         <translation>Kesalahan Folder Dokumen</translation>
     </message>
@@ -8416,7 +8618,6 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Warna LED Kamera OpenMV</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Thanks for using the OpenMV Cam and OpenMV IDE!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -8438,7 +8639,7 @@ Blinking White:
 Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
 
 </source>
-        <translation>Terima kasih telah menggunakan OpenMV Cam dan OpenMV IDE! 
+        <translation type="vanished">Terima kasih telah menggunakan OpenMV Cam dan OpenMV IDE! 
 
 LED onboard OpenMV Cam Anda berkedip dengan warna berbeda untuk menunjukkan statusnya: 
 
@@ -8459,18 +8660,18 @@ Berkedip Putih:
 Firmware OpenMV Cam Anda panik karena kegagalan perangkat keras. Harap periksa apakah modul kamera OpenMV Cam Anda terpasang dengan aman.</translation>
     </message>
     <message>
-        <location line="+93" />
-        <location line="+1212" />
+        <location line="+94" />
+        <location line="+1236" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Port Serial - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1180" />
+        <location line="-1204" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+827" />
+        <location line="+851" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
@@ -8480,7 +8681,7 @@ Firmware OpenMV Cam Anda panik karena kegagalan perangkat keras. Harap periksa a
         <translation>Menghubungkan... (batas waktu 30 detik)</translation>
     </message>
     <message>
-        <location line="-1820" />
+        <location line="-1844" />
         <source>
 
 Try doing:
@@ -8531,12 +8732,12 @@ panggilan sudo adduser %L1
     </message>
     <message>
         <location line="+17" />
-        <location line="+1270" />
+        <location line="+1294" />
         <source>UDP Server Connection - %1</source>
         <translation>Koneksi Server UDP - %1</translation>
     </message>
     <message>
-        <location line="-1196" />
+        <location line="-1220" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Argumen port tidak valid (%1) untuk -open_udp_server_terminal</translation>
     </message>
@@ -8567,12 +8768,12 @@ panggilan sudo adduser %L1
     </message>
     <message>
         <location line="+17" />
-        <location line="+1317" />
+        <location line="+1341" />
         <source>TCP Server Connection - %1</source>
         <translation>Koneksi Server TCP - %1</translation>
     </message>
     <message>
-        <location line="-1243" />
+        <location line="-1267" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Argumen port tidak valid (%1) untuk -open_tcp_server_terminal</translation>
     </message>
@@ -8601,7 +8802,7 @@ panggilan sudo adduser %L1
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2716" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2935" />
         <location line="+10" />
         <location line="+8" />
         <location line="+22" />
@@ -8689,16 +8890,15 @@ Silakan jalankan Contoh-&gt;HelloWorld-&gt;helloworld.py untuk menguji kualitas 
         <translation>Kamera OpenMV Tidak Terdaftar Terdeteksi</translation>
     </message>
     <message>
-        <location line="-19" />
         <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with OpenMV IDE without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
-        <translation>OpenMV Cam Anda tidak terdaftar. Anda perlu mendaftarkan OpenMV Cam Anda dengan OpenMV untuk penggunaan tak terbatas dengan OpenMV IDE tanpa gangguan apa pun. 
+        <translation type="vanished">OpenMV Cam Anda tidak terdaftar. Anda perlu mendaftarkan OpenMV Cam Anda dengan OpenMV untuk penggunaan tak terbatas dengan OpenMV IDE tanpa gangguan apa pun. 
 
 Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-9" />
         <source>Unregistered OpenMV Cams hurt the open-source OpenMV ecosystem by undercutting offical OpenMV Cam sales which help fund OpenMV Cam software development.
 
 Would you like to register your OpenMV Cam now?</source>
@@ -8707,11 +8907,170 @@ Would you like to register your OpenMV Cam now?</source>
 Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>OpenMV IDE will display these three messages boxes each time you connect until you register your OpenMV Cam...
 
 Would you like to register your OpenMV Cam now?</source>
-        <translation>OpenMV IDE akan menampilkan tiga kotak pesan ini setiap kali Anda terhubung hingga Anda mendaftarkan OpenMV Cam Anda... 
+        <translation type="vanished">OpenMV IDE akan menampilkan tiga kotak pesan ini setiap kali Anda terhubung hingga Anda mendaftarkan OpenMV Cam Anda... 
+
+Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
+    </message>
+    <message>
+        <location line="-2208" />
+        <location line="+8" />
+        <source>About %1</source>
+        <translation>Tentang %1</translation>
+    </message>
+    <message>
+        <location line="-7" />
+        <source>About %1...</source>
+        <translation>Tentang %1...</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>&lt;p&gt;&lt;b&gt;Release Notes&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Catatan Rilis&lt;/b&gt;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>%1 %2</source>
+        <translation>%1 %2</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>OpenMV Firmware %1</source>
+        <translation>Firmware OpenMV %1</translation>
+    </message>
+    <message>
+        <location line="+193" />
+        <source>JPG</source>
+        <translation>JPG</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <location line="+13" />
+        <source>JPEG Mode</source>
+        <translation>Mode JPEG</translation>
+    </message>
+    <message>
+        <location line="-5" />
+        <location line="+7" />
+        <source>The Frame Buffer is streaming JPEG-compressed images</source>
+        <translation>Buffer Bingkai sedang mengalirkan gambar terkompresi JPEG</translation>
+    </message>
+    <message>
+        <location line="-6" />
+        <location line="+7" />
+        <source>The Frame Buffer is streaming raw (uncompressed) images</source>
+        <translation>Buffer Bingkai sedang mengalirkan gambar mentah (tidak terkompresi)</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+25" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
+        <translation>Buffer Bingkai - Res (l:%1, t:%2) - ROI (x:%3, y:%4, l:%5, t:%6) - Piksel (%7) - Fokus (%8)</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
+        <translation>Buffer Bingkai - Res (l:%1, t:%2) - Titik (x:%3, y:%4)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
+        <source>Frame Buffer - Res (w:%1, h:%2) - Focus (%3)</source>
+        <translation>Buffer Bingkai - Res (l:%1, t:%2) - Fokus (%3)</translation>
+    </message>
+    <message>
+        <location line="+255" />
+        <source>Camera serial port -- click to give this camera a friendly name</source>
+        <translation>Port serial kamera -- klik untuk memberi kamera ini nama yang mudah diingat</translation>
+    </message>
+    <message>
+        <location line="+389" />
+        <source>A new version of %5 (%L1.%L2.%L3) is available for download. See the &lt;a href=&quot;%L4&quot;&gt;release notes&lt;/a&gt;.</source>
+        <translation>Versi baru dari %5 (%L1.%L2.%L3) tersedia untuk diunduh. Lihat &lt;a href=&quot;%L4&quot;&gt;catatan rilis&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+124" />
+        <source>Connect (Network available)</source>
+        <translation>Hubungkan (Jaringan tersedia)</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Connect (USB available)</source>
+        <translation>Hubungkan (USB tersedia)</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Connect (USB &amp; Network available)</source>
+        <translation>Hubungkan (USB &amp; Jaringan tersedia)</translation>
+    </message>
+    <message>
+        <location line="+89" />
+        <source>-auto_run in viewer mode requires a readable text script file argument on the command line.</source>
+        <translation>-auto_run dalam mode penampil memerlukan argumen berkas skrip teks yang dapat dibaca pada baris perintah.</translation>
+    </message>
+    <message>
+        <location line="+250" />
+        <source>Thanks for using the OpenMV Cam and %1!
+
+Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
+
+Blinking Green:
+
+Your OpenMV Cam&apos;s onboard bootloader is running. The onboard bootloader runs for a few seconds when your OpenMV Cam is powered via USB to allow %1 to reprogram your OpenMV Cam.
+
+Blinking Blue:
+
+Your OpenMV Cam is running the default main.py script onboard.
+
+If you have an SD card installed or overwrote the main.py script on your OpenMV Cam then it will run whatever code you loaded on it instead.
+
+If the LED is blinking blue but %1 can&apos;t connect to your OpenMV Cam please make sure you are connecting your OpenMV Cam to your PC with a USB cable that supplies both data and power.
+
+Blinking White:
+
+Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Please check that your OpenMV Cam&apos;s camera module is installed securely.
+
+</source>
+        <translation>Terima kasih telah menggunakan OpenMV Cam dan %1!
+
+LED onboard OpenMV Cam Anda berkedip dengan warna berbeda untuk menunjukkan statusnya:
+
+Berkedip Hijau:
+
+Bootloader onboard OpenMV Cam Anda sedang berjalan. Bootloader onboard berjalan selama beberapa detik saat OpenMV Cam Anda diberi daya melalui USB untuk memungkinkan %1 memprogram ulang OpenMV Cam Anda.
+
+Berkedip Biru:
+
+OpenMV Cam Anda sedang menjalankan skrip main.py bawaan onboard.
+
+Jika Anda memasang kartu SD atau menimpa skrip main.py pada OpenMV Cam Anda, maka ia akan menjalankan kode apa pun yang Anda muat sebagai gantinya.
+
+Jika LED berkedip biru tetapi %1 tidak dapat terhubung ke OpenMV Cam Anda, harap pastikan Anda menghubungkan OpenMV Cam Anda ke PC dengan kabel USB yang menyuplai baik data maupun daya.
+
+Berkedip Putih:
+
+Firmware OpenMV Cam Anda mengalami panic karena kegagalan perangkat keras. Harap periksa bahwa modul kamera OpenMV Cam Anda terpasang dengan aman.
+
+</translation>
+    </message>
+    <message>
+        <location line="+711" />
+        <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with %1 without any interruptions.
+
+Would you like to register your OpenMV Cam now?</source>
+        <translation>OpenMV Cam Anda belum terdaftar. Anda perlu mendaftarkan OpenMV Cam Anda dengan OpenMV untuk penggunaan tanpa batas dengan %1 tanpa gangguan apa pun.
+
+Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>%1 will display these three messages boxes each time you connect until you register your OpenMV Cam...
+
+Would you like to register your OpenMV Cam now?</source>
+        <translation>%1 akan menampilkan tiga kotak pesan ini setiap kali Anda terhubung sampai Anda mendaftarkan OpenMV Cam Anda...
 
 Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
@@ -8756,10 +9115,10 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Kunci Papan yang diformat tidak valid!</translation>
     </message>
     <message>
-        <location line="+99" />
+        <location line="+84" />
         <location line="+7" />
         <location line="+18" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-117" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-109" />
         <location line="+7" />
         <location line="+18" />
         <source>Save Image</source>
@@ -8767,7 +9126,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="-23" />
-        <location line="+1101" />
+        <location line="+1140" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>File Gambar (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
@@ -8848,7 +9207,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1344" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1362" />
         <source>Please select a serial port</source>
         <translation>Silakan pilih port serial</translation>
     </message>
@@ -8859,7 +9218,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="+96" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+245" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+249" />
         <source>Try doing:
 
 </source>
@@ -8972,7 +9331,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+555" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+68" />
         <source>What would you like to do?</source>
         <translation>Apa yang ingin kamu lakukan?</translation>
     </message>
@@ -8997,7 +9356,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <location line="-70" />
         <location line="+80" />
         <location line="+21" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+428" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+535" />
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>File Titik Kunci (*.lbp *.orb)</translation>
     </message>
@@ -9092,19 +9451,17 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Generasi selesai!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1658" />
         <source>New OpenMV IDE resources are available (e.g. examples, firmware, documentation, etc.).</source>
-        <translation>Sumber daya OpenMV IDE baru tersedia (misalnya contoh, firmware, dokumentasi, dll.).</translation>
+        <translation type="vanished">Sumber daya OpenMV IDE baru tersedia (misalnya contoh, firmware, dokumentasi, dll.).</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1859" />
         <source>Install</source>
         <translation>Memasang</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+289" />
-        <location line="+165" />
+        <location line="+327" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
@@ -9127,23 +9484,20 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Mengunduh...</translation>
     </message>
     <message>
-        <location line="-440" />
+        <location line="-313" />
         <source>Installing...</source>
         <translation>Menginstal...</translation>
     </message>
     <message>
-        <location line="+59" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
         <source>Please close any programs that are viewing/editing OpenMV IDE&apos;s application data and then restart OpenMV IDE!</source>
-        <translation>Silakan tutup semua program yang melihat/mengedit data aplikasi OpenMV IDE dan kemudian restart OpenMV IDE!</translation>
+        <translation type="vanished">Silakan tutup semua program yang melihat/mengedit data aplikasi OpenMV IDE dan kemudian restart OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Installation Sucessful! Please restart OpenMV IDE.</source>
-        <translation>Instalasi Berhasil! Silakan mulai ulang OpenMV IDE.</translation>
+        <translation type="vanished">Instalasi Berhasil! Silakan mulai ulang OpenMV IDE.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+128" />
         <location line="+6" />
         <location line="+28" />
         <source>Package Update</source>
@@ -9151,20 +9505,18 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+273" />
-        <location line="+88" />
+        <location line="+315" />
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>Tidak dapat membuka file sumber daya &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-333" />
-        <location line="+273" />
-        <location line="+95" />
+        <location line="-287" />
+        <location line="+314" />
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>Permintaan jaringan gagal &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-336" />
+        <location line="-282" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9172,67 +9524,67 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Jalur Firmware</translation>
     </message>
     <message>
-        <location line="-4" />
         <source>Firmware Binary (*.bin *.dfu *.img)</source>
-        <translation>Biner Firmware (*.bin *.dfu *.img)</translation>
+        <translation type="vanished">Biner Firmware (*.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+117" />
-        <location line="+720" />
+        <location line="+8" />
+        <location line="+159" />
+        <location line="+875" />
         <location line="+227" />
-        <location line="+2414" />
+        <location line="+2601" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Hapus sistem file FAT internal</translation>
     </message>
     <message>
-        <location line="-3553" />
-        <location line="+117" />
-        <location line="+722" />
+        <location line="-3937" />
+        <location line="+159" />
+        <location line="+877" />
         <location line="+226" />
-        <location line="+2413" />
+        <location line="+2600" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Jika Anda mengaktifkan opsi ini, semua file di sistem file FAT internal OpenMV Cam Anda akan dihapus. Ini tidak menghapus file pada kartu SD yang dapat dilepas (jika dimasukkan).</translation>
     </message>
     <message>
-        <location line="-3553" />
-        <location line="+839" />
+        <location line="-3937" />
+        <location line="+1036" />
         <location line="+226" />
-        <location line="+2413" />
+        <location line="+2600" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Setel ulang sistem file ROMFS</translation>
     </message>
     <message>
-        <location line="-3552" />
-        <location line="+840" />
+        <location line="-3936" />
+        <location line="+1037" />
         <location line="+225" />
-        <location line="+2412" />
+        <location line="+2599" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Jika Anda mengaktifkan opsi ini, sistem file ROM pada OpenMV Cam Anda akan diatur ulang kembali ke default.</translation>
     </message>
     <message>
-        <location line="-3552" />
-        <location line="+148" />
+        <location line="-3936" />
+        <location line="+190" />
         <source>Run</source>
         <translation>Berlari</translation>
     </message>
     <message>
-        <location line="-106" />
-        <location line="+45" />
+        <location line="-125" />
+        <location line="+13" />
+        <location line="+51" />
         <source>Bootloader</source>
         <translation>Pemuat boot</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="-50" />
         <source>&quot;%L1&quot; is not a file!</source>
         <translation>&quot;%L1&quot; bukan berkas!</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+73" />
         <source>Update ROMFS file system</source>
         <translation>Perbarui sistem file ROMFS</translation>
     </message>
@@ -9253,22 +9605,116 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+3343" />
+        <location line="+3685" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Peringatan: Mengupgrade ke versi firmware baru memerlukan penghapusan sistem file FAT.</translation>
     </message>
     <message>
-        <location line="-3249" />
         <source>Extracting...</source>
-        <translation>Mengekstraksi...</translation>
+        <translation type="vanished">Mengekstraksi...</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Unable to extract firmware!</source>
-        <translation>Tidak dapat mengekstrak firmware!</translation>
+        <translation type="vanished">Tidak dapat mengekstrak firmware!</translation>
     </message>
     <message>
-        <location line="+148" />
+        <location line="-4503" />
+        <source>Checking development examples...</source>
+        <translation>Memeriksa contoh pengembangan...</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Downloading development examples...</source>
+        <translation>Mengunduh contoh pengembangan...</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Checking development documentation...</source>
+        <translation>Memeriksa dokumentasi pengembangan...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Downloading development documentation...</source>
+        <translation>Mengunduh dokumentasi pengembangan...</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Checking development firmware...</source>
+        <translation>Memeriksa firmware pengembangan...</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location line="+84" />
+        <source>Downloading the latest development firmware...</source>
+        <translation>Mengunduh firmware pengembangan terbaru...</translation>
+    </message>
+    <message>
+        <location line="-73" />
+        <source>Unpacking the latest development firmware...</source>
+        <translation>Membongkar firmware pengembangan terbaru...</translation>
+    </message>
+    <message>
+        <location line="+311" />
+        <source>New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the &lt;a href=&quot;%L1&quot;&gt;release notes&lt;/a&gt;.</source>
+        <translation>Sumber daya %2 baru tersedia (mis. contoh, firmware, dokumentasi, dll.). Lihat &lt;a href=&quot;%L1&quot;&gt;catatan rilis&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+89" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
+        <source>Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
+        <translation>Harap tutup semua program yang sedang melihat/mengedit data aplikasi %1 lalu mulai ulang %1!</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>Installation Sucessful! Please restart %1.</source>
+        <translation>Instalasi Berhasil! Harap mulai ulang %1.</translation>
+    </message>
+    <message>
+        <location line="+96" />
+        <source>Firmware Binary (*.bin *.dfu *.img *.zip)</source>
+        <translation>Biner Firmware (*.bin *.dfu *.img *.zip)</translation>
+    </message>
+    <message>
+        <location line="+91" />
+        <source>Unable to unpack the firmware zip &quot;%L1&quot;!</source>
+        <translation>Tidak dapat membongkar zip firmware &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="+212" />
+        <source>Unable to download the latest development firmware!</source>
+        <translation>Tidak dapat mengunduh firmware pengembangan terbaru!</translation>
+    </message>
+    <message>
+        <location line="+81" />
+        <source>The development firmware for this board is not available!</source>
+        <translation>Firmware pengembangan untuk papan ini tidak tersedia!</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Update complete!
+
+</source>
+        <translation>Pembaruan selesai!
+
+</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Please wait for the device to finish restarting. This can take a little while.</source>
+        <translation>Harap tunggu perangkat selesai memulai ulang. Ini bisa memakan waktu sebentar.</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Unknown Board (Wi-Fi)</source>
+        <translation>Papan Tidak Dikenal (Wi-Fi)</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>%1 (Wi-Fi)</source>
+        <translation>%1 (Wi-Fi)</translation>
+    </message>
+    <message>
+        <location line="+85" />
         <location line="+5" />
         <location line="+48" />
         <location line="+5" />
@@ -9278,7 +9724,22 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Dewan Tidak Dikenal</translation>
     </message>
     <message>
-        <location line="+177" />
+        <location line="+60" />
+        <source>Name Camera</source>
+        <translation>Beri Nama Kamera</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Serial port:</source>
+        <translation>Port serial:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Name:</source>
+        <translation>Nama:</translation>
+    </message>
+    <message>
+        <location line="+202" />
         <source>USB problems were detected by your OS with the devices below on this system. Please fix or remove these devices as they will cause connection issues.
 
 %1</source>
@@ -9328,31 +9789,31 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="+84" />
-        <location line="+2415" />
+        <location line="+2602" />
         <source>Upgrade options:</source>
         <translation>Opsi peningkatan:</translation>
     </message>
     <message>
-        <location line="-2337" />
-        <location line="+170" />
+        <location line="-2524" />
+        <location line="+175" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Harap perbarui bootloader ke versi terbaru dan instal SoftDevice untuk mem-flash firmware OpenMV. Informasi lebih lanjut dapat ditemukan di &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-204" />
-        <location line="+169" />
+        <location line="-209" />
+        <location line="+174" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Singkatkan REC ke GND dan setel ulang board Anda. Informasi lebih lanjut dapat ditemukan di &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-201" />
+        <location line="-206" />
         <source>No released firmware available for the attached board!</source>
         <translation>Tidak ada firmware yang dirilis tersedia untuk papan yang terpasang!</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+66" />
         <source>Please select a DFU Device</source>
         <translation>Silakan pilih Perangkat DFU</translation>
     </message>
@@ -9366,17 +9827,17 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
 (Tekan batal jika ini memerlukan waktu lebih dari 5 detik).</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+154" />
         <source>Timeout error while getting firmware version!</source>
         <translation>Kesalahan batas waktu saat mendapatkan versi firmware!</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Do not try to connect while the green light on your OpenMV Cam is on!</source>
         <translation>Jangan mencoba menyambung saat lampu hijau di OpenMV Cam Anda menyala!</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Try to connect again?</source>
         <translation>Coba sambungkan lagi?</translation>
     </message>
@@ -9484,7 +9945,7 @@ OpenMV merekomendasikan hanya memuat bootloader.dfu untuk memperbaiki bootloader
         <translation>Kesalahan batas waktu saat mempelajari MTU!</translation>
     </message>
     <message>
-        <location line="+170" />
+        <location line="+226" />
         <source>Board: %L1</source>
         <translation>Papan: %L1</translation>
     </message>
@@ -9504,25 +9965,22 @@ OpenMV merekomendasikan hanya memuat bootloader.dfu untuk memperbaiki bootloader
         <translation>Versi Firmware: %L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-2356" />
+        <location line="+2361" />
         <source>Serial Port: %L1</source>
         <translation>Port Seri: %L1</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+503" />
-        <location line="+155" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-512" />
         <source>FPS: 0</source>
-        <translation>FPS: 0</translation>
+        <translation type="vanished">FPS: 0</translation>
     </message>
     <message>
-        <location line="-577" />
+        <location line="+120" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation>- [ kedaluwarsa - klik di sini untuk meningkatkan ]</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+13" />
         <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>Firmware OpenMV Cam Anda sudah kedaluwarsa. Apakah Anda ingin meningkatkan?</translation>
     </message>
@@ -9532,7 +9990,27 @@ OpenMV merekomendasikan hanya memuat bootloader.dfu untuk memperbaiki bootloader
         <translation>- [ terbaru ]</translation>
     </message>
     <message>
-        <location line="+592" />
+        <location line="+424" />
+        <location line="+10" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+191" />
+        <location line="+16" />
+        <source>Run Script</source>
+        <translation>Jalankan Skrip</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-14" />
+        <source>Python Files (*.py);;Text Files (*.txt);;All Files (*)</source>
+        <translation>Berkas Python (*.py);;Berkas Teks (*.txt);;Semua Berkas (*)</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+15" />
+        <source>Error: Cannot open &quot;%L1&quot;!</source>
+        <translation>Galat: Tidak dapat membuka &quot;%L1&quot;!</translation>
+    </message>
+    <message>
+        <location line="+223" />
         <source>More Examples</source>
         <translation>Contoh Lainnya</translation>
     </message>
@@ -9595,9 +10073,13 @@ Secara khusus, periksa contoh Pemrosesan Gambar -&gt; Pelacakan Warna dan Pembel
         <translation>Rekam Video</translation>
     </message>
     <message>
-        <location line="+69" />
         <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to OpenMV IDE!</source>
-        <translation>Peringatan: JPEG/PNG terlalu besar untuk di-buffer pada OpenMV Cam saat ini dan dikirim ke OpenMV IDE!</translation>
+        <translation type="vanished">Peringatan: JPEG/PNG terlalu besar untuk di-buffer pada OpenMV Cam saat ini dan dikirim ke OpenMV IDE!</translation>
+    </message>
+    <message>
+        <location line="+69" />
+        <source>Warning: JPEG/PNG too big to buffer on the current OpenMV Cam and send to %1!</source>
+        <translation>Peringatan: JPEG/PNG terlalu besar untuk di-buffer pada OpenMV Cam saat ini dan dikirim ke %1!</translation>
     </message>
     <message>
         <location line="+83" />
@@ -9671,27 +10153,57 @@ Secara khusus, periksa contoh Pemrosesan Gambar -&gt; Pelacakan Warna dan Pembel
         <location line="-223" />
         <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
 
-Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
-        <translation>Modul &quot;%L1&quot; di OpenMV Cam Anda berbeda dengan salinan di komputer Anda. 
+Would you like %2 to update the module on your OpenMV Cam?</source>
+        <translation>Modul &quot;%L1&quot; pada OpenMV Cam Anda berbeda dari salinan di komputer Anda.
 
-Apakah Anda ingin OpenMV IDE memperbarui modul pada OpenMV Cam Anda?</translation>
+Apakah Anda ingin %2 memperbarui modul pada OpenMV Cam Anda?</translation>
     </message>
     <message>
         <location line="+75" />
-        <source>Would you like OpenMV IDE to update the module on your computer?</source>
-        <translation>Apakah Anda ingin OpenMV IDE memperbarui modul di komputer Anda?</translation>
+        <source>Would you like %1 to update the module on your computer?</source>
+        <translation>Apakah Anda ingin %1 memperbarui modul di komputer Anda?</translation>
     </message>
     <message>
         <location line="+91" />
         <source>Module &quot;%L1&quot; may be required to run your script.
 
+Would you like %2 to copy it to your OpenMV Cam?</source>
+        <translation>Modul &quot;%L1&quot; mungkin diperlukan untuk menjalankan skrip Anda.
+
+Apakah Anda ingin %2 menyalinnya ke OpenMV Cam Anda?</translation>
+    </message>
+    <message>
+        <source>Module &quot;%L1&quot; on your OpenMV Cam is different than the copy on your computer.
+
+Would you like OpenMV IDE to update the module on your OpenMV Cam?</source>
+        <translation type="vanished">Modul &quot;%L1&quot; di OpenMV Cam Anda berbeda dengan salinan di komputer Anda. 
+
+Apakah Anda ingin OpenMV IDE memperbarui modul pada OpenMV Cam Anda?</translation>
+    </message>
+    <message>
+        <source>Would you like OpenMV IDE to update the module on your computer?</source>
+        <translation type="vanished">Apakah Anda ingin OpenMV IDE memperbarui modul di komputer Anda?</translation>
+    </message>
+    <message>
+        <source>Module &quot;%L1&quot; may be required to run your script.
+
 Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
-        <translation>Modul &quot;%L1&quot; mungkin diperlukan untuk menjalankan skrip Anda. 
+        <translation type="vanished">Modul &quot;%L1&quot; mungkin diperlukan untuk menjalankan skrip Anda. 
 
 Apakah Anda ingin OpenMV IDE menyalinnya ke OpenMV Cam Anda?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+44" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-541" />
+        <source>FPS: %L1 Cam - %L2 IDE</source>
+        <translation>FPS: %L1 Cam - %L2 IDE</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>On-camera FPS and IDE display FPS</source>
+        <translation>FPS pada kamera dan FPS tampilan IDE</translation>
+    </message>
+    <message>
+        <location line="+47" />
         <location line="+28" />
         <source>Select Drive</source>
         <translation>Pilih Berkendara</translation>
@@ -9782,7 +10294,7 @@ Apakah Anda ingin OpenMV IDE menyalinnya ke OpenMV Cam Anda?</translation>
         <translation>Polling Kode Profiler (md)</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+138" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>Simpan Skrip</translation>
@@ -9939,27 +10451,43 @@ Apakah Anda ingin OpenMV IDE menyalinnya ke OpenMV Cam Anda?</translation>
         <translation>Fungsi: %1, Total Panggilan: %2, Total μs: %3, Total Siklus: %4</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-789" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-856" />
         <source>Please select the target</source>
         <translation>Silakan pilih targetnya</translation>
+    </message>
+    <message>
+        <source>The model has already been converted for the Ethos-U NPU.
+
+OpenMV IDE will just copy the model as is.</source>
+        <translation type="vanished">Model telah dikonversi untuk NPU Ethos-U. 
+
+OpenMV IDE hanya akan menyalin model apa adanya.</translation>
+    </message>
+    <message>
+        <source>The model has already been converted for the Neural-ART NPU.
+
+OpenMV IDE will just copy the model as is.</source>
+        <translation type="vanished">Model telah dikonversi untuk Neural-ART NPU. 
+
+OpenMV IDE hanya akan menyalin model apa adanya.</translation>
     </message>
     <message>
         <location line="+59" />
         <source>The model has already been converted for the Ethos-U NPU.
 
-OpenMV IDE will just copy the model as is.</source>
-        <translation>Model telah dikonversi untuk NPU Ethos-U. 
+%1 will just copy the model as is.</source>
+        <translation>Model sudah dikonversi untuk NPU Ethos-U.
 
-OpenMV IDE hanya akan menyalin model apa adanya.</translation>
+%1 hanya akan menyalin model apa adanya.</translation>
     </message>
     <message>
         <location line="+27" />
         <source>The model has already been converted for the Neural-ART NPU.
 
-OpenMV IDE will just copy the model as is.</source>
-        <translation>Model telah dikonversi untuk Neural-ART NPU. 
+%1 will just copy the model as is.</source>
+        <translation>Model sudah dikonversi untuk NPU Neural-ART.
 
-OpenMV IDE hanya akan menyalin model apa adanya.</translation>
+%1 hanya akan menyalin model apa adanya.</translation>
     </message>
     <message>
         <location line="+147" />
@@ -9979,7 +10507,7 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+93" />
+        <location line="+122" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
@@ -9987,7 +10515,7 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
         <location line="+40" />
         <location line="+15" />
         <location line="+27" />
-        <location line="+24" />
+        <location line="+62" />
         <location line="+53" />
         <location line="+63" />
         <location line="+6" />
@@ -9996,7 +10524,7 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
         <translation>Sunting ROMFS</translation>
     </message>
     <message>
-        <location line="-606" />
+        <location line="-673" />
         <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>Folder dengan nama yang sama sudah ada!</translation>
@@ -10049,37 +10577,37 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+225" />
+        <location line="+292" />
         <source>Extract File</source>
         <translation>Ekstrak Berkas</translation>
     </message>
     <message>
-        <location line="-231" />
+        <location line="-298" />
         <source>View/Edit</source>
         <translation>Lihat/Edit</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+222" />
+        <location line="+289" />
         <source>Add File</source>
         <translation>Tambahkan Berkas</translation>
     </message>
     <message>
-        <location line="-221" />
-        <location line="+223" />
+        <location line="-288" />
+        <location line="+290" />
         <source>New Folder</source>
         <translation>Folder Baru</translation>
     </message>
     <message>
-        <location line="-135" />
+        <location line="-173" />
         <location line="+13" />
-        <location line="+303" />
+        <location line="+341" />
         <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS tidak didukung pada board ini!</translation>
     </message>
     <message>
-        <location line="-275" />
+        <location line="-313" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Gagal membongkar ROMFS!</translation>
@@ -10092,7 +10620,7 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
     </message>
     <message>
         <location line="-25" />
-        <location line="+165" />
+        <location line="+203" />
         <source>ROMFS Images (*.img)</source>
         <translation>Gambar ROMFS (*.img)</translation>
     </message>
@@ -10126,7 +10654,7 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
         <translation>Apakah Anda yakin ingin mereset sistem file ROM OpenMV Cam Anda?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-377" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-584" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10139,7 +10667,7 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
         <translation>File Teks (*.txt);;Semua file (*)</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+223" />
         <source>Zoom: %1%</source>
         <translation>Perbesar: %1%</translation>
     </message>
@@ -10159,7 +10687,7 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
         <translation>Menemukan</translation>
     </message>
     <message>
-        <location line="+239" />
+        <location line="+235" />
         <source>Serial Terminal</source>
         <translation>Terminal Seri</translation>
     </message>
@@ -10170,6 +10698,7 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
     </message>
     <message>
         <location line="+5" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="-379" />
         <source>Save</source>
         <translation>Menyimpan</translation>
     </message>
@@ -10179,12 +10708,16 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
         <translation>Bungkus Teks</translation>
     </message>
     <message>
-        <location line="+6" />
-        <source>Run &quot;/main.py&quot;</source>
-        <translation>Jalankan &quot;/main.py&quot;</translation>
+        <location line="+16" />
+        <source>Run a script file from disk</source>
+        <translation>Jalankan berkas skrip dari disk</translation>
     </message>
     <message>
-        <location line="+0" />
+        <source>Run &quot;/main.py&quot;</source>
+        <translation type="vanished">Jalankan &quot;/main.py&quot;</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Run current script in editor window</source>
         <translation>Jalankan skrip saat ini di jendela editor</translation>
     </message>
@@ -10262,8 +10795,8 @@ Kamera harus didaur ulang dayanya setelah pembaruan paket sistem.</translation>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1031" />
-        <location line="+79" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1124" />
+        <location line="+85" />
         <source>Query failed!</source>
         <translation>Kueri gagal!</translation>
     </message>
@@ -10603,7 +11136,7 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <location line="+25" />
         <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+171" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+184" />
         <source>Success - Press Ok to close the window</source>
         <translation>Berhasil - Tekan Ok untuk menutup jendela</translation>
     </message>
@@ -10847,7 +11380,7 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Vela Compiler tidak didukung pada platform ini.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-652" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-674" />
         <source>Reading File...</source>
         <translation>Membaca Berkas...</translation>
     </message>
@@ -10879,12 +11412,12 @@ Buka kumpulan data untuk mengunggahnya.</translation>
     </message>
     <message>
         <location line="-77" />
-        <location line="+605" />
+        <location line="+627" />
         <source>Transcoding File...</source>
         <translation>File Transkode...</translation>
     </message>
     <message>
-        <location line="-594" />
+        <location line="-616" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -10939,17 +11472,34 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Versi File OpenMV ImageWriter tidak didukung!</translation>
     </message>
     <message>
-        <location line="+96" />
-        <location line="+79" />
         <source>Get Input Formats</source>
-        <translation>Dapatkan Format Input</translation>
+        <translation type="vanished">Dapatkan Format Input</translation>
+    </message>
+    <message>
+        <location line="+97" />
+        <location line="+85" />
+        <source>FFmpeg is not supported on this platform.</source>
+        <translation>FFmpeg tidak didukung pada platform ini.</translation>
+    </message>
+    <message>
+        <location line="-82" />
+        <location line="+85" />
+        <source>The FFmpeg executable was not found (the installation may be incomplete).</source>
+        <translation>Berkas eksekusi FFmpeg tidak ditemukan (instalasi mungkin tidak lengkap).</translation>
+    </message>
+    <message>
+        <location line="-83" />
+        <location line="+85" />
+        <source>Get Formats</source>
+        <translation>Dapatkan Format</translation>
     </message>
     <message>
         <location line="+37" />
         <location line="+111" />
+        <location line="+10" />
         <location line="+98" />
         <location line="+15" />
-        <location line="+371" />
+        <location line="+445" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
@@ -10973,7 +11523,7 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Konversi Video</translation>
     </message>
     <message>
-        <location line="-989" />
+        <location line="-1073" />
         <source>Converting</source>
         <translation>Konversi</translation>
     </message>
@@ -10981,6 +11531,19 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <location line="+112" />
         <source>FFMPEG is not supported on this platform.</source>
         <translation>FFMPEG tidak didukung pada platform ini.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>The FFmpeg executable was not found:
+
+%1
+
+Your OpenMV IDE installation may be incomplete.</source>
+        <translation>Berkas eksekusi FFmpeg tidak ditemukan:
+
+%1
+
+Instalasi OpenMV IDE Anda mungkin tidak lengkap.</translation>
     </message>
     <message>
         <location line="+98" />
@@ -10993,19 +11556,29 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Tidak dapat membuka file video keluaran!</translation>
     </message>
     <message>
-        <location line="+163" />
-        <location line="+415" />
+        <location line="+199" />
+        <location line="+453" />
         <source>Play Video</source>
         <translation>Putar Video</translation>
     </message>
     <message>
-        <location line="-414" />
-        <location line="+163" />
+        <location line="-452" />
+        <source>Video playback is not supported on this platform.</source>
+        <translation>Pemutaran video tidak didukung pada platform ini.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location line="+200" />
         <source>Failed to launch ffplay!</source>
         <translation>Gagal meluncurkan ffplay!</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1" />
+        <source>RTSP playback is not supported on this platform.</source>
+        <translation>Pemutaran RTSP tidak didukung pada platform ini.</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Convert Video Source</source>
         <translation>Konversi Sumber Video</translation>
     </message>
@@ -11109,6 +11682,261 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <location line="+7" />
         <source>Save Video</source>
         <translation>Simpan Video</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+68" />
+        <source>Unknown control: %L1</source>
+        <translation>Kontrol tidak dikenal: %L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>(missing type)</source>
+        <translation>(tipe tidak ada)</translation>
+    </message>
+    <message>
+        <location line="+174" />
+        <location line="+5" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+783" />
+        <location line="+5" />
+        <source>Show text</source>
+        <translation>Tampilkan teks</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+0" />
+        <source>Hide text</source>
+        <translation>Sembunyikan teks</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>These fields have invalid or incomplete input:
+
+%L1
+
+Fix or clear them before saving.</source>
+        <translation>Bidang-bidang ini memiliki masukan yang tidak valid atau tidak lengkap:
+
+%L1
+
+Perbaiki atau kosongkan sebelum menyimpan.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Unable to open:
+
+%L1
+
+%L2</source>
+        <translation>Tidak dapat membuka:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Not a valid JSON config file:
+
+%L1</source>
+        <translation>Bukan berkas konfigurasi JSON yang valid:
+
+%L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>the top level must be a JSON object.</source>
+        <translation>level teratas harus berupa objek JSON.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>This JSON file has no &quot;controls&quot; array to build a GUI from.</source>
+        <translation>Berkas JSON ini tidak memiliki larik &quot;controls&quot; untuk membangun GUI.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Unable to save:
+
+%L1
+
+%L2</source>
+        <translation>Tidak dapat menyimpan:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <location line="+21" />
+        <source>JSON Files (*.json)</source>
+        <translation>Berkas JSON (*.json)</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Unable to create:
+
+%L1
+
+%L2</source>
+        <translation>Tidak dapat membuat:
+
+%L1
+
+%L2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="-90" />
+        <source>Edit WiFi Debugging</source>
+        <translation>Edit Debugging WiFi</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Set Up WiFi Debugging</source>
+        <translation>Siapkan Debugging WiFi</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Please enter or select a WiFi network name (SSID).</source>
+        <translation>Harap masukkan atau pilih nama jaringan WiFi (SSID).</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Editing this camera&apos;s WiFi debugging setup -- this updates the boot.py already on the camera, keeping any code you added to it. It brings the network up on power-up and advertises the camera to the IDE, so you can connect without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</source>
+        <translation>Mengedit pengaturan debugging WiFi kamera ini -- ini memperbarui boot.py yang sudah ada di kamera, dengan mempertahankan kode apa pun yang Anda tambahkan. Ini mengaktifkan jaringan saat dinyalakan dan mengumumkan kamera ke IDE, sehingga Anda dapat terhubung tanpa kabel USB. Saat Debugging WiFi aktif, debugging USB dinonaktifkan -- pilih &quot;Dinonaktifkan&quot; di bawah untuk mematikannya dan kembali ke USB.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Set up this camera for debugging over the network. This writes a boot.py to the camera that brings up its WiFi or Ethernet on power-up and advertises it to the IDE, so you can connect to it without a USB cable. While WiFi Debugging is active, USB debugging is disabled -- choose &quot;Disabled&quot; below to turn it off and go back to USB.</source>
+        <translation>Siapkan kamera ini untuk debugging melalui jaringan. Ini menulis boot.py ke kamera yang mengaktifkan WiFi atau Ethernet-nya saat dinyalakan dan mengumumkannya ke IDE, sehingga Anda dapat terhubung tanpa kabel USB. Saat Debugging WiFi aktif, debugging USB dinonaktifkan -- pilih &quot;Dinonaktifkan&quot; di bawah untuk mematikannya dan kembali ke USB.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Connection</source>
+        <translation>Koneksi</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>WiFi</source>
+        <translation>WiFi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ethernet</source>
+        <translation>Ethernet</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Disabled (USB debugging)</source>
+        <translation>Dinonaktifkan (debugging USB)</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>WiFi Network</source>
+        <translation>Jaringan WiFi</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Scan</source>
+        <translation>Pindai</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Network (SSID):</source>
+        <translation>Jaringan (SSID):</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Password:</source>
+        <translation>Kata Sandi:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Automatic</source>
+        <translation>Otomatis</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Open (no password)</source>
+        <translation>Terbuka (tanpa kata sandi)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA / WPA2</source>
+        <translation>WPA / WPA2</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA3</source>
+        <translation>WPA3</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WPA2 / WPA3</source>
+        <translation>WPA2 / WPA3</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>WEP (legacy)</source>
+        <translation>WEP (lama)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Security:</source>
+        <translation>Keamanan:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>IP Address</source>
+        <translation>Alamat IP</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Automatic (DHCP)</source>
+        <translation>Otomatis (DHCP)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Static</source>
+        <translation>Statis</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Address:</source>
+        <translation>Alamat:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Netmask:</source>
+        <translation>Netmask:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Gateway:</source>
+        <translation>Gateway:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>DNS:</source>
+        <translation>DNS:</translation>
+    </message>
+    <message>
+        <location line="+93" />
+        <source>No WiFi networks were found (this PC may have no WiFi adapter). You can type the network name in by hand.</source>
+        <translation>Tidak ada jaringan WiFi yang ditemukan (PC ini mungkin tidak memiliki adaptor WiFi). Anda dapat mengetikkan nama jaringan secara manual.</translation>
+    </message>
+    <message>
+        <location line="+72" />
+        <source>Edit boot.py</source>
+        <translation>Edit boot.py</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Failed to write boot.py to the camera:
+
+%1</source>
+        <translation>Gagal menulis boot.py ke kamera:
+
+%1</translation>
     </message>
 </context>
 <context>
@@ -13122,7 +13950,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <location line="+1" />
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-227" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+485" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+493" />
         <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+217" />
         <source>Clone</source>
         <translation>Klon</translation>
@@ -13367,7 +14195,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
 %1</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+315" />
         <source>Error while restoring session</source>
         <translation>Terjadi kesalahan saat memulihkan sesi</translation>
     </message>
@@ -13383,17 +14211,17 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
     </message>
     <message>
         <location line="+47" />
-        <location line="+42" />
+        <location line="+49" />
         <source>Error while saving session</source>
         <translation>Terjadi kesalahan saat menyimpan sesi</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-48" />
         <source>Could not save session %1</source>
         <translation>Tidak dapat menyimpan sesi %1</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+49" />
         <source>Could not save session to file &quot;%1&quot;</source>
         <translation>Tidak dapat menyimpan sesi ke file &quot;%1&quot;</translation>
     </message>
@@ -17970,32 +18798,29 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Alt+X</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-612" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-620" />
         <source>Open Session #%1</source>
         <translation>Sesi Terbuka #%1</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Ctrl+Meta+%1</source>
-        <translation>Ctrl+Meta+%1</translation>
+        <translation type="vanished">Ctrl+Meta+%1</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Ctrl+Alt+%1</source>
-        <translation>Ctrl+Alt+%1</translation>
+        <translation type="vanished">Ctrl+Alt+%1</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>Open Recent Project #%1</source>
         <translation>Buka Proyek Terbaru #%1</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Ctrl+Shift+%1</source>
-        <translation>Ctrl+Shift+%1</translation>
+        <translation type="vanished">Ctrl+Shift+%1</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+56" />
         <source>Open %1 &quot;%2&quot;</source>
         <translation>Buka %1 &quot;%2&quot;</translation>
     </message>
@@ -19661,7 +20486,20 @@ Specifies how backspace interacts with indentation.
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+Menentukan bagaimana backspace berinteraksi dengan indentasi.
+
+&lt;ul&gt;
+&lt;li&gt;Tidak Ada: Tidak ada interaksi sama sekali. Perilaku backspace biasa.
+&lt;/li&gt;
+
+&lt;li&gt;Mengikuti Indentasi Sebelumnya: Pada spasi kosong di awal, kursor akan dibawa kembali ke tingkat indentasi terdekat yang digunakan pada baris sebelumnya.
+&lt;/li&gt;
+
+&lt;li&gt;Menghilangkan Indentasi: Jika karakter di belakang kursor adalah spasi, perilakunya seperti backtab.
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
     </message>
     <message>
         <location line="+15" />
@@ -19793,7 +20631,13 @@ Specifies how backspace interacts with indentation.
 &lt;li&gt;&lt;i&gt;Always Delete:&lt;/i&gt; never write an UTF-8 BOM, possibly deleting a pre-existing one.&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;Note that UTF-8 BOMs are uncommon and treated incorrectly by some editors, so it usually makes little sense to add any.&lt;/p&gt;
 &lt;p&gt;This setting does &lt;b&gt;not&lt;/b&gt; influence the use of UTF-16 and UTF-32 BOMs.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+&lt;p&gt;Bagaimana editor teks harus menangani Byte Order Mark UTF-8. Opsinya adalah:&lt;/p&gt;
+&lt;ul &gt;&lt;li&gt;&lt;i&gt;Tambah Jika Pengodean Adalah UTF-8:&lt;/i&gt; selalu tambahkan BOM saat menyimpan berkas dalam pengodean UTF-8. Perlu diketahui bahwa ini tidak akan berfungsi jika pengodean adalah &lt;i&gt;System&lt;/i&gt;, karena editor teks tidak mengetahui apa sebenarnya pengodean tersebut.&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;Pertahankan Jika Sudah Ada: &lt;/i&gt;simpan berkas dengan BOM jika sudah memilikinya saat dimuat.&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;Selalu Hapus:&lt;/i&gt; jangan pernah menulis BOM UTF-8, kemungkinan menghapus BOM yang sudah ada.&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Perlu diketahui bahwa BOM UTF-8 tidak umum dan ditangani secara tidak benar oleh beberapa editor, sehingga biasanya tidak banyak gunanya menambahkannya.&lt;/p&gt;
+&lt;p&gt;Pengaturan ini &lt;b&gt;tidak&lt;/b&gt; memengaruhi penggunaan BOM UTF-16 dan UTF-32.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+11" />
@@ -21125,7 +21969,31 @@ Influences the indentation of continuation lines.
 &lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
+Memengaruhi indentasi baris lanjutan.
+
+&lt;ul&gt;
+&lt;li&gt;Sama Sekali Tidak: Jangan sejajarkan sama sekali. Baris hanya akan diindentasi hingga kedalaman indentasi logis saat ini.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;Dengan Spasi: Selalu gunakan spasi untuk penyejajaran, terlepas dari pengaturan indentasi lainnya.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)            c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;Dengan Indentasi Reguler: Gunakan tab dan/atau spasi untuk penyejajaran, sesuai konfigurasi di atas.
+&lt;pre&gt;
+(tab)int i = foo(a, b
+(tab)(tab)(tab)  c, d);
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+31" />
