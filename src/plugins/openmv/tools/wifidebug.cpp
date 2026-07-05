@@ -97,7 +97,9 @@ _HOSTNAME   = ("omv-" + _cfg.get("serial", "000000000000"))[:32]
 _OP_CHANNEL_READ = 0x26
 _FLAG_EVENT      = 0x20
 _CH_STDOUT       = 2
-_STDOUT_EVT_MS   = 50          # min interval between forwarded stdout NOTIFY events
+_CH_STREAM       = 3
+_THROTTLE_EVT_CHANNELS = (_CH_STDOUT, _CH_STREAM)   # data channels whose events can flood
+_EVT_MS          = 50          # min interval between forwarded events, per throttled channel
 # Channels whose CHANNEL_READ responses are the bulk, readp-backed (zero-copy) sources -- camera
 # frames and profiler dumps. Only their read responses go over UDP (fire-and-forget, high
 # throughput; a dropped frame just skips). Everything else -- control, stdin, and the copying
@@ -215,7 +217,7 @@ class _NetworkTransport:
         self._peer = None      # IDE UDP frame endpoint == its TCP peer address
         self._rx = bytearray()
         self._tx = bytearray()
-        self._stdout_evt_ms = 0   # last forwarded stdout NOTIFY (throttle, see flush)
+        self._evt_ms = {}         # channel -> last forwarded event ticks_ms (throttle, see flush)
 
     def _drop(self):
         if self._conn is not None:
@@ -300,16 +302,18 @@ class _NetworkTransport:
                 pass           # datagram dropped: a lost frame just skips (best-effort by design)
             return 0
 
-        # Throttle stdout NOTIFY events. A fast-printing script re-arms the stdout channel's
-        # notify on every ringbuffer threshold crossing -- hundreds of events per second -- and
-        # the flood queues seconds of latency onto the control connection (commands, frame locks,
-        # even resync handshakes crawl behind it). The events are edge triggers and the IDE polls
-        # stdout size every ~50ms regardless, so forward one per interval and drop the rest.
-        if (len(buf) >= 6 and (buf[4] & _FLAG_EVENT) and buf[3] == _CH_STDOUT):
+        # Throttle data-channel events, per channel. Both flood the control link: a fast-printing
+        # script re-arms the stdout NOTIFY on every ringbuffer threshold crossing, and a fast
+        # camera re-arms the stream frame-ready event every capture -- hundreds per second either
+        # way, queuing seconds of latency ahead of commands, frame locks, even resync handshakes.
+        # They are edge triggers the IDE also covers by polling, so forward one per interval per
+        # channel and drop the rest. (System/stdin events are rare and meaningful -- not throttled.)
+        if (len(buf) >= 6 and (buf[4] & _FLAG_EVENT) and buf[3] in _THROTTLE_EVT_CHANNELS):
+            ch = buf[3]
             now = time.ticks_ms()
-            if time.ticks_diff(now, self._stdout_evt_ms) < _STDOUT_EVT_MS:
+            if time.ticks_diff(now, self._evt_ms.get(ch, 0)) < _EVT_MS:
                 return 0
-            self._stdout_evt_ms = now
+            self._evt_ms[ch] = now
 
         if self._conn is None:
             return 0           # no control link yet -> drop it (nothing sends before the IDE connects)

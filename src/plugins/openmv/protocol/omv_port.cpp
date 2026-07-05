@@ -15,8 +15,10 @@
 #define SERIAL_READ_TIMEOUT 3000
 #define SERIAL_READ_STALL_TIMEOUT 1000
 
-#define TCP_READ_TIMEOUT 5000
-#define TCP_READ_STALL_TIMEOUT 3000
+// Weak WiFi links (chip antennas) show multi-second delivery stalls that are hiccups, not dead
+// links -- timing out inside one turns a late response into a stale-response cascade.
+#define TCP_READ_TIMEOUT 10000
+#define TCP_READ_STALL_TIMEOUT 5000
 #define TCP_CONNECT_TIMEOUT 3000
 
 #define READ_BUFFER_SIZE (64 * 1024 * 1024)
