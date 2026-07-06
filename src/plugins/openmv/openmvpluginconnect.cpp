@@ -1308,13 +1308,23 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
             .pathAppended(firmwareFileName).toString()).copy(tempTarget);
     }
 
-    // For a custom local bundle, stage its romfs image(s) next to the firmware so the bootloader's
-    // romfs-reset step -- which, for a dev/custom install, looks for romfsN.img in the firmware's
-    // own directory -- finds them. (The .lst path above already stages everything; this covers the
-    // common single-firmware.bin boards, whose zip carries romfs0.img alongside firmware.bin.)
-    if(useCustom)
+    // Stage the bundle's romfs image(s) next to the firmware so the bootloader's romfs-reset
+    // step -- which, for a dev/custom install, looks for romfsN.img in the firmware's own
+    // directory -- finds them. This must happen for the dev bundle too, not just a custom .zip:
+    // the ROMFS editor dumps the camera's romfs into the same temp directory, and without fresh
+    // staging the bootloader "prefers" that stale full-partition dump over the downloaded image.
+    // Clear any stale romfs images first for the same reason (also covers a bundle that ships no
+    // romfs -- the bootloader then falls back to the released image instead of a stale dump).
+    // (The .lst path above already stages everything; this covers the common single-firmware.bin
+    // boards, whose bundle carries romfs0.img alongside firmware.bin.)
     {
         const QString tempDir = QFileInfo(tempTarget).path();
+
+        for(const QFileInfo &info : QDir(tempDir).entryInfoList(QStringList{QStringLiteral("romfs*.img")}, QDir::Files))
+        {
+            QFile::remove(info.absoluteFilePath());
+        }
+
         for(const QFileInfo &info : QDir(cachedDir.toString()).entryInfoList(QStringList{QStringLiteral("*.img")}, QDir::Files))
         {
             const QString dst = tempDir + QDir::separator() + info.fileName();
