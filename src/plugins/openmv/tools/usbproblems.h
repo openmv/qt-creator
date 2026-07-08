@@ -44,6 +44,13 @@ QStringList usbProblemDeviceNames();
 // older macOS, and on non-macOS platforms.
 bool isMacAccessorySecurityLikelyToInterfere();
 
+// True on macOS when the "Input Monitoring" privacy grant has NOT been
+// given to this process (denied or never-asked). Child processes such as
+// NXP's blhost/sdphost inherit the parent grant, so a denied state here
+// means an RT1062 firmware update via SPSDK will fail with
+// "UsbHidPeripheral() cannot open USB HID device". False on non-macOS.
+bool isMacHidAccessDeniedForOpenMVIDE();
+
 } // namespace Internal
 } // namespace OpenMV
 

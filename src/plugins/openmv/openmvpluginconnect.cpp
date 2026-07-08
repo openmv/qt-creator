@@ -4163,6 +4163,23 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             m_versionButton->update();
         }
 
+        if ((!m_autoConnect) && (m_boardType == QStringLiteral("IMXRT1060")) && isMacHidAccessDeniedForOpenMVIDE())
+        {
+            QMessageBox::warning(Core::ICore::dialogParent(),
+                Tr::tr("Connect"),
+                Tr::tr("Your OpenMV Cam RT1062 is connected, but %L1 does not have Input Monitoring "
+                       "permission on this Mac. Without it, firmware updates for the RT1062 will fail with a "
+                       "\"UsbHidPeripheral() cannot open USB HID device\" error, because macOS blocks the "
+                       "NXP flashing tools (blhost, sdphost) that %L1 uses from opening the RT1062's USB HID "
+                       "bootloader.\n\n"
+                       "To grant access, open the Apple menu, go to System Settings, click Privacy & Security "
+                       "in the sidebar, click Input Monitoring, and enable %L1 in the list. Then quit and "
+                       "reopen %L1 so the new grant takes effect (macOS reads privacy grants at launch).\n\n"
+                       "This warning will stop appearing once Input Monitoring is granted. You can keep using "
+                       "your OpenMV Cam RT1062 for running scripts without this permission; it is only required "
+                       "for firmware updates.").arg(QGuiApplication::applicationDisplayName()));
+        }
+
         ///////////////////////////////////////////////////////////////////////
 
         m_working = false;

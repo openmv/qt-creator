@@ -30,6 +30,7 @@
 
 #ifdef Q_OS_MACOS
 #include <sys/sysctl.h>
+#include <IOKit/hidsystem/IOHIDLib.h>
 #include <QOperatingSystemVersion>
 #endif
 
@@ -207,6 +208,23 @@ bool isMacAccessorySecurityLikelyToInterfere()
     // we cannot confirm whether it is currently "Ask" vs "Automatically allow";
     // just warn on hardware where the setting exists at all.
     return true;
+#else
+    return false;
+#endif
+}
+
+bool isMacHidAccessDeniedForOpenMVIDE()
+{
+#ifdef Q_OS_MACOS
+    // IOHIDCheckAccess() reports how macOS's "Input Monitoring" privacy grant
+    // sees THIS process. That grant is inherited by children (blhost/sdphost),
+    // so if it isn't granted here, an RT1062 flash will fail with the classic
+    // "UsbHidPeripheral() cannot open USB HID device" error. Available since
+    // macOS 10.15 (Catalina); older macOS never enforced this at all.
+    if (QOperatingSystemVersion::current()
+        < QOperatingSystemVersion(QOperatingSystemVersion::MacOSCatalina))
+        return false;
+    return IOHIDCheckAccess(kIOHIDRequestTypeListenEvent) != kIOHIDAccessTypeGranted;
 #else
     return false;
 #endif
