@@ -1827,22 +1827,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                  arg(problems.join(QStringLiteral("\n"))));
         }
 
-        if ((!m_autoConnect) && isMacAccessorySecurityLikelyToInterfere())
-        {
-            Utils::CheckableMessageBox::information(Core::ICore::dialogParent(),
-                Tr::tr("Connect"),
-                Tr::tr("Your Apple Silicon Mac has an \"Allow accessories to connect\" security setting "
-                       "that can interrupt connections to your OpenMV Cam. When your OpenMV Cam is in bootloader "
-                       "(DFU) mode for a firmware update, macOS may show an \"Allow accessory to connect\" "
-                       "popup that must be clicked before the connection works.\n\n"
-                       "To prevent this, open the Apple menu, go to System Settings, click Privacy & Security "
-                       "in the sidebar, scroll to the bottom to Accessories, and change \"Allow accessories to connect\" "
-                       "to \"Automatically allow when unlocked\" (recommended) or \"Always allow\"."),
-                Utils::CheckableDecider(DONT_SHOW_MAC_ACCESSORY_AGAIN),
-                QMessageBox::Ok,
-                QMessageBox::Ok);
-        }
-
         QStringList stringList;
         QElapsedTimer waitForCameraTimeout;
         waitForCameraTimeout.start();
@@ -4178,6 +4162,22 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                        "This warning will stop appearing once Input Monitoring is granted. You can keep using "
                        "your OpenMV Cam RT1062 for running scripts without this permission; it is only required "
                        "for firmware updates.").arg(QGuiApplication::applicationDisplayName()));
+        }
+
+        if ((!m_autoConnect) && isMacAccessorySecurityLikelyToInterfere())
+        {
+            Utils::CheckableMessageBox::information(Core::ICore::dialogParent(),
+                Tr::tr("Connect"),
+                Tr::tr("Your Apple Silicon Mac has an \"Allow accessories to connect\" security setting "
+                       "that can interrupt connections to your OpenMV Cam. When your OpenMV Cam is in bootloader "
+                       "(DFU) mode for a firmware update, macOS may show an \"Allow accessory to connect\" "
+                       "popup that must be clicked before the connection works.\n\n"
+                       "To prevent this, open the Apple menu, go to System Settings, click Privacy & Security "
+                       "in the sidebar, scroll to the bottom to Accessories, and change \"Allow accessories to connect\" "
+                       "to \"Automatically allow when unlocked\" (recommended) or \"Always allow\"."),
+                Utils::CheckableDecider(DONT_SHOW_MAC_ACCESSORY_AGAIN),
+                QMessageBox::Ok,
+                QMessageBox::Ok);
         }
 
         ///////////////////////////////////////////////////////////////////////
