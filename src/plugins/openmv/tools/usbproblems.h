@@ -38,6 +38,12 @@ namespace Internal {
 
 QStringList usbProblemDeviceNames();
 
+// True on Apple Silicon Macs running macOS Ventura or later, where the
+// "Allow accessories to connect" security setting can block DFU (and other
+// USB accessory) connections with a system prompt. False on Intel Macs,
+// older macOS, and on non-macOS platforms.
+bool isMacAccessorySecurityLikelyToInterfere();
+
 } // namespace Internal
 } // namespace OpenMV
 

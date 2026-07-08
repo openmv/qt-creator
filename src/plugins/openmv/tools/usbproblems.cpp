@@ -28,6 +28,11 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#ifdef Q_OS_MACOS
+#include <sys/sysctl.h>
+#include <QOperatingSystemVersion>
+#endif
+
 #ifdef Q_OS_WIN
 
 #ifndef NOMINMAX
@@ -165,6 +170,45 @@ QStringList usbProblemDeviceNames()
     return out;
 #else
     return QStringList();
+#endif
+}
+
+#ifdef Q_OS_MACOS
+static bool sysctlIntByName(const char *name, int *out)
+{
+    int value = 0;
+    size_t size = sizeof(value);
+    if (sysctlbyname(name, &value, &size, nullptr, 0) != 0)
+        return false;
+    *out = value;
+    return true;
+}
+
+#endif
+
+bool isMacAccessorySecurityLikelyToInterfere()
+{
+#ifdef Q_OS_MACOS
+    // The "Allow accessories to connect" setting is present on every Apple
+    // Silicon Mac running macOS Ventura (13) or later, including desktops.
+    // Laptops just default to the most restrictive "Ask for new accessories"
+    // policy; desktops still have the setting and can be configured the same
+    // way, and the accessory-prompt behavior is the same when it triggers.
+    // The setting does not exist on Intel Macs or older macOS versions.
+    int arm64 = 0;
+    if (!sysctlIntByName("hw.optional.arm64", &arm64) || arm64 != 1)
+        return false;
+
+    if (QOperatingSystemVersion::current()
+        < QOperatingSystemVersion(QOperatingSystemVersion::MacOSVentura))
+        return false;
+
+    // The setting itself cannot be read from a sandboxed userland process, so
+    // we cannot confirm whether it is currently "Ask" vs "Automatically allow";
+    // just warn on hardware where the setting exists at all.
+    return true;
+#else
+    return false;
 #endif
 }
 

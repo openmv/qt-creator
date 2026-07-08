@@ -157,6 +157,7 @@
 #define DONT_SHOW_COPILOT_AGAIN "DontShowCopilotAgain"
 #define DONT_SHOW_LED_STATES_AGAIN "DontShowLEDStatesAgain"
 #define DONT_SHOW_UPGRADE_FW_AGAIN "DontShowUpgradeFWAgain"
+#define DONT_SHOW_MAC_ACCESSORY_AGAIN "DontShowMacAccessoryAgain"
 #define LAST_FORM_KEY "LastFormKey"
 #define LAST_FIRMWARE_PATH "LastFirmwarePath"
 #define LAST_FIRMWARE_HISTORY "LastFirmwareHistory"
