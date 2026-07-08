@@ -802,6 +802,17 @@ void OutputPaneManager::slotPrev()
 
 void OutputPaneManager::slotHide()
 {
+    // OPENMV-DIFF //
+    // In viewer mode the serial terminal must never hide: the editor area above
+    // it is hidden and every affordance for re-showing the pane is removed (the
+    // status-bar toggle buttons, the close/minmax buttons, and the unattached
+    // Output menu), so a hide would be permanent until restart. This is the
+    // choke point for every hide path -- the global Esc shortcut (ReturnToEditor
+    // -> doEscapeKeyFocusMoveMagic()), the pane toggle actions, and IOutputPane
+    // hidePage/togglePage requests -- so guard it here rather than per-caller.
+    if (isViewerMode())
+        return;
+    // OPENMV-DIFF //
     OutputPanePlaceHolder *ph = OutputPanePlaceHolder::getCurrent();
     if (ph) {
         emit ph->visibilityChangeRequested(false);

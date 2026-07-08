@@ -889,6 +889,7 @@ void OpenMVPlugin::extensionsInitialized()
         const Utils::Id editingCommands[] = {
             Core::Constants::NEW_FILE, Core::Constants::OPEN, Core::Constants::SAVE,
             Core::Constants::SAVEAS, Core::Constants::PRINT, Core::Constants::CLOSE,
+            Core::Constants::CLOSE_ALTERNATIVE, // Ctrl+F4 duplicate of CLOSE (Windows only)
             Core::Constants::CLOSEALL, Core::Constants::UNDO, Core::Constants::REDO,
             Core::Constants::CUT, Core::Constants::PASTE, Core::Constants::GOTO,
         };

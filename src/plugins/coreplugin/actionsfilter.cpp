@@ -53,7 +53,15 @@ ActionsFilter::ActionsFilter()
                           "matches \"File > Sessions > Default\"."));
     setDefaultShortcutString("t");
     setDefaultSearchText({});
-    setDefaultKeySequence(QKeySequence("Ctrl+Shift+K"));
+    // OPENMV-DIFF //
+    // setDefaultKeySequence(QKeySequence("Ctrl+Shift+K"));
+    // OPENMV-DIFF //
+    // OpenMV IDE has no locator UI (the Ctrl+K shortcut and Tools menu entry are
+    // disabled and the status-bar input lives in the hidden First container), so
+    // don't pop the locator over nothing. This filter also enumerates every
+    // registered command -- including actions the viewer variant hides, like the
+    // output-pane toggles -- so a default shortcut here bypasses those removals.
+    // OPENMV-DIFF //
     connect(ICore::instance(), &ICore::contextAboutToChange, this, [this] {
         if (LocatorManager::locatorHasFocus())
             updateEnabledActionCache();

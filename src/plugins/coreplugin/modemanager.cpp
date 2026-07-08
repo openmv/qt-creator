@@ -214,8 +214,15 @@ void ModeManagerPrivate::appendMode(IMode *mode)
     const Id actionId = mode->id().withPrefix("QtCreator.Mode.");
     QAction *action = new QAction(Tr::tr("Switch to <b>%1</b> mode").arg(mode->displayName()), m_instance);
     Command *cmd = ActionManager::registerAction(action, actionId);
-    cmd->setDefaultKeySequence(QKeySequence(useMacShortcuts ? QString("Meta+%1").arg(index + 1)
-                                                            : QString("Ctrl+%1").arg(index + 1)));
+    // OPENMV-DIFF //
+    // cmd->setDefaultKeySequence(QKeySequence(useMacShortcuts ? QString("Meta+%1").arg(index + 1)
+    //                                                         : QString("Ctrl+%1").arg(index + 1)));
+    // OPENMV-DIFF //
+    // OpenMV IDE permanently hides the mode-selector strip (FancyTabWidget's
+    // m_tabBar), so switching modes by shortcut (e.g. Ctrl+2 -> ProjectExplorer's
+    // Projects mode) would swap out the whole central widget with no visible way
+    // back. Don't assign default mode-switch shortcuts.
+    // OPENMV-DIFF //
     m_modeCommands.append(cmd);
 
     m_modeStack->setTabToolTip(index, cmd->action()->toolTip());
