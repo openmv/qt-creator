@@ -126,11 +126,17 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
 
 static QString openmvServerUserAgent()
 {
+    // Identify honestly as the IDE. A bare "Mozilla/5.0 (X11; Linux x86_64)" (browser
+    // impersonation with no engine tokens) trips Cloudflare bot-management in front of
+    // upload.openmv.io, which returns a 403 challenge at the edge before the request
+    // reaches the origin -- so the Linux license check silently never arrived.
+    const QString version = QStringLiteral("OpenMV-IDE/%1.%2.%3")
+        .arg(IDE_VERSION_MAJOR).arg(IDE_VERSION_MINOR).arg(IDE_VERSION_RELEASE);
     if (Utils::HostOsInfo::isWindowsHost())
-        return QStringLiteral("Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
+        return version + QStringLiteral(" (Windows NT 10.0; Win64; x64)");
     if (Utils::HostOsInfo::isMacHost())
-        return QStringLiteral("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)");
-    return QStringLiteral("Mozilla/5.0 (X11; Linux x86_64)");
+        return version + QStringLiteral(" (Macintosh; Intel Mac OS X 10_15_7)");
+    return version + QStringLiteral(" (X11; Linux x86_64)");
 }
 
 static void noShow()
