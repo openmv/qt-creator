@@ -481,16 +481,29 @@ void OpenMVPlugin::setSpacing()
     line->setFrameShape(QFrame::HLine);
     line->setFrameShadow(QFrame::Sunken);
     rlayout->addWidget(line);
+#ifdef Q_OS_MAC
+    rlayout->addSpacing(10);
+#endif
 
     QGroupBox *getStateGroup = new QGroupBox(Tr::tr("Combined Polling"));
     getStateGroup->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
     getStateGroup->setCheckable(true);
     getStateGroup->setChecked(useGetState);
     getStateGroup->setEnabled(useGetStateAvailable);
-    rlayout->addWidget(getStateGroup);
-
 #ifdef Q_OS_MAC
-    rlayout->addSpacing(10);
+    // QGroupBox on macOS renders with the native Cocoa style, which for a
+    // checkable box squishes the title checkbox to a tiny size and gives
+    // the frame no interior padding. Setting an explicit stylesheet forces
+    // Qt's own painter, which honors margin/padding and draws a normal-sized
+    // title -- and lets both group boxes below share the same look.
+    const QString kMacGroupBoxStyle = QStringLiteral(
+        "QGroupBox { margin-top: 22px; padding: 12px 8px 10px 8px; }"
+        "QGroupBox::title { subcontrol-origin: margin; subcontrol-position: top left; left: 12px; padding: 0 6px; }");
+    getStateGroup->setStyleSheet(kMacGroupBoxStyle);
+#endif
+    rlayout->addWidget(getStateGroup);
+#ifdef Q_OS_MAC
+    rlayout->addSpacing(12);
 #endif
 
     QFormLayout *getStateGroupLayout = new QFormLayout(getStateGroup);
@@ -502,6 +515,9 @@ void OpenMVPlugin::setSpacing()
 
     QGroupBox *oldStateGroup = new QGroupBox(useGetStateAvailable ? Tr::tr("Split Polling") : Tr::tr("Polling Settings"));
     oldStateGroup->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+#ifdef Q_OS_MAC
+    oldStateGroup->setStyleSheet(kMacGroupBoxStyle);
+#endif
 
     if(useGetStateAvailable)
     {
@@ -510,6 +526,9 @@ void OpenMVPlugin::setSpacing()
     }
 
     rlayout->addWidget(oldStateGroup);
+#ifdef Q_OS_MAC
+    rlayout->addSpacing(12);
+#endif
 
     QFormLayout *oldStateGroupLayout = new QFormLayout(oldStateGroup);
 
