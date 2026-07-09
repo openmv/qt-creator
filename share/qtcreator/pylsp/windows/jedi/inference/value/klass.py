@@ -120,9 +120,15 @@ class ClassFilter(ParserTreeFilter):
         return False
 
     def _access_possible(self, name):
-        # Filter for name mangling of private variables like __foo
-        return not name.value.startswith('__') or name.value.endswith('__') \
-            or self._equals_origin_scope()
+        # OPENMV-DIFF #
+        # # Filter for name mangling of private variables like __foo
+        # return not name.value.startswith('__') or name.value.endswith('__') \
+        #     or self._equals_origin_scope()
+        # OPENMV-DIFF #
+        # MicroPython does not implement private name mangling, so __foo
+        # class members remain accessible from outside the class.
+        return True
+        # OPENMV-DIFF #
 
     def _filter(self, names):
         names = super()._filter(names)
