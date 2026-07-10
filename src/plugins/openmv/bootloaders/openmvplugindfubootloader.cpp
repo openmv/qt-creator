@@ -251,7 +251,9 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
     {
         bool foundMatch = false;
 
-        for(const QJsonValue &val : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
+        // Boards may share a bootloaderVidPid (a third-party board reusing the
+        // OpenMV bootloader) - prefer the entries of the board being flashed.
+        for(const QJsonValue &val : OpenMVThirdParty::boardsPreferringResourceRoot(m_firmwareSettings, m_boardResourceRoot))
         {
             QJsonObject obj = val.toObject();
 
@@ -480,7 +482,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
             {
                 for(int i = 0, j = resetROMFSCommandsCmd.size(); i < j; i++)
                 {
-                    QString path = Core::ICore::allUsersResourcePath(QStringLiteral("firmware")).pathAppended(resetROMFSCommandsPath.at(i)).toString();
+                    QString path = firmwareResourcePath().pathAppended(resetROMFSCommandsPath.at(i)).toString();
 
                     if (installTheLatestDevelopmentFirmware)
                     {
@@ -557,7 +559,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
         for(int i = 0, j = programCommandsCmd.size(); i < j; i++)
         {
             downloadFirmware(Tr::tr("Flashing Firmware"), command, process,
-                             Core::ICore::allUsersResourcePath(QStringLiteral("firmware")).pathAppended(programCommandsPath.at(i)).toString(),
+                             firmwareResourcePath().pathAppended(programCommandsPath.at(i)).toString(),
                              dfuDeviceVidPid, programCommandsCmd.at(i) +
                              (((i + 1) == j) ? QStringLiteral(" --reset") : QStringLiteral("")) + dfuDeviceSerial, 
                              false, 0, (i == 0) ? extraMessage : QString());

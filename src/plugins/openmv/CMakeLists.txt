@@ -6,6 +6,7 @@ add_qtc_plugin(OpenMV
     openmvpluginconnect.cpp openmvpluginconnect.h
     openmvmodelzoo.cpp openmvmodelzoo.h
     openmvromfs.cpp openmvromfs.h
+    openmvthirdparty.cpp openmvthirdparty.h
     bootloaders/openmvpluginbootloader.cpp
     bootloaders/openmvplugindfubootloader.cpp
     bootloaders/openmvpluginimxbootloader.cpp

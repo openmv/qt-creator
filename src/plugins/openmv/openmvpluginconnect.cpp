@@ -2094,6 +2094,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 QMap<QString, QJsonObject> fallbackBootloaderMappings;
                 QMap<QString, QString> vidpidMappings;
                 QMap<QString, QString> defaultFirmwareNameMappings;
+                QMap<QString, QString> resourceRootMappings; // Third-party board -> vendor firmware dir.
 
                 for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
                 {
@@ -2103,6 +2104,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         mappings.insert(a, value.toObject().value(QStringLiteral("boardFirmwareFolder")).toString());
                         vidpidMappings.insert(a, value.toObject().value(QStringLiteral("bootloaderVidPid")).toString());
                         defaultFirmwareNameMappings.insert(a, value.toObject().value(QStringLiteral("defaultFirmwareName")).toString());
+                        resourceRootMappings.insert(a, value.toObject().value(QStringLiteral("_resourceRoot")).toString());
 
                         if (value.toObject().value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("internal"))
                         {
@@ -2168,6 +2170,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                     fallbackBootloaderMappings.insert(altvidpidDisplayName, QJsonObject());
                                     vidpidMappings.insert(altvidpidDisplayName, altvidpid);
                                     defaultFirmwareNameMappings.insert(altvidpidDisplayName, defaultFirmwareName);
+                                    resourceRootMappings.insert(altvidpidDisplayName, object.value(QStringLiteral("_resourceRoot")).toString());
                                 }
                             }
 
@@ -2191,6 +2194,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                     fallbackBootloaderMappings.remove(it.key());
                                     vidpidMappings.remove(it.key());
                                     defaultFirmwareNameMappings.remove(it.key());
+                                    resourceRootMappings.remove(it.key());
                                     it = mappings.erase(it);
                                 }
                                 else
@@ -2271,7 +2275,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                                        checkBox2->isChecked());
                                     previousMapping = temp;
                                     originalFirmwareFolder = mappings.value(temp);
-                                    firmwarePath = Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
+                                    m_boardResourceRoot = resourceRootMappings.value(temp);
+                                    firmwarePath = (resourceRootMappings.value(temp).isEmpty()
+                                        ? Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
+                                        : Utils::FilePath::fromString(resourceRootMappings.value(temp)))
                                         .pathAppended(originalFirmwareFolder)
                                         .pathAppended(defaultFirmwareNameMappings.value(temp)).toString();
                                     if (forceBootloader && (!forceFirmwarePath.isEmpty())) firmwarePath = forceFirmwarePath;
@@ -2853,6 +2860,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         QMap<QString, QJsonObject> fallbackBootloaderMappings;
                         QMap<QString, QString> vidpidMappings;
                         QMap<QString, QString> defaultFirmwareNameMapping;
+                        QMap<QString, QString> resourceRootMappings; // Third-party board -> vendor firmware dir.
 
                         MyQSerialPortInfo tempInfo = createInfo(selectedPort);
 
@@ -2865,6 +2873,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 mappingsHumanReadable.insert(value.toObject().value(QStringLiteral("boardDisplayName")).toString(), a);
                                 vidpidMappings.insert(a, value.toObject().value(QStringLiteral("bootloaderVidPid")).toString());
                                 defaultFirmwareNameMapping.insert(a, value.toObject().value(QStringLiteral("defaultFirmwareName")).toString());
+                                resourceRootMappings.insert(a, value.toObject().value(QStringLiteral("_resourceRoot")).toString());
 
                                 if (value.toObject().value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("internal"))
                                 {
@@ -2930,7 +2939,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         {
                             previousMapping = temp;
                             originalFirmwareFolder = mappings.value(temp);
-                            firmwarePath = Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
+                            m_boardResourceRoot = resourceRootMappings.value(temp);
+                            firmwarePath = (resourceRootMappings.value(temp).isEmpty()
+                                ? Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
+                                : Utils::FilePath::fromString(resourceRootMappings.value(temp)))
                                 .pathAppended(originalFirmwareFolder)
                                 .pathAppended(defaultFirmwareNameMapping.value(temp)).toString();
                             if (forceBootloader && (!forceFirmwarePath.isEmpty())) firmwarePath = forceFirmwarePath;
@@ -2953,6 +2965,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         {
                             previousMapping = temp;
                             originalFirmwareFolder = mappings.value(temp);
+                            m_boardResourceRoot = resourceRootMappings.value(temp);
                             originalEraseFlashSectorStart = eraseMappings.value(temp).first;
                             originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
                             originalEraseFlashSectorAllStart = eraseAllMappings.value(temp).first;
@@ -2982,6 +2995,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         if(match.hasMatch())
                         {
                             m_boardTypeFolder = originalFirmwareFolder;
+                            m_boardResourceRoot = resourceRootMappings.value(temp);
                             m_fullBoardType = match.captured(1).trimmed();
                             m_boardType = match.captured(2);
                             m_boardId = match.captured(3);
@@ -3045,7 +3059,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             {
                                 QString tempPath = tempDir.path();
 
-                                QDir originalFirmwareDir(Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
+                                QDir originalFirmwareDir(firmwareResourcePath()
                                     .pathAppended(originalFirmwareFolder).toString());
 
                                 if (originalFirmwareDir.exists())
@@ -3230,7 +3244,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     {
                         QString tempPath = tempDir.path();
 
-                        QDir originalFirmwareDir(Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
+                        QDir originalFirmwareDir(firmwareResourcePath()
                                                      .pathAppended(originalFirmwareFolder).toString());
 
                         if (originalFirmwareDir.exists())
@@ -3562,6 +3576,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         }
 
         m_boardTypeFolder = QString();
+        m_boardResourceRoot = QString();
         m_fullBoardType = QString();
         m_boardType = QString();
         m_boardId = QString();
@@ -3622,6 +3637,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         {
                             boardTypeLabel = value.toObject().value(QStringLiteral("boardDisplayName")).toString();
                             m_boardTypeFolder = value.toObject().value(QStringLiteral("boardFirmwareFolder")).toString();
+                            m_boardResourceRoot = value.toObject().value(QStringLiteral("_resourceRoot")).toString();
                             break;
                         }
                     }
@@ -4079,31 +4095,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         // Check Version //////////////////////////////////////////////////////
 
-        // The newest firmware we ship is the global "firmware_version", but a board may
-        // pin its own last-shipped firmware via a per-board "firmware_version" (for boards
-        // we no longer build newer firmware for -- e.g. the Arduino Nano boards capped at
-        // 4.7.0). When the connected board pins one, treat that as "latest" for it so it
-        // isn't flagged out of date for firmware we never released.
-        QString latestFirmware = m_firmwareSettings.object().value(QStringLiteral("firmware_version")).toString();
-
-        if(!m_boardTypeFolder.isEmpty())
-        {
-            for(const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
-            {
-                const QJsonObject board = value.toObject();
-
-                if((board.value(QStringLiteral("boardFirmwareFolder")).toString() == m_boardTypeFolder)
-                && board.contains(QStringLiteral("firmware_version")))
-                {
-                    latestFirmware = board.value(QStringLiteral("firmware_version")).toString();
-                    break;
-                }
-            }
-        }
+        QString latestFirmware = latestFirmwareForConnectedBoard();
 
         QRegularExpressionMatch match = QRegularExpression(QStringLiteral("(\\d+)\\.(\\d+)\\.(\\d+)")).match(latestFirmware);
 
-        if(m_viewerMode)
+        // Third-party boards get the normal out-of-date coloring and upgrade prompt
+        // even in the viewer - vendor fleets receiving firmware updates through the
+        // viewer are the primary third-party use case.
+        if(m_viewerMode && m_boardResourceRoot.isEmpty())
         {
             // The viewer ships inside a customer's product to show off what they built on OpenMV.
             // Whatever firmware the product runs is theirs by design -- "out of date" doesn't apply,
@@ -4842,12 +4841,43 @@ void OpenMVPlugin::showExamplesDialog()
     }
 }
 
+// The newest firmware we ship is the global "firmware_version", but a board may
+// pin its own last-shipped firmware via a per-board "firmware_version" (for boards
+// we no longer build newer firmware for -- e.g. the Arduino Nano boards capped at
+// 4.7.0). When the connected board pins one, treat that as "latest" for it so it
+// isn't flagged out of date for firmware we never released. Third-party boards
+// never fall back to the global version (it describes OpenMV firmware, not
+// theirs): without a per-board version they are simply never out of date.
+QString OpenMVPlugin::latestFirmwareForConnectedBoard() const
+{
+    QString latestFirmware = m_boardResourceRoot.isEmpty()
+        ? m_firmwareSettings.object().value(QStringLiteral("firmware_version")).toString()
+        : QString();
+
+    if(!m_boardTypeFolder.isEmpty())
+    {
+        for(const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
+        {
+            const QJsonObject board = value.toObject();
+
+            if((board.value(QStringLiteral("boardFirmwareFolder")).toString() == m_boardTypeFolder)
+            && board.contains(QStringLiteral("firmware_version")))
+            {
+                latestFirmware = board.value(QStringLiteral("firmware_version")).toString();
+                break;
+            }
+        }
+    }
+
+    return latestFirmware;
+}
+
 void OpenMVPlugin::updateCam(bool forceYes)
 {
     if(!m_working)
     {
         QRegularExpressionMatch match = QRegularExpression(QStringLiteral("(\\d+)\\.(\\d+)\\.(\\d+)")).
-            match(m_firmwareSettings.object().value(QStringLiteral("firmware_version")).toString());
+            match(latestFirmwareForConnectedBoard());
 
         if((m_major < match.captured(1).toInt())
         || ((m_major == match.captured(1).toInt()) && (m_minor < match.captured(2).toInt()))

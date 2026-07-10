@@ -97,6 +97,7 @@
 #include "openmvprofile.h"
 #include "openmvromfs.h"
 #include "openmvterminal.h"
+#include "openmvthirdparty.h"
 #include "histogram/openmvpluginhistogram.h"
 #include "tools/alif.h"
 #include "tools/bossac.h"
@@ -501,6 +502,7 @@ public slots: // private
     void saveTemplate(const QRect &rect);
     void saveDescriptor(const QRect &rect);
     QMultiMap<QString, QAction *> aboutToShowExamplesRecursive(const QString &path, QMenu *parent, bool notExamples = false);
+    QString latestFirmwareForConnectedBoard() const;
     void updateCam(bool forceYes = false);
     void setPortPath(bool silent = false);
     void setPortAlias();
@@ -651,6 +653,23 @@ private:
     QStringList m_resourceFoldersToDelete;
 
     QJsonDocument m_firmwareSettings;
+
+    // Third Party Repositories (see openmvthirdparty.h). Scanned/merged once at
+    // startup; the overrides list backs the preferences page's dynamic panel.
+    QList<OpenMVThirdParty::Repo> m_thirdPartyRepos;
+    QList<OpenMVThirdParty::OverrideRecord> m_thirdPartyOverrides;
+
+    // The folder holding <boardFirmwareFolder>/ for the connected board: the
+    // vendor's firmware dir for a third-party board, else the IDE's. Set at
+    // board resolution alongside m_boardTypeFolder.
+    QString m_boardResourceRoot;
+
+    Utils::FilePath firmwareResourcePath() const
+    {
+        return m_boardResourceRoot.isEmpty()
+            ? Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
+            : Utils::FilePath::fromString(m_boardResourceRoot);
+    }
 
     bool m_viewerMode;
 

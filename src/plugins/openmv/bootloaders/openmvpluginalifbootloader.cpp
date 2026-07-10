@@ -88,6 +88,8 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
         }
     }
 
+    QString alifFirmwareFolder = originalFirmwareFolder;
+
     if(!originalFirmwareFolder.isEmpty())
     {
         bool foundMatch = false;
@@ -100,6 +102,21 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
             && (obj.value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("alif_tools")))
             {
                 outObj = obj.value(QStringLiteral("bootloaderSettings")).toObject();
+
+                // Keep the member in sync when the board was picked inside this
+                // function (folder passed in empty) - the chained
+                // openmvDFUBootloader() below resolves its program/romfs paths
+                // through firmwareResourcePath().
+                m_boardResourceRoot = obj.value(QStringLiteral("_resourceRoot")).toString();
+
+                // Third-party boards resolve their firmware under the vendor's
+                // folder - pass alifUpdateBuild() the absolute path it accepts.
+                if(!m_boardResourceRoot.isEmpty())
+                {
+                    alifFirmwareFolder = OpenMVThirdParty::firmwareRootForBoard(obj)
+                        .pathAppended(originalFirmwareFolder).toString();
+                }
+
                 foundMatch = true;
                 break;
             }
@@ -138,7 +155,7 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
     }
     else
     {
-        if(alifDownloadFirmware(selectedDfuDevice.split(QStringLiteral(",")).last(), originalFirmwareFolder, outObj))
+        if(alifDownloadFirmware(selectedDfuDevice.split(QStringLiteral(",")).last(), alifFirmwareFolder, outObj))
         {
             QJsonObject dfuBootloaderProgramCommand = outObj.value(QStringLiteral("dfuBootloaderProgramCommand")).toObject();
 

@@ -91,6 +91,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_patch = int();
     m_developmentCam = false;
     m_boardTypeFolder = QString();
+    m_boardResourceRoot = QString();
     m_fullBoardType = QString();
     m_boardType = QString();
     m_boardId = QString();
@@ -549,6 +550,17 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
     ///////////////////////////////////////////////////////////////////////////
 
+    // Third Party Repositories: mirror install-dir repos into the writable area
+    // and enumerate them. Problems never abort startup (unlike the built-in
+    // settings.json below) - a broken vendor folder must not brick the IDE.
+    QStringList thirdPartyErrors;   // mirror/scan problems: noisy every startup
+    QStringList thirdPartyWarnings; // merge notes (rejected boards): noisy once
+
+    OpenMVThirdParty::mirrorInstallDirRepos(&thirdPartyErrors);
+    m_thirdPartyRepos = OpenMVThirdParty::scanRepos(&thirdPartyErrors);
+
+    ///////////////////////////////////////////////////////////////////////////
+
     QFile firmwareSettings(Core::ICore::allUsersResourcePath(QStringLiteral("firmware/settings.json")).toString());
 
     if(firmwareSettings.open(QIODevice::ReadOnly))
@@ -559,7 +571,13 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
 
         if(error.error == QJsonParseError::NoError)
         {
-
+            if(!m_thirdPartyRepos.isEmpty())
+            {
+                m_firmwareSettings = OpenMVThirdParty::mergeFirmwareSettings(m_firmwareSettings,
+                                                                             m_thirdPartyRepos,
+                                                                             &m_thirdPartyOverrides,
+                                                                             &thirdPartyWarnings);
+            }
         }
         else
         {
@@ -577,6 +595,32 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
                    "\n\n%2 versions before v4.3.0 do not have this file and would have deleted it on installing resources.").
                    arg(firmwareSettings.errorString()).arg(QGuiApplication::applicationDisplayName()));
         exit(-1);
+    }
+
+    // Third Party Repositories notes: everything goes to the log each startup,
+    // but the message box is "noisy once" - merge notes and override records pop
+    // up only when a repo is seen for the first time (afterwards the preferences
+    // page's dynamic panel is the persistent visibility mechanism). Mirror/scan
+    // errors (broken repos) stay noisy every startup.
+    {
+        const QStringList overrideLines = OpenMVThirdParty::overridesText(m_thirdPartyOverrides);
+
+        for(const QString &line : QStringList() << thirdPartyErrors << thirdPartyWarnings << overrideLines)
+        {
+            qWarning("[Third Party Repositories] %s", qPrintable(line));
+        }
+
+        QStringList noisy = thirdPartyErrors;
+
+        if(OpenMVThirdParty::noteNewRepos(m_thirdPartyRepos))
+        {
+            noisy << thirdPartyWarnings << overrideLines;
+        }
+
+        if((!noisy.isEmpty()) && (!isNoShow()))
+        {
+            QMessageBox::warning(Q_NULLPTR, Tr::tr("Third Party Repositories"), noisy.join(QStringLiteral("\n\n")));
+        }
     }
 
     #ifdef FORCE_LIST_PORTS

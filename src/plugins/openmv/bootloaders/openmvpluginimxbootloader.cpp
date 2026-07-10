@@ -106,13 +106,13 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
             && (obj.value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("imx")))
             {
                 QJsonObject bootloaderSettings = obj.value(QStringLiteral("bootloaderSettings")).toObject();
-                QString secureBootloaderPath = Core::ICore::allUsersResourcePath(QStringLiteral("firmware")).
+                QString secureBootloaderPath = OpenMVThirdParty::firmwareRootForBoard(obj).
                         pathAppended(originalFirmwareFolder).
                         pathAppended(bootloaderSettings.value(QStringLiteral("sdphost_flash_loader_path")).toString()).toString();
-                QString bootloaderPath = Core::ICore::allUsersResourcePath(QStringLiteral("firmware")).
+                QString bootloaderPath = OpenMVThirdParty::firmwareRootForBoard(obj).
                         pathAppended(originalFirmwareFolder).
                         pathAppended(bootloaderSettings.value(QStringLiteral("blhost_secure_bootloader_path")).toString()).toString();
-                QString romfsPath = Core::ICore::allUsersResourcePath(QStringLiteral("firmware")).
+                QString romfsPath = OpenMVThirdParty::firmwareRootForBoard(obj).
                         pathAppended(originalFirmwareFolder).
                         pathAppended(bootloaderSettings.value(QStringLiteral("blhost_romfs_path")).toString()).toString();
 
