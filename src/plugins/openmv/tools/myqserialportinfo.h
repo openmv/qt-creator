@@ -41,6 +41,7 @@ class MyQSerialPortInfo
 public:
     explicit MyQSerialPortInfo();
     explicit MyQSerialPortInfo(const QSerialPortInfo &info);
+    MyQSerialPortInfo(const MyQSerialPortInfo &other) = default;
     bool isNull() const { return m_isNull; }
     QString description() const { return m_description; }
     bool hasProductIdentifier() const { return m_hasProductIdentifier; }
@@ -51,7 +52,7 @@ public:
     QString serialNumber() const { return m_serialNumber; }
     QString systemLocation() const { return m_systemLocation; }
     quint16 vendorIdentifier() const { return m_vendorIdentifier; }
-    MyQSerialPortInfo &operator=(const MyQSerialPortInfo &other);
+    MyQSerialPortInfo &operator=(const MyQSerialPortInfo &other) = default;
 private:
     QSerialPortInfo m_info;
     bool m_isNull;

@@ -139,21 +139,5 @@ MyQSerialPortInfo::MyQSerialPortInfo(const QSerialPortInfo &info)
 #endif
 }
 
-MyQSerialPortInfo &MyQSerialPortInfo::operator=(const MyQSerialPortInfo &other)
-{
-    m_info = other.m_info;
-    m_isNull = other.m_isNull;
-    m_description = other.m_description;
-    m_hasProductIdentifier = other.m_hasProductIdentifier;
-    m_hasVendorIdentifier = other.m_hasVendorIdentifier;
-    m_manufacturer = other.m_manufacturer;
-    m_productIdentifier = other.m_productIdentifier;
-    m_serialNumber = other.m_serialNumber;
-    m_systemLocation = other.m_systemLocation;
-    m_vendorIdentifier = other.m_vendorIdentifier;
-
-    return *this;
-}
-
 } // namespace Internal
 } // namespace OpenMV
