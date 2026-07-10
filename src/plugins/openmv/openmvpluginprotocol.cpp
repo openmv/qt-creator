@@ -862,6 +862,31 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
 
 QByteArray OpenMVPlugin::fixScriptForSensor(QByteArray data, bool notExamples, bool increaseResolution)
 {
+    if(!notExamples)
+    {
+        // Older example scripts may lack a blank line between the import block
+        // and the first line of code - insert one if it is missing.
+        QList<QByteArray> lines = data.split('\n');
+
+        for(int i = 0; i < lines.size() - 1; i++)
+        {
+            const QByteArray line = lines.at(i).trimmed();
+            const QByteArray next = lines.at(i + 1).trimmed();
+
+            bool lineIsImport = (lines.at(i).startsWith("import ") || lines.at(i).startsWith("from ")) &&
+                                (!line.endsWith('(')) && (!line.endsWith('\\'));
+            bool nextIsImport = next.startsWith("import ") || next.startsWith("from ");
+
+            if(lineIsImport && (!nextIsImport) && (!next.isEmpty()))
+            {
+                lines.insert(i + 1, lines.at(i).endsWith('\r') ? QByteArrayLiteral("\r") : QByteArray());
+                i += 1;
+            }
+        }
+
+        data = lines.join('\n');
+    }
+
     if((!notExamples) &&
         ((m_sensorType.startsWith(QStringLiteral("HM01B0"))) ||
          (m_sensorType.startsWith(QStringLiteral("HM0360"))) ||
