@@ -3282,6 +3282,13 @@ bool OpenMVPlugin::delayedInitialize()
         backgroundSyncDevResources(DevExamples | DevDocs);
     }
 
+    // Third Party Repositories update check (also in viewer mode - vendor
+    // fleets updating through the viewer are the primary customer). Fetches
+    // each repo's configUrl in the background; if anything is newer, ONE
+    // aggregated prompt is shown once no other modal dialog is open.
+    OpenMVThirdParty::checkAndPrompt(this,
+        OpenMVThirdParty::FirmwarePart | (m_viewerMode ? 0 : OpenMVThirdParty::ExamplesPart), false);
+
     // -auto_run in viewer mode runs the open script -- a file passed on the command
     // line that the IDE opens, after which auto-run runs the open document. The IDE
     // only opens a file as a runnable script in its text editor when its MIME type is

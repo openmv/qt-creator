@@ -90,6 +90,10 @@ namespace Internal {
 // produced their one-time "this repo overrides/conflicts" warning box.
 #define KNOWN_THIRD_PARTY_REPOS "OpenMV/KnownThirdPartyRepos"
 
+// Stored under the plugin's QSettings; the last URL typed into the preferences
+// page's "Install from URL" dialog.
+#define LAST_THIRD_PARTY_INSTALL_URL "OpenMV/LastThirdPartyInstallUrl"
+
 class OpenMVThirdParty
 {
 public:
@@ -169,6 +173,60 @@ public:
 
     // One string per record, for the warning box, the log, and the UI panel.
     static QStringList overridesText(const QList<OverrideRecord> &overrides);
+
+    // The records produced by this run's mergeFirmwareSettings() call -
+    // regenerated every startup; backs the preferences page's dynamic panel.
+    static QList<OverrideRecord> mergedOverrides();
+
+    // --- Network updates -----------------------------------------------------
+    //
+    // A repo with a "configUrl" is updatable: the URL hosts the current
+    // config.json, whose per-part release versions are compared (ordered)
+    // against the local "<part>.version" sidecars. Payload zips are downloaded,
+    // sha256-checked when a hash is published, and swapped into place. Repo
+    // changes take effect on restart.
+
+    enum Part
+    {
+        FirmwarePart = 1,
+        ExamplesPart = 2,
+    };
+
+    // One updatable repo's check result: the freshly fetched config.json (raw
+    // and parsed) and the bitmask of parts whose remote version is newer.
+    struct UpdateCheck
+    {
+        Repo repo;                // as installed (writablePath/versions valid)
+        Repo remote;              // parsed from remoteConfig
+        QByteArray remoteConfig;  // fetched config.json, written back on install
+        int parts = 0;
+    };
+
+    // Fetch every updatable repo's configUrl asynchronously (GUI thread, no
+    // blocking) and invoke onDone with the repos that have updates. Fetch/parse
+    // failures are logged and skipped. onDone is not called if context dies.
+    static void launchUpdateCheck(const QList<Repo> &repos, int parts, QObject *context,
+                                  std::function<void(const QList<UpdateCheck> &)> onDone);
+
+    // Download + install the flagged parts of one repo with a modal progress
+    // dialog, then update the sidecars and config.json. GUI thread.
+    static bool installParts(const UpdateCheck &check, QString *error, QWidget *parent);
+
+    // The full startup flow: scan -> launchUpdateCheck -> ONE aggregated user
+    // prompt (deferred while any other modal dialog is open, so popups never
+    // stack) -> sequential installParts -> restart offer. No-op without
+    // updatable repos. When interactive, also reports "no updates found".
+    static void checkAndPrompt(QObject *context, int parts, bool interactive);
+
+    // Download config.json from url, validate it, create the writable vendor
+    // folder, and install its release parts. Refuses an existing repo id
+    // unless overwrite. Cleans up after itself on failure. GUI thread.
+    static bool installFromUrl(const QUrl &url, bool overwrite, QString *repoId,
+                               QString *error, QWidget *parent);
+
+    // Delete a repo from the writable area (refused for install-dir repos) and
+    // forget it in KNOWN_THIRD_PARTY_REPOS so a reinstall warns again.
+    static bool removeRepo(const QString &id, QString *error);
 };
 
 } // namespace Internal

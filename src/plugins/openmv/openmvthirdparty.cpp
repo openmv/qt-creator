@@ -29,17 +29,22 @@
  */
 
 #include <QtCore>
-#include <QGuiApplication>
+#include <QtNetwork>
+#include <QtWidgets>
 
 #include <coreplugin/icore.h>
 #include <extensionsystem/pluginmanager.h>
 #include <utils/fileutils.h>
+#include <utils/hostosinfo.h>
 
 #include "openmvthirdparty.h"
 #include "openmvtr.h"
+#include "qzip/qzipreader.h"
 
 namespace OpenMV {
 namespace Internal {
+
+static QList<OpenMVThirdParty::OverrideRecord> s_mergedOverrides;
 
 static const QRegularExpression &vendorIdRegex()
 {
@@ -95,22 +100,17 @@ static OpenMVThirdParty::Channel parseChannel(const QJsonObject &part, const QSt
     return result;
 }
 
-static bool parseConfig(const Utils::FilePath &vendorDir, OpenMVThirdParty::Repo *repo, QString *error)
+// Parse config.json contents. context names the source in errors (folder name
+// or URL); expectedName, when set, must match the "name" field (folder repos).
+static bool parseConfigData(const QByteArray &data, const QString &context, const QString &expectedName,
+                            OpenMVThirdParty::Repo *repo, QString *error)
 {
-    QFile file(vendorDir.pathAppended(QStringLiteral("config.json")).toString());
-
-    if (!file.open(QIODevice::ReadOnly))
-    {
-        *error = Tr::tr("\"%L1\" does not have a readable config.json").arg(vendorDir.fileName());
-        return false;
-    }
-
     QJsonParseError parseError;
-    QJsonDocument doc = QJsonDocument::fromJson(file.readAll(), &parseError);
+    QJsonDocument doc = QJsonDocument::fromJson(data, &parseError);
 
     if (parseError.error != QJsonParseError::NoError)
     {
-        *error = Tr::tr("\"%L1\" config.json - %L2").arg(vendorDir.fileName()).arg(parseError.errorString());
+        *error = Tr::tr("\"%L1\" config.json - %L2").arg(context).arg(parseError.errorString());
         return false;
     }
 
@@ -119,13 +119,13 @@ static bool parseConfig(const Utils::FilePath &vendorDir, OpenMVThirdParty::Repo
 
     if (!vendorIdRegex().match(name).hasMatch())
     {
-        *error = Tr::tr("\"%L1\" config.json - invalid repository name \"%L2\"").arg(vendorDir.fileName()).arg(name);
+        *error = Tr::tr("\"%L1\" config.json - invalid repository name \"%L2\"").arg(context).arg(name);
         return false;
     }
 
-    if (name != vendorDir.fileName())
+    if ((!expectedName.isEmpty()) && (name != expectedName))
     {
-        *error = Tr::tr("\"%L1\" config.json - name \"%L2\" does not match the folder name").arg(vendorDir.fileName()).arg(name);
+        *error = Tr::tr("\"%L1\" config.json - name \"%L2\" does not match the folder name").arg(context).arg(name);
         return false;
     }
 
@@ -148,6 +148,19 @@ static bool parseConfig(const Utils::FilePath &vendorDir, OpenMVThirdParty::Repo
     repo->examplesRelease = parseChannel(examples, QStringLiteral("release"));
 
     return true;
+}
+
+static bool parseConfig(const Utils::FilePath &vendorDir, OpenMVThirdParty::Repo *repo, QString *error)
+{
+    QFile file(vendorDir.pathAppended(QStringLiteral("config.json")).toString());
+
+    if (!file.open(QIODevice::ReadOnly))
+    {
+        *error = Tr::tr("\"%L1\" does not have a readable config.json").arg(vendorDir.fileName());
+        return false;
+    }
+
+    return parseConfigData(file.readAll(), vendorDir.fileName(), vendorDir.fileName(), repo, error);
 }
 
 static QStringList vendorFolderNames(const Utils::FilePath &root)
@@ -544,7 +557,14 @@ QJsonDocument OpenMVThirdParty::mergeFirmwareSettings(const QJsonDocument &built
     root[QStringLiteral("boards")] = boards;
     root[QStringLiteral("sensors")] = sensors;
 
+    s_mergedOverrides = *overrides;
+
     return QJsonDocument(root);
+}
+
+QList<OpenMVThirdParty::OverrideRecord> OpenMVThirdParty::mergedOverrides()
+{
+    return s_mergedOverrides;
 }
 
 QJsonArray OpenMVThirdParty::boardsPreferringResourceRoot(const QJsonDocument &settings,
@@ -608,6 +628,487 @@ bool OpenMVThirdParty::noteNewRepos(const QList<Repo> &repos)
     }
 
     return anyNew;
+}
+
+// Blocking GET on the calling thread via a local event loop (the pattern the
+// dev-resource sync uses). SSL errors are ignored to match that behavior. An
+// optional progress dialog shows download progress and can abort the request.
+static QByteArray httpGetBlocking(const QUrl &url, QString *error, QProgressDialog *progress)
+{
+    QNetworkAccessManager manager;
+    QNetworkRequest request(url);
+    request.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::NoLessSafeRedirectPolicy);
+
+    QNetworkReply *reply = manager.get(request);
+    QObject::connect(reply, &QNetworkReply::sslErrors, reply, [reply] (const QList<QSslError> &) {
+        reply->ignoreSslErrors();
+    });
+
+    QEventLoop loop;
+    QObject::connect(reply, &QNetworkReply::finished, &loop, &QEventLoop::quit);
+
+    if (progress)
+    {
+        QObject::connect(reply, &QNetworkReply::downloadProgress, progress, [progress] (qint64 received, qint64 total) {
+            if (total > 0)
+            {
+                progress->setRange(0, 1000);
+                progress->setValue(int((received * 1000) / total));
+            }
+        });
+
+        QObject::connect(progress, &QProgressDialog::canceled, reply, &QNetworkReply::abort);
+    }
+
+    loop.exec();
+
+    QByteArray data = reply->readAll();
+    bool ok = (reply->error() == QNetworkReply::NoError);
+
+    if ((!ok) && error)
+    {
+        *error = reply->errorString();
+    }
+
+    reply->deleteLater();
+    return ok ? data : QByteArray();
+}
+
+// Extract a payload zip (one top-level directory whose contents are the part's
+// payload) and swap it in as <vendorDir>/<part>.
+static bool installArchiveToPart(const QByteArray &data, const Utils::FilePath &vendorDir,
+                                 const QString &part, QString *error)
+{
+    Utils::FilePath staging = vendorDir.pathAppended(QStringLiteral(".staging"));
+    staging.removeRecursively();
+
+    QByteArray copy = data;
+    QBuffer buffer(&copy);
+    buffer.open(QIODevice::ReadOnly);
+    QZipReader reader(&buffer);
+
+    if (!reader.extractAll(staging.toString()))
+    {
+        *error = Tr::tr("failed to extract the downloaded archive");
+        staging.removeRecursively();
+        return false;
+    }
+
+    QStringList entries = QDir(staging.toString()).entryList(QDir::Dirs | QDir::NoDotAndDotDot, QDir::Name);
+
+    if (entries.size() != 1)
+    {
+        *error = Tr::tr("the downloaded archive must contain exactly one top-level folder");
+        staging.removeRecursively();
+        return false;
+    }
+
+    Utils::FilePath target = vendorDir.pathAppended(part);
+    QString removeError;
+
+    if (!target.removeRecursively(&removeError))
+    {
+        *error = removeError;
+        staging.removeRecursively();
+        return false;
+    }
+
+    if (!QDir().rename(staging.pathAppended(entries.first()).toString(), target.toString()))
+    {
+        *error = Tr::tr("failed to move the extracted folder into place");
+        staging.removeRecursively();
+        return false;
+    }
+
+    staging.removeRecursively();
+    return true;
+}
+
+static bool writeVendorFile(const Utils::FilePath &path, const QByteArray &data, QString *error)
+{
+    QFile file(path.toString());
+
+    if ((!file.open(QIODevice::WriteOnly | QIODevice::Truncate)) || (file.write(data) != data.size()))
+    {
+        *error = Tr::tr("failed to write \"%L1\"").arg(path.toUserOutput());
+        return false;
+    }
+
+    return true;
+}
+
+// Run fn once no modal dialog is open, polling so an update prompt can never
+// stack on top of another popup (the resources update, a connect dialog, ...).
+static void whenNoModal(QObject *context, std::function<void()> fn)
+{
+    if (!QApplication::activeModalWidget())
+    {
+        fn();
+        return;
+    }
+
+    QTimer::singleShot(1000, context, [context, fn] { whenNoModal(context, fn); });
+}
+
+static void offerRestart(QWidget *parent)
+{
+    if (QMessageBox::question(parent,
+        Tr::tr("Third Party Repositories"),
+        Tr::tr("Changes take effect after restarting.\n\nRestart %L1 now?").arg(QGuiApplication::applicationDisplayName()),
+        QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes) == QMessageBox::Yes)
+    {
+        Core::ICore::restart();
+    }
+}
+
+void OpenMVThirdParty::launchUpdateCheck(const QList<Repo> &repos, int parts, QObject *context,
+                                         std::function<void(const QList<UpdateCheck> &)> onDone)
+{
+    QList<Repo> updatable;
+
+    for (const Repo &repo : repos)
+    {
+        if (!repo.configUrl.isEmpty())
+        {
+            updatable.append(repo);
+        }
+    }
+
+    if (updatable.isEmpty())
+    {
+        onDone(QList<UpdateCheck>());
+        return;
+    }
+
+    QNetworkAccessManager *manager = new QNetworkAccessManager(context);
+    auto results = std::make_shared<QList<UpdateCheck> >();
+    auto pending = std::make_shared<int>(updatable.size());
+
+    for (const Repo &repo : updatable)
+    {
+        QNetworkRequest request(QUrl(repo.configUrl));
+        request.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::NoLessSafeRedirectPolicy);
+
+        QNetworkReply *reply = manager->get(request);
+        QObject::connect(reply, &QNetworkReply::sslErrors, reply, [reply] (const QList<QSslError> &) {
+            reply->ignoreSslErrors();
+        });
+
+        QObject::connect(reply, &QNetworkReply::finished, manager,
+                         [manager, results, pending, repo, parts, reply, onDone] {
+            reply->deleteLater();
+
+            if (reply->error() == QNetworkReply::NoError)
+            {
+                UpdateCheck check;
+                check.repo = repo;
+                check.remoteConfig = reply->readAll();
+
+                QString error;
+
+                if (parseConfigData(check.remoteConfig, repo.configUrl, repo.id, &check.remote, &error))
+                {
+                    if ((parts & FirmwarePart) && check.remote.firmwareRelease.isValid()
+                    && versionGreater(check.remote.firmwareRelease.version, repo.firmwareVersion))
+                    {
+                        check.parts |= FirmwarePart;
+                    }
+
+                    if ((parts & ExamplesPart) && check.remote.examplesRelease.isValid()
+                    && versionGreater(check.remote.examplesRelease.version, repo.examplesVersion))
+                    {
+                        check.parts |= ExamplesPart;
+                    }
+
+                    if (check.parts)
+                    {
+                        results->append(check);
+                    }
+                }
+                else
+                {
+                    qWarning("[Third Party Repositories] update check: %s", qPrintable(error));
+                }
+            }
+            else
+            {
+                qWarning("[Third Party Repositories] update check \"%s\": %s",
+                         qPrintable(repo.id), qPrintable(reply->errorString()));
+            }
+
+            if (--(*pending) == 0)
+            {
+                manager->deleteLater();
+                onDone(*results);
+            }
+        });
+    }
+}
+
+bool OpenMVThirdParty::installParts(const UpdateCheck &check, QString *error, QWidget *parent)
+{
+    struct PartInfo { int bit; QString name; Channel channel; };
+
+    const QList<PartInfo> partList = {
+        { FirmwarePart, QStringLiteral("firmware"), check.remote.firmwareRelease },
+        { ExamplesPart, QStringLiteral("examples"), check.remote.examplesRelease },
+    };
+
+    for (const PartInfo &part : partList)
+    {
+        if (!(check.parts & part.bit))
+        {
+            continue;
+        }
+
+        QProgressDialog progress(Tr::tr("Downloading \"%L1\" %L2...").arg(check.remote.displayName).arg(part.name),
+                                 Tr::tr("Cancel"), 0, 0, parent,
+                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+        progress.setWindowTitle(Tr::tr("Third Party Repositories"));
+        progress.setWindowModality(Qt::ApplicationModal);
+        progress.setMinimumDuration(0);
+        progress.setValue(0);
+
+        QByteArray data = httpGetBlocking(QUrl(part.channel.url), error, &progress);
+
+        progress.close();
+
+        if (data.isEmpty())
+        {
+            if (error && error->isEmpty())
+            {
+                *error = Tr::tr("empty download");
+            }
+
+            return false;
+        }
+
+        if ((!part.channel.sha256.isEmpty())
+        && (QString::fromLatin1(QCryptographicHash::hash(data, QCryptographicHash::Sha256).toHex()).toLower()
+            != part.channel.sha256.toLower()))
+        {
+            *error = Tr::tr("the downloaded \"%L1\" archive failed its sha256 check").arg(part.name);
+            return false;
+        }
+
+        if (!installArchiveToPart(data, check.repo.writablePath, part.name, error))
+        {
+            return false;
+        }
+
+        if (!writeVendorFile(check.repo.writablePath.pathAppended(part.name + QStringLiteral(".version")),
+                             part.channel.version.toUtf8() + QByteArrayLiteral("\n"), error))
+        {
+            return false;
+        }
+    }
+
+    return writeVendorFile(check.repo.writablePath.pathAppended(QStringLiteral("config.json")),
+                           check.remoteConfig, error);
+}
+
+void OpenMVThirdParty::checkAndPrompt(QObject *context, int parts, bool interactive)
+{
+    launchUpdateCheck(scanRepos(), parts, context, [context, interactive] (const QList<UpdateCheck> &updates) {
+        if (updates.isEmpty())
+        {
+            if (interactive)
+            {
+                QMessageBox::information(Core::ICore::dialogParent(),
+                    Tr::tr("Third Party Repositories"),
+                    Tr::tr("All third party repositories are up to date."));
+            }
+
+            return;
+        }
+
+        auto prompt = [updates] {
+            QStringList lines;
+
+            for (const UpdateCheck &check : updates)
+            {
+                QStringList what;
+
+                if (check.parts & FirmwarePart)
+                {
+                    what.append(Tr::tr("firmware %L1 -> %L2").arg(check.repo.firmwareVersion.isEmpty()
+                        ? Tr::tr("none") : check.repo.firmwareVersion).arg(check.remote.firmwareRelease.version));
+                }
+
+                if (check.parts & ExamplesPart)
+                {
+                    what.append(Tr::tr("examples %L1 -> %L2").arg(check.repo.examplesVersion.isEmpty()
+                        ? Tr::tr("none") : check.repo.examplesVersion).arg(check.remote.examplesRelease.version));
+                }
+
+                lines.append(QStringLiteral("%1 - %2").arg(check.remote.displayName).arg(what.join(QStringLiteral(", "))));
+            }
+
+            if (QMessageBox::question(Core::ICore::dialogParent(),
+                Tr::tr("Third Party Repositories"),
+                Tr::tr("Updates are available:\n\n%L1\n\nInstall now?").arg(lines.join(QStringLiteral("\n"))),
+                QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes) != QMessageBox::Yes)
+            {
+                return;
+            }
+
+            QStringList errors;
+            bool anyInstalled = false;
+
+            for (const UpdateCheck &check : updates)
+            {
+                QString error;
+
+                if (installParts(check, &error, Core::ICore::dialogParent()))
+                {
+                    anyInstalled = true;
+                }
+                else
+                {
+                    errors.append(QStringLiteral("%1 - %2").arg(check.repo.id).arg(error));
+                }
+            }
+
+            if (!errors.isEmpty())
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    Tr::tr("Third Party Repositories"),
+                    Tr::tr("Some updates failed:\n\n%L1").arg(errors.join(QStringLiteral("\n"))));
+            }
+
+            if (anyInstalled)
+            {
+                offerRestart(Core::ICore::dialogParent());
+            }
+        };
+
+        // At startup the check runs in the background and must never pop a
+        // dialog on top of another one; from the preferences page the user
+        // just clicked a button, so answer immediately.
+        if (interactive)
+        {
+            prompt();
+        }
+        else
+        {
+            whenNoModal(context, prompt);
+        }
+    });
+}
+
+bool OpenMVThirdParty::installFromUrl(const QUrl &url, bool overwrite, QString *repoId,
+                                      QString *error, QWidget *parent)
+{
+    QByteArray data = httpGetBlocking(url, error, Q_NULLPTR);
+
+    if (data.isEmpty())
+    {
+        if (error && error->isEmpty())
+        {
+            *error = Tr::tr("empty download");
+        }
+
+        return false;
+    }
+
+    Repo remote;
+
+    if (!parseConfigData(data, url.toString(), QString(), &remote, error))
+    {
+        return false;
+    }
+
+    if (!remote.firmwareRelease.isValid())
+    {
+        *error = Tr::tr("config.json does not define a firmware release channel");
+        return false;
+    }
+
+    if (repoId)
+    {
+        *repoId = remote.id;
+    }
+
+    // The hosted config.json may omit its own URL - inject the URL the user
+    // installed from so the repo receives updates.
+    if (remote.configUrl.isEmpty())
+    {
+        QJsonObject obj = QJsonDocument::fromJson(data).object();
+        obj[QStringLiteral("configUrl")] = url.toString();
+        data = QJsonDocument(obj).toJson();
+        remote.configUrl = url.toString();
+    }
+
+    Utils::FilePath vendorDir = writableRoot().pathAppended(remote.id);
+
+    if (vendorDir.exists())
+    {
+        if (!overwrite)
+        {
+            *error = Tr::tr("a repository named \"%L1\" is already installed").arg(remote.id);
+            return false;
+        }
+
+        if (!vendorDir.removeRecursively(error))
+        {
+            return false;
+        }
+    }
+
+    vendorDir.ensureWritableDir();
+
+    if (!writeVendorFile(vendorDir.pathAppended(QStringLiteral("config.json")), data, error))
+    {
+        vendorDir.removeRecursively();
+        return false;
+    }
+
+    UpdateCheck check;
+    check.repo.id = remote.id;
+    check.repo.writablePath = vendorDir;
+    check.remote = remote;
+    check.remoteConfig = data;
+    check.parts = FirmwarePart | (remote.examplesRelease.isValid() ? ExamplesPart : 0);
+
+    if (!installParts(check, error, parent))
+    {
+        vendorDir.removeRecursively();
+        return false;
+    }
+
+    return true;
+}
+
+bool OpenMVThirdParty::removeRepo(const QString &id, QString *error)
+{
+    if (installRoot().pathAppended(id).exists())
+    {
+        *error = Tr::tr("\"%L1\" was installed into the application directory by an installer - remove it there").arg(id);
+        return false;
+    }
+
+    Utils::FilePath vendorDir = writableRoot().pathAppended(id);
+
+    if (!vendorDir.exists())
+    {
+        *error = Tr::tr("\"%L1\" is not installed").arg(id);
+        return false;
+    }
+
+    if (!vendorDir.removeRecursively(error))
+    {
+        return false;
+    }
+
+    // Forget the repo so a reinstall gets the first-seen warning box again.
+    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+    QStringList known = settings->value(KNOWN_THIRD_PARTY_REPOS).toStringList();
+    known.removeAll(id);
+    settings->setValue(KNOWN_THIRD_PARTY_REPOS, known);
+    settings->sync();
+
+    return true;
 }
 
 QStringList OpenMVThirdParty::overridesText(const QList<OverrideRecord> &overrides)
