@@ -3230,7 +3230,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                     forceBootloaderBricked,
                                     originalFirmwareFolder,
                                     selectedDfuDevice,
-                                    romfsAccess);
+                                    romfsAccess,
+                                    customFirmwareBundleDir);
                 return;
             }
 

@@ -46,9 +46,16 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
                                        bool forceBootloaderBricked,
                                        QString originalFirmwareFolder,
                                        const QString &selectedDfuDevice,
-                                       OpenMVROMFSAccess romfsAccess)
+                                       OpenMVROMFSAccess romfsAccess,
+                                       const QString &customBundleDir)
 {
     QJsonObject outObj;
+
+    // When the board is already sitting in the NXP serial downloader (blhost) the
+    // normal connect path never ran, so it never staged the dev/custom firmware
+    // and firmwarePath arrived empty. Stage it here, now that the board (and its
+    // defaultFirmwareName) is known in the match loop below.
+    QString effectiveFirmwarePath = firmwarePath;
 
     if(originalFirmwareFolder.isEmpty())
     {
@@ -106,6 +113,20 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
             && (obj.value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("imx")))
             {
                 QJsonObject bootloaderSettings = obj.value(QStringLiteral("bootloaderSettings")).toObject();
+
+                // Stage the dev/custom firmware bundle if the caller couldn't (board
+                // already in blhost mode). Skipped when firmwarePath is already set
+                // (normal connect path) or when this isn't a dev/custom install.
+                if(installTheLatestDevelopmentFirmware && effectiveFirmwarePath.isEmpty())
+                {
+                    if(!getTheLatestDevelopmentFirmware(originalFirmwareFolder, &effectiveFirmwarePath,
+                            obj.value(QStringLiteral("defaultFirmwareName")).toString(),
+                            originalFirmwareFolder, customBundleDir))
+                    {
+                        CONNECT_END();
+                    }
+                }
+
                 QString secureBootloaderPath = OpenMVThirdParty::firmwareRootForBoard(obj).
                         pathAppended(originalFirmwareFolder).
                         pathAppended(bootloaderSettings.value(QStringLiteral("sdphost_flash_loader_path")).toString()).toString();
@@ -118,11 +139,11 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
 
                 if ((romfsAccess == OPENMV_ROMFS_READ) || (romfsAccess == OPENMV_ROMFS_WRITE))
                 {
-                    romfsPath = firmwarePath;
+                    romfsPath = effectiveFirmwarePath;
                 }
                 else if (installTheLatestDevelopmentFirmware)
                 {
-                    romfsPath = QFileInfo(firmwarePath).path() + QDir::separator() + QFileInfo(romfsPath).fileName();
+                    romfsPath = QFileInfo(effectiveFirmwarePath).path() + QDir::separator() + QFileInfo(romfsPath).fileName();
                 }
 
                 outObj = bootloaderSettings;
@@ -130,14 +151,14 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
                 outObj.insert(QStringLiteral("blhost_secure_bootloader_path"), bootloaderPath);
                 outObj.insert(QStringLiteral("blhost_secure_bootloader_length"),
                         QString::number(QFileInfo(bootloaderPath).size(), 16).prepend(QStringLiteral("0x")));
-                outObj.insert(QStringLiteral("blhost_firmware_path"), firmwarePath);
+                outObj.insert(QStringLiteral("blhost_firmware_path"), effectiveFirmwarePath);
                 outObj.insert(QStringLiteral("blhost_firmware_length"),
-                        QString::number(QFileInfo(firmwarePath).size(), 16).prepend(QStringLiteral("0x")));
+                        QString::number(QFileInfo(effectiveFirmwarePath).size(), 16).prepend(QStringLiteral("0x")));
                 outObj.insert(QStringLiteral("blhost_romfs_path"), romfsPath);
                 outObj.insert(QStringLiteral("blhost_romfs_length"),
                         QString::number(QFileInfo(romfsPath).size(), 16).prepend(QStringLiteral("0x")));
 
-                if (firmwarePath.endsWith(".img"))
+                if (effectiveFirmwarePath.endsWith(".img"))
                 {
                     outObj.insert(QStringLiteral("blhost_firmware_address"), bootloaderSettings.value(QStringLiteral("blhost_romfs_address")));
                 }

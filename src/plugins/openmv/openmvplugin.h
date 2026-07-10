@@ -622,7 +622,8 @@ private:
                              bool forceBootloaderBricked,
                              QString originalFirmwareFolder,
                              const QString &selectedDfuDevice,
-                             OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE);
+                             OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE,
+                             const QString &customBundleDir = QString());
     void openmvAlifBootloader(const QString &forceFirmwarePath,
                               bool forceFlashFSErase,
                               bool justEraseFlashFs,
