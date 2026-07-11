@@ -122,10 +122,12 @@ public:
         Channel firmwareRelease;
         Channel firmwareDev;
         Channel examplesRelease;
+        Channel modelsRelease;
         Utils::FilePath writablePath;
         bool fromInstallDir = false;    // also present in the read-only install dir
         QString firmwareVersion;        // installed sidecar versions ("" if absent)
         QString examplesVersion;
+        QString modelsVersion;
     };
 
     struct OverrideRecord
@@ -214,6 +216,7 @@ public:
     {
         FirmwarePart = 1,
         ExamplesPart = 2,
+        ModelsPart = 4,
     };
 
     // One updatable repo's check result: the freshly fetched config.json (raw

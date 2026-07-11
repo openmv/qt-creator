@@ -3307,7 +3307,7 @@ bool OpenMVPlugin::delayedInitialize()
     // each repo's configUrl in the background; if anything is newer, ONE
     // aggregated prompt is shown once no other modal dialog is open.
     OpenMVThirdParty::checkAndPrompt(this,
-        OpenMVThirdParty::FirmwarePart | (m_viewerMode ? 0 : OpenMVThirdParty::ExamplesPart), false);
+        OpenMVThirdParty::FirmwarePart | (m_viewerMode ? 0 : (OpenMVThirdParty::ExamplesPart | OpenMVThirdParty::ModelsPart)), false);
 
     // -auto_run in viewer mode runs the open script -- a file passed on the command
     // line that the IDE opens, after which auto-run runs the open document. The IDE

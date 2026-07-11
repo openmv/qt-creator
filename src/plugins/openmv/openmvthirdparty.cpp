@@ -147,6 +147,9 @@ static bool parseConfigData(const QByteArray &data, const QString &context, cons
     QJsonObject examples = obj.value(QStringLiteral("examples")).toObject();
     repo->examplesRelease = parseChannel(examples, QStringLiteral("release"));
 
+    QJsonObject models = obj.value(QStringLiteral("models")).toObject();
+    repo->modelsRelease = parseChannel(models, QStringLiteral("release"));
+
     return true;
 }
 
@@ -261,7 +264,7 @@ void OpenMVThirdParty::mirrorInstallDirRepos(QStringList *warnings)
         // still pushes its content through.
         bool updated = false;
 
-        for (const QString &part : {QStringLiteral("firmware"), QStringLiteral("examples")})
+        for (const QString &part : {QStringLiteral("firmware"), QStringLiteral("examples"), QStringLiteral("models")})
         {
             QString sidecar = part + QStringLiteral(".version");
 
@@ -340,6 +343,7 @@ QList<OpenMVThirdParty::Repo> OpenMVThirdParty::scanRepos(QStringList *warnings)
         repo.fromInstallDir = installRoot().pathAppended(vendor).exists();
         repo.firmwareVersion = readVersionFile(vendorDir.pathAppended(QStringLiteral("firmware.version")));
         repo.examplesVersion = readVersionFile(vendorDir.pathAppended(QStringLiteral("examples.version")));
+        repo.modelsVersion = readVersionFile(vendorDir.pathAppended(QStringLiteral("models.version")));
 
         repos.append(repo);
     }
@@ -864,6 +868,12 @@ void OpenMVThirdParty::launchUpdateCheck(const QList<Repo> &repos, int parts, QO
                         check.parts |= ExamplesPart;
                     }
 
+                    if ((parts & ModelsPart) && check.remote.modelsRelease.isValid()
+                    && versionGreater(check.remote.modelsRelease.version, repo.modelsVersion))
+                    {
+                        check.parts |= ModelsPart;
+                    }
+
                     if (check.parts)
                     {
                         results->append(check);
@@ -896,6 +906,7 @@ bool OpenMVThirdParty::installParts(const UpdateCheck &check, QString *error, QW
     const QList<PartInfo> partList = {
         { FirmwarePart, QStringLiteral("firmware"), check.remote.firmwareRelease },
         { ExamplesPart, QStringLiteral("examples"), check.remote.examplesRelease },
+        { ModelsPart, QStringLiteral("models"), check.remote.modelsRelease },
     };
 
     for (const PartInfo &part : partList)
@@ -984,6 +995,12 @@ void OpenMVThirdParty::checkAndPrompt(QObject *context, int parts, bool interact
                 {
                     what.append(Tr::tr("examples %L1 -> %L2").arg(check.repo.examplesVersion.isEmpty()
                         ? Tr::tr("none") : check.repo.examplesVersion).arg(check.remote.examplesRelease.version));
+                }
+
+                if (check.parts & ModelsPart)
+                {
+                    what.append(Tr::tr("models %L1 -> %L2").arg(check.repo.modelsVersion.isEmpty()
+                        ? Tr::tr("none") : check.repo.modelsVersion).arg(check.remote.modelsRelease.version));
                 }
 
                 lines.append(QStringLiteral("%1 - %2").arg(check.remote.displayName).arg(what.join(QStringLiteral(", "))));
@@ -1113,7 +1130,9 @@ bool OpenMVThirdParty::installFromUrl(const QUrl &url, bool overwrite, QString *
     check.repo.writablePath = vendorDir;
     check.remote = remote;
     check.remoteConfig = data;
-    check.parts = FirmwarePart | (remote.examplesRelease.isValid() ? ExamplesPart : 0);
+    check.parts = FirmwarePart
+        | (remote.examplesRelease.isValid() ? ExamplesPart : 0)
+        | (remote.modelsRelease.isValid() ? ModelsPart : 0);
 
     if (!installParts(check, error, parent))
     {

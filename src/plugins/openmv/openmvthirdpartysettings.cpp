@@ -48,7 +48,7 @@ static bool viewerMode()
 
 static int updateParts()
 {
-    return OpenMVThirdParty::FirmwarePart | (viewerMode() ? 0 : OpenMVThirdParty::ExamplesPart);
+    return OpenMVThirdParty::FirmwarePart | (viewerMode() ? 0 : (OpenMVThirdParty::ExamplesPart | OpenMVThirdParty::ModelsPart));
 }
 
 static void offerRestart(QWidget *parent)
@@ -76,10 +76,10 @@ public:
         layout->addWidget(header);
 
         m_tree = new QTreeWidget;
-        m_tree->setColumnCount(6);
+        m_tree->setColumnCount(7);
         m_tree->setHeaderLabels(QStringList()
             << Tr::tr("Name") << Tr::tr("Id") << Tr::tr("Source")
-            << Tr::tr("Firmware") << Tr::tr("Examples") << Tr::tr("Update URL"));
+            << Tr::tr("Firmware") << Tr::tr("Examples") << Tr::tr("Models") << Tr::tr("Update URL"));
         m_tree->setRootIsDecorated(false);
         m_tree->setAllColumnsShowFocus(true);
         m_tree->setSelectionMode(QAbstractItemView::SingleSelection);
@@ -143,6 +143,7 @@ private:
                 << (repo.fromInstallDir ? Tr::tr("Built-in") : Tr::tr("User"))
                 << (repo.firmwareVersion.isEmpty() ? QStringLiteral("-") : repo.firmwareVersion)
                 << (repo.examplesVersion.isEmpty() ? QStringLiteral("-") : repo.examplesVersion)
+                << (repo.modelsVersion.isEmpty() ? QStringLiteral("-") : repo.modelsVersion)
                 << (repo.configUrl.isEmpty()
                     ? (repo.fromInstallDir ? Tr::tr("<Built-In>") : Tr::tr("<None>"))
                     : repo.configUrl));
