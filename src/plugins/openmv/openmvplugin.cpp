@@ -4695,7 +4695,36 @@ static void mergeExampleActions(QMenu *into, const QList<QAction *> &fromActions
 
         if(fromAction->menu() && match && match->menu())
         {
-            mergeExampleActions(match->menu(), fromAction->menu()->actions());
+            QMenu *container = fromAction->menu();
+            mergeExampleActions(match->menu(), container->actions());
+
+            // The vendor's examples have been moved into the existing submenu but
+            // are still QObject-parented to this now-redundant container. When the
+            // container holds only leaves (the common case), reparent them onto the
+            // target menu and delete the emptied container so it isn't leaked. A
+            // container with nested sub-categories is left as-is (rare) rather than
+            // reparent a menu widget (which is error-prone). Reparenting a leaf
+            // QAction is safe -- it moves the object without touching menu widgets.
+            bool onlyLeaves = true;
+
+            for(QAction *child : container->actions())
+            {
+                if(child->menu())
+                {
+                    onlyLeaves = false;
+                    break;
+                }
+            }
+
+            if(onlyLeaves)
+            {
+                for(QAction *child : container->actions())
+                {
+                    child->setParent(match->menu());
+                }
+
+                delete container;
+            }
         }
         else if(match && (!fromAction->menu()) && (!match->menu()))
         {
