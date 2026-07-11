@@ -655,6 +655,19 @@ static void packDirIntoRomfs(VfsRomWriter *writer, const QDir &dir)
     }
 }
 
+// The staging path for a romfs image the ROMFS editor dumps from / commits to
+// and then hands the bootloader to flash. A private per-user subdirectory (not
+// the shared %TEMP% root) so the fixed romfsN.img name can't collide with a
+// second IDE instance or unrelated files, and nothing external churns it during
+// the multi-minute flash. Kept separate from the firmware-flash staging dir
+// (openmv-fw-staging), which is wiped on every flash.
+static QString romfsStagingPath(int romfsIndex)
+{
+    const QString dir = QDir::cleanPath(QDir::tempPath() + QStringLiteral("/openmv-romfs-staging"));
+    QDir().mkpath(dir);
+    return QDir::cleanPath(dir + QDir::separator() + QString(QStringLiteral("romfs%1.img")).arg(romfsIndex));
+}
+
 void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 {
     if (m_working)
@@ -726,7 +739,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
     {
         if (fromConnect)
         {
-            QFile romfsFile(QDir::tempPath() + QDir::separator() + QString(QStringLiteral("romfs%1.img").arg(romfsIndex)));
+            QFile romfsFile(romfsStagingPath(romfsIndex));
 
             if ((!romfsFile.exists()) || romfsFile.remove())
             {
@@ -822,7 +835,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         // Load-only: skip the editor dialog and the commit/save choice. Re-pack the
         // unpacked image (re-aligned for the board, exactly as the IDE's commit
         // does) and write it straight to the cam.
-        QFile romfsFile(QDir::tempPath() + QDir::separator() + QString(QStringLiteral("romfs%1.img").arg(romfsIndex)));
+        QFile romfsFile(romfsStagingPath(romfsIndex));
 
         if (romfsFile.open(QIODevice::WriteOnly | QIODevice::Truncate))
         {
@@ -947,7 +960,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 
             if(combo2->currentIndex() == 0)
             {
-                QFile romfsFile(QDir::tempPath() + QDir::separator() + QString(QStringLiteral("romfs%1.img").arg(romfsIndex)));
+                QFile romfsFile(romfsStagingPath(romfsIndex));
 
                 if (romfsFile.open(QIODevice::WriteOnly | QIODevice::Truncate))
                 {
