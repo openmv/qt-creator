@@ -257,9 +257,34 @@ PyLSClient::~PyLSClient()
     pythonClients().remove(pythonClients().key(this));
 }
 
+// OPENMV-DIFF //
+static QStringList m_extraStubPaths;
+void PyLSClient::setExtraStubPaths(const QStringList &paths)
+{
+    m_extraStubPaths = paths;
+}
+// OPENMV-DIFF //
+
 void PyLSClient::updateConfiguration()
 {
     const auto doc = QJsonDocument::fromJson(PythonSettings::pylsConfiguration().toUtf8());
+    // OPENMV-DIFF //
+    // Inject the third-party repo stub directories as jedi extra_paths so their
+    // .pyi stubs provide completion alongside OpenMV's (which are the workspace
+    // root). Highest priority first, so an earlier stub wins a name collision.
+    if (doc.isObject() && (!m_extraStubPaths.isEmpty())) {
+        QJsonObject config = doc.object();
+        QJsonObject pylsp = config.value("pylsp").toObject();
+        QJsonObject plugins = pylsp.value("plugins").toObject();
+        QJsonObject jedi = plugins.value("jedi").toObject();
+        jedi.insert("extra_paths", QJsonArray::fromStringList(m_extraStubPaths));
+        plugins.insert("jedi", jedi);
+        pylsp.insert("plugins", plugins);
+        config.insert("pylsp", pylsp);
+        Client::updateConfiguration(config);
+        return;
+    }
+    // OPENMV-DIFF //
     if (doc.isArray())
         Client::updateConfiguration(doc.array());
     else if (doc.isObject())

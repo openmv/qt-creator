@@ -75,6 +75,10 @@ public:
 
     // OPENMV-DIFF //
     static void setPortPath(const Utils::FilePath &portPath);
+    // Extra directories (third-party repo stubs/ folders) added to jedi's
+    // extra_paths so vendor .pyi stubs give completion for custom firmware APIs.
+    // Set by the OpenMV plugin at startup; applied on the next updateConfiguration().
+    static void setExtraStubPaths(const QStringList &paths);
     // OPENMV-DIFF //
 
 private:
