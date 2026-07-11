@@ -127,7 +127,8 @@ void MergedFilesystemModel::buildChildren(Node *node, const QStringList &sourceD
 
         if (child->isDir)
         {
-            buildChildren(child, dirSources.value(name));
+            child->sourceDirs = dirSources.value(name);
+            buildChildren(child, child->sourceDirs);
         }
     }
 }
@@ -164,6 +165,39 @@ QModelIndex MergedFilesystemModel::index(const QString &path, int column) const
 {
     Node *node = m_byPath.value(cleanPath(path), Q_NULLPTR);
     return (node && (column == 0)) ? indexForNode(node) : QModelIndex();
+}
+
+QString MergedFilesystemModel::indexHtmlFor(const QModelIndex &index) const
+{
+    Node *node = index.isValid() ? static_cast<Node *>(index.internalPointer()) : m_root;
+
+    // Start the search at a directory: a selected file describes its container.
+    if ((node != m_root) && (!node->isDir))
+    {
+        node = node->parent;
+    }
+
+    for (Node *n = node; n != Q_NULLPTR; n = n->parent)
+    {
+        const QStringList sources = (n == m_root) ? m_roots : n->sourceDirs;
+
+        for (const QString &dir : sources)
+        {
+            const QString candidate = dir + QStringLiteral("/index.html");
+
+            if (QFileInfo::exists(candidate))
+            {
+                return candidate;
+            }
+        }
+
+        if (n == m_root)
+        {
+            break;
+        }
+    }
+
+    return QString();
 }
 
 bool MergedFilesystemModel::isUnderRoots(const QString &path) const

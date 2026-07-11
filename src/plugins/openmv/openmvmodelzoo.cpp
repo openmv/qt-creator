@@ -305,61 +305,35 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
             return;
         }
 
-        QString path = m_model->filePath(m_filter->mapToSource(indexes.first()));
+        QModelIndex sourceIndex = m_filter->mapToSource(indexes.first());
+        QString path = m_model->filePath(sourceIndex);
 
         if (QFileInfo(path).isDir())
         {
             m_selectedModel = QString();
             ok->setEnabled(false);
-
-            do
-            {
-                QString indexPath = path + QDir::separator() + QStringLiteral("index.html");
-
-                if (QFileInfo::exists(indexPath))
-                {
-                    QFile file(indexPath);
-
-                    if(file.open(QIODevice::ReadOnly))
-                    {
-                        textBrowser->setSearchPaths(QStringList() << QFileInfo(indexPath).path());
-                        textBrowser->setHtml(QString::fromUtf8(file.readAll()));
-                        file.close();
-                    }
-
-                    break;
-                }
-
-                path = QFileInfo(path).path();
-            }
-            while (m_model->isUnderRoots(path));
         }
         else
         {
             m_selectedModel = path;
             ok->setEnabled(true);
+        }
 
-            do
+        // Look up the category's index.html across every source that contributes
+        // to this (possibly merged) node, so a merged category still shows its
+        // description even when the selection came from another root.
+        QString indexPath = m_model->indexHtmlFor(sourceIndex);
+
+        if (!indexPath.isEmpty())
+        {
+            QFile file(indexPath);
+
+            if(file.open(QIODevice::ReadOnly))
             {
-                path = QFileInfo(path).path();
-
-                QString indexPath = path + QDir::separator() + QStringLiteral("index.html");
-
-                if (QFileInfo::exists(indexPath))
-                {
-                    QFile file(indexPath);
-
-                    if(file.open(QIODevice::ReadOnly))
-                    {
-                        textBrowser->setSearchPaths(QStringList() << QFileInfo(indexPath).path());
-                        textBrowser->setHtml(QString::fromUtf8(file.readAll()));
-                        file.close();
-                    }
-
-                    break;
-                }
+                textBrowser->setSearchPaths(QStringList() << QFileInfo(indexPath).path());
+                textBrowser->setHtml(QString::fromUtf8(file.readAll()));
+                file.close();
             }
-            while (m_model->isUnderRoots(path));
         }
     });
 

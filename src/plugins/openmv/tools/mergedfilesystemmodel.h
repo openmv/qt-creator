@@ -76,6 +76,14 @@ public:
     // walk up the tree looking for an index.html.
     bool isUnderRoots(const QString &path) const;
 
+    // The index.html to show for index (a description pane): walks up the merged
+    // tree from index's directory and, at each level, checks EVERY contributing
+    // source directory -- so a merged category's description is found even when
+    // the selected item comes from a different (higher-priority) root than the
+    // one shipping the index.html. Empty if none. (index may be invalid for the
+    // top level.)
+    QString indexHtmlFor(const QModelIndex &index) const;
+
     // QAbstractItemModel.
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
     QModelIndex parent(const QModelIndex &child) const override;
@@ -96,6 +104,7 @@ private:
         bool isDir = false;
         Node *parent = Q_NULLPTR;
         QList<Node *> children;
+        QStringList sourceDirs;     // for a directory: every root's copy of it (priority order)
     };
 
     // Merge the parallel source directories (same relative position across roots,
