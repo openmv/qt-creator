@@ -1080,6 +1080,81 @@ bool OpenMVThirdParty::installFromUrl(const QUrl &url, bool overwrite, QString *
     return true;
 }
 
+OpenMVThirdParty::Repo OpenMVThirdParty::repoForFirmwareRoot(const QString &firmwareRoot)
+{
+    for (const Repo &repo : scanRepos())
+    {
+        if (repo.writablePath.pathAppended(QStringLiteral("firmware")).toString() == firmwareRoot)
+        {
+            return repo;
+        }
+    }
+
+    return Repo();
+}
+
+Utils::FilePath OpenMVThirdParty::syncDevChannelBlocking(const Repo &repo, QString *error, QWidget *parent)
+{
+    if (!repo.firmwareDev.isValid())
+    {
+        *error = Tr::tr("\"%L1\" does not provide a development firmware channel").arg(repo.displayName);
+        return Utils::FilePath();
+    }
+
+    Utils::FilePath devDir = repo.writablePath.pathAppended(QStringLiteral("firmware-dev"));
+    Utils::FilePath sidecar = repo.writablePath.pathAppended(QStringLiteral("firmware-dev.version"));
+
+    // The dev version is compared for inequality (dev builds are not ordered);
+    // a matching sidecar means the cache is already the requested build.
+    if (devDir.exists() && (readVersionFile(sidecar) == repo.firmwareDev.version))
+    {
+        return devDir;
+    }
+
+    QProgressDialog progress(Tr::tr("Downloading \"%L1\" development firmware...").arg(repo.displayName),
+                             Tr::tr("Cancel"), 0, 0, parent,
+                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+    progress.setWindowTitle(Tr::tr("Third Party Repositories"));
+    progress.setWindowModality(Qt::ApplicationModal);
+    progress.setMinimumDuration(0);
+    progress.setValue(0);
+
+    QByteArray data = httpGetBlocking(QUrl(repo.firmwareDev.url), error, &progress);
+
+    progress.close();
+
+    if (data.isEmpty())
+    {
+        if (error && error->isEmpty())
+        {
+            *error = Tr::tr("empty download");
+        }
+
+        return Utils::FilePath();
+    }
+
+    if ((!repo.firmwareDev.sha256.isEmpty())
+    && (QString::fromLatin1(QCryptographicHash::hash(data, QCryptographicHash::Sha256).toHex()).toLower()
+        != repo.firmwareDev.sha256.toLower()))
+    {
+        *error = Tr::tr("the downloaded development firmware failed its sha256 check");
+        return Utils::FilePath();
+    }
+
+    if (!installArchiveToPart(data, repo.writablePath, QStringLiteral("firmware-dev"), error))
+    {
+        return Utils::FilePath();
+    }
+
+    if (!writeVendorFile(sidecar, repo.firmwareDev.version.toUtf8() + QByteArrayLiteral("\n"), error))
+    {
+        return Utils::FilePath();
+    }
+
+    return devDir;
+}
+
 bool OpenMVThirdParty::removeRepo(const QString &id, QString *error)
 {
     if (installRoot().pathAppended(id).exists())

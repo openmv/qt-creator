@@ -157,6 +157,16 @@ public:
     // "_resourceRoot" for third-party boards, else the IDE's firmware folder.
     static Utils::FilePath firmwareRootForBoard(const QJsonObject &board);
 
+    // The writable repo whose firmware dir equals firmwareRoot (a connected
+    // third-party board's "_resourceRoot"), or a Repo with an empty id if none.
+    static Repo repoForFirmwareRoot(const QString &firmwareRoot);
+
+    // Sync repo's development firmware channel into <vendor>/firmware-dev (only
+    // re-downloading when the dev version changed), with a modal progress
+    // dialog. Returns the firmware-dev dir, or an empty path on failure / when
+    // the repo declares no development channel (error is set).
+    static Utils::FilePath syncDevChannelBlocking(const Repo &repo, QString *error, QWidget *parent);
+
     // The merged "boards" array, stably reordered so entries whose
     // "_resourceRoot" equals resourceRoot come first. First-match-wins loops
     // that key on a SHARED value (bootloaderVidPid) then prefer the board of

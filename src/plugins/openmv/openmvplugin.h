@@ -528,6 +528,10 @@ private:
     // openmvpluginprotocol.cpp; used by the mDNS discovery listener.
     static QList<QPair<QString, QHostAddress> > parseMdnsARecords(const QByteArray &data);
     bool getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder, const QString &customBundleDir = QString());
+    // The "Install the Latest Development Release" options dialog, shared by the
+    // OpenMV flow (changelogHtml = scraped release notes) and third-party boards
+    // (empty changelogHtml; dev firmware comes from the vendor's own channel).
+    void showDevelopmentReleaseDialog(const QByteArray &changelogHtml);
     // In viewer mode (a simple end-user tool) the OpenMV-Cam-specific post-flash instructions
     // (self-test, blinking blue LED, main.py, internal flash-drive mount) mean nothing, so collapse a
     // firmware/erase completion message to a plain "wait for the device to restart". Returns the

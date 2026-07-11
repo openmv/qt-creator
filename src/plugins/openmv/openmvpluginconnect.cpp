@@ -1068,6 +1068,14 @@ void OpenMVPlugin::bootloaderClicked()
 
 void OpenMVPlugin::installTheLatestDevelopmentRelease()
 {
+    // A third-party board pulls dev firmware from its own vendor's channel and
+    // has no OpenMV changelog to scrape -- open the options dialog directly.
+    if(!m_boardResourceRoot.isEmpty())
+    {
+        showDevelopmentReleaseDialog(QByteArray());
+        return;
+    }
+
     QProgressDialog *dialog = new QProgressDialog(Tr::tr("Downloading..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
@@ -1102,6 +1110,60 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
                 d = d.mid(0, i - 1);
             }
 
+            showDevelopmentReleaseDialog(d);
+        }
+        else if((reply2->error() != QNetworkReply::NoError) && (reply2->error() != QNetworkReply::OperationCanceledError))
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                Tr::tr("Connect"),
+                Tr::tr("Error: %L1!").arg(reply2->errorString()));
+        }
+        else if(reply2->error() != QNetworkReply::OperationCanceledError)
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                Tr::tr("Connect"),
+                Tr::tr("Cannot open the resources file \"%L1\"!").arg(reply2->request().url().toString()));
+        }
+
+        connect(reply2, &QNetworkReply::destroyed, manager2, &QNetworkAccessManager::deleteLater); reply2->deleteLater();
+        dialog->deleteLater();
+    });
+
+    QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://github.com/openmv/openmv/releases/tag/development")));
+    QNetworkReply *reply2 = manager2->get(request2);
+    QPointer<QProgressDialog> dlg = dialog;
+
+    if(reply2)
+    {
+        connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
+        connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
+        connect(reply2, &QNetworkReply::downloadProgress, dialog, [dlg] (qint64 bytesReceived, qint64 bytesTotal) {
+            if (!dlg) return;
+            dlg->setMaximum((bytesTotal > 0) ? bytesTotal : 0);
+            dlg->setValue(bytesReceived);
+        });
+
+        dialog->exec();
+    }
+    else
+    {
+        QMessageBox::critical(Core::ICore::dialogParent(),
+            Tr::tr("Connect"),
+            Tr::tr("Network request failed \"%L1\"!").arg(request2.url().toString()));
+    }
+}
+
+// The "Install the Latest Development Release" options dialog (erase FAT /
+// update ROMFS / force bootloader), factored out so both the OpenMV flow (after
+// scraping the changelog HTML, passed as changelogHtml) and a third-party board
+// (empty changelogHtml, its dev firmware coming from the vendor's own channel)
+// share it. On accept it runs the dev-firmware connect flow.
+void OpenMVPlugin::showDevelopmentReleaseDialog(const QByteArray &changelogHtml)
+{
+    {
+        const QByteArray d = changelogHtml;
+
+        {
             QDialog *newDialog = new QDialog(Core::ICore::dialogParent(),
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -1195,44 +1257,6 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
                 delete newDialog;
             }
         }
-        else if((reply2->error() != QNetworkReply::NoError) && (reply2->error() != QNetworkReply::OperationCanceledError))
-        {
-            QMessageBox::critical(Core::ICore::dialogParent(),
-                Tr::tr("Connect"),
-                Tr::tr("Error: %L1!").arg(reply2->errorString()));
-        }
-        else if(reply2->error() != QNetworkReply::OperationCanceledError)
-        {
-            QMessageBox::critical(Core::ICore::dialogParent(),
-                Tr::tr("Connect"),
-                Tr::tr("Cannot open the resources file \"%L1\"!").arg(reply2->request().url().toString()));
-        }
-
-        connect(reply2, &QNetworkReply::destroyed, manager2, &QNetworkAccessManager::deleteLater); reply2->deleteLater();
-        dialog->deleteLater();
-    });
-
-    QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://github.com/openmv/openmv/releases/tag/development")));
-    QNetworkReply *reply2 = manager2->get(request2);
-    QPointer<QProgressDialog> dlg = dialog;
-
-    if(reply2)
-    {
-        connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
-        connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-        connect(reply2, &QNetworkReply::downloadProgress, dialog, [dlg] (qint64 bytesReceived, qint64 bytesTotal) {
-            if (!dlg) return;
-            dlg->setMaximum((bytesTotal > 0) ? bytesTotal : 0);
-            dlg->setValue(bytesReceived);
-        });
-
-        dialog->exec();
-    }
-    else
-    {
-        QMessageBox::critical(Core::ICore::dialogParent(),
-            Tr::tr("Connect"),
-            Tr::tr("Network request failed \"%L1\"!").arg(request2.url().toString()));
     }
 }
 
@@ -1260,10 +1284,30 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
     // binaries come from the zip.
     const bool useCustom = !customBundleDir.isEmpty();
 
+    // A connected third-party board (its _resourceRoot became m_boardResourceRoot)
+    // pulls development firmware from its own vendor's channel, not OpenMV's.
+    const bool useThirdParty = (!useCustom) && (!m_boardResourceRoot.isEmpty());
+    Utils::FilePath thirdPartyDevDir;
+
     // Both the .lst and single-file paths flash from the cached dev firmware bundle.
     // syncDevFirmwareBlocking() re-downloads the 54.7 MB bundle only when the dev version
     // actually changed (with a modal progress dialog), so repeat installs don't re-fetch.
-    if((!useCustom) && (!syncDevFirmwareBlocking()))
+    if(useThirdParty)
+    {
+        QString error;
+        thirdPartyDevDir = OpenMVThirdParty::syncDevChannelBlocking(
+            OpenMVThirdParty::repoForFirmwareRoot(m_boardResourceRoot), &error, Core::ICore::dialogParent());
+
+        if(thirdPartyDevDir.isEmpty())
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                Tr::tr("Connect"),
+                error.isEmpty() ? Tr::tr("Unable to download the latest development firmware!") : error);
+
+            return false;
+        }
+    }
+    else if((!useCustom) && (!syncDevFirmwareBlocking()))
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
@@ -1274,7 +1318,11 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
 
     Utils::FilePath cachedDir;
 
-    if(useCustom)
+    if(useThirdParty)
+    {
+        cachedDir = thirdPartyDevDir.pathAppended(arch);
+    }
+    else if(useCustom)
     {
         // A custom .zip is the build output for one board. Tolerate both a flat zip (images at the
         // root, e.g. firmware.bin/romfs0.img) and a dev-bundle-style layout (images under <arch>/),
@@ -1322,7 +1370,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
 
         QFile::remove(tempTarget); // in case a dev binary shared the .lst's name
         *path = tempTarget;
-        return QFile(Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
+        return QFile(firmwareResourcePath()
             .pathAppended(originalFirmwareFolder)
             .pathAppended(firmwareFileName).toString()).copy(tempTarget);
     }
