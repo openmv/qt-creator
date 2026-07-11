@@ -33,6 +33,7 @@
 #include "openmvpluginconnect.h"
 
 #include "openmvmodelzoo.h"
+#include "openmvthirdparty.h"
 
 #define LAST_MODEL_ZOO_DIALOG_GEOMETRY "OpenMVModelZooDialogGeometry"
 #define LAST_MODEL_ZOO_DIALOG_SPLITTER_STATE "OpenMVModelZooDialogSplitterState"
@@ -43,13 +44,9 @@
 namespace OpenMV {
 namespace Internal {
 
-OpenMVModelZooBrowserFilter::OpenMVModelZooBrowserFilter(const QJsonObject &boardSettings, QCheckBox *checkBox, QObject *parent) :
-    QSortFilterProxyModel(parent),
-    m_boardSettings(boardSettings), m_filterCheckBox(checkBox)
+static void appendModelFilters(const QString &indexCsvPath, QList<modelFilter_t> &modelFilters)
 {
-    m_modelFilters = QList<modelFilter_t>();
-
-    QFile filters(Core::ICore::allUsersResourcePath(QStringLiteral("models/index.csv")).toString());
+    QFile filters(indexCsvPath);
 
     if(filters.open(QIODevice::ReadOnly))
     {
@@ -69,7 +66,7 @@ OpenMVModelZooBrowserFilter::OpenMVModelZooBrowserFilter(const QJsonObject &boar
                 filter.boardType.optimize();
                 filter.boardType.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
 
-                m_modelFilters.append(filter);
+                modelFilters.append(filter);
             }
             else
             {
@@ -80,10 +77,31 @@ OpenMVModelZooBrowserFilter::OpenMVModelZooBrowserFilter(const QJsonObject &boar
     }
 }
 
+OpenMVModelZooBrowserFilter::OpenMVModelZooBrowserFilter(const QJsonObject &boardSettings, QCheckBox *checkBox, QObject *parent) :
+    QSortFilterProxyModel(parent),
+    m_boardSettings(boardSettings), m_filterCheckBox(checkBox)
+{
+    m_modelFilters = QList<modelFilter_t>();
+
+    // The released models' filters, then each third-party repo's models/index.csv
+    // so vendor models filter to their boards (matched by their own path regex).
+    appendModelFilters(Core::ICore::allUsersResourcePath(QStringLiteral("models/index.csv")).toString(), m_modelFilters);
+
+    for(const OpenMVThirdParty::Repo &repo : OpenMVThirdParty::scanRepos())
+    {
+        Utils::FilePath indexCsv = repo.writablePath.pathAppended(QStringLiteral("models/index.csv"));
+
+        if(indexCsv.exists())
+        {
+            appendModelFilters(indexCsv.toString(), m_modelFilters);
+        }
+    }
+}
+
 bool OpenMVModelZooBrowserFilter::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
     QModelIndex index = sourceModel()->index(sourceRow, 0, sourceParent);
-    QFileSystemModel *fileModel = qobject_cast<QFileSystemModel *>(sourceModel());
+    MergedFilesystemModel *fileModel = qobject_cast<MergedFilesystemModel *>(sourceModel());
 
     if (!fileModel)
     {
@@ -108,12 +126,22 @@ bool OpenMVModelZooBrowserFilter::filterAcceptsRow(int sourceRow, const QModelIn
         return false;
     }
 
+    // A third-party board may set "exampleBoardType" (a firmware-compatible
+    // OpenMV folder) to inherit that board's stock models, mirroring how example
+    // filtering works; when set it replaces boardFirmwareFolder for matching.
+    QString boardType = m_boardSettings.value(QStringLiteral("exampleBoardType")).toString();
+
+    if(boardType.isEmpty())
+    {
+        boardType = m_boardSettings.value(QStringLiteral("boardFirmwareFolder")).toString();
+    }
+
     for(const modelFilter_t &filter : m_modelFilters)
     {
         if(filter.path.match(filePath).hasMatch())
         {
             if((!filter.boardType.pattern().isEmpty())
-            && filter.boardType.match(m_boardSettings.value(QStringLiteral("boardFirmwareFolder")).toString()).hasMatch())
+            && filter.boardType.match(boardType).hasMatch())
             {
                 if (fileModel->isDir(index))
                 {
@@ -140,7 +168,7 @@ bool OpenMVModelZooBrowserFilter::filterAcceptsRow(int sourceRow, const QModelIn
 }
 
 OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, Utils::QtcSettings *settings, QWidget *parent, bool saveDialog) :
-    QDialog(parent), m_boardSettings(boardSettings), m_settings(settings), m_model(new QFileSystemModel(this))
+    QDialog(parent), m_boardSettings(boardSettings), m_settings(settings), m_model(new MergedFilesystemModel(this))
 {
     setWindowFlags(windowFlags() | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -157,13 +185,29 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
 
     m_treeView = new OpenMVModelZooBrowserTreeView(this);
     Utils::FilePath path = Core::ICore::allUsersResourcePath(QStringLiteral("models"));
-    m_model->setRootPath(path.toString());
+
+    // Roots highest priority first: each third-party repo that ships models (in
+    // vendor priority order) then OpenMV's models as the base. A model at the
+    // same relative path in several roots is taken from the highest-priority one.
+    QStringList modelRoots;
+
+    for(const OpenMVThirdParty::Repo &repo : OpenMVThirdParty::scanRepos())
+    {
+        Utils::FilePath modelsDir = repo.writablePath.pathAppended(QStringLiteral("models"));
+
+        if(modelsDir.exists())
+        {
+            modelRoots.append(modelsDir.toString());
+        }
+    }
+
+    modelRoots.append(path.toString());
+    m_model->setRoots(modelRoots);
+
     m_treeView->setModel(m_filter);
-    m_treeView->setRootIndex(m_filter->mapFromSource(m_model->index(path.toString())));
+    m_treeView->setRootIndex(m_filter->mapFromSource(QModelIndex()));
     m_treeView->setContextMenuPolicy(Qt::DefaultContextMenu);
     m_treeView->setHeaderHidden(true);
-    m_treeView->setColumnHidden(2, true); // Type
-    m_treeView->setColumnHidden(3, true); // DateModified
     m_splitter->addWidget(m_treeView);
 
     QHeaderView *header = m_treeView->header();
@@ -213,7 +257,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
             + m_boardSettings.value(QStringLiteral("boardFirmwareFolder")).toString()
             + QStringLiteral("/" LAST_MODEL_ZOO_DIALOG_EXPANDED_STATE))).toStringList();
 
-        connect(m_model, &QFileSystemModel::directoryLoaded, this, [this] () {
+        connect(m_model, &MergedFilesystemModel::directoryLoaded, this, [this] () {
             if (!m_listToExpand.isEmpty())
             {
                 restoreExpandedState(QString(), m_treeView->rootIndex());
@@ -288,7 +332,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
 
                 path = QFileInfo(path).path();
             }
-            while (Utils::FilePath::fromString(path).isChildOf(Core::ICore::allUsersResourcePath(QStringLiteral("models"))));
+            while (m_model->isUnderRoots(path));
         }
         else
         {
@@ -315,7 +359,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
                     break;
                 }
             }
-            while (Utils::FilePath::fromString(path).isChildOf(Core::ICore::allUsersResourcePath(QStringLiteral("models"))));
+            while (m_model->isUnderRoots(path));
         }
     });
 

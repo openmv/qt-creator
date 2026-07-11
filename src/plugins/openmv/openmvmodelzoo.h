@@ -37,6 +37,8 @@
 #include <coreplugin/minisplitter.h>
 #include <utils/qtcsettings.h>
 
+#include "tools/mergedfilesystemmodel.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -139,7 +141,7 @@ private:
 
     QJsonObject m_boardSettings;
     Utils::QtcSettings *m_settings;
-    QFileSystemModel *m_model;
+    MergedFilesystemModel *m_model;
     OpenMVModelZooBrowserTreeView *m_treeView;
     Core::MiniSplitter *m_splitter;
     OpenMVModelZooBrowserFilter *m_filter;

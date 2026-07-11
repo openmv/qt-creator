@@ -33,6 +33,7 @@ add_qtc_plugin(OpenMV
     tools/driveserialnumber.cpp tools/driveserialnumber.h
     tools/myqserialportinfo.cpp tools/myqserialportinfo.h
     tools/loaderdialog.cpp tools/loaderdialog.h
+    tools/mergedfilesystemmodel.cpp tools/mergedfilesystemmodel.h
     tools/alif.cpp tools/alif.h
     tools/bossac.cpp tools/bossac.h
     tools/dfu-util.cpp tools/dfu-util.h
