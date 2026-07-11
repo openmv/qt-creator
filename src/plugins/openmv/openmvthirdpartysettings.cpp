@@ -86,14 +86,25 @@ public:
         m_tree->setEditTriggers(QAbstractItemView::NoEditTriggers);
         layout->addWidget(m_tree);
 
+        QLabel *orderLabel = new QLabel(Tr::tr("Order sets priority (highest at the top). When two repositories provide "
+                                               "a board with the same USB ID, or an example with the same name, the one "
+                                               "higher in this list wins; all repositories override %L1's built-ins.")
+                                        .arg(QGuiApplication::applicationDisplayName()));
+        orderLabel->setWordWrap(true);
+        layout->addWidget(orderLabel);
+
         QHBoxLayout *buttons = new QHBoxLayout;
         m_installButton = new QPushButton(Tr::tr("Install from URL..."));
         m_removeButton = new QPushButton(Tr::tr("Remove"));
         m_updateButton = new QPushButton(Tr::tr("Check for Updates"));
+        m_upButton = new QPushButton(Tr::tr("Move Up"));
+        m_downButton = new QPushButton(Tr::tr("Move Down"));
         buttons->addWidget(m_installButton);
         buttons->addWidget(m_removeButton);
         buttons->addWidget(m_updateButton);
         buttons->addStretch();
+        buttons->addWidget(m_upButton);
+        buttons->addWidget(m_downButton);
         layout->addLayout(buttons);
 
         m_overridesBox = new QGroupBox(Tr::tr("Override warnings"));
@@ -109,6 +120,8 @@ public:
         connect(m_updateButton, &QPushButton::clicked, this, [this] {
             OpenMVThirdParty::checkAndPrompt(this, updateParts(), true);
         });
+        connect(m_upButton, &QPushButton::clicked, this, [this] { moveSelected(-1); });
+        connect(m_downButton, &QPushButton::clicked, this, [this] { moveSelected(1); });
 
         refresh();
     }
@@ -182,6 +195,54 @@ private:
         }
 
         m_updateButton->setEnabled(anyUpdatable);
+
+        int row = m_tree->currentItem() ? m_tree->indexOfTopLevelItem(m_tree->currentItem()) : -1;
+        m_upButton->setEnabled(row > 0);
+        m_downButton->setEnabled((row >= 0) && (row < (m_tree->topLevelItemCount() - 1)));
+    }
+
+    // Move the selected repo up/down in the priority order (delta -1/+1).
+    // Materializes the current display order into the stored list first so the
+    // order becomes explicit and stable, then swaps and persists.
+    void moveSelected(int delta)
+    {
+        const OpenMVThirdParty::Repo *repo = selectedRepo();
+
+        if (!repo)
+        {
+            return;
+        }
+
+        QString id = repo->id;
+        QStringList order;
+
+        for (const OpenMVThirdParty::Repo &r : m_repos)
+        {
+            order.append(r.id);
+        }
+
+        int i = order.indexOf(id);
+        int j = i + delta;
+
+        if ((i < 0) || (j < 0) || (j >= order.size()))
+        {
+            return;
+        }
+
+        order.move(i, j);
+        OpenMVThirdParty::setRepoOrder(order);
+
+        refresh();
+
+        // Reselect the moved repo at its new row.
+        for (int k = 0; k < m_tree->topLevelItemCount(); k++)
+        {
+            if (m_tree->topLevelItem(k)->data(0, Qt::UserRole).toString() == id)
+            {
+                m_tree->setCurrentItem(m_tree->topLevelItem(k));
+                break;
+            }
+        }
     }
 
     void installClicked()
@@ -278,6 +339,8 @@ private:
     QPushButton *m_installButton;
     QPushButton *m_removeButton;
     QPushButton *m_updateButton;
+    QPushButton *m_upButton;
+    QPushButton *m_downButton;
     QGroupBox *m_overridesBox;
     QPlainTextEdit *m_overridesList;
     QList<OpenMVThirdParty::Repo> m_repos;

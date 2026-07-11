@@ -344,7 +344,32 @@ QList<OpenMVThirdParty::Repo> OpenMVThirdParty::scanRepos(QStringList *warnings)
         repos.append(repo);
     }
 
+    // Apply the user priority order (highest first). Listed repos come first in
+    // that order; the rest (freshly installed, not yet ordered) keep their
+    // alphabetical order after them.
+    const QStringList order = repoOrder();
+
+    std::stable_sort(repos.begin(), repos.end(), [&order] (const Repo &a, const Repo &b) {
+        int ia = order.indexOf(a.id);
+        int ib = order.indexOf(b.id);
+        if (ia < 0) ia = order.size();
+        if (ib < 0) ib = order.size();
+        return ia < ib;
+    });
+
     return repos;
+}
+
+QStringList OpenMVThirdParty::repoOrder()
+{
+    return ExtensionSystem::PluginManager::settings()->value(THIRD_PARTY_REPO_ORDER).toStringList();
+}
+
+void OpenMVThirdParty::setRepoOrder(const QStringList &order)
+{
+    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+    settings->setValue(THIRD_PARTY_REPO_ORDER, order);
+    settings->sync();
 }
 
 QJsonDocument OpenMVThirdParty::mergeFirmwareSettings(const QJsonDocument &builtIn,
@@ -460,11 +485,14 @@ QJsonDocument OpenMVThirdParty::mergeFirmwareSettings(const QJsonDocument &built
                 continue;
             }
 
-            // Masked app VID:PID overlap with an already-merged board shadows
-            // it: the existing entry is removed so every consumer of the merged
-            // document (matching, VID:PID lists, mapping tables) sees only the
-            // vendor's board. Recorded so the UI can always show the override.
+            // Masked app VID:PID overlap. Repos are processed highest priority
+            // first, so an already-merged board that overlaps is either an
+            // OpenMV base board (this vendor overrides it - the base entry is
+            // removed and the override recorded for the UI) or a board from a
+            // HIGHER-priority vendor (which wins - this board is rejected). The
+            // user reorders priority in the preferences page.
             QJsonArray keptBoards;
+            QString shadowedBy;
 
             for (const QJsonValue &existingValue : boards)
             {
@@ -475,20 +503,36 @@ QJsonDocument OpenMVThirdParty::mergeFirmwareSettings(const QJsonDocument &built
                 if (boardVidPid(existing, &existingVid, &existingPid, &existingMask)
                 && vidPidOverlap(vid, pid, mask, existingVid, existingPid, existingMask))
                 {
-                    OverrideRecord record;
-                    record.vendorId = repo.id;
-                    record.vendorBoard = displayName;
-                    record.vendorVidPid = board.value(QStringLiteral("boardVidPid")).toString();
-                    record.overriddenBoard = existing.value(QStringLiteral("boardDisplayName")).toString();
-                    record.overriddenVidPid = existing.value(QStringLiteral("boardVidPid")).toString();
-                    overrides->append(record);
-                    continue;
+                    QString existingVendor = existing.value(QStringLiteral("_vendor")).toString();
+
+                    if (existingVendor.isEmpty())
+                    {
+                        // OpenMV base board -> this vendor overrides it (drop it).
+                        OverrideRecord record;
+                        record.vendorId = repo.id;
+                        record.vendorBoard = displayName;
+                        record.vendorVidPid = board.value(QStringLiteral("boardVidPid")).toString();
+                        record.overriddenBoard = existing.value(QStringLiteral("boardDisplayName")).toString();
+                        record.overriddenVidPid = existing.value(QStringLiteral("boardVidPid")).toString();
+                        overrides->append(record);
+                        continue;
+                    }
+
+                    // A higher-priority vendor already claimed this id -> keep it.
+                    shadowedBy = existingVendor;
                 }
 
                 keptBoards.append(existingValue);
             }
 
             boards = keptBoards;
+
+            if (!shadowedBy.isEmpty())
+            {
+                warnings->append(Tr::tr("\"%L1\" board \"%L2\" (%L3) - USB id already provided by the higher-priority repository \"%L4\" (skipped)")
+                                 .arg(repo.id).arg(displayName).arg(board.value(QStringLiteral("boardVidPid")).toString()).arg(shadowedBy));
+                continue;
+            }
 
             // The vendor app VID:PID overlapping a remaining board's bootloader
             // VID:PID is kept as a visible note only - bootloader IDs are shared
@@ -1176,11 +1220,17 @@ bool OpenMVThirdParty::removeRepo(const QString &id, QString *error)
         return false;
     }
 
-    // Forget the repo so a reinstall gets the first-seen warning box again.
+    // Forget the repo so a reinstall gets the first-seen warning box again, and
+    // drop it from the priority order.
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
     QStringList known = settings->value(KNOWN_THIRD_PARTY_REPOS).toStringList();
     known.removeAll(id);
     settings->setValue(KNOWN_THIRD_PARTY_REPOS, known);
+
+    QStringList order = settings->value(THIRD_PARTY_REPO_ORDER).toStringList();
+    order.removeAll(id);
+    settings->setValue(THIRD_PARTY_REPO_ORDER, order);
+
     settings->sync();
 
     return true;

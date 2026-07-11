@@ -94,6 +94,14 @@ namespace Internal {
 // page's "Install from URL" dialog.
 #define LAST_THIRD_PARTY_INSTALL_URL "OpenMV/LastThirdPartyInstallUrl"
 
+// Stored under the plugin's QSettings; the user-controlled vendor priority as a
+// list of vendor ids, HIGHEST priority first. A repo higher in this list
+// overrides those below it (and OpenMV, the implicit base) when they collide -
+// a board with an overlapping USB id, or an example at the same relative path.
+// Repos not in the list (freshly installed) sort after the listed ones,
+// alphabetically. The preferences page's Up/Down buttons rewrite this.
+#define THIRD_PARTY_REPO_ORDER "OpenMV/ThirdPartyRepoOrder"
+
 class OpenMVThirdParty
 {
 public:
@@ -140,9 +148,15 @@ public:
     // warnings. Runs in the IDE and the viewer.
     static void mirrorInstallDirRepos(QStringList *warnings);
 
-    // Enumerate the writable repos in deterministic (alphabetical) order.
-    // Malformed vendor folders are skipped and reported via warnings.
+    // Enumerate the writable repos in user priority order (highest first; see
+    // THIRD_PARTY_REPO_ORDER). Malformed vendor folders are skipped and
+    // reported via warnings.
     static QList<Repo> scanRepos(QStringList *warnings = Q_NULLPTR);
+
+    // The stored vendor priority order (highest first), and a setter the
+    // preferences page's Up/Down buttons use.
+    static QStringList repoOrder();
+    static void setRepoOrder(const QStringList &order);
 
     // Merge every repo's firmware/settings.json into the built-in document.
     // Boards whose masked app VID:PID overlaps an already-merged board replace
