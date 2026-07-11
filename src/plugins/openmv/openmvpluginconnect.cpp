@@ -1238,7 +1238,20 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
 
 bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString *path, const QString &firmwareFileName, const QString &originalFirmwareFolder, const QString &customBundleDir)
 {
-    const QString tempTarget = QDir::cleanPath(QDir::fromNativeSeparators(QDir::tempPath() + QDir::separator() + firmwareFileName));
+    // Stage into a private per-flash subdirectory instead of the shared %TEMP%
+    // root. The bootloaders find the staged firmware by the full path returned
+    // in *path and its romfs images via QFileInfo(path).path(), so an isolated
+    // directory is transparent to them -- but it keeps the multi-minute flash's
+    // loose firmware.bin/romfs*.img out of a directory the ROMFS editor also
+    // dumps into (whose stale images the bootloader would otherwise prefer) and
+    // that unrelated processes churn, and makes the romfs*.img wildcard-clear
+    // below safe (it can only ever touch our own staged files). Recreated fresh
+    // each flash so nothing stale survives.
+    const QString stagingDir = QDir::cleanPath(QDir::tempPath() + QStringLiteral("/openmv-fw-staging"));
+    QDir(stagingDir).removeRecursively();
+    QDir().mkpath(stagingDir);
+
+    const QString tempTarget = QDir::cleanPath(stagingDir + QDir::separator() + firmwareFileName);
     QFile::remove(tempTarget);
 
     // "Load Custom Firmware" with a local .zip unpacks it and passes the bundle dir as customBundleDir.
