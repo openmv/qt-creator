@@ -156,7 +156,7 @@ private:
             m_tree->setColumnWidth(i, m_tree->columnWidth(i) + 30);
         }
 
-        QStringList lines = OpenMVThirdParty::overridesText(OpenMVThirdParty::mergedOverrides());
+        QStringList lines = OpenMVThirdParty::overrideLines(m_repos, OpenMVThirdParty::mergedOverrides());
         m_overridesBox->setVisible(!lines.isEmpty());
         m_overridesList->setPlainText(lines.join(QStringLiteral("\n")));
 

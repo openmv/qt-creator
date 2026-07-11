@@ -513,7 +513,7 @@ QJsonDocument OpenMVThirdParty::mergeFirmwareSettings(const QJsonDocument &built
                     {
                         // OpenMV base board -> this vendor overrides it (drop it).
                         OverrideRecord record;
-                        record.vendorId = repo.id;
+                        record.vendor = repo.displayName;
                         record.vendorBoard = displayName;
                         record.vendorVidPid = board.value(QStringLiteral("boardVidPid")).toString();
                         record.overriddenBoard = existing.value(QStringLiteral("boardDisplayName")).toString();
@@ -552,7 +552,7 @@ QJsonDocument OpenMVThirdParty::mergeFirmwareSettings(const QJsonDocument &built
                 && vidPidOverlap(vid, pid, mask, blVid, blPid, blMask))
                 {
                     OverrideRecord record;
-                    record.vendorId = repo.id;
+                    record.vendor = repo.displayName;
                     record.vendorBoard = displayName;
                     record.vendorVidPid = board.value(QStringLiteral("boardVidPid")).toString();
                     record.overriddenBoard = existing.value(QStringLiteral("boardDisplayName")).toString();
@@ -1264,18 +1264,95 @@ QStringList OpenMVThirdParty::overridesText(const QList<OverrideRecord> &overrid
         if (record.bootloaderOnly)
         {
             list.append(Tr::tr("\"%L1\" board \"%L2\" (%L3) overlaps the bootloader id of \"%L4\" (%L5)")
-                        .arg(record.vendorId).arg(record.vendorBoard).arg(record.vendorVidPid)
+                        .arg(record.vendor).arg(record.vendorBoard).arg(record.vendorVidPid)
                         .arg(record.overriddenBoard).arg(record.overriddenVidPid));
         }
         else
         {
             list.append(Tr::tr("\"%L1\" board \"%L2\" (%L3) overrides \"%L4\" (%L5)")
-                        .arg(record.vendorId).arg(record.vendorBoard).arg(record.vendorVidPid)
+                        .arg(record.vendor).arg(record.vendorBoard).arg(record.vendorVidPid)
                         .arg(record.overriddenBoard).arg(record.overriddenVidPid));
         }
     }
 
     return list;
+}
+
+// Append override lines for one resource part ("examples"/"models"). Scans the
+// vendor part folders (highest priority first) then the OpenMV base for files at
+// the same relative path; the first (highest-priority) copy wins, the rest are
+// overridden. index.csv / index.json are ignored (filter/manifest metadata that
+// is aggregated, not overridden).
+static void appendResourceOverrides(const QList<OpenMVThirdParty::Repo> &repos,
+                                    const QString &part, const QString &kind, QStringList *lines)
+{
+    QList<QPair<QString, QString> > roots; // (directory, owner label), highest priority first
+
+    for (const OpenMVThirdParty::Repo &repo : repos)
+    {
+        Utils::FilePath dir = repo.writablePath.pathAppended(part);
+
+        if (dir.exists())
+        {
+            roots.append(qMakePair(dir.toString(), repo.displayName));
+        }
+    }
+
+    // No collision is possible without at least one third-party copy - skip the
+    // base-folder walk entirely when no vendor ships this part.
+    if (roots.isEmpty())
+    {
+        return;
+    }
+
+    Utils::FilePath base = Core::ICore::allUsersResourcePath(part);
+
+    if (base.exists())
+    {
+        roots.append(qMakePair(base.toString(), QGuiApplication::applicationDisplayName()));
+    }
+
+    QHash<QString, QString> winner; // relative path -> winning owner label
+
+    for (const QPair<QString, QString> &root : roots)
+    {
+        QDirIterator it(root.first, QDir::Files, QDirIterator::Subdirectories);
+
+        while (it.hasNext())
+        {
+            it.next();
+
+            const QString name = it.fileName();
+
+            if ((name == QStringLiteral("index.csv")) || (name == QStringLiteral("index.json")))
+            {
+                continue;
+            }
+
+            const QString rel = QDir::cleanPath(QDir(root.first).relativeFilePath(it.filePath()));
+
+            if (winner.contains(rel))
+            {
+                lines->append(Tr::tr("\"%L1\" %L2 \"%L3\" overrides \"%L4\"")
+                              .arg(winner.value(rel)).arg(kind).arg(rel).arg(root.second));
+            }
+            else
+            {
+                winner.insert(rel, root.second);
+            }
+        }
+    }
+}
+
+QStringList OpenMVThirdParty::overrideLines(const QList<Repo> &repos,
+                                            const QList<OverrideRecord> &firmwareOverrides)
+{
+    QStringList lines = overridesText(firmwareOverrides);
+
+    appendResourceOverrides(repos, QStringLiteral("examples"), Tr::tr("example"), &lines);
+    appendResourceOverrides(repos, QStringLiteral("models"), Tr::tr("model"), &lines);
+
+    return lines;
 }
 
 } // namespace Internal

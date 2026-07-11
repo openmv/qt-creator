@@ -132,7 +132,7 @@ public:
 
     struct OverrideRecord
     {
-        QString vendorId;
+        QString vendor;         // repo display name (for the warning text)
         QString vendorBoard;
         QString vendorVidPid;
         QString overriddenBoard;
@@ -199,6 +199,15 @@ public:
 
     // One string per record, for the warning box, the log, and the UI panel.
     static QStringList overridesText(const QList<OverrideRecord> &overrides);
+
+    // Human-readable override lines across all three resource kinds, for the
+    // preferences panel and the first-seen warning: firmware from firmwareOverrides
+    // (board VID/PID overrides recorded during the merge), plus examples and models
+    // found by scanning the base part folder and each repo's part folder (highest
+    // priority first) for files at the same relative path -- the highest-priority
+    // copy wins and the rest are overridden.
+    static QStringList overrideLines(const QList<Repo> &repos,
+                                     const QList<OverrideRecord> &firmwareOverrides);
 
     // The records produced by this run's mergeFirmwareSettings() call -
     // regenerated every startup; backs the preferences page's dynamic panel.

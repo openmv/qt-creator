@@ -607,7 +607,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     // page's dynamic panel is the persistent visibility mechanism). Mirror/scan
     // errors (broken repos) stay noisy every startup.
     {
-        const QStringList overrideLines = OpenMVThirdParty::overridesText(m_thirdPartyOverrides);
+        const QStringList overrideLines = OpenMVThirdParty::overrideLines(m_thirdPartyRepos, m_thirdPartyOverrides);
 
         for(const QString &line : QStringList() << thirdPartyErrors << thirdPartyWarnings << overrideLines)
         {
