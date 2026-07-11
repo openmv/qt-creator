@@ -3639,6 +3639,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         m_boardTypeFolder = QString();
         m_boardResourceRoot = QString();
+        m_boardExampleType = QString();
         m_fullBoardType = QString();
         m_boardType = QString();
         m_boardId = QString();
@@ -3700,6 +3701,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             boardTypeLabel = value.toObject().value(QStringLiteral("boardDisplayName")).toString();
                             m_boardTypeFolder = value.toObject().value(QStringLiteral("boardFirmwareFolder")).toString();
                             m_boardResourceRoot = value.toObject().value(QStringLiteral("_resourceRoot")).toString();
+                            m_boardExampleType = value.toObject().value(QStringLiteral("exampleBoardType")).toString();
                             break;
                         }
                     }

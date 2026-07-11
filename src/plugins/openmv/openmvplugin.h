@@ -562,9 +562,12 @@ private:
     // otherwise "<name>" -- so callers transparently read dev or released resources.
     QString devResourceFolder(const QString &name) const;
 
-    // Load the example board/sensor filters from <examplesFolder>/index.csv (the
-    // released "examples" folder, or "examples-dev" for a development cam).
+    // Load the example board/sensor filters: the released "examples" folder's
+    // index.csv (or "examples-dev" for a development cam), plus each third-party
+    // repo's examples/index.csv appended, so vendor examples filter to their
+    // boards. appendExampleFilters() reads one index.csv into m_exampleFilters.
     void loadExampleFilters(const QString &examplesFolder);
+    void appendExampleFilters(const Utils::FilePath &indexCsv);
 
 public:
     enum DevResourcePart { DevExamples = 1, DevDocs = 2, DevFirmware = 4 };
@@ -668,6 +671,12 @@ private:
     // vendor's firmware dir for a third-party board, else the IDE's. Set at
     // board resolution alongside m_boardTypeFolder.
     QString m_boardResourceRoot;
+
+    // Optional per-board "exampleBoardType": when set, example filters are
+    // matched against this instead of m_boardTypeFolder, so a firmware-compatible
+    // clone (e.g. exampleBoardType "OPENMV4") inherits the stock examples. Set at
+    // board resolution alongside m_boardTypeFolder.
+    QString m_boardExampleType;
 
     Utils::FilePath firmwareResourcePath() const
     {

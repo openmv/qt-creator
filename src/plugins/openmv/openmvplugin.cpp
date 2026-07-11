@@ -92,6 +92,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_developmentCam = false;
     m_boardTypeFolder = QString();
     m_boardResourceRoot = QString();
+    m_boardExampleType = QString();
     m_fullBoardType = QString();
     m_boardType = QString();
     m_boardId = QString();
@@ -178,6 +179,9 @@ static bool removeRecursively(const Utils::FilePath &path, const QList<QString> 
 
     return ok;
 }
+
+// Defined below (near aboutToShowExamplesRecursive); used by the Examples menu builder above it.
+static void mergeExampleActions(QMenu *into, const QList<QAction *> &fromActions);
 
 static bool copyOperator(const Utils::FilePath &src, const Utils::FilePath &dest, QString *error)
 {
@@ -892,17 +896,33 @@ void OpenMVPlugin::extensionsInitialized()
 
             if((!m_enableFilteringExamplesAction->isChecked()) || m_connected)
             {
+                // Build the base (OpenMV) examples menu, then overlay each
+                // third-party repo that ships examples, merging by category.
+                // Repos are applied lowest priority first (m_thirdPartyRepos is
+                // highest first) so the highest-priority version wins a same-name
+                // collision -- matching the firmware override rule.
                 QMultiMap<QString, QAction *> actions = aboutToShowExamplesRecursive(Core::ICore::allUsersResourcePath(devResourceFolder(QStringLiteral("examples"))).toString(), examplesMenu->menu());
+                examplesMenu->menu()->addActions(actions.values());
 
-                if(actions.isEmpty())
+                for(auto it = m_thirdPartyRepos.crbegin(); it != m_thirdPartyRepos.crend(); ++it)
+                {
+                    Utils::FilePath examplesDir = it->writablePath.pathAppended(QStringLiteral("examples"));
+
+                    if(examplesDir.exists())
+                    {
+                        // Build this repo's examples parented to the persistent Examples
+                        // menu (so they are reclaimed by its clear() on the next open),
+                        // then overlay them onto what's already there.
+                        QMultiMap<QString, QAction *> vendorActions = aboutToShowExamplesRecursive(examplesDir.toString(), examplesMenu->menu());
+                        mergeExampleActions(examplesMenu->menu(), vendorActions.values());
+                    }
+                }
+
+                if(examplesMenu->menu()->isEmpty())
                 {
                     QAction *action = new QAction(Tr::tr("No examples found for your board"), examplesMenu->menu());
                     action->setDisabled(true);
                     examplesMenu->menu()->addAction(action);
-                }
-                else
-                {
-                    examplesMenu->menu()->addActions(actions.values());
                 }
             }
             else
@@ -4593,7 +4613,26 @@ void OpenMVPlugin::loadExampleFilters(const QString &examplesFolder)
 {
     m_exampleFilters = QList<exampleFilter_t>();
 
-    QFile filters(Core::ICore::allUsersResourcePath(examplesFolder + QStringLiteral("/index.csv")).toString());
+    // The released (or dev) examples folder's filters...
+    appendExampleFilters(Core::ICore::allUsersResourcePath(examplesFolder + QStringLiteral("/index.csv")));
+
+    // ...then each third-party repo that ships examples, so vendor examples
+    // filter to their own boards (matched by path regex, which targets each
+    // vendor's own example paths).
+    for(const OpenMVThirdParty::Repo &repo : m_thirdPartyRepos)
+    {
+        Utils::FilePath indexCsv = repo.writablePath.pathAppended(QStringLiteral("examples/index.csv"));
+
+        if(indexCsv.exists())
+        {
+            appendExampleFilters(indexCsv);
+        }
+    }
+}
+
+void OpenMVPlugin::appendExampleFilters(const Utils::FilePath &indexCsv)
+{
+    QFile filters(indexCsv.toString());
 
     if(filters.open(QIODevice::ReadOnly))
     {
@@ -4624,6 +4663,49 @@ void OpenMVPlugin::loadExampleFilters(const QString &examplesFolder)
                 filters.close();
                 break;
             }
+        }
+    }
+}
+
+// Overlay a higher-priority source's top-level example actions (`fromActions`)
+// onto the accumulated menu (`into`). Submenus with the same title merge
+// recursively; a leaf whose text already exists in `into` is overridden in
+// place (keeping its position) and the old leaf deleted; anything new is
+// appended. Called with sources in ascending priority (OpenMV base first,
+// highest-priority vendor last) so the highest-priority version of a colliding
+// example wins. All example actions are QObject-parented (hierarchically) under
+// the persistent Examples menu and reclaimed by its clear() on the next open;
+// the overridden leaf deleted here is the one exception clear() would miss. The
+// single-root example building is untouched -- this only runs when a third-party
+// repo ships examples.
+static void mergeExampleActions(QMenu *into, const QList<QAction *> &fromActions)
+{
+    for(QAction *fromAction : fromActions)
+    {
+        QAction *match = Q_NULLPTR;
+
+        for(QAction *intoAction : into->actions())
+        {
+            if(intoAction->text() == fromAction->text())
+            {
+                match = intoAction;
+                break;
+            }
+        }
+
+        if(fromAction->menu() && match && match->menu())
+        {
+            mergeExampleActions(match->menu(), fromAction->menu()->actions());
+        }
+        else if(match && (!fromAction->menu()) && (!match->menu()))
+        {
+            into->insertAction(match, fromAction);
+            into->removeAction(match);
+            delete match;
+        }
+        else
+        {
+            into->addAction(fromAction);
         }
     }
 }
@@ -6124,9 +6206,14 @@ bool OpenMVPlugin::matchExample(const QString &filePath, QString *flattenRegex)
 
     bool match = false;
 
+    // A third-party board may set "exampleBoardType" to a firmware-compatible
+    // OpenMV board's folder (e.g. "OPENMV4") so it inherits that board's stock
+    // examples; when set it replaces m_boardTypeFolder for filter matching.
+    const QString exampleBoardType = m_boardExampleType.isEmpty() ? m_boardTypeFolder : m_boardExampleType;
+
     for(const exampleFilter_t &filter : m_exampleFilters)
     {
-        if(filter.path.match(cleanFilePath).hasMatch() && filter.boardType.match(m_boardTypeFolder).hasMatch() && filter.sensorType.match(m_sensorType).hasMatch())
+        if(filter.path.match(cleanFilePath).hasMatch() && filter.boardType.match(exampleBoardType).hasMatch() && filter.sensorType.match(m_sensorType).hasMatch())
         {
             *flattenRegex = filter.flatten;
             match = true;
