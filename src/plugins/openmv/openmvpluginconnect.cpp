@@ -3639,7 +3639,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         m_boardTypeFolder = QString();
         m_boardResourceRoot = QString();
-        m_boardExampleType = QString();
+        m_boardVendor = QString();
+        m_boardFirmwareFolderAlias = QString();
         m_fullBoardType = QString();
         m_boardType = QString();
         m_boardId = QString();
@@ -3701,20 +3702,24 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             boardTypeLabel = value.toObject().value(QStringLiteral("boardDisplayName")).toString();
                             m_boardTypeFolder = value.toObject().value(QStringLiteral("boardFirmwareFolder")).toString();
                             m_boardResourceRoot = value.toObject().value(QStringLiteral("_resourceRoot")).toString();
-                            m_boardExampleType = value.toObject().value(QStringLiteral("exampleBoardType")).toString();
+                            m_boardVendor = value.toObject().value(QStringLiteral("_vendor")).toString();
+                            m_boardFirmwareFolderAlias = value.toObject().value(QStringLiteral("boardFirmwareFolderAlias")).toString();
                             break;
                         }
                     }
 
                     QNetworkAccessManager *manager = new QNetworkAccessManager(this);
 
-                    connect(manager, &QNetworkAccessManager::finished, this, [this, disableLicenseCheck, manager, board, id] (QNetworkReply *reply) {
+                    connect(manager, &QNetworkAccessManager::finished, this, [this, disableLicenseCheck, manager, board, id, vendor = m_boardVendor] (QNetworkReply *reply) {
 
                         QByteArray data = reply->readAll();
 
                         if((reply->error() == QNetworkReply::NoError) && (!data.isEmpty()))
                         {
                             if((!m_formKey.isEmpty())
+                                // Third-party (vendor) boards always license-check,
+                                // regardless of board type or the exemptions below.
+                                || (!vendor.isEmpty())
                                 // Skip OpenMV Cam M4's...
                                 || ((!disableLicenseCheck) && (board != QStringLiteral("M4"))))
                             {
@@ -3750,7 +3755,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                     m_registerButton->setVisible(true);
                                     m_registerButtonSpacer->setVisible(true);
 
-                                    QTimer::singleShot(0, this, [this, board, id] { registerOpenMVCam(board, id); });
+                                    QTimer::singleShot(0, this, [this, board, id, vendor] { registerOpenMVCam(board, id, vendor); });
                                 }
                                 else if((!m_formKey.isEmpty()) && (!QString::fromUtf8(data).contains(QStringLiteral("<p>Yes</p>"))))
                                 {
@@ -3786,6 +3791,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
                     request.setHeader(QNetworkRequest::UserAgentHeader, openmvServerUserAgent());
                     QByteArray postData = QStringLiteral("board=%1&id=%2").arg(board, id).toUtf8();
+                    if(!m_boardVendor.isEmpty()) postData += QStringLiteral("&vendor=%1").arg(m_boardVendor).toUtf8();
                     QNetworkReply *reply = manager->post(request, postData);
 
                     if(reply)

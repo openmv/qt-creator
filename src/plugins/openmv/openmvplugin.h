@@ -471,8 +471,8 @@ public:
 
 public slots: // private
 
-    void registerOpenMVCam(const QString board, const QString id);
-    bool registerOpenMVCamDialog(const QString board, const QString id);
+    void registerOpenMVCam(const QString board, const QString id, const QString vendor = QString());
+    bool registerOpenMVCamDialog(const QString board, const QString id, const QString vendor = QString());
     void packageUpdate();
     void bootloaderClicked();
     void editRomfsClicked(bool fromConnect = false, bool newRomfs = false);
@@ -672,11 +672,16 @@ private:
     // board resolution alongside m_boardTypeFolder.
     QString m_boardResourceRoot;
 
-    // Optional per-board "exampleBoardType": when set, example filters are
-    // matched against this instead of m_boardTypeFolder, so a firmware-compatible
-    // clone (e.g. exampleBoardType "OPENMV4") inherits the stock examples. Set at
-    // board resolution alongside m_boardTypeFolder.
-    QString m_boardExampleType;
+    // The third-party repository id ("_vendor") the connected board belongs to,
+    // empty for a built-in OpenMV board. Set at board resolution alongside
+    // m_boardTypeFolder; a non-empty value forces the server license check.
+    QString m_boardVendor;
+
+    // Optional per-board "boardFirmwareFolderAlias": when set, example and model
+    // filters are matched against this instead of m_boardTypeFolder, so a
+    // firmware-compatible clone (alias "OPENMV4") inherits the stock examples and
+    // models. Set at board resolution alongside m_boardTypeFolder.
+    QString m_boardFirmwareFolderAlias;
 
     Utils::FilePath firmwareResourcePath() const
     {

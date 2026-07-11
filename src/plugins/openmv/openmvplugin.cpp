@@ -92,7 +92,8 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_developmentCam = false;
     m_boardTypeFolder = QString();
     m_boardResourceRoot = QString();
-    m_boardExampleType = QString();
+    m_boardVendor = QString();
+    m_boardFirmwareFolderAlias = QString();
     m_fullBoardType = QString();
     m_boardType = QString();
     m_boardId = QString();
@@ -2708,7 +2709,7 @@ void OpenMVPlugin::extensionsInitialized()
     Core::ICore::statusBar()->addPermanentWidget(m_registerButton);
     Core::ICore::statusBar()->addPermanentWidget(m_registerButtonSpacer);
     connect(m_registerButton, &QToolButton::clicked, this, [this] {
-        if (m_connected) registerOpenMVCam(m_boardType, m_boardId);
+        if (m_connected) registerOpenMVCam(m_boardType, m_boardId, m_boardVendor);
     });
 
     m_sensorLabel = new Utils::ElidingLabel(Tr::tr("Sensor:"));
@@ -4184,7 +4185,7 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
     return Q_NULLPTR;
 }
 
-void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
+void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id, const QString vendor)
 {
     if(!m_formKey.isEmpty())
     {
@@ -4197,6 +4198,7 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
         request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
         request.setHeader(QNetworkRequest::UserAgentHeader, openmvServerUserAgent());
         QByteArray postData = QStringLiteral("board=%1&id=%2&form_key=%3").arg(board).arg(id).arg(m_formKey).toUtf8();
+        if(!vendor.isEmpty()) postData += QStringLiteral("&vendor=%1").arg(vendor).toUtf8();
         QNetworkReply *reply = manager.post(request, postData);
 
         if(reply)
@@ -4304,7 +4306,7 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
     == QMessageBox::Yes)
     {
-        if(registerOpenMVCamDialog(board, id)) return;
+        if(registerOpenMVCamDialog(board, id, vendor)) return;
     }
 
     if(QMessageBox::warning(Core::ICore::dialogParent(),
@@ -4314,7 +4316,7 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
     == QMessageBox::Yes)
     {
-        if(registerOpenMVCamDialog(board, id)) return;
+        if(registerOpenMVCamDialog(board, id, vendor)) return;
     }
 
     if(QMessageBox::warning(Core::ICore::dialogParent(),
@@ -4324,11 +4326,11 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id)
         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
     == QMessageBox::Yes)
     {
-        if(registerOpenMVCamDialog(board, id)) return;
+        if(registerOpenMVCamDialog(board, id, vendor)) return;
     }
 }
 
-bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id)
+bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id, const QString vendor)
 {
     forever
     {
@@ -4396,6 +4398,7 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
                 request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
                 request.setHeader(QNetworkRequest::UserAgentHeader, openmvServerUserAgent());
                 QByteArray postData = QStringLiteral("board=%1&id=%2&id_key=%3").arg(board).arg(id).arg(boardKey).toUtf8();
+                if(!vendor.isEmpty()) postData += QStringLiteral("&vendor=%1").arg(vendor).toUtf8();
                 QNetworkReply *reply = manager.post(request, postData);
 
                 if(reply)
@@ -6239,10 +6242,10 @@ bool OpenMVPlugin::matchExample(const QString &filePath, QString *flattenRegex)
 
     bool match = false;
 
-    // A third-party board may set "exampleBoardType" to a firmware-compatible
-    // OpenMV board's folder (e.g. "OPENMV4") so it inherits that board's stock
-    // examples; when set it replaces m_boardTypeFolder for filter matching.
-    const QString exampleBoardType = m_boardExampleType.isEmpty() ? m_boardTypeFolder : m_boardExampleType;
+    // A third-party board may set "boardFirmwareFolderAlias" to a firmware-
+    // compatible OpenMV board's folder (e.g. "OPENMV4") so it inherits that
+    // board's stock examples; when set it replaces m_boardTypeFolder for matching.
+    const QString exampleBoardType = m_boardFirmwareFolderAlias.isEmpty() ? m_boardTypeFolder : m_boardFirmwareFolderAlias;
 
     for(const exampleFilter_t &filter : m_exampleFilters)
     {

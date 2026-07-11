@@ -126,10 +126,10 @@ bool OpenMVModelZooBrowserFilter::filterAcceptsRow(int sourceRow, const QModelIn
         return false;
     }
 
-    // A third-party board may set "exampleBoardType" (a firmware-compatible
-    // OpenMV folder) to inherit that board's stock models, mirroring how example
-    // filtering works; when set it replaces boardFirmwareFolder for matching.
-    QString boardType = m_boardSettings.value(QStringLiteral("exampleBoardType")).toString();
+    // A third-party board may set "boardFirmwareFolderAlias" (a firmware-
+    // compatible OpenMV folder) to inherit that board's stock models, mirroring
+    // how example filtering works; when set it replaces boardFirmwareFolder.
+    QString boardType = m_boardSettings.value(QStringLiteral("boardFirmwareFolderAlias")).toString();
 
     if(boardType.isEmpty())
     {
