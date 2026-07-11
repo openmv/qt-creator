@@ -123,11 +123,13 @@ public:
         Channel firmwareDev;
         Channel examplesRelease;
         Channel modelsRelease;
+        Channel stubsRelease;
         Utils::FilePath writablePath;
         bool fromInstallDir = false;    // also present in the read-only install dir
         QString firmwareVersion;        // installed sidecar versions ("" if absent)
         QString examplesVersion;
         QString modelsVersion;
+        QString stubsVersion;
     };
 
     struct OverrideRecord
@@ -226,7 +228,13 @@ public:
         FirmwarePart = 1,
         ExamplesPart = 2,
         ModelsPart = 4,
+        StubsPart = 8,
     };
+
+    // Absolute paths of every installed repo's stubs/ dir that contains .pyi
+    // files, highest priority first -- fed to the language server as jedi
+    // extra_paths so vendor stubs provide completion for custom firmware APIs.
+    static QStringList stubPaths();
 
     // One updatable repo's check result: the freshly fetched config.json (raw
     // and parsed) and the bitmask of parts whose remote version is newer.

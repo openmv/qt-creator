@@ -563,6 +563,10 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
     OpenMVThirdParty::mirrorInstallDirRepos(&thirdPartyErrors);
     m_thirdPartyRepos = OpenMVThirdParty::scanRepos(&thirdPartyErrors);
 
+    // Feed the third-party repo stub directories to the Python language server as
+    // jedi extra_paths so vendor .pyi stubs complete their custom firmware APIs.
+    Python::Internal::PyLSClient::setExtraStubPaths(OpenMVThirdParty::stubPaths());
+
     ///////////////////////////////////////////////////////////////////////////
 
     QFile firmwareSettings(Core::ICore::allUsersResourcePath(QStringLiteral("firmware/settings.json")).toString());
@@ -3307,7 +3311,7 @@ bool OpenMVPlugin::delayedInitialize()
     // each repo's configUrl in the background; if anything is newer, ONE
     // aggregated prompt is shown once no other modal dialog is open.
     OpenMVThirdParty::checkAndPrompt(this,
-        OpenMVThirdParty::FirmwarePart | (m_viewerMode ? 0 : (OpenMVThirdParty::ExamplesPart | OpenMVThirdParty::ModelsPart)), false);
+        OpenMVThirdParty::FirmwarePart | (m_viewerMode ? 0 : (OpenMVThirdParty::ExamplesPart | OpenMVThirdParty::ModelsPart | OpenMVThirdParty::StubsPart)), false);
 
     // -auto_run in viewer mode runs the open script -- a file passed on the command
     // line that the IDE opens, after which auto-run runs the open document. The IDE

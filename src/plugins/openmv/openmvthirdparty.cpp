@@ -150,6 +150,9 @@ static bool parseConfigData(const QByteArray &data, const QString &context, cons
     QJsonObject models = obj.value(QStringLiteral("models")).toObject();
     repo->modelsRelease = parseChannel(models, QStringLiteral("release"));
 
+    QJsonObject stubs = obj.value(QStringLiteral("stubs")).toObject();
+    repo->stubsRelease = parseChannel(stubs, QStringLiteral("release"));
+
     return true;
 }
 
@@ -264,7 +267,7 @@ void OpenMVThirdParty::mirrorInstallDirRepos(QStringList *warnings)
         // still pushes its content through.
         bool updated = false;
 
-        for (const QString &part : {QStringLiteral("firmware"), QStringLiteral("examples"), QStringLiteral("models")})
+        for (const QString &part : {QStringLiteral("firmware"), QStringLiteral("examples"), QStringLiteral("models"), QStringLiteral("stubs")})
         {
             QString sidecar = part + QStringLiteral(".version");
 
@@ -344,6 +347,7 @@ QList<OpenMVThirdParty::Repo> OpenMVThirdParty::scanRepos(QStringList *warnings)
         repo.firmwareVersion = readVersionFile(vendorDir.pathAppended(QStringLiteral("firmware.version")));
         repo.examplesVersion = readVersionFile(vendorDir.pathAppended(QStringLiteral("examples.version")));
         repo.modelsVersion = readVersionFile(vendorDir.pathAppended(QStringLiteral("models.version")));
+        repo.stubsVersion = readVersionFile(vendorDir.pathAppended(QStringLiteral("stubs.version")));
 
         repos.append(repo);
     }
@@ -874,6 +878,12 @@ void OpenMVThirdParty::launchUpdateCheck(const QList<Repo> &repos, int parts, QO
                         check.parts |= ModelsPart;
                     }
 
+                    if ((parts & StubsPart) && check.remote.stubsRelease.isValid()
+                    && versionGreater(check.remote.stubsRelease.version, repo.stubsVersion))
+                    {
+                        check.parts |= StubsPart;
+                    }
+
                     if (check.parts)
                     {
                         results->append(check);
@@ -907,6 +917,7 @@ bool OpenMVThirdParty::installParts(const UpdateCheck &check, QString *error, QW
         { FirmwarePart, QStringLiteral("firmware"), check.remote.firmwareRelease },
         { ExamplesPart, QStringLiteral("examples"), check.remote.examplesRelease },
         { ModelsPart, QStringLiteral("models"), check.remote.modelsRelease },
+        { StubsPart, QStringLiteral("stubs"), check.remote.stubsRelease },
     };
 
     for (const PartInfo &part : partList)
@@ -1001,6 +1012,12 @@ void OpenMVThirdParty::checkAndPrompt(QObject *context, int parts, bool interact
                 {
                     what.append(Tr::tr("models %L1 -> %L2").arg(check.repo.modelsVersion.isEmpty()
                         ? Tr::tr("none") : check.repo.modelsVersion).arg(check.remote.modelsRelease.version));
+                }
+
+                if (check.parts & StubsPart)
+                {
+                    what.append(Tr::tr("stubs %L1 -> %L2").arg(check.repo.stubsVersion.isEmpty()
+                        ? Tr::tr("none") : check.repo.stubsVersion).arg(check.remote.stubsRelease.version));
                 }
 
                 lines.append(QStringLiteral("%1 - %2").arg(check.remote.displayName).arg(what.join(QStringLiteral(", "))));
@@ -1132,7 +1149,8 @@ bool OpenMVThirdParty::installFromUrl(const QUrl &url, bool overwrite, QString *
     check.remoteConfig = data;
     check.parts = FirmwarePart
         | (remote.examplesRelease.isValid() ? ExamplesPart : 0)
-        | (remote.modelsRelease.isValid() ? ModelsPart : 0);
+        | (remote.modelsRelease.isValid() ? ModelsPart : 0)
+        | (remote.stubsRelease.isValid() ? StubsPart : 0);
 
     if (!installParts(check, error, parent))
     {
@@ -1154,6 +1172,25 @@ OpenMVThirdParty::Repo OpenMVThirdParty::repoForFirmwareRoot(const QString &firm
     }
 
     return Repo();
+}
+
+QStringList OpenMVThirdParty::stubPaths()
+{
+    QStringList paths;
+
+    for (const Repo &repo : scanRepos()) // highest priority first
+    {
+        Utils::FilePath stubs = repo.writablePath.pathAppended(QStringLiteral("stubs"));
+
+        if (stubs.exists()
+        && QDirIterator(stubs.toString(), QStringList() << QStringLiteral("*.pyi"),
+                        QDir::Files, QDirIterator::Subdirectories).hasNext())
+        {
+            paths.append(stubs.toString());
+        }
+    }
+
+    return paths;
 }
 
 Utils::FilePath OpenMVThirdParty::syncDevChannelBlocking(const Repo &repo, QString *error, QWidget *parent)
@@ -1351,6 +1388,7 @@ QStringList OpenMVThirdParty::overrideLines(const QList<Repo> &repos,
 
     appendResourceOverrides(repos, QStringLiteral("examples"), Tr::tr("example"), &lines);
     appendResourceOverrides(repos, QStringLiteral("models"), Tr::tr("model"), &lines);
+    appendResourceOverrides(repos, QStringLiteral("stubs"), Tr::tr("stub"), &lines);
 
     return lines;
 }
