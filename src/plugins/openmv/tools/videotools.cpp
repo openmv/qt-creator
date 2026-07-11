@@ -68,6 +68,28 @@
 namespace OpenMV {
 namespace Internal {
 
+// A private per-user subdirectory for the transient files the video tools write
+// (extracted frames, the transcoded .mjpeg, the ffplay launch scripts) instead
+// of dropping them loose in the shared %TEMP% root, where their fixed / basename
+// -derived names collide with a second IDE instance or unrelated files and are
+// exposed to anything churning Temp.
+static QString videoTempDir()
+{
+    const QString dir = QDir::cleanPath(QDir::tempPath() + QStringLiteral("/openmvide-video"));
+    QDir().mkpath(dir);
+    return dir;
+}
+
+// The ffplay launch script is written and executed detached, so a fixed name
+// races a second IDE instance still reading its own copy. Qualify it by process
+// id: one file per instance, harmlessly overwritten on that instance's next
+// launch (so it never accumulates). suffix is "cmd" or "sh".
+static QString ffplayScriptPath(const QString &suffix)
+{
+    return QDir::cleanPath(videoTempDir() + QDir::separator()
+        + QString(QStringLiteral("openmvide-ffplay-%1.%2")).arg(QCoreApplication::applicationPid()).arg(suffix));
+}
+
 static QByteArray jpgToBytes(const QImage &image)
 {
     QByteArray out;
@@ -444,7 +466,7 @@ static QString handleImageWriterFiles(const QString &path)
 
                 if((version == 10) || (version == 11) || (version == 20) || (version == 21))
                 {
-                    QFile tempFile(QDir::tempPath() + QDir::separator() + QFileInfo(file).completeBaseName() + QStringLiteral(".mjpeg"));
+                    QFile tempFile(videoTempDir() + QDir::separator() + QFileInfo(file).completeBaseName() + QStringLiteral(".mjpeg"));
 
                     if(tempFile.open(QIODevice::WriteOnly))
                     {
@@ -719,7 +741,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
 
     if(dst.toLower().endsWith(QStringLiteral(".bin")))
     {
-        newDst = QDir::tempPath() + QDir::separator() + QFileInfo(dst).completeBaseName() + QStringLiteral("-%07d.jpg");
+        newDst = videoTempDir() + QDir::separator() + QFileInfo(dst).completeBaseName() + QStringLiteral("-%07d.jpg");
         reformat = true;
     }
 
@@ -983,7 +1005,7 @@ static bool playVideoFile(const QString &path)
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.cmd"));
+        QFile file(ffplayScriptPath(QStringLiteral("cmd")));
 
         if(file.open(QIODevice::WriteOnly))
         {
@@ -1003,7 +1025,7 @@ static bool playVideoFile(const QString &path)
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+        QFile file(ffplayScriptPath(QStringLiteral("sh")));
 
         if(file.open(QIODevice::WriteOnly))
         {
@@ -1030,7 +1052,7 @@ static bool playVideoFile(const QString &path)
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+            QFile file(ffplayScriptPath(QStringLiteral("sh")));
 
             if(file.open(QIODevice::WriteOnly))
             {
@@ -1098,7 +1120,7 @@ static bool playVideoFile(const QString &path)
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         {
-            QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+            QFile file(ffplayScriptPath(QStringLiteral("sh")));
 
             if(file.open(QIODevice::WriteOnly))
             {
@@ -1183,7 +1205,7 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
-        QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.cmd"));
+        QFile file(ffplayScriptPath(QStringLiteral("cmd")));
 
         if(file.open(QIODevice::WriteOnly))
         {
@@ -1203,7 +1225,7 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+        QFile file(ffplayScriptPath(QStringLiteral("sh")));
 
         if(file.open(QIODevice::WriteOnly))
         {
@@ -1230,7 +1252,7 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
         {
-            QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+            QFile file(ffplayScriptPath(QStringLiteral("sh")));
 
             if(file.open(QIODevice::WriteOnly))
             {
@@ -1298,7 +1320,7 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         {
-            QFile file(QDir::tempPath() + QDir::separator() + QStringLiteral("openmvide-ffplay.sh"));
+            QFile file(ffplayScriptPath(QStringLiteral("sh")));
 
             if(file.open(QIODevice::WriteOnly))
             {
