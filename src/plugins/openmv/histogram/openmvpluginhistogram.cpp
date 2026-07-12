@@ -33,6 +33,8 @@
 
 #include "openmvtr.h"
 
+#include <cmath>
+
 #include <utils/elidinglabel.h>
 #include <utils/theme/theme.h>
 
@@ -51,8 +53,6 @@ extern const uint8_t rb528_table[32];
 extern const uint8_t g628_table[64];
 extern const uint8_t rb825_table[256];
 extern const uint8_t g826_table[256];
-extern const int8_t lab_table[196608];
-extern const int8_t yuv_table[196608];
 
 namespace OpenMV {
 namespace Internal {
@@ -72,48 +72,110 @@ static inline int toB5(QRgb value)
     return rb825_table[qBlue(value)]; // 0:255 -> 0:31
 }
 
-static inline int toRGB565(QRgb value)
-{
-    int r = toR5(value);
-    int g = toG6(value);
-    int b = toB5(value);
-
-    return (r << 3) | (g >> 3) | ((g & 0x7) << 13) | (b << 8); // byte reversed.
-}
+// The 256-bin channels below convert straight from the full 8-bit RGB pixel.
+// The firmware's own conversions run on RGB565, but quantizing the streamed
+// RGB888 frame down to RGB565 first (the old lab_table/yuv_table path)
+// collapses it to so few distinct values that the histograms comb into
+// spikes with empty bins between. Grayscale, Y, U, and V use the firmware's
+// integer weights (which sum to exactly neutral for gray pixels), so values
+// still line up with on-camera thresholds.
 
 static inline int toGrayscale(QRgb value)
 {
-    return yuv_table[(toRGB565(value)*3)+0] + 128; // 0:255 -> 0:255
+    return ((qRed(value) * 38) + (qGreen(value) * 75) + (qBlue(value) * 15)) >> 7; // 0:255
+}
+
+// CIELAB support (sRGB, D65), on lookup tables so the per-pixel cost is a
+// few multiplies: srgbToLinear() linearizes an 8-bit channel and labF() is
+// the LAB transfer function f(t) sampled over t in [0:1].
+
+static inline double srgbToLinear(int v)
+{
+    static double table[256];
+    static bool init = false;
+
+    if(!init)
+    {
+        for(int i = 0; i < 256; i++)
+        {
+            double s = i / 255.0;
+            table[i] = (s <= 0.04045) ? (s / 12.92) : std::pow((s + 0.055) / 1.055, 2.4);
+        }
+
+        init = true;
+    }
+
+    return table[v];
+}
+
+#define LAB_F_LUT_SIZE 4096
+
+static inline double labF(double t)
+{
+    static double table[LAB_F_LUT_SIZE];
+    static bool init = false;
+
+    if(!init)
+    {
+        for(int i = 0; i < LAB_F_LUT_SIZE; i++)
+        {
+            double x = i / double(LAB_F_LUT_SIZE - 1);
+            table[i] = (x > (216.0 / 24389.0)) ? std::cbrt(x)
+                                               : ((((24389.0 / 27.0) * x) + 16.0) / 116.0);
+        }
+
+        init = true;
+    }
+
+    return table[qBound(0, qRound(t * (LAB_F_LUT_SIZE - 1)), LAB_F_LUT_SIZE - 1)];
 }
 
 static inline int toL(QRgb value)
 {
-    return lab_table[(toRGB565(value)*3)+0]; // 0:255 -> 0:100
+    double y = (0.2126729 * srgbToLinear(qRed(value))) +
+               (0.7151522 * srgbToLinear(qGreen(value))) +
+               (0.0721750 * srgbToLinear(qBlue(value)));
+
+    return qBound(0, qRound((116.0 * labF(y)) - 16.0), 100); // 0:100
 }
 
 static inline int toA(QRgb value)
 {
-    return lab_table[(toRGB565(value)*3)+1] + 128; // 0:255 -> 0:255
+    double lr = srgbToLinear(qRed(value));
+    double lg = srgbToLinear(qGreen(value));
+    double lb = srgbToLinear(qBlue(value));
+
+    double x = ((0.4124564 * lr) + (0.3575761 * lg) + (0.1805375 * lb)) / 0.95047;
+    double y = (0.2126729 * lr) + (0.7151522 * lg) + (0.0721750 * lb);
+
+    return qBound(0, qRound(500.0 * (labF(x) - labF(y))) + 128, 255); // 0:255
 }
 
 static inline int toB(QRgb value)
 {
-    return lab_table[(toRGB565(value)*3)+2] + 128; // 0:255 -> 0:255
+    double lr = srgbToLinear(qRed(value));
+    double lg = srgbToLinear(qGreen(value));
+    double lb = srgbToLinear(qBlue(value));
+
+    double y = (0.2126729 * lr) + (0.7151522 * lg) + (0.0721750 * lb);
+    double z = ((0.0193339 * lr) + (0.1191920 * lg) + (0.9503041 * lb)) / 1.08883;
+
+    return qBound(0, qRound(200.0 * (labF(y) - labF(z))) + 128, 255); // 0:255
 }
 
 static inline int toY(QRgb value)
 {
-    return yuv_table[(toRGB565(value)*3)+0] + 128; // 0:255 -> 0:255
+    return ((qRed(value) * 38) + (qGreen(value) * 75) + (qBlue(value) * 15)) >> 7; // 0:255
 }
 
 static inline int toU(QRgb value)
 {
-    return yuv_table[(toRGB565(value)*3)+1] + 128; // 0:255 -> 0:255
+    return (((qRed(value) * -21) + (qGreen(value) * -43) + (qBlue(value) * 64)) >> 7) + 128; // 0:255
 }
 
 static inline int toV(QRgb value)
 {
-    return yuv_table[(toRGB565(value)*3)+2] + 128; // 0:255 -> 0:255
+    return (((qRed(value) * 64) + (qGreen(value) * -54) + (qBlue(value) * -10)) >> 7) + 128; // 0:255
 }
 
 static inline int getValue(int value, int channel)
