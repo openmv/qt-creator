@@ -2440,7 +2440,9 @@ void OpenMVPlugin::extensionsInitialized()
     paneView->insertItem(MEMORY_VIEW, Tr::tr("Memory"));
     paneView->setCurrentIndex(HISTOGRAM_VIEW);
     paneView->setToolTip(Tr::tr("Select what this pane displays"));
-    styledBar1Layout->addWidget(paneView);
+    // Equal stretch with the selector stack below: the bar splits in half
+    // between the view selector and the current view's controls.
+    styledBar1Layout->addWidget(paneView, 1);
     styledBar1Layout->addSpacing(6);
     styledBar1->setLayout(styledBar1Layout);
 
@@ -2461,7 +2463,10 @@ void OpenMVPlugin::extensionsInitialized()
     QStackedWidget *selectorStack = new QStackedWidget;
     selectorStack->addWidget(colorSpace);  // HISTOGRAM_VIEW
     selectorStack->addWidget(new QWidget); // MEMORY_VIEW (no controls)
-    styledBar1Layout->addWidget(selectorStack);
+    // Preferred (not the QStackedWidget default of Expanding) plus the same
+    // stretch as the view selector above -> each takes half the bar.
+    selectorStack->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+    styledBar1Layout->addWidget(selectorStack, 1);
 
     m_histogram = new OpenMVPluginHistogram;
     m_memoryView = new OpenMVMemoryView;
@@ -2486,7 +2491,15 @@ void OpenMVPlugin::extensionsInitialized()
     // Memory view updates. processEvents() polls getMemoryStats() on
     // m_memoryStatsTimer while connected, alongside the other pollers; this
     // consumer just renders whatever arrives.
-    connect(m_iodevice, &OpenMVPluginIO::memoryStats, m_memoryView, &OpenMVMemoryView::memoryStats);
+    // Drop results that land after a disconnect (a poll can be in flight when
+    // the connection drops) so the view's frozen data isn't replaced by the
+    // empty "not available" state.
+    connect(m_iodevice, &OpenMVPluginIO::memoryStats, this, [this] (const QVariantList &entries) {
+        if(m_connected)
+        {
+            m_memoryView->memoryStats(entries);
+        }
+    });
 
     connect(paneView, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, [paneStack, selectorStack] (int index) {
         paneStack->setCurrentIndex(index);
@@ -2786,6 +2799,10 @@ void OpenMVPlugin::extensionsInitialized()
     m_fpsButton->setMinimumWidth(m_fpsButton->fontMetrics().horizontalAdvance(QStringLiteral("FPS: 000.000")));
     Core::ICore::statusBar()->addPermanentWidget(m_fpsButton);
     connect(m_fpsButton, &QToolButton::clicked, this, &OpenMVPlugin::setSpacing);
+
+    // The Memory view's labels track the status bar's font so its text renders
+    // at the same size as the rest of the IDE chrome.
+    m_memoryView->setFont(m_boardLabel->font());
 
 #ifdef Q_OS_MAC
     QApplication::setFont(m_boardLabel->font(), "QToolButton");

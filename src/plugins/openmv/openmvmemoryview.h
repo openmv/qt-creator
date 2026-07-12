@@ -89,7 +89,9 @@ private:
     QLabel *m_peakValue;
 };
 
-class OpenMVMemoryView : public QScrollArea
+// A two-page stack: a big centered status message (styled like the frame
+// buffer's "No Image" text) or the scrollable list of pool cards.
+class OpenMVMemoryView : public QStackedWidget
 {
     Q_OBJECT
 
@@ -106,6 +108,7 @@ public slots:
 
 private:
 
+    void clearCards();
     void showMessage(const QString &message);
 
     QLabel *m_message;

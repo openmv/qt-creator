@@ -4429,7 +4429,9 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             m_getScriptRunningTimer.restart();
             m_getTxBufferTimer.restart();
             m_memoryStatsTimer.restart();
-            m_memoryView->reset();
+            // m_memoryView keeps its last data on disconnect (updates just
+            // stop); the connect path's reset() drops it when a new session
+            // starts.
 
             m_timer.restart();
             m_queue.clear();

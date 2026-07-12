@@ -31,6 +31,8 @@
 #include "openmvmemoryview.h"
 #include "openmvtr.h"
 
+#include <utils/theme/theme.h>
+
 namespace OpenMV {
 namespace Internal {
 
@@ -196,18 +198,20 @@ void OpenMVMemoryGraph::paintEvent(QPaintEvent *event)
 
 OpenMVMemoryCard::OpenMVMemoryCard(QWidget *parent) : QFrame(parent)
 {
-    setFrameShape(QFrame::StyledPanel);
-
     QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->setContentsMargins(8, 8, 8, 8);
+    layout->setContentsMargins(4, 4, 4, 4);
     layout->setSpacing(4);
 
-    m_header = new QLabel;
+    // All text is mouse-selectable so figures can be copied out. The header
+    // bolds via stylesheet (an explicit QFont would freeze its size and stop
+    // parent font changes from propagating).
+    auto makeSelectable = [](QLabel *label) -> QLabel * {
+        label->setTextInteractionFlags(Qt::TextSelectableByMouse);
+        return label;
+    };
 
-    QFont bold = m_header->font();
-    bold.setBold(true);
-    m_header->setFont(bold);
-
+    m_header = makeSelectable(new QLabel);
+    m_header->setStyleSheet(QStringLiteral("font-weight: bold"));
     layout->addWidget(m_header);
 
     m_graph = new OpenMVMemoryGraph;
@@ -217,25 +221,25 @@ OpenMVMemoryCard::OpenMVMemoryCard(QWidget *parent) : QFrame(parent)
     grid->setContentsMargins(0, 0, 0, 0);
     grid->setSpacing(2);
 
-    grid->addWidget(new QLabel(Tr::tr("Used / Total")), 0, 0);
-    m_usedValue = new QLabel;
+    grid->addWidget(makeSelectable(new QLabel(Tr::tr("Used / Total"))), 0, 0);
+    m_usedValue = makeSelectable(new QLabel);
     m_usedValue->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
     grid->addWidget(m_usedValue, 0, 1);
 
-    grid->addWidget(new QLabel(Tr::tr("Free")), 1, 0);
-    m_freeValue = new QLabel;
+    grid->addWidget(makeSelectable(new QLabel(Tr::tr("Free"))), 1, 0);
+    m_freeValue = makeSelectable(new QLabel);
     m_freeValue->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
     grid->addWidget(m_freeValue, 1, 1);
 
-    m_persistLabel = new QLabel(Tr::tr("Persist"));
+    m_persistLabel = makeSelectable(new QLabel(Tr::tr("Persist")));
     grid->addWidget(m_persistLabel, 2, 0);
-    m_persistValue = new QLabel;
+    m_persistValue = makeSelectable(new QLabel);
     m_persistValue->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
     grid->addWidget(m_persistValue, 2, 1);
 
-    m_peakLabel = new QLabel(Tr::tr("Peak"));
+    m_peakLabel = makeSelectable(new QLabel(Tr::tr("Peak")));
     grid->addWidget(m_peakLabel, 3, 0);
-    m_peakValue = new QLabel;
+    m_peakValue = makeSelectable(new QLabel);
     m_peakValue->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
     grid->addWidget(m_peakValue, 3, 1);
 
@@ -269,16 +273,22 @@ void OpenMVMemoryCard::setData(const QVariantMap &entry, int umaIndex,
         .arg(formatBytes(used)).arg(formatBytes(total)).arg(pct));
     m_freeValue->setText(formatBytes(entry.value(QStringLiteral("free")).toUInt()));
 
-    // The firmware only tracks persist/peak for UMA pools.
+    // The firmware only tracks persist for UMA pools. It doesn't track a GC
+    // peak either (the field is 0), so the GC card reports the highest usage
+    // this view has observed since connecting -- the graph's peak line.
     m_persistLabel->setVisible(!isGC);
     m_persistValue->setVisible(!isGC);
-    m_peakLabel->setVisible(!isGC);
-    m_peakValue->setVisible(!isGC);
 
-    if(!isGC)
+    if(isGC)
+    {
+        m_peakValue->setText(formatBytes(peak));
+        m_peakValue->setToolTip(Tr::tr("Highest usage observed while connected"));
+    }
+    else
     {
         m_persistValue->setText(formatBytes(entry.value(QStringLiteral("persist")).toUInt()));
         m_peakValue->setText(formatBytes(entry.value(QStringLiteral("peak")).toUInt()));
+        m_peakValue->setToolTip(QString());
     }
 
     m_graph->setHistory(history, peak);
@@ -286,43 +296,63 @@ void OpenMVMemoryCard::setData(const QVariantMap &entry, int umaIndex,
 
 ///////////////////////////////////////////////////////////////////////////////
 
-OpenMVMemoryView::OpenMVMemoryView(QWidget *parent) : QScrollArea(parent)
+OpenMVMemoryView::OpenMVMemoryView(QWidget *parent) : QStackedWidget(parent)
 {
-    setWidgetResizable(true);
-    setFrameShape(QFrame::NoFrame);
-
-    QWidget *container = new QWidget;
-    QVBoxLayout *layout = new QVBoxLayout(container);
-    layout->setContentsMargins(6, 6, 6, 6);
-    layout->setSpacing(6);
-
+    // Page 0: a status message, centered and styled like the frame buffer's
+    // "No Image" text.
     m_message = new QLabel;
     m_message->setAlignment(Qt::AlignCenter);
     m_message->setWordWrap(true);
-    m_message->setEnabled(false); // greyed helper text
-    layout->addWidget(m_message);
+    addWidget(m_message);
+
+    // Page 1: the scrollable list of pool cards.
+    QScrollArea *scrollArea = new QScrollArea;
+    scrollArea->setWidgetResizable(true);
+    scrollArea->setFrameShape(QFrame::NoFrame);
+
+    QWidget *container = new QWidget;
+    QVBoxLayout *layout = new QVBoxLayout(container);
+    layout->setContentsMargins(4, 4, 4, 4);
+    layout->setSpacing(4);
 
     m_cardsLayout = new QVBoxLayout;
     m_cardsLayout->setContentsMargins(0, 0, 0, 0);
-    m_cardsLayout->setSpacing(6);
+    m_cardsLayout->setSpacing(4);
     layout->addLayout(m_cardsLayout);
 
     layout->addStretch(1);
 
-    setWidget(container);
+    scrollArea->setWidget(container);
+    addWidget(scrollArea);
 
     reset();
 }
 
-void OpenMVMemoryView::showMessage(const QString &message)
+void OpenMVMemoryView::clearCards()
 {
-    qDeleteAll(m_cards);
+    // Cards and their separator lines both live in m_cardsLayout.
+    while(QLayoutItem *item = m_cardsLayout->takeAt(0))
+    {
+        delete item->widget();
+        delete item;
+    }
+
     m_cards.clear();
     m_histories.clear();
     m_peaks.clear();
+}
 
-    m_message->setText(message);
-    m_message->setVisible(true);
+void OpenMVMemoryView::showMessage(const QString &message)
+{
+    clearCards();
+
+    // The same markup the frame buffer uses for its "No Image" placeholder.
+    m_message->setText(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
+        "<div align=\"center\">"
+        "<div style=\"font-size:20px\">%2</div>"
+        "</div>"
+        "</body></html>").arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name(), message));
+    setCurrentIndex(0);
 }
 
 void OpenMVMemoryView::reset()
@@ -340,13 +370,32 @@ void OpenMVMemoryView::memoryStats(const QVariantList &entries)
 
     if(m_cards.size() != entries.size())
     {
-        qDeleteAll(m_cards);
-        m_cards.clear();
-        m_histories.clear();
-        m_peaks.clear();
+        clearCards();
 
         for(int i = 0; i < entries.size(); i++)
         {
+            if(i)
+            {
+                // Faint 1px separator between pools instead of per-card
+                // borders, inset to align with the cards' text margins.
+                QWidget *line = new QWidget;
+                line->setFixedHeight(1);
+                line->setAutoFillBackground(true);
+
+                QColor color = palette().color(QPalette::Text);
+                color.setAlpha(38);
+
+                QPalette linePalette = line->palette();
+                linePalette.setColor(QPalette::Window, color);
+                line->setPalette(linePalette);
+
+                QWidget *divider = new QWidget;
+                QHBoxLayout *dividerLayout = new QHBoxLayout(divider);
+                dividerLayout->setContentsMargins(4, 0, 4, 0);
+                dividerLayout->addWidget(line);
+                m_cardsLayout->addWidget(divider);
+            }
+
             OpenMVMemoryCard *card = new OpenMVMemoryCard;
             m_cardsLayout->addWidget(card);
             m_cards.append(card);
@@ -355,7 +404,7 @@ void OpenMVMemoryView::memoryStats(const QVariantList &entries)
         }
     }
 
-    m_message->setVisible(false);
+    setCurrentIndex(1);
 
     int umaIndex = 0;
 
