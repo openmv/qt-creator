@@ -85,6 +85,12 @@ void ElidingLabel::paintEvent(QPaintEvent *)
         // OPENMV-DIFF //
         // updateToolTip(QString());
         // OPENMV-DIFF //
+        // OPENMV-DIFF //
+        // The text fits, so let QLabel paint it natively -- textInteractionFlags
+        // selection highlights only render through QLabel's own painting.
+        QLabel::paintEvent(nullptr);
+        return;
+        // OPENMV-DIFF //
     }
     int flags = QStyle::visualAlignment(layoutDirection(), alignment()) | Qt::TextSingleLine;
 

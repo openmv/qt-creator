@@ -590,6 +590,15 @@ OpenMVPluginHistogram::OpenMVPluginHistogram(QWidget *parent) : QWidget(parent),
         label->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
     }
 
+    // Every label (stat names, values, and the channel letters) is
+    // mouse-selectable so figures can be copied out. ElidingLabel renders the
+    // selection through QLabel's native painting whenever its text fits (see
+    // the OPENMV-DIFF in elidinglabel.cpp).
+    const QList<QLabel *> allLabels = findChildren<QLabel *>();
+    for (QLabel *label : allLabels) {
+        label->setTextInteractionFlags(Qt::TextSelectableByMouse);
+    }
+
     // Keep the channel labels (R/G/B, ...) at their minimum width so they hug the left of each stats
     // row instead of centering in a wide column.
     m_ui->C0ChannelLabel->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
