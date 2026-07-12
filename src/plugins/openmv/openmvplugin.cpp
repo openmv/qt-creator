@@ -68,7 +68,9 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
 
     m_ioport = Q_NULLPTR;
     m_iodevice = Q_NULLPTR;
+    m_boardInfoView = Q_NULLPTR;
     m_memoryView = Q_NULLPTR;
+    m_statisticsView = Q_NULLPTR;
 
     m_frameSizeDumpTimer.start();
     m_getScriptRunningTimer.start();
@@ -76,6 +78,8 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_getStateTimer.start();
     m_readProfileTimer.start();
     m_memoryStatsTimer.start();
+    m_systemInfoTimer.start();
+    m_protocolStatsTimer.start();
 
     m_timer.start();
     m_queue = QQueue<qint64>();
@@ -2437,7 +2441,9 @@ void OpenMVPlugin::extensionsInitialized()
     paneView->setProperty("hideborder", true);
     paneView->setProperty("drawleftborder", false);
     paneView->insertItem(HISTOGRAM_VIEW, Tr::tr("Histogram"));
+    paneView->insertItem(BOARD_INFO_VIEW, Tr::tr("Board Info"));
     paneView->insertItem(MEMORY_VIEW, Tr::tr("Memory"));
+    paneView->insertItem(STATISTICS_VIEW, Tr::tr("Statistics"));
     paneView->setCurrentIndex(HISTOGRAM_VIEW);
     paneView->setToolTip(Tr::tr("Select what this pane displays"));
     // Equal stretch with the selector stack below: the bar splits in half
@@ -2462,17 +2468,23 @@ void OpenMVPlugin::extensionsInitialized()
     // whatever the pane is displaying rather than just being hidden.
     QStackedWidget *selectorStack = new QStackedWidget;
     selectorStack->addWidget(colorSpace);  // HISTOGRAM_VIEW
+    selectorStack->addWidget(new QWidget); // BOARD_INFO_VIEW (no controls)
     selectorStack->addWidget(new QWidget); // MEMORY_VIEW (no controls)
+    selectorStack->addWidget(new QWidget); // STATISTICS_VIEW (no controls)
     // Preferred (not the QStackedWidget default of Expanding) plus the same
     // stretch as the view selector above -> each takes half the bar.
     selectorStack->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     styledBar1Layout->addWidget(selectorStack, 1);
 
     m_histogram = new OpenMVPluginHistogram;
+    m_boardInfoView = new OpenMVBoardInfoView;
     m_memoryView = new OpenMVMemoryView;
+    m_statisticsView = new OpenMVStatisticsView;
     QStackedWidget *paneStack = new QStackedWidget;
     paneStack->addWidget(m_histogram);
+    paneStack->addWidget(m_boardInfoView);
     paneStack->addWidget(m_memoryView);
+    paneStack->addWidget(m_statisticsView);
     QWidget *tempWidget1 = new QWidget;
     QVBoxLayout *tempLayout1 = new QVBoxLayout;
     tempLayout1->setContentsMargins(0, 0, 0, 0);
@@ -2488,18 +2500,19 @@ void OpenMVPlugin::extensionsInitialized()
 
     connect(m_histogram, &OpenMVPluginHistogram::focusMetric, m_frameBuffer, &OpenMVPluginFB::focusMetric);
 
-    // Memory view updates. processEvents() polls getMemoryStats() on
-    // m_memoryStatsTimer while connected, alongside the other pollers; this
-    // consumer just renders whatever arrives.
-    // Drop results that land after a disconnect (a poll can be in flight when
-    // the connection drops) so the view's frozen data isn't replaced by the
-    // empty "not available" state.
-    connect(m_iodevice, &OpenMVPluginIO::memoryStats, this, [this] (const QVariantList &entries) {
-        if(m_connected)
-        {
-            m_memoryView->memoryStats(entries);
-        }
+    // Pane view updates. processEvents() polls while connected (and
+    // disconnectClicked drains in-flight commands before tearing down), so
+    // these consumers just render whatever arrives -- when disconnected no
+    // new data comes and the views keep their last state.
+    connect(m_iodevice, &OpenMVPluginIO::memoryStats,
+            m_memoryView, &OpenMVMemoryView::memoryStats);
+
+    connect(m_iodevice, &OpenMVPluginIO::systemInfo, this, [this] (const QVariantMap &info) {
+        m_boardInfoView->systemInfo(info, m_fullBoardType, m_boardId, m_sensorType, m_portName, m_iodevice->getProfileEnabled());
     });
+
+    connect(m_iodevice, &OpenMVPluginIO::protocolStats,
+            m_statisticsView, &OpenMVStatisticsView::protocolStats);
 
     connect(paneView, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, [paneStack, selectorStack] (int index) {
         paneStack->setCurrentIndex(index);

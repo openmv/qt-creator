@@ -131,6 +131,7 @@ void OMVCamera::disconnect()
 
     channelsById.clear();
     channelsByName.clear();
+    eventCounts.clear();
     sysinfo.clear();
     pendingChannelEvents = 0;
     resyncPending = false;
@@ -283,6 +284,8 @@ void OMVCamera::handleEvent(uint8_t channel_id, uint16_t event)
         // Channel events
         const ChannelInfo &ch = channelsById[channel_id];
         QString event_type;
+
+        eventCounts[channel_id]++;
 
         if (ch.name == QStringLiteral("stream")) {
             frameEvent = true;
@@ -623,6 +626,24 @@ QVariantMap OMVCamera::deviceStats()
         m.insert(QStringLiteral("max_ack_queue_depth"), data[7]);
         return m;
     });
+}
+
+QVariantList OMVCamera::channelEventCounts() const
+{
+    /*
+        Per-channel event totals for this session, in channel-id order.
+    */
+    QVariantList list;
+
+    for (auto it = channelsById.constBegin(); it != channelsById.constEnd(); ++it) {
+        QVariantMap m;
+        m.insert(QStringLiteral("id"), it.key());
+        m.insert(QStringLiteral("name"), it.value().name);
+        m.insert(QStringLiteral("events"), eventCounts.value(it.key(), 0));
+        list.append(m);
+    }
+
+    return list;
 }
 
 QVariantList OMVCamera::memoryStats()

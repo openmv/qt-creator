@@ -29,9 +29,9 @@
  */
 
 #include "openmvmemoryview.h"
+#include "openmvviewstyle.h"
 #include "openmvtr.h"
 
-#include <utils/theme/theme.h>
 
 namespace OpenMV {
 namespace Internal {
@@ -346,12 +346,7 @@ void OpenMVMemoryView::showMessage(const QString &message)
 {
     clearCards();
 
-    // The same markup the frame buffer uses for its "No Image" placeholder.
-    m_message->setText(QStringLiteral("<html><body style=\"color:%1;font-size:14px\">"
-        "<div align=\"center\">"
-        "<div style=\"font-size:20px\">%2</div>"
-        "</div>"
-        "</body></html>").arg(Utils::creatorTheme()->color(Utils::Theme::TextColorDisabled).name(), message));
+    m_message->setText(viewMessageHtml(message));
     setCurrentIndex(0);
 }
 

@@ -95,10 +95,9 @@ enum
     BOOTLDR_QSPIF_LAYOUT_CPL,
     BOOTLDR_QSPIF_MEMTEST_CPL,
     CLOSE_CPL,
-    V2_SYSTEM_INFO_STRING_CPL,
-    V2_HOST_STATS_STRING_CPL,
-    V2_DEVICE_STATS_STRING_CPL,
     V2_MEMORY_STATS_CPL,
+    V2_SYSTEM_INFO_CPL,
+    V2_PROTOCOL_STATS_CPL,
     V2_FIRMWARE_VERSION_CPL,
     V2_JPEG_PREFERRED_CPL,
     V2_FRAME_BUFFER_DATA_CPL,
@@ -349,35 +348,30 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
     connect(m_port, &OpenMVPluginSerialPort::enableV2ProtocolResponse,
             this, &OpenMVPluginIO::protocolVersionDone);
 
-    connect(m_port, &OpenMVPluginSerialPort::systemInfoString,
-            this, [this] (bool timeout, const QString &info) {
-                if (timeout) m_timeout = true;
-                m_completionQueue.removeOne(V2_SYSTEM_INFO_STRING_CPL);
-                emit systemInfoString(info);
-                if (m_completionQueue.isEmpty()) emit queueEmpty();
-            });
-
-    connect(m_port, &OpenMVPluginSerialPort::hostStatsString,
-            this, [this] (bool timeout, const QString &info) {
-                if (timeout) m_timeout = true;
-                m_completionQueue.removeOne(V2_HOST_STATS_STRING_CPL);
-                emit hostStatsString(info);
-                if (m_completionQueue.isEmpty()) emit queueEmpty();
-            });
-
-    connect(m_port, &OpenMVPluginSerialPort::deviceStatsString,
-            this, [this] (bool timeout, const QString &info) {
-                if (timeout) m_timeout = true;
-                m_completionQueue.removeOne(V2_DEVICE_STATS_STRING_CPL);
-                emit deviceStatsString(info);
-                if (m_completionQueue.isEmpty()) emit queueEmpty();
-            });
-
+    // Timeout or errored polls release their queue token but are not
+    // forwarded: a dying link must not repaint the pane views.
     connect(m_port, &OpenMVPluginSerialPort::memoryStats,
-            this, [this] (bool timeout, const QVariantList &entries) {
+            this, [this] (bool timeout, bool error, const QVariantList &entries) {
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_MEMORY_STATS_CPL);
-                emit memoryStats(entries);
+                if ((!timeout) && (!error)) emit memoryStats(entries);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
+            });
+
+    connect(m_port, &OpenMVPluginSerialPort::systemInfo,
+            this, [this] (bool timeout, bool error, const QVariantMap &info) {
+                if (timeout) m_timeout = true;
+                m_completionQueue.removeOne(V2_SYSTEM_INFO_CPL);
+                if ((!timeout) && (!error)) emit systemInfo(info);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
+            });
+
+    connect(m_port, &OpenMVPluginSerialPort::protocolStats,
+            this, [this] (bool timeout, bool error, const QVariantMap &host,
+                          const QVariantMap &device, const QVariantList &channels) {
+                if (timeout) m_timeout = true;
+                m_completionQueue.removeOne(V2_PROTOCOL_STATS_CPL);
+                if ((!timeout) && (!error)) emit protocolStats(host, device, channels);
                 if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
@@ -1579,6 +1573,16 @@ bool OpenMVPluginIO::getMemoryStatsQueued() const
     return m_completionQueue.contains(V2_MEMORY_STATS_CPL);
 }
 
+bool OpenMVPluginIO::getSystemInfoQueued() const
+{
+    return m_completionQueue.contains(V2_SYSTEM_INFO_CPL);
+}
+
+bool OpenMVPluginIO::getProtocolStatsQueued() const
+{
+    return m_completionQueue.contains(V2_PROTOCOL_STATS_CPL);
+}
+
 void OpenMVPluginIO::checkProtocolVerison(bool splitCommand)
 {
     // STM32 USBDBG Behavior:
@@ -1700,75 +1704,6 @@ void OpenMVPluginIO::getJPEGPreferred()
     QTimer::singleShot(0, this, [this] {jpegPreferred(true);});
 }
 
-void OpenMVPluginIO::getSystemInfoString()
-{
-    if (m_v2ProtocolEnabled) {
-        m_completionQueue.enqueue(V2_SYSTEM_INFO_STRING_CPL);
-        m_port->getSystemInfoString();
-        return;
-    }
-
-    QTimer::singleShot(0, this, [this] {
-        QString info;
-        QTextStream stream(&info);
-
-        QRegularExpressionMatch match = QRegularExpression(QStringLiteral("(.+?)\\[(.+?):(.+?)\\]")).match(m_archString);
-
-        if(match.hasMatch())
-        {
-            stream << "CPU ID: " << match.captured(2) << " - ";
-            stream << "Device ID: " << match.captured(3) << '\n';
-        }
-
-        stream << QStringLiteral("CSI0: 0x%1").arg(m_sensorID) << '\n';
-
-        if(match.hasMatch())
-        {
-            stream << "USB ID: " << match.captured(1).trimmed() << '\n';
-        }
-
-        stream << "Hardware capabilities:" << '\n';
-        stream << "  USB High-Speed: " << (m_hsOn ? "Yes" : "No");
-        stream << "\t\tPMU: " << (m_hasPMU ? "Yes" : "No") << '\n';
-        stream << "Profiler: " << (m_profileEnabled ? "Available" : "Not available") << '\n';
-        stream << "Firmware version: " << m_firmwareMajor << "." << m_firmwareMinor << "." << m_firmwarePatch;
-        systemInfoString(info);
-    });
-}
-
-void OpenMVPluginIO::getHostStatsString()
-{
-    if (m_v2ProtocolEnabled) {
-        m_completionQueue.enqueue(V2_HOST_STATS_STRING_CPL);
-        m_port->getHostStatsString();
-        return;
-    }
-
-    QTimer::singleShot(0, this, [this] {
-        QString info;
-        QTextStream stream(&info);
-        stream << "Packets Sent: " << m_sentPackets << "\n";
-        stream << "Packets Received: " << m_receivedPackets;
-        hostStatsString(info);
-    });
-}
-
-void OpenMVPluginIO::getDeviceStatsString()
-{
-    if (m_v2ProtocolEnabled) {
-        m_completionQueue.enqueue(V2_DEVICE_STATS_STRING_CPL);
-        m_port->getDeviceStatsString();
-        return;
-    }
-
-    QTimer::singleShot(0, this, [this] {
-        QString info;
-        QTextStream stream(&info);
-        stream << "Sent Images: " << m_receivedImages;
-        deviceStatsString(info);
-    });
-}
-
 void OpenMVPluginIO::getMemoryStats()
 {
     if (m_v2ProtocolEnabled) {
@@ -1780,6 +1715,49 @@ void OpenMVPluginIO::getMemoryStats()
     // V1 protocol has no memory statistics; an empty result means "unsupported".
     QTimer::singleShot(0, this, [this] {
         emit memoryStats(QVariantList());
+    });
+}
+
+void OpenMVPluginIO::getSystemInfo()
+{
+    if (m_v2ProtocolEnabled) {
+        m_completionQueue.enqueue(V2_SYSTEM_INFO_CPL);
+        m_port->getSystemInfo();
+        return;
+    }
+
+    // V1 protocol: report what the old string-based readout knew about --
+    // rows for keys that are absent simply don't show.
+    QTimer::singleShot(0, this, [this] {
+        QVariantMap info;
+        info.insert(QStringLiteral("firmware_version"),
+                    QVariantList() << m_firmwareMajor << m_firmwareMinor << m_firmwarePatch);
+        info.insert(QStringLiteral("protocol_version"), QVariantList() << 1 << 0 << 0);
+        info.insert(QStringLiteral("usb_highspeed"), bool(m_hsOn));
+        info.insert(QStringLiteral("pmu_present"), bool(m_hasPMU));
+        emit systemInfo(info);
+    });
+}
+
+void OpenMVPluginIO::getProtocolStats()
+{
+    if (m_v2ProtocolEnabled) {
+        m_completionQueue.enqueue(V2_PROTOCOL_STATS_CPL);
+        m_port->getProtocolStats();
+        return;
+    }
+
+    // V1 protocol: report the counters the old string-based readouts knew
+    // about -- rows for keys that are absent simply don't show.
+    QTimer::singleShot(0, this, [this] {
+        QVariantMap host;
+        host.insert(QStringLiteral("sent"), m_sentPackets);
+        host.insert(QStringLiteral("received"), m_receivedPackets);
+
+        QVariantMap device;
+        device.insert(QStringLiteral("sent_images"), m_receivedImages);
+
+        emit protocolStats(host, device, QVariantList());
     });
 }
 

@@ -384,10 +384,9 @@ public slots:
     //
     // Serial thread implements the transport and transaction layer of the protocol.
 
-    void getSystemInfoString();
-    void getHostStatsString();
-    void getDeviceStatsString();
     void getMemoryStats();
+    void getSystemInfo();
+    void getProtocolStats();
     void getFirmwareVersion();
     void getJPEGPreferred();
     void getFrameReady(); // poll event
@@ -430,10 +429,10 @@ signals:
     //
     // Serial thread implements the transport and transaction layer of the protocol.
 
-    void systemInfoString(bool timeout, const QString &info);
-    void hostStatsString(bool timeout, const QString &stats);
-    void deviceStatsString(bool timeout, const QString &stats);
-    void memoryStats(bool timeout, const QVariantList &entries);
+    void memoryStats(bool timeout, bool error, const QVariantList &entries);
+    void systemInfo(bool timeout, bool error, const QVariantMap &info);
+    void protocolStats(bool timeout, bool error, const QVariantMap &host,
+                       const QVariantMap &device, const QVariantList &channels);
     void firmwareVersion(bool timeout, int major, int minor, int patch);
     void jpegPreferred(bool timeout, bool preferred);
     void frameReady(bool ready); // poll event
@@ -515,10 +514,9 @@ signals:
     //
     // Serial thread implements the transport and transaction layer of the protocol.
 
-    void getSystemInfoString();
-    void getHostStatsString();
-    void getDeviceStatsString();
     void getMemoryStats();
+    void getSystemInfo();
+    void getProtocolStats();
     void getFirmwareVersion();
     void getJPEGPreferred();
     void getFrameReady(); // poll event
@@ -539,10 +537,10 @@ signals:
     void profileReset();
     void close();
 
-    void systemInfoString(bool timeout, const QString &info);
-    void hostStatsString(bool timeout, const QString &stats);
-    void deviceStatsString(bool timeout, const QString &stats);
-    void memoryStats(bool timeout, const QVariantList &entries);
+    void memoryStats(bool timeout, bool error, const QVariantList &entries);
+    void systemInfo(bool timeout, bool error, const QVariantMap &info);
+    void protocolStats(bool timeout, bool error, const QVariantMap &host,
+                       const QVariantMap &device, const QVariantList &channels);
     void firmwareVersion(bool timeout, int major, int minor, int patch);
     void jpegPreferred(bool timeout, bool preferred);
     void frameReady(bool ready); // poll event

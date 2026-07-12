@@ -3986,7 +3986,12 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_getScriptRunningTimer.restart();
         m_getTxBufferTimer.restart();
         m_memoryStatsTimer.restart();
-        m_memoryView->reset(); // drop any prior session's graphs
+        m_systemInfoTimer.restart();
+        m_protocolStatsTimer.restart();
+        // Drop any prior session's data from the pane views.
+        m_boardInfoView->reset();
+        m_memoryView->reset();
+        m_statisticsView->reset();
 
         m_timer.restart();
         m_queue.clear();
@@ -4305,6 +4310,19 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
 
             bool v2ProtocolEnabled = m_iodevice->v2ProtocolEnabled();
 
+            // Let any in-flight polls (frame/state/memory/stats/info) complete
+            // before stopping, so their responses aren't interleaved with the
+            // shutdown conversation below.
+            if(!m_iodevice->queueisEmpty())
+            {
+                QEventLoop loop;
+
+                connect(m_iodevice, &OpenMVPluginIO::queueEmpty,
+                        &loop, &QEventLoop::quit);
+
+                loop.exec(); // drain previous commands
+            }
+
             // Stopping ///////////////////////////////////////////////////////
             {
                 QEventLoop loop;
@@ -4429,7 +4447,9 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             m_getScriptRunningTimer.restart();
             m_getTxBufferTimer.restart();
             m_memoryStatsTimer.restart();
-            // m_memoryView keeps its last data on disconnect (updates just
+            m_systemInfoTimer.restart();
+            m_protocolStatsTimer.restart();
+            // The pane views keep their last data on disconnect (updates just
             // stop); the connect path's reset() drops it when a new session
             // starts.
 

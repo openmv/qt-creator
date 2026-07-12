@@ -63,8 +63,8 @@
 #include <texteditor/tabsettings.h>
 #include <texteditor/texteditor.h>
 
-#include "openmvpluginfb.h"
-#include "openmv/histogram/openmvpluginhistogram.h"
+#include "views/openmvpluginfb.h"
+#include "views/openmvpluginhistogram.h"
 
 namespace OpenMV {
 namespace Internal {

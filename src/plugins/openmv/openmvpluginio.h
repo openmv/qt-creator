@@ -178,15 +178,16 @@ public:
     bool getStateQueued() const;
     bool readProfileQueued() const;
     bool getMemoryStatsQueued() const;
+    bool getSystemInfoQueued() const;
+    bool getProtocolStatsQueued() const;
 
 public slots:
 
     void checkProtocolVerison(bool splitCommand);
     void forceV2Protocol();   // skip the V1/V2 detection probe (network links are always V2)
-    void getSystemInfoString();
-    void getHostStatsString();
-    void getDeviceStatsString();
     void getMemoryStats();
+    void getSystemInfo();
+    void getProtocolStats();
     void getFirmwareVersion();
     void getJPEGPreferred();
     void frameSizeDump();
@@ -242,10 +243,10 @@ public slots: // private
 signals:
 
     void protocolVersionDone();
-    void systemInfoString(const QString &info);
-    void hostStatsString(const QString &stats);
-    void deviceStatsString(const QString &stats);
     void memoryStats(const QVariantList &entries);
+    void systemInfo(const QVariantMap &info);
+    void protocolStats(const QVariantMap &host, const QVariantMap &device,
+                       const QVariantList &channels);
     void firmwareVersion(int major, int minor, int patch);
     void jpegPreferred(bool preferred);
     void frameBufferData(const QPixmap &data);

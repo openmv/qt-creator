@@ -877,74 +877,9 @@ void OpenMVPluginSerialPort_private::bootloaderReset()
 //
 // Serial thread implements the transport and transaction layer of the protocol.
 
-void OpenMVPluginSerialPort_private::getSystemInfoString() {
-    if (!m_camera || !m_camera->isConnected()) {
-        emit systemInfoString(true, QString());
-        return;
-    }
-
-    try {
-        emit systemInfoString(false, m_camera->systemInfoString());
-    } catch (...) {
-        emit systemInfoString(true, QString());
-        delete m_camera;
-        m_camera = Q_NULLPTR;
-    }
-}
-
-void OpenMVPluginSerialPort_private::getHostStatsString() {
-    if (!m_camera || !m_camera->isConnected()) {
-        emit hostStatsString(true, QString());
-        return;
-    }
-
-    try {
-        QString info;
-        QTextStream stream(&info);
-        QVariantMap stats = m_camera->hostStats();
-        stream << "Packets Sent: " << stats.value(QStringLiteral("sent")).toUInt() << "\n";
-        stream << "Packets Received: " << stats.value(QStringLiteral("received")).toUInt() << "\n";
-        stream << "Checksum Errors: " << stats.value(QStringLiteral("checksum")).toUInt() << "\n";
-        stream << "Sequence Errors: " << stats.value(QStringLiteral("sequence")).toUInt();
-
-        emit hostStatsString(false, info);
-    } catch (...) {
-        emit hostStatsString(true, QString());
-        delete m_camera;
-        m_camera = Q_NULLPTR;
-    }
-}
-
-void OpenMVPluginSerialPort_private::getDeviceStatsString() {
-    if (!m_camera || !m_camera->isConnected()) {
-        emit deviceStatsString(true, QString());
-        return;
-    }
-
-    try {
-        QString info;
-        QTextStream stream(&info);
-        QVariantMap stats = m_camera->deviceStats();
-        stream << "Packets Sent: " << stats.value(QStringLiteral("sent")).toUInt() << "\n";
-        stream << "Packets Received: " << stats.value(QStringLiteral("received")).toUInt() << "\n";
-        stream << "Checksum Errors: " << stats.value(QStringLiteral("checksum")).toUInt() << "\n";
-        stream << "Sequence Errors: " << stats.value(QStringLiteral("sequence")).toUInt() << "\n";
-        stream << "Retransmit Errors: " << stats.value(QStringLiteral("retransmit")).toUInt() << "\n";
-        stream << "Transport Errors: " << stats.value(QStringLiteral("transport")).toUInt() << "\n";
-        stream << "Sent Events: " << stats.value(QStringLiteral("sent_events")).toUInt() << "\n";
-        stream << "Max ACK Queue Depth: " << stats.value(QStringLiteral("max_ack_queue_depth")).toUInt();
-
-        emit deviceStatsString(false, info);
-    } catch (...) {
-        emit deviceStatsString(true, QString());
-        delete m_camera;
-        m_camera = Q_NULLPTR;
-    }
-}
-
 void OpenMVPluginSerialPort_private::getMemoryStats() {
     if (!m_camera || !m_camera->isConnected()) {
-        emit memoryStats(true, QVariantList());
+        emit memoryStats(true, false, QVariantList());
         return;
     }
 
@@ -952,11 +887,51 @@ void OpenMVPluginSerialPort_private::getMemoryStats() {
         // The protocol-version gate for SYS_MEMORY lives in
         // OMVCamera::memoryStats(); an empty result means the connected
         // firmware does not support it.
-        emit memoryStats(false, m_camera->memoryStats());
+        emit memoryStats(false, false, m_camera->memoryStats());
     } catch (...) {
-        // A background stats poll must never take the connection down; report
-        // no data and let the caller retry on its next poll.
-        emit memoryStats(false, QVariantList());
+        // A background stats poll must never take the connection down. The
+        // error flag makes the GUI thread ignore this reply (a dying link
+        // must not repaint a view) while still releasing its queue token.
+        emit memoryStats(false, true, QVariantList());
+    }
+}
+
+void OpenMVPluginSerialPort_private::getSystemInfo() {
+    if (!m_camera || !m_camera->isConnected()) {
+        emit systemInfo(true, false, QVariantMap());
+        return;
+    }
+
+    try {
+        // Cached by OMVCamera::connect(); only hits the wire if somehow empty.
+        QVariantMap info = m_camera->cachedSystemInfo();
+
+        if (info.isEmpty()) {
+            m_camera->systemInfo(); // caches
+            info = m_camera->cachedSystemInfo();
+        }
+
+        emit systemInfo(false, false, info);
+    } catch (...) {
+        // A background poll must never take the connection down; the error
+        // flag makes the GUI thread ignore this reply.
+        emit systemInfo(false, true, QVariantMap());
+    }
+}
+
+void OpenMVPluginSerialPort_private::getProtocolStats() {
+    if (!m_camera || !m_camera->isConnected()) {
+        emit protocolStats(true, false, QVariantMap(), QVariantMap(), QVariantList());
+        return;
+    }
+
+    try {
+        emit protocolStats(false, false, m_camera->hostStats(), m_camera->deviceStats(),
+                           m_camera->channelEventCounts());
+    } catch (...) {
+        // A background stats poll must never take the connection down; the
+        // error flag makes the GUI thread ignore this reply.
+        emit protocolStats(false, true, QVariantMap(), QVariantMap(), QVariantList());
     }
 }
 
@@ -1464,29 +1439,23 @@ OpenMVPluginSerialPort::OpenMVPluginSerialPort(const QJsonDocument &settings,
     //
     // Serial thread implements the transport and transaction layer of the protocol.
 
-    connect(this, &OpenMVPluginSerialPort::getSystemInfoString,
-            m_port, &OpenMVPluginSerialPort_private::getSystemInfoString);
-
-    connect(m_port, &OpenMVPluginSerialPort_private::systemInfoString,
-            this, &OpenMVPluginSerialPort::systemInfoString);
-
-    connect(this, &OpenMVPluginSerialPort::getHostStatsString,
-            m_port, &OpenMVPluginSerialPort_private::getHostStatsString);
-
-    connect(m_port, &OpenMVPluginSerialPort_private::hostStatsString,
-            this, &OpenMVPluginSerialPort::hostStatsString);
-
-    connect(this, &OpenMVPluginSerialPort::getDeviceStatsString,
-            m_port, &OpenMVPluginSerialPort_private::getDeviceStatsString);
-
-    connect(m_port, &OpenMVPluginSerialPort_private::deviceStatsString,
-            this, &OpenMVPluginSerialPort::deviceStatsString);
-
     connect(this, &OpenMVPluginSerialPort::getMemoryStats,
             m_port, &OpenMVPluginSerialPort_private::getMemoryStats);
 
     connect(m_port, &OpenMVPluginSerialPort_private::memoryStats,
             this, &OpenMVPluginSerialPort::memoryStats);
+
+    connect(this, &OpenMVPluginSerialPort::getSystemInfo,
+            m_port, &OpenMVPluginSerialPort_private::getSystemInfo);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::systemInfo,
+            this, &OpenMVPluginSerialPort::systemInfo);
+
+    connect(this, &OpenMVPluginSerialPort::getProtocolStats,
+            m_port, &OpenMVPluginSerialPort_private::getProtocolStats);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::protocolStats,
+            this, &OpenMVPluginSerialPort::protocolStats);
 
     connect(this, &OpenMVPluginSerialPort::getFirmwareVersion,
             m_port, &OpenMVPluginSerialPort_private::getFirmwareVersion);

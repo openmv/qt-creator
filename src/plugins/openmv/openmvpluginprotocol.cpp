@@ -234,6 +234,26 @@ void OpenMVPlugin::processEvents()
                 m_iodevice->getMemoryStats();
             }
 
+            // Board Info: system info is static per connection (cached on the
+            // camera at connect), so this fetches once and then goes quiet.
+            if(m_boardInfoView && (!m_boardInfoView->hasData()))
+            {
+                if((!m_iodevice->getSystemInfoQueued()) && m_systemInfoTimer.hasExpired(SYSTEM_INFO_SPACING))
+                {
+                    m_systemInfoTimer.restart();
+                    m_iodevice->getSystemInfo();
+                }
+            }
+
+            // Poll protocol statistics continuously while connected, like the
+            // memory stats above: host stats are local and device stats are one
+            // small PROTO_STATS command.
+            if((!m_iodevice->getProtocolStatsQueued()) && m_protocolStatsTimer.hasExpired(PROTOCOL_STATS_SPACING))
+            {
+                m_protocolStatsTimer.restart();
+                m_iodevice->getProtocolStats();
+            }
+
             if(m_iodevice->v2ProtocolEnabled() && m_dynamicFrameReading && (!m_dynamicFrameReadingLock))
             {
                 m_ioport->getFrameReady();
@@ -402,79 +422,10 @@ void OpenMVPlugin::setSpacing()
     hlayout->setContentsMargins(0, 0, 0, 0);
     vlayout->addWidget(mainWidget);
 
-    QWidget *leftWidget = new QWidget;
-    QVBoxLayout *llayout = new QVBoxLayout(leftWidget);
-    llayout->setContentsMargins(0, 0, 0, 0);
-    hlayout->addWidget(leftWidget);
-
-    QLabel *infoLabelTitle = new QLabel(Tr::tr("Protocol Version %1 - System Info:").arg(m_iodevice->v2ProtocolEnabled() ? 2 : 1));
-    infoLabelTitle->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
-    llayout->addWidget(infoLabelTitle);
-    QLabel *infoLabel = new QLabel;
-    infoLabel->setAlignment(Qt::AlignLeft | Qt::AlignTop);
-    infoLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
-    infoLabel->setFrameStyle(QFrame::StyledPanel);
-    infoLabel->setMinimumWidth(480);
-    infoLabel->setTextFormat(Qt::RichText);
-    connect(m_iodevice, &OpenMVPluginIO::systemInfoString, infoLabel, [infoLabel] (const QString &text) {
-        infoLabel->setText(QString("<pre>%1</pre>").arg(text));
-    });
-    m_iodevice->getSystemInfoString();
-    llayout->addWidget(infoLabel);
-
-    QWidget *stats = new QWidget;
-    QHBoxLayout *statsLayout = new QHBoxLayout(stats);
-    statsLayout->setContentsMargins(0, 0, 0, 0);
-    llayout->addWidget(stats);
-
-    QWidget *leftHSWidget = new QWidget;
-    QVBoxLayout *lhslayout = new QVBoxLayout(leftHSWidget);
-    lhslayout->setContentsMargins(0, 0, 0, 0);
-    statsLayout->addWidget(leftHSWidget);
-
-    QLabel *hostStatsTitle = new QLabel(Tr::tr("Host Stats:"));
-    hostStatsTitle->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
-    lhslayout->addWidget(hostStatsTitle);
-    QLabel *hostStats = new QLabel;
-    hostStats->setAlignment(Qt::AlignLeft | Qt::AlignTop);
-    hostStats->setTextInteractionFlags(Qt::TextSelectableByMouse);
-    hostStats->setFrameStyle(QFrame::StyledPanel);
-    hostStats->setMinimumWidth(240);
-    hostStats->setTextFormat(Qt::RichText);
-    connect(m_iodevice, &OpenMVPluginIO::hostStatsString, hostStats, [hostStats] (const QString &text) {
-        hostStats->setText(QString("<pre>%1</pre>").arg(text));
-    });
-    QTimer *hostStatsTimer = new QTimer(dialog);
-    connect(hostStatsTimer, &QTimer::timeout, m_iodevice, &OpenMVPluginIO::getHostStatsString);
-    hostStatsTimer->start(1000);
-    m_iodevice->getHostStatsString();
-    lhslayout->addWidget(hostStats);
-
-    QWidget *rightDSWidget = new QWidget;
-    QVBoxLayout *rdslayout = new QVBoxLayout(rightDSWidget);
-    rdslayout->setContentsMargins(0, 0, 0, 0);
-    statsLayout->addWidget(rightDSWidget);
-
-    QLabel *deviceStatsTitle = new QLabel(Tr::tr("Device Stats:"));
-    deviceStatsTitle->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
-    rdslayout->addWidget(deviceStatsTitle);
-    QLabel *deviceStats = new QLabel;
-    deviceStats->setAlignment(Qt::AlignLeft | Qt::AlignTop);
-    deviceStats->setTextInteractionFlags(Qt::TextSelectableByMouse);
-    deviceStats->setFrameStyle(QFrame::StyledPanel);
-    deviceStats->setMinimumWidth(240);
-    deviceStats->setTextFormat(Qt::RichText);
-    connect(m_iodevice, &OpenMVPluginIO::deviceStatsString, deviceStats, [deviceStats] (const QString &text) {
-        deviceStats->setText(QString("<pre>%1</pre>").arg(text));
-    });
-    QTimer *deviceStatsTimer = new QTimer(dialog);
-    connect(deviceStatsTimer, &QTimer::timeout, m_iodevice, &OpenMVPluginIO::getDeviceStatsString);
-    deviceStatsTimer->start(1000);
-    m_iodevice->getDeviceStatsString();
-    rdslayout->addWidget(deviceStats);
-
+    // The system-info and host/device stats readouts moved into the
+    // histogram pane's Board Info and Statistics views; this dialog keeps
+    // just the protocol/polling controls.
     QWidget *rightWidget = new QWidget;
-    rightWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
     QVBoxLayout *rlayout = new QVBoxLayout(rightWidget);
     rlayout->setContentsMargins(0, 0, 0, 0);
     hlayout->addWidget(rightWidget);
@@ -577,8 +528,6 @@ void OpenMVPlugin::setSpacing()
     connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
     connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
     vlayout->addWidget(box);
-
-    infoLabel->setFocus();
 
     connect(m_iodevice, &OpenMVPluginIO::closeResponse, dialog, &QDialog::reject);
     connect(dynamicFrameReadingBox, &QCheckBox::toggled, this, [this, frameDumpSpacingBox] (bool checked) {

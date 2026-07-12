@@ -90,16 +90,18 @@
 #endif
 
 #include "openmvdataseteditor.h"
-#include "openmvmemoryview.h"
+#include "views/openmvboardinfoview.h"
+#include "views/openmvmemoryview.h"
+#include "views/openmvstatisticsview.h"
 #include "openmvmodelzoo.h"
 #include "openmvpluginserialport.h"
 #include "openmvpluginio.h"
-#include "openmvpluginfb.h"
+#include "views/openmvpluginfb.h"
 #include "openmvprofile.h"
 #include "openmvromfs.h"
 #include "openmvterminal.h"
 #include "openmvthirdparty.h"
-#include "histogram/openmvpluginhistogram.h"
+#include "views/openmvpluginhistogram.h"
 #include "tools/alif.h"
 #include "tools/bossac.h"
 #include "tools/dfu-util.h"
@@ -287,6 +289,8 @@
 #define GET_STATE_SPACING           25 // in ms
 #define READ_PROFILE_SPACING        500 // in ms
 #define MEMORY_STATS_SPACING        1000 // in ms
+#define SYSTEM_INFO_SPACING         1000 // in ms
+#define PROTOCOL_STATS_SPACING      1000 // in ms
 
 #define FPS_AVERAGE_BUFFER_DEPTH    100 // in samples
 #define WIFI_PORT_RETIRE            8 // in seconds (cams announce every 2s -> ~4 missed = retired)
@@ -309,9 +313,12 @@
 
 #define FORCE_SHUTDOWN_TIMEOUT      10000 // in ms
 
-// Histogram-pane view selector indexes (order of the pane's combo box).
+// Histogram-pane view selector indexes (order of the pane's combo box,
+// matching OpenMV Studio's tab order).
 #define HISTOGRAM_VIEW 0
-#define MEMORY_VIEW 1
+#define BOARD_INFO_VIEW 1
+#define MEMORY_VIEW 2
+#define STATISTICS_VIEW 3
 
 namespace OpenMV {
 namespace Internal {
@@ -716,6 +723,8 @@ private:
     QElapsedTimer m_getStateTimer;
     QElapsedTimer m_readProfileTimer;
     QElapsedTimer m_memoryStatsTimer;
+    QElapsedTimer m_systemInfoTimer;
+    QElapsedTimer m_protocolStatsTimer;
 
     QElapsedTimer m_timer;
     QQueue<qint64> m_queue;
@@ -798,7 +807,9 @@ private:
     OpenMVDatasetEditor *m_datasetEditor;
     OpenMVPluginFB *m_frameBuffer;
     OpenMVPluginHistogram *m_histogram;
+    OpenMVBoardInfoView *m_boardInfoView;
     OpenMVMemoryView *m_memoryView;
+    OpenMVStatisticsView *m_statisticsView;
     QPointer<OpenMVProfileView> m_profile;
 
     Utils::ElidingLabel *m_boardLabel;

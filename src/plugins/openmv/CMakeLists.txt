@@ -4,7 +4,10 @@ add_qtc_plugin(OpenMV
   SOURCES
     openmvplugin.cpp openmvplugin.h openmvtr.h
     openmvpluginconnect.cpp openmvpluginconnect.h
-    openmvmemoryview.cpp openmvmemoryview.h
+    views/openmvboardinfoview.cpp views/openmvboardinfoview.h
+    views/openmvmemoryview.cpp views/openmvmemoryview.h
+    views/openmvstatisticsview.cpp views/openmvstatisticsview.h
+    views/openmvviewstyle.cpp views/openmvviewstyle.h
     openmvmodelzoo.cpp openmvmodelzoo.h
     openmvromfs.cpp openmvromfs.h
     openmvthirdparty.cpp openmvthirdparty.h
@@ -22,15 +25,15 @@ add_qtc_plugin(OpenMV
     openmveject.cpp openmveject.h
     openmvpluginserialport.cpp openmvpluginserialport.h
     openmvpluginio.cpp openmvpluginio.h
-    openmvpluginfb.cpp openmvpluginfb.h
+    views/openmvpluginfb.cpp views/openmvpluginfb.h
     openmvprofile.cpp openmvprofile.h
     openmvterminal.cpp openmvterminal.h
     openmvdataseteditor.cpp openmvdataseteditor.h
     elfio/elfio/elfio.hpp
-    histogram/openmvpluginhistogram.cpp histogram/openmvpluginhistogram.h
-    histogram/rgb2rgb_tab.c
-    histogram/lab_tab.c
-    histogram/yuv_tab.c
+    views/openmvpluginhistogram.cpp views/openmvpluginhistogram.h
+    views/rgb2rgb_tab.c
+    views/lab_tab.c
+    views/yuv_tab.c
     tools/driveserialnumber.cpp tools/driveserialnumber.h
     tools/myqserialportinfo.cpp tools/myqserialportinfo.h
     tools/loaderdialog.cpp tools/loaderdialog.h
@@ -63,7 +66,7 @@ add_qtc_plugin(OpenMV
     qcustomplot/qcustomplot.cpp qcustomplot/qcustomplot.h
     qzip/qzip.cpp qzip/qzipreader.h qzip/qzipwriter.h
     openmv.qrc
-    histogram/openmvpluginhistogram.ui
+    views/openmvpluginhistogram.ui
 )
 
 target_sources(OpenMV

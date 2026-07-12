@@ -63,6 +63,7 @@ public:
 
     // Device/firmware stats & info
     QVariantMap deviceStats();   // PROTO_STATS
+    QVariantList channelEventCounts() const; // per-channel event totals (id order)
     QVariantMap systemInfo();    // SYS_INFO
     QVariantList memoryStats();  // SYS_MEMORY (protocol >= 1.0.2)
     QString systemInfoString();
@@ -125,6 +126,7 @@ private:
     // Protocol components
     QMap<QString, uint8_t> channelsByName;
     QMap<uint8_t, ChannelInfo> channelsById;
+    QMap<uint8_t, quint32> eventCounts; // per-channel event totals this session
     int          pendingChannelEvents;
     QVariantMap  sysinfo;
     OMVTransport *transport;
