@@ -64,6 +64,7 @@ public:
     // Device/firmware stats & info
     QVariantMap deviceStats();   // PROTO_STATS
     QVariantMap systemInfo();    // SYS_INFO
+    QVariantList memoryStats();  // SYS_MEMORY (protocol >= 1.0.2)
     QString systemInfoString();
     void printSystemInfo();
 

@@ -942,6 +942,24 @@ void OpenMVPluginSerialPort_private::getDeviceStatsString() {
     }
 }
 
+void OpenMVPluginSerialPort_private::getMemoryStats() {
+    if (!m_camera || !m_camera->isConnected()) {
+        emit memoryStats(true, QVariantList());
+        return;
+    }
+
+    try {
+        // The protocol-version gate for SYS_MEMORY lives in
+        // OMVCamera::memoryStats(); an empty result means the connected
+        // firmware does not support it.
+        emit memoryStats(false, m_camera->memoryStats());
+    } catch (...) {
+        // A background stats poll must never take the connection down; report
+        // no data and let the caller retry on its next poll.
+        emit memoryStats(false, QVariantList());
+    }
+}
+
 void OpenMVPluginSerialPort_private::getFirmwareVersion() {
     if (!m_camera) {
         emit firmwareVersion(true, 0, 0, 0);
@@ -1463,6 +1481,12 @@ OpenMVPluginSerialPort::OpenMVPluginSerialPort(const QJsonDocument &settings,
 
     connect(m_port, &OpenMVPluginSerialPort_private::deviceStatsString,
             this, &OpenMVPluginSerialPort::deviceStatsString);
+
+    connect(this, &OpenMVPluginSerialPort::getMemoryStats,
+            m_port, &OpenMVPluginSerialPort_private::getMemoryStats);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::memoryStats,
+            this, &OpenMVPluginSerialPort::memoryStats);
 
     connect(this, &OpenMVPluginSerialPort::getFirmwareVersion,
             m_port, &OpenMVPluginSerialPort_private::getFirmwareVersion);

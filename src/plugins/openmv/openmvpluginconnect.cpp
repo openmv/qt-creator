@@ -3985,6 +3985,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_frameSizeDumpTimer.restart();
         m_getScriptRunningTimer.restart();
         m_getTxBufferTimer.restart();
+        m_memoryStatsTimer.restart();
+        m_memoryView->reset(); // drop any prior session's graphs
 
         m_timer.restart();
         m_queue.clear();
@@ -4426,12 +4428,14 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             m_frameSizeDumpTimer.restart();
             m_getScriptRunningTimer.restart();
             m_getTxBufferTimer.restart();
+            m_memoryStatsTimer.restart();
+            m_memoryView->reset();
 
             m_timer.restart();
             m_queue.clear();
             m_cameraQueue.clear();
             m_connected = false;
-        m_processEventsTimer->stop();
+            m_processEventsTimer->stop();
             m_running = false;
             m_major = int();
             m_minor = int();

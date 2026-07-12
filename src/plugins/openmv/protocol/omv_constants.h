@@ -89,6 +89,7 @@ enum : uint8_t {
     SYS_BOOT        = 0x11,
     SYS_INFO        = 0x12,
     SYS_EVENT       = 0x13,
+    SYS_MEMORY      = 0x14, // Get memory statistics (protocol >= 1.0.2)
 
     // Channel commands
     CHANNEL_LIST    = 0x20,

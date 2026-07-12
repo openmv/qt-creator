@@ -222,6 +222,18 @@ void OpenMVPlugin::processEvents()
                 }
             }
 
+            // Poll memory stats continuously while connected -- not only while
+            // the Memory view is visible -- so switching to it shows current
+            // data immediately, and the last values stay on screen after a
+            // disconnect (this whole block only runs while m_connected). The
+            // serial layer never sends SYS_MEMORY to firmware that predates it,
+            // so polling costs nothing there.
+            if((!m_iodevice->getMemoryStatsQueued()) && m_memoryStatsTimer.hasExpired(MEMORY_STATS_SPACING))
+            {
+                m_memoryStatsTimer.restart();
+                m_iodevice->getMemoryStats();
+            }
+
             if(m_iodevice->v2ProtocolEnabled() && m_dynamicFrameReading && (!m_dynamicFrameReadingLock))
             {
                 m_ioport->getFrameReady();

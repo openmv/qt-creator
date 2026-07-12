@@ -4,6 +4,7 @@ add_qtc_plugin(OpenMV
   SOURCES
     openmvplugin.cpp openmvplugin.h openmvtr.h
     openmvpluginconnect.cpp openmvpluginconnect.h
+    openmvmemoryview.cpp openmvmemoryview.h
     openmvmodelzoo.cpp openmvmodelzoo.h
     openmvromfs.cpp openmvromfs.h
     openmvthirdparty.cpp openmvthirdparty.h

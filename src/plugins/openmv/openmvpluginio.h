@@ -177,6 +177,7 @@ public:
     bool getTxBufferQueued() const;
     bool getStateQueued() const;
     bool readProfileQueued() const;
+    bool getMemoryStatsQueued() const;
 
 public slots:
 
@@ -185,6 +186,7 @@ public slots:
     void getSystemInfoString();
     void getHostStatsString();
     void getDeviceStatsString();
+    void getMemoryStats();
     void getFirmwareVersion();
     void getJPEGPreferred();
     void frameSizeDump();
@@ -243,6 +245,7 @@ signals:
     void systemInfoString(const QString &info);
     void hostStatsString(const QString &stats);
     void deviceStatsString(const QString &stats);
+    void memoryStats(const QVariantList &entries);
     void firmwareVersion(int major, int minor, int patch);
     void jpegPreferred(bool preferred);
     void frameBufferData(const QPixmap &data);

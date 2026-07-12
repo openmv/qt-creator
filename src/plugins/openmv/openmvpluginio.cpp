@@ -98,6 +98,7 @@ enum
     V2_SYSTEM_INFO_STRING_CPL,
     V2_HOST_STATS_STRING_CPL,
     V2_DEVICE_STATS_STRING_CPL,
+    V2_MEMORY_STATS_CPL,
     V2_FIRMWARE_VERSION_CPL,
     V2_JPEG_PREFERRED_CPL,
     V2_FRAME_BUFFER_DATA_CPL,
@@ -369,6 +370,14 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_DEVICE_STATS_STRING_CPL);
                 emit deviceStatsString(info);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
+            });
+
+    connect(m_port, &OpenMVPluginSerialPort::memoryStats,
+            this, [this] (bool timeout, const QVariantList &entries) {
+                if (timeout) m_timeout = true;
+                m_completionQueue.removeOne(V2_MEMORY_STATS_CPL);
+                emit memoryStats(entries);
                 if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
@@ -1565,6 +1574,11 @@ bool OpenMVPluginIO::readProfileQueued() const
            m_completionQueue.contains(V2_PROFILE_DATA_CPL);
 }
 
+bool OpenMVPluginIO::getMemoryStatsQueued() const
+{
+    return m_completionQueue.contains(V2_MEMORY_STATS_CPL);
+}
+
 void OpenMVPluginIO::checkProtocolVerison(bool splitCommand)
 {
     // STM32 USBDBG Behavior:
@@ -1752,6 +1766,20 @@ void OpenMVPluginIO::getDeviceStatsString()
         QTextStream stream(&info);
         stream << "Sent Images: " << m_receivedImages;
         deviceStatsString(info);
+    });
+}
+
+void OpenMVPluginIO::getMemoryStats()
+{
+    if (m_v2ProtocolEnabled) {
+        m_completionQueue.enqueue(V2_MEMORY_STATS_CPL);
+        m_port->getMemoryStats();
+        return;
+    }
+
+    // V1 protocol has no memory statistics; an empty result means "unsupported".
+    QTimer::singleShot(0, this, [this] {
+        emit memoryStats(QVariantList());
     });
 }
 

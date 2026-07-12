@@ -625,6 +625,68 @@ QVariantMap OMVCamera::deviceStats()
     });
 }
 
+QVariantList OMVCamera::memoryStats()
+{
+    /*
+        Get memory statistics: one GC-heap entry followed by one entry per
+        UMA pool. SYS_MEMORY was added in protocol 1.0.2; gate on the cached
+        protocol version so older firmware is never sent an opcode it would
+        NAK (which costs a resync round). An empty list means "unsupported".
+    */
+    if (sysinfo.isEmpty()) {
+        systemInfo(); // caches sysinfo + proto_v
+    }
+
+    int version = (proto_v.size() >= 3)
+        ? ((proto_v.at(0).toInt() * 10000) + (proto_v.at(1).toInt() * 100) + proto_v.at(2).toInt())
+        : 0;
+
+    if (version < 10002) {
+        return QVariantList();
+    }
+
+    return retryIfFailed([this]() -> QVariantList {
+        QByteArray payload = sendCmdWaitResp(OMVPOpcode::SYS_MEMORY);
+        if (payload.size() < 4) {
+            throw OMVPException(
+                QStringLiteral("Invalid SYS_MEMORY payload size: %1").arg(payload.size()));
+        }
+
+        // 4-byte header (count u8 + 3 reserved), then 24-byte entries:
+        // type u8, reserved u8, flags u16, total/used/free/persist/peak u32 (LE).
+        int count = uint8_t(payload.at(0));
+        QVariantList entries;
+
+        for (int i = 0; i < count; ++i) {
+            int offset = 4 + (i * 24);
+            if ((offset + 24) > payload.size()) {
+                break;
+            }
+
+            QDataStream ds(payload.mid(offset, 24));
+            ds.setByteOrder(QDataStream::LittleEndian);
+
+            uint8_t type = 0, reserved = 0;
+            uint16_t flags = 0;
+            uint32_t total = 0, used = 0, free = 0, persist = 0, peak = 0;
+            ds >> type >> reserved >> flags >> total >> used >> free >> persist >> peak;
+
+            QVariantMap m;
+            m.insert(QStringLiteral("mem_type"), (type == 0)
+                ? QStringLiteral("gc") : QStringLiteral("uma"));
+            m.insert(QStringLiteral("flags"), flags);
+            m.insert(QStringLiteral("total"), total);
+            m.insert(QStringLiteral("used"), used);
+            m.insert(QStringLiteral("free"), free);
+            m.insert(QStringLiteral("persist"), persist);
+            m.insert(QStringLiteral("peak"), peak);
+            entries.append(m);
+        }
+
+        return entries;
+    });
+}
+
 void OMVCamera::reset()
 {
     /*

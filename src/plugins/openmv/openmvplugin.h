@@ -90,6 +90,7 @@
 #endif
 
 #include "openmvdataseteditor.h"
+#include "openmvmemoryview.h"
 #include "openmvmodelzoo.h"
 #include "openmvpluginserialport.h"
 #include "openmvpluginio.h"
@@ -154,6 +155,7 @@
 #define JPG_COMPRESS_STATE "JPGCompressState"
 #define DISABLE_FRAME_BUFFER_STATE "DisableFrameBufferState"
 #define HISTOGRAM_COLOR_SPACE_STATE "HistogramColorSpace"
+#define HISTOGRAM_PANE_VIEW_STATE "HistogramPaneView"
 #define DONT_SHOW_EXAMPLES_AGAIN "DontShowExamplesAgain"
 #define DONT_SHOW_COPILOT_AGAIN "DontShowCopilotAgain"
 #define DONT_SHOW_LED_STATES_AGAIN "DontShowLEDStatesAgain"
@@ -284,6 +286,7 @@
 #define GET_TX_BUFFER_SPACING       5 // in ms
 #define GET_STATE_SPACING           25 // in ms
 #define READ_PROFILE_SPACING        500 // in ms
+#define MEMORY_STATS_SPACING        1000 // in ms
 
 #define FPS_AVERAGE_BUFFER_DEPTH    100 // in samples
 #define WIFI_PORT_RETIRE            8 // in seconds (cams announce every 2s -> ~4 missed = retired)
@@ -305,6 +308,10 @@
 #define FOLDER_SCAN_TIME            10000 // in ms
 
 #define FORCE_SHUTDOWN_TIMEOUT      10000 // in ms
+
+// Histogram-pane view selector indexes (order of the pane's combo box).
+#define HISTOGRAM_VIEW 0
+#define MEMORY_VIEW 1
 
 namespace OpenMV {
 namespace Internal {
@@ -708,6 +715,7 @@ private:
     QElapsedTimer m_getTxBufferTimer;
     QElapsedTimer m_getStateTimer;
     QElapsedTimer m_readProfileTimer;
+    QElapsedTimer m_memoryStatsTimer;
 
     QElapsedTimer m_timer;
     QQueue<qint64> m_queue;
@@ -790,6 +798,7 @@ private:
     OpenMVDatasetEditor *m_datasetEditor;
     OpenMVPluginFB *m_frameBuffer;
     OpenMVPluginHistogram *m_histogram;
+    OpenMVMemoryView *m_memoryView;
     QPointer<OpenMVProfileView> m_profile;
 
     Utils::ElidingLabel *m_boardLabel;

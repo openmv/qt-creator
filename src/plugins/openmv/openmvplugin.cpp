@@ -68,12 +68,14 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
 
     m_ioport = Q_NULLPTR;
     m_iodevice = Q_NULLPTR;
+    m_memoryView = Q_NULLPTR;
 
     m_frameSizeDumpTimer.start();
     m_getScriptRunningTimer.start();
     m_getTxBufferTimer.start();
     m_getStateTimer.start();
     m_readProfileTimer.start();
+    m_memoryStatsTimer.start();
 
     m_timer.start();
     m_queue = QQueue<qint64>();
@@ -2429,7 +2431,16 @@ void OpenMVPlugin::extensionsInitialized()
     styledBar1Layout->setContentsMargins(0, 0, 0, 0);
     styledBar1Layout->setSpacing(0);
     styledBar1Layout->addSpacing(4);
-    styledBar1Layout->addWidget(new QLabel(Tr::tr("Histogram")));
+    // The pane title doubles as the view selector (the same pattern as the
+    // navigation sidebar's header combo box).
+    QComboBox *paneView = new QComboBox;
+    paneView->setProperty("hideborder", true);
+    paneView->setProperty("drawleftborder", false);
+    paneView->insertItem(HISTOGRAM_VIEW, Tr::tr("Histogram"));
+    paneView->insertItem(MEMORY_VIEW, Tr::tr("Memory"));
+    paneView->setCurrentIndex(HISTOGRAM_VIEW);
+    paneView->setToolTip(Tr::tr("Select what this pane displays"));
+    styledBar1Layout->addWidget(paneView);
     styledBar1Layout->addSpacing(6);
     styledBar1->setLayout(styledBar1Layout);
 
@@ -2442,20 +2453,46 @@ void OpenMVPlugin::extensionsInitialized()
     colorSpace->insertItem(YUV_COLOR_SPACE, Tr::tr("YUV Color Space"));
     colorSpace->setCurrentIndex(RGB_COLOR_SPACE);
     colorSpace->setToolTip(Tr::tr("Use Grayscale/LAB for color tracking"));
-    styledBar1Layout->addWidget(colorSpace);
+
+    // The histogram-type selector rides in a stacked widget that mirrors
+    // paneStack below: the bar shows the color-space combo for the Histogram
+    // view and an empty page for the Memory view, so the selector swaps with
+    // whatever the pane is displaying rather than just being hidden.
+    QStackedWidget *selectorStack = new QStackedWidget;
+    selectorStack->addWidget(colorSpace);  // HISTOGRAM_VIEW
+    selectorStack->addWidget(new QWidget); // MEMORY_VIEW (no controls)
+    styledBar1Layout->addWidget(selectorStack);
 
     m_histogram = new OpenMVPluginHistogram;
+    m_memoryView = new OpenMVMemoryView;
+    QStackedWidget *paneStack = new QStackedWidget;
+    paneStack->addWidget(m_histogram);
+    paneStack->addWidget(m_memoryView);
     QWidget *tempWidget1 = new QWidget;
     QVBoxLayout *tempLayout1 = new QVBoxLayout;
     tempLayout1->setContentsMargins(0, 0, 0, 0);
     tempLayout1->setSpacing(0);
     tempLayout1->addWidget(styledBar1);
-    tempLayout1->addWidget(m_histogram);
+    tempLayout1->addWidget(paneStack);
     tempWidget1->setLayout(tempLayout1);
 
     connect(colorSpace, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), m_histogram, &OpenMVPluginHistogram::colorSpaceChanged);
+    // Feed the histogram every frame so switching to it always shows current
+    // data rather than a stale plot from when it was last visible.
     connect(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, m_histogram, &OpenMVPluginHistogram::pixmapUpdate);
+
     connect(m_histogram, &OpenMVPluginHistogram::focusMetric, m_frameBuffer, &OpenMVPluginFB::focusMetric);
+
+    // Memory view updates. processEvents() polls getMemoryStats() on
+    // m_memoryStatsTimer while connected, alongside the other pollers; this
+    // consumer just renders whatever arrives.
+    connect(m_iodevice, &OpenMVPluginIO::memoryStats, m_memoryView, &OpenMVMemoryView::memoryStats);
+
+    connect(paneView, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, [paneStack, selectorStack] (int index) {
+        paneStack->setCurrentIndex(index);
+        selectorStack->setCurrentIndex(index);
+    });
+
     connect(m_frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [frameBufferLabel] (const QSize &res, const QRect &roi, int focus) {
         if(res.isValid())
         {
@@ -2798,6 +2835,8 @@ void OpenMVPlugin::extensionsInitialized()
         settings->value(SETTINGS_GROUP "/" DISABLE_FRAME_BUFFER_STATE, m_disableFrameBuffer->isChecked()).toBool());
     colorSpace->setCurrentIndex(
         settings->value(SETTINGS_GROUP "/" HISTOGRAM_COLOR_SPACE_STATE, colorSpace->currentIndex()).toInt());
+    paneView->setCurrentIndex(
+        settings->value(SETTINGS_GROUP "/" HISTOGRAM_PANE_VIEW_STATE, paneView->currentIndex()).toInt());
     QFont font = TextEditor::TextEditorSettings::fontSettings().defaultFixedFontFamily();
     font.setPointSize(TextEditor::TextEditorSettings::fontSettings().defaultFontSize());
     Core::MessageManager::outputWindow()->setBaseFont(font);
@@ -2937,7 +2976,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     settings->endArray();
 
-    connect(Core::ICore::instance(), &Core::ICore::saveSettingsRequested, this, [this, zoomButton, colorSpace, msplitter, hsplitter, vsplitter] {
+    connect(Core::ICore::instance(), &Core::ICore::saveSettingsRequested, this, [this, zoomButton, colorSpace, paneView, msplitter, hsplitter, vsplitter] {
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
         // Don't let viewer mode clobber the normal IDE's remembered open documents --
         // it starts clean and never restores them anyway.
@@ -2969,6 +3008,8 @@ void OpenMVPlugin::extensionsInitialized()
             m_disableFrameBuffer->isChecked());
         settings->setValue(SETTINGS_GROUP "/" HISTOGRAM_COLOR_SPACE_STATE,
             colorSpace->currentIndex());
+        settings->setValue(SETTINGS_GROUP "/" HISTOGRAM_PANE_VIEW_STATE,
+            paneView->currentIndex());
         settings->setValue(SETTINGS_GROUP "/" OUTPUT_WINDOW_FONT_ZOOM_STATE,
             Core::MessageManager::outputWindow()->fontZoom());
 
