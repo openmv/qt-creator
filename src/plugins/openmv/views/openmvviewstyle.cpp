@@ -67,7 +67,9 @@ QWidget *viewSectionLabel(const QString &text)
     QLabel *label = new QLabel(text);
     label->setTextInteractionFlags(Qt::TextSelectableByMouse);
     label->setStyleSheet(QStringLiteral("font-weight: bold"));
-    label->setContentsMargins(4, 4, 4, 2);
+    // Text insets from the view edge; the hairline below runs full-bleed
+    // (the view containers have no horizontal margins, like the histogram).
+    label->setContentsMargins(6, 4, 6, 2);
 
     QWidget *section = new QWidget;
     QVBoxLayout *layout = new QVBoxLayout(section);
@@ -104,7 +106,7 @@ QWidget *viewRow(QWidget *name, const QList<QWidget *> &values)
 {
     QWidget *content = new QWidget;
     QHBoxLayout *contentLayout = new QHBoxLayout(content);
-    contentLayout->setContentsMargins(4, 3, 4, 3);
+    contentLayout->setContentsMargins(6, 3, 6, 3); // text inset; the hairline runs full-bleed
     contentLayout->setSpacing(8);
     contentLayout->addWidget(name);
     contentLayout->addStretch(1);

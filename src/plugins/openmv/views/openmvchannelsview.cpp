@@ -874,7 +874,9 @@ OpenMVChannelsView::OpenMVChannelsView(QWidget *parent) : QStackedWidget(parent)
 
     QWidget *container = new QWidget;
     QVBoxLayout *layout = new QVBoxLayout(container);
-    layout->setContentsMargins(4, 4, 4, 4);
+    // Rows inset their own text; hairlines and the depth/waveform graphics
+    // run full-bleed to the view edges, like the histogram.
+    layout->setContentsMargins(0, 4, 0, 4);
     layout->setSpacing(0);
 
     m_contentLayout = new QVBoxLayout;
@@ -1013,7 +1015,7 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
     auto addRecordBar = [this](Record &record, QVBoxLayout *rowLayout, int index) {
         QWidget *recordBar = new QWidget;
         QHBoxLayout *recordBarLayout = new QHBoxLayout(recordBar);
-        recordBarLayout->setContentsMargins(0, 0, 0, 0);
+        recordBarLayout->setContentsMargins(6, 0, 6, 0); // text inset; the graph above is full-bleed
         recordBarLayout->setSpacing(8);
 
         record.recordButton = new QPushButton(Tr::tr("Record"));
@@ -1049,7 +1051,7 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
             {
                 QWidget *bar = new QWidget;
                 QHBoxLayout *barLayout = new QHBoxLayout(bar);
-                barLayout->setContentsMargins(4, 3, 4, 3);
+                barLayout->setContentsMargins(6, 3, 6, 3);
                 barLayout->setSpacing(8);
 
                 Section section;
@@ -1083,13 +1085,15 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
             record.sectionIndex = currentSection;
             record.trackIndex = trackCounter++;
 
-            // Header (name, size, range) above the colormapped image.
+            // Header (name, size, range) above the colormapped image. The
+            // image runs full-bleed; the header and record bar inset.
             QWidget *row = new QWidget;
             QVBoxLayout *rowLayout = new QVBoxLayout(row);
-            rowLayout->setContentsMargins(4, 3, 4, 3);
+            rowLayout->setContentsMargins(0, 3, 0, 3);
             rowLayout->setSpacing(4);
 
             record.depthHeader = viewNameLabel(QString());
+            record.depthHeader->setContentsMargins(6, 0, 6, 0);
             rowLayout->addWidget(record.depthHeader);
 
             record.depth = new OpenMVChannelDepth;
@@ -1105,13 +1109,15 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
             record.sectionIndex = currentSection;
             record.trackIndex = trackCounter++;
 
-            // Header (name, geometry, rate) above the traces.
+            // Header (name, geometry, rate) above the traces. The plot runs
+            // full-bleed; the header and record bar inset.
             QWidget *row = new QWidget;
             QVBoxLayout *rowLayout = new QVBoxLayout(row);
-            rowLayout->setContentsMargins(4, 3, 4, 3);
+            rowLayout->setContentsMargins(0, 3, 0, 3);
             rowLayout->setSpacing(4);
 
             record.waveformHeader = viewNameLabel(QString());
+            record.waveformHeader->setContentsMargins(6, 0, 6, 0);
             rowLayout->addWidget(record.waveformHeader);
 
             record.waveform = new OpenMVChannelWaveform;
@@ -1292,7 +1298,7 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
 
             QWidget *row = new QWidget;
             QVBoxLayout *rowLayout = new QVBoxLayout(row);
-            rowLayout->setContentsMargins(4, 3, 4, 3);
+            rowLayout->setContentsMargins(6, 3, 6, 3);
             rowLayout->addWidget(record.value);
 
             record.row = row;

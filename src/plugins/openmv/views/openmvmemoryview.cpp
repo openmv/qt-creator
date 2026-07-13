@@ -189,7 +189,7 @@ void OpenMVMemoryGraph::paintEvent(QPaintEvent *event)
         small.setPointSizeF(qMax(6.0, small.pointSizeF() - 2.0));
         painter.setFont(small);
         painter.setPen(PEAK_TEXT_COLOR);
-        painter.drawText(QPointF(w - painter.fontMetrics().horizontalAdvance(Tr::tr("peak")) - 2,
+        painter.drawText(QPointF(w - painter.fontMetrics().horizontalAdvance(Tr::tr("peak")) - 6,
                                  peakY - 3), Tr::tr("peak"));
     }
 }
@@ -199,7 +199,9 @@ void OpenMVMemoryGraph::paintEvent(QPaintEvent *event)
 OpenMVMemoryCard::OpenMVMemoryCard(QWidget *parent) : QFrame(parent)
 {
     QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->setContentsMargins(4, 4, 4, 4);
+    // Text insets horizontally on its own below; the graph runs full-bleed
+    // to the view edges, like the histogram's plots.
+    layout->setContentsMargins(0, 4, 0, 4);
     layout->setSpacing(4);
 
     // All text is mouse-selectable so figures can be copied out. The header
@@ -212,13 +214,14 @@ OpenMVMemoryCard::OpenMVMemoryCard(QWidget *parent) : QFrame(parent)
 
     m_header = makeSelectable(new QLabel);
     m_header->setStyleSheet(QStringLiteral("font-weight: bold"));
+    m_header->setContentsMargins(6, 0, 6, 0);
     layout->addWidget(m_header);
 
     m_graph = new OpenMVMemoryGraph;
     layout->addWidget(m_graph);
 
     QGridLayout *grid = new QGridLayout;
-    grid->setContentsMargins(0, 0, 0, 0);
+    grid->setContentsMargins(6, 0, 6, 0);
     grid->setSpacing(2);
 
     grid->addWidget(makeSelectable(new QLabel(Tr::tr("Used / Total"))), 0, 0);
@@ -312,7 +315,7 @@ OpenMVMemoryView::OpenMVMemoryView(QWidget *parent) : QStackedWidget(parent)
 
     QWidget *container = new QWidget;
     QVBoxLayout *layout = new QVBoxLayout(container);
-    layout->setContentsMargins(4, 4, 4, 4);
+    layout->setContentsMargins(0, 4, 0, 4); // cards inset their own text
     layout->setSpacing(4);
 
     m_cardsLayout = new QVBoxLayout;
@@ -372,7 +375,7 @@ void OpenMVMemoryView::memoryStats(const QVariantList &entries)
             if(i)
             {
                 // Faint 1px separator between pools instead of per-card
-                // borders, inset to align with the cards' text margins.
+                // borders, full-bleed like the other views' hairlines.
                 QWidget *line = new QWidget;
                 line->setFixedHeight(1);
                 line->setAutoFillBackground(true);
@@ -386,7 +389,7 @@ void OpenMVMemoryView::memoryStats(const QVariantList &entries)
 
                 QWidget *divider = new QWidget;
                 QHBoxLayout *dividerLayout = new QHBoxLayout(divider);
-                dividerLayout->setContentsMargins(4, 0, 4, 0);
+                dividerLayout->setContentsMargins(0, 0, 0, 0);
                 dividerLayout->addWidget(line);
                 m_cardsLayout->addWidget(divider);
             }

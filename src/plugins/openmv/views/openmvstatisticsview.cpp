@@ -76,7 +76,7 @@ OpenMVStatisticsView::OpenMVStatisticsView(QWidget *parent) : QStackedWidget(par
 
     QWidget *container = new QWidget;
     QVBoxLayout *layout = new QVBoxLayout(container);
-    layout->setContentsMargins(4, 4, 4, 4);
+    layout->setContentsMargins(0, 4, 0, 4); // rows inset their own text; hairlines run full-bleed
     layout->setSpacing(0);
 
     layout->addWidget(viewSectionLabel(Tr::tr("Device")));

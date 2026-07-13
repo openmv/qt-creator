@@ -113,7 +113,7 @@ OpenMVBoardInfoView::OpenMVBoardInfoView(QWidget *parent) : QStackedWidget(paren
 
     QWidget *container = new QWidget;
     QVBoxLayout *layout = new QVBoxLayout(container);
-    layout->setContentsMargins(4, 4, 4, 4);
+    layout->setContentsMargins(0, 4, 0, 4); // rows inset their own text; hairlines run full-bleed
     layout->setSpacing(0);
 
     for(size_t i = 0; i < (sizeof(ROW_LABELS) / sizeof(ROW_LABELS[0])); i++)
