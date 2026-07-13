@@ -432,6 +432,7 @@ void OpenMVPlugin::setSpacing()
                                       (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
     dialog->setWindowTitle(Tr::tr("Debug Protocol Settings"));
     dialog->setSizeGripEnabled(true);
+    dialog->setMinimumWidth(240);
     QVBoxLayout *vlayout = new QVBoxLayout(dialog);
 
     QWidget *mainWidget = new QWidget;

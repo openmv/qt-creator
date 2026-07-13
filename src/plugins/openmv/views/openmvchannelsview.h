@@ -32,7 +32,11 @@
 // the SenML-CBOR channels a running script publishes, mirroring OpenMV
 // Studio's Channels tab. Records render by their widget type: value labels
 // (with units), depth-map images (Turbo colormap), and -- on writable
-// channels -- toggles, sliders, and selects that write back to the script.
+// channels -- toggles, sliders, spinboxes (precise stepped entry), radio
+// buttons, line edits, selects, and pushbuttons (momentary actions) that
+// write back to the script, plus static rich text ("text"). The control
+// vocabulary matches the Settings Editor's element names where they exist
+// there ("label" keeps Studio's meaning: a name/value readout row).
 // Fed by OpenMVPluginIO::readChannels() polling while the view is visible;
 // control changes are emitted through writeChannel() and the next render of
 // that channel is skipped so an in-flight pre-write read can't snap a
@@ -214,7 +218,11 @@ private:
         QLabel *sliderValue = Q_NULLPTR;
         double sliderMin = 0.0;
         double sliderStep = 1.0;
+        QDoubleSpinBox *spinbox = Q_NULLPTR;
+        QButtonGroup *radio = Q_NULLPTR;
+        QLineEdit *lineedit = Q_NULLPTR;
         QComboBox *select = Q_NULLPTR;
+        QPushButton *pushbutton = Q_NULLPTR;
         OpenMVChannelDepth *depth = Q_NULLPTR;
         QLabel *depthHeader = Q_NULLPTR;
         OpenMVChannelWaveform *waveform = Q_NULLPTR;

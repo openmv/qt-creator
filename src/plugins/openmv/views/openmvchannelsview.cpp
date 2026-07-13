@@ -70,20 +70,184 @@ enum : int {
 
 #define CHANNEL_FLAG_WRITE (1 << 1)
 
-// Unit -> 14x14 icon (OpenMV Studio's set; "currentColor" is replaced with
-// the muted name-label color at render time).
+// Unit -> 14x14 icon covering the SenML unit registry (RFC 8428 plus the
+// RFC 8798 secondary units) and OpenMV Studio's legacy names (lux, mg,
+// mdps). Units sharing a concept share a glyph; "currentColor" is
+// replaced with the muted name-label color at render time.
+#define UNIT_ICON_THERMOMETER "<svg viewBox=\"0 0 14 14\"><path d=\"M5 1.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0zM9 5v5a2.5 2.5 0 1 1-5 0V5a3 3 0 1 1 6 0zm-2 0a1 1 0 1 0-2 0v5a.5.5 0 0 0 1 0V5z\" fill=\"currentColor\"/></svg>"
+#define UNIT_ICON_DROPLET "<svg viewBox=\"0 0 14 14\"><path d=\"M7 1S3 5.5 3 8.5a4 4 0 0 0 8 0C11 5.5 7 1 7 1zm0 10a2.5 2.5 0 0 1-2.5-2.5c0-.3.05-.6.15-.9l2.85-3.2 2.85 3.2c.1.3.15.6.15.9A2.5 2.5 0 0 1 7 11z\" fill=\"currentColor\"/></svg>"
+#define UNIT_ICON_SUN "<svg viewBox=\"0 0 14 14\"><circle cx=\"7\" cy=\"7\" r=\"3\" fill=\"currentColor\"/><g stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"><line x1=\"7\" y1=\"1\" x2=\"7\" y2=\"2.5\"/><line x1=\"7\" y1=\"11.5\" x2=\"7\" y2=\"13\"/><line x1=\"1\" y1=\"7\" x2=\"2.5\" y2=\"7\"/><line x1=\"11.5\" y1=\"7\" x2=\"13\" y2=\"7\"/><line x1=\"2.8\" y1=\"2.8\" x2=\"3.8\" y2=\"3.8\"/><line x1=\"10.2\" y1=\"10.2\" x2=\"11.2\" y2=\"11.2\"/><line x1=\"2.8\" y1=\"11.2\" x2=\"3.8\" y2=\"10.2\"/><line x1=\"10.2\" y1=\"3.8\" x2=\"11.2\" y2=\"2.8\"/></g></svg>"
+#define UNIT_ICON_PRESSURE "<svg viewBox=\"0 0 14 14\"><path d=\"M3 12V6l2-4 2 4v6m-1-3H4m6 3V4l2-2v10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+#define UNIT_ICON_BOLT "<svg viewBox=\"0 0 14 14\"><path d=\"M8 1L3 8h4l-1 5 5-7H7l1-5z\" fill=\"currentColor\"/></svg>"
+#define UNIT_ICON_AMP "<svg viewBox=\"0 0 14 14\"><path d=\"M7 2l-4 10h2l1-3h2l1 3h2L7 2zm0 3.5L8.2 8H5.8L7 5.5z\" fill=\"currentColor\"/></svg>"
+#define UNIT_ICON_ANGLE "<svg viewBox=\"0 0 14 14\"><circle cx=\"7\" cy=\"7\" r=\"4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><line x1=\"7\" y1=\"7\" x2=\"7\" y2=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/><circle cx=\"7\" cy=\"2\" r=\"1\" fill=\"currentColor\"/></svg>"
+#define UNIT_ICON_WIND "<svg viewBox=\"0 0 14 14\"><path d=\"M1 10c1.5-1 3-4 5-4s2.5 3 4 3 2.5-2 3-3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/><path d=\"M10 4l2 1-1 2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+#define UNIT_ICON_AXES "<svg viewBox=\"0 0 14 14\"><path d=\"M2 7h10M7 2v10M4 4l6 6M10 4l-6 6\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/></svg>"
+#define UNIT_ICON_GYRO "<svg viewBox=\"0 0 14 14\"><circle cx=\"7\" cy=\"7\" r=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M7 7l3-2\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/><path d=\"M9 3l1.5.5-.5 1.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+#define UNIT_ICON_MAGNET "<svg viewBox=\"0 0 14 14\"><path d=\"M4 12V6a3 3 0 0 1 6 0v6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"/><path d=\"M3 10h2.6M8.4 10H11\" stroke=\"currentColor\" stroke-width=\"1.2\"/></svg>"
+#define UNIT_ICON_RULER "<svg viewBox=\"0 0 14 14\"><rect x=\"1\" y=\"5\" width=\"12\" height=\"4\" rx=\"1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M4 5v2M7 5v2M10 5v2\" stroke=\"currentColor\" stroke-width=\"1\"/></svg>"
+#define UNIT_ICON_CLOCK "<svg viewBox=\"0 0 14 14\"><circle cx=\"7\" cy=\"7\" r=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M7 4v3l2 2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/></svg>"
+#define UNIT_ICON_WAVE "<svg viewBox=\"0 0 14 14\"><path d=\"M1 7c1-4 2-4 3 0s2 4 3 0 2-4 3 0 2 4 3 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/></svg>"
+#define UNIT_ICON_CHIP "<svg viewBox=\"0 0 14 14\"><rect x=\"4\" y=\"4\" width=\"6\" height=\"6\" rx=\"1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M5.5 4V2M8.5 4V2M5.5 12v-2M8.5 12v-2M4 5.5H2M4 8.5H2M12 5.5h-2M12 8.5h-2\" stroke=\"currentColor\" stroke-width=\"1\"/></svg>"
+#define UNIT_ICON_BATTERY "<svg viewBox=\"0 0 14 14\"><rect x=\"1\" y=\"4\" width=\"10\" height=\"6\" rx=\"1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><rect x=\"3\" y=\"6\" width=\"4\" height=\"2\" fill=\"currentColor\"/><path d=\"M12.5 6v2\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg>"
+#define UNIT_ICON_ENERGY "<svg viewBox=\"0 0 14 14\"><rect x=\"1\" y=\"4\" width=\"10\" height=\"6\" rx=\"1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M12.5 6v2\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><path d=\"M6.6 4.6L4.6 7.2h1.5l-1 2.2 2.3-2.6H5.9l.7-2.2z\" fill=\"currentColor\"/></svg>"
+#define UNIT_ICON_POWER "<svg viewBox=\"0 0 14 14\"><circle cx=\"7\" cy=\"7\" r=\"5.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.1\"/><path d=\"M7.8 3.5L5.5 7.4h1.9L6.2 10.5l2.4-3.6H6.8l1-3.4z\" fill=\"currentColor\"/></svg>"
+#define UNIT_ICON_SPEAKER "<svg viewBox=\"0 0 14 14\"><path d=\"M2 5.5v3h1.8L7 11V3L3.8 5.5H2z\" fill=\"currentColor\"/><path d=\"M9 5.5a2 2 0 0 1 0 3M10.8 4a4.3 4.3 0 0 1 0 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/></svg>"
+#define UNIT_ICON_HASH "<svg viewBox=\"0 0 14 14\"><path d=\"M5 2L4 12M10 2L9 12M2.5 5h9M2.5 9h9\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/></svg>"
+#define UNIT_ICON_HEART "<svg viewBox=\"0 0 14 14\"><path d=\"M7 12S2 8.6 2 5.6a2.6 2.6 0 0 1 5-1 2.6 2.6 0 0 1 5 1C12 8.6 7 12 7 12z\" fill=\"currentColor\"/></svg>"
+#define UNIT_ICON_PERCENT "<svg viewBox=\"0 0 14 14\"><path d=\"M3 11l8-8\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/><circle cx=\"4.2\" cy=\"4.2\" r=\"1.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.1\"/><circle cx=\"9.8\" cy=\"9.8\" r=\"1.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.1\"/></svg>"
+#define UNIT_ICON_SCALE "<svg viewBox=\"0 0 14 14\"><path d=\"M5 4.5a2 2 0 1 1 4 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M4 4.5h6l1.2 6.2a1 1 0 0 1-1 1.3H3.8a1 1 0 0 1-1-1.3z\" fill=\"currentColor\"/></svg>"
+#define UNIT_ICON_CLOUD "<svg viewBox=\"0 0 14 14\"><path d=\"M4.2 11a2.6 2.6 0 0 1-.2-5.2 3.4 3.4 0 0 1 6.6-.5A2.4 2.4 0 0 1 10.4 11z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/></svg>"
+#define UNIT_ICON_OMEGA "<svg viewBox=\"0 0 14 14\"><path d=\"M3.5 11.5H6v-1.3a3.6 3.6 0 1 1 2 0v1.3h2.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+#define UNIT_ICON_CAPACITOR "<svg viewBox=\"0 0 14 14\"><path d=\"M1 7h4M9 7h4M5 3.5v7M9 3.5v7\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/></svg>"
+#define UNIT_ICON_COIL "<svg viewBox=\"0 0 14 14\"><path d=\"M1 8.5a1.5 1.5 0 0 1 3 0 1.5 1.5 0 0 1 3 0 1.5 1.5 0 0 1 3 0 1.5 1.5 0 0 1 3 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/></svg>"
+#define UNIT_ICON_RADIATION "<svg viewBox=\"0 0 14 14\"><circle cx=\"7\" cy=\"7\" r=\"1.3\" fill=\"currentColor\"/><path d=\"M7 6L5 2.6a6 6 0 0 1 4 0zM8.1 7.6l3.4 2a6 6 0 0 1-2 3.4zM5.9 7.6l-3.4 2a6 6 0 0 0 2 3.4z\" fill=\"currentColor\"/></svg>"
+#define UNIT_ICON_FLASK "<svg viewBox=\"0 0 14 14\"><path d=\"M5.5 1.5h3M6 1.5v4L3.2 11a1.4 1.4 0 0 0 1.3 2h5a1.4 1.4 0 0 0 1.3-2L8 5.5v-4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/></svg>"
+#define UNIT_ICON_AREA "<svg viewBox=\"0 0 14 14\"><rect x=\"2.5\" y=\"2.5\" width=\"9\" height=\"9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/></svg>"
+#define UNIT_ICON_VOLUME "<svg viewBox=\"0 0 14 14\"><path d=\"M7 1.5l5 2.5v6l-5 2.5-5-2.5V4z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M2 4l5 2.5L12 4M7 6.5v6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\"/></svg>"
+#define UNIT_ICON_FLOW "<svg viewBox=\"0 0 14 14\"><path d=\"M4.5 1.5S2 4.5 2 6.5a2.5 2.5 0 0 0 5 0c0-2-2.5-5-2.5-5z\" fill=\"currentColor\"/><path d=\"M8.5 10.5H13M11.2 8.7l1.8 1.8-1.8 1.8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+#define UNIT_ICON_GLOBE "<svg viewBox=\"0 0 14 14\"><circle cx=\"7\" cy=\"7\" r=\"5.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.1\"/><ellipse cx=\"7\" cy=\"7\" rx=\"2.3\" ry=\"5.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\"/><path d=\"M1.8 7h10.4\" stroke=\"currentColor\" stroke-width=\"1\"/></svg>"
+#define UNIT_ICON_FORCE "<svg viewBox=\"0 0 14 14\"><rect x=\"8\" y=\"4.5\" width=\"4.5\" height=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M1 7h5.5M4.8 5.2L6.6 7l-1.8 1.8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
 static const struct { const char *unit; const char *svg; } UNIT_ICONS[] = {
-    { "Cel", "<svg viewBox=\"0 0 14 14\"><path d=\"M5 1.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0zM9 5v5a2.5 2.5 0 1 1-5 0V5a3 3 0 1 1 6 0zm-2 0a1 1 0 1 0-2 0v5a.5.5 0 0 0 1 0V5z\" fill=\"currentColor\"/></svg>" },
-    { "%RH", "<svg viewBox=\"0 0 14 14\"><path d=\"M7 1S3 5.5 3 8.5a4 4 0 0 0 8 0C11 5.5 7 1 7 1zm0 10a2.5 2.5 0 0 1-2.5-2.5c0-.3.05-.6.15-.9l2.85-3.2 2.85 3.2c.1.3.15.6.15.9A2.5 2.5 0 0 1 7 11z\" fill=\"currentColor\"/></svg>" },
-    { "lux", "<svg viewBox=\"0 0 14 14\"><circle cx=\"7\" cy=\"7\" r=\"3\" fill=\"currentColor\"/><g stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"><line x1=\"7\" y1=\"1\" x2=\"7\" y2=\"2.5\"/><line x1=\"7\" y1=\"11.5\" x2=\"7\" y2=\"13\"/><line x1=\"1\" y1=\"7\" x2=\"2.5\" y2=\"7\"/><line x1=\"11.5\" y1=\"7\" x2=\"13\" y2=\"7\"/><line x1=\"2.8\" y1=\"2.8\" x2=\"3.8\" y2=\"3.8\"/><line x1=\"10.2\" y1=\"10.2\" x2=\"11.2\" y2=\"11.2\"/><line x1=\"2.8\" y1=\"11.2\" x2=\"3.8\" y2=\"10.2\"/><line x1=\"10.2\" y1=\"3.8\" x2=\"11.2\" y2=\"2.8\"/></g></svg>" },
-    { "Pa", "<svg viewBox=\"0 0 14 14\"><path d=\"M3 12V6l2-4 2 4v6m-1-3H4m6 3V4l2-2v10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>" },
-    { "hPa", "<svg viewBox=\"0 0 14 14\"><path d=\"M3 12V6l2-4 2 4v6m-1-3H4m6 3V4l2-2v10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>" },
-    { "V", "<svg viewBox=\"0 0 14 14\"><path d=\"M8 1L3 8h4l-1 5 5-7H7l1-5z\" fill=\"currentColor\"/></svg>" },
-    { "A", "<svg viewBox=\"0 0 14 14\"><path d=\"M7 2l-4 10h2l1-3h2l1 3h2L7 2zm0 3.5L8.2 8H5.8L7 5.5z\" fill=\"currentColor\"/></svg>" },
-    { "deg", "<svg viewBox=\"0 0 14 14\"><circle cx=\"7\" cy=\"7\" r=\"4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><line x1=\"7\" y1=\"7\" x2=\"7\" y2=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/><circle cx=\"7\" cy=\"2\" r=\"1\" fill=\"currentColor\"/></svg>" },
-    { "m/s", "<svg viewBox=\"0 0 14 14\"><path d=\"M1 10c1.5-1 3-4 5-4s2.5 3 4 3 2.5-2 3-3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/><path d=\"M10 4l2 1-1 2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>" },
-    { "mg", "<svg viewBox=\"0 0 14 14\"><path d=\"M2 7h10M7 2v10M4 4l6 6M10 4l-6 6\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/></svg>" },
-    { "mdps", "<svg viewBox=\"0 0 14 14\"><circle cx=\"7\" cy=\"7\" r=\"5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M7 7l3-2\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/><path d=\"M9 3l1.5.5-.5 1.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>" },
+    // Temperature
+    { "Cel", UNIT_ICON_THERMOMETER },
+    { "K", UNIT_ICON_THERMOMETER },
+    // Humidity
+    { "%RH", UNIT_ICON_DROPLET },
+    // Light
+    { "lx", UNIT_ICON_SUN },
+    { "lux", UNIT_ICON_SUN },
+    { "lm", UNIT_ICON_SUN },
+    { "cd", UNIT_ICON_SUN },
+    { "cd/m2", UNIT_ICON_SUN },
+    { "W/m2", UNIT_ICON_SUN },
+    // Pressure
+    { "Pa", UNIT_ICON_PRESSURE },
+    { "hPa", UNIT_ICON_PRESSURE },
+    // Voltage
+    { "V", UNIT_ICON_BOLT },
+    { "mV", UNIT_ICON_BOLT },
+    // Current
+    { "A", UNIT_ICON_AMP },
+    { "mA", UNIT_ICON_AMP },
+    // Angle
+    { "deg", UNIT_ICON_ANGLE },
+    { "rad", UNIT_ICON_ANGLE },
+    { "sr", UNIT_ICON_ANGLE },
+    // Speed
+    { "m/s", UNIT_ICON_WIND },
+    { "km/h", UNIT_ICON_WIND },
+    { "m/h", UNIT_ICON_WIND },
+    // Acceleration
+    { "mg", UNIT_ICON_AXES },
+    { "m/s2", UNIT_ICON_AXES },
+    // Angular rate
+    { "mdps", UNIT_ICON_GYRO },
+    { "dps", UNIT_ICON_GYRO },
+    { "rad/s", UNIT_ICON_GYRO },
+    // Magnetic
+    { "uT", UNIT_ICON_MAGNET },
+    { "T", UNIT_ICON_MAGNET },
+    { "gauss", UNIT_ICON_MAGNET },
+    { "Wb", UNIT_ICON_MAGNET },
+    // Length
+    { "m", UNIT_ICON_RULER },
+    { "cm", UNIT_ICON_RULER },
+    { "mm", UNIT_ICON_RULER },
+    { "km", UNIT_ICON_RULER },
+    // Time
+    { "s", UNIT_ICON_CLOCK },
+    { "ms", UNIT_ICON_CLOCK },
+    { "min", UNIT_ICON_CLOCK },
+    { "h", UNIT_ICON_CLOCK },
+    // Frequency
+    { "Hz", UNIT_ICON_WAVE },
+    { "kHz", UNIT_ICON_WAVE },
+    { "MHz", UNIT_ICON_WAVE },
+    { "1/s", UNIT_ICON_WAVE },
+    { "1/min", UNIT_ICON_WAVE },
+    // Data
+    { "bit", UNIT_ICON_CHIP },
+    { "B", UNIT_ICON_CHIP },
+    { "KB", UNIT_ICON_CHIP },
+    { "KiB", UNIT_ICON_CHIP },
+    { "MB", UNIT_ICON_CHIP },
+    { "GB", UNIT_ICON_CHIP },
+    { "bit/s", UNIT_ICON_CHIP },
+    { "B/s", UNIT_ICON_CHIP },
+    { "MB/s", UNIT_ICON_CHIP },
+    { "Mbit/s", UNIT_ICON_CHIP },
+    // Battery
+    { "%EL", UNIT_ICON_BATTERY },
+    { "EL", UNIT_ICON_BATTERY },
+    // Energy/Charge
+    { "J", UNIT_ICON_ENERGY },
+    { "Wh", UNIT_ICON_ENERGY },
+    { "kWh", UNIT_ICON_ENERGY },
+    { "Ah", UNIT_ICON_ENERGY },
+    { "C", UNIT_ICON_ENERGY },
+    { "varh", UNIT_ICON_ENERGY },
+    { "kvarh", UNIT_ICON_ENERGY },
+    { "kVAh", UNIT_ICON_ENERGY },
+    { "Wh/km", UNIT_ICON_ENERGY },
+    // Power
+    { "W", UNIT_ICON_POWER },
+    { "kW", UNIT_ICON_POWER },
+    { "VA", UNIT_ICON_POWER },
+    { "kVA", UNIT_ICON_POWER },
+    { "VAs", UNIT_ICON_POWER },
+    { "var", UNIT_ICON_POWER },
+    { "kvar", UNIT_ICON_POWER },
+    { "vars", UNIT_ICON_POWER },
+    { "dBW", UNIT_ICON_POWER },
+    { "dBm", UNIT_ICON_POWER },
+    // Sound
+    { "dB", UNIT_ICON_SPEAKER },
+    { "Bspl", UNIT_ICON_SPEAKER },
+    // Counting
+    { "count", UNIT_ICON_HASH },
+    // Heart
+    { "beat/min", UNIT_ICON_HEART },
+    { "beats", UNIT_ICON_HEART },
+    // Ratio
+    { "%", UNIT_ICON_PERCENT },
+    { "/", UNIT_ICON_PERCENT },
+    { "/100", UNIT_ICON_PERCENT },
+    { "/1000", UNIT_ICON_PERCENT },
+    { "ppm", UNIT_ICON_PERCENT },
+    // Mass
+    { "kg", UNIT_ICON_SCALE },
+    { "g", UNIT_ICON_SCALE },
+    // Concentration
+    { "kg/m3", UNIT_ICON_CLOUD },
+    { "ug/m3", UNIT_ICON_CLOUD },
+    { "mm/h", UNIT_ICON_CLOUD },
+    // Electrical
+    { "Ohm", UNIT_ICON_OMEGA },
+    { "S", UNIT_ICON_OMEGA },
+    { "S/m", UNIT_ICON_OMEGA },
+    { "F", UNIT_ICON_CAPACITOR },
+    { "H", UNIT_ICON_COIL },
+    // Radiation
+    { "Bq", UNIT_ICON_RADIATION },
+    { "Gy", UNIT_ICON_RADIATION },
+    { "Sv", UNIT_ICON_RADIATION },
+    // Chemistry
+    { "mol", UNIT_ICON_FLASK },
+    { "kat", UNIT_ICON_FLASK },
+    { "pH", UNIT_ICON_FLASK },
+    // Geometry
+    { "m2", UNIT_ICON_AREA },
+    { "m3", UNIT_ICON_VOLUME },
+    { "l", UNIT_ICON_VOLUME },
+    // Flow
+    { "m3/s", UNIT_ICON_FLOW },
+    { "l/s", UNIT_ICON_FLOW },
+    // Position
+    { "lat", UNIT_ICON_GLOBE },
+    { "lon", UNIT_ICON_GLOBE },
+    // Force
+    { "N", UNIT_ICON_FORCE },
 };
 
 // A small icon label for a known unit, tinted like the muted name labels;
@@ -800,7 +964,25 @@ QList<OpenMVChannelsView::Record> OpenMVChannelsView::decode(const QVariantList 
             record.rec = rec;
             records.append(record);
 
-            schemaParts.append(QStringLiteral("%1:%2:%3").arg(channelName, record.name, record.wtype));
+            // Select/radio options are baked into their widgets at build, so
+            // they're part of the schema: a script repopulating a select's
+            // options (WiFi scan results, SD file lists) triggers a rebuild.
+            QString options;
+
+            if(rec.contains(qint64(CBOR_KEY_W_OPTS)))
+            {
+                QCborArray optionsArray = rec.value(qint64(CBOR_KEY_W_OPTS)).toArray();
+                QStringList list;
+
+                for(qsizetype j = 0; j < optionsArray.size(); j++)
+                {
+                    list.append(optionsArray.at(j).toString());
+                }
+
+                options = list.join(QLatin1Char(','));
+            }
+
+            schemaParts.append(QStringLiteral("%1:%2:%3:%4").arg(channelName, record.name, record.wtype, options));
         }
     }
 
@@ -1013,6 +1195,125 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
 
             record.row = row;
             m_contentLayout->addWidget(row);
+        }
+        else if(record.wtype == QStringLiteral("spinbox"))
+        {
+            // Precise stepped entry (issue #157: +/- buttons in fixed
+            // increments) - a spin box over the slider's min/max/step keys.
+            // Named like the Settings Editor's element; the step decides the
+            // decimals, so one type covers spinbox and doublespinbox.
+            record.spinbox = new QDoubleSpinBox;
+            record.spinbox->setEnabled(writable);
+            // Type freely without a write per keystroke; valueChanged fires
+            // on the arrows, Return, and focus-out.
+            record.spinbox->setKeyboardTracking(false);
+
+            if(writable)
+            {
+                connect(record.spinbox, static_cast<void (QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged),
+                        this, [this, channelName, recordName] (double value) {
+                    stageWrite(channelName, recordName, numberValue(value));
+                });
+            }
+
+            QList<QWidget *> values;
+            values.append(record.spinbox);
+            QString unit = record.rec.value(qint64(CBOR_KEY_U)).toString();
+
+            if(!unit.isEmpty())
+            {
+                values.append(viewNameLabel(unit));
+            }
+
+            record.row = viewRow(record.name, values);
+            m_contentLayout->addWidget(record.row);
+        }
+        else if(record.wtype == QStringLiteral("radio"))
+        {
+            // A select rendered as radio buttons - same options/value keys.
+            QWidget *box = new QWidget;
+            QHBoxLayout *boxLayout = new QHBoxLayout(box);
+            boxLayout->setContentsMargins(0, 0, 0, 0);
+            boxLayout->setSpacing(8);
+
+            record.radio = new QButtonGroup(box);
+            QCborArray options = record.rec.value(qint64(CBOR_KEY_W_OPTS)).toArray();
+
+            for(qsizetype j = 0; j < options.size(); j++)
+            {
+                QRadioButton *button = new QRadioButton(options.at(j).toString());
+                button->setEnabled(writable);
+                record.radio->addButton(button);
+                boxLayout->addWidget(button);
+            }
+
+            if(writable)
+            {
+                // clicked only fires on user interaction, so the patch's
+                // programmatic setChecked() can't echo a write back.
+                connect(record.radio, &QButtonGroup::buttonClicked, this, [this, channelName, recordName] (QAbstractButton *button) {
+                    stageWrite(channelName, recordName, QCborValue(button->text()));
+                });
+            }
+
+            record.row = viewRow(record.name, box);
+            m_contentLayout->addWidget(record.row);
+        }
+        else if(record.wtype == QStringLiteral("lineedit"))
+        {
+            record.lineedit = new QLineEdit;
+            record.lineedit->setEnabled(writable);
+
+            if(writable)
+            {
+                // Writes on Return and focus-out, not per keystroke.
+                connect(record.lineedit, &QLineEdit::editingFinished, this, [this, i] {
+                    if(i < m_records.size())
+                    {
+                        const Record &r = m_records.at(i);
+                        stageWrite(r.channelName, r.name, QCborValue(r.lineedit->text()));
+                    }
+                });
+            }
+
+            record.row = viewRow(record.name, record.lineedit);
+            m_contentLayout->addWidget(record.row);
+        }
+        else if(record.wtype == QStringLiteral("text"))
+        {
+            // The Settings Editor's static label element ("label" here
+            // already means a name/value readout row, matching OpenMV
+            // Studio). Rich text rides in the record's value, so scripts can
+            // update it live; the existing value-label patch handles that.
+            record.value = new QLabel;
+            record.value->setWordWrap(true);
+            record.value->setTextInteractionFlags(Qt::TextBrowserInteraction);
+            record.value->setOpenExternalLinks(true);
+
+            QWidget *row = new QWidget;
+            QVBoxLayout *rowLayout = new QVBoxLayout(row);
+            rowLayout->setContentsMargins(4, 3, 4, 3);
+            rowLayout->addWidget(record.value);
+
+            record.row = row;
+            m_contentLayout->addWidget(row);
+        }
+        else if(record.wtype == QStringLiteral("pushbutton"))
+        {
+            // A momentary action (trigger/calibrate/start): clicking writes
+            // true to the record; there's no state to render back.
+            record.pushbutton = new QPushButton(record.name);
+            record.pushbutton->setEnabled(writable);
+
+            if(writable)
+            {
+                connect(record.pushbutton, &QPushButton::clicked, this, [this, channelName, recordName] {
+                    stageWrite(channelName, recordName, QCborValue(true));
+                });
+            }
+
+            record.row = viewRow(QString(), record.pushbutton);
+            m_contentLayout->addWidget(record.row);
         }
         else if(record.wtype == QStringLiteral("select"))
         {
@@ -1229,6 +1530,52 @@ void OpenMVChannelsView::patchContent(QList<Record> &records)
             built.slider->setRange(0, sliderSteps(min, max, step));
             built.slider->setValue(qRound((value - min) / built.sliderStep));
             built.sliderValue->setText(displayValue(recordValue(built.rec)));
+        }
+
+        if(built.spinbox && (!built.spinbox->hasFocus()))
+        {
+            // hasFocus() plays the slider's drag guard: while the user is
+            // typing or stepping, reads must not snap the box back.
+            double min = built.rec.value(qint64(CBOR_KEY_W_MIN)).toDouble();
+            double max = built.rec.value(qint64(CBOR_KEY_W_MAX)).toDouble(100.0);
+            double step = built.rec.value(qint64(CBOR_KEY_W_STEP)).toDouble(1.0);
+            step = (step > 0.0) ? step : 1.0;
+
+            // Just enough decimals to represent the step (0.1 -> 1, 0.05 -> 2).
+            int decimals = 0;
+
+            for(double s = step; (s < 0.999999) && (decimals < 6); s *= 10.0)
+            {
+                decimals++;
+            }
+
+            QSignalBlocker blocker(built.spinbox);
+            built.spinbox->setDecimals(decimals);
+            built.spinbox->setRange(min, max);
+            built.spinbox->setSingleStep(step);
+            built.spinbox->setValue(recordValue(built.rec).toDouble());
+        }
+
+        if(built.radio)
+        {
+            // setChecked() doesn't emit clicked, so no blocker is needed.
+            QString value = recordValue(built.rec).toString();
+
+            for(QAbstractButton *button : built.radio->buttons())
+            {
+                if(button->text() == value)
+                {
+                    button->setChecked(true);
+                    break;
+                }
+            }
+        }
+
+        if(built.lineedit && (!built.lineedit->hasFocus()))
+        {
+            // hasFocus() plays the drag guard: reads must not overwrite text
+            // mid-typing. setText() doesn't emit editingFinished.
+            built.lineedit->setText(recordValue(built.rec).toString());
         }
 
         if(built.select && (!m_activeControls.contains(controlId)))
