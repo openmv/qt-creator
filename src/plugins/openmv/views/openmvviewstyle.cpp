@@ -100,13 +100,13 @@ QLabel *viewValueLabel()
     return label;
 }
 
-QWidget *viewRow(const QString &name, const QList<QWidget *> &values)
+QWidget *viewRow(QWidget *name, const QList<QWidget *> &values)
 {
     QWidget *content = new QWidget;
     QHBoxLayout *contentLayout = new QHBoxLayout(content);
     contentLayout->setContentsMargins(4, 3, 4, 3);
     contentLayout->setSpacing(8);
-    contentLayout->addWidget(viewNameLabel(name));
+    contentLayout->addWidget(name);
     contentLayout->addStretch(1);
 
     for(QWidget *value : values)
@@ -121,6 +121,11 @@ QWidget *viewRow(const QString &name, const QList<QWidget *> &values)
     rowLayout->addWidget(content);
     rowLayout->addWidget(hairline());
     return row;
+}
+
+QWidget *viewRow(const QString &name, const QList<QWidget *> &values)
+{
+    return viewRow(viewNameLabel(name), values);
 }
 
 QWidget *viewRow(const QString &name, QWidget *value)

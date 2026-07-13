@@ -387,6 +387,8 @@ public slots:
     void getMemoryStats();
     void getSystemInfo();
     void getProtocolStats();
+    void readChannels();
+    void writeChannel(const QString &name, const QByteArray &data);
     void getFirmwareVersion();
     void getJPEGPreferred();
     void getFrameReady(); // poll event
@@ -434,6 +436,8 @@ signals:
     void systemInfo(bool timeout, bool error, const QVariantMap &info);
     void protocolStats(bool timeout, bool error, const QVariantMap &host,
                        const QVariantMap &device, const QVariantList &channels);
+    void channelsData(bool timeout, bool error, const QVariantList &channels);
+    void writeChannelDone(bool timeout);
     void firmwareVersion(bool timeout, int major, int minor, int patch);
     void jpegPreferred(bool timeout, bool preferred);
     void frameReady(bool ready); // poll event
@@ -520,6 +524,8 @@ signals:
     void getMemoryStats();
     void getSystemInfo();
     void getProtocolStats();
+    void readChannels();
+    void writeChannel(const QString &name, const QByteArray &data);
     void getFirmwareVersion();
     void getJPEGPreferred();
     void getFrameReady(); // poll event
@@ -545,6 +551,8 @@ signals:
     void systemInfo(bool timeout, bool error, const QVariantMap &info);
     void protocolStats(bool timeout, bool error, const QVariantMap &host,
                        const QVariantMap &device, const QVariantList &channels);
+    void channelsData(bool timeout, bool error, const QVariantList &channels);
+    void writeChannelDone(bool timeout);
     void firmwareVersion(bool timeout, int major, int minor, int patch);
     void jpegPreferred(bool timeout, bool preferred);
     void frameReady(bool ready); // poll event

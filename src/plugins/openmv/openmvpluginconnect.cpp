@@ -4007,9 +4007,12 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_memoryStatsTimer.restart();
         m_systemInfoTimer.restart();
         m_protocolStatsTimer.restart();
+        m_readChannelsTimer.restart();
+        m_userChannelsPresent = false; // rediscovered by the channel poll
         // Drop any prior session's data from the pane views.
         m_boardInfoView->reset();
         m_memoryView->reset();
+        m_channelsView->reset();
         m_statisticsView->reset();
 
         m_timer.restart();
@@ -4468,6 +4471,7 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             m_memoryStatsTimer.restart();
             m_systemInfoTimer.restart();
             m_protocolStatsTimer.restart();
+            m_readChannelsTimer.restart();
             // The pane views keep their last data on disconnect (updates just
             // stop); the connect path's reset() drops it when a new session
             // starts.

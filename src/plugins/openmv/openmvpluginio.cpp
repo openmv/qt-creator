@@ -98,6 +98,8 @@ enum
     V2_MEMORY_STATS_CPL,
     V2_SYSTEM_INFO_CPL,
     V2_PROTOCOL_STATS_CPL,
+    V2_READ_CHANNELS_CPL,
+    V2_WRITE_CHANNEL_CPL,
     V2_FIRMWARE_VERSION_CPL,
     V2_JPEG_PREFERRED_CPL,
     V2_FRAME_BUFFER_DATA_CPL,
@@ -373,6 +375,22 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
                 if (timeout) m_timeout = true;
                 m_completionQueue.removeOne(V2_PROTOCOL_STATS_CPL);
                 if ((!timeout) && (!error)) emit protocolStats(host, device, channels);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
+            });
+
+    connect(m_port, &OpenMVPluginSerialPort::channelsData,
+            this, [this] (bool timeout, bool error, const QVariantList &channels) {
+                if (timeout) m_timeout = true;
+                m_completionQueue.removeOne(V2_READ_CHANNELS_CPL);
+                if ((!timeout) && (!error)) emit channelsData(channels);
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
+            });
+
+    connect(m_port, &OpenMVPluginSerialPort::writeChannelDone,
+            this, [this] (bool timeout) {
+                if (timeout) m_timeout = true;
+                m_completionQueue.removeOne(V2_WRITE_CHANNEL_CPL);
+                emit writeChannelDone();
                 if (m_completionQueue.isEmpty()) emit queueEmpty();
             });
 
@@ -1595,6 +1613,11 @@ bool OpenMVPluginIO::getProtocolStatsQueued() const
     return m_completionQueue.contains(V2_PROTOCOL_STATS_CPL);
 }
 
+bool OpenMVPluginIO::readChannelsQueued() const
+{
+    return m_completionQueue.contains(V2_READ_CHANNELS_CPL);
+}
+
 void OpenMVPluginIO::checkProtocolVerison(bool splitCommand)
 {
     // STM32 USBDBG Behavior:
@@ -1682,6 +1705,35 @@ void OpenMVPluginIO::forceV2Protocol()
     // V2 flag here, and the port's V2 mode via enableV2Protocol(). No response to wait for.
     m_v2ProtocolEnabled = true;
     m_port->enableV2Protocol(true);
+}
+
+void OpenMVPluginIO::readChannels()
+{
+    if (m_v2ProtocolEnabled) {
+        m_completionQueue.enqueue(V2_READ_CHANNELS_CPL);
+        m_port->readChannels();
+        return;
+    }
+
+    // V1 protocol has no channels; an empty result means "unsupported".
+    QTimer::singleShot(0, this, [this] {
+        emit channelsData(QVariantList());
+    });
+}
+
+void OpenMVPluginIO::writeChannel(const QString &name, const QByteArray &data)
+{
+    if (m_v2ProtocolEnabled) {
+        m_completionQueue.enqueue(V2_WRITE_CHANNEL_CPL);
+        m_port->writeChannel(name, data);
+        return;
+    }
+
+    // V1 protocol has no channels; complete immediately so callers waiting
+    // on the callback always get it.
+    QTimer::singleShot(0, this, [this] {
+        emit writeChannelDone();
+    });
 }
 
 void OpenMVPluginIO::getFirmwareVersion()

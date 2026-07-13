@@ -90,6 +90,7 @@ public:
     bool readFrame(OMVFrame &outFrame);
 
     qsizetype channelSize(const QString &channel);
+    QVariantList readDynamicChannels(); // every script-published channel's raw CBOR
     QByteArray channelRead(const QString &channel, qsizetype size = -1);
     bool channelWrite(const QString &channel, const QByteArray &data);
     bool hasChannel(const QString &channel) const;

@@ -71,6 +71,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_iodevice = Q_NULLPTR;
     m_boardInfoView = Q_NULLPTR;
     m_memoryView = Q_NULLPTR;
+    m_channelsView = Q_NULLPTR;
     m_statisticsView = Q_NULLPTR;
 
     m_frameSizeDumpTimer.start();
@@ -81,6 +82,7 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_memoryStatsTimer.start();
     m_systemInfoTimer.start();
     m_protocolStatsTimer.start();
+    m_readChannelsTimer.start();
 
     m_timer.start();
     m_queue = QQueue<qint64>();
@@ -125,6 +127,8 @@ OpenMVPlugin::OpenMVPlugin() : IPlugin()
     m_getTxBufferSpacing = GET_TX_BUFFER_SPACING;
     m_getStateSpacing = GET_STATE_SPACING;
     m_readProfileSpacing = READ_PROFILE_SPACING;
+    m_readChannelsSpacing = READ_CHANNELS_SPACING;
+    m_userChannelsPresent = false;
     m_dynamicFrameReading = true;
     m_dynamicFrameReadingLock = false;
     m_dynamicFrameReadingPending = false;
@@ -2462,6 +2466,7 @@ void OpenMVPlugin::extensionsInitialized()
     paneView->insertItem(HISTOGRAM_VIEW, Tr::tr("Histogram"));
     paneView->insertItem(BOARD_INFO_VIEW, Tr::tr("Board Info"));
     paneView->insertItem(MEMORY_VIEW, Tr::tr("Memory"));
+    paneView->insertItem(CHANNELS_VIEW, Tr::tr("Channels"));
     paneView->insertItem(STATISTICS_VIEW, Tr::tr("Statistics"));
     paneView->setCurrentIndex(HISTOGRAM_VIEW);
     paneView->setToolTip(Tr::tr("Select what this pane displays"));
@@ -2489,6 +2494,7 @@ void OpenMVPlugin::extensionsInitialized()
     selectorStack->addWidget(colorSpace);  // HISTOGRAM_VIEW
     selectorStack->addWidget(new QWidget); // BOARD_INFO_VIEW (no controls)
     selectorStack->addWidget(new QWidget); // MEMORY_VIEW (no controls)
+    selectorStack->addWidget(new QWidget); // CHANNELS_VIEW (no controls)
     selectorStack->addWidget(new QWidget); // STATISTICS_VIEW (no controls)
     // Preferred (not the QStackedWidget default of Expanding) plus the same
     // stretch as the view selector above -> each takes half the bar.
@@ -2498,11 +2504,13 @@ void OpenMVPlugin::extensionsInitialized()
     m_histogram = new OpenMVPluginHistogram;
     m_boardInfoView = new OpenMVBoardInfoView;
     m_memoryView = new OpenMVMemoryView;
+    m_channelsView = new OpenMVChannelsView;
     m_statisticsView = new OpenMVStatisticsView;
     QStackedWidget *paneStack = new QStackedWidget;
     paneStack->addWidget(m_histogram);
     paneStack->addWidget(m_boardInfoView);
     paneStack->addWidget(m_memoryView);
+    paneStack->addWidget(m_channelsView);
     paneStack->addWidget(m_statisticsView);
     QWidget *tempWidget1 = new QWidget;
     QVBoxLayout *tempLayout1 = new QVBoxLayout;
@@ -2532,6 +2540,34 @@ void OpenMVPlugin::extensionsInitialized()
 
     connect(m_iodevice, &OpenMVPluginIO::protocolStats,
             m_statisticsView, &OpenMVStatisticsView::protocolStats);
+
+    connect(m_iodevice, &OpenMVPluginIO::channelsData,
+            m_channelsView, &OpenMVChannelsView::channelsData);
+
+    // Track whether the script is publishing any channels; the poll loop
+    // drops to a slow discovery rate while there are none (the camera layer
+    // sends nothing on the wire for an empty read, so discovery is free).
+    connect(m_iodevice, &OpenMVPluginIO::channelsData, this, [this] (const QVariantList &channels) {
+        m_userChannelsPresent = !channels.isEmpty();
+    });
+
+    // Control changes in the Channels view write back to the script's
+    // channel; coalesce per channel while a firmware operation is running.
+    connect(m_channelsView, &OpenMVChannelsView::writeChannel, this, [this] (const QString &name, const QByteArray &data) {
+        if(m_connected)
+        {
+            if(!m_working)
+            {
+                m_iodevice->writeChannel(name, data);
+            }
+            else
+            {
+                deferLatest(QStringLiteral("writeChannel:") + name, [this, name, data] {
+                    m_iodevice->writeChannel(name, data);
+                });
+            }
+        }
+    });
 
     connect(paneView, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, [paneStack, selectorStack] (int index) {
         paneStack->setCurrentIndex(index);
@@ -2915,6 +2951,7 @@ void OpenMVPlugin::extensionsInitialized()
     m_getTxBufferSpacing = settings->value(SETTINGS_GROUP "/" LAST_GET_TX_BUFFER_SPACING, GET_TX_BUFFER_SPACING).toInt();
     m_getStateSpacing = settings->value(SETTINGS_GROUP "/" LAST_GET_STATE_SPACING, GET_STATE_SPACING).toInt();
     m_readProfileSpacing = settings->value(SETTINGS_GROUP "/" LAST_READ_PROFILE_SPACING, READ_PROFILE_SPACING).toInt();
+    m_readChannelsSpacing = settings->value(SETTINGS_GROUP "/" LAST_READ_CHANNELS_SPACING, READ_CHANNELS_SPACING).toInt();
     m_dynamicFrameReading = settings->value(SETTINGS_GROUP "/" LAST_DYNAMIC_FRAME_READING, true).toBool();
 
     connect(m_ioport, &OpenMVPluginSerialPort::frameReady, this, [this] (bool ready) {

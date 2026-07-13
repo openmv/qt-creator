@@ -92,6 +92,7 @@
 #include "openmvdataseteditor.h"
 #include "views/openmvboardinfoview.h"
 #include "views/openmvmemoryview.h"
+#include "views/openmvchannelsview.h"
 #include "views/openmvstatisticsview.h"
 #include "openmvmodelzoo.h"
 #include "openmvpluginserialport.h"
@@ -217,6 +218,7 @@
 #define LAST_GET_TX_BUFFER_SPACING "LastGetTxBufferSpacing"
 #define LAST_GET_STATE_SPACING "LastGetStateSpacing"
 #define LAST_READ_PROFILE_SPACING "LastReadProfileSpacing"
+#define LAST_READ_CHANNELS_SPACING "LastReadChannelsSpacing"
 #define LAST_DYNAMIC_FRAME_READING "LastDynamicFrameReading"
 #define LAST_ROMFS_DIALOG_GEOMETRY "LastROMFSDialogGeometry"
 #define LAST_ROMFS_DIALOG_OPEN_FILE_PATH "LastROMFSDialogFilePath"
@@ -291,6 +293,8 @@
 #define MEMORY_STATS_SPACING        1000 // in ms
 #define SYSTEM_INFO_SPACING         1000 // in ms
 #define PROTOCOL_STATS_SPACING      1000 // in ms
+#define READ_CHANNELS_SPACING       25 // in ms (interactive controls and waveforms - like GET_STATE_SPACING)
+#define READ_CHANNELS_DISCOVERY_SPACING 500 // in ms (while no script channels exist - reads are free then)
 
 #define FPS_AVERAGE_BUFFER_DEPTH    100 // in samples
 #define WIFI_PORT_RETIRE            8 // in seconds (cams announce every 2s -> ~4 missed = retired)
@@ -318,7 +322,8 @@
 #define HISTOGRAM_VIEW 0
 #define BOARD_INFO_VIEW 1
 #define MEMORY_VIEW 2
-#define STATISTICS_VIEW 3
+#define CHANNELS_VIEW 3
+#define STATISTICS_VIEW 4
 
 namespace OpenMV {
 namespace Internal {
@@ -725,6 +730,7 @@ private:
     QElapsedTimer m_memoryStatsTimer;
     QElapsedTimer m_systemInfoTimer;
     QElapsedTimer m_protocolStatsTimer;
+    QElapsedTimer m_readChannelsTimer;
 
     QElapsedTimer m_timer;
     QQueue<qint64> m_queue;
@@ -780,6 +786,10 @@ private:
     int m_getTxBufferSpacing;
     int m_getStateSpacing;
     int m_readProfileSpacing;
+    int m_readChannelsSpacing;
+    // True while the last channel read returned script-published channels;
+    // gates the fast channel poll (discovery rate otherwise).
+    bool m_userChannelsPresent;
     bool m_dynamicFrameReading, m_dynamicFrameReadingLock, m_dynamicFrameReadingPending;
 
     QAction *m_bootloaderAction;
@@ -820,6 +830,7 @@ private:
     OpenMVPluginHistogram *m_histogram;
     OpenMVBoardInfoView *m_boardInfoView;
     OpenMVMemoryView *m_memoryView;
+    OpenMVChannelsView *m_channelsView;
     OpenMVStatisticsView *m_statisticsView;
     QPointer<OpenMVProfileView> m_profile;
 

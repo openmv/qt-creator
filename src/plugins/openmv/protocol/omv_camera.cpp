@@ -1277,6 +1277,51 @@ qsizetype OMVCamera::channelSize(const QString &channel)
     });
 }
 
+QVariantList OMVCamera::readDynamicChannels()
+{
+    /*
+        Read every dynamically-registered (script-published) channel. Returns
+        one map per channel: name, flags, and the raw CBOR payload.
+    */
+    return retryIfFailed([this]() -> QVariantList {
+        // Pick up channels the script registered since the last look.
+        if (pendingChannelEvents > 0) {
+            updateChannels();
+        }
+
+        QVariantList list;
+
+        // Built-in channel names the IDE drives itself. The WiFi debug agent
+        // registers dynamic shadows of these (e.g. its persistent-exec "stdin"
+        // shadow) -- those are debug-agent infrastructure, not script-published
+        // data, and reading them here would consume the agent's own traffic.
+        static const QSet<QString> builtinNames = {
+            QStringLiteral("stdin"), QStringLiteral("stdout"),
+            QStringLiteral("stream"), QStringLiteral("profile"),
+        };
+
+        for (auto it = channelsById.constBegin(); it != channelsById.constEnd(); ++it) {
+            if (!(it.value().flags & OMVPChannelFlags::DYNAMIC)) {
+                continue;
+            }
+
+            if (builtinNames.contains(it.value().name)) {
+                continue;
+            }
+
+            uint32_t len = channelSizeRaw(it.key());
+
+            QVariantMap m;
+            m.insert(QStringLiteral("name"), it.value().name);
+            m.insert(QStringLiteral("flags"), it.value().flags);
+            m.insert(QStringLiteral("data"), len ? channelReadRaw(it.key(), 0, len) : QByteArray());
+            list.append(m);
+        }
+
+        return list;
+    });
+}
+
 QByteArray OMVCamera::channelRead(const QString &channel, qsizetype size)
 {
     /*

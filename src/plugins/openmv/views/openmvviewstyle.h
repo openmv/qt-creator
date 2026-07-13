@@ -57,6 +57,7 @@ QLabel *viewValueLabel();
 // underneath. Hiding the returned row hides its hairline too.
 QWidget *viewRow(const QString &name, const QList<QWidget *> &values);
 QWidget *viewRow(const QString &name, QWidget *value);
+QWidget *viewRow(QWidget *name, const QList<QWidget *> &values);
 
 // Toggles a row's hairline (e.g. off for the last visible row of a table).
 void viewRowSetLineVisible(QWidget *row, bool visible);

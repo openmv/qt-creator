@@ -935,6 +935,37 @@ void OpenMVPluginSerialPort_private::getProtocolStats() {
     }
 }
 
+void OpenMVPluginSerialPort_private::readChannels() {
+    if (!m_camera || !m_camera->isConnected()) {
+        emit channelsData(true, false, QVariantList());
+        return;
+    }
+
+    try {
+        emit channelsData(false, false, m_camera->readDynamicChannels());
+    } catch (...) {
+        // A background poll must never take the connection down; the error
+        // flag makes the GUI thread ignore this reply.
+        emit channelsData(false, true, QVariantList());
+    }
+}
+
+void OpenMVPluginSerialPort_private::writeChannel(const QString &name, const QByteArray &data) {
+    if (!m_camera || !m_camera->isConnected()) {
+        emit writeChannelDone(true);
+        return;
+    }
+
+    try {
+        m_camera->channelWrite(name, data);
+        emit writeChannelDone(false);
+    } catch (...) {
+        emit writeChannelDone(true);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
+    }
+}
+
 void OpenMVPluginSerialPort_private::getFirmwareVersion() {
     if (!m_camera) {
         emit firmwareVersion(true, 0, 0, 0);
@@ -1478,6 +1509,18 @@ OpenMVPluginSerialPort::OpenMVPluginSerialPort(const QJsonDocument &settings,
 
     connect(m_port, &OpenMVPluginSerialPort_private::protocolStats,
             this, &OpenMVPluginSerialPort::protocolStats);
+
+    connect(this, &OpenMVPluginSerialPort::readChannels,
+            m_port, &OpenMVPluginSerialPort_private::readChannels);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::channelsData,
+            this, &OpenMVPluginSerialPort::channelsData);
+
+    connect(this, &OpenMVPluginSerialPort::writeChannel,
+            m_port, &OpenMVPluginSerialPort_private::writeChannel);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::writeChannelDone,
+            this, &OpenMVPluginSerialPort::writeChannelDone);
 
     connect(this, &OpenMVPluginSerialPort::getFirmwareVersion,
             m_port, &OpenMVPluginSerialPort_private::getFirmwareVersion);

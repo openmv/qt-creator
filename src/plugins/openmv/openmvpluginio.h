@@ -180,6 +180,7 @@ public:
     bool getMemoryStatsQueued() const;
     bool getSystemInfoQueued() const;
     bool getProtocolStatsQueued() const;
+    bool readChannelsQueued() const;
 
 public slots:
 
@@ -188,6 +189,8 @@ public slots:
     void getMemoryStats();
     void getSystemInfo();
     void getProtocolStats();
+    void readChannels();
+    void writeChannel(const QString &name, const QByteArray &data);
     void getFirmwareVersion();
     void getJPEGPreferred();
     void frameSizeDump();
@@ -248,6 +251,8 @@ signals:
     void systemInfo(const QVariantMap &info);
     void protocolStats(const QVariantMap &host, const QVariantMap &device,
                        const QVariantList &channels);
+    void channelsData(const QVariantList &channels);
+    void writeChannelDone();
     void firmwareVersion(int major, int minor, int patch);
     void jpegPreferred(bool preferred);
     void frameBufferData(const QPixmap &data);

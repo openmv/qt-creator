@@ -254,6 +254,22 @@ void OpenMVPlugin::processEvents()
                 m_iodevice->getProtocolStats();
             }
 
+            // Channels: polled continuously while connected, like the memory
+            // and protocol stats above, so the view is always current and a
+            // CSV recording can't gap when another pane view is selected.
+            // Fast polling only happens while the script actually publishes
+            // channels; otherwise poll at the discovery rate, where a read is
+            // free (the camera layer sends nothing for an empty channel set).
+            {
+                int readChannelsSpacing = m_userChannelsPresent ? m_readChannelsSpacing : int(READ_CHANNELS_DISCOVERY_SPACING);
+
+                if((!m_iodevice->readChannelsQueued()) && m_readChannelsTimer.hasExpired(readChannelsSpacing))
+                {
+                    m_readChannelsTimer.restart();
+                    m_iodevice->readChannels();
+                }
+            }
+
             if(m_iodevice->v2ProtocolEnabled() && m_dynamicFrameReading && (!m_dynamicFrameReadingLock))
             {
                 m_ioport->getFrameReady();
@@ -401,6 +417,7 @@ void OpenMVPlugin::setSpacing()
                                              GET_TX_BUFFER_SPACING).toInt();
     int getStateSpacing = settings->value(SETTINGS_GROUP "/" LAST_GET_STATE_SPACING, GET_STATE_SPACING).toInt();
     int readProfileSpacing = settings->value(SETTINGS_GROUP "/" LAST_READ_PROFILE_SPACING, READ_PROFILE_SPACING).toInt();
+    int readChannelsSpacing = settings->value(SETTINGS_GROUP "/" LAST_READ_CHANNELS_SPACING, READ_CHANNELS_SPACING).toInt();
 
     int useGetStateAvailable =
       !((m_major < OPENMV_ADD_GET_STATE_MAJOR)
@@ -524,6 +541,19 @@ void OpenMVPlugin::setSpacing()
     readProfileWidgetLayout->addRow(readProfileLabel, readProfileSpacingBox);
     rlayout->addWidget(readProfileWidget);
 
+    // Script-published channel reads (Channels view) - V2 protocol only.
+    QWidget *readChannelsWidget = new QWidget;
+    QFormLayout *readChannelsWidgetLayout = new QFormLayout(readChannelsWidget);
+    readChannelsWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    QSpinBox *readChannelsSpacingBox = new QSpinBox;
+    readChannelsSpacingBox->setRange(0, 1000);
+    readChannelsSpacingBox->setValue(readChannelsSpacing);
+    readChannelsSpacingBox->setEnabled(m_iodevice->v2ProtocolEnabled());
+    QLabel *readChannelsLabel = new QLabel(Tr::tr("Channel Polling (ms)"));
+    readChannelsLabel->setEnabled(m_iodevice->v2ProtocolEnabled());
+    readChannelsWidgetLayout->addRow(readChannelsLabel, readChannelsSpacingBox);
+    rlayout->addWidget(readChannelsWidget);
+
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
     connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
@@ -546,6 +576,8 @@ void OpenMVPlugin::setSpacing()
         settings->setValue(SETTINGS_GROUP "/" LAST_GET_STATE_SPACING, m_getStateSpacing = getStateSpacingBox->value());
         settings->setValue(SETTINGS_GROUP "/" LAST_READ_PROFILE_SPACING,
                            m_readProfileSpacing = readProfileSpacingBox->value());
+        settings->setValue(SETTINGS_GROUP "/" LAST_READ_CHANNELS_SPACING,
+                           m_readChannelsSpacing = readChannelsSpacingBox->value());
         settings->setValue(SETTINGS_GROUP "/" LAST_DYNAMIC_FRAME_READING,
                            m_dynamicFrameReading = dynamicFrameReadingBox->isChecked());
 
@@ -554,6 +586,7 @@ void OpenMVPlugin::setSpacing()
         m_getTxBufferTimer.restart();
         m_getStateTimer.restart();
         m_readProfileTimer.restart();
+        m_readChannelsTimer.restart();
         m_timer.restart();
         m_queue.clear();
         m_cameraQueue.clear();
