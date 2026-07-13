@@ -2332,19 +2332,31 @@ void OpenMVPlugin::extensionsInitialized()
         }
     });
 
-    m_jpgCompress = new QToolButton;
-    m_jpgCompress->setText(Tr::tr("JPG"));
-    m_jpgCompress->setToolTip(Tr::tr("JPEG compress the Frame Buffer for higher performance"));
-    m_jpgCompress->setCheckable(true);
-    m_jpgCompress->setChecked(true);
-    // Only show for V2 Protocol //
+    // The streaming mode combo states the requested mode explicitly (JPEG
+    // Mode / RAW Mode) and switches it - replacing the old JPG toggle plus
+    // status label pair. The actual format of the arriving frames shows in
+    // the Frame Buffer label. Only shown for the V2 protocol.
+    m_jpgCompress = new QComboBox;
+    m_jpgCompress->setProperty("hideborder", true);
+    m_jpgCompress->setProperty("drawleftborder", false);
+    m_jpgCompress->setProperty("compactwidth", true); // drop the panel style's extra 14px
+    m_jpgCompress->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+    m_jpgCompress->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
+    m_jpgCompress->addItem(Tr::tr("JPG Mode"), true); // data = jpegEnable
+    m_jpgCompress->addItem(Tr::tr("RAW Mode"), false);
+    m_jpgCompress->setCurrentIndex(0);
+    m_jpgCompress->setToolTip(Tr::tr("Stream JPG-compressed images for higher performance"));
     m_jpgCompress->setVisible(false);
     styledBar0Layout->addWidget(m_jpgCompress);
-    connect(m_jpgCompress, &QToolButton::clicked, this, [this] {
+    connect(m_jpgCompress, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, [this] {
+        const bool enableJpeg = jpgCompressEnabled();
+
+        m_jpgCompress->setToolTip(enableJpeg
+            ? Tr::tr("Stream JPG-compressed images for higher performance")
+            : Tr::tr("Stream RAW (uncompressed) images at their true quality"));
+
         if(m_connected)
         {
-            const bool enableJpeg = m_jpgCompress->isChecked();
-
             if(!m_working)
             {
                 m_iodevice->jpegEnable(enableJpeg);
@@ -2357,28 +2369,7 @@ void OpenMVPlugin::extensionsInitialized()
             }
         }
     });
-    // The JPG button keeps a fixed label; this read-only label to its right shows the
-    // requested streaming mode. Shown/hidden together with the button (V2 only). The
-    // actual format of the arriving frames shows in the Frame Buffer label instead --
-    // rewriting this text on the first frame resized the bar.
-    m_jpgCompressMode = new QLabel(m_jpgCompress->isChecked() ? Tr::tr("JPEG Mode") : Tr::tr("RAW Mode"));
-    // The bar has no trailing stretch, so a default (growable) label would absorb the bar's
-    // slack and shove the buttons to the center. Maximum keeps it at its text width; the left
-    // margin gives a gap from the button since the layout spacing is 0.
-    m_jpgCompressMode->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
-    m_jpgCompressMode->setContentsMargins(6, 0, 6, 0);
-    m_jpgCompressMode->setEnabled(false); // read-only status text -- greyed so it doesn't look clickable
-    m_jpgCompressMode->setToolTip(m_jpgCompress->isChecked()
-        ? Tr::tr("The Frame Buffer is streaming JPEG-compressed images")
-        : Tr::tr("The Frame Buffer is streaming raw (uncompressed) images"));
-    m_jpgCompressMode->setVisible(false);
-    styledBar0Layout->addWidget(m_jpgCompressMode);
-    connect(m_jpgCompress, &QToolButton::toggled, this, [this] (bool checked) {
-        m_jpgCompressMode->setText(checked ? Tr::tr("JPEG Mode") : Tr::tr("RAW Mode"));
-        m_jpgCompressMode->setToolTip(checked
-            ? Tr::tr("The Frame Buffer is streaming JPEG-compressed images")
-            : Tr::tr("The Frame Buffer is streaming raw (uncompressed) images"));
-    });
+
     connect(m_iodevice, &OpenMVPluginIO::frameBufferFormat, this, [this] (uint format) {
         // Remembered for the Frame Buffer label, which repaints on every frame.
         m_frameFormatName = omv::get_format_string(format);
@@ -2915,8 +2906,8 @@ void OpenMVPlugin::extensionsInitialized()
     }
     zoomButton->setChecked(
         settings->value(SETTINGS_GROUP "/" ZOOM_STATE, zoomButton->isChecked()).toBool());
-    m_jpgCompress->setChecked(
-        settings->value(SETTINGS_GROUP "/" JPG_COMPRESS_STATE, m_jpgCompress->isChecked()).toBool());
+    setJpgCompressEnabled(
+        settings->value(SETTINGS_GROUP "/" JPG_COMPRESS_STATE, jpgCompressEnabled()).toBool());
     m_frameBufferSource->setCurrentIndex(qBound(0,
         settings->value(SETTINGS_GROUP "/" FRAME_BUFFER_SOURCE_STATE, m_frameBufferSource->currentIndex()).toInt(),
         m_frameBufferSource->count() - 1));
@@ -3091,7 +3082,7 @@ void OpenMVPlugin::extensionsInitialized()
         settings->setValue(SETTINGS_GROUP "/" ZOOM_STATE,
             zoomButton->isChecked());
         settings->setValue(SETTINGS_GROUP "/" JPG_COMPRESS_STATE,
-            m_jpgCompress->isChecked());
+            jpgCompressEnabled());
         settings->setValue(SETTINGS_GROUP "/" FRAME_BUFFER_SOURCE_STATE,
             m_frameBufferSource->currentIndex());
         settings->setValue(SETTINGS_GROUP "/" HISTOGRAM_COLOR_SPACE_STATE,

@@ -3956,7 +3956,6 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         }
 
         m_jpgCompress->setVisible(m_iodevice->v2ProtocolEnabled());
-        m_jpgCompressMode->setVisible(m_iodevice->v2ProtocolEnabled());
         m_frameFormatName.clear(); // unknown until this session's first frame reports its format
 
         if (!m_boardType.isEmpty() && m_iodevice->v2ProtocolEnabled())
@@ -3986,12 +3985,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             // FORCE PREFFERED ON CONNECT
             jpgCompress = jpegPreferred;
 
-            m_jpgCompress->setChecked(jpgCompress);
+            // m_connected is still false here, so the combo's change handler
+            // stays quiet; the explicit jpegEnable() below does the work.
+            setJpgCompressEnabled(jpgCompress);
             m_iodevice->jpegEnable(jpgCompress);
         }
         else
         {
-            m_iodevice->jpegEnable(m_jpgCompress->isChecked());
+            m_iodevice->jpegEnable(jpgCompressEnabled());
         }
 
         applyFrameBufferSource();
@@ -4451,7 +4452,6 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             }
 
             m_jpgCompress->setVisible(false);
-            m_jpgCompressMode->setVisible(false);
 
             if (!m_boardType.isEmpty() && v2ProtocolEnabled)
             {
@@ -4459,7 +4459,7 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
                 const Utils::Key jpgKey =
                     Utils::keyFromString(QStringLiteral(SETTINGS_GROUP "/" JPG_COMPRESS_STATE "_") + m_boardType);
 
-                settings->setValue(jpgKey, m_jpgCompress->isChecked());
+                settings->setValue(jpgKey, jpgCompressEnabled());
             }
 
             ///////////////////////////////////////////////////////////////////
@@ -4748,7 +4748,7 @@ void OpenMVPlugin::startClicked()
         if(importHelper(contents))
         {
             m_iodevice->scriptExec(contents);
-            m_iodevice->jpegEnable(m_jpgCompress->isChecked());
+            m_iodevice->jpegEnable(jpgCompressEnabled());
             applyFrameBufferSource();
 
             m_timer.restart();

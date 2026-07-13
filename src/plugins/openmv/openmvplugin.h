@@ -811,8 +811,11 @@ private:
     Core::Command *m_startCommand; QAction *m_startAction;
     Core::Command *m_stopCommand; QAction *m_stopAction;
 
-    QToolButton *m_jpgCompress;
-    QLabel *m_jpgCompressMode; // requested streaming mode (JPEG/RAW)
+    // Streaming mode selector: "JPEG Mode" (data true = jpegEnable) or
+    // "RAW Mode" (data false). States the requested mode explicitly.
+    QComboBox *m_jpgCompress;
+    bool jpgCompressEnabled() const { return m_jpgCompress->currentData().toBool(); }
+    void setJpgCompressEnabled(bool enable) { m_jpgCompress->setCurrentIndex(enable ? 0 : 1); }
     // Actual format of the frames arriving from the camera (V2 protocol);
     // shown in the Frame Buffer label next to the resolution.
     QString m_frameFormatName;
