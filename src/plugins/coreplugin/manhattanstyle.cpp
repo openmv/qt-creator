@@ -168,8 +168,15 @@ QSize ManhattanStyle::sizeFromContents(ContentsType type, const QStyleOption *op
             newSize = QSize(1, 1);
         break;
     case CT_ComboBox:
-        if (panelWidget(widget))
+        if (panelWidget(widget)) {
             newSize += QSize(14, 0);
+            // OPENMV-DIFF //
+            // Toolbar combos that must hug their text (the frame buffer
+            // source selector) opt out of the extra panel padding.
+            if (widget && widget->property("compactwidth").toBool())
+                newSize -= QSize(14, 0);
+            // OPENMV-DIFF //
+        }
         break;
     // OPENMV-DIFF //
     case CT_Slider:

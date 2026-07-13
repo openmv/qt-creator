@@ -2306,6 +2306,7 @@ void OpenMVPlugin::extensionsInitialized()
     m_frameBufferSource = new QComboBox;
     m_frameBufferSource->setProperty("hideborder", true);
     m_frameBufferSource->setProperty("drawleftborder", false);
+    m_frameBufferSource->setProperty("compactwidth", true); // drop the panel style's extra 14px
     m_frameBufferSource->setToolTip(Tr::tr("Select the Frame Buffer source, or turn it off for maximum performance"));
     // Content width only (and re-fit when the sensor list changes at connect)
     // so the selector sits with the buttons instead of soaking the bar's slack.
@@ -4344,6 +4345,12 @@ void OpenMVPlugin::updateFrameBufferSources(const QList<QPair<uint32_t, QString>
     if(sources.isEmpty())
     {
         m_frameBufferSource->addItem(Tr::tr("On"), 0);
+    }
+    else if(sources.size() == 1)
+    {
+        // A single source is just the stream switch - "On" reads better
+        // than the sensor's name.
+        m_frameBufferSource->addItem(Tr::tr("On"), int(sources.first().first));
     }
     else
     {
