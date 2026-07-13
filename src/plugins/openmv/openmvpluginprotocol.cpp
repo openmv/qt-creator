@@ -457,6 +457,20 @@ void OpenMVPlugin::setSpacing()
     dynamicFrameReadingBox->setEnabled(m_iodevice->v2ProtocolEnabled());
     rlayout->addWidget(dynamicFrameReadingBox);
 
+    // Script-published channel reads (Channels view) - V2 protocol only, so
+    // it lives with the protocol controls above the V1-era polling groups.
+    QWidget *readChannelsWidget = new QWidget;
+    QFormLayout *readChannelsWidgetLayout = new QFormLayout(readChannelsWidget);
+    readChannelsWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    QSpinBox *readChannelsSpacingBox = new QSpinBox;
+    readChannelsSpacingBox->setRange(0, 1000);
+    readChannelsSpacingBox->setValue(readChannelsSpacing);
+    readChannelsSpacingBox->setEnabled(m_iodevice->v2ProtocolEnabled());
+    QLabel *readChannelsLabel = new QLabel(Tr::tr("Channel Polling (ms)"));
+    readChannelsLabel->setEnabled(m_iodevice->v2ProtocolEnabled());
+    readChannelsWidgetLayout->addRow(readChannelsLabel, readChannelsSpacingBox);
+    rlayout->addWidget(readChannelsWidget);
+
     QFrame *line = new QFrame;
     line->setFrameShape(QFrame::HLine);
     line->setFrameShadow(QFrame::Sunken);
@@ -540,19 +554,6 @@ void OpenMVPlugin::setSpacing()
     readProfileLabel->setEnabled(m_iodevice->getProfileEnabled());
     readProfileWidgetLayout->addRow(readProfileLabel, readProfileSpacingBox);
     rlayout->addWidget(readProfileWidget);
-
-    // Script-published channel reads (Channels view) - V2 protocol only.
-    QWidget *readChannelsWidget = new QWidget;
-    QFormLayout *readChannelsWidgetLayout = new QFormLayout(readChannelsWidget);
-    readChannelsWidgetLayout->setContentsMargins(0, 0, 0, 0);
-    QSpinBox *readChannelsSpacingBox = new QSpinBox;
-    readChannelsSpacingBox->setRange(0, 1000);
-    readChannelsSpacingBox->setValue(readChannelsSpacing);
-    readChannelsSpacingBox->setEnabled(m_iodevice->v2ProtocolEnabled());
-    QLabel *readChannelsLabel = new QLabel(Tr::tr("Channel Polling (ms)"));
-    readChannelsLabel->setEnabled(m_iodevice->v2ProtocolEnabled());
-    readChannelsWidgetLayout->addRow(readChannelsLabel, readChannelsSpacingBox);
-    rlayout->addWidget(readChannelsWidget);
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
