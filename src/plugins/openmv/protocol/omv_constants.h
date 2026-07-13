@@ -126,6 +126,7 @@ enum : uint8_t {
     STREAM_CTRL     = 0x00, // Enable/disable streaming
     STREAM_RAW_CTRL = 0x01, // Enable/disable raw streaming
     STREAM_RAW_CFG  = 0x02, // Set raw stream resolution
+    STREAM_SOURCE   = 0x03, // Set stream source chip ID (protocol >= 1.0.1)
 
     // Profile channel IOCTLs
     PROFILE_MODE      = 0x00, // Set profiling mode

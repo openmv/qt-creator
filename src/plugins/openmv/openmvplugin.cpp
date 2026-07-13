@@ -35,6 +35,7 @@
 #include "openmvtr.h"
 
 #include "protocol/omv_debug.h"
+#include "protocol/omv_image.h"
 #include "protocol/omv_transport.h"
 
 #include <QGuiApplication>
@@ -2298,25 +2299,29 @@ void OpenMVPlugin::extensionsInitialized()
     zoomButton->setChecked(true);
     styledBar0Layout->addWidget(zoomButton);
 
-    m_disableFrameBuffer = new QToolButton;
-    m_disableFrameBuffer->setText(Tr::tr("Disable"));
-    m_disableFrameBuffer->setToolTip(Tr::tr("Disable the Frame Buffer for maximum performance"));
-    m_disableFrameBuffer->setCheckable(true);
-    m_disableFrameBuffer->setChecked(false);
-    styledBar0Layout->addWidget(m_disableFrameBuffer);
-    connect(m_disableFrameBuffer, &QToolButton::clicked, this, [this] {
+    m_frameBufferSource = new QComboBox;
+    m_frameBufferSource->setProperty("hideborder", true);
+    m_frameBufferSource->setProperty("drawleftborder", false);
+    m_frameBufferSource->setToolTip(Tr::tr("Select the Frame Buffer source, or turn it off for maximum performance"));
+    // Content width only (and re-fit when the sensor list changes at connect)
+    // so the selector sits with the buttons instead of soaking the bar's slack.
+    m_frameBufferSource->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+    m_frameBufferSource->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
+    m_frameBufferSource->addItem(Tr::tr("Off"), -1);
+    m_frameBufferSource->addItem(Tr::tr("On"), 0);
+    m_frameBufferSource->setCurrentIndex(1);
+    styledBar0Layout->addWidget(m_frameBufferSource);
+    connect(m_frameBufferSource, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, [this] {
         if(m_connected)
         {
-            const bool enableFb = !m_disableFrameBuffer->isChecked();
-
             if(!m_working)
             {
-                m_iodevice->fbEnable(enableFb);
+                applyFrameBufferSource();
             }
             else
             {
-                deferLatest(QStringLiteral("fbEnable"), [this, enableFb] {
-                    m_iodevice->fbEnable(enableFb);
+                deferLatest(QStringLiteral("fbEnable"), [this] {
+                    applyFrameBufferSource();
                 });
             }
         }
@@ -2347,8 +2352,11 @@ void OpenMVPlugin::extensionsInitialized()
             }
         }
     });
-    // The JPG button keeps a fixed label; this read-only label to its right reports which
-    // frame-buffer mode is actually active. Shown/hidden together with the button (V2 only).
+    // The JPG button keeps a fixed label; this read-only label to its right shows the
+    // requested streaming mode until a frame arrives, then the actual pixel format of
+    // the frames coming from the camera. Toggling the JPG button flips it back to the
+    // requested mode until the next frame confirms what the camera is really sending.
+    // Shown/hidden together with the button (V2 only).
     m_jpgCompressMode = new QLabel(m_jpgCompress->isChecked() ? Tr::tr("JPEG Mode") : Tr::tr("RAW Mode"));
     // The bar has no trailing stretch, so a default (growable) label would absorb the bar's
     // slack and shove the buttons to the center. Maximum keeps it at its text width; the left
@@ -2367,15 +2375,26 @@ void OpenMVPlugin::extensionsInitialized()
             ? Tr::tr("The Frame Buffer is streaming JPEG-compressed images")
             : Tr::tr("The Frame Buffer is streaming raw (uncompressed) images"));
     });
+    connect(m_iodevice, &OpenMVPluginIO::frameBufferFormat, this, [this] (uint format) {
+        QString name = omv::get_format_string(format);
 
-    Utils::ElidingLabel *disableLabel = new Utils::ElidingLabel(Tr::tr("Frame Buffer Disabled - click the disable button again to enable (top right)"));
+        if(m_jpgCompressMode->text() != name)
+        {
+            m_jpgCompressMode->setText(name);
+            m_jpgCompressMode->setToolTip(Tr::tr("The format of the frames arriving from the camera"));
+        }
+    });
+
+    Utils::ElidingLabel *disableLabel = new Utils::ElidingLabel(Tr::tr("Frame Buffer Off - select a source to enable it (top right)"));
     disableLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
     disableLabel->setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;padding:4px;")).
                                 arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
                                 arg(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal).name()));
     disableLabel->setAlignment(Qt::AlignCenter);
-    disableLabel->setVisible(m_disableFrameBuffer->isChecked());
-    connect(m_disableFrameBuffer, &QToolButton::toggled, disableLabel, &QLabel::setVisible);
+    disableLabel->setVisible(frameBufferDisabled());
+    connect(m_frameBufferSource, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, [this, disableLabel] {
+        disableLabel->setVisible(frameBufferDisabled());
+    });
 
     Utils::ElidingLabel *recordingLabel = new Utils::ElidingLabel(Tr::tr("Elapsed: 0h:00m:00s:000ms - Size: 0 B - FPS: 0"));
     recordingLabel->setSizePolicy(QSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred, QSizePolicy::Label));
@@ -2398,7 +2417,7 @@ void OpenMVPlugin::extensionsInitialized()
     tempWidget0->setLayout(tempLayout0);
 
     connect(zoomButton, &QToolButton::toggled, m_frameBuffer, &OpenMVPluginFB::enableFitInView);
-    connect(m_iodevice, &OpenMVPluginIO::frameBufferData, this, [this] (const QPixmap &data) { if(!m_disableFrameBuffer->isChecked()) m_frameBuffer->frameBufferData(data); });
+    connect(m_iodevice, &OpenMVPluginIO::frameBufferData, this, [this] (const QPixmap &data) { if(!frameBufferDisabled()) m_frameBuffer->frameBufferData(data); });
     connect(m_frameBuffer, &OpenMVPluginFB::saveImage, this, &OpenMVPlugin::saveImage);
     connect(m_frameBuffer, &OpenMVPluginFB::saveTemplate, this, &OpenMVPlugin::saveTemplate);
     connect(m_frameBuffer, &OpenMVPluginFB::saveDescriptor, this, &OpenMVPlugin::saveDescriptor);
@@ -2861,8 +2880,9 @@ void OpenMVPlugin::extensionsInitialized()
         settings->value(SETTINGS_GROUP "/" ZOOM_STATE, zoomButton->isChecked()).toBool());
     m_jpgCompress->setChecked(
         settings->value(SETTINGS_GROUP "/" JPG_COMPRESS_STATE, m_jpgCompress->isChecked()).toBool());
-    m_disableFrameBuffer->setChecked(
-        settings->value(SETTINGS_GROUP "/" DISABLE_FRAME_BUFFER_STATE, m_disableFrameBuffer->isChecked()).toBool());
+    m_frameBufferSource->setCurrentIndex(qBound(0,
+        settings->value(SETTINGS_GROUP "/" FRAME_BUFFER_SOURCE_STATE, m_frameBufferSource->currentIndex()).toInt(),
+        m_frameBufferSource->count() - 1));
     colorSpace->setCurrentIndex(
         settings->value(SETTINGS_GROUP "/" HISTOGRAM_COLOR_SPACE_STATE, colorSpace->currentIndex()).toInt());
     paneView->setCurrentIndex(
@@ -3034,8 +3054,8 @@ void OpenMVPlugin::extensionsInitialized()
             zoomButton->isChecked());
         settings->setValue(SETTINGS_GROUP "/" JPG_COMPRESS_STATE,
             m_jpgCompress->isChecked());
-        settings->setValue(SETTINGS_GROUP "/" DISABLE_FRAME_BUFFER_STATE,
-            m_disableFrameBuffer->isChecked());
+        settings->setValue(SETTINGS_GROUP "/" FRAME_BUFFER_SOURCE_STATE,
+            m_frameBufferSource->currentIndex());
         settings->setValue(SETTINGS_GROUP "/" HISTOGRAM_COLOR_SPACE_STATE,
             colorSpace->currentIndex());
         settings->setValue(SETTINGS_GROUP "/" HISTOGRAM_PANE_VIEW_STATE,
@@ -4254,6 +4274,49 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
     }
 
     return Q_NULLPTR;
+}
+
+void OpenMVPlugin::applyFrameBufferSource()
+{
+    int source = m_frameBufferSource->currentData().toInt();
+
+    // Set the source before enabling so the first frames already come from
+    // the selected sensor. -1 = off, 0 = on with no source selection.
+    if(source > 0)
+    {
+        m_iodevice->setStreamSource(uint(source));
+    }
+
+    m_iodevice->fbEnable(source != -1);
+}
+
+void OpenMVPlugin::updateFrameBufferSources(const QList<QPair<uint32_t, QString> > &sources)
+{
+    // Rebuilt at connect: cameras differ in sensor count, so the previous
+    // selection is clamped to the new list. The clamp works on item INDEXES
+    // ("Off" is always index 0, so Off stays Off; an out-of-range sensor
+    // choice falls back to the last sensor) -- the -1/0/chip-id values live
+    // in the items' data, not their indexes. This runs before m_connected is
+    // set, so the change handler stays quiet and the connect flow's
+    // applyFrameBufferSource() sends the result once.
+    int previousIndex = m_frameBufferSource->currentIndex();
+
+    m_frameBufferSource->clear();
+    m_frameBufferSource->addItem(Tr::tr("Off"), -1);
+
+    if(sources.isEmpty())
+    {
+        m_frameBufferSource->addItem(Tr::tr("On"), 0);
+    }
+    else
+    {
+        for(const QPair<uint32_t, QString> &source : sources)
+        {
+            m_frameBufferSource->addItem(source.second, int(source.first));
+        }
+    }
+
+    m_frameBufferSource->setCurrentIndex(qBound(0, previousIndex, m_frameBufferSource->count() - 1));
 }
 
 void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id, const QString vendor)

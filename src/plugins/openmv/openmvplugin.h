@@ -155,7 +155,7 @@
 #define ZOOM_STATE "ZoomState"
 #define OUTPUT_WINDOW_FONT_ZOOM_STATE "OutputWindowFontZoomState"
 #define JPG_COMPRESS_STATE "JPGCompressState"
-#define DISABLE_FRAME_BUFFER_STATE "DisableFrameBufferState"
+#define FRAME_BUFFER_SOURCE_STATE "FrameBufferSourceState"
 #define HISTOGRAM_COLOR_SPACE_STATE "HistogramColorSpace"
 #define HISTOGRAM_PANE_VIEW_STATE "HistogramPaneView"
 #define DONT_SHOW_EXAMPLES_AGAIN "DontShowExamplesAgain"
@@ -802,8 +802,19 @@ private:
     Core::Command *m_stopCommand; QAction *m_stopAction;
 
     QToolButton *m_jpgCompress;
-    QLabel *m_jpgCompressMode; // frame-buffer mode text shown to the right of m_jpgCompress
-    QToolButton *m_disableFrameBuffer;
+    QLabel *m_jpgCompressMode; // actual format of the frames arriving from the camera
+    // Frame Buffer source selector: "Off" (data -1), "On" (data 0, no source
+    // selection), or one entry per sensor (data = chip id). Rebuilt on connect.
+    QComboBox *m_frameBufferSource;
+
+    bool frameBufferDisabled() const
+    {
+        return m_frameBufferSource->currentData().toInt() < 0;
+    }
+
+    void updateFrameBufferSources(const QList<QPair<uint32_t, QString> > &sources);
+    void applyFrameBufferSource();
+
     OpenMVDatasetEditor *m_datasetEditor;
     OpenMVPluginFB *m_frameBuffer;
     OpenMVPluginHistogram *m_histogram;

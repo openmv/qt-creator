@@ -871,6 +871,22 @@ void OMVCamera::streaming(bool enable, bool raw, const QSize &res)
     });
 }
 
+void OMVCamera::setStreamSource(uint32_t chip_id)
+{
+    /*
+        Select which sensor feeds the stream channel.
+    */
+    retryIfFailedVoid([&]() {
+        uint8_t stream_id = getChannelId(QStringLiteral("stream"));
+        QList<uint32_t> args;
+        args << chip_id;
+        channelIoctl(stream_id,
+                     static_cast<uint32_t>(OMVPChannelIOCTL::STREAM_SOURCE),
+                     "I",
+                     args);
+    });
+}
+
 QVariantMap OMVCamera::readStatus()
 {
     /*

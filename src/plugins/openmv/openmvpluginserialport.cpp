@@ -1004,8 +1004,9 @@ void OpenMVPluginSerialPort_private::frameDump() {
         OMVFrame frame;
 
         if (m_camera->frameReady() && m_camera->readFrame(frame)) {
-            // Emit before the frame so the UI has the value cached when it renders.
+            // Emit before the frame so the UI has the values cached when it renders.
             if (frame.has_fps) emit cameraFrameRate(frame.fps);
+            emit frameBufferFormat(frame.format);
             emit frameBufferData(false, frame.pixmap);
         } else {
             emit frameBufferData(false, QPixmap());
@@ -1158,6 +1159,22 @@ void OpenMVPluginSerialPort_private::sysReset(bool enterBootloader) {
     }
 }
 
+void OpenMVPluginSerialPort_private::setStreamSource(uint chipId) {
+    if (!m_camera || !m_camera->isConnected()) {
+        emit setStreamSourceDone(true);
+        return;
+    }
+
+    try {
+        m_camera->setStreamSource(chipId);
+        emit setStreamSourceDone(false);
+    } catch (...) {
+        emit setStreamSourceDone(true);
+        delete m_camera;
+        m_camera = Q_NULLPTR;
+    }
+}
+
 void OpenMVPluginSerialPort_private::fbEnable(bool enable) {
     if (!m_camera || !m_camera->isConnected()) {
         emit fbEnableDone(true);
@@ -1242,6 +1259,11 @@ void OpenMVPluginSerialPort_private::getState() {
 
         OMVFrame frame;
         bool frameValid = status.first && m_camera->readFrame(frame);
+
+        if (frameValid) {
+            if (frame.has_fps) emit cameraFrameRate(frame.fps);
+            emit frameBufferFormat(frame.format);
+        }
 
         emit getStateDone(false,
                           status.second,
@@ -1516,6 +1538,15 @@ OpenMVPluginSerialPort::OpenMVPluginSerialPort(const QJsonDocument &settings,
 
     connect(this, &OpenMVPluginSerialPort::fbEnable,
             m_port, &OpenMVPluginSerialPort_private::fbEnable);
+
+    connect(this, &OpenMVPluginSerialPort::setStreamSource,
+            m_port, &OpenMVPluginSerialPort_private::setStreamSource);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::setStreamSourceDone,
+            this, &OpenMVPluginSerialPort::setStreamSourceDone);
+
+    connect(m_port, &OpenMVPluginSerialPort_private::frameBufferFormat,
+            this, &OpenMVPluginSerialPort::frameBufferFormat);
 
     connect(m_port, &OpenMVPluginSerialPort_private::fbEnableDone,
             this, &OpenMVPluginSerialPort::fbEnableDone);

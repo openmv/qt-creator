@@ -3499,6 +3499,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             m_iodevice->breakUpSetAttributeCommand(false);
             m_iodevice->breakUpFBEnable(false);
             m_iodevice->breakUpJPEGEnable(false);
+
+            // No sensor enumeration on this old firmware: plain Off/On so the
+            // previous camera's sensor list doesn't linger in the selector.
+            updateFrameBufferSources(QList<QPair<uint32_t, QString> >());
         }
         else
         {
@@ -3527,6 +3531,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 loop.exec();
 
                 disconnect(conn);
+
+                QList<QPair<uint32_t, QString> > frameBufferSources;
 
                 if(ids2.isEmpty() || ids2.at(0) == 0xFF)
                 {
@@ -3564,6 +3570,17 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         QPair<QString, bool> pair(sensorType, hidden);
                         if (mainSensor) sensorTypeList.prepend(pair);
                         else if (!hidden || sensorTypeList.isEmpty()) sensorTypeList.append(pair);
+
+                        // Frame Buffer source entries mirror the sensors that
+                        // end up displayed (sensorTypeList post-strips hidden
+                        // entries below): non-hidden only, main sensor first,
+                        // keeping the chip id for STREAM_SOURCE.
+                        if (!hidden)
+                        {
+                            QPair<uint32_t, QString> sourcePair(uint32_t(id), sensorType);
+                            if (mainSensor) frameBufferSources.prepend(sourcePair);
+                            else frameBufferSources.append(sourcePair);
+                        }
                     }
 
                     for (int i = 0; i < sensorTypeList.size(); )
@@ -3590,6 +3607,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     disableLicenseCheck = true;
                     m_sensorType = Tr::tr("Unknown");
                 }
+
+                updateFrameBufferSources(frameBufferSources);
             }
         }
 
@@ -3974,7 +3993,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             m_iodevice->jpegEnable(m_jpgCompress->isChecked());
         }
 
-        m_iodevice->fbEnable(!m_disableFrameBuffer->isChecked());
+        applyFrameBufferSource();
 
         Core::MessageManager::grayOutOldContent();
 
@@ -4725,7 +4744,7 @@ void OpenMVPlugin::startClicked()
         {
             m_iodevice->scriptExec(contents);
             m_iodevice->jpegEnable(m_jpgCompress->isChecked());
-            m_iodevice->fbEnable(!m_disableFrameBuffer->isChecked());
+            applyFrameBufferSource();
 
             m_timer.restart();
             m_queue.clear();

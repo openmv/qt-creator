@@ -76,6 +76,7 @@ public:
     void stop();
     void exec(const QString &script);
     void streaming(bool enable, bool raw = false, const QSize &res = QSize());
+    void setStreamSource(uint32_t chip_id); // STREAM_SOURCE ioctl (protocol >= 1.0.1)
 
     // Channels and polling
     QVariantMap readStatus();

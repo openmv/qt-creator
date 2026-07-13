@@ -174,7 +174,7 @@ void OpenMVPlugin::processEvents()
                 || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor < OPENMV_ADD_GET_STATE_MINOR))
                 || ((m_major == OPENMV_ADD_GET_STATE_MAJOR) && (m_minor == OPENMV_ADD_GET_STATE_MINOR) && (m_patch < OPENMV_ADD_GET_STATE_PATCH)))
             {
-                if((!m_disableFrameBuffer->isChecked()) && (!m_iodevice->frameSizeDumpQueued()) && m_frameSizeDumpTimer.hasExpired(m_frameSizeDumpSpacing) &&
+                if((!frameBufferDisabled()) && (!m_iodevice->frameSizeDumpQueued()) && m_frameSizeDumpTimer.hasExpired(m_frameSizeDumpSpacing) &&
                     (!(m_iodevice->v2ProtocolEnabled() && m_dynamicFrameReading)))
                 {
                     m_frameSizeDumpTimer.restart();
@@ -260,7 +260,7 @@ void OpenMVPlugin::processEvents()
                 m_dynamicFrameReadingLock = true;
             }
 
-            if (m_dynamicFrameReadingPending && (!m_disableFrameBuffer->isChecked()) && (!m_iodevice->frameSizeDumpQueued()))
+            if (m_dynamicFrameReadingPending && (!frameBufferDisabled()) && (!m_iodevice->frameSizeDumpQueued()))
             {
                 m_dynamicFrameReadingPending = false;
                 m_frameSizeDumpTimer.restart();

@@ -107,6 +107,7 @@ enum
     V2_SCRIPT_RUNNING_CPL,
     V2_SYSTEM_RESET_CPL,
     V2_FRAME_BUFFER_ENABLE_CPL,
+    V2_STREAM_SOURCE_CPL,
     V2_JPEG_ENABLE_CPL,
     V2_PRINT_DATA_CPL,
     V2_SENSOR_ID_CPL,
@@ -403,6 +404,17 @@ OpenMVPluginIO::OpenMVPluginIO(OpenMVPluginSerialPort *port, QObject *parent) : 
 
     connect(m_port, &OpenMVPluginSerialPort::cameraFrameRate,
             this, [this] (double fps) { emit cameraFrameRate(fps); });
+
+    connect(m_port, &OpenMVPluginSerialPort::frameBufferFormat,
+            this, [this] (uint format) { emit frameBufferFormat(format); });
+
+    connect(m_port, &OpenMVPluginSerialPort::setStreamSourceDone,
+            this, [this] (bool timeout) {
+                if (timeout) m_timeout = true;
+                m_completionQueue.removeOne(V2_STREAM_SOURCE_CPL);
+                emit setStreamSourceDone();
+                if (m_completionQueue.isEmpty()) emit queueEmpty();
+            });
 
     connect(m_port, &OpenMVPluginSerialPort::archString,
             this, [this] (bool timeout, const QString &arch) {
@@ -2050,6 +2062,21 @@ void OpenMVPluginIO::sysReset(bool enterBootloader)
                                                         enterBootloader ? SYS_RESET_TO_BL_END_DELAY : SYS_RESET_END_DELAY));
     m_completionQueue.enqueue(USBDBG_SYS_RESET_CPL);
     command();
+}
+
+void OpenMVPluginIO::setStreamSource(uint chipId)
+{
+    if (m_v2ProtocolEnabled) {
+        m_completionQueue.enqueue(V2_STREAM_SOURCE_CPL);
+        m_port->setStreamSource(chipId);
+        return;
+    }
+
+    // The V1 protocol has no stream-source selection; complete immediately
+    // so callers waiting on the callback always get it.
+    QTimer::singleShot(0, this, [this] {
+        emit setStreamSourceDone();
+    });
 }
 
 void OpenMVPluginIO::fbEnable(bool enabled)

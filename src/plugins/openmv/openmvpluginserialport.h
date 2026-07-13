@@ -397,6 +397,7 @@ public slots:
     void getScriptRunning();
     void sysReset(bool enterBootloader = false);
     void fbEnable(bool enable);
+    void setStreamSource(uint chipId);
     void jpegEnable(bool enable);
     void getTxBuffer();
     void sensorId();
@@ -438,12 +439,14 @@ signals:
     void frameReady(bool ready); // poll event
     void frameBufferData(bool timeout, const QPixmap &data);
     void cameraFrameRate(double fps); // on-camera FPS from the v5.0.0 stream header
+    void frameBufferFormat(uint format); // pixel format of the last received frame
     void archString(bool timeout, const QString &arch);
     void scriptExecDone(bool timeout);
     void scriptStopDone(bool timeout);
     void scriptRunning(bool timeout, bool running);
     void sysResetDone(bool timeout);
     void fbEnableDone(bool timeout);
+    void setStreamSourceDone(bool timeout);
     void jpegEnableDone(bool timeout);
     void printData(bool timeout, const QByteArray &data);
     void sensorIdDone(bool timeout, QList<int> ids);
@@ -527,6 +530,7 @@ signals:
     void getScriptRunning();
     void sysReset(bool enterBootloader = false);
     void fbEnable(bool enable);
+    void setStreamSource(uint chipId);
     void jpegEnable(bool enable);
     void getTxBuffer();
     void sensorId();
@@ -546,12 +550,14 @@ signals:
     void frameReady(bool ready); // poll event
     void frameBufferData(bool timeout, const QPixmap &data);
     void cameraFrameRate(double fps); // on-camera FPS from the v5.0.0 stream header
+    void frameBufferFormat(uint format); // pixel format of the last received frame
     void archString(bool timeout, const QString &arch);
     void scriptExecDone(bool timeout);
     void scriptStopDone(bool timeout);
     void scriptRunning(bool timeout, bool running);
     void sysResetDone(bool timeout);
     void fbEnableDone(bool timeout);
+    void setStreamSourceDone(bool timeout);
     void jpegEnableDone(bool timeout);
     void printData(bool timeout, const QByteArray &data);
     void sensorIdDone(bool timeout, QList<int> ids);

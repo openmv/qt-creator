@@ -202,6 +202,7 @@ public slots:
     void setAttribute(int attr, int value);
     void sysReset(bool enterBootloader = false);
     void fbEnable(bool enable);
+    void setStreamSource(uint chipId);
     void jpegEnable(bool enabled);
     void getTxBuffer();
     void sensorId();
@@ -251,6 +252,7 @@ signals:
     void jpegPreferred(bool preferred);
     void frameBufferData(const QPixmap &data);
     void cameraFrameRate(double fps); // on-camera FPS from the v5.0.0 stream header
+    void frameBufferFormat(uint format); // pixel format of the last received frame
     void frameBufferEmpty(bool ok);
     void archString(const QString &arch);
     void learnedMTU(bool ok);
@@ -263,6 +265,7 @@ signals:
     void setAttrributeDone();
     void sysResetDone();
     void fbEnableDone();
+    void setStreamSourceDone();
     void jpegEnableDone();
     void printData(const QByteArray &data);
     void printEmpty(bool ok);
