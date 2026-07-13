@@ -2358,10 +2358,9 @@ void OpenMVPlugin::extensionsInitialized()
         }
     });
     // The JPG button keeps a fixed label; this read-only label to its right shows the
-    // requested streaming mode until a frame arrives, then the actual pixel format of
-    // the frames coming from the camera. Toggling the JPG button flips it back to the
-    // requested mode until the next frame confirms what the camera is really sending.
-    // Shown/hidden together with the button (V2 only).
+    // requested streaming mode. Shown/hidden together with the button (V2 only). The
+    // actual format of the arriving frames shows in the Frame Buffer label instead --
+    // rewriting this text on the first frame resized the bar.
     m_jpgCompressMode = new QLabel(m_jpgCompress->isChecked() ? Tr::tr("JPEG Mode") : Tr::tr("RAW Mode"));
     // The bar has no trailing stretch, so a default (growable) label would absorb the bar's
     // slack and shove the buttons to the center. Maximum keeps it at its text width; the left
@@ -2381,13 +2380,8 @@ void OpenMVPlugin::extensionsInitialized()
             : Tr::tr("The Frame Buffer is streaming raw (uncompressed) images"));
     });
     connect(m_iodevice, &OpenMVPluginIO::frameBufferFormat, this, [this] (uint format) {
-        QString name = omv::get_format_string(format);
-
-        if(m_jpgCompressMode->text() != name)
-        {
-            m_jpgCompressMode->setText(name);
-            m_jpgCompressMode->setToolTip(Tr::tr("The format of the frames arriving from the camera"));
-        }
+        // Remembered for the Frame Buffer label, which repaints on every frame.
+        m_frameFormatName = omv::get_format_string(format);
     });
 
     Utils::ElidingLabel *disableLabel = new Utils::ElidingLabel(Tr::tr("Frame Buffer Off - select a source to enable it (top right)"));
@@ -2575,7 +2569,13 @@ void OpenMVPlugin::extensionsInitialized()
         selectorStack->setCurrentIndex(index);
     });
 
-    connect(m_frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [frameBufferLabel] (const QSize &res, const QRect &roi, int focus) {
+    connect(m_frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [this, frameBufferLabel] (const QSize &res, const QRect &roi, int focus) {
+        // The actual format of the arriving frames (from the V2 protocol)
+        // rides in the title next to the resolution.
+        QString name = m_frameFormatName.isEmpty()
+            ? Tr::tr("Frame Buffer")
+            : Tr::tr("Frame Buffer (%1)").arg(m_frameFormatName);
+
         if(res.isValid())
         {
             if(roi.isValid())
@@ -2583,21 +2583,21 @@ void OpenMVPlugin::extensionsInitialized()
                 if((roi.width() > 1)
                 || (roi.height() > 1))
                 {
-                    frameBufferLabel->setText(Tr::tr("Frame Buffer - Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()).arg(roi.width()).arg(roi.height()).arg(roi.width() * roi.height()).arg(focus));
+                    frameBufferLabel->setText(name + Tr::tr(" - Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()).arg(roi.width()).arg(roi.height()).arg(roi.width() * roi.height()).arg(focus));
                 }
                 else
                 {
-                    frameBufferLabel->setText(Tr::tr("Frame Buffer - Res (w:%1, h:%2) - Point (x:%3, y:%4)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()));
+                    frameBufferLabel->setText(name + Tr::tr(" - Res (w:%1, h:%2) - Point (x:%3, y:%4)").arg(res.width()).arg(res.height()).arg(roi.x()).arg(roi.y()));
                 }
             }
             else
             {
-                frameBufferLabel->setText(Tr::tr("Frame Buffer - Res (w:%1, h:%2) - Focus (%3)").arg(res.width()).arg(res.height()).arg(focus));
+                frameBufferLabel->setText(name + Tr::tr(" - Res (w:%1, h:%2) - Focus (%3)").arg(res.width()).arg(res.height()).arg(focus));
             }
         }
         else
         {
-            frameBufferLabel->setText(Tr::tr("Frame Buffer"));
+            frameBufferLabel->setText(name);
         }
     });
 

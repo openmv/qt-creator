@@ -812,7 +812,10 @@ private:
     Core::Command *m_stopCommand; QAction *m_stopAction;
 
     QToolButton *m_jpgCompress;
-    QLabel *m_jpgCompressMode; // actual format of the frames arriving from the camera
+    QLabel *m_jpgCompressMode; // requested streaming mode (JPEG/RAW)
+    // Actual format of the frames arriving from the camera (V2 protocol);
+    // shown in the Frame Buffer label next to the resolution.
+    QString m_frameFormatName;
     // Frame Buffer source selector: "Off" (data -1), "On" (data 0, no source
     // selection), or one entry per sensor (data = chip id). Rebuilt on connect.
     QComboBox *m_frameBufferSource;

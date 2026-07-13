@@ -3957,6 +3957,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         m_jpgCompress->setVisible(m_iodevice->v2ProtocolEnabled());
         m_jpgCompressMode->setVisible(m_iodevice->v2ProtocolEnabled());
+        m_frameFormatName.clear(); // unknown until this session's first frame reports its format
 
         if (!m_boardType.isEmpty() && m_iodevice->v2ProtocolEnabled())
         {
