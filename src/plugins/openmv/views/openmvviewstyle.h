@@ -43,6 +43,10 @@
 namespace OpenMV {
 namespace Internal {
 
+// Paint a pane view on Base (white in light themes) like the histogram's
+// plots, with the theme's normal text color for every label.
+void viewApplyBackground(QWidget *view);
+
 // Bold section label with a hairline underneath.
 QWidget *viewSectionLabel(const QString &text);
 

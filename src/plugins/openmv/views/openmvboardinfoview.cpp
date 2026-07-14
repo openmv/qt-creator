@@ -99,6 +99,8 @@ static QString textOrEmpty(const QString &text)
 
 OpenMVBoardInfoView::OpenMVBoardInfoView(QWidget *parent) : QStackedWidget(parent)
 {
+    viewApplyBackground(this);
+
     // Page 0: a status message, centered and styled like the frame buffer's
     // "No Image" text.
     m_message = new QLabel;
@@ -110,6 +112,7 @@ OpenMVBoardInfoView::OpenMVBoardInfoView(QWidget *parent) : QStackedWidget(paren
     QScrollArea *scrollArea = new QScrollArea;
     scrollArea->setWidgetResizable(true);
     scrollArea->setFrameShape(QFrame::NoFrame);
+    scrollArea->viewport()->setAutoFillBackground(false);
 
     QWidget *container = new QWidget;
     QVBoxLayout *layout = new QVBoxLayout(container);

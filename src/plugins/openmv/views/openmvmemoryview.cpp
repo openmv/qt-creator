@@ -32,15 +32,25 @@
 #include "openmvviewstyle.h"
 #include "openmvtr.h"
 
+#include <utils/theme/theme.h>
 
 namespace OpenMV {
 namespace Internal {
 
-// Accent colors (match OpenMV Studio's memory graphs; legible on both themes).
-static const QColor USED_LINE_COLOR = QColor(0x5b, 0x9c, 0xf5);
-static const QColor USED_FILL_COLOR = QColor(0x5b, 0x9c, 0xf5, 51);
-static const QColor PEAK_LINE_COLOR = QColor(0xf0, 0x55, 0x55, 128);
-static const QColor PEAK_TEXT_COLOR = QColor(0xf0, 0x55, 0x55, 178);
+// Accent colors (match OpenMV Studio's memory graphs). The dark theme's
+// pastels wash out on the light theme's white background, so light picks
+// deeper shades and stronger alphas.
+static QColor usedColor()
+{
+    return Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface)
+        ? QColor(0x5b, 0x9c, 0xf5) : QColor(0x2b, 0x6c, 0xd4);
+}
+
+static QColor peakColor()
+{
+    return Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface)
+        ? QColor(0xf0, 0x55, 0x55) : QColor(0xc0, 0x2c, 0x2c);
+}
 
 static QString formatBytes(quint32 bytes)
 {
@@ -109,7 +119,7 @@ void OpenMVMemoryGraph::paintEvent(QPaintEvent *event)
     int w = width();
     int h = height();
 
-    painter.fillRect(rect(), palette().color(QPalette::Base));
+    painter.fillRect(rect(), Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal));
 
     if((!m_history) || (m_history->size() < 2))
     {
@@ -128,10 +138,11 @@ void OpenMVMemoryGraph::paintEvent(QPaintEvent *event)
         return;
     }
 
-    QColor faint = palette().color(QPalette::Text);
+    bool dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
+    QColor faint = Utils::creatorTheme()->color(Utils::Theme::TextColorNormal);
 
     // Grid lines at 25%, 50%, 75%
-    faint.setAlpha(13);
+    faint.setAlpha(dark ? 13 : 30);
     painter.setPen(QPen(faint, 1));
 
     for(int q = 1; q <= 3; q++)
@@ -141,7 +152,7 @@ void OpenMVMemoryGraph::paintEvent(QPaintEvent *event)
     }
 
     // Total line (dimmed) - shows pool growth/shrink over the window.
-    faint.setAlpha(38);
+    faint.setAlpha(dark ? 38 : 64);
     painter.setPen(QPen(faint, 1));
 
     QPolygonF totalLine;
@@ -167,11 +178,15 @@ void OpenMVMemoryGraph::paintEvent(QPaintEvent *event)
     usedFill.append(QPointF(usedLine.last().x(), h));
     usedFill.append(QPointF(usedLine.first().x(), h));
 
+    QColor used = usedColor();
+    QColor usedFillColor = used;
+    usedFillColor.setAlpha(51);
+
     painter.setPen(Qt::NoPen);
-    painter.setBrush(USED_FILL_COLOR);
+    painter.setBrush(usedFillColor);
     painter.drawPolygon(usedFill);
 
-    painter.setPen(QPen(USED_LINE_COLOR, 1.5));
+    painter.setPen(QPen(used, 1.5));
     painter.setBrush(Qt::NoBrush);
     painter.drawPolyline(usedLine);
 
@@ -181,14 +196,20 @@ void OpenMVMemoryGraph::paintEvent(QPaintEvent *event)
     {
         qreal peakY = h - ((qreal(m_peak) / maxTotal) * h);
 
-        QPen peakPen(PEAK_LINE_COLOR, 1, Qt::DashLine);
+        QColor peakLine = peakColor();
+        peakLine.setAlpha(dark ? 128 : 200);
+
+        QPen peakPen(peakLine, 1, Qt::DashLine);
         painter.setPen(peakPen);
         painter.drawLine(QPointF(0, peakY), QPointF(w, peakY));
+
+        QColor peakText = peakColor();
+        peakText.setAlpha(dark ? 178 : 255);
 
         QFont small = font();
         small.setPointSizeF(qMax(6.0, small.pointSizeF() - 2.0));
         painter.setFont(small);
-        painter.setPen(PEAK_TEXT_COLOR);
+        painter.setPen(peakText);
         painter.drawText(QPointF(w - painter.fontMetrics().horizontalAdvance(Tr::tr("peak")) - 6,
                                  peakY - 3), Tr::tr("peak"));
     }
@@ -301,6 +322,8 @@ void OpenMVMemoryCard::setData(const QVariantMap &entry, int umaIndex,
 
 OpenMVMemoryView::OpenMVMemoryView(QWidget *parent) : QStackedWidget(parent)
 {
+    viewApplyBackground(this);
+
     // Page 0: a status message, centered and styled like the frame buffer's
     // "No Image" text.
     m_message = new QLabel;
@@ -312,6 +335,7 @@ OpenMVMemoryView::OpenMVMemoryView(QWidget *parent) : QStackedWidget(parent)
     QScrollArea *scrollArea = new QScrollArea;
     scrollArea->setWidgetResizable(true);
     scrollArea->setFrameShape(QFrame::NoFrame);
+    scrollArea->viewport()->setAutoFillBackground(false);
 
     QWidget *container = new QWidget;
     QVBoxLayout *layout = new QVBoxLayout(container);

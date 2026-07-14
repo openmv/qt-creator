@@ -38,6 +38,7 @@
 #include <extensionsystem/pluginmanager.h>
 #include <utils/qtcsettings.h>
 #include <utils/store.h>
+#include <utils/theme/theme.h>
 
 namespace OpenMV {
 namespace Internal {
@@ -261,7 +262,7 @@ static QLabel *unitIconLabel(const QString &unit)
             QLabel *label = new QLabel;
 
             QByteArray svg(UNIT_ICONS[i].svg);
-            svg.replace("currentColor", label->palette().color(QPalette::Text).name().toLatin1());
+            svg.replace("currentColor", Utils::creatorTheme()->color(Utils::Theme::TextColorNormal).name().toLatin1());
 
             qreal dpr = label->devicePixelRatioF();
             QPixmap pixmap(qRound(14 * dpr), qRound(14 * dpr));
@@ -270,7 +271,8 @@ static QLabel *unitIconLabel(const QString &unit)
 
             QSvgRenderer renderer(svg);
             QPainter painter(&pixmap);
-            painter.setOpacity(150.0 / 255.0); // match the muted name labels
+            // Match the name labels: muted on dark, full strength on light.
+            painter.setOpacity(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? (150.0 / 255.0) : 1.0);
             renderer.render(&painter);
             painter.end();
 
@@ -802,11 +804,13 @@ void OpenMVChannelWaveform::paintEvent(QPaintEvent *event)
     int w = width();
     int h = height();
 
-    painter.fillRect(rect(), palette().color(QPalette::Base));
+    painter.fillRect(rect(), Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal));
 
-    // Grid lines at 25%, 50%, 75%
-    QColor faint = palette().color(QPalette::Text);
-    faint.setAlpha(13);
+    bool dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
+
+    // Grid lines at 25%, 50%, 75% (stronger on the light theme's white).
+    QColor faint = Utils::creatorTheme()->color(Utils::Theme::TextColorNormal);
+    faint.setAlpha(dark ? 13 : 30);
     painter.setPen(QPen(faint, 1));
 
     for(int q = 1; q <= 3; q++)
@@ -837,7 +841,15 @@ void OpenMVChannelWaveform::paintEvent(QPaintEvent *event)
                                 h - (qBound(0.0, (value - m_min) / range, 1.0) * h)));
         }
 
-        painter.setPen(QPen(WAVEFORM_COLORS[s % int(sizeof(WAVEFORM_COLORS) / sizeof(WAVEFORM_COLORS[0]))], 1.0));
+        // The dark theme's pastels wash out on white; deepen them there.
+        QColor trace = WAVEFORM_COLORS[s % int(sizeof(WAVEFORM_COLORS) / sizeof(WAVEFORM_COLORS[0]))];
+
+        if(!dark)
+        {
+            trace = trace.darker(130);
+        }
+
+        painter.setPen(QPen(trace, 1.0));
         painter.drawPolyline(line);
     }
 
@@ -847,7 +859,7 @@ void OpenMVChannelWaveform::paintEvent(QPaintEvent *event)
     small.setPointSizeF(qMax(6.0, small.pointSizeF() - 2.0));
     painter.setFont(small);
 
-    QColor muted = palette().color(QPalette::Text);
+    QColor muted = Utils::creatorTheme()->color(Utils::Theme::TextColorNormal);
     muted.setAlpha(150);
     painter.setPen(muted);
 
@@ -860,6 +872,8 @@ void OpenMVChannelWaveform::paintEvent(QPaintEvent *event)
 
 OpenMVChannelsView::OpenMVChannelsView(QWidget *parent) : QStackedWidget(parent)
 {
+    viewApplyBackground(this);
+
     // Page 0: a status message, centered and styled like the frame buffer's
     // "No Image" text.
     m_message = new QLabel;
@@ -871,6 +885,7 @@ OpenMVChannelsView::OpenMVChannelsView(QWidget *parent) : QStackedWidget(parent)
     QScrollArea *scrollArea = new QScrollArea;
     scrollArea->setWidgetResizable(true);
     scrollArea->setFrameShape(QFrame::NoFrame);
+    scrollArea->viewport()->setAutoFillBackground(false);
 
     QWidget *container = new QWidget;
     QVBoxLayout *layout = new QVBoxLayout(container);

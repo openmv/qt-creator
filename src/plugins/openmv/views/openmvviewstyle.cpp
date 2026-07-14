@@ -35,31 +35,51 @@
 namespace OpenMV {
 namespace Internal {
 
-// 1px separator in the text color, heavily faded.
+// 1px separator in the theme's text color, heavily faded. Its own
+// stylesheet wins over the view-wide background rule.
 static QWidget *hairline()
 {
     QWidget *line = new QWidget;
     line->setFixedHeight(1);
-    line->setAutoFillBackground(true);
+    line->setAttribute(Qt::WA_StyledBackground);
 
-    QColor color = line->palette().color(QPalette::Text);
-    color.setAlpha(25);
-
-    QPalette palette = line->palette();
-    palette.setColor(QPalette::Window, color);
-    line->setPalette(palette);
+    QColor color = Utils::creatorTheme()->color(Utils::Theme::TextColorNormal);
+    line->setStyleSheet(QStringLiteral("background-color:rgba(%1,%2,%3,25);")
+        .arg(color.red()).arg(color.green()).arg(color.blue()));
     return line;
 }
 
-// Fade a label towards the background (Studio's tertiary text).
+// Fade a label towards the background (Studio's tertiary text). Its own
+// stylesheet color wins over the view-wide QLabel rule; the palette carries
+// the same color for code that derives tints from the label.
 static void mute(QLabel *label)
 {
+    QColor color = Utils::creatorTheme()->color(Utils::Theme::TextColorNormal);
+
+    // Studio's tertiary fade is calibrated for the dark theme; on the light
+    // theme's white it washes out, so names stay at full strength there
+    // (like the histogram's labels).
+    color.setAlpha(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? 150 : 255);
+
+    label->setStyleSheet(QStringLiteral("color:rgba(%1,%2,%3,%4);")
+        .arg(color.red()).arg(color.green()).arg(color.blue()).arg(color.alpha()));
+
     QPalette palette = label->palette();
-    QColor color = palette.color(QPalette::Text);
-    color.setAlpha(150);
     palette.setColor(QPalette::WindowText, color);
     palette.setColor(QPalette::Text, color);
     label->setPalette(palette);
+}
+
+void viewApplyBackground(QWidget *view)
+{
+    // Exactly how the histogram themes itself: stylesheet colors from the
+    // theme, which win over whatever palette the pane hierarchy hands down
+    // (in light themes it carries a white WindowText meant for the dark
+    // toolbars).
+    view->setAttribute(Qt::WA_StyledBackground);
+    view->setStyleSheet(QString(QStringLiteral("background-color:%1;color:%2;")).
+                        arg(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal).name()).
+                        arg(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal).name()));
 }
 
 QWidget *viewSectionLabel(const QString &text)
