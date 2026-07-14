@@ -610,6 +610,13 @@ OpenMVPluginHistogram::OpenMVPluginHistogram(QWidget *parent) : QWidget(parent),
         plot->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
     }
 
+    // The grid "hash" lines dim toward the pane graphs' grids: theme text
+    // at low alpha instead of QCP's bright default gray - visible, but the
+    // data owns the plot.
+    QColor gridColor = Utils::creatorTheme()->color(Utils::Theme::TextColorNormal);
+    gridColor.setAlpha(45);
+    QPen gridPen(gridColor, 0, Qt::DotLine);
+
     m_ui->C0Plot->installEventFilter(this);
     m_ui->C0Plot->setAutoAddPlottableToLegend(false);
     m_ui->C0Plot->setBackground(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal));
@@ -621,6 +628,8 @@ OpenMVPluginHistogram::OpenMVPluginHistogram(QWidget *parent) : QWidget(parent),
     m_ui->C0Plot->xAxis->setTickPen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
     m_ui->C0Plot->xAxis->setSubTickPen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
     m_ui->C0Plot->xAxis->setTickLabelColor(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal));
+    m_ui->C0Plot->xAxis->grid()->setPen(gridPen);
+    m_ui->C0Plot->yAxis->grid()->setPen(gridPen);
     m_ui->C0Plot->xAxis->grid()->setZeroLinePen(m_ui->C0Plot->xAxis->grid()->pen());
     m_ui->C0Plot->xAxis->setPadding(0);
     m_ui->C0Plot->yAxis->setTicks(false);
@@ -650,6 +659,8 @@ OpenMVPluginHistogram::OpenMVPluginHistogram(QWidget *parent) : QWidget(parent),
     m_ui->C1Plot->xAxis->setTickPen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
     m_ui->C1Plot->xAxis->setSubTickPen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
     m_ui->C1Plot->xAxis->setTickLabelColor(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal));
+    m_ui->C1Plot->xAxis->grid()->setPen(gridPen);
+    m_ui->C1Plot->yAxis->grid()->setPen(gridPen);
     m_ui->C1Plot->xAxis->grid()->setZeroLinePen(m_ui->C1Plot->xAxis->grid()->pen());
     m_ui->C1Plot->xAxis->setPadding(0);
     m_ui->C1Plot->yAxis->setTicks(false);
@@ -679,6 +690,8 @@ OpenMVPluginHistogram::OpenMVPluginHistogram(QWidget *parent) : QWidget(parent),
     m_ui->C2Plot->xAxis->setTickPen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
     m_ui->C2Plot->xAxis->setSubTickPen(QPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
     m_ui->C2Plot->xAxis->setTickLabelColor(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal));
+    m_ui->C2Plot->xAxis->grid()->setPen(gridPen);
+    m_ui->C2Plot->yAxis->grid()->setPen(gridPen);
     m_ui->C2Plot->xAxis->grid()->setZeroLinePen(m_ui->C2Plot->xAxis->grid()->pen());
     m_ui->C2Plot->xAxis->setPadding(0);
     m_ui->C2Plot->yAxis->setTicks(false);
