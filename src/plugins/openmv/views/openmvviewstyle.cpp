@@ -49,6 +49,48 @@ static QWidget *hairline()
     return line;
 }
 
+QColor viewPlotColor(int color)
+{
+    if(color == ViewPlotGray)
+    {
+        QColor gray = Utils::creatorTheme()->color(Utils::Theme::TextColorNormal);
+        gray.setAlpha(160);
+        return gray;
+    }
+
+    static const QColor colors[ViewPlotColorCount] = {
+        QColor(0x5b, 0x9c, 0xf5), // blue
+        QColor(0xf0, 0x55, 0x55), // red
+        QColor(0x4e, 0xc9, 0x62), // green
+        QColor(0xfc, 0xc0, 0x2c), // yellow
+        QColor(0xc9, 0x6b, 0xf0), // purple
+        QColor(0x2c, 0xd5, 0xd5), // cyan
+        QColor(0xf5, 0x8b, 0x3c), // orange
+    };
+
+    QColor result = colors[qBound(0, color, int(ViewPlotColorCount) - 1)];
+
+    // The dark theme's pastels wash out on the light theme's white.
+    if(!Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface))
+    {
+        result = result.darker(130);
+    }
+
+    return result;
+}
+
+QPen viewPlotPen(int color)
+{
+    return QPen(viewPlotColor(color), 1.5);
+}
+
+QBrush viewPlotBrush(int color)
+{
+    QColor fill = viewPlotColor(color);
+    fill.setAlpha(51);
+    return fill;
+}
+
 void viewApplyBackground(QWidget *view)
 {
     // Exactly how the histogram themes itself: stylesheet colors from the

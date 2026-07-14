@@ -765,16 +765,6 @@ QString OpenMVChannelRecorder::status() const
 
 ///////////////////////////////////////////////////////////////////////////////
 
-// Per-series trace colors (cycled).
-static const QColor WAVEFORM_COLORS[] = {
-    QColor(0x5b, 0x9c, 0xf5), // blue
-    QColor(0xf0, 0x55, 0x55), // red
-    QColor(0x4e, 0xc9, 0x62), // green
-    QColor(0xfc, 0xc0, 0x2c), // yellow
-    QColor(0xc9, 0x6b, 0xf0), // purple
-    QColor(0x2c, 0xd5, 0xd5), // cyan
-};
-
 OpenMVChannelWaveform::OpenMVChannelWaveform(QWidget *parent) : QWidget(parent)
 {
     setFixedHeight(100);
@@ -839,15 +829,8 @@ void OpenMVChannelWaveform::paintEvent(QPaintEvent *event)
                                 h - (qBound(0.0, (value - m_min) / range, 1.0) * h)));
         }
 
-        // The dark theme's pastels wash out on white; deepen them there.
-        QColor trace = WAVEFORM_COLORS[s % int(sizeof(WAVEFORM_COLORS) / sizeof(WAVEFORM_COLORS[0]))];
-
-        if(!dark)
-        {
-            trace = trace.darker(130);
-        }
-
-        painter.setPen(QPen(trace, 1.0));
+        // Traces cycle through the shared plot palette (theme-adjusted).
+        painter.setPen(QPen(viewPlotColor(s % ViewPlotColorCount), 1.0));
         painter.drawPolyline(line);
     }
 

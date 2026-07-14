@@ -47,6 +47,26 @@ namespace Internal {
 // plots, with the theme's normal text color for every label.
 void viewApplyBackground(QWidget *view);
 
+// Shared accent palette for every plot the views draw (waveform traces,
+// memory graphs, histogram channels). Colors deepen on the light theme,
+// where the dark theme's pastels wash out. ViewPlotGray is the neutral
+// (theme-text-based) member outside the trace cycle.
+enum ViewPlotColor {
+    ViewPlotBlue,
+    ViewPlotRed,
+    ViewPlotGreen,
+    ViewPlotYellow,
+    ViewPlotPurple,
+    ViewPlotCyan,
+    ViewPlotOrange,
+    ViewPlotColorCount,
+    ViewPlotGray,
+};
+
+QColor viewPlotColor(int color);
+QPen viewPlotPen(int color);     // 1.5px trace line
+QBrush viewPlotBrush(int color); // 20% alpha-blended area fill
+
 // Bold section label with a hairline underneath.
 QWidget *viewSectionLabel(const QString &text);
 

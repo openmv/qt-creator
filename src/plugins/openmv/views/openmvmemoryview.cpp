@@ -37,19 +37,16 @@
 namespace OpenMV {
 namespace Internal {
 
-// Accent colors (match OpenMV Studio's memory graphs). The dark theme's
-// pastels wash out on the light theme's white background, so light picks
-// deeper shades and stronger alphas.
+// Accent colors from the shared plot palette (theme-adjusted): blue for
+// usage, red for the peak marker.
 static QColor usedColor()
 {
-    return Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface)
-        ? QColor(0x5b, 0x9c, 0xf5) : QColor(0x2b, 0x6c, 0xd4);
+    return viewPlotColor(ViewPlotBlue);
 }
 
 static QColor peakColor()
 {
-    return Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface)
-        ? QColor(0xf0, 0x55, 0x55) : QColor(0xc0, 0x2c, 0x2c);
+    return viewPlotColor(ViewPlotRed);
 }
 
 static QString formatBytes(quint32 bytes)

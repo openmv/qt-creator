@@ -29,6 +29,7 @@
  */
 
 #include "openmvpluginhistogram.h"
+#include "openmvviewstyle.h"
 #include "ui_openmvpluginhistogram.h"
 
 #include "openmvtr.h"
@@ -804,8 +805,8 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C0MaxValue->setNum(m_max);
             m_ui->C0LQValue->setNum(m_lowerQuartile);
             m_ui->C0UQValue->setNum(m_upperQuartile);
-            m_channel0->setPen(QPen(QBrush(QColor(255, 0, 0)), 0, Qt::SolidLine));
-            m_channel0->setBrush(QBrush(QColor(255, 200, 200), Qt::SolidPattern));
+            m_channel0->setPen(viewPlotPen(ViewPlotRed));
+            m_channel0->setBrush(viewPlotBrush(ViewPlotRed));
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0ChannelLabel->setText(Tr::tr("R"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
@@ -820,8 +821,8 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C1MaxValue->setNum(m_max);
             m_ui->C1LQValue->setNum(m_lowerQuartile);
             m_ui->C1UQValue->setNum(m_upperQuartile);
-            m_channel1->setPen(QPen(QBrush(QColor(0, 255, 0)), 0, Qt::SolidLine));
-            m_channel1->setBrush(QBrush(QColor(200, 255, 200), Qt::SolidPattern));
+            m_channel1->setPen(viewPlotPen(ViewPlotGreen));
+            m_channel1->setBrush(viewPlotBrush(ViewPlotGreen));
             m_ui->C1Plot->rescaleAxes();
             m_ui->C1ChannelLabel->setText(Tr::tr("G"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
@@ -836,8 +837,8 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C2MaxValue->setNum(m_max);
             m_ui->C2LQValue->setNum(m_lowerQuartile);
             m_ui->C2UQValue->setNum(m_upperQuartile);
-            m_channel2->setPen(QPen(QBrush(QColor(0, 0, 255)), 0, Qt::SolidLine));
-            m_channel2->setBrush(QBrush(QColor(200, 200, 255), Qt::SolidPattern));
+            m_channel2->setPen(viewPlotPen(ViewPlotBlue));
+            m_channel2->setBrush(viewPlotBrush(ViewPlotBlue));
             m_ui->C2Plot->rescaleAxes();
             m_ui->C2ChannelLabel->setText(Tr::tr("B"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
@@ -861,8 +862,8 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C0MaxValue->setNum(m_max);
             m_ui->C0LQValue->setNum(m_lowerQuartile);
             m_ui->C0UQValue->setNum(m_upperQuartile);
-            m_channel0->setPen(QPen(QBrush(QColor(143, 143, 143)), 0, Qt::SolidLine));
-            m_channel0->setBrush(QBrush(QColor(200, 200, 200), Qt::SolidPattern));
+            m_channel0->setPen(viewPlotPen(ViewPlotGray));
+            m_channel0->setBrush(viewPlotBrush(ViewPlotGray));
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0ChannelLabel->setText(Tr::tr("Y"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
@@ -886,8 +887,8 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C0MaxValue->setNum(m_max);
             m_ui->C0LQValue->setNum(m_lowerQuartile);
             m_ui->C0UQValue->setNum(m_upperQuartile);
-            m_channel0->setPen(QPen(QBrush(QColor(143, 143, 143)), 0, Qt::SolidLine));
-            m_channel0->setBrush(QBrush(QColor(200, 200, 200), Qt::SolidPattern));
+            m_channel0->setPen(viewPlotPen(ViewPlotGray));
+            m_channel0->setBrush(viewPlotBrush(ViewPlotGray));
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0ChannelLabel->setText(Tr::tr("L"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
@@ -902,8 +903,8 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C1MaxValue->setNum(m_max);
             m_ui->C1LQValue->setNum(m_lowerQuartile);
             m_ui->C1UQValue->setNum(m_upperQuartile);
-            m_channel1->setPen(QPen(QBrush(QColor(204, 255, 0)), 0, Qt::SolidLine));
-            m_channel1->setBrush(QBrush(QColor(244, 255, 200), Qt::SolidPattern));
+            m_channel1->setPen(viewPlotPen(ViewPlotCyan));
+            m_channel1->setBrush(viewPlotBrush(ViewPlotCyan));
             m_ui->C1Plot->rescaleAxes();
             m_ui->C1ChannelLabel->setText(Tr::tr("A"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
@@ -918,8 +919,8 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C2MaxValue->setNum(m_max);
             m_ui->C2LQValue->setNum(m_lowerQuartile);
             m_ui->C2UQValue->setNum(m_upperQuartile);
-            m_channel2->setPen(QPen(QBrush(QColor(0, 102, 255)), 0, Qt::SolidLine));
-            m_channel2->setBrush(QBrush(QColor(200, 222, 255), Qt::SolidPattern));
+            m_channel2->setPen(viewPlotPen(ViewPlotPurple));
+            m_channel2->setBrush(viewPlotBrush(ViewPlotPurple));
             m_ui->C2Plot->rescaleAxes();
             m_ui->C2ChannelLabel->setText(Tr::tr("B"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
@@ -943,8 +944,8 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C0MaxValue->setNum(m_max);
             m_ui->C0LQValue->setNum(m_lowerQuartile);
             m_ui->C0UQValue->setNum(m_upperQuartile);
-            m_channel0->setPen(QPen(QBrush(QColor(143, 143, 143)), 0, Qt::SolidLine));
-            m_channel0->setBrush(QBrush(QColor(200, 200, 200), Qt::SolidPattern));
+            m_channel0->setPen(viewPlotPen(ViewPlotGray));
+            m_channel0->setBrush(viewPlotBrush(ViewPlotGray));
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0ChannelLabel->setText(Tr::tr("Y"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
@@ -959,8 +960,8 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C1MaxValue->setNum(m_max);
             m_ui->C1LQValue->setNum(m_lowerQuartile);
             m_ui->C1UQValue->setNum(m_upperQuartile);
-            m_channel1->setPen(QPen(QBrush(QColor(0, 255, 102)), 0, Qt::SolidLine));
-            m_channel1->setBrush(QBrush(QColor(200, 255, 222), Qt::SolidPattern));
+            m_channel1->setPen(viewPlotPen(ViewPlotOrange));
+            m_channel1->setBrush(viewPlotBrush(ViewPlotOrange));
             m_ui->C1Plot->rescaleAxes();
             m_ui->C1ChannelLabel->setText(Tr::tr("U"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
@@ -975,8 +976,8 @@ void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
             m_ui->C2MaxValue->setNum(m_max);
             m_ui->C2LQValue->setNum(m_lowerQuartile);
             m_ui->C2UQValue->setNum(m_upperQuartile);
-            m_channel2->setPen(QPen(QBrush(QColor(204, 0, 255)), 0, Qt::SolidLine));
-            m_channel2->setBrush(QBrush(QColor(244, 200, 255), Qt::SolidPattern));
+            m_channel2->setPen(viewPlotPen(ViewPlotYellow));
+            m_channel2->setBrush(viewPlotBrush(ViewPlotYellow));
             m_ui->C2Plot->rescaleAxes();
             m_ui->C2ChannelLabel->setText(Tr::tr("V"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
@@ -1049,8 +1050,8 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C0MaxValue->setNum(m_max);
             m_ui->C0LQValue->setNum(m_lowerQuartile);
             m_ui->C0UQValue->setNum(m_upperQuartile);
-            m_channel0->setPen(QPen(QBrush(QColor(255, 0, 0)), 0, Qt::SolidLine));
-            m_channel0->setBrush(QBrush(QColor(255, 200, 200), Qt::SolidPattern));
+            m_channel0->setPen(viewPlotPen(ViewPlotRed));
+            m_channel0->setBrush(viewPlotBrush(ViewPlotRed));
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0ChannelLabel->setText(Tr::tr("R"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
@@ -1065,8 +1066,8 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C1MaxValue->setNum(m_max);
             m_ui->C1LQValue->setNum(m_lowerQuartile);
             m_ui->C1UQValue->setNum(m_upperQuartile);
-            m_channel1->setPen(QPen(QBrush(QColor(0, 255, 0)), 0, Qt::SolidLine));
-            m_channel1->setBrush(QBrush(QColor(200, 255, 200), Qt::SolidPattern));
+            m_channel1->setPen(viewPlotPen(ViewPlotGreen));
+            m_channel1->setBrush(viewPlotBrush(ViewPlotGreen));
             m_ui->C1Plot->rescaleAxes();
             m_ui->C1ChannelLabel->setText(Tr::tr("G"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
@@ -1081,8 +1082,8 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C2MaxValue->setNum(m_max);
             m_ui->C2LQValue->setNum(m_lowerQuartile);
             m_ui->C2UQValue->setNum(m_upperQuartile);
-            m_channel2->setPen(QPen(QBrush(QColor(0, 0, 255)), 0, Qt::SolidLine));
-            m_channel2->setBrush(QBrush(QColor(200, 200, 255), Qt::SolidPattern));
+            m_channel2->setPen(viewPlotPen(ViewPlotBlue));
+            m_channel2->setBrush(viewPlotBrush(ViewPlotBlue));
             m_ui->C2Plot->rescaleAxes();
             m_ui->C2ChannelLabel->setText(Tr::tr("B"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
@@ -1101,8 +1102,8 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C0MaxValue->setNum(m_max);
             m_ui->C0LQValue->setNum(m_lowerQuartile);
             m_ui->C0UQValue->setNum(m_upperQuartile);
-            m_channel0->setPen(QPen(QBrush(QColor(143, 143, 143)), 0, Qt::SolidLine));
-            m_channel0->setBrush(QBrush(QColor(200, 200, 200), Qt::SolidPattern));
+            m_channel0->setPen(viewPlotPen(ViewPlotGray));
+            m_channel0->setBrush(viewPlotBrush(ViewPlotGray));
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0ChannelLabel->setText(Tr::tr("Y"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
@@ -1121,8 +1122,8 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C0MaxValue->setNum(m_max);
             m_ui->C0LQValue->setNum(m_lowerQuartile);
             m_ui->C0UQValue->setNum(m_upperQuartile);
-            m_channel0->setPen(QPen(QBrush(QColor(143, 143, 143)), 0, Qt::SolidLine));
-            m_channel0->setBrush(QBrush(QColor(200, 200, 200), Qt::SolidPattern));
+            m_channel0->setPen(viewPlotPen(ViewPlotGray));
+            m_channel0->setBrush(viewPlotBrush(ViewPlotGray));
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0ChannelLabel->setText(Tr::tr("L"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
@@ -1137,8 +1138,8 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C1MaxValue->setNum(m_max);
             m_ui->C1LQValue->setNum(m_lowerQuartile);
             m_ui->C1UQValue->setNum(m_upperQuartile);
-            m_channel1->setPen(QPen(QBrush(QColor(204, 255, 0)), 0, Qt::SolidLine));
-            m_channel1->setBrush(QBrush(QColor(244, 255, 200), Qt::SolidPattern));
+            m_channel1->setPen(viewPlotPen(ViewPlotCyan));
+            m_channel1->setBrush(viewPlotBrush(ViewPlotCyan));
             m_ui->C1Plot->rescaleAxes();
             m_ui->C1ChannelLabel->setText(Tr::tr("A"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
@@ -1153,8 +1154,8 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C2MaxValue->setNum(m_max);
             m_ui->C2LQValue->setNum(m_lowerQuartile);
             m_ui->C2UQValue->setNum(m_upperQuartile);
-            m_channel2->setPen(QPen(QBrush(QColor(0, 102, 255)), 0, Qt::SolidLine));
-            m_channel2->setBrush(QBrush(QColor(200, 222, 255), Qt::SolidPattern));
+            m_channel2->setPen(viewPlotPen(ViewPlotPurple));
+            m_channel2->setBrush(viewPlotBrush(ViewPlotPurple));
             m_ui->C2Plot->rescaleAxes();
             m_ui->C2ChannelLabel->setText(Tr::tr("B"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
@@ -1173,8 +1174,8 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C0MaxValue->setNum(m_max);
             m_ui->C0LQValue->setNum(m_lowerQuartile);
             m_ui->C0UQValue->setNum(m_upperQuartile);
-            m_channel0->setPen(QPen(QBrush(QColor(143, 143, 143)), 0, Qt::SolidLine));
-            m_channel0->setBrush(QBrush(QColor(200, 200, 200), Qt::SolidPattern));
+            m_channel0->setPen(viewPlotPen(ViewPlotGray));
+            m_channel0->setBrush(viewPlotBrush(ViewPlotGray));
             m_ui->C0Plot->rescaleAxes();
             m_ui->C0ChannelLabel->setText(Tr::tr("Y"));
             m_ui->C0Plot->yAxis->setRange(0, 1);
@@ -1189,8 +1190,8 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C1MaxValue->setNum(m_max);
             m_ui->C1LQValue->setNum(m_lowerQuartile);
             m_ui->C1UQValue->setNum(m_upperQuartile);
-            m_channel1->setPen(QPen(QBrush(QColor(0, 255, 102)), 0, Qt::SolidLine));
-            m_channel1->setBrush(QBrush(QColor(200, 255, 222), Qt::SolidPattern));
+            m_channel1->setPen(viewPlotPen(ViewPlotOrange));
+            m_channel1->setBrush(viewPlotBrush(ViewPlotOrange));
             m_ui->C1Plot->rescaleAxes();
             m_ui->C1ChannelLabel->setText(Tr::tr("U"));
             m_ui->C1Plot->yAxis->setRange(0, 1);
@@ -1205,8 +1206,8 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             m_ui->C2MaxValue->setNum(m_max);
             m_ui->C2LQValue->setNum(m_lowerQuartile);
             m_ui->C2UQValue->setNum(m_upperQuartile);
-            m_channel2->setPen(QPen(QBrush(QColor(204, 0, 255)), 0, Qt::SolidLine));
-            m_channel2->setBrush(QBrush(QColor(244, 200, 255), Qt::SolidPattern));
+            m_channel2->setPen(viewPlotPen(ViewPlotYellow));
+            m_channel2->setBrush(viewPlotBrush(ViewPlotYellow));
             m_ui->C2Plot->rescaleAxes();
             m_ui->C2ChannelLabel->setText(Tr::tr("V"));
             m_ui->C2Plot->yAxis->setRange(0, 1);
