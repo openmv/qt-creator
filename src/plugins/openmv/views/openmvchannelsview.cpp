@@ -271,8 +271,6 @@ static QLabel *unitIconLabel(const QString &unit)
 
             QSvgRenderer renderer(svg);
             QPainter painter(&pixmap);
-            // Match the name labels: muted on dark, full strength on light.
-            painter.setOpacity(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? (150.0 / 255.0) : 1.0);
             renderer.render(&painter);
             painter.end();
 
@@ -859,9 +857,7 @@ void OpenMVChannelWaveform::paintEvent(QPaintEvent *event)
     small.setPointSizeF(qMax(6.0, small.pointSizeF() - 2.0));
     painter.setFont(small);
 
-    QColor muted = Utils::creatorTheme()->color(Utils::Theme::TextColorNormal);
-    muted.setAlpha(150);
-    painter.setPen(muted);
+    painter.setPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal));
 
     QFontMetrics metrics(small);
     painter.drawText(QPointF(2, metrics.ascent() + 1), QString::number(m_max, 'g', 6));

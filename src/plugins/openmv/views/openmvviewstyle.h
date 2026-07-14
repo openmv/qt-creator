@@ -29,9 +29,9 @@
  */
 
 // Shared look for the histogram pane's table views (Board Info, Statistics),
-// mirroring OpenMV Studio's right-panel tables: muted name labels against
-// brighter monospace values, a hairline under each row, and small bold
-// section labels. Everything is mouse-selectable.
+// mirroring OpenMV Studio's right-panel tables: name labels against
+// monospace values, a hairline under each row, and small bold section
+// labels. Everything is mouse-selectable and themed like the histogram.
 
 #ifndef OPENMVVIEWSTYLE_H
 #define OPENMVVIEWSTYLE_H
@@ -50,10 +50,10 @@ void viewApplyBackground(QWidget *view);
 // Bold section label with a hairline underneath.
 QWidget *viewSectionLabel(const QString &text);
 
-// Muted (tertiary) selectable label for row names and secondary values.
+// Selectable label for row names and secondary values.
 QLabel *viewNameLabel(const QString &text);
 
-// Bright monospace right-aligned selectable label for row values ("--" until
+// Monospace right-aligned selectable label for row values ("--" until
 // data arrives).
 QLabel *viewValueLabel();
 

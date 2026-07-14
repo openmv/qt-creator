@@ -49,27 +49,6 @@ static QWidget *hairline()
     return line;
 }
 
-// Fade a label towards the background (Studio's tertiary text). Its own
-// stylesheet color wins over the view-wide QLabel rule; the palette carries
-// the same color for code that derives tints from the label.
-static void mute(QLabel *label)
-{
-    QColor color = Utils::creatorTheme()->color(Utils::Theme::TextColorNormal);
-
-    // Studio's tertiary fade is calibrated for the dark theme; on the light
-    // theme's white it washes out, so names stay at full strength there
-    // (like the histogram's labels).
-    color.setAlpha(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface) ? 150 : 255);
-
-    label->setStyleSheet(QStringLiteral("color:rgba(%1,%2,%3,%4);")
-        .arg(color.red()).arg(color.green()).arg(color.blue()).arg(color.alpha()));
-
-    QPalette palette = label->palette();
-    palette.setColor(QPalette::WindowText, color);
-    palette.setColor(QPalette::Text, color);
-    label->setPalette(palette);
-}
-
 void viewApplyBackground(QWidget *view)
 {
     // Exactly how the histogram themes itself: stylesheet colors from the
@@ -87,24 +66,36 @@ QWidget *viewSectionLabel(const QString &text)
     QLabel *label = new QLabel(text);
     label->setTextInteractionFlags(Qt::TextSelectableByMouse);
     label->setStyleSheet(QStringLiteral("font-weight: bold"));
-    // Text insets from the view edge; the hairline below runs full-bleed
-    // (the view containers have no horizontal margins, like the histogram).
-    label->setContentsMargins(6, 4, 6, 2);
+    // Text insets from the view edge; the band and hairline below run
+    // full-bleed (the view containers have no horizontal margins, like the
+    // histogram).
+    label->setContentsMargins(6, 4, 6, 3);
+
+    // A markedly darker underline than the row hairlines sets headers
+    // apart without eating horizontal space the way indentation would.
+    QWidget *line = new QWidget;
+    line->setFixedHeight(1);
+    line->setAttribute(Qt::WA_StyledBackground);
+
+    QColor color = Utils::creatorTheme()->color(Utils::Theme::TextColorNormal);
+    line->setStyleSheet(QStringLiteral("background-color:rgba(%1,%2,%3,90);")
+        .arg(color.red()).arg(color.green()).arg(color.blue()));
 
     QWidget *section = new QWidget;
     QVBoxLayout *layout = new QVBoxLayout(section);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins(0, 6, 0, 0); // air above each section
     layout->setSpacing(0);
     layout->addWidget(label);
-    layout->addWidget(hairline());
+    layout->addWidget(line);
     return section;
 }
 
 QLabel *viewNameLabel(const QString &text)
 {
+    // Full-strength text like the histogram's labels; the monospace values
+    // alone set the two columns apart.
     QLabel *label = new QLabel(text);
     label->setTextInteractionFlags(Qt::TextSelectableByMouse);
-    mute(label);
     return label;
 }
 
