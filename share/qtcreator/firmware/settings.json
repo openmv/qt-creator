@@ -1370,6 +1370,96 @@
         },
         {
             "hidden" : false,
+            "boardType" : "N6",
+            "boardArchString" : "OpenMV N6 Classic",
+            "boardDisplayName" : "OpenMV N6 Classic",
+            "boardFirmwareFolder" : "OPENMV_N6_CLASSIC",
+            "highSpeed" : true,
+            "boardVidPid" : "37C5:1208",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "37C5:9208",
+            "bootloaderType" : "openmv_dfu",
+            "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : true,
+                "eraseCommands" : ["-a 2"],
+                "programCommands" : [
+                    {
+                        "cmd" : "-a 1",
+                        "path" : "OPENMV_N6_CLASSIC/firmware.bin"
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "path" : "OPENMV_N6_CLASSIC/romfs0.img"
+                    }
+                ],
+                "resetROMFSCommands" : [
+                    {
+                        "cmd": "-a 3",
+                        "path" : "OPENMV_N6_CLASSIC/romfs0.img"
+                    }
+                ],
+                "binProgamCommands" : [
+                    {
+                        "cmd": "-a 1",
+                        "name": "firmware.bin",
+                        "size" : 3670016
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "romfs.img",
+                        "size" : 25165824
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "romfs0.img",
+                        "size" : 25165824
+                    }
+                ]
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 25165824,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "onnx",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 32
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "stedgeai",
+                        "args" : [
+                            "--target stm32n6",
+                            "--st-neural-art default@neuralart.json"
+                        ],
+                        "jsonFilePath" : "OPENMV_N6_CLASSIC/neuralart.json",
+                        "mpoolFilePath" : "OPENMV_N6_CLASSIC/stm32n6.mpool"
+                    }
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
             "boardType" : "H7",
             "boardArchString" : "PORTENTA H7 8192 SDRAM",
             "boardDisplayName" : "Arduino Portenta",
