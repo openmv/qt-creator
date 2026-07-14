@@ -117,7 +117,7 @@ Component.prototype.createOperations = function()
                                 "@StartMenuDir@/Uninstall.lnk",
                                 "workingDirectory=@homeDir@" );
         component.addElevatedOperation("Execute", "{2,257,512}", "cmd", "/c", "@TargetDir@\\share\\qtcreator\\drivers\\ftdi\\ftdi.cmd");
-        component.addElevatedOperation("Execute", "{9,264,519,774,1029,1284,1539,1794,2049,2304}", "cmd", "/c", "@TargetDir@\\share\\qtcreator\\drivers\\openmv\\openmv.cmd");
+        component.addElevatedOperation("Execute", "{10,265,520,775,1030,1285,1539,1795,2050,2305,2560}", "cmd", "/c", "@TargetDir@\\share\\qtcreator\\drivers\\openmv\\openmv.cmd");
         component.addElevatedOperation("Execute", "{5,260,515,770,1025,1280}", "cmd", "/c", "@TargetDir@\\share\\qtcreator\\drivers\\arduino\\arduino.cmd");
         // component.addElevatedOperation("Execute", "{1,256}", "cmd", "/c", "@TargetDir@\\share\\qtcreator\\drivers\\pybcdc\\pybcdc.cmd");
         component.addElevatedOperation("Execute", "{0}", "cmd", "/c", "@TargetDir@\\share\\qtcreator\\drivers\\DFU_driver\\STM32Bootloader.bat");
