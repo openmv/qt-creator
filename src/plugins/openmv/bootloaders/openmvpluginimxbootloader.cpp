@@ -143,7 +143,17 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
                 }
                 else if (installTheLatestDevelopmentFirmware)
                 {
-                    romfsPath = QFileInfo(effectiveFirmwarePath).path() + QDir::separator() + QFileInfo(romfsPath).fileName();
+                    // The dev/custom bundle's romfs image is staged next to
+                    // the firmware. A custom .zip may ship no romfs at all -
+                    // fall back to the released image then instead of
+                    // pointing blhost at a nonexistent file (which surfaced
+                    // as a "Timeout Error!" naming the missing romfs).
+                    QString staged = QFileInfo(effectiveFirmwarePath).path() + QDir::separator() + QFileInfo(romfsPath).fileName();
+
+                    if (QFileInfo::exists(staged))
+                    {
+                        romfsPath = staged;
+                    }
                 }
 
                 outObj = bootloaderSettings;

@@ -1027,16 +1027,74 @@ void OpenMVPlugin::bootloaderClicked()
 
                 if((!zipData.isEmpty()) && QDir().mkpath(bundleDir) && extractZipToDir(zipData, bundleDir))
                 {
-                    // If the zip ships a romfs image it must be applied -- force the reset regardless
-                    // of the checkbox (the user may forget it). Otherwise honor the checkbox, which
-                    // then falls back to the released romfs.
+                    QStringList romfsImages;
                     QDirIterator romfsIt(bundleDir, QStringList{QStringLiteral("romfs*.img")},
                                          QDir::Files, QDirIterator::Subdirectories);
-                    const bool zipHasRomfs = romfsIt.hasNext();
 
-                    connectClicked(true, QString(), flashFSErase, false, true, false, QString(),
-                                   (zipHasRomfs || resetROMFS) ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE,
-                                   false, bundleDir);
+                    while(romfsIt.hasNext())
+                    {
+                        romfsImages.append(romfsIt.next());
+                    }
+
+                    QDirIterator firmwareIt(bundleDir,
+                        QStringList{QStringLiteral("*.bin"), QStringLiteral("*.dfu"), QStringLiteral("*.lst")},
+                        QDir::Files, QDirIterator::Subdirectories);
+                    const bool zipHasFirmware = firmwareIt.hasNext();
+
+                    if((!zipHasFirmware) && (romfsImages.size() == 1))
+                    {
+                        // A romfs-only zip loads like picking the .img directly:
+                        // flash just the image (the firmware-install path can't
+                        // express "no firmware, only a romfs").
+                        connectClicked(true, romfsImages.first(), flashFSErase,
+                                       false, false, false, QString(), OPENMV_ROMFS_NONE);
+                    }
+                    else if((!zipHasFirmware) && (!romfsImages.isEmpty()))
+                    {
+                        // Multiple romfs images and no firmware (multi-romfs
+                        // boards like the AE3): flash just the images through
+                        // the ROMFS write path. A generated listing names them
+                        // (the bootloader matches listing lines against its
+                        // binProgamCommands by file name, exactly like the
+                        // released firmware.lst) and OPENMV_ROMFS_WRITE flashes
+                        // only the listed files - the firmware is untouched.
+                        const QString listingPath = bundleDir + QStringLiteral("/romfs.lst");
+                        QFile listing(listingPath);
+
+                        if(listing.open(QIODevice::WriteOnly | QIODevice::Text))
+                        {
+                            for(const QString &image : qAsConst(romfsImages))
+                            {
+                                listing.write((QDir(bundleDir).relativeFilePath(image) + QLatin1Char('\n')).toUtf8());
+                            }
+
+                            listing.close();
+
+                            connectClicked(true, listingPath, flashFSErase,
+                                           false, false, false, QString(), OPENMV_ROMFS_WRITE);
+                        }
+                        else
+                        {
+                            QMessageBox::critical(Core::ICore::dialogParent(),
+                                Tr::tr("Bootloader"),
+                                listing.errorString());
+                        }
+                    }
+                    else if(!zipHasFirmware)
+                    {
+                        QMessageBox::critical(Core::ICore::dialogParent(),
+                            Tr::tr("Bootloader"),
+                            Tr::tr("The zip \"%L1\" does not contain a firmware image!").arg(forceFirmwarePath));
+                    }
+                    else
+                    {
+                        // If the zip ships a romfs image it must be applied -- force the reset regardless
+                        // of the checkbox (the user may forget it). Otherwise honor the checkbox, which
+                        // then falls back to the released romfs.
+                        connectClicked(true, QString(), flashFSErase, false, true, false, QString(),
+                                       ((!romfsImages.isEmpty()) || resetROMFS) ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE,
+                                       false, bundleDir);
+                    }
                 }
                 else
                 {
@@ -1370,9 +1428,50 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
 
         QFile::remove(tempTarget); // in case a dev binary shared the .lst's name
         *path = tempTarget;
-        return QFile(firmwareResourcePath()
+
+        if(!QFile(firmwareResourcePath()
             .pathAppended(originalFirmwareFolder)
-            .pathAppended(firmwareFileName).toString()).copy(tempTarget);
+            .pathAppended(firmwareFileName).toString()).copy(tempTarget))
+        {
+            return false;
+        }
+
+        // A custom zip must supply every binary the released listing names.
+        // Catch what's missing here, with a message that says so, instead of
+        // a cryptic DFU failure partway through the flash.
+        if(useCustom)
+        {
+            QStringList missing;
+            QFile listing(tempTarget);
+
+            if(listing.open(QIODevice::ReadOnly | QIODevice::Text))
+            {
+                QTextStream in(&listing);
+
+                while(!in.atEnd())
+                {
+                    const QString line = in.readLine().trimmed();
+
+                    if((!line.isEmpty()) && (!QFileInfo::exists(tempDir + QDir::separator() + line)))
+                    {
+                        missing.append(line);
+                    }
+                }
+
+                listing.close();
+            }
+
+            if(!missing.isEmpty())
+            {
+                QMessageBox::critical(Core::ICore::dialogParent(),
+                    Tr::tr("Connect"),
+                    Tr::tr("The firmware zip is missing file(s) this board's flash listing requires: %L1").arg(missing.join(QStringLiteral(", "))));
+
+                return false;
+            }
+        }
+
+        return true;
     }
 
     // Stage the bundle's romfs image(s) next to the firmware so the bootloader's romfs-reset
@@ -1406,7 +1505,9 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
     {
         QMessageBox::critical(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
-            Tr::tr("The development firmware for this board is not available!"));
+            useCustom
+                ? Tr::tr("The firmware zip does not contain \"%L1\", which this board's firmware update requires!").arg(firmwareFileName)
+                : Tr::tr("The development firmware for this board is not available!"));
 
         return false;
     }
