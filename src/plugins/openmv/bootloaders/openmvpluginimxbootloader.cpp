@@ -202,10 +202,15 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
 
         QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 
-        // Create the pycache for blhost before running during the time limited process.
-        imxGetDevice(outObj);
+        // Two phases: arming the catcher (importing spsdk -- a few seconds, the
+        // board is untouched and the user may safely cancel) and then, after the
+        // reset, waiting for the bootloader to enumerate. The label reflects
+        // which phase we're in rather than the old fixed "hit cancel after 5s".
+        const QString connectingText = forceBootloaderBricked
+            ? QString(QStringLiteral("%1%2")).arg(Tr::tr("Disconnect your OpenMV Cam and then reconnect it...")).arg(justEraseFlashFs ? QString() : Tr::tr("\n\nHit cancel to skip to SBL reprogramming."))
+            : Tr::tr("Connecting to the bootloader...");
 
-        QProgressDialog dialog(forceBootloaderBricked ? QString(QStringLiteral("%1%2")).arg(Tr::tr("Disconnect your OpenMV Cam and then reconnect it...")).arg(justEraseFlashFs ? QString() : Tr::tr("\n\nHit cancel to skip to SBL reprogramming.")) : Tr::tr("Connecting... (Hit cancel if this takes more than 5 seconds)."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+        QProgressDialog dialog(Tr::tr("Preparing the bootloader tools... (this can take a few seconds)"), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
             (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
         dialog.setWindowModality(Qt::ApplicationModal);
@@ -219,19 +224,50 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
             *canceledPtr = true;
         });
 
-        QEventLoop loop;
+        // The SBL only holds its USB device for ~1s after the reset before
+        // jumping to the app -- too tight to import spsdk and probe on a loaded
+        // host. Arm a pre-imported, hot-scanning catcher FIRST (this blocks
+        // until it reports READY, watching the cancel flag), then reset, so
+        // detect+claim is a hot loop by the time the device enumerates. Falls
+        // back to the old spawn-per-probe loop when the catcher can't arm.
+        // 0 = wait until claimed or the user cancels (imxAwaitCatcher kills the
+        // catcher on cancel) -- the same open-ended wait the old imxGetDevice
+        // loop had. A fixed timeout would wrongly give up while the user is
+        // reconnecting/jumping a bricked board.
+        Utils::Process *catcher = imxArmCatcher(outObj, QStringLiteral("blhost_pidvid"), "claim",
+                                                0, &canceled);
 
-        connect(m_iodevice, &OpenMVPluginIO::closeResponse,
-                &loop, &QEventLoop::quit);
-
-        m_iodevice->sysReset(false);
-        m_iodevice->close();
-
-        loop.exec();
-
-        while((!imxGetDevice(outObj)) && (!canceled))
+        // Cancel during arming (before any reset) leaves the board untouched --
+        // don't reset it, just fall through to the canceled path below.
+        if(!canceled)
         {
-            QApplication::processEvents();
+            dialog.setLabelText(connectingText);
+
+            QEventLoop loop;
+
+            connect(m_iodevice, &OpenMVPluginIO::closeResponse,
+                    &loop, &QEventLoop::quit);
+
+            m_iodevice->sysReset(false);
+            m_iodevice->close();
+
+            loop.exec();
+
+            // Fast path: the catcher claims the SBL the moment it enumerates
+            // and exits 0 -- the wait is open-ended (cancel-only). Only when
+            // the catcher couldn't arm at all fall back to the old
+            // spawn-per-probe loop, which is equally open-ended.
+            if(catcher)
+            {
+                imxAwaitCatcher(catcher, &canceled);
+            }
+            else if(!canceled)
+            {
+                while((!imxGetDevice(outObj)) && (!canceled))
+                {
+                    QApplication::processEvents();
+                }
+            }
         }
 
         QApplication::restoreOverrideCursor();

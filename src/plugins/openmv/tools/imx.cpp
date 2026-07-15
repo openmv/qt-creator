@@ -55,6 +55,273 @@ namespace Internal {
 
 QMutex imx_working;
 
+// The bundled python interpreter and the spsdk package dir for this host, or
+// empty FilePaths when unsupported. (Factored out of the three call sites that
+// duplicated this OS switch.)
+static bool imxResolvePython(Utils::FilePath *python, Utils::FilePath *spsdk)
+{
+    if(Utils::HostOsInfo::isWindowsHost())
+    {
+        *spsdk = Core::ICore::resourcePath(QStringLiteral("spsdk/windows"));
+        *python = Core::ICore::resourcePath(QStringLiteral("python/win/python.exe"));
+    }
+    else if(Utils::HostOsInfo::isMacHost())
+    {
+        *spsdk = Core::ICore::resourcePath(QStringLiteral("spsdk/mac"));
+        *python = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+    }
+    else if(Utils::HostOsInfo::isLinuxHost())
+    {
+        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
+        {
+            *spsdk = Core::ICore::resourcePath(QStringLiteral("spsdk/linux-x86_64"));
+            *python = Core::ICore::resourcePath(QStringLiteral("python/linux-x86_64/bin/python"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        {
+            *spsdk = Core::ICore::resourcePath(QStringLiteral("spsdk/aarch64"));
+            *python = Core::ICore::resourcePath(QStringLiteral("python/linux-arm64/bin/python"));
+        }
+    }
+
+    return (!python->isEmpty()) && (!spsdk->isEmpty());
+}
+
+// Runs on the bundled python with spsdk on PYTHONPATH. Imports spsdk (the slow
+// part), prints READY, then hot-loops MbootUSBInterface.scan() and -- in "claim"
+// mode -- opens McuBoot and reads CURRENT_VERSION the instant the device appears
+// (retrying the open for a grace period; Windows can lag attaching the HID after
+// the scan first sees it). "wait" mode just reports the device is present.
+// argv: <mode> <device_id vid:pid> <timeout_s> <expected_version_int>
+static const char IMX_CATCHER_SCRIPT[] =
+    "import sys, time, importlib\n"
+    "mode, dev, t, want = sys.argv[1], sys.argv[2], float(sys.argv[3]), int(sys.argv[4])\n"
+    "Mboot = importlib.import_module('spsdk.mboot.mcuboot').McuBoot\n"
+    "Iface = importlib.import_module('spsdk.mboot.interfaces.usb').MbootUSBInterface\n"
+    "UsbDevice = importlib.import_module('spsdk.utils.interfaces.device.usb_device').UsbDevice\n"
+    "CURRENT_VERSION = 1\n"
+    // Scan by VID:PID only. MbootUSBInterface.scan() would call get_devices()
+    // -> the spsdk device database, which loads under a FileLock(timeout=10) --
+    // two spsdk processes contending on it stall a full 10s. We already know the
+    // exact VID:PID, so enumerate directly (no database, no lock) and wrap the
+    // matches as mboot interfaces.
+    "def find():\n"
+    "    return [Iface(d) for d in UsbDevice.scan(device_id=dev)]\n"
+    // One throwaway scan warms libusbsio / HIDAPI before READY, so the
+    // post-reset loop is a pure hot path (try/except so a transient enumerate
+    // hiccup can't abort the arm).
+    "try:\n"
+    "    find()\n"
+    "except Exception:\n"
+    "    pass\n"
+    "print('READY', flush=True)\n"
+    // t <= 0 means wait indefinitely (until claimed) -- the parent kills this
+    // process on cancel/disconnect, matching the old probe loop that waited
+    // until the user hit Cancel. t > 0 keeps a ceiling for non-interactive use.
+    "deadline = (time.time() + t) if t > 0 else None\n"
+    "while deadline is None or time.time() < deadline:\n"
+    "    ifaces = find()\n"
+    "    if ifaces:\n"
+    "        if mode == 'wait':\n"
+    "            print('FOUND', flush=True); sys.exit(0)\n"
+    "        grace = time.time() + 1.0\n"
+    "        while time.time() < grace:\n"
+    "            try:\n"
+    "                with Mboot(ifaces[0]) as mb:\n"
+    "                    vals = mb.get_property(CURRENT_VERSION)\n"
+    "                    if vals and vals[0] == want:\n"
+    "                        print('CLAIMED %d' % vals[0], flush=True); sys.exit(0)\n"
+    "            except Exception:\n"
+    "                pass\n"
+    "            ifaces = find() or ifaces\n"
+    "            time.sleep(0.02)\n"
+    "    time.sleep(0.05)\n"
+    "sys.stderr.write('imx catcher: %s did not enumerate within %ss\\n' % (dev, sys.argv[3]))\n"
+    "sys.exit(2)\n";
+
+// The SBL/flashloader's CURRENT_VERSION property value (K2.8.0), matching the
+// existing imxGetDevice() acceptance check (0x4B020800).
+static const int IMX_EXPECTED_VERSION = 1258424320;
+
+Utils::Process *imxArmCatcher(const QJsonObject &obj, const QString &pidvidKey,
+                              const char *mode, int timeoutS, const bool *canceled)
+{
+    Utils::FilePath python, spsdk;
+
+    if(!imxResolvePython(&python, &spsdk))
+    {
+        return nullptr;
+    }
+
+    // The *_pidvid settings are "VID,PID" (e.g. "0x15A2,0x0073") -- the same
+    // form blhost's -u takes -- and spsdk's device filter accepts a comma or
+    // colon separated "VID,PID"/"VID:PID". So pass it through (spaces stripped);
+    // do NOT reorder it (an earlier swap scanned for a device that never
+    // existed and the catcher never claimed anything).
+    QString deviceId = obj.value(pidvidKey).toString();
+    deviceId.remove(QLatin1Char(' '));
+
+    if(deviceId.split(QLatin1Char(',')).size() != 2)
+    {
+        return nullptr;
+    }
+
+    Utils::Process *process = new Utils::Process;
+    process->setStdOutCodec(QTextCodec::codecForName("UTF-8"));
+    process->setStdErrCodec(QTextCodec::codecForName("UTF-8"));
+
+    // Mirror the process setup the alif tools use (alif.cpp), which reliably
+    // streams live text back from a console child on all hosts: both text
+    // channels in MultiLine mode (textOnStandardOutput/Error only fire when a
+    // mode is set) and Writer process mode (Reader mode closes the child's
+    // stdin during startup -- a code path the working alif setup never takes).
+    process->setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+    process->setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+    process->setProcessMode(Utils::ProcessMode::Writer);
+
+    Utils::Environment env = process->environment();
+    env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
+    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
+    env.prependOrSet("PYTHONPATH", spsdk.path());
+    process->setEnvironment(env);
+
+    process->setCommand(Utils::CommandLine(python, QStringList()
+        << QStringLiteral("-u")
+        << QStringLiteral("-c")
+        << QString::fromLatin1(IMX_CATCHER_SCRIPT)
+        << QString::fromLatin1(mode)
+        << deviceId
+        << QString::number(timeoutS)
+        << QString::number(IMX_EXPECTED_VERSION)));
+
+    // Block (pumping events) until the catcher prints READY -- i.e. spsdk is
+    // imported and it is actively scanning -- so the caller only triggers the
+    // reset/jump once the hot loop is live. The slow import happens here, off
+    // the device's ~1s window.
+    bool armed = false;
+    bool *armedPtr = &armed;
+    QString stdOutBuffer;
+    QString *stdOutBufferPtr = &stdOutBuffer;
+    QString stdErrBuffer;
+    QString *stdErrBufferPtr = &stdErrBuffer;
+
+    QEventLoop loop;
+
+    // Watch both channels -- the marker is printed on stdout, but watch stderr
+    // too in case output lands on the wrong channel. The loop is the receiver
+    // context, so these connections die with it.
+    QObject::connect(process, &Utils::Process::textOnStandardOutput,
+        &loop, [armedPtr, stdOutBufferPtr, &loop] (const QString &text) {
+        stdOutBufferPtr->append(text);
+
+        if(stdOutBufferPtr->contains(QStringLiteral("READY")))
+        {
+            *armedPtr = true;
+            loop.quit();
+        }
+    });
+
+    QObject::connect(process, &Utils::Process::textOnStandardError,
+        &loop, [armedPtr, stdErrBufferPtr, &loop] (const QString &text) {
+        stdErrBufferPtr->append(text);
+
+        if(stdErrBufferPtr->contains(QStringLiteral("READY")))
+        {
+            *armedPtr = true;
+            loop.quit();
+        }
+    });
+
+    QObject::connect(process, &Utils::Process::done,
+        &loop, &QEventLoop::quit);
+
+    // Queue the start() so it executes after the nested event loop is running.
+    // Process::runBlocking() (which the working alif flow goes through) does
+    // exactly this -- starting before the nested loop breaks the process's
+    // signal delivery on Windows with QProcessImpl (QTCREATORBUG-30066), which
+    // is why READY never used to arrive here.
+    QMetaObject::invokeMethod(process, [process] {
+        process->start();
+    }, Qt::QueuedConnection);
+
+    // Poll the cancel flag so the user can bail during the slow import; the
+    // caller checks *canceled after this returns and skips the board reset.
+    QTimer cancelPoll;
+
+    if(canceled)
+    {
+        QObject::connect(&cancelPoll, &QTimer::timeout, &loop, [canceled, &loop] {
+            if(*canceled)
+            {
+                loop.quit();
+            }
+        });
+        cancelPoll.start(50);
+    }
+
+    // Generous arm timeout -- a cold spsdk import on a loaded host can take
+    // several seconds; this is all off the device's critical window.
+    QTimer::singleShot(30000, &loop, &QEventLoop::quit);
+    loop.exec();
+
+    cancelPoll.stop();
+
+    if((!armed) || (canceled && *canceled))
+    {
+        process->stop();
+        process->waitForFinished();
+        delete process;
+        return nullptr;
+    }
+
+    return process;
+}
+
+bool imxAwaitCatcher(Utils::Process *proc, const bool *canceled)
+{
+    if(!proc)
+    {
+        return false;
+    }
+
+    QEventLoop loop;
+
+    QMetaObject::Connection doneConn = QObject::connect(proc, &Utils::Process::done,
+        &loop, &QEventLoop::quit);
+
+    // The catcher runs its own timeout; poll the cancel flag so the Cancel
+    // button (owned by the caller's dialog) can abort the wait.
+    QTimer poll;
+    QObject::connect(&poll, &QTimer::timeout, &loop, [canceled, &loop] {
+        if(*canceled)
+        {
+            loop.quit();
+        }
+    });
+    poll.start(50);
+
+    if(proc->state() != QProcess::NotRunning)
+    {
+        loop.exec();
+    }
+
+    QObject::disconnect(doneConn);
+    poll.stop();
+
+    const bool claimed = (proc->state() == QProcess::NotRunning)
+        && (proc->exitCode() == 0)
+        && (proc->result() == Utils::ProcessResult::FinishedWithSuccess);
+
+    if(proc->state() != QProcess::NotRunning)
+    {
+        proc->stop();
+        proc->waitForFinished();
+    }
+
+    delete proc;
+    return claimed && (!*canceled);
+}
+
 QList<QPair<int, int> > imxVidPidList(const QJsonDocument &settings, bool spd_host, bool bl_host)
 {
     QList<QPair<int, int> > pidvidlist;
@@ -368,6 +635,10 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
     QObject::connect(dialog, &QDialog::finished, &loop, &QEventLoop::quit);
 
+    // Pre-armed flashloader detector (armed before the jump below); declared here
+    // so the goto-cleanup paths can tear it down. See the "Start Flash Loader" step.
+    Utils::Process *flashloaderCatcher = nullptr;
+
     QString stdOutBuffer = QString();
     QString *stdOutBufferPtr = &stdOutBuffer;
     bool stdOutFirstTime = true;
@@ -551,6 +822,14 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
         }
     }
 
+    // Arm a pre-imported, hot-scanning catcher for the flashloader BEFORE the
+    // jump, so "Wait for Flash Loader" below is an instant scan hit rather than
+    // a single get-property that can miss if the flashloader hasn't finished
+    // enumerating (spsdk's import cost is paid here, before the jump). Falls
+    // back to the get-property probe when the catcher can't arm.
+    dialog->appendColoredText(Tr::tr("Preparing the bootloader tools... (this can take a few seconds)"));
+    flashloaderCatcher = imxArmCatcher(obj, QStringLiteral("blhost_pidvid"), "claim", 300, nullptr);
+
     // Start Flash Loader
     {
         QStringList args = QStringList() <<
@@ -603,6 +882,29 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     }
 
     // Wait for Flash Loader
+    if(flashloaderCatcher)
+    {
+        dialog->appendColoredText(Tr::tr("Waiting for the flashloader to enumerate..."));
+
+        bool no = false;
+        bool claimed = imxAwaitCatcher(flashloaderCatcher, &no);
+        flashloaderCatcher = nullptr; // consumed (deleted) by imxAwaitCatcher
+
+        if(!claimed)
+        {
+            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+            box.setDetailedText(Tr::tr("The i.MX flashloader did not enumerate."));
+            box.setDefaultButton(QMessageBox::Ok);
+            box.setEscapeButton(QMessageBox::Cancel);
+            box.exec();
+
+            result = false;
+            goto cleanup;
+        }
+    }
+    else
     {
         QStringList args = QStringList() <<
                            QStringLiteral("-u") <<
@@ -1263,6 +1565,15 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     }
 
 cleanup:
+
+    // A goto that fired between arming and awaiting leaves the catcher running;
+    // an already-true cancel makes imxAwaitCatcher stop+delete it immediately.
+    if(flashloaderCatcher)
+    {
+        bool kill = true;
+        imxAwaitCatcher(flashloaderCatcher, &kill);
+        flashloaderCatcher = nullptr;
+    }
 
     delete dialog;
 

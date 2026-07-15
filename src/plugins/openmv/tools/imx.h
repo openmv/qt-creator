@@ -37,6 +37,8 @@
 
 #include "openmvromfs.h"
 
+namespace Utils { class Process; }
+
 namespace OpenMV {
 namespace Internal {
 
@@ -44,6 +46,28 @@ QList<QPair<int, int> > imxVidPidList(const QJsonDocument &settings, bool spd_ho
 // Returns PID/VID of SPD and BL bootloaders on the system.
 QStringList imxGetAllDevices(const QJsonDocument &settings, bool spd_host = true, bool bl_host = true);
 bool imxGetDevice(QJsonObject &obj);
+
+// Pre-armed detection of the mboot/blhost bootloader device. The SBL only holds
+// its USB device for ~1s after a reset before jumping to the app, and importing
+// spsdk to run a probe takes seconds -- too slow on a loaded host. So a resident
+// python process imports spsdk up front, prints READY, then hot-loops
+// MbootUSBInterface.scan() and claims the device (get_property) the instant it
+// appears. Arm it (blocks until READY or arm-timeout) BEFORE the reset/jump that
+// makes the device appear, then await the result.
+//
+// pidvidKey is the bootloaderSettings key holding the target's "VID,PID"
+// (e.g. "blhost_pidvid"). mode is "claim" (scan+open+get_property, validates the
+// SBL) or "wait" (scan only, for a flashloader that holds once up). Returns the
+// running process (caller passes it to imxAwaitCatcher) or nullptr if python/spsdk
+// couldn't be resolved, the process never armed, or *canceled went true during
+// the (multi-second) spsdk import. Pass the cancel flag so the user can bail
+// during arming BEFORE the board is reset; check it at the call site and skip
+// the reset when set.
+Utils::Process *imxArmCatcher(const QJsonObject &obj, const QString &pidvidKey,
+                              const char *mode, int timeoutS, const bool *canceled = nullptr);
+// Pumps events until the catcher exits or *canceled goes true (kills it then).
+// Deletes the process. Returns true only on a clean claim/find (exit 0).
+bool imxAwaitCatcher(Utils::Process *proc, const bool *canceled);
 bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs, OpenMVROMFSAccess romfsAccess);
 bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEraseFlashFs, OpenMVROMFSAccess romfsAccess);
 
