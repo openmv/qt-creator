@@ -983,6 +983,13 @@ void OpenMVPlugin::extensionsInitialized()
         {
             if(Core::Command *cmd = Core::ActionManager::command(id))
             {
+                // Clear the DEFAULT sequences too: ActionManager persists any command
+                // whose current sequences differ from its defaults into the shared
+                // settings file on shutdown ("KeyboardShortcutsV2/<id> = ''"), which
+                // permanently killed Ctrl+S/N/Z/... in the non-viewer IDE after one
+                // viewer run. With both cleared they compare equal, nothing persists,
+                // and a stale cleared entry from before this fix gets removed.
+                cmd->setDefaultKeySequences({});
                 cmd->setKeySequences({});
             }
         }
