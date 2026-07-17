@@ -15122,7 +15122,20 @@ void QCustomPlot::replot(QCustomPlot::RefreshPriority refreshPriority)
     }
     return;
   }
-  
+
+  // OPENMV-DIFF //
+  // A collapsed pane resizes the plot to zero; painting into a zero-sized
+  // buffer fails ("QPainter::begin: Paint device returned engine == 0" +
+  // "drawToPaintBuffer() paint buffer returned inactive painter" spam on
+  // every data update / window move / resize). Skip quietly instead -- the
+  // resizeEvent when the pane reopens replots with a real size.
+  if (width() <= 0 || height() <= 0)
+  {
+    mReplotQueued = false;
+    return;
+  }
+  // OPENMV-DIFF //
+
   if (mReplotting) // incase signals loop back to replot slot
     return;
   mReplotting = true;

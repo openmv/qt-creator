@@ -801,6 +801,31 @@ bool OpenMVPluginHistogram::eventFilter(QObject *watched, QEvent *event)
     return QWidget::eventFilter(watched, event);
 }
 
+// Process the frame that arrived while the widget couldn't be seen, now that
+// it can. showEvent covers switching back to this pane view; resizeEvent
+// covers the pane expanding from collapsed (no show/hide happens then).
+void OpenMVPluginHistogram::catchUp()
+{
+    if ((!m_pendingPixmap.isNull()) && isVisible() && (width() > 0) && (height() > 0))
+    {
+        QPixmap pending = m_pendingPixmap;
+        m_pendingPixmap = QPixmap();
+        pixmapUpdate(pending);
+    }
+}
+
+void OpenMVPluginHistogram::showEvent(QShowEvent *event)
+{
+    QWidget::showEvent(event);
+    catchUp();
+}
+
+void OpenMVPluginHistogram::resizeEvent(QResizeEvent *event)
+{
+    QWidget::resizeEvent(event);
+    catchUp();
+}
+
 void OpenMVPluginHistogram::colorSpaceChanged(int colorSpace)
 {
     m_colorSpace = colorSpace;
@@ -1048,6 +1073,18 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
         return;
     }
 
+    // Skip the histogram computation and replots entirely while the widget
+    // can't be seen (page hidden behind another pane view, or pane collapsed
+    // to zero). The latest frame is stashed and processed on show/expand, so
+    // switching back always displays current data without paying the
+    // per-frame cost while invisible.
+    if ((!isVisible()) || (width() <= 0) || (height() <= 0))
+    {
+        m_pendingPixmap = data;
+        return;
+    }
+
+    m_pendingPixmap = QPixmap();
     m_pixmap = data.scaledToWidth(160, Qt::SmoothTransformation);
 
     switch(m_colorSpace)

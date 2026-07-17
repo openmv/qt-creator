@@ -71,13 +71,20 @@ signals:
 protected:
 
     bool eventFilter(QObject *watched, QEvent *event);
+    void showEvent(QShowEvent *event) override;
+    void resizeEvent(QResizeEvent *event) override;
 
 private:
 
     void updatePlot(QCPGraph *graph, int channel);
+    void catchUp();
 
     int m_colorSpace;
     QPixmap m_pixmap;
+    // Latest frame received while the widget couldn't be seen (page hidden
+    // behind another pane view, or pane collapsed to zero) -- processed on
+    // show/expand so switching back always displays current data.
+    QPixmap m_pendingPixmap;
 
     int m_mean;
     int m_median;
