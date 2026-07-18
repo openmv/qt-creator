@@ -4126,6 +4126,10 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_running = false;
         m_portName = selectedPort;
         m_portPath = QString();
+        // Fresh connection: no drive resolved yet, so open the rescan retry
+        // window and clear any prior guess state.
+        m_portPathIsGuess = false;
+        m_driveRescanAttempts = 0;
         m_major = major2;
         m_minor = minor2;
         m_patch = patch2;
@@ -4217,7 +4221,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             m_portLabel->setText(Tr::tr("Serial Port: %L1").arg(alias.isEmpty() ? m_portName : alias));
         }
         m_pathButton->setEnabled(true);
-        m_pathButton->setText(Tr::tr("Drive:"));
+        m_pathButton->setText(Tr::tr("No Drive"));
         m_fpsButton->setEnabled(true);
         m_fpsIde = 0.0;
         m_fpsCamera = 0.0;
@@ -4599,6 +4603,8 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             m_sensorType = QString();
             m_portName = QString();
             m_portPath = QString();
+            m_portPathIsGuess = false;
+            m_driveRescanAttempts = 0;
             m_portDriveSerialNumber = QString();
             m_errorFilterString = QString();
 
@@ -4631,7 +4637,7 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             m_portLabel->setDisabled(true);
             m_portLabel->setText(Tr::tr("Serial Port:"));
             m_pathButton->setDisabled(true);
-            m_pathButton->setText(Tr::tr("Drive:"));
+            m_pathButton->setText(Tr::tr("No Drive"));
             m_fpsButton->setDisabled(true);
             m_fpsIde = 0.0;
             m_fpsCamera = 0.0;

@@ -187,7 +187,10 @@ void OpenMVPlugin::processEvents()
                     m_getScriptRunningTimer.restart();
                     m_iodevice->getScriptRunning();
 
-                    if(m_portPath.isEmpty())
+                    // Also re-resolve while the current drive is only a
+                    // guess (weak single-drive fallback) so a strict serial
+                    // match arriving later supersedes it.
+                    if(m_portPath.isEmpty() || m_portPathIsGuess)
                     {
                         setPortPath(true);
                     }
@@ -206,7 +209,10 @@ void OpenMVPlugin::processEvents()
                     m_getStateTimer.restart();
                     m_iodevice->getState();
 
-                    if(m_portPath.isEmpty())
+                    // Also re-resolve while the current drive is only a
+                    // guess (weak single-drive fallback) so a strict serial
+                    // match arriving later supersedes it.
+                    if(m_portPath.isEmpty() || m_portPathIsGuess)
                     {
                         setPortPath(true);
                     }
@@ -309,6 +315,32 @@ void OpenMVPlugin::refreshFpsButton()
     }
 }
 
+bool OpenMVPlugin::driveStrictlyMatchesCam(const QString &rootPath, const QString &serialNumber) const
+{
+    QByteArray serialNumberBytes = serialNumber.toUtf8();
+    std::reverse(serialNumberBytes.begin(), serialNumberBytes.end());
+    const QString serialNumberRev = QString::fromUtf8(serialNumberBytes);
+
+    return (((m_major < OPENMV_DISK_ADDED_MAJOR)
+              || ((m_major == OPENMV_DISK_ADDED_MAJOR) && (m_minor < OPENMV_DISK_ADDED_MINOR))
+              || ((m_major == OPENMV_DISK_ADDED_MAJOR) && (m_minor == OPENMV_DISK_ADDED_MINOR) && (m_patch < OPENMV_DISK_ADDED_PATCH)))
+              || QFile::exists(rootPath + QStringLiteral(OPENMV_DISK_ADDED_NAME)))
+        && ((serialNumber.toLower() == m_portDriveSerialNumber.toLower()) || (serialNumberRev.toLower() == m_portDriveSerialNumber.toLower()));
+}
+
+bool OpenMVPlugin::camDriveResolved() const
+{
+    for(const QPair<QString, QString> &pair : qAsConst(m_availableDrives))
+    {
+        if(driveStrictlyMatchesCam(pair.first, pair.second))
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 void OpenMVPlugin::setPortPath(bool silent)
 {
     if(!m_working)
@@ -317,26 +349,26 @@ void OpenMVPlugin::setPortPath(bool silent)
 
         for(const QPair<QString, QString> &pair : qAsConst(m_availableDrives))
         {
-            const QString rootPath = pair.first;
-            const QString serialNumber = pair.second;
-            QByteArray serialNumberBytes = serialNumber.toUtf8();
-            std::reverse(serialNumberBytes.begin(), serialNumberBytes.end());
-            const QString serialNumberRev = QString::fromUtf8(serialNumberBytes);
-
-            if((((m_major < OPENMV_DISK_ADDED_MAJOR)
-                  || ((m_major == OPENMV_DISK_ADDED_MAJOR) && (m_minor < OPENMV_DISK_ADDED_MINOR))
-                  || ((m_major == OPENMV_DISK_ADDED_MAJOR) && (m_minor == OPENMV_DISK_ADDED_MINOR) && (m_patch < OPENMV_DISK_ADDED_PATCH)))
-                  || QFile::exists(rootPath + QStringLiteral(OPENMV_DISK_ADDED_NAME)))
-                && ((serialNumber.toLower() == m_portDriveSerialNumber.toLower()) || (serialNumberRev.toLower() == m_portDriveSerialNumber.toLower())))
+            if(driveStrictlyMatchesCam(pair.first, pair.second))
             {
-                drives.append(rootPath);
+                drives.append(pair.first);
             }
         }
 
-        // If strict matching didn't work. Allow for weak matching if there's only one drive.
-        if(drives.isEmpty() && m_availableDrives.size() == 1)
+        // A strict serial match is authoritative. The weak "there's only one
+        // drive, use it" fallback is a guess -- during the USB-enumeration race
+        // the sole mounted volume is often something like a Google Drive mount
+        // that appears before the cam's real drive does. Only take the guess
+        // once the drive scan has settled (the rescan retry window elapsed), so
+        // the race can't lock onto the wrong drive, and flag it as a guess so
+        // the poll loop keeps re-resolving until a real match shows up.
+        bool guessed = false;
+
+        if(drives.isEmpty() && (m_availableDrives.size() == 1)
+        && (m_driveRescanAttempts >= DRIVE_RESCAN_MAX_ATTEMPTS))
         {
             drives.append(m_availableDrives.at(0).first);
+            guessed = true;
         }
 
         Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
@@ -352,10 +384,15 @@ void OpenMVPlugin::setPortPath(bool silent)
             }
 
             m_portPath = QString();
+            m_portPathIsGuess = false;
         }
         else if(drives.size() == 1)
         {
-            if(m_portPath == drives.first())
+            // Reveal the drive only on a user-initiated (non-silent) re-click of
+            // the already-associated drive -- never from a silent poll-loop call,
+            // which would otherwise reopen the file explorer every cycle while a
+            // guess is being re-resolved.
+            if((m_portPath == drives.first()) && (!silent))
             {
                 QTimer::singleShot(0, this, [this] {
                     Core::FileUtils::showInGraphicalShell(Core::ICore::mainWindow(),
@@ -363,11 +400,16 @@ void OpenMVPlugin::setPortPath(bool silent)
                                                                                                                    ? QStringLiteral("") : QStringLiteral(".openmv_disk")));
                 });
             }
-            else
+            else if(m_portPath != drives.first())
             {
                 m_portPath = drives.first();
                 settings->setValue(portKey, m_portPath);
             }
+
+            // Track match confidence even when the drive is unchanged, so a
+            // strict match arriving for a previously-guessed drive promotes it
+            // to confirmed and stops the poll-loop re-resolution.
+            m_portPathIsGuess = guessed;
         }
         else
         {
@@ -383,11 +425,15 @@ void OpenMVPlugin::setPortPath(bool silent)
             if(ok)
             {
                 m_portPath = temp;
+                // Multiple entries here are all strict serial matches (the weak
+                // fallback only fires for a single total drive), so this is a
+                // confirmed selection, not a guess.
+                m_portPathIsGuess = false;
                 settings->setValue(portKey, m_portPath);
             }
         }
 
-        m_pathButton->setText((!m_portPath.isEmpty()) ? Tr::tr("Drive: %L1").arg(m_portPath) : Tr::tr("Drive:"));
+        m_pathButton->setText((!m_portPath.isEmpty()) ? Tr::tr("Drive: %L1").arg(m_portPath) : Tr::tr("No Drive"));
 
         Core::IEditor *editor = Core::EditorManager::currentEditor();
         m_openDriveFolderAction->setEnabled(!m_portPath.isEmpty());

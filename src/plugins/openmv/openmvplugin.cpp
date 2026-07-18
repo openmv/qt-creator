@@ -2852,7 +2852,7 @@ void OpenMVPlugin::extensionsInitialized()
     connect(m_portLabel, &QToolButton::clicked, this, &OpenMVPlugin::setPortAlias);
 
     m_pathButton = new Utils::ElidingToolButton;
-    m_pathButton->setText(Tr::tr("Drive:"));
+    m_pathButton->setText(Tr::tr("No Drive"));
     m_pathButton->setToolTip(Tr::tr("Drive associated with port"));
     m_pathButton->setDisabled(true);
     Core::ICore::statusBar()->addPermanentWidget(m_pathButton);
@@ -3622,9 +3622,25 @@ bool OpenMVPlugin::delayedInitialize()
         m_scanDriveThread->moveToThread(thread);
         m_driveScanTimer = new QTimer(this);
 
-        connect(m_driveScanTimer, &QTimer::timeout, m_scanDriveThread, [this] () {
-            if (!m_connected || m_availableDrives.isEmpty()) {
-                m_scanDriveThread->scanDrivesSlot();
+        // Runs on the GUI thread (receiver is `this`) so the predicate reads
+        // m_availableDrives/version state safely; the actual scan (which spawns
+        // PowerShell) is queued onto the scan thread. Keep scanning while
+        // disconnected or driveless, and -- once connected -- until the cam
+        // drive serial-matches or the bounded retry window elapses. This lets a
+        // later scan supersede an early one taken before the cam's USB drive (or
+        // its serial) had populated, without spawning PowerShell forever.
+        connect(m_driveScanTimer, &QTimer::timeout, this, [this] () {
+            const bool resolved = camDriveResolved();
+            const bool needRescan = (!m_connected)
+                                 || m_availableDrives.isEmpty()
+                                 || ((!resolved) && (m_driveRescanAttempts < DRIVE_RESCAN_MAX_ATTEMPTS));
+
+            if (needRescan) {
+                if (m_connected && (!resolved)) {
+                    m_driveRescanAttempts++;
+                }
+
+                QMetaObject::invokeMethod(m_scanDriveThread, "scanDrivesSlot", Qt::QueuedConnection);
             }
         });
 

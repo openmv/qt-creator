@@ -253,6 +253,13 @@
 #define OPENMV_DISK_ADDED_PATCH 0
 #define OPENMV_DISK_ADDED_NAME "/.openmv_disk"
 
+// After connecting, keep rescanning drives (at the 1s timer cadence) up to this
+// many times while the cam drive hasn't serial-matched, so the USB drive/serial
+// has time to populate. Also gates the weak single-drive fallback so the
+// enumeration race can't lock onto the wrong volume. ~10s ~= the PowerShell
+// serial-query timeout.
+#define DRIVE_RESCAN_MAX_ATTEMPTS 10
+
 #define OPENMV_DBG_PROTOCOL_CHNAGE_MAJOR 3
 #define OPENMV_DBG_PROTOCOL_CHNAGE_MINOR 5
 #define OPENMV_DBG_PROTOCOL_CHNAGE_PATCH 3
@@ -524,6 +531,12 @@ public slots: // private
     QString latestFirmwareForConnectedBoard() const;
     void updateCam(bool forceYes = false);
     void setPortPath(bool silent = false);
+    // A drive whose (possibly byte-reversed) USB serial equals the connected
+    // cam's, gated by the .openmv_disk marker on firmware new enough to write
+    // it. This is the strict match setPortPath() trusts; the timer uses it to
+    // decide whether the cam drive has resolved yet.
+    bool driveStrictlyMatchesCam(const QString &rootPath, const QString &serialNumber) const;
+    bool camDriveResolved() const;
     void setPortAlias();
     void setSpacing();
     void openTerminalAboutToShow();
@@ -775,6 +788,14 @@ private:
     QString m_portName;
     QString m_portPath;
     QString m_portDriveSerialNumber;
+    // True when m_portPath was chosen by the weak single-drive fallback (a guess
+    // during the USB-enumeration race) rather than a serial match or a manual
+    // pick. While it's only a guess, the poll loop keeps re-running setPortPath()
+    // so a later scan that serial-matches the real cam drive supersedes it.
+    bool m_portPathIsGuess = false;
+    // Bounds the connected-state drive rescan (each scan spawns PowerShell), so
+    // we stop once the cam drive serial-matches or the retry window elapses.
+    int m_driveRescanAttempts = 0;
     QString m_formKey;
 
     QString m_serialNumberFilter;
