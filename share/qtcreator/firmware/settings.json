@@ -1914,6 +1914,16 @@
             "main" : false
         },
         {
+            "name" : "LEPTON-3.1R",
+            "id" : "0x5431",
+            "main" : false
+        },
+        {
+            "name" : "LEPTON-UW",
+            "id" : "0x5432",
+            "main" : false
+        },
+        {
             "name" : "LEPTON-3.0",
             "id" : "0x5430",
             "main" : false
