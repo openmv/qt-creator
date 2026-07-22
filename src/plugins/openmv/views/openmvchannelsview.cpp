@@ -52,7 +52,7 @@ enum : int {
     CBOR_KEY_VS = 3,   // string value
     CBOR_KEY_VB = 4,   // boolean value
     CBOR_KEY_VD = 8,   // data value (binary)
-    CBOR_KEY_T  = 6,   // time (SenML): waveform chunk timestamp
+    CBOR_KEY_T  = 6,   // time: waveform chunk timestamp (integer us, or SenML float seconds)
     CBOR_KEY_UT = 7,   // update time (SenML): waveform sample period (s)
 
     // Custom 2D data extension keys
@@ -897,6 +897,7 @@ void OpenMVChannelsView::reset()
 {
     m_activeControls.clear();
     m_skipRenders.clear();
+    m_pendingWrites.clear();
     showMessage(Tr::tr("Connect a camera to view channels"));
 }
 
@@ -1124,7 +1125,7 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
         }
         else if(record.wtype == QStringLiteral("toggle"))
         {
-            record.toggle = new QCheckBox;
+            record.toggle = new HoverGlowCheckBox;
             record.toggle->setEnabled(writable);
 
             if(writable)
@@ -1162,9 +1163,19 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
 
             rowLayout->addWidget(header);
 
-            record.slider = new QSlider(Qt::Horizontal);
+            // Inset the slider to the same margin as the header's name label so
+            // the two line up, rather than running full-bleed to the pane edges.
+            QWidget *sliderRow = new QWidget;
+            QHBoxLayout *sliderLayout = new QHBoxLayout(sliderRow);
+            // Bottom margin matches the 3px viewRow() leaves under its content,
+            // so the slider does not sit right on the separator.
+            sliderLayout->setContentsMargins(4, 0, 4, 3);
+            sliderLayout->setSpacing(0);
+
+            record.slider = new HoverGlowSlider(Qt::Horizontal);
             record.slider->setEnabled(writable);
-            rowLayout->addWidget(record.slider);
+            sliderLayout->addWidget(record.slider);
+            rowLayout->addWidget(sliderRow);
 
             if(writable)
             {
@@ -1189,9 +1200,26 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
                         const Record &r = m_records.at(i);
                         r.sliderValue->setText(displayValue(numberValue(
                             r.sliderMin + (position * r.sliderStep))));
+
+                        // Keyboard arrows, wheel, and trough clicks change the
+                        // value without a handle drag (no sliderPressed/Released),
+                        // so write those immediately. During a drag isSliderDown()
+                        // is true and the write is deferred to sliderReleased to
+                        // avoid a write per intermediate step. Programmatic
+                        // setValue() in the render path is wrapped in a
+                        // QSignalBlocker, so this can't echo a read back.
+                        if(!r.slider->isSliderDown())
+                        {
+                            stageWrite(r.channelName, r.name, numberValue(
+                                r.sliderMin + (position * r.sliderStep)));
+                        }
                     }
                 });
             }
+
+            // viewRow() ends every other row with a separator; this row is built
+            // by hand, so add one to match.
+            rowLayout->addWidget(viewHairline());
 
             record.row = row;
             m_contentLayout->addWidget(row);
@@ -1202,7 +1230,7 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
             // increments) - a spin box over the slider's min/max/step keys.
             // Named like the Settings Editor's element; the step decides the
             // decimals, so one type covers spinbox and doublespinbox.
-            record.spinbox = new QDoubleSpinBox;
+            record.spinbox = new HoverGlowSpinBox;
             record.spinbox->setEnabled(writable);
             // Type freely without a write per keystroke; valueChanged fires
             // on the arrows, Return, and focus-out.
@@ -1241,7 +1269,7 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
 
             for(qsizetype j = 0; j < options.size(); j++)
             {
-                QRadioButton *button = new QRadioButton(options.at(j).toString());
+                QRadioButton *button = new HoverGlowRadioButton(options.at(j).toString());
                 button->setEnabled(writable);
                 record.radio->addButton(button);
                 boxLayout->addWidget(button);
@@ -1412,8 +1440,16 @@ void OpenMVChannelsView::patchContent(QList<Record> &records)
                 typecode = built.rec.value(qint64(CBOR_KEY_VS)).toString();
             }
 
-            double t = built.rec.contains(qint64(CBOR_KEY_T))
-                ? built.rec.value(qint64(CBOR_KEY_T)).toDouble() : qQNaN();
+            // A camera on a single-precision-float build can't hold microsecond
+            // resolution in a float timestamp of seconds, so it sends an integer
+            // count of microseconds; a float t (older/other senders) stays SenML
+            // seconds. Normalize both to seconds here.
+            double t = qQNaN();
+            if(built.rec.contains(qint64(CBOR_KEY_T)))
+            {
+                QCborValue tValue = built.rec.value(qint64(CBOR_KEY_T));
+                t = tValue.isInteger() ? (tValue.toInteger() / 1e6) : tValue.toDouble();
+            }
             QByteArray data = built.rec.value(qint64(CBOR_KEY_VD)).toByteArray();
 
             if(built.recorder)
@@ -1471,6 +1507,26 @@ void OpenMVChannelsView::patchContent(QList<Record> &records)
         }
 
         QString controlId = QStringLiteral("%1/%2").arg(built.channelName, built.name);
+
+        // Hold a just-written control at the value the user set until the
+        // device echoes it back, so a pre-write read still in flight can't snap
+        // it back. Releases when the read matches the written value, or when the
+        // deadline passes (the device never reported it, e.g. it clamped it).
+        if(m_pendingWrites.contains(controlId))
+        {
+            if(recordValue(built.rec) == m_pendingWrites.value(controlId).first)
+            {
+                m_pendingWrites.remove(controlId);
+            }
+            else if(QDateTime::currentMSecsSinceEpoch() < m_pendingWrites.value(controlId).second)
+            {
+                continue;
+            }
+            else
+            {
+                m_pendingWrites.remove(controlId);
+            }
+        }
 
         if(built.value)
         {
@@ -1625,6 +1681,7 @@ void OpenMVChannelsView::channelsData(const QVariantList &channels)
         m_records = records;
         m_activeControls.clear();
         m_skipRenders.clear();
+        m_pendingWrites.clear();
 
         // The freshly-built widgets still need their first values.
         patchContent(records);
@@ -1882,6 +1939,13 @@ void OpenMVChannelsView::stageWrite(const QString &channelName, const QString &r
     // Skip the next couple of renders for this channel: a read may already be
     // in flight carrying pre-write data that would snap the control back.
     m_skipRenders[channelName] = 2;
+
+    // Then hold this specific control at the written value until the device
+    // echoes it back (or 3s passes), so a slow write round-trip can't let a
+    // later pre-write read snap it back after the coarse skip count drains.
+    const QString controlId = QStringLiteral("%1/%2").arg(channelName, recordName);
+    m_pendingWrites[controlId] = qMakePair(value, QDateTime::currentMSecsSinceEpoch() + 3000);
+
     emit writeChannel(channelName, encodeWrite(recordName, value));
 }
 

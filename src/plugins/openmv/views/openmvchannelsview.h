@@ -268,6 +268,13 @@ private:
     // Channels with a write in flight: skip rendering them until the count
     // drains so a pre-write read can't snap the control back.
     QMap<QString, int> m_skipRenders;
+
+    // Controls with a write in flight, keyed "channel/name" -> (written value,
+    // deadline ms). The control is held at the written value until the device
+    // echoes it back (or the deadline passes), so a pre-write read still in
+    // flight can't snap it back -- which showed as a checkbox flicking off then
+    // on. Longer-lived and per-control where m_skipRenders is a coarse count.
+    QHash<QString, QPair<QCborValue, qint64>> m_pendingWrites;
 };
 
 } // namespace Internal

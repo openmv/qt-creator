@@ -44,8 +44,58 @@ namespace OpenMV {
 namespace Internal {
 
 // Paint a pane view on Base (white in light themes) like the histogram's
-// plots, with the theme's normal text color for every label.
+// plots, with the theme's normal text color for every label -- via the palette
+// so the pane's controls keep native rendering (hover, disabled, popups).
 void viewApplyBackground(QWidget *view);
+
+// Controls whose indicator/handle outlines in the highlight colour while
+// hovered. The base class still paints the control, so the native check mark
+// and slider handle are untouched -- only the outline is drawn on top. (A
+// stylesheet can't do this: styling ::indicator/::handle replaces their
+// rendering, and styling the widget fills its whole rectangle instead.)
+class HoverGlowCheckBox : public QCheckBox
+{
+public:
+    explicit HoverGlowCheckBox(QWidget *parent = Q_NULLPTR);
+protected:
+    void paintEvent(QPaintEvent *event) override;
+    void enterEvent(QEnterEvent *event) override;
+    void leaveEvent(QEvent *event) override;
+};
+
+class HoverGlowRadioButton : public QRadioButton
+{
+public:
+    explicit HoverGlowRadioButton(const QString &text, QWidget *parent = Q_NULLPTR);
+protected:
+    void paintEvent(QPaintEvent *event) override;
+    void enterEvent(QEnterEvent *event) override;
+    void leaveEvent(QEvent *event) override;
+};
+
+class HoverGlowSlider : public QSlider
+{
+public:
+    explicit HoverGlowSlider(Qt::Orientation orientation, QWidget *parent = Q_NULLPTR);
+protected:
+    void paintEvent(QPaintEvent *event) override;
+    void enterEvent(QEnterEvent *event) override;
+    void leaveEvent(QEvent *event) override;
+};
+
+// Darkens the hovered step button. The base style brightens it instead (Fusion
+// fills with a hardcoded translucent white), which reads washed out, and no
+// palette role can invert that -- so shade over it.
+class HoverGlowSpinBox : public QDoubleSpinBox
+{
+public:
+    explicit HoverGlowSpinBox(QWidget *parent = Q_NULLPTR);
+protected:
+    void paintEvent(QPaintEvent *event) override;
+    void enterEvent(QEnterEvent *event) override;
+    void leaveEvent(QEvent *event) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
+};
 
 // Shared accent palette for every plot the views draw (waveform traces,
 // memory graphs, histogram channels). Colors deepen on the light theme,
@@ -82,6 +132,9 @@ QLabel *viewValueLabel();
 QWidget *viewRow(const QString &name, const QList<QWidget *> &values);
 QWidget *viewRow(const QString &name, QWidget *value);
 QWidget *viewRow(QWidget *name, const QList<QWidget *> &values);
+
+// The 1px row separator, for rows built by hand instead of via viewRow().
+QWidget *viewHairline();
 
 // Toggles a row's hairline (e.g. off for the last visible row of a table).
 void viewRowSetLineVisible(QWidget *row, bool visible);
