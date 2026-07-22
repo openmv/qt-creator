@@ -792,7 +792,9 @@ void OpenMVChannelWaveform::paintEvent(QPaintEvent *event)
     int w = width();
     int h = height();
 
-    painter.fillRect(rect(), Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal));
+    // Take the pane's own background rather than the theme colour directly, so
+    // the plot always matches whatever viewApplyBackground() painted behind it.
+    painter.fillRect(rect(), palette().color(QPalette::Window));
 
     bool dark = Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
 
@@ -842,9 +844,11 @@ void OpenMVChannelWaveform::paintEvent(QPaintEvent *event)
 
     painter.setPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal));
 
+    // Inset to the header's margin: the plot itself runs full-bleed, so without
+    // this the range labels would sit hard against the pane edge.
     QFontMetrics metrics(small);
-    painter.drawText(QPointF(2, metrics.ascent() + 1), QString::number(m_max, 'g', 6));
-    painter.drawText(QPointF(2, h - 1 - metrics.descent()), QString::number(m_min, 'g', 6));
+    painter.drawText(QPointF(6, metrics.ascent() + 1), QString::number(m_max, 'g', 6));
+    painter.drawText(QPointF(6, h - 1 - metrics.descent()), QString::number(m_min, 'g', 6));
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -1080,21 +1084,30 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
             record.sectionIndex = currentSection;
             record.trackIndex = trackCounter++;
 
-            // Header (name, size, range) above the colormapped image. The
-            // image runs full-bleed; the header and record bar inset.
-            QWidget *row = new QWidget;
-            QVBoxLayout *rowLayout = new QVBoxLayout(row);
-            rowLayout->setContentsMargins(0, 3, 0, 3);
-            rowLayout->setSpacing(4);
+            // Header (name, size, range) above the colormapped image, all inset
+            // from the pane edge, with the separator below running full-bleed
+            // like viewRow()'s.
+            QWidget *content = new QWidget;
+            QVBoxLayout *contentLayout = new QVBoxLayout(content);
+            contentLayout->setContentsMargins(0, 3, 0, 5);   // extra room under the record bar
+            contentLayout->setSpacing(4);
 
             record.depthHeader = viewNameLabel(QString());
             record.depthHeader->setContentsMargins(6, 0, 6, 0);
-            rowLayout->addWidget(record.depthHeader);
+            contentLayout->addWidget(record.depthHeader);
 
+            // The image runs full-bleed; the header and record bar inset.
             record.depth = new OpenMVChannelDepth;
-            rowLayout->addWidget(record.depth);
+            contentLayout->addWidget(record.depth);
 
-            addRecordBar(record, rowLayout, i);
+            addRecordBar(record, contentLayout, i);
+
+            QWidget *row = new QWidget;
+            QVBoxLayout *rowLayout = new QVBoxLayout(row);
+            rowLayout->setContentsMargins(0, 0, 0, 0);
+            rowLayout->setSpacing(0);
+            rowLayout->addWidget(content);
+            rowLayout->addWidget(viewHairline());
 
             record.row = row;
             m_contentLayout->addWidget(row);
@@ -1104,21 +1117,31 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
             record.sectionIndex = currentSection;
             record.trackIndex = trackCounter++;
 
-            // Header (name, geometry, rate) above the traces. The plot runs
-            // full-bleed; the header and record bar inset.
-            QWidget *row = new QWidget;
-            QVBoxLayout *rowLayout = new QVBoxLayout(row);
-            rowLayout->setContentsMargins(0, 3, 0, 3);
-            rowLayout->setSpacing(4);
+            // Header (name, geometry, rate) above the traces, all inset from the
+            // pane edge, with the separator below running full-bleed like
+            // viewRow()'s.
+            QWidget *content = new QWidget;
+            QVBoxLayout *contentLayout = new QVBoxLayout(content);
+            contentLayout->setContentsMargins(0, 3, 0, 5);   // extra room under the record bar
+            contentLayout->setSpacing(4);
 
             record.waveformHeader = viewNameLabel(QString());
             record.waveformHeader->setContentsMargins(6, 0, 6, 0);
-            rowLayout->addWidget(record.waveformHeader);
+            contentLayout->addWidget(record.waveformHeader);
 
+            // The plot runs full-bleed; its min/max labels carry the same inset
+            // as the header so the text still lines up.
             record.waveform = new OpenMVChannelWaveform;
-            rowLayout->addWidget(record.waveform);
+            contentLayout->addWidget(record.waveform);
 
-            addRecordBar(record, rowLayout, i);
+            addRecordBar(record, contentLayout, i);
+
+            QWidget *row = new QWidget;
+            QVBoxLayout *rowLayout = new QVBoxLayout(row);
+            rowLayout->setContentsMargins(0, 0, 0, 0);
+            rowLayout->setSpacing(0);
+            rowLayout->addWidget(content);
+            rowLayout->addWidget(viewHairline());
 
             record.row = row;
             m_contentLayout->addWidget(row);
@@ -1318,10 +1341,20 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
             record.value->setTextInteractionFlags(Qt::TextBrowserInteraction);
             record.value->setOpenExternalLinks(true);
 
+            // Same structure viewRow() gives every other row: the text insets
+            // from the pane edge, the separator below runs full-bleed.
+            QWidget *content = new QWidget;
+            QVBoxLayout *contentLayout = new QVBoxLayout(content);
+            contentLayout->setContentsMargins(6, 3, 6, 3);
+            contentLayout->setSpacing(0);
+            contentLayout->addWidget(record.value);
+
             QWidget *row = new QWidget;
             QVBoxLayout *rowLayout = new QVBoxLayout(row);
-            rowLayout->setContentsMargins(6, 3, 6, 3);
-            rowLayout->addWidget(record.value);
+            rowLayout->setContentsMargins(0, 0, 0, 0);
+            rowLayout->setSpacing(0);
+            rowLayout->addWidget(content);
+            rowLayout->addWidget(viewHairline());
 
             record.row = row;
             m_contentLayout->addWidget(row);
