@@ -49,6 +49,10 @@
 #include <QtGui>
 #include <QtWidgets>
 
+#include "openmvchannelrecorder.h"
+
+#include "../qcustomplot/qcustomplot.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -76,85 +80,18 @@ private:
     QImage m_image;
 };
 
-// Streams waveform chunks to CSV. This is a data-collection instrument,
-// not display eye candy: one row per sample with a device timestamp,
-// values written exactly (integer typecodes stay integral, floats keep
-// round-trip precision), flushed per chunk so a crash can't lose recorded
-// data. The output splits into numbered part files before any one grows
-// unwieldy.
+// Live scrolling plot of interleaved 1D sample series (mic/IMU waveforms):
+// w samples per series, h series overlaid as separate traces, scaled to
+// [min, max]. Chunks append end to end into a rolling history, so the plot
+// shows a continuous stream rather than only the newest chunk, and the view
+// can be panned and zoomed back through it.
 //
-// The file holds one or more tracks -- one per recorded graph, so a
-// per-graph recording is a single track and "Record All" is one track per
-// graph, all sharing the time column. A waveform track writes one row per
-// sample: its series columns plus a "gap" column reporting
-// discontinuities between its chunks in seconds (missed chunks, bursty
-// publishers; empty when a chunk continues exactly where the previous one
-// ended). A depth track writes one row per frame with one column per
-// value and no gap column.
-class OpenMVChannelRecorder : public QObject
-{
-    Q_OBJECT
-
-public:
-
-    // A recorded graph's column group: its name prefix, column count
-    // (series for a waveform, values for a depth frame), and whether it
-    // carries a gap column. A single track with an empty name writes the
-    // plain value/series_N column names.
-    struct Track {
-        QString name;
-        int columns = 1;
-        bool gap = true;
-    };
-
-    explicit OpenMVChannelRecorder(const QString &path, const QList<Track> &tracks,
-                                   QObject *parent = Q_NULLPTR);
-    virtual ~OpenMVChannelRecorder();
-
-    bool ok() const { return m_file.isOpen(); }
-    QString errorString() const { return m_error; }
-
-    // Appends one chunk to a track. The poll re-reads an unchanged chunk
-    // faster than scripts publish, so duplicates are detected (by timestamp
-    // and data) and skipped. Returns false when a write fails;
-    // errorString() says why.
-    bool append(int track, const QByteArray &data, const QString &typecode,
-                int samples, int series, double t, double period);
-
-    QString status() const;
-
-private:
-
-    bool openPart();
-    bool rollPart();
-    bool writeHeader();
-    QString partPath(int part) const;
-
-    struct TrackState {
-        int offset = 0; // this track's first CSV column after time
-        bool hasLast = false;
-        double lastT = 0.0;
-        QByteArray lastData;
-        bool hasChunkTiming = false;
-        double chunkEnd = 0.0;
-    };
-
-    QString m_basePath;
-    QFile m_file;
-    QString m_error;
-    QList<Track> m_tracks;
-    QList<TrackState> m_states;
-    int m_totalColumns = 0; // series + gap columns across all tracks
-    int m_part = 0;
-    qint64 m_partRows = 0;
-    qint64 m_totalRows = 0;
-    qint64 m_totalBytes = 0;
-    QElapsedTimer m_hostClock;
-};
-
-// Renders interleaved 1D sample series (mic/IMU waveforms): w samples per
-// series, h series overlaid as separate traces, scaled to [min, max].
-class OpenMVChannelWaveform : public QWidget
+// Built on QCustomPlot for the parts that are hard to hand-roll: adaptive
+// sampling (what makes a 16 kHz trace affordable to draw), drag/zoom, and
+// the spectrum view. It deliberately does not look like a chart -- the
+// resting state is the full-bleed trace the hand-painted widget it replaced
+// drew, with subtle ticks; the readout, cursor and axes appear on demand.
+class OpenMVChannelWaveform : public QCustomPlot
 {
     Q_OBJECT
 
@@ -162,20 +99,147 @@ public:
 
     explicit OpenMVChannelWaveform(QWidget *parent = Q_NULLPTR);
 
+    // Appends one chunk. t is the device chunk timestamp in seconds (NaN when
+    // the sender omits it) and period the sample period in seconds (0 when the
+    // sender publishes no rate, in which case the x axis counts samples).
     void setData(const QByteArray &data, const QString &typecode,
-                 int samples, int series, double min, double max);
+                 int samples, int series, double min, double max,
+                 double period, double t, const QStringList &names);
+
+    // The record's own name, used to label a single trace.
+    void setTitle(const QString &title) { m_title = title; }
+
+    // Identifies this graph in the settings, as "<channel>/<record>". Its
+    // saved image path and its auto scale preference are both remembered per
+    // graph, so several plots in one session each keep their own.
+    void setSettingsKey(const QString &key);
+
+    // The view modes, driven from the buttons beside the record bar.
+    void setSpectrum(bool enabled);
+    void setShowStats(bool enabled);
+
+    // Freezes the plot. Recording is unaffected -- this is a display control,
+    // so resuming starts a fresh trace rather than splicing the stream back
+    // together across the samples that were skipped.
+    void setPaused(bool paused);
+
+signals:
+
+    // The trigger pauses the graph itself, so the Pause button has to hear
+    // about a freeze it did not initiate.
+    void pausedChanged(bool paused);
+
+public:
+    bool spectrum() const { return m_spectrum; }
 
 protected:
 
-    virtual void paintEvent(QPaintEvent *event);
+    virtual void changeEvent(QEvent *event);
+    virtual void leaveEvent(QEvent *event);
 
 private:
 
-    QVector<float> m_samples; // interleaved
-    int m_seriesCount = 1;
-    int m_samplesPerSeries = 0;
+    void applyTheme();
+
+    // Fits the vertical axis to what is on screen, when the graph is set to
+    // scale itself rather than to the range the record declares.
+    void updateVerticalRange();
+
+    // The corner numbers always describe what is actually drawn, so they
+    // follow the axis rather than the declared range.
+    void updateRangeLabels();
+
+    // Watches the newest samples for the armed crossing, and freezes the
+    // graph on the one that crosses.
+    void checkTrigger(const QVector<double> &keys, const QVector<double> &values);
+    void updateTriggerItems();
+    void armTrigger(bool armed);
+
+    // The corner readout: values under the cursor while the mouse is over the
+    // plot, statistics for the visible window when it is not.
+    void updateReadout();
+
+    // Axes, tickers and which set of traces is shown, for the current domain.
+    void applyMode();
+
+    // Trades line quality for speed, but only once the window holds more
+    // points than the pane can resolve.
+    void updateDrawQuality();
+
+    // Windowed FFT of the newest samples of each series, in dBFS against the
+    // record's own display range.
+    void computeSpectrum();
+
+    void showContextMenu(const QPoint &pos);
+    void saveImage();
+    void resetHistory(int series, double min, double max, double period,
+                      const QStringList &names);
+    void setSeriesVisible(int series, bool visible);
+
+    // The visible window when following, and how much history is kept behind
+    // it, in seconds (or in chunks when the sender publishes no rate).
+    double viewSpan() const;
+
+    int m_seriesCount = 0;
+    int m_samplesPerChunk = 0;
     double m_min = 0.0;
     double m_max = 1.0;
+    double m_period = 0.0;
+    bool m_timeAxis = false; // x is seconds (period known) vs sample counts
+    double m_next = 0.0;     // where the next chunk starts when t is absent
+    double m_end = 0.0;      // right edge of the newest data
+    bool m_hasData = false;
+    bool m_following = true; // auto-scroll until the user pans or zooms
+    double m_lastT = qQNaN();
+    QByteArray m_lastData;
+    QStringList m_seriesNames;
+    QString m_title;
+    QString m_settingsKey;
+
+    QCPItemStraightLine *m_cursor = Q_NULLPTR;
+    QCPItemText *m_readout = Q_NULLPTR;
+    QCPItemText *m_maxLabel = Q_NULLPTR; // display range, inset in the corners
+    QCPItemText *m_minLabel = Q_NULLPTR;
+    QList<QCPItemTracer *> m_tracers; // one per series, shown under the cursor
+    bool m_hovering = false;
+    bool m_showStats = false; // window statistics in the readout, off by default
+    bool m_paused = false;
+    bool m_autoScale = true; // fit the axis to the data, not to min/max
+    double m_cursorKey = 0.0;
+
+    // Traces are held twice over: graph(s) is the time domain and
+    // graph(seriesCount + s) its spectrum, so switching domains does not
+    // discard the history the spectrum is computed from.
+    bool m_spectrum = false;
+    double m_nyquist = 0.0;
+    int m_fftSize = 0;
+    QSet<int> m_hiddenSeries; // traces the user switched off in the legend
+
+    // Capture on a level crossing, the way a scope does it: arm, and the next
+    // crossing freezes the graph with the event a quarter of the way in, so
+    // there is a run of samples on either side of it to read.
+    bool m_triggerArmed = false;
+    bool m_triggered = false;
+    bool m_triggerRising = true;
+    bool m_triggerHasLevel = false;
+    bool m_triggerHasPrevious = false;
+    int m_triggerSeries = 0;
+    double m_triggerLevel = 0.0;
+    double m_triggerPrevious = 0.0; // carried across chunks, so a crossing at
+                                    // a chunk boundary is not missed
+    QCPItemStraightLine *m_triggerLine = Q_NULLPTR;
+    QCPItemStraightLine *m_triggerMark = Q_NULLPTR;
+
+    // Statistics are smoothed before display: recomputed against a sliding
+    // window at the poll rate, the raw digits flicker too fast to read.
+    struct SeriesStats {
+        bool valid = false;
+        double low = 0.0;  // spectrum: the peak's key
+        double high = 0.0; // spectrum: the peak's level
+        double rms = 0.0;  // spectrum: unused
+    };
+
+    QList<SeriesStats> m_stats;
 };
 
 class OpenMVChannelsView : public QStackedWidget
@@ -230,19 +294,19 @@ private:
         QPushButton *recordButton = Q_NULLPTR;
         QLabel *recordStatus = Q_NULLPTR;
         OpenMVChannelRecorder *recorder = Q_NULLPTR; // owned by the row widget
-        int sectionIndex = -1; // this waveform's channel section (Record All)
-        int trackIndex = -1;   // its track in that section's group recording
+        bool groupStarted = false; // started by its section's Record All
+        int sectionIndex = -1;     // this waveform's channel section
     };
 
-    // A channel section's Record All bar: captures every waveform in the
-    // section into one multi-track file. Mutually exclusive with the
-    // per-graph buttons.
+    // A channel section's Record All bar: starts and stops every graph in the
+    // section together. Each still writes its own file -- the point is the
+    // shared instant, not a shared table, since tracks at different rates
+    // have no rows in common. Mutually exclusive with the per-graph buttons.
     struct Section {
         QString channelName;
         QWidget *bar = Q_NULLPTR;
         QPushButton *button = Q_NULLPTR;
         QLabel *status = Q_NULLPTR;
-        OpenMVChannelRecorder *recorder = Q_NULLPTR; // owned by the bar widget
     };
 
     void showMessage(const QString &message);
@@ -254,7 +318,10 @@ private:
     void toggleRecording(int index);
     void toggleGroupRecording(int index);
     void updateRecordButtonStates();
-    OpenMVChannelRecorder::Track trackFor(const Record &record, bool named) const;
+    OpenMVChannelRecorder::Info infoFor(const Record &record) const;
+    bool startRecorder(Record &record, const QString &path,
+                       OpenMVChannelRecorder::Format format, bool group);
+    void stopRecorder(Record &record);
 
     QLabel *m_message;
     QVBoxLayout *m_contentLayout;

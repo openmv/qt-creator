@@ -5,6 +5,7 @@ add_qtc_plugin(OpenMV
     openmvplugin.cpp openmvplugin.h openmvtr.h
     openmvpluginconnect.cpp openmvpluginconnect.h
     views/openmvboardinfoview.cpp views/openmvboardinfoview.h
+    views/openmvchannelrecorder.cpp views/openmvchannelrecorder.h
     views/openmvchannelsview.cpp views/openmvchannelsview.h
     views/openmvmemoryview.cpp views/openmvmemoryview.h
     views/openmvstatisticsview.cpp views/openmvstatisticsview.h
