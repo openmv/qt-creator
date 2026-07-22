@@ -368,6 +368,22 @@ static double chunkTime(const QCborMap &rec)
     return tValue.isInteger() ? (tValue.toInteger() / 1e6) : tValue.toDouble();
 }
 
+// The next free <name>.<n>.<suffix> in a folder. Recording a section twice
+// would otherwise write the second capture over the first, and the numbering
+// is the shape Edge Impulse reads a label and index out of.
+static QString numberedRecordPath(const QDir &dir, const QString &base, const QString &suffix)
+{
+    for(int n = 1; ; n++)
+    {
+        QString path = dir.filePath(QStringLiteral("%1.%2.%3").arg(base).arg(n).arg(suffix));
+
+        if(!QFileInfo::exists(path))
+        {
+            return path;
+        }
+    }
+}
+
 // A record or channel name reduced to something a file system will take.
 static QString recordFileName(const QString &name)
 {
@@ -485,7 +501,13 @@ void OpenMVChannelDepth::paintEvent(QPaintEvent *event)
 // waveform's shape, the way the single-chunk plot this replaced did -- with
 // a long tail of history behind it to pan back into.
 static const double WAVEFORM_VIEW_CHUNKS = 2.0;
+static const double WAVEFORM_VIEW_MIN_SAMPLES = 256.0;
+static const double WAVEFORM_VIEW_MAX_SAMPLES = 1024.0;
 static const double WAVEFORM_HISTORY_MULTIPLE = 50.0;
+// What the History menu offers, as screens of history kept behind the view.
+static const double WAVEFORM_HISTORY_CHOICES[] = {10.0, 50.0, 250.0};
+
+static QString readoutNumber(double value, int digits = 4);
 static const double WAVEFORM_HELD_HISTORY_MULTIPLE = 10.0;
 
 // "OpenMV" matches the plugin's SETTINGS_GROUP.
@@ -497,6 +519,11 @@ static Utils::Key plotPathKey(const QString &key)
 static Utils::Key plotAutoScaleKey(const QString &key)
 {
     return Utils::keyFromString(QStringLiteral("OpenMV/ChannelPlotAutoScale/%1").arg(key));
+}
+
+static Utils::Key plotHistoryKey(const QString &key)
+{
+    return Utils::keyFromString(QStringLiteral("OpenMV/ChannelPlotHistory/%1").arg(key));
 }
 
 OpenMVChannelWaveform::OpenMVChannelWaveform(QWidget *parent) : QCustomPlot(parent)
@@ -564,6 +591,11 @@ OpenMVChannelWaveform::OpenMVChannelWaveform(QWidget *parent) : QCustomPlot(pare
     m_cursor->point1->setTypeY(QCPItemPosition::ptAxisRectRatio);
     m_cursor->point2->setTypeY(QCPItemPosition::ptAxisRectRatio);
 
+    m_pinned = new QCPItemStraightLine(this);
+    m_pinned->setVisible(false);
+    m_pinned->point1->setTypeY(QCPItemPosition::ptAxisRectRatio);
+    m_pinned->point2->setTypeY(QCPItemPosition::ptAxisRectRatio);
+
     // The armed level, and where the crossing landed once it fires.
     m_triggerLine = new QCPItemStraightLine(this);
     m_triggerLine->setVisible(false);
@@ -626,7 +658,17 @@ void OpenMVChannelWaveform::leaveEvent(QEvent *event)
 
 double OpenMVChannelWaveform::viewSpan() const
 {
-    return qMax(1, m_samplesPerChunk) * (m_timeAxis ? m_period : 1.0) * WAVEFORM_VIEW_CHUNKS;
+    // A couple of chunks wide, but held between bounds at both ends. How
+    // much a publisher sends at a time describes its cadence, not how much
+    // of its signal is worth looking at: ten samples a chunk would give a
+    // window of dots, and sixteen hundred would cram a hundred and fifty
+    // cycles into the pane. Neither number has anything to do with the
+    // signal.
+    double samples = qBound(WAVEFORM_VIEW_MIN_SAMPLES,
+                            qMax(1, m_samplesPerChunk) * WAVEFORM_VIEW_CHUNKS,
+                            WAVEFORM_VIEW_MAX_SAMPLES);
+
+    return samples * (m_timeAxis ? m_period : 1.0);
 }
 
 void OpenMVChannelWaveform::applyTheme()
@@ -711,6 +753,15 @@ void OpenMVChannelWaveform::applyTheme()
     if(m_cursor)
     {
         m_cursor->setPen(QPen(line));
+    }
+
+    if(m_pinned)
+    {
+        // Solid where the live cursor is plain, so the fixed one reads as
+        // placed rather than as following the pointer.
+        QPen pen(text);
+        pen.setWidthF(1.0);
+        m_pinned->setPen(pen);
     }
 
     if(m_readout)
@@ -800,6 +851,7 @@ void OpenMVChannelWaveform::resetHistory(int series, double min, double max, dou
     m_tracers.clear();
 
     m_hiddenSeries.clear();
+    m_hasPinned = false; // its key belongs to the history being discarded
     m_stats.clear();
 
     for(int s = 0; s < series; s++)
@@ -821,8 +873,11 @@ void OpenMVChannelWaveform::resetHistory(int series, double min, double max, dou
         g->setName((s < names.size()) ? names.at(s) : fallback);
         g->addToLegend();
 
+        // Deliberately not given its graph yet: setGraph() positions the
+        // tracer immediately, and the graph it would be handed here has just
+        // been created and holds nothing. applyMode() attaches it once there
+        // are samples to sit on, and it stays hidden until then.
         QCPItemTracer *tracer = new QCPItemTracer(this);
-        tracer->setGraph(g);
         tracer->setInterpolating(false);
         tracer->setStyle(QCPItemTracer::tsCircle);
         tracer->setSize(5);
@@ -905,9 +960,38 @@ static void waveformFft(QVector<double> &re, QVector<double> &im)
     }
 }
 
-void OpenMVChannelWaveform::computeSpectrum()
+// The window a bin is multiplied by before the transform. Hann is the
+// sensible default; a rectangular window is only right when the capture is
+// already an exact number of cycles.
+static double windowGain(int window, int i, int n)
 {
     const double pi = 3.14159265358979323846;
+    double phase = (2.0 * pi * i) / (n - 1);
+
+    switch(window)
+    {
+        case 1: return 0.54 - (0.46 * qCos(phase));                            // Hamming
+        case 2: return 0.42 - (0.5 * qCos(phase)) + (0.08 * qCos(2.0 * phase)); // Blackman
+        case 3: return 1.0;                                                     // rectangular
+        default: return 0.5 * (1.0 - qCos(phase));                              // Hann
+    }
+}
+
+// Each window loses amplitude, and the reference a bin is measured against
+// has to lose the same amount or a full scale tone would not read 0 dB.
+static double windowCoherentGain(int window)
+{
+    switch(window)
+    {
+        case 1: return 0.54;
+        case 2: return 0.42;
+        case 3: return 1.0;
+        default: return 0.5;
+    }
+}
+
+void OpenMVChannelWaveform::computeSpectrum()
+{
 
     m_fftSize = 0;
     m_nyquist = m_timeAxis ? (0.5 / m_period) : 0.0;
@@ -947,28 +1031,60 @@ void OpenMVChannelWaveform::computeSpectrum()
 
         for(int i = 0; i < n; i++)
         {
-            // Hann window, with the offset removed first: a mic centred at
+            // Windowed, with the offset removed first: a mic centred at
             // 32768 would otherwise bury every tone under its own DC bin.
-            re[i] = (re.at(i) - mean) * (0.5 * (1.0 - qCos((2.0 * pi * i) / (n - 1))));
+            re[i] = (re.at(i) - mean) * windowGain(m_spectrumWindow, i, n);
         }
 
         waveformFft(re, im);
 
-        // Full scale is a sine spanning the record's display range; the
-        // window's coherent gain of 0.5 is part of the same reference, so a
-        // full-scale tone reads 0 dB.
-        double reference = ((m_max - m_min) * 0.5) * (n / 2.0) * 0.5;
+        // Full scale is a sine spanning the record's display range, and the
+        // window's coherent gain is part of the same reference, so a full
+        // scale tone reads 0 dB whichever window is in use.
+        double reference = ((m_max - m_min) * 0.5) * (n / 2.0)
+            * windowCoherentGain(m_spectrumWindow);
+        // Bin zero is what is left of the offset that was subtracted out, so
+        // it carries no signal -- and on a log axis it is the widest decade on
+        // screen. Start at the first bin that means something.
         int bins = n / 2;
-        QVector<double> keys(bins);
-        QVector<double> values(bins);
+        QVector<double> keys(bins - 1);
+        QVector<double> values(bins - 1);
 
-        for(int i = 0; i < bins; i++)
+        for(int i = 1; i < bins; i++)
         {
             double magnitude = qSqrt((re.at(i) * re.at(i)) + (im.at(i) * im.at(i)));
-            keys[i] = m_timeAxis ? ((i * 2.0 * m_nyquist) / n) : i;
-            values[i] = (magnitude > 0.0)
+            keys[i - 1] = m_timeAxis ? ((i * 2.0 * m_nyquist) / n) : i;
+            values[i - 1] = (magnitude > 0.0)
                 ? qMax(WAVEFORM_FLOOR_DB, 20.0 * std::log10(magnitude / reference))
                 : WAVEFORM_FLOOR_DB;
+        }
+
+        // Averaging settles a noisy floor; peak hold keeps the loudest bin
+        // seen, which is how a burst that has already passed stays readable.
+        if(m_spectrumAveraging || m_spectrumPeakHold)
+        {
+            if(m_spectrumHeld.size() != m_seriesCount)
+            {
+                m_spectrumHeld.resize(m_seriesCount);
+            }
+
+            QVector<double> &held = m_spectrumHeld[s];
+
+            if(held.size() != values.size())
+            {
+                held = values;
+            }
+            else
+            {
+                for(int i = 0; i < values.size(); i++)
+                {
+                    held[i] = m_spectrumPeakHold
+                        ? qMax(held.at(i), values.at(i))
+                        : (held.at(i) + (0.3 * (values.at(i) - held.at(i))));
+                }
+            }
+
+            values = held;
         }
 
         target->setData(keys, values, true);
@@ -983,7 +1099,17 @@ void OpenMVChannelWaveform::applyMode()
 
         graph(s)->setVisible(shown && (!m_spectrum));
         graph(m_seriesCount + s)->setVisible(shown && m_spectrum);
-        m_tracers.at(s)->setGraph(m_spectrum ? graph(m_seriesCount + s) : graph(s));
+
+        // Handing a tracer a graph repositions it there and then, and a
+        // tracer over a graph with no samples warns every time. Only retarget
+        // when it changes and there is something to sit on; updateReadout()
+        // keeps it hidden until then.
+        QCPGraph *target = m_spectrum ? graph(m_seriesCount + s) : graph(s);
+
+        if((m_tracers.at(s)->graph() != target) && (!target->data()->isEmpty()))
+        {
+            m_tracers.at(s)->setGraph(target);
+        }
     }
 
     if(m_spectrum)
@@ -993,9 +1119,27 @@ void OpenMVChannelWaveform::applyMode()
         xAxis->setLabel(QString());
         yAxis->setLabel(QString());
 
+        // A log axis spreads the low end out, which is where anything
+        // interesting sits in a signal with harmonics. Zero has no place on
+        // one, so the sweep starts at the first bin instead.
+        bool logarithmic = m_logFrequency && m_timeAxis && (m_fftSize > 0);
+
+        if(logarithmic != (xAxis->scaleType() == QCPAxis::stLogarithmic))
+        {
+            xAxis->setScaleType(logarithmic ? QCPAxis::stLogarithmic : QCPAxis::stLinear);
+            xAxis->setTicker(logarithmic
+                ? QSharedPointer<QCPAxisTicker>(new QCPAxisTickerLog)
+                : QSharedPointer<QCPAxisTicker>(new QCPAxisTicker));
+            xAxis->ticker()->setTickCount(3);
+        }
+
         if(m_following)
         {
-            xAxis->setRange(0.0, m_timeAxis ? m_nyquist : qMax(1, m_fftSize / 2));
+            double top = m_timeAxis ? m_nyquist : qMax(1, m_fftSize / 2);
+            // The window smears the removed offset across the first couple
+            // of bins, which on a log axis is a long ragged run-in to the
+            // noise floor. Open past it.
+            xAxis->setRange(logarithmic ? ((6.0 * m_nyquist) / m_fftSize) : 0.0, top);
             yAxis->setRange(WAVEFORM_FLOOR_DB, 0.0);
         }
     }
@@ -1003,6 +1147,7 @@ void OpenMVChannelWaveform::applyMode()
     {
         xAxis->setLabel(QString());
         yAxis->setLabel(QString());
+        xAxis->setScaleType(QCPAxis::stLinear);
 
         if(m_following)
         {
@@ -1010,7 +1155,19 @@ void OpenMVChannelWaveform::applyMode()
 
             if(m_hasData)
             {
-                xAxis->setRange(m_end - viewSpan(), m_end);
+                // Until there is a window's worth of history, show what there
+                // is rather than scrolling a mostly empty pane: a 100Hz record
+                // takes a couple of seconds to fill one, and watching a trace
+                // creep in from the right reads as a fault rather than as a
+                // graph that has not been running long.
+                double low = m_end - viewSpan();
+
+                if(!graph(0)->data()->isEmpty())
+                {
+                    low = qMax(low, graph(0)->data()->constBegin()->key);
+                }
+
+                xAxis->setRange((low < m_end) ? low : (m_end - viewSpan()), m_end);
             }
         }
     }
@@ -1053,6 +1210,7 @@ void OpenMVChannelWaveform::setSpectrum(bool enabled)
     }
 
     m_spectrum = enabled;
+    m_spectrumHeld.clear();
     // Whatever range the other domain was parked at means nothing here, and
     // the smoothed statistics now measure a different quantity.
     m_following = true;
@@ -1076,6 +1234,7 @@ void OpenMVChannelWaveform::setSettingsKey(const QString &key)
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
     m_autoScale = settings->value(plotAutoScaleKey(key), true).toBool();
+    m_history = settings->value(plotHistoryKey(key), WAVEFORM_HISTORY_MULTIPLE).toDouble();
 
     if(!m_autoScale)
     {
@@ -1089,8 +1248,12 @@ void OpenMVChannelWaveform::setSettingsKey(const QString &key)
 
 void OpenMVChannelWaveform::armTrigger(bool armed)
 {
+    // Discard any captured window and pick the live stream back up first --
+    // setPaused() disarms as part of going live, so arming has to come after
+    // it rather than before.
+    setPaused(false);
+
     m_triggerArmed = armed;
-    m_triggered = false;
     m_triggerHasPrevious = false;
 
     // Arming without a level having been set puts it in the middle of the
@@ -1101,9 +1264,6 @@ void OpenMVChannelWaveform::armTrigger(bool armed)
         m_triggerHasLevel = true;
     }
 
-    // Re-arming discards the captured window and picks the live stream back
-    // up; setPaused() clears the spliced history for us.
-    setPaused(false);
     updateTriggerItems();
     replot(QCustomPlot::rpQueuedReplot);
 }
@@ -1186,7 +1346,14 @@ void OpenMVChannelWaveform::setPaused(bool paused)
     // never happened. Resuming starts a new one instead.
     if(!m_paused)
     {
+        // Releasing a captured graph puts it back on the live stream, which
+        // means disarming: leaving it armed would let the very next crossing
+        // freeze it again, and it would never come back.
+        m_triggered = false;
+        m_triggerArmed = false;
+        m_triggerHasPrevious = false;
         resetHistory(m_seriesCount, m_min, m_max, m_period, m_seriesNames);
+        updateTriggerItems();
     }
 
     emit pausedChanged(m_paused);
@@ -1313,6 +1480,9 @@ void OpenMVChannelWaveform::showContextMenu(const QPoint &pos)
     scale->setChecked(m_autoScale);
     scale->setEnabled(!m_spectrum);
 
+    QAction *pin = menu.addAction(m_hasPinned ? Tr::tr("Clear Marker") : Tr::tr("Drop Marker Here"));
+    menu.addSeparator();
+
     QMenu *trigger = menu.addMenu(Tr::tr("Trigger"));
     trigger->setEnabled(!m_spectrum);
 
@@ -1347,6 +1517,51 @@ void OpenMVChannelWaveform::showContextMenu(const QPoint &pos)
         }
     }
 
+    QMenu *historyMenu = menu.addMenu(Tr::tr("History"));
+    QList<QAction *> histories;
+
+    for(double choice : WAVEFORM_HISTORY_CHOICES)
+    {
+        // Labelled by how much data that actually keeps, since a count of
+        // screens means nothing without knowing how wide one is.
+        double span = viewSpan() * choice;
+        QAction *history = historyMenu->addAction(m_timeAxis
+            ? ((span >= 60.0) ? Tr::tr("%1 min").arg(readoutNumber(span / 60.0, 2))
+                              : Tr::tr("%1 s").arg(readoutNumber(span, 2)))
+            : Tr::tr("%1 samples").arg(qRound(span)));
+        history->setCheckable(true);
+        history->setChecked(qFuzzyCompare(choice, m_history));
+        histories.append(history);
+    }
+
+    QMenu *spectrumMenu = menu.addMenu(Tr::tr("Spectrum"));
+    spectrumMenu->setEnabled(m_spectrum);
+
+    QAction *averaging = spectrumMenu->addAction(Tr::tr("Averaging"));
+    averaging->setCheckable(true);
+    averaging->setChecked(m_spectrumAveraging);
+
+    QAction *peakHold = spectrumMenu->addAction(Tr::tr("Peak Hold"));
+    peakHold->setCheckable(true);
+    peakHold->setChecked(m_spectrumPeakHold);
+
+    QAction *logFrequency = spectrumMenu->addAction(Tr::tr("Log Frequency"));
+    logFrequency->setCheckable(true);
+    logFrequency->setChecked(m_logFrequency);
+
+    spectrumMenu->addSeparator();
+    QList<QAction *> windows;
+    const QStringList windowNames = {Tr::tr("Hann"), Tr::tr("Hamming"),
+                                     Tr::tr("Blackman"), Tr::tr("Rectangular")};
+
+    for(int w = 0; w < windowNames.size(); w++)
+    {
+        QAction *window = spectrumMenu->addAction(windowNames.at(w));
+        window->setCheckable(true);
+        window->setChecked(w == m_spectrumWindow);
+        windows.append(window);
+    }
+
     menu.addSeparator();
     QAction *save = menu.addAction(Tr::tr("Save Image..."));
 
@@ -1355,6 +1570,54 @@ void OpenMVChannelWaveform::showContextMenu(const QPoint &pos)
     if(chosen == save)
     {
         saveImage();
+    }
+    else if((chosen == averaging) || (chosen == peakHold) || (chosen == logFrequency)
+         || windows.contains(chosen))
+    {
+        if(chosen == averaging)
+        {
+            m_spectrumAveraging = averaging->isChecked();
+            m_spectrumPeakHold = m_spectrumPeakHold && (!m_spectrumAveraging);
+        }
+        else if(chosen == peakHold)
+        {
+            // Holding the loudest bin and averaging towards the latest one
+            // are opposite answers to the same question.
+            m_spectrumPeakHold = peakHold->isChecked();
+            m_spectrumAveraging = m_spectrumAveraging && (!m_spectrumPeakHold);
+        }
+        else if(chosen == logFrequency)
+        {
+            m_logFrequency = logFrequency->isChecked();
+            m_following = true;
+        }
+        else
+        {
+            m_spectrumWindow = int(windows.indexOf(chosen));
+        }
+
+        m_spectrumHeld.clear();
+        computeSpectrum();
+        applyMode();
+        updateReadout();
+        replot(QCustomPlot::rpQueuedReplot);
+    }
+    else if(histories.contains(chosen))
+    {
+        m_history = WAVEFORM_HISTORY_CHOICES[histories.indexOf(chosen)];
+
+        if(!m_settingsKey.isEmpty())
+        {
+            ExtensionSystem::PluginManager::settings()
+                ->setValue(plotHistoryKey(m_settingsKey), m_history);
+        }
+    }
+    else if(chosen == pin)
+    {
+        m_hasPinned = !m_hasPinned;
+        m_pinnedKey = xAxis->pixelToCoord(pos.x());
+        updateReadout();
+        replot(QCustomPlot::rpQueuedReplot);
     }
     else if(chosen == arm)
     {
@@ -1402,9 +1665,23 @@ void OpenMVChannelWaveform::showContextMenu(const QPoint &pos)
     }
 }
 
+// The sample a graph holds at a key, or none when the key is off its ends.
+static bool valueAtKey(QCPGraph *graph, double key, double *value)
+{
+    QCPGraphDataContainer::const_iterator it = graph->data()->findBegin(key);
+
+    if(it == graph->data()->constEnd())
+    {
+        return false;
+    }
+
+    *value = it->value;
+    return true;
+}
+
 // Enough digits to tell neighbouring samples apart without turning the
 // readout into a wall of decimals.
-static QString readoutNumber(double value, int digits = 4)
+static QString readoutNumber(double value, int digits)
 {
     return QString::number(value, 'g', digits);
 }
@@ -1422,6 +1699,7 @@ void OpenMVChannelWaveform::updateReadout()
     if(!m_hasData)
     {
         m_cursor->setVisible(false);
+        m_pinned->setVisible(false);
         m_readout->setVisible(false);
         m_maxLabel->setVisible(false);
         m_minLabel->setVisible(false);
@@ -1453,14 +1731,34 @@ void OpenMVChannelWaveform::updateReadout()
                 : Tr::tr("n %1").arg(qRound(m_cursorKey)));
         }
 
+        if(m_hasPinned)
+        {
+            double delta = m_cursorKey - m_pinnedKey;
+
+            // The reciprocal is what the measurement is usually for: mark two
+            // peaks and read the rate between them.
+            lines.append((m_timeAxis && (!m_spectrum) && (!qFuzzyIsNull(delta)))
+                ? Tr::tr("dt %1 s  %2 Hz").arg(readoutNumber(delta),
+                    readoutNumber(1.0 / qAbs(delta)))
+                : Tr::tr("dx %1").arg(readoutNumber(delta)));
+        }
+
         for(int s = 0; s < m_seriesCount; s++)
         {
             QCPGraph *shown = m_spectrum ? graph(m_seriesCount + s) : graph(s);
 
-            m_tracers.at(s)->setGraphKey(m_cursorKey);
-            m_tracers.at(s)->setVisible(shown->visible());
+            // A tracer rides on its graph's samples, so it can only be shown
+            // once there are some: a cleared history (or a spectrum with too
+            // few samples to transform) leaves it with nothing to sit on, and
+            // it complains once per replot. The pointer can still be over the
+            // plot at that moment -- a modal dialog takes the mouse without
+            // ever sending a leave event.
+            bool populated = !shown->data()->isEmpty();
 
-            if(!shown->visible())
+            m_tracers.at(s)->setGraphKey(m_cursorKey);
+            m_tracers.at(s)->setVisible(shown->visible() && populated);
+
+            if((!shown->visible()) || (!populated))
             {
                 continue;
             }
@@ -1469,9 +1767,24 @@ void OpenMVChannelWaveform::updateReadout()
 
             if(it != shown->data()->constEnd())
             {
-                lines.append(m_spectrum
-                    ? Tr::tr("%1 %2 dB").arg(shown->name(), readoutNumber(it->value))
-                    : QStringLiteral("%1 %2").arg(shown->name(), readoutNumber(it->value)));
+                double pinnedValue = 0.0;
+
+                // With a cursor pinned the interesting number is the step
+                // between the two, not the value at one of them.
+                if(m_hasPinned && valueAtKey(shown, m_pinnedKey, &pinnedValue))
+                {
+                    lines.append(m_spectrum
+                        ? Tr::tr("%1 %2 dB  d %3").arg(shown->name(),
+                            readoutNumber(it->value), readoutNumber(it->value - pinnedValue))
+                        : Tr::tr("%1 %2  d %3").arg(shown->name(),
+                            readoutNumber(it->value), readoutNumber(it->value - pinnedValue)));
+                }
+                else
+                {
+                    lines.append(m_spectrum
+                        ? Tr::tr("%1 %2 dB").arg(shown->name(), readoutNumber(it->value))
+                        : QStringLiteral("%1 %2").arg(shown->name(), readoutNumber(it->value)));
+                }
             }
         }
     }
@@ -1567,6 +1880,10 @@ void OpenMVChannelWaveform::updateReadout()
         }
     }
 
+    m_pinned->setVisible(m_hasPinned);
+    m_pinned->point1->setCoords(m_pinnedKey, 0.0);
+    m_pinned->point2->setCoords(m_pinnedKey, 1.0);
+
     m_cursor->setVisible(m_hovering);
     m_cursor->point1->setCoords(m_cursorKey, 0.0);
     m_cursor->point2->setCoords(m_cursorKey, 1.0);
@@ -1649,7 +1966,7 @@ void OpenMVChannelWaveform::setData(const QByteArray &data, const QString &typec
     // Trimming to the usual depth while the user is looking through history
     // would delete the very samples they panned back to, so the window only
     // widens; the multiple still bounds how far memory can grow.
-    double keep = end - (viewSpan() * WAVEFORM_HISTORY_MULTIPLE
+    double keep = end - (viewSpan() * m_history
         * (m_following ? 1.0 : WAVEFORM_HELD_HISTORY_MULTIPLE));
 
     for(int s = 0; s < count; s++)
@@ -2656,10 +2973,19 @@ void OpenMVChannelsView::updateRecordButtonStates()
 // plus a gap column. Depth tracks are always named (their column count
 // makes bare value_N names useless); waveform tracks are named only in
 // multi-track files to keep the single-graph layout stable.
+
+void OpenMVChannelsView::setDevice(const QString &type, const QString &id)
+{
+    m_deviceType = type;
+    m_deviceId = id;
+}
+
 OpenMVChannelRecorder::Info OpenMVChannelsView::infoFor(const Record &record) const
 {
     OpenMVChannelRecorder::Info info;
     info.name = record.name;
+    info.deviceType = m_deviceType;
+    info.deviceName = m_deviceId;
     info.unit = record.rec.value(qint64(CBOR_KEY_U)).toString();
     info.min = record.rec.value(qint64(CBOR_KEY_MIN)).toDouble();
     info.max = record.rec.value(qint64(CBOR_KEY_MAX)).toDouble();
@@ -2757,6 +3083,26 @@ void OpenMVChannelsView::toggleRecording(int index)
     QString channelName = m_records.at(index).channelName;
     QString recordName = m_records.at(index).name;
 
+    // Decide what this record can be written as before offering anything, so
+    // a format is never picked and then refused.
+    OpenMVChannelRecorder::Info info = infoFor(m_records.at(index));
+
+    if(info.columns <= 0)
+    {
+        m_records[index].recordStatus->setText(Tr::tr("No data to record yet"));
+        return;
+    }
+
+    QList<OpenMVChannelRecorder::Format> formats =
+        OpenMVChannelRecorder::supportedFormats(info);
+
+    if(formats.isEmpty())
+    {
+        QMessageBox::critical(this, Tr::tr("Record Channel"),
+            OpenMVChannelRecorder::unsupportedReason(OpenMVChannelRecorder::Csv, info));
+        return;
+    }
+
     // Each graph remembers its own last save path ("OpenMV" matches the
     // plugin's SETTINGS_GROUP).
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
@@ -2767,13 +3113,17 @@ void OpenMVChannelsView::toggleRecording(int index)
 
     if(suggestion.isEmpty())
     {
-        suggestion = QDir(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation))
-            .filePath(recordFileName(recordName) + QStringLiteral(".csv"));
+        // Numbered, so the name already has the shape Edge Impulse reads a
+        // label and index out of; the dialog's name field is where a real
+        // label gets typed.
+        suggestion = numberedRecordPath(
+            QDir(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)),
+            recordFileName(recordName), OpenMVChannelRecorder::suffixFor(formats.first()));
     }
 
     QString filter;
     QString path = QFileDialog::getSaveFileName(this, Tr::tr("Record \"%1\" To").arg(recordName),
-        suggestion, OpenMVChannelRecorder::filterString(), &filter);
+        suggestion, OpenMVChannelRecorder::filterString(formats), &filter);
 
     if(path.isEmpty())
     {
@@ -2833,37 +3183,109 @@ void OpenMVChannelsView::toggleGroupRecording(int index)
         return;
     }
 
-    // The whole-channel recording remembers its own last save path,
-    // separate from the per-graph paths ("OpenMV" matches the plugin's
-    // SETTINGS_GROUP).
+    // Every graph writes its own file here, so what is being chosen is a
+    // folder to put them in -- and a folder dialog has nowhere to offer a file
+    // type, so the format is asked for separately. Both are remembered per
+    // channel ("OpenMV" matches the plugin's SETTINGS_GROUP).
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
-    const Utils::Key pathKey = Utils::keyFromString(
-        QStringLiteral("OpenMV/LastChannelRecordPath/%1/__all__").arg(channelName));
+    const Utils::Key folderKey = Utils::keyFromString(
+        QStringLiteral("OpenMV/LastChannelRecordFolder/%1").arg(channelName));
+    const Utils::Key formatKey = Utils::keyFromString(
+        QStringLiteral("OpenMV/LastChannelRecordFormat/%1").arg(channelName));
 
-    QString suggestion = settings->value(pathKey).toString();
+    QString suggestion = settings->value(folderKey).toString();
 
     if(suggestion.isEmpty())
     {
-        suggestion = QDir(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation))
-            .filePath(recordFileName(channelName) + QStringLiteral(".csv"));
+        suggestion = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
     }
 
-    QString filter;
-    QString path = QFileDialog::getSaveFileName(this, Tr::tr("Record \"%1\" To").arg(channelName),
-        suggestion, OpenMVChannelRecorder::filterString(), &filter);
+    QString folder = QFileDialog::getExistingDirectory(this,
+        Tr::tr("Record \"%1\" To Folder").arg(channelName), suggestion);
 
-    if(path.isEmpty())
+    if(folder.isEmpty())
     {
         return;
     }
 
-    settings->setValue(pathKey, path);
+    // Only formats every graph in the section can be written as: one choice
+    // covers them all, so a format that suits the mic but not the depth map
+    // has no business being on the list.
+    QList<OpenMVChannelRecorder::Format> formats;
+    bool first = true;
 
-    // The chosen name is a base: each graph gets its own file beside it,
-    // because graphs at different rates share no rows to be written into one.
-    OpenMVChannelRecorder::Format format = OpenMVChannelRecorder::formatForFilter(filter, path);
-    QFileInfo base(path);
-    QString stem = base.completeBaseName();
+    for(const Record &record : m_records)
+    {
+        if((record.channelName != channelName) || (!(record.waveform || record.depth)))
+        {
+            continue;
+        }
+
+        QList<OpenMVChannelRecorder::Format> supported =
+            OpenMVChannelRecorder::supportedFormats(infoFor(record));
+
+        if(first)
+        {
+            formats = supported;
+            first = false;
+        }
+        else
+        {
+            for(int f = formats.size() - 1; f >= 0; f--)
+            {
+                if(!supported.contains(formats.at(f)))
+                {
+                    formats.removeAt(f);
+                }
+            }
+        }
+    }
+
+    if(formats.isEmpty())
+    {
+        QMessageBox::critical(this, Tr::tr("Record Channel"),
+            Tr::tr("No format can hold every graph in \"%1\". "
+                   "Record them one at a time.").arg(channelName));
+        return;
+    }
+
+    // Both graphs of one take want the same label, and neither has a name
+    // field of its own here, so it is asked for once alongside the format.
+    QStringList names = OpenMVChannelRecorder::formatNames(formats);
+    const Utils::Key labelKey = Utils::keyFromString(
+        QStringLiteral("OpenMV/LastChannelRecordLabel/%1").arg(channelName));
+
+    QDialog dialog(this);
+    dialog.setWindowTitle(Tr::tr("Record \"%1\"").arg(channelName));
+
+    QComboBox *formatBox = new QComboBox;
+    formatBox->addItems(names);
+    formatBox->setCurrentIndex(qBound(0, settings->value(formatKey, 0).toInt(), names.size() - 1));
+
+    QLineEdit *labelEdit = new QLineEdit(settings->value(labelKey).toString());
+    labelEdit->setPlaceholderText(Tr::tr("optional, names the files for Edge Impulse"));
+
+    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    connect(buttons, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
+
+    QFormLayout *form = new QFormLayout(&dialog);
+    form->addRow(Tr::tr("Format:"), formatBox);
+    form->addRow(Tr::tr("Label:"), labelEdit);
+    form->addRow(buttons);
+
+    if(dialog.exec() != QDialog::Accepted)
+    {
+        return;
+    }
+
+    OpenMVChannelRecorder::Format format = formats.at(formatBox->currentIndex());
+    QString label = recordFileName(labelEdit->text().trimmed());
+
+    settings->setValue(folderKey, folder);
+    settings->setValue(formatKey, formatBox->currentIndex());
+    settings->setValue(labelKey, label);
+
     QString suffix = OpenMVChannelRecorder::suffixFor(format);
     int started = 0;
 
@@ -2886,8 +3308,12 @@ void OpenMVChannelsView::toggleGroupRecording(int index)
                 continue;
             }
 
-            QString file = base.dir().filePath(QStringLiteral("%1_%2.%3")
-                .arg(stem, recordFileName(record.name), suffix));
+            // Each file is named after the graph it holds, which is the only
+            // thing that distinguishes them, and numbered so a second capture
+            // into the same folder does not land on the first.
+            QString file = numberedRecordPath(QDir(folder), label.isEmpty()
+                ? recordFileName(record.name)
+                : (recordFileName(record.name) + QLatin1Char('_') + label), suffix);
 
             if(startRecorder(record, file, format, true))
             {

@@ -197,6 +197,13 @@ private:
     QString m_settingsKey;
 
     QCPItemStraightLine *m_cursor = Q_NULLPTR;
+
+    // A second cursor, left where the user put it, so the readout can measure
+    // the distance to the one under the pointer rather than only report a
+    // value at it.
+    QCPItemStraightLine *m_pinned = Q_NULLPTR;
+    bool m_hasPinned = false;
+    double m_pinnedKey = 0.0;
     QCPItemText *m_readout = Q_NULLPTR;
     QCPItemText *m_maxLabel = Q_NULLPTR; // display range, inset in the corners
     QCPItemText *m_minLabel = Q_NULLPTR;
@@ -204,13 +211,24 @@ private:
     bool m_hovering = false;
     bool m_showStats = false; // window statistics in the readout, off by default
     bool m_paused = false;
-    bool m_autoScale = true; // fit the axis to the data, not to min/max
+    bool m_autoScale = true;  // fit the axis to the data, not to min/max
+    double m_history = 50.0;  // how many screens of history to keep behind
     double m_cursorKey = 0.0;
 
     // Traces are held twice over: graph(s) is the time domain and
     // graph(seriesCount + s) its spectrum, so switching domains does not
     // discard the history the spectrum is computed from.
+    // How the spectrum is taken. A single unaveraged frame of a noisy signal
+    // jumps around too much to read a floor off, and a rectangular window
+    // smears every tone across its neighbours, so both are adjustable.
+    enum SpectrumWindow { HannWindow, HammingWindow, BlackmanWindow, RectangularWindow };
+
     bool m_spectrum = false;
+    int m_spectrumWindow = HannWindow;
+    bool m_spectrumAveraging = false;
+    bool m_spectrumPeakHold = false;
+    bool m_logFrequency = false;
+    QVector<QVector<double>> m_spectrumHeld; // averaged or held bins, per series
     double m_nyquist = 0.0;
     int m_fftSize = 0;
     QSet<int> m_hiddenSeries; // traces the user switched off in the legend
@@ -257,6 +275,10 @@ public slots:
     // message and drops all per-session state.
     void channelsData(const QVariantList &channels);
     void reset();
+
+    // The connected board, named in the files a recording writes: Edge
+    // Impulse groups samples by the device they came off.
+    void setDevice(const QString &type, const QString &id);
 
 signals:
 
@@ -326,6 +348,8 @@ private:
     QLabel *m_message;
     QVBoxLayout *m_contentLayout;
     QString m_schema;
+    QString m_deviceType;
+    QString m_deviceId;
     QList<Record> m_records;
     QList<Section> m_sections;
 

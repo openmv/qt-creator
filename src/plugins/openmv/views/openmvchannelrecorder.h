@@ -88,9 +88,15 @@ public:
         bool gap = true;     // a waveform's timed chunks, vs a depth frame
     };
 
-    // The save dialog's filter string, and the format a chosen filter or file
-    // suffix names.
-    static QString filterString();
+    // The formats that can actually describe this record, in enum order. The
+    // chooser is built from these, so a format is never offered that would
+    // then have to be refused.
+    static QList<Format> supportedFormats(const Info &info);
+
+    // The save dialog's filter string, the display names for a chooser that
+    // is not a file dialog, and the format a chosen filter or suffix names.
+    static QString filterString(const QList<Format> &formats);
+    static QStringList formatNames(const QList<Format> &formats);
     static Format formatForFilter(const QString &filter, const QString &path);
     static QString suffixFor(Format format);
 

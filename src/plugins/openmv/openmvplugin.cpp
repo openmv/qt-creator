@@ -2542,6 +2542,10 @@ void OpenMVPlugin::extensionsInitialized()
     // sends nothing on the wire for an empty read, so discovery is free).
     connect(m_iodevice, &OpenMVPluginIO::channelsData, this, [this] (const QVariantList &channels) {
         m_userChannelsPresent = !channels.isEmpty();
+
+        // Recording names the board in its files, and this is the one place
+        // that runs while channels are live.
+        m_channelsView->setDevice(m_boardType, m_boardId);
     });
 
     // Control changes in the Channels view write back to the script's

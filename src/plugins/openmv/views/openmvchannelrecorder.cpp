@@ -131,6 +131,14 @@ static QString recordBytesString(qint64 bytes)
     return Tr::tr("%L1 MB").arg(bytes / (1024.0 * 1024.0), 0, 'f', 1);
 }
 
+// The count is right aligned in the space reserved for it, which keeps the
+// header length -- and so every sample's offset -- unchanged.
+static QByteArray npyCountText(qint64 rows)
+{
+    QByteArray text = QByteArray::number(rows);
+    return QByteArray(qMax(0, 12 - int(text.size())), ' ') + text;
+}
+
 // Column names for a record's axes: what the sender called them, else the
 // record's name, numbered when there is more than one.
 static QStringList axisNames(const OpenMVChannelRecorder::Info &info)
@@ -156,36 +164,95 @@ static QStringList axisNames(const OpenMVChannelRecorder::Info &info)
 
 ///////////////////////////////////////////////////////////////////////////////
 
-QString OpenMVChannelRecorder::filterString()
+// A camera built with single-precision floats cannot hold 1/100, so a record
+// declaring 100 Hz publishes a period of 0.00999999977, and every timestamp
+// derived from it drifts: 30ms writes as 29.999999 and the interval Edge
+// Impulse infers comes out as 9.999999776. Snap the rate back to the whole
+// number of samples per second it is a hair away from being.
+static double snapPeriod(double period)
 {
-    // Edge Impulse ingests every format named here except the NumPy array,
-    // which is for people running their own pipeline.
-    return Tr::tr("CSV (*.csv);;"
-                  "WAV Audio (*.wav);;"
-                  "Edge Impulse JSON (*.json);;"
-                  "Edge Impulse CBOR (*.cbor);;"
-                  "NumPy Array (*.npy)");
+    if(period <= 0.0)
+    {
+        return period;
+    }
+
+    double rate = 1.0 / period;
+    double whole = qRound(rate);
+
+    return ((whole > 0.0) && (qAbs(rate - whole) < (whole * 1e-5))) ? (1.0 / whole) : period;
+}
+
+// Display name and file dialog filter for one format.
+static QString formatLabel(OpenMVChannelRecorder::Format format)
+{
+    switch(format)
+    {
+        case OpenMVChannelRecorder::Wav: return Tr::tr("WAV Audio");
+        case OpenMVChannelRecorder::JsonEdgeImpulse: return Tr::tr("Edge Impulse JSON");
+        case OpenMVChannelRecorder::CborEdgeImpulse: return Tr::tr("Edge Impulse CBOR");
+        case OpenMVChannelRecorder::Npy: return Tr::tr("NumPy Array");
+        default: return Tr::tr("CSV");
+    }
+}
+
+QList<OpenMVChannelRecorder::Format> OpenMVChannelRecorder::supportedFormats(const Info &info)
+{
+    QList<Format> formats;
+
+    for(Format format : {Csv, Wav, JsonEdgeImpulse, CborEdgeImpulse, Npy})
+    {
+        if(unsupportedReason(format, info).isEmpty())
+        {
+            formats.append(format);
+        }
+    }
+
+    return formats;
+}
+
+QStringList OpenMVChannelRecorder::formatNames(const QList<Format> &formats)
+{
+    QStringList names;
+
+    for(Format format : formats)
+    {
+        names.append(formatLabel(format));
+    }
+
+    return names;
+}
+
+QString OpenMVChannelRecorder::filterString(const QList<Format> &formats)
+{
+    QStringList filters;
+
+    for(Format format : formats)
+    {
+        filters.append(QStringLiteral("%1 (*.%2)").arg(formatLabel(format), suffixFor(format)));
+    }
+
+    return filters.join(QStringLiteral(";;"));
 }
 
 OpenMVChannelRecorder::Format OpenMVChannelRecorder::formatForFilter(const QString &filter,
                                                                     const QString &path)
 {
-    if(filter.startsWith(QStringLiteral("WAV")))
+    if(filter.startsWith(formatLabel(Wav)))
     {
         return Wav;
     }
 
-    if(filter.startsWith(QStringLiteral("Edge Impulse JSON")))
+    if(filter.startsWith(formatLabel(JsonEdgeImpulse)))
     {
         return JsonEdgeImpulse;
     }
 
-    if(filter.startsWith(QStringLiteral("Edge Impulse CBOR")))
+    if(filter.startsWith(formatLabel(CborEdgeImpulse)))
     {
         return CborEdgeImpulse;
     }
 
-    if(filter.startsWith(QStringLiteral("NumPy")))
+    if(filter.startsWith(formatLabel(Npy)))
     {
         return Npy;
     }
@@ -263,6 +330,7 @@ OpenMVChannelRecorder::OpenMVChannelRecorder(const QString &path, Format format,
     m_info(info)
 {
     m_info.columns = qMax(1, m_info.columns);
+    m_info.period = snapPeriod(m_info.period);
     openPart();
 }
 
@@ -381,8 +449,10 @@ bool OpenMVChannelRecorder::writeHeader()
             QByteArray dict = "{'descr': '" + QByteArray(dtype)
                 + "', 'fortran_order': False, 'shape': (";
             m_countOffset = 10 + dict.size();
-            dict += QByteArray(12, ' ');
-            dict += "0, " + QByteArray::number(m_info.columns) + "), }";
+            // A count of the same width as the one written on close, so the
+            // header stays valid even if the file is read before then.
+            dict += npyCountText(0);
+            dict += ", " + QByteArray::number(m_info.columns) + "), }";
 
             // The whole header, magic included, pads to a 64 byte boundary.
             int total = 10 + dict.size() + 1;
@@ -403,14 +473,6 @@ bool OpenMVChannelRecorder::writeHeader()
 
     m_headerBytes = header.size();
     return header.isEmpty() ? true : writeBlock(header);
-}
-
-// The count is right aligned in the space reserved for it, which keeps the
-// header length -- and so every sample's offset -- unchanged.
-static QByteArray npyCountText(qint64 rows)
-{
-    QByteArray text = QByteArray::number(rows);
-    return QByteArray(qMax(0, 12 - int(text.size())), ' ') + text;
 }
 
 bool OpenMVChannelRecorder::finishPart()
@@ -603,8 +665,7 @@ bool OpenMVChannelRecorder::append(const QByteArray &data, const QString &typeco
     {
         case Csv:
         {
-            if(!writeBlock(csvRows(data, code, rows, actual,
-                                   (period > 0.0) ? period : m_info.period)))
+            if(!writeBlock(csvRows(data, code, rows, actual, m_info.period)))
             {
                 return false;
             }
@@ -695,7 +756,6 @@ bool OpenMVChannelRecorder::append(const QByteArray &data, const QString &typeco
                 }
             }
 
-            m_totalBytes = qint64(m_values.size()) * 8;
             break;
         }
     }
@@ -721,9 +781,13 @@ bool OpenMVChannelRecorder::append(const QByteArray &data, const QString &typeco
 
 QString OpenMVChannelRecorder::status() const
 {
+    // A format still holding its samples in memory has nothing on disk to
+    // measure, so its size is estimated from what it is holding.
+    qint64 bytes = m_totalBytes + (qint64(m_values.size()) * 8);
+
     return m_part
-        ? Tr::tr("%L1 samples (%L2) - part %L3").arg(m_totalRows).arg(recordBytesString(m_totalBytes)).arg(m_part + 1)
-        : Tr::tr("%L1 samples (%L2)").arg(m_totalRows).arg(recordBytesString(m_totalBytes));
+        ? Tr::tr("%L1 samples (%L2) - part %L3").arg(m_totalRows).arg(recordBytesString(bytes)).arg(m_part + 1)
+        : Tr::tr("%L1 samples (%L2)").arg(m_totalRows).arg(recordBytesString(bytes));
 }
 
 } // namespace Internal
