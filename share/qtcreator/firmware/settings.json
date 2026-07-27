@@ -1984,6 +1984,16 @@
             "main" : false
         },
         {
+            "name" : "VB1943",
+            "id" : "0x1943",
+            "main" : false
+        },
+        {
+            "name" : "VB5943",
+            "id" : "0x5943",
+            "main" : false
+        },
+        {
             "name" : "SoftCSI",
             "id" : "0x50F7",
             "main" : false,

@@ -3665,7 +3665,9 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                         if (!found)
                         {
-                            sensorType = Tr::tr("Unknown");
+                            // Name the reported chip id so an unrecognized
+                            // sensor can be identified and added to the table.
+                            sensorType = Tr::tr("Unknown (0x%1)").arg(id, 0, 16);
                         }
 
                         QPair<QString, bool> pair(sensorType, hidden);
