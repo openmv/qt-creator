@@ -380,15 +380,18 @@ class _ScriptChannel:
                     # Run-while-running replaces the current script (matching the USB path): kill
                     # the running one; the loop then picks up _pending. Without this, the upload
                     # sat latent in _pending and surprise-ran after the NEXT Stop.
-                    micropython.schedule(micropython.keyboard_interrupt, 0)
+                    micropython.schedule(micropython.kbd_intr)
         elif cmd == _STDIN_STOP:
             self._pending = None   # a stop also cancels anything queued to run next
             if self._running:
-                # Deliver a KeyboardInterrupt to the foreground script. The scheduled callback is a
-                # C function: it sets the VM's pending exception and runs no Python bytecode after,
-                # so it survives the protected scheduler call and fires in the script's own frame,
-                # where _run_one catches it. (A Python callback that raises dies in the scheduler.)
-                micropython.schedule(micropython.keyboard_interrupt, 0)
+                # Deliver a KeyboardInterrupt to the foreground script. schedule(kbd_intr) with
+                # EXACTLY one argument is a special case (micropython PR 19467): it queues a C
+                # sched node that sets the VM's pending exception, which fires in the script's
+                # own frame, where _run_one catches it. Passing a second argument would instead
+                # schedule a real deferred kbd_intr(arg) call -- silently reprogramming the
+                # interrupt char, never raising. (A Python callback that raises dies in the
+                # scheduler.)
+                micropython.schedule(micropython.kbd_intr)
         elif cmd == _STDIN_RESET:
             self._buf = bytearray()
         return r
