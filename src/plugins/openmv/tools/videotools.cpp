@@ -732,6 +732,60 @@ static QString getOutputFormats()
     }
 }
 
+// The bundled FFmpeg builds are not uniform: the Windows, linux-x86_64 and
+// linux-arm64 ones are LGPL (configured --disable-libx264, so libopenh264 is
+// the only H.264 encoder) while the linux-x86, linux-armhf and linux-armel
+// static ones ship libx264 and no libopenh264. Ask the binary we are about to
+// run which one it has instead of guessing, and use that encoder's quality
+// knob -- libopenh264 has no -crf, it has its own quality rate control mode.
+// Cached per binary because the answer cannot change while the IDE is running.
+static QStringList h264EncoderArgs(const Utils::FilePath &binary)
+{
+    static QHash<QString, QStringList> cache;
+    const QString key = binary.toString();
+
+    if(cache.contains(key))
+    {
+        return cache.value(key);
+    }
+
+    Utils::Process process;
+    std::chrono::seconds timeout(10);
+    process.setProcessChannelMode(QProcess::MergedChannels);
+    process.setCommand(Utils::CommandLine(binary, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-encoders")));
+    process.runBlocking(timeout, Utils::EventLoopMode::On);
+
+    const QString encoders = (process.result() == Utils::ProcessResult::FinishedWithSuccess)
+        ? process.stdOut() : QString();
+
+    // Match the encoder table's own column (" V....D libx264   ...") rather
+    // than a bare substring, which "--disable-libx264" in a leaked banner line
+    // would satisfy just as well.
+    const auto has = [&encoders] (const QString &name) {
+        return QRegularExpression(QString(QStringLiteral("^\\s*V\\S*\\s+%1\\s")).arg(name),
+                                  QRegularExpression::MultilineOption).match(encoders).hasMatch();
+    };
+
+    QStringList args;
+
+    if(has(QStringLiteral("libx264")))
+    {
+        args << QStringLiteral("-c:v") << QStringLiteral("libx264")
+             << QStringLiteral("-preset") << QStringLiteral("medium")
+             << QStringLiteral("-crf") << QStringLiteral("18");
+    }
+    else if(has(QStringLiteral("libopenh264")))
+    {
+        args << QStringLiteral("-c:v") << QStringLiteral("libopenh264")
+             << QStringLiteral("-rc_mode") << QStringLiteral("quality");
+    }
+    // Otherwise leave the codec unnamed: a conversion that produces a less
+    // portable file still beats one that fails outright.
+
+    cache.insert(key, args);
+    return args;
+}
+
 static bool convertVideoFile(const QString &dst, const QString &src, int scale, int skip)
 {
     QString newSrc = src;
@@ -826,16 +880,6 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     });
 
     Utils::FilePath binary;
-    QStringList args = QStringList() <<
-                       QStringLiteral("-hide_banner") <<
-                       QStringLiteral("-y") <<
-                       QStringLiteral("-i") <<
-                       QDir::toNativeSeparators(QDir::cleanPath(newSrc)) <<
-                       QStringLiteral("-q:v") <<
-                       QStringLiteral("1");
-    if(scale != -1) args = args << QStringLiteral("-vf") << QString(QStringLiteral("scale=%1:-1")).arg(scale);
-    if(mjpeg) args = args << QStringLiteral("-f") << QStringLiteral("avi");
-    args = args << QDir::toNativeSeparators(QDir::cleanPath(newDst));
 
     if(Utils::HostOsInfo::isWindowsHost())
     {
@@ -884,6 +928,46 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
         delete dialog;
         return false;
     }
+
+    // Naming no codec leaves FFmpeg to the muxer's default, which for .mp4 is
+    // MPEG-4 Part 2 once libx264 is absent -- a valid file that no browser can
+    // decode, so it is rejected by anything that reads video in one (Roboflow,
+    // and the <video> preview in most annotation tools). Ask for H.264 by name
+    // for the containers that expect it. yuv420p because the MJPEG input
+    // decodes to yuvj420p, which several players will not touch, and
+    // +faststart so playback can begin before the whole file has downloaded.
+    const QString dstSuffix = QFileInfo(newDst).suffix().toLower();
+    const bool faststart = (dstSuffix == QStringLiteral("mp4"))
+                        || (dstSuffix == QStringLiteral("mov"))
+                        || (dstSuffix == QStringLiteral("m4v"));
+    const bool h264 = faststart || (dstSuffix == QStringLiteral("mkv"));
+
+    QStringList args = QStringList() <<
+                       QStringLiteral("-hide_banner") <<
+                       QStringLiteral("-y") <<
+                       QStringLiteral("-i") <<
+                       QDir::toNativeSeparators(QDir::cleanPath(newSrc));
+
+    if(h264)
+    {
+        args = args << h264EncoderArgs(binary) << QStringLiteral("-pix_fmt") << QStringLiteral("yuv420p");
+
+        if(faststart) args = args << QStringLiteral("-movflags") << QStringLiteral("+faststart");
+    }
+    else
+    {
+        args = args << QStringLiteral("-q:v") << QStringLiteral("1");
+    }
+
+    // H.264 cannot encode odd dimensions: scale=%1:-1 lands on an odd height
+    // for plenty of aspect ratios, and an odd-sized source (a cropped ROI)
+    // fails even when it is not being scaled at all. -2 rounds the computed
+    // side to even; the trunc() pair is a no-op for the already-even sizes.
+    if(scale != -1) args = args << QStringLiteral("-vf") << QString(QStringLiteral("scale=%1:%2")).arg(scale).arg(h264 ? QStringLiteral("-2") : QStringLiteral("-1"));
+    else if(h264) args = args << QStringLiteral("-vf") << QStringLiteral("scale=trunc(iw/2)*2:trunc(ih/2)*2");
+
+    if(mjpeg) args = args << QStringLiteral("-f") << QStringLiteral("avi");
+    args = args << QDir::toNativeSeparators(QDir::cleanPath(newDst));
 
     QString command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
