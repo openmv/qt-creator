@@ -65,6 +65,7 @@
 
 #define TIME_SCALE          (1000)
 #define RATE_SNAP_PERCENT   (2)
+#define H264_GOP_SIZE       (30)
 
 namespace OpenMV {
 namespace Internal {
@@ -808,8 +809,13 @@ static QStringList h264EncoderArgs(const Utils::FilePath &binary)
     }
     else if(has(QStringLiteral("libopenh264")))
     {
+        // Left to itself the wrapper asks for constrained baseline, which
+        // OpenH264 refuses per layer -- it warns and drops to an unspecified
+        // profile. Naming high both silences that and codes smaller, and every
+        // H.264 decoder that matters has handled high profile for years.
         args << QStringLiteral("-c:v") << QStringLiteral("libopenh264")
-             << QStringLiteral("-rc_mode") << QStringLiteral("quality");
+             << QStringLiteral("-rc_mode") << QStringLiteral("quality")
+             << QStringLiteral("-profile:v") << QStringLiteral("high");
     }
     // Otherwise leave the codec unnamed: a conversion that produces a less
     // portable file still beats one that fails outright.
@@ -982,7 +988,19 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
 
     if(h264)
     {
-        args = args << h264EncoderArgs(binary) << QStringLiteral("-pix_fmt") << QStringLiteral("yuv420p");
+        // Both H.264 encoders override FFmpeg's generic GOP default with one of
+        // their own -- libx264 with 250 frames, libopenh264 with effectively no
+        // periodic key frame at all, so a whole recording codes as a single GOP.
+        // That plays fine but cannot be seeked: reaching frame N means decoding
+        // every frame before it, which is why extracting a training set out of
+        // one times out partway through. The MPEG-4 Part 2 output this replaced
+        // was seekable by accident, having taken the generic default, so pin the
+        // interval rather than inherit it. One key frame per H264_GOP_SIZE frames
+        // caps the decode behind any seek at that many frames regardless of the
+        // capture rate, and costs about a quarter of the file size.
+        args = args << h264EncoderArgs(binary)
+                    << QStringLiteral("-g") << QString::number(H264_GOP_SIZE)
+                    << QStringLiteral("-pix_fmt") << QStringLiteral("yuv420p");
 
         if(faststart) args = args << QStringLiteral("-movflags") << QStringLiteral("+faststart");
     }
