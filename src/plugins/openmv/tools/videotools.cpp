@@ -64,6 +64,7 @@
 #define serializeData(fp, data, size) fp.append(data, size)
 
 #define TIME_SCALE          (1000)
+#define RATE_SNAP_PERCENT   (2)
 
 namespace OpenMV {
 namespace Internal {
@@ -127,12 +128,43 @@ static QByteArray jpgToBytes(const QImage &image)
     return out;
 }
 
+// avgMicros is the mean inter-frame delta the camera actually achieved, so the
+// rate it implies lands on values like 30.29 fps rather than a round number.
+// That is faithful to the capture, but it propagates into every file converted
+// from the recording, and tools downstream index frames against the declared
+// rate -- a fractional one puts frame N at a timestamp that drifts away from
+// the N/30 the rest of the world assumes. Snap to the nearest whole frame rate
+// when the measurement is already within RATE_SNAP_PERCENT of it. This re-tags
+// the header only: no frame is added, dropped or reordered, so frame indices
+// still map one to one onto captured frames and nothing but the playback clock
+// moves, by less than that percent. A rate nowhere near a whole number -- a
+// deliberate slow time lapse -- is left exactly as measured rather than
+// distorted to fit.
+static uint32_t snapRateToWholeFps(uint32_t rate)
+{
+    // rate is in TIME_SCALE units, so a whole fps is a multiple of TIME_SCALE.
+    uint32_t nearest = ((rate + (TIME_SCALE / 2)) / TIME_SCALE) * TIME_SCALE;
+
+    if(!nearest)
+    {
+        return rate; // Under half a frame per second, so there is nothing to snap to.
+    }
+
+    uint32_t delta = (rate > nearest) ? (rate - nearest) : (nearest - rate);
+
+    return ((((uint64_t) delta) * 100) <= (((uint64_t) nearest) * RATE_SNAP_PERCENT)) ? nearest : rate;
+}
+
 static QByteArray getMJPEGHeader(int width, int height, uint32_t frames, uint32_t bytes, uint32_t avgMicros)
 {
     // size of all mjpeg headers and jpegs.
     uint32_t datasize = (frames * 8) + bytes;
     // frames_per_second == rate / scale
-    uint32_t rate = avgMicros ? ((1000000 * TIME_SCALE) / avgMicros) : 0;
+    uint32_t rate = avgMicros ? snapRateToWholeFps((uint32_t) ((((uint64_t) 1000000 * TIME_SCALE) + (avgMicros / 2)) / avgMicros)) : 0;
+    // Derive this back from the rate instead of using avgMicros directly, so a
+    // snapped rate does not leave the two ways this header states the frame
+    // period contradicting each other.
+    uint32_t micros = rate ? ((uint32_t) (((uint64_t) 1000000 * TIME_SCALE) / rate)) : avgMicros;
     // video length == frames / frames_per_second
     uint32_t length = rate ? ((((uint64_t) frames) * TIME_SCALE) / rate) : 0;
 
@@ -148,7 +180,7 @@ static QByteArray getMJPEGHeader(int width, int height, uint32_t frames, uint32_
 
     serializeData(fp, "avih", 4); // FOURCC fcc; - 6
     serializeLong(fp, 56); // DWORD cb; - 7
-    serializeLong(fp, avgMicros); // DWORD dwMicroSecPerFrame; micros - updated on close - 8
+    serializeLong(fp, micros); // DWORD dwMicroSecPerFrame; micros - updated on close - 8
     serializeLong(fp, frames ? ((((uint64_t) datasize) * avgMicros) / frames) : 0); // DWORD dwMaxBytesPerSec; updated on close - 9
     serializeLong(fp, 4); // DWORD dwPaddingGranularity; - 10
     serializeLong(fp, 0); // DWORD dwFlags; - 11
