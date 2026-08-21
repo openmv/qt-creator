@@ -1277,9 +1277,40 @@ void IconListField::setup(JsonFieldPage *page, const QString &name)
     });
 }
 
+// OPENMV-DIFF //
+// initializeData()/selectRow() mutate the selection while the wizard page
+// is still hidden (QWizard::initializePage runs before the page is shown);
+// the base handlers then emit Cocoa a11y notifications that crash
+// (NSRangeException) against an unbuilt element cache. Skip them while
+// hidden - the selection state itself is kept in the selection model and
+// the view repaints fully on show.
+class IconListView final : public QListView
+{
+public:
+    using QListView::QListView;
+
+protected:
+    void currentChanged(const QModelIndex &current, const QModelIndex &previous) final
+    {
+        if (!isVisible())
+            return;
+        QListView::currentChanged(current, previous);
+    }
+    void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected) final
+    {
+        if (!isVisible())
+            return;
+        QListView::selectionChanged(selected, deselected);
+    }
+};
+// OPENMV-DIFF //
+
 QWidget *IconListField::createWidget(const QString & /*displayName*/, JsonFieldPage * /*page*/)
 {
-    const auto listView = new QListView;
+    // OPENMV-DIFF //
+    // const auto listView = new QListView;
+    const auto listView = new IconListView;
+    // OPENMV-DIFF //
     QObject::connect(listView->selectionModel(), &QItemSelectionModel::currentChanged,
                      [this] { setHasUserChanges(); });
     return listView;

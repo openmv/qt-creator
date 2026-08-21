@@ -339,7 +339,13 @@ void ProjectTreeWidget::rowsInserted(const QModelIndex &parent, int start, int e
             continue;
         const int renameIdx = m_delayedRename.indexOf(n->filePath());
         if (renameIdx != -1) {
-            m_view->setCurrentIndex(idx);
+            // OPENMV-DIFF //
+            // m_view->setCurrentIndex(idx);
+            // Async build-system rescans can land while the tree is hidden;
+            // selecting then trips the macOS Cocoa a11y bridge.
+            if (m_view->isVisible())
+                m_view->setCurrentIndex(idx);
+            // OPENMV-DIFF //
             m_delayedRename.removeAt(renameIdx);
         }
     }
@@ -474,10 +480,21 @@ void ProjectTreeWidget::renamed(const FilePath &oldPath, const FilePath &newPath
     if (!currentNode() || currentNode()->filePath() != newPath) {
         // try to find the node
         Node *node = nodeForFile(newPath);
-        if (node)
-            m_view->setCurrentIndex(m_model->indexForNode(node));
-        else
+        // OPENMV-DIFF //
+        // if (node)
+        //     m_view->setCurrentIndex(m_model->indexForNode(node));
+        // else
+        //     m_delayedRename << newPath;
+        // renamed() fires on every registered ProjectTreeWidget, including
+        // hidden sidebars; selecting on a hidden tree trips the macOS Cocoa
+        // a11y bridge (NSRangeException).
+        if (node) {
+            if (m_view->isVisible())
+                m_view->setCurrentIndex(m_model->indexForNode(node));
+        } else {
             m_delayedRename << newPath;
+        }
+        // OPENMV-DIFF //
     }
 }
 

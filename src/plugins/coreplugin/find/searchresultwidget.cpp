@@ -22,6 +22,9 @@
 #include <QFrame>
 #include <QLabel>
 #include <QLineEdit>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QToolButton>
 #include <QCheckBox>
 #include <QVBoxLayout>
@@ -242,9 +245,19 @@ void SearchResultWidget::addResults(const SearchResultItems &items, SearchResult
             }
         }
 
-        m_searchResultTreeView->selectionModel()
-            ->select(m_searchResultTreeView->model()->index(0, 0, QModelIndex()),
-                     QItemSelectionModel::Select);
+        // OPENMV-DIFF //
+        // m_searchResultTreeView->selectionModel()
+        //     ->select(m_searchResultTreeView->model()->index(0, 0, QModelIndex()),
+        //              QItemSelectionModel::Select);
+        // Results stream in asynchronously; selecting on the hidden results
+        // tree (pane closed/other tab current) trips the macOS Cocoa a11y
+        // bridge (NSRangeException). goToNext falls back to the first row
+        // when nothing is selected, so skipping is safe.
+        if (m_searchResultTreeView->isVisible())
+            m_searchResultTreeView->selectionModel()
+                ->select(m_searchResultTreeView->model()->index(0, 0, QModelIndex()),
+                         QItemSelectionModel::Select);
+        // OPENMV-DIFF //
         emit navigateStateChanged();
     } else if (m_count <= SEARCHRESULT_WARNING_LIMIT) {
         return;
@@ -302,10 +315,19 @@ void SearchResultWidget::setShowReplaceUI(bool visible)
     m_searchResultTreeView->model()->setShowReplaceUI(visible);
     m_topReplaceWidget->setVisible(visible);
     m_isShowingReplaceUI = visible;
+    // OPENMV-DIFF //
+    // if (visible)
+    //     m_replaceTextEdit->setFocus();
+    // else
+    //     m_searchResultTreeView->setFocus();
+    // Runs from the constructor and pre-popup paths; focusing the hidden
+    // results tree makes the eventual focus-in auto-assign a current index
+    // mid-show and trips the macOS Cocoa a11y bridge (NSRangeException).
     if (visible)
         m_replaceTextEdit->setFocus();
-    else
+    else if (m_searchResultTreeView->isVisible())
         m_searchResultTreeView->setFocus();
+    // OPENMV-DIFF //
 }
 
 bool SearchResultWidget::hasFocusInternally() const
@@ -319,8 +341,20 @@ void SearchResultWidget::setFocusInternally()
         return;
     if (m_isShowingReplaceUI && (!focusWidget() || focusWidget() == m_replaceTextEdit))
         m_replaceTextEdit->setFocus();
-    else
+    // OPENMV-DIFF //
+    // else
+    //     m_searchResultTreeView->setFocus();
+    // Called before the pane pops up; defer the tree focus until it is
+    // visible so the focus-in does not auto-assign a current index on a
+    // hidden/mid-activation view (macOS Cocoa a11y NSRangeException).
+    else if (m_searchResultTreeView->isVisible())
         m_searchResultTreeView->setFocus();
+    else
+        QTimer::singleShot(0, m_searchResultTreeView, [this] {
+            if (m_searchResultTreeView->isVisible())
+                m_searchResultTreeView->setFocus();
+        });
+    // OPENMV-DIFF //
 }
 
 bool SearchResultWidget::canFocusInternally() const

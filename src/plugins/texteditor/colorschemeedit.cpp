@@ -16,6 +16,9 @@
 #include <QComboBox>
 #include <QDoubleSpinBox>
 #include <QLabel>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QListView>
 #include <QPushButton>
 #include <QSpacerItem>
@@ -273,8 +276,23 @@ void ColorSchemeEdit::setFormatDescriptions(const FormatDescriptions &descriptio
     m_descriptions = descriptions;
     m_formatsModel->setFormatDescriptions(&m_descriptions);
 
-    if (!m_descriptions.empty())
-        m_itemList->setCurrentIndex(m_formatsModel->index(0));
+    // OPENMV-DIFF //
+    // if (!m_descriptions.empty())
+    //     m_itemList->setCurrentIndex(m_formatsModel->index(0));
+    // Called from the options-page constructor before the widget is shown;
+    // selecting on the hidden list trips the macOS Cocoa a11y bridge
+    // (NSRangeException).
+    if (!m_descriptions.empty()) {
+        if (m_itemList->isVisible()) {
+            m_itemList->setCurrentIndex(m_formatsModel->index(0));
+        } else {
+            QTimer::singleShot(0, m_itemList, [this] {
+                if (m_itemList->isVisible() && !m_itemList->currentIndex().isValid())
+                    m_itemList->setCurrentIndex(m_formatsModel->index(0));
+            });
+        }
+    }
+    // OPENMV-DIFF //
 }
 
 void ColorSchemeEdit::setBaseFont(const QFont &font)

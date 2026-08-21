@@ -149,14 +149,26 @@ void CompletingTextEdit::keyPressEvent(QKeyEvent *e)
         return;
     }
 
-    if (newCompletionPrefix != completer()->completionPrefix()) {
+    // OPENMV-DIFF //
+    // if (newCompletionPrefix != completer()->completionPrefix()) {
+    //     completer()->setCompletionPrefix(newCompletionPrefix);
+    //     completer()->popup()->setCurrentIndex(completer()->completionModel()->index(0, 0));
+    // }
+    // Select the first entry only after complete() has shown the popup -
+    // selecting on the hidden popup view trips the macOS Cocoa a11y bridge
+    // (NSRangeException).
+    const bool prefixChanged = newCompletionPrefix != completer()->completionPrefix();
+    if (prefixChanged)
         completer()->setCompletionPrefix(newCompletionPrefix);
-        completer()->popup()->setCurrentIndex(completer()->completionModel()->index(0, 0));
-    }
+    // OPENMV-DIFF //
     QRect cr = cursorRect();
     cr.setWidth(completer()->popup()->sizeHintForColumn(0)
                 + completer()->popup()->verticalScrollBar()->sizeHint().width());
     completer()->complete(cr); // popup it up!
+    // OPENMV-DIFF //
+    if (prefixChanged && completer()->popup()->isVisible())
+        completer()->popup()->setCurrentIndex(completer()->completionModel()->index(0, 0));
+    // OPENMV-DIFF //
 }
 
 void CompletingTextEdit::focusInEvent(QFocusEvent *e)

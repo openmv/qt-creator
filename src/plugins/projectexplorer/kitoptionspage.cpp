@@ -23,6 +23,9 @@
 #include <QHeaderView>
 #include <QItemSelectionModel>
 #include <QPushButton>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QTreeView>
 #include <QVBoxLayout>
 
@@ -540,7 +543,15 @@ KitOptionsPageWidget::KitOptionsPageWidget()
 
     m_kitsView->setModel(m_sortModel);
     m_kitsView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
-    m_kitsView->expandAll();
+    // OPENMV-DIFF //
+    // m_kitsView->expandAll();
+    // Deferred: the options-page widget is constructed hidden; expanding a
+    // hidden tree trips the macOS Cocoa a11y bridge (NSRangeException).
+    QTimer::singleShot(0, m_kitsView, [this] {
+        if (m_kitsView->isVisible())
+            m_kitsView->expandAll();
+    });
+    // OPENMV-DIFF //
     m_kitsView->setSortingEnabled(true);
     m_kitsView->sortByColumn(0, Qt::AscendingOrder);
 
@@ -586,6 +597,17 @@ KitOptionsPageWidget::KitOptionsPageWidget()
 
 void KitOptionsPageWidget::scrollToSelectedKit()
 {
+    // OPENMV-DIFF //
+    // Called from the constructor before the page is shown; selecting on a
+    // hidden tree trips the macOS Cocoa a11y bridge (NSRangeException).
+    if (!m_kitsView->isVisible()) {
+        QTimer::singleShot(0, m_kitsView, [this] {
+            if (m_kitsView->isVisible())
+                scrollToSelectedKit();
+        });
+        return;
+    }
+    // OPENMV-DIFF //
     QModelIndex index = m_sortModel->mapFromSource(
         m_model->indexOf(Core::preselectedOptionsPageItem(Constants::KITS_SETTINGS_PAGE_ID)));
     m_selectionModel->select(index,
@@ -609,7 +631,13 @@ void KitOptionsPageWidget::kitSelectionChanged()
 
     if (m_currentWidget) {
         m_currentWidget->setVisible(true);
-        m_kitsView->scrollTo(current);
+        // OPENMV-DIFF //
+        // m_kitsView->scrollTo(current);
+        // kitAdded/kitRemoved/kitUpdated can land here while the page is
+        // hidden; scrolling a hidden tree trips the macOS Cocoa a11y bridge.
+        if (m_kitsView->isVisible())
+            m_kitsView->scrollTo(current);
+        // OPENMV-DIFF //
     }
 
     updateState();

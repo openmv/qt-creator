@@ -30,6 +30,9 @@
 #include <QListView>
 #include <QPointer>
 #include <QPushButton>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QResizeEvent>
 #include <QScrollArea>
 #include <QScrollBar>
@@ -546,7 +549,13 @@ SettingsDialog::SettingsDialog(QWidget *parent)
             });
     connect(m_filterLineEdit, &Utils::FancyLineEdit::filterChanged,
             this, &SettingsDialog::filter);
-    m_categoryList->setFocus();
+    // OPENMV-DIFF //
+    // m_categoryList->setFocus();
+    // Deferred: focusing the list before the dialog is shown auto-assigns a
+    // current index during window activation and trips the macOS Cocoa a11y
+    // bridge (NSRangeException) when no page was preselected.
+    QTimer::singleShot(0, this, [this] { m_categoryList->setFocus(); });
+    // OPENMV-DIFF //
 }
 
 void SettingsDialog::showPage(const Id pageId)
@@ -598,11 +607,33 @@ void SettingsDialog::showPage(const Id pageId)
             m_filterLineEdit->setText(QString());
             modelIndex = m_proxyModel.mapFromSource(m_model.index(initialCategoryIndex));
         }
-        m_categoryList->setCurrentIndex(modelIndex);
-        if (initialPageIndex != -1) {
-            if (QTC_GUARD(categories.at(initialCategoryIndex)->tabWidget))
-                categories.at(initialCategoryIndex)->tabWidget->setCurrentIndex(initialPageIndex);
-        }
+        // OPENMV-DIFF //
+        // m_categoryList->setCurrentIndex(modelIndex);
+        // if (initialPageIndex != -1) {
+        //     if (QTC_GUARD(categories.at(initialCategoryIndex)->tabWidget))
+        //         categories.at(initialCategoryIndex)->tabWidget->setCurrentIndex(initialPageIndex);
+        // }
+        // showPage() runs before open() when the dialog is first brought up;
+        // selecting on the not-yet-shown list trips the macOS Cocoa a11y
+        // bridge (NSRangeException). Defer the selection (and the dependent
+        // tab selection, since the tab widget is created by the resulting
+        // currentChanged) until after the dialog is shown.
+        const auto applySelection = [this, initialCategoryIndex, initialPageIndex] {
+            const QModelIndex modelIndex = m_proxyModel.mapFromSource(m_model.index(initialCategoryIndex));
+            if (!modelIndex.isValid())
+                return;
+            m_categoryList->setCurrentIndex(modelIndex);
+            if (initialPageIndex != -1) {
+                const QList<Category *> &cats = m_model.categories();
+                if (QTC_GUARD(cats.at(initialCategoryIndex)->tabWidget))
+                    cats.at(initialCategoryIndex)->tabWidget->setCurrentIndex(initialPageIndex);
+            }
+        };
+        if (m_categoryList->isVisible())
+            applySelection();
+        else
+            QTimer::singleShot(0, this, applySelection);
+        // OPENMV-DIFF //
     }
 }
 

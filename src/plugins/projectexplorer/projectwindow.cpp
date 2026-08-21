@@ -804,10 +804,29 @@ public:
             return;
         setPanel(projectItem->data(0, PanelWidgetRole).value<QWidget *>());
 
+        // OPENMV-DIFF //
+        // QModelIndex activeIndex = projectItem->activeIndex();
+        // m_selectorTree->expandAll();
+        // m_selectorTree->selectionModel()->clear();
+        // m_selectorTree->selectionModel()->select(activeIndex, QItemSelectionModel::Select);
+        // Project/kit/session changes land here while Projects mode is
+        // hidden; mutating the hidden tree trips the macOS Cocoa a11y
+        // bridge (NSRangeException). ProjectWindow::showEvent re-syncs.
+        syncTreeSelection();
+    }
+
+    void syncTreeSelection()
+    {
+        if (!m_selectorTree->isVisible())
+            return;
+        ProjectItem *projectItem = m_projectsModel.rootItem()->childAt(0);
+        if (!projectItem)
+            return;
         QModelIndex activeIndex = projectItem->activeIndex();
         m_selectorTree->expandAll();
         m_selectorTree->selectionModel()->clear();
         m_selectorTree->selectionModel()->select(activeIndex, QItemSelectionModel::Select);
+        // OPENMV-DIFF //
     }
 
     void registerProject(Project *project)
@@ -851,7 +870,13 @@ public:
         QTC_ASSERT(comboboxItem, return);
         m_projectsModel.rootItem()->appendChild(comboboxItem->m_projectItem);
         m_projectSelection->setCurrentIndex(comboboxItem->indexInParent());
-        m_selectorTree->expandAll();
+        // OPENMV-DIFF //
+        // m_selectorTree->expandAll();
+        // Expanding the hidden tree trips the macOS Cocoa a11y bridge;
+        // syncTreeSelection()/showEvent re-expand when actually visible.
+        if (m_selectorTree->isVisible())
+            m_selectorTree->expandAll();
+        // OPENMV-DIFF //
         m_selectorTree->setRootIndex(m_projectsModel.index(0, 0, QModelIndex()));
         updatePanel();
     }
@@ -1009,6 +1034,14 @@ void ProjectWindow::showEvent(QShowEvent *event)
 {
     FancyMainWindow::showEvent(event);
     loadPersistentSettings();
+    // OPENMV-DIFF //
+    // Replay the selector-tree sync that updatePanel() skips while hidden
+    // (macOS Cocoa a11y crash class), deferred past window activation.
+    QTimer::singleShot(0, this, [this] {
+        if (isVisible())
+            d->syncTreeSelection();
+    });
+    // OPENMV-DIFF //
 }
 
 ProjectWindow::~ProjectWindow() = default;

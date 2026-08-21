@@ -27,6 +27,9 @@
 #include <QAction>
 #include <QContextMenuEvent>
 #include <QDebug>
+// OPENMV-DIFF //
+#include <QItemSelectionModel>
+// OPENMV-DIFF //
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QFormLayout>
@@ -190,6 +193,26 @@ protected:
     void contextMenuEvent(QContextMenuEvent *event) final;
     void removeBookmark(const QModelIndex &index);
     void keyPressEvent(QKeyEvent *event) final;
+    // OPENMV-DIFF //
+    // The view shares BookmarkManager's selection model, which is mutated
+    // from editor shortcuts and session restore while the Bookmarks pane is
+    // hidden. The base handlers emit Cocoa a11y notifications that crash
+    // (NSRangeException) on a hidden view's unbuilt element cache - skip
+    // them while hidden; the shared selection state itself is unaffected
+    // and the view repaints fully on show.
+    void currentChanged(const QModelIndex &current, const QModelIndex &previous) final
+    {
+        if (!isVisible())
+            return;
+        Utils::ListView::currentChanged(current, previous);
+    }
+    void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected) final
+    {
+        if (!isVisible())
+            return;
+        Utils::ListView::selectionChanged(selected, deselected);
+    }
+    // OPENMV-DIFF //
 
 private:
     Core::IContext *m_bookmarkContext;

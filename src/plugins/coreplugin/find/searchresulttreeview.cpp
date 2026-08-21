@@ -97,7 +97,12 @@ void SearchResultTreeView::clear()
 void SearchResultTreeView::addResults(const SearchResultItems &items, SearchResult::AddMode mode)
 {
     const QList<QModelIndex> addedParents = m_model->addResults(items, mode);
-    if (m_autoExpandResults && !addedParents.isEmpty()) {
+    // OPENMV-DIFF //
+    // if (m_autoExpandResults && !addedParents.isEmpty()) {
+    // Results stream in asynchronously; expanding rows on the hidden results
+    // tree trips the macOS Cocoa a11y bridge (NSRangeException).
+    if (m_autoExpandResults && !addedParents.isEmpty() && isVisible()) {
+    // OPENMV-DIFF //
         for (const QModelIndex &index : addedParents)
             setExpanded(index, true);
     }

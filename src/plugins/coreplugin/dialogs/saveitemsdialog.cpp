@@ -55,7 +55,9 @@ SaveItemsDialog::SaveItemsDialog(QWidget *parent, const QList<IDocument *> &item
     }
     m_buttonBox->setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Save);
     QPushButton *discardButton = m_buttonBox->addButton(Tr::tr("Do &Not Save"), discardButtonRole);
-    m_treeWidget->setFocus();
+    // OPENMV-DIFF //
+    // m_treeWidget->setFocus();
+    // OPENMV-DIFF //
 
     m_saveBeforeBuildCheckBox->setVisible(false);
 
@@ -97,7 +99,10 @@ SaveItemsDialog::SaveItemsDialog(QWidget *parent, const QList<IDocument *> &item
     m_treeWidget->resizeColumnToContents(0);
     // OPENMV-DIFF //
     // m_treeWidget->selectAll();
-    QTimer::singleShot(0, m_treeWidget, [this] { m_treeWidget->selectAll(); });
+    QTimer::singleShot(0, m_treeWidget, [this] {
+        m_treeWidget->setFocus();
+        m_treeWidget->selectAll();
+    });
     // OPENMV-DIFF //
     if (HostOsInfo::isMacHost())
         m_treeWidget->setAlternatingRowColors(true);

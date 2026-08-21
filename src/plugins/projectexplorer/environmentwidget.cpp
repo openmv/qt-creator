@@ -307,6 +307,13 @@ EnvironmentWidget::~EnvironmentWidget()
 
 void EnvironmentWidget::focusIndex(const QModelIndex &index)
 {
+    // OPENMV-DIFF //
+    // The details container this view lives in can be expanded while the
+    // enclosing panel is itself hidden; selecting/focusing then trips the
+    // macOS Cocoa a11y bridge (NSRangeException).
+    if (!d->m_environmentView->isVisible())
+        return;
+    // OPENMV-DIFF //
     d->m_environmentView->setCurrentIndex(index);
     d->m_environmentView->setFocus();
     // When the current item changes as a result of the call above,

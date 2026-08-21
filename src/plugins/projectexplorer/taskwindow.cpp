@@ -41,6 +41,9 @@
 #include <QScrollBar>
 #include <QStyledItemDelegate>
 #include <QTextDocument>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QToolButton>
 #include <QVBoxLayout>
 
@@ -151,6 +154,12 @@ public:
     QMenu *m_categoriesMenu;
     QList<QAction *> m_actions;
     int m_visibleIssuesCount = 0;
+    // OPENMV-DIFF //
+    // Current-index updates are skipped while the Issues pane is hidden
+    // (macOS Cocoa a11y crash class); the intended position is kept here so
+    // Next/Previous Item still advance and setFocus can replay it.
+    QPersistentModelIndex m_pendingCurrentIndex;
+    // OPENMV-DIFF //
 };
 
 static QToolButton *createFilterButton(const QIcon &icon, const QString &toolTip,
@@ -428,8 +437,21 @@ void TaskWindow::showTask(const Task &task)
     int sourceRow = d->m_model->rowForTask(task);
     QModelIndex sourceIdx = d->m_model->index(sourceRow, 0);
     QModelIndex filterIdx = d->m_filter->mapFromSource(sourceIdx);
-    d->m_treeView.setCurrentIndex(filterIdx);
+    // OPENMV-DIFF //
+    // d->m_treeView.setCurrentIndex(filterIdx);
+    // popup(Core::IOutputPane::ModeSwitch);
+    // Reordered and deferred: selecting on the still-hidden Issues pane
+    // trips the macOS Cocoa a11y bridge (NSRangeException).
     popup(Core::IOutputPane::ModeSwitch);
+    const QPersistentModelIndex idx(filterIdx);
+    d->m_pendingCurrentIndex = idx;
+    QTimer::singleShot(0, &d->m_treeView, [this, idx] {
+        if (idx.isValid() && d->m_treeView.isVisible()) {
+            d->m_pendingCurrentIndex = QPersistentModelIndex();
+            d->m_treeView.setCurrentIndex(idx);
+        }
+    });
+    // OPENMV-DIFF //
 }
 
 void TaskWindow::openTask(const Task &task)
@@ -531,15 +553,38 @@ bool TaskWindow::canFocus() const
 
 void TaskWindow::setFocus()
 {
-    if (d->m_filter->rowCount()) {
-        d->m_treeView.setFocus();
-        if (!d->m_treeView.currentIndex().isValid())
-            d->m_treeView.setCurrentIndex(d->m_filter->index(0,0, QModelIndex()));
-        if (d->m_treeView.selectionModel()->selection().isEmpty()) {
-            d->m_treeView.selectionModel()->setCurrentIndex(d->m_treeView.currentIndex(),
-                                                            QItemSelectionModel::Select);
+    // OPENMV-DIFF //
+    // if (d->m_filter->rowCount()) {
+    //     d->m_treeView.setFocus();
+    //     if (!d->m_treeView.currentIndex().isValid())
+    //         d->m_treeView.setCurrentIndex(d->m_filter->index(0,0, QModelIndex()));
+    //     if (d->m_treeView.selectionModel()->selection().isEmpty()) {
+    //         d->m_treeView.selectionModel()->setCurrentIndex(d->m_treeView.currentIndex(),
+    //                                                         QItemSelectionModel::Select);
+    //     }
+    // }
+    // Deferred: runs right after the pane is shown, i.e. mid-activation;
+    // focusing/selecting then trips the macOS Cocoa a11y bridge
+    // (NSRangeException). Also replays a pending Next/Prev position.
+    QTimer::singleShot(0, &d->m_treeView, [this] {
+        if (!d->m_treeView.isVisible())
+            return;
+        if (d->m_filter->rowCount()) {
+            if (!d->m_treeView.currentIndex().isValid()) {
+                const QModelIndex idx = d->m_pendingCurrentIndex.isValid()
+                    ? QModelIndex(d->m_pendingCurrentIndex)
+                    : d->m_filter->index(0,0, QModelIndex());
+                d->m_pendingCurrentIndex = QPersistentModelIndex();
+                d->m_treeView.setCurrentIndex(idx);
+            }
+            d->m_treeView.setFocus();
+            if (d->m_treeView.selectionModel()->selection().isEmpty()) {
+                d->m_treeView.selectionModel()->setCurrentIndex(d->m_treeView.currentIndex(),
+                                                                QItemSelectionModel::Select);
+            }
         }
-    }
+    });
+    // OPENMV-DIFF //
 }
 
 bool TaskWindow::canNext() const
@@ -557,6 +602,10 @@ void TaskWindow::goToNext()
     if (!canNext())
         return;
     QModelIndex startIndex = d->m_treeView.currentIndex();
+    // OPENMV-DIFF //
+    if (!startIndex.isValid() && d->m_pendingCurrentIndex.isValid())
+        startIndex = QModelIndex(d->m_pendingCurrentIndex);
+    // OPENMV-DIFF //
     QModelIndex currentIndex = startIndex;
 
     if (startIndex.isValid()) {
@@ -571,7 +620,18 @@ void TaskWindow::goToNext()
     } else {
         currentIndex = d->m_filter->index(0, 0);
     }
-    d->m_treeView.setCurrentIndex(currentIndex);
+    // OPENMV-DIFF //
+    // d->m_treeView.setCurrentIndex(currentIndex);
+    // Selecting on the hidden Issues pane trips the macOS Cocoa a11y bridge
+    // (NSRangeException); remember the position instead so navigation still
+    // advances and setFocus replays it once visible.
+    if (d->m_treeView.isVisible()) {
+        d->m_pendingCurrentIndex = QPersistentModelIndex();
+        d->m_treeView.setCurrentIndex(currentIndex);
+    } else {
+        d->m_pendingCurrentIndex = QPersistentModelIndex(currentIndex);
+    }
+    // OPENMV-DIFF //
     triggerDefaultHandler(currentIndex);
 }
 
@@ -580,6 +640,10 @@ void TaskWindow::goToPrev()
     if (!canPrevious())
         return;
     QModelIndex startIndex = d->m_treeView.currentIndex();
+    // OPENMV-DIFF //
+    if (!startIndex.isValid() && d->m_pendingCurrentIndex.isValid())
+        startIndex = QModelIndex(d->m_pendingCurrentIndex);
+    // OPENMV-DIFF //
     QModelIndex currentIndex = startIndex;
 
     if (startIndex.isValid()) {
@@ -594,7 +658,15 @@ void TaskWindow::goToPrev()
     } else {
         currentIndex = d->m_filter->index(0, 0);
     }
-    d->m_treeView.setCurrentIndex(currentIndex);
+    // OPENMV-DIFF //
+    // d->m_treeView.setCurrentIndex(currentIndex);
+    if (d->m_treeView.isVisible()) {
+        d->m_pendingCurrentIndex = QPersistentModelIndex();
+        d->m_treeView.setCurrentIndex(currentIndex);
+    } else {
+        d->m_pendingCurrentIndex = QPersistentModelIndex(currentIndex);
+    }
+    // OPENMV-DIFF //
     triggerDefaultHandler(currentIndex);
 }
 

@@ -325,6 +325,13 @@ protected:
         // item->forChildrenAtLevel(1, [&](const TreeItem *child) { m_view->expand(child->index()); });
         const QPersistentModelIndex itemIndex(item->index());
         QTimer::singleShot(0, m_view, [this, itemIndex] {
+            // OPENMV-DIFF //
+            // The pane can be hidden/collapsed when the async LSP response
+            // lands; expanding a hidden tree trips the macOS Cocoa a11y
+            // bridge (NSRangeException).
+            if (!m_view->isVisible())
+                return;
+            // OPENMV-DIFF //
             if (!itemIndex.isValid())
                 return;
             m_view->expand(itemIndex);

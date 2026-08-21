@@ -532,7 +532,13 @@ void MimeTypeSettingsPrivate::editMagicHeaderRowData(const int row, const MagicD
     item->setData(0, Qt::UserRole, QVariant::fromValue(data));
     m_magicHeadersTreeWidget->takeTopLevelItem(row);
     m_magicHeadersTreeWidget->insertTopLevelItem(row, item);
-    m_magicHeadersTreeWidget->setCurrentItem(item);
+    // OPENMV-DIFF //
+    // m_magicHeadersTreeWidget->setCurrentItem(item);
+    // syncData() can drive this while the options page is hidden; selecting
+    // on a hidden tree trips the macOS Cocoa a11y bridge (NSRangeException).
+    if (m_magicHeadersTreeWidget->isVisible())
+        m_magicHeadersTreeWidget->setCurrentItem(item);
+    // OPENMV-DIFF //
 }
 
 void MimeTypeSettingsPrivate::addMagicHeader()

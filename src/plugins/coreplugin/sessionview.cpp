@@ -11,6 +11,9 @@
 #include <QItemSelection>
 #include <QStringList>
 #include <QStyledItemDelegate>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 
 namespace Core {
 namespace Internal {
@@ -50,10 +53,21 @@ SessionView::SessionView(QWidget *parent)
     // Ensure that the full session name is visible.
     header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
 
-    QItemSelection firstRow(m_sessionModel.index(0,0), m_sessionModel.index(
-        0, m_sessionModel.columnCount() - 1));
-    selectionModel()->select(firstRow, QItemSelectionModel::QItemSelectionModel::
-        SelectCurrent);
+    // OPENMV-DIFF //
+    // QItemSelection firstRow(m_sessionModel.index(0,0), m_sessionModel.index(
+    //     0, m_sessionModel.columnCount() - 1));
+    // selectionModel()->select(firstRow, QItemSelectionModel::QItemSelectionModel::
+    //     SelectCurrent);
+    // Deferred: selecting in the constructor, before the dialog is shown,
+    // trips the macOS Cocoa a11y bridge (NSRangeException).
+    QTimer::singleShot(0, this, [this] {
+        if (!isVisible())
+            return;
+        QItemSelection firstRow(m_sessionModel.index(0,0), m_sessionModel.index(
+            0, m_sessionModel.columnCount() - 1));
+        selectionModel()->select(firstRow, QItemSelectionModel::SelectCurrent);
+    });
+    // OPENMV-DIFF //
 
     connect(this, &Utils::TreeView::activated, this, [this](const QModelIndex &index){
         emit sessionActivated(m_sessionModel.sessionAt(index.row()));
@@ -117,6 +131,13 @@ void SessionView::selectActiveSession()
 
 void SessionView::selectSession(const QString &sessionName)
 {
+    // OPENMV-DIFF //
+    // modelReset/sessionCreated can land here while the view is hidden;
+    // selecting on a hidden view trips the macOS Cocoa a11y bridge
+    // (NSRangeException). showEvent re-selects the active session.
+    if (!isVisible())
+        return;
+    // OPENMV-DIFF //
     int row = m_sessionModel.indexOfSession(sessionName);
     selectionModel()->setCurrentIndex(model()->index(row, 0),
         QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
@@ -125,8 +146,18 @@ void SessionView::selectSession(const QString &sessionName)
 void SessionView::showEvent(QShowEvent *event)
 {
     Utils::TreeView::showEvent(event);
-    selectActiveSession();
-    setFocus();
+    // OPENMV-DIFF //
+    // selectActiveSession();
+    // setFocus();
+    // Deferred: selecting/focusing during the show handshake runs while the
+    // window is still activating and trips the macOS Cocoa a11y bridge.
+    QTimer::singleShot(0, this, [this] {
+        if (!isVisible())
+            return;
+        selectActiveSession();
+        setFocus();
+    });
+    // OPENMV-DIFF //
 }
 
 void SessionView::keyPressEvent(QKeyEvent *event)

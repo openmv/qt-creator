@@ -24,6 +24,9 @@
 #include <QModelIndex>
 #include <QPainter>
 #include <QPushButton>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QSortFilterProxyModel>
 #include <QStandardItem>
 #include <QTextBrowser>
@@ -346,13 +349,30 @@ void NewDialogWidget::showDialog()
     if (!idx.isValid())
         idx = m_filterProxyModel->index(0,0, m_filterProxyModel->index(0,0));
 
-    m_templateCategoryView->setCurrentIndex(idx);
+    // OPENMV-DIFF //
+    // m_templateCategoryView->setCurrentIndex(idx);
+    //
+    // // We need to ensure that the category has default focus
+    // m_templateCategoryView->setFocus(Qt::NoFocusReason);
+    //
+    // for (int row = 0; row < m_filterProxyModel->rowCount(); ++row)
+    //     m_templateCategoryView->setExpanded(m_filterProxyModel->index(row, 0), true);
+    //
+    // Deferred until after show(): selecting/focusing/expanding the tree
+    // before the window is shown trips the macOS Cocoa a11y bridge
+    // (NSRangeException on an unbuilt child-element cache).
+    const QPersistentModelIndex persistentIdx(idx);
+    QTimer::singleShot(0, this, [this, persistentIdx] {
+        if (persistentIdx.isValid())
+            m_templateCategoryView->setCurrentIndex(persistentIdx);
 
-    // We need to ensure that the category has default focus
-    m_templateCategoryView->setFocus(Qt::NoFocusReason);
+        // We need to ensure that the category has default focus
+        m_templateCategoryView->setFocus(Qt::NoFocusReason);
 
-    for (int row = 0; row < m_filterProxyModel->rowCount(); ++row)
-        m_templateCategoryView->setExpanded(m_filterProxyModel->index(row, 0), true);
+        for (int row = 0; row < m_filterProxyModel->rowCount(); ++row)
+            m_templateCategoryView->setExpanded(m_filterProxyModel->index(row, 0), true);
+    });
+    // OPENMV-DIFF //
 
     // Ensure that item description is visible on first show
     currentItemChanged(m_filterProxyModel->index(0, 0, m_templatesView->rootIndex()));

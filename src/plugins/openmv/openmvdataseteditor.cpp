@@ -226,8 +226,15 @@ void OpenMVDatasetEditor::snapshot()
     if(m_pixmap.save(filePath))
     {
         const QModelIndex newIndex = m_model->index(filePath);
-        if (newIndex.isValid())
+        // OPENMV-DIFF //
+        // if (newIndex.isValid())
+        //     setCurrentIndex(newIndex);
+        // The serial escape-code parser can trigger snapshot() while the
+        // dataset pane is hidden; selecting on a hidden view trips the
+        // macOS Cocoa a11y bridge (NSRangeException).
+        if (newIndex.isValid() && isVisible())
             setCurrentIndex(newIndex);
+        // OPENMV-DIFF //
     }
     else
     {

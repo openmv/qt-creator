@@ -238,6 +238,14 @@ OpenMVROMFSEditor::OpenMVROMFSEditor(QWidget *parent, const QString &path, const
 
 void OpenMVROMFSEditor::preloadDirectories(const QModelIndex &index)
 {
+    // OPENMV-DIFF //
+    // Expanding rows on a hidden tree trips the macOS Cocoa a11y bridge
+    // (NSRangeException) - e.g. when a queued directoryLoaded lands after
+    // the dialog was closed. directoryLoaded re-fires as dirs keep loading
+    // while visible, so skipped preloads are retried naturally.
+    if (!isVisible())
+        return;
+    // OPENMV-DIFF //
     for (int row = 0; row < m_filter->rowCount(index); row++)
     {
         QModelIndex child = m_filter->index(row, 0, index);

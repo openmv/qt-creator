@@ -37,6 +37,9 @@
 #include <QSpacerItem>
 #include <QStackedWidget>
 #include <QTextStream>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QTreeView>
 #include <QVBoxLayout>
 
@@ -190,7 +193,15 @@ public:
         m_toolChainView->header()->setStretchLastSection(false);
         m_toolChainView->header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
         m_toolChainView->header()->setSectionResizeMode(1, QHeaderView::Stretch);
-        m_toolChainView->expandAll();
+        // OPENMV-DIFF //
+        // m_toolChainView->expandAll();
+        // Deferred: the options-page widget is constructed hidden; expanding
+        // a hidden tree trips the macOS Cocoa a11y bridge (NSRangeException).
+        QTimer::singleShot(0, m_toolChainView, [this] {
+            if (m_toolChainView->isVisible())
+                m_toolChainView->expandAll();
+        });
+        // OPENMV-DIFF //
 
         m_addButton = new QPushButton(Tr::tr("Add"), this);
         auto addMenu = new QMenu(this);

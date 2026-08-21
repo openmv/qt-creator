@@ -22,6 +22,9 @@
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QElapsedTimer>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QFormLayout>
 #include <QGroupBox>
 #include <QHeaderView>
@@ -239,6 +242,18 @@ LspLogWidget::LspLogWidget()
 
 void LspLogWidget::currentMessageChanged(const QModelIndex &index)
 {
+    // OPENMV-DIFF //
+    // Model rebuilds re-emit currentChanged while the log list is hidden
+    // (other tab current, window not yet shown); mutating its selection
+    // then trips the macOS Cocoa a11y bridge (NSRangeException).
+    if (!m_messages->isVisible()) {
+        if (!index.isValid()) {
+            m_clientDetails->clear();
+            m_serverDetails->clear();
+        }
+        return;
+    }
+    // OPENMV-DIFF //
     m_messages->clearSelection();
     if (!index.isValid()) {
         m_clientDetails->clear();
@@ -348,9 +363,20 @@ void LspInspector::show(const QString &defaultClient)
     } else {
         QApplication::setActiveWindow(m_currentWidget);
     }
-    if (!defaultClient.isEmpty())
-        static_cast<LspInspectorWidget *>(m_currentWidget)->selectClient(defaultClient);
+    // OPENMV-DIFF //
+    // if (!defaultClient.isEmpty())
+    //     static_cast<LspInspectorWidget *>(m_currentWidget)->selectClient(defaultClient);
+    // m_currentWidget->show();
+    // Reordered: selectClient() rebuilds the log model, which mutates the
+    // selection of a QListView; doing that before the window is shown trips
+    // the macOS Cocoa a11y bridge (NSRangeException).
     m_currentWidget->show();
+    if (!defaultClient.isEmpty()) {
+        const auto widget = static_cast<LspInspectorWidget *>(m_currentWidget);
+        QTimer::singleShot(0, widget, [widget, defaultClient] {
+            widget->selectClient(defaultClient);
+        });
+    }
 }
 
 void LspInspector::log(const LspLogMessage::MessageSender sender,

@@ -31,6 +31,10 @@
 #include "openmvprofile.h"
 #include "openmvtr.h"
 
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
+
 #include <coreplugin/icore.h>
 #include <utils/theme/theme.h>
 #include <utils/pathchooser.h>
@@ -881,7 +885,14 @@ OpenMVProfileView::OpenMVProfileView(Utils::QtcSettings *settings, QWidget *pare
         }
     });
 
-    emit m_filterEdit->textChanged(m_filterEdit->text());
+    // OPENMV-DIFF //
+    // emit m_filterEdit->textChanged(m_filterEdit->text());
+    // Deferred: the connected lambda runs collapseAll/expandAll on the tree,
+    // which must not happen before the dialog is shown (macOS a11y crash).
+    QTimer::singleShot(0, this, [this] {
+        emit m_filterEdit->textChanged(m_filterEdit->text());
+    });
+    // OPENMV-DIFF //
 
     QHeaderView *header = m_treeView->header();
     header->setSectionsClickable(true);

@@ -320,6 +320,20 @@ class OutlineComboBox : public Utils::TreeViewComboBox
 public:
     OutlineComboBox(Client *client, TextEditor::BaseTextEditor *editor);
 
+    // OPENMV-DIFF //
+    // Replays the expandAll that updateModel() skips while the popup is
+    // hidden (macOS Cocoa a11y crash class): expand only once the popup
+    // view is actually visible, deferred a tick past QComboBox::showPopup.
+    void showPopup() override
+    {
+        Utils::TreeViewComboBox::showPopup();
+        QTimer::singleShot(0, this, [this] {
+            if (view()->isVisible())
+                view()->expandAll();
+        });
+    }
+    // OPENMV-DIFF //
+
 private:
     void updateModel(const DocumentUri &resultUri, const DocumentSymbolsResult &result);
     void updateEntry();
@@ -394,7 +408,11 @@ void OutlineComboBox::updateModel(const DocumentUri &resultUri, const DocumentSy
     // // The list has changed, update the current item
     // updateEntry();
     QTimer::singleShot(0, this, [this] {
-        view()->expandAll();
+        // The combo's popup tree is hidden until showPopup(); expanding it
+        // while hidden trips the macOS Cocoa a11y bridge (NSRangeException).
+        // showPopup() re-expands, so skipping here loses nothing.
+        if (view()->isVisible())
+            view()->expandAll();
         updateEntry();
     });
     // OPENMV-DIFF //

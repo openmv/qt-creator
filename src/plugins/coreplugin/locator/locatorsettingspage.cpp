@@ -28,6 +28,9 @@
 #include <QMenu>
 #include <QPainter>
 #include <QPushButton>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QSpinBox>
 #include <QStyledItemDelegate>
 
@@ -297,7 +300,15 @@ public:
         m_proxyModel->setSortRole(SortRole);
         m_proxyModel->setFilterKeyColumn(-1/*all*/);
         m_filterList->setModel(m_proxyModel);
-        m_filterList->expandAll();
+        // OPENMV-DIFF //
+        // m_filterList->expandAll();
+        // Deferred: the options-page widget is constructed hidden; expanding
+        // a hidden tree trips the macOS Cocoa a11y bridge (NSRangeException).
+        QTimer::singleShot(0, m_filterList, [this] {
+            if (m_filterList->isVisible())
+                m_filterList->expandAll();
+        });
+        // OPENMV-DIFF //
 
         new HeaderViewStretcher(m_filterList->header(), FilterName);
         m_filterList->header()->setSortIndicator(FilterName, Qt::AscendingOrder);

@@ -371,16 +371,33 @@ BaseTreeView::~BaseTreeView()
 void BaseTreeView::setModel(QAbstractItemModel *m)
 {
     if (auto oldModel = qobject_cast<BaseTreeModel *>(model())) {
-        disconnect(oldModel, &BaseTreeModel::requestExpansion, this, &BaseTreeView::expand);
-        disconnect(oldModel, &BaseTreeModel::requestCollapse, this, &BaseTreeView::collapse);
+        // OPENMV-DIFF //
+        // disconnect(oldModel, &BaseTreeModel::requestExpansion, this, &BaseTreeView::expand);
+        // disconnect(oldModel, &BaseTreeModel::requestCollapse, this, &BaseTreeView::collapse);
+        disconnect(oldModel, &BaseTreeModel::requestExpansion, this, nullptr);
+        disconnect(oldModel, &BaseTreeModel::requestCollapse, this, nullptr);
+        // OPENMV-DIFF //
     }
 
     TreeView::setModel(m);
 
     if (m) {
         if (auto newModel = qobject_cast<BaseTreeModel *>(m)) {
-            connect(newModel, &BaseTreeModel::requestExpansion, this, &BaseTreeView::expand);
-            connect(newModel, &BaseTreeModel::requestCollapse, this, &BaseTreeView::collapse);
+            // OPENMV-DIFF //
+            // connect(newModel, &BaseTreeModel::requestExpansion, this, &BaseTreeView::expand);
+            // connect(newModel, &BaseTreeModel::requestCollapse, this, &BaseTreeView::collapse);
+            // Model code can request expansion at arbitrary times, including
+            // while the hosting pane is hidden; expanding a hidden tree trips
+            // the macOS Cocoa a11y bridge (NSRangeException).
+            connect(newModel, &BaseTreeModel::requestExpansion, this, [this](const QModelIndex &idx) {
+                if (isVisible())
+                    expand(idx);
+            });
+            connect(newModel, &BaseTreeModel::requestCollapse, this, [this](const QModelIndex &idx) {
+                if (isVisible())
+                    collapse(idx);
+            });
+            // OPENMV-DIFF //
         }
         d->restoreState();
 

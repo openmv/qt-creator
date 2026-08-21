@@ -34,6 +34,9 @@
 #include <QAction>
 #include <QGuiApplication>
 #include <QItemDelegate>
+// OPENMV-DIFF //
+#include <QItemSelectionModel>
+// OPENMV-DIFF //
 #include <QKeyEvent>
 #include <QLabel>
 #include <QLayout>
@@ -222,6 +225,27 @@ protected:
         QMetaObject::invokeMethod(this, &SelectorView::doResetOptimalWidth, Qt::QueuedConnection);
     }
 
+    // OPENMV-DIFF //
+    // These lists live in a Qt::Popup that is hidden nearly all the time
+    // while async project/target signals keep updating their selection.
+    // The base handlers emit Cocoa a11y notifications that crash
+    // (NSRangeException) on a hidden view's unbuilt element cache - skip
+    // them while hidden; the selection state itself is unaffected and the
+    // popup repaints fully on show.
+    void currentChanged(const QModelIndex &current, const QModelIndex &previous) override
+    {
+        if (!isVisible())
+            return;
+        TreeView::currentChanged(current, previous);
+    }
+    void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected) override
+    {
+        if (!isVisible())
+            return;
+        TreeView::selectionChanged(selected, deselected);
+    }
+    // OPENMV-DIFF //
+
 private:
     void keyPressEvent(QKeyEvent *event) override;
     void keyReleaseEvent(QKeyEvent *event) override;
@@ -387,8 +411,17 @@ private:
 
     void showEvent(QShowEvent* event) override
     {
-        scrollTo(currentIndex());
+        // OPENMV-DIFF //
+        // scrollTo(currentIndex());
+        // TreeView::showEvent(event);
+        // Reordered and deferred: scrolling before the base showEvent runs
+        // mid-show and trips the macOS Cocoa a11y bridge (NSRangeException).
         TreeView::showEvent(event);
+        QTimer::singleShot(0, this, [this] {
+            if (isVisible() && currentIndex().isValid())
+                scrollTo(currentIndex());
+        });
+        // OPENMV-DIFF //
     }
 
     QObject *objectAt(const QModelIndex &index) const
@@ -1339,16 +1372,35 @@ void MiniProjectTargetSelector::setVisible(bool visible)
     QWidget::setVisible(visible);
     m_projectAction->setChecked(visible);
     if (visible) {
-        if (!focusWidget() || !focusWidget()->isVisibleTo(this)) { // Does the second part actually work?
-            if (m_projectListWidget->isVisibleTo(this))
-                m_projectListWidget->setFocus();
-            for (int i = TARGET; i < LAST; ++i) {
-                if (m_listWidgets[i]->isVisibleTo(this)) {
-                    m_listWidgets[i]->setFocus();
-                    break;
+        // OPENMV-DIFF //
+        // if (!focusWidget() || !focusWidget()->isVisibleTo(this)) { // Does the second part actually work?
+        //     if (m_projectListWidget->isVisibleTo(this))
+        //         m_projectListWidget->setFocus();
+        //     for (int i = TARGET; i < LAST; ++i) {
+        //         if (m_listWidgets[i]->isVisibleTo(this)) {
+        //             m_listWidgets[i]->setFocus();
+        //             break;
+        //         }
+        //     }
+        // }
+        // Deferred: focusing the lists while the popup is still ordering in
+        // auto-assigns a current index mid-activation and trips the macOS
+        // Cocoa a11y bridge (NSRangeException).
+        QTimer::singleShot(0, this, [this] {
+            if (!isVisible())
+                return;
+            if (!focusWidget() || !focusWidget()->isVisibleTo(this)) { // Does the second part actually work?
+                if (m_projectListWidget->isVisibleTo(this))
+                    m_projectListWidget->setFocus();
+                for (int i = TARGET; i < LAST; ++i) {
+                    if (m_listWidgets[i]->isVisibleTo(this)) {
+                        m_listWidgets[i]->setFocus();
+                        break;
+                    }
                 }
             }
-        }
+        });
+        // OPENMV-DIFF //
     }
 }
 
