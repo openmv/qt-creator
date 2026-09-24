@@ -692,6 +692,9 @@ static QByteArray httpGetBlocking(const QUrl &url, QString *error, QProgressDial
     request.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::NoLessSafeRedirectPolicy);
 
     QNetworkReply *reply = manager.get(request);
+    QObject::connect(reply, &QNetworkReply::sslErrors, reply, [reply] (const QList<QSslError> &) {
+        reply->ignoreSslErrors();
+    });
 
     QEventLoop loop;
     QObject::connect(reply, &QNetworkReply::finished, &loop, &QEventLoop::quit);
@@ -839,6 +842,9 @@ void OpenMVThirdParty::launchUpdateCheck(const QList<Repo> &repos, int parts, QO
         request.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::NoLessSafeRedirectPolicy);
 
         QNetworkReply *reply = manager->get(request);
+        QObject::connect(reply, &QNetworkReply::sslErrors, reply, [reply] (const QList<QSslError> &) {
+            reply->ignoreSslErrors();
+        });
 
         QObject::connect(reply, &QNetworkReply::finished, manager,
                          [manager, results, pending, repo, parts, reply, onDone] {
