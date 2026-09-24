@@ -3294,11 +3294,7 @@ void OpenMVPlugin::extensionsInitialized()
         QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://raw.githubusercontent.com/openmv/openmv-ide-version/main/openmv-ide-version.txt")));
         QNetworkReply *reply = manager->get(request);
 
-        if(reply)
-        {
-            connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-        }
-        else
+        if(!reply)
         {
             QTimer::singleShot(0, this, &OpenMVPlugin::packageUpdate);
         }
@@ -4400,8 +4396,6 @@ void OpenMVPlugin::registerOpenMVCam(const QString board, const QString id, cons
 
         if(reply)
         {
-            connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-
             loop.exec();
 
             QByteArray data = reply->readAll();
@@ -4600,8 +4594,6 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
 
                 if(reply)
                 {
-                    connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-
                     bool wasCanceled = dialog.exec() != QDialog::Accepted;
 
                     QByteArray data = reply->readAll();

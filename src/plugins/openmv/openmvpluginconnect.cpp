@@ -292,7 +292,6 @@ static QByteArray devDownloadSync(const QUrl &url, QPromise<DevSyncOutcome> &pro
 
     QEventLoop loop;
     QObject::connect(reply, &QNetworkReply::finished, &loop, &QEventLoop::quit);
-    QObject::connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
     QObject::connect(reply, &QNetworkReply::downloadProgress, &loop, [reply, &promise] (qint64 received, qint64 total) {
         if(promise.isCanceled())
         {
@@ -905,7 +904,6 @@ void OpenMVPlugin::packageUpdate()
                         if(reply2)
                         {
                             connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
-                            connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
                             connect(reply2, &QNetworkReply::downloadProgress, dialog, [dlg] (qint64 bytesReceived, qint64 bytesTotal) {
                                 if (!dlg) return;
                                 dlg->setMaximum((bytesTotal > 0) ? bytesTotal : 0);
@@ -929,12 +927,7 @@ void OpenMVPlugin::packageUpdate()
     });
 
     QNetworkRequest request = QNetworkRequest(QUrl(QStringLiteral("https://raw.githubusercontent.com/openmv/openmv-ide-version/main/openmv-ide-resources-version-v2.txt")));
-    QNetworkReply *reply = manager->get(request);
-
-    if(reply)
-    {
-        connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-    }
+    manager->get(request);
 }
 
 void OpenMVPlugin::bootloaderClicked()
@@ -1194,7 +1187,6 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
     if(reply2)
     {
         connect(dialog, &QProgressDialog::canceled, reply2, &QNetworkReply::abort);
-        connect(reply2, &QNetworkReply::sslErrors, reply2, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
         connect(reply2, &QNetworkReply::downloadProgress, dialog, [dlg] (qint64 bytesReceived, qint64 bytesTotal) {
             if (!dlg) return;
             dlg->setMaximum((bytesTotal > 0) ? bytesTotal : 0);
@@ -3916,11 +3908,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     if(!m_boardVendor.isEmpty()) postData += QStringLiteral("&vendor=%1").arg(m_boardVendor).toUtf8();
                     QNetworkReply *reply = manager->post(request, postData);
 
-                    if(reply)
-                    {
-                        connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
-                    }
-                    else if(!m_formKey.isEmpty())
+                    if((!reply) && (!m_formKey.isEmpty()))
                     {
                         QMessageBox::critical(Core::ICore::dialogParent(),
                             Tr::tr("Register OpenMV Cam"),
