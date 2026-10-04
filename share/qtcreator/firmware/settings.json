@@ -2009,7 +2009,8 @@
             "overrideReadTimeout" : -1,
             "overrideReadStallTimeout" : -1,
             "overridePerCommandWait" : -1,
-            "overrideFlushTimeout": -1
+            "overrideFlushTimeout": -1,
+            "overrideFlushMaxTimeout" : -1
         },
         "v2" : {
             "overrideCRC" : -1,

@@ -46,6 +46,7 @@
 #define WRITE_LOOPS 1 // disabled
 #define WRITE_DELAY 0 // disabled
 #define FLUSH_TIMEOUT 100
+#define FLUSH_MAX_TIMEOUT 3000
 #define WRITE_TIMEOUT 3000
 #define BOOTLOADER_WRITE_TIMEOUT 6
 #define BOOTLOADER_READ_TIMEOUT 10
@@ -530,8 +531,16 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
             int override_flush_timeout = obj.value(QStringLiteral("overrideFlushTimeout")).toInt(-1);
             if (override_flush_timeout >= 0) flush_timeout = override_flush_timeout;
 
+            int flush_max_timeout = FLUSH_MAX_TIMEOUT;
+            int override_flush_max_timeout = obj.value(QStringLiteral("overrideFlushMaxTimeout")).toInt(-1);
+            if (override_flush_max_timeout >= 0) flush_max_timeout = override_flush_max_timeout;
+
             QElapsedTimer elaspedTimer;
             elaspedTimer.start();
+
+            // The camera may never stop sending data, so don't wait forever for the port to go idle.
+            QElapsedTimer flushTimer;
+            flushTimer.start();
 
             do
             {
@@ -542,7 +551,7 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
                     elaspedTimer.restart();
                 }
             }
-            while(!elaspedTimer.hasExpired(flush_timeout));
+            while((!elaspedTimer.hasExpired(flush_timeout)) && (!flushTimer.hasExpired(flush_max_timeout)));
         }
 
         int write_timeout = WRITE_TIMEOUT;
