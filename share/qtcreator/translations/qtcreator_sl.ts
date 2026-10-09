@@ -7982,9 +7982,9 @@ Preverite datoteko json glede napak in jih odpravite.</translation>
     <message>
         <location line="-283" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2395" />
-        <location line="+554" />
-        <location line="+420" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2934" />
+        <location line="+665" />
+        <location line="+432" />
         <source>Record</source>
         <translation>Zapis</translation>
     </message>
@@ -7997,8 +7997,8 @@ Preverite datoteko json glede napak in jih odpravite.</translation>
     <message>
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-492" />
-        <location line="+385" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-504" />
+        <location line="+397" />
         <location line="+91" />
         <location line="+291" />
         <source>Stop</source>
@@ -13288,7 +13288,7 @@ S tem izbrišete njegove plošče, vdelano programsko opremo in primere.</transl
         <translation>%L1 vzorcev (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3220" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3882" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -13298,7 +13298,7 @@ S tem izbrišete njegove plošče, vdelano programsko opremo in primere.</transl
         <translation>%L1 Hz</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+991" />
         <source>Series %1</source>
         <translation>Niz %1</translation>
     </message>
@@ -13314,12 +13314,29 @@ S tem izbrišete njegove plošče, vdelano programsko opremo in primere.</transl
         <translation>Slika PNG (*.png);;Dokument PDF (*.pdf)</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-996" />
+        <location line="+1019" />
         <source>Failed to write &quot;%1&quot;!</source>
         <translation>Zapisovanje &quot;%1&quot; ni uspelo!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1100" />
+        <source>x %1  y %2  %3</source>
+        <translation>x %1  y %2  %3</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <location line="+19" />
+        <source>Save Depth Image</source>
+        <translation>Shrani globinsko sliko</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>PNG Image (*.png)</source>
+        <translation>Slika PNG (*.png)</translation>
+    </message>
+    <message>
+        <location line="+1048" />
         <source>Auto Scale</source>
         <translation>Samodejno merilo</translation>
     </message>
@@ -13385,12 +13402,12 @@ S tem izbrišete njegove plošče, vdelano programsko opremo in primere.</transl
     </message>
     <message>
         <location line="+6" />
-        <location line="+819" />
+        <location line="+848" />
         <source>Spectrum</source>
         <translation>Spekter</translation>
     </message>
     <message>
-        <location line="-816" />
+        <location line="-845" />
         <source>Averaging</source>
         <translation>Povprečenje</translation>
     </message>
@@ -13425,7 +13442,8 @@ S tem izbrišete njegove plošče, vdelano programsko opremo in primere.</transl
         <translation>Pravokotno</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1156" />
+        <location line="+1167" />
         <source>Save Image...</source>
         <translation>Shrani sliko ...</translation>
     </message>
@@ -13496,13 +13514,13 @@ S tem izbrišete njegove plošče, vdelano programsko opremo in primere.</transl
     </message>
     <message>
         <location line="+9" />
-        <location line="+975" />
+        <location line="+1119" />
         <source>No channels are being published by the camera</source>
         <translation>Kamera ne objavlja nobenih kanalov</translation>
     </message>
     <message numerus="yes">
-        <location line="-946" />
-        <location line="+1290" />
+        <location line="-1090" />
+        <location line="+1434" />
         <source>Saved %Ln file(s)</source>
         <translation>
             <numerusform>Shranjenih %Ln datotek</numerusform>
@@ -13512,26 +13530,42 @@ S tem izbrišete njegove plošče, vdelano programsko opremo in primere.</transl
         </translation>
     </message>
     <message>
-        <location line="-1289" />
-        <location line="+265" />
-        <location line="+791" />
+        <location line="-1433" />
+        <location line="+393" />
+        <location line="+807" />
         <location line="+2" />
         <location line="+232" />
         <source>Record All</source>
         <translation>Snemaj vse</translation>
     </message>
     <message>
-        <location line="-1156" />
+        <location line="-1300" />
         <source>Graphs: drag to pan, scroll to zoom, double click to follow live, right click to save.</source>
         <translation>Grafi: vlecite za premik, vrtite kolesce za povečavo, dvokliknite za sledenje v živo, desni klik za shranjevanje.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+80" />
+        <source>No file format can hold this record.</source>
+        <translation>Noben format datoteke ne more shraniti tega zapisa.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Record this graph&apos;s data to a file (%1). Click again to stop.</source>
+        <translation>Posname podatke tega grafa v datoteko (%1). Ponovni klik ustavi snemanje.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Show the signal&apos;s frequency spectrum instead of its waveform. Right click the graph for averaging, peak hold and the window.</source>
+        <translation>Namesto oblike valovanja prikaže frekvenčni spekter signala. Z desnim klikom na graf odprete povprečenje, zadrževanje vrhov in okno.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+38" />
         <source>Pause</source>
         <translation>Premor</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-36" />
         <source>Freeze the graph. Recording is not affected.</source>
         <translation>Zamrzni graf. Snemanje se nadaljuje.</translation>
     </message>
@@ -13541,8 +13575,133 @@ S tem izbrišete njegove plošče, vdelano programsko opremo in primere.</transl
         <translation>Statistika</translation>
     </message>
     <message>
-        <location line="+533" />
-        <location line="+370" />
+        <location line="+1" />
+        <source>Show the min, max and RMS of what is on screen, or the peak of the spectrum, in the graph&apos;s corner.</source>
+        <translation>V kotu grafa prikaže najmanjšo vrednost, največjo vrednost in RMS prikazanih podatkov ali vrh spektra.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Freeze the map. Recording is not affected.</source>
+        <translation>Zamrzne zemljevid. Snemanje ni prizadeto.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Depth</source>
+        <translation>Globina</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s depth palette: red is near, blue is far.</source>
+        <translation>Globinska paleta kamere: rdeča je blizu, modra je daleč.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Rainbow</source>
+        <translation>Mavrica</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s rainbow palette: blue is near, red is far.</source>
+        <translation>Mavrična paleta kamere: modra je blizu, rdeča je daleč.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ironbow</source>
+        <translation>Ironbow</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s ironbow palette, as used for thermal images: white near, through black, to yellow far.</source>
+        <translation>Paleta ironbow kamere, ki se uporablja za termične slike: bela je blizu, nato črna, rumena je daleč.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Dark</source>
+        <translation>Dogodki temno</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a dark background.</source>
+        <translation>Paleta dogodkovne kamere na temnem ozadju.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Light</source>
+        <translation>Dogodki svetlo</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a light background.</source>
+        <translation>Paleta dogodkovne kamere na svetlem ozadju.</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Bicubic</source>
+        <translation>Bikubično</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up with a smooth curve through the pixels.</source>
+        <translation>Poveča zemljevid z gladko krivuljo skozi slikovne pike.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Bilinear</source>
+        <translation>Bilinearno</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up by blending neighbouring pixels.</source>
+        <translation>Poveča zemljevid z mešanjem sosednjih slikovnih pik.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Nearest</source>
+        <translation>Najbližji sosed</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up as blocks, one per sensor pixel.</source>
+        <translation>Poveča zemljevid v obliki blokov, enega za vsako slikovno piko senzorja.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Script Range</source>
+        <translation>Obseg skripte</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span the min and max the script declared when it added the record, so a color means the same distance in every frame.</source>
+        <translation>Barve pokrivajo najmanjšo in največjo vrednost, ki ju je skripta navedla ob dodajanju zapisa, zato ista barva v vsaki sličici pomeni isto razdaljo.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Auto Range</source>
+        <translation>Samodejni obseg</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span what this frame holds, with the extremes clipped and the range eased between frames.</source>
+        <translation>Barve pokrivajo vrednosti v trenutni sličici, skrajne vrednosti so odrezane, obseg pa se med sličicami gladko prilagaja.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Equalize</source>
+        <translation>Izenači</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Every color covers the same number of pixels, which shows the most detail; flat surfaces look noisier.</source>
+        <translation>Vsaka barva pokriva enako število slikovnih pik, kar prikaže največ podrobnosti; ravne površine so videti bolj zrnate.</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Record every graph in this channel at once, each to its own file in a folder you choose. Click again to stop them all.</source>
+        <translation>Hkrati posname vse grafe v tem kanalu, vsakega v svojo datoteko v izbrani mapi. Ponovni klik jih vse ustavi.</translation>
+    </message>
+    <message>
+        <location line="+492" />
+        <location line="+382" />
         <location line="+13" />
         <location line="+58" />
         <location line="+160" />
@@ -13551,8 +13710,12 @@ S tem izbrišete njegove plošče, vdelano programsko opremo in primere.</transl
     </message>
     <message>
         <location line="-555" />
+        <source>%1 (%2x%3, range %4-%5%6) min %7 max %8 mean %9</source>
+        <translation>%1 (%2x%3, obseg %4-%5%6) min %7 maks %8 povpr. %9</translation>
+    </message>
+    <message>
         <source>%1 (%2x%3, %4-%5mm)</source>
-        <translation>%1 (%2x%3, %4-%5 mm)</translation>
+        <translation type="vanished">%1 (%2x%3, %4-%5 mm)</translation>
     </message>
     <message>
         <location line="+24" />

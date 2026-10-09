@@ -7968,9 +7968,9 @@ Reviseu el fitxer json per detectar errors i corregiu-los.</translation>
     <message>
         <location line="-283" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2395" />
-        <location line="+554" />
-        <location line="+420" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2934" />
+        <location line="+665" />
+        <location line="+432" />
         <source>Record</source>
         <translation>Registre</translation>
     </message>
@@ -7983,8 +7983,8 @@ Reviseu el fitxer json per detectar errors i corregiu-los.</translation>
     <message>
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-492" />
-        <location line="+385" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-504" />
+        <location line="+397" />
         <location line="+91" />
         <location line="+291" />
         <source>Stop</source>
@@ -13272,7 +13272,7 @@ Això suprimeix les seves plaques, microprogramari i exemples.</translation>
         <translation>%L1 mostres (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3220" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3882" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -13282,7 +13282,7 @@ Això suprimeix les seves plaques, microprogramari i exemples.</translation>
         <translation>%L1 Hz</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+991" />
         <source>Series %1</source>
         <translation>Sèrie %1</translation>
     </message>
@@ -13298,12 +13298,29 @@ Això suprimeix les seves plaques, microprogramari i exemples.</translation>
         <translation>Imatge PNG (*.png);;Document PDF (*.pdf)</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-996" />
+        <location line="+1019" />
         <source>Failed to write &quot;%1&quot;!</source>
         <translation>No s&apos;ha pogut escriure &quot;%1&quot;!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1100" />
+        <source>x %1  y %2  %3</source>
+        <translation>x %1  y %2  %3</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <location line="+19" />
+        <source>Save Depth Image</source>
+        <translation>Desa la imatge de profunditat</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>PNG Image (*.png)</source>
+        <translation>Imatge PNG (*.png)</translation>
+    </message>
+    <message>
+        <location line="+1048" />
         <source>Auto Scale</source>
         <translation>Escala automàtica</translation>
     </message>
@@ -13369,12 +13386,12 @@ Això suprimeix les seves plaques, microprogramari i exemples.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+819" />
+        <location line="+848" />
         <source>Spectrum</source>
         <translation>Espectre</translation>
     </message>
     <message>
-        <location line="-816" />
+        <location line="-845" />
         <source>Averaging</source>
         <translation>Mitjana</translation>
     </message>
@@ -13409,7 +13426,8 @@ Això suprimeix les seves plaques, microprogramari i exemples.</translation>
         <translation>Rectangular</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1156" />
+        <location line="+1167" />
         <source>Save Image...</source>
         <translation>Desa la imatge...</translation>
     </message>
@@ -13480,13 +13498,13 @@ Això suprimeix les seves plaques, microprogramari i exemples.</translation>
     </message>
     <message>
         <location line="+9" />
-        <location line="+975" />
+        <location line="+1119" />
         <source>No channels are being published by the camera</source>
         <translation>La càmera no publica cap canal</translation>
     </message>
     <message numerus="yes">
-        <location line="-946" />
-        <location line="+1290" />
+        <location line="-1090" />
+        <location line="+1434" />
         <source>Saved %Ln file(s)</source>
         <translation>
             <numerusform>S&apos;han desat %Ln fitxers</numerusform>
@@ -13494,26 +13512,42 @@ Això suprimeix les seves plaques, microprogramari i exemples.</translation>
         </translation>
     </message>
     <message>
-        <location line="-1289" />
-        <location line="+265" />
-        <location line="+791" />
+        <location line="-1433" />
+        <location line="+393" />
+        <location line="+807" />
         <location line="+2" />
         <location line="+232" />
         <source>Record All</source>
         <translation>Enregistra-ho tot</translation>
     </message>
     <message>
-        <location line="-1156" />
+        <location line="-1300" />
         <source>Graphs: drag to pan, scroll to zoom, double click to follow live, right click to save.</source>
         <translation>Gràfics: arrossegueu per desplaçar, feu scroll per fer zoom, doble clic per seguir en directe, clic dret per desar.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+80" />
+        <source>No file format can hold this record.</source>
+        <translation>Cap format de fitxer pot contenir aquest registre.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Record this graph&apos;s data to a file (%1). Click again to stop.</source>
+        <translation>Enregistra les dades d&apos;aquest gràfic en un fitxer (%1). Torna a fer clic per aturar-ho.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Show the signal&apos;s frequency spectrum instead of its waveform. Right click the graph for averaging, peak hold and the window.</source>
+        <translation>Mostra l&apos;espectre de freqüències del senyal en lloc de la seva forma d&apos;ona. Fes clic dret al gràfic per accedir a la mitjana, la retenció de pics i la finestra.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+38" />
         <source>Pause</source>
         <translation>Pausa</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-36" />
         <source>Freeze the graph. Recording is not affected.</source>
         <translation>Congela el gràfic. L&apos;enregistrament no es veu afectat.</translation>
     </message>
@@ -13523,8 +13557,133 @@ Això suprimeix les seves plaques, microprogramari i exemples.</translation>
         <translation>Estadístiques</translation>
     </message>
     <message>
-        <location line="+533" />
-        <location line="+370" />
+        <location line="+1" />
+        <source>Show the min, max and RMS of what is on screen, or the peak of the spectrum, in the graph&apos;s corner.</source>
+        <translation>Mostra el mínim, el màxim i el RMS del que hi ha a la pantalla, o el pic de l&apos;espectre, a la cantonada del gràfic.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Freeze the map. Recording is not affected.</source>
+        <translation>Congela el mapa. L&apos;enregistrament no es veu afectat.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Depth</source>
+        <translation>Profunditat</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s depth palette: red is near, blue is far.</source>
+        <translation>La paleta de profunditat de la càmera: el vermell és a prop, el blau és lluny.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Rainbow</source>
+        <translation>Arc de Sant Martí</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s rainbow palette: blue is near, red is far.</source>
+        <translation>La paleta arc de Sant Martí de la càmera: el blau és a prop, el vermell és lluny.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ironbow</source>
+        <translation>Ironbow</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s ironbow palette, as used for thermal images: white near, through black, to yellow far.</source>
+        <translation>La paleta ironbow de la càmera, utilitzada per a imatges tèrmiques: blanc a prop, passant pel negre, fins al groc lluny.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Dark</source>
+        <translation>Esdeveniment fosc</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a dark background.</source>
+        <translation>La paleta de càmera d&apos;esdeveniments de la càmera sobre un fons fosc.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Light</source>
+        <translation>Esdeveniment clar</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a light background.</source>
+        <translation>La paleta de càmera d&apos;esdeveniments de la càmera sobre un fons clar.</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Bicubic</source>
+        <translation>Bicúbic</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up with a smooth curve through the pixels.</source>
+        <translation>Amplia el mapa amb una corba suau a través dels píxels.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Bilinear</source>
+        <translation>Bilineal</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up by blending neighbouring pixels.</source>
+        <translation>Amplia el mapa barrejant els píxels veïns.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Nearest</source>
+        <translation>Veí més proper</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up as blocks, one per sensor pixel.</source>
+        <translation>Amplia el mapa com a blocs, un per cada píxel del sensor.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Script Range</source>
+        <translation>Rang de l&apos;script</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span the min and max the script declared when it added the record, so a color means the same distance in every frame.</source>
+        <translation>Els colors abasten el mínim i el màxim que l&apos;script va declarar en afegir el registre, de manera que un color significa la mateixa distància en tots els fotogrames.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Auto Range</source>
+        <translation>Rang automàtic</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span what this frame holds, with the extremes clipped and the range eased between frames.</source>
+        <translation>Els colors abasten el que conté aquest fotograma, amb els extrems retallats i el rang suavitzat entre fotogrames.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Equalize</source>
+        <translation>Equalitza</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Every color covers the same number of pixels, which shows the most detail; flat surfaces look noisier.</source>
+        <translation>Cada color cobreix el mateix nombre de píxels, cosa que mostra el màxim de detall; les superfícies planes semblen més sorolloses.</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Record every graph in this channel at once, each to its own file in a folder you choose. Click again to stop them all.</source>
+        <translation>Enregistra alhora tots els gràfics d&apos;aquest canal, cadascun en el seu propi fitxer dins d&apos;una carpeta que triïs. Torna a fer clic per aturar-los tots.</translation>
+    </message>
+    <message>
+        <location line="+492" />
+        <location line="+382" />
         <location line="+13" />
         <location line="+58" />
         <location line="+160" />
@@ -13533,8 +13692,12 @@ Això suprimeix les seves plaques, microprogramari i exemples.</translation>
     </message>
     <message>
         <location line="-555" />
+        <source>%1 (%2x%3, range %4-%5%6) min %7 max %8 mean %9</source>
+        <translation>%1 (%2x%3, rang %4-%5%6) mín %7 màx %8 mitjana %9</translation>
+    </message>
+    <message>
         <source>%1 (%2x%3, %4-%5mm)</source>
-        <translation>%1 (%2x%3, %4-%5mm)</translation>
+        <translation type="vanished">%1 (%2x%3, %4-%5mm)</translation>
     </message>
     <message>
         <location line="+24" />

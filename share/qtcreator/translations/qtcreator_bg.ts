@@ -7968,9 +7968,9 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="-283" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2395" />
-        <location line="+554" />
-        <location line="+420" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2934" />
+        <location line="+665" />
+        <location line="+432" />
         <source>Record</source>
         <translation>Записвайте</translation>
     </message>
@@ -7983,8 +7983,8 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-492" />
-        <location line="+385" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-504" />
+        <location line="+397" />
         <location line="+91" />
         <location line="+291" />
         <source>Stop</source>
@@ -13274,7 +13274,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>%L1 семпла (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3220" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3882" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -13284,7 +13284,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>%L1 Hz</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+991" />
         <source>Series %1</source>
         <translation>Серия %1</translation>
     </message>
@@ -13300,12 +13300,29 @@ This deletes its boards, firmware, and examples.</source>
         <translation>PNG изображение (*.png);;PDF документ (*.pdf)</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-996" />
+        <location line="+1019" />
         <source>Failed to write &quot;%1&quot;!</source>
         <translation>Неуспешен запис на &quot;%1&quot;!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1100" />
+        <source>x %1  y %2  %3</source>
+        <translation>x %1  y %2  %3</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <location line="+19" />
+        <source>Save Depth Image</source>
+        <translation>Запазване на изображението на дълбочината</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>PNG Image (*.png)</source>
+        <translation>PNG изображение (*.png)</translation>
+    </message>
+    <message>
+        <location line="+1048" />
         <source>Auto Scale</source>
         <translation>Автомащаб</translation>
     </message>
@@ -13371,12 +13388,12 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+6" />
-        <location line="+819" />
+        <location line="+848" />
         <source>Spectrum</source>
         <translation>Спектър</translation>
     </message>
     <message>
-        <location line="-816" />
+        <location line="-845" />
         <source>Averaging</source>
         <translation>Осредняване</translation>
     </message>
@@ -13411,7 +13428,8 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Правоъгълен</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1156" />
+        <location line="+1167" />
         <source>Save Image...</source>
         <translation>Запазване на изображение...</translation>
     </message>
@@ -13482,13 +13500,13 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+9" />
-        <location line="+975" />
+        <location line="+1119" />
         <source>No channels are being published by the camera</source>
         <translation>Камерата не публикува канали</translation>
     </message>
     <message numerus="yes">
-        <location line="-946" />
-        <location line="+1290" />
+        <location line="-1090" />
+        <location line="+1434" />
         <source>Saved %Ln file(s)</source>
         <translation>
             <numerusform>Запазени са %Ln файла</numerusform>
@@ -13496,26 +13514,42 @@ This deletes its boards, firmware, and examples.</source>
         </translation>
     </message>
     <message>
-        <location line="-1289" />
-        <location line="+265" />
-        <location line="+791" />
+        <location line="-1433" />
+        <location line="+393" />
+        <location line="+807" />
         <location line="+2" />
         <location line="+232" />
         <source>Record All</source>
         <translation>Запис на всички</translation>
     </message>
     <message>
-        <location line="-1156" />
+        <location line="-1300" />
         <source>Graphs: drag to pan, scroll to zoom, double click to follow live, right click to save.</source>
         <translation>Графики: влачете за преместване, превъртете за мащабиране, двойно щракване за следване на живо, десен бутон за запазване.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+80" />
+        <source>No file format can hold this record.</source>
+        <translation>Никой файлов формат не може да съхрани този запис.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Record this graph&apos;s data to a file (%1). Click again to stop.</source>
+        <translation>Записва данните на тази графика във файл (%1). Щракнете отново, за да спрете.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Show the signal&apos;s frequency spectrum instead of its waveform. Right click the graph for averaging, peak hold and the window.</source>
+        <translation>Показва честотния спектър на сигнала вместо формата на вълната. Щракнете с десния бутон върху графиката за усредняване, задържане на пика и прозореца.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+38" />
         <source>Pause</source>
         <translation>Пауза</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-36" />
         <source>Freeze the graph. Recording is not affected.</source>
         <translation>Замразяване на графиката. Записът не се засяга.</translation>
     </message>
@@ -13525,8 +13559,133 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Статистика</translation>
     </message>
     <message>
-        <location line="+533" />
-        <location line="+370" />
+        <location line="+1" />
+        <source>Show the min, max and RMS of what is on screen, or the peak of the spectrum, in the graph&apos;s corner.</source>
+        <translation>Показва минимума, максимума и RMS на видимото на екрана или пика на спектъра в ъгъла на графиката.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Freeze the map. Recording is not affected.</source>
+        <translation>Замразява картата. Записът не се засяга.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Depth</source>
+        <translation>Дълбочина</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s depth palette: red is near, blue is far.</source>
+        <translation>Палитрата за дълбочина на камерата: червено е близо, синьо е далече.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Rainbow</source>
+        <translation>Дъга</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s rainbow palette: blue is near, red is far.</source>
+        <translation>Палитрата дъга на камерата: синьо е близо, червено е далече.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ironbow</source>
+        <translation>Ironbow</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s ironbow palette, as used for thermal images: white near, through black, to yellow far.</source>
+        <translation>Палитрата ironbow на камерата, използвана за термални изображения: бяло близо, през черно, до жълто далече.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Dark</source>
+        <translation>Събития тъмно</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a dark background.</source>
+        <translation>Палитрата на събитийната камера върху тъмен фон.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Light</source>
+        <translation>Събития светло</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a light background.</source>
+        <translation>Палитрата на събитийната камера върху светъл фон.</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Bicubic</source>
+        <translation>Бикубично</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up with a smooth curve through the pixels.</source>
+        <translation>Увеличава картата с плавна крива през пикселите.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Bilinear</source>
+        <translation>Билинейно</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up by blending neighbouring pixels.</source>
+        <translation>Увеличава картата чрез смесване на съседни пиксели.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Nearest</source>
+        <translation>Най-близък</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up as blocks, one per sensor pixel.</source>
+        <translation>Увеличава картата на блокове, по един за всеки пиксел на сензора.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Script Range</source>
+        <translation>Диапазон от скрипта</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span the min and max the script declared when it added the record, so a color means the same distance in every frame.</source>
+        <translation>Цветовете обхващат минимума и максимума, които скриптът е задал при добавянето на записа, така че един цвят означава еднакво разстояние във всеки кадър.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Auto Range</source>
+        <translation>Авто диапазон</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span what this frame holds, with the extremes clipped and the range eased between frames.</source>
+        <translation>Цветовете обхващат стойностите в този кадър, като крайните стойности се отрязват, а диапазонът се променя плавно между кадрите.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Equalize</source>
+        <translation>Изравняване</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Every color covers the same number of pixels, which shows the most detail; flat surfaces look noisier.</source>
+        <translation>Всеки цвят покрива един и същ брой пиксели, което показва най-много детайли; плоските повърхности изглеждат по-шумни.</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Record every graph in this channel at once, each to its own file in a folder you choose. Click again to stop them all.</source>
+        <translation>Записва всички графики в този канал едновременно, всяка в собствен файл в избрана от вас папка. Щракнете отново, за да спрете всички.</translation>
+    </message>
+    <message>
+        <location line="+492" />
+        <location line="+382" />
         <location line="+13" />
         <location line="+58" />
         <location line="+160" />
@@ -13535,8 +13694,12 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="-555" />
+        <source>%1 (%2x%3, range %4-%5%6) min %7 max %8 mean %9</source>
+        <translation>%1 (%2x%3, диапазон %4-%5%6) мин %7 макс %8 средно %9</translation>
+    </message>
+    <message>
         <source>%1 (%2x%3, %4-%5mm)</source>
-        <translation>%1 (%2x%3, %4-%5 мм)</translation>
+        <translation type="vanished">%1 (%2x%3, %4-%5 мм)</translation>
     </message>
     <message>
         <location line="+24" />

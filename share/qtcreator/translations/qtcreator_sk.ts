@@ -7975,9 +7975,9 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="-283" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2395" />
-        <location line="+554" />
-        <location line="+420" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2934" />
+        <location line="+665" />
+        <location line="+432" />
         <source>Record</source>
         <translation>Záznam</translation>
     </message>
@@ -7990,8 +7990,8 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-492" />
-        <location line="+385" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-504" />
+        <location line="+397" />
         <location line="+91" />
         <location line="+291" />
         <source>Stop</source>
@@ -13288,7 +13288,7 @@ Týmto sa odstránia jeho dosky, firmvér a príklady.</translation>
         <translation>%L1 vzoriek (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3220" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3882" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -13298,7 +13298,7 @@ Týmto sa odstránia jeho dosky, firmvér a príklady.</translation>
         <translation>%L1 Hz</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+991" />
         <source>Series %1</source>
         <translation>Séria %1</translation>
     </message>
@@ -13314,12 +13314,29 @@ Týmto sa odstránia jeho dosky, firmvér a príklady.</translation>
         <translation>Obrázok PNG (*.png);;Dokument PDF (*.pdf)</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-996" />
+        <location line="+1019" />
         <source>Failed to write &quot;%1&quot;!</source>
         <translation>Nepodarilo sa zapísať &quot;%1&quot;!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1100" />
+        <source>x %1  y %2  %3</source>
+        <translation>x %1  y %2  %3</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <location line="+19" />
+        <source>Save Depth Image</source>
+        <translation>Uložiť obraz hĺbky</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>PNG Image (*.png)</source>
+        <translation>Obrázok PNG (*.png)</translation>
+    </message>
+    <message>
+        <location line="+1048" />
         <source>Auto Scale</source>
         <translation>Automatická mierka</translation>
     </message>
@@ -13385,12 +13402,12 @@ Týmto sa odstránia jeho dosky, firmvér a príklady.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+819" />
+        <location line="+848" />
         <source>Spectrum</source>
         <translation>Spektrum</translation>
     </message>
     <message>
-        <location line="-816" />
+        <location line="-845" />
         <source>Averaging</source>
         <translation>Priemerovanie</translation>
     </message>
@@ -13425,7 +13442,8 @@ Týmto sa odstránia jeho dosky, firmvér a príklady.</translation>
         <translation>Obdĺžnikové</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1156" />
+        <location line="+1167" />
         <source>Save Image...</source>
         <translation>Uložiť obrázok...</translation>
     </message>
@@ -13496,13 +13514,13 @@ Týmto sa odstránia jeho dosky, firmvér a príklady.</translation>
     </message>
     <message>
         <location line="+9" />
-        <location line="+975" />
+        <location line="+1119" />
         <source>No channels are being published by the camera</source>
         <translation>Kamera nepublikuje žiadne kanály</translation>
     </message>
     <message numerus="yes">
-        <location line="-946" />
-        <location line="+1290" />
+        <location line="-1090" />
+        <location line="+1434" />
         <source>Saved %Ln file(s)</source>
         <translation>
             <numerusform>Uložených súborov: %Ln</numerusform>
@@ -13511,26 +13529,42 @@ Týmto sa odstránia jeho dosky, firmvér a príklady.</translation>
         </translation>
     </message>
     <message>
-        <location line="-1289" />
-        <location line="+265" />
-        <location line="+791" />
+        <location line="-1433" />
+        <location line="+393" />
+        <location line="+807" />
         <location line="+2" />
         <location line="+232" />
         <source>Record All</source>
         <translation>Nahrať všetko</translation>
     </message>
     <message>
-        <location line="-1156" />
+        <location line="-1300" />
         <source>Graphs: drag to pan, scroll to zoom, double click to follow live, right click to save.</source>
         <translation>Grafy: ťahaním posúvate, kolieskom približujete, dvojklikom sledujete naživo, pravým kliknutím uložíte.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+80" />
+        <source>No file format can hold this record.</source>
+        <translation>Žiadny formát súboru nedokáže uložiť tento záznam.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Record this graph&apos;s data to a file (%1). Click again to stop.</source>
+        <translation>Nahrá údaje tohto grafu do súboru (%1). Opätovným kliknutím nahrávanie zastavíte.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Show the signal&apos;s frequency spectrum instead of its waveform. Right click the graph for averaging, peak hold and the window.</source>
+        <translation>Zobrazí frekvenčné spektrum signálu namiesto jeho priebehu. Pravým kliknutím na graf nastavíte priemerovanie, podržanie vrcholov a okno.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+38" />
         <source>Pause</source>
         <translation>Pozastaviť</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-36" />
         <source>Freeze the graph. Recording is not affected.</source>
         <translation>Zmrazí graf. Nahrávanie nie je ovplyvnené.</translation>
     </message>
@@ -13540,8 +13574,133 @@ Týmto sa odstránia jeho dosky, firmvér a príklady.</translation>
         <translation>Štatistiky</translation>
     </message>
     <message>
-        <location line="+533" />
-        <location line="+370" />
+        <location line="+1" />
+        <source>Show the min, max and RMS of what is on screen, or the peak of the spectrum, in the graph&apos;s corner.</source>
+        <translation>Zobrazí v rohu grafu minimum, maximum a RMS zobrazených údajov alebo vrchol spektra.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Freeze the map. Recording is not affected.</source>
+        <translation>Zmrazí mapu. Nahrávanie tým nie je ovplyvnené.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Depth</source>
+        <translation>Hĺbka</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s depth palette: red is near, blue is far.</source>
+        <translation>Hĺbková paleta kamery: červená je blízko, modrá ďaleko.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Rainbow</source>
+        <translation>Dúha</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s rainbow palette: blue is near, red is far.</source>
+        <translation>Dúhová paleta kamery: modrá je blízko, červená ďaleko.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ironbow</source>
+        <translation>Ironbow</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s ironbow palette, as used for thermal images: white near, through black, to yellow far.</source>
+        <translation>Paleta ironbow kamery, používaná pri tepelných obrazoch: biela je blízko, cez čiernu až po žltú, ktorá je ďaleko.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Dark</source>
+        <translation>Udalosť tmavá</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a dark background.</source>
+        <translation>Paleta udalostnej kamery na tmavom pozadí.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Light</source>
+        <translation>Udalosť svetlá</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a light background.</source>
+        <translation>Paleta udalostnej kamery na svetlom pozadí.</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Bicubic</source>
+        <translation>Bikubická</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up with a smooth curve through the pixels.</source>
+        <translation>Zväčší mapu pomocou plynulej krivky prechádzajúcej pixelmi.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Bilinear</source>
+        <translation>Bilineárna</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up by blending neighbouring pixels.</source>
+        <translation>Zväčší mapu zmiešavaním susedných pixelov.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Nearest</source>
+        <translation>Najbližší sused</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up as blocks, one per sensor pixel.</source>
+        <translation>Zväčší mapu ako bloky, jeden na každý pixel senzora.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Script Range</source>
+        <translation>Rozsah skriptu</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span the min and max the script declared when it added the record, so a color means the same distance in every frame.</source>
+        <translation>Farby pokrývajú minimum a maximum, ktoré skript uviedol pri pridaní záznamu, takže farba znamená rovnakú vzdialenosť v každom snímku.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Auto Range</source>
+        <translation>Auto rozsah</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span what this frame holds, with the extremes clipped and the range eased between frames.</source>
+        <translation>Farby pokrývajú hodnoty v tomto snímku, pričom extrémy sú orezané a rozsah sa medzi snímkami plynulo upravuje.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Equalize</source>
+        <translation>Vyrovnať</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Every color covers the same number of pixels, which shows the most detail; flat surfaces look noisier.</source>
+        <translation>Každá farba pokrýva rovnaký počet pixelov, čo zobrazí najviac detailov; ploché povrchy vyzerajú zašumenejšie.</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Record every graph in this channel at once, each to its own file in a folder you choose. Click again to stop them all.</source>
+        <translation>Nahrá naraz všetky grafy v tomto kanáli, každý do vlastného súboru v zvolenom priečinku. Opätovným kliknutím ich všetky zastavíte.</translation>
+    </message>
+    <message>
+        <location line="+492" />
+        <location line="+382" />
         <location line="+13" />
         <location line="+58" />
         <location line="+160" />
@@ -13550,8 +13709,12 @@ Týmto sa odstránia jeho dosky, firmvér a príklady.</translation>
     </message>
     <message>
         <location line="-555" />
+        <source>%1 (%2x%3, range %4-%5%6) min %7 max %8 mean %9</source>
+        <translation>%1 (%2x%3, rozsah %4-%5%6) min %7 max %8 priem. %9</translation>
+    </message>
+    <message>
         <source>%1 (%2x%3, %4-%5mm)</source>
-        <translation>%1 (%2x%3, %4-%5mm)</translation>
+        <translation type="vanished">%1 (%2x%3, %4-%5mm)</translation>
     </message>
     <message>
         <location line="+24" />

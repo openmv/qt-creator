@@ -7968,9 +7968,9 @@ Tarkista json-tiedosto virheiden varalta ja korjaa ne.</translation>
     <message>
         <location line="-283" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2395" />
-        <location line="+554" />
-        <location line="+420" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2934" />
+        <location line="+665" />
+        <location line="+432" />
         <source>Record</source>
         <translation>Ennätys</translation>
     </message>
@@ -7983,8 +7983,8 @@ Tarkista json-tiedosto virheiden varalta ja korjaa ne.</translation>
     <message>
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-492" />
-        <location line="+385" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-504" />
+        <location line="+397" />
         <location line="+91" />
         <location line="+291" />
         <source>Stop</source>
@@ -13272,7 +13272,7 @@ Tämä poistaa sen kortit, laiteohjelmistot ja esimerkit.</translation>
         <translation>%L1 näytettä (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3220" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3882" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -13282,7 +13282,7 @@ Tämä poistaa sen kortit, laiteohjelmistot ja esimerkit.</translation>
         <translation>%L1 Hz</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+991" />
         <source>Series %1</source>
         <translation>Sarja %1</translation>
     </message>
@@ -13298,12 +13298,29 @@ Tämä poistaa sen kortit, laiteohjelmistot ja esimerkit.</translation>
         <translation>PNG-kuva (*.png);;PDF-asiakirja (*.pdf)</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-996" />
+        <location line="+1019" />
         <source>Failed to write &quot;%1&quot;!</source>
         <translation>Kohteen &quot;%1&quot; kirjoitus epäonnistui!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1100" />
+        <source>x %1  y %2  %3</source>
+        <translation>x %1  y %2  %3</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <location line="+19" />
+        <source>Save Depth Image</source>
+        <translation>Tallenna syvyyskuva</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>PNG Image (*.png)</source>
+        <translation>PNG-kuva (*.png)</translation>
+    </message>
+    <message>
+        <location line="+1048" />
         <source>Auto Scale</source>
         <translation>Automaattinen skaalaus</translation>
     </message>
@@ -13369,12 +13386,12 @@ Tämä poistaa sen kortit, laiteohjelmistot ja esimerkit.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+819" />
+        <location line="+848" />
         <source>Spectrum</source>
         <translation>Spektri</translation>
     </message>
     <message>
-        <location line="-816" />
+        <location line="-845" />
         <source>Averaging</source>
         <translation>Keskiarvoistus</translation>
     </message>
@@ -13409,7 +13426,8 @@ Tämä poistaa sen kortit, laiteohjelmistot ja esimerkit.</translation>
         <translation>Suorakaide</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1156" />
+        <location line="+1167" />
         <source>Save Image...</source>
         <translation>Tallenna kuva...</translation>
     </message>
@@ -13480,13 +13498,13 @@ Tämä poistaa sen kortit, laiteohjelmistot ja esimerkit.</translation>
     </message>
     <message>
         <location line="+9" />
-        <location line="+975" />
+        <location line="+1119" />
         <source>No channels are being published by the camera</source>
         <translation>Kamera ei julkaise yhtään kanavaa</translation>
     </message>
     <message numerus="yes">
-        <location line="-946" />
-        <location line="+1290" />
+        <location line="-1090" />
+        <location line="+1434" />
         <source>Saved %Ln file(s)</source>
         <translation>
             <numerusform>Tallennettu %Ln tiedostoa</numerusform>
@@ -13494,26 +13512,42 @@ Tämä poistaa sen kortit, laiteohjelmistot ja esimerkit.</translation>
         </translation>
     </message>
     <message>
-        <location line="-1289" />
-        <location line="+265" />
-        <location line="+791" />
+        <location line="-1433" />
+        <location line="+393" />
+        <location line="+807" />
         <location line="+2" />
         <location line="+232" />
         <source>Record All</source>
         <translation>Tallenna kaikki</translation>
     </message>
     <message>
-        <location line="-1156" />
+        <location line="-1300" />
         <source>Graphs: drag to pan, scroll to zoom, double click to follow live, right click to save.</source>
         <translation>Kuvaajat: vedä panoroidaksesi, vieritä zoomataksesi, kaksoisnapsauta seurataksesi reaaliaikaisesti, napsauta hiiren oikealla tallentaaksesi.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+80" />
+        <source>No file format can hold this record.</source>
+        <translation>Mikään tiedostomuoto ei voi sisältää tätä tietuetta.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Record this graph&apos;s data to a file (%1). Click again to stop.</source>
+        <translation>Tallenna tämän kuvaajan tiedot tiedostoon (%1). Napsauta uudelleen pysäyttääksesi.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Show the signal&apos;s frequency spectrum instead of its waveform. Right click the graph for averaging, peak hold and the window.</source>
+        <translation>Näytä signaalin taajuusspektri aaltomuodon sijaan. Napsauta kuvaajaa hiiren kakkospainikkeella keskiarvoistusta, huippuarvon pitoa ja ikkunafunktiota varten.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+38" />
         <source>Pause</source>
         <translation>Tauko</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-36" />
         <source>Freeze the graph. Recording is not affected.</source>
         <translation>Pysäytä kuvaaja. Ei vaikuta tallennukseen.</translation>
     </message>
@@ -13523,8 +13557,133 @@ Tämä poistaa sen kortit, laiteohjelmistot ja esimerkit.</translation>
         <translation>Tilastot</translation>
     </message>
     <message>
-        <location line="+533" />
-        <location line="+370" />
+        <location line="+1" />
+        <source>Show the min, max and RMS of what is on screen, or the peak of the spectrum, in the graph&apos;s corner.</source>
+        <translation>Näytä ruudulla olevan datan min-, maks- ja RMS-arvo tai spektrin huippu kuvaajan kulmassa.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Freeze the map. Recording is not affected.</source>
+        <translation>Pysäytä kartta. Tallennus ei vaikuta tähän.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Depth</source>
+        <translation>Syvyys</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s depth palette: red is near, blue is far.</source>
+        <translation>Kameran syvyyspaletti: punainen on lähellä, sininen kaukana.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Rainbow</source>
+        <translation>Sateenkaari</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s rainbow palette: blue is near, red is far.</source>
+        <translation>Kameran sateenkaaripaletti: sininen on lähellä, punainen kaukana.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ironbow</source>
+        <translation>Ironbow</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s ironbow palette, as used for thermal images: white near, through black, to yellow far.</source>
+        <translation>Kameran ironbow-paletti, jota käytetään lämpökuvissa: valkoinen on lähellä, sitten musta, ja keltainen kaukana.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Dark</source>
+        <translation>Tapahtuma, tumma</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a dark background.</source>
+        <translation>Kameran tapahtumakameran paletti tummalla taustalla.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Light</source>
+        <translation>Tapahtuma, vaalea</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a light background.</source>
+        <translation>Kameran tapahtumakameran paletti vaalealla taustalla.</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Bicubic</source>
+        <translation>Bikuubinen</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up with a smooth curve through the pixels.</source>
+        <translation>Suurenna kartta pehmeällä käyrällä pikseleiden läpi.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Bilinear</source>
+        <translation>Bilineaarinen</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up by blending neighbouring pixels.</source>
+        <translation>Suurenna kartta sekoittamalla vierekkäisiä pikseleitä.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Nearest</source>
+        <translation>Lähin naapuri</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up as blocks, one per sensor pixel.</source>
+        <translation>Suurenna kartta lohkoina, yksi lohko jokaista anturin pikseliä kohden.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Script Range</source>
+        <translation>Skriptin alue</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span the min and max the script declared when it added the record, so a color means the same distance in every frame.</source>
+        <translation>Värit kattavat vähimmäis- ja enimmäisarvon, jotka skripti ilmoitti lisätessään tietueen, joten väri tarkoittaa samaa etäisyyttä jokaisessa kuvassa.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Auto Range</source>
+        <translation>Automaattialue</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span what this frame holds, with the extremes clipped and the range eased between frames.</source>
+        <translation>Värit kattavat tämän kuvan arvot: ääripäät leikataan pois ja arvoväliä tasoitetaan kuvien välillä.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Equalize</source>
+        <translation>Tasaa</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Every color covers the same number of pixels, which shows the most detail; flat surfaces look noisier.</source>
+        <translation>Jokainen väri kattaa saman määrän pikseleitä, mikä tuo esiin eniten yksityiskohtia; tasaiset pinnat näyttävät kohinaisemmilta.</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Record every graph in this channel at once, each to its own file in a folder you choose. Click again to stop them all.</source>
+        <translation>Tallenna kaikki tämän kanavan kuvaajat kerralla, kukin omaan tiedostoonsa valitsemaasi kansioon. Napsauta uudelleen pysäyttääksesi ne kaikki.</translation>
+    </message>
+    <message>
+        <location line="+492" />
+        <location line="+382" />
         <location line="+13" />
         <location line="+58" />
         <location line="+160" />
@@ -13533,8 +13692,12 @@ Tämä poistaa sen kortit, laiteohjelmistot ja esimerkit.</translation>
     </message>
     <message>
         <location line="-555" />
+        <source>%1 (%2x%3, range %4-%5%6) min %7 max %8 mean %9</source>
+        <translation>%1 (%2x%3, väli %4-%5%6) min %7 maks %8 keskiarvo %9</translation>
+    </message>
+    <message>
         <source>%1 (%2x%3, %4-%5mm)</source>
-        <translation>%1 (%2x%3, %4-%5mm)</translation>
+        <translation type="vanished">%1 (%2x%3, %4-%5mm)</translation>
     </message>
     <message>
         <location line="+24" />

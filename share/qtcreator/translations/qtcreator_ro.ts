@@ -8400,9 +8400,9 @@ Doriți să alegeți un alt nume?</translation>
     <message>
         <location line="-283" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2395" />
-        <location line="+554" />
-        <location line="+420" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2934" />
+        <location line="+665" />
+        <location line="+432" />
         <source>Record</source>
         <translation>Înregistra</translation>
     </message>
@@ -8415,8 +8415,8 @@ Doriți să alegeți un alt nume?</translation>
     <message>
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-492" />
-        <location line="+385" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-504" />
+        <location line="+397" />
         <location line="+91" />
         <location line="+291" />
         <source>Stop</source>
@@ -12738,7 +12738,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>%L1 eșantioane (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3220" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3882" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -12748,7 +12748,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>%L1 Hz</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+991" />
         <source>Series %1</source>
         <translation>Seria %1</translation>
     </message>
@@ -12764,12 +12764,29 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Imagine PNG (*.png);;Document PDF (*.pdf)</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-996" />
+        <location line="+1019" />
         <source>Failed to write &quot;%1&quot;!</source>
         <translation>Scrierea &quot;%1&quot; a eșuat!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1100" />
+        <source>x %1  y %2  %3</source>
+        <translation>x %1  y %2  %3</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <location line="+19" />
+        <source>Save Depth Image</source>
+        <translation>Salvează imaginea de adâncime</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>PNG Image (*.png)</source>
+        <translation>Imagine PNG (*.png)</translation>
+    </message>
+    <message>
+        <location line="+1048" />
         <source>Auto Scale</source>
         <translation>Scalare automată</translation>
     </message>
@@ -12835,12 +12852,12 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+819" />
+        <location line="+848" />
         <source>Spectrum</source>
         <translation>Spectru</translation>
     </message>
     <message>
-        <location line="-816" />
+        <location line="-845" />
         <source>Averaging</source>
         <translation>Mediere</translation>
     </message>
@@ -12875,7 +12892,8 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Dreptunghiulară</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1156" />
+        <location line="+1167" />
         <source>Save Image...</source>
         <translation>Salvează imaginea...</translation>
     </message>
@@ -12946,13 +12964,13 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
     </message>
     <message>
         <location line="+9" />
-        <location line="+975" />
+        <location line="+1119" />
         <source>No channels are being published by the camera</source>
         <translation>Camera nu publică niciun canal</translation>
     </message>
     <message numerus="yes">
-        <location line="-946" />
-        <location line="+1290" />
+        <location line="-1090" />
+        <location line="+1434" />
         <source>Saved %Ln file(s)</source>
         <translation>
             <numerusform>S-au salvat %Ln fișiere</numerusform>
@@ -12961,26 +12979,42 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         </translation>
     </message>
     <message>
-        <location line="-1289" />
-        <location line="+265" />
-        <location line="+791" />
+        <location line="-1433" />
+        <location line="+393" />
+        <location line="+807" />
         <location line="+2" />
         <location line="+232" />
         <source>Record All</source>
         <translation>Înregistrează tot</translation>
     </message>
     <message>
-        <location line="-1156" />
+        <location line="-1300" />
         <source>Graphs: drag to pan, scroll to zoom, double click to follow live, right click to save.</source>
         <translation>Grafice: trageți pentru a deplasa, derulați pentru a mări, dublu clic pentru a urmări în direct, clic dreapta pentru a salva.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+80" />
+        <source>No file format can hold this record.</source>
+        <translation>Niciun format de fișier nu poate stoca această înregistrare.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Record this graph&apos;s data to a file (%1). Click again to stop.</source>
+        <translation>Înregistrează datele acestui grafic într-un fișier (%1). Fă clic din nou pentru a opri.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Show the signal&apos;s frequency spectrum instead of its waveform. Right click the graph for averaging, peak hold and the window.</source>
+        <translation>Afișează spectrul de frecvențe al semnalului în loc de forma de undă. Fă clic dreapta pe grafic pentru mediere, menținerea vârfului și fereastră.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+38" />
         <source>Pause</source>
         <translation>Pauză</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-36" />
         <source>Freeze the graph. Recording is not affected.</source>
         <translation>Îngheață graficul. Înregistrarea nu este afectată.</translation>
     </message>
@@ -12990,8 +13024,133 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Statistici</translation>
     </message>
     <message>
-        <location line="+533" />
-        <location line="+370" />
+        <location line="+1" />
+        <source>Show the min, max and RMS of what is on screen, or the peak of the spectrum, in the graph&apos;s corner.</source>
+        <translation>Afișează în colțul graficului minimul, maximul și RMS ale datelor de pe ecran sau vârful spectrului.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Freeze the map. Recording is not affected.</source>
+        <translation>Îngheață harta. Înregistrarea nu este afectată.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Depth</source>
+        <translation>Adâncime</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s depth palette: red is near, blue is far.</source>
+        <translation>Paleta de adâncime a camerei: roșu înseamnă aproape, albastru înseamnă departe.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Rainbow</source>
+        <translation>Curcubeu</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s rainbow palette: blue is near, red is far.</source>
+        <translation>Paleta curcubeu a camerei: albastru înseamnă aproape, roșu înseamnă departe.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ironbow</source>
+        <translation>Ironbow</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s ironbow palette, as used for thermal images: white near, through black, to yellow far.</source>
+        <translation>Paleta ironbow a camerei, folosită pentru imaginile termice: alb aproape, apoi negru, până la galben departe.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Dark</source>
+        <translation>Eveniment întunecat</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a dark background.</source>
+        <translation>Paleta camerei de evenimente a camerei, pe fundal întunecat.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Light</source>
+        <translation>Eveniment luminos</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a light background.</source>
+        <translation>Paleta camerei de evenimente a camerei, pe fundal luminos.</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Bicubic</source>
+        <translation>Bicubic</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up with a smooth curve through the pixels.</source>
+        <translation>Mărește harta cu o curbă netedă prin pixeli.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Bilinear</source>
+        <translation>Biliniar</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up by blending neighbouring pixels.</source>
+        <translation>Mărește harta prin amestecarea pixelilor vecini.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Nearest</source>
+        <translation>Cel mai apropiat</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up as blocks, one per sensor pixel.</source>
+        <translation>Mărește harta sub formă de blocuri, câte unul pentru fiecare pixel al senzorului.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Script Range</source>
+        <translation>Interval script</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span the min and max the script declared when it added the record, so a color means the same distance in every frame.</source>
+        <translation>Culorile acoperă minimul și maximul declarate de script la adăugarea înregistrării, astfel încât o culoare înseamnă aceeași distanță în fiecare cadru.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Auto Range</source>
+        <translation>Interval automat</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span what this frame holds, with the extremes clipped and the range eased between frames.</source>
+        <translation>Culorile acoperă valorile din acest cadru, cu extremele tăiate, iar intervalul se ajustează treptat de la un cadru la altul.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Equalize</source>
+        <translation>Egalizare</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Every color covers the same number of pixels, which shows the most detail; flat surfaces look noisier.</source>
+        <translation>Fiecare culoare acoperă același număr de pixeli, ceea ce evidențiază cele mai multe detalii; suprafețele plane par mai zgomotoase.</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Record every graph in this channel at once, each to its own file in a folder you choose. Click again to stop them all.</source>
+        <translation>Înregistrează simultan toate graficele din acest canal, fiecare într-un fișier propriu, într-un folder la alegere. Fă clic din nou pentru a le opri pe toate.</translation>
+    </message>
+    <message>
+        <location line="+492" />
+        <location line="+382" />
         <location line="+13" />
         <location line="+58" />
         <location line="+160" />
@@ -13000,8 +13159,12 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
     </message>
     <message>
         <location line="-555" />
+        <source>%1 (%2x%3, range %4-%5%6) min %7 max %8 mean %9</source>
+        <translation>%1 (%2x%3, interval %4-%5%6) min %7 max %8 medie %9</translation>
+    </message>
+    <message>
         <source>%1 (%2x%3, %4-%5mm)</source>
-        <translation>%1 (%2x%3, %4-%5mm)</translation>
+        <translation type="vanished">%1 (%2x%3, %4-%5mm)</translation>
     </message>
     <message>
         <location line="+24" />

@@ -8387,9 +8387,9 @@ Bạn có muốn chọn một tên khác không?</translation>
     <message>
         <location line="-283" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2395" />
-        <location line="+554" />
-        <location line="+420" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2934" />
+        <location line="+665" />
+        <location line="+432" />
         <source>Record</source>
         <translation>Ghi</translation>
     </message>
@@ -8402,8 +8402,8 @@ Bạn có muốn chọn một tên khác không?</translation>
     <message>
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-492" />
-        <location line="+385" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-504" />
+        <location line="+397" />
         <location line="+91" />
         <location line="+291" />
         <source>Stop</source>
@@ -12723,7 +12723,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>%L1 mẫu (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3220" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3882" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -12733,7 +12733,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>%L1 Hz</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+991" />
         <source>Series %1</source>
         <translation>Chuỗi %1</translation>
     </message>
@@ -12749,12 +12749,29 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Ảnh PNG (*.png);;Tài liệu PDF (*.pdf)</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-996" />
+        <location line="+1019" />
         <source>Failed to write &quot;%1&quot;!</source>
         <translation>Ghi &quot;%1&quot; thất bại!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1100" />
+        <source>x %1  y %2  %3</source>
+        <translation>x %1  y %2  %3</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <location line="+19" />
+        <source>Save Depth Image</source>
+        <translation>Lưu ảnh độ sâu</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>PNG Image (*.png)</source>
+        <translation>Ảnh PNG (*.png)</translation>
+    </message>
+    <message>
+        <location line="+1048" />
         <source>Auto Scale</source>
         <translation>Tự động co giãn</translation>
     </message>
@@ -12820,12 +12837,12 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
     </message>
     <message>
         <location line="+6" />
-        <location line="+819" />
+        <location line="+848" />
         <source>Spectrum</source>
         <translation>Phổ</translation>
     </message>
     <message>
-        <location line="-816" />
+        <location line="-845" />
         <source>Averaging</source>
         <translation>Lấy trung bình</translation>
     </message>
@@ -12860,7 +12877,8 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Chữ nhật</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1156" />
+        <location line="+1167" />
         <source>Save Image...</source>
         <translation>Lưu ảnh...</translation>
     </message>
@@ -12931,39 +12949,55 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
     </message>
     <message>
         <location line="+9" />
-        <location line="+975" />
+        <location line="+1119" />
         <source>No channels are being published by the camera</source>
         <translation>Camera không phát kênh nào</translation>
     </message>
     <message numerus="yes">
-        <location line="-946" />
-        <location line="+1290" />
+        <location line="-1090" />
+        <location line="+1434" />
         <source>Saved %Ln file(s)</source>
         <translation>
             <numerusform>Đã lưu %Ln tệp</numerusform>
         </translation>
     </message>
     <message>
-        <location line="-1289" />
-        <location line="+265" />
-        <location line="+791" />
+        <location line="-1433" />
+        <location line="+393" />
+        <location line="+807" />
         <location line="+2" />
         <location line="+232" />
         <source>Record All</source>
         <translation>Ghi tất cả</translation>
     </message>
     <message>
-        <location line="-1156" />
+        <location line="-1300" />
         <source>Graphs: drag to pan, scroll to zoom, double click to follow live, right click to save.</source>
         <translation>Đồ thị: kéo để di chuyển, cuộn để thu phóng, nhấp đúp để theo dõi trực tiếp, nhấp chuột phải để lưu.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+80" />
+        <source>No file format can hold this record.</source>
+        <translation>Không có định dạng tệp nào có thể chứa bản ghi này.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Record this graph&apos;s data to a file (%1). Click again to stop.</source>
+        <translation>Ghi dữ liệu của đồ thị này vào một tệp (%1). Nhấp lần nữa để dừng.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Show the signal&apos;s frequency spectrum instead of its waveform. Right click the graph for averaging, peak hold and the window.</source>
+        <translation>Hiển thị phổ tần số của tín hiệu thay cho dạng sóng. Nhấp chuột phải vào đồ thị để chọn lấy trung bình, giữ đỉnh và hàm cửa sổ.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+38" />
         <source>Pause</source>
         <translation>Tạm dừng</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-36" />
         <source>Freeze the graph. Recording is not affected.</source>
         <translation>Đóng băng đồ thị. Việc ghi không bị ảnh hưởng.</translation>
     </message>
@@ -12973,8 +13007,133 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Thống kê</translation>
     </message>
     <message>
-        <location line="+533" />
-        <location line="+370" />
+        <location line="+1" />
+        <source>Show the min, max and RMS of what is on screen, or the peak of the spectrum, in the graph&apos;s corner.</source>
+        <translation>Hiển thị giá trị nhỏ nhất, lớn nhất và RMS của phần đang hiện trên màn hình, hoặc đỉnh của phổ, ở góc đồ thị.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Freeze the map. Recording is not affected.</source>
+        <translation>Đóng băng bản đồ. Việc ghi không bị ảnh hưởng.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Depth</source>
+        <translation>Độ sâu</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s depth palette: red is near, blue is far.</source>
+        <translation>Bảng màu độ sâu của camera: đỏ là gần, xanh dương là xa.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Rainbow</source>
+        <translation>Cầu vồng</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s rainbow palette: blue is near, red is far.</source>
+        <translation>Bảng màu cầu vồng của camera: xanh dương là gần, đỏ là xa.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ironbow</source>
+        <translation>Ironbow</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s ironbow palette, as used for thermal images: white near, through black, to yellow far.</source>
+        <translation>Bảng màu ironbow của camera, dùng cho ảnh nhiệt: trắng là gần, qua đen, đến vàng là xa.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Dark</source>
+        <translation>Sự kiện tối</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a dark background.</source>
+        <translation>Bảng màu event camera của camera trên nền tối.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Light</source>
+        <translation>Sự kiện sáng</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a light background.</source>
+        <translation>Bảng màu event camera của camera trên nền sáng.</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Bicubic</source>
+        <translation>Song bậc ba</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up with a smooth curve through the pixels.</source>
+        <translation>Phóng to bản đồ bằng một đường cong mượt đi qua các điểm ảnh.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Bilinear</source>
+        <translation>Song tuyến tính</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up by blending neighbouring pixels.</source>
+        <translation>Phóng to bản đồ bằng cách trộn các điểm ảnh lân cận.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Nearest</source>
+        <translation>Lân cận gần nhất</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up as blocks, one per sensor pixel.</source>
+        <translation>Phóng to bản đồ thành các khối, mỗi khối tương ứng một điểm ảnh của cảm biến.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Script Range</source>
+        <translation>Dải của tập lệnh</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span the min and max the script declared when it added the record, so a color means the same distance in every frame.</source>
+        <translation>Màu trải từ giá trị nhỏ nhất đến lớn nhất mà tập lệnh khai báo khi thêm bản ghi, nên một màu luôn biểu thị cùng một khoảng cách ở mọi khung hình.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Auto Range</source>
+        <translation>Dải tự động</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span what this frame holds, with the extremes clipped and the range eased between frames.</source>
+        <translation>Màu trải theo dữ liệu của khung hình hiện tại, các giá trị cực biên được cắt bỏ và dải giá trị được làm mượt giữa các khung hình.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Equalize</source>
+        <translation>Cân bằng</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Every color covers the same number of pixels, which shows the most detail; flat surfaces look noisier.</source>
+        <translation>Mỗi màu bao phủ cùng một số điểm ảnh, giúp hiển thị nhiều chi tiết nhất; các bề mặt phẳng trông nhiễu hơn.</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Record every graph in this channel at once, each to its own file in a folder you choose. Click again to stop them all.</source>
+        <translation>Ghi đồng thời mọi đồ thị trong kênh này, mỗi đồ thị vào một tệp riêng trong thư mục bạn chọn. Nhấp lần nữa để dừng tất cả.</translation>
+    </message>
+    <message>
+        <location line="+492" />
+        <location line="+382" />
         <location line="+13" />
         <location line="+58" />
         <location line="+160" />
@@ -12983,8 +13142,12 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
     </message>
     <message>
         <location line="-555" />
+        <source>%1 (%2x%3, range %4-%5%6) min %7 max %8 mean %9</source>
+        <translation>%1 (%2x%3, dải %4-%5%6) min %7 max %8 tb %9</translation>
+    </message>
+    <message>
         <source>%1 (%2x%3, %4-%5mm)</source>
-        <translation>%1 (%2x%3, %4-%5mm)</translation>
+        <translation type="vanished">%1 (%2x%3, %4-%5mm)</translation>
     </message>
     <message>
         <location line="+24" />

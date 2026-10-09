@@ -7966,9 +7966,9 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="-283" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2395" />
-        <location line="+554" />
-        <location line="+420" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2934" />
+        <location line="+665" />
+        <location line="+432" />
         <source>Record</source>
         <translation>Aufnehmen</translation>
     </message>
@@ -7981,8 +7981,8 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-492" />
-        <location line="+385" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-504" />
+        <location line="+397" />
         <location line="+91" />
         <location line="+291" />
         <source>Stop</source>
@@ -13278,7 +13278,7 @@ Dadurch werden dessen Boards, Firmware und Beispiele gelöscht.</translation>
         <translation>%L1 Samples (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3220" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3882" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -13288,7 +13288,7 @@ Dadurch werden dessen Boards, Firmware und Beispiele gelöscht.</translation>
         <translation>%L1 Hz</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+991" />
         <source>Series %1</source>
         <translation>Reihe %1</translation>
     </message>
@@ -13304,12 +13304,29 @@ Dadurch werden dessen Boards, Firmware und Beispiele gelöscht.</translation>
         <translation>PNG-Bild (*.png);;PDF-Dokument (*.pdf)</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-996" />
+        <location line="+1019" />
         <source>Failed to write &quot;%1&quot;!</source>
         <translation>&quot;%1&quot; konnte nicht geschrieben werden!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1100" />
+        <source>x %1  y %2  %3</source>
+        <translation>x %1  y %2  %3</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <location line="+19" />
+        <source>Save Depth Image</source>
+        <translation>Tiefenbild speichern</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>PNG Image (*.png)</source>
+        <translation>PNG-Bild (*.png)</translation>
+    </message>
+    <message>
+        <location line="+1048" />
         <source>Auto Scale</source>
         <translation>Auto-Skalierung</translation>
     </message>
@@ -13375,12 +13392,12 @@ Dadurch werden dessen Boards, Firmware und Beispiele gelöscht.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+819" />
+        <location line="+848" />
         <source>Spectrum</source>
         <translation>Spektrum</translation>
     </message>
     <message>
-        <location line="-816" />
+        <location line="-845" />
         <source>Averaging</source>
         <translation>Mittelung</translation>
     </message>
@@ -13415,7 +13432,8 @@ Dadurch werden dessen Boards, Firmware und Beispiele gelöscht.</translation>
         <translation>Rechteck</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1156" />
+        <location line="+1167" />
         <source>Save Image...</source>
         <translation>Bild speichern...</translation>
     </message>
@@ -13486,13 +13504,13 @@ Dadurch werden dessen Boards, Firmware und Beispiele gelöscht.</translation>
     </message>
     <message>
         <location line="+9" />
-        <location line="+975" />
+        <location line="+1119" />
         <source>No channels are being published by the camera</source>
         <translation>Die Kamera veröffentlicht keine Kanäle</translation>
     </message>
     <message numerus="yes">
-        <location line="-946" />
-        <location line="+1290" />
+        <location line="-1090" />
+        <location line="+1434" />
         <source>Saved %Ln file(s)</source>
         <translation>
             <numerusform>%Ln Dateien gespeichert</numerusform>
@@ -13500,26 +13518,42 @@ Dadurch werden dessen Boards, Firmware und Beispiele gelöscht.</translation>
         </translation>
     </message>
     <message>
-        <location line="-1289" />
-        <location line="+265" />
-        <location line="+791" />
+        <location line="-1433" />
+        <location line="+393" />
+        <location line="+807" />
         <location line="+2" />
         <location line="+232" />
         <source>Record All</source>
         <translation>Alle aufzeichnen</translation>
     </message>
     <message>
-        <location line="-1156" />
+        <location line="-1300" />
         <source>Graphs: drag to pan, scroll to zoom, double click to follow live, right click to save.</source>
         <translation>Graphen: Ziehen zum Verschieben, Scrollen zum Zoomen, Doppelklick zum Live-Verfolgen, Rechtsklick zum Speichern.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+80" />
+        <source>No file format can hold this record.</source>
+        <translation>Kein Dateiformat kann diesen Datensatz aufnehmen.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Record this graph&apos;s data to a file (%1). Click again to stop.</source>
+        <translation>Die Daten dieses Graphen in eine Datei (%1) aufzeichnen. Erneut klicken, um die Aufzeichnung zu beenden.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Show the signal&apos;s frequency spectrum instead of its waveform. Right click the graph for averaging, peak hold and the window.</source>
+        <translation>Das Frequenzspektrum des Signals statt der Kurvenform anzeigen. Rechtsklick auf den Graphen für Mittelung, Spitzenwerthaltung und das Fenster.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+38" />
         <source>Pause</source>
         <translation>Pause</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-36" />
         <source>Freeze the graph. Recording is not affected.</source>
         <translation>Graph einfrieren. Die Aufzeichnung ist davon nicht betroffen.</translation>
     </message>
@@ -13529,8 +13563,133 @@ Dadurch werden dessen Boards, Firmware und Beispiele gelöscht.</translation>
         <translation>Statistik</translation>
     </message>
     <message>
-        <location line="+533" />
-        <location line="+370" />
+        <location line="+1" />
+        <source>Show the min, max and RMS of what is on screen, or the peak of the spectrum, in the graph&apos;s corner.</source>
+        <translation>Minimum, Maximum und RMS des angezeigten Bereichs oder den Spitzenwert des Spektrums in der Ecke des Graphen anzeigen.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Freeze the map. Recording is not affected.</source>
+        <translation>Die Karte einfrieren. Die Aufzeichnung bleibt davon unberührt.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Depth</source>
+        <translation>Tiefe</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s depth palette: red is near, blue is far.</source>
+        <translation>Die Tiefenpalette der Kamera: Rot ist nah, Blau ist fern.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Rainbow</source>
+        <translation>Regenbogen</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s rainbow palette: blue is near, red is far.</source>
+        <translation>Die Regenbogenpalette der Kamera: Blau ist nah, Rot ist fern.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ironbow</source>
+        <translation>Ironbow</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s ironbow palette, as used for thermal images: white near, through black, to yellow far.</source>
+        <translation>Die Ironbow-Palette der Kamera, wie sie für Wärmebilder verwendet wird: Weiß ist nah, über Schwarz bis Gelb für fern.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Dark</source>
+        <translation>Event dunkel</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a dark background.</source>
+        <translation>Die Eventkamera-Palette der Kamera auf dunklem Hintergrund.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Light</source>
+        <translation>Event hell</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a light background.</source>
+        <translation>Die Eventkamera-Palette der Kamera auf hellem Hintergrund.</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Bicubic</source>
+        <translation>Bikubisch</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up with a smooth curve through the pixels.</source>
+        <translation>Die Karte mit einer glatten Kurve durch die Pixel vergrößern.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Bilinear</source>
+        <translation>Bilinear</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up by blending neighbouring pixels.</source>
+        <translation>Die Karte durch Überblenden benachbarter Pixel vergrößern.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Nearest</source>
+        <translation>Nächster Nachbar</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up as blocks, one per sensor pixel.</source>
+        <translation>Die Karte als Blöcke vergrößern, einen pro Sensorpixel.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Script Range</source>
+        <translation>Skript-Bereich</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span the min and max the script declared when it added the record, so a color means the same distance in every frame.</source>
+        <translation>Die Farben spannen den Bereich zwischen Minimum und Maximum auf, den das Skript beim Hinzufügen des Datensatzes angegeben hat, sodass eine Farbe in jedem Frame dieselbe Entfernung bedeutet.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Auto Range</source>
+        <translation>Auto-Bereich</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span what this frame holds, with the extremes clipped and the range eased between frames.</source>
+        <translation>Die Farben spannen den Wertebereich des aktuellen Frames auf, wobei die Extremwerte abgeschnitten und der Bereich zwischen den Frames weich angepasst wird.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Equalize</source>
+        <translation>Angleichen</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Every color covers the same number of pixels, which shows the most detail; flat surfaces look noisier.</source>
+        <translation>Jede Farbe deckt dieselbe Anzahl an Pixeln ab, wodurch die meisten Details sichtbar werden; ebene Flächen wirken dafür rauschiger.</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Record every graph in this channel at once, each to its own file in a folder you choose. Click again to stop them all.</source>
+        <translation>Alle Graphen in diesem Kanal gleichzeitig aufzeichnen, jeweils in eine eigene Datei in einem von Ihnen gewählten Ordner. Erneut klicken, um alle zu beenden.</translation>
+    </message>
+    <message>
+        <location line="+492" />
+        <location line="+382" />
         <location line="+13" />
         <location line="+58" />
         <location line="+160" />
@@ -13539,8 +13698,12 @@ Dadurch werden dessen Boards, Firmware und Beispiele gelöscht.</translation>
     </message>
     <message>
         <location line="-555" />
+        <source>%1 (%2x%3, range %4-%5%6) min %7 max %8 mean %9</source>
+        <translation>%1 (%2x%3, Bereich %4-%5%6) min %7 max %8 Mittel %9</translation>
+    </message>
+    <message>
         <source>%1 (%2x%3, %4-%5mm)</source>
-        <translation>%1 (%2x%3, %4-%5mm)</translation>
+        <translation type="vanished">%1 (%2x%3, %4-%5mm)</translation>
     </message>
     <message>
         <location line="+24" />

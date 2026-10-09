@@ -7961,9 +7961,9 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="-283" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2395" />
-        <location line="+554" />
-        <location line="+420" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2934" />
+        <location line="+665" />
+        <location line="+432" />
         <source>Record</source>
         <translation>رکورد</translation>
     </message>
@@ -7976,8 +7976,8 @@ Check the json file for errors and fix them.</source>
     <message>
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-492" />
-        <location line="+385" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-504" />
+        <location line="+397" />
         <location line="+91" />
         <location line="+291" />
         <source>Stop</source>
@@ -13262,7 +13262,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>%L1 نمونه (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3220" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3882" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -13272,7 +13272,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>%L1 Hz</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+991" />
         <source>Series %1</source>
         <translation>سری %1</translation>
     </message>
@@ -13288,12 +13288,29 @@ This deletes its boards, firmware, and examples.</source>
         <translation>تصویر PNG (*.png);;سند PDF (*.pdf)</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-996" />
+        <location line="+1019" />
         <source>Failed to write &quot;%1&quot;!</source>
         <translation>نوشتن &quot;%1&quot; ناموفق بود!</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-1100" />
+        <source>x %1  y %2  %3</source>
+        <translation>x %1  y %2  %3</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <location line="+19" />
+        <source>Save Depth Image</source>
+        <translation>ذخیره‌ی تصویر عمق</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>PNG Image (*.png)</source>
+        <translation>تصویر PNG (*.png)</translation>
+    </message>
+    <message>
+        <location line="+1048" />
         <source>Auto Scale</source>
         <translation>مقیاس خودکار</translation>
     </message>
@@ -13359,12 +13376,12 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+6" />
-        <location line="+819" />
+        <location line="+848" />
         <source>Spectrum</source>
         <translation>طیف</translation>
     </message>
     <message>
-        <location line="-816" />
+        <location line="-845" />
         <source>Averaging</source>
         <translation>میانگین‌گیری</translation>
     </message>
@@ -13399,7 +13416,8 @@ This deletes its boards, firmware, and examples.</source>
         <translation>مستطیلی</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-1156" />
+        <location line="+1167" />
         <source>Save Image...</source>
         <translation>ذخیرهٔ تصویر...</translation>
     </message>
@@ -13470,39 +13488,55 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+9" />
-        <location line="+975" />
+        <location line="+1119" />
         <source>No channels are being published by the camera</source>
         <translation>دوربین هیچ کانالی منتشر نمی‌کند</translation>
     </message>
     <message numerus="yes">
-        <location line="-946" />
-        <location line="+1290" />
+        <location line="-1090" />
+        <location line="+1434" />
         <source>Saved %Ln file(s)</source>
         <translation>
             <numerusform>%Ln فایل ذخیره شد</numerusform>
         </translation>
     </message>
     <message>
-        <location line="-1289" />
-        <location line="+265" />
-        <location line="+791" />
+        <location line="-1433" />
+        <location line="+393" />
+        <location line="+807" />
         <location line="+2" />
         <location line="+232" />
         <source>Record All</source>
         <translation>ضبط همه</translation>
     </message>
     <message>
-        <location line="-1156" />
+        <location line="-1300" />
         <source>Graphs: drag to pan, scroll to zoom, double click to follow live, right click to save.</source>
         <translation>نمودارها: برای جابه‌جایی بکشید، برای بزرگ‌نمایی اسکرول کنید، برای دنبال کردن زنده دوبار کلیک کنید، برای ذخیره راست‌کلیک کنید.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+80" />
+        <source>No file format can hold this record.</source>
+        <translation>هیچ قالب فایلی نمی‌تواند این رکورد را نگه دارد.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Record this graph&apos;s data to a file (%1). Click again to stop.</source>
+        <translation>داده‌های این نمودار را در یک فایل (%1) ضبط می‌کند. برای توقف، دوباره کلیک کنید.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Show the signal&apos;s frequency spectrum instead of its waveform. Right click the graph for averaging, peak hold and the window.</source>
+        <translation>به‌جای شکل موج، طیف فرکانسی سیگنال را نشان می‌دهد. برای میانگین‌گیری، نگه‌داشتن قله و پنجره، روی نمودار راست‌کلیک کنید.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+38" />
         <source>Pause</source>
         <translation>مکث</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-36" />
         <source>Freeze the graph. Recording is not affected.</source>
         <translation>نمودار را ثابت نگه می‌دارد. ضبط تحت تأثیر قرار نمی‌گیرد.</translation>
     </message>
@@ -13512,8 +13546,133 @@ This deletes its boards, firmware, and examples.</source>
         <translation>آمار</translation>
     </message>
     <message>
-        <location line="+533" />
-        <location line="+370" />
+        <location line="+1" />
+        <source>Show the min, max and RMS of what is on screen, or the peak of the spectrum, in the graph&apos;s corner.</source>
+        <translation>کمینه، بیشینه و RMS داده‌های روی صفحه یا قله‌ی طیف را در گوشه‌ی نمودار نشان می‌دهد.</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>Freeze the map. Recording is not affected.</source>
+        <translation>نقشه را ثابت نگه می‌دارد. ضبط تحت تأثیر قرار نمی‌گیرد.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Depth</source>
+        <translation>عمق</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s depth palette: red is near, blue is far.</source>
+        <translation>پالت عمق دوربین: قرمز نزدیک و آبی دور است.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Rainbow</source>
+        <translation>رنگین‌کمان</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s rainbow palette: blue is near, red is far.</source>
+        <translation>پالت رنگین‌کمان دوربین: آبی نزدیک و قرمز دور است.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ironbow</source>
+        <translation>Ironbow</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s ironbow palette, as used for thermal images: white near, through black, to yellow far.</source>
+        <translation>پالت ironbow دوربین که برای تصاویر حرارتی استفاده می‌شود: سفید نزدیک، سپس سیاه، و زرد دور است.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Dark</source>
+        <translation>رویداد تیره</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a dark background.</source>
+        <translation>پالت دوربین رویدادمحور روی پس‌زمینه‌ی تیره.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Event Light</source>
+        <translation>رویداد روشن</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The camera&apos;s event camera palette on a light background.</source>
+        <translation>پالت دوربین رویدادمحور روی پس‌زمینه‌ی روشن.</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Bicubic</source>
+        <translation>دوکعبی</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up with a smooth curve through the pixels.</source>
+        <translation>نقشه را با یک منحنی هموار که از میان پیکسل‌ها می‌گذرد بزرگ‌نمایی می‌کند.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Bilinear</source>
+        <translation>دوخطی</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up by blending neighbouring pixels.</source>
+        <translation>نقشه را با ترکیب پیکسل‌های مجاور بزرگ‌نمایی می‌کند.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Nearest</source>
+        <translation>نزدیک‌ترین همسایه</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scale the map up as blocks, one per sensor pixel.</source>
+        <translation>نقشه را به‌صورت بلوک‌هایی، یکی برای هر پیکسل حسگر، بزرگ‌نمایی می‌کند.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Script Range</source>
+        <translation>بازه اسکریپت</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span the min and max the script declared when it added the record, so a color means the same distance in every frame.</source>
+        <translation>رنگ‌ها بازه‌ی کمینه و بیشینه‌ای را که اسکریپت هنگام افزودن رکورد اعلام کرده پوشش می‌دهند، بنابراین هر رنگ در همه‌ی فریم‌ها نشان‌دهنده‌ی همان فاصله است.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Auto Range</source>
+        <translation>بازه خودکار</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Colors span what this frame holds, with the extremes clipped and the range eased between frames.</source>
+        <translation>رنگ‌ها بازه‌ی مقادیر همین فریم را پوشش می‌دهند؛ مقادیر بسیار کم و بسیار زیاد حذف می‌شوند و بازه به‌صورت نرم بین فریم‌ها تغییر می‌کند.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Equalize</source>
+        <translation>همسان‌سازی</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Every color covers the same number of pixels, which shows the most detail; flat surfaces look noisier.</source>
+        <translation>هر رنگ تعداد یکسانی پیکسل را پوشش می‌دهد که بیشترین جزئیات را نشان می‌دهد؛ سطوح صاف نویزی‌تر دیده می‌شوند.</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Record every graph in this channel at once, each to its own file in a folder you choose. Click again to stop them all.</source>
+        <translation>همه‌ی نمودارهای این کانال را همزمان ضبط می‌کند و هر کدام را در فایل جداگانه‌ای در پوشه‌ای که انتخاب می‌کنید ذخیره می‌کند. برای توقف همه، دوباره کلیک کنید.</translation>
+    </message>
+    <message>
+        <location line="+492" />
+        <location line="+382" />
         <location line="+13" />
         <location line="+58" />
         <location line="+160" />
@@ -13522,8 +13681,12 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="-555" />
+        <source>%1 (%2x%3, range %4-%5%6) min %7 max %8 mean %9</source>
+        <translation>%1 (%2x%3، بازه %4-%5%6) کمینه %7 بیشینه %8 میانگین %9</translation>
+    </message>
+    <message>
         <source>%1 (%2x%3, %4-%5mm)</source>
-        <translation>%1 (%2x%3, %4-%5mm)</translation>
+        <translation type="vanished">%1 (%2x%3, %4-%5mm)</translation>
     </message>
     <message>
         <location line="+24" />
