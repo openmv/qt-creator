@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+838" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
         <source>Copy</source>
         <translation>Sao chép</translation>
     </message>
@@ -96,7 +96,7 @@
 <context>
     <name>OpenMVPluginHistogram</name>
     <message>
-        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.ui" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.ui" />
         <source>000</source>
         <translation>000</translation>
     </message>
@@ -212,7 +212,7 @@
         <translation>Đang cập nhật định nghĩa cú pháp cho &apos;%1&apos; lên phiên bản %2...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1263" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1358" />
         <source>Copy/Convert Python File</source>
         <translation>Sao chép/Chuyển đổi tệp Python</translation>
     </message>
@@ -850,7 +850,7 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+481" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+484" />
         <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+150" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+191" />
         <location line="+8" />
@@ -1183,7 +1183,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Thêm tệp vào kiểm soát phiên bản (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+68" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+71" />
         <source>Text Encoding</source>
         <translation>Mã hóa văn bản</translation>
     </message>
@@ -1198,7 +1198,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Chọn mã hóa cho &quot;%1&quot;.%2</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+59" />
         <source>Reload with Encoding</source>
         <translation>Tải lại bằng mã hóa</translation>
     </message>
@@ -1259,10 +1259,10 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
     <message>
         <location line="+2" />
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+182" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+305" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+316" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+396" />
-        <location line="+404" />
+        <location line="+410" />
         <source>Remove</source>
         <translation>Di dời</translation>
     </message>
@@ -1332,13 +1332,13 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
     </message>
     <message>
         <location line="+12" />
-        <location line="+413" />
+        <location line="+422" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+248" />
         <source>No changes to apply.</source>
         <translation>Không có thay đổi để áp dụng.</translation>
     </message>
     <message>
-        <location line="-410" />
+        <location line="-419" />
         <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-239" />
         <source>Change...</source>
         <translation>Thay đổi...</translation>
@@ -1408,7 +1408,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Thêm danh mục</translation>
     </message>
     <message>
-        <location line="+292" />
+        <location line="+301" />
         <source>PATH=C:\dev\bin;${PATH}</source>
         <translation>PATH=C:\dev\bin;${PATH}</translation>
     </message>
@@ -1548,7 +1548,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Không xác định</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/newdialogwidget.cpp" line="+201" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/newdialogwidget.cpp" line="+204" />
         <source>Choose a template:</source>
         <translation>Chọn một mẫu:</translation>
     </message>
@@ -1579,7 +1579,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Mẫu %1</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+163" />
         <source>Platform independent</source>
         <translation>Nền tảng độc lập</translation>
     </message>
@@ -1589,7 +1589,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Nền tảng được hỗ trợ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/openwithdialog.cpp" line="+23" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/openwithdialog.cpp" line="+26" />
         <source>Open File With...</source>
         <translation>Mở tệp bằng...</translation>
     </message>
@@ -1752,7 +1752,7 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
         <translation>Khô&amp;ng lưu</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+76" />
         <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1711" />
         <location line="+1737" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+2000" />
@@ -1802,7 +1802,7 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
         <translation>Lưu đã chọn</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+504" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+507" />
         <source>Sort categories</source>
         <translation>Sắp xếp danh mục</translation>
     </message>
@@ -2254,8 +2254,8 @@ Tiếp tục?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+142" />
-        <location line="+117" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+145" />
+        <location line="+127" />
         <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+191" />
         <source>Cancel</source>
         <translation>Hủy bỏ</translation>
@@ -2323,7 +2323,7 @@ Tiếp tục?</translation>
         <translation>Alt+O</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorswindow.cpp" line="+52" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorswindow.cpp" line="+55" />
         <source>*</source>
         <translation>*</translation>
     </message>
@@ -2739,7 +2739,7 @@ Tiếp tục?</translation>
         <translation>,</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="-113" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="-123" />
         <source>Repeat the search with same parameters.</source>
         <translation>Lặp lại tìm kiếm với các tham số tương tự.</translation>
     </message>
@@ -2774,7 +2774,7 @@ Tiếp tục?</translation>
         <translation>Không thể hoàn tác thay đổi này.</translation>
     </message>
     <message numerus="yes">
-        <location line="+18" />
+        <location line="+28" />
         <source>The search resulted in more than %n items, do you still want to continue?</source>
         <translation>
             <numerusform>Việc tìm kiếm cho kết quả hơn %n mục, bạn vẫn muốn tiếp tục phải không?</numerusform>
@@ -2786,7 +2786,7 @@ Tiếp tục?</translation>
         <translation>Tiếp tục</translation>
     </message>
     <message>
-        <location line="+184" />
+        <location line="+205" />
         <source>Search was canceled.</source>
         <translation>Tìm kiếm đã bị hủy bỏ.</translation>
     </message>
@@ -2816,7 +2816,7 @@ Tiếp tục?</translation>
     <message>
         <location line="-487" />
         <location line="+500" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-36" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-44" />
         <source>Show Paths in Relation to Active Project</source>
         <translation>Hiển thị đường dẫn liên quan đến dự án đang hoạt động</translation>
     </message>
@@ -3569,16 +3569,16 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     <message>
         <location line="+2" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-16" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-410" />
-        <location line="+408" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-416" />
+        <location line="+414" />
         <source>Add...</source>
         <translation>Thêm vào...</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+55" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-405" />
-        <location line="+406" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-411" />
+        <location line="+412" />
         <source>Edit...</source>
         <translation>Biên tập...</translation>
     </message>
@@ -3817,7 +3817,7 @@ Bạn có muốn giết nó không?</translation>
         <translation>Bộ lọc có sẵn</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-53" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-61" />
         <source>Refresh interval:</source>
         <translation>Khoảng thời gian làm mới:</translation>
     </message>
@@ -3837,7 +3837,7 @@ Bạn có muốn giết nó không?</translation>
         <translation>Bộ lọc định vị hiển thị đường dẫn tương đối đến dự án đang hoạt động khi có thể.</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+79" />
         <source>Files in Directories</source>
         <translation>Tập tin trong thư mục</translation>
     </message>
@@ -4022,7 +4022,7 @@ Bấm đúp để chỉnh sửa mục.</translation>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-418" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-424" />
         <source>Type</source>
         <translation>Kiểu</translation>
     </message>
@@ -4329,30 +4329,30 @@ Bấm đúp để chỉnh sửa mục.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+247" />
+        <location line="+253" />
         <location line="+182" />
         <source>Reset MIME Types</source>
         <translation>Đặt lại các loại MIME</translation>
     </message>
     <message>
-        <location line="-426" />
+        <location line="-432" />
         <source>Reset the assigned handler for all MIME type definitions to the default.</source>
         <translation>Đặt lại trình xử lý được chỉ định cho tất cả các định nghĩa loại MIME về mặc định.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+426" />
+        <location line="+432" />
         <source>Reset Handlers</source>
         <translation>Đặt lại trình xử lý</translation>
     </message>
     <message>
-        <location line="-423" />
-        <location line="+425" />
+        <location line="-429" />
+        <location line="+431" />
         <source>Patterns:</source>
         <translation>Mẫu:</translation>
     </message>
     <message>
-        <location line="-421" />
+        <location line="-427" />
         <source>A semicolon-separated list of wildcarded file names.</source>
         <translation>Danh sách tên tệp có ký tự đại diện được phân tách bằng dấu chấm phẩy.</translation>
     </message>
@@ -4373,13 +4373,13 @@ Bấm đúp để chỉnh sửa mục.</translation>
     </message>
     <message>
         <location line="+16" />
-        <location line="+397" />
+        <location line="+403" />
         <source>Registered MIME Types</source>
         <translation>Các loại MIME đã đăng ký</translation>
     </message>
     <message>
-        <location line="-394" />
-        <location line="+399" />
+        <location line="-400" />
+        <location line="+405" />
         <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+42" />
         <source>Details</source>
         <translation>Chi tiết</translation>
@@ -4441,7 +4441,7 @@ Bấm đúp để chỉnh sửa mục.</translation>
         <translation>&amp;Ra &amp; đưa</translation>
     </message>
     <message>
-        <location line="+461" />
+        <location line="+472" />
         <source>Reset to Default</source>
         <translation>Đặt lại về mặc định</translation>
     </message>
@@ -6123,7 +6123,7 @@ Bạn có muốn ghi đè lên chúng không?</translation>
         <translation>bắt nguồn</translation>
     </message>
     <message>
-        <location line="+212" />
+        <location line="+219" />
         <source>Call Hierarchy</source>
         <translation>Phân cấp cuộc gọi</translation>
     </message>
@@ -6284,7 +6284,7 @@ Bạn có muốn ghi đè lên chúng không?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
-        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+82" />
+        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+85" />
         <source>Expand All</source>
         <translation>Mở rộng tất cả</translation>
     </message>
@@ -6588,12 +6588,12 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <translation>Tin nhắn máy chủ</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+94" />
         <source>Log File</source>
         <translation>Tệp nhật ký</translation>
     </message>
     <message>
-        <location line="+93" />
+        <location line="+104" />
         <source>Language Client Inspector</source>
         <translation>Thanh tra khách hàng ngôn ngữ</translation>
     </message>
@@ -6675,13 +6675,13 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
     <name>QtC::OpenMV</name>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
-        <location line="+37" />
+        <location line="+54" />
         <location line="+9" />
         <location line="+9" />
         <location line="+25" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+75" />
         <location line="+87" />
-        <location line="+55" />
+        <location line="+57" />
         <location line="+37" />
         <location line="+19" />
         <location line="+13" />
@@ -6716,7 +6716,7 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+235" />
         <location line="+9" />
-        <location line="+95" />
+        <location line="+97" />
         <location line="+11" />
         <location line="+40" />
         <location line="+19" />
@@ -6727,10 +6727,10 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+18" />
         <location line="+23" />
         <location line="+18" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+80" />
-        <location line="+73" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+87" />
+        <location line="+97" />
         <location line="+9" />
-        <location line="+52" />
+        <location line="+88" />
         <location line="+4" />
         <location line="+7" />
         <location line="+9" />
@@ -6748,20 +6748,22 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+587" />
-        <location line="+1098" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1195" />
+        <location line="+1211" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1176" />
         <location line="+6" />
         <location line="+27" />
-        <location line="+22" />
-        <location line="+81" />
-        <location line="+477" />
+        <location line="+153" />
+        <location line="+9" />
+        <location line="+96" />
+        <location line="+40" />
+        <location line="+479" />
         <location line="+136" />
         <location line="+28" />
         <location line="+100" />
-        <location line="+56" />
-        <location line="+68" />
+        <location line="+58" />
+        <location line="+70" />
         <location line="+13" />
-        <location line="+81" />
+        <location line="+84" />
         <location line="+10" />
         <location line="+12" />
         <location line="+29" />
@@ -6776,15 +6778,15 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+6" />
         <location line="+5" />
         <location line="+72" />
-        <location line="+116" />
-        <location line="+83" />
+        <location line="+118" />
+        <location line="+88" />
         <location line="+82" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+46" />
         <location line="+54" />
-        <location line="+51" />
+        <location line="+52" />
         <location line="+14" />
         <location line="+9" />
         <location line="+9" />
@@ -6792,27 +6794,29 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+21" />
         <location line="+20" />
         <location line="+24" />
-        <location line="+135" />
-        <location line="+217" />
+        <location line="+154" />
+        <location line="+229" />
         <location line="+33" />
-        <location line="+370" />
+        <location line="+369" />
+        <location line="+22" />
+        <location line="+17" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+839" />
         <location line="+48" />
         <source>Connect</source>
         <translation>Kết nối</translation>
     </message>
     <message>
-        <location line="-80" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-232" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2171" />
-        <location line="+252" />
-        <location line="+700" />
-        <location line="+2104" />
+        <location line="-97" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-292" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2255" />
+        <location line="+256" />
+        <location line="+705" />
+        <location line="+2231" />
         <source>Please select the board type</source>
         <translation>Vui lòng chọn loại bảng</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+55" />
         <source>No settings for the selected board type %L1!</source>
         <translation>Không có cài đặt nào cho loại bảng đã chọn %L1!</translation>
     </message>
@@ -6828,7 +6832,7 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+155" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+215" />
         <location line="+51" />
         <source>Firmware update complete!
 
@@ -6873,19 +6877,19 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
 Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash gắn trong của OpenMV Cam (một cửa sổ có thể mở hoặc không mở).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-340" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-342" />
         <source>DFU Util may not be stable on this platform. If loading fails please use a regular computer.</source>
         <translation>DFU Util có thể không ổn định trên nền tảng này. Nếu tải không thành công, vui lòng sử dụng máy tính thông thường.</translation>
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-352" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-354" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Không có cài đặt DFU cho loại bảng đã chọn!</translation>
     </message>
     <message>
-        <location line="+55" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+104" />
+        <location line="+57" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+106" />
         <source>No DFU settings for the selected device!</source>
         <translation>Không có cài đặt DFU cho thiết bị đã chọn!</translation>
     </message>
@@ -6910,9 +6914,10 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+536" />
-        <location line="+41" />
-        <location line="+51" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+807" />
+        <location line="+49" />
+        <location line="+39" />
+        <location line="+35" />
         <location line="+44" />
         <location line="+42" />
         <location line="+44" />
@@ -6927,7 +6932,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+219" />
+        <location line="+228" />
         <location line="+50" />
         <location line="+51" />
         <location line="+42" />
@@ -6984,21 +6989,21 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+189" />
         <location line="+7" />
-        <location line="+72" />
+        <location line="+79" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1436" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1549" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1795" />
+        <location line="+1931" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+139" />
-        <location line="+202" />
-        <location line="+330" />
+        <location line="+189" />
+        <location line="+203" />
+        <location line="+421" />
         <location line="+13" />
         <location line="+169" />
         <location line="+146" />
@@ -7006,19 +7011,19 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4119" />
-        <location line="+315" />
-        <location line="+1388" />
-        <location line="+1089" />
-        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="+109" />
-        <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+699" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4427" />
+        <location line="+290" />
+        <location line="+1592" />
+        <location line="+1127" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+760" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
         <location line="+11" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+507" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+562" />
         <location line="+19" />
         <location line="+11" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+109" />
+        <location line="+7" />
         <source>Error: %L1!</source>
         <translation>Lỗi: %L1!</translation>
     </message>
@@ -7046,8 +7051,8 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+10" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-931" />
-        <location line="+932" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-975" />
+        <location line="+976" />
         <source>Flashing Firmware</source>
         <translation>Phần mềm nhấp nháy</translation>
     </message>
@@ -7079,7 +7084,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-138" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-172" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>Ngắt kết nối OpenMV Cam của bạn và sau đó kết nối lại...</translation>
     </message>
@@ -7092,7 +7097,6 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+0" />
         <source>Connecting... (Hit cancel if this takes more than 5 seconds).</source>
         <translation>Đang kết nối... (Nhấn hủy nếu quá trình này mất hơn 5 giây).</translation>
     </message>
@@ -7101,29 +7105,31 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3690" />
-        <location line="+1794" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+3" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3968" />
+        <location line="+1930" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+273" />
-        <location line="+578" />
+        <location line="+323" />
+        <location line="+670" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
         <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3187" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3404" />
         <location line="+252" />
-        <location line="+327" />
-        <location line="+1479" />
+        <location line="+393" />
+        <location line="+1592" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+931" />
+        <location line="+284" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-324" />
         <location line="+85" />
-        <location line="+627" />
+        <location line="+728" />
         <source>Cancel</source>
         <translation>Hủy bỏ</translation>
     </message>
@@ -7186,7 +7192,7 @@ Tiếp tục?</translation>
     </message>
     <message>
         <location line="+24" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+83" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+114" />
         <location line="+53" />
         <source>Firmware Upgrade complete!
 
@@ -7304,7 +7310,7 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động DFU của OpenMV Cam của
         <translation>Cập nhật firmware BOSSAC không thành công!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-542" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-544" />
         <source>the detected board</source>
         <translation>bảng được phát hiện</translation>
     </message>
@@ -7334,7 +7340,7 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động DFU của OpenMV Cam của
         <translation>Để nạp một ảnh bootloader, OpenMV Cam của bạn phải ở chế độ khôi phục bootloader. Rút camera ra, nối BOOT0/SBL/RECOVERY với 3.3V bằng một dây nối, rồi cắm camera trở lại trước khi thử lại.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-159" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-195" />
         <source>No IMX settings for the selected board type %L1!</source>
         <translation>Không có cài đặt IMX cho loại bảng đã chọn %L1!</translation>
     </message>
@@ -7344,14 +7350,25 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động DFU của OpenMV Cam của
         <translation>Không tìm thấy cài đặt IMX nào!</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+16" />
         <source>
 
 Hit cancel to skip to SBL reprogramming.</source>
         <translation>Nhấn hủy để bỏ qua việc lập trình lại SBL.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+1" />
+        <source>Connecting to the bootloader...</source>
+        <translation>Đang kết nối với bootloader...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-769" />
+        <source>Preparing the bootloader tools... (this can take a few seconds)</source>
+        <translation>Đang chuẩn bị các công cụ bootloader... (có thể mất vài giây)</translation>
+    </message>
+    <message>
+        <location line="+69" />
         <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>Không thể kết nối với bộ tải khởi động thông thường của OpenMV Cam của bạn!</translation>
     </message>
@@ -7428,60 +7445,60 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation>Cập nhật chương trình cơ sở PicoTool không thành công!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/histogram/openmvpluginhistogram.cpp" line="+671" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+756" />
         <location line="+34" />
         <source>Value %L1</source>
         <translation>Giá trị %L1</translation>
     </message>
     <message>
-        <location line="+34" />
-        <location line="+245" />
+        <location line="+59" />
+        <location line="+257" />
         <source>R</source>
         <translation>R</translation>
     </message>
     <message>
-        <location line="-229" />
-        <location line="+245" />
+        <location line="-241" />
+        <location line="+257" />
         <source>G</source>
         <translation>G</translation>
     </message>
     <message>
-        <location line="-229" />
+        <location line="-241" />
         <location line="+82" />
-        <location line="+163" />
+        <location line="+175" />
         <location line="+72" />
         <source>B</source>
         <translation>B</translation>
     </message>
     <message>
-        <location line="-292" />
+        <location line="-304" />
         <location line="+82" />
-        <location line="+158" />
+        <location line="+170" />
         <location line="+72" />
         <source>Y</source>
         <translation>Y</translation>
     </message>
     <message>
-        <location line="-287" />
-        <location line="+235" />
+        <location line="-299" />
+        <location line="+247" />
         <source>L</source>
         <translation>L</translation>
     </message>
     <message>
-        <location line="-219" />
-        <location line="+235" />
+        <location line="-231" />
+        <location line="+247" />
         <source>A</source>
         <translation>MỘT</translation>
     </message>
     <message>
-        <location line="-178" />
-        <location line="+230" />
+        <location line="-190" />
+        <location line="+242" />
         <source>U</source>
         <translation>bạn</translation>
     </message>
     <message>
-        <location line="-214" />
-        <location line="+230" />
+        <location line="-226" />
+        <location line="+242" />
         <source>V</source>
         <translation>V.</translation>
     </message>
@@ -7490,11 +7507,11 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation type="vanished">Vui lòng nhập mạng WiFi của bạn tại đây</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-367" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-374" />
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+33" />
+        <location line="+40" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7506,19 +7523,19 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4292" />
-        <location line="+878" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4570" />
+        <location line="+981" />
         <source>Dataset Editor</source>
         <translation>Trình chỉnh sửa tập dữ liệu</translation>
     </message>
     <message>
-        <location line="-366" />
+        <location line="-373" />
         <source>Please enter a class name</source>
         <translation>Vui lòng nhập tên lớp</translation>
     </message>
     <message>
         <location line="+58" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-835" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-938" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
         <location line="+48" />
@@ -7532,24 +7549,24 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation>Không tạo được &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+33" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+2844" />
-        <location line="+1481" />
+        <location line="+40" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3031" />
+        <location line="+1572" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Không lưu được file hình ảnh vì lý do không xác định!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+589" />
-        <location line="+291" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+597" />
+        <location line="+304" />
         <source>Delete</source>
         <translation>Xóa bỏ</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-361" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-374" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Bạn có chắc chắn muốn xóa vĩnh viễn &quot;%L1&quot; không?</translation>
     </message>
@@ -7576,13 +7593,13 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation>Không thể đổi tên tệp vì lý do không xác định!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+147" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4654" />
+        <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+175" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4932" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+67" />
-        <location line="+288" />
+        <location line="+301" />
         <source>Model Zoo</source>
         <translation>Vườn thú mẫu</translation>
     </message>
@@ -7592,7 +7609,7 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation>Lọc mô hình theo loại bảng</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+58" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-152" />
         <source>Copy</source>
         <translation>Sao chép</translation>
@@ -7603,7 +7620,8 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation>ĐƯỢC RỒI</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1244" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1316" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1152" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-308" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Không thể sao chép tập tin &quot;%1&quot; sang &quot;%2&quot;.</translation>
@@ -7630,7 +7648,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation type="vanished">Vui lòng đóng mọi chương trình đang xem/chỉnh sửa dữ liệu ứng dụng của OpenMV IDE rồi khởi động lại OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+248" />
+        <location line="+269" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7647,7 +7665,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
 Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa nó khi cài đặt tài nguyên.</translation>
     </message>
     <message>
-        <location line="+139" />
+        <location line="+165" />
         <source>Missing argument for -form_key</source>
         <translation>Thiếu đối số cho -form_key</translation>
     </message>
@@ -7692,22 +7710,23 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
     </message>
     <message>
         <location line="+12" />
+        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+82" />
         <source>Examples</source>
         <translation>Ví dụ</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+31" />
         <source>No examples found for your board</source>
         <translation>Không tìm thấy ví dụ nào cho bảng của bạn</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+7" />
         <source>Connect to your board first to see examples</source>
         <translation>Kết nối với bảng của bạn trước để xem ví dụ</translation>
     </message>
     <message>
-        <location line="+48" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1605" />
+        <location line="+56" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1784" />
         <source>Load Custom Firmware</source>
         <translation>Tải chương trình cơ sở tùy chỉnh</translation>
     </message>
@@ -7806,7 +7825,7 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <translation type="vanished">Định cấu hình tệp cài đặt OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <source>Save open script to OpenMV Cam (as main.py)</source>
         <translation>Lưu tập lệnh đang mở vào OpenMV Cam (dưới dạng main.py)</translation>
     </message>
@@ -7846,13 +7865,13 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
     </message>
     <message>
         <location line="+14" />
-        <location line="+4137" />
+        <location line="+4415" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Mở thiết bị đầu cuối</translation>
     </message>
     <message>
-        <location line="-4191" />
+        <location line="-4469" />
         <source>Machine Vision</source>
         <translation>Tầm nhìn máy</translation>
     </message>
@@ -7873,28 +7892,28 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-754" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-775" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Chuyển đổi mô hình</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+4040" />
+        <location line="+4318" />
         <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Trình chỉnh sửa ngưỡng</translation>
     </message>
     <message>
-        <location line="-4110" />
-        <location line="+4187" />
+        <location line="-4388" />
+        <location line="+4465" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Trình chỉnh sửa điểm chính</translation>
     </message>
     <message>
-        <location line="-4178" />
-        <location line="+4342" />
+        <location line="-4456" />
+        <location line="+4620" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7903,7 +7922,7 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <translation>Trình tạo thẻ tháng tư</translation>
     </message>
     <message>
-        <location line="-4489" />
+        <location line="-4767" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Gia đình TAG16H5 (30 Thẻ)</translation>
     </message>
@@ -7938,18 +7957,18 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <translation>Trình tạo mã QR</translation>
     </message>
     <message>
-        <location line="-1338" />
-        <location line="+1348" />
+        <location line="-1410" />
+        <location line="+1420" />
         <location line="+14" />
         <location line="+14" />
         <location line="+409" />
-        <location line="+1051" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+149" />
+        <location line="+1164" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+157" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Không mở được: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-2643" />
+        <location line="-2828" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
@@ -7976,7 +7995,7 @@ Please close any programs that are viewing/editing %1&apos;s application data an
 Vui lòng đóng mọi chương trình đang xem/chỉnh sửa dữ liệu ứng dụng của %1 rồi khởi động lại %1!</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+78" />
         <source>Error reading &lt;user_resources&gt;/openmvide/firmware/settings.json: %L1.
 
 %2 versions before v4.3.0 do not have this file and would have deleted it on installing resources.</source>
@@ -7985,8 +8004,21 @@ Vui lòng đóng mọi chương trình đang xem/chỉnh sửa dữ liệu ứng
 Các phiên bản %2 trước v4.3.0 không có tệp này và sẽ xóa nó khi cài đặt tài nguyên.</translation>
     </message>
     <message>
-        <location line="+379" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+554" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+745" />
+        <location line="+126" />
+        <location line="+51" />
+        <location line="+42" />
+        <location line="+27" />
+        <location line="+164" />
+        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="-25" />
+        <location line="+297" />
+        <source>Third Party Repositories</source>
+        <translation>Kho lưu trữ bên thứ ba</translation>
+    </message>
+    <message>
+        <location line="+401" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+567" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>Nạp ROMFS vào OpenMV Cam</translation>
     </message>
@@ -8001,7 +8033,7 @@ Các phiên bản %2 trước v4.3.0 không có tệp này và sẽ xóa nó khi
         <translation>Chỉnh sửa boot.py cho gỡ lỗi WiFi</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+44" />
         <source>Open OpenMV Cam Settings Config File</source>
         <translation>Mở tệp cấu hình cài đặt OpenMV Cam</translation>
     </message>
@@ -8157,8 +8189,8 @@ Bạn có muốn chọn một tên khác không?</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+2690" />
-        <location line="+1327" />
+        <location line="+2877" />
+        <location line="+1418" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-240" />
@@ -8169,7 +8201,7 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation>Vui lòng thêm phần mở rộng tập tin!</translation>
     </message>
     <message>
-        <location line="-3997" />
+        <location line="-4275" />
         <source>Exporting...</source>
         <translation>Đang xuất...</translation>
     </message>
@@ -8327,7 +8359,7 @@ Bạn có muốn chọn một tên khác không?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+154" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+179" />
         <location line="+26" />
         <location line="+7" />
         <source>Disconnect</source>
@@ -8345,15 +8377,19 @@ Bạn có muốn chọn một tên khác không?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location line="+211" />
+        <location line="+290" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
         <location line="+166" />
+        <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="+50" />
         <source>Frame Buffer</source>
         <translation>Bộ đệm khung</translation>
     </message>
     <message>
-        <location line="-204" />
+        <location line="-283" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2395" />
+        <location line="+554" />
+        <location line="+420" />
         <source>Record</source>
         <translation>Ghi</translation>
     </message>
@@ -8366,6 +8402,10 @@ Bạn có muốn chọn một tên khác không?</translation>
     <message>
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-492" />
+        <location line="+385" />
+        <location line="+91" />
+        <location line="+291" />
         <source>Stop</source>
         <translation>Dừng lại</translation>
     </message>
@@ -8388,49 +8428,45 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation>Thu phóng để phù hợp</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Disable</source>
-        <translation>Vô hiệu hóa</translation>
+        <translation type="vanished">Vô hiệu hóa</translation>
+    </message>
+    <message>
+        <source>Disable the Frame Buffer for maximum performance</source>
+        <translation type="vanished">Vô hiệu hóa Bộ đệm khung để có hiệu suất tối đa</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>JPG Mode</source>
+        <translation>Chế độ JPG</translation>
+    </message>
+    <message>
+        <source>JPEG compress the Frame Buffer for higher performance</source>
+        <translation type="vanished">JPEG nén Bộ đệm khung để có hiệu suất cao hơn</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Disable the Frame Buffer for maximum performance</source>
-        <translation>Vô hiệu hóa Bộ đệm khung để có hiệu suất tối đa</translation>
-    </message>
-    <message>
-        <source>JPG Mode</source>
-        <translation type="vanished">Chế độ JPG</translation>
-    </message>
-    <message>
-        <location line="+24" />
-        <source>JPEG compress the Frame Buffer for higher performance</source>
-        <translation>JPEG nén Bộ đệm khung để có hiệu suất cao hơn</translation>
-    </message>
-    <message>
-        <location line="+25" />
-        <location line="+13" />
         <source>RAW Mode</source>
         <translation>Chế độ RAW</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Frame Buffer Disabled - click the disable button again to enable (top right)</source>
-        <translation>Đã tắt bộ đệm khung - nhấp lại vào nút tắt để bật (trên cùng bên phải)</translation>
+        <translation type="vanished">Đã tắt bộ đệm khung - nhấp lại vào nút tắt để bật (trên cùng bên phải)</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+43" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4" />
         <source>Elapsed: 0h:00m:00s:000ms - Size: 0 B - FPS: 0</source>
         <translation>Đã trôi qua: 0h:00m:00s:000ms - Kích thước: 0 B - FPS: 0</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+63" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+92" />
         <source>Histogram</source>
         <translation>biểu đồ</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+16" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+7" />
         <source>RGB Color Space</source>
         <translation>Không gian màu RGB</translation>
@@ -8476,12 +8512,12 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation type="vanished">Độ phân giải (w:%1, h:%2) - Tiêu điểm (%3)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-729" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-761" />
         <source>FPS: %L1</source>
         <translation>FPS: %L1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+165" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+250" />
         <source>Close</source>
         <translation>Đóng</translation>
     </message>
@@ -8502,7 +8538,7 @@ Bạn có muốn chọn một tên khác không?</translation>
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3486" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3759" />
         <source>Board:</source>
         <translation>Bảng:</translation>
     </message>
@@ -8544,34 +8580,30 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation type="vanished">Cổng nối tiếp máy ảnh</translation>
     </message>
     <message>
-        <location line="+8" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-377" />
-        <location line="+379" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+83" />
         <source>Drive:</source>
-        <translation>Lái xe:</translation>
+        <translation type="vanished">Lái xe:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>Drive associated with port</source>
         <translation>Ổ đĩa được liên kết với cổng</translation>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+9" />
         <source>FPS:</source>
         <translation>FPS:</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-82" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+1" />
         <source>May be different from camera FPS</source>
         <translation>Có thể khác với FPS của máy ảnh</translation>
     </message>
     <message>
-        <location line="+377" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3644" />
+        <location line="+387" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3917" />
         <source>Update Available</source>
         <translation>Cập nhật có sẵn</translation>
     </message>
@@ -8593,7 +8625,7 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation type="vanished">Một ứng dụng khác đang sử dụng cổng khám phá phát sóng OpenMV Cam. Vui lòng đóng ứng dụng đó và khởi động lại OpenMV IDE để kích hoạt lập trình WiFi.</translation>
     </message>
     <message>
-        <location line="+416" />
+        <location line="+439" />
         <source>Documents Folder Error</source>
         <translation>Lỗi thư mục tài liệu</translation>
     </message>
@@ -8661,17 +8693,17 @@ Phần sụn của OpenMV Cam của bạn đang bị lỗi do lỗi phần cứn
     </message>
     <message>
         <location line="+94" />
-        <location line="+1236" />
+        <location line="+1378" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Cổng nối tiếp - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1204" />
+        <location line="-1346" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+851" />
+        <location line="+993" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
@@ -8681,7 +8713,7 @@ Phần sụn của OpenMV Cam của bạn đang bị lỗi do lỗi phần cứn
         <translation>Đang kết nối... (thời gian chờ 30 giây)</translation>
     </message>
     <message>
-        <location line="-1844" />
+        <location line="-1986" />
         <source>
 
 Try doing:
@@ -8732,12 +8764,12 @@ người bổ sung sudo %L1 quay số
     </message>
     <message>
         <location line="+17" />
-        <location line="+1294" />
+        <location line="+1436" />
         <source>UDP Server Connection - %1</source>
         <translation>Kết nối máy chủ UDP - %1</translation>
     </message>
     <message>
-        <location line="-1220" />
+        <location line="-1362" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Đối số cổng không hợp lệ (%1) cho -open_udp_server_terminal</translation>
     </message>
@@ -8768,12 +8800,12 @@ người bổ sung sudo %L1 quay số
     </message>
     <message>
         <location line="+17" />
-        <location line="+1341" />
+        <location line="+1483" />
         <source>TCP Server Connection - %1</source>
         <translation>Kết nối máy chủ TCP - %1</translation>
     </message>
     <message>
-        <location line="-1267" />
+        <location line="-1409" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Đối số cổng không hợp lệ (%1) cho -open_tcp_server_terminal</translation>
     </message>
@@ -8783,7 +8815,7 @@ người bổ sung sudo %L1 quay số
         <translation>Thiếu đối số cho -open_tcp_server_terminal</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+108" />
         <location line="+18" />
         <location line="+6" />
         <location line="+6" />
@@ -8792,7 +8824,7 @@ người bổ sung sudo %L1 quay số
         <location line="+8" />
         <location line="+9" />
         <location line="+45" />
-        <location line="+82" />
+        <location line="+83" />
         <location line="+27" />
         <location line="+6" />
         <location line="+6" />
@@ -8802,15 +8834,15 @@ người bổ sung sudo %L1 quay số
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+2935" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3152" />
         <location line="+10" />
         <location line="+8" />
-        <location line="+22" />
+        <location line="+23" />
         <source>Register OpenMV Cam</source>
         <translation>Đăng ký OpenMV Cam</translation>
     </message>
     <message>
-        <location line="-278" />
+        <location line="-279" />
         <source>OpenMV Cam automatically registered!
 
 Board: %1
@@ -8831,13 +8863,13 @@ Vui lòng chạy Ví dụ-&gt;HelloWorld-&gt;helloworld.py để kiểm tra ch�
     <message>
         <location line="+7" />
         <location line="+29" />
-        <location line="+172" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-69" />
+        <location line="+173" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-70" />
         <source>Registered</source>
         <translation>Đăng ký</translation>
     </message>
     <message>
-        <location line="-190" />
+        <location line="-191" />
         <source>Board type not available for this form key!</source>
         <translation>Loại bảng không có sẵn cho khóa biểu mẫu này!</translation>
     </message>
@@ -8863,27 +8895,27 @@ Vui lòng chạy Ví dụ-&gt;HelloWorld-&gt;helloworld.py để kiểm tra ch�
     </message>
     <message>
         <location line="+17" />
-        <location line="+204" />
+        <location line="+205" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+30" />
         <source>Database Error!</source>
         <translation>Lỗi cơ sở dữ liệu!</translation>
     </message>
     <message>
-        <location line="-187" />
-        <location line="+200" />
+        <location line="-188" />
+        <location line="+201" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+18" />
         <source>GET Network error!</source>
         <translation>NHẬN lỗi mạng!</translation>
     </message>
     <message>
-        <location line="-191" />
-        <location line="+199" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+22" />
+        <location line="-192" />
+        <location line="+200" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+23" />
         <source>GET network error!</source>
         <translation>NHẬN lỗi mạng!</translation>
     </message>
     <message>
-        <location line="-192" />
+        <location line="-193" />
         <location line="+10" />
         <location line="+10" />
         <source>Unregistered OpenMV Cam Detected</source>
@@ -8915,7 +8947,7 @@ Would you like to register your OpenMV Cam now?</source>
 Bạn có muốn đăng ký OpenMV Cam của mình ngay bây giờ không?</translation>
     </message>
     <message>
-        <location line="-2208" />
+        <location line="-2394" />
         <location line="+8" />
         <source>About %1</source>
         <translation>Giới thiệu về %1</translation>
@@ -8941,45 +8973,115 @@ Bạn có muốn đăng ký OpenMV Cam của mình ngay bây giờ không?</tran
         <translation>Firmware OpenMV %1</translation>
     </message>
     <message>
-        <location line="+193" />
         <source>JPG</source>
-        <translation>JPG</translation>
+        <translation type="vanished">JPG</translation>
     </message>
     <message>
-        <location line="+26" />
-        <location line="+13" />
         <source>JPEG Mode</source>
-        <translation>Chế độ JPEG</translation>
+        <translation type="vanished">Chế độ JPEG</translation>
     </message>
     <message>
-        <location line="-5" />
-        <location line="+7" />
         <source>The Frame Buffer is streaming JPEG-compressed images</source>
-        <translation>Bộ đệm khung đang truyền các hình ảnh nén JPEG</translation>
+        <translation type="vanished">Bộ đệm khung đang truyền các hình ảnh nén JPEG</translation>
     </message>
     <message>
-        <location line="-6" />
-        <location line="+7" />
         <source>The Frame Buffer is streaming raw (uncompressed) images</source>
-        <translation>Bộ đệm khung đang truyền các hình ảnh thô (chưa nén)</translation>
+        <translation type="vanished">Bộ đệm khung đang truyền các hình ảnh thô (chưa nén)</translation>
     </message>
     <message>
-        <location line="+105" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+25" />
         <source>Frame Buffer - Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
         <translation>Bộ đệm khung - Độ phân giải (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Điểm ảnh (%7) - Tiêu điểm (%8)</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4" />
         <source>Frame Buffer - Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
         <translation>Bộ đệm khung - Độ phân giải (w:%1, h:%2) - Điểm (x:%3, y:%4)</translation>
     </message>
     <message>
         <location line="+5" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <source>Frame Buffer - Res (w:%1, h:%2) - Focus (%3)</source>
         <translation>Bộ đệm khung - Độ phân giải (w:%1, h:%2) - Tiêu điểm (%3)</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+172" />
+        <source>Select the Frame Buffer source, or turn it off for maximum performance</source>
+        <translation>Chọn nguồn bộ đệm khung, hoặc tắt nó để đạt hiệu năng tối đa</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location line="+2039" />
+        <source>Off</source>
+        <translation>Tắt</translation>
+    </message>
+    <message>
+        <location line="-2038" />
+        <location line="+2042" />
+        <location line="+6" />
+        <source>On</source>
+        <translation>Bật</translation>
+    </message>
+    <message>
+        <location line="-2016" />
+        <location line="+7" />
+        <source>Stream JPG-compressed images for higher performance</source>
+        <translation>Truyền ảnh nén JPG để có hiệu năng cao hơn</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Stream RAW (uncompressed) images at their true quality</source>
+        <translation>Truyền ảnh RAW (không nén) với chất lượng thực</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Frame Buffer Off - select a source to enable it (top right)</source>
+        <translation>Bộ đệm khung đã tắt - chọn một nguồn để bật (góc trên bên phải)</translation>
+    </message>
+    <message>
+        <location line="+75" />
+        <source>Board Info</source>
+        <translation>Thông tin bo mạch</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Memory</source>
+        <translation>Bộ nhớ</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/openmv/views/openmvstatisticsview.cpp" line="+97" />
+        <source>Channels</source>
+        <translation>Kênh</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Statistics</source>
+        <translation>Thống kê</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select what this pane displays</source>
+        <translation>Chọn nội dung hiển thị của ngăn này</translation>
+    </message>
+    <message>
+        <location line="+114" />
+        <source>Frame Buffer (%1)</source>
+        <translation>Bộ đệm khung (%1)</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source> - Res (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Pixels (%7) - Focus (%8)</source>
+        <translation> - Độ phân giải (w:%1, h:%2) - ROI (x:%3, y:%4, w:%5, h:%6) - Điểm ảnh (%7) - Lấy nét (%8)</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source> - Res (w:%1, h:%2) - Point (x:%3, y:%4)</source>
+        <translation> - Độ phân giải (w:%1, h:%2) - Điểm (x:%3, y:%4)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source> - Res (w:%1, h:%2) - Focus (%3)</source>
+        <translation> - Độ phân giải (w:%1, h:%2) - Lấy nét (%3)</translation>
     </message>
     <message>
         <location line="+255" />
@@ -8987,7 +9089,15 @@ Bạn có muốn đăng ký OpenMV Cam của mình ngay bây giờ không?</tran
         <translation>Cổng nối tiếp của camera -- nhấp để đặt tên thân thiện cho camera này</translation>
     </message>
     <message>
-        <location line="+389" />
+        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+299" />
+        <location line="+418" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+122" />
+        <source>No Drive</source>
+        <translation>Không có ổ đĩa</translation>
+    </message>
+    <message>
+        <location line="+392" />
         <source>A new version of %5 (%L1.%L2.%L3) is available for download. See the &lt;a href=&quot;%L4&quot;&gt;release notes&lt;/a&gt;.</source>
         <translation>Đã có phiên bản mới của %5 (%L1.%L2.%L3) để tải xuống. Xem &lt;a href=&quot;%L4&quot;&gt;ghi chú phát hành&lt;/a&gt;.</translation>
     </message>
@@ -9007,12 +9117,12 @@ Bạn có muốn đăng ký OpenMV Cam của mình ngay bây giờ không?</tran
         <translation>Kết nối (Có sẵn USB và mạng)</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+96" />
         <source>-auto_run in viewer mode requires a readable text script file argument on the command line.</source>
         <translation>-auto_run ở chế độ trình xem yêu cầu một đối số tệp kịch bản văn bản có thể đọc được trên dòng lệnh.</translation>
     </message>
     <message>
-        <location line="+250" />
+        <location line="+266" />
         <source>Thanks for using the OpenMV Cam and %1!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -9057,7 +9167,7 @@ Firmware của OpenMV Cam đang gặp sự cố nghiêm trọng do lỗi phần 
 </translation>
     </message>
     <message>
-        <location line="+711" />
+        <location line="+761" />
         <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with %1 without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
@@ -9085,7 +9195,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Đang đăng ký OpenMV Cam...</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+34" />
         <source>Thank you for registering your OpenMV Cam!</source>
         <translation>Cảm ơn bạn đã đăng ký OpenMV Cam!</translation>
     </message>
@@ -9126,7 +9236,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="-23" />
-        <location line="+1140" />
+        <location line="+1231" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Tệp hình ảnh (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
@@ -9207,7 +9317,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1362" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2118" />
         <source>Please select a serial port</source>
         <translation>Vui lòng chọn một cổng nối tiếp</translation>
     </message>
@@ -9356,7 +9466,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <location line="-70" />
         <location line="+80" />
         <location line="+21" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+535" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+420" />
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>Tệp điểm chính (*.lbp *.orb)</translation>
     </message>
@@ -9455,13 +9565,13 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation type="vanished">Tài nguyên IDE OpenMV mới có sẵn (ví dụ: ví dụ, chương trình cơ sở, tài liệu, v.v.).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1859" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2038" />
         <source>Install</source>
         <translation>Cài đặt</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+327" />
+        <location line="+393" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
@@ -9472,9 +9582,9 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <location line="+46" />
         <location line="+72" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-888" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-159" />
         <location line="+50" />
-        <location line="+871" />
+        <location line="+911" />
         <location line="+50" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
         <location line="+51" />
@@ -9484,7 +9594,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Đang tải xuống...</translation>
     </message>
     <message>
-        <location line="-313" />
+        <location line="-379" />
         <source>Installing...</source>
         <translation>Đang cài đặt...</translation>
     </message>
@@ -9505,18 +9615,18 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+315" />
+        <location line="+290" />
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>Không thể mở tệp tài nguyên &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-287" />
-        <location line="+314" />
+        <location line="-262" />
+        <location line="+289" />
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>Yêu cầu mạng không thành công &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-282" />
+        <location line="-257" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9529,62 +9639,65 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+8" />
-        <location line="+159" />
-        <location line="+875" />
-        <location line="+227" />
-        <location line="+2601" />
+        <location line="+279" />
+        <location line="+927" />
+        <location line="+231" />
+        <location line="+2733" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Xóa hệ thống tệp FAT nội bộ</translation>
     </message>
     <message>
-        <location line="-3937" />
-        <location line="+159" />
-        <location line="+877" />
-        <location line="+226" />
-        <location line="+2600" />
+        <location line="-4245" />
+        <location line="+279" />
+        <location line="+929" />
+        <location line="+230" />
+        <location line="+2732" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Nếu bạn bật tùy chọn này, tất cả các tệp trên hệ thống tệp FAT bên trong của OpenMV Cam sẽ bị xóa. Thao tác này không xóa các tập tin trên bất kỳ thẻ SD có thể tháo rời nào (nếu được lắp vào).</translation>
     </message>
     <message>
-        <location line="-3937" />
-        <location line="+1036" />
-        <location line="+226" />
-        <location line="+2600" />
+        <location line="-4245" />
+        <location line="+1208" />
+        <location line="+230" />
+        <location line="+2732" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Đặt lại hệ thống tệp ROMFS</translation>
     </message>
     <message>
-        <location line="-3936" />
-        <location line="+1037" />
-        <location line="+225" />
-        <location line="+2599" />
+        <location line="-4244" />
+        <location line="+1209" />
+        <location line="+229" />
+        <location line="+2731" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Nếu bạn bật tùy chọn này, hệ thống tệp ROM trên OpenMV Cam của bạn sẽ được đặt lại về mặc định.</translation>
     </message>
     <message>
-        <location line="-3936" />
-        <location line="+190" />
+        <location line="-4244" />
+        <location line="+310" />
         <source>Run</source>
         <translation>Chạy</translation>
     </message>
     <message>
-        <location line="-125" />
+        <location line="-210" />
+        <location line="+7" />
+        <location line="+16" />
         <location line="+13" />
-        <location line="+51" />
+        <location line="+113" />
+        <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="-5" />
         <source>Bootloader</source>
         <translation>Bộ nạp khởi động</translation>
     </message>
     <message>
-        <location line="-50" />
+        <location line="-112" />
         <source>&quot;%L1&quot; is not a file!</source>
         <translation>&quot;%L1&quot; không phải là một tập tin!</translation>
     </message>
     <message>
-        <location line="+73" />
+        <location line="+135" />
         <source>Update ROMFS file system</source>
         <translation>Cập nhật hệ thống tệp ROMFS</translation>
     </message>
@@ -9605,7 +9718,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+3685" />
+        <location line="+3873" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Cảnh báo: Việc nâng cấp lên phiên bản chương trình cơ sở mới yêu cầu phải xóa hệ thống tệp FAT.</translation>
     </message>
@@ -9618,7 +9731,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation type="vanished">Không thể giải nén firmware!</translation>
     </message>
     <message>
-        <location line="-4503" />
+        <location line="-4811" />
         <source>Checking development examples...</source>
         <translation>Đang kiểm tra ví dụ phát triển...</translation>
     </message>
@@ -9675,17 +9788,33 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Tệp nhị phân firmware (*.bin *.dfu *.img *.zip)</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+133" />
+        <source>The zip &quot;%L1&quot; does not contain a firmware image!</source>
+        <translation>Tệp zip &quot;%L1&quot; không chứa ảnh firmware!</translation>
+    </message>
+    <message>
+        <location line="+16" />
         <source>Unable to unpack the firmware zip &quot;%L1&quot;!</source>
         <translation>Không thể giải nén tệp zip firmware &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+212" />
+        <location line="+260" />
+        <location line="+9" />
         <source>Unable to download the latest development firmware!</source>
         <translation>Không thể tải firmware phát triển mới nhất!</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+96" />
+        <source>The firmware zip is missing file(s) this board&apos;s flash listing requires: %L1</source>
+        <translation>Tệp zip firmware thiếu (các) tệp mà danh sách flash của bo mạch này yêu cầu: %L1</translation>
+    </message>
+    <message>
+        <location line="+41" />
+        <source>The firmware zip does not contain &quot;%L1&quot;, which this board&apos;s firmware update requires!</source>
+        <translation>Tệp zip firmware không chứa &quot;%L1&quot;, thứ mà bản cập nhật firmware của bo mạch này yêu cầu!</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>The development firmware for this board is not available!</source>
         <translation>Firmware phát triển cho bo mạch này không có sẵn!</translation>
     </message>
@@ -9783,18 +9912,18 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Không tìm thấy Camera OpenMV nào!</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+58" />
         <source>Do you have an OpenMV Cam connected and is it bricked?</source>
         <translation>Bạn có kết nối OpenMV Cam không và nó có bị brick không?</translation>
     </message>
     <message>
-        <location line="+84" />
-        <location line="+2602" />
+        <location line="+86" />
+        <location line="+2734" />
         <source>Upgrade options:</source>
         <translation>Tùy chọn nâng cấp:</translation>
     </message>
     <message>
-        <location line="-2524" />
+        <location line="-2653" />
         <location line="+175" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
@@ -9843,31 +9972,31 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+72" />
-        <location line="+199" />
-        <location line="+733" />
+        <location line="+206" />
+        <location line="+765" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Lỗi hết thời gian chờ khi lấy kiến ​​trúc bảng!</translation>
     </message>
     <message>
-        <location line="-651" />
-        <location line="+192" />
+        <location line="-683" />
+        <location line="+193" />
         <source>Failed to copy firmware files to temporary directory!</source>
         <translation>Không sao chép được tập tin chương trình cơ sở vào thư mục tạm thời!</translation>
     </message>
     <message>
-        <location line="-183" />
-        <location line="+192" />
+        <location line="-184" />
+        <location line="+193" />
         <source>Original firmware folder does not exist!</source>
         <translation>Thư mục phần mềm gốc không tồn tại!</translation>
     </message>
     <message>
-        <location line="-183" />
-        <location line="+192" />
+        <location line="-184" />
+        <location line="+193" />
         <source>Failed to create temporary directory!</source>
         <translation>Không tạo được thư mục tạm thời!</translation>
     </message>
     <message>
-        <location line="-183" />
+        <location line="-184" />
         <source>Only loading bootloader.bin files is supported with the ST Cube Programmer!</source>
         <translation>ST Cube Programmer chỉ hỗ trợ tải các tệp bootloader.bin!</translation>
     </message>
@@ -9882,7 +10011,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Bộ tải khởi động IMX chỉ hỗ trợ tải các tệp *.bin và *.img!</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="+52" />
         <source>Bootloader update complete!
 
 </source>
@@ -9918,34 +10047,38 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 OpenMV khuyên bạn chỉ nên tải bootloader.dfu để sửa chữa bootloader.</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+87" />
         <source>None</source>
         <translation>Không có</translation>
     </message>
     <message>
-        <location line="+27" />
-        <location line="+30" />
-        <location line="+56" />
+        <location line="+29" />
+        <source>Unknown (0x%1)</source>
+        <translation>Không rõ (0x%1)</translation>
+    </message>
+    <message>
+        <location line="+41" />
+        <location line="+61" />
         <source>Unknown</source>
         <translation>Không xác định</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="-64" />
         <source>Timeout error while getting sensor type!</source>
         <translation>Lỗi hết thời gian chờ khi nhận loại cảm biến!</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+167" />
         <source>Unregistered</source>
         <translation>Chưa đăng ký</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+95" />
         <source>Timeout error while learning MTU!</source>
         <translation>Lỗi hết thời gian chờ khi học MTU!</translation>
     </message>
     <message>
-        <location line="+226" />
+        <location line="+242" />
         <source>Board: %L1</source>
         <translation>Bảng: %L1</translation>
     </message>
@@ -9965,8 +10098,8 @@ OpenMV khuyên bạn chỉ nên tải bootloader.dfu để sửa chữa bootload
         <translation>Phiên bản chương trình cơ sở: %L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="-2356" />
-        <location line="+2361" />
+        <location line="-2418" />
+        <location line="+2423" />
         <source>Serial Port: %L1</source>
         <translation>Cổng nối tiếp: %L1</translation>
     </message>
@@ -9975,7 +10108,7 @@ OpenMV khuyên bạn chỉ nên tải bootloader.dfu để sửa chữa bootload
         <translation type="vanished">FPS: 0</translation>
     </message>
     <message>
-        <location line="+120" />
+        <location line="+103" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation>- [đã lỗi thời - bấm vào đây để nâng cấp]</translation>
     </message>
@@ -9990,7 +10123,29 @@ OpenMV khuyên bạn chỉ nên tải bootloader.dfu để sửa chữa bootload
         <translation>- [ mới nhất ]</translation>
     </message>
     <message>
-        <location line="+424" />
+        <location line="+11" />
+        <source>Your OpenMV Cam RT1062 is connected, but %L1 does not have Input Monitoring permission on this Mac. Without it, firmware updates for the RT1062 will fail with a &quot;UsbHidPeripheral() cannot open USB HID device&quot; error, because macOS blocks the NXP flashing tools (blhost, sdphost) that %L1 uses from opening the RT1062&apos;s USB HID bootloader.
+
+To grant access, open the Apple menu, go to System Settings, click Privacy &amp; Security in the sidebar, click Input Monitoring, and enable %L1 in the list. Then quit and reopen %L1 so the new grant takes effect (macOS reads privacy grants at launch).
+
+This warning will stop appearing once Input Monitoring is granted. You can keep using your OpenMV Cam RT1062 for running scripts without this permission; it is only required for firmware updates.</source>
+        <translation>OpenMV Cam RT1062 của bạn đã được kết nối, nhưng %L1 không có quyền Giám sát đầu vào trên máy Mac này. Nếu không có quyền đó, cập nhật firmware cho RT1062 sẽ thất bại với lỗi &quot;UsbHidPeripheral() cannot open USB HID device&quot;, vì macOS chặn các công cụ nạp firmware của NXP (blhost, sdphost) mà %L1 sử dụng mở bootloader USB HID của RT1062.
+
+Để cấp quyền, hãy mở menu Apple, vào Cài đặt Hệ thống, nhấp Quyền riêng tư &amp; Bảo mật ở thanh bên, nhấp Giám sát đầu vào và bật %L1 trong danh sách. Sau đó thoát và mở lại %L1 để quyền mới có hiệu lực (macOS đọc các quyền riêng tư khi khởi chạy).
+
+Cảnh báo này sẽ không còn xuất hiện sau khi quyền Giám sát đầu vào được cấp. Bạn vẫn có thể dùng OpenMV Cam RT1062 để chạy script mà không cần quyền này; quyền này chỉ cần cho việc cập nhật firmware.</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Your Apple Silicon Mac has an &quot;Allow accessories to connect&quot; security setting that can interrupt connections to your OpenMV Cam. When your OpenMV Cam is in bootloader (DFU) mode for a firmware update, macOS may show an &quot;Allow accessory to connect&quot; popup that must be clicked before the connection works.
+
+To prevent this, open the Apple menu, go to System Settings, click Privacy &amp; Security in the sidebar, scroll to the bottom to Accessories, and change &quot;Allow accessories to connect&quot; to &quot;Automatically allow when unlocked&quot; (recommended) or &quot;Always allow&quot;.</source>
+        <translation>Máy Mac Apple Silicon của bạn có cài đặt bảo mật &quot;Cho phép phụ kiện kết nối&quot; có thể làm gián đoạn kết nối tới OpenMV Cam. Khi OpenMV Cam ở chế độ bootloader (DFU) để cập nhật firmware, macOS có thể hiện cửa sổ bật lên &quot;Cho phép phụ kiện kết nối&quot; mà bạn phải nhấp vào thì kết nối mới hoạt động.
+
+Để tránh điều này, hãy mở menu Apple, vào Cài đặt Hệ thống, nhấp Quyền riêng tư &amp; Bảo mật ở thanh bên, cuộn xuống cuối tới mục Phụ kiện, rồi đổi &quot;Cho phép phụ kiện kết nối&quot; thành &quot;Tự động cho phép khi được mở khóa&quot; (khuyến nghị) hoặc &quot;Luôn cho phép&quot;.</translation>
+    </message>
+    <message>
+        <location line="+452" />
         <location line="+10" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+191" />
         <location line="+16" />
@@ -10010,7 +10165,7 @@ OpenMV khuyên bạn chỉ nên tải bootloader.dfu để sửa chữa bootload
         <translation>Lỗi: Không thể mở &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+223" />
+        <location line="+227" />
         <source>More Examples</source>
         <translation>Thêm ví dụ</translation>
     </message>
@@ -10024,7 +10179,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Cụ thể, hãy xem ví dụ Xử lý hình ảnh -&gt; Theo dõi màu sắc và Học máy -&gt; TensorFlow.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+57" />
         <location line="+70" />
         <location line="+8" />
         <source>Firmware Update</source>
@@ -10061,7 +10216,7 @@ Cụ thể, hãy xem ví dụ Xử lý hình ảnh -&gt; Theo dõi màu sắc v�
         <translation>Chỉnh sửa ngưỡng LAB bằng Trình chỉnh sửa ngưỡng</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginfb.cpp" line="-55" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="-55" />
         <location line="+150" />
         <source>No Image</source>
         <translation>Không có hình ảnh</translation>
@@ -10193,7 +10348,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
 Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-541" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-548" />
         <source>FPS: %L1 Cam - %L2 IDE</source>
         <translation>FPS: %L1 Cam - %L2 IDE</translation>
     </message>
@@ -10203,48 +10358,45 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
         <translation>FPS trên camera và FPS hiển thị của IDE</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+28" />
+        <location line="+73" />
+        <location line="+38" />
         <source>Select Drive</source>
         <translation>Chọn ổ đĩa</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="-37" />
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
         <translation>Không tìm thấy ổ đĩa hợp lệ nào liên kết với OpenMV Cam của bạn!</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+37" />
         <source>Please associate a drive with your OpenMV Cam</source>
         <translation>Vui lòng liên kết ổ đĩa với OpenMV Cam của bạn</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+16" />
         <source>Drive: %L1</source>
         <translation>Ổ đĩa: %L1</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+43" />
         <source>Debug Protocol Settings</source>
         <translation>Cài đặt giao thức gỡ lỗi</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Protocol Version %1 - System Info:</source>
-        <translation>Phiên bản Giao thức %1 - Thông tin Hệ thống:</translation>
+        <translation type="vanished">Phiên bản Giao thức %1 - Thông tin Hệ thống:</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Host Stats:</source>
-        <translation>Thống kê máy chủ:</translation>
+        <translation type="vanished">Thống kê máy chủ:</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>Device Stats:</source>
-        <translation>Thống kê thiết bị:</translation>
+        <translation type="vanished">Thống kê thiết bị:</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+18" />
         <source>Protocol Controls:</source>
         <translation>Kiểm soát giao thức:</translation>
     </message>
@@ -10254,12 +10406,17 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
         <translation>Đọc khung động</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+15" />
+        <source>Channel Polling (ms)</source>
+        <translation>Thăm dò kênh (ms)</translation>
+    </message>
+    <message>
+        <location line="+13" />
         <source>Combined Polling</source>
         <translation>Bỏ phiếu kết hợp</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+26" />
         <source>Polling (ms)</source>
         <translation>Bỏ phiếu (ms)</translation>
     </message>
@@ -10274,7 +10431,7 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
         <translation>Cài đặt bỏ phiếu</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+23" />
         <source>Frame Buffer Polling (ms)</source>
         <translation>Kiểm tra bộ đệm khung (ms)</translation>
     </message>
@@ -10294,7 +10451,7 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
         <translation>Thăm dò hồ sơ mã (ms)</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+139" />
         <location line="+20" />
         <source>Save Script</source>
         <translation>Lưu tập lệnh</translation>
@@ -10338,7 +10495,7 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
         <translation>Lưu mô tả</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+149" />
         <location line="+26" />
         <location line="+7" />
         <source>Failed to flush &quot;%L1&quot;!</source>
@@ -10401,12 +10558,12 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
     </message>
     <message>
         <location line="+396" />
-        <location line="+177" />
+        <location line="+184" />
         <source>Code Profiler</source>
         <translation>Trình phân tích mã</translation>
     </message>
     <message>
-        <location line="-147" />
+        <location line="-154" />
         <source>Flat</source>
         <translation>Phẳng</translation>
     </message>
@@ -10441,7 +10598,7 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
         <translation>Cài lại</translation>
     </message>
     <message>
-        <location line="+165" />
+        <location line="+172" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
         <translation>Chức năng: %1, Tổng số cuộc gọi: %2, Tổng số μs: %3, Tổng số chu kỳ: %4, Tổng số sự kiện: %5</translation>
     </message>
@@ -10451,7 +10608,7 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
         <translation>Chức năng: %1, Tổng số cuộc gọi: %2, Tổng số μs: %3, Tổng số chu kỳ: %4</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-856" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-877" />
         <source>Please select the target</source>
         <translation>Hãy chọn mục tiêu</translation>
     </message>
@@ -10490,7 +10647,7 @@ OpenMV IDE sẽ chỉ sao chép mô hình.</translation>
 %1 sẽ chỉ sao chép mô hình như hiện trạng.</translation>
     </message>
     <message>
-        <location line="+147" />
+        <location line="+155" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
@@ -10507,7 +10664,7 @@ OpenMV IDE sẽ chỉ sao chép mô hình.</translation>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+122" />
+        <location line="+135" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
@@ -10524,7 +10681,7 @@ OpenMV IDE sẽ chỉ sao chép mô hình.</translation>
         <translation>Chỉnh sửa ROMFS</translation>
     </message>
     <message>
-        <location line="-673" />
+        <location line="-686" />
         <location line="+93" />
         <source>A folder with the same name already exists!</source>
         <translation>Một thư mục có cùng tên đã tồn tại!</translation>
@@ -10577,24 +10734,24 @@ OpenMV IDE sẽ chỉ sao chép mô hình.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+292" />
+        <location line="+305" />
         <source>Extract File</source>
         <translation>Giải nén tập tin</translation>
     </message>
     <message>
-        <location line="-298" />
+        <location line="-311" />
         <source>View/Edit</source>
         <translation>Xem/Chỉnh sửa</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+289" />
+        <location line="+302" />
         <source>Add File</source>
         <translation>Thêm tập tin</translation>
     </message>
     <message>
-        <location line="-288" />
-        <location line="+290" />
+        <location line="-301" />
+        <location line="+303" />
         <source>New Folder</source>
         <translation>Thư mục mới</translation>
     </message>
@@ -10753,8 +10910,8 @@ OpenMV IDE sẽ chỉ sao chép mô hình.</translation>
     </message>
     <message>
         <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-870" />
-        <location line="+921" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-910" />
+        <location line="+961" />
         <source>This feature is not supported on this machine!</source>
         <translation>Tính năng này không được hỗ trợ trên máy này!</translation>
     </message>
@@ -10795,7 +10952,7 @@ Máy ảnh phải được cấp nguồn sau khi cập nhật gói hệ thống.
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1124" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1225" />
         <location line="+85" />
         <source>Query failed!</source>
         <translation>Truy vấn không thành công!</translation>
@@ -10999,11 +11156,12 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Vui lòng nhập Khóa API dự án Edge Impulse</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1015" />
-        <location line="+144" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1059" />
+        <location line="+148" />
         <location line="+36" />
-        <location line="+41" />
-        <location line="+51" />
+        <location line="+49" />
+        <location line="+39" />
+        <location line="+35" />
         <location line="+44" />
         <location line="+42" />
         <location line="+44" />
@@ -11018,7 +11176,7 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <location line="+42" />
         <location line="+43" />
         <location line="+40" />
-        <location line="+39" />
+        <location line="+48" />
         <location line="+135" />
         <location line="+45" />
         <location line="+50" />
@@ -11033,10 +11191,20 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>NXP IMX</translation>
     </message>
     <message>
-        <location line="-884" />
+        <location line="-1260" />
+        <source>Waiting for the flashloader to enumerate...</source>
+        <translation>Đang chờ flashloader được nhận diện...</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>The i.MX flashloader did not enumerate.</source>
+        <translation>Flashloader i.MX không được nhận diện.</translation>
+    </message>
+    <message>
+        <location line="+356" />
         <location line="+51" />
         <location line="+91" />
-        <location line="+344" />
+        <location line="+353" />
         <location line="+51" />
         <location line="+50" />
         <location line="+94" />
@@ -11136,7 +11304,7 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <location line="+25" />
         <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+184" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+285" />
         <source>Success - Press Ok to close the window</source>
         <translation>Thành công - Nhấn Ok để đóng cửa sổ</translation>
     </message>
@@ -11380,7 +11548,7 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Trình biên dịch Vela không được hỗ trợ trên nền tảng này.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-674" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-775" />
         <source>Reading File...</source>
         <translation>Đang đọc tệp...</translation>
     </message>
@@ -11412,12 +11580,12 @@ Mở một tập dữ liệu để tải nó lên.</translation>
     </message>
     <message>
         <location line="-77" />
-        <location line="+627" />
+        <location line="+728" />
         <source>Transcoding File...</source>
         <translation>Tập tin chuyển mã...</translation>
     </message>
     <message>
-        <location line="-616" />
+        <location line="-717" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -11494,10 +11662,10 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Lấy định dạng</translation>
     </message>
     <message>
-        <location line="+37" />
-        <location line="+111" />
+        <location line="+96" />
+        <location line="+101" />
         <location line="+10" />
-        <location line="+98" />
+        <location line="+150" />
         <location line="+15" />
         <location line="+445" />
         <location line="+12" />
@@ -11523,12 +11691,12 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Chuyển đổi video</translation>
     </message>
     <message>
-        <location line="-1073" />
+        <location line="-1115" />
         <source>Converting</source>
         <translation>Chuyển đổi</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location line="+102" />
         <source>FFMPEG is not supported on this platform.</source>
         <translation>FFMPEG không được hỗ trợ trên nền tảng này.</translation>
     </message>
@@ -11546,7 +11714,7 @@ Your OpenMV IDE installation may be incomplete.</source>
 Bản cài đặt OpenMV IDE của bạn có thể chưa hoàn chỉnh.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+150" />
         <source>Unable to write to output video file!</source>
         <translation>Không thể ghi vào tập tin video đầu ra!</translation>
     </message>
@@ -11696,7 +11864,7 @@ Bản cài đặt OpenMV IDE của bạn có thể chưa hoàn chỉnh.</transla
     <message>
         <location line="+174" />
         <location line="+5" />
-        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+783" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+786" />
         <location line="+5" />
         <source>Show text</source>
         <translation>Hiện văn bản</translation>
@@ -11816,11 +11984,13 @@ Hãy sửa hoặc xóa chúng trước khi lưu.</translation>
     </message>
     <message>
         <location line="+2" />
+        <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="+17" />
         <source>WiFi</source>
         <translation>WiFi</translation>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="+3" />
         <source>Ethernet</source>
         <translation>Ethernet</translation>
     </message>
@@ -11937,6 +12107,1110 @@ Hãy sửa hoặc xóa chúng trước khi lưu.</translation>
         <translation>Không ghi được boot.py vào camera:
 
 %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1105" />
+        <source>&quot;%L1&quot; config.json - %L2</source>
+        <translation>&quot;%L1&quot; config.json - %L2</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>&quot;%L1&quot; config.json - invalid repository name &quot;%L2&quot;</source>
+        <translation>&quot;%L1&quot; config.json - tên kho lưu trữ không hợp lệ &quot;%L2&quot;</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&quot;%L1&quot; config.json - name &quot;%L2&quot; does not match the folder name</source>
+        <translation>&quot;%L1&quot; config.json - tên &quot;%L2&quot; không khớp với tên thư mục</translation>
+    </message>
+    <message>
+        <location line="+37" />
+        <source>&quot;%L1&quot; does not have a readable config.json</source>
+        <translation>&quot;%L1&quot; không có config.json đọc được</translation>
+    </message>
+    <message>
+        <location line="+91" />
+        <source>&quot;%L1&quot; - failed to install: %L2</source>
+        <translation>&quot;%L1&quot; - cài đặt thất bại: %L2</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>&quot;%L1&quot; - failed to update &quot;%L2&quot;: %L3</source>
+        <translation>&quot;%L1&quot; - cập nhật &quot;%L2&quot; thất bại: %L3</translation>
+    </message>
+    <message>
+        <location line="+103" />
+        <source>&quot;%L1&quot; - missing firmware/settings.json</source>
+        <translation>&quot;%L1&quot; - thiếu firmware/settings.json</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>&quot;%L1&quot; firmware/settings.json - %L2</source>
+        <translation>&quot;%L1&quot; firmware/settings.json - %L2</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>&quot;%L1&quot; firmware/settings.json - &quot;protocol&quot; is not allowed (ignored)</source>
+        <translation>&quot;%L1&quot; firmware/settings.json - không cho phép &quot;protocol&quot; (đã bỏ qua)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>&quot;%L1&quot; firmware/settings.json - top-level &quot;firmware_version&quot; is ignored (use a per-board &quot;firmware_version&quot;)</source>
+        <translation>&quot;%L1&quot; firmware/settings.json - &quot;firmware_version&quot; ở cấp cao nhất bị bỏ qua (hãy dùng &quot;firmware_version&quot; riêng cho từng bo mạch)</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <source>&quot;%L1&quot; board &quot;%L2&quot; - missing or invalid &quot;boardVidPid&quot; (skipped)</source>
+        <translation>&quot;%L1&quot; bo mạch &quot;%L2&quot; - &quot;boardVidPid&quot; bị thiếu hoặc không hợp lệ (bỏ qua)</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&quot;%L1&quot; board &quot;%L2&quot; - missing &quot;boardFirmwareFolder&quot; (skipped)</source>
+        <translation>&quot;%L1&quot; bo mạch &quot;%L2&quot; - thiếu &quot;boardFirmwareFolder&quot; (bỏ qua)</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&quot;%L1&quot; board &quot;%L2&quot; - no per-board &quot;firmware_version&quot; (the board will never be offered firmware updates)</source>
+        <translation>&quot;%L1&quot; bo mạch &quot;%L2&quot; - không có &quot;firmware_version&quot; riêng cho bo mạch (bo mạch sẽ không bao giờ được đề nghị cập nhật firmware)</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>&quot;%L1&quot; board &quot;%L2&quot; - &quot;boardFirmwareFolder&quot; &quot;%L3&quot; is already used by &quot;%L4&quot; (skipped)</source>
+        <translation>&quot;%L1&quot; bo mạch &quot;%L2&quot; - &quot;boardFirmwareFolder&quot; &quot;%L3&quot; đã được &quot;%L4&quot; sử dụng (bỏ qua)</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>&quot;%L1&quot; board &quot;%L2&quot; (%L3) - USB id already provided by the higher-priority repository &quot;%L4&quot; (skipped)</source>
+        <translation>&quot;%L1&quot; bo mạch &quot;%L2&quot; (%L3) - id USB đã được kho lưu trữ có ưu tiên cao hơn &quot;%L4&quot; cung cấp (bỏ qua)</translation>
+    </message>
+    <message>
+        <location line="+52" />
+        <source>&quot;%L1&quot; sensor &quot;%L2&quot; - id conflicts with an existing sensor (skipped)</source>
+        <translation>&quot;%L1&quot; cảm biến &quot;%L2&quot; - id xung đột với một cảm biến hiện có (bỏ qua)</translation>
+    </message>
+    <message>
+        <location line="+152" />
+        <source>failed to extract the downloaded archive</source>
+        <translation>giải nén tệp nén đã tải xuống thất bại</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>the downloaded archive must contain exactly one top-level folder</source>
+        <translation>tệp nén đã tải xuống phải chứa đúng một thư mục cấp cao nhất</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>failed to move the extracted folder into place</source>
+        <translation>di chuyển thư mục đã giải nén vào vị trí thất bại</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>failed to write &quot;%L1&quot;</source>
+        <translation>ghi &quot;%L1&quot; thất bại</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="-296" />
+        <source>Changes take effect after restarting.
+
+Restart %L1 now?</source>
+        <translation>Các thay đổi có hiệu lực sau khi khởi động lại.
+
+Khởi động lại %L1 ngay?</translation>
+    </message>
+    <message>
+        <location line="+121" />
+        <source>Downloading &quot;%L1&quot; %L2...</source>
+        <translation>Đang tải xuống &quot;%L1&quot; %L2...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <location line="+140" />
+        <location line="+144" />
+        <source>empty download</source>
+        <translation>tải xuống rỗng</translation>
+    </message>
+    <message>
+        <location line="-274" />
+        <source>the downloaded &quot;%L1&quot; archive failed its sha256 check</source>
+        <translation>tệp nén &quot;%L1&quot; đã tải xuống không qua được kiểm tra sha256</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>All third party repositories are up to date.</source>
+        <translation>Tất cả kho lưu trữ bên thứ ba đều đã được cập nhật.</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>firmware %L1 -&gt; %L2</source>
+        <translation>firmware %L1 -&gt; %L2</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location line="+6" />
+        <location line="+6" />
+        <location line="+6" />
+        <source>none</source>
+        <translation>không có</translation>
+    </message>
+    <message>
+        <location line="-13" />
+        <source>examples %L1 -&gt; %L2</source>
+        <translation>ví dụ %L1 -&gt; %L2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>models %L1 -&gt; %L2</source>
+        <translation>mô hình %L1 -&gt; %L2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>stubs %L1 -&gt; %L2</source>
+        <translation>stub %L1 -&gt; %L2</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Updates are available:
+
+%L1
+
+Install now?</source>
+        <translation>Có bản cập nhật:
+
+%L1
+
+Cài đặt ngay?</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Some updates failed:
+
+%L1</source>
+        <translation>Một số cập nhật thất bại:
+
+%L1</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>config.json does not define a firmware release channel</source>
+        <translation>config.json không định nghĩa kênh phát hành firmware</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>a repository named &quot;%L1&quot; is already installed</source>
+        <translation>kho lưu trữ tên &quot;%L1&quot; đã được cài đặt</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>&quot;%L1&quot; does not provide a development firmware channel</source>
+        <translation>&quot;%L1&quot; không cung cấp kênh firmware phát triển</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Downloading &quot;%L1&quot; development firmware...</source>
+        <translation>Đang tải xuống firmware phát triển &quot;%L1&quot;...</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>the downloaded development firmware failed its sha256 check</source>
+        <translation>firmware phát triển đã tải xuống không qua được kiểm tra sha256</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>&quot;%L1&quot; was installed into the application directory by an installer - remove it there</source>
+        <translation>&quot;%L1&quot; đã được trình cài đặt cài vào thư mục ứng dụng - hãy gỡ bỏ nó ở đó</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&quot;%L1&quot; is not installed</source>
+        <translation>&quot;%L1&quot; chưa được cài đặt</translation>
+    </message>
+    <message>
+        <location line="+33" />
+        <source>&quot;%L1&quot; board &quot;%L2&quot; (%L3) overlaps the bootloader id of &quot;%L4&quot; (%L5)</source>
+        <translation>&quot;%L1&quot; bo mạch &quot;%L2&quot; (%L3) trùng id bootloader của &quot;%L4&quot; (%L5)</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&quot;%L1&quot; board &quot;%L2&quot; (%L3) overrides &quot;%L4&quot; (%L5)</source>
+        <translation>&quot;%L1&quot; bo mạch &quot;%L2&quot; (%L3) ghi đè &quot;%L4&quot; (%L5)</translation>
+    </message>
+    <message>
+        <location line="+64" />
+        <source>&quot;%L1&quot; %L2 &quot;%L3&quot; overrides &quot;%L4&quot;</source>
+        <translation>&quot;%L1&quot; %L2 &quot;%L3&quot; ghi đè &quot;%L4&quot;</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>example</source>
+        <translation>ví dụ</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>model</source>
+        <translation>mô hình</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>stub</source>
+        <translation>stub</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+14" />
+        <source>Third party repositories add support for boards (and their firmware, examples, etc.) made by other companies to %L1.</source>
+        <translation>Kho lưu trữ bên thứ ba bổ sung vào %L1 hỗ trợ cho các bo mạch (cùng firmware, ví dụ, v.v.) do các công ty khác sản xuất.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Name</source>
+        <translation>Tên</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Id</source>
+        <translation>Id</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Source</source>
+        <translation>Nguồn</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="-22" />
+        <source>Firmware</source>
+        <translation>Firmware</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Models</source>
+        <translation>Mô hình</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Stubs</source>
+        <translation>Stub</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Update URL</source>
+        <translation>URL cập nhật</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Order sets priority (highest at the top). When two repositories provide a board with the same USB ID, or an example with the same name, the one higher in this list wins; all repositories override %L1&apos;s built-ins.</source>
+        <translation>Thứ tự xác định mức ưu tiên (cao nhất ở trên cùng). Khi hai kho lưu trữ cùng cung cấp một bo mạch có cùng USB ID, hoặc một ví dụ có cùng tên, kho ở vị trí cao hơn trong danh sách này sẽ thắng; mọi kho lưu trữ đều ghi đè các thành phần tích hợp sẵn của %L1.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Install from URL...</source>
+        <translation>Cài đặt từ URL...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Remove</source>
+        <translation>Xóa</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Check for Updates</source>
+        <translation>Kiểm tra cập nhật</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Move Up</source>
+        <translation>Di chuyển lên</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Move Down</source>
+        <translation>Di chuyển xuống</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Override warnings</source>
+        <translation>Cảnh báo ghi đè</translation>
+    </message>
+    <message>
+        <location line="+33" />
+        <source>Built-in</source>
+        <translation>Tích hợp sẵn</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>User</source>
+        <translation>Người dùng</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Built-In&gt;</source>
+        <translation>&lt;Tích hợp sẵn&gt;</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>&lt;None&gt;</source>
+        <translation>&lt;Không có&gt;</translation>
+    </message>
+    <message>
+        <location line="+107" />
+        <location line="+26" />
+        <location line="+11" />
+        <location line="+7" />
+        <source>Install from URL</source>
+        <translation>Cài đặt từ URL</translation>
+    </message>
+    <message>
+        <location line="-43" />
+        <source>URL of the repository&apos;s config.json file:</source>
+        <translation>URL của tệp config.json của kho lưu trữ:</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>A repository named &quot;%L1&quot; is already installed. Reinstall it?</source>
+        <translation>Kho lưu trữ tên &quot;%L1&quot; đã được cài đặt. Cài đặt lại?</translation>
+    </message>
+    <message>
+        <location line="+37" />
+        <location line="+11" />
+        <source>Remove Repository</source>
+        <translation>Gỡ bỏ kho lưu trữ</translation>
+    </message>
+    <message>
+        <location line="-10" />
+        <source>Remove &quot;%L1&quot;?
+
+This deletes its boards, firmware, and examples.</source>
+        <translation>Gỡ bỏ &quot;%L1&quot;?
+
+Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>OpenMV</source>
+        <translation>OpenMV</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="-3" />
+        <source>Board</source>
+        <translation>Bo mạch</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Sensor</source>
+        <translation>Cảm biến</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Port</source>
+        <translation>Cổng</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Protocol</source>
+        <translation>Giao thức</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>CPU ID</source>
+        <translation>ID CPU</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Device ID</source>
+        <translation>ID thiết bị</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>USB</source>
+        <translation>USB</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Stream Buffer</source>
+        <translation>Bộ đệm luồng</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Flash</source>
+        <translation>Flash</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RAM</source>
+        <translation>RAM</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>GPU</source>
+        <translation>GPU</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NPU</source>
+        <translation>NPU</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ISP</source>
+        <translation>ISP</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Video Encoder</source>
+        <translation>Bộ mã hóa video</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>JPEG</source>
+        <translation>JPEG</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>DRAM</source>
+        <translation>DRAM</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>CRC</source>
+        <translation>CRC</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PMU</source>
+        <translation>PMU</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Profiler</source>
+        <translation>Trình phân tích hiệu năng</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Bluetooth</source>
+        <translation>Bluetooth</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>SD Card</source>
+        <translation>Thẻ SD</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>USB High Speed</source>
+        <translation>USB tốc độ cao</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Multicore</source>
+        <translation>Đa lõi</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <location line="+113" />
+        <source>Yes</source>
+        <translation>Có</translation>
+    </message>
+    <message>
+        <location line="-113" />
+        <location line="+117" />
+        <source>No</source>
+        <translation>Không</translation>
+    </message>
+    <message>
+        <location line="-61" />
+        <source>Connect a camera to view board information</source>
+        <translation>Kết nối camera để xem thông tin bo mạch</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Board information is not available for this camera</source>
+        <translation>Không có thông tin bo mạch cho camera này</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelrecorder.cpp" line="+137" />
+        <source>%L1 KB</source>
+        <translation>%L1 KB</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Yes (%L1 counters)</source>
+        <translation>Có (%L1 bộ đếm)</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Available</source>
+        <translation>Có sẵn</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Not available</source>
+        <translation>Không có sẵn</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/views/openmvchannelrecorder.cpp" line="-5" />
+        <source>%L1 B</source>
+        <translation>%L1 B</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>%L1 MB</source>
+        <translation>%L1 MB</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>WAV Audio</source>
+        <translation>Âm thanh WAV</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Edge Impulse JSON</source>
+        <translation>Edge Impulse JSON</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Edge Impulse CBOR</source>
+        <translation>Edge Impulse CBOR</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NumPy Array</source>
+        <translation>Mảng NumPy</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>CSV</source>
+        <translation>CSV</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>&quot;%1&quot; publishes samples of type &quot;%2&quot;, which cannot be recorded. Use one of b, B, h, H, i, I or f.</source>
+        <translation>&quot;%1&quot; phát mẫu kiểu &quot;%2&quot;, không thể ghi được. Hãy dùng một trong b, B, h, H, i, I hoặc f.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>A depth map is not audio; record it to a CSV, JSON, CBOR or NumPy file.</source>
+        <translation>Bản đồ độ sâu không phải âm thanh; hãy ghi nó vào tệp CSV, JSON, CBOR hoặc NumPy.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>This format needs a sample rate, and &quot;%1&quot; does not publish one. Pass sample_rate when adding the record, or save a NumPy array.</source>
+        <translation>Định dạng này cần tốc độ lấy mẫu, và &quot;%1&quot; không phát giá trị đó. Hãy truyền sample_rate khi thêm bản ghi, hoặc lưu thành mảng NumPy.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>WAV needs the record&apos;s display range to scale samples, and &quot;%1&quot; does not publish min and max.</source>
+        <translation>WAV cần phạm vi hiển thị của bản ghi để co giãn mẫu, và &quot;%1&quot; không phát min và max.</translation>
+    </message>
+    <message>
+        <location line="+45" />
+        <source>Cannot open &quot;%1&quot; - %2</source>
+        <translation>Không thể mở &quot;%1&quot; - %2</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Cannot write &quot;%1&quot; - %2</source>
+        <translation>Không thể ghi &quot;%1&quot; - %2</translation>
+    </message>
+    <message>
+        <location line="+441" />
+        <source>%L1 samples (%L2) - part %L3</source>
+        <translation>%L1 mẫu (%L2) - phần %L3</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>%L1 samples (%L2)</source>
+        <translation>%L1 mẫu (%L2)</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3220" />
+        <source>%L1 kHz</source>
+        <translation>%L1 kHz</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>%L1 Hz</source>
+        <translation>%L1 Hz</translation>
+    </message>
+    <message>
+        <location line="+473" />
+        <source>Series %1</source>
+        <translation>Chuỗi %1</translation>
+    </message>
+    <message>
+        <location line="+596" />
+        <location line="+23" />
+        <source>Save Plot Image</source>
+        <translation>Lưu ảnh đồ thị</translation>
+    </message>
+    <message>
+        <location line="-22" />
+        <source>PNG Image (*.png);;PDF Document (*.pdf)</source>
+        <translation>Ảnh PNG (*.png);;Tài liệu PDF (*.pdf)</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Failed to write &quot;%1&quot;!</source>
+        <translation>Ghi &quot;%1&quot; thất bại!</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Auto Scale</source>
+        <translation>Tự động co giãn</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Clear Marker</source>
+        <translation>Xóa điểm đánh dấu</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Drop Marker Here</source>
+        <translation>Đặt điểm đánh dấu tại đây</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Trigger</source>
+        <translation>Kích hoạt</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Re-arm</source>
+        <translation>Kích hoạt lại</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Arm</source>
+        <translation>Kích hoạt</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Set Level Here</source>
+        <translation>Đặt mức tại đây</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Rising Edge</source>
+        <translation>Sườn lên</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Falling Edge</source>
+        <translation>Sườn xuống</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>History</source>
+        <translation>Lịch sử</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>%1 min</source>
+        <translation>%1 phút</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>%1 s</source>
+        <translation>%1 s</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>%1 samples</source>
+        <translation>%1 mẫu</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <location line="+819" />
+        <source>Spectrum</source>
+        <translation>Phổ</translation>
+    </message>
+    <message>
+        <location line="-816" />
+        <source>Averaging</source>
+        <translation>Lấy trung bình</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Peak Hold</source>
+        <translation>Giữ đỉnh</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Log Frequency</source>
+        <translation>Tần số log</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Hann</source>
+        <translation>Hann</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Hamming</source>
+        <translation>Hamming</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Blackman</source>
+        <translation>Blackman</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Rectangular</source>
+        <translation>Chữ nhật</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Save Image...</source>
+        <translation>Lưu ảnh...</translation>
+    </message>
+    <message>
+        <location line="+196" />
+        <source>f %1 Hz</source>
+        <translation>f %1 Hz</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>bin %1</source>
+        <translation>bin %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>t %1 s</source>
+        <translation>t %1 s</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>n %1</source>
+        <translation>n %1</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>dt %1 s  %2 Hz</source>
+        <translation>dt %1 s  %2 Hz</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>dx %1</source>
+        <translation>dx %1</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>%1 %2 dB  d %3</source>
+        <translation>%1 %2 dB  d %3</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>%1 %2  d %3</source>
+        <translation>%1 %2  d %3</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%1 %2 dB</source>
+        <translation>%1 %2 dB</translation>
+    </message>
+    <message>
+        <location line="+53" />
+        <source>%1 peak %2 Hz %3 dB</source>
+        <translation>%1 đỉnh %2 Hz %3 dB</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>%1 peak bin %2 %3 dB</source>
+        <translation>%1 đỉnh bin %2 %3 dB</translation>
+    </message>
+    <message>
+        <location line="+36" />
+        <source>%1 min %2 max %3 rms %4</source>
+        <translation>%1 min %2 max %3 rms %4</translation>
+    </message>
+    <message>
+        <location line="+202" />
+        <source>Connect a camera to view channels</source>
+        <translation>Kết nối camera để xem các kênh</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location line="+975" />
+        <source>No channels are being published by the camera</source>
+        <translation>Camera không phát kênh nào</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-946" />
+        <location line="+1290" />
+        <source>Saved %Ln file(s)</source>
+        <translation>
+            <numerusform>Đã lưu %Ln tệp</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="-1289" />
+        <location line="+265" />
+        <location line="+791" />
+        <location line="+2" />
+        <location line="+232" />
+        <source>Record All</source>
+        <translation>Ghi tất cả</translation>
+    </message>
+    <message>
+        <location line="-1156" />
+        <source>Graphs: drag to pan, scroll to zoom, double click to follow live, right click to save.</source>
+        <translation>Đồ thị: kéo để di chuyển, cuộn để thu phóng, nhấp đúp để theo dõi trực tiếp, nhấp chuột phải để lưu.</translation>
+    </message>
+    <message>
+        <location line="+72" />
+        <source>Pause</source>
+        <translation>Tạm dừng</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Freeze the graph. Recording is not affected.</source>
+        <translation>Đóng băng đồ thị. Việc ghi không bị ảnh hưởng.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Stats</source>
+        <translation>Thống kê</translation>
+    </message>
+    <message>
+        <location line="+533" />
+        <location line="+370" />
+        <location line="+13" />
+        <location line="+58" />
+        <location line="+160" />
+        <source>Record Channel</source>
+        <translation>Ghi kênh</translation>
+    </message>
+    <message>
+        <location line="-555" />
+        <source>%1 (%2x%3, %4-%5mm)</source>
+        <translation>%1 (%2x%3, %4-%5mm)</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <source>%1 spectrum (dB per bin)</source>
+        <translation>Phổ %1 (dB trên bin)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>%1 spectrum (dB per Hz)</source>
+        <translation>Phổ %1 (dB trên Hz)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>%1 (%2 @ %3)</source>
+        <translation>%1 (%2 @ %3)</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+136" />
+        <source>%n channel(s) published, but no records decoded</source>
+        <translation>
+            <numerusform>%n kênh đã phát, nhưng không giải mã được bản ghi nào</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+87" />
+        <location line="+382" />
+        <source>Recording %Ln file(s)...</source>
+        <translation>
+            <numerusform>Đang ghi %Ln tệp...</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="-325" />
+        <location line="+75" />
+        <source>No data to record yet</source>
+        <translation>Chưa có dữ liệu để ghi</translation>
+    </message>
+    <message>
+        <location line="-41" />
+        <source>Recording...</source>
+        <translation>Đang ghi...</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Saved %1</source>
+        <translation>Đã lưu %1</translation>
+    </message>
+    <message>
+        <location line="+78" />
+        <source>Record &quot;%1&quot; To</source>
+        <translation>Ghi &quot;%1&quot; vào</translation>
+    </message>
+    <message>
+        <location line="+79" />
+        <source>Record &quot;%1&quot; To Folder</source>
+        <translation>Ghi &quot;%1&quot; vào thư mục</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>No format can hold every graph in &quot;%1&quot;. Record them one at a time.</source>
+        <translation>Không có định dạng nào chứa được mọi đồ thị trong &quot;%1&quot;. Hãy ghi từng đồ thị một.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Record &quot;%1&quot;</source>
+        <translation>Ghi &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>optional, names the files for Edge Impulse</source>
+        <translation>tùy chọn, đặt tên cho các tệp dành cho Edge Impulse</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Format:</source>
+        <translation>Định dạng:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Label:</source>
+        <translation>Nhãn:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/views/openmvmemoryview.cpp" line="+210" />
+        <location line="+1" />
+        <source>peak</source>
+        <translation>đỉnh</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Used / Total</source>
+        <translation>Đã dùng / Tổng</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Free</source>
+        <translation>Trống</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Persist</source>
+        <translation>Bền vững</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Peak</source>
+        <translation>Đỉnh</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>GC Heap</source>
+        <translation>Heap GC</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>UMA Pool %L1</source>
+        <translation>Vùng UMA %L1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>UMA Pool %L1 (%L2)</source>
+        <translation>Vùng UMA %L1 (%L2)</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>%L1 / %L2 (%L3%)</source>
+        <translation>%L1 / %L2 (%L3%)</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Highest usage observed while connected</source>
+        <translation>Mức sử dụng cao nhất quan sát được khi đang kết nối</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>Connect a camera to view memory usage</source>
+        <translation>Kết nối camera để xem mức sử dụng bộ nhớ</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Memory usage is not available for this camera</source>
+        <translation>Không có thông tin sử dụng bộ nhớ cho camera này</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/views/openmvstatisticsview.cpp" line="-56" />
+        <location line="+14" />
+        <source>Sent</source>
+        <translation>Đã gửi</translation>
+    </message>
+    <message>
+        <location line="-13" />
+        <location line="+14" />
+        <source>Received</source>
+        <translation>Đã nhận</translation>
+    </message>
+    <message>
+        <location line="-13" />
+        <location line="+14" />
+        <source>Checksum Errors</source>
+        <translation>Lỗi checksum</translation>
+    </message>
+    <message>
+        <location line="-13" />
+        <location line="+14" />
+        <source>Sequence Errors</source>
+        <translation>Lỗi trình tự</translation>
+    </message>
+    <message>
+        <location line="-13" />
+        <source>Retransmits</source>
+        <translation>Truyền lại</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Transport Errors</source>
+        <translation>Lỗi truyền tải</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Events Sent</source>
+        <translation>Sự kiện đã gửi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Max ACK Queue</source>
+        <translation>Hàng đợi ACK tối đa</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Images Sent</source>
+        <translation>Ảnh đã gửi</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>Device</source>
+        <translation>Thiết bị</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Host</source>
+        <translation>Máy chủ</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <source>Connect a camera to view statistics</source>
+        <translation>Kết nối camera để xem thống kê</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>%1 events</source>
+        <translation>%1 sự kiện</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Statistics are not available for this camera</source>
+        <translation>Không có thống kê cho camera này</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>%L1/s</source>
+        <translation>%L1/s</translation>
     </message>
 </context>
 <context>
@@ -12240,7 +13514,7 @@ Hãy sửa hoặc xóa chúng trước khi lưu.</translation>
         <location line="+14" />
         <location line="+30" />
         <location line="+142" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+731" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
         <source>Kits</source>
@@ -13949,9 +15223,9 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
     <message>
         <location line="+1" />
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-227" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-252" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+493" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+217" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+228" />
         <source>Clone</source>
         <translation>Dòng vô tính</translation>
     </message>
@@ -14374,7 +15648,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
     <message>
         <location line="+15" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-291" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-56" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-64" />
         <source>Name</source>
         <translation>Tên</translation>
     </message>
@@ -14812,7 +16086,7 @@ Display name of the clean build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+694" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+727" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-204" />
         <location line="+111" />
         <location line="+121" />
@@ -14874,15 +16148,15 @@ Display name of the build build step list. Used as part of the labels in the pro
     <message>
         <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+118" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+525" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+532" />
         <source>Enable</source>
         <translation>Cho phép</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+0" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-289" />
-        <location line="+289" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-296" />
+        <location line="+296" />
         <location line="+6" />
         <source>Disable</source>
         <translation>Vô hiệu hóa</translation>
@@ -14932,7 +16206,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+79" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+290" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+34" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+42" />
         <source>Add</source>
         <translation>Thêm vào</translation>
     </message>
@@ -14940,7 +16214,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <location line="+7" />
         <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-78" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-469" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-476" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+2" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+1" />
         <location line="+11" />
@@ -16016,12 +17290,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+22" />
-        <location line="+412" />
+        <location line="+419" />
         <source>Choose Directory</source>
         <translation>Chọn thư mục</translation>
     </message>
     <message>
-        <location line="-278" />
+        <location line="-285" />
         <source>Ed&amp;it</source>
         <translation>B&amp;iên tập</translation>
     </message>
@@ -16061,7 +17335,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Mở một thiết bị đầu cuối với môi trường này được thiết lập.</translation>
     </message>
     <message>
-        <location line="+123" />
+        <location line="+130" />
         <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
         <translation>Bỏ đặt &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</translation>
     </message>
@@ -16891,7 +18165,7 @@ to project &quot;%2&quot;.</source>
     <message>
         <location line="+43" />
         <location line="+258" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+779" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+798" />
         <source>Unconfigured</source>
         <translation>Chưa được định cấu hình</translation>
     </message>
@@ -17197,13 +18471,13 @@ to project &quot;%2&quot;.</source>
         <translation>Không có xung đột với biến môi trường &lt;code&gt;MAKEFLAGS&lt;/code&gt;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1348" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1397" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2084" />
         <source>Run Without Deployment</source>
         <translation>Chạy mà không cần triển khai</translation>
     </message>
     <message>
-        <location line="+563" />
+        <location line="+593" />
         <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+215" />
         <source>Project</source>
         <translation>Dự án</translation>
@@ -17219,7 +18493,7 @@ to project &quot;%2&quot;.</source>
         <translation>Chạy</translation>
     </message>
     <message>
-        <location line="+783" />
+        <location line="+802" />
         <source>&lt;b&gt;Project:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;Dự án:&lt;/b&gt; %1</translation>
     </message>
@@ -17474,7 +18748,7 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+626" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+643" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
         <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
@@ -18738,7 +20012,7 @@ What should %1 do now?</source>
         <translation>&lt;b&gt;Cảnh báo:&lt;/b&gt; Tệp này nằm ngoài thư mục dự án.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-395" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-412" />
         <source>Simplify Tree</source>
         <translation>Cây đơn giản hóa</translation>
     </message>
@@ -18783,12 +20057,12 @@ What should %1 do now?</source>
         <translation>Đồng bộ hóa với Trình chỉnh sửa</translation>
     </message>
     <message>
-        <location line="+140" />
+        <location line="+146" />
         <source>Filter Tree</source>
         <translation>Cây lọc</translation>
     </message>
     <message>
-        <location line="+198" />
+        <location line="+209" />
         <source>Meta+X</source>
         <translation>Meta+X</translation>
     </message>
@@ -18945,12 +20219,12 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+268" />
-        <location line="+171" />
+        <location line="+196" />
         <source>Import Existing Build...</source>
         <translation>Nhập bản dựng hiện có...</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="-184" />
         <source>Project Selector</source>
         <translation>Bộ chọn dự án</translation>
     </message>
@@ -18961,17 +20235,17 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+10" />
-        <location line="+148" />
+        <location line="+173" />
         <source>Manage Kits...</source>
         <translation>Quản lý bộ...</translation>
     </message>
     <message>
-        <location line="-121" />
+        <location line="-146" />
         <source>Build System Output</source>
         <translation>Xây dựng đầu ra hệ thống</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+181" />
         <source>Import Directory</source>
         <translation>Thư mục nhập khẩu</translation>
     </message>
@@ -19686,7 +20960,7 @@ Những tập tin này được bảo tồn.</numerusform>
         <translation>Sự cố xây dựng</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+176" />
+        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+185" />
         <source>Issues</source>
         <translation>Vấn đề</translation>
     </message>
@@ -19701,7 +20975,7 @@ Những tập tin này được bảo tồn.</numerusform>
         <translation>Lọc theo danh mục</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-152" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-160" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
         <translation>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</translation>
     </message>
@@ -19740,7 +21014,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Kiểu</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+84" />
         <source>Re-detect</source>
         <translation>Phát hiện lại</translation>
     </message>
@@ -19981,7 +21255,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Máy chủ ngôn ngữ Python (%1)</translation>
     </message>
     <message>
-        <location line="+303" />
+        <location line="+328" />
         <source>Install Python language server (PyLS) for %1 (%2). The language server provides Python specific completion and annotation.</source>
         <translation>Cài đặt máy chủ ngôn ngữ Python (PyLS) cho %1 (%2). Máy chủ ngôn ngữ cung cấp chú thích và hoàn thiện cụ thể cho Python.</translation>
     </message>
@@ -20381,7 +21655,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>ví dụ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+140" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+148" />
         <source>Sort Alphabetically</source>
         <translation>Sắp xếp theo thứ tự bảng chữ cái</translation>
@@ -20434,7 +21708,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+342" />
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+803" />
         <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="+161" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+545" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+556" />
         <source>Text Editor</source>
         <translation>Trình soạn thảo văn bản</translation>
     </message>
@@ -20757,7 +22031,7 @@ Chỉ định cách phím backspace tương tác với thụt lề.
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+25" />
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+202" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+225" />
         <location line="+827" />
         <source>Bookmarks</source>
         <translation>Dấu trang</translation>
@@ -20868,7 +22142,7 @@ Chỉ định cách phím backspace tương tác với thụt lề.
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-224" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-235" />
         <source>Remove</source>
         <translation>Di dời</translation>
     </message>
@@ -20962,7 +22236,7 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Không phải là tập tin lược đồ màu.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+134" />
+        <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+137" />
         <source>Unset</source>
         <translation>Bỏ đặt</translation>
     </message>
@@ -21042,7 +22316,7 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Màu sắc:</translation>
     </message>
     <message>
-        <location line="+477" />
+        <location line="+492" />
         <source>No Underline</source>
         <translation>Không gạch chân</translation>
     </message>
@@ -21938,7 +23212,7 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Không có đoạn trích nào được chọn.</translation>
     </message>
     <message>
-        <location line="+86" />
+        <location line="+97" />
         <source>Snippets</source>
         <translation>Đoạn trích</translation>
     </message>
@@ -23780,7 +25054,7 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Di dời</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/basetreeview.cpp" line="+542" />
+        <location filename="../../../src/libs/utils/basetreeview.cpp" line="+559" />
         <source>Show %1 Column</source>
         <translation>Hiển thị Cột %1</translation>
     </message>
