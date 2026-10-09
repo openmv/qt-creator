@@ -6714,29 +6714,31 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+235" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+240" />
         <location line="+9" />
-        <location line="+97" />
+        <location line="+122" />
         <location line="+11" />
         <location line="+40" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+69" />
+        <location line="+30" />
+        <location line="+30" />
+        <location line="+41" />
         <location line="+26" />
         <location line="+18" />
         <location line="+23" />
         <location line="+18" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+87" />
-        <location line="+97" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+89" />
+        <location line="+101" />
         <location line="+9" />
-        <location line="+88" />
+        <location line="+102" />
         <location line="+4" />
         <location line="+7" />
         <location line="+9" />
-        <location line="+25" />
+        <location line="+32" />
         <location line="+26" />
-        <location line="+27" />
+        <location line="+34" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+105" />
         <location line="+35" />
         <location line="+14" />
@@ -6748,7 +6750,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+587" />
-        <location line="+1211" />
+        <location line="+1231" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1176" />
         <location line="+6" />
         <location line="+27" />
@@ -6757,8 +6759,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+96" />
         <location line="+40" />
         <location line="+479" />
-        <location line="+136" />
-        <location line="+28" />
+        <location line="+148" />
+        <location line="+34" />
         <location line="+100" />
         <location line="+58" />
         <location line="+70" />
@@ -6779,27 +6781,28 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+5" />
         <location line="+72" />
         <location line="+118" />
-        <location line="+88" />
+        <location line="+90" />
         <location line="+82" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+46" />
-        <location line="+54" />
+        <location line="+55" />
         <location line="+52" />
         <location line="+14" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+24" />
+        <location line="+13" />
+        <location line="+23" />
         <location line="+21" />
         <location line="+20" />
         <location line="+24" />
         <location line="+154" />
         <location line="+229" />
         <location line="+33" />
-        <location line="+369" />
-        <location line="+22" />
+        <location line="+399" />
         <location line="+17" />
+        <location line="+14" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+839" />
         <location line="+48" />
         <source>Connect</source>
@@ -6807,11 +6810,11 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="-97" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-292" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2255" />
-        <location line="+256" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-324" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2298" />
+        <location line="+262" />
         <location line="+705" />
-        <location line="+2231" />
+        <location line="+2270" />
         <source>Please select the board type</source>
         <translation>กรุณาเลือกประเภทบอร์ด</translation>
     </message>
@@ -6827,13 +6830,14 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+9" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1872" />
         <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>รองรับการกู้คืนเฟิร์มแวร์โดยใช้เครื่องมือ SE ของ Alif Semiconductor เท่านั้น</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+215" />
-        <location line="+51" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+233" />
+        <location line="+58" />
         <source>Firmware update complete!
 
 </source>
@@ -6846,8 +6850,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-12" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-39" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-49" />
-        <location line="+52" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-56" />
+        <location line="+59" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-12" />
         <source>Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).</source>
         <translation>คลิกปุ่มตกลงหลังจากที่ OpenMV Cam ของคุณแจกแจงและรันการทดสอบตัวเองในตัวเสร็จแล้ว (ไฟ LED สีฟ้ากะพริบ - ใช้เวลาสักครู่)</translation>
@@ -6858,13 +6862,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-143" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-174" />
-        <location line="+134" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-206" />
+        <location line="+166" />
         <location line="+41" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-51" />
-        <location line="+25" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-58" />
+        <location line="+32" />
         <location line="+27" />
-        <location line="+26" />
+        <location line="+33" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-36" />
         <location line="+37" />
         <source>
@@ -6883,13 +6887,13 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-354" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-411" />
         <source>No DFU settings for the selected board type!</source>
         <translation>ไม่มีการตั้งค่า DFU สำหรับประเภทบอร์ดที่เลือก!</translation>
     </message>
     <message>
         <location line="+57" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+106" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+131" />
         <source>No DFU settings for the selected device!</source>
         <translation>ไม่มีการตั้งค่า DFU สำหรับอุปกรณ์ที่เลือก!</translation>
     </message>
@@ -6914,9 +6918,9 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+44" />
         <location line="+37" />
         <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+807" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+821" />
         <location line="+49" />
-        <location line="+39" />
+        <location line="+53" />
         <location line="+35" />
         <location line="+44" />
         <location line="+42" />
@@ -6948,8 +6952,8 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+20" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+33" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+20" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-56" />
-        <location line="+53" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-63" />
+        <location line="+60" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+17" />
         <source>Onboard Data Flash Erased!
 
@@ -6960,8 +6964,8 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
-        <location line="+53" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-59" />
+        <location line="+60" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <source>Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.
 
@@ -6972,8 +6976,8 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-52" />
-        <location line="+53" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-59" />
+        <location line="+60" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+1" />
         <source>Click OK when your OpenMV Cam&apos;s RGB LED starts blinking blue - which indicates the self-test is complete.</source>
         <translation>คลิก ตกลง เมื่อไฟ LED RGB ของ OpenMV Cam ของคุณเริ่มกะพริบเป็นสีน้ำเงิน ซึ่งแสดงว่าการทดสอบตัวเองเสร็จสมบูรณ์</translation>
@@ -6993,17 +6997,17 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1549" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1569" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1931" />
+        <location line="+1980" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+189" />
+        <location line="+192" />
         <location line="+203" />
-        <location line="+421" />
+        <location line="+426" />
         <location line="+13" />
         <location line="+169" />
         <location line="+146" />
@@ -7011,10 +7015,10 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4427" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2612" />
         <location line="+290" />
-        <location line="+1592" />
-        <location line="+1127" />
+        <location line="+1610" />
+        <location line="+1142" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+760" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
         <location line="+11" />
@@ -7036,7 +7040,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+16" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+32" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>เขียน ROMFS</translation>
@@ -7046,13 +7050,13 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-8" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+33" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+49" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+10" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-975" />
-        <location line="+976" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-989" />
+        <location line="+990" />
         <source>Flashing Firmware</source>
         <translation>เฟิร์มแวร์กระพริบ</translation>
     </message>
@@ -7084,7 +7088,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-172" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-200" />
         <source>Disconnect your OpenMV Cam and then reconnect it...</source>
         <translation>ยกเลิกการเชื่อมต่อ OpenMV Cam ของคุณแล้วเชื่อมต่อใหม่...</translation>
     </message>
@@ -7106,30 +7110,30 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+3" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-3968" />
-        <location line="+1930" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4025" />
+        <location line="+1979" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+323" />
-        <location line="+670" />
+        <location line="+326" />
+        <location line="+675" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
         <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3404" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3437" />
         <location line="+252" />
         <location line="+393" />
-        <location line="+1592" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+931" />
-        <location line="+284" />
+        <location line="+1610" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+1040" />
+        <location line="+301" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-324" />
         <location line="+85" />
-        <location line="+728" />
+        <location line="+737" />
         <source>Cancel</source>
         <translation>ยกเลิก</translation>
     </message>
@@ -7192,8 +7196,8 @@ Continue?</source>
     </message>
     <message>
         <location line="+24" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+114" />
-        <location line="+53" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+135" />
+        <location line="+60" />
         <source>Firmware Upgrade complete!
 
 </source>
@@ -7310,7 +7314,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation>การอัพเดตเฟิร์มแวร์ BOSSAC ล้มเหลว!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-544" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-606" />
         <source>the detected board</source>
         <translation>บอร์ดที่ตรวจพบ</translation>
     </message>
@@ -7340,7 +7344,17 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation>หากต้องการแฟลชอิมเมจ bootloader OpenMV Cam ของคุณต้องอยู่ในโหมดกู้คืน bootloader ถอดกล้องออก เชื่อมต่อ BOOT0/SBL/RECOVERY กับ 3.3V ด้วยจัมเปอร์ แล้วเสียบกล้องกลับเข้าไปก่อนลองอีกครั้ง</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-195" />
+        <location line="+409" />
+        <source>DFU ROMFS read failed!</source>
+        <translation>การอ่าน ROMFS ผ่าน DFU ล้มเหลว!</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <source>DFU ROMFS write failed!</source>
+        <translation>การเขียน ROMFS ผ่าน DFU ล้มเหลว!</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-223" />
         <source>No IMX settings for the selected board type %L1!</source>
         <translation>ไม่มีการตั้งค่า IMX สำหรับบอร์ดประเภทที่เลือก %L1!</translation>
     </message>
@@ -7363,12 +7377,12 @@ Hit cancel to skip to SBL reprogramming.</source>
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-769" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-783" />
         <source>Preparing the bootloader tools... (this can take a few seconds)</source>
         <translation>กำลังเตรียมเครื่องมือบูตโหลดเดอร์... (อาจใช้เวลาสักครู่)</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+83" />
         <source>Unable to connect to your OpenMV Cam&apos;s normal bootloader!</source>
         <translation>ไม่สามารถเชื่อมต่อกับ bootloader ปกติของ OpenMV Cam ได้!</translation>
     </message>
@@ -7382,7 +7396,7 @@ Continue?</source>
 ดำเนินการต่อหรือไม่?</translation>
     </message>
     <message>
-        <location line="+73" />
+        <location line="+80" />
         <source>If you are forcing SBL mode, disconnect the device from your computer and remove the SBL wire jumper, then reconnect it.</source>
         <translation>หากคุณกำลังบังคับโหมด SBL ให้ถอดอุปกรณ์ออกจากคอมพิวเตอร์ของคุณและถอดสายจัมเปอร์ SBL แล้วเชื่อมต่อใหม่อีกครั้ง</translation>
     </message>
@@ -7395,7 +7409,7 @@ Continue?</source>
 ดำเนินการต่อ?</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-73" />
         <source>Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.
 
 Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.</source>
@@ -7416,7 +7430,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <translation>ถอดอุปกรณ์ออกจากคอมพิวเตอร์ของคุณ ถอดสายจัมเปอร์ระหว่างขา SBL และ 3.3V แล้วเชื่อมต่อใหม่อีกครั้ง</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+54" />
         <source>If you are forcing SBL mode, disconnect your OpenMV Cam from your computer and remove the SBL wire jumper. Then reconnect your OpenMV Cam to your computer.
 
 </source>
@@ -7452,53 +7466,53 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location line="+59" />
-        <location line="+257" />
+        <location line="+271" />
         <source>R</source>
         <translation>ร</translation>
     </message>
     <message>
-        <location line="-241" />
-        <location line="+257" />
+        <location line="-255" />
+        <location line="+271" />
         <source>G</source>
         <translation>ช</translation>
     </message>
     <message>
-        <location line="-241" />
+        <location line="-255" />
         <location line="+82" />
-        <location line="+175" />
+        <location line="+189" />
         <location line="+72" />
         <source>B</source>
         <translation>บี</translation>
     </message>
     <message>
-        <location line="-304" />
+        <location line="-318" />
         <location line="+82" />
-        <location line="+170" />
+        <location line="+184" />
         <location line="+72" />
         <source>Y</source>
         <translation>ย</translation>
     </message>
     <message>
-        <location line="-299" />
-        <location line="+247" />
+        <location line="-313" />
+        <location line="+261" />
         <source>L</source>
         <translation>ล</translation>
     </message>
     <message>
-        <location line="-231" />
-        <location line="+247" />
+        <location line="-245" />
+        <location line="+261" />
         <source>A</source>
         <translation>ก</translation>
     </message>
     <message>
-        <location line="-190" />
-        <location line="+242" />
+        <location line="-204" />
+        <location line="+256" />
         <source>U</source>
         <translation>คุณ</translation>
     </message>
     <message>
-        <location line="-226" />
-        <location line="+242" />
+        <location line="-240" />
+        <location line="+256" />
         <source>V</source>
         <translation>วี</translation>
     </message>
@@ -7523,8 +7537,8 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4570" />
-        <location line="+981" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4627" />
+        <location line="+988" />
         <source>Dataset Editor</source>
         <translation>ตัวแก้ไขชุดข้อมูล</translation>
     </message>
@@ -7535,7 +7549,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location line="+58" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-938" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-945" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
         <location line="+48" />
@@ -7550,23 +7564,23 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location line="+40" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3031" />
-        <location line="+1572" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3083" />
+        <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>ไม่สามารถบันทึกไฟล์ภาพโดยไม่ทราบสาเหตุ!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+597" />
-        <location line="+304" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+633" />
+        <location line="+342" />
         <source>Delete</source>
         <translation>ลบ</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-374" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-412" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>คุณแน่ใจหรือไม่ว่าต้องการลบ &quot;%L1&quot; อย่างถาวร</translation>
     </message>
@@ -7593,13 +7607,13 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <translation>ไม่สามารถเปลี่ยนชื่อไฟล์โดยไม่ทราบสาเหตุ!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+175" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4932" />
+        <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4989" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+67" />
-        <location line="+301" />
+        <location line="+339" />
         <source>Model Zoo</source>
         <translation>สวนสัตว์จำลอง</translation>
     </message>
@@ -7621,7 +7635,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1316" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1152" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1278" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-308" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>ไม่สามารถคัดลอกไฟล์ &quot;%1&quot; ไปยัง &quot;%2&quot;</translation>
@@ -7726,7 +7740,7 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
     </message>
     <message>
         <location line="+56" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1784" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1802" />
         <source>Load Custom Firmware</source>
         <translation>โหลดเฟิร์มแวร์ที่กำหนดเอง</translation>
     </message>
@@ -7865,13 +7879,13 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
     </message>
     <message>
         <location line="+14" />
-        <location line="+4415" />
+        <location line="+4472" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>เปิดเทอร์มินัล</translation>
     </message>
     <message>
-        <location line="-4469" />
+        <location line="-4526" />
         <source>Machine Vision</source>
         <translation>วิชันซิสเต็ม</translation>
     </message>
@@ -7892,28 +7906,28 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-775" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-819" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>แปลงโมเดล</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+4318" />
+        <location line="+4375" />
         <location line="+75" />
         <source>Threshold Editor</source>
         <translation>ตัวแก้ไขเกณฑ์</translation>
     </message>
     <message>
-        <location line="-4388" />
-        <location line="+4465" />
+        <location line="-4445" />
+        <location line="+4522" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>ตัวแก้ไขประเด็นสำคัญ</translation>
     </message>
     <message>
-        <location line="-4456" />
-        <location line="+4620" />
+        <location line="-4513" />
+        <location line="+4677" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7922,7 +7936,7 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
         <translation>เครื่องสร้างแท็ก AprilTag</translation>
     </message>
     <message>
-        <location line="-4767" />
+        <location line="-4824" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 ครอบครัว (30 แท็ก)</translation>
     </message>
@@ -7962,13 +7976,13 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
         <location line="+14" />
         <location line="+14" />
         <location line="+409" />
-        <location line="+1164" />
+        <location line="+1184" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+157" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>ไม่สามารถเปิดได้: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-2828" />
+        <location line="-2848" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
@@ -8005,12 +8019,12 @@ Please close any programs that are viewing/editing %1&apos;s application data an
     </message>
     <message>
         <location line="+28" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+745" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+854" />
         <location line="+126" />
         <location line="+51" />
         <location line="+42" />
         <location line="+27" />
-        <location line="+164" />
+        <location line="+181" />
         <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="-25" />
         <location line="+297" />
         <source>Third Party Repositories</source>
@@ -8018,7 +8032,8 @@ Please close any programs that are viewing/editing %1&apos;s application data an
     </message>
     <message>
         <location line="+401" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+567" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+605" />
+        <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>โหลด ROMFS ลงบน OpenMV Cam</translation>
     </message>
@@ -8113,7 +8128,7 @@ Would you like to choose a different name?</source>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+447" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+460" />
         <location line="+276" />
         <source>Play RTSP Stream</source>
         <translation>เล่นสตรีม RTSP</translation>
@@ -8189,8 +8204,8 @@ Would you like to choose a different name?</source>
     </message>
     <message>
         <location line="+6" />
-        <location line="+2877" />
-        <location line="+1418" />
+        <location line="+2929" />
+        <location line="+1423" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-240" />
@@ -8201,7 +8216,7 @@ Would you like to choose a different name?</source>
         <translation>กรุณาเพิ่มนามสกุลไฟล์!</translation>
     </message>
     <message>
-        <location line="-4275" />
+        <location line="-4332" />
         <source>Exporting...</source>
         <translation>กำลังส่งออก...</translation>
     </message>
@@ -8377,7 +8392,7 @@ Would you like to choose a different name?</source>
     </message>
     <message>
         <location line="+70" />
-        <location line="+290" />
+        <location line="+297" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
         <location line="+166" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="+50" />
@@ -8385,11 +8400,11 @@ Would you like to choose a different name?</source>
         <translation>บัฟเฟอร์เฟรม</translation>
     </message>
     <message>
-        <location line="-283" />
+        <location line="-290" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2934" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2961" />
         <location line="+665" />
-        <location line="+432" />
+        <location line="+435" />
         <source>Record</source>
         <translation>บันทึก</translation>
     </message>
@@ -8402,8 +8417,8 @@ Would you like to choose a different name?</source>
     <message>
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-504" />
-        <location line="+397" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-507" />
+        <location line="+400" />
         <location line="+91" />
         <location line="+291" />
         <source>Stop</source>
@@ -8454,7 +8469,7 @@ Would you like to choose a different name?</source>
         <translation type="vanished">Frame Buffer Disabled - คลิกปุ่มปิดการใช้งานอีกครั้งเพื่อเปิดใช้งาน (ขวาบน)</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+50" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+4" />
         <source>Elapsed: 0h:00m:00s:000ms - Size: 0 B - FPS: 0</source>
         <translation>ผ่านไป: 0h:00m:00s:000ms - ขนาด: 0 B - FPS: 0</translation>
@@ -8538,7 +8553,7 @@ Would you like to choose a different name?</source>
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3759" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3812" />
         <source>Board:</source>
         <translation>กระดาน:</translation>
     </message>
@@ -8602,8 +8617,8 @@ Would you like to choose a different name?</source>
         <translation>อาจจะแตกต่างจากกล้อง FPS</translation>
     </message>
     <message>
-        <location line="+387" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3917" />
+        <location line="+400" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3970" />
         <source>Update Available</source>
         <translation>อัปเดตพร้อมใช้งาน</translation>
     </message>
@@ -8625,7 +8640,7 @@ Would you like to choose a different name?</source>
         <translation type="vanished">แอปพลิเคชั่นอื่นกำลังใช้พอร์ตการค้นพบการออกอากาศ OpenMV Cam โปรดปิดแอปพลิเคชันนั้นและรีสตาร์ท OpenMV IDE เพื่อเปิดใช้งานการเขียนโปรแกรม WiFi</translation>
     </message>
     <message>
-        <location line="+439" />
+        <location line="+463" />
         <source>Documents Folder Error</source>
         <translation>ข้อผิดพลาดโฟลเดอร์เอกสาร</translation>
     </message>
@@ -8692,18 +8707,18 @@ OpenMV Cam ของคุณใช้งานสคริปต์ main.py เ
 เฟิร์มแวร์ของ OpenMV Cam ของคุณตื่นตระหนกเนื่องจากความล้มเหลวของฮาร์ดแวร์ โปรดตรวจสอบว่าโมดูลกล้องของ OpenMV Cam ของคุณได้รับการติดตั้งอย่างปลอดภัย</translation>
     </message>
     <message>
-        <location line="+94" />
-        <location line="+1378" />
+        <location line="+99" />
+        <location line="+1386" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>พอร์ตอนุกรม - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1346" />
+        <location line="-1354" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+993" />
+        <location line="+1001" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
@@ -8713,7 +8728,7 @@ OpenMV Cam ของคุณใช้งานสคริปต์ main.py เ
         <translation>กำลังเชื่อมต่อ... (หมดเวลา 30 วินาที)</translation>
     </message>
     <message>
-        <location line="-1986" />
+        <location line="-1994" />
         <source>
 
 Try doing:
@@ -8764,12 +8779,12 @@ sudo adduser %L1 โทรออก
     </message>
     <message>
         <location line="+17" />
-        <location line="+1436" />
+        <location line="+1444" />
         <source>UDP Server Connection - %1</source>
         <translation>การเชื่อมต่อเซิร์ฟเวอร์ UDP - %1</translation>
     </message>
     <message>
-        <location line="-1362" />
+        <location line="-1370" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>อาร์กิวเมนต์พอร์ตไม่ถูกต้อง (%1) สำหรับ -open_udp_server_terminal</translation>
     </message>
@@ -8800,12 +8815,12 @@ sudo adduser %L1 โทรออก
     </message>
     <message>
         <location line="+17" />
-        <location line="+1483" />
+        <location line="+1491" />
         <source>TCP Server Connection - %1</source>
         <translation>การเชื่อมต่อเซิร์ฟเวอร์ TCP - %1</translation>
     </message>
     <message>
-        <location line="-1409" />
+        <location line="-1417" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>อาร์กิวเมนต์พอร์ตไม่ถูกต้อง (%1) สำหรับ -open_tcp_server_terminal</translation>
     </message>
@@ -8815,7 +8830,7 @@ sudo adduser %L1 โทรออก
         <translation>ไม่มีอาร์กิวเมนต์สำหรับ -open_tcp_server_terminal</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+111" />
         <location line="+18" />
         <location line="+6" />
         <location line="+6" />
@@ -8834,7 +8849,7 @@ sudo adduser %L1 โทรออก
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3152" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3185" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -8947,7 +8962,7 @@ Would you like to register your OpenMV Cam now?</source>
 คุณต้องการลงทะเบียน OpenMV Cam ของคุณตอนนี้หรือไม่?</translation>
     </message>
     <message>
-        <location line="-2394" />
+        <location line="-2446" />
         <location line="+8" />
         <source>About %1</source>
         <translation>เกี่ยวกับ %1</translation>
@@ -9010,19 +9025,19 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+5" />
-        <location line="+2039" />
+        <location line="+2091" />
         <source>Off</source>
         <translation>ปิด</translation>
     </message>
     <message>
-        <location line="-2038" />
-        <location line="+2042" />
+        <location line="-2090" />
+        <location line="+2094" />
         <location line="+6" />
         <source>On</source>
         <translation>เปิด</translation>
     </message>
     <message>
-        <location line="-2016" />
+        <location line="-2068" />
         <location line="+7" />
         <source>Stream JPG-compressed images for higher performance</source>
         <translation>สตรีมภาพที่บีบอัดแบบ JPG เพื่อประสิทธิภาพที่สูงขึ้น</translation>
@@ -9038,7 +9053,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>เฟรมบัฟเฟอร์ปิดอยู่ - เลือกแหล่งที่มาเพื่อเปิดใช้งาน (มุมขวาบน)</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+82" />
         <source>Board Info</source>
         <translation>ข้อมูลบอร์ด</translation>
     </message>
@@ -9090,14 +9105,14 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+299" />
-        <location line="+418" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+307" />
+        <location line="+430" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+122" />
         <source>No Drive</source>
         <translation>ไม่มีไดรฟ์</translation>
     </message>
     <message>
-        <location line="+392" />
+        <location line="+405" />
         <source>A new version of %5 (%L1.%L2.%L3) is available for download. See the &lt;a href=&quot;%L4&quot;&gt;release notes&lt;/a&gt;.</source>
         <translation>%5 เวอร์ชันใหม่ (%L1.%L2.%L3) พร้อมให้ดาวน์โหลดแล้ว ดู&lt;a href=&quot;%L4&quot;&gt;บันทึกการเปลี่ยนแปลง&lt;/a&gt;</translation>
     </message>
@@ -9122,7 +9137,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>-auto_run ในโหมดตัวแสดงผลจำเป็นต้องมีอาร์กิวเมนต์ไฟล์สคริปต์ข้อความที่อ่านได้บนบรรทัดคำสั่ง</translation>
     </message>
     <message>
-        <location line="+266" />
+        <location line="+290" />
         <source>Thanks for using the OpenMV Cam and %1!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -9167,7 +9182,7 @@ OpenMV Cam ของคุณกำลังทำงานสคริปต์
 </translation>
     </message>
     <message>
-        <location line="+761" />
+        <location line="+769" />
         <source>Your OpenMV Cam isn&apos;t registered. You need to register your OpenMV Cam with OpenMV for unlimited use with %1 without any interruptions.
 
 Would you like to register your OpenMV Cam now?</source>
@@ -9236,7 +9251,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-23" />
-        <location line="+1231" />
+        <location line="+1236" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>ไฟล์รูปภาพ (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
@@ -9317,7 +9332,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2118" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2153" />
         <source>Please select a serial port</source>
         <translation>โปรดเลือกพอร์ตอนุกรม</translation>
     </message>
@@ -9441,7 +9456,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+68" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+65" />
         <source>What would you like to do?</source>
         <translation>คุณอยากจะทำอะไร?</translation>
     </message>
@@ -9565,7 +9580,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">มีทรัพยากร OpenMV IDE ใหม่ (เช่น ตัวอย่าง เฟิร์มแวร์ เอกสารประกอบ ฯลฯ)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2038" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2056" />
         <source>Install</source>
         <translation>ติดตั้ง</translation>
     </message>
@@ -9584,7 +9599,7 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-159" />
         <location line="+50" />
-        <location line="+911" />
+        <location line="+925" />
         <location line="+50" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
         <location line="+51" />
@@ -9640,43 +9655,43 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="+8" />
         <location line="+279" />
-        <location line="+927" />
+        <location line="+945" />
         <location line="+231" />
-        <location line="+2733" />
+        <location line="+2768" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>ลบระบบไฟล์ FAT ภายใน</translation>
     </message>
     <message>
-        <location line="-4245" />
+        <location line="-4298" />
         <location line="+279" />
-        <location line="+929" />
+        <location line="+947" />
         <location line="+230" />
-        <location line="+2732" />
+        <location line="+2767" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>หากคุณเปิดใช้งานตัวเลือกนี้ ไฟล์ทั้งหมดในระบบไฟล์ FAT ภายในของ OpenMV Cam จะถูกลบ การดำเนินการนี้จะไม่ลบไฟล์ในการ์ด SD แบบถอดได้ (หากเสียบไว้)</translation>
     </message>
     <message>
-        <location line="-4245" />
-        <location line="+1208" />
+        <location line="-4298" />
+        <location line="+1226" />
         <location line="+230" />
-        <location line="+2732" />
+        <location line="+2767" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>รีเซ็ตระบบไฟล์ ROMFS</translation>
     </message>
     <message>
-        <location line="-4244" />
-        <location line="+1209" />
+        <location line="-4297" />
+        <location line="+1227" />
         <location line="+229" />
-        <location line="+2731" />
+        <location line="+2766" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>หากคุณเปิดใช้งานตัวเลือกนี้ ระบบไฟล์ ROM บน OpenMV Cam ของคุณจะถูกรีเซ็ตกลับเป็นค่าเริ่มต้น</translation>
     </message>
     <message>
-        <location line="-4244" />
+        <location line="-4297" />
         <location line="+310" />
         <source>Run</source>
         <translation>วิ่ง</translation>
@@ -9718,7 +9733,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+27" />
-        <location line="+3873" />
+        <location line="+3926" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>คำเตือน: การอัปเกรดเป็นเฟิร์มแวร์เวอร์ชันใหม่จำเป็นต้องลบระบบไฟล์ FAT</translation>
     </message>
@@ -9731,7 +9746,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">ไม่สามารถแยกเฟิร์มแวร์ได้!</translation>
     </message>
     <message>
-        <location line="-4811" />
+        <location line="-4864" />
         <source>Checking development examples...</source>
         <translation>กำลังตรวจสอบตัวอย่างสำหรับนักพัฒนา...</translation>
     </message>
@@ -9877,7 +9892,7 @@ Would you like to register your OpenMV Cam now?</source>
 %1</translation>
     </message>
     <message>
-        <location line="+167" />
+        <location line="+185" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>ตรวจพบบอร์ดในโหมด DFU คุณอยากจะทำอะไร?</translation>
     </message>
@@ -9918,12 +9933,12 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+86" />
-        <location line="+2734" />
+        <location line="+2769" />
         <source>Upgrade options:</source>
         <translation>ตัวเลือกการอัพเกรด:</translation>
     </message>
     <message>
-        <location line="-2653" />
+        <location line="-2688" />
         <location line="+175" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
@@ -9972,31 +9987,31 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+72" />
-        <location line="+206" />
-        <location line="+765" />
+        <location line="+208" />
+        <location line="+778" />
         <source>Timeout error while getting board architecture!</source>
         <translation>เกิดข้อผิดพลาดการหมดเวลาขณะรับสถาปัตยกรรมบอร์ด!</translation>
     </message>
     <message>
-        <location line="-683" />
-        <location line="+193" />
+        <location line="-696" />
+        <location line="+194" />
         <source>Failed to copy firmware files to temporary directory!</source>
         <translation>ไม่สามารถคัดลอกไฟล์เฟิร์มแวร์ไปยังไดเร็กทอรีชั่วคราว!</translation>
     </message>
     <message>
-        <location line="-184" />
-        <location line="+193" />
+        <location line="-185" />
+        <location line="+194" />
         <source>Original firmware folder does not exist!</source>
         <translation>ไม่มีโฟลเดอร์เฟิร์มแวร์ดั้งเดิม!</translation>
     </message>
     <message>
-        <location line="-184" />
-        <location line="+193" />
+        <location line="-185" />
+        <location line="+194" />
         <source>Failed to create temporary directory!</source>
         <translation>ไม่สามารถสร้างไดเรกทอรีชั่วคราวได้!</translation>
     </message>
     <message>
-        <location line="-184" />
+        <location line="-185" />
         <source>Only loading bootloader.bin files is supported with the ST Cube Programmer!</source>
         <translation>ST Cube Programmer รองรับการโหลดไฟล์ bootloader.bin เท่านั้น!</translation>
     </message>
@@ -10006,7 +10021,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>รองรับเฉพาะการโหลดไฟล์ *.bin และ *.img สำหรับ bootloader ภายใน!</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+55" />
         <source>Only loading *.bin and *.img files are supported for the IMX bootloader!</source>
         <translation>รองรับการโหลดไฟล์ *.bin และ *.img เท่านั้นสำหรับ IMX bootloader!</translation>
     </message>
@@ -10023,7 +10038,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>เชื่อมต่อ OpenMV Cam ของคุณทันที</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+67" />
         <source>Only loading *.bin, *.dfu, and *.img files are supported for the Arduino bootloader!</source>
         <translation>Arduino bootloader รองรับเฉพาะการโหลดไฟล์ *.bin, *.dfu และ *.img เท่านั้น!</translation>
     </message>
@@ -10078,7 +10093,7 @@ OpenMV แนะนำให้โหลดเฉพาะ bootloader.dfu เพ
         <translation>เกิดข้อผิดพลาดการหมดเวลาขณะเรียนรู้ MTU!</translation>
     </message>
     <message>
-        <location line="+242" />
+        <location line="+250" />
         <source>Board: %L1</source>
         <translation>คณะกรรมการ: %L1</translation>
     </message>
@@ -10098,8 +10113,8 @@ OpenMV แนะนำให้โหลดเฉพาะ bootloader.dfu เพ
         <translation>เวอร์ชันเฟิร์มแวร์: %L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="-2418" />
-        <location line="+2423" />
+        <location line="-2459" />
+        <location line="+2464" />
         <source>Serial Port: %L1</source>
         <translation>พอร์ตอนุกรม: %L1</translation>
     </message>
@@ -10108,22 +10123,22 @@ OpenMV แนะนำให้โหลดเฉพาะ bootloader.dfu เพ
         <translation type="vanished">เฟรมต่อวินาที: 0</translation>
     </message>
     <message>
-        <location line="+103" />
+        <location line="+105" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation>- [ ล้าสมัย - คลิกที่นี่เพื่ออัปเกรด ]</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+64" />
         <source>Your OpenMV Cam&apos;s firmware is out of date. Would you like to upgrade?</source>
         <translation>เฟิร์มแวร์ของ OpenMV Cam ของคุณล้าสมัย คุณต้องการอัพเกรดหรือไม่?</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-50" />
         <source> - [ latest ]</source>
         <translation>- [ ล่าสุด ]</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+19" />
         <source>Your OpenMV Cam RT1062 is connected, but %L1 does not have Input Monitoring permission on this Mac. Without it, firmware updates for the RT1062 will fail with a &quot;UsbHidPeripheral() cannot open USB HID device&quot; error, because macOS blocks the NXP flashing tools (blhost, sdphost) that %L1 uses from opening the RT1062&apos;s USB HID bootloader.
 
 To grant access, open the Apple menu, go to System Settings, click Privacy &amp; Security in the sidebar, click Input Monitoring, and enable %L1 in the list. Then quit and reopen %L1 so the new grant takes effect (macOS reads privacy grants at launch).
@@ -10145,7 +10160,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
 เพื่อป้องกันปัญหานี้ ให้เปิดเมนู Apple ไปที่การตั้งค่าระบบ คลิกความเป็นส่วนตัวและความปลอดภัยในแถบด้านข้าง เลื่อนลงไปด้านล่างสุดที่อุปกรณ์เสริม แล้วเปลี่ยน &quot;อนุญาตให้อุปกรณ์เสริมเชื่อมต่อ&quot; เป็น &quot;อนุญาตโดยอัตโนมัติเมื่อปลดล็อค&quot; (แนะนำ) หรือ &quot;อนุญาตเสมอ&quot;</translation>
     </message>
     <message>
-        <location line="+452" />
+        <location line="+464" />
         <location line="+10" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+191" />
         <location line="+16" />
@@ -10201,7 +10216,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>ต้องการรีเซ็ตเฟิร์มแวร์ของ OpenMV Cam ให้เป็นเวอร์ชันวางจำหน่ายหรือไม่?</translation>
     </message>
     <message>
-        <location line="+86" />
+        <location line="+90" />
         <source>No board settings for the connected board found!</source>
         <translation>ไม่พบการตั้งค่าบอร์ดสำหรับบอร์ดที่เชื่อมต่อ!</translation>
     </message>
@@ -10608,7 +10623,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>ฟังก์ชัน: %1, การโทรทั้งหมด: %2, μs ทั้งหมด: %3, รอบทั้งหมด: %4</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-877" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-918" />
         <source>Please select the target</source>
         <translation>กรุณาเลือกเป้าหมาย</translation>
     </message>
@@ -10651,12 +10666,12 @@ OpenMV IDE จะคัดลอกโมเดลตามที่เป็น
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
-        <location line="+42" />
+        <location line="+45" />
         <location line="+16" />
         <location line="+21" />
         <location line="+6" />
         <location line="+8" />
-        <location line="+23" />
+        <location line="+26" />
         <location line="+18" />
         <location line="+22" />
         <location line="+12" />
@@ -10664,43 +10679,45 @@ OpenMV IDE จะคัดลอกโมเดลตามที่เป็น
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+135" />
+        <location line="+153" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
         <location line="+13" />
         <location line="+40" />
+        <location line="+14" />
         <location line="+15" />
         <location line="+27" />
-        <location line="+62" />
-        <location line="+53" />
-        <location line="+63" />
+        <location line="+68" />
+        <location line="+50" />
+        <location line="+68" />
         <location line="+6" />
+        <location line="+22" />
         <location line="+21" />
         <source>Edit ROMFS</source>
         <translation>แก้ไข ROMFS</translation>
     </message>
     <message>
-        <location line="-686" />
-        <location line="+93" />
+        <location line="-754" />
+        <location line="+96" />
         <source>A folder with the same name already exists!</source>
         <translation>มีโฟลเดอร์ชื่อเดียวกันนี้แล้ว!</translation>
     </message>
     <message>
-        <location line="-87" />
-        <location line="+93" />
+        <location line="-90" />
+        <location line="+96" />
         <source>File already exists! Overwrite?</source>
         <translation>มีไฟล์อยู่แล้ว! เขียนทับ?</translation>
     </message>
     <message>
-        <location line="-85" />
-        <location line="+93" />
+        <location line="-88" />
+        <location line="+96" />
         <source>Failed to remove file!</source>
         <translation>ไม่สามารถลบไฟล์ได้!</translation>
     </message>
     <message>
         <location line="-51" />
-        <location line="+74" />
+        <location line="+77" />
         <source>Failed to copy file!</source>
         <translation>คัดลอกไฟล์ไม่สำเร็จ!</translation>
     </message>
@@ -10734,37 +10751,55 @@ OpenMV IDE จะคัดลอกโมเดลตามที่เป็น
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+305" />
+        <location line="+343" />
         <source>Extract File</source>
         <translation>แยกไฟล์</translation>
     </message>
     <message>
-        <location line="-311" />
+        <location line="-349" />
         <source>View/Edit</source>
         <translation>ดู/แก้ไข</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+302" />
+        <location line="+340" />
         <source>Add File</source>
         <translation>เพิ่มไฟล์</translation>
     </message>
     <message>
-        <location line="-301" />
-        <location line="+303" />
+        <location line="-339" />
+        <location line="+341" />
         <source>New Folder</source>
         <translation>โฟลเดอร์ใหม่</translation>
     </message>
     <message>
-        <location line="-173" />
+        <location line="-253" />
+        <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
+
+Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to reset the ROM file system or to edit and commit it again.</source>
+        <translation>การเขียน ROMFS ไม่เสร็จสมบูรณ์ ระบบไฟล์ ROM บน OpenMV Cam ของคุณจึงอาจไม่สมบูรณ์
+
+OpenMV Cam ของคุณยังอยู่ในโหมดบูตโหลดเดอร์: คลิก เชื่อมต่อ แล้วใช้ตัวเลือกของบูตโหลดเดอร์เพื่อรีเซ็ตระบบไฟล์ ROM หรือแก้ไขและเขียนลงอีกครั้ง</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The ROMFS read did not complete.
+
+Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to edit the ROM file system again.</source>
+        <translation>การอ่าน ROMFS ไม่เสร็จสมบูรณ์
+
+OpenMV Cam ของคุณยังอยู่ในโหมดบูตโหลดเดอร์: คลิก เชื่อมต่อ แล้วใช้ตัวเลือกของบูตโหลดเดอร์เพื่อแก้ไขระบบไฟล์ ROM อีกครั้ง</translation>
+    </message>
+    <message>
+        <location line="+53" />
         <location line="+13" />
-        <location line="+341" />
+        <location line="+377" />
         <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS ไม่รองรับบอร์ดนี้!</translation>
     </message>
     <message>
-        <location line="-313" />
+        <location line="-335" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>ไม่สามารถคลาย ROMFS ได้!</translation>
@@ -10777,17 +10812,17 @@ OpenMV IDE จะคัดลอกโมเดลตามที่เป็น
     </message>
     <message>
         <location line="-25" />
-        <location line="+203" />
+        <location line="+211" />
         <source>ROMFS Images (*.img)</source>
         <translation>รูปภาพ ROMFS (*.img)</translation>
     </message>
     <message>
-        <location line="-101" />
+        <location line="-103" />
         <source>Commit</source>
         <translation>ให้สัญญา</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+35" />
         <source>Commit ROMFS to OpenMV Cam</source>
         <translation>มอบ ROMFS ให้กับ OpenMV Cam</translation>
     </message>
@@ -10797,16 +10832,17 @@ OpenMV IDE จะคัดลอกโมเดลตามที่เป็น
         <translation>บันทึก ROMFS ลงในไฟล์</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+124" />
         <location line="+7" />
         <location line="+11" />
         <location line="+12" />
         <location line="+11" />
+        <location line="+29" />
         <source>Reset ROMFS</source>
         <translation>รีเซ็ต ROMFS</translation>
     </message>
     <message>
-        <location line="-40" />
+        <location line="-69" />
         <source>Are you sure you want to reset your OpenMV Cam&apos;s ROM file system?</source>
         <translation>คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ตระบบไฟล์ ROM ของ OpenMV Cam</translation>
     </message>
@@ -10910,8 +10946,8 @@ OpenMV IDE จะคัดลอกโมเดลตามที่เป็น
     </message>
     <message>
         <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-910" />
-        <location line="+961" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-924" />
+        <location line="+975" />
         <source>This feature is not supported on this machine!</source>
         <translation>เครื่องนี้ไม่รองรับฟีเจอร์นี้!</translation>
     </message>
@@ -10952,7 +10988,7 @@ The camera must be power cycled after a system package update.</source>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1225" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1247" />
         <location line="+85" />
         <source>Query failed!</source>
         <translation>การค้นหาล้มเหลว!</translation>
@@ -11156,11 +11192,11 @@ Open a data set to upload it.</source>
         <translation>โปรดป้อนคีย์ API ของโครงการ Edge Impulse</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1059" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1073" />
         <location line="+148" />
         <location line="+36" />
         <location line="+49" />
-        <location line="+39" />
+        <location line="+53" />
         <location line="+35" />
         <location line="+44" />
         <location line="+42" />
@@ -11191,12 +11227,12 @@ Open a data set to upload it.</source>
         <translation>เอ็นเอ็กซ์พี ไอเอ็มเอ็กซ์</translation>
     </message>
     <message>
-        <location line="-1260" />
+        <location line="-1274" />
         <source>Waiting for the flashloader to enumerate...</source>
         <translation>กำลังรอให้แฟลชโหลดเดอร์ปรากฏบนบัส USB...</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+25" />
         <source>The i.MX flashloader did not enumerate.</source>
         <translation>แฟลชโหลดเดอร์ i.MX ไม่ปรากฏบนบัส USB</translation>
     </message>
@@ -11304,7 +11340,7 @@ Open a data set to upload it.</source>
         <location line="+25" />
         <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+285" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+294" />
         <source>Success - Press Ok to close the window</source>
         <translation>สำเร็จ - กดตกลงเพื่อปิดหน้าต่าง</translation>
     </message>
@@ -11548,7 +11584,7 @@ Open a data set to upload it.</source>
         <translation>Vela Compiler ไม่ได้รับการสนับสนุนบนแพลตฟอร์มนี้</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-775" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-784" />
         <source>Reading File...</source>
         <translation>กำลังอ่านไฟล์...</translation>
     </message>
@@ -11580,12 +11616,12 @@ Open a data set to upload it.</source>
     </message>
     <message>
         <location line="-77" />
-        <location line="+728" />
+        <location line="+737" />
         <source>Transcoding File...</source>
         <translation>ไฟล์การแปลงรหัส...</translation>
     </message>
     <message>
-        <location line="-717" />
+        <location line="-726" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -11662,12 +11698,12 @@ Open a data set to upload it.</source>
         <translation>รับรูปแบบ</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+101" />
         <location line="+101" />
         <location line="+10" />
-        <location line="+150" />
+        <location line="+154" />
         <location line="+15" />
-        <location line="+445" />
+        <location line="+458" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
@@ -11691,7 +11727,7 @@ Open a data set to upload it.</source>
         <translation>แปลงวิดีโอ</translation>
     </message>
     <message>
-        <location line="-1115" />
+        <location line="-1132" />
         <source>Converting</source>
         <translation>กำลังแปลง</translation>
     </message>
@@ -11714,7 +11750,7 @@ Your OpenMV IDE installation may be incomplete.</source>
 การติดตั้ง OpenMV IDE ของคุณอาจไม่สมบูรณ์</translation>
     </message>
     <message>
-        <location line="+150" />
+        <location line="+154" />
         <source>Unable to write to output video file!</source>
         <translation>ไม่สามารถเขียนไปยังไฟล์วิดีโอเอาท์พุตได้!</translation>
     </message>
@@ -11724,7 +11760,7 @@ Your OpenMV IDE installation may be incomplete.</source>
         <translation>ไม่สามารถเปิดไฟล์วิดีโอเอาท์พุตได้!</translation>
     </message>
     <message>
-        <location line="+199" />
+        <location line="+212" />
         <location line="+453" />
         <source>Play Video</source>
         <translation>เล่นวิดีโอ</translation>
@@ -12109,7 +12145,7 @@ Fix or clear them before saving.</source>
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1105" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1231" />
         <source>&quot;%L1&quot; config.json - %L2</source>
         <translation>&quot;%L1&quot; config.json - %L2</translation>
     </message>
@@ -12129,7 +12165,7 @@ Fix or clear them before saving.</source>
         <translation>&quot;%L1&quot; ไม่มี config.json ที่อ่านได้</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location line="+105" />
         <source>&quot;%L1&quot; - failed to install: %L2</source>
         <translation>&quot;%L1&quot; - ติดตั้งไม่สำเร็จ: %L2</translation>
     </message>
@@ -12164,12 +12200,17 @@ Fix or clear them before saving.</source>
         <translation>&quot;%L1&quot; บอร์ด &quot;%L2&quot; - ไม่มี &quot;boardVidPid&quot; หรือค่าไม่ถูกต้อง (ข้าม)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
         <source>&quot;%L1&quot; board &quot;%L2&quot; - missing &quot;boardFirmwareFolder&quot; (skipped)</source>
         <translation>&quot;%L1&quot; บอร์ด &quot;%L2&quot; - ไม่มี &quot;boardFirmwareFolder&quot; (ข้าม)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+14" />
+        <source>&quot;%L1&quot; board &quot;%L2&quot; - missing or invalid &quot;bootloaderVidPid&quot; (skipped)</source>
+        <translation>&quot;%L1&quot; บอร์ด &quot;%L2&quot; - ไม่มี &quot;bootloaderVidPid&quot; หรือค่าไม่ถูกต้อง (ข้าม)</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>&quot;%L1&quot; board &quot;%L2&quot; - no per-board &quot;firmware_version&quot; (the board will never be offered firmware updates)</source>
         <translation>&quot;%L1&quot; บอร์ด &quot;%L2&quot; - ไม่มี &quot;firmware_version&quot; ประจำบอร์ด (บอร์ดนี้จะไม่ได้รับการเสนออัปเดตเฟิร์มแวร์)</translation>
     </message>
@@ -12179,17 +12220,27 @@ Fix or clear them before saving.</source>
         <translation>&quot;%L1&quot; บอร์ด &quot;%L2&quot; - &quot;boardFirmwareFolder&quot; &quot;%L3&quot; ถูกใช้โดย &quot;%L4&quot; อยู่แล้ว (ข้าม)</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+61" />
         <source>&quot;%L1&quot; board &quot;%L2&quot; (%L3) - USB id already provided by the higher-priority repository &quot;%L4&quot; (skipped)</source>
         <translation>&quot;%L1&quot; บอร์ด &quot;%L2&quot; (%L3) - USB id นี้มีอยู่แล้วในที่เก็บที่มีลำดับความสำคัญสูงกว่า &quot;%L4&quot; (ข้าม)</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+18" />
+        <source>&quot;%L1&quot; board &quot;%L2&quot; - &quot;boardDisplayName&quot; is already used by &quot;%L3&quot; (skipped)</source>
+        <translation>&quot;%L1&quot; บอร์ด &quot;%L2&quot; - &quot;boardDisplayName&quot; ถูกใช้โดย &quot;%L3&quot; อยู่แล้ว (ข้าม)</translation>
+    </message>
+    <message>
+        <location line="+66" />
         <source>&quot;%L1&quot; sensor &quot;%L2&quot; - id conflicts with an existing sensor (skipped)</source>
         <translation>&quot;%L1&quot; เซ็นเซอร์ &quot;%L2&quot; - id ขัดแย้งกับเซ็นเซอร์ที่มีอยู่แล้ว (ข้าม)</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="+171" />
+        <source>the downloaded archive contains an unsafe entry &quot;%L1&quot;</source>
+        <translation>ไฟล์เก็บถาวรที่ดาวน์โหลดมามีรายการที่ไม่ปลอดภัย &quot;%L1&quot;</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>failed to extract the downloaded archive</source>
         <translation>แตกไฟล์เก็บถาวรที่ดาวน์โหลดมาไม่สำเร็จ</translation>
     </message>
@@ -12199,12 +12250,17 @@ Fix or clear them before saving.</source>
         <translation>ไฟล์เก็บถาวรที่ดาวน์โหลดมาต้องมีโฟลเดอร์ระดับบนสุดเพียงโฟลเดอร์เดียว</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+15" />
+        <source>failed to move the existing &quot;%L1&quot; folder aside</source>
+        <translation>ย้ายโฟลเดอร์ &quot;%L1&quot; ที่มีอยู่ไปไว้ข้าง ๆ ไม่สำเร็จ</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>failed to move the extracted folder into place</source>
         <translation>ย้ายโฟลเดอร์ที่แตกไฟล์แล้วไปยังตำแหน่งไม่สำเร็จ</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+23" />
         <source>failed to write &quot;%L1&quot;</source>
         <translation>เขียน &quot;%L1&quot; ไม่สำเร็จ</translation>
     </message>
@@ -12226,12 +12282,12 @@ Restart %L1 now?</source>
     <message>
         <location line="+17" />
         <location line="+140" />
-        <location line="+144" />
+        <location line="+161" />
         <source>empty download</source>
         <translation>ดาวน์โหลดได้ไฟล์ว่างเปล่า</translation>
     </message>
     <message>
-        <location line="-274" />
+        <location line="-291" />
         <source>the downloaded &quot;%L1&quot; archive failed its sha256 check</source>
         <translation>ไฟล์เก็บถาวร &quot;%L1&quot; ที่ดาวน์โหลดมาไม่ผ่านการตรวจสอบ sha256</translation>
     </message>
@@ -12296,12 +12352,17 @@ Install now?</source>
         <translation>config.json ไม่ได้กำหนดช่องทางเผยแพร่เฟิร์มแวร์</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+26" />
         <source>a repository named &quot;%L1&quot; is already installed</source>
         <translation>ที่เก็บชื่อ &quot;%L1&quot; ถูกติดตั้งไว้แล้ว</translation>
     </message>
     <message>
-        <location line="+73" />
+        <location line="+11" />
+        <source>failed to move the existing repository &quot;%L1&quot; aside</source>
+        <translation>ย้ายที่เก็บ &quot;%L1&quot; ที่มีอยู่ไปไว้ข้าง ๆ ไม่สำเร็จ</translation>
+    </message>
+    <message>
+        <location line="+78" />
         <source>&quot;%L1&quot; does not provide a development firmware channel</source>
         <translation>&quot;%L1&quot; ไม่มีช่องทางเฟิร์มแวร์รุ่นพัฒนา</translation>
     </message>
@@ -12336,7 +12397,7 @@ Install now?</source>
         <translation>&quot;%L1&quot; บอร์ด &quot;%L2&quot; (%L3) แทนที่ &quot;%L4&quot; (%L5)</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="+65" />
         <source>&quot;%L1&quot; %L2 &quot;%L3&quot; overrides &quot;%L4&quot;</source>
         <translation>&quot;%L1&quot; %L2 &quot;%L3&quot; แทนที่ &quot;%L4&quot;</translation>
     </message>
@@ -12628,7 +12689,7 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+13" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelrecorder.cpp" line="+137" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelrecorder.cpp" line="+141" />
         <source>%L1 KB</source>
         <translation>%L1 KB</translation>
     </message>
@@ -12713,7 +12774,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ไม่สามารถเขียน &quot;%1&quot; - %2</translation>
     </message>
     <message>
-        <location line="+441" />
+        <location line="+445" />
         <source>%L1 samples (%L2) - part %L3</source>
         <translation>%L1 ตัวอย่าง (%L2) - ส่วนที่ %L3</translation>
     </message>
@@ -12723,7 +12784,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>%L1 ตัวอย่าง (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3882" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3912" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -12733,7 +12794,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>%L1 Hz</translation>
     </message>
     <message>
-        <location line="+991" />
+        <location line="+999" />
         <source>Series %1</source>
         <translation>ชุดข้อมูล %1</translation>
     </message>
@@ -12837,12 +12898,12 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+6" />
-        <location line="+848" />
+        <location line="+867" />
         <source>Spectrum</source>
         <translation>สเปกตรัม</translation>
     </message>
     <message>
-        <location line="-845" />
+        <location line="-864" />
         <source>Averaging</source>
         <translation>ค่าเฉลี่ย</translation>
     </message>
@@ -12943,40 +13004,40 @@ This deletes its boards, firmware, and examples.</source>
         <translation>%1 min %2 max %3 rms %4</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+212" />
         <source>Connect a camera to view channels</source>
         <translation>เชื่อมต่อกล้องเพื่อดูช่องสัญญาณ</translation>
     </message>
     <message>
         <location line="+9" />
-        <location line="+1119" />
+        <location line="+1128" />
         <source>No channels are being published by the camera</source>
         <translation>กล้องไม่ได้เผยแพร่ช่องสัญญาณใด ๆ</translation>
     </message>
     <message numerus="yes">
-        <location line="-1090" />
-        <location line="+1434" />
+        <location line="-1099" />
+        <location line="+1446" />
         <source>Saved %Ln file(s)</source>
         <translation>
             <numerusform>บันทึก %Ln ไฟล์แล้ว</numerusform>
         </translation>
     </message>
     <message>
-        <location line="-1433" />
-        <location line="+393" />
-        <location line="+807" />
+        <location line="-1445" />
+        <location line="+402" />
+        <location line="+810" />
         <location line="+2" />
         <location line="+232" />
         <source>Record All</source>
         <translation>บันทึกทั้งหมด</translation>
     </message>
     <message>
-        <location line="-1300" />
+        <location line="-1312" />
         <source>Graphs: drag to pan, scroll to zoom, double click to follow live, right click to save.</source>
         <translation>กราฟ: ลากเพื่อเลื่อน เลื่อนล้อเพื่อซูม ดับเบิลคลิกเพื่อติดตามแบบสด คลิกขวาเพื่อบันทึก</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+89" />
         <source>No file format can hold this record.</source>
         <translation>ไม่มีรูปแบบไฟล์ใดที่เก็บระเบียนนี้ได้</translation>
     </message>
@@ -13133,7 +13194,7 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+492" />
-        <location line="+382" />
+        <location line="+385" />
         <location line="+13" />
         <location line="+58" />
         <location line="+160" />
@@ -13141,7 +13202,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>บันทึกช่องสัญญาณ</translation>
     </message>
     <message>
-        <location line="-555" />
+        <location line="-558" />
         <source>%1 (%2x%3, range %4-%5%6) min %7 max %8 mean %9</source>
         <translation>%1 (%2x%3, ช่วง %4-%5%6) ต่ำสุด %7 สูงสุด %8 เฉลี่ย %9</translation>
     </message>
@@ -13177,7 +13238,7 @@ This deletes its boards, firmware, and examples.</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location line="+87" />
+        <location line="+90" />
         <location line="+382" />
         <source>Recording %Ln file(s)...</source>
         <translation>
