@@ -2031,9 +2031,18 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             {
                 forceBootloaderBricked = true;
 
+                // Nothing is connected: a root left over from the previous
+                // (third-party) connection must not steer the bootloaders'
+                // board lists or image paths for whatever is in DFU now. The
+                // picker below sets it again when a vendor board is chosen;
+                // the non-hidden DFU boards are resolved later from their
+                // own rows.
+                m_boardResourceRoot = QString();
+
                 QMap<QString, QString> mappings;
                 QMap<QString, QJsonObject> fallbackBootloaderMappings;
                 QMap<QString, QString> vidpidMappings;
+                QMap<QString, QString> resourceRootMappings; // Third-party board -> vendor firmware dir.
 
                 for (const QJsonValue &value : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
                 {
@@ -2042,6 +2051,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         QString a = value.toObject().value(QStringLiteral("boardDisplayName")).toString();
                         mappings.insert(a, value.toObject().value(QStringLiteral("boardFirmwareFolder")).toString());
                         vidpidMappings.insert(a, value.toObject().value(QStringLiteral("bootloaderVidPid")).toString());
+                        resourceRootMappings.insert(a, value.toObject().value(QStringLiteral("_resourceRoot")).toString());
 
                         if (value.toObject().value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("internal"))
                         {
@@ -2084,6 +2094,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             mappings.insert(altvidpidDisplayName, boardFirmwareFolder);
                             fallbackBootloaderMappings.insert(altvidpidDisplayName, QJsonObject());
                             vidpidMappings.insert(altvidpidDisplayName, altvidpid);
+                            resourceRootMappings.insert(altvidpidDisplayName, object.value(QStringLiteral("_resourceRoot")).toString());
                         }
                     }
 
@@ -2104,6 +2115,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         {
                             fallbackBootloaderMappings.remove(it.key());
                             vidpidMappings.remove(it.key());
+                            resourceRootMappings.remove(it.key());
                             it = mappings.erase(it);
                         }
                         else
@@ -2130,6 +2142,12 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                             originalFirmwareFolder = mappings.value(temp);
                             originalFallbackBootloaderSettings = fallbackBootloaderMappings.value(temp);
+                            // The bootloaders resolve firmware/bootloader images and
+                            // their board lists through m_boardResourceRoot. Set it
+                            // from the chosen board (empty for built-ins) so a root
+                            // left over from a previous third-party connection can't
+                            // redirect a bricked built-in board to vendor files.
+                            m_boardResourceRoot = resourceRootMappings.value(temp);
                         }
                     }
                 }
@@ -2232,7 +2250,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         {
                             QTimer::singleShot(0, this, [this] { editRomfsClicked(true); });
                         }
-                        else if(combo->currentIndex() == 3)
+                        else if(combo->currentIndex() == 4)
                         {
                             QTimer::singleShot(0, this, [this] { resetRomfsClicked(); });
                         }
@@ -3136,21 +3154,23 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         }
 
                         QStringList vidpid = vidpidMappings.value(temp).split(QStringLiteral(":"));
-                        isOpenMVDfu = dfuVidPidList(m_firmwareSettings).contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16)));
-                        isIMX = imxVidPidList(m_firmwareSettings).contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16)));
-                        isAlif = alifVidPidList(m_firmwareSettings).contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16)));
-                        isArduinoDFU = isBootloaderType(m_firmwareSettings, vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16), QStringLiteral("arduino_dfu"));
-                        isBossac = isBootloaderType(m_firmwareSettings, vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16), QStringLiteral("bossac"));
-                        isPicotool = isBootloaderType(m_firmwareSettings, vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16), QStringLiteral("picotool"));
+                        int vidpidVid = (vidpid.size() == 2) ? vidpid.at(0).toInt(nullptr, 16) : 0;
+                        int vidpidPid = (vidpid.size() == 2) ? vidpid.at(1).toInt(nullptr, 16) : 0;
+                        isOpenMVDfu = dfuVidPidList(m_firmwareSettings).contains(QPair<int , int>(vidpidVid, vidpidPid));
+                        isIMX = imxVidPidList(m_firmwareSettings).contains(QPair<int , int>(vidpidVid, vidpidPid));
+                        isAlif = alifVidPidList(m_firmwareSettings).contains(QPair<int , int>(vidpidVid, vidpidPid));
+                        isArduinoDFU = isBootloaderType(m_firmwareSettings, vidpidVid, vidpidPid, QStringLiteral("arduino_dfu"));
+                        isBossac = isBootloaderType(m_firmwareSettings, vidpidVid, vidpidPid, QStringLiteral("bossac"));
+                        isPicotool = isBootloaderType(m_firmwareSettings, vidpidVid, vidpidPid, QStringLiteral("picotool"));
 
                         // These need to be hardcoded to prevent disabling the license check.
 
-                        isPortenta = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == PORTENTA_LDR_PID);
-                        isNiclav = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == NICLA_LDR_PID);
-                        isGiga = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == GIGA_LDR_PID);
-                        isNRF = (vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == NRF_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == NRF_LDR_PID));
-                        isRPIPico = ((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && ((vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID) || (vidpid.at(1).toInt(nullptr, 16) == RPI_LDR_PID))) ||
-                                    ((vidpid.at(0).toInt(nullptr, 16) == RPI2040_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI2040_PID));
+                        isPortenta = (vidpidVid == ARDUINOCAM_VID) && (vidpidPid == PORTENTA_LDR_PID);
+                        isNiclav = (vidpidVid == ARDUINOCAM_VID) && (vidpidPid == NICLA_LDR_PID);
+                        isGiga = (vidpidVid == ARDUINOCAM_VID) && (vidpidPid == GIGA_LDR_PID);
+                        isNRF = (vidpidVid == ARDUINOCAM_VID) && ((vidpidPid == NRF_OLD_PID) || (vidpidPid == NRF_LDR_PID));
+                        isRPIPico = ((vidpidVid == ARDUINOCAM_VID) && ((vidpidPid == RPI_OLD_PID) || (vidpidPid == RPI_LDR_PID))) ||
+                                    ((vidpidVid == RPI2040_VID) && (vidpidPid == RPI2040_PID));
 
                         QRegularExpressionMatch match = QRegularExpression(QStringLiteral("(.+?)\\[(.+?):(.+?)\\]")).match(arch2);
 
@@ -3161,8 +3181,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             m_fullBoardType = match.captured(1).trimmed();
                             m_boardType = match.captured(2);
                             m_boardId = match.captured(3);
-                            m_boardVID = vidpid.at(0).toInt(nullptr, 16);
-                            m_boardPID = vidpid.at(1).toInt(nullptr, 16);
+                            m_boardVID = vidpidVid;
+                            m_boardPID = vidpidPid;
                         }
                     }
                     else
@@ -3380,7 +3400,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         Tr::tr("Connect"),
                         Tr::tr("Only loading *.bin and *.img files are supported for the IMX bootloader!"));
 
-                    CONNECT_END();
+                    CLOSE_CONNECT_END(); // The serial port is still open on this path.
                 }
 
                 openmvIMXBootloader(forceFirmwarePath,
@@ -3667,7 +3687,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         {
                             // Name the reported chip id so an unrecognized
                             // sensor can be identified and added to the table.
-                            sensorType = Tr::tr("Unknown (0x%1)").arg(id, 0, 16);
+                            sensorType = Tr::tr("Unknown (0x%1)").arg(QString::number(uint(id), 16).toUpper());
                         }
 
                         QPair<QString, bool> pair(sensorType, hidden);
@@ -4303,6 +4323,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         // Check Version //////////////////////////////////////////////////////
 
+        bool promptFirmwareUpgrade = false;
+
         QString latestFirmware = latestFirmwareForConnectedBoard();
 
         QRegularExpressionMatch match = QRegularExpression(QStringLiteral("(\\d+)\\.(\\d+)\\.(\\d+)")).match(latestFirmware);
@@ -4333,17 +4355,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                             QStringLiteral("coral"));
             m_versionButton->update();
 
-            QTimer::singleShot(1, this, [this] {
-                if ((!m_autoConnect) && Utils::CheckableMessageBox::question(Core::ICore::dialogParent(),
-                        Tr::tr("Connect"),
-                        Tr::tr("Your OpenMV Cam's firmware is out of date. Would you like to upgrade?"),
-                        Utils::CheckableDecider(DONT_SHOW_UPGRADE_FW_AGAIN),
-                        QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel,
-                        QMessageBox::Yes, QMessageBox::No, {}, {}, QMessageBox::Yes) == QMessageBox::Yes)
-                {
-                    OpenMVPlugin::updateCam(true);
-                }
-            });
+            promptFirmwareUpgrade = true;
         }
         else
         {
@@ -4354,38 +4366,57 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             m_versionButton->update();
         }
 
-        if ((!m_autoConnect) && (m_boardType == QStringLiteral("IMXRT1060")) && isMacHidAccessDeniedForOpenMVIDE())
-        {
-            QMessageBox::warning(Core::ICore::dialogParent(),
-                Tr::tr("Connect"),
-                Tr::tr("Your OpenMV Cam RT1062 is connected, but %L1 does not have Input Monitoring "
-                       "permission on this Mac. Without it, firmware updates for the RT1062 will fail with a "
-                       "\"UsbHidPeripheral() cannot open USB HID device\" error, because macOS blocks the "
-                       "NXP flashing tools (blhost, sdphost) that %L1 uses from opening the RT1062's USB HID "
-                       "bootloader.\n\n"
-                       "To grant access, open the Apple menu, go to System Settings, click Privacy & Security "
-                       "in the sidebar, click Input Monitoring, and enable %L1 in the list. Then quit and "
-                       "reopen %L1 so the new grant takes effect (macOS reads privacy grants at launch).\n\n"
-                       "This warning will stop appearing once Input Monitoring is granted. You can keep using "
-                       "your OpenMV Cam RT1062 for running scripts without this permission; it is only required "
-                       "for firmware updates.").arg(QGuiApplication::applicationDisplayName()));
-        }
+        // Deferred through the idle queue so it runs only once the connect flow
+        // (and an -auto_run / queued Start, which re-raise m_working) has
+        // finished, and is dropped if the camera disconnects first. The Mac
+        // warnings run first and the upgrade prompt after them, in the same
+        // slot: a plain single-shot used to fire the prompt inside a warning
+        // box's event loop while m_working was still true, so updateCam()
+        // silently ignored "Yes".
+        deferNormal([this, promptFirmwareUpgrade] {
+            if ((!m_autoConnect) && (m_boardType == QStringLiteral("IMXRT1060")) && isMacHidAccessDeniedForOpenMVIDE())
+            {
+                QMessageBox::warning(Core::ICore::dialogParent(),
+                    Tr::tr("Connect"),
+                    Tr::tr("Your OpenMV Cam RT1062 is connected, but %L1 does not have Input Monitoring "
+                           "permission on this Mac. Without it, firmware updates for the RT1062 will fail with a "
+                           "\"UsbHidPeripheral() cannot open USB HID device\" error, because macOS blocks the "
+                           "NXP flashing tools (blhost, sdphost) that %L1 uses from opening the RT1062's USB HID "
+                           "bootloader.\n\n"
+                           "To grant access, open the Apple menu, go to System Settings, click Privacy & Security "
+                           "in the sidebar, click Input Monitoring, and enable %L1 in the list. Then quit and "
+                           "reopen %L1 so the new grant takes effect (macOS reads privacy grants at launch).\n\n"
+                           "This warning will stop appearing once Input Monitoring is granted. You can keep using "
+                           "your OpenMV Cam RT1062 for running scripts without this permission; it is only required "
+                           "for firmware updates.").arg(QGuiApplication::applicationDisplayName()));
+            }
 
-        if ((!m_autoConnect) && isMacAccessorySecurityLikelyToInterfere())
-        {
-            Utils::CheckableMessageBox::information(Core::ICore::dialogParent(),
-                Tr::tr("Connect"),
-                Tr::tr("Your Apple Silicon Mac has an \"Allow accessories to connect\" security setting "
-                       "that can interrupt connections to your OpenMV Cam. When your OpenMV Cam is in bootloader "
-                       "(DFU) mode for a firmware update, macOS may show an \"Allow accessory to connect\" "
-                       "popup that must be clicked before the connection works.\n\n"
-                       "To prevent this, open the Apple menu, go to System Settings, click Privacy & Security "
-                       "in the sidebar, scroll to the bottom to Accessories, and change \"Allow accessories to connect\" "
-                       "to \"Automatically allow when unlocked\" (recommended) or \"Always allow\"."),
-                Utils::CheckableDecider(DONT_SHOW_MAC_ACCESSORY_AGAIN),
-                QMessageBox::Ok,
-                QMessageBox::Ok);
-        }
+            if ((!m_autoConnect) && isMacAccessorySecurityLikelyToInterfere())
+            {
+                Utils::CheckableMessageBox::information(Core::ICore::dialogParent(),
+                    Tr::tr("Connect"),
+                    Tr::tr("Your Apple Silicon Mac has an \"Allow accessories to connect\" security setting "
+                           "that can interrupt connections to your OpenMV Cam. When your OpenMV Cam is in bootloader "
+                           "(DFU) mode for a firmware update, macOS may show an \"Allow accessory to connect\" "
+                           "popup that must be clicked before the connection works.\n\n"
+                           "To prevent this, open the Apple menu, go to System Settings, click Privacy & Security "
+                           "in the sidebar, scroll to the bottom to Accessories, and change \"Allow accessories to connect\" "
+                           "to \"Automatically allow when unlocked\" (recommended) or \"Always allow\"."),
+                    Utils::CheckableDecider(DONT_SHOW_MAC_ACCESSORY_AGAIN),
+                    QMessageBox::Ok,
+                    QMessageBox::Ok);
+            }
+
+            if (promptFirmwareUpgrade && (!m_autoConnect) && Utils::CheckableMessageBox::question(Core::ICore::dialogParent(),
+                    Tr::tr("Connect"),
+                    Tr::tr("Your OpenMV Cam's firmware is out of date. Would you like to upgrade?"),
+                    Utils::CheckableDecider(DONT_SHOW_UPGRADE_FW_AGAIN),
+                    QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel,
+                    QMessageBox::Yes, QMessageBox::No, {}, {}, QMessageBox::Yes) == QMessageBox::Yes)
+            {
+                OpenMVPlugin::updateCam(true);
+            }
+        });
 
         ///////////////////////////////////////////////////////////////////////
 

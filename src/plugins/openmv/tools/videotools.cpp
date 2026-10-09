@@ -1013,7 +1013,11 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     // for plenty of aspect ratios, and an odd-sized source (a cropped ROI)
     // fails even when it is not being scaled at all. -2 rounds the computed
     // side to even; the trunc() pair is a no-op for the already-even sizes.
-    if(scale != -1) args = args << QStringLiteral("-vf") << QString(QStringLiteral("scale=%1:%2")).arg(scale).arg(h264 ? QStringLiteral("-2") : QStringLiteral("-1"));
+    // The user-entered width is rounded the same way - libx264 (mac/linux
+    // builds) rejects an odd width outright rather than rounding it.
+    if(scale != -1) args = args << QStringLiteral("-vf") << (h264
+        ? QString(QStringLiteral("scale=trunc(%1/2)*2:-2")).arg(scale)
+        : QString(QStringLiteral("scale=%1:-1")).arg(scale));
     else if(h264) args = args << QStringLiteral("-vf") << QStringLiteral("scale=trunc(iw/2)*2:trunc(ih/2)*2");
 
     if(mjpeg) args = args << QStringLiteral("-f") << QStringLiteral("avi");

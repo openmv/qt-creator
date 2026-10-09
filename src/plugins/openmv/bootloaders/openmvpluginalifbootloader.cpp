@@ -59,7 +59,7 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
                 QString a = val.toObject().value(QStringLiteral("boardDisplayName")).toString();
                 QStringList vidpid = val.toObject().value(QStringLiteral("bootloaderVidPid")).toString().split(QStringLiteral(":"));
 
-                if(vidpidlist.contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16))))
+                if((vidpid.size() == 2) && vidpidlist.contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16))))
                 {
                     mappings.insert(a, val.toObject().value(QStringLiteral("boardFirmwareFolder")).toString());
                 }

@@ -157,6 +157,7 @@
 #define OUTPUT_WINDOW_FONT_ZOOM_STATE "OutputWindowFontZoomState"
 #define JPG_COMPRESS_STATE "JPGCompressState"
 #define FRAME_BUFFER_SOURCE_STATE "FrameBufferSourceState"
+#define DISABLE_FRAME_BUFFER_STATE_LEGACY "DisableFrameBufferState" // pre-5.0.1 bool, migrated on load
 #define HISTOGRAM_COLOR_SPACE_STATE "HistogramColorSpace"
 #define HISTOGRAM_PANE_VIEW_STATE "HistogramPaneView"
 #define DONT_SHOW_EXAMPLES_AGAIN "DontShowExamplesAgain"
@@ -843,10 +844,13 @@ private:
     // Frame Buffer source selector: "Off" (data -1), "On" (data 0, no source
     // selection), or one entry per sensor (data = chip id). Rebuilt on connect.
     QComboBox *m_frameBufferSource;
+    int m_frameBufferSourceSavedIndex = -1; // Index restored from settings, pending the first connect's list rebuild.
 
     bool frameBufferDisabled() const
     {
-        return m_frameBufferSource->currentData().toInt() < 0;
+        // Item data is a qlonglong: -1 = off, 0 = on, else a 32-bit chip id
+        // (which can exceed INT_MAX, so toInt() would misread it as off).
+        return m_frameBufferSource->currentData().toLongLong() < 0;
     }
 
     void updateFrameBufferSources(const QList<QPair<uint32_t, QString> > &sources);

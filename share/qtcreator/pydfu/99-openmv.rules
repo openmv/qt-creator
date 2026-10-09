@@ -33,6 +33,7 @@ SUBSYSTEMS=="usb", ATTRS{idVendor}=="37c5", ATTRS{idProduct}=="924a", MODE:="066
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="37c5", ATTRS{idProduct}=="9205", MODE:="0666", SYMLINK+="openmvdfu"
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="37c5", ATTRS{idProduct}=="96e3", MODE:="0666", SYMLINK+="openmvdfu"
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="37c5", ATTRS{idProduct}=="9206", MODE:="0666", SYMLINK+="openmvdfu"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="37c5", ATTRS{idProduct}=="9208", MODE:="0666", SYMLINK+="openmvdfu"
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="37c5", ATTRS{idProduct}=="9060", MODE:="0666", SYMLINK+="openmvdfu"
 KERNEL=="ttyACM*", ATTRS{idVendor}=="1209", ATTRS{idProduct}=="abd1", MODE:="0666", SYMLINK+="openmvcam"
 KERNEL=="ttyACM*", ATTRS{idVendor}=="37c5", ATTRS{idProduct}=="1202", MODE:="0666", SYMLINK+="openmvcam"

@@ -2392,6 +2392,13 @@ void OpenMVPlugin::extensionsInitialized()
     disableLabel->setVisible(frameBufferDisabled());
     connect(m_frameBufferSource, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, [this, disableLabel] {
         disableLabel->setVisible(frameBufferDisabled());
+
+        // A change made by the user before the first connect (Off/On on the
+        // placeholder list) supersedes the index restored from settings.
+        if(!m_connected)
+        {
+            m_frameBufferSourceSavedIndex = -1;
+        }
     });
 
     Utils::ElidingLabel *recordingLabel = new Utils::ElidingLabel(Tr::tr("Elapsed: 0h:00m:00s:000ms - Size: 0 B - FPS: 0"));
@@ -2920,9 +2927,22 @@ void OpenMVPlugin::extensionsInitialized()
         settings->value(SETTINGS_GROUP "/" ZOOM_STATE, zoomButton->isChecked()).toBool());
     setJpgCompressEnabled(
         settings->value(SETTINGS_GROUP "/" JPG_COMPRESS_STATE, jpgCompressEnabled()).toBool());
-    m_frameBufferSource->setCurrentIndex(qBound(0,
-        settings->value(SETTINGS_GROUP "/" FRAME_BUFFER_SOURCE_STATE, m_frameBufferSource->currentIndex()).toInt(),
-        m_frameBufferSource->count() - 1));
+    {
+        // The combo only holds Off/On until a camera connects, so a saved
+        // sensor index (2+) can't be applied yet: keep the raw value for
+        // updateFrameBufferSources() to clamp against the real list.
+        int sourceIndex = settings->value(SETTINGS_GROUP "/" FRAME_BUFFER_SOURCE_STATE, m_frameBufferSource->currentIndex()).toInt();
+
+        // Pre-5.0.1 stored the frame buffer switch as a bool under its own key.
+        if((!settings->contains(SETTINGS_GROUP "/" FRAME_BUFFER_SOURCE_STATE))
+        && settings->value(SETTINGS_GROUP "/" DISABLE_FRAME_BUFFER_STATE_LEGACY).toBool())
+        {
+            sourceIndex = 0;
+        }
+
+        m_frameBufferSource->setCurrentIndex(qBound(0, sourceIndex, m_frameBufferSource->count() - 1));
+        m_frameBufferSourceSavedIndex = sourceIndex;
+    }
     colorSpace->setCurrentIndex(
         settings->value(SETTINGS_GROUP "/" HISTOGRAM_COLOR_SPACE_STATE, colorSpace->currentIndex()).toInt());
     paneView->setCurrentIndex(
@@ -3096,7 +3116,7 @@ void OpenMVPlugin::extensionsInitialized()
         settings->setValue(SETTINGS_GROUP "/" JPG_COMPRESS_STATE,
             jpgCompressEnabled());
         settings->setValue(SETTINGS_GROUP "/" FRAME_BUFFER_SOURCE_STATE,
-            m_frameBufferSource->currentIndex());
+            (m_frameBufferSourceSavedIndex >= 0) ? m_frameBufferSourceSavedIndex : m_frameBufferSource->currentIndex());
         settings->setValue(SETTINGS_GROUP "/" HISTOGRAM_COLOR_SPACE_STATE,
             colorSpace->currentIndex());
         settings->setValue(SETTINGS_GROUP "/" HISTOGRAM_PANE_VIEW_STATE,
@@ -4335,13 +4355,15 @@ QObject *OpenMVPlugin::remoteCommand(const QStringList &options, const QString &
 
 void OpenMVPlugin::applyFrameBufferSource()
 {
-    int source = m_frameBufferSource->currentData().toInt();
+    // Chip ids are 32-bit unsigned (GENX320 is 0xB0602003) and would read as
+    // negative through toInt(), so the item data is kept as qlonglong.
+    qlonglong source = m_frameBufferSource->currentData().toLongLong();
 
     // Set the source before enabling so the first frames already come from
     // the selected sensor. -1 = off, 0 = on with no source selection.
     if(source > 0)
     {
-        m_iodevice->setStreamSource(uint(source));
+        m_iodevice->setStreamSource(uint32_t(source));
     }
 
     m_iodevice->fbEnable(source != -1);
@@ -4356,7 +4378,8 @@ void OpenMVPlugin::updateFrameBufferSources(const QList<QPair<uint32_t, QString>
     // in the items' data, not their indexes. This runs before m_connected is
     // set, so the change handler stays quiet and the connect flow's
     // applyFrameBufferSource() sends the result once.
-    int previousIndex = m_frameBufferSource->currentIndex();
+    int previousIndex = (m_frameBufferSourceSavedIndex >= 0) ? m_frameBufferSourceSavedIndex : m_frameBufferSource->currentIndex();
+    m_frameBufferSourceSavedIndex = -1;
 
     m_frameBufferSource->clear();
     m_frameBufferSource->addItem(Tr::tr("Off"), -1);
@@ -4369,13 +4392,13 @@ void OpenMVPlugin::updateFrameBufferSources(const QList<QPair<uint32_t, QString>
     {
         // A single source is just the stream switch - "On" reads better
         // than the sensor's name.
-        m_frameBufferSource->addItem(Tr::tr("On"), int(sources.first().first));
+        m_frameBufferSource->addItem(Tr::tr("On"), qlonglong(sources.first().first));
     }
     else
     {
         for(const QPair<uint32_t, QString> &source : sources)
         {
-            m_frameBufferSource->addItem(source.second, int(source.first));
+            m_frameBufferSource->addItem(source.second, qlonglong(source.first));
         }
     }
 

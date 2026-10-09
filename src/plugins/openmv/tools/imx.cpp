@@ -119,8 +119,22 @@ static const char IMX_CATCHER_SCRIPT[] =
     // process on cancel/disconnect, matching the old probe loop that waited
     // until the user hit Cancel. t > 0 keeps a ceiling for non-interactive use.
     "deadline = (time.time() + t) if t > 0 else None\n"
+    // The hot loop runs while the USB tree is churning after the reset: a
+    // transient enumerate error must not kill the catcher (the parent would
+    // then see a non-zero exit and fall back to the slow probe loop). A
+    // persistent one (libusbsio/permission problem) must, though, so the
+    // parent falls back and the real error reaches stderr instead of an
+    // open-ended silent wait: ~2s of back-to-back failures ends the catcher.
+    "fails = 0\n"
     "while deadline is None or time.time() < deadline:\n"
-    "    ifaces = find()\n"
+    "    try:\n"
+    "        ifaces = find()\n"
+    "        fails = 0\n"
+    "    except Exception as e:\n"
+    "        fails += 1\n"
+    "        if fails >= 40:\n"
+    "            sys.stderr.write('imx catcher: enumerate failed: %s\\n' % e); sys.exit(2)\n"
+    "        ifaces = []\n"
     "    if ifaces:\n"
     "        if mode == 'wait':\n"
     "            print('FOUND', flush=True); sys.exit(0)\n"
@@ -886,9 +900,23 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     {
         dialog->appendColoredText(Tr::tr("Waiting for the flashloader to enumerate..."));
 
-        bool no = false;
-        bool claimed = imxAwaitCatcher(flashloaderCatcher, &no);
+        // The LoaderDialog's Cancel only kills `process`, which is idle during
+        // this wait, so watch the dialog closing ourselves: it cancels the
+        // wait (imxAwaitCatcher kills the catcher) and ends the update instead
+        // of letting the remaining steps run headless behind a closed dialog.
+        bool dialogClosed = false;
+        QMetaObject::Connection closeConn = QObject::connect(dialog, &QDialog::finished, dialog, [&dialogClosed] () {
+            dialogClosed = true;
+        });
+        bool claimed = imxAwaitCatcher(flashloaderCatcher, &dialogClosed);
+        QObject::disconnect(closeConn);
         flashloaderCatcher = nullptr; // consumed (deleted) by imxAwaitCatcher
+
+        if(dialogClosed)
+        {
+            result = false;
+            goto cleanup;
+        }
 
         if(!claimed)
         {

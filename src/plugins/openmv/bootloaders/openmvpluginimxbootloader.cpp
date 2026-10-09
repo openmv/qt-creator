@@ -61,6 +61,7 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
     {
         QList<QPair<int, int> > vidpidlist = imxVidPidList(m_firmwareSettings, false, true);
         QMap<QString, QString> mappings;
+        QMap<QString, QString> resourceRootMappings; // Third-party board -> vendor firmware dir.
 
         for (const QJsonValue &val : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
         {
@@ -72,9 +73,10 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
                 QString a = val.toObject().value(QStringLiteral("boardDisplayName")).toString();
                 QStringList vidpid = val.toObject().value(QStringLiteral("bootloaderVidPid")).toString().split(QStringLiteral(":"));
 
-                if(vidpidlist.contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16))))
+                if((vidpid.size() == 2) && vidpidlist.contains(QPair<int , int>(vidpid.at(0).toInt(nullptr, 16), vidpid.at(1).toInt(nullptr, 16))))
                 {
                     mappings.insert(a, val.toObject().value(QStringLiteral("boardFirmwareFolder")).toString());
+                    resourceRootMappings.insert(a, obj.value(QStringLiteral("_resourceRoot")).toString());
                 }
             }
         }
@@ -93,6 +95,10 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
             {
                 settings->setValue(LAST_BOARD_TYPE_STATE_IMX, temp);
                 originalFirmwareFolder = mappings.value(temp);
+                // Keep the member in sync when the board was picked here (as the
+                // Alif bootloader does): getTheLatestDevelopmentFirmware() below
+                // decides between the OpenMV and the vendor dev channel from it.
+                m_boardResourceRoot = resourceRootMappings.value(temp);
             }
             else
             {
@@ -237,8 +243,19 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
         Utils::Process *catcher = imxArmCatcher(outObj, QStringLiteral("blhost_pidvid"), "claim",
                                                 0, &canceled);
 
-        // Cancel during arming (before any reset) leaves the board untouched --
-        // don't reset it, just fall through to the canceled path below.
+        // Cancel during arming (before any reset) leaves the board untouched.
+        // In the normal connect flow the serial port is still open and nothing
+        // was attempted yet: close it and stop quietly rather than reporting
+        // "unable to connect" and offering an SBL repair. In the bricked flow
+        // the cancel deliberately falls through to that offer ("hit cancel to
+        // skip to SBL reprogramming").
+        if(canceled && (!forceBootloaderBricked))
+        {
+            QApplication::restoreOverrideCursor();
+            dialog.close();
+            CLOSE_CONNECT_END();
+        }
+
         if(!canceled)
         {
             dialog.setLabelText(connectingText);
@@ -257,11 +274,14 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
             // and exits 0 -- the wait is open-ended (cancel-only). Only when
             // the catcher couldn't arm at all fall back to the old
             // spawn-per-probe loop, which is equally open-ended.
-            if(catcher)
-            {
-                imxAwaitCatcher(catcher, &canceled);
-            }
-            else if(!canceled)
+            // imxAwaitCatcher() returns false when the catcher died without
+            // claiming the SBL (python exception, crash) as well as on cancel.
+            // Only a claim may skip the probe loop -- otherwise the blhost
+            // download below would run against a board that is not (yet) in
+            // the bootloader and fail with a spurious timeout.
+            bool claimed = catcher ? imxAwaitCatcher(catcher, &canceled) : false;
+
+            if((!claimed) && (!canceled))
             {
                 while((!imxGetDevice(outObj)) && (!canceled))
                 {

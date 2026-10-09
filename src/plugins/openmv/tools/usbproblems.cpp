@@ -28,6 +28,8 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <QtGlobal> // Q_OS_* must not depend on the precompiled header.
+
 #ifdef Q_OS_MACOS
 #include <sys/sysctl.h>
 #include <IOKit/hidsystem/IOHIDLib.h>

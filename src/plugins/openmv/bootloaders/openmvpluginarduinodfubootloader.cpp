@@ -95,7 +95,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
     {
         bool foundMatch = false;
 
-        for(const QJsonValue &val : m_firmwareSettings.object().value(QStringLiteral("boards")).toArray())
+        for(const QJsonValue &val : OpenMVThirdParty::boardsPreferringResourceRoot(m_firmwareSettings, m_boardResourceRoot))
         {
             QJsonObject obj = val.toObject();
 

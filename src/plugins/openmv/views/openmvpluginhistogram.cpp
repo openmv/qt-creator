@@ -1078,6 +1078,20 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
     // to zero). The latest frame is stashed and processed on show/expand, so
     // switching back always displays current data without paying the
     // per-frame cost while invisible.
+    //
+    // The focus metric is the exception: it feeds the Frame Buffer title,
+    // which stays visible whichever pane view is showing, so it is computed
+    // from every frame regardless of visibility (it was before the pane
+    // views existed).
+    QPixmap scaled = data.scaledToWidth(160, Qt::SmoothTransformation);
+
+    {
+        QBuffer buffer;
+        QImageWriter writer(&buffer, "jpg");
+        writer.write(scaled.toImage());
+        emit focusMetric(((buffer.size() - start_of_scan_offset(buffer.data())) * 100 * 8) / (scaled.rect().width() * scaled.rect().height()));
+    }
+
     if ((!isVisible()) || (width() <= 0) || (height() <= 0))
     {
         m_pendingPixmap = data;
@@ -1085,7 +1099,7 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
     }
 
     m_pendingPixmap = QPixmap();
-    m_pixmap = data.scaledToWidth(160, Qt::SmoothTransformation);
+    m_pixmap = scaled;
 
     switch(m_colorSpace)
     {
@@ -1266,11 +1280,6 @@ void OpenMVPluginHistogram::pixmapUpdate(const QPixmap &data)
             break;
         }
     }
-
-    QBuffer buffer;
-    QImageWriter writer(&buffer, "jpg");
-    writer.write(m_pixmap.toImage());
-    emit focusMetric(((buffer.size() - start_of_scan_offset(buffer.data())) * 100 * 8) / (m_pixmap.rect().width() * m_pixmap.rect().height()));
 }
 
 } // namespace Internal

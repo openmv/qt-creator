@@ -198,7 +198,9 @@ static bool parseVidPid(const QString &vidPid, const QString &pidMask, int *vid,
         *mask = 0xFFFF;
     }
 
-    return vidOk && pidOk;
+    // A mask outside 16 bits can't match a PID (and would be written back
+    // into the merged row as garbage) - treat it as an invalid id.
+    return vidOk && pidOk && (*mask >= 0) && (*mask <= 0xFFFF);
 }
 
 static bool boardVidPid(const QJsonObject &board, int *vid, int *pid, int *mask)
@@ -454,10 +456,31 @@ QJsonDocument OpenMVThirdParty::mergeFirmwareSettings(const QJsonDocument &built
                 continue;
             }
 
+            // parseVidPid() treats a missing/invalid mask as 0xFFFF but the
+            // runtime matchers (matchVidPid/isBootloaderType) parse the key
+            // directly and would get 0 (matches nothing). Write the defaulted
+            // mask back so the merged row behaves the way it was validated.
+            board[QStringLiteral("boardPidMask")] = QStringLiteral("0x%1").arg(mask, 4, 16, QLatin1Char('0')).toUpper().replace(QStringLiteral("0X"), QStringLiteral("0x"));
+
             if (folder.isEmpty())
             {
                 warnings->append(Tr::tr("\"%L1\" board \"%L2\" - missing \"boardFirmwareFolder\" (skipped)").arg(repo.id).arg(displayName));
                 continue;
+            }
+
+            // bootloaderVidPid is split on ':' and indexed by the IMX/Alif
+            // bootloaders and the DFU-detected dialog, which then flash the
+            // board - a malformed value must never get that far. It is only
+            // optional for boards with no bootloaderType (never flashed by the IDE).
+            {
+                int blVid, blPid, blMask;
+
+                if ((!board.value(QStringLiteral("bootloaderType")).toString().isEmpty() || board.contains(QStringLiteral("bootloaderVidPid")))
+                && (!parseVidPid(board.value(QStringLiteral("bootloaderVidPid")).toString(), QString(), &blVid, &blPid, &blMask)))
+                {
+                    warnings->append(Tr::tr("\"%L1\" board \"%L2\" - missing or invalid \"bootloaderVidPid\" (skipped)").arg(repo.id).arg(displayName));
+                    continue;
+                }
             }
 
             if (!board.contains(QStringLiteral("firmware_version")))
@@ -500,6 +523,7 @@ QJsonDocument OpenMVThirdParty::mergeFirmwareSettings(const QJsonDocument &built
             // HIGHER-priority vendor (which wins - this board is rejected). The
             // user reorders priority in the preferences page.
             QJsonArray keptBoards;
+            QList<OverrideRecord> pendingOverrides; // Committed only if this board is accepted.
             QString shadowedBy;
 
             for (const QJsonValue &existingValue : boards)
@@ -522,7 +546,7 @@ QJsonDocument OpenMVThirdParty::mergeFirmwareSettings(const QJsonDocument &built
                         record.vendorVidPid = board.value(QStringLiteral("boardVidPid")).toString();
                         record.overriddenBoard = existing.value(QStringLiteral("boardDisplayName")).toString();
                         record.overriddenVidPid = existing.value(QStringLiteral("boardVidPid")).toString();
-                        overrides->append(record);
+                        pendingOverrides.append(record);
                         continue;
                     }
 
@@ -533,14 +557,47 @@ QJsonDocument OpenMVThirdParty::mergeFirmwareSettings(const QJsonDocument &built
                 keptBoards.append(existingValue);
             }
 
-            boards = keptBoards;
-
+            // `boards` is replaced by `keptBoards` only once the board passes
+            // the remaining checks - a rejected board must not take the
+            // built-in rows it overlapped down with it.
             if (!shadowedBy.isEmpty())
             {
                 warnings->append(Tr::tr("\"%L1\" board \"%L2\" (%L3) - USB id already provided by the higher-priority repository \"%L4\" (skipped)")
                                  .arg(repo.id).arg(displayName).arg(board.value(QStringLiteral("boardVidPid")).toString()).arg(shadowedBy));
                 continue;
             }
+
+            // Display names key the board-picker dialogs (QMap), so a vendor
+            // board named like a board that is still in the list would silently
+            // take over that entry's firmware folder. (Overriding a built-in
+            // board with the same name is fine - the built-in was just removed.)
+            {
+                bool nameConflict = false;
+
+                for (const QJsonValue &existingValue : keptBoards)
+                {
+                    QJsonObject existing = existingValue.toObject();
+
+                    if (existing.value(QStringLiteral("boardDisplayName")).toString() == displayName)
+                    {
+                        warnings->append(Tr::tr("\"%L1\" board \"%L2\" - \"boardDisplayName\" is already used by \"%L3\" (skipped)")
+                                         .arg(repo.id).arg(displayName)
+                                         .arg(existing.value(QStringLiteral("_vendor")).toString().isEmpty()
+                                              ? QGuiApplication::applicationDisplayName()
+                                              : existing.value(QStringLiteral("_vendor")).toString()));
+                        nameConflict = true;
+                        break;
+                    }
+                }
+
+                if (nameConflict)
+                {
+                    continue;
+                }
+            }
+
+            boards = keptBoards;
+            overrides->append(pendingOverrides);
 
             // The vendor app VID:PID overlapping a remaining board's bootloader
             // VID:PID is kept as a visible note only - bootloader IDs are shared

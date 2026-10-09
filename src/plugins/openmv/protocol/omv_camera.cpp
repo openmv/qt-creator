@@ -874,8 +874,23 @@ void OMVCamera::streaming(bool enable, bool raw, const QSize &res)
 void OMVCamera::setStreamSource(uint32_t chip_id)
 {
     /*
-        Select which sensor feeds the stream channel.
+        Select which sensor feeds the stream channel. STREAM_SOURCE was added
+        in protocol 1.0.1; gate on the cached protocol version (as memoryStats
+        does) so older firmware is never sent an ioctl it would NAK with
+        INVALID, which costs a resync round and drops the connection.
     */
+    if (sysinfo.isEmpty()) {
+        systemInfo(); // caches sysinfo + proto_v
+    }
+
+    int version = (proto_v.size() >= 3)
+        ? ((proto_v.at(0).toInt() * 10000) + (proto_v.at(1).toInt() * 100) + proto_v.at(2).toInt())
+        : 0;
+
+    if (version < 10001) {
+        return;
+    }
+
     retryIfFailedVoid([&]() {
         uint8_t stream_id = getChannelId(QStringLiteral("stream"));
         QList<uint32_t> args;
