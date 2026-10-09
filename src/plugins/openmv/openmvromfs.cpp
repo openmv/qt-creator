@@ -44,6 +44,36 @@
 namespace OpenMV {
 namespace Internal {
 
+// The converters (mpy-cross, vela, stedgeai) hand back a file inside a
+// QTemporaryDir they deliberately leave behind for the caller; drop that
+// directory once the file has been copied into the editor's tree. Only a
+// directory strictly below the temp root is ever removed.
+static void removeConversionDir(const QString &src, const QString &convertedSrc)
+{
+    if (convertedSrc.isEmpty() || (convertedSrc == src))
+    {
+        return;
+    }
+
+    // The converted file may sit a level or two below the QTemporaryDir
+    // (stedgeai writes st_ai_output/...), so remove the first directory
+    // under the temp root, which is the QTemporaryDir itself.
+    const QString dir = QFileInfo(convertedSrc).absolutePath();
+    const QString tempRoot = QDir(QDir::tempPath()).absolutePath();
+    const QString prefix = tempRoot + QLatin1Char('/');
+
+    if ((dir != tempRoot) && dir.startsWith(prefix) && (dir.length() > prefix.length()))
+    {
+        const QString first = dir.mid(prefix.length()).section(QLatin1Char('/'), 0, 0);
+
+        if (!first.isEmpty())
+        {
+            QDir(prefix + first).removeRecursively();
+        }
+    }
+}
+
+
 QJsonObject getROMFSConfig(const QString &title,
                            const QJsonObject &boardSettings,
                            Utils::QtcSettings *settings)
@@ -360,7 +390,10 @@ void OpenMVROMFSEditor::addModel()
             }
         }
 
-        if (QFile::copy(convertedSrc, newFilePath))
+        bool copied = QFile::copy(convertedSrc, newFilePath);
+        removeConversionDir(src, convertedSrc);
+
+        if (copied)
         {
             // Required to make sure creation timestamps are different on created files.
             QThread::msleep(10);
@@ -453,7 +486,10 @@ void OpenMVROMFSEditor::addFile()
             }
         }
 
-        if (QFile::copy(convertedSrc, newFilePath))
+        bool copied = QFile::copy(convertedSrc, newFilePath);
+        removeConversionDir(file, convertedSrc);
+
+        if (copied)
         {
             const QModelIndex newIndex = m_filter->mapFromSource(m_model->index(newFilePath));
             if (newIndex.isValid())
@@ -668,12 +704,30 @@ static void packDirIntoRomfs(VfsRomWriter *writer, const QDir &dir)
 // the shared %TEMP% root) so the fixed romfsN.img name can't collide with a
 // second IDE instance or unrelated files, and nothing external churns it during
 // the multi-minute flash. Kept separate from the firmware-flash staging dir
-// (openmv-fw-staging), which is wiped on every flash.
+// (openmv-fw-staging-<pid>), which is wiped on every flash.
 static QString romfsStagingPath(int romfsIndex)
 {
     const QString dir = QDir::cleanPath(QDir::tempPath() + QStringLiteral("/openmv-romfs-staging"));
     QDir().mkpath(dir);
     return QDir::cleanPath(dir + QDir::separator() + QString(QStringLiteral("romfs%1.img")).arg(romfsIndex));
+}
+
+void OpenMVPlugin::romfsOperationIncomplete(const QString &title, bool write)
+{
+    if (write)
+    {
+        QMessageBox::warning(Core::ICore::dialogParent(), title,
+            Tr::tr("The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.\n\n"
+                   "Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options "
+                   "to reset the ROM file system or to edit and commit it again."));
+    }
+    else
+    {
+        QMessageBox::information(Core::ICore::dialogParent(), title,
+            Tr::tr("The ROMFS read did not complete.\n\n"
+                   "Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options "
+                   "to edit the ROM file system again."));
+    }
 }
 
 void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
@@ -741,6 +795,9 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         return;
     }
 
+    // Marks the session for the auto-reconnect gate (the editor's own connect
+    // calls below are direct) and clears the bootloaders' failure flag.
+    RomfsSessionGuard romfsSession(this);
     bool wasConnected = m_connected;
 
     if (!newRomfs)
@@ -764,6 +821,17 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                 });
 
                 loop.exec();
+
+                if (m_romfsOperationFailed)
+                {
+                    // Cancelled or failed in the bootloader: no reconnect wait
+                    // (the cam is still in the bootloader, so it would spin for
+                    // 10 s and then raise the DFU dialog) and no "failed to
+                    // unpack" for a read the user stopped.
+                    romfsFile.remove();
+                    romfsOperationIncomplete(Tr::tr("Edit ROMFS"), false);
+                    return;
+                }
 
                 if (romfsFile.open(QFile::ReadOnly))
                 {
@@ -872,6 +940,12 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                 romfsFile.errorString());
         }
 
+        if (m_romfsOperationFailed)
+        {
+            romfsOperationIncomplete(Tr::tr("Load ROMFS onto OpenMV Cam"), true);
+            return;
+        }
+
         if (wasConnected) connectClicked(false, QString(), false, false, false, true);
         return;
     }
@@ -923,12 +997,9 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         dialog->resize(640, 480);
     }
 
-    bool ok = dialog->exec() == QDialog::Accepted;
-
-    settings->setValue(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_GEOMETRY, dialog->saveGeometry());
-
-    if (ok)
+    while (dialog->exec() == QDialog::Accepted)
     {
+        settings->setValue(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_GEOMETRY, dialog->saveGeometry());
         QDialog *dialog2 = new QDialog(Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -962,6 +1033,10 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
             QTimer::singleShot(0, this, [dialog2] { dialog2->adjustSize(); });
         });
 
+        // Cancel in this dialog, in the Save As chooser, or an error opening
+        // the output means "back to the editor", not "discard the edits".
+        bool done = false;
+
         if (dialog2->exec() == QDialog::Accepted)
         {
             settings->setValue(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_ACTION, combo2->currentIndex());
@@ -991,6 +1066,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                     });
 
                     loop.exec();
+                    done = true;
                 }
                 else
                 {
@@ -1018,6 +1094,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                         romfsFile.close();
 
                         settings->setValue(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_SAVE_PATH, path);
+                        done = true;
                     }
                     else
                     {
@@ -1030,9 +1107,22 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         }
 
         delete dialog2;
+
+        if (done)
+        {
+            break;
+        }
     }
 
+    settings->setValue(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_GEOMETRY, dialog->saveGeometry());
+
     delete dialog;
+
+    if (m_romfsOperationFailed)
+    {
+        romfsOperationIncomplete(Tr::tr("Edit ROMFS"), true);
+        return;
+    }
 
     if (wasConnected) connectClicked(false, QString(), false, false, false, true);
 }
@@ -1094,6 +1184,9 @@ void OpenMVPlugin::resetRomfsClicked()
         }
 
 
+        // Marks the session for the auto-reconnect gate (the editor's own connect
+        // calls below are direct) and clears the bootloaders' failure flag.
+        RomfsSessionGuard romfsSession(this);
         bool wasConnected = m_connected;
 
         QEventLoop loop;
@@ -1110,6 +1203,12 @@ void OpenMVPlugin::resetRomfsClicked()
         });
 
         loop.exec();
+
+        if (m_romfsOperationFailed)
+        {
+            romfsOperationIncomplete(Tr::tr("Reset ROMFS"), true);
+            return;
+        }
 
         if (wasConnected) connectClicked(false, QString(), false, false, false, true);
     }

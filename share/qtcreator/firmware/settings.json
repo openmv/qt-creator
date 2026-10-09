@@ -1259,6 +1259,66 @@
             }
         },
         {
+            "hidden" : true,
+            "boardType" : "N6",
+            "boardArchString" : "OpenMV N6 Classic",
+            "boardDisplayName" : "OpenMV N6 Classic (STM32N657)",
+            "boardFirmwareFolder" : "OPENMV_N6_CLASSIC",
+            "highSpeed" : true,
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "0483:df11",
+            "bootloaderType" : "internal",
+            "bootloaderSettings" : {
+                "fallbackBootloader" : {
+                    "useSTCubeProgrammer" : true,
+                    "vidpid" : "37C5:9208",
+                    "type" : "openmv_dfu"
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 25165824,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "onnx",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 32
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "stedgeai",
+                        "args" : [
+                            "--target stm32n6",
+                            "--st-neural-art default@neuralart.json"
+                        ],
+                        "jsonFilePath" : "OPENMV_N6_CLASSIC/neuralart.json",
+                        "mpoolFilePath" : "OPENMV_N6_CLASSIC/stm32n6.mpool"
+                    }
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
             "hidden" : false,
             "boardType" : "N6",
             "boardArchString" : "OpenMV N6",

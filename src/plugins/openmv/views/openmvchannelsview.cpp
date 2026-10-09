@@ -499,6 +499,9 @@ static bool depthMeasured(double value)
 // and clips each tile's histogram at this multiple of a flat one, the usual
 // CLAHE settings.
 static const double DEPTH_RANGE_CLIP = 0.01;
+// Largest depth frame accepted (pixels). Bounds the buffers a script can make
+// the IDE allocate, and keeps the width*height products below in range.
+static const qint64 DEPTH_MAX_PIXELS = Q_INT64_C(1) << 22;
 static const double DEPTH_RANGE_EASING = 0.25;
 static const int DEPTH_TILE_SIZE = 8;
 static const int DEPTH_TILES_MAX = 8;
@@ -521,7 +524,12 @@ void OpenMVChannelDepth::setData(const QByteArray &data, int width, int height, 
         return;
     }
 
-    if((width <= 0) || (height <= 0) || (data.size() < int(sizeof(float)) * width * height))
+    // 64-bit products: a hostile w*h would otherwise wrap the int size check
+    // while the size_t memcpy length did not.
+    const qint64 pixels = qint64(width) * qint64(height);
+
+    if((width <= 0) || (height <= 0) || (pixels > DEPTH_MAX_PIXELS)
+    || (qint64(data.size()) < (qint64(sizeof(float)) * pixels)))
     {
         return;
     }
@@ -530,8 +538,8 @@ void OpenMVChannelDepth::setData(const QByteArray &data, int width, int height, 
     m_height = height;
     m_min = min;
     m_max = (max != min) ? max : (min + 1.0);
-    m_values.resize(width * height);
-    memcpy(m_values.data(), data.constData(), sizeof(float) * width * height);
+    m_values.resize(int(pixels));
+    memcpy(m_values.data(), data.constData(), size_t(sizeof(float) * pixels));
 
     // The frame's own range and mean, for the header and the curves.
     double low = 0.0;
@@ -2554,9 +2562,19 @@ void OpenMVChannelWaveform::setData(const QByteArray &data, const QString &typec
         return;
     }
 
-    QVector<float> decoded = decodeSamples(data, typecode, per * count);
+    // 64-bit product: an overflowed (negative) count would pass the size
+    // check below and index an empty vector. Every sample is at least one
+    // byte, so a total beyond the payload can't be complete either.
+    const qint64 total = qint64(per) * qint64(count);
 
-    if(decoded.size() < (per * count))
+    if((total <= 0) || (total > qint64(data.size())))
+    {
+        return;
+    }
+
+    QVector<float> decoded = decodeSamples(data, typecode, int(total));
+
+    if(decoded.size() < int(total))
     {
         return;
     }
@@ -2879,9 +2897,18 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
     {
         if(record.recorder)
         {
+            QString key = QStringLiteral("%1/%2/%3").arg(record.channelName, record.name, record.wtype);
+
+            // Two records with the same channel/name/type can't both be
+            // handed back (the key is all there is to match on): close the
+            // earlier one now so its file is finalized rather than orphaned.
+            if(running.contains(key))
+            {
+                delete running.value(key).recorder;
+            }
+
             record.recorder->setParent(this);
-            running.insert(QStringLiteral("%1/%2/%3").arg(record.channelName, record.name, record.wtype),
-                           Running{record.recorder, record.groupStarted});
+            running.insert(key, Running{record.recorder, record.groupStarted});
             record.recorder = Q_NULLPTR;
         }
     }
@@ -3569,7 +3596,7 @@ void OpenMVChannelsView::patchContent(QList<Record> &records)
                 int width = int(built.rec.value(qint64(CBOR_KEY_W)).toInteger());
                 int height = int(built.rec.value(qint64(CBOR_KEY_H)).toInteger());
                 samples = 1;
-                series = qMax(1, width * height);
+                series = int(qBound(Q_INT64_C(1), qint64(width) * qint64(height), DEPTH_MAX_PIXELS));
                 typecode = QStringLiteral("f");
             }
             else
@@ -3850,7 +3877,10 @@ void OpenMVChannelsView::channelsData(const QVariantList &channels)
     bool thaw = m_frozen;
     m_frozen = false;
 
-    if(schema != m_schema)
+    // The schema is a joined string, so a record name or option containing
+    // the separators can make differently-shaped lists compare equal; the
+    // count check keeps patchContent()'s positional indexing in bounds.
+    if((schema != m_schema) || (records.size() != m_records.size()))
     {
         buildContent(records);
         m_schema = schema;
@@ -3951,7 +3981,7 @@ OpenMVChannelRecorder::Info OpenMVChannelsView::infoFor(const Record &record) co
         // A depth frame is one row of w*h float32 values with no sample rate.
         int width = int(record.rec.value(qint64(CBOR_KEY_W)).toInteger());
         int height = int(record.rec.value(qint64(CBOR_KEY_H)).toInteger());
-        info.columns = width * height;
+        info.columns = int(qBound(Q_INT64_C(1), qint64(width) * qint64(height), DEPTH_MAX_PIXELS));
         info.typecode = QStringLiteral("f");
         info.gap = false;
         return info;
@@ -4315,6 +4345,14 @@ void OpenMVChannelsView::toggleGroupRecording(int index)
 void OpenMVChannelsView::stageWrite(const QString &channelName, const QString &recordName,
                                     const QCborValue &value)
 {
+    // Frozen = the script stopped (or the camera is going away): disabling a
+    // focused spinbox can still commit its text and emit a change, which
+    // must not turn into a write.
+    if(m_frozen)
+    {
+        return;
+    }
+
     // Skip the next couple of renders for this channel: a read may already be
     // in flight carrying pre-write data that would snap the control back.
     m_skipRenders[channelName] = 2;

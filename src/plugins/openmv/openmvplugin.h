@@ -600,7 +600,7 @@ private:
     // repo's examples/index.csv appended, so vendor examples filter to their
     // boards. appendExampleFilters() reads one index.csv into m_exampleFilters.
     void loadExampleFilters(const QString &examplesFolder);
-    void appendExampleFilters(const Utils::FilePath &indexCsv);
+    void appendExampleFilters(const Utils::FilePath &indexCsv, const Utils::FilePath &root);
 
 public:
     enum DevResourcePart { DevExamples = 1, DevDocs = 2, DevFirmware = 4 };
@@ -652,7 +652,8 @@ private:
                              const QString &selectedDfuDevice,
                              OpenMVROMFSAccess romfsAccess = OPENMV_ROMFS_NONE,
                              const QString &extraMessage = QString(),
-                             bool forceBootloaderEntry = false);
+                             bool forceBootloaderEntry = false,
+                             const QString &customBundleDir = QString());
     void openmvIMXBootloader(const QString &forceFirmwarePath,
                              bool forceFlashFSErase,
                              bool justEraseFlashFs,
@@ -846,6 +847,33 @@ private:
     QComboBox *m_frameBufferSource;
     int m_frameBufferSourceSavedIndex = -1; // Index restored from settings, pending the first connect's list rebuild.
 
+    // ROMFS editor session state. The editor drives its own connect/bootloader
+    // calls while a modal dialog is up, so the auto-reconnect scan must stay
+    // out of the way for the whole of editRomfsClicked()/resetRomfsClicked();
+    // the bootloaders flag a ROMFS read/write that did not complete (cancelled
+    // or failed) so the editor neither unpacks a partial image nor waits 10 s
+    // for a camera that is still sitting in the bootloader.
+    bool m_romfsSessionActive = false;
+    bool m_romfsOperationFailed = false;
+
+    struct RomfsSessionGuard
+    {
+        explicit RomfsSessionGuard(OpenMVPlugin *p) : plugin(p)
+        {
+            plugin->m_romfsSessionActive = true;
+            plugin->m_romfsOperationFailed = false;
+        }
+
+        ~RomfsSessionGuard()
+        {
+            plugin->m_romfsSessionActive = false;
+        }
+
+        OpenMVPlugin *plugin;
+    };
+
+    void romfsOperationIncomplete(const QString &title, bool write);
+
     bool frameBufferDisabled() const
     {
         // Item data is a qlonglong: -1 = off, 0 = on, else a 32-bit chip id
@@ -973,6 +1001,7 @@ private:
         QRegularExpression boardType;
         QRegularExpression sensorType;
         QString flatten;
+        QString root; // Examples dir the index.csv belongs to; rows only apply to files below it.
     }
     exampleFilter_t;
 

@@ -831,9 +831,14 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     bool reformat = false;
     bool mjpeg = false;
 
+    // Frame files are qualified by this process id so two IDE instances
+    // converting same-named files don't interleave frames, and so leftovers
+    // from an earlier run can be told apart and swept (below).
+    const QString frameBase = QFileInfo(dst).completeBaseName() + QStringLiteral("-") + QString::number(QCoreApplication::applicationPid());
+
     if(dst.toLower().endsWith(QStringLiteral(".bin")))
     {
-        newDst = videoTempDir() + QDir::separator() + QFileInfo(dst).completeBaseName() + QStringLiteral("-%07d.jpg");
+        newDst = videoTempDir() + QDir::separator() + frameBase + QStringLiteral("-%07d.jpg");
         reformat = true;
     }
 
@@ -843,7 +848,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
         mjpeg = true;
     }
 
-    float fps, *fpsPtr = &fps;
+    float fps = 0.0f, *fpsPtr = &fps; // 0 = ffmpeg didn't report one; a 30 fps period is used then
     QRegularExpression fpsRegex(QStringLiteral("Video:.*?,\\s*(\\d+(?:\\.\\d+)?)\\s+fps,"));
 
     Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
@@ -1080,7 +1085,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
 
         if(file.open(QIODevice::WriteOnly))
         {
-            QStringList list = QDir(QFileInfo(newDst).path()).entryList(QStringList() << (QFileInfo(dst).completeBaseName() + QStringLiteral("-*.jpg")));
+            QStringList list = QDir(QFileInfo(newDst).path()).entryList(QStringList() << (frameBase + QStringLiteral("-*.jpg")));
 
             QProgressDialog progress(Tr::tr("Transcoding File..."), Tr::tr("Cancel"), 0, list.size(), Core::ICore::dialogParent(),
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
@@ -1104,7 +1109,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
                     QImage image = QImage::fromData(in.readAll());
                     QByteArray out = jpgToBytes(image);
 
-                    serializeLong(data, qCeil(1000 / fps));
+                    serializeLong(data, (fps > 0.0f) ? qCeil(1000 / fps) : 33);
                     serializeLong(data, image.width());
                     serializeLong(data, image.height());
                     serializeLong(data, image.isGrayscale() ? 1 : 2);
@@ -1131,6 +1136,19 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
             QMessageBox::critical(Core::ICore::dialogParent(),
                 Tr::tr("Convert Video"),
                 Tr::tr("Unable to open output video file!"));
+        }
+    }
+
+    if(reformat)
+    {
+        // Frames are consumed as they are packed; whatever is left (dialog
+        // rejected, ffmpeg or the output write failed) must not be folded
+        // into the next conversion with the same name.
+        QDir frames(QFileInfo(newDst).path());
+
+        for(const QString &name : frames.entryList(QStringList() << (frameBase + QStringLiteral("-*.jpg")), QDir::Files))
+        {
+            frames.remove(name);
         }
     }
 

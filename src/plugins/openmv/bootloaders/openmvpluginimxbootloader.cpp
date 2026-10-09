@@ -337,7 +337,14 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
         {
             if ((romfsAccess == OPENMV_ROMFS_READ) || (romfsAccess == OPENMV_ROMFS_WRITE))
             {
-                imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess);
+                // False = cancelled (blhost killed, no message) or failed
+                // (message already shown); either way the board is still in
+                // the bootloader and the editor must not treat it as done.
+                if(!imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess))
+                {
+                    m_romfsOperationFailed = true;
+                }
+
                 CONNECT_END();
             }
             else if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess))
@@ -390,7 +397,14 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
         {
             if ((romfsAccess == OPENMV_ROMFS_READ) || (romfsAccess == OPENMV_ROMFS_WRITE))
             {
-                imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess);
+                // False = cancelled (blhost killed, no message) or failed
+                // (message already shown); either way the board is still in
+                // the bootloader and the editor must not treat it as done.
+                if(!imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess))
+                {
+                    m_romfsOperationFailed = true;
+                }
+
                 CONNECT_END();
             }
             else if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess))

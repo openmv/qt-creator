@@ -171,7 +171,19 @@ static bool parseConfig(const Utils::FilePath &vendorDir, OpenMVThirdParty::Repo
 
 static QStringList vendorFolderNames(const Utils::FilePath &root)
 {
-    return QDir(root.toString()).entryList(QDir::Dirs | QDir::NoDotAndDotDot, QDir::Name);
+    QStringList names = QDir(root.toString()).entryList(QDir::Dirs | QDir::NoDotAndDotDot, QDir::Name);
+
+    // "<id>.old" is a repository set aside by a reinstall in progress (or one
+    // that died midway); it must not show up as a second copy of the vendor.
+    for (int i = names.size() - 1; i >= 0; i--)
+    {
+        if (names.at(i).endsWith(QStringLiteral(".old")))
+        {
+            names.removeAt(i);
+        }
+    }
+
+    return names;
 }
 
 // VID:PID parsing that mirrors matchVidPid()/isBootloaderType() in
@@ -796,6 +808,33 @@ static bool installArchiveToPart(const QByteArray &data, const Utils::FilePath &
     buffer.open(QIODevice::ReadOnly);
     QZipReader reader(&buffer);
 
+    // QZipReader writes <staging>/<entry path> as-is (only leading "./" and
+    // "/" are stripped) and creates symlink entries before the files, so an
+    // entry like "x/../../y" or a link pointing outside would write outside
+    // the staging dir, and a top-level link would be renamed in as the part.
+    // Reject anything that is not a plain relative path.
+    const QList<QZipReader::FileInfo> zipEntries = reader.fileInfoList();
+
+    for (const QZipReader::FileInfo &fi : zipEntries)
+    {
+        const QString clean = QDir::cleanPath(fi.filePath);
+
+        if (fi.isSymLink
+        || clean.isEmpty()
+        || QDir::isAbsolutePath(clean)
+        || clean.startsWith(QLatin1Char('/'))
+        || clean.contains(QLatin1Char(':'))
+        || (clean == QStringLiteral(".."))
+        || clean.startsWith(QStringLiteral("../"))
+        || clean.contains(QStringLiteral("/../"))
+        || clean.endsWith(QStringLiteral("/..")))
+        {
+            *error = Tr::tr("the downloaded archive contains an unsafe entry \"%L1\"").arg(fi.filePath);
+            staging.removeRecursively();
+            return false;
+        }
+    }
+
     if (!reader.extractAll(staging.toString()))
     {
         *error = Tr::tr("failed to extract the downloaded archive");
@@ -813,11 +852,16 @@ static bool installArchiveToPart(const QByteArray &data, const Utils::FilePath &
     }
 
     Utils::FilePath target = vendorDir.pathAppended(part);
-    QString removeError;
 
-    if (!target.removeRecursively(&removeError))
+    // Move the live part aside rather than deleting it, so a failed rename
+    // (a locked file, an AV scan of the fresh extraction) does not leave the
+    // vendor without a part until the next release.
+    Utils::FilePath previous = vendorDir.pathAppended(part + QStringLiteral(".old"));
+    previous.removeRecursively();
+
+    if (target.exists() && (!QDir().rename(target.toString(), previous.toString())))
     {
-        *error = removeError;
+        *error = Tr::tr("failed to move the existing \"%L1\" folder aside").arg(part);
         staging.removeRecursively();
         return false;
     }
@@ -825,9 +869,17 @@ static bool installArchiveToPart(const QByteArray &data, const Utils::FilePath &
     if (!QDir().rename(staging.pathAppended(entries.first()).toString(), target.toString()))
     {
         *error = Tr::tr("failed to move the extracted folder into place");
+
+        if (previous.exists())
+        {
+            QDir().rename(previous.toString(), target.toString());
+        }
+
         staging.removeRecursively();
         return false;
     }
+
+    previous.removeRecursively();
 
     staging.removeRecursively();
     return true;
@@ -1176,6 +1228,7 @@ bool OpenMVThirdParty::installFromUrl(const QUrl &url, bool overwrite, QString *
     }
 
     Utils::FilePath vendorDir = writableRoot().pathAppended(remote.id);
+    Utils::FilePath previousVendorDir;
 
     if (vendorDir.exists())
     {
@@ -1185,17 +1238,32 @@ bool OpenMVThirdParty::installFromUrl(const QUrl &url, bool overwrite, QString *
             return false;
         }
 
-        if (!vendorDir.removeRecursively(error))
+        // Reinstall: set the working repo aside until the new one is fully
+        // installed, so a failed download does not leave nothing behind.
+        previousVendorDir = writableRoot().pathAppended(remote.id + QStringLiteral(".old"));
+        previousVendorDir.removeRecursively();
+
+        if (!QDir().rename(vendorDir.toString(), previousVendorDir.toString()))
         {
+            *error = Tr::tr("failed to move the existing repository \"%L1\" aside").arg(remote.id);
             return false;
         }
     }
+
+    auto restorePrevious = [&] () {
+        vendorDir.removeRecursively();
+
+        if (previousVendorDir.exists())
+        {
+            QDir().rename(previousVendorDir.toString(), vendorDir.toString());
+        }
+    };
 
     vendorDir.ensureWritableDir();
 
     if (!writeVendorFile(vendorDir.pathAppended(QStringLiteral("config.json")), data, error))
     {
-        vendorDir.removeRecursively();
+        restorePrevious();
         return false;
     }
 
@@ -1211,10 +1279,11 @@ bool OpenMVThirdParty::installFromUrl(const QUrl &url, bool overwrite, QString *
 
     if (!installParts(check, error, parent))
     {
-        vendorDir.removeRecursively();
+        restorePrevious();
         return false;
     }
 
+    previousVendorDir.removeRecursively();
     return true;
 }
 
@@ -1378,7 +1447,8 @@ QStringList OpenMVThirdParty::overridesText(const QList<OverrideRecord> &overrid
 // overridden. index.csv / index.json are ignored (filter/manifest metadata that
 // is aggregated, not overridden).
 static void appendResourceOverrides(const QList<OpenMVThirdParty::Repo> &repos,
-                                    const QString &part, const QString &kind, QStringList *lines)
+                                    const QString &part, const QString &kind, QStringList *lines,
+                                    const QString &basePart = QString())
 {
     QList<QPair<QString, QString> > roots; // (directory, owner label), highest priority first
 
@@ -1399,7 +1469,7 @@ static void appendResourceOverrides(const QList<OpenMVThirdParty::Repo> &repos,
         return;
     }
 
-    Utils::FilePath base = Core::ICore::allUsersResourcePath(part);
+    Utils::FilePath base = Core::ICore::allUsersResourcePath(basePart.isEmpty() ? part : basePart);
 
     if (base.exists())
     {
@@ -1445,7 +1515,7 @@ QStringList OpenMVThirdParty::overrideLines(const QList<Repo> &repos,
 
     appendResourceOverrides(repos, QStringLiteral("examples"), Tr::tr("example"), &lines);
     appendResourceOverrides(repos, QStringLiteral("models"), Tr::tr("model"), &lines);
-    appendResourceOverrides(repos, QStringLiteral("stubs"), Tr::tr("stub"), &lines);
+    appendResourceOverrides(repos, QStringLiteral("stubs"), Tr::tr("stub"), &lines, QStringLiteral("html/stubs")); // the IDE's own stubs ship in html/stubs
 
     return lines;
 }

@@ -1022,7 +1022,7 @@ void OpenMVPlugin::bootloaderClicked()
                 // downloading.
                 QFile zipFile(forceFirmwarePath);
                 QByteArray zipData = zipFile.open(QIODevice::ReadOnly) ? zipFile.readAll() : QByteArray();
-                const QString bundleDir = QDir::tempPath() + QStringLiteral("/openmv-custom-fw");
+                const QString bundleDir = QDir::tempPath() + QStringLiteral("/openmv-custom-fw-") + QString::number(QCoreApplication::applicationPid()); // per process: another IDE instance must not wipe it mid-flash
                 QDir(bundleDir).removeRecursively();
 
                 if((!zipData.isEmpty()) && QDir().mkpath(bundleDir) && extractZipToDir(zipData, bundleDir))
@@ -1329,7 +1329,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
     // that unrelated processes churn, and makes the romfs*.img wildcard-clear
     // below safe (it can only ever touch our own staged files). Recreated fresh
     // each flash so nothing stale survives.
-    const QString stagingDir = QDir::cleanPath(QDir::tempPath() + QStringLiteral("/openmv-fw-staging"));
+    const QString stagingDir = QDir::cleanPath(QDir::tempPath() + QStringLiteral("/openmv-fw-staging-") + QString::number(QCoreApplication::applicationPid())); // per process (see aboutToShutdown for cleanup)
     QDir(stagingDir).removeRecursively();
     QDir().mkpath(stagingDir);
 
@@ -3384,7 +3384,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                         selectedDfuDevice,
                                         romfsAccess,
                                         QString(),
-                                        forceBootloaderEntry);
+                                        forceBootloaderEntry,
+                                        customFirmwareBundleDir);
                 }
 
                 return;
@@ -3486,6 +3487,18 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                         CONNECT_END();
                     }
+                }
+
+                // The SE-tools path only knows the release image; a dev or
+                // custom-zip install requested for a board in SE mode would
+                // otherwise flash the release build and report success.
+                if(installTheLatestDevelopmentFirmware)
+                {
+                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
+                        Tr::tr("Connect"),
+                        Tr::tr("Only firmware recovery is supported using the Alif Semiconductor's SE Tools."));
+
+                    CONNECT_END();
                 }
 
                 openmvAlifBootloader(forceFirmwarePath,
@@ -4144,6 +4157,14 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         m_queue.clear();
         m_cameraQueue.clear();
         m_connected = true;
+
+        // The drive scan timer stops 10 s after the last USB event, which can
+        // be before (or long before) this connect: make sure the bounded
+        // serial-match retries actually get to run.
+        if(!m_driveScanTimer->isActive())
+        {
+            m_driveScanTimer->start(1000);
+        }
         m_processEventsTimer->start(1);
         m_running = false;
         m_portName = selectedPort;
@@ -4590,6 +4611,7 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             }
 
             m_jpgCompress->setVisible(false);
+            m_frameFormatName.clear(); // else the title keeps "(JPEG)" over "No Image"
 
             if (!m_boardType.isEmpty() && v2ProtocolEnabled)
             {
@@ -5294,7 +5316,11 @@ void OpenMVPlugin::updateCam(bool forceYes)
 
 QJsonObject OpenMVPlugin::getBoardSettings(const QString &title, Utils::QtcSettings *settings, bool autoConnectToBoard)
 {
-    if (m_nonDFUBoardPresent && (!m_working) && autoConnectToBoard)
+    // Only connect when not already connected: m_nonDFUBoardPresent stays
+    // true while connected (the scan only runs when disconnected), and
+    // connectClicked() on a connected cam does a full disconnect/reconnect
+    // cycle just to read the board type that is already known.
+    if (m_nonDFUBoardPresent && (!m_working) && (!m_connected) && autoConnectToBoard)
     {
         QEventLoop loop;
         connect(this, &OpenMVPlugin::workingDone, &loop, &QEventLoop::quit);

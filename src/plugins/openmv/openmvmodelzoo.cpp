@@ -44,8 +44,10 @@
 namespace OpenMV {
 namespace Internal {
 
-static void appendModelFilters(const QString &indexCsvPath, QList<modelFilter_t> &modelFilters)
+static void appendModelFilters(const QString &indexCsvPath, const QString &root, QList<modelFilter_t> &modelFilters)
 {
+    const QString cleanRoot = QDir::cleanPath(QDir::fromNativeSeparators(root)) + QLatin1Char('/');
+
     QFile filters(indexCsvPath);
 
     if(filters.open(QIODevice::ReadOnly))
@@ -65,6 +67,7 @@ static void appendModelFilters(const QString &indexCsvPath, QList<modelFilter_t>
                 filter.boardType = QRegularExpression(regexes.captured(2));
                 filter.boardType.optimize();
                 filter.boardType.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
+                filter.root = cleanRoot;
 
                 modelFilters.append(filter);
             }
@@ -85,7 +88,8 @@ OpenMVModelZooBrowserFilter::OpenMVModelZooBrowserFilter(const QJsonObject &boar
 
     // The released models' filters, then each third-party repo's models/index.csv
     // so vendor models filter to their boards (matched by their own path regex).
-    appendModelFilters(Core::ICore::allUsersResourcePath(QStringLiteral("models/index.csv")).toString(), m_modelFilters);
+    appendModelFilters(Core::ICore::allUsersResourcePath(QStringLiteral("models/index.csv")).toString(),
+                       Core::ICore::allUsersResourcePath(QStringLiteral("models")).toString(), m_modelFilters);
 
     for(const OpenMVThirdParty::Repo &repo : OpenMVThirdParty::scanRepos())
     {
@@ -93,7 +97,7 @@ OpenMVModelZooBrowserFilter::OpenMVModelZooBrowserFilter(const QJsonObject &boar
 
         if(indexCsv.exists())
         {
-            appendModelFilters(indexCsv.toString(), m_modelFilters);
+            appendModelFilters(indexCsv.toString(), repo.writablePath.pathAppended(QStringLiteral("models")).toString(), m_modelFilters);
         }
     }
 }
@@ -136,8 +140,18 @@ bool OpenMVModelZooBrowserFilter::filterAcceptsRow(int sourceRow, const QModelIn
         boardType = m_boardSettings.value(QStringLiteral("boardFirmwareFolder")).toString();
     }
 
+    const QString cleanFilePath = QDir::cleanPath(QDir::fromNativeSeparators(filePath));
+
     for(const modelFilter_t &filter : m_modelFilters)
     {
+        // Base rows come first and their path regexes are unanchored, so
+        // without this a base row would capture a vendor's same-named model
+        // before the vendor's own rows are consulted.
+        if(!cleanFilePath.startsWith(filter.root, Utils::HostOsInfo::fileNameCaseSensitivity()))
+        {
+            continue;
+        }
+
         if(filter.path.match(filePath).hasMatch())
         {
             if((!filter.boardType.pattern().isEmpty())
@@ -276,6 +290,31 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
                 // OPENMV-DIFF //
             }
         });
+
+        // MergedFilesystemModel emits directoryLoaded exactly once, synchronously
+        // from setRoots() above - before the connection just made existed - and
+        // never again, so the restore has to be replayed once the dialog is
+        // showing (the first paint). Without this the tree always opens
+        // collapsed and the saved selection (gated on the list being consumed)
+        // is never applied either.
+        if (!m_listToExpand.isEmpty())
+        {
+            QObject *replay = new QObject(this);
+
+            connect(m_treeView, &OpenMVModelZooBrowserTreeView::paintEventSignal, replay, [this, replay] () {
+                if (m_treeView->isVisible())
+                {
+                    QTimer::singleShot(0, this, [this] {
+                        if (m_treeView->isVisible() && (!m_listToExpand.isEmpty()))
+                        {
+                            restoreExpandedState(QString(), m_treeView->rootIndex());
+                        }
+                    });
+
+                    replay->deleteLater(); // one shot
+                }
+            });
+        }
 
         connect(m_treeView, &OpenMVModelZooBrowserTreeView::paintEventSignal, this, [this] () {
             if (m_listToExpand.isEmpty() && (!m_initialized) && m_settings->contains(SETTINGS_GROUP "/" LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX))

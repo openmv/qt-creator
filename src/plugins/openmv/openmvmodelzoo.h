@@ -46,6 +46,7 @@ typedef struct modelFilter
 {
     QRegularExpression path;
     QRegularExpression boardType;
+    QString root; // Models dir the index.csv belongs to; rows only apply to files below it.
 }
 modelFilter_t;
 

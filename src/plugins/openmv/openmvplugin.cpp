@@ -3620,9 +3620,12 @@ bool OpenMVPlugin::delayedInitialize()
 
             updateConnectIcon();
 
-            if(m_nonDFUBoardPresent && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected) && (!m_firmwareUpdateInProgress) && (!loaderDialogActive()))
+            // (m_romfsSessionActive: the ROMFS editor is mid-session - its
+            // read ends with a reset that re-enumerates the cam, and an
+            // auto-reconnect would then connect underneath the modal editor.)
+            if(m_nonDFUBoardPresent && m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected) && (!m_firmwareUpdateInProgress) && (!loaderDialogActive()) && (!m_romfsSessionActive))
             {
-                QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected) && (!m_firmwareUpdateInProgress) && (!loaderDialogActive())) emit m_connectAction->triggered(); });
+                QTimer::singleShot(1000, this, [this] { if(m_autoReconnectAction->isChecked() && (!m_working) && (!m_connected) && (!m_firmwareUpdateInProgress) && (!loaderDialogActive()) && (!m_romfsSessionActive)) emit m_connectAction->triggered(); });
             }
         });
 
@@ -3640,6 +3643,9 @@ bool OpenMVPlugin::delayedInitialize()
         QTimer::singleShot(0, scanSerialPortsThread, &ScanSerialPortsThread::scanSerialPortsSlot);
     }
 
+    // 10 s hardware-event scan window, shared by the drive-scan and scan-window blocks below.
+    QTimer *scanWindowTimer = new QTimer(this);
+
     // Scan Drives
     {
         QThread *thread = new QThread;
@@ -3654,11 +3660,22 @@ bool OpenMVPlugin::delayedInitialize()
         // drive serial-matches or the bounded retry window elapses. This lets a
         // later scan supersede an early one taken before the cam's USB drive (or
         // its serial) had populated, without spawning PowerShell forever.
-        connect(m_driveScanTimer, &QTimer::timeout, this, [this] () {
+        connect(m_driveScanTimer, &QTimer::timeout, this, [this, scanWindowTimer] () {
             const bool resolved = camDriveResolved();
+            const bool retrying = m_connected && (!resolved) && (m_driveRescanAttempts < DRIVE_RESCAN_MAX_ATTEMPTS);
+
+            // Past the hardware-event window the timer only lives for the
+            // bounded connected-but-unresolved retries; anything else
+            // (disconnected, no volumes at all) would otherwise spawn a
+            // PowerShell scan every second for the whole session.
+            if ((!scanWindowTimer->isActive()) && (!retrying)) {
+                m_driveScanTimer->stop();
+                return;
+            }
+
             const bool needRescan = (!m_connected)
                                  || m_availableDrives.isEmpty()
-                                 || ((!resolved) && (m_driveRescanAttempts < DRIVE_RESCAN_MAX_ATTEMPTS));
+                                 || retrying;
 
             if (needRescan) {
                 if (m_connected && (!resolved)) {
@@ -3690,13 +3707,20 @@ bool OpenMVPlugin::delayedInitialize()
     // Scan Window (hardware-event-driven, macOS, Windows, and Linux)
     {
 #if defined(Q_OS_MAC) || defined(Q_OS_WIN) || defined(Q_OS_LINUX)
-        QTimer *scanWindowTimer = new QTimer(this);
         scanWindowTimer->setSingleShot(true);
 
         // Stop both scan timers when the window expires
         connect(scanWindowTimer, &QTimer::timeout, this, [this]() {
             m_serialScanTimer->stop();
-            m_driveScanTimer->stop();
+
+            // Leave the drive scan running while a connected cam's drive is
+            // still unresolved and retries remain - the retry counter only
+            // advances on these ticks, so stopping here made the bounded
+            // single-drive fallback unreachable whenever the cam was plugged
+            // in more than ~10 s before it connected.
+            if (!(m_connected && (!camDriveResolved()) && (m_driveRescanAttempts < DRIVE_RESCAN_MAX_ATTEMPTS))) {
+                m_driveScanTimer->stop();
+            }
         });
 
         // Restart window on any hardware event (USB plug/unplug, disk mount/dismount)
@@ -3777,6 +3801,11 @@ void OpenMVPlugin::showLEDStatesDialog()
 
 ExtensionSystem::IPlugin::ShutdownFlag OpenMVPlugin::aboutToShutdown()
 {
+    // Per-process firmware staging dirs (getTheLatestDevelopmentFirmware,
+    // bootloaderClicked's custom zip); nothing else cleans them up.
+    QDir(QDir::tempPath() + QStringLiteral("/openmv-fw-staging-") + QString::number(QCoreApplication::applicationPid())).removeRecursively();
+    QDir(QDir::tempPath() + QStringLiteral("/openmv-custom-fw-") + QString::number(QCoreApplication::applicationPid())).removeRecursively();
+
     if(!m_connected)
     {
         if(!m_working)
@@ -4841,7 +4870,8 @@ void OpenMVPlugin::loadExampleFilters(const QString &examplesFolder)
     m_exampleFilters = QList<exampleFilter_t>();
 
     // The released (or dev) examples folder's filters...
-    appendExampleFilters(Core::ICore::allUsersResourcePath(examplesFolder + QStringLiteral("/index.csv")));
+    appendExampleFilters(Core::ICore::allUsersResourcePath(examplesFolder + QStringLiteral("/index.csv")),
+                         Core::ICore::allUsersResourcePath(examplesFolder));
 
     // ...then each third-party repo that ships examples, so vendor examples
     // filter to their own boards (matched by path regex, which targets each
@@ -4852,13 +4882,16 @@ void OpenMVPlugin::loadExampleFilters(const QString &examplesFolder)
 
         if(indexCsv.exists())
         {
-            appendExampleFilters(indexCsv);
+            appendExampleFilters(indexCsv, repo.writablePath.pathAppended(QStringLiteral("examples")));
         }
     }
 }
 
-void OpenMVPlugin::appendExampleFilters(const Utils::FilePath &indexCsv)
+void OpenMVPlugin::appendExampleFilters(const Utils::FilePath &indexCsv, const Utils::FilePath &root)
 {
+    // Same normalization as matchExample()'s file path, so prefix tests line up.
+    const QString cleanRoot = QDir::cleanPath(QDir::fromNativeSeparators(root.toString())) + QLatin1Char('/');
+
     QFile filters(indexCsv.toString());
 
     if(filters.open(QIODevice::ReadOnly))
@@ -4882,6 +4915,7 @@ void OpenMVPlugin::appendExampleFilters(const Utils::FilePath &indexCsv)
                 filter.sensorType.optimize();
                 filter.sensorType.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
                 filter.flatten = regexes.captured(4);
+                filter.root = cleanRoot;
 
                 m_exampleFilters.append(filter);
             }
@@ -6469,6 +6503,15 @@ bool OpenMVPlugin::matchExample(const QString &filePath, QString *flattenRegex)
 
     for(const exampleFilter_t &filter : m_exampleFilters)
     {
+        // The path regexes are unanchored ("examples/00-HelloWorld/...") and
+        // the base rows are listed first, so without this a base row would
+        // capture a vendor's same-named example and its own rows (which may
+        // restrict it to the vendor's boards) would never be consulted.
+        if(!cleanFilePath.startsWith(filter.root, Utils::HostOsInfo::fileNameCaseSensitivity()))
+        {
+            continue;
+        }
+
         if(filter.path.match(cleanFilePath).hasMatch() && filter.boardType.match(exampleBoardType).hasMatch() && filter.sensorType.match(m_sensorType).hasMatch())
         {
             *flattenRegex = filter.flatten;

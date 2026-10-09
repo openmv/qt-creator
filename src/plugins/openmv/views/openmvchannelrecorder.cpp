@@ -40,6 +40,10 @@ namespace Internal {
 enum : qint64 {
     RECORD_MAX_PART_ROWS  = 1000000,
     RECORD_MAX_PART_BYTES = Q_INT64_C(512) * 1024 * 1024,
+    // The Edge Impulse formats are held in memory until the part finishes and
+    // then encoded through QCborArray/QJsonArray, which transiently costs
+    // several times the raw doubles: roll those parts much earlier.
+    RECORD_MAX_BUFFERED_PART_BYTES = Q_INT64_C(64) * 1024 * 1024,
 };
 
 // The samples-per-value width of an array typecode, and whether its values
@@ -789,7 +793,9 @@ bool OpenMVChannelRecorder::append(const QByteArray &data, const QString &typeco
             const uchar *p = reinterpret_cast<const uchar *>(data.constData());
             int written = qMin(actual, m_info.columns);
 
-            m_values.reserve(m_values.size() + (qsizetype(rows) * m_info.columns));
+            // (No per-chunk reserve(): QList::reserve allocates exactly the
+            // requested size, which made every chunk reallocate and copy the
+            // whole buffer - quadratic. Geometric growth is what we want.)
 
             for(int r = 0; r < rows; r++)
             {
@@ -815,9 +821,11 @@ bool OpenMVChannelRecorder::append(const QByteArray &data, const QString &typeco
     // Split before a part grows unwieldy (checked per chunk, so a part can
     // overshoot by at most one chunk's rows). The buffered formats have
     // nothing on disk until the part finishes, so what they hold counts.
-    qint64 partBytes = m_file.size() + (qint64(m_values.size()) * qint64(sizeof(double)));
+    qint64 bufferedBytes = qint64(m_values.size()) * qint64(sizeof(double));
+    qint64 partBytes = m_file.size() + bufferedBytes;
 
-    if(((m_partRows >= RECORD_MAX_PART_ROWS) || (partBytes >= RECORD_MAX_PART_BYTES))
+    if(((m_partRows >= RECORD_MAX_PART_ROWS) || (partBytes >= RECORD_MAX_PART_BYTES)
+    || (bufferedBytes >= RECORD_MAX_BUFFERED_PART_BYTES))
     && (!rollPart()))
     {
         return false;

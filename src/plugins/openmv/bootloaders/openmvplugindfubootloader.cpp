@@ -92,12 +92,17 @@ QString OpenMVPlugin::dfuInterfaceErrorText(const QJsonObject &boardObject,
 void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                                        bool justEraseFlashFs,
                                        bool installTheLatestDevelopmentFirmware,
-                                       const QString &firmwarePath,
+                                       const QString &firmwarePathIn,
                                        const QString &selectedDfuDevice,
                                        OpenMVROMFSAccess romfsAccess,
                                        const QString &extraMessage,
-                                       bool forceBootloaderEntry)
+                                       bool forceBootloaderEntry,
+                                       const QString &customBundleDir)
 {
+    // May be filled in below when the board was already in DFU (the connect
+    // path that normally stages dev/custom firmware never ran).
+    QString firmwarePath = firmwarePathIn;
+
     if(selectedDfuDevice.isEmpty())
     {
         QEventLoop loop;
@@ -261,6 +266,31 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
             && (obj.value(QStringLiteral("bootloaderType")).toString() == QStringLiteral("openmv_dfu")))
             {
                 QJsonObject bootloaderSettings = obj.value(QStringLiteral("bootloaderSettings")).toObject();
+
+                // A dev-release install or a custom zip onto a board that is
+                // already sitting in DFU arrives with no staged image: stage it
+                // here, now that the board is known. Without this the empty path
+                // fell through to the release programCommands below and quietly
+                // flashed the release build instead.
+                if(installTheLatestDevelopmentFirmware && firmwarePath.isEmpty())
+                {
+                    QString folder = obj.value(QStringLiteral("boardFirmwareFolder")).toString();
+
+                    // getTheLatestDevelopmentFirmware() picks the vendor's dev
+                    // channel (vs OpenMV's) through m_boardResourceRoot, which the
+                    // bricked connect path cleared; sync it from the matched row
+                    // the way the IMX bootloader does.
+                    m_boardResourceRoot = obj.value(QStringLiteral("_resourceRoot")).toString();
+
+                    if(!getTheLatestDevelopmentFirmware(folder, &firmwarePath,
+                            obj.value(QStringLiteral("defaultFirmwareName")).toString(),
+                            folder, customBundleDir))
+                    {
+                        CONNECT_END();
+                    }
+
+                    firmwarePathFileName = QFileInfo(firmwarePath).fileName();
+                }
 
                 QJsonArray eraseCommandsArray = bootloaderSettings.value(QStringLiteral("eraseCommands")).toArray();
                 for(const QJsonValue &command : eraseCommandsArray)
@@ -449,9 +479,25 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                              dfuDeviceVidPid, binProgramCommands.first() + QStringLiteral(" --reset") + dfuDeviceSerial,
                              true, binProgramSizes.first());
 
-            if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+            if(process.result() != Utils::ProcessResult::FinishedWithSuccess)
             {
-                CONNECT_END();
+                // Cancelled (dfu-util killed) or failed: the image is partial
+                // and the board is still in DFU (the --reset rode on the
+                // command that just died). Tell the editor rather than let it
+                // "fail to unpack" a half-read file and wait for a camera.
+                m_romfsOperationFailed = true;
+                QFile::remove(firmwarePath);
+
+                if(process.result() != Utils::ProcessResult::TerminatedAbnormally)
+                {
+                    QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("DFU ROMFS read failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                    box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                    box.setDefaultButton(QMessageBox::Ok);
+                    box.setEscapeButton(QMessageBox::Cancel);
+                    box.exec();
+                }
             }
 
             CONNECT_END();
@@ -465,8 +511,24 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                                  dfuDeviceVidPid, binProgramCommands.at(i) +
                                  (((i + 1) == j) ? QStringLiteral(" --reset") : QStringLiteral("")) + dfuDeviceSerial);
 
-                if(process.result() == Utils::ProcessResult::TerminatedAbnormally)
+                if(process.result() != Utils::ProcessResult::FinishedWithSuccess)
                 {
+                    // Cancelled or failed mid-write: the ROMFS may be partial
+                    // and the board is still in DFU. A genuine dfu-util error
+                    // used to end silently here as if it had succeeded.
+                    m_romfsOperationFailed = true;
+
+                    if(process.result() != Utils::ProcessResult::TerminatedAbnormally)
+                    {
+                        QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("DFU ROMFS write failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
+                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                        box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                        box.setDefaultButton(QMessageBox::Ok);
+                        box.setEscapeButton(QMessageBox::Cancel);
+                        box.exec();
+                    }
+
                     CONNECT_END();
                 }
 
