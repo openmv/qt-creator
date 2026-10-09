@@ -433,86 +433,589 @@ static QCborValue numberValue(double value)
 
 ///////////////////////////////////////////////////////////////////////////////
 
-// Approximation of the Turbo colormap by Anton Mikhailov (Google): red
-// (close) -> yellow -> green -> cyan -> blue -> dark blue (far), matching
-// OpenMV Studio's depth rendering.
-static const struct { double t; int r, g, b; } TURBO_STOPS[] = {
-    { 0.00, 200,  36,  12 },
-    { 0.20, 252, 192,  12 },
-    { 0.40, 100, 236,  28 },
-    { 0.60,  24, 220, 180 },
-    { 0.80,  40, 120, 252 },
-    { 1.00,  24,  32, 112 },
-};
+// Defined with the plot, further down; the depth map's readout uses them too.
+static QString readoutNumber(double value, int digits);
+static Utils::Key plotPathKey(const QString &key);
 
-static QRgb turboColor(double t)
-{
-    size_t i = 0;
+// The graphs' row height, shared by the plots and the depth maps so a
+// section of mixed rows lines up.
+static const int VIEW_GRAPH_HEIGHT = 130;
 
-    while ((i < ((sizeof(TURBO_STOPS) / sizeof(TURBO_STOPS[0])) - 2)) && (t > TURBO_STOPS[i + 1].t))
-    {
-        i++;
-    }
-
-    double f = (t - TURBO_STOPS[i].t) / (TURBO_STOPS[i + 1].t - TURBO_STOPS[i].t);
-    return qRgb(qRound(TURBO_STOPS[i].r + (f * (TURBO_STOPS[i + 1].r - TURBO_STOPS[i].r))),
-                qRound(TURBO_STOPS[i].g + (f * (TURBO_STOPS[i + 1].g - TURBO_STOPS[i].g))),
-                qRound(TURBO_STOPS[i].b + (f * (TURBO_STOPS[i + 1].b - TURBO_STOPS[i].b))));
+// The camera's own colour palettes (lib/imlib/rainbow_tab.c, RGB565), so a
+// map drawn here matches what a script gets from image.to_depth_color() and
+// its siblings.
+extern "C" {
+extern const uint16_t depth_table[256];
+extern const uint16_t rainbow_table[256];
+extern const uint16_t ironbow_table[256];
+extern const uint16_t evt_dark_table[256];
+extern const uint16_t evt_light_table[256];
 }
+
+static const uint16_t *paletteTable(int palette)
+{
+    switch(palette)
+    {
+        case OpenMVChannelDepth::RainbowPalette: return rainbow_table;
+        case OpenMVChannelDepth::IronbowPalette: return ironbow_table;
+        case OpenMVChannelDepth::EventDarkPalette: return evt_dark_table;
+        case OpenMVChannelDepth::EventLightPalette: return evt_light_table;
+        default: return depth_table;
+    }
+}
+
+static QRgb rgb565ToRgb(uint16_t pixel)
+{
+    int r = (pixel >> 11) & 0x1F;
+    int g = (pixel >> 5) & 0x3F;
+    int b = pixel & 0x1F;
+    return qRgb((r << 3) | (r >> 2), (g << 2) | (g >> 4), (b << 3) | (b >> 2));
+}
+
+// Catmull-Rom cubic convolution weights for a fractional offset.
+static void cubicWeights(double t, double w[4])
+{
+    double t2 = t * t;
+    double t3 = t2 * t;
+    w[0] = (-0.5 * t3) + t2 - (0.5 * t);
+    w[1] = (1.5 * t3) - (2.5 * t2) + 1.0;
+    w[2] = (-1.5 * t3) + (2.0 * t2) + (0.5 * t);
+    w[3] = (0.5 * t3) - (0.5 * t2);
+}
+
+// A depth is a distance, so a value of zero or less is a zone the sensor
+// could not measure (the VL53L5CX reports those as signed garbage), and is
+// treated like NaN: left out of the statistics and the range, drawn at the
+// near end.
+static bool depthMeasured(double value)
+{
+    return qIsFinite(value) && (value > 0.0);
+}
+
+// The adaptive curves' range leaves this fraction of the frame's pixels
+// outside at each end, so one bad pixel cannot own a palette end, and eases
+// towards each new frame by this much, so the colours settle rather than
+// flicker. Local Equalize tiles the map at least this many pixels square
+// and clips each tile's histogram at this multiple of a flat one, the usual
+// CLAHE settings.
+static const double DEPTH_RANGE_CLIP = 0.01;
+static const double DEPTH_RANGE_EASING = 0.25;
+static const int DEPTH_TILE_SIZE = 8;
+static const int DEPTH_TILES_MAX = 8;
+static const double DEPTH_CLIP_LIMIT = 4.0;
+static const int DEPTH_BINS = 256;
 
 OpenMVChannelDepth::OpenMVChannelDepth(QWidget *parent) : QWidget(parent)
 {
-    QSizePolicy policy(QSizePolicy::Expanding, QSizePolicy::Preferred);
-    policy.setHeightForWidth(true); // layouts honor heightForWidth() only with this set
-    setSizePolicy(policy);
+    // The plots' height: a map scaled to the pane's width would run off the
+    // bottom of it and drag a scroll bar in.
+    setFixedHeight(VIEW_GRAPH_HEIGHT);
+    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+    setMouseTracking(true); // the readout follows the pointer, as on the plots
 }
 
 void OpenMVChannelDepth::setData(const QByteArray &data, int width, int height, double min, double max)
 {
-    if ((width <= 0) || (height <= 0) || (data.size() < int(sizeof(float)) * width * height))
+    if(m_paused)
     {
         return;
     }
 
-    if ((m_image.width() != width) || (m_image.height() != height))
+    if((width <= 0) || (height <= 0) || (data.size() < int(sizeof(float)) * width * height))
     {
-        m_image = QImage(width, height, QImage::Format_RGB32);
-        updateGeometry();
+        return;
     }
 
-    const float *values = reinterpret_cast<const float *>(data.constData());
-    double range = ((max - min) != 0.0) ? (max - min) : 1.0;
+    m_width = width;
+    m_height = height;
+    m_min = min;
+    m_max = (max != min) ? max : (min + 1.0);
+    m_values.resize(width * height);
+    memcpy(m_values.data(), data.constData(), sizeof(float) * width * height);
 
-    for (int y = 0; y < height; y++)
+    // The frame's own range and mean, for the header and the curves.
+    double low = 0.0;
+    double high = 0.0;
+    double sum = 0.0;
+    int count = 0;
+
+    for(float value : m_values)
     {
-        QRgb *line = reinterpret_cast<QRgb *>(m_image.scanLine(y));
-
-        for (int x = 0; x < width; x++)
+        if(!depthMeasured(value))
         {
-            line[x] = turboColor(qBound(0.0, (double(values[(y * width) + x]) - min) / range, 1.0));
+            continue;
+        }
+
+        if((!count) || (value < low))
+        {
+            low = value;
+        }
+
+        if((!count) || (value > high))
+        {
+            high = value;
+        }
+
+        sum += value;
+        count++;
+    }
+
+    m_frameMin = count ? low : m_min;
+    m_frameMax = count ? high : m_max;
+    m_frameMean = count ? (sum / count) : m_min;
+
+    // The clipped range: walk a histogram of the frame in from each end
+    // until the clip fraction of the pixels is behind it.
+    double clippedLow = m_frameMin;
+    double clippedHigh = m_frameMax;
+
+    if(count && (m_frameMax > m_frameMin))
+    {
+        QVector<int> histogram(DEPTH_BINS, 0);
+        double scale = (DEPTH_BINS - 1) / (m_frameMax - m_frameMin);
+
+        for(float value : m_values)
+        {
+            if(depthMeasured(value))
+            {
+                histogram[qBound(0, int((value - m_frameMin) * scale), DEPTH_BINS - 1)]++;
+            }
+        }
+
+        // At least one pixel per end once there are enough to spare: on an
+        // 8x8 sensor one percent rounds to nothing, and a single invalid
+        // zone reporting a negative distance would own the near end.
+        int clip = qMax((count >= 32) ? 1 : 0, int(count * DEPTH_RANGE_CLIP));
+        int seen = 0;
+        int lowBin = 0;
+        int highBin = DEPTH_BINS - 1;
+
+        for(; (lowBin < (DEPTH_BINS - 1)) && ((seen + histogram.at(lowBin)) <= clip); lowBin++)
+        {
+            seen += histogram.at(lowBin);
+        }
+
+        seen = 0;
+
+        for(; (highBin > lowBin) && ((seen + histogram.at(highBin)) <= clip); highBin--)
+        {
+            seen += histogram.at(highBin);
+        }
+
+        clippedLow = m_frameMin + (lowBin / scale);
+        clippedHigh = m_frameMin + ((highBin + 1) / scale);
+    }
+
+    if(!m_rangeValid)
+    {
+        m_rangeLow = clippedLow;
+        m_rangeHigh = clippedHigh;
+        m_rangeValid = true;
+    }
+    else
+    {
+        m_rangeLow += (clippedLow - m_rangeLow) * DEPTH_RANGE_EASING;
+        m_rangeHigh += (clippedHigh - m_rangeHigh) * DEPTH_RANGE_EASING;
+    }
+
+    if(m_rangeHigh <= m_rangeLow)
+    {
+        m_rangeHigh = m_rangeLow + 1.0;
+    }
+
+    prepareMapping();
+    m_cache = QImage();
+    update();
+}
+
+void OpenMVChannelDepth::setColorPalette(int palette)
+{
+    if(m_palette != palette)
+    {
+        m_palette = palette;
+        m_cache = QImage();
+        update();
+    }
+}
+
+void OpenMVChannelDepth::setScaling(int scaling)
+{
+    if(m_scaling != scaling)
+    {
+        m_scaling = scaling;
+        m_cache = QImage();
+        update();
+    }
+}
+
+void OpenMVChannelDepth::setToneMap(int toneMap)
+{
+    if(m_toneMap != toneMap)
+    {
+        m_toneMap = toneMap;
+        prepareMapping();
+        m_cache = QImage();
+        update();
+    }
+}
+
+// A histogram's equalizing table: each bin's share of the palette is its
+// share of the pixels, so every colour covers as many pixels as any other.
+// The clip limit caps any one bin and hands the excess out evenly, which
+// keeps a flat surface from eating the whole palette and turning its noise
+// into contrast.
+static QVector<double> equalizeTable(QVector<int> histogram, int pixels, double clipLimit)
+{
+    if(clipLimit > 0.0)
+    {
+        int limit = qMax(1, int((clipLimit * pixels) / histogram.size()));
+        int excess = 0;
+
+        for(int &bin : histogram)
+        {
+            if(bin > limit)
+            {
+                excess += bin - limit;
+                bin = limit;
+            }
+        }
+
+        int share = excess / histogram.size();
+        int remainder = excess - (share * histogram.size());
+
+        for(int b = 0; b < histogram.size(); b++)
+        {
+            histogram[b] += share + ((b < remainder) ? 1 : 0);
         }
     }
 
-    QWidget::update();
+    QVector<double> table(histogram.size(), 0.0);
+    double total = 0.0;
+
+    for(int bin : histogram)
+    {
+        total += bin;
+    }
+
+    double running = 0.0;
+    double first = histogram.isEmpty() ? 0.0 : histogram.first();
+
+    for(int b = 0; b < histogram.size(); b++)
+    {
+        running += histogram.at(b);
+        table[b] = (total > first) ? ((running - first) / (total - first)) : 0.0;
+    }
+
+    return table;
 }
 
-int OpenMVChannelDepth::heightForWidth(int width) const
+void OpenMVChannelDepth::prepareMapping()
 {
-    return m_image.isNull() ? 0 : ((width * m_image.height()) / qMax(1, m_image.width()));
+    m_tileLuts.clear();
+    m_tilesX = 1;
+    m_tilesY = 1;
+
+    if(m_values.isEmpty() || (m_toneMap != EqualizeMap))
+    {
+        return;
+    }
+
+    double scale = (DEPTH_BINS - 1) / (m_rangeHigh - m_rangeLow);
+
+    auto binOf = [this, scale] (float value) -> int {
+        return depthMeasured(value) ? qBound(0, int((value - m_rangeLow) * scale), DEPTH_BINS - 1) : 0;
+    };
+
+    // A grid of tiles at least DEPTH_TILE_SIZE across, each with its own
+    // clipped table. A map too small to tile gets one tile, which is plain
+    // clipped equalization.
+    m_tilesX = qBound(1, m_width / DEPTH_TILE_SIZE, DEPTH_TILES_MAX);
+    m_tilesY = qBound(1, m_height / DEPTH_TILE_SIZE, DEPTH_TILES_MAX);
+    m_tileLuts.resize(m_tilesX * m_tilesY * DEPTH_BINS);
+
+    for(int ty = 0; ty < m_tilesY; ty++)
+    {
+        int y0 = (ty * m_height) / m_tilesY;
+        int y1 = ((ty + 1) * m_height) / m_tilesY;
+
+        for(int tx = 0; tx < m_tilesX; tx++)
+        {
+            int x0 = (tx * m_width) / m_tilesX;
+            int x1 = ((tx + 1) * m_width) / m_tilesX;
+            QVector<int> histogram(DEPTH_BINS, 0);
+
+            for(int y = y0; y < y1; y++)
+            {
+                for(int x = x0; x < x1; x++)
+                {
+                    histogram[binOf(m_values.at((y * m_width) + x))]++;
+                }
+            }
+
+            QVector<double> table = equalizeTable(histogram, (x1 - x0) * (y1 - y0), DEPTH_CLIP_LIMIT);
+            memcpy(m_tileLuts.data() + (((ty * m_tilesX) + tx) * DEPTH_BINS), table.constData(),
+                   sizeof(double) * DEPTH_BINS);
+        }
+    }
+}
+
+double OpenMVChannelDepth::mapValue(double value, double x, double y) const
+{
+    if(!depthMeasured(value))
+    {
+        return 0.0; // an unmeasured zone takes the near end, as it always has
+    }
+
+    switch(m_toneMap)
+    {
+        case AutoMap:
+        {
+            return (value - m_rangeLow) / (m_rangeHigh - m_rangeLow);
+        }
+
+        case EqualizeMap:
+        {
+            if(m_tileLuts.size() != (m_tilesX * m_tilesY * DEPTH_BINS))
+            {
+                return (value - m_rangeLow) / (m_rangeHigh - m_rangeLow);
+            }
+
+            double scale = (DEPTH_BINS - 1) / (m_rangeHigh - m_rangeLow);
+            int bin = qBound(0, int((value - m_rangeLow) * scale), DEPTH_BINS - 1);
+
+            // Blend the four nearest tiles' tables by where the pixel sits
+            // between their centres, which is what keeps tile edges from
+            // showing.
+            double fx = ((x * m_tilesX) / m_width) - 0.5;
+            double fy = ((y * m_tilesY) / m_height) - 0.5;
+            int x0 = qBound(0, int(std::floor(fx)), m_tilesX - 1);
+            int y0 = qBound(0, int(std::floor(fy)), m_tilesY - 1);
+            int x1 = qMin(x0 + 1, m_tilesX - 1);
+            int y1 = qMin(y0 + 1, m_tilesY - 1);
+            double wx = qBound(0.0, fx - x0, 1.0);
+            double wy = qBound(0.0, fy - y0, 1.0);
+
+            auto at = [this, bin] (int tx, int ty) -> double {
+                return m_tileLuts.at((((ty * m_tilesX) + tx) * DEPTH_BINS) + bin);
+            };
+
+            double top = (at(x0, y0) * (1.0 - wx)) + (at(x1, y0) * wx);
+            double bottom = (at(x0, y1) * (1.0 - wx)) + (at(x1, y1) * wx);
+            return (top * (1.0 - wy)) + (bottom * wy);
+        }
+
+        default:
+        {
+            return (value - m_min) / (m_max - m_min);
+        }
+    }
+}
+
+double OpenMVChannelDepth::sample(double x, double y) const
+{
+    auto at = [this] (int sx, int sy) -> double {
+        return double(m_values.at((qBound(0, sy, m_height - 1) * m_width) + qBound(0, sx, m_width - 1)));
+    };
+
+    switch(m_scaling)
+    {
+        case NearestScaling:
+        {
+            return at(int(std::floor(x)), int(std::floor(y)));
+        }
+
+        case BilinearScaling:
+        {
+            double fx = x - 0.5;
+            double fy = y - 0.5;
+            int x0 = int(std::floor(fx));
+            int y0 = int(std::floor(fy));
+            double tx = fx - x0;
+            double ty = fy - y0;
+            double top = (at(x0, y0) * (1.0 - tx)) + (at(x0 + 1, y0) * tx);
+            double bottom = (at(x0, y0 + 1) * (1.0 - tx)) + (at(x0 + 1, y0 + 1) * tx);
+            return (top * (1.0 - ty)) + (bottom * ty);
+        }
+
+        default:
+        {
+            double fx = x - 0.5;
+            double fy = y - 0.5;
+            int x0 = int(std::floor(fx));
+            int y0 = int(std::floor(fy));
+            double wx[4];
+            double wy[4];
+            cubicWeights(fx - x0, wx);
+            cubicWeights(fy - y0, wy);
+            double value = 0.0;
+
+            for(int j = 0; j < 4; j++)
+            {
+                double row = 0.0;
+
+                for(int i = 0; i < 4; i++)
+                {
+                    row += at(x0 - 1 + i, y0 - 1 + j) * wx[i];
+                }
+
+                value += row * wy[j];
+            }
+
+            return value;
+        }
+    }
+}
+
+QImage OpenMVChannelDepth::render(const QSize &size) const
+{
+    QImage image(size, QImage::Format_RGB32);
+    const uint16_t *table = paletteTable(m_palette);
+    double sx = double(m_width) / size.width();
+    double sy = double(m_height) / size.height();
+
+    for(int y = 0; y < size.height(); y++)
+    {
+        QRgb *line = reinterpret_cast<QRgb *>(image.scanLine(y));
+        double py = (y + 0.5) * sy;
+
+        for(int x = 0; x < size.width(); x++)
+        {
+            double px = (x + 0.5) * sx;
+            double t = mapValue(sample(px, py), px, py);
+
+            if(!qIsFinite(t))
+            {
+                t = 0.0;
+            }
+
+            line[x] = rgb565ToRgb(table[qBound(0, qRound(t * 255.0), 255)]);
+        }
+    }
+
+    return image;
+}
+
+QRect OpenMVChannelDepth::imageRect() const
+{
+    // Fit the row, keep the aspect, centre: an 8x8 map at the plot height is
+    // a square in the middle, not a band across the pane.
+    QSize target = QSize(m_width, m_height).scaled(size(), Qt::KeepAspectRatio);
+    return QRect(QPoint((width() - target.width()) / 2, (height() - target.height()) / 2), target);
 }
 
 void OpenMVChannelDepth::paintEvent(QPaintEvent *event)
 {
     Q_UNUSED(event)
 
-    if (m_image.isNull())
+    if(m_values.isEmpty())
     {
         return;
     }
 
+    QRect rect = imageRect();
+
+    if(rect.isEmpty())
+    {
+        return;
+    }
+
+    if(m_cache.size() != rect.size())
+    {
+        m_cache = render(rect.size());
+    }
+
     QPainter painter(this);
-    painter.setRenderHint(QPainter::SmoothPixmapTransform);
-    painter.drawImage(QRect(0, 0, width(), heightForWidth(width())), m_image);
+    painter.drawImage(rect.topLeft(), m_cache);
+
+    // The readout, as on the plots: the value under the cursor while the
+    // pointer is over the map. The frame's statistics live in the header.
+    if(m_hovering && rect.contains(m_cursor))
+    {
+        int sx = qBound(0, ((m_cursor.x() - rect.left()) * m_width) / rect.width(), m_width - 1);
+        int sy = qBound(0, ((m_cursor.y() - rect.top()) * m_height) / rect.height(), m_height - 1);
+        QString text = Tr::tr("x %1  y %2  %3").arg(sx).arg(sy)
+            .arg(readoutNumber(double(m_values.at((sy * m_width) + sx)), 4));
+
+        QFont small = font();
+        small.setPointSizeF(qMax(6.0, small.pointSizeF() - 2.0));
+        painter.setFont(small);
+
+        QRect box = painter.fontMetrics().boundingRect(text).adjusted(-4, -2, 4, 2);
+        box.moveTopLeft(rect.topLeft() + QPoint(4, 4));
+
+        QColor fill = Utils::creatorTheme()->color(Utils::Theme::BackgroundColorNormal);
+        fill.setAlpha(200);
+        painter.fillRect(box, fill);
+        painter.setPen(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal));
+        painter.drawText(box, Qt::AlignCenter, text);
+    }
+}
+
+void OpenMVChannelDepth::mouseMoveEvent(QMouseEvent *event)
+{
+    m_hovering = true;
+    m_cursor = event->pos();
+    update();
+}
+
+void OpenMVChannelDepth::leaveEvent(QEvent *event)
+{
+    QWidget::leaveEvent(event);
+    m_hovering = false;
+    update();
+}
+
+void OpenMVChannelDepth::contextMenuEvent(QContextMenuEvent *event)
+{
+    QMenu menu;
+    QAction *save = menu.addAction(Tr::tr("Save Image..."));
+
+    if(menu.exec(event->globalPos()) == save)
+    {
+        saveImage();
+    }
+}
+
+void OpenMVChannelDepth::saveImage()
+{
+    if(m_values.isEmpty())
+    {
+        return;
+    }
+
+    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+    const Utils::Key pathKey = plotPathKey(m_settingsKey);
+    QString suggestion = m_settingsKey.isEmpty() ? QString() : settings->value(pathKey).toString();
+
+    if(suggestion.isEmpty())
+    {
+        suggestion = QDir(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation))
+            .filePath(recordFileName(m_title.isEmpty() ? QStringLiteral("depth") : m_title)
+                + QStringLiteral(".png"));
+    }
+
+    QString path = QFileDialog::getSaveFileName(this, Tr::tr("Save Depth Image"),
+        suggestion, Tr::tr("PNG Image (*.png)"));
+
+    if(path.isEmpty())
+    {
+        return;
+    }
+
+    if(!m_settingsKey.isEmpty())
+    {
+        settings->setValue(pathKey, path);
+    }
+
+    // The on-screen map is only a hundred or so pixels tall, so the export
+    // is rendered at three times that, like the plots' image export.
+    QSize size = imageRect().size() * 3;
+
+    if(size.isEmpty() || (!render(size).save(path, "PNG")))
+    {
+        QMessageBox::critical(this, Tr::tr("Save Depth Image"),
+                              Tr::tr("Failed to write \"%1\"!").arg(path));
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -541,6 +1044,21 @@ static Utils::Key plotAutoScaleKey(const QString &key)
     return Utils::keyFromString(QStringLiteral("OpenMV/ChannelPlotAutoScale/%1").arg(key));
 }
 
+static Utils::Key depthPaletteKey(const QString &key)
+{
+    return Utils::keyFromString(QStringLiteral("OpenMV/LastChannelDepthPalette/%1").arg(key));
+}
+
+static Utils::Key depthScalingKey(const QString &key)
+{
+    return Utils::keyFromString(QStringLiteral("OpenMV/LastChannelDepthScaling/%1").arg(key));
+}
+
+static Utils::Key depthToneMapKey(const QString &key)
+{
+    return Utils::keyFromString(QStringLiteral("OpenMV/LastChannelDepthToneMap/%1").arg(key));
+}
+
 static Utils::Key plotHistoryKey(const QString &key)
 {
     return Utils::keyFromString(QStringLiteral("OpenMV/ChannelPlotHistory/%1").arg(key));
@@ -548,7 +1066,7 @@ static Utils::Key plotHistoryKey(const QString &key)
 
 OpenMVChannelWaveform::OpenMVChannelWaveform(QWidget *parent) : QCustomPlot(parent)
 {
-    setFixedHeight(130);
+    setFixedHeight(VIEW_GRAPH_HEIGHT);
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 
     setInteractions(QCP::iRangeDrag | QCP::iRangeZoom | QCP::iSelectLegend);
@@ -2384,15 +2902,44 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
         }
     }
 
+    // Fills a selector from (label, data, description) rows. Each entry's
+    // description shows as its tooltip in the list, and the selector's own
+    // tooltip follows whatever is chosen, so a one-word label never has to
+    // carry the whole meaning.
+    struct Choice { QString label; int data; QString description; };
+
+    auto fillChoices = [] (QComboBox *combo, const QList<Choice> &choices) {
+        for(const Choice &choice : choices)
+        {
+            combo->addItem(choice.label, choice.data);
+            combo->setItemData(combo->count() - 1, choice.description, Qt::ToolTipRole);
+        }
+
+        auto track = [combo] (int index) {
+            combo->setToolTip(combo->itemData(index, Qt::ToolTipRole).toString());
+        };
+
+        connect(combo, &QComboBox::currentIndexChanged, combo, track);
+        track(combo->currentIndex());
+    };
+
     // The per-graph CSV recording controls: Record/Stop plus a live
     // rows/size readout while data is being captured.
-    auto addRecordBar = [this](Record &record, QVBoxLayout *rowLayout, int index) {
+    auto addRecordBar = [this, fillChoices](Record &record, QVBoxLayout *rowLayout, int index) {
         QWidget *recordBar = new QWidget;
         QHBoxLayout *recordBarLayout = new QHBoxLayout(recordBar);
         recordBarLayout->setContentsMargins(6, 0, 6, 0); // text inset; the graph above is full-bleed
         recordBarLayout->setSpacing(8);
 
         record.recordButton = new QPushButton(Tr::tr("Record"));
+
+        // Named for the formats this record can actually be written as: a
+        // depth map has no WAV, a waveform with no sample rate only NumPy.
+        QStringList formats = OpenMVChannelRecorder::formatNames(
+            OpenMVChannelRecorder::supportedFormats(infoFor(record)));
+        record.recordButton->setToolTip(formats.isEmpty()
+            ? Tr::tr("No file format can hold this record.")
+            : Tr::tr("Record this graph's data to a file (%1). Click again to stop.").arg(formats.join(QStringLiteral(", "))));
         record.recordButton->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Fixed);
         recordBarLayout->addWidget(record.recordButton);
 
@@ -2404,6 +2951,8 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
             OpenMVChannelWaveform *plot = record.waveform;
 
             QPushButton *spectrum = new QPushButton(Tr::tr("Spectrum"));
+            spectrum->setToolTip(Tr::tr("Show the signal's frequency spectrum instead of its waveform. "
+                                        "Right click the graph for averaging, peak hold and the window."));
             spectrum->setCheckable(true);
             spectrum->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Fixed);
             recordBarLayout->addWidget(spectrum);
@@ -2428,12 +2977,109 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
             });
 
             QPushButton *stats = new QPushButton(Tr::tr("Stats"));
+            stats->setToolTip(Tr::tr("Show the min, max and RMS of what is on screen, "
+                                     "or the peak of the spectrum, in the graph's corner."));
             stats->setCheckable(true);
             stats->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Fixed);
             recordBarLayout->addWidget(stats);
 
             connect(stats, &QPushButton::toggled, plot, [plot] (bool checked) {
                 plot->setShowStats(checked);
+            });
+        }
+
+        // A depth map's palette and how it is scaled up to the row, beside
+        // Record the way the plot's view modes are. Both are remembered per
+        // graph.
+        if(record.depth)
+        {
+            OpenMVChannelDepth *depth = record.depth;
+            const QString key = QStringLiteral("%1/%2").arg(record.channelName, record.name);
+            Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+
+            depth->setSettingsKey(key);
+
+            QPushButton *pause = new QPushButton(Tr::tr("Pause"));
+            pause->setCheckable(true);
+            pause->setToolTip(Tr::tr("Freeze the map. Recording is not affected."));
+            pause->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Fixed);
+            recordBarLayout->addWidget(pause);
+
+            connect(pause, &QPushButton::toggled, depth, [depth] (bool checked) {
+                depth->setPaused(checked);
+            });
+
+            QComboBox *palette = new QComboBox;
+            fillChoices(palette, {
+                {Tr::tr("Depth"), int(OpenMVChannelDepth::DepthPalette),
+                 Tr::tr("The camera's depth palette: red is near, blue is far.")},
+                {Tr::tr("Rainbow"), int(OpenMVChannelDepth::RainbowPalette),
+                 Tr::tr("The camera's rainbow palette: blue is near, red is far.")},
+                {Tr::tr("Ironbow"), int(OpenMVChannelDepth::IronbowPalette),
+                 Tr::tr("The camera's ironbow palette, as used for thermal images: white near, through black, to yellow far.")},
+                {Tr::tr("Event Dark"), int(OpenMVChannelDepth::EventDarkPalette),
+                 Tr::tr("The camera's event camera palette on a dark background.")},
+                {Tr::tr("Event Light"), int(OpenMVChannelDepth::EventLightPalette),
+                 Tr::tr("The camera's event camera palette on a light background.")}});
+            palette->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+            depth->setColorPalette(qBound(0, settings->value(depthPaletteKey(key),
+                int(OpenMVChannelDepth::DepthPalette)).toInt(), palette->count() - 1));
+            palette->setCurrentIndex(qMax(0, palette->findData(depth->colorPalette())));
+            recordBarLayout->addWidget(palette);
+
+            connect(palette, &QComboBox::currentIndexChanged, depth, [depth, key, palette] (int) {
+                int value = palette->currentData().toInt();
+                depth->setColorPalette(value);
+                ExtensionSystem::PluginManager::settings()->setValue(depthPaletteKey(key), value);
+            });
+
+            // Best first; the item data carries the enum so the saved
+            // preference does not depend on the menu order.
+            QComboBox *scaling = new QComboBox;
+            fillChoices(scaling, {
+                {Tr::tr("Bicubic"), int(OpenMVChannelDepth::BicubicScaling),
+                 Tr::tr("Scale the map up with a smooth curve through the pixels.")},
+                {Tr::tr("Bilinear"), int(OpenMVChannelDepth::BilinearScaling),
+                 Tr::tr("Scale the map up by blending neighbouring pixels.")},
+                {Tr::tr("Nearest"), int(OpenMVChannelDepth::NearestScaling),
+                 Tr::tr("Scale the map up as blocks, one per sensor pixel.")}});
+            scaling->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+            depth->setScaling(qBound(int(OpenMVChannelDepth::NearestScaling),
+                settings->value(depthScalingKey(key), int(OpenMVChannelDepth::BicubicScaling)).toInt(),
+                int(OpenMVChannelDepth::BicubicScaling)));
+            scaling->setCurrentIndex(qMax(0, scaling->findData(depth->scaling())));
+            recordBarLayout->addWidget(scaling);
+
+            connect(scaling, &QComboBox::currentIndexChanged, depth, [depth, key, scaling] (int) {
+                int value = scaling->currentData().toInt();
+                depth->setScaling(value);
+                ExtensionSystem::PluginManager::settings()->setValue(depthScalingKey(key), value);
+            });
+
+            // How the values spread over the palette. Range keeps colours
+            // comparable between frames; the other two adapt to the frame.
+            QComboBox *toneMap = new QComboBox;
+            fillChoices(toneMap, {
+                {Tr::tr("Script Range"), int(OpenMVChannelDepth::RangeMap),
+                 Tr::tr("Colors span the min and max the script declared when it added the record, "
+                        "so a color means the same distance in every frame.")},
+                {Tr::tr("Auto Range"), int(OpenMVChannelDepth::AutoMap),
+                 Tr::tr("Colors span what this frame holds, with the extremes clipped and the range "
+                        "eased between frames.")},
+                {Tr::tr("Equalize"), int(OpenMVChannelDepth::EqualizeMap),
+                 Tr::tr("Every color covers the same number of pixels, which shows the most detail; "
+                        "flat surfaces look noisier.")}});
+            toneMap->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+            depth->setToneMap(qBound(int(OpenMVChannelDepth::RangeMap),
+                settings->value(depthToneMapKey(key), int(OpenMVChannelDepth::RangeMap)).toInt(),
+                int(OpenMVChannelDepth::EqualizeMap)));
+            toneMap->setCurrentIndex(qMax(0, toneMap->findData(depth->toneMap())));
+            recordBarLayout->addWidget(toneMap);
+
+            connect(toneMap, &QComboBox::currentIndexChanged, depth, [depth, key, toneMap] (int) {
+                int value = toneMap->currentData().toInt();
+                depth->setToneMap(value);
+                ExtensionSystem::PluginManager::settings()->setValue(depthToneMapKey(key), value);
             });
         }
 
@@ -2472,6 +3118,8 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
                 section.bar = bar;
 
                 section.button = new QPushButton(Tr::tr("Record All"));
+                section.button->setToolTip(Tr::tr("Record every graph in this channel at once, each to its own file "
+                                                  "in a folder you choose. Click again to stop them all."));
                 section.button->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Fixed);
                 barLayout->addWidget(section.button);
 
@@ -2509,8 +3157,10 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
             record.depthHeader->setContentsMargins(6, 0, 6, 0);
             contentLayout->addWidget(record.depthHeader);
 
-            // The image runs full-bleed; the header and record bar inset.
+            // The map sits at the plots' height, centred; the header and
+            // record bar inset.
             record.depth = new OpenMVChannelDepth;
+            record.depth->setTitle(record.name);
             contentLayout->addWidget(record.depth);
 
             addRecordBar(record, contentLayout, i);
@@ -3006,10 +3656,22 @@ void OpenMVChannelsView::patchContent(QList<Record> &records)
             double min = built.rec.value(qint64(CBOR_KEY_MIN)).toDouble();
             double max = built.rec.value(qint64(CBOR_KEY_MAX)).toDouble(1.0);
 
-            built.depthHeader->setText(Tr::tr("%1 (%2x%3, %4-%5mm)").arg(built.name)
-                .arg(width).arg(height).arg(qRound(min)).arg(qRound(max)));
             built.depth->setData(built.rec.value(qint64(CBOR_KEY_VD)).toByteArray(),
                                  width, height, min, max);
+
+            // The frame's statistics ride on the header, where the plots'
+            // Stats readout would be; a paused map reports the frame shown.
+            // Min and max are the clipped, eased range the adaptive curves
+            // use, so one invalid pixel does not flick the numbers about.
+            // The size and the range the script declared, then the frame's
+            // own numbers. The declared range is what Script Range colours
+            // by; the frame's min and max are the clipped, eased range the
+            // other curves use.
+            QString unit = built.rec.value(qint64(CBOR_KEY_U)).toString();
+            built.depthHeader->setText(Tr::tr("%1 (%2x%3, range %4-%5%6) min %7 max %8 mean %9").arg(built.name)
+                .arg(width).arg(height).arg(readoutNumber(min, 4), readoutNumber(max, 4), unit)
+                .arg(readoutNumber(built.depth->rangeLow(), 4), readoutNumber(built.depth->rangeHigh(), 4),
+                     readoutNumber(built.depth->frameMean(), 4)));
         }
 
         if(built.waveform)

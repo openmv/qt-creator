@@ -35,6 +35,7 @@ add_qtc_plugin(OpenMV
     views/openmvpluginhistogram.cpp views/openmvpluginhistogram.h
     views/rgb2rgb_tab.c
     views/lab_tab.c
+    views/palette_tab.c
     views/yuv_tab.c
     tools/driveserialnumber.cpp tools/driveserialnumber.h
     tools/myqserialportinfo.cpp tools/myqserialportinfo.h

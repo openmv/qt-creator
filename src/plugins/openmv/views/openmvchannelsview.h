@@ -56,28 +56,112 @@
 namespace OpenMV {
 namespace Internal {
 
-// Renders a WxH float32 buffer through the Turbo colormap, scaled to the
-// view's width with the aspect ratio kept.
+// Renders a WxH float32 buffer through one of the camera's own colour
+// palettes, scaled to fit the row with the aspect ratio kept. The scaling
+// is done on the depth values and the result looked up in the palette, so a
+// smoothed map never blends two palette colours into a third that is not in
+// it. A tone mapping curve decides how the values spread over the palette:
+// the declared range keeps colours comparable between frames, the adaptive
+// curves show the most relief in whatever the frame holds.
 class OpenMVChannelDepth : public QWidget
 {
     Q_OBJECT
 
 public:
 
+    // In the order the camera's image module lists them.
+    enum Palette { DepthPalette, RainbowPalette, IronbowPalette, EventDarkPalette, EventLightPalette };
+    enum Scaling { NearestScaling, BilinearScaling, BicubicScaling };
+    // Range: the declared min and max, comparable between frames. Auto:
+    // the frame's own range. Equalize: clipped, tiled histogram
+    // equalization (CLAHE), which shows the most relief without turning a
+    // flat surface's noise into contrast.
+    enum ToneMap { RangeMap, AutoMap, EqualizeMap };
+
     explicit OpenMVChannelDepth(QWidget *parent = Q_NULLPTR);
 
     void setData(const QByteArray &data, int width, int height, double min, double max);
 
-    virtual bool hasHeightForWidth() const { return true; }
-    virtual int heightForWidth(int width) const;
+    // The record's own name, for the exported image's file name.
+    void setTitle(const QString &title) { m_title = title; }
+
+    // Identifies this map in the settings, as "<channel>/<record>"; its
+    // saved image path is remembered per map.
+    void setSettingsKey(const QString &key) { m_settingsKey = key; }
+
+    void setColorPalette(int palette);
+    void setScaling(int scaling);
+    void setToneMap(int toneMap);
+    int colorPalette() const { return m_palette; }
+    int scaling() const { return m_scaling; }
+    int toneMap() const { return m_toneMap; }
+
+    // Freezing the display never affects recording.
+    void setPaused(bool paused) { m_paused = paused; }
+
+    // The newest frame's statistics, for the header above the map. A
+    // paused map keeps reporting the frame it is showing.
+    double frameMin() const { return m_frameMin; }
+    double frameMax() const { return m_frameMax; }
+    double frameMean() const { return m_frameMean; }
+
+    // The clipped, eased range the adaptive curves work from.
+    double rangeLow() const { return m_rangeLow; }
+    double rangeHigh() const { return m_rangeHigh; }
 
 protected:
 
     virtual void paintEvent(QPaintEvent *event);
+    virtual void mouseMoveEvent(QMouseEvent *event);
+    virtual void leaveEvent(QEvent *event);
+    virtual void contextMenuEvent(QContextMenuEvent *event);
 
 private:
 
-    QImage m_image;
+    // The map at a point in source pixel units (centres at .5), clamped to
+    // the edges, through the chosen filter.
+    double sample(double x, double y) const;
+
+    // The lookup tables the adaptive curves need for the current frame.
+    void prepareMapping();
+
+    // A value's position along the palette, 0 near to 1 far, through the
+    // chosen curve. x and y are where it sits in the map, for the local
+    // curve.
+    double mapValue(double value, double x, double y) const;
+
+    QImage render(const QSize &size) const;
+    QRect imageRect() const; // where the map sits in the row
+    void saveImage();
+
+    QVector<float> m_values;
+    int m_width = 0;
+    int m_height = 0;
+    double m_min = 0.0;
+    double m_max = 1.0;
+    double m_frameMin = 0.0; // the newest frame's own range and mean
+    double m_frameMax = 0.0;
+    double m_frameMean = 0.0;
+
+    // The adaptive curves' working range: the frame's values with the
+    // extremes clipped off, eased from frame to frame so a stray pixel or
+    // sensor noise cannot swing the colours.
+    bool m_rangeValid = false;
+    double m_rangeLow = 0.0;
+    double m_rangeHigh = 1.0;
+    QVector<double> m_tileLuts; // Equalize: palette position per value bin, per tile
+    int m_tilesX = 1;
+    int m_tilesY = 1;
+
+    int m_palette = DepthPalette;
+    int m_scaling = BicubicScaling;
+    int m_toneMap = RangeMap;
+    bool m_paused = false;
+    bool m_hovering = false;
+    QPoint m_cursor;
+    QString m_title;
+    QString m_settingsKey;
+    QImage m_cache; // the last render, kept while nothing has changed
 };
 
 // Live scrolling plot of interleaved 1D sample series (mic/IMU waveforms):
