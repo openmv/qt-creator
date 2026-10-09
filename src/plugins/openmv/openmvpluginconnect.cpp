@@ -4582,7 +4582,9 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
             m_readChannelsTimer.restart();
             // The pane views keep their last data on disconnect (updates just
             // stop); the connect path's reset() drops it when a new session
-            // starts.
+            // starts. The Channels view's controls would write to a camera
+            // that is no longer there, so they are switched off.
+            m_channelsView->freeze();
 
             m_timer.restart();
             m_queue.clear();
@@ -4856,6 +4858,10 @@ void OpenMVPlugin::startClicked()
 
         if(importHelper(contents))
         {
+            // The previous script's channels stay on screen after it stops
+            // so they can still be read; the next script starts from blank.
+            m_channelsView->clear();
+
             m_iodevice->scriptExec(contents);
             m_iodevice->jpegEnable(jpgCompressEnabled());
             applyFrameBufferSource();

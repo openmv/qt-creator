@@ -34,6 +34,8 @@
 #include "../openmvtr.h"
 
 #include <QtCore/QtEndian>
+
+#include <cmath>
 #include <QtSvg/QSvgRenderer>
 
 #include <extensionsystem/pluginmanager.h>
@@ -314,11 +316,29 @@ static int sliderSteps(double min, double max, double step)
     return qMax(1, qRound((max - min) / ((step > 0.0) ? step : 1.0)));
 }
 
+// The array-module typecodes a record may carry. Anything else ("d", "q",
+// a stray string) is refused outright: reading it at a guessed width would
+// draw half the samples as garbage without a word of complaint.
+static bool typecodeKnown(char code)
+{
+    switch(code)
+    {
+        case 'b': case 'B': case 'h': case 'H': case 'i': case 'I': case 'f': return true;
+        default: return false;
+    }
+}
+
 // Decode interleaved samples per the array-module typecode carried in the
 // record's string-value slot ("H" uint16 when absent). Little-endian.
 static QVector<float> decodeSamples(const QByteArray &data, const QString &typecode, int count)
 {
     char code = typecode.isEmpty() ? 'H' : typecode.at(0).toLatin1();
+
+    if(!typecodeKnown(code))
+    {
+        return QVector<float>();
+    }
+
     int stride = ((code == 'b') || (code == 'B')) ? 1
                : ((code == 'h') || (code == 'H')) ? 2 : 4;
     int n = qMin(count, int(data.size()) / stride);
@@ -577,9 +597,12 @@ OpenMVChannelWaveform::OpenMVChannelWaveform(QWidget *parent) : QCustomPlot(pare
         }
     });
     connect(this, &QCustomPlot::mouseDoubleClick, this, [this] {
+        // Back to following the live data in whichever domain is showing.
+        // applyMode() knows each one's ranges; the time-domain ones would
+        // put seconds on a frequency axis.
         m_following = true;
-        yAxis->setRange(m_min, m_max);
-        if(m_hasData) xAxis->setRange(m_end - viewSpan(), m_end);
+        applyMode();
+        updateVerticalRange();
         replot(QCustomPlot::rpQueuedReplot);
     });
 
@@ -777,11 +800,13 @@ void OpenMVChannelWaveform::applyTheme()
         tracer->setBrush(QBrush(palette().color(QPalette::Window)));
     }
 
+    // The range numbers are read, not glanced past like the tick labels, so
+    // they take the pane's own size rather than the reduced one.
     for(QCPItemText *label : {m_maxLabel, m_minLabel})
     {
         if(label)
         {
-            label->setFont(small);
+            label->setFont(font());
             label->setColor(text);
         }
     }
@@ -839,6 +864,7 @@ void OpenMVChannelWaveform::resetHistory(int series, double min, double max, dou
     m_hasData = false;
     m_following = true;
     m_lastData.clear();
+    m_spectrumHeld.clear(); // averaged against a range that may have changed
 
     clearGraphs();
     legend->clearItems();
@@ -1215,6 +1241,17 @@ void OpenMVChannelWaveform::setSpectrum(bool enabled)
     // the smoothed statistics now measure a different quantity.
     m_following = true;
 
+    // A crossing caught but not yet frozen belongs to the time axis, so it
+    // is let go rather than freezing a spectrum. The trigger stays armed and
+    // picks up again once the time domain is back.
+    if(m_triggerFilling)
+    {
+        m_triggerFilling = false;
+        m_triggered = false;
+        m_triggerHasPrevious = false;
+        updateTriggerItems();
+    }
+
     for(SeriesStats &stat : m_stats)
     {
         stat.valid = false;
@@ -1236,6 +1273,13 @@ void OpenMVChannelWaveform::setSettingsKey(const QString &key)
     m_autoScale = settings->value(plotAutoScaleKey(key), true).toBool();
     m_history = settings->value(plotHistoryKey(key), WAVEFORM_HISTORY_MULTIPLE).toDouble();
 
+    // Only the menu writes this key, but a stray edit would otherwise leave
+    // one sample per chunk with nothing in the menu checked.
+    if((!qIsFinite(m_history)) || (m_history <= 0.0))
+    {
+        m_history = WAVEFORM_HISTORY_MULTIPLE;
+    }
+
     if(!m_autoScale)
     {
         yAxis->setRange(m_min, m_max);
@@ -1255,6 +1299,7 @@ void OpenMVChannelWaveform::armTrigger(bool armed)
 
     m_triggerArmed = armed;
     m_triggerHasPrevious = false;
+    m_triggerFilling = false;
 
     // Arming without a level having been set puts it in the middle of the
     // record's range, which is where a crossing is most likely to be useful.
@@ -1320,9 +1365,11 @@ void OpenMVChannelWaveform::checkTrigger(const QVector<double> &keys,
                 m_following = false;
                 xAxis->setRange(key - (span * 0.25), key + (span * 0.75));
 
-                // Freezing here keeps exactly the window that was captured;
-                // anything appended after would scroll the event away.
-                setPaused(true);
+                // Most of the samples to the right of the event have not
+                // arrived yet, so the freeze waits until the window has
+                // filled; pausing now would leave three quarters of it blank.
+                m_triggerFilling = true;
+                m_triggerFillKey = key + (span * 0.75);
                 return;
             }
         }
@@ -1352,6 +1399,7 @@ void OpenMVChannelWaveform::setPaused(bool paused)
         m_triggered = false;
         m_triggerArmed = false;
         m_triggerHasPrevious = false;
+        m_triggerFilling = false;
         resetHistory(m_seriesCount, m_min, m_max, m_period, m_seriesNames);
         updateTriggerItems();
     }
@@ -1411,8 +1459,10 @@ void OpenMVChannelWaveform::updateVerticalRange()
 
 void OpenMVChannelWaveform::updateRangeLabels()
 {
-    m_maxLabel->setText(QString::number(yAxis->range().upper, 'g', 6));
-    m_minLabel->setText(QString::number(yAxis->range().lower, 'g', 6));
+    // Four figures: enough to place the range, without a tail of decimals
+    // on a self-scaled axis. Whole numbers are never shortened.
+    m_maxLabel->setText(readoutNumber(yAxis->range().upper, 4));
+    m_minLabel->setText(readoutNumber(yAxis->range().lower, 4));
 }
 
 void OpenMVChannelWaveform::setShowStats(bool enabled)
@@ -1545,6 +1595,10 @@ void OpenMVChannelWaveform::showContextMenu(const QPoint &pos)
     peakHold->setCheckable(true);
     peakHold->setChecked(m_spectrumPeakHold);
 
+    // Averaging and peak hold exclude each other; the axis scale below goes
+    // with either, so it sits apart from them.
+    spectrumMenu->addSeparator();
+
     QAction *logFrequency = spectrumMenu->addAction(Tr::tr("Log Frequency"));
     logFrequency->setCheckable(true);
     logFrequency->setChecked(m_logFrequency);
@@ -1666,13 +1720,26 @@ void OpenMVChannelWaveform::showContextMenu(const QPoint &pos)
 }
 
 // The sample a graph holds at a key, or none when the key is off its ends.
+// The sample nearest the key, which is the one the (non-interpolating)
+// tracer dot sits on, so the number and the dot always describe the same
+// sample. Past either end of the data there is nothing to report.
 static bool valueAtKey(QCPGraph *graph, double key, double *value)
 {
-    QCPGraphDataContainer::const_iterator it = graph->data()->findBegin(key);
+    const QSharedPointer<QCPGraphDataContainer> data = graph->data();
 
-    if(it == graph->data()->constEnd())
+    if(data->isEmpty() || (key < data->constBegin()->key) || (key > (data->constEnd() - 1)->key))
     {
         return false;
+    }
+
+    // findBegin() is the last sample at or before the key; the one after it
+    // may be closer.
+    QCPGraphDataContainer::const_iterator it = data->findBegin(key);
+    QCPGraphDataContainer::const_iterator next = it + 1;
+
+    if((next != data->constEnd()) && ((next->key - key) < (key - it->key)))
+    {
+        it = next;
     }
 
     *value = it->value;
@@ -1683,7 +1750,32 @@ static bool valueAtKey(QCPGraph *graph, double key, double *value)
 // readout into a wall of decimals.
 static QString readoutNumber(double value, int digits)
 {
-    return QString::number(value, 'g', digits);
+    // Plain decimal to the given number of significant figures: 1.2e+04 is
+    // harder to take in at a glance than 12000, and the readout is glanced
+    // at while watching the trace.
+    if((!qIsFinite(value)) || (value == 0.0))
+    {
+        return qIsFinite(value) ? QStringLiteral("0") : QString::number(value);
+    }
+
+    int magnitude = int(std::floor(std::log10(std::fabs(value))));
+    int decimals = qBound(0, (digits - 1) - magnitude, 9);
+    QString text = QString::number(value, 'f', decimals);
+
+    if(text.contains(QLatin1Char('.')))
+    {
+        while(text.endsWith(QLatin1Char('0')))
+        {
+            text.chop(1);
+        }
+
+        if(text.endsWith(QLatin1Char('.')))
+        {
+            text.chop(1);
+        }
+    }
+
+    return text;
 }
 
 // Statistics settle towards their true value over about a second rather than
@@ -1763,9 +1855,9 @@ void OpenMVChannelWaveform::updateReadout()
                 continue;
             }
 
-            QCPGraphDataContainer::const_iterator it = shown->data()->findBegin(m_cursorKey);
+            double value = 0.0;
 
-            if(it != shown->data()->constEnd())
+            if(valueAtKey(shown, m_cursorKey, &value))
             {
                 double pinnedValue = 0.0;
 
@@ -1775,15 +1867,15 @@ void OpenMVChannelWaveform::updateReadout()
                 {
                     lines.append(m_spectrum
                         ? Tr::tr("%1 %2 dB  d %3").arg(shown->name(),
-                            readoutNumber(it->value), readoutNumber(it->value - pinnedValue))
+                            readoutNumber(value), readoutNumber(value - pinnedValue))
                         : Tr::tr("%1 %2  d %3").arg(shown->name(),
-                            readoutNumber(it->value), readoutNumber(it->value - pinnedValue)));
+                            readoutNumber(value), readoutNumber(value - pinnedValue)));
                 }
                 else
                 {
                     lines.append(m_spectrum
-                        ? Tr::tr("%1 %2 dB").arg(shown->name(), readoutNumber(it->value))
-                        : QStringLiteral("%1 %2").arg(shown->name(), readoutNumber(it->value)));
+                        ? Tr::tr("%1 %2 dB").arg(shown->name(), readoutNumber(value))
+                        : QStringLiteral("%1 %2").arg(shown->name(), readoutNumber(value)));
                 }
             }
         }
@@ -1873,7 +1965,7 @@ void OpenMVChannelWaveform::updateReadout()
                 smoothStat(stat.rms, qSqrt(square / count), stat.valid);
                 stat.valid = true;
 
-                lines.append(Tr::tr("%1 %2..%3 rms %4").arg(shown->name(),
+                lines.append(Tr::tr("%1 min %2 max %3 rms %4").arg(shown->name(),
                     readoutNumber(stat.low, 3), readoutNumber(stat.high, 3),
                     readoutNumber(stat.rms, 3)));
             }
@@ -1912,6 +2004,13 @@ void OpenMVChannelWaveform::setData(const QByteArray &data, const QString &typec
 
     int count = qMax(1, series);
     int per = qMax(0, samples);
+
+    // A NaN never compares equal to itself, so one in the period or range
+    // would read as a change on every chunk and wipe the history each time.
+    if(!qIsFinite(period)) period = 0.0;
+    if(!qIsFinite(min)) min = 0.0;
+    if(!qIsFinite(max)) max = min + 1.0;
+
     double top = (max != min) ? max : (min + 1.0);
 
     // The poll re-reads the newest chunk faster than scripts publish it;
@@ -1982,7 +2081,8 @@ void OpenMVChannelWaveform::setData(const QByteArray &data, const QString &typec
         graph(s)->addData(keys, values, true);
         graph(s)->data()->removeBefore(keep);
 
-        if(m_triggerArmed && (!m_triggered) && (s == qBound(0, m_triggerSeries, count - 1)))
+        if(m_triggerArmed && (!m_triggered) && (!m_spectrum)
+        && (s == qBound(0, m_triggerSeries, count - 1)))
         {
             checkTrigger(keys, values);
         }
@@ -1993,6 +2093,14 @@ void OpenMVChannelWaveform::setData(const QByteArray &data, const QString &typec
     m_next = base + (per * dt);
     m_end = end;
     m_hasData = true;
+
+    if(m_triggerFilling && (m_end >= m_triggerFillKey))
+    {
+        // Freezing keeps exactly the window that was captured; anything
+        // appended after would scroll the event away.
+        m_triggerFilling = false;
+        setPaused(true);
+    }
 
     if(m_spectrum)
     {
@@ -2055,10 +2163,85 @@ void OpenMVChannelsView::showMessage(const QString &message)
 
 void OpenMVChannelsView::reset()
 {
+    m_frozen = false;
     m_activeControls.clear();
     m_skipRenders.clear();
     m_pendingWrites.clear();
     showMessage(Tr::tr("Connect a camera to view channels"));
+}
+
+void OpenMVChannelsView::clear()
+{
+    m_frozen = false;
+    m_activeControls.clear();
+    m_skipRenders.clear();
+    m_pendingWrites.clear();
+    showMessage(Tr::tr("No channels are being published by the camera"));
+}
+
+void OpenMVChannelsView::freeze()
+{
+    if(m_frozen || m_records.isEmpty())
+    {
+        return;
+    }
+
+    m_frozen = true;
+    m_activeControls.clear();
+    m_skipRenders.clear();
+    m_pendingWrites.clear();
+
+    // Nothing more is coming, so captures in progress are closed, which
+    // finalizes their files. A group capture reports its count the way its
+    // own Stop does.
+    for(int s = 0; s < m_sections.size(); s++)
+    {
+        int running = 0;
+
+        for(const Record &record : m_records)
+        {
+            running += (record.recorder && record.groupStarted && (record.sectionIndex == s)) ? 1 : 0;
+        }
+
+        if(running)
+        {
+            m_sections.at(s).status->setText(Tr::tr("Saved %Ln file(s)", Q_NULLPTR, running));
+            m_sections.at(s).button->setText(Tr::tr("Record All"));
+        }
+    }
+
+    for(int i = 0; i < m_records.size(); i++)
+    {
+        stopRecorder(m_records[i]);
+    }
+
+    updateRecordButtonStates();
+    applyControlStates();
+}
+
+// Controls write to the camera, so they are live only while the script that
+// published them is: writable per the record's flags, and not frozen.
+void OpenMVChannelsView::applyControlStates()
+{
+    for(const Record &record : m_records)
+    {
+        bool enabled = ((record.flags & CHANNEL_FLAG_WRITE) != 0) && (!m_frozen);
+
+        if(record.toggle) record.toggle->setEnabled(enabled);
+        if(record.slider) record.slider->setEnabled(enabled);
+        if(record.spinbox) record.spinbox->setEnabled(enabled);
+        if(record.lineedit) record.lineedit->setEnabled(enabled);
+        if(record.select) record.select->setEnabled(enabled);
+        if(record.pushbutton) record.pushbutton->setEnabled(enabled);
+
+        if(record.radio)
+        {
+            for(QAbstractButton *button : record.radio->buttons())
+            {
+                button->setEnabled(enabled);
+            }
+        }
+    }
 }
 
 void OpenMVChannelsView::clearContent()
@@ -2168,12 +2351,29 @@ static QWidget *plotHintRow()
 
 void OpenMVChannelsView::buildContent(QList<Record> &records)
 {
+    // A schema change mid-capture (a select's options refreshing, say) must
+    // not end the capture: the recorders are lifted out of the rows about
+    // to be deleted and handed back to the matching graphs once rebuilt.
+    struct Running { OpenMVChannelRecorder *recorder = Q_NULLPTR; bool group = false; };
+    QHash<QString, Running> running;
+
+    for(Record &record : m_records)
+    {
+        if(record.recorder)
+        {
+            record.recorder->setParent(this);
+            running.insert(QStringLiteral("%1/%2/%3").arg(record.channelName, record.name, record.wtype),
+                           Running{record.recorder, record.groupStarted});
+            record.recorder = Q_NULLPTR;
+        }
+    }
+
     clearContent();
 
     // Channels with more than one recordable graph (waveform or depth) get
-    // a Record All bar under their section label, capturing every graph
-    // into one multi-track file. With a single graph the per-graph button
-    // already covers it, so no bar.
+    // a Record All bar under their section label, starting every graph
+    // writing its own file at the same instant. With a single graph the
+    // per-graph button already covers it, so no bar.
     QMap<QString, int> recordableCounts;
 
     for(const Record &record : records)
@@ -2249,7 +2449,6 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
 
     QString previousChannel;
     int currentSection = -1;
-    int trackCounter = 0;
 
     for(int i = 0; i < records.size(); i++)
     {
@@ -2260,7 +2459,6 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
             m_contentLayout->addWidget(viewSectionLabel(record.channelName));
             previousChannel = record.channelName;
             currentSection = -1;
-            trackCounter = 0;
 
             if(recordableCounts.value(record.channelName, 0) > 1)
             {
@@ -2659,6 +2857,43 @@ void OpenMVChannelsView::buildContent(QList<Record> &records)
             break;
         }
     }
+
+    // Captures that survived the rebuild pick up where they were. Any whose
+    // graph is gone are closed, which finalizes their files.
+    for(Record &record : records)
+    {
+        if(!(record.waveform || record.depth))
+        {
+            continue;
+        }
+
+        Running run = running.take(QStringLiteral("%1/%2/%3").arg(record.channelName, record.name, record.wtype));
+
+        if(run.recorder)
+        {
+            run.recorder->setParent(record.row);
+            record.recorder = run.recorder;
+            record.groupStarted = run.group;
+            record.recordButton->setText(Tr::tr("Stop"));
+            record.recordStatus->setText(run.recorder->status());
+        }
+    }
+
+    for(const Running &run : running)
+    {
+        delete run.recorder;
+    }
+
+    // m_records still holds the old list here; the bar states are read
+    // from the records just built.
+    m_records = records;
+
+    for(int s = 0; s < m_sections.size(); s++)
+    {
+        syncSectionBar(s);
+    }
+
+    updateRecordButtonStates();
 }
 
 void OpenMVChannelsView::patchContent(QList<Record> &records)
@@ -2675,7 +2910,6 @@ void OpenMVChannelsView::patchContent(QList<Record> &records)
         if(built.recorder)
         {
             int samples, series;
-            double period;
             QString typecode;
 
             if(built.depth)
@@ -2686,14 +2920,12 @@ void OpenMVChannelsView::patchContent(QList<Record> &records)
                 int height = int(built.rec.value(qint64(CBOR_KEY_H)).toInteger());
                 samples = 1;
                 series = qMax(1, width * height);
-                period = 0.0;
                 typecode = QStringLiteral("f");
             }
             else
             {
                 samples = int(built.rec.value(qint64(CBOR_KEY_W)).toInteger());
                 series = int(built.rec.value(qint64(CBOR_KEY_H)).toInteger(1));
-                period = built.rec.value(qint64(CBOR_KEY_UT)).toDouble();
                 typecode = built.rec.value(qint64(CBOR_KEY_VS)).toString();
             }
 
@@ -2702,7 +2934,7 @@ void OpenMVChannelsView::patchContent(QList<Record> &records)
 
             if(built.recorder)
             {
-                if(built.recorder->append(data, typecode, samples, series, t, period))
+                if(built.recorder->append(data, typecode, samples, series, t))
                 {
                     built.recordStatus->setText(built.recorder->status());
                 }
@@ -2716,6 +2948,15 @@ void OpenMVChannelsView::patchContent(QList<Record> &records)
                     built.recorder = Q_NULLPTR;
                     built.recordButton->setText(Tr::tr("Record"));
                     built.recordStatus->setText(error);
+
+                    // A group capture that lost this track is one track
+                    // smaller, and over if it was the last one.
+                    if(built.groupStarted)
+                    {
+                        built.groupStarted = false;
+                        syncSectionBar(built.sectionIndex);
+                    }
+
                     updateRecordButtonStates();
 
                     QMetaObject::invokeMethod(this, [this, error] {
@@ -2905,7 +3146,18 @@ void OpenMVChannelsView::channelsData(const QVariantList &channels)
 {
     if(channels.isEmpty())
     {
-        showMessage(Tr::tr("No channels are being published by the camera"));
+        // The script stopped, or has not registered anything yet. What was
+        // showing stays up to be read, with the controls switched off;
+        // clear() drops it when the next script starts.
+        if(m_records.isEmpty())
+        {
+            showMessage(Tr::tr("No channels are being published by the camera"));
+        }
+        else
+        {
+            freeze();
+        }
+
         return;
     }
 
@@ -2914,11 +3166,27 @@ void OpenMVChannelsView::channelsData(const QVariantList &channels)
 
     if(records.isEmpty())
     {
-        // Channels exist but none produced records: distinguish from the
-        // no-channels case (a decode problem rather than nothing published).
-        showMessage(Tr::tr("%n channel(s) published, but no records decoded", "", int(channels.size())));
+        // Channels exist but none produced records. After a script stops
+        // its channels stay listed with empty payloads until the next
+        // channel event, so with something on screen this is the same
+        // stopped state as an empty list. With nothing on screen it is a
+        // decode problem worth distinguishing from nothing published.
+        if(m_records.isEmpty())
+        {
+            showMessage(Tr::tr("%n channel(s) published, but no records decoded", "", int(channels.size())));
+        }
+        else
+        {
+            freeze();
+        }
+
         return;
     }
+
+    // Data again means a script is publishing: the controls go live. A
+    // rebuild enables them itself; a patch of the existing widgets does not.
+    bool thaw = m_frozen;
+    m_frozen = false;
 
     if(schema != m_schema)
     {
@@ -2935,6 +3203,12 @@ void OpenMVChannelsView::channelsData(const QVariantList &channels)
     else
     {
         patchContent(records);
+
+        if(thaw)
+        {
+            applyControlStates();
+            updateRecordButtonStates();
+        }
     }
 
     setCurrentIndex(1);
@@ -2958,21 +3232,41 @@ void OpenMVChannelsView::updateRecordButtonStates()
     {
         if(record.recordButton)
         {
-            record.recordButton->setEnabled(!anyGroup);
+            record.recordButton->setEnabled((!anyGroup) && (!m_frozen));
         }
     }
 
     for(const Section &section : m_sections)
     {
-        section.button->setEnabled(!anyIndividual);
+        section.button->setEnabled((!anyIndividual) && (!m_frozen));
     }
 }
 
-// The recorder track a record's data maps to: a depth frame is one value
-// column per pixel with no gap column; a waveform is one column per series
-// plus a gap column. Depth tracks are always named (their column count
-// makes bare value_N names useless); waveform tracks are named only in
-// multi-track files to keep the single-graph layout stable.
+void OpenMVChannelsView::syncSectionBar(int index)
+{
+    if((index < 0) || (index >= m_sections.size()))
+    {
+        return;
+    }
+
+    const Section &section = m_sections.at(index);
+    int running = 0;
+
+    for(const Record &record : m_records)
+    {
+        running += (record.recorder && record.groupStarted && (record.sectionIndex == index)) ? 1 : 0;
+    }
+
+    if(running)
+    {
+        section.button->setText(Tr::tr("Stop"));
+        section.status->setText(Tr::tr("Recording %Ln file(s)...", Q_NULLPTR, running));
+    }
+    else if(section.button->text() != Tr::tr("Record All"))
+    {
+        section.button->setText(Tr::tr("Record All"));
+    }
+}
 
 void OpenMVChannelsView::setDevice(const QString &type, const QString &id)
 {
@@ -3031,7 +3325,13 @@ bool OpenMVChannelsView::startRecorder(Record &record, const QString &path,
 
     if(!reason.isEmpty())
     {
-        QMessageBox::critical(this, Tr::tr("Record Channel"), reason);
+        // Queued: Record All calls this in a loop over m_records, and a
+        // modal loop here would let a schema change rebuild the list
+        // under it.
+        record.recordStatus->setText(reason);
+        QMetaObject::invokeMethod(this, [this, reason] {
+            QMessageBox::critical(this, Tr::tr("Record Channel"), reason);
+        }, Qt::QueuedConnection);
         return false;
     }
 
@@ -3041,7 +3341,10 @@ bool OpenMVChannelsView::startRecorder(Record &record, const QString &path,
     {
         QString error = recorder->errorString();
         delete recorder;
-        QMessageBox::critical(this, Tr::tr("Record Channel"), error);
+        record.recordStatus->setText(error);
+        QMetaObject::invokeMethod(this, [this, error] {
+            QMessageBox::critical(this, Tr::tr("Record Channel"), error);
+        }, Qt::QueuedConnection);
         return false;
     }
 
@@ -3109,19 +3412,34 @@ void OpenMVChannelsView::toggleRecording(int index)
     const Utils::Key pathKey = Utils::keyFromString(
         QStringLiteral("OpenMV/LastChannelRecordPath/%1/%2").arg(channelName, recordName));
 
-    QString suggestion = settings->value(pathKey).toString();
+    // What is remembered is the last file written. The suggestion is the
+    // next free number beside it, in its format: offering the file itself
+    // again would start every take with an overwrite prompt.
+    QString last = settings->value(pathKey).toString();
+    QDir dir(last.isEmpty() ? QString() : QFileInfo(last).absolutePath());
+    OpenMVChannelRecorder::Format suggested = formats.first();
 
-    if(suggestion.isEmpty())
+    if(last.isEmpty() || (!dir.exists()))
     {
-        // Numbered, so the name already has the shape Edge Impulse reads a
-        // label and index out of; the dialog's name field is where a real
-        // label gets typed.
-        suggestion = numberedRecordPath(
-            QDir(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)),
-            recordFileName(recordName), OpenMVChannelRecorder::suffixFor(formats.first()));
+        dir = QDir(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation));
+    }
+    else
+    {
+        OpenMVChannelRecorder::Format lastFormat = OpenMVChannelRecorder::formatForFilter(QString(), last);
+
+        if(formats.contains(lastFormat))
+        {
+            suggested = lastFormat;
+        }
     }
 
-    QString filter;
+    // Numbered, so the name already has the shape Edge Impulse reads a
+    // label and index out of; the dialog's name field is where a real
+    // label gets typed.
+    QString suggestion = numberedRecordPath(dir, recordFileName(recordName),
+                                            OpenMVChannelRecorder::suffixFor(suggested));
+
+    QString filter = OpenMVChannelRecorder::filterString(QList<OpenMVChannelRecorder::Format>() << suggested);
     QString path = QFileDialog::getSaveFileName(this, Tr::tr("Record \"%1\" To").arg(recordName),
         suggestion, OpenMVChannelRecorder::filterString(formats), &filter);
 

@@ -61,6 +61,15 @@ static char typecodeOf(const QString &typecode)
     return typecode.isEmpty() ? 'H' : typecode.at(0).toLatin1();
 }
 
+static bool typecodeKnown(char code)
+{
+    switch(code)
+    {
+        case 'b': case 'B': case 'h': case 'H': case 'i': case 'I': case 'f': return true;
+        default: return false;
+    }
+}
+
 // One sample, read out of the raw chunk exactly as the camera packed it.
 static double sampleAt(const uchar *p, char code, qsizetype index)
 {
@@ -298,18 +307,26 @@ QString OpenMVChannelRecorder::suffixFor(Format format)
 
 QString OpenMVChannelRecorder::unsupportedReason(Format format, const Info &info)
 {
-    // Every format except the NumPy array states its own sample rate, and
-    // there is nothing honest to put there if the script never published one.
-    if((format != Npy) && (info.period <= 0.0))
+    if(!typecodeKnown(typecodeOf(info.typecode)))
     {
-        return Tr::tr("This format needs a sample rate, and \"%1\" does not publish one. "
-                      "Pass sample_rate when adding the record, or save a NumPy array.")
-            .arg(info.name);
+        return Tr::tr("\"%1\" publishes samples of type \"%2\", which cannot be recorded. "
+                      "Use one of b, B, h, H, i, I or f.").arg(info.name, info.typecode);
     }
 
     if((format == Wav) && (!info.gap))
     {
-        return Tr::tr("A depth map is not audio; record it to a CSV, JSON or NumPy file.");
+        return Tr::tr("A depth map is not audio; record it to a CSV, JSON, CBOR or NumPy file.");
+    }
+
+    // Every format except the NumPy array states a sample rate. A waveform
+    // that never published one has nothing honest to put there, since its
+    // samples' spacing is unknown; a depth map is one frame per chunk, so
+    // its frames are stamped as they arrive instead.
+    if((format != Npy) && (info.period <= 0.0) && info.gap)
+    {
+        return Tr::tr("This format needs a sample rate, and \"%1\" does not publish one. "
+                      "Pass sample_rate when adding the record, or save a NumPy array.")
+            .arg(info.name);
     }
 
     if((format == Wav) && (info.max <= info.min))
@@ -365,6 +382,8 @@ bool OpenMVChannelRecorder::openPart()
 
     m_partRows = 0;
     m_rowCounter = 0;
+    m_clockStarted = false;
+    m_lastStampMs = 0.0;
     m_values.clear();
     return writeHeader();
 }
@@ -547,7 +566,11 @@ bool OpenMVChannelRecorder::finishPart()
 
             payload[QStringLiteral("device_type")] = m_info.deviceType.isEmpty()
                 ? QStringLiteral("OpenMV Cam") : m_info.deviceType;
-            payload[QStringLiteral("interval_ms")] = m_info.period * 1000.0;
+            // Without a published rate the interval is what was measured
+            // between the first and last frames of this part.
+            payload[QStringLiteral("interval_ms")] = (m_info.period > 0.0)
+                ? (m_info.period * 1000.0)
+                : ((m_partRows > 1) ? (m_lastStampMs / double(m_partRows - 1)) : 0.0);
             payload[QStringLiteral("sensors")] = sensors;
             payload[QStringLiteral("values")] = values;
 
@@ -588,7 +611,7 @@ bool OpenMVChannelRecorder::rollPart()
 }
 
 QByteArray OpenMVChannelRecorder::csvRows(const QByteArray &data, char code,
-                                          int rows, int actual, double period)
+                                          int rows, int actual, double period, double stampMs)
 {
     const uchar *p = reinterpret_cast<const uchar *>(data.constData());
     bool integral = typecodeIsIntegral(code);
@@ -601,8 +624,9 @@ QByteArray OpenMVChannelRecorder::csvRows(const QByteArray &data, char code,
     {
         // Edge Impulse requires a constant interval, so the clock counts rows
         // rather than following device timestamps -- which drift by however
-        // far the publisher's cadence misses its declared rate.
-        block += timestampText((m_rowCounter + r) * period * 1000.0);
+        // far the publisher's cadence misses its declared rate. A record
+        // with no rate is stamped with its arrival instead.
+        block += timestampText((period > 0.0) ? ((m_rowCounter + r) * period * 1000.0) : stampMs);
 
         for(int c = 0; c < m_info.columns; c++)
         {
@@ -623,7 +647,7 @@ QByteArray OpenMVChannelRecorder::csvRows(const QByteArray &data, char code,
 }
 
 bool OpenMVChannelRecorder::append(const QByteArray &data, const QString &typecode,
-                                   int samples, int series, double t, double period)
+                                   int samples, int series, double t)
 {
     if(!m_file.isOpen())
     {
@@ -651,6 +675,12 @@ bool OpenMVChannelRecorder::append(const QByteArray &data, const QString &typeco
     m_lastData = data;
 
     char code = typecodeOf(typecode);
+
+    if(!typecodeKnown(code))
+    {
+        return true; // refused at start; a mid-recording change is dropped
+    }
+
     int stride = typecodeStride(code);
     int actual = qMax(1, series);
     int count = qMin(samples * actual, int(data.size()) / stride);
@@ -661,11 +691,25 @@ bool OpenMVChannelRecorder::append(const QByteArray &data, const QString &typeco
         return true;
     }
 
+    double stampMs = 0.0;
+
+    if(m_info.period <= 0.0)
+    {
+        if(!m_clockStarted)
+        {
+            m_clock.start();
+            m_clockStarted = true;
+        }
+
+        stampMs = double(m_clock.nsecsElapsed()) / 1e6;
+        m_lastStampMs = stampMs;
+    }
+
     switch(m_format)
     {
         case Csv:
         {
-            if(!writeBlock(csvRows(data, code, rows, actual, m_info.period)))
+            if(!writeBlock(csvRows(data, code, rows, actual, m_info.period, stampMs)))
             {
                 return false;
             }
@@ -769,8 +813,11 @@ bool OpenMVChannelRecorder::append(const QByteArray &data, const QString &typeco
     m_totalRows += rows;
 
     // Split before a part grows unwieldy (checked per chunk, so a part can
-    // overshoot by at most one chunk's rows).
-    if(((m_partRows >= RECORD_MAX_PART_ROWS) || (m_file.size() >= RECORD_MAX_PART_BYTES))
+    // overshoot by at most one chunk's rows). The buffered formats have
+    // nothing on disk until the part finishes, so what they hold counts.
+    qint64 partBytes = m_file.size() + (qint64(m_values.size()) * qint64(sizeof(double)));
+
+    if(((m_partRows >= RECORD_MAX_PART_ROWS) || (partBytes >= RECORD_MAX_PART_BYTES))
     && (!rollPart()))
     {
         return false;

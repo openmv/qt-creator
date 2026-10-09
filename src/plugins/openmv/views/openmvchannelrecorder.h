@@ -114,7 +114,7 @@ public:
     // scripts publish, so duplicates are detected (by timestamp and data) and
     // skipped. Returns false when a write fails; errorString() says why.
     bool append(const QByteArray &data, const QString &typecode,
-                int samples, int series, double t, double period);
+                int samples, int series, double t);
 
     QString status() const;
 
@@ -127,7 +127,8 @@ private:
     bool writeBlock(const QByteArray &block);
     QString partPath(int part) const;
 
-    QByteArray csvRows(const QByteArray &data, char code, int rows, int actual, double period);
+    QByteArray csvRows(const QByteArray &data, char code, int rows, int actual,
+                       double period, double stampMs);
 
     QString m_basePath;
     Format m_format;
@@ -148,6 +149,12 @@ private:
     double m_lastT = 0.0;
     QByteArray m_lastData;
     qint64 m_rowCounter = 0; // rows in this part, for a constant-interval clock
+
+    // A record that publishes no rate (a depth map: one frame per chunk) is
+    // stamped as its chunks arrive instead, from the first one in the part.
+    QElapsedTimer m_clock;
+    bool m_clockStarted = false;
+    double m_lastStampMs = 0.0;
 
     int m_part = 0;
     qint64 m_partRows = 0;

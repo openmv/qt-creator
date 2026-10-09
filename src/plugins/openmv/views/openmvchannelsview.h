@@ -245,6 +245,8 @@ private:
     double m_triggerLevel = 0.0;
     double m_triggerPrevious = 0.0; // carried across chunks, so a crossing at
                                     // a chunk boundary is not missed
+    bool m_triggerFilling = false;  // crossed, still taking samples until the
+    double m_triggerFillKey = 0.0;  // window to the right of it has filled
     QCPItemStraightLine *m_triggerLine = Q_NULLPTR;
     QCPItemStraightLine *m_triggerMark = Q_NULLPTR;
 
@@ -271,10 +273,20 @@ public:
 public slots:
 
     // One map per channel: name, flags, and the raw CBOR payload. An empty
-    // list shows the "no channels" message; reset() shows the "connect"
-    // message and drops all per-session state.
+    // list freezes what is showing (the script stopped, or has not
+    // registered anything yet); reset() shows the "connect" message and
+    // drops all per-session state.
     void channelsData(const QVariantList &channels);
     void reset();
+
+    // Drops what is showing: the next script's channels start from a blank
+    // view rather than over the previous script's stale controls.
+    void clear();
+
+    // Keeps what is showing but disables every control that would write
+    // to the camera, and closes any captures. The view thaws by itself when
+    // channel data arrives again.
+    void freeze();
 
     // The connected board, named in the files a recording writes: Edge
     // Impulse groups samples by the device they came off.
@@ -340,6 +352,8 @@ private:
     void toggleRecording(int index);
     void toggleGroupRecording(int index);
     void updateRecordButtonStates();
+    void syncSectionBar(int index);
+    void applyControlStates();
     OpenMVChannelRecorder::Info infoFor(const Record &record) const;
     bool startRecorder(Record &record, const QString &path,
                        OpenMVChannelRecorder::Format format, bool group);
@@ -352,6 +366,7 @@ private:
     QString m_deviceId;
     QList<Record> m_records;
     QList<Section> m_sections;
+    bool m_frozen = false; // showing a stopped script's last state
 
     // Controls mid-interaction (slider drags) that patches must not fight.
     QSet<QString> m_activeControls;
