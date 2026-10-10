@@ -61,6 +61,7 @@
 #include <texteditor/codeassist/completionassistprovider.h>
 #include <texteditor/codeassist/keywordscompletionassist.h>
 #include <texteditor/textdocument.h>
+#include <texteditor/textmark.h>
 #include <texteditor/texteditor.h>
 #include <extensionsystem/iplugin.h>
 #include <extensionsystem/pluginmanager.h>
@@ -78,6 +79,7 @@
 #include <utils/styledbar.h>
 #include <utils/qtcprocess.h>
 #include <utils/theme/theme.h>
+#include <utils/utilsicons.h>
 #include <utils/tooltip/tooltip.h>
 
 #if defined(Q_OS_WIN)
@@ -803,6 +805,8 @@ private:
     QString m_serialNumberFilter;
     QRegularExpression m_errorFilterRegex;
     QString m_errorFilterString;
+    TextEditor::TextMark *m_errorMark = Q_NULLPTR; // red mark + inline error text on the traceback line; cleared on edit/run/disconnect
+    void clearErrorMark();
     bool m_useGetState;
     int m_frameSizeDumpSpacing;
     int m_getScriptRunningSpacing;
@@ -855,6 +859,7 @@ private:
     // for a camera that is still sitting in the bootloader.
     bool m_romfsSessionActive = false;
     bool m_romfsOperationFailed = false;
+    bool m_romfsBootloaderLeft = false; // ...and the bootloader was asked to leave DFU (board re-enumerates as the app)
 
     struct RomfsSessionGuard
     {
@@ -862,6 +867,7 @@ private:
         {
             plugin->m_romfsSessionActive = true;
             plugin->m_romfsOperationFailed = false;
+            plugin->m_romfsBootloaderLeft = false;
         }
 
         ~RomfsSessionGuard()

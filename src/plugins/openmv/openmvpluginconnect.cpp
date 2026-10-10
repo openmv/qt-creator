@@ -697,13 +697,16 @@ void OpenMVPlugin::packageUpdate()
 
         if((reply->error() == QNetworkReply::NoError) && (!data.isEmpty()))
         {
-            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("^(\\d+)\\.(\\d+)\\.(\\d+)$")).match(QString::fromUtf8(data).trimmed());
+            // "<major>.<minor>.<patch>" optionally followed by whitespace and the
+            // zip's sha256 (hex); when present the download is verified against it.
+            QRegularExpressionMatch match = QRegularExpression(QStringLiteral("^(\\d+)\\.(\\d+)\\.(\\d+)(?:\\s+([0-9A-Fa-f]{64}))?$")).match(QString::fromUtf8(data).trimmed());
 
             if(match.hasMatch())
             {
                 int new_major = match.captured(1).toInt();
                 int new_minor = match.captured(2).toInt();
                 int new_patch = match.captured(3).toInt();
+                QString new_sha256 = match.captured(4).toLower();
 
                 int old_major = 0;
                 int old_minor = 0;
@@ -750,10 +753,17 @@ void OpenMVPlugin::packageUpdate()
 
                         QNetworkAccessManager *manager2 = new QNetworkAccessManager(this);
 
-                        connect(manager2, &QNetworkAccessManager::finished, this, [this, manager2, new_major, new_minor, new_patch, dialog] (QNetworkReply *reply2) {
+                        connect(manager2, &QNetworkAccessManager::finished, this, [this, manager2, new_major, new_minor, new_patch, new_sha256, dialog] (QNetworkReply *reply2) {
                             QByteArray data2 = reply2->error() == QNetworkReply::NoError ? reply2->readAll() : QByteArray();
 
-                            if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty()))
+                            if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty())
+                            && (!new_sha256.isEmpty()) && (sha256Hex(data2) != new_sha256))
+                            {
+                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                    Tr::tr("Package Update"),
+                                    Tr::tr("The downloaded resources file \"%L1\" failed its checksum. Please try again later.").arg(reply2->request().url().toString()));
+                            }
+                            else if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty()))
                             {
                                 dialog->setLabelText(Tr::tr("Installing..."));
                                 dialog->setRange(0, 0);
@@ -4612,6 +4622,7 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
 
             m_jpgCompress->setVisible(false);
             m_frameFormatName.clear(); // else the title keeps "(JPEG)" over "No Image"
+            clearErrorMark();
 
             if (!m_boardType.isEmpty() && v2ProtocolEnabled)
             {
@@ -4721,6 +4732,109 @@ void OpenMVPlugin::disconnectClicked(bool reset, bool enterBootloader)
     }
 
     QTimer::singleShot(0, this, &OpenMVPlugin::disconnectDone);
+}
+
+// Drop "#" comments from the script before it is uploaded: the source sits in
+// the camera's RAM while MicroPython compiles it, and the examples are comment
+// heavy. Lines are never removed (a comment-only line becomes an empty one),
+// so traceback line numbers still match the editor. String literals are
+// tracked, including triple-quoted ones spanning lines, so a "#" inside a
+// string is left alone. Line endings are kept as they were.
+static QByteArray stripComments(const QByteArray &source)
+{
+    QByteArray out;
+    out.reserve(source.size());
+
+    QByteArray triple; // "\"\"\"" or "'''" while inside a multi-line string
+    int start = 0;
+
+    while(start <= source.size())
+    {
+        int nl = source.indexOf('\n', start);
+        int end = (nl == -1) ? source.size() : nl;
+        bool cr = (end > start) && (source.at(end - 1) == '\r');
+        int bodyEnd = cr ? (end - 1) : end;
+
+        char quote = 0; // single-line string in progress
+        int cut = -1;
+
+        for(int i = start; i < bodyEnd; i++)
+        {
+            char c = source.at(i);
+
+            if(!triple.isEmpty())
+            {
+                if((c == '\\') && (i + 1 < bodyEnd))
+                {
+                    i++;
+                }
+                else if((c == triple.at(0)) && (source.mid(i, 3) == triple))
+                {
+                    triple.clear();
+                    i += 2;
+                }
+            }
+            else if(quote)
+            {
+                if((c == '\\') && (i + 1 < bodyEnd))
+                {
+                    i++;
+                }
+                else if(c == quote)
+                {
+                    quote = 0;
+                }
+            }
+            else if((c == '"') || (c == '\''))
+            {
+                if((source.mid(i, 3) == "\"\"\"") || (source.mid(i, 3) == "'''"))
+                {
+                    triple = source.mid(i, 3);
+                    i += 2;
+                }
+                else
+                {
+                    quote = c;
+                }
+            }
+            else if(c == '#')
+            {
+                cut = i;
+                break;
+            }
+        }
+
+        if(cut != -1)
+        {
+            int keep = cut;
+
+            while((keep > start) && ((source.at(keep - 1) == ' ') || (source.at(keep - 1) == '\t')))
+            {
+                keep--;
+            }
+
+            out.append(source.mid(start, keep - start));
+
+            if(cr)
+            {
+                out.append('\r');
+            }
+        }
+        else
+        {
+            out.append(source.mid(start, end - start));
+        }
+
+        if(nl == -1)
+        {
+            break;
+        }
+
+        out.append('\n');
+        start = nl + 1;
+    }
+
+    return out;
 }
 
 void OpenMVPlugin::startClicked()
@@ -4914,8 +5028,9 @@ void OpenMVPlugin::startClicked()
             // The previous script's channels stay on screen after it stops
             // so they can still be read; the next script starts from blank.
             m_channelsView->clear();
+            clearErrorMark();
 
-            m_iodevice->scriptExec(contents);
+            m_iodevice->scriptExec(stripComments(contents));
             m_iodevice->jpegEnable(jpgCompressEnabled());
             applyFrameBufferSource();
 

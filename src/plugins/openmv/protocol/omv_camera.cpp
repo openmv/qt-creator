@@ -277,7 +277,13 @@ void OMVCamera::handleEvent(uint8_t channel_id, uint16_t event)
             resyncPending = true;
             // Reset here to handle any in-flight packets.
             transport->reset_sequence();
-        } else if (event == static_cast<uint16_t>(OMVPEventType::CHANNEL_REGISTERED)) {
+            // The reboot dropped every dynamic channel: refresh the list on the
+            // next poll rather than keeping the stale map until the next exec/stop.
+            pendingChannelEvents += 1;
+        } else if ((event == static_cast<uint16_t>(OMVPEventType::CHANNEL_REGISTERED))
+                || (event == static_cast<uint16_t>(OMVPEventType::CHANNEL_UNREGISTERED))) {
+            // Unregistered channels used to linger (and be read, then NAKed) until
+            // the next exec/stop rebuilt the map.
             pendingChannelEvents += 1;
         }
     } else if (channelsById.contains(channel_id)) {

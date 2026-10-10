@@ -4759,6 +4759,18 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
     }
 }
 
+void OpenMVPlugin::clearErrorMark()
+{
+    if(m_errorMark)
+    {
+        // The TextMark destructor removes it from its document; when the
+        // document itself is going away (destroyed signal) the mark has
+        // already been detached, so plain delete is right in both cases.
+        delete m_errorMark;
+        m_errorMark = Q_NULLPTR;
+    }
+}
+
 void OpenMVPlugin::errorFilter(const QByteArray &data)
 {
     m_errorFilterString.append(QString::fromUtf8(data).replace(QStringLiteral("\r\n"), QStringLiteral("\n")));
@@ -4812,6 +4824,22 @@ void OpenMVPlugin::errorFilter(const QByteArray &data)
             editor->gotoLine(lineNumber);
             editor->editorWidget()->gotoLineEndWithSelection();
             Core::EditorManager::activateEditor(editor);
+
+            // Mark the line in red with the error text inline, the way the
+            // code model shows diagnostics. It stays until the document is
+            // edited, the script is run again, or the cam disconnects.
+            clearErrorMark();
+
+            static const TextEditor::TextMarkCategory category{Tr::tr("OpenMV Cam Error"), Utils::Id("OpenMV.ScriptError")};
+            m_errorMark = new TextEditor::TextMark(editor->textDocument(), lineNumber, category);
+            m_errorMark->setColor(Utils::Theme::CodeModel_Error_TextMarkColor);
+            m_errorMark->setIcon(Utils::Icons::CRITICAL.icon());
+            m_errorMark->setPriority(TextEditor::TextMark::HighPriority);
+            m_errorMark->setLineAnnotation(errorMessage);
+            m_errorMark->setToolTip(errorMessage);
+
+            connect(editor->textDocument()->document(), &QTextDocument::contentsChanged, this, &OpenMVPlugin::clearErrorMark, Qt::UniqueConnection);
+            connect(editor->textDocument(), &QObject::destroyed, this, &OpenMVPlugin::clearErrorMark, Qt::UniqueConnection);
         }
 
         QMessageBox *box = new QMessageBox(QMessageBox::Critical, QString(), errorMessage, QMessageBox::Ok, Core::ICore::dialogParent());

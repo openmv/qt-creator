@@ -186,6 +186,64 @@ QList<QString> getDevices()
     }
 }
 
+static Utils::FilePath dfuUtilBinary()
+{
+    if(Utils::HostOsInfo::isWindowsHost())
+    {
+        return Core::ICore::resourcePath(QStringLiteral("dfu-util/windows/dfu-util.exe"));
+    }
+    else if(Utils::HostOsInfo::isMacHost())
+    {
+        return Core::ICore::resourcePath(QStringLiteral("dfu-util/osx/dfu-util"));
+    }
+    else if(Utils::HostOsInfo::isLinuxHost())
+    {
+        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
+        {
+            return Core::ICore::resourcePath(QStringLiteral("dfu-util/linux32/dfu-util"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
+        {
+            return Core::ICore::resourcePath(QStringLiteral("dfu-util/linux64/dfu-util"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
+        {
+            return Core::ICore::resourcePath(QStringLiteral("dfu-util/arm/dfu-util"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        {
+            return Core::ICore::resourcePath(QStringLiteral("dfu-util/aarch64/dfu-util"));
+        }
+    }
+
+    return Utils::FilePath();
+}
+
+bool detachAndReset(const QString &device)
+{
+    Utils::FilePath binary = dfuUtilBinary();
+
+    if(binary.isEmpty())
+    {
+        return false;
+    }
+
+    QMutexLocker locker(&dfu_util_working);
+
+    Utils::Process process;
+    std::chrono::seconds timeout(10);
+    process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
+    process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
+    process.setProcessChannelMode(QProcess::MergedChannels);
+    process.setCommand(Utils::CommandLine(binary, QStringList()
+        << QStringLiteral("-d") << (QStringLiteral(",") + device)
+        << QStringLiteral("-a") << QStringLiteral("0")
+        << QStringLiteral("--detach") << QStringLiteral("--reset")));
+    process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+    return process.result() == Utils::ProcessResult::FinishedWithSuccess;
+}
+
 void downloadFirmware(const QString &details,
                       QString &command, Utils::Process &process,
                       const QString &path, const QString &device, const QString &moreArgs,

@@ -244,6 +244,11 @@ OpenMVROMFSEditor::OpenMVROMFSEditor(QWidget *parent, const QString &path, const
     setColumnHidden(2, true); // Type
     setColumnHidden(3, true); // DateModified
 
+    // Files dragged in from the desktop/file manager go through addFileAt()
+    // (same conversion as Add File) into the folder they were dropped on.
+    setAcceptDrops(true);
+    setDropIndicatorShown(true);
+
     m_boardSettings = boardSettings;
 
 #ifndef Q_OS_MAC
@@ -446,6 +451,21 @@ void OpenMVROMFSEditor::addFile()
 
     if (!file.isEmpty())
     {
+        addFileAt(file, index);
+    }
+}
+
+// The work behind Add File, also used for files dropped onto the tree: scripts
+// are compiled and models converted exactly as when picked through the dialog.
+void OpenMVROMFSEditor::addFileAt(const QString &file, QModelIndex index)
+{
+    Utils::QtcSettings *settings = ExtensionSystem::PluginManager::settings();
+
+    if (!index.isValid()) {
+        index = m_model->index(m_model->rootPath());
+    }
+
+    {
         QString convertedSrc = convertModel(m_boardSettings, convertScript(m_boardSettings, file, settings), settings);
 
         if (convertedSrc.isEmpty())
@@ -505,6 +525,66 @@ void OpenMVROMFSEditor::addFile()
                 Tr::tr("Failed to copy file!"));
         }
     }
+}
+
+void OpenMVROMFSEditor::dragEnterEvent(QDragEnterEvent *event)
+{
+    if (event->mimeData()->hasUrls())
+    {
+        event->acceptProposedAction();
+        return;
+    }
+
+    QTreeView::dragEnterEvent(event);
+}
+
+void OpenMVROMFSEditor::dragMoveEvent(QDragMoveEvent *event)
+{
+    if (event->mimeData()->hasUrls())
+    {
+        event->acceptProposedAction();
+        return;
+    }
+
+    QTreeView::dragMoveEvent(event);
+}
+
+void OpenMVROMFSEditor::dropEvent(QDropEvent *event)
+{
+    if (!event->mimeData()->hasUrls())
+    {
+        QTreeView::dropEvent(event);
+        return;
+    }
+
+    // Target: the folder under the cursor (or the folder containing the file
+    // under the cursor); empty space means the ROMFS root.
+    QModelIndex index = m_filter->mapToSource(indexAt(event->position().toPoint()));
+
+    for (const QUrl &url : event->mimeData()->urls())
+    {
+        if (!url.isLocalFile())
+        {
+            continue;
+        }
+
+        QFileInfo info(url.toLocalFile());
+
+        if (info.isDir())
+        {
+            QMessageBox::critical(Core::ICore::dialogParent(),
+                Tr::tr("Edit ROMFS"),
+                Tr::tr("Dropping folders is not supported - drop the files inside them instead."));
+            continue;
+        }
+
+        if (info.isFile())
+        {
+            addFileAt(info.filePath(), index);
+        }
+    }
+
+    event->acceptProposedAction();
 }
 
 void OpenMVROMFSEditor::newFolder()
@@ -717,9 +797,11 @@ void OpenMVPlugin::romfsOperationIncomplete(const QString &title, bool write)
     if (write)
     {
         QMessageBox::warning(Core::ICore::dialogParent(), title,
-            Tr::tr("The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.\n\n"
-                   "Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options "
-                   "to reset the ROM file system or to edit and commit it again."));
+            Tr::tr("The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.\n\n") +
+            (m_romfsBootloaderLeft
+             ? Tr::tr("Reset the ROM file system, or edit and commit it again, before relying on it.")
+             : Tr::tr("Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options "
+                      "to reset the ROM file system or to edit and commit it again.")));
     }
     else
     {
@@ -824,12 +906,22 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 
                 if (m_romfsOperationFailed)
                 {
-                    // Cancelled or failed in the bootloader: no reconnect wait
-                    // (the cam is still in the bootloader, so it would spin for
-                    // 10 s and then raise the DFU dialog) and no "failed to
-                    // unpack" for a read the user stopped.
+                    // Cancelled or failed in the bootloader: no "failed to
+                    // unpack" for a read the user stopped. If the bootloader
+                    // was sent back to the app, wait for it like a normal
+                    // reconnect; otherwise the cam is still in DFU (a wait
+                    // would spin for 10 s and raise the DFU dialog), so say so.
                     romfsFile.remove();
-                    romfsOperationIncomplete(Tr::tr("Edit ROMFS"), false);
+
+                    if (m_romfsBootloaderLeft)
+                    {
+                        if (wasConnected) connectClicked(false, QString(), false, false, false, true);
+                    }
+                    else
+                    {
+                        romfsOperationIncomplete(Tr::tr("Edit ROMFS"), false);
+                    }
+
                     return;
                 }
 
@@ -943,6 +1035,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         if (m_romfsOperationFailed)
         {
             romfsOperationIncomplete(Tr::tr("Load ROMFS onto OpenMV Cam"), true);
+            if (m_romfsBootloaderLeft && wasConnected) connectClicked(false, QString(), false, false, false, true);
             return;
         }
 
@@ -1121,6 +1214,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
     if (m_romfsOperationFailed)
     {
         romfsOperationIncomplete(Tr::tr("Edit ROMFS"), true);
+        if (m_romfsBootloaderLeft && wasConnected) connectClicked(false, QString(), false, false, false, true);
         return;
     }
 
@@ -1207,6 +1301,7 @@ void OpenMVPlugin::resetRomfsClicked()
         if (m_romfsOperationFailed)
         {
             romfsOperationIncomplete(Tr::tr("Reset ROMFS"), true);
+            if (m_romfsBootloaderLeft && wasConnected) connectClicked(false, QString(), false, false, false, true);
             return;
         }
 

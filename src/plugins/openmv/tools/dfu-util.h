@@ -41,6 +41,9 @@ namespace Internal {
 
 QList<QPair<int, int> > dfuVidPidList(const QJsonDocument &settings);
 QList<QString> getDevices();
+// "dfu-util -d ,<vid:pid> -a 0 --detach --reset": asks the bootloader to leave DFU
+// and re-enumerate as the application. Quiet (no dialog); true when dfu-util exited 0.
+bool detachAndReset(const QString &device);
 void downloadFirmware(const QString &details,
                       QString &command, Utils::Process &process,
                       const QString &path, const QString &device, const QString &moreArgs = QString(),

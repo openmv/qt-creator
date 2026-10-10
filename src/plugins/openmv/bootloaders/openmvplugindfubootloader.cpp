@@ -487,6 +487,9 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                 // "fail to unpack" a half-read file and wait for a camera.
                 m_romfsOperationFailed = true;
                 QFile::remove(firmwarePath);
+                // Try to send the board back to the application so the editor
+                // can simply wait for it to come back instead of leaving it in DFU.
+                m_romfsBootloaderLeft = detachAndReset(dfuDeviceVidPid);
 
                 if(process.result() != Utils::ProcessResult::TerminatedAbnormally)
                 {
@@ -517,6 +520,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                     // and the board is still in DFU. A genuine dfu-util error
                     // used to end silently here as if it had succeeded.
                     m_romfsOperationFailed = true;
+                    m_romfsBootloaderLeft = detachAndReset(dfuDeviceVidPid);
 
                     if(process.result() != Utils::ProcessResult::TerminatedAbnormally)
                     {

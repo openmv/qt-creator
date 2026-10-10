@@ -124,9 +124,13 @@ protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
     void keyPressEvent(QKeyEvent *event) override;
     void paintEvent(QPaintEvent *event) override;
+    void dragEnterEvent(QDragEnterEvent *event) override;
+    void dragMoveEvent(QDragMoveEvent *event) override;
+    void dropEvent(QDropEvent *event) override;
 
 private:
 
+    void addFileAt(const QString &file, QModelIndex index);
     void preloadDirectories(const QModelIndex &index);
     void calculateFileSystemSize();
 
