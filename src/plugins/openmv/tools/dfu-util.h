@@ -49,6 +49,9 @@ void downloadFirmware(const QString &details,
                       const QString &path, const QString &device, const QString &moreArgs = QString(),
                       bool uploadInstead = false, int uploadSize = 0,
                       const QString &extraMessage = QString());
+// True when the last downloadFirmware() call ended because the user pressed
+// Cancel in its dialog.
+bool downloadFirmwareWasCanceled();
 
 } // namespace Internal
 } // namespace OpenMV

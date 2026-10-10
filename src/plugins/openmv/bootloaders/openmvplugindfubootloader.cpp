@@ -491,7 +491,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                 // can simply wait for it to come back instead of leaving it in DFU.
                 m_romfsBootloaderLeft = detachAndReset(dfuDeviceVidPid);
 
-                if(process.result() != Utils::ProcessResult::TerminatedAbnormally)
+                if((!downloadFirmwareWasCanceled()) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                 {
                     QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("DFU ROMFS read failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -522,7 +522,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                     m_romfsOperationFailed = true;
                     m_romfsBootloaderLeft = detachAndReset(dfuDeviceVidPid);
 
-                    if(process.result() != Utils::ProcessResult::TerminatedAbnormally)
+                    if((!downloadFirmwareWasCanceled()) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                     {
                         QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("DFU ROMFS write failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |

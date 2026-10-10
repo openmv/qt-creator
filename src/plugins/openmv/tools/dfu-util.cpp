@@ -244,12 +244,24 @@ bool detachAndReset(const QString &device)
     return process.result() == Utils::ProcessResult::FinishedWithSuccess;
 }
 
+// Set by downloadFirmware() from its loader dialog: true when the user pressed
+// Cancel. A killed dfu-util / DfuSe / pydfu reports a plain non-zero exit on
+// Windows (not a crash), so the process result alone can't tell a cancel from
+// a failure.
+static bool s_downloadCanceled = false;
+
+bool downloadFirmwareWasCanceled()
+{
+    return s_downloadCanceled;
+}
+
 void downloadFirmware(const QString &details,
                       QString &command, Utils::Process &process,
                       const QString &path, const QString &device, const QString &moreArgs,
                       bool uploadInstead, int uploadSize,
                       const QString &extraMessage)
 {
+    s_downloadCanceled = false;
     QStringList list;
 
     for(const QString &d : getDevices())
@@ -386,6 +398,7 @@ void downloadFirmware(const QString &details,
             process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
+            s_downloadCanceled = dialog->wasRejected();
             delete dialog;
         }
         else
@@ -502,6 +515,7 @@ void downloadFirmware(const QString &details,
             process.setCommand(Utils::CommandLine(binary, args));
             process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
+            s_downloadCanceled = dialog->wasRejected();
             delete dialog;
         }
 
@@ -684,6 +698,7 @@ void downloadFirmware(const QString &details,
     process.setCommand(Utils::CommandLine(binary, args));
     process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
+    s_downloadCanceled = dialog->wasRejected();
     delete dialog;
 }
 
