@@ -103,9 +103,16 @@ table.docutils td, table.docutils th {
       margin: 0;
     }
 
-    /* Override Shibuya's .yue a link-underline border for landing anchors.
+    /* Override Shibuya's .yue a link styling for landing anchors. Older Shibuya
+       underlined via border-bottom (the class-scoped border overrides below);
+       newer Shibuya uses text-decoration, which propagates into every line box
+       of the composite card/step/button anchors -- kill it here. Same 0-1-1
+       specificity as .yue a; custom.css loads after the theme, so it wins.
        Use specificity (:is(.openmv-landing, .omv-cards-page) + class) instead of !important. */
-    :is(.openmv-landing, .omv-cards-page) a { font-weight: inherit; }
+    :is(.openmv-landing, .omv-cards-page) a {
+      font-weight: inherit;
+      text-decoration: none;
+    }
     :is(.openmv-landing, .omv-cards-page) a.omv-step,
     :is(.openmv-landing, .omv-cards-page) a.omv-card,
     :is(.openmv-landing, .omv-cards-page) a.omv-link-card {
@@ -993,6 +1000,14 @@ html.dark .changelog-product-card.icon-amber .card-icon {
     background: rgba(251, 191, 36, 0.18);
     color: #FCD34D;
 }
+.changelog-product-card.icon-coral .card-icon {
+    background: rgba(216, 90, 48, 0.12);
+    color: #D85A30;
+}
+html.dark .changelog-product-card.icon-coral .card-icon {
+    background: rgba(251, 146, 60, 0.18);
+    color: #FDBA74;
+}
 .changelog-product-card .card-arrow {
     margin-top: 12px;
     font-size: 12px;
@@ -1120,6 +1135,36 @@ video.framed,
     overflow: hidden;
 }
 
+/* Controls-less looping demo videos pop out into an enlarged lightbox on
+   click (static/video-lightbox.js) -- the column shows them far below native
+   resolution. The cursor is the affordance; click anywhere or Esc dismisses. */
+video:not([controls]) {
+    cursor: zoom-in;
+}
+.video-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.75);
+    cursor: zoom-out;
+    opacity: 0;
+    transition: opacity 0.15s ease-out;
+}
+.video-lightbox.open {
+    opacity: 1;
+}
+.video-lightbox video {
+    width: min(1720px, 94vw);
+    max-height: 94vh;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+    cursor: zoom-out;
+}
+
 /* sphinxcontrib-video wraps the <video> in a figure that defaults to
    "align-left" (floated), and emits <video width="100%"> -- which browsers
    honour on <img> but NOT on <video>, so the video falls back to its intrinsic
@@ -1215,5 +1260,97 @@ video.framed {
 [dir="rtl"] .next-step-card .card-arrow { transform: translateX(4px); }
 [dir="rtl"] a.changelog-product-card:hover .card-arrow,
 [dir="rtl"] a.next-step-card:hover .card-arrow { transform: translateX(0); }
+
+/* Legacy (CMUcam) pages: lay a group of images out as a single centered row,
+   shrinking them as needed so they all fit on one line (never stacking). */
+.legacy-center > p {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 1rem 0;
+}
+.legacy-center > p img { min-width: 0; max-width: 100%; height: auto; }
+
+/* Even-height row: for groups whose source thumbnails differ in intrinsic
+   size, line them up on a common height instead of showing them at natural
+   size. Wraps on narrow screens. */
+.legacy-center.legacy-even > p { flex-wrap: wrap; }
+.legacy-center.legacy-even > p img { height: 150px; width: auto; max-width: 100%; }
+/* Larger even-height variant for rows whose source images are full-size. */
+.legacy-center.legacy-even-lg > p { flex-wrap: wrap; }
+.legacy-center.legacy-even-lg > p img { height: 300px; width: auto; max-width: 100%; }
+
+/* Present only to get a full-size image collected so a thumbnail can link to it. */
+img.legacy-collect-only { display: none; }
+
+/* Responsive 16:9 wrapper for embedded (YouTube) videos on legacy pages. */
+.legacy-yt { position: relative; width: 100%; max-width: 720px; margin: 1rem auto; aspect-ratio: 16 / 9; }
+.legacy-yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* Captioned 2x2 quad box for legacy gallery groups (never a single column). */
+.legacy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 16px; margin: 1rem 0; }
+.legacy-grid figure { margin: 0; text-align: center; }
+.legacy-grid figure img { max-width: 100%; height: auto; }
+.legacy-grid figcaption { margin-top: 4px; font-weight: bold; }
+/* Prose variant: descriptive sentence captions read better unbolded. */
+.legacy-grid.legacy-grid-prose figcaption { font-weight: normal; }
+
+/* Give raster media across the legacy (CMUcam) pages the same rounded,
+   contained frame as the .framed treatment used elsewhere. The .legacy-pages
+   class is set by static/legacy-frame.js on any /legacy/ URL, so no
+   per-directive tagging is needed. */
+html.legacy-pages article.yue img:not(.legacy-collect-only),
+html.legacy-pages article.yue video {
+    box-sizing: border-box;
+    border: 1px solid var(--sy-c-border);
+    border-radius: 10px;
+}
+html.legacy-pages .legacy-yt {
+    border-radius: 10px;
+    overflow: hidden;
+}
+/* Thumbnail -> full-size images are wrapped in a link; suppress the theme's
+   link underline that would otherwise draw a line under the image. Direct
+   images get the .image-reference class; substitution images (rows) are a
+   bare .reference inside a .legacy-center container. */
+html.legacy-pages article.yue a.image-reference,
+html.legacy-pages .legacy-center a {
+    border-bottom: none;
+    text-decoration: none;
+    background-image: none;
+}
+/* The intro page's board-style camera cards carry transparent-background
+   product photos with their own treatment -- leave those unframed. */
+html.legacy-pages .omv-card img {
+    border: none;
+    border-radius: 0;
+}
+/* Pages flagged by legacy-frame.js opt out of the frame entirely (board
+   photos, header image rows). Keeps the link-underline suppression above.
+   The :not() matches the framing rule's specificity so source order wins. */
+html.legacy-noframe article.yue img:not(.legacy-collect-only),
+html.legacy-noframe article.yue video {
+    border: none;
+    border-radius: 0;
+}
+/* Per-image opt-out (e.g. diagrams) via :class: legacy-unframed on the figure. */
+html.legacy-pages article.yue img.legacy-unframed {
+    border: none;
+    border-radius: 0;
+}
+
+/* Download-role links should read as normal prose links, not monospace code. */
+a.reference.download code,
+a.reference.download code .pre {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+}
 
 /* openmv-english-only */.nav-languages{display:none!important}.nav-versions{display:none!important}

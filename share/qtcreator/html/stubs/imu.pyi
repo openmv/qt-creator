@@ -43,21 +43,37 @@ Example usage – detect which way the camera is tilted:
 from typing import Any
 import machine
 
-def __read_reg(addr: int) -> int:
-    """Returns the value of the IMU register at addr."""
+
+def __read_reg(addr: int, buf: bytearray | None = None) -> int | None:
+    """
+    Returns the value of the IMU register at addr.
+
+    If buf is given, performs a burst read instead: len(buf) bytes
+    are read starting at addr into the writable buffer and None is
+    returned. Use this to read a block of consecutive registers (for example
+    all six accelerometer output bytes) in a single bus transaction.
+    """
     ...
+
+
 def __write_reg(addr: int, val: int) -> None:
     """Sets the IMU register at addr to val."""
     ...
+
+
 def acceleration_mg() -> tuple[float, float, float]:
     """Returns the acceleration for (x, y, z) as a float tuple in milli-g’s."""
     ...
+
+
 def angular_rate_mdps() -> tuple[float, float, float]:
     """
     Returns the angular rate for (x, y, z) as a float tuple in
     milli-degrees-per-second.
     """
     ...
+
+
 def pitch() -> float:
     """
     Returns the pitch angle of the camera module in degrees.
@@ -68,6 +84,8 @@ def pitch() -> float:
     - 270 -> Camera is pointing up.
     """
     ...
+
+
 def roll() -> float:
     """
     Returns the roll angle of the camera module in degrees.
@@ -78,15 +96,20 @@ def roll() -> float:
     - 270 -> Camera is rotated right.
     """
     ...
+
+
 def sleep(enable: bool) -> None:
     """
     enable set to True puts the IMU sensor to sleep. False wakes it
     back up (the default).
     """
     ...
+
+
 def temperature_c() -> float:
     """Returns the IMU sensor temperature in degrees Celsius."""
     ...
+
 
 class IMU:
     """
@@ -102,22 +125,24 @@ class IMU:
     and output data rates.
     """
     def __init__(self, bus: 'machine.I2C') -> None: ...
+
     def accel(self) -> tuple[float, float, float]:
         """
         Return the latest accelerometer reading as an (x, y, z) tuple in
         units of g (standard gravities).
         """
         ...
+
     def gyro(self) -> tuple[float, float, float]:
         """
         Return the latest gyroscope reading as an (x, y, z) tuple in
         degrees per second.
         """
         ...
+
     def magnet(self) -> tuple[float, float, float]:
         """
         Return the latest magnetometer reading as an (x, y, z) tuple in
         micro-tesla (uT).
         """
         ...
-

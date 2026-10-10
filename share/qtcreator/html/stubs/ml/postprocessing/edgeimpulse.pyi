@@ -7,6 +7,7 @@ for Edge Impulse models.
 from typing import Any
 import ml
 
+
 class Fomo:
     """
     Creates a FOMO post-processor.
@@ -26,6 +27,7 @@ class Fomo:
     nms_sigma sigma value passed to non-max-suppression (soft-NMS).
     """
     def __init__(self, threshold: float = 0.4, w_scale: float = 1.414214, h_scale: float = 1.414214, nms_threshold: float = 0.1, nms_sigma: float = 0.001) -> None: ...
+
     def __call__(self, model: ml.Model, inputs: list, outputs: list) -> list:
         """
         Invoked by ml.Model.predict() with the model, its inputs, and its raw
@@ -36,3 +38,27 @@ class Fomo:
         """
         ...
 
+
+class YoloPro:
+    """
+    Creates a YOLO Pro post-processor.
+
+    threshold minimum class score required for a box to be kept before
+    non-max-suppression.
+
+    nms_threshold IoU threshold passed to non-max-suppression.
+
+    nms_sigma sigma value passed to non-max-suppression (soft-NMS).
+    """
+    def __init__(self, threshold: float = 0.6, nms_threshold: float = 0.1, nms_sigma: float = 0.1) -> None: ...
+
+    def __call__(self, model: ml.Model, inputs: list, outputs: list) -> list:
+        """
+        Invoked by ml.Model.predict() with the model, its inputs, and its raw
+        outputs. Returns a list of per-class detection lists. Each detection is a
+        ((x, y, w, h), score) tuple in ROI coordinates. Empty class lists are
+        included so that the position of each list in the output matches the
+        class index in the model output. Returns an empty tuple when nothing is
+        detected.
+        """
+        ...

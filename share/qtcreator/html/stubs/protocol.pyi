@@ -35,6 +35,7 @@ CHANNEL_ID_STREAM: int
 CHANNEL_ID_TRANSPORT: int
 """Reserved channel ID for the active transport."""
 
+
 def init(crc: bool = True, seq: bool = True, ack: bool = True, events: bool = True, max_payload: int = ..., rtx_retries: int = 3, rtx_timeout_ms: int = 500, lock_interval_ms: int = 10, poll_ms: int = 0) -> None:
     """
     Initialize (or reconfigure) the protocol stack and register the default
@@ -42,7 +43,9 @@ def init(crc: bool = True, seq: bool = True, ack: bool = True, events: bool = Tr
     in, profile). Raises RuntimeError if initialization fails. The
     firmware boots with a default USB protocol stack already running, so
     calling this is needed only to change the transport or override the
-    default framing parameters.
+    default framing parameters. Calling it again re-initializes the stack:
+    the previous polling timer is removed and the channels are registered
+    afresh.
 
     crc enables CRC validation on protocol frames.
 
@@ -140,12 +143,31 @@ def init(crc: bool = True, seq: bool = True, ack: bool = True, events: bool = Tr
     disables timer polling.
     """
     ...
+
+
 def is_active() -> bool:
     """
     Return True if a host is currently connected and the protocol stack
     is active, otherwise False.
     """
     ...
+
+
+def poll() -> int:
+    """
+    Run one iteration of the protocol task: drain the transport’s receive
+    buffer, parse any complete frames, dispatch commands and service channel
+    events. The firmware normally does this for you from the USB interrupt
+    and from the poll_ms timer, so this is only needed for custom
+    transports that are not driven by either – for example when
+    poll_ms=0 and the transport is polled from the script’s main loop.
+
+    Returns 0 on success and -1 if no active transport is registered
+    or the call was made from an interrupt context.
+    """
+    ...
+
+
 def register(name: str, *, backend: object, flags: int = 0) -> ProtocolChannel:
     """
     Register a Python backend object as a new logical channel and return
@@ -169,12 +191,14 @@ def register(name: str, *, backend: object, flags: int = 0) -> ProtocolChannel:
     """
     ...
 
+
 class CBORChannel:
     """
     A higher-level Python backend (provided by the frozen protocol
     package) that serializes named fields to CBOR using SenML-compatible
-    integer keys. Supports display widgets (label, depth) and
-    interactive controls (toggle, slider, select) with
+    integer keys. Supports display widgets (label, text, depth,
+    waveform) and interactive controls (toggle, pushbutton,
+    slider, spinbox, select, radio, lineedit) with
     on_read/on_write callbacks.
 
     on_read is an optional callable on_read(channel) invoked before
@@ -184,62 +208,102 @@ class CBORChannel:
     invoked when the host writes a new value for a named field.
     """
     def __init__(self, on_read: Callable | None = None, on_write: Callable | None = None) -> None: ...
+
     def __getitem__(self, name: str) -> object:
         """
-        Return the current value of the named field. For depth fields
-        the binary data buffer is returned, otherwise the scalar value.
+        Return the current value of the named field. For depth and
+        waveform fields the binary data buffer is returned, otherwise the
+        scalar value.
         """
         ...
+
     def __setitem__(self, name: str, value: Any) -> None:
         """
-        Set the value of the named field. For slider fields, a
-        (min, max, value) tuple updates the range and current value
-        simultaneously. For depth fields, value is the binary data
-        buffer.
+        Set the value of the named field. For slider and spinbox
+        fields, a (min, max, value) tuple updates the range and current
+        value simultaneously. For depth fields, value is the binary
+        data buffer. For waveform fields, value is a bytes-like block
+        of interleaved samples in the field’s typecode; the samples-per-
+        series count is derived from its length and a monotonic timestamp (in
+        microseconds, accumulated from time.ticks_us()) is attached so
+        the host can place the chunk on its time axis.
         """
         ...
-    def add(self, name: str, type: str, value: Any = None, unit: str | None = None, min: int | float | None = None, max: int | float | None = None, step: int | float | None = None, options: list | None = None, width: int | None = None, height: int | None = None) -> None:
+
+    def add(self, name: str, type: str, value: Any = None, unit: str | None = None, min: int | float | None = None, max: int | float | None = None, step: int | float | None = None, options: list | None = None, width: int | None = None, height: int | None = None, sample_rate: float | None = None, series: int = 1, typecode: str | None = None) -> None:
         """
         Add a named field to the channel.
 
         name is the display name; must be unique within this channel.
 
-        type is the widget type: "label", "toggle", "slider",
-        "select", or "depth".
+        type is the widget type:
 
-        value is the initial value. The default depends on type.
+        - "label" – read-only numeric display with an optional unit.
+        - "text" – read-only string display.
+        - "toggle" – boolean switch.
+        - "pushbutton" – momentary action (trigger, calibrate, …). The
+          host writes True on click and renders no state.
+        - "slider" – numeric control with min/max/step.
+        - "spinbox" – precise stepped numeric entry; shares the slider
+          fields and the (min, max, value) tuple update form.
+        - "select" – drop-down of options strings.
+        - "radio" – options rendered as a group of radio buttons.
+        - "lineedit" – writable string input.
+        - "depth" – 2D depth-map display of width x height.
+        - "waveform" – 1D time-series plot of interleaved samples.
 
-        unit is the unit string for label/slider (e.g. "Cel",
-        "%RH").
+        value is the initial value. The default depends on type:
+        0 for label, "" for text/lineedit/select/
+        radio, False for toggle/pushbutton, min for
+        slider/spinbox.
 
-        min is the minimum value (slider range or depth range).
+        unit is the unit string for label/slider/spinbox/
+        waveform (e.g. "Cel", "%RH").
 
-        max is the maximum value (slider range or depth range).
+        min is the minimum value (slider/spinbox range, or depth/waveform
+        display range).
 
-        step is the step size (slider).
+        max is the maximum value (slider/spinbox range, or depth/waveform
+        display range).
 
-        options is the list of option strings (select).
+        step is the step size (slider/spinbox).
+
+        options is the list of option strings (select/radio), or the list
+        of per-series names (waveform).
 
         width is the pixel width (depth).
 
         height is the pixel height (depth).
+
+        sample_rate is the sample rate in samples per second (waveform).
+        Sent to the host as the sample period.
+
+        series is the number of interleaved series in each sample block
+        (waveform), e.g. 3 for an XYZ accelerometer trace.
+
+        typecode is the array typecode of the waveform samples
+        (e.g. "H", "h", "f"). Defaults to "H" (unsigned 16-bit).
         """
         ...
+
     def poll(self) -> bool:
         """
         Backend interface method. Returns True when serialized data is
         available for the host.
         """
         ...
+
     def read(self, offset: int, size: int) -> bytes:
         """Backend interface method. Returns a slice of the serialized buffer."""
         ...
+
     def size(self) -> int:
         """
         Backend interface method. Invokes on_read (if set) and returns
         the size of the serialized buffer.
         """
         ...
+
     def write(self, offset: int, data: bytearray) -> int:
         """
         Backend interface method. Decodes a CBOR update list and applies
@@ -247,12 +311,14 @@ class CBORChannel:
         """
         ...
 
+
 class ProtocolChannel:
     """
     Handle returned by protocol.register. Instances are not constructed
     directly.
     """
     def __init__(self) -> None: ...
+
     def send_event(self, event: int, wait_ack: bool = False) -> None:
         """
         Send a channel event notification to the host.
@@ -265,21 +331,25 @@ class ProtocolChannel:
         """
         ...
 
+
 class backend:
     """
     Channel backend object passed to protocol.register. The methods below
     describe the optional interface a Python backend may implement.
     """
     def __init__(self) -> None: ...
+
     def flush(self) -> object:
         """Flush any pending data. Return any non-None value on success."""
         ...
+
     def init(self) -> object:
         """
         Called once when the channel is initialized. Return any non-None
         value on success; an exception or missing return is treated as an error.
         """
         ...
+
     def ioctl(self, cmd: int, length: int, arg: bytearray | None) -> int:
         """
         Handle an ioctl. arg is None if length is zero, otherwise a
@@ -287,24 +357,29 @@ class backend:
         success, or a negative integer on error.
         """
         ...
+
     def is_active(self) -> bool:
         """
         For transport channels, return True if the underlying transport is
         currently connected.
         """
         ...
+
     def lock(self) -> bool:
         """Acquire the channel for a transfer. Return True on success."""
         ...
+
     def poll(self) -> bool:
         """Return True if the channel has data ready to be read by the host."""
         ...
+
     def read(self, offset: int, size: int) -> bytes:
         """
         Return up to size bytes starting at offset as a bytes-like
         object that supports the buffer protocol.
         """
         ...
+
     def readp(self, offset: int, size: int) -> bytes:
         """
         Zero-copy variant of read. Returns a buffer whose underlying memory
@@ -312,6 +387,7 @@ class backend:
         for the duration of the transfer.
         """
         ...
+
     def shape(self) -> tuple:
         """
         Return a tuple of up to four integers describing the data shape (e.g.
@@ -319,12 +395,15 @@ class backend:
         layer.
         """
         ...
+
     def size(self) -> int:
         """Return the number of bytes currently readable from the channel."""
         ...
+
     def unlock(self) -> bool:
         """Release the channel after a transfer. Return True on success."""
         ...
+
     def write(self, offset: int, data: bytearray) -> int:
         """
         Write data at offset. data is a bytearray referencing
@@ -332,4 +411,3 @@ class backend:
         default success.
         """
         ...
-
