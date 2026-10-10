@@ -32127,7 +32127,10 @@ QCPPolarAxisRadial::SelectablePart QCPPolarAxisRadial::getPartAt(const QPointF &
   else if (mAxisPainter->labelSelectionBox().contains(pos.toPoint()))
     return spAxisLabel;
   else */
-    return spNone;
+  // OPENMV-DIFF //
+  // return spNone;
+  return spNone; // de-indented: silences -Wmisleading-indentation
+  // OPENMV-DIFF //
 }
 
 /* inherits documentation from base class */
@@ -32947,7 +32950,10 @@ QCPPolarAxisAngular::SelectablePart QCPPolarAxisAngular::getPartAt(const QPointF
   else if (mAxisPainter->labelSelectionBox().contains(pos.toPoint()))
     return spAxisLabel;
   else */
-    return spNone;
+  // OPENMV-DIFF //
+  // return spNone;
+  return spNone; // de-indented: silences -Wmisleading-indentation
+  // OPENMV-DIFF //
 }
 
 /* inherits documentation from base class */
