@@ -7117,7 +7117,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+96" />
         <location line="+192" />
         <location line="+203" />
-        <location line="+426" />
+        <location line="+454" />
         <location line="+13" />
         <location line="+169" />
         <location line="+146" />
@@ -7125,7 +7125,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+887" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+897" />
         <location line="+290" />
         <location line="+1610" />
         <location line="+1142" />
@@ -7143,7 +7143,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-316" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4181" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4209" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
         <location line="+48" />
@@ -7158,7 +7158,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+40" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3083" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
@@ -7166,15 +7166,15 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+633" />
-        <location line="+342" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+355" />
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-412" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-425" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>您确定要永久删除&quot;%L1&quot;吗？</translation>
     </message>
@@ -7201,7 +7201,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>由于未知原因，无法重命名文件！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6233" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6261" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+63" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+62" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
@@ -7481,33 +7481,33 @@ v4.3.0 之前的 %2 版本没有此文件，并会在安装资源时将其删除
     </message>
     <message>
         <location line="+267" />
-        <location line="+4472" />
+        <location line="+4500" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>打开终端</translation>
     </message>
     <message>
-        <location line="-4526" />
+        <location line="-4554" />
         <source>Machine Vision</source>
         <translation>机器视觉</translation>
     </message>
     <message>
         <location line="+182" />
-        <location line="+4375" />
+        <location line="+4403" />
         <location line="+75" />
         <source>Threshold Editor</source>
         <translation>阈值编辑器</translation>
     </message>
     <message>
-        <location line="-4445" />
-        <location line="+4522" />
+        <location line="-4473" />
+        <location line="+4550" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>关键点编辑器</translation>
     </message>
     <message>
-        <location line="-4513" />
-        <location line="+4677" />
+        <location line="-4541" />
+        <location line="+4705" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7516,7 +7516,7 @@ v4.3.0 之前的 %2 版本没有此文件，并会在安装资源时将其删除
         <translation>AprilTag生成器</translation>
     </message>
     <message>
-        <location line="-4824" />
+        <location line="-4852" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5家族(30标签)</translation>
     </message>
@@ -7557,7 +7557,7 @@ v4.3.0 之前的 %2 版本没有此文件，并会在安装资源时将其删除
         <location line="+14" />
         <location line="+409" />
         <location line="+1184" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-229" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-304" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>无法打开：&quot;%L1&quot;</translation>
     </message>
@@ -7589,7 +7589,7 @@ v4.3.0 之前的 %2 版本没有此文件，并会在安装资源时将其删除
     </message>
     <message>
         <location line="+225" />
-        <location line="+2929" />
+        <location line="+2957" />
         <location line="+1423" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
@@ -7610,7 +7610,7 @@ v4.3.0 之前的 %2 版本没有此文件，并会在安装资源时将其删除
         <translation>无法覆盖输出文件！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4562" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4590" />
         <source>Video Tools</source>
         <translation>视频工具</translation>
     </message>
@@ -7718,16 +7718,16 @@ v4.3.0 之前的 %2 版本没有此文件，并会在安装资源时将其删除
         <location line="+101" />
         <location line="+96" />
         <location line="+326" />
-        <location line="+675" />
+        <location line="+703" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
         <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-385" />
-        <location line="+252" />
-        <location line="+393" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-395" />
+        <location line="+255" />
+        <location line="+400" />
         <location line="+1610" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-304" />
         <location line="+301" />
@@ -7739,7 +7739,7 @@ v4.3.0 之前的 %2 版本没有此文件，并会在安装资源时将其删除
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4377" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4405" />
         <source>Upload to Edge Impulse Project</source>
         <translation>上传到Edge Impulse项目</translation>
     </message>
@@ -7878,8 +7878,8 @@ v4.3.0 之前的 %2 版本没有此文件，并会在安装资源时将其删除
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+30" />
-        <location line="+30" />
+        <location line="+33" />
+        <location line="+31" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -8178,7 +8178,7 @@ v4.3.0 之前的 %2 版本没有此文件，并会在安装资源时将其删除
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+605" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+692" />
         <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>将 ROMFS 加载到 OpenMV Cam</translation>
@@ -8298,7 +8298,7 @@ Would you like to choose a different name?</source>
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-795" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-887" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>转换模型</translation>
@@ -8442,7 +8442,7 @@ Would you like to choose a different name?</source>
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3744" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3745" />
         <source>Board:</source>
         <translation>板:</translation>
     </message>
@@ -8507,7 +8507,7 @@ Would you like to choose a different name?</source>
     </message>
     <message>
         <location line="+400" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3970" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3978" />
         <source>Update Available</source>
         <translation>更新可用</translation>
     </message>
@@ -8597,17 +8597,17 @@ OpenMV Cam的板载LED闪烁着不同的颜色，以指示其状态：
     </message>
     <message>
         <location line="+99" />
-        <location line="+1386" />
+        <location line="+1414" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>串行端口 - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1354" />
+        <location line="-1382" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1001" />
+        <location line="+1029" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
@@ -8617,7 +8617,7 @@ OpenMV Cam的板载LED闪烁着不同的颜色，以指示其状态：
         <translation>正在连接...(30秒超时)</translation>
     </message>
     <message>
-        <location line="-1994" />
+        <location line="-2022" />
         <source>
 
 Try doing:
@@ -8670,12 +8670,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1444" />
+        <location line="+1472" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP服务器连接 - %1</translation>
     </message>
     <message>
-        <location line="-1370" />
+        <location line="-1398" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>无效的-open_udp_server_terminal端口参数(%1)</translation>
     </message>
@@ -8706,12 +8706,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1491" />
+        <location line="+1519" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP服务器连接 - %1</translation>
     </message>
     <message>
-        <location line="-1417" />
+        <location line="-1445" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>无效的-open_tcp_server_terminal端口参数(%1)</translation>
     </message>
@@ -8740,7 +8740,7 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3185" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3192" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -8912,7 +8912,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>去除注释并将空格转换为制表符？</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+84" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+112" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-75" />
@@ -8978,7 +8978,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>打开文件</translation>
     </message>
     <message>
-        <location line="-3031" />
+        <location line="-3059" />
         <source>&lt;p&gt;&lt;b&gt;Release Notes&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;发行说明&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
@@ -9101,7 +9101,7 @@ Would you like to register your OpenMV Cam now?</source>
 您想现在注册您的 OpenMV Cam 吗？</translation>
     </message>
     <message>
-        <location line="+576" />
+        <location line="+604" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -9235,7 +9235,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>刷新“%L1”失败！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2807" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2835" />
         <location line="+7" />
         <source>Stream JPG-compressed images for higher performance</source>
         <translation>传输 JPG 压缩图像以获得更高性能</translation>
@@ -9299,13 +9299,18 @@ Would you like to register your OpenMV Cam now?</source>
     <message>
         <location line="+262" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+307" />
-        <location line="+430" />
+        <location line="+431" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-639" />
         <source>No Drive</source>
         <translation>无驱动器</translation>
     </message>
     <message>
-        <location line="+2330" />
+        <location line="+1966" />
+        <source>OpenMV Cam Error</source>
+        <translation>OpenMV Cam 错误</translation>
+    </message>
+    <message>
+        <location line="+392" />
         <location line="+12" />
         <location line="+31" />
         <location line="+9" />
@@ -9352,7 +9357,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2153" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2154" />
         <source>Please select a serial port</source>
         <translation>请选择一个串口</translation>
     </message>
@@ -9478,7 +9483,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+926" />
         <source>What would you like to do?</source>
         <translation>您想做什么？</translation>
     </message>
@@ -9594,18 +9599,18 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">新的 OpenMV IDE 资源可用（例如示例、固件、文档等）。</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2056" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2063" />
         <source>Install</source>
         <translation>安装</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+393" />
+        <location line="+400" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
         <location line="+46" />
         <location line="+73" />
         <location line="+46" />
@@ -9636,7 +9641,8 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">安装成功！请重新启动OpenMV IDE。</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="-5" />
+        <location line="+133" />
         <location line="+6" />
         <location line="+28" />
         <source>Package Update</source>
@@ -9663,41 +9669,41 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+279" />
         <location line="+945" />
         <location line="+231" />
-        <location line="+2768" />
+        <location line="+2873" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>擦除内部FAT文件系统</translation>
     </message>
     <message>
-        <location line="-4298" />
+        <location line="-4403" />
         <location line="+279" />
         <location line="+947" />
         <location line="+230" />
-        <location line="+2767" />
+        <location line="+2872" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>如果启用此选项，则将删除OpenMV Cam的内部FAT文件系统上的所有文件。 这不会在任何可移动的SD卡上删除文件（如果已插入）。</translation>
     </message>
     <message>
-        <location line="-4298" />
+        <location line="-4403" />
         <location line="+1226" />
         <location line="+230" />
-        <location line="+2767" />
+        <location line="+2872" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>重置romfs文件系统</translation>
     </message>
     <message>
-        <location line="-4297" />
+        <location line="-4402" />
         <location line="+1227" />
         <location line="+229" />
-        <location line="+2766" />
+        <location line="+2871" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>如果启用此选项，则OpenMV Cam上的ROM文件系统将重置为默认值。</translation>
     </message>
     <message>
-        <location line="-4197" />
+        <location line="-4302" />
         <location line="+7" />
         <location line="+16" />
         <location line="+13" />
@@ -9784,7 +9790,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
 为避免此问题，请打开苹果菜单，进入“系统设置”，在边栏中点击“隐私与安全性”，滚动到底部的“配件”，并将“允许配件连接”更改为“解锁后自动允许”（推荐）或“始终允许”。</translation>
     </message>
     <message>
-        <location line="+464" />
+        <location line="+568" />
         <location line="+10" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+84" />
         <location line="+16" />
@@ -9804,7 +9810,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
         <translation>错误：无法打开“%L1”！</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+229" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9813,7 +9819,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 特别是，请查看图像处理 -&gt; 颜色跟踪和机器学习 -&gt; TensorFlow 示例。</translation>
     </message>
     <message>
-        <location line="-4169" />
+        <location line="-4274" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9951,7 +9957,7 @@ OpenMV建议仅加载bootloader.dfu维修引导加载程序。</translation>
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1453" />
         <location line="+262" />
         <location line="+705" />
-        <location line="+2270" />
+        <location line="+2375" />
         <source>Please select the board type</source>
         <translation>请选择主板类型</translation>
     </message>
@@ -9960,7 +9966,7 @@ OpenMV建议仅加载bootloader.dfu维修引导加载程序。</translation>
         <translation type="vanished">擦除内部文件系统？</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2855" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2960" />
         <source>No released firmware available for the attached board!</source>
         <translation>没有可用于所连接板的已发布固件！</translation>
     </message>
@@ -9977,7 +9983,7 @@ OpenMV建议仅加载bootloader.dfu维修引导加载程序。</translation>
         <translation>请将引导加载程序更新到最新版本并安装 SoftDevice 以刷新 OpenMV 固件。 更多信息可以在 &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt; 上找到</translation>
     </message>
     <message>
-        <location line="-2366" />
+        <location line="-2376" />
         <source>Checking development examples...</source>
         <translation>正在检查开发示例……</translation>
     </message>
@@ -10013,12 +10019,17 @@ OpenMV建议仅加载bootloader.dfu维修引导加载程序。</translation>
         <translation>正在解压最新的开发固件……</translation>
     </message>
     <message>
-        <location line="+311" />
+        <location line="+314" />
         <source>New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the &lt;a href=&quot;%L1&quot;&gt;release notes&lt;/a&gt;.</source>
         <translation>有新的 %2 资源可用（例如示例、固件、文档等）。请参阅&lt;a href=&quot;%L1&quot;&gt;发行说明&lt;/a&gt;。</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+31" />
+        <source>The downloaded resources file &quot;%L1&quot; failed its checksum. Please try again later.</source>
+        <translation>下载的资源文件 &quot;%L1&quot; 校验和不匹配。请稍后重试。</translation>
+    </message>
+    <message>
+        <location line="+65" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
         <source>Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
         <translation>请关闭所有正在查看/编辑 %1 应用数据的程序，然后重新启动 %1！</translation>
@@ -10045,12 +10056,12 @@ OpenMV建议仅加载bootloader.dfu维修引导加载程序。</translation>
     </message>
     <message>
         <location line="+182" />
-        <location line="+3926" />
+        <location line="+4031" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>警告：升级到新的固件版本需要删除FAT文件系统。</translation>
     </message>
     <message>
-        <location line="-3848" />
+        <location line="-3953" />
         <location line="+9" />
         <source>Unable to download the latest development firmware!</source>
         <translation>无法下载最新的开发固件！</translation>
@@ -10135,12 +10146,12 @@ OpenMV建议仅加载bootloader.dfu维修引导加载程序。</translation>
     </message>
     <message>
         <location line="+233" />
-        <location line="+2769" />
+        <location line="+2874" />
         <source>Upgrade options:</source>
         <translation>升级选项：</translation>
     </message>
     <message>
-        <location line="-2678" />
+        <location line="-2783" />
         <location line="+174" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
@@ -10239,7 +10250,7 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-227" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-231" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
@@ -10340,7 +10351,7 @@ Continue?</source>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+166" />
+        <location line="+170" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-91" />
         <location line="+32" />
@@ -10481,7 +10492,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-410" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-414" />
         <source>No DFU settings for the selected board type!</source>
         <translation>所选板类型没有DFU设置！</translation>
     </message>
@@ -10507,7 +10518,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+32" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>写romfs</translation>
@@ -10517,7 +10528,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+49" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
@@ -10907,7 +10918,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation type="vanished">启动</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+738" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+843" />
         <source>More Examples</source>
         <translation>更多例子</translation>
     </message>
@@ -11102,12 +11113,12 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5007" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5035" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-380" />
-        <location line="+339" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-393" />
+        <location line="+352" />
         <source>Model Zoo</source>
         <translation>模型库</translation>
     </message>
@@ -11193,7 +11204,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>获取设备</translation>
@@ -11207,7 +11218,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>查询失败！</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+102" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -11953,7 +11964,7 @@ Your OpenMV IDE installation may be incomplete.</source>
         <translation type="vanished">所选文件名没有匹配接口！</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-877" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-970" />
         <source>Please select the target</source>
         <translation>请选择目标</translation>
     </message>
@@ -11992,33 +12003,34 @@ OpenMV IDE只会按原样复制模型。</translation>
 %1 只会按原样复制该模型。</translation>
     </message>
     <message>
-        <location line="+155" />
+        <location line="+160" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
         <location line="+45" />
         <location line="+16" />
-        <location line="+21" />
+        <location line="+36" />
         <location line="+6" />
         <location line="+8" />
         <location line="+26" />
-        <location line="+18" />
+        <location line="+52" />
+        <location line="+26" />
         <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+153" />
+        <location line="+155" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
         <location line="+13" />
-        <location line="+40" />
-        <location line="+14" />
+        <location line="+48" />
+        <location line="+16" />
         <location line="+15" />
         <location line="+27" />
-        <location line="+68" />
+        <location line="+69" />
         <location line="+50" />
         <location line="+68" />
         <location line="+6" />
@@ -12028,31 +12040,36 @@ OpenMV IDE只会按原样复制模型。</translation>
         <translation>编辑romfs</translation>
     </message>
     <message>
-        <location line="-754" />
-        <location line="+96" />
+        <location line="-842" />
+        <location line="+111" />
         <source>A folder with the same name already exists!</source>
         <translation>一个具有相同名称的文件夹已经存在！</translation>
     </message>
     <message>
-        <location line="-90" />
-        <location line="+96" />
+        <location line="-105" />
+        <location line="+111" />
         <source>File already exists! Overwrite?</source>
         <translation>文件已经存在！ 覆盖？</translation>
     </message>
     <message>
-        <location line="-88" />
-        <location line="+96" />
+        <location line="-103" />
+        <location line="+111" />
         <source>Failed to remove file!</source>
         <translation>无法删除文件！</translation>
     </message>
     <message>
-        <location line="-51" />
-        <location line="+77" />
+        <location line="-66" />
+        <location line="+92" />
         <source>Failed to copy file!</source>
         <translation>无法复制文件！</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+52" />
+        <source>Dropping folders is not supported - drop the files inside them instead.</source>
+        <translation>不支持拖放文件夹，请改为拖放其中的文件。</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Folder Name</source>
         <translation>文件夹名称</translation>
     </message>
@@ -12081,38 +12098,56 @@ OpenMV IDE只会按原样复制模型。</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+343" />
+        <location line="+356" />
         <source>Extract File</source>
         <translation>提取文件</translation>
     </message>
     <message>
-        <location line="-349" />
+        <location line="-362" />
         <source>View/Edit</source>
         <translation>查看/编辑</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+340" />
+        <location line="+353" />
         <source>Add File</source>
         <translation>添加文件</translation>
     </message>
     <message>
-        <location line="-339" />
-        <location line="+341" />
+        <location line="-352" />
+        <location line="+354" />
         <source>New Folder</source>
         <translation>新文件夹</translation>
     </message>
     <message>
-        <location line="-253" />
+        <location line="-266" />
+        <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
+
+</source>
+        <translation>ROMFS 写入未完成，因此您 OpenMV Cam 上的 ROM 文件系统可能不完整。
+
+</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reset the ROM file system, or edit and commit it again, before relying on it.</source>
+        <translation>在依赖 ROM 文件系统之前，请先重置它，或重新编辑并提交。</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to reset the ROM file system or to edit and commit it again.</source>
+        <translation>您的 OpenMV Cam 仍处于引导加载程序模式：请点击“连接”，然后使用引导加载程序选项重置 ROM 文件系统，或重新编辑并提交。</translation>
+    </message>
+    <message>
         <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
 
 Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to reset the ROM file system or to edit and commit it again.</source>
-        <translation>ROMFS 写入未完成，因此您 OpenMV Cam 上的 ROM 文件系统可能不完整。
+        <translation type="vanished">ROMFS 写入未完成，因此您 OpenMV Cam 上的 ROM 文件系统可能不完整。
 
 您的 OpenMV Cam 仍处于引导加载程序模式：请点击“连接”，然后使用引导加载程序选项重置 ROM 文件系统，或重新编辑并提交。</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>The ROMFS read did not complete.
 
 Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to edit the ROM file system again.</source>
@@ -12123,13 +12158,13 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
     <message>
         <location line="+53" />
         <location line="+13" />
-        <location line="+377" />
+        <location line="+389" />
         <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>该板上不支持ROMF！</translation>
     </message>
     <message>
-        <location line="-335" />
+        <location line="-337" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>未能解开ROMF！</translation>
@@ -12142,7 +12177,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
     </message>
     <message>
         <location line="-25" />
-        <location line="+211" />
+        <location line="+212" />
         <source>ROMFS Images (*.img)</source>
         <translation>romfs图像（*.img）</translation>
     </message>
@@ -12162,7 +12197,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>保存romfs文件</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+125" />
         <location line="+7" />
         <location line="+11" />
         <location line="+12" />
@@ -12383,7 +12418,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>在此平台上不支持STM32编程器。</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-606" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
         <source>the detected board</source>
         <translation>检测到的板子</translation>
     </message>
@@ -12413,12 +12448,12 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>要烧录引导程序镜像，您的 OpenMV Cam 必须处于引导程序恢复模式。请拔下摄像头，用跳线将 BOOT0/SBL/RECOVERY 连接到 3.3V，然后重新插入摄像头再试一次。</translation>
     </message>
     <message>
-        <location line="+409" />
+        <location line="+412" />
         <source>DFU ROMFS read failed!</source>
         <translation>DFU 读取 ROMFS 失败！</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+31" />
         <source>DFU ROMFS write failed!</source>
         <translation>DFU 写入 ROMFS 失败！</translation>
     </message>

@@ -7117,7 +7117,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+96" />
         <location line="+192" />
         <location line="+203" />
-        <location line="+426" />
+        <location line="+454" />
         <location line="+13" />
         <location line="+169" />
         <location line="+146" />
@@ -7125,7 +7125,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+887" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+897" />
         <location line="+290" />
         <location line="+1610" />
         <location line="+1142" />
@@ -7143,7 +7143,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-316" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4181" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4209" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
         <location line="+48" />
@@ -7158,7 +7158,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+40" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3083" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
@@ -7166,15 +7166,15 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+633" />
-        <location line="+342" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+355" />
         <source>Delete</source>
         <translation>Törlés</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-412" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-425" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Biztosan végleg törli a következőt: &quot;%L1&quot;?</translation>
     </message>
@@ -7201,7 +7201,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>A fájl átnevezése ismeretlen okból nem sikerült!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6233" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6261" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+63" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+62" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
@@ -7436,33 +7436,33 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+267" />
-        <location line="+4472" />
+        <location line="+4500" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Nyissa meg a Terminált</translation>
     </message>
     <message>
-        <location line="-4526" />
+        <location line="-4554" />
         <source>Machine Vision</source>
         <translation>Gépi látás</translation>
     </message>
     <message>
         <location line="+182" />
-        <location line="+4375" />
+        <location line="+4403" />
         <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Küszöb szerkesztő</translation>
     </message>
     <message>
-        <location line="-4445" />
-        <location line="+4522" />
+        <location line="-4473" />
+        <location line="+4550" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Keypoints szerkesztő</translation>
     </message>
     <message>
-        <location line="-4513" />
-        <location line="+4677" />
+        <location line="-4541" />
+        <location line="+4705" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7471,7 +7471,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag Generator</translation>
     </message>
     <message>
-        <location line="-4824" />
+        <location line="-4852" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 család (30 címke)</translation>
     </message>
@@ -7512,7 +7512,7 @@ Check the json file for errors and fix them.</source>
         <location line="+14" />
         <location line="+409" />
         <location line="+1184" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-229" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-304" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Nem sikerült megnyitni: &quot;%L1&quot;</translation>
     </message>
@@ -7544,7 +7544,7 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+225" />
-        <location line="+2929" />
+        <location line="+2957" />
         <location line="+1423" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
@@ -7565,7 +7565,7 @@ Check the json file for errors and fix them.</source>
         <translation>Nem lehet felülírni a kimeneti fájlt!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4562" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4590" />
         <source>Video Tools</source>
         <translation>Videóeszközök</translation>
     </message>
@@ -7673,16 +7673,16 @@ Check the json file for errors and fix them.</source>
         <location line="+101" />
         <location line="+96" />
         <location line="+326" />
-        <location line="+675" />
+        <location line="+703" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
         <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3437" />
-        <location line="+252" />
-        <location line="+393" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3447" />
+        <location line="+255" />
+        <location line="+400" />
         <location line="+1610" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+977" />
         <location line="+301" />
@@ -7694,7 +7694,7 @@ Check the json file for errors and fix them.</source>
         <translation>Megszünteti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4377" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4405" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Feltöltés az Edge Impulse Project-be</translation>
     </message>
@@ -7833,8 +7833,8 @@ Check the json file for errors and fix them.</source>
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+30" />
-        <location line="+30" />
+        <location line="+33" />
+        <location line="+31" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -8133,7 +8133,7 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+605" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+692" />
         <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>ROMFS betöltése az OpenMV Cam kamerára</translation>
@@ -8253,7 +8253,7 @@ Szeretne másik nevet választani?</translation>
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-795" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-887" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Konvertál</translation>
@@ -8397,7 +8397,7 @@ Szeretne másik nevet választani?</translation>
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3744" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3745" />
         <source>Board:</source>
         <translation>Tábla:</translation>
     </message>
@@ -8462,7 +8462,7 @@ Szeretne másik nevet választani?</translation>
     </message>
     <message>
         <location line="+400" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3970" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3978" />
         <source>Update Available</source>
         <translation>Frissítés elérhető</translation>
     </message>
@@ -8554,17 +8554,17 @@ Az OpenMV Cam firmware-je pánikba esik egy hardverhiba miatt. Ellenőrizze, hog
     </message>
     <message>
         <location line="+99" />
-        <location line="+1386" />
+        <location line="+1414" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Soros port - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1354" />
+        <location line="-1382" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1001" />
+        <location line="+1029" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
@@ -8574,7 +8574,7 @@ Az OpenMV Cam firmware-je pánikba esik egy hardverhiba miatt. Ellenőrizze, hog
         <translation>Csatlakozás... (30 másodperces időtúllépés)</translation>
     </message>
     <message>
-        <location line="-1994" />
+        <location line="-2022" />
         <source>
 
 Try doing:
@@ -8627,12 +8627,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1444" />
+        <location line="+1472" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP-kiszolgáló kapcsolat - %1</translation>
     </message>
     <message>
-        <location line="-1370" />
+        <location line="-1398" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Érvénytelen portargumentum (%1) az -open_udp_server_terminalhoz</translation>
     </message>
@@ -8663,12 +8663,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1491" />
+        <location line="+1519" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP szerver kapcsolat - %1</translation>
     </message>
     <message>
-        <location line="-1417" />
+        <location line="-1445" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Érvénytelen portargumentum (%1) a -open_tcp_server_terminal számára</translation>
     </message>
@@ -8697,7 +8697,7 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3185" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3192" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -8869,7 +8869,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Törli a megjegyzéseket és konvertálja a szóközöket tabulátorokká?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+84" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+112" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-75" />
@@ -8935,7 +8935,7 @@ Szeretné most regisztrálni OpenMV kameráját?</translation>
         <translation>Fájl megnyitása</translation>
     </message>
     <message>
-        <location line="-4724" />
+        <location line="-4752" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
@@ -9107,7 +9107,7 @@ Would you like to register your OpenMV Cam now?</source>
 Szeretné most regisztrálni az OpenMV Cam kameráját?</translation>
     </message>
     <message>
-        <location line="+576" />
+        <location line="+604" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -9241,7 +9241,7 @@ Szeretné most regisztrálni az OpenMV Cam kameráját?</translation>
         <translation>Nem sikerült kiüríteni &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2807" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2835" />
         <location line="+7" />
         <source>Stream JPG-compressed images for higher performance</source>
         <translation>JPG-tömörített képek továbbítása a nagyobb teljesítményért</translation>
@@ -9305,13 +9305,18 @@ Szeretné most regisztrálni az OpenMV Cam kameráját?</translation>
     <message>
         <location line="+262" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3390" />
-        <location line="+430" />
+        <location line="+431" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-639" />
         <source>No Drive</source>
         <translation>Nincs meghajtó</translation>
     </message>
     <message>
-        <location line="+2330" />
+        <location line="+1966" />
+        <source>OpenMV Cam Error</source>
+        <translation>OpenMV Cam hiba</translation>
+    </message>
+    <message>
+        <location line="+392" />
         <location line="+12" />
         <location line="+31" />
         <location line="+9" />
@@ -9358,7 +9363,7 @@ Szeretné most regisztrálni az OpenMV Cam kameráját?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2153" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2154" />
         <source>Please select a serial port</source>
         <translation>Kérjük, válasszon egy soros portot</translation>
     </message>
@@ -9484,7 +9489,7 @@ Szeretné most regisztrálni az OpenMV Cam kameráját?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+926" />
         <source>What would you like to do?</source>
         <translation>Mit szeretnél csinálni?</translation>
     </message>
@@ -9600,18 +9605,18 @@ Szeretné most regisztrálni az OpenMV Cam kameráját?</translation>
         <translation type="vanished">Új OpenMV IDE erőforrások állnak rendelkezésre (például példák, firmware, dokumentáció stb.).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2056" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2063" />
         <source>Install</source>
         <translation>Telepítés</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+393" />
+        <location line="+400" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
         <location line="+46" />
         <location line="+73" />
         <location line="+46" />
@@ -9642,7 +9647,8 @@ Szeretné most regisztrálni az OpenMV Cam kameráját?</translation>
         <translation type="vanished">Sikeres telepítés! Kérjük, indítsa újra az OpenMV IDE-t.</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="-5" />
+        <location line="+133" />
         <location line="+6" />
         <location line="+28" />
         <source>Package Update</source>
@@ -9669,41 +9675,41 @@ Szeretné most regisztrálni az OpenMV Cam kameráját?</translation>
         <location line="+279" />
         <location line="+945" />
         <location line="+231" />
-        <location line="+2768" />
+        <location line="+2873" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Törölje a belső zsírfájlrendszert</translation>
     </message>
     <message>
-        <location line="-4298" />
+        <location line="-4403" />
         <location line="+279" />
         <location line="+947" />
         <location line="+230" />
-        <location line="+2767" />
+        <location line="+2872" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Ha engedélyezi ezt az opciót, az OpenMV CAM belső zsírfájlrendszerének minden fájlja törlődik. Ez nem törli a fájlokat egyetlen cserélhető SD -kártyán (ha beillesztve).</translation>
     </message>
     <message>
-        <location line="-4298" />
+        <location line="-4403" />
         <location line="+1226" />
         <location line="+230" />
-        <location line="+2767" />
+        <location line="+2872" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>A ROMFS fájlrendszer visszaállítása</translation>
     </message>
     <message>
-        <location line="-4297" />
+        <location line="-4402" />
         <location line="+1227" />
         <location line="+229" />
-        <location line="+2766" />
+        <location line="+2871" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Ha engedélyezi ezt az opciót, az OpenMV CAM ROM fájlrendszere visszaállítja az alapértelmezett értéket.</translation>
     </message>
     <message>
-        <location line="-4197" />
+        <location line="-4302" />
         <location line="+7" />
         <location line="+16" />
         <location line="+13" />
@@ -9790,7 +9796,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
 Ennek elkerüléséhez nyissa meg az Apple menüt, válassza a Rendszerbeállítások elemet, kattintson az oldalsávon az Adatvédelem és biztonság elemre, görgessen le a Kiegészítők részhez, és állítsa a &quot;Kiegészítők csatlakozásának engedélyezése&quot; beállítást &quot;Automatikusan, ha fel van oldva&quot; (ajánlott) vagy &quot;Mindig&quot; értékre.</translation>
     </message>
     <message>
-        <location line="+464" />
+        <location line="+568" />
         <location line="+10" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+84" />
         <location line="+16" />
@@ -9810,7 +9816,7 @@ Ennek elkerüléséhez nyissa meg az Apple menüt, válassza a Rendszerbeállít
         <translation>Hiba: A(z) &quot;%L1&quot; nem nyitható meg!</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+229" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9819,7 +9825,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Különösen nézze meg a Képfeldolgozás -&gt; Színkövetés és gépi tanulás -&gt; TensorFlow példákat.</translation>
     </message>
     <message>
-        <location line="-4169" />
+        <location line="-4274" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9957,7 +9963,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1453" />
         <location line="+262" />
         <location line="+705" />
-        <location line="+2270" />
+        <location line="+2375" />
         <source>Please select the board type</source>
         <translation>Kérjük, válassza ki a tábla típusát</translation>
     </message>
@@ -9966,7 +9972,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Törli a belső fájlrendszert?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2855" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2960" />
         <source>No released firmware available for the attached board!</source>
         <translation>A csatolt kártyához nem érhető el kiadott firmware!</translation>
     </message>
@@ -9983,7 +9989,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Kérjük, frissítse a rendszertöltőt a legújabb verzióra, és telepítse a SoftDevice-t az OpenMV firmware frissítéséhez. További információ a &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt; oldalon található.</translation>
     </message>
     <message>
-        <location line="-2366" />
+        <location line="-2376" />
         <source>Checking development examples...</source>
         <translation>Fejlesztői példák ellenőrzése...</translation>
     </message>
@@ -10019,12 +10025,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>A legújabb fejlesztői firmware kicsomagolása...</translation>
     </message>
     <message>
-        <location line="+311" />
+        <location line="+314" />
         <source>New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the &lt;a href=&quot;%L1&quot;&gt;release notes&lt;/a&gt;.</source>
         <translation>Új %2 erőforrások érhetők el (pl. példák, firmware, dokumentáció stb.). Lásd a &lt;a href=&quot;%L1&quot;&gt;kiadási megjegyzéseket&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+31" />
+        <source>The downloaded resources file &quot;%L1&quot; failed its checksum. Please try again later.</source>
+        <translation>A letöltött &quot;%L1&quot; erőforrásfájl ellenőrzőösszege hibás. Kérjük, próbálja újra később.</translation>
+    </message>
+    <message>
+        <location line="+65" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
         <source>Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
         <translation>Kérjük, zárja be az összes programot, amely a(z) %1 alkalmazásadatait nézi vagy szerkeszti, majd indítsa újra a(z) %1 alkalmazást!</translation>
@@ -10051,12 +10062,12 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+182" />
-        <location line="+3926" />
+        <location line="+4031" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>FIGYELMEZTETÉS: Az új firmware verzióra történő frissítéshez a FAT fájlrendszer törlését igényli.</translation>
     </message>
     <message>
-        <location line="-3848" />
+        <location line="-3953" />
         <location line="+9" />
         <source>Unable to download the latest development firmware!</source>
         <translation>Nem sikerült letölteni a legújabb fejlesztői firmware-t!</translation>
@@ -10141,12 +10152,12 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+233" />
-        <location line="+2769" />
+        <location line="+2874" />
         <source>Upgrade options:</source>
         <translation>Frissítési lehetőségek:</translation>
     </message>
     <message>
-        <location line="-2678" />
+        <location line="-2783" />
         <location line="+174" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
@@ -10245,7 +10256,7 @@ Folytatni?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-227" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-231" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
@@ -10346,7 +10357,7 @@ Folytatni?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+166" />
+        <location line="+170" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-91" />
         <location line="+32" />
@@ -10487,7 +10498,7 @@ Kattintson az OK gombra, miután az OpenMV Cam SBL Bootloaderje felsorolta.</tra
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-410" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-414" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Nincsenek DFU beállítások a kiválasztott kártyatípushoz!</translation>
     </message>
@@ -10513,7 +10524,7 @@ Kattintson az OK gombra, miután az OpenMV Cam SBL Bootloaderje felsorolta.</tra
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+32" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Írj ROMF -eket</translation>
@@ -10523,7 +10534,7 @@ Kattintson az OK gombra, miután az OpenMV Cam SBL Bootloaderje felsorolta.</tra
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+49" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
@@ -10913,7 +10924,7 @@ Kattintson az OK gombra, miután az OpenMV Cam DFU Bootloaderje felsorolta.</tra
         <translation type="vanished">Rajt</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+738" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+843" />
         <source>More Examples</source>
         <translation>További példák</translation>
     </message>
@@ -11108,12 +11119,12 @@ Szeretné, hogy az OpenMV IDE átmásolja az OpenMV kamerába?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5007" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5035" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-380" />
-        <location line="+339" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-393" />
+        <location line="+352" />
         <source>Model Zoo</source>
         <translation>Állatkert</translation>
     </message>
@@ -11199,7 +11210,7 @@ Szeretné, hogy az OpenMV IDE átmásolja az OpenMV kamerába?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Szerezzen be eszközöket</translation>
@@ -11213,7 +11224,7 @@ Szeretné, hogy az OpenMV IDE átmásolja az OpenMV kamerába?</translation>
         <translation>A lekérdezés sikertelen!</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+102" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -11959,7 +11970,7 @@ Az OpenMV IDE telepítése hiányos lehet.</translation>
         <translation type="vanished">Nincs megfelelő interfész a kiválasztott fájlnévhez!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-877" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-970" />
         <source>Please select the target</source>
         <translation>Kérjük, válassza ki a célt</translation>
     </message>
@@ -11998,33 +12009,34 @@ A(z) %1 egyszerűen az eredeti formájában másolja a modellt.</translation>
 A(z) %1 egyszerűen az eredeti formájában másolja a modellt.</translation>
     </message>
     <message>
-        <location line="+155" />
+        <location line="+160" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
         <location line="+45" />
         <location line="+16" />
-        <location line="+21" />
+        <location line="+36" />
         <location line="+6" />
         <location line="+8" />
         <location line="+26" />
-        <location line="+18" />
+        <location line="+52" />
+        <location line="+26" />
         <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+153" />
+        <location line="+155" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
         <location line="+13" />
-        <location line="+40" />
-        <location line="+14" />
+        <location line="+48" />
+        <location line="+16" />
         <location line="+15" />
         <location line="+27" />
-        <location line="+68" />
+        <location line="+69" />
         <location line="+50" />
         <location line="+68" />
         <location line="+6" />
@@ -12034,31 +12046,36 @@ A(z) %1 egyszerűen az eredeti formájában másolja a modellt.</translation>
         <translation>Szerkesztse a ROMF -eket</translation>
     </message>
     <message>
-        <location line="-754" />
-        <location line="+96" />
+        <location line="-842" />
+        <location line="+111" />
         <source>A folder with the same name already exists!</source>
         <translation>Az azonos névvel rendelkező mappa már létezik!</translation>
     </message>
     <message>
-        <location line="-90" />
-        <location line="+96" />
+        <location line="-105" />
+        <location line="+111" />
         <source>File already exists! Overwrite?</source>
         <translation>A fájl már létezik! Átír?</translation>
     </message>
     <message>
-        <location line="-88" />
-        <location line="+96" />
+        <location line="-103" />
+        <location line="+111" />
         <source>Failed to remove file!</source>
         <translation>Nem sikerült eltávolítani a fájlt!</translation>
     </message>
     <message>
-        <location line="-51" />
-        <location line="+77" />
+        <location line="-66" />
+        <location line="+92" />
         <source>Failed to copy file!</source>
         <translation>Nem sikerült másolni a fájlt!</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+52" />
+        <source>Dropping folders is not supported - drop the files inside them instead.</source>
+        <translation>Mappák ejtése nem támogatott - ejtse inkább a bennük lévő fájlokat.</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Folder Name</source>
         <translation>Mappanév</translation>
     </message>
@@ -12087,38 +12104,56 @@ A(z) %1 egyszerűen az eredeti formájában másolja a modellt.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+343" />
+        <location line="+356" />
         <source>Extract File</source>
         <translation>Dosszié</translation>
     </message>
     <message>
-        <location line="-349" />
+        <location line="-362" />
         <source>View/Edit</source>
         <translation>Megtekintés/Szerkesztés</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+340" />
+        <location line="+353" />
         <source>Add File</source>
         <translation>Fájl hozzáadása</translation>
     </message>
     <message>
-        <location line="-339" />
-        <location line="+341" />
+        <location line="-352" />
+        <location line="+354" />
         <source>New Folder</source>
         <translation>Új mappa</translation>
     </message>
     <message>
-        <location line="-253" />
+        <location line="-266" />
+        <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
+
+</source>
+        <translation>A ROMFS írása nem fejeződött be, így az OpenMV Cam ROM fájlrendszere hiányos lehet.
+
+</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reset the ROM file system, or edit and commit it again, before relying on it.</source>
+        <translation>Állítsa vissza a ROM fájlrendszert, vagy szerkessze és írja ki újra, mielőtt számítana rá.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to reset the ROM file system or to edit and commit it again.</source>
+        <translation>Az OpenMV Cam még mindig rendszerbetöltő módban van: kattintson a Csatlakozás gombra, és a rendszerbetöltő lehetőségeivel állítsa vissza a ROM fájlrendszert, vagy szerkessze és írja ki újra.</translation>
+    </message>
+    <message>
         <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
 
 Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to reset the ROM file system or to edit and commit it again.</source>
-        <translation>A ROMFS írása nem fejeződött be, így az OpenMV Cam ROM fájlrendszere hiányos lehet.
+        <translation type="vanished">A ROMFS írása nem fejeződött be, így az OpenMV Cam ROM fájlrendszere hiányos lehet.
 
 Az OpenMV Cam még mindig rendszerbetöltő módban van: kattintson a Csatlakozás gombra, és a rendszerbetöltő lehetőségeivel állítsa vissza a ROM fájlrendszert, vagy szerkessze és írja ki újra.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>The ROMFS read did not complete.
 
 Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to edit the ROM file system again.</source>
@@ -12129,13 +12164,13 @@ Az OpenMV Cam még mindig rendszerbetöltő módban van: kattintson a Csatlakoz�
     <message>
         <location line="+53" />
         <location line="+13" />
-        <location line="+377" />
+        <location line="+389" />
         <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>A ROMFS nem támogatott ezen a táblán!</translation>
     </message>
     <message>
-        <location line="-335" />
+        <location line="-337" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Nem sikerült kicsomagolni a ROMF -eket!</translation>
@@ -12148,7 +12183,7 @@ Az OpenMV Cam még mindig rendszerbetöltő módban van: kattintson a Csatlakoz�
     </message>
     <message>
         <location line="-25" />
-        <location line="+211" />
+        <location line="+212" />
         <source>ROMFS Images (*.img)</source>
         <translation>ROMFS képek (*.Img)</translation>
     </message>
@@ -12168,7 +12203,7 @@ Az OpenMV Cam még mindig rendszerbetöltő módban van: kattintson a Csatlakoz�
         <translation>Mentse el a ROMF -eket a fájlba</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+125" />
         <location line="+7" />
         <location line="+11" />
         <location line="+12" />
@@ -12389,7 +12424,7 @@ Az OpenMV Cam még mindig rendszerbetöltő módban van: kattintson a Csatlakoz�
         <translation>Az STM32 programozó nem támogatott ezen a platformon.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-606" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
         <source>the detected board</source>
         <translation>az észlelt tábla</translation>
     </message>
@@ -12419,12 +12454,12 @@ Az OpenMV Cam még mindig rendszerbetöltő módban van: kattintson a Csatlakoz�
         <translation>Egy rendszertöltő kép feltöltéséhez az OpenMV Cam kamerának rendszertöltő helyreállítási módban kell lennie. Húzza ki a kamerát, csatlakoztassa a BOOT0/SBL/RECOVERY tűt a 3.3V-hoz egy áthidalóval, majd dugja vissza a kamerát, mielőtt újra próbálkozik.</translation>
     </message>
     <message>
-        <location line="+409" />
+        <location line="+412" />
         <source>DFU ROMFS read failed!</source>
         <translation>A ROMFS DFU-olvasása nem sikerült!</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+31" />
         <source>DFU ROMFS write failed!</source>
         <translation>A ROMFS DFU-írása nem sikerült!</translation>
     </message>

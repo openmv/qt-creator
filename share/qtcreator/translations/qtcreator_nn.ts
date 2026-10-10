@@ -7124,7 +7124,7 @@ Se dokumentasjonen til den spesifikke språkserveren for gyldige innstillinger.<
         <location line="+96" />
         <location line="+192" />
         <location line="+203" />
-        <location line="+426" />
+        <location line="+454" />
         <location line="+13" />
         <location line="+169" />
         <location line="+146" />
@@ -7132,7 +7132,7 @@ Se dokumentasjonen til den spesifikke språkserveren for gyldige innstillinger.<
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+887" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+897" />
         <location line="+290" />
         <location line="+1610" />
         <location line="+1142" />
@@ -7150,7 +7150,7 @@ Se dokumentasjonen til den spesifikke språkserveren for gyldige innstillinger.<
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-316" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4181" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4209" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
         <location line="+48" />
@@ -7165,7 +7165,7 @@ Se dokumentasjonen til den spesifikke språkserveren for gyldige innstillinger.<
     </message>
     <message>
         <location line="+40" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3083" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
@@ -7173,15 +7173,15 @@ Se dokumentasjonen til den spesifikke språkserveren for gyldige innstillinger.<
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+633" />
-        <location line="+342" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+355" />
         <source>Delete</source>
         <translation>Slett</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-412" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-425" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Er du sikker på at du vil slette &quot;%L1&quot; permanent?</translation>
     </message>
@@ -7208,7 +7208,7 @@ Se dokumentasjonen til den spesifikke språkserveren for gyldige innstillinger.<
         <translation>Kunne ikke endre navn på filen av en ukjent årsak!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6233" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6261" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+63" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+62" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
@@ -7488,33 +7488,33 @@ Sjekk json-filen for feil og fiks dem.</translation>
     </message>
     <message>
         <location line="+267" />
-        <location line="+4472" />
+        <location line="+4500" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Åpne Terminal</translation>
     </message>
     <message>
-        <location line="-4526" />
+        <location line="-4554" />
         <source>Machine Vision</source>
         <translation>Maskinsyn</translation>
     </message>
     <message>
         <location line="+182" />
-        <location line="+4375" />
+        <location line="+4403" />
         <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Threshold Editor</translation>
     </message>
     <message>
-        <location line="-4445" />
-        <location line="+4522" />
+        <location line="-4473" />
+        <location line="+4550" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Keypoints Editor</translation>
     </message>
     <message>
-        <location line="-4513" />
-        <location line="+4677" />
+        <location line="-4541" />
+        <location line="+4705" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7523,7 +7523,7 @@ Sjekk json-filen for feil og fiks dem.</translation>
         <translation>AprilTag Generator</translation>
     </message>
     <message>
-        <location line="-4824" />
+        <location line="-4852" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5-familie (30 tagger)</translation>
     </message>
@@ -7564,7 +7564,7 @@ Sjekk json-filen for feil og fiks dem.</translation>
         <location line="+14" />
         <location line="+409" />
         <location line="+1184" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-229" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-304" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Kunne ikke åpne: &quot;%L1&quot;</translation>
     </message>
@@ -7596,7 +7596,7 @@ Sjekk json-filen for feil og fiks dem.</translation>
     </message>
     <message>
         <location line="+225" />
-        <location line="+2929" />
+        <location line="+2957" />
         <location line="+1423" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
@@ -7617,7 +7617,7 @@ Sjekk json-filen for feil og fiks dem.</translation>
         <translation>Kan ikke overskrive utdatafilen!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4562" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4590" />
         <source>Video Tools</source>
         <translation>Videoverktøy</translation>
     </message>
@@ -7725,16 +7725,16 @@ Sjekk json-filen for feil og fiks dem.</translation>
         <location line="+101" />
         <location line="+96" />
         <location line="+326" />
-        <location line="+675" />
+        <location line="+703" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
         <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-385" />
-        <location line="+252" />
-        <location line="+393" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-395" />
+        <location line="+255" />
+        <location line="+400" />
         <location line="+1610" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-304" />
         <location line="+301" />
@@ -7746,7 +7746,7 @@ Sjekk json-filen for feil og fiks dem.</translation>
         <translation>Avbryt</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4377" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4405" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Last opp til Edge Impulse Project</translation>
     </message>
@@ -7885,8 +7885,8 @@ Sjekk json-filen for feil og fiks dem.</translation>
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+30" />
-        <location line="+30" />
+        <location line="+33" />
+        <location line="+31" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -8193,7 +8193,7 @@ OpenMV IDE-versjoner før v4.3.0 har ikke denne filen og ville ha slettet den ve
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+605" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+692" />
         <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>Last ROMFS inn på OpenMV Cam</translation>
@@ -8313,7 +8313,7 @@ Vil du velja eit anna namn?</translation>
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-795" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-887" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Konverter modell</translation>
@@ -8457,7 +8457,7 @@ Vil du velja eit anna namn?</translation>
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3744" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3745" />
         <source>Board:</source>
         <translation>Borde:</translation>
     </message>
@@ -8522,7 +8522,7 @@ Vil du velja eit anna namn?</translation>
     </message>
     <message>
         <location line="+400" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3970" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3978" />
         <source>Update Available</source>
         <translation>Oppdatering tilgjengelig</translation>
     </message>
@@ -8614,17 +8614,17 @@ Firmwaren til OpenMV Cam får panikk på grunn av en maskinvarefeil. Vennligst s
     </message>
     <message>
         <location line="+99" />
-        <location line="+1386" />
+        <location line="+1414" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Seriell port - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1354" />
+        <location line="-1382" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1001" />
+        <location line="+1029" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
@@ -8634,7 +8634,7 @@ Firmwaren til OpenMV Cam får panikk på grunn av en maskinvarefeil. Vennligst s
         <translation>Kobler til... (30 sekunders tidsavbrudd)</translation>
     </message>
     <message>
-        <location line="-1994" />
+        <location line="-2022" />
         <source>
 
 Try doing:
@@ -8687,12 +8687,12 @@ sudo adduser %L1 oppringing
     </message>
     <message>
         <location line="+17" />
-        <location line="+1444" />
+        <location line="+1472" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP-servertilkobling - %1</translation>
     </message>
     <message>
-        <location line="-1370" />
+        <location line="-1398" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Ugyldig portargument (%1) for -open_udp_server_terminal</translation>
     </message>
@@ -8723,12 +8723,12 @@ sudo adduser %L1 oppringing
     </message>
     <message>
         <location line="+17" />
-        <location line="+1491" />
+        <location line="+1519" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP-servertilkobling - %1</translation>
     </message>
     <message>
-        <location line="-1417" />
+        <location line="-1445" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Ugyldig portargument (%1) for -open_tcp_server_terminal</translation>
     </message>
@@ -8757,7 +8757,7 @@ sudo adduser %L1 oppringing
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3185" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3192" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -8929,7 +8929,7 @@ Vil du registrere ditt OpenMV Cam nå?</translation>
         <translation>Vil du fjerne kommentarer og konvertere mellomrom til faner?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+84" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+112" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-75" />
@@ -8995,7 +8995,7 @@ Vil du registrere ditt OpenMV Cam nå?</translation>
         <translation>Åpen fil</translation>
     </message>
     <message>
-        <location line="-3031" />
+        <location line="-3059" />
         <source>&lt;p&gt;&lt;b&gt;Release Notes&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Utgjevingsnotat&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
@@ -9118,7 +9118,7 @@ Would you like to register your OpenMV Cam now?</source>
 Vil du registrera OpenMV Cam-en din no?</translation>
     </message>
     <message>
-        <location line="+576" />
+        <location line="+604" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -9252,7 +9252,7 @@ Vil du registrera OpenMV Cam-en din no?</translation>
         <translation>Kunne ikke tømme «%L1»!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2807" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2835" />
         <location line="+7" />
         <source>Stream JPG-compressed images for higher performance</source>
         <translation>Strøym JPG-komprimerte bilete for høgare yting</translation>
@@ -9316,13 +9316,18 @@ Vil du registrera OpenMV Cam-en din no?</translation>
     <message>
         <location line="+262" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+307" />
-        <location line="+430" />
+        <location line="+431" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-639" />
         <source>No Drive</source>
         <translation>Ingen stasjon</translation>
     </message>
     <message>
-        <location line="+2330" />
+        <location line="+1966" />
+        <source>OpenMV Cam Error</source>
+        <translation>OpenMV Cam-feil</translation>
+    </message>
+    <message>
+        <location line="+392" />
         <location line="+12" />
         <location line="+31" />
         <location line="+9" />
@@ -9369,7 +9374,7 @@ Vil du registrera OpenMV Cam-en din no?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2153" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2154" />
         <source>Please select a serial port</source>
         <translation>Velg en seriell port</translation>
     </message>
@@ -9495,7 +9500,7 @@ Vil du registrera OpenMV Cam-en din no?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+926" />
         <source>What would you like to do?</source>
         <translation>Hva har du lyst til å gjøre?</translation>
     </message>
@@ -9612,18 +9617,18 @@ Vil du registrera OpenMV Cam-en din no?</translation>
         <translation type="vanished">Nye OpenMV IDE-ressurser er tilgjengelige (f.eks. eksempler, fastvare, dokumentasjon, etc.).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2056" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2063" />
         <source>Install</source>
         <translation>Installere</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+393" />
+        <location line="+400" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-450" />
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
         <location line="+46" />
         <location line="+73" />
         <location line="+46" />
@@ -9654,7 +9659,8 @@ Vil du registrera OpenMV Cam-en din no?</translation>
         <translation type="vanished">Installasjon vellykket! Vennligst start OpenMV IDE på nytt.</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="-5" />
+        <location line="+133" />
         <location line="+6" />
         <location line="+28" />
         <source>Package Update</source>
@@ -9681,41 +9687,41 @@ Vil du registrera OpenMV Cam-en din no?</translation>
         <location line="+279" />
         <location line="+945" />
         <location line="+231" />
-        <location line="+2768" />
+        <location line="+2873" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Slett internt FAT-filsystem</translation>
     </message>
     <message>
-        <location line="-4298" />
+        <location line="-4403" />
         <location line="+279" />
         <location line="+947" />
         <location line="+230" />
-        <location line="+2767" />
+        <location line="+2872" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Hvis du aktiverer dette alternativet, vil alle filene på OpenMV Cams interne FAT-filsystem bli slettet. Dette sletter ikke filer på noe flyttbart SD-kort (hvis det er satt inn).</translation>
     </message>
     <message>
-        <location line="-4298" />
+        <location line="-4403" />
         <location line="+1226" />
         <location line="+230" />
-        <location line="+2767" />
+        <location line="+2872" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Tilbakestill ROMFS-filsystemet</translation>
     </message>
     <message>
-        <location line="-4297" />
+        <location line="-4402" />
         <location line="+1227" />
         <location line="+229" />
-        <location line="+2766" />
+        <location line="+2871" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Hvis du aktiverer dette alternativet, vil ROM-filsystemet på OpenMV Cam bli tilbakestilt til standard.</translation>
     </message>
     <message>
-        <location line="-4197" />
+        <location line="-4302" />
         <location line="+7" />
         <location line="+16" />
         <location line="+13" />
@@ -9802,7 +9808,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
 For å unngå dette: opne Apple-menyen, gå til &quot;System Settings&quot;, klikk på &quot;Privacy &amp; Security&quot; i sidestolpen, rull heilt ned til &quot;Accessories&quot;, og endre &quot;Allow accessories to connect&quot; til &quot;Automatically allow when unlocked&quot; (tilrådd) eller &quot;Always allow&quot;.</translation>
     </message>
     <message>
-        <location line="+464" />
+        <location line="+568" />
         <location line="+10" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+84" />
         <location line="+16" />
@@ -9822,7 +9828,7 @@ For å unngå dette: opne Apple-menyen, gå til &quot;System Settings&quot;, kli
         <translation>Feil: Kan ikkje opna «%L1»!</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+229" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9831,7 +9837,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Sjekk spesielt bildebehandling -&gt; fargesporing og maskinlæring -&gt; TensorFlow-eksempler.</translation>
     </message>
     <message>
-        <location line="-4169" />
+        <location line="-4274" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9961,7 +9967,7 @@ OpenMV anbefaler bare å laste bootloader.dfu for å reparere bootloader.</trans
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1453" />
         <location line="+262" />
         <location line="+705" />
-        <location line="+2270" />
+        <location line="+2375" />
         <source>Please select the board type</source>
         <translation>Velg bretttype</translation>
     </message>
@@ -9970,7 +9976,7 @@ OpenMV anbefaler bare å laste bootloader.dfu for å reparere bootloader.</trans
         <translation type="vanished">Vil du slette det interne filsystemet?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2855" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2960" />
         <source>No released firmware available for the attached board!</source>
         <translation>Ingen utgitt fastvare tilgjengelig for det vedlagte kortet!</translation>
     </message>
@@ -9987,7 +9993,7 @@ OpenMV anbefaler bare å laste bootloader.dfu for å reparere bootloader.</trans
         <translation>Oppdater oppstartslasteren til den nyeste versjonen og installer SoftDevice for å flashe OpenMV-fastvaren. Mer informasjon finner du på &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-2366" />
+        <location line="-2376" />
         <source>Checking development examples...</source>
         <translation>Sjekkar utviklingseksempel ...</translation>
     </message>
@@ -10023,12 +10029,17 @@ OpenMV anbefaler bare å laste bootloader.dfu for å reparere bootloader.</trans
         <translation>Pakkar ut den nyaste utviklings-fastvara ...</translation>
     </message>
     <message>
-        <location line="+311" />
+        <location line="+314" />
         <source>New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the &lt;a href=&quot;%L1&quot;&gt;release notes&lt;/a&gt;.</source>
         <translation>Nye %2-ressursar er tilgjengelege (t.d. eksempel, fastvare, dokumentasjon osv.). Sjå &lt;a href=&quot;%L1&quot;&gt;utgjevingsnotatet&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+31" />
+        <source>The downloaded resources file &quot;%L1&quot; failed its checksum. Please try again later.</source>
+        <translation>Den nedlasta ressursfila &quot;%L1&quot; bestod ikkje kontrollsummen. Prøv igjen seinare.</translation>
+    </message>
+    <message>
+        <location line="+65" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
         <source>Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
         <translation>Lukk alle program som viser/redigerer applikasjonsdataa til %1, og start deretter %1 på nytt!</translation>
@@ -10055,12 +10066,12 @@ OpenMV anbefaler bare å laste bootloader.dfu for å reparere bootloader.</trans
     </message>
     <message>
         <location line="+182" />
-        <location line="+3926" />
+        <location line="+4031" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Advarsel: Oppgradering til den nye fastvareversjonen krever at FAT-filsystemet slettes.</translation>
     </message>
     <message>
-        <location line="-3848" />
+        <location line="-3953" />
         <location line="+9" />
         <source>Unable to download the latest development firmware!</source>
         <translation>Kan ikkje lasta ned den nyaste utviklings-fastvara!</translation>
@@ -10145,12 +10156,12 @@ OpenMV anbefaler bare å laste bootloader.dfu for å reparere bootloader.</trans
     </message>
     <message>
         <location line="+233" />
-        <location line="+2769" />
+        <location line="+2874" />
         <source>Upgrade options:</source>
         <translation>Oppgraderingsalternativer:</translation>
     </message>
     <message>
-        <location line="-2678" />
+        <location line="-2783" />
         <location line="+174" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
@@ -10249,7 +10260,7 @@ Fortsette?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-227" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-231" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
@@ -10350,7 +10361,7 @@ Fortsette?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+166" />
+        <location line="+170" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-91" />
         <location line="+32" />
@@ -10491,7 +10502,7 @@ Klikk på OK-knappen etter at OpenMV Cams SBL Bootloader er registrert.</transla
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-410" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-414" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Ingen DFU-innstillinger for valgt bretttype!</translation>
     </message>
@@ -10517,7 +10528,7 @@ Klikk på OK-knappen etter at OpenMV Cams SBL Bootloader er registrert.</transla
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+32" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Skriv ROMFS</translation>
@@ -10527,7 +10538,7 @@ Klikk på OK-knappen etter at OpenMV Cams SBL Bootloader er registrert.</transla
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+49" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
@@ -10917,7 +10928,7 @@ Klikk på OK-knappen etter at OpenMV Cams DFU Bootloader er registrert.</transla
         <translation type="vanished">Start</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+738" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+843" />
         <source>More Examples</source>
         <translation>Flere eksempler</translation>
     </message>
@@ -11112,12 +11123,12 @@ Vil du at OpenMV IDE skal kopiere den til din OpenMV Cam?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5007" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5035" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-380" />
-        <location line="+339" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-393" />
+        <location line="+352" />
         <source>Model Zoo</source>
         <translation>Modell Zoo</translation>
     </message>
@@ -11203,7 +11214,7 @@ Vil du at OpenMV IDE skal kopiere den til din OpenMV Cam?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Få enheter</translation>
@@ -11217,7 +11228,7 @@ Vil du at OpenMV IDE skal kopiere den til din OpenMV Cam?</translation>
         <translation>Søket mislyktes!</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+102" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -11955,7 +11966,7 @@ OpenMV IDE-installasjonen din kan vera ufullstendig.</translation>
         <translation>Skjul detaljer</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-877" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-970" />
         <source>Please select the target</source>
         <translation>Vennligst velg målet</translation>
     </message>
@@ -11994,33 +12005,34 @@ OpenMV IDE vil bare kopiere modellen som den er.</translation>
 %1 kopierer berre modellen som han er.</translation>
     </message>
     <message>
-        <location line="+155" />
+        <location line="+160" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
         <location line="+45" />
         <location line="+16" />
-        <location line="+21" />
+        <location line="+36" />
         <location line="+6" />
         <location line="+8" />
         <location line="+26" />
-        <location line="+18" />
+        <location line="+52" />
+        <location line="+26" />
         <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+153" />
+        <location line="+155" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
         <location line="+13" />
-        <location line="+40" />
-        <location line="+14" />
+        <location line="+48" />
+        <location line="+16" />
         <location line="+15" />
         <location line="+27" />
-        <location line="+68" />
+        <location line="+69" />
         <location line="+50" />
         <location line="+68" />
         <location line="+6" />
@@ -12030,31 +12042,36 @@ OpenMV IDE vil bare kopiere modellen som den er.</translation>
         <translation>Rediger ROMFS</translation>
     </message>
     <message>
-        <location line="-754" />
-        <location line="+96" />
+        <location line="-842" />
+        <location line="+111" />
         <source>A folder with the same name already exists!</source>
         <translation>En mappe med samme navn finnes allerede!</translation>
     </message>
     <message>
-        <location line="-90" />
-        <location line="+96" />
+        <location line="-105" />
+        <location line="+111" />
         <source>File already exists! Overwrite?</source>
         <translation>Filen eksisterer allerede! Vil du overskrive?</translation>
     </message>
     <message>
-        <location line="-88" />
-        <location line="+96" />
+        <location line="-103" />
+        <location line="+111" />
         <source>Failed to remove file!</source>
         <translation>Kunne ikke fjerne filen!</translation>
     </message>
     <message>
-        <location line="-51" />
-        <location line="+77" />
+        <location line="-66" />
+        <location line="+92" />
         <source>Failed to copy file!</source>
         <translation>Kunne ikke kopiere filen!</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+52" />
+        <source>Dropping folders is not supported - drop the files inside them instead.</source>
+        <translation>Mapper kan ikkje sleppast - slepp heller filene som ligg i dei.</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Folder Name</source>
         <translation>Mappenavn</translation>
     </message>
@@ -12083,38 +12100,56 @@ OpenMV IDE vil bare kopiere modellen som den er.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+343" />
+        <location line="+356" />
         <source>Extract File</source>
         <translation>Pakk ut fil</translation>
     </message>
     <message>
-        <location line="-349" />
+        <location line="-362" />
         <source>View/Edit</source>
         <translation>Vis/rediger</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+340" />
+        <location line="+353" />
         <source>Add File</source>
         <translation>Legg til fil</translation>
     </message>
     <message>
-        <location line="-339" />
-        <location line="+341" />
+        <location line="-352" />
+        <location line="+354" />
         <source>New Folder</source>
         <translation>Ny mappe</translation>
     </message>
     <message>
-        <location line="-253" />
+        <location line="-266" />
+        <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
+
+</source>
+        <translation>Skrivinga av ROMFS vart ikkje fullført, så ROM-filsystemet på OpenMV Cam kan vere ufullstendig.
+
+</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reset the ROM file system, or edit and commit it again, before relying on it.</source>
+        <translation>Tilbakestill ROM-filsystemet, eller rediger og skriv det på nytt, før du stolar på det.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to reset the ROM file system or to edit and commit it again.</source>
+        <translation>OpenMV Cam er framleis i oppstartslastar-modus: klikk på Kopla til og bruk vala i oppstartslastaren for å tilbakestille ROM-filsystemet eller for å redigere og skrive det på nytt.</translation>
+    </message>
+    <message>
         <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
 
 Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to reset the ROM file system or to edit and commit it again.</source>
-        <translation>Skrivinga av ROMFS vart ikkje fullført, så ROM-filsystemet på OpenMV Cam kan vere ufullstendig.
+        <translation type="vanished">Skrivinga av ROMFS vart ikkje fullført, så ROM-filsystemet på OpenMV Cam kan vere ufullstendig.
 
 OpenMV Cam er framleis i oppstartslastar-modus: klikk på Kopla til og bruk vala i oppstartslastaren for å tilbakestille ROM-filsystemet eller for å redigere og skrive det på nytt.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>The ROMFS read did not complete.
 
 Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to edit the ROM file system again.</source>
@@ -12125,13 +12160,13 @@ OpenMV Cam er framleis i oppstartslastar-modus: klikk på Kopla til og bruk vala
     <message>
         <location line="+53" />
         <location line="+13" />
-        <location line="+377" />
+        <location line="+389" />
         <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS støttes ikke på dette brettet!</translation>
     </message>
     <message>
-        <location line="-335" />
+        <location line="-337" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Kunne ikke pakke ut ROMFS!</translation>
@@ -12144,7 +12179,7 @@ OpenMV Cam er framleis i oppstartslastar-modus: klikk på Kopla til og bruk vala
     </message>
     <message>
         <location line="-25" />
-        <location line="+211" />
+        <location line="+212" />
         <source>ROMFS Images (*.img)</source>
         <translation>ROMFS-bilder (*.img)</translation>
     </message>
@@ -12164,7 +12199,7 @@ OpenMV Cam er framleis i oppstartslastar-modus: klikk på Kopla til og bruk vala
         <translation>Lagre ROMFS til fil</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+125" />
         <location line="+7" />
         <location line="+11" />
         <location line="+12" />
@@ -12381,7 +12416,7 @@ OpenMV Cam er framleis i oppstartslastar-modus: klikk på Kopla til og bruk vala
         <translation>STM32-programmerer støttes ikke på denne plattformen.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-606" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
         <source>the detected board</source>
         <translation>det oppdagede brettet</translation>
     </message>
@@ -12411,12 +12446,12 @@ OpenMV Cam er framleis i oppstartslastar-modus: klikk på Kopla til og bruk vala
         <translation>For å flasha eit oppstartslastarbilete må OpenMV Cam-en din vera i gjenopprettingsmodus for oppstartslastar. Kopla frå kameraet, kopla BOOT0/SBL/RECOVERY til 3.3V med ein jumpar, og kopla deretter kameraet til att før du prøver på nytt.</translation>
     </message>
     <message>
-        <location line="+409" />
+        <location line="+412" />
         <source>DFU ROMFS read failed!</source>
         <translation>DFU-lesing av ROMFS mislukkast!</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+31" />
         <source>DFU ROMFS write failed!</source>
         <translation>DFU-skriving av ROMFS mislukkast!</translation>
     </message>

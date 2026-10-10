@@ -7131,7 +7131,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+96" />
         <location line="+192" />
         <location line="+203" />
-        <location line="+426" />
+        <location line="+454" />
         <location line="+13" />
         <location line="+169" />
         <location line="+146" />
@@ -7139,7 +7139,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+887" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+897" />
         <location line="+290" />
         <location line="+1610" />
         <location line="+1142" />
@@ -7157,7 +7157,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-316" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4181" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4209" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
         <location line="+48" />
@@ -7172,7 +7172,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+40" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3083" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
@@ -7180,15 +7180,15 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+633" />
-        <location line="+342" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+355" />
         <source>Delete</source>
         <translation>Dzēst</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-412" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-425" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Vai tiešām vēlaties neatgriezeniski dzēst &quot;%L1&quot;?</translation>
     </message>
@@ -7215,7 +7215,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Failu neizdevās pārdēvēt nezināma iemesla dēļ!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6233" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6261" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+63" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+62" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
@@ -7450,33 +7450,33 @@ Pārbaudiet json failā kļūdas un izlabojiet tās.</translation>
     </message>
     <message>
         <location line="+267" />
-        <location line="+4472" />
+        <location line="+4500" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Atveriet termināli</translation>
     </message>
     <message>
-        <location line="-4526" />
+        <location line="-4554" />
         <source>Machine Vision</source>
         <translation>Mašīnredze</translation>
     </message>
     <message>
         <location line="+182" />
-        <location line="+4375" />
+        <location line="+4403" />
         <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Sliekšņa redaktors</translation>
     </message>
     <message>
-        <location line="-4445" />
-        <location line="+4522" />
+        <location line="-4473" />
+        <location line="+4550" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Keypoints redaktors</translation>
     </message>
     <message>
-        <location line="-4513" />
-        <location line="+4677" />
+        <location line="-4541" />
+        <location line="+4705" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7485,7 +7485,7 @@ Pārbaudiet json failā kļūdas un izlabojiet tās.</translation>
         <translation>AprilTag ģenerators</translation>
     </message>
     <message>
-        <location line="-4824" />
+        <location line="-4852" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 ģimene (30&#xa0;tagi)</translation>
     </message>
@@ -7526,7 +7526,7 @@ Pārbaudiet json failā kļūdas un izlabojiet tās.</translation>
         <location line="+14" />
         <location line="+409" />
         <location line="+1184" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-229" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-304" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Neizdevās atvērt: &quot;%L1&quot;</translation>
     </message>
@@ -7558,7 +7558,7 @@ Pārbaudiet json failā kļūdas un izlabojiet tās.</translation>
     </message>
     <message>
         <location line="+225" />
-        <location line="+2929" />
+        <location line="+2957" />
         <location line="+1423" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
@@ -7579,7 +7579,7 @@ Pārbaudiet json failā kļūdas un izlabojiet tās.</translation>
         <translation>Nevar pārrakstīt izvades failu!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4562" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4590" />
         <source>Video Tools</source>
         <translation>Video rīki</translation>
     </message>
@@ -7687,16 +7687,16 @@ Pārbaudiet json failā kļūdas un izlabojiet tās.</translation>
         <location line="+101" />
         <location line="+96" />
         <location line="+326" />
-        <location line="+675" />
+        <location line="+703" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
         <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3437" />
-        <location line="+252" />
-        <location line="+393" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3447" />
+        <location line="+255" />
+        <location line="+400" />
         <location line="+1610" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+977" />
         <location line="+301" />
@@ -7708,7 +7708,7 @@ Pārbaudiet json failā kļūdas un izlabojiet tās.</translation>
         <translation>Atcelt</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4377" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4405" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Augšupielādēt Edge Impulse Project</translation>
     </message>
@@ -7847,8 +7847,8 @@ Pārbaudiet json failā kļūdas un izlabojiet tās.</translation>
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+30" />
-        <location line="+30" />
+        <location line="+33" />
+        <location line="+31" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -8147,7 +8147,7 @@ Pārbaudiet json failā kļūdas un izlabojiet tās.</translation>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+605" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+692" />
         <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>Ielādēt ROMFS OpenMV Cam</translation>
@@ -8267,7 +8267,7 @@ Vai vēlaties izvēlēties citu nosaukumu?</translation>
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-795" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-887" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Pārveidot modeli</translation>
@@ -8411,7 +8411,7 @@ Vai vēlaties izvēlēties citu nosaukumu?</translation>
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3744" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3745" />
         <source>Board:</source>
         <translation>Valde:</translation>
     </message>
@@ -8476,7 +8476,7 @@ Vai vēlaties izvēlēties citu nosaukumu?</translation>
     </message>
     <message>
         <location line="+400" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3970" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3978" />
         <source>Update Available</source>
         <translation>Pieejams atjauninājums</translation>
     </message>
@@ -8568,17 +8568,17 @@ Jūsu OpenMV Cam programmaparatūra ir panikā aparatūras kļūmes dēļ. Lūdz
     </message>
     <message>
         <location line="+99" />
-        <location line="+1386" />
+        <location line="+1414" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Seriālais ports — %L1 — %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1354" />
+        <location line="-1382" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1001" />
+        <location line="+1029" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
@@ -8588,7 +8588,7 @@ Jūsu OpenMV Cam programmaparatūra ir panikā aparatūras kļūmes dēļ. Lūdz
         <translation>Notiek savienojuma izveide... (30&#xa0;sekunžu taimauts)</translation>
     </message>
     <message>
-        <location line="-1994" />
+        <location line="-2022" />
         <source>
 
 Try doing:
@@ -8641,12 +8641,12 @@ sudo adduser %L1 iezvanpieeja
     </message>
     <message>
         <location line="+17" />
-        <location line="+1444" />
+        <location line="+1472" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP servera savienojums — %1</translation>
     </message>
     <message>
-        <location line="-1370" />
+        <location line="-1398" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Nederīgs porta arguments (%1) -open_udp_server_terminal</translation>
     </message>
@@ -8677,12 +8677,12 @@ sudo adduser %L1 iezvanpieeja
     </message>
     <message>
         <location line="+17" />
-        <location line="+1491" />
+        <location line="+1519" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP servera savienojums — %1</translation>
     </message>
     <message>
-        <location line="-1417" />
+        <location line="-1445" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Nederīgs porta arguments (%1) -open_tcp_server_terminal</translation>
     </message>
@@ -8711,7 +8711,7 @@ sudo adduser %L1 iezvanpieeja
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3185" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3192" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -8883,7 +8883,7 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
         <translation>Vai noņemt komentārus un pārvērst atstarpes par tabulēšanas zīmēm?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+84" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+112" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-75" />
@@ -8949,7 +8949,7 @@ Vai vēlaties reģistrēt savu OpenMV kameru tūlīt?</translation>
         <translation>Atver failu</translation>
     </message>
     <message>
-        <location line="-4724" />
+        <location line="-4752" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
@@ -9121,7 +9121,7 @@ Would you like to register your OpenMV Cam now?</source>
 Vai vēlaties reģistrēt savu OpenMV Cam tagad?</translation>
     </message>
     <message>
-        <location line="+576" />
+        <location line="+604" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -9255,7 +9255,7 @@ Vai vēlaties reģistrēt savu OpenMV Cam tagad?</translation>
         <translation>Neizdevās izskalot &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2807" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2835" />
         <location line="+7" />
         <source>Stream JPG-compressed images for higher performance</source>
         <translation>Straumēt JPG saspiestus attēlus lielākai veiktspējai</translation>
@@ -9319,13 +9319,18 @@ Vai vēlaties reģistrēt savu OpenMV Cam tagad?</translation>
     <message>
         <location line="+262" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3390" />
-        <location line="+430" />
+        <location line="+431" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-639" />
         <source>No Drive</source>
         <translation>Nav diska</translation>
     </message>
     <message>
-        <location line="+2330" />
+        <location line="+1966" />
+        <source>OpenMV Cam Error</source>
+        <translation>OpenMV Cam kļūda</translation>
+    </message>
+    <message>
+        <location line="+392" />
         <location line="+12" />
         <location line="+31" />
         <location line="+9" />
@@ -9372,7 +9377,7 @@ Vai vēlaties reģistrēt savu OpenMV Cam tagad?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2153" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2154" />
         <source>Please select a serial port</source>
         <translation>Lūdzu, atlasiet seriālo portu</translation>
     </message>
@@ -9498,7 +9503,7 @@ Vai vēlaties reģistrēt savu OpenMV Cam tagad?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+926" />
         <source>What would you like to do?</source>
         <translation>Ko tu gribētu darīt?</translation>
     </message>
@@ -9616,18 +9621,18 @@ Vai vēlaties reģistrēt savu OpenMV Cam tagad?</translation>
         <translation type="vanished">Ir pieejami jauni OpenMV IDE resursi (piemēram, piemēri, programmaparatūra, dokumentācija utt.).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2056" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2063" />
         <source>Install</source>
         <translation>Uzstādīt</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+393" />
+        <location line="+400" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
         <location line="+46" />
         <location line="+73" />
         <location line="+46" />
@@ -9658,7 +9663,8 @@ Vai vēlaties reģistrēt savu OpenMV Cam tagad?</translation>
         <translation type="vanished">Uzstādīšana sekmīga! Lūdzu, restartējiet OpenMV IDE.</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="-5" />
+        <location line="+133" />
         <location line="+6" />
         <location line="+28" />
         <source>Package Update</source>
@@ -9685,41 +9691,41 @@ Vai vēlaties reģistrēt savu OpenMV Cam tagad?</translation>
         <location line="+279" />
         <location line="+945" />
         <location line="+231" />
-        <location line="+2768" />
+        <location line="+2873" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Izdzēsiet iekšējo tauku failu sistēmu</translation>
     </message>
     <message>
-        <location line="-4298" />
+        <location line="-4403" />
         <location line="+279" />
         <location line="+947" />
         <location line="+230" />
-        <location line="+2767" />
+        <location line="+2872" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Ja iespējojat šo opciju, tiks izdzēsti visi jūsu OpenMV CAM iekšējā tauku failu sistēmas faili. Tas neizdzēš failus nevienā noņemamā SD kartē (ja tiek ievietots).</translation>
     </message>
     <message>
-        <location line="-4298" />
+        <location line="-4403" />
         <location line="+1226" />
         <location line="+230" />
-        <location line="+2767" />
+        <location line="+2872" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Atiestatīt romfs failu sistēmu</translation>
     </message>
     <message>
-        <location line="-4297" />
+        <location line="-4402" />
         <location line="+1227" />
         <location line="+229" />
-        <location line="+2766" />
+        <location line="+2871" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Ja iespējojat šo opciju, ROM failu sistēma OpenMV kamerā tiks atiestatīta atpakaļ uz noklusējumu.</translation>
     </message>
     <message>
-        <location line="-4197" />
+        <location line="-4302" />
         <location line="+7" />
         <location line="+16" />
         <location line="+13" />
@@ -9806,7 +9812,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
 Lai to novērstu, atveriet Apple izvēlni, dodieties uz &quot;System Settings&quot;, sānjoslā noklikšķiniet uz &quot;Privacy &amp; Security&quot;, ritiniet līdz apakšai līdz &quot;Accessories&quot; un mainiet &quot;Allow accessories to connect&quot; uz &quot;Automatically allow when unlocked&quot; (ieteicams) vai &quot;Always allow&quot;.</translation>
     </message>
     <message>
-        <location line="+464" />
+        <location line="+568" />
         <location line="+10" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+84" />
         <location line="+16" />
@@ -9826,7 +9832,7 @@ Lai to novērstu, atveriet Apple izvēlni, dodieties uz &quot;System Settings&qu
         <translation>Kļūda: Nevar atvērt &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+229" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9835,7 +9841,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Jo īpaši pārbaudiet attēlu apstrāde -&gt; Krāsu izsekošana un mašīnmācīšanās -&gt; TensorFlow piemērus.</translation>
     </message>
     <message>
-        <location line="-4169" />
+        <location line="-4274" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9973,7 +9979,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1453" />
         <location line="+262" />
         <location line="+705" />
-        <location line="+2270" />
+        <location line="+2375" />
         <source>Please select the board type</source>
         <translation>Lūdzu, izvēlieties dēļa veidu</translation>
     </message>
@@ -9982,7 +9988,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Vai dzēst iekšējo failu sistēmu?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2855" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2960" />
         <source>No released firmware available for the attached board!</source>
         <translation>Pievienotajai platei nav pieejama izlaista programmaparatūra!</translation>
     </message>
@@ -9999,7 +10005,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Lūdzu, atjauniniet sāknēšanas ielādētāju uz jaunāko versiju un instalējiet SoftDevice, lai mirgotu OpenMV programmaparatūra. Plašāku informāciju var atrast vietnē &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="-2366" />
+        <location line="-2376" />
         <source>Checking development examples...</source>
         <translation>Notiek izstrādes piemēru pārbaude...</translation>
     </message>
@@ -10035,12 +10041,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Notiek jaunākās izstrādes programmaparatūras izpakošana...</translation>
     </message>
     <message>
-        <location line="+311" />
+        <location line="+314" />
         <source>New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the &lt;a href=&quot;%L1&quot;&gt;release notes&lt;/a&gt;.</source>
         <translation>Ir pieejami jauni %2 resursi (piemēram, piemēri, programmaparatūra, dokumentācija utt.). Skatiet &lt;a href=&quot;%L1&quot;&gt;laidiena piezīmes&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+31" />
+        <source>The downloaded resources file &quot;%L1&quot; failed its checksum. Please try again later.</source>
+        <translation>Lejupielādētais resursu fails &quot;%L1&quot; neizturēja kontrolsummas pārbaudi. Lūdzu, mēģiniet vēlāk vēlreiz.</translation>
+    </message>
+    <message>
+        <location line="+65" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
         <source>Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
         <translation>Lūdzu, aizveriet visas programmas, kas skata/rediģē %1 lietotnes datus, un pēc tam restartējiet %1!</translation>
@@ -10067,12 +10078,12 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+182" />
-        <location line="+3926" />
+        <location line="+4031" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>BRĪDINĀJUMS: Jaunināšanai uz jauno programmaparatūras versiju ir nepieciešams izdzēst tauku failu sistēmu.</translation>
     </message>
     <message>
-        <location line="-3848" />
+        <location line="-3953" />
         <location line="+9" />
         <source>Unable to download the latest development firmware!</source>
         <translation>Nevar lejupielādēt jaunāko izstrādes programmaparatūru!</translation>
@@ -10157,12 +10168,12 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+233" />
-        <location line="+2769" />
+        <location line="+2874" />
         <source>Upgrade options:</source>
         <translation>Jaunināšanas iespējas:</translation>
     </message>
     <message>
-        <location line="-2678" />
+        <location line="-2783" />
         <location line="+174" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
@@ -10261,7 +10272,7 @@ Turpināt?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-227" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-231" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
@@ -10362,7 +10373,7 @@ Turpināt?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+166" />
+        <location line="+170" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-91" />
         <location line="+32" />
@@ -10503,7 +10514,7 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam SBL sāknēšanas programma 
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-410" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-414" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Nav DFU iestatījumu atlasītajam plates tipam!</translation>
     </message>
@@ -10529,7 +10540,7 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam SBL sāknēšanas programma 
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+32" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Rakstiet romfs</translation>
@@ -10539,7 +10550,7 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam SBL sāknēšanas programma 
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+49" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
@@ -10929,7 +10940,7 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam DFU sāknēšanas programma 
         <translation type="vanished">Sākt</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+738" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+843" />
         <source>More Examples</source>
         <translation>Vairāk piemēru</translation>
     </message>
@@ -11124,12 +11135,12 @@ Vai vēlaties, lai OpenMV IDE to kopētu jūsu OpenMV kamerā?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5007" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5035" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-380" />
-        <location line="+339" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-393" />
+        <location line="+352" />
         <source>Model Zoo</source>
         <translation>Zooloģiskā dārza modelis</translation>
     </message>
@@ -11215,7 +11226,7 @@ Vai vēlaties, lai OpenMV IDE to kopētu jūsu OpenMV kamerā?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Iegūstiet ierīces</translation>
@@ -11229,7 +11240,7 @@ Vai vēlaties, lai OpenMV IDE to kopētu jūsu OpenMV kamerā?</translation>
         <translation>Vaicājums neizdevās!</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+102" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -11975,7 +11986,7 @@ Jūsu OpenMV IDE instalācija var būt nepilnīga.</translation>
         <translation type="vanished">Nav atlasītā faila nosaukuma atbilstošas ​​saskarnes!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-877" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-970" />
         <source>Please select the target</source>
         <translation>Lūdzu, atlasiet mērķi</translation>
     </message>
@@ -12014,33 +12025,34 @@ OpenMV IDE vienkārši kopē modeli tādam, kāds tas ir.</translation>
 %1 vienkārši kopēs modeli tāds, kāds tas ir.</translation>
     </message>
     <message>
-        <location line="+155" />
+        <location line="+160" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
         <location line="+45" />
         <location line="+16" />
-        <location line="+21" />
+        <location line="+36" />
         <location line="+6" />
         <location line="+8" />
         <location line="+26" />
-        <location line="+18" />
+        <location line="+52" />
+        <location line="+26" />
         <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+153" />
+        <location line="+155" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
         <location line="+13" />
-        <location line="+40" />
-        <location line="+14" />
+        <location line="+48" />
+        <location line="+16" />
         <location line="+15" />
         <location line="+27" />
-        <location line="+68" />
+        <location line="+69" />
         <location line="+50" />
         <location line="+68" />
         <location line="+6" />
@@ -12050,31 +12062,36 @@ OpenMV IDE vienkārši kopē modeli tādam, kāds tas ir.</translation>
         <translation>Rediģēt romfs</translation>
     </message>
     <message>
-        <location line="-754" />
-        <location line="+96" />
+        <location line="-842" />
+        <location line="+111" />
         <source>A folder with the same name already exists!</source>
         <translation>Mape ar tādu pašu vārdu jau pastāv!</translation>
     </message>
     <message>
-        <location line="-90" />
-        <location line="+96" />
+        <location line="-105" />
+        <location line="+111" />
         <source>File already exists! Overwrite?</source>
         <translation>Fails jau pastāv! Pārrakstīt?</translation>
     </message>
     <message>
-        <location line="-88" />
-        <location line="+96" />
+        <location line="-103" />
+        <location line="+111" />
         <source>Failed to remove file!</source>
         <translation>Neizdevās noņemt failu!</translation>
     </message>
     <message>
-        <location line="-51" />
-        <location line="+77" />
+        <location line="-66" />
+        <location line="+92" />
         <source>Failed to copy file!</source>
         <translation>Neizdevās kopēt failu!</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+52" />
+        <source>Dropping folders is not supported - drop the files inside them instead.</source>
+        <translation>Mapju nomešana netiek atbalstīta - tā vietā nometiet tajās esošos failus.</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Folder Name</source>
         <translation>Mapes nosaukums</translation>
     </message>
@@ -12103,38 +12120,56 @@ OpenMV IDE vienkārši kopē modeli tādam, kāds tas ir.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+343" />
+        <location line="+356" />
         <source>Extract File</source>
         <translation>Izrakstīšanas fails</translation>
     </message>
     <message>
-        <location line="-349" />
+        <location line="-362" />
         <source>View/Edit</source>
         <translation>Skatīt/rediģēt</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+340" />
+        <location line="+353" />
         <source>Add File</source>
         <translation>Pievienot failu</translation>
     </message>
     <message>
-        <location line="-339" />
-        <location line="+341" />
+        <location line="-352" />
+        <location line="+354" />
         <source>New Folder</source>
         <translation>Jauna mape</translation>
     </message>
     <message>
-        <location line="-253" />
+        <location line="-266" />
+        <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
+
+</source>
+        <translation>ROMFS ierakstīšana netika pabeigta, tāpēc ROM failu sistēma jūsu OpenMV Cam var būt nepilnīga.
+
+</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reset the ROM file system, or edit and commit it again, before relying on it.</source>
+        <translation>Pirms paļauties uz ROM failu sistēmu, atiestatiet to vai vēlreiz rediģējiet un ierakstiet.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to reset the ROM file system or to edit and commit it again.</source>
+        <translation>Jūsu OpenMV Cam joprojām ir sāknēšanas ielādētāja režīmā: noklikšķiniet uz Savienot un izmantojiet sāknēšanas ielādētāja opcijas, lai atiestatītu ROM failu sistēmu vai to vēlreiz rediģētu un ierakstītu.</translation>
+    </message>
+    <message>
         <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
 
 Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to reset the ROM file system or to edit and commit it again.</source>
-        <translation>ROMFS ierakstīšana netika pabeigta, tāpēc ROM failu sistēma jūsu OpenMV Cam var būt nepilnīga.
+        <translation type="vanished">ROMFS ierakstīšana netika pabeigta, tāpēc ROM failu sistēma jūsu OpenMV Cam var būt nepilnīga.
 
 Jūsu OpenMV Cam joprojām ir sāknēšanas ielādētāja režīmā: noklikšķiniet uz Savienot un izmantojiet sāknēšanas ielādētāja opcijas, lai atiestatītu ROM failu sistēmu vai to vēlreiz rediģētu un ierakstītu.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>The ROMFS read did not complete.
 
 Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to edit the ROM file system again.</source>
@@ -12145,13 +12180,13 @@ Jūsu OpenMV Cam joprojām ir sāknēšanas ielādētāja režīmā: noklikšķi
     <message>
         <location line="+53" />
         <location line="+13" />
-        <location line="+377" />
+        <location line="+389" />
         <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS netiek atbalstīts šajā dēlī!</translation>
     </message>
     <message>
-        <location line="-335" />
+        <location line="-337" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Neizdevās izpakot romfus!</translation>
@@ -12164,7 +12199,7 @@ Jūsu OpenMV Cam joprojām ir sāknēšanas ielādētāja režīmā: noklikšķi
     </message>
     <message>
         <location line="-25" />
-        <location line="+211" />
+        <location line="+212" />
         <source>ROMFS Images (*.img)</source>
         <translation>Romfs attēli (*.Img)</translation>
     </message>
@@ -12184,7 +12219,7 @@ Jūsu OpenMV Cam joprojām ir sāknēšanas ielādētāja režīmā: noklikšķi
         <translation>Saglabāt romfs, lai iesniegtu iesniegšanu</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+125" />
         <location line="+7" />
         <location line="+11" />
         <location line="+12" />
@@ -12405,7 +12440,7 @@ Jūsu OpenMV Cam joprojām ir sāknēšanas ielādētāja režīmā: noklikšķi
         <translation>Šajā platformā netiek atbalstīts STM32 programmētājs.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-606" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
         <source>the detected board</source>
         <translation>atklātais dēlis</translation>
     </message>
@@ -12435,12 +12470,12 @@ Jūsu OpenMV Cam joprojām ir sāknēšanas ielādētāja režīmā: noklikšķi
         <translation>Lai ierakstītu sāknētāja attēlu, jūsu OpenMV Cam ir jābūt sāknētāja atkopšanas režīmā. Atvienojiet kameru, ar savienotāju savienojiet BOOT0/SBL/RECOVERY ar 3.3V un pēc tam pievienojiet kameru atpakaļ, pirms mēģiniet vēlreiz.</translation>
     </message>
     <message>
-        <location line="+409" />
+        <location line="+412" />
         <source>DFU ROMFS read failed!</source>
         <translation>ROMFS nolasīšana ar DFU neizdevās!</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+31" />
         <source>DFU ROMFS write failed!</source>
         <translation>ROMFS ierakstīšana ar DFU neizdevās!</translation>
     </message>

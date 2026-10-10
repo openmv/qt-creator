@@ -7124,7 +7124,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+96" />
         <location line="+192" />
         <location line="+203" />
-        <location line="+426" />
+        <location line="+454" />
         <location line="+13" />
         <location line="+169" />
         <location line="+146" />
@@ -7132,7 +7132,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+887" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+897" />
         <location line="+290" />
         <location line="+1610" />
         <location line="+1142" />
@@ -7150,7 +7150,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-316" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4181" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4209" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
         <location line="+48" />
@@ -7165,7 +7165,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+40" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3083" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
@@ -7173,15 +7173,15 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+633" />
-        <location line="+342" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+355" />
         <source>Delete</source>
         <translation>Poistaa</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-412" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-425" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Haluatko varmasti poistaa &quot;%L1&quot; pysyvästi?</translation>
     </message>
@@ -7208,7 +7208,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Tiedoston uudelleennimeäminen epäonnistui tuntemattomasta syystä!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6233" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6261" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+63" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+62" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
@@ -7443,33 +7443,33 @@ Tarkista json-tiedosto virheiden varalta ja korjaa ne.</translation>
     </message>
     <message>
         <location line="+267" />
-        <location line="+4472" />
+        <location line="+4500" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Avaa Terminaali</translation>
     </message>
     <message>
-        <location line="-4526" />
+        <location line="-4554" />
         <source>Machine Vision</source>
         <translation>Konenäkö</translation>
     </message>
     <message>
         <location line="+182" />
-        <location line="+4375" />
+        <location line="+4403" />
         <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Kynnyseditori</translation>
     </message>
     <message>
-        <location line="-4445" />
-        <location line="+4522" />
+        <location line="-4473" />
+        <location line="+4550" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Keypoints Editor</translation>
     </message>
     <message>
-        <location line="-4513" />
-        <location line="+4677" />
+        <location line="-4541" />
+        <location line="+4705" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7478,7 +7478,7 @@ Tarkista json-tiedosto virheiden varalta ja korjaa ne.</translation>
         <translation>AprilTag Generator</translation>
     </message>
     <message>
-        <location line="-4824" />
+        <location line="-4852" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5-perhe (30 tagia)</translation>
     </message>
@@ -7519,7 +7519,7 @@ Tarkista json-tiedosto virheiden varalta ja korjaa ne.</translation>
         <location line="+14" />
         <location line="+409" />
         <location line="+1184" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-229" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-304" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Avaaminen epäonnistui: &quot;%L1&quot;</translation>
     </message>
@@ -7551,7 +7551,7 @@ Tarkista json-tiedosto virheiden varalta ja korjaa ne.</translation>
     </message>
     <message>
         <location line="+225" />
-        <location line="+2929" />
+        <location line="+2957" />
         <location line="+1423" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
@@ -7572,7 +7572,7 @@ Tarkista json-tiedosto virheiden varalta ja korjaa ne.</translation>
         <translation>Tulostiedostoa ei voi korvata!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4562" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4590" />
         <source>Video Tools</source>
         <translation>Videotyökalut</translation>
     </message>
@@ -7680,16 +7680,16 @@ Tarkista json-tiedosto virheiden varalta ja korjaa ne.</translation>
         <location line="+101" />
         <location line="+96" />
         <location line="+326" />
-        <location line="+675" />
+        <location line="+703" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
         <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3437" />
-        <location line="+252" />
-        <location line="+393" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3447" />
+        <location line="+255" />
+        <location line="+400" />
         <location line="+1610" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+977" />
         <location line="+301" />
@@ -7701,7 +7701,7 @@ Tarkista json-tiedosto virheiden varalta ja korjaa ne.</translation>
         <translation>Peruuttaa</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4377" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4405" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Lataa Edge Impulse Projectiin</translation>
     </message>
@@ -7840,8 +7840,8 @@ Tarkista json-tiedosto virheiden varalta ja korjaa ne.</translation>
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+30" />
-        <location line="+30" />
+        <location line="+33" />
+        <location line="+31" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -8140,7 +8140,7 @@ Tarkista json-tiedosto virheiden varalta ja korjaa ne.</translation>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+605" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+692" />
         <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>Lataa ROMFS OpenMV Cam -laitteeseen</translation>
@@ -8260,7 +8260,7 @@ Haluatko valita toisen nimen?</translation>
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-795" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-887" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Muuntaa malli</translation>
@@ -8404,7 +8404,7 @@ Haluatko valita toisen nimen?</translation>
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3744" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3745" />
         <source>Board:</source>
         <translation>Hallitus:</translation>
     </message>
@@ -8469,7 +8469,7 @@ Haluatko valita toisen nimen?</translation>
     </message>
     <message>
         <location line="+400" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3970" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3978" />
         <source>Update Available</source>
         <translation>Päivitys saatavilla</translation>
     </message>
@@ -8561,17 +8561,17 @@ OpenMV Camin laiteohjelmisto on paniikissa laitteistovian vuoksi. Tarkista, ett�
     </message>
     <message>
         <location line="+99" />
-        <location line="+1386" />
+        <location line="+1414" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Sarjaportti - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1354" />
+        <location line="-1382" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1001" />
+        <location line="+1029" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
@@ -8581,7 +8581,7 @@ OpenMV Camin laiteohjelmisto on paniikissa laitteistovian vuoksi. Tarkista, ett�
         <translation>Yhdistetään... (30 sekunnin aikakatkaisu)</translation>
     </message>
     <message>
-        <location line="-1994" />
+        <location line="-2022" />
         <source>
 
 Try doing:
@@ -8634,12 +8634,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1444" />
+        <location line="+1472" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP-palvelinyhteys - %1</translation>
     </message>
     <message>
-        <location line="-1370" />
+        <location line="-1398" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Virheellinen porttiargumentti (%1) kohteelle -open_udp_server_terminal</translation>
     </message>
@@ -8670,12 +8670,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1491" />
+        <location line="+1519" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP-palvelinyhteys - %1</translation>
     </message>
     <message>
-        <location line="-1417" />
+        <location line="-1445" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Virheellinen porttiargumentti (%1) kohteelle -open_tcp_server_terminal</translation>
     </message>
@@ -8704,7 +8704,7 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3185" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3192" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -8876,7 +8876,7 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Poistetaanko kommentit ja muunnetaan välilyönnit sarkaimeiksi?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+84" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+112" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-75" />
@@ -8942,7 +8942,7 @@ Haluatko rekisteröidä OpenMV-kamerasi nyt?</translation>
         <translation>Avaa tiedosto</translation>
     </message>
     <message>
-        <location line="-4724" />
+        <location line="-4752" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
@@ -9114,7 +9114,7 @@ Would you like to register your OpenMV Cam now?</source>
 Haluatko rekisteröidä OpenMV Cam -laitteesi nyt?</translation>
     </message>
     <message>
-        <location line="+576" />
+        <location line="+604" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -9248,7 +9248,7 @@ Haluatko rekisteröidä OpenMV Cam -laitteesi nyt?</translation>
         <translation>&quot;%L1&quot;:n huuhtelu epäonnistui!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2807" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2835" />
         <location line="+7" />
         <source>Stream JPG-compressed images for higher performance</source>
         <translation>Suoratoista JPG-pakattuja kuvia paremman suorituskyvyn saamiseksi</translation>
@@ -9312,13 +9312,18 @@ Haluatko rekisteröidä OpenMV Cam -laitteesi nyt?</translation>
     <message>
         <location line="+262" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3390" />
-        <location line="+430" />
+        <location line="+431" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-639" />
         <source>No Drive</source>
         <translation>Ei asemaa</translation>
     </message>
     <message>
-        <location line="+2330" />
+        <location line="+1966" />
+        <source>OpenMV Cam Error</source>
+        <translation>OpenMV Cam -virhe</translation>
+    </message>
+    <message>
+        <location line="+392" />
         <location line="+12" />
         <location line="+31" />
         <location line="+9" />
@@ -9365,7 +9370,7 @@ Haluatko rekisteröidä OpenMV Cam -laitteesi nyt?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2153" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2154" />
         <source>Please select a serial port</source>
         <translation>Valitse sarjaportti</translation>
     </message>
@@ -9491,7 +9496,7 @@ Haluatko rekisteröidä OpenMV Cam -laitteesi nyt?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+833" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+926" />
         <source>What would you like to do?</source>
         <translation>Mitä haluaisit tehdä?</translation>
     </message>
@@ -9608,18 +9613,18 @@ Haluatko rekisteröidä OpenMV Cam -laitteesi nyt?</translation>
         <translation type="vanished">Uusia OpenMV IDE -resursseja on saatavilla (esim. esimerkkejä, laiteohjelmistoa, dokumentaatiota jne.).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2056" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2063" />
         <source>Install</source>
         <translation>Asentaa</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+393" />
+        <location line="+400" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
         <location line="+46" />
         <location line="+73" />
         <location line="+46" />
@@ -9650,7 +9655,8 @@ Haluatko rekisteröidä OpenMV Cam -laitteesi nyt?</translation>
         <translation type="vanished">Asennus onnistui! Käynnistä OpenMV IDE uudelleen.</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="-5" />
+        <location line="+133" />
         <location line="+6" />
         <location line="+28" />
         <source>Package Update</source>
@@ -9677,41 +9683,41 @@ Haluatko rekisteröidä OpenMV Cam -laitteesi nyt?</translation>
         <location line="+279" />
         <location line="+945" />
         <location line="+231" />
-        <location line="+2768" />
+        <location line="+2873" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Poista sisäinen rasvatiedostojärjestelmä</translation>
     </message>
     <message>
-        <location line="-4298" />
+        <location line="-4403" />
         <location line="+279" />
         <location line="+947" />
         <location line="+230" />
-        <location line="+2767" />
+        <location line="+2872" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Jos otat tämän vaihtoehdon käyttöön, kaikki OpenMV Camin sisäisen rasvatiedostojärjestelmän tiedostot poistetaan. Tämä ei poista tiedostoja millään irrotettavalla SD -kortilla (jos asetettu).</translation>
     </message>
     <message>
-        <location line="-4298" />
+        <location line="-4403" />
         <location line="+1226" />
         <location line="+230" />
-        <location line="+2767" />
+        <location line="+2872" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Nollaa ROMFS -tiedostojärjestelmä</translation>
     </message>
     <message>
-        <location line="-4297" />
+        <location line="-4402" />
         <location line="+1227" />
         <location line="+229" />
-        <location line="+2766" />
+        <location line="+2871" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Jos otat tämän vaihtoehdon käyttöön, OpenMV -nokan ROM -tiedostojärjestelmä palautetaan takaisin oletusarvoon.</translation>
     </message>
     <message>
-        <location line="-4197" />
+        <location line="-4302" />
         <location line="+7" />
         <location line="+16" />
         <location line="+13" />
@@ -9798,7 +9804,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
 Estääksesi tämän avaa Omenavalikko, siirry kohtaan Järjestelmäasetukset, napsauta sivupalkissa Tietosuoja ja suojaus, vieritä alas kohtaan Lisälaitteet ja vaihda asetus &quot;Salli lisälaitteiden yhdistäminen&quot; arvoon &quot;Salli automaattisesti, kun lukitus on avattu&quot; (suositus) tai &quot;Salli aina&quot;.</translation>
     </message>
     <message>
-        <location line="+464" />
+        <location line="+568" />
         <location line="+10" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+84" />
         <location line="+16" />
@@ -9818,7 +9824,7 @@ Estääksesi tämän avaa Omenavalikko, siirry kohtaan Järjestelmäasetukset, n
         <translation>Virhe: tiedostoa &quot;%L1&quot; ei voi avata!</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+229" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9827,7 +9833,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Tutustu erityisesti Esimerkkeihin Kuvankäsittely -&gt; Värien seuranta ja koneoppiminen -&gt; TensorFlow.</translation>
     </message>
     <message>
-        <location line="-4169" />
+        <location line="-4274" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9965,7 +9971,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1453" />
         <location line="+262" />
         <location line="+705" />
-        <location line="+2270" />
+        <location line="+2375" />
         <source>Please select the board type</source>
         <translation>Valitse taulun tyyppi</translation>
     </message>
@@ -9974,7 +9980,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Poistetaanko sisäinen tiedostojärjestelmä?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2855" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2960" />
         <source>No released firmware available for the attached board!</source>
         <translation>Liitetylle levylle ei ole saatavilla julkaistua laiteohjelmistoa!</translation>
     </message>
@@ -9991,7 +9997,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Päivitä käynnistyslatain uusimpaan versioon ja asenna SoftDevice OpenMV-laiteohjelmiston päivittämiseksi. Lisätietoja on osoitteessa &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-2366" />
+        <location line="-2376" />
         <source>Checking development examples...</source>
         <translation>Tarkistetaan kehitysesimerkkejä...</translation>
     </message>
@@ -10027,12 +10033,17 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Puretaan uusinta kehityslaiteohjelmistoa...</translation>
     </message>
     <message>
-        <location line="+311" />
+        <location line="+314" />
         <source>New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the &lt;a href=&quot;%L1&quot;&gt;release notes&lt;/a&gt;.</source>
         <translation>Uusia %2-resursseja on saatavilla (esim. esimerkkejä, laiteohjelmisto, dokumentaatio jne.). Katso &lt;a href=&quot;%L1&quot;&gt;julkaisutiedot&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+31" />
+        <source>The downloaded resources file &quot;%L1&quot; failed its checksum. Please try again later.</source>
+        <translation>Ladattu resurssitiedosto &quot;%L1&quot; ei läpäissyt tarkistussummaa. Yritä myöhemmin uudelleen.</translation>
+    </message>
+    <message>
+        <location line="+65" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
         <source>Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
         <translation>Sulje kaikki ohjelmat, jotka tarkastelevat tai muokkaavat sovelluksen %1 dataa, ja käynnistä %1 sitten uudelleen!</translation>
@@ -10059,12 +10070,12 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+182" />
-        <location line="+3926" />
+        <location line="+4031" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>VAROITUS: Uuden laiteohjelmiston version päivittäminen edellyttää, että FAT -tiedostojärjestelmä poistetaan.</translation>
     </message>
     <message>
-        <location line="-3848" />
+        <location line="-3953" />
         <location line="+9" />
         <source>Unable to download the latest development firmware!</source>
         <translation>Uusinta kehityslaiteohjelmistoa ei voitu ladata!</translation>
@@ -10149,12 +10160,12 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+233" />
-        <location line="+2769" />
+        <location line="+2874" />
         <source>Upgrade options:</source>
         <translation>Päivitysvaihtoehdot:</translation>
     </message>
     <message>
-        <location line="-2678" />
+        <location line="-2783" />
         <location line="+174" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
@@ -10253,7 +10264,7 @@ Jatkaa?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-227" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-231" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
@@ -10354,7 +10365,7 @@ Jatkaa?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+166" />
+        <location line="+170" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-91" />
         <location line="+32" />
@@ -10495,7 +10506,7 @@ Napsauta OK-painiketta, kun OpenMV-kamerasi SBL-käynnistyslataaja on lueteltu.<
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-410" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-414" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Ei DFU-asetuksia valitulle korttityypille!</translation>
     </message>
@@ -10521,7 +10532,7 @@ Napsauta OK-painiketta, kun OpenMV-kamerasi SBL-käynnistyslataaja on lueteltu.<
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+32" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Kirjoita ROMFS</translation>
@@ -10531,7 +10542,7 @@ Napsauta OK-painiketta, kun OpenMV-kamerasi SBL-käynnistyslataaja on lueteltu.<
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+49" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
@@ -10921,7 +10932,7 @@ Napsauta OK-painiketta, kun OpenMV-kamerasi DFU-käynnistyslataaja on lueteltu.<
         <translation type="vanished">alkaa</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+738" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+843" />
         <source>More Examples</source>
         <translation>Lisää esimerkkejä</translation>
     </message>
@@ -11116,12 +11127,12 @@ Haluatko OpenMV IDE:n kopioivan sen OpenMV Camiin?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5007" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5035" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-380" />
-        <location line="+339" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-393" />
+        <location line="+352" />
         <source>Model Zoo</source>
         <translation>Eläintarha</translation>
     </message>
@@ -11207,7 +11218,7 @@ Haluatko OpenMV IDE:n kopioivan sen OpenMV Camiin?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Hanki laitteita</translation>
@@ -11221,7 +11232,7 @@ Haluatko OpenMV IDE:n kopioivan sen OpenMV Camiin?</translation>
         <translation>Kysely epäonnistui!</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+102" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -11967,7 +11978,7 @@ OpenMV IDE -asennuksesi voi olla vaillinainen.</translation>
         <translation type="vanished">Ei vastaavaa käyttöliittymää valitulle tiedostonimille!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-877" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-970" />
         <source>Please select the target</source>
         <translation>Valitse kohde</translation>
     </message>
@@ -12006,33 +12017,34 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
 %1 vain kopioi mallin sellaisenaan.</translation>
     </message>
     <message>
-        <location line="+155" />
+        <location line="+160" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
         <location line="+45" />
         <location line="+16" />
-        <location line="+21" />
+        <location line="+36" />
         <location line="+6" />
         <location line="+8" />
         <location line="+26" />
-        <location line="+18" />
+        <location line="+52" />
+        <location line="+26" />
         <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+153" />
+        <location line="+155" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
         <location line="+13" />
-        <location line="+40" />
-        <location line="+14" />
+        <location line="+48" />
+        <location line="+16" />
         <location line="+15" />
         <location line="+27" />
-        <location line="+68" />
+        <location line="+69" />
         <location line="+50" />
         <location line="+68" />
         <location line="+6" />
@@ -12042,31 +12054,36 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <translation>Muokkaa ROMF: ää</translation>
     </message>
     <message>
-        <location line="-754" />
-        <location line="+96" />
+        <location line="-842" />
+        <location line="+111" />
         <source>A folder with the same name already exists!</source>
         <translation>Kansio, jolla on sama nimi, on jo olemassa!</translation>
     </message>
     <message>
-        <location line="-90" />
-        <location line="+96" />
+        <location line="-105" />
+        <location line="+111" />
         <source>File already exists! Overwrite?</source>
         <translation>Tiedosto on jo olemassa! Korvata?</translation>
     </message>
     <message>
-        <location line="-88" />
-        <location line="+96" />
+        <location line="-103" />
+        <location line="+111" />
         <source>Failed to remove file!</source>
         <translation>Tiedoston poistaminen epäonnistui!</translation>
     </message>
     <message>
-        <location line="-51" />
-        <location line="+77" />
+        <location line="-66" />
+        <location line="+92" />
         <source>Failed to copy file!</source>
         <translation>Tiedoston kopiointi epäonnistui!</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+52" />
+        <source>Dropping folders is not supported - drop the files inside them instead.</source>
+        <translation>Kansioiden pudottamista ei tueta - pudota sen sijaan niiden sisältämät tiedostot.</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Folder Name</source>
         <translation>Kansionimi</translation>
     </message>
@@ -12095,38 +12112,56 @@ OpenMv IDE kopioi mallin vain sellaisenaan.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+343" />
+        <location line="+356" />
         <source>Extract File</source>
         <translation>Poimitiedosto</translation>
     </message>
     <message>
-        <location line="-349" />
+        <location line="-362" />
         <source>View/Edit</source>
         <translation>Näkymä/muokkaa</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+340" />
+        <location line="+353" />
         <source>Add File</source>
         <translation>Lisää tiedosto</translation>
     </message>
     <message>
-        <location line="-339" />
-        <location line="+341" />
+        <location line="-352" />
+        <location line="+354" />
         <source>New Folder</source>
         <translation>Uusi kansio</translation>
     </message>
     <message>
-        <location line="-253" />
+        <location line="-266" />
+        <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
+
+</source>
+        <translation>ROMFS:n kirjoittaminen ei valmistunut, joten OpenMV Camin ROM-tiedostojärjestelmä voi olla epätäydellinen.
+
+</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reset the ROM file system, or edit and commit it again, before relying on it.</source>
+        <translation>Nollaa ROM-tiedostojärjestelmä tai muokkaa ja kirjoita se uudelleen ennen kuin luotat siihen.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to reset the ROM file system or to edit and commit it again.</source>
+        <translation>OpenMV Cam on yhä käynnistyslataimen tilassa: napsauta Yhdistä ja nollaa ROM-tiedostojärjestelmä tai muokkaa ja kirjoita se uudelleen käynnistyslataimen valinnoilla.</translation>
+    </message>
+    <message>
         <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
 
 Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to reset the ROM file system or to edit and commit it again.</source>
-        <translation>ROMFS:n kirjoittaminen ei valmistunut, joten OpenMV Camin ROM-tiedostojärjestelmä voi olla epätäydellinen.
+        <translation type="vanished">ROMFS:n kirjoittaminen ei valmistunut, joten OpenMV Camin ROM-tiedostojärjestelmä voi olla epätäydellinen.
 
 OpenMV Cam on yhä käynnistyslataimen tilassa: napsauta Yhdistä ja nollaa ROM-tiedostojärjestelmä tai muokkaa ja kirjoita se uudelleen käynnistyslataimen valinnoilla.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>The ROMFS read did not complete.
 
 Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to edit the ROM file system again.</source>
@@ -12137,13 +12172,13 @@ OpenMV Cam on yhä käynnistyslataimen tilassa: napsauta Yhdistä ja muokkaa ROM
     <message>
         <location line="+53" />
         <location line="+13" />
-        <location line="+377" />
+        <location line="+389" />
         <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS: ää ei tueta tässä hallituksessa!</translation>
     </message>
     <message>
-        <location line="-335" />
+        <location line="-337" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>ROMF: ien purkamista epäonnistui!</translation>
@@ -12156,7 +12191,7 @@ OpenMV Cam on yhä käynnistyslataimen tilassa: napsauta Yhdistä ja muokkaa ROM
     </message>
     <message>
         <location line="-25" />
-        <location line="+211" />
+        <location line="+212" />
         <source>ROMFS Images (*.img)</source>
         <translation>ROMFS -kuvat (*.img)</translation>
     </message>
@@ -12176,7 +12211,7 @@ OpenMV Cam on yhä käynnistyslataimen tilassa: napsauta Yhdistä ja muokkaa ROM
         <translation>Tallenna ROMFS tiedostoon</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+125" />
         <location line="+7" />
         <location line="+11" />
         <location line="+12" />
@@ -12397,7 +12432,7 @@ OpenMV Cam on yhä käynnistyslataimen tilassa: napsauta Yhdistä ja muokkaa ROM
         <translation>STM32 -ohjelmoijaa ei tueta tällä alustalla.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-606" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
         <source>the detected board</source>
         <translation>havaittu levy</translation>
     </message>
@@ -12427,12 +12462,12 @@ OpenMV Cam on yhä käynnistyslataimen tilassa: napsauta Yhdistä ja muokkaa ROM
         <translation>Käynnistyslataimen vedoksen vilkuttamiseksi OpenMV Cam -laitteesi on oltava käynnistyslataimen palautustilassa. Irrota kamera, kytke BOOT0/SBL/RECOVERY 3.3V:iin hyppylangalla ja kytke kamera sitten takaisin ennen uutta yritystä.</translation>
     </message>
     <message>
-        <location line="+409" />
+        <location line="+412" />
         <source>DFU ROMFS read failed!</source>
         <translation>ROMFS:n lukeminen DFU:lla epäonnistui!</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+31" />
         <source>DFU ROMFS write failed!</source>
         <translation>ROMFS:n kirjoittaminen DFU:lla epäonnistui!</translation>
     </message>

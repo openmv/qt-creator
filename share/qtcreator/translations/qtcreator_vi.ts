@@ -6722,8 +6722,8 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+30" />
-        <location line="+30" />
+        <location line="+33" />
+        <location line="+31" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -6751,7 +6751,7 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+587" />
         <location line="+1231" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1176" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1186" />
         <location line="+6" />
         <location line="+27" />
         <location line="+153" />
@@ -6814,7 +6814,7 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2298" />
         <location line="+262" />
         <location line="+705" />
-        <location line="+2270" />
+        <location line="+2375" />
         <source>Please select the board type</source>
         <translation>Vui lòng chọn loại bảng</translation>
     </message>
@@ -6830,7 +6830,7 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
     </message>
     <message>
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1872" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1977" />
         <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>Chỉ hỗ trợ khôi phục chương trình cơ sở bằng Công cụ SE của Alif Semiconductor.</translation>
     </message>
@@ -6862,8 +6862,8 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-143" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-206" />
-        <location line="+166" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-210" />
+        <location line="+170" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-58" />
         <location line="+32" />
@@ -6887,7 +6887,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-411" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-415" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Không có cài đặt DFU cho loại bảng đã chọn!</translation>
     </message>
@@ -7007,7 +7007,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
         <location line="+96" />
         <location line="+192" />
         <location line="+203" />
-        <location line="+426" />
+        <location line="+454" />
         <location line="+13" />
         <location line="+169" />
         <location line="+146" />
@@ -7040,7 +7040,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+32" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Viết ROMFS</translation>
@@ -7050,7 +7050,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-8" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+49" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+10" />
@@ -7110,23 +7110,23 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <location line="+141" />
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+3" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4025" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4053" />
         <location line="+1979" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+326" />
-        <location line="+675" />
+        <location line="+703" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
         <location line="+114" />
         <location line="+117" />
         <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3437" />
-        <location line="+252" />
-        <location line="+393" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3447" />
+        <location line="+255" />
+        <location line="+400" />
         <location line="+1610" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+1040" />
         <location line="+301" />
@@ -7181,7 +7181,7 @@ Tiếp tục?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+244" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
         <location line="+46" />
         <location line="+191" />
         <location line="+47" />
@@ -7314,7 +7314,7 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động DFU của OpenMV Cam của
         <translation>Cập nhật firmware BOSSAC không thành công!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-606" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
         <source>the detected board</source>
         <translation>bảng được phát hiện</translation>
     </message>
@@ -7344,12 +7344,12 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động DFU của OpenMV Cam của
         <translation>Để nạp một ảnh bootloader, OpenMV Cam của bạn phải ở chế độ khôi phục bootloader. Rút camera ra, nối BOOT0/SBL/RECOVERY với 3.3V bằng một dây nối, rồi cắm camera trở lại trước khi thử lại.</translation>
     </message>
     <message>
-        <location line="+409" />
+        <location line="+412" />
         <source>DFU ROMFS read failed!</source>
         <translation>Đọc ROMFS qua DFU không thành công!</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+31" />
         <source>DFU ROMFS write failed!</source>
         <translation>Ghi ROMFS qua DFU không thành công!</translation>
     </message>
@@ -7537,7 +7537,7 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4627" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4655" />
         <location line="+988" />
         <source>Dataset Editor</source>
         <translation>Trình chỉnh sửa tập dữ liệu</translation>
@@ -7564,7 +7564,7 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
     </message>
     <message>
         <location line="+40" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3083" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
@@ -7572,15 +7572,15 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+633" />
-        <location line="+342" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location line="+355" />
         <source>Delete</source>
         <translation>Xóa bỏ</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-412" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-425" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Bạn có chắc chắn muốn xóa vĩnh viễn &quot;%L1&quot; không?</translation>
     </message>
@@ -7608,12 +7608,12 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4989" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5017" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+67" />
-        <location line="+339" />
+        <location line="+352" />
         <source>Model Zoo</source>
         <translation>Vườn thú mẫu</translation>
     </message>
@@ -7879,13 +7879,13 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
     </message>
     <message>
         <location line="+14" />
-        <location line="+4472" />
+        <location line="+4500" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Mở thiết bị đầu cuối</translation>
     </message>
     <message>
-        <location line="-4526" />
+        <location line="-4554" />
         <source>Machine Vision</source>
         <translation>Tầm nhìn máy</translation>
     </message>
@@ -7906,28 +7906,28 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-819" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-912" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Chuyển đổi mô hình</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+4375" />
+        <location line="+4403" />
         <location line="+75" />
         <source>Threshold Editor</source>
         <translation>Trình chỉnh sửa ngưỡng</translation>
     </message>
     <message>
-        <location line="-4445" />
-        <location line="+4522" />
+        <location line="-4473" />
+        <location line="+4550" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Trình chỉnh sửa điểm chính</translation>
     </message>
     <message>
-        <location line="-4513" />
-        <location line="+4677" />
+        <location line="-4541" />
+        <location line="+4705" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7936,7 +7936,7 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <translation>Trình tạo thẻ tháng tư</translation>
     </message>
     <message>
-        <location line="-4824" />
+        <location line="-4852" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Gia đình TAG16H5 (30 Thẻ)</translation>
     </message>
@@ -7977,7 +7977,7 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <location line="+14" />
         <location line="+409" />
         <location line="+1184" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+157" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+162" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Không mở được: &quot;%L1&quot;</translation>
     </message>
@@ -8032,7 +8032,7 @@ Các phiên bản %2 trước v4.3.0 không có tệp này và sẽ xóa nó khi
     </message>
     <message>
         <location line="+401" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+605" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+692" />
         <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>Nạp ROMFS vào OpenMV Cam</translation>
@@ -8204,7 +8204,7 @@ Bạn có muốn chọn một tên khác không?</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+2929" />
+        <location line="+2957" />
         <location line="+1423" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
@@ -8216,7 +8216,7 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation>Vui lòng thêm phần mở rộng tập tin!</translation>
     </message>
     <message>
-        <location line="-4332" />
+        <location line="-4360" />
         <source>Exporting...</source>
         <translation>Đang xuất...</translation>
     </message>
@@ -8553,7 +8553,7 @@ Bạn có muốn chọn một tên khác không?</translation>
     </message>
     <message>
         <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3812" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3813" />
         <source>Board:</source>
         <translation>Bảng:</translation>
     </message>
@@ -8618,7 +8618,7 @@ Bạn có muốn chọn một tên khác không?</translation>
     </message>
     <message>
         <location line="+400" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3970" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3978" />
         <source>Update Available</source>
         <translation>Cập nhật có sẵn</translation>
     </message>
@@ -8708,17 +8708,17 @@ Phần sụn của OpenMV Cam của bạn đang bị lỗi do lỗi phần cứn
     </message>
     <message>
         <location line="+99" />
-        <location line="+1386" />
+        <location line="+1414" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Cổng nối tiếp - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1354" />
+        <location line="-1382" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1001" />
+        <location line="+1029" />
         <location line="+146" />
         <location line="+114" />
         <location line="+130" />
@@ -8728,7 +8728,7 @@ Phần sụn của OpenMV Cam của bạn đang bị lỗi do lỗi phần cứn
         <translation>Đang kết nối... (thời gian chờ 30 giây)</translation>
     </message>
     <message>
-        <location line="-1994" />
+        <location line="-2022" />
         <source>
 
 Try doing:
@@ -8779,12 +8779,12 @@ người bổ sung sudo %L1 quay số
     </message>
     <message>
         <location line="+17" />
-        <location line="+1444" />
+        <location line="+1472" />
         <source>UDP Server Connection - %1</source>
         <translation>Kết nối máy chủ UDP - %1</translation>
     </message>
     <message>
-        <location line="-1370" />
+        <location line="-1398" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Đối số cổng không hợp lệ (%1) cho -open_udp_server_terminal</translation>
     </message>
@@ -8815,12 +8815,12 @@ người bổ sung sudo %L1 quay số
     </message>
     <message>
         <location line="+17" />
-        <location line="+1491" />
+        <location line="+1519" />
         <source>TCP Server Connection - %1</source>
         <translation>Kết nối máy chủ TCP - %1</translation>
     </message>
     <message>
-        <location line="-1417" />
+        <location line="-1445" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Đối số cổng không hợp lệ (%1) cho -open_tcp_server_terminal</translation>
     </message>
@@ -8849,7 +8849,7 @@ người bổ sung sudo %L1 quay số
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3185" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3192" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -9106,7 +9106,7 @@ Bạn có muốn đăng ký OpenMV Cam của mình ngay bây giờ không?</tran
     <message>
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+307" />
-        <location line="+430" />
+        <location line="+431" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+122" />
         <source>No Drive</source>
         <translation>Không có ổ đĩa</translation>
@@ -9240,7 +9240,12 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Khóa bảng được định dạng không hợp lệ!</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+81" />
+        <source>OpenMV Cam Error</source>
+        <translation>Lỗi OpenMV Cam</translation>
+    </message>
+    <message>
+        <location line="+31" />
         <location line="+7" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-109" />
@@ -9332,7 +9337,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2153" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2154" />
         <source>Please select a serial port</source>
         <translation>Vui lòng chọn một cổng nối tiếp</translation>
     </message>
@@ -9456,7 +9461,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+65" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+66" />
         <source>What would you like to do?</source>
         <translation>Bạn muốn làm gì?</translation>
     </message>
@@ -9580,13 +9585,13 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation type="vanished">Tài nguyên IDE OpenMV mới có sẵn (ví dụ: ví dụ, chương trình cơ sở, tài liệu, v.v.).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2056" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2063" />
         <source>Install</source>
         <translation>Cài đặt</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+393" />
+        <location line="+400" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
@@ -9622,7 +9627,8 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation type="vanished">Cài đặt thành công! Vui lòng khởi động lại OpenMV IDE.</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="-5" />
+        <location line="+133" />
         <location line="+6" />
         <location line="+28" />
         <source>Package Update</source>
@@ -9657,41 +9663,41 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <location line="+279" />
         <location line="+945" />
         <location line="+231" />
-        <location line="+2768" />
+        <location line="+2873" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Xóa hệ thống tệp FAT nội bộ</translation>
     </message>
     <message>
-        <location line="-4298" />
+        <location line="-4403" />
         <location line="+279" />
         <location line="+947" />
         <location line="+230" />
-        <location line="+2767" />
+        <location line="+2872" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Nếu bạn bật tùy chọn này, tất cả các tệp trên hệ thống tệp FAT bên trong của OpenMV Cam sẽ bị xóa. Thao tác này không xóa các tập tin trên bất kỳ thẻ SD có thể tháo rời nào (nếu được lắp vào).</translation>
     </message>
     <message>
-        <location line="-4298" />
+        <location line="-4403" />
         <location line="+1226" />
         <location line="+230" />
-        <location line="+2767" />
+        <location line="+2872" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Đặt lại hệ thống tệp ROMFS</translation>
     </message>
     <message>
-        <location line="-4297" />
+        <location line="-4402" />
         <location line="+1227" />
         <location line="+229" />
-        <location line="+2766" />
+        <location line="+2871" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Nếu bạn bật tùy chọn này, hệ thống tệp ROM trên OpenMV Cam của bạn sẽ được đặt lại về mặc định.</translation>
     </message>
     <message>
-        <location line="-4297" />
+        <location line="-4402" />
         <location line="+310" />
         <source>Run</source>
         <translation>Chạy</translation>
@@ -9733,7 +9739,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+3926" />
+        <location line="+4031" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Cảnh báo: Việc nâng cấp lên phiên bản chương trình cơ sở mới yêu cầu phải xóa hệ thống tệp FAT.</translation>
     </message>
@@ -9746,7 +9752,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation type="vanished">Không thể giải nén firmware!</translation>
     </message>
     <message>
-        <location line="-4864" />
+        <location line="-4979" />
         <source>Checking development examples...</source>
         <translation>Đang kiểm tra ví dụ phát triển...</translation>
     </message>
@@ -9782,12 +9788,17 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Đang giải nén firmware phát triển mới nhất...</translation>
     </message>
     <message>
-        <location line="+311" />
+        <location line="+314" />
         <source>New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the &lt;a href=&quot;%L1&quot;&gt;release notes&lt;/a&gt;.</source>
         <translation>Đã có tài nguyên %2 mới (ví dụ như ví dụ, firmware, tài liệu, v.v.). Xem &lt;a href=&quot;%L1&quot;&gt;ghi chú phát hành&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+31" />
+        <source>The downloaded resources file &quot;%L1&quot; failed its checksum. Please try again later.</source>
+        <translation>Tệp tài nguyên đã tải xuống &quot;%L1&quot; không vượt qua kiểm tra tổng kiểm. Vui lòng thử lại sau.</translation>
+    </message>
+    <message>
+        <location line="+65" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+66" />
         <source>Please close any programs that are viewing/editing %1&apos;s application data and then restart %1!</source>
         <translation>Vui lòng đóng mọi chương trình đang xem/chỉnh sửa dữ liệu ứng dụng của %1 rồi khởi động lại %1!</translation>
@@ -9933,12 +9944,12 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+86" />
-        <location line="+2769" />
+        <location line="+2874" />
         <source>Upgrade options:</source>
         <translation>Tùy chọn nâng cấp:</translation>
     </message>
     <message>
-        <location line="-2688" />
+        <location line="-2793" />
         <location line="+175" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
@@ -10160,7 +10171,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
 Để tránh điều này, hãy mở menu Apple, vào Cài đặt Hệ thống, nhấp Quyền riêng tư &amp; Bảo mật ở thanh bên, cuộn xuống cuối tới mục Phụ kiện, rồi đổi &quot;Cho phép phụ kiện kết nối&quot; thành &quot;Tự động cho phép khi được mở khóa&quot; (khuyến nghị) hoặc &quot;Luôn cho phép&quot;.</translation>
     </message>
     <message>
-        <location line="+464" />
+        <location line="+568" />
         <location line="+10" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+191" />
         <location line="+16" />
@@ -10180,7 +10191,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
         <translation>Lỗi: Không thể mở &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+227" />
+        <location line="+228" />
         <source>More Examples</source>
         <translation>Thêm ví dụ</translation>
     </message>
@@ -10623,7 +10634,7 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
         <translation>Chức năng: %1, Tổng số cuộc gọi: %2, Tổng số μs: %3, Tổng số chu kỳ: %4</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-918" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1011" />
         <source>Please select the target</source>
         <translation>Hãy chọn mục tiêu</translation>
     </message>
@@ -10662,33 +10673,34 @@ OpenMV IDE sẽ chỉ sao chép mô hình.</translation>
 %1 sẽ chỉ sao chép mô hình như hiện trạng.</translation>
     </message>
     <message>
-        <location line="+155" />
+        <location line="+160" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
         <location line="+45" />
         <location line="+16" />
-        <location line="+21" />
+        <location line="+36" />
         <location line="+6" />
         <location line="+8" />
         <location line="+26" />
-        <location line="+18" />
+        <location line="+52" />
+        <location line="+26" />
         <location line="+22" />
         <location line="+12" />
         <location line="+6" />
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+153" />
+        <location line="+155" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
         <location line="+13" />
-        <location line="+40" />
-        <location line="+14" />
+        <location line="+48" />
+        <location line="+16" />
         <location line="+15" />
         <location line="+27" />
-        <location line="+68" />
+        <location line="+69" />
         <location line="+50" />
         <location line="+68" />
         <location line="+6" />
@@ -10698,31 +10710,36 @@ OpenMV IDE sẽ chỉ sao chép mô hình.</translation>
         <translation>Chỉnh sửa ROMFS</translation>
     </message>
     <message>
-        <location line="-754" />
-        <location line="+96" />
+        <location line="-842" />
+        <location line="+111" />
         <source>A folder with the same name already exists!</source>
         <translation>Một thư mục có cùng tên đã tồn tại!</translation>
     </message>
     <message>
-        <location line="-90" />
-        <location line="+96" />
+        <location line="-105" />
+        <location line="+111" />
         <source>File already exists! Overwrite?</source>
         <translation>Tệp đã tồn tại! Ghi đè?</translation>
     </message>
     <message>
-        <location line="-88" />
-        <location line="+96" />
+        <location line="-103" />
+        <location line="+111" />
         <source>Failed to remove file!</source>
         <translation>Không thể xóa tập tin!</translation>
     </message>
     <message>
-        <location line="-51" />
-        <location line="+77" />
+        <location line="-66" />
+        <location line="+92" />
         <source>Failed to copy file!</source>
         <translation>Không thể sao chép tập tin!</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+52" />
+        <source>Dropping folders is not supported - drop the files inside them instead.</source>
+        <translation>Không hỗ trợ thả thư mục - hãy thả các tệp bên trong thư mục đó.</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Folder Name</source>
         <translation>Tên thư mục</translation>
     </message>
@@ -10751,38 +10768,56 @@ OpenMV IDE sẽ chỉ sao chép mô hình.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+343" />
+        <location line="+356" />
         <source>Extract File</source>
         <translation>Giải nén tập tin</translation>
     </message>
     <message>
-        <location line="-349" />
+        <location line="-362" />
         <source>View/Edit</source>
         <translation>Xem/Chỉnh sửa</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+340" />
+        <location line="+353" />
         <source>Add File</source>
         <translation>Thêm tập tin</translation>
     </message>
     <message>
-        <location line="-339" />
-        <location line="+341" />
+        <location line="-352" />
+        <location line="+354" />
         <source>New Folder</source>
         <translation>Thư mục mới</translation>
     </message>
     <message>
-        <location line="-253" />
+        <location line="-266" />
+        <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
+
+</source>
+        <translation>Việc ghi ROMFS chưa hoàn tất, nên hệ thống tập tin ROM trên OpenMV Cam của bạn có thể không đầy đủ.
+
+</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reset the ROM file system, or edit and commit it again, before relying on it.</source>
+        <translation>Hãy đặt lại hệ thống tập tin ROM, hoặc chỉnh sửa và ghi lại, trước khi tin dùng nó.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to reset the ROM file system or to edit and commit it again.</source>
+        <translation>OpenMV Cam của bạn vẫn đang ở chế độ bootloader: nhấp Kết nối và dùng các tùy chọn bootloader để đặt lại hệ thống tập tin ROM hoặc chỉnh sửa và ghi lại.</translation>
+    </message>
+    <message>
         <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
 
 Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to reset the ROM file system or to edit and commit it again.</source>
-        <translation>Việc ghi ROMFS chưa hoàn tất, nên hệ thống tập tin ROM trên OpenMV Cam của bạn có thể không đầy đủ.
+        <translation type="vanished">Việc ghi ROMFS chưa hoàn tất, nên hệ thống tập tin ROM trên OpenMV Cam của bạn có thể không đầy đủ.
 
 OpenMV Cam của bạn vẫn đang ở chế độ bootloader: nhấp Kết nối và dùng các tùy chọn bootloader để đặt lại hệ thống tập tin ROM hoặc chỉnh sửa và ghi lại.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>The ROMFS read did not complete.
 
 Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options to edit the ROM file system again.</source>
@@ -10793,13 +10828,13 @@ OpenMV Cam của bạn vẫn đang ở chế độ bootloader: nhấp Kết nố
     <message>
         <location line="+53" />
         <location line="+13" />
-        <location line="+377" />
+        <location line="+389" />
         <location line="+11" />
         <source>ROMFS is not supported on this board!</source>
         <translation>ROMFS không được hỗ trợ trên bảng này!</translation>
     </message>
     <message>
-        <location line="-335" />
+        <location line="-337" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Không giải nén được ROMFS!</translation>
@@ -10812,7 +10847,7 @@ OpenMV Cam của bạn vẫn đang ở chế độ bootloader: nhấp Kết nố
     </message>
     <message>
         <location line="-25" />
-        <location line="+211" />
+        <location line="+212" />
         <source>ROMFS Images (*.img)</source>
         <translation>Hình ảnh ROMFS (*.img)</translation>
     </message>
@@ -10832,7 +10867,7 @@ OpenMV Cam của bạn vẫn đang ở chế độ bootloader: nhấp Kết nố
         <translation>Lưu ROMFS vào tập tin</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+125" />
         <location line="+7" />
         <location line="+11" />
         <location line="+12" />
@@ -10980,7 +11015,7 @@ Máy ảnh phải được cấp nguồn sau khi cập nhật gói hệ thống.
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-355" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Nhận thiết bị</translation>
@@ -10994,7 +11029,7 @@ Máy ảnh phải được cấp nguồn sau khi cập nhật gói hệ thống.
         <translation>Truy vấn không thành công!</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+102" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
