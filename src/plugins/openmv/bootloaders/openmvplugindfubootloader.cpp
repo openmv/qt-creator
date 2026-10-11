@@ -479,7 +479,16 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                              dfuDeviceVidPid, binProgramCommands.first() + QStringLiteral(" --reset") + dfuDeviceSerial,
                              true, binProgramSizes.first());
 
-            if(process.result() != Utils::ProcessResult::FinishedWithSuccess)
+            // dfu-util exits non-zero when the post-transfer --reset errors
+            // out even though the upload completed - on macOS the device
+            // re-enumerates on detach before libusb_reset_device runs. Trust
+            // the printed transfer result (plus the image size) over the
+            // exit code; the reset was already attempted either way.
+            bool uploadDone = ((process.stdOut().contains(QStringLiteral("Upload done"))
+                            || process.stdErr().contains(QStringLiteral("Upload done"))))
+                           && (QFileInfo(firmwarePath).size() >= binProgramSizes.first());
+
+            if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (!uploadDone))
             {
                 // Cancelled (dfu-util killed) or failed: the image is partial
                 // and the board is still in DFU (the --reset rode on the
@@ -514,7 +523,16 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                                  dfuDeviceVidPid, binProgramCommands.at(i) +
                                  (((i + 1) == j) ? QStringLiteral(" --reset") : QStringLiteral("")) + dfuDeviceSerial);
 
-                if(process.result() != Utils::ProcessResult::FinishedWithSuccess)
+                // dfu-util exits non-zero when the post-transfer --reset
+                // errors out even though the write completed - on macOS the
+                // board re-enumerates on detach before libusb_reset_device
+                // runs. A raw (-a N, no DfuSe suffix) download prints
+                // "Download done." on a fully-sent image but never prints
+                // "File downloaded successfully", so key off the former.
+                bool downloadDone = process.stdOut().contains(QStringLiteral("Download done."))
+                                 || process.stdErr().contains(QStringLiteral("Download done."));
+
+                if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (!downloadDone))
                 {
                     // Cancelled or failed mid-write: the ROMFS may be partial
                     // and the board is still in DFU. A genuine dfu-util error
