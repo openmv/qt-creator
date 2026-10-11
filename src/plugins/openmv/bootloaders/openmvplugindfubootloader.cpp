@@ -417,8 +417,29 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                                      dfuDeviceVidPid, eraseCommands.at(i) +
                                      ((justEraseFlashFs && ((i + 1) == j)) ? QStringLiteral(" --reset") : QStringLiteral("")) + dfuDeviceSerial);
 
-                    if(((i + 1) != j) && (process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+                    // dfu-util exits non-zero when the post-transfer --reset on
+                    // the last erase command errors out even though the erase
+                    // completed - the board re-enumerates before
+                    // libusb_reset_device runs. Trust the printed "Download
+                    // done." over the exit code, but still check the last
+                    // command: skipping it reported a failed erase (e.g. the
+                    // DFU interface busy on Linux) as "Onboard Data Flash
+                    // Erased!" and left the board stuck in DFU.
+                    bool downloadDone = process.stdOut().contains(QStringLiteral("Download done."))
+                                     || process.stdErr().contains(QStringLiteral("Download done."));
+
+                    if(downloadFirmwareWasCanceled())
                     {
+                        detachAndReset(dfuDeviceVidPid);
+
+                        CONNECT_END();
+                    }
+                    else if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (!downloadDone) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
+                    {
+                        // Try to send the board back to the application rather
+                        // than leave it sitting in DFU.
+                        detachAndReset(dfuDeviceVidPid);
+
                         QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));

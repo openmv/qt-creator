@@ -219,6 +219,40 @@ static Utils::FilePath dfuUtilBinary()
     return Utils::FilePath();
 }
 
+// fwupd (on by default on most Linux desktops) probes every DFU device the
+// moment it enumerates. If dfu-util tries to claim the interface during that
+// probe it fails with LIBUSB_ERROR_BUSY and exits before moving any data. The
+// probe only lasts a few milliseconds, so retry when that happens.
+static const int DFU_UTIL_BUSY_ATTEMPTS = 8;
+static const int DFU_UTIL_BUSY_RETRY_DELAY_MS = 250;
+
+static bool dfuUtilDeviceWasBusy(const Utils::Process &process)
+{
+    if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
+    {
+        return false;
+    }
+
+    QString out = process.stdOut() + process.stdErr();
+
+    // Only retry if dfu-util never started the transfer.
+    if(out.contains(QStringLiteral("Copying data")))
+    {
+        return false;
+    }
+
+    return out.contains(QStringLiteral("LIBUSB_ERROR_BUSY"))
+        || out.contains(QStringLiteral("Cannot claim interface"))
+        || out.contains(QStringLiteral("Cannot open DFU device"));
+}
+
+static void dfuUtilBusyRetryDelay()
+{
+    QEventLoop loop;
+    QTimer::singleShot(DFU_UTIL_BUSY_RETRY_DELAY_MS, &loop, &QEventLoop::quit);
+    loop.exec();
+}
+
 bool detachAndReset(const QString &device)
 {
     Utils::FilePath binary = dfuUtilBinary();
@@ -239,9 +273,23 @@ bool detachAndReset(const QString &device)
         << QStringLiteral("-d") << (QStringLiteral(",") + device)
         << QStringLiteral("-a") << QStringLiteral("0")
         << QStringLiteral("--detach") << QStringLiteral("--reset")));
-    process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
 
-    return process.result() == Utils::ProcessResult::FinishedWithSuccess;
+    for(int attempt = 1; ; attempt++)
+    {
+        process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+        if((attempt == DFU_UTIL_BUSY_ATTEMPTS) || (!dfuUtilDeviceWasBusy(process)))
+        {
+            break;
+        }
+
+        dfuUtilBusyRetryDelay();
+    }
+
+    // dfu-util exits non-zero when libusb_reset_device errors out because the
+    // board already dropped off the bus to re-enumerate - the reset worked.
+    return (process.result() == Utils::ProcessResult::FinishedWithSuccess)
+        || process.stdOut().contains(QStringLiteral("Resetting USB to switch back"));
 }
 
 // Set by downloadFirmware() from its loader dialog: true when the user pressed
@@ -696,7 +744,24 @@ void downloadFirmware(const QString &details,
     process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
     process.setTextChannelMode(Utils::Channel::Error, Utils::TextChannelMode::MultiLine);
     process.setCommand(Utils::CommandLine(binary, args));
-    process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+    for(int attempt = 1; ; attempt++)
+    {
+        process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
+
+        if((attempt == DFU_UTIL_BUSY_ATTEMPTS) || dialog->wasRejected() || (!dfuUtilDeviceWasBusy(process)))
+        {
+            break;
+        }
+
+        dialog->appendColoredText(Tr::tr("DFU device busy, retrying (%1/%2)...").arg(attempt).arg(DFU_UTIL_BUSY_ATTEMPTS - 1), true);
+        dfuUtilBusyRetryDelay();
+
+        if(dialog->wasRejected())
+        {
+            break;
+        }
+    }
 
     s_downloadCanceled = dialog->wasRejected();
     delete dialog;
