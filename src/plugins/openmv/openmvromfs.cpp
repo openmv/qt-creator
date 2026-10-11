@@ -78,19 +78,29 @@ QJsonObject getROMFSConfig(const QString &title,
                            const QJsonObject &boardSettings,
                            Utils::QtcSettings *settings)
 {
+    // QMap::keys() is sorted alphabetically, so keep the names in a separate
+    // list to present the targets in the order romfsConfig defines them.
     QMap<QString, QJsonObject> mappings;
+    QStringList names;
 
     for (const QJsonValue &val : boardSettings.value(QStringLiteral("romfsConfig")).toArray())
     {
-        mappings.insert(val.toObject().value(QStringLiteral("name")).toString(), val.toObject());
+        QString name = val.toObject().value(QStringLiteral("name")).toString();
+
+        if (!mappings.contains(name))
+        {
+            names.append(name);
+        }
+
+        mappings.insert(name, val.toObject());
     }
 
-    int index = mappings.keys().indexOf(settings->value(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE_ROMFS).toString());
+    int index = names.indexOf(settings->value(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE_ROMFS).toString());
 
-    bool ok = mappings.size() == 1;
-    QString temp = (mappings.size() == 1) ? mappings.keys().first() : QInputDialog::getItem(Core::ICore::dialogParent(),
+    bool ok = names.size() == 1;
+    QString temp = (names.size() == 1) ? names.first() : QInputDialog::getItem(Core::ICore::dialogParent(),
         title, Tr::tr("Please select the target"),
-        mappings.keys(), (index != -1) ? index : 0, false, &ok,
+        names, (index != -1) ? index : 0, false, &ok,
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
