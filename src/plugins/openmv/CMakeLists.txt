@@ -135,6 +135,7 @@ if (APPLE)
         "-framework IOKit"
         "-framework CoreFoundation"
         "-framework DiskArbitration"
+        "-framework Security"
     )
 endif()
 

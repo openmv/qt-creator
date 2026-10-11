@@ -33,6 +33,8 @@
 #ifdef Q_OS_MACOS
 #include <sys/sysctl.h>
 #include <IOKit/hidsystem/IOHIDLib.h>
+#include <Security/SecCode.h>
+#include <Security/SecRequirement.h>
 #include <QOperatingSystemVersion>
 #endif
 
@@ -215,6 +217,35 @@ bool isMacAccessorySecurityLikelyToInterfere()
 #endif
 }
 
+#ifdef Q_OS_MACOS
+// True only for the shipped, Developer-ID-signed build. macOS keys privacy
+// grants (Input Monitoring etc.) to the code-signing identity, so an ad-hoc
+// "linker-signed" local build is a different app to TCC than the release in
+// the user's Input Monitoring list - IOHIDCheckAccess() can never report it
+// as granted no matter what the user toggles. Detecting that lets us skip a
+// warning the developer can do nothing about on a dev build.
+static bool isReleaseSignedBuild()
+{
+    SecCodeRef self = nullptr;
+    if (SecCodeCopySelf(kSecCSDefaultFlags, &self) != errSecSuccess)
+        return false;
+
+    CFDictionaryRef info = nullptr;
+    OSStatus st = SecCodeCopySigningInformation(self, kSecCSSigningInformation, &info);
+    CFRelease(self);
+    if ((st != errSecSuccess) || (!info))
+        return false;
+
+    // A real Developer ID / App Store signature carries a Team Identifier;
+    // ad-hoc and unsigned builds do not.
+    const void *team = CFDictionaryGetValue(info, kSecCodeInfoTeamIdentifier);
+    bool signedRelease = (team != nullptr) && (CFGetTypeID(team) == CFStringGetTypeID())
+                      && (CFStringGetLength(static_cast<CFStringRef>(team)) > 0);
+    CFRelease(info);
+    return signedRelease;
+}
+#endif
+
 bool isMacHidAccessDeniedForOpenMVIDE()
 {
 #ifdef Q_OS_MACOS
@@ -225,6 +256,11 @@ bool isMacHidAccessDeniedForOpenMVIDE()
     // macOS 10.15 (Catalina); older macOS never enforced this at all.
     if (QOperatingSystemVersion::current()
         < QOperatingSystemVersion(QOperatingSystemVersion::MacOSCatalina))
+        return false;
+    // On an ad-hoc-signed dev build the grant can never match, so the check
+    // would fire the warning on every connect with no way for the developer
+    // to satisfy it. Only trust the result on the shipped signed build.
+    if (!isReleaseSignedBuild())
         return false;
     return IOHIDCheckAccess(kIOHIDRequestTypeListenEvent) != kIOHIDAccessTypeGranted;
 #else
